@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.goodwy.commons.samples">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/commons_launcher"
+        android:label="@string/smtco_app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.goodwy.commons.activities.FAQActivity"/>
+        <activity
+            android:name="com.goodwy.commons.activities.AboutActivity"/>
+        <activity
+            android:name="com.goodwy.commons.activities.LicenseActivity"/>
+        <activity
+            android:name="com.goodwy.commons.activities.CustomizationActivity"/>
+    </application>
+</manifest>

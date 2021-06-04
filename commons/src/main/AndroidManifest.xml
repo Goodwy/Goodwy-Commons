@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.goodwy.commons">
+
+    <queries>
+        <package android:name="com.goodwy.thankyou.debug" />
+        <package android:name="com.goodwy.thankyou" />
+    </queries>
+
+    <uses-feature
+        android:name="android.hardware.faketouch"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="false" />
+
+    <application>
+        <receiver
+            android:name=".receivers.SharedThemeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.goodwy.commons.SHARED_THEME_ACTIVATED" />
+                <action android:name="com.goodwy.commons.SHARED_THEME_UPDATED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

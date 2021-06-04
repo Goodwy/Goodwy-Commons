@@ -1,0 +1,864 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="save_as">Αποθήκευση ως</string>
+    <string name="file_saved">Αποθηκεύθηκε επιτυχώς</string>
+    <string name="invalid_file_format">Μη έγκυρη μορφή αρχείου</string>
+    <string name="out_of_memory_error">Σφάλμα Έλλειψη μνήμης</string>
+    <string name="an_error_occurred">Παρουσιάστηκε σφάλμα: %s</string>
+    <string name="open_with">Άνοιγμα με</string>
+    <string name="edit_with">Επεξεργασία με</string>
+    <string name="no_app_found">Δεν βρέθηκε έγκυρη εφαρμογή</string>
+    <string name="set_as">Ορισμός ως</string>
+    <string name="copy_to_clipboard">Αντιγραφή στο Πρόχειρο</string>
+    <string name="copy_number_to_clipboard">Αντιγραφή αριθμού στο Πρόχειρο</string>
+    <string name="value_copied_to_clipboard">Η τιμή αντιγράφηκε στο πρόχειρο</string>
+    <string name="dial_number">Κλήση αριθμού</string>
+    <string name="unknown">Άγνωστο</string>
+    <string name="always">Πάντα</string>
+    <string name="never">Ποτέ</string>
+    <string name="details">Λεπτομέρειες</string>
+    <string name="notes">Σημειώσεις</string>
+    <string name="deleting_folder">Διαγραφή φακέλου \'%s\'</string>
+    <string name="none">Χωρίς</string>
+    <string name="label">Ετικέτα</string>
+    <string name="transparent">Διαφάνεια</string>
+    <string name="transparent_color">Χρώμα διαφάνειας</string>
+    <string name="select_a_different_color">Επιλέξτε διαφορετικό χρώμα</string>
+    <string name="download">Λήψη</string>
+    <string name="notification">Ειδοποιήσεις</string>
+    <string name="email">Email</string>
+    <string name="previous">Προηγούμενο</string>
+    <string name="playpause">Αναπαραγωγή / Παύση</string>
+    <string name="next">Επόμενο</string>
+    <string name="number">Αριθμός</string>
+    <string name="no_contacts_found">Δεν βρέθηκαν Επαφές</string>
+    <string name="request_the_required_permissions">Ζητούνται τα απαιτούμενα δικαιώματα</string>
+    <string name="no_access_to_contacts">Η εφαρμογή δεν έχει πρόσβαση στις επαφές σας</string>
+    <string name="insert_text_here">Εισαγωγή κειμένου εδώ</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Αλλαγή τύπου εμφάνισης</string>
+    <string name="grid">Πλέγμα</string>
+    <string name="list">Λίστα</string>
+    <string name="increase_column_count">Αύξηση αριθμού στηλών</string>
+    <string name="reduce_column_count">Μείωση αριθμού στηλών</string>
+    <string name="change_cover_image">Αλλαγή εξώφυλλου φακέλου</string>
+    <string name="select_photo">Επιλογή φωτογραφίας</string>
+
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
+    <string name="not_blocking_anyone">Χωρίς αποκλεισμο κανενός.</string>
+    <string name="add_a_blocked_number">Προσθήκη ένος αποκλεισμένου αριθμού</string>
+    <string name="block_number">Αποκλεισμό αριθμού</string>
+    <string name="block_numbers">Αποκλεισμό αριθμών</string>
+    <string name="blocked_numbers">Αποκλεισμένοι αριθμοί</string>
+    <string name="must_make_default_dialer">Θα πρέπει να οριστεί προεπιλεγμένη εφαρμογή για χρήση αποκλεισμένων αριθμών.</string>
+    <string name="set_as_default">Ορισμός ως προεπιλογής</string>
+    <string name="block_confirmation">Σίγουρα να αποκλειστεί ο \"%s\"?</string>
+
+    <!-- Favorites -->
+    <string name="favorites">Αγαπημένα</string>
+    <string name="add_favorites">Προσθήκη αγαπημένων</string>
+    <string name="add_to_favorites">Προσθήκη στα αγαπημένα</string>
+    <string name="remove_from_favorites">Αφαίρεση απο τα αγαπημένα</string>
+
+    <!-- Search -->
+    <string name="search">Αναζήτηση</string>
+    <string name="type_2_characters">Πληκτρολογήστε τουλάχιστον 2 χαρακτήρες για να ξεκινήσετε την αναζήτηση.</string>
+
+    <!-- Filters -->
+    <string name="filter">Φίλτρο</string>
+    <string name="no_items_found">Δεν βρέθηκαν στοιχεία.</string>
+    <string name="change_filter">Αλλαγή φίλτρου</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Απαιτείται άδεια Αποθήκευσης</string>
+    <string name="no_contacts_permission">Απαιτείται άδεια Επαφών</string>
+    <string name="no_camera_permissions">Απαιτείται άδεια Κάμερας</string>
+    <string name="no_audio_permissions">Απαιτείται άδεια Ήχου</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Μετονομασία αρχείου</string>
+    <string name="rename_folder">Μετονομασία φακέλου</string>
+    <string name="rename_file_error">Αδύνατη η μετονομασία του αρχείου</string>
+    <string name="rename_folder_error">Αδύνατη η μετονομασία του φακέλου</string>
+    <string name="rename_folder_empty">Το όνομα του φακέλου δεν πρέπει να είναι κενό</string>
+    <string name="rename_folder_exists">Ένας φάκελος με αυτό το όνομα υπάρχει ήδη</string>
+    <string name="rename_folder_root">Αδύνατη η μετονομασία του ριζικού φακέλου ενός χώρου αποθήκευσης</string>
+    <string name="rename_folder_ok">Ο φάκελος μετονομάστηκε με επιτυχία</string>
+    <string name="renaming_folder">Μετονομασία φακέλου</string>
+    <string name="filename_cannot_be_empty">Το όνομα αρχείου δεν μπορεί να είναι κενό</string>
+    <string name="filename_invalid_characters">Το όνομα περιέχει μη έγκυρους χαρακτήρες</string>
+    <string name="filename_invalid_characters_placeholder">Το όνομα \'%s\' περιέχει μη έγκυρους χαρακτήρες</string>
+    <string name="extension_cannot_be_empty">Η επέκταση δεν μπορεί να είναι κενή</string>
+    <string name="source_file_doesnt_exist">To αρχείο προέλευσης %s δεν υπάρχει</string>
+    <string name="prepend_filenames">Προεπιλεγμένα ονόματα αρχείων</string>
+    <string name="append_filenames">Προσθέστε ονόματα αρχείων</string>
+    <string name="simple_renaming">Απλή μετονομασία</string>
+    <string name="pattern_renaming">Μοτίβο</string>
+    <string name="string_to_add">Συμβολοσειρά για προσθήκη</string>
+    <string name="rename_date_time_pattern">%Y - έτος\n%M - μήνας\n%D - ημέρα\n%h - ώρα\n%m - λεπτό\n%s - δευτ/το\n%i - αύξηση αριθμού από 1</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Αντιγραφή</string>
+    <string name="move">Μετακίνηση</string>
+    <string name="copy_move">Αντιγραφή / Μετακίνηση</string>
+    <string name="copy_to">Αντιγραφή σε</string>
+    <string name="move_to">Μετακίνηση σε</string>
+    <string name="source">Προέλευση</string>
+    <string name="destination">Προορισμός</string>
+    <string name="select_destination">Επιλογή προορισμού</string>
+    <string name="click_select_destination">Κάντε κλικ εδώ για να επιλέξετε προορισμό</string>
+    <string name="invalid_destination">Αδύνατη η εγγραφή στον επιλεγμένο προορισμό</string>
+    <string name="please_select_destination">Επιλέξτε έναν προορισμό</string>
+    <string name="source_and_destination_same">Η προέλευση και ο προορισμός δεν μπορούν να είναι ίδιες</string>
+    <string name="copy_failed">Αδύνατη η αντιγραφή των αρχείων</string>
+    <string name="copying">Αντιγράφονται…</string>
+    <string name="copying_success">Τα αρχεία αντιγράφηκαν με επιτυχία</string>
+    <string name="copy_move_failed">Ένα σφάλμα παρουσιάστηκε</string>
+    <string name="moving">Μετακινούνται…</string>
+    <string name="moving_success">Τα αρχεία μετακινήθηκαν με επιτυχία</string>
+    <string name="moving_success_partial">Αδύνατη η μετακίνηση ορισμένων αρχείων</string>
+    <string name="copying_success_partial">Αδύνατη η αντιγραφή ορισμένων αρχείων</string>
+    <string name="no_files_selected">Δεν έχουν επιλεγεί αρχεία</string>
+    <string name="saving">Αποθηκεύεται…</string>
+    <string name="could_not_create_folder">Αδύνατη η δημιουργία του φακέλου %s</string>
+    <string name="could_not_create_file">Αδύνατη η δημιουργία του αρχείου %s</string>
+    <string name="no_new_items">Δεν βρέθηκαν νέα στοιχεία</string>
+    <string name="no_space">Ο προορισμός που επιλέξατε δεν διαθέτει τον απαιτούμενο χώρο.\nΑπαιτείται %1$s, διαθέσιμα %2$s</string>
+
+    <!-- Create new -->
+    <string name="create_new">Δημιουργία νέου</string>
+    <string name="folder">Φάκελος</string>
+    <string name="file">Αρχείο</string>
+    <string name="create_new_folder">Δημιουργία νέου φακέλου</string>
+    <string name="name_taken">Ένα αρχείο ή φάκελος με αυτό το όνομα υπάρχει ήδη</string>
+    <string name="invalid_name">Το όνομα περιέχει μη αποδεκτούς χαρακτήρες</string>
+    <string name="empty_name">Παρακαλώ εισάγετε ένα όνομα</string>
+    <string name="unknown_error_occurred">Παρουσιάστηκε άγνωστο σφάλμα</string>
+
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Το αρχείο \"%s\" υπάρχει ήδη</string>
+    <string name="file_already_exists_overwrite">Το αρχείο \"%s\" υπάρχει ήδη. Αντικατάσταση?</string>
+    <string name="folder_already_exists">Ο φάκελος \"%s\" υπάρχει ήδη</string>
+    <string name="merge">Συγχώνευση</string>
+    <string name="keep_both">Κρατήστε και τα δύο</string>
+    <string name="overwrite">Αντικατάσταση</string>
+    <string name="skip">Παράβλεψη</string>
+    <string name="append">Προσάρτηση με \'_1\'</string>
+    <string name="apply_to_all">Εφαρμογή σε όλα</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Επιλέξτε ένα φάκελο</string>
+    <string name="select_file">Επιλέξτε ένα αρχείο</string>
+    <string name="confirm_storage_access_title">Επιβεβαιώστε την πρόσβαση στην εξωτερική αποθήκευση</string>
+    <string name="confirm_storage_access_text">Επιλέξτε τον ριζικό φάκελο της κάρτας SD στην επόμενη οθόνη, για να επιτρέψετε πρόσβαση εγγραφής</string>
+    <string name="confirm_storage_access_text_sd">Εάν δεν βλέπετε την κάρτα SD, δοκιμάστε αυτό</string>
+    <string name="confirm_selection">Επιβεβαίωση επιλογής</string>
+
+    <plurals name="items">
+        <item quantity="one">%d στοιχείο</item>
+        <item quantity="other">%d στοιχεία</item>
+    </plurals>
+
+    <!-- Are you sure you want to delete 5 items? -->
+    <plurals name="delete_items">
+        <item quantity="one">%d στοιχείο</item>
+        <item quantity="other">%d στοιχεία</item>
+    </plurals>
+
+    <plurals name="deleting_items">
+        <item quantity="one">Διαγραφή %d στοιχείο</item>
+        <item quantity="other">Διαγραφή %d στοιχεία</item>
+    </plurals>
+
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d επαφή</item>
+        <item quantity="other">%d επαφές</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Επιλέξτε αποθήκευση</string>
+    <string name="internal">Εσωτερική</string>
+    <string name="sd_card">SD Card</string>
+    <string name="root">Root</string>
+    <string name="wrong_root_selected">Επιλέξατε λάθος φάκελο, επιλέξτε τον ριζικό φάκελο της SD card</string>
+    <string name="sd_card_usb_same">Οι διαδρομές συσκευών SD card και USB δεν μπορούν να είναι οι ίδιες</string>
+    <string name="app_on_sd_card">Φαίνεται ότι έχετε εγκαταστήσει την εφαρμογή σε μια κάρτα SD, πράγμα που καθιστά τα Γραφικά στοιχεία εφαρμογών μη διαθέσιμα. Δεν θα τα δείτε ακόμη και στη λίστα των διαθέσιμων Γραφικών στοιχείων.
+        Είναι ένας περιορισμός του συστήματος, οπότε αν θέλετε να χρησιμοποιήσετε τα Γραφικά στοιχεία, θα πρέπει να μετακινήσετε την εφαρμογή πίσω στον εσωτερικό αποθηκευτικό χώρο.</string>
+
+    <!-- File properties -->
+    <string name="properties">Ιδιότητες</string>
+    <string name="path">Διαδρομή</string>
+    <string name="items_selected">Επιλεγμένα στοιχεία</string>
+    <string name="direct_children_count">Άμμεση καταμέτρηση παιδιών</string>
+    <string name="files_count">Αριθμός συνολικών αρχείων</string>
+    <string name="resolution">Ανάλυση</string>
+    <string name="duration">Διάρκεια</string>
+    <string name="artist">Καλλιτέχνης</string>
+    <string name="album">Αλμπουμ</string>
+    <string name="focal_length">Εστιακό μήκος</string>
+    <string name="exposure_time">Χρόνος έκθεσης</string>
+    <string name="iso_speed">Ταχύτητα ISO</string>
+    <string name="f_number">F-αριθμός</string>
+    <string name="camera">Κάμερα</string>
+    <string name="exif">EXIF</string>
+    <string name="song_title">Τίτλος τραγουδιού</string>
+    <string name="gps_coordinates">Συντεταγμένες GPS</string>
+    <string name="altitude">Υψόμετρο</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Χρώμα φόντου</string>
+    <string name="text_color">Χρώμα κειμένου</string>
+    <string name="primary_color">Πρωτεύον χρώμα</string>
+    <string name="accent_color_white">Χρώμα έμφασης Λευκού θέματος</string>
+    <string name="accent_color_black_and_white">Χρώμα έμφασης του Μαύρου &amp; Λευκού θέματος</string>
+    <string name="foreground_color">Χρώμα προσκηνίου</string>
+    <string name="app_icon_color">Χρώμα εικονιδίου εφαρμογής</string>
+    <string name="bottom_navigation_bar_color">Χρώμα κάτω γραμμής Πλοήγησης</string>
+    <string name="restore_defaults">Επαναφορά προεπιλογών</string>
+    <string name="use_default">Χρήση προεπιλογής</string>
+    <string name="default_color">Προεπιλογή</string>
+    <string name="change_color">Αλλαγή χρώματος</string>
+    <string name="theme">Θέμα</string>
+    <string name="changing_color_description">Η αλλαγή ενός χρώματος θα αλλάξει το Προεπιλεγμένο θέμα</string>
+    <string name="save">Αποθήκευση</string>
+    <string name="discard">Απόρριψη</string>
+    <string name="undo_changes">Αναίρεση αλλαγών</string>
+    <string name="undo_changes_confirmation">Είστε βέβαιοι ότι θέλετε να αναιρέσετε τις αλλαγές σας?</string>
+    <string name="save_before_closing">Έχετε αλλαγές που δεν έχουν αποθηκευτεί. Αποθήκευση πριν από την έξοδο?</string>
+    <string name="apply_to_all_apps">Εφαρμογή χρωμάτων σε όλες τις Απλές Εφαρμογές</string>
+    <string name="app_icon_color_warning">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Ορισμένοι Εκκινητές δεν χειρίζονται σωστά τα εικονίδια της εφαρμογής. Σε περίπτωση που το εικονίδιο εξαφανιστεί, δοκιμάστε να ξεκινήσετε την εφαρμογή μέσω του Google Play ή κάποιου Witget, αν είναι διαθέσιμο.
+        Μόλις ξεκινήσει, απλά επαναφέρετε το προεπιλεγμένο πορτοκαλί εικονίδιο #F57C00. Μπορεί να χρειαστεί να επανεγκαταστήσετε την εφαρμογή στη χειρότερη περίπτωση.</string>
+    <string name="share_colors_success">Τα χρώματα ενημερώθηκαν με επιτυχία. Ένα νέο θέμα που ονομάζεται  \"Κοινόχρηστο\" έχει προστεθεί, παρακαλούμε να χρησιμοποιήστε το για την ενημέρωση των χρωμάτων όλων των εφαρμ. στο μέλλον.</string>
+    <string name="shared_theme_note">Σημειώστε ότι αν και χρησιμοποιείτε την έκδοση εφαρμογής Pro, εξακολουθείτε να χρειάζεστε το \"Απλά Σας Ευχαριστώ\" για τεχνικούς λόγους. Φροντίζει για το συγχρονισμό χρωμάτων.</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Παρακαλώ αγοράστε την <a href="https://play.google.com/store/apps/details?id=com.goodwy.thankyou">Απλά Σας Ευχαριστώ</a> για να ξεκλειδώσετε αυτή τη λειτουργία για να υποστηρίξετε την ανάπτυξη. Ευχαριστώ!
+        ]]>
+    </string>
+
+    <!-- Themes -->
+    <string name="light_theme">Φωτεινό</string>
+    <string name="dark_theme">Σκούρο</string>
+    <string name="solarized">Solarized</string>
+    <string name="dark_red">Σκούρο κόκκινο</string>
+    <string name="white">Άσπρο</string>
+    <string name="black_white">Μαύρο &amp; Άσπρο</string>
+    <string name="custom">Προσαρμογή</string>
+    <string name="shared">Κοινόχρηστο</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Τι νέο υπάρχει</string>
+    <string name="whats_new_disclaimer">* μόνο οι μεγαλύτερες ενημερώσεις παρατίθενται εδώ, επίσης υπάρχουν πάντα μερικές μικρότερες βελτιώσεις</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Διαγραφή</string>
+    <string name="remove">Αφαίρεση</string>
+    <string name="rename">Μετονομασία</string>
+    <string name="share">Κοινόχρηστο</string>
+    <string name="share_via">Κοινόχρηστο μέσω</string>
+    <string name="select_all">Επιλογή όλων</string>
+    <string name="select_text">Επιλογή κειμένου</string>
+    <string name="hide">Απόκρυψη</string>
+    <string name="unhide">Επανεμφάνιση</string>
+    <string name="hide_folder">Απόκρυψη φακέλου</string>
+    <string name="unhide_folder">Επανεμφάνιση φακέλου</string>
+    <string name="temporarily_show_hidden">Προσωρινή Εμφάνιση κρυφών</string>
+    <string name="stop_showing_hidden">Διακοπή εμφάνισης κρυφών μέσων</string>
+    <string name="maximum_share_reached">Δεν μπορείτε να μοιραστείτε μεγάλο περιεχόμενο ταυτόχρονα</string>
+    <string name="empty_and_disable_recycle_bin">Άδειασμα και απενεργοποίηση του Κάδου Ανακύκλωσης</string>
+    <string name="undo">Αναίρεση</string>
+    <string name="redo">Επανάληψη</string>
+    <string name="print">Εκτύπωση</string>
+    <string name="create_shortcut">Δημιουργία συντόμευσης</string>
+    <string name="add_number_to_contact">Προσθήκη αριθμού επαφής</string>
+    <string name="view_contact_details">Προβολή λεπτομερειών επαφής</string>
+    <string name="call_from_sim_1">Κλήση απο SIM 1</string>
+    <string name="call_from_sim_2">Κλήση απο SIM 2</string>
+    <string name="toggle_filename">Αλλαγή προβολής ονόματος αρχείων</string>
+    <string name="move_to_top">Μετακίνηση στην κορυφή</string>
+    <string name="move_to_bottom">Μετακίνηση στο τέλος</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Ταξινόμηση κατά</string>
+    <string name="name">Όνομα</string>
+    <string name="size">Μέγεθος</string>
+    <string name="last_modified">Τελευταία τροπ/ηση</string>
+    <string name="date_taken">Ημερ. λήψης</string>
+    <string name="title">Τίτλο</string>
+    <string name="filename">Όνομα αρχείου</string>
+    <string name="extension">Επέκταση</string>
+    <string name="random">Τυχαία</string>
+    <string name="sort_randomly">Τυχαία ταξ/μηση</string>
+    <string name="ascending">Αύξουσα</string>
+    <string name="descending">Φθίνουσα</string>
+    <string name="use_for_this_folder">Χρήση μόνο σε αυτόν το φάκελο</string>
+    <string name="sort_numeric_parts">Αριθμητ. τμήμ. κατά πραγμ. τιμή</string>
+    <string name="first_name">Όνομα</string>
+    <string name="middle_name">Μεσαίο όνομα</string>
+    <string name="surname">Επώνυμο</string>
+    <string name="full_name">Πλήρες όνομα</string>
+    <string name="use_custom_sorting">Προσαρ/μένη ταξ/μηση</string>
+    <string name="change_order">Αλλαγή σειράς</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Είστε βέβαιοι ότι θέλετε να συνεχίσετε τη διαγραφή?</string>
+    <string name="deletion_confirmation">Είστε βέβαιοι ότι θέλετε να διαγράψετε %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Είστε βέβαιοι ότι θέλετε να μετακινήσετε %s στον κάδο ανακύκλωσης?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το στοιχείο?</string>
+    <string name="are_you_sure_recycle_bin">Είστε βέβαιοι ότι θέλετε να μετακινήσετε αυτό το στοιχείο στον κάδο ανακύκλωσης?</string>
+    <string name="do_not_ask_again">Μην ξαναερωτηθώ αυτήν την περίοδο</string>
+    <string name="yes">Ναί</string>
+    <string name="no">Όχι</string>
+    <string name="maybe">Ίσως</string>
+
+    <plurals name="delete_warning">
+        <item quantity="one">Προειδοποίηση: Διαγράφετε %d φάκελο</item>
+        <item quantity="other">Προειδοποίηση: Διαγράφετε %d φακέλους</item>
+    </plurals>
+
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Εισαγωγή PIN</string>
+    <string name="please_enter_pin">Παρακαλώ εισάγετε ένα PIN</string>
+    <string name="wrong_pin">Λάθος PIN</string>
+    <string name="repeat_pin">Επανάληψη PIN</string>
+    <string name="pattern">Μοτίβο</string>
+    <string name="insert_pattern">Εισαγωγή μοτίβου</string>
+    <string name="wrong_pattern">Λάθος μοτίβο</string>
+    <string name="repeat_pattern">Επανάληψη μοτίβου</string>
+    <string name="fingerprint">Δακτυλικό αποτύπωμα</string>
+    <string name="add_fingerprint">Προσθήκη δακτυλικού αποτυπώματος</string>
+    <string name="place_finger">Παρακαλώ τοποθετήστε το δάκτυλό σας στον αισθητήρα δακτυλικών αποτυπωμάτων</string>
+    <string name="authentication_failed">Ο έλεγχος ταυτότητας απέτυχε</string>
+    <string name="authentication_blocked">Αποκλεισμός ελέγχου ταυτότητας, προσπαθήστε ξανά σε λίγο</string>
+    <string name="no_fingerprints_registered">Δεν έχετε καταχωρήσει δακτυλικά αποτυπώματα, προσθέστε μερικά στις Ρυθμίσεις της συσκευής σας</string>
+    <string name="go_to_settings">Μετάβαση στις Ρυθμίσεις</string>
+    <string name="protection_setup_successfully">Ο κωδικός πρόσβασης ολοκληρώθηκε με επιτυχία. Εγκαταστήστε ξανά την εφαρμογή σε περίπτωση που τον ξεχάσετε.</string>
+    <string name="fingerprint_setup_successfully">Η ρύθμιση προστασίας ολοκληρώθηκε με επιτυχία. Εγκαταστήστε ξανά την εφαρμογή σε περίπτωση προβλημάτων με την επαναφορά της.</string>
+    <string name="lock_folder">Κλείδωμα Φακέλου</string>
+    <string name="unlock_folder">Ξεκλείδωμα Φακέλου</string>
+    <string name="lock_folder_notice">Αυτή η προστασία λειτουργεί μόνο για αυτήν την εφαρμογή, δεν πρόκειται να αντικαταστήσει την πραγματική κρυπτογράφηση του Συστήματος.</string>
+
+    <!-- Times -->
+    <string name="yesterday">Χθές</string>
+    <string name="today">Σήμερα</string>
+    <string name="tomorrow">Αύριο</string>
+    <string name="hide_year">Απόκρυψη χρόνου</string>
+    <string name="seconds_raw">δευτ.</string>
+    <string name="minutes_raw">λεπτ.</string>
+    <string name="hours_raw">ώρ.</string>
+    <string name="days_raw">ημερ.</string>
+    <string name="seconds_letter">δ</string>
+    <string name="minutes_letter">λ</string>
+    <string name="hours_letter">ω</string>
+
+    <plurals name="seconds">
+        <item quantity="one">%d δευτ.</item>
+        <item quantity="other">%d δευτ.</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d λεπτ.</item>
+        <item quantity="other">%d λεπτ.</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d ώρ.</item>
+        <item quantity="other">%d ώρ.</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d ημερ.</item>
+        <item quantity="other">%d ημερ.</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d εβδομ.</item>
+        <item quantity="other">%d εβδομ.</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d μήνα</item>
+        <item quantity="other">%d μήνες</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d χρόνο</item>
+        <item quantity="other">%d χρόνια</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">σε %d δευτ.</item>
+        <item quantity="other">σε %d δευτ.</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">σε %d λεπτ.</item>
+        <item quantity="other">σε %d λεπτ.</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">σε %d ώρ.</item>
+        <item quantity="other">σε %d ώρ.</item>
+    </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d ημέρα</item>
+        <item quantity="other">%d ημέρες</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d εβδομάδα</item>
+        <item quantity="other">%d εβδομάδες</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d μήνας</item>
+        <item quantity="other">%d μήνες</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d έτος</item>
+        <item quantity="other">%d έτη</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">πρίν %d δευτ.</item>
+        <item quantity="other">πρίν %d δευτ.</item>
+    </plurals>
+    <plurals name="minutes_before">
+        <item quantity="one">πρίν %d λεπτ.</item>
+        <item quantity="other">πρίν %d λεπτ.</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">πρίν %d ώρ.</item>
+        <item quantity="other">πρίν %d ώρ.</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">πρίν %d ημερ.</item>
+        <item quantity="other">πρίν %d ημερ.</item>
+    </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">πρίν %d εβδομάδα</item>
+        <item quantity="other">πρίν %d εβδομάδες</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">πρίν %d μήνα</item>
+        <item quantity="other">πρίν %d μήνες</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">πρίν %d έτος</item>
+        <item quantity="other">πρίν %d έτη</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">αναβολή %d δευτ.</item>
+        <item quantity="other">αναβολή %d δευτ.</item>
+    </plurals>
+    <plurals name="by_minutes">
+        <item quantity="one">αναβολή %d λεπτ.</item>
+        <item quantity="other">αναβολή %d λεπτ.</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">αναβολή %d ώρ.</item>
+        <item quantity="other">αναβολή %d ώρ.</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d ημέρα</item>
+        <item quantity="other">%d ημέρες</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d εβδομάδα</item>
+        <item quantity="other">%d εβδομάδες</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d μήνα</item>
+        <item quantity="other">%d μήνες</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d έτος</item>
+        <item quantity="other">%d έτη</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Χρόνος που απομένει μέχρι να κλείσει η ειδοποίηση:\n%s</string>
+    <string name="reminder_triggers_in">Χρόνος που απομένει μέχρι να ενεργοποιηθεί η υπενθύμιση:\n%s</string>
+    <string name="alarm_warning">Βεβαιωθείτε ότι η ειδοποίηση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
+    <string name="reminder_warning">Βεβαιωθείτε ότι η υπενθύμιση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
+    <string name="notifications_disabled">Οι ειδοποιήσεις αυτής της εφαρμογής είναι απενεργοποιημένες. Μεταβείτε στις ρυθμίσεις της συσκευής για να τις ενεργοποιήσετε.</string>
+
+    <!-- Alarms -->
+    <string name="alarm">Ειδοποιήσεις</string>
+    <string name="snooze">Αναβολή</string>
+    <string name="dismiss">Απόρριψη</string>
+    <string name="no_reminder">Χωρίς υπενθύμιση</string>
+    <string name="at_start">Κατά την έναρξη</string>
+    <string name="system_sounds">Ήχοι συστήματος</string>
+    <string name="your_sounds">Οι ήχοι σας</string>
+    <string name="add_new_sound">Προσθέστε νέο ήχο</string>
+    <string name="no_sound">Χωρίς ήχο</string>
+    <string name="during_day_at_hh_mm">Κατά τη διάρκεια της ημέρας στις hh:mm</string>
+    <string name="during_day_at">Κατά τη διάρκεια της ημέρας στις %02d:%02d</string>
+
+    <!-- Settings -->
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="purchase_simple_thank_you">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
+    <string name="customize_colors">Προσαρμογή χρωμάτων</string>
+    <string name="customize_colors_locked">Προσαρμογή χρωμάτων (Κλειδωμένο)</string>
+    <string name="customize_widget_colors">Προσαρμογή χρωμάτων widget</string>
+    <string name="customize_notifications">Προσαρμογή ειδοποιήσεων</string>
+    <string name="use_english_language">Χρήση γλώσσας English</string>
+    <string name="show_hidden_items">Εμφάνιση κρυφών στοιχείων</string>
+    <string name="font_size">Μέγεθος κειμένου</string>
+    <string name="small">Μικρό</string>
+    <string name="medium">Μεσαίο</string>
+    <string name="large">Μεγάλο</string>
+    <string name="extra_large">Πολύ Μεγάλο</string>
+    <string name="password_protect_hidden_items">Κωδικός προστασίας προβολής κρυφών στοιχείων</string>
+    <string name="password_protect_whole_app">Κωδικός προστασίας ολόκληρης της εφαρμογής</string>
+    <string name="password_protect_file_deletion">Προστασία με κωδικό για διαγραφή ή μετακίνηση</string>
+    <string name="keep_last_modified">Διατήρηση προηγ/νης τροπ/μένης τιμής στις λειτουργίες αρχείων</string>
+    <string name="show_info_bubble">Εμφάνιση φυσαλίδας πληροφοριών κατά την κύλιση στοιχείων στη γραμμή κύλισης</string>
+    <string name="prevent_phone_from_sleeping">Αποτροπή της αναστολής λειτουργίας του τηλεφώνου ενώ η εφαρμογή βρίσκεται στο προσκήνιο</string>
+    <string name="skip_delete_confirmation">Παράκαμψη πάντα το παράθυρο διαλόγου επιβεβαίωσης διαγραφής</string>
+    <string name="enable_pull_to_refresh">Ενεργοποίηση ανανέωσης με \"Σάρωση απο πάνω-κάτω\"</string>
+    <string name="use_24_hour_time_format">Χρήση 24ώρου</string>
+    <string name="change_date_and_time_format">Αλλαγή μορφής ημερομηνίας και ώρας</string>
+    <string name="sunday_first">Έναρξη εβδομάδας την Κυριακή</string>
+    <string name="widgets">Γραφικά στοιχεία</string>
+    <string name="use_same_snooze">Χρήση πάντα του ίδιου χρόνου αναβολής</string>
+    <string name="snooze_time">Χρόνος αναβολής</string>
+    <string name="vibrate_on_button_press">Δόνηση κατά το πάτημα του κουμπιού</string>
+    <string name="move_items_into_recycle_bin">Μετακινήστε τα αντικείμενα στον Κάδο Ανακύκλωσης αντί για διαγραφή</string>
+    <string name="recycle_bin_cleaning_interval">Περίοδος καθαρισμού Κάδου ανακύκλωσης</string>
+    <string name="empty_recycle_bin">Άδειασμα του Κάδου Ανακύκλωσης</string>
+    <string name="force_portrait_mode">Εξαναγκασμός σε Πορτρέτο</string>
+    <string name="export_settings">Εξαγωγή ρυθμίσεων</string>
+    <string name="import_settings">Εισαγωγή ρυθμίσεων</string>
+    <string name="settings_exported_successfully">Επιτυχής εξαγωγή ρυθμίσεων</string>
+    <string name="settings_imported_successfully">Επιτυχής εισαγωγή ρυθμίσεων</string>
+    <string name="start_name_with_surname">Εμφάνιση πρώτα το επώνυμο</string>
+    <string name="clear_cache">Καθαρισμός cache</string>
+
+    <!-- Setting sections -->
+    <string name="visibility">Προβολή</string>
+    <string name="security">Ασφάλεια</string>
+    <string name="scrolling">Κύλιση</string>
+    <string name="file_operations">Λειτουργίες αρχείων</string>
+    <string name="recycle_bin">Κάδος Ανακύκλωσης</string>
+    <string name="saving_label">Εξοικονόμηση</string>
+    <string name="startup">Εκκίνηση</string>
+    <string name="text">Κείμενο</string>
+    <string name="migrating">Μετεγκατάσταση</string>
+
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Διαχείριση εμφανιζόμενων καρτελών</string>
+    <string name="default_tab_to_open">Καρτέλα για άνοιγμα κατά την έναρξη της εφαρμογής</string>
+    <string name="contacts_tab">Επαφές</string>
+    <string name="favorites_tab">Αγαπημένες</string>
+    <string name="call_history_tab">Ιστορικό κλήσεων</string>
+    <string name="groups_tab">Ομάδες</string>
+    <string name="last_used_tab">Τελευταία χρήση</string>
+    <string name="files_tab">Αρχεία</string>
+    <string name="recent_files_tab">Πρόσφατα αρχεία</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Επαναφορά αυτού του αρχείου</string>
+    <string name="restore_selected_files">Επαναφορά επιλεγμένων αρχείων</string>
+    <string name="restore_all_files">Επαναφορά όλων των αρχείων</string>
+    <string name="recycle_bin_emptied">Ο Κάδος Ανακύκλωσης άδειασε επιτυχώς</string>
+    <string name="files_restored_successfully">Τα αρχεία επαναφέρθηκαν επιτυχώς</string>
+    <string name="empty_recycle_bin_confirmation">Σίγουρα θέλετε να αδειάσετε τον Κάδο Ανακύκλωσης; Τα αρχεία θα χαθούν οριστικά.</string>
+    <string name="recycle_bin_empty">Ο Κάδος Ανακύκλωσης είναι κενός</string>
+    <string name="moving_recycle_bin_items_disabled">Η μετακίνηση στον Κάδο είναι ανενεργή, χρησιμοποιείστε την Επαναφορά</string>
+    <string name="show_the_recycle_bin">Εμφάνιση Κάδου Ανακύκλωσης</string>
+    <string name="hide_the_recycle_bin">Απόκρυψη Κάδου Ανακύκλωσης</string>
+
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Μετακινήθηκε %d στοιχείο στον Κάδο</item>
+        <item quantity="other">Μετακινήθηκαν %d στοιχεία στον Κάδο</item>
+    </plurals>
+
+    <!-- Import / Export -->
+    <string name="importing">Εισαγωγή…</string>
+    <string name="exporting">Εξαγωγή…</string>
+    <string name="importing_successful">Επιτυχής Εισαγωγή</string>
+    <string name="exporting_successful">Επιτυχής Εξαγωγή</string>
+    <string name="importing_failed">Η Εισαγωγή απέτυχε</string>
+    <string name="exporting_failed">Η Εξαγωγή απέτυχε</string>
+    <string name="importing_some_entries_failed">Η Εισαγωγή μερικών καταχωρήσεων απέτυχε</string>
+    <string name="exporting_some_entries_failed">Η Εξαγωγή μερικών καταχωρήσεων απέτυχε</string>
+    <string name="no_entries_for_importing">Δεν βρέθηκαν καταχωρήσεις για Εισαγωγή</string>
+    <string name="no_entries_for_exporting">Δεν βρέθηκαν καταχωρήσεις για Εξαγωγή</string>
+
+    <!-- OTG devices -->
+    <string name="usb">USB</string>
+    <string name="usb_detected">Φαίνεται ότι μια συσκευή USB είναι συνδεδεμένη στη συσκευή σας. Για να βεβαιωθείτε ότι τα αρχεία της εμφανίζονται σωστά, χρειάζεται να χορηγήσετε πρόσθετα δικαιώματα.</string>
+    <string name="confirm_usb_storage_access_text">Παρακαλώ επιλέξτε τον ριζικό κατάλογο της συσκευής USB στην επόμενη οθόνη, για παραχώρηση πρόσβασης</string>
+    <string name="wrong_root_selected_usb">Λάθος επιλεγμένος κατάλογος, παρακαλώ επιλέξτε το ριζικό κατάλογο της συσκευής USB</string>
+
+    <!-- Dates -->
+    <string name="january">Ιανουάριος</string>
+    <string name="february">Φεβρουάριος</string>
+    <string name="march">Μάρτιος</string>
+    <string name="april">Απρίλιος</string>
+    <string name="may">Μάιος</string>
+    <string name="june">Ιούνιος</string>
+    <string name="july">Ιούλιος</string>
+    <string name="august">Αύγουστος</string>
+    <string name="september">Σεπτέμβριος</string>
+    <string name="october">Οκτώβριος</string>
+    <string name="november">Νοέμβριος</string>
+    <string name="december">Δεκέμβριος</string>
+
+    <!-- in January -->
+    <string name="in_january">τον Ιανουάριο</string>
+    <string name="in_february">τον Φεβρουάριο</string>
+    <string name="in_march">τον Μάρτιο</string>
+    <string name="in_april">τον Απρίλιο</string>
+    <string name="in_may">τον Μάιο</string>
+    <string name="in_june">τον Ιούνιο</string>
+    <string name="in_july">τον Ιούλιο</string>
+    <string name="in_august">τον Αύγουστο</string>
+    <string name="in_september">τον Σεπτέμβριο</string>
+    <string name="in_october">τον Οκτώβριο</string>
+    <string name="in_november">τον Νοέμβριο</string>
+    <string name="in_december">τον Δεκέμβριο</string>
+
+    <string name="monday">Δευτέρα</string>
+    <string name="tuesday">Τρίτη</string>
+    <string name="wednesday">Τετάρτη</string>
+    <string name="thursday">Πέμπτη</string>
+    <string name="friday">Παρασκευή</string>
+    <string name="saturday">Σαββάτο</string>
+    <string name="sunday">Κυριακή</string>
+
+    <string name="monday_letter">Δ</string>
+    <string name="tuesday_letter">Τ</string>
+    <string name="wednesday_letter">Τ</string>
+    <string name="thursday_letter">Π</string>
+    <string name="friday_letter">Π</string>
+    <string name="saturday_letter">Σ</string>
+    <string name="sunday_letter">Κ</string>
+
+    <string name="monday_short">Δευ</string>
+    <string name="tuesday_short">Τρί</string>
+    <string name="wednesday_short">Τετ</string>
+    <string name="thursday_short">Πέμ</string>
+    <string name="friday_short">Παρ</string>
+    <string name="saturday_short">Σαβ</string>
+    <string name="sunday_short">Κυρ</string>
+
+    <!-- Pro version -->
+    <string name="upgrade_to_pro_long">Η έκδοση της εφαρμογής σας δεν θα ενημερώνεται πλέον. Παρακαλώ αναβαθμίστε την στην έκδοση Pro για να λάβετε νέες επιδιορθώσεις και βελτιώσεις.</string>
+    <string name="upgrade_to_pro_long_click">Η έκδοση της εφαρμογής σας δεν θα ενημερώνεται πλέον. Παρακαλώ αναβαθμίστε την στην έκδοση Pro για να λάβετε νέες επιδιορθώσεις και βελτιώσεις πατώντας εδώ.</string>
+    <string name="it_is_free">Είναι δωρεάν μέχρι: %s. Εάν κάνετε λήψη μέχρι τότε, θα μπορείτε να την χρησιμοποιείτε δωρεάν για πάντα.</string>
+    <string name="more_info">Περισσότερα</string>
+    <string name="upgrade">Αναβάθμιση</string>
+    <string name="upgrade_calendar">Πρέπει να μεταφέρετε τα αποθηκευμένα τοπικά συμβάντα χειροκίνητα, μέσω Εξαγωγής σε αρχείο .ics και στη συνέχεια Εισαγωγή. Μπορείτε να βρείτε τις επιλογές Εξαγωγής/Εισαγωγής, στο μενού της κύριας οθόνης.</string>
+
+    <!-- About -->
+    <string name="about">Σχετικά</string>
+    <string name="website_label">Για τον κώδικα επισκεφθείτε</string>
+    <string name="email_label">Στείλτε τα σχόλιά σας ή τις προτάσεις σας</string>
+    <string name="upgrade_to_pro">Αναβάθμιση στην Pro</string>
+    <string name="more_apps_underlined"><u>Περισσότερες εφαρμογές</u></string>
+    <string name="more_apps_from_us_underlined"><u>Περισσότερες εφαρμογές από εμάς</u></string>
+    <string name="third_party_licences_underlined"><u>Άδειες τρίτων</u></string>
+    <string name="invite_friends_underlined"><u>Πρόσκληση φίλων</u></string>
+    <string name="share_text">Έι, έλα να δεις %1$s στο %2$s</string>
+    <string name="invite_via">Πρόσκληση μέσω</string>
+    <string name="rate_us_underlined"><u>Βαθμολογήστε μας</u></string>
+    <string name="rate">Βαθμολογία</string>
+    <string name="donate">Δωρεά</string>
+    <string name="donate_underlined"><u>Δωρεά</u></string>
+    <string name="follow_us">Ακολουθήστε μας</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Πρόσθετες πληροφορίες</string>
+    <string name="app_version">Έκδοση εφαρμογής: %s</string>
+    <string name="device_os">OS Συσκευής: %s</string>
+    <string name="donate_please">
+        <![CDATA[
+            Γειά σας,<br><br>
+            Ελπίζω να απολαμβάνετε την εφαρμογή. Δεν περιέχει διαφημίσεις, παρακαλώ υποστηρίξτε την ανάπτυξή της με την αγορά στο <a href="https://play.google.com/store/apps/details?id=com.goodwy.thankyou">Απλά Σας Ευχαριστούμε</a>, θα αποτρέψει επίσης την εμφάνιση αυτού του διαλόγου.<br><br>
+            Ευχαριστούμε!
+        ]]>
+    </string>
+    <string name="purchase">Αγορά</string>
+    <string name="update_thank_you">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστούμε στην τελευταία έκδοση</string>
+    <string name="before_asking_question_read_faq">Πριν κάνετε μια ερώτηση, ελέγξτε τις ρυθμίσεις της εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Ίσως η λύση υπάρχει εκεί.</string>
+    <string name="before_rate_read_faq">Πριν μας αξιολογήσετε, ελέγξτε τις ρυθμίσεις εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Αν έχετε προβλήματα, ίσως η λύση υπάρχει εκεί.</string>
+    <string name="make_sure_latest">Επίσης, βεβαιωθείτε ότι χρησιμοποιείτε την τελευταία έκδοση της εφαρμογής.</string>
+    <string name="read_it">Διαβάστε τις</string>
+    <string name="read_faq">Συχνές Ερωτήσεις</string>
+    <string name="rate_us_prompt">Γειά σας,\n\nφαίνεται ότι χρησιμοποιείτε αυτήν την εφαρμογή ήδη για αρκετό καιρό, και το εκτιμούμε πραγματικά.\n\nΑν μπορούμε να σας ζητήσουμε μια χάρη, παρακαλούμε αξιολογήστε μας στο Google Play. Αυτό θα μας βοηθούσε πολύ.\n\nΑνεξάρτητα τι αποφασίσατε, δεν θα εμφανιστεί ξανά αυτό το μήνυμα.\n\nΕυχαριστούμε!</string>
+    <string name="rate_our_app">Βαθμολογήστε την εφαρμογή μας παρακαλώ :)</string>
+    <string name="thank_you">Σας Ευχαριστούμε</string>
+    <string name="widget_locked">
+        <![CDATA[
+            Αυτό το γραφικό είναι κλειδωμένο.<br>Παρακαλώ αγοράστε το <a href="https://play.google.com/store/apps/details?id=com.goodwy.thankyou">Simple Thank You</a> για να το ξεκλειδώσετε.
+        ]]>
+    </string>
+
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Γειά σας,<br><br>
+           απλά σας ενημερώνουμε ότι πρόσφατα κυκλοφόρησε μια νέα εφαρμογή:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
+            Μπορείτε να την κατεβάσετε πατώντας τον τίτλο.<br><br>
+            Ευχαριστούμε
+        ]]>
+    </string>
+
+    <string name="simple_app_launcher">Απλός Εκκινητής</string>
+    <string name="simple_calculator">Απλή Αριθμομηχανή</string>
+    <string name="simple_calendar">Απλό Ημερολόγιο</string>
+    <string name="simple_camera">Απλή Κάμερα</string>
+    <string name="simple_clock">Απλό Ρολόι</string>
+    <string name="simple_contacts">Απλές Επαφές</string>
+    <string name="simple_dialer">Απλή Κλήση</string>
+    <string name="simple_draw">Απλή Ζωγραφική</string>
+    <string name="simple_file_manager">Απλός Διαχειριστής Αρχείων</string>
+    <string name="simple_flashlight">Απλός Φακός</string>
+    <string name="simple_gallery">Απλή Συλλογή</string>
+    <string name="simple_music_player">Απλός Music Player</string>
+    <string name="simple_notes">Απλές Σημειώσεις</string>
+    <string name="simple_sms_messenger">Απλός SMS Messenger</string>
+    <string name="simple_thank_you">Απλά Σας Ευχαριστούμε</string>
+    <string name="simple_voice_recorder">Απλή Εγγραφή Φωνής</string>
+
+    <string name="app_launcher_short">Εκκινητής εφαρμογών</string>
+    <string name="calculator_short">Αριθμομηχανή</string>
+    <string name="calendar_short">Ημερολόγιο</string>
+    <string name="camera_short">Κάμερα</string>
+    <string name="clock_short">Ρολόι</string>
+    <string name="contacts_short">Επαφές</string>
+    <string name="dialer_short">Πληκτ/γιο Κλήσης</string>
+    <string name="draw_short">Ζωγραφική</string>
+    <string name="file_manager_short">Αρχεία</string>
+    <string name="flashlight_short">Φακός</string>
+    <string name="gallery_short">Συλλογή</string>
+    <string name="music_player_short">Μουσική</string>
+    <string name="notes_short">Σημειώσεις</string>
+    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="thank_you_short">Σας Ευχαριστούμε</string>
+    <string name="voice_recorder_short">Εγγραφή φωνής</string>
+
+    <string name="sideloaded_app">
+        <![CDATA[
+            Φαίνεται ότι η έκδοση της εφαρμογής σας είναι κατεστραμμένη. Κατεβάστε την αρχική έκδοση από <a href="%s">εδώ</a>.
+        ]]>
+    </string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Συχνές ερωτήσεις</string>
+    <string name="before_asking_question">Πριν κάνετε μια ερώτηση, διαβάστε πρώτα τις</string>
+    <string name="faq_1_title_commons">Γιατί δεν βλέπω αυτό το Γραφικό στοιχείο εφαρμογής στη λίστα;</string>
+    <string name="faq_1_text_commons">Είναι πολύ πιθανό επειδή μετακινήσατε την εφαρμογή σε μια κάρτα SD. Υπάρχει ένας περιορισμός του συστήματος Android που αποκρύπτει τα συγκεκριμένα Γραφικά στοιχεία εφαρμογών
+       σε αυτή την περίπτωση. Η μόνη λύση είναι να μετακινήσετε την εφαρμογή πίσω στην εσωτερική αποθήκευση μέσω των ρυθμίσεων της συσκευής σας.</string>
+    <string name="faq_2_title_commons">Θέλω να σας υποστηρίξω, αλλά δεν μπορώ να δωρίσω χρήματα. Υπάρχει κάτι άλλο που μπορώ να κάνω;</string>
+    <string name="faq_2_text_commons">Ναι φυσικά. Μπορείτε να διαδώσετε το όνομα σχετικά με τις εφαρμογές μας ή να γράψετε καλά σχόλια και αξιολογήσεις. Μπορείτε επίσης να βοηθήσετε με τη μετάφραση των εφαρμογών σε μια νέα γλώσσα ή απλά να ενημερώσετε μερικές υπάρχουσες μεταφράσεις.
+        Μπορείτε να βρείτε τον οδηγό στο https://github.com/SimpleMobileTools/General-Discussion , ή απλά ένα μήνυμα στο goodwy.dev@gmail.com αν χρειάζεστε βοήθεια.</string>
+    <string name="faq_3_title_commons">Διαγραφή κάποιων αρχείων κατά λάθος, πώς μπορώ να τα ανακτήσω;</string>
+    <string name="faq_3_text_commons">Δυστυχώς, δεν μπορείτε. Τα αρχεία διαγράφονται αμέσως μετά το παράθυρο διαλόγου επιβεβαίωσης, δεν υπάρχει διαθέσιμος Κάδος ανακύκλωσης.</string>
+    <string name="faq_4_title_commons">Δεν μου αρέσουν τα χρώματα του Γραφικού στοιχείου, μπορώ να τα αλλάξω;</string>
+    <string name="faq_4_text_commons">Ναι, καθώς σύρετε ένα γραφικό στοιχείο στην αρχική οθόνη σας, εμφανίζεται μια οθόνη διαμόρφωσης Γραφικού στοιχείου. Θα δείτε έγχρωμα τετράγωνα στην κάτω αριστερή γωνία, απλά πατήστε τα για να επιλέξετε ένα νέο χρώμα. Μπορείτε να χρησιμοποιήσετε το ρυθμιστικό για να ρυθμίσετε το alpha επίσης.</string>
+    <string name="faq_5_title_commons">Μπορώ να επαναφέρω με κάποιο τρόπο τα διαγραμμένα αρχεία;</string>
+    <string name="faq_5_text_commons">Αν όντως διαγράφηκαν, δεν μπορείτε. Ωστόσο, υπάρχει ενεργοποιημένος από προεπιλογή ο Κάδος ανακύκλωσης, αυτό σημαίνει, οτι τα αρχεία μετακινούνται στον Κάδο αντί για διαγραφή.</string>
+    <string name="faq_6_title_commons">Το εικονίδιο εκκίνησης εφαρμογών εξαφανίστηκε. Τι μπορώ να κάνω?</string>
+    <string name="faq_6_text_commons">Προκαλείται από τον Εκκινητή σας που δεν υποστηρίζει την προσαρμογή εικονιδίων κατάλληλα. Δοκιμάστε να ξεκινήσει η εφαρμογή μέσω του Google Play ή κάποιου Γραφικού στοιχείου, εάν είναι διαθέσιμο.
+        Μόλις ξεκινήσει, απλά επαναφέρετε το προεπιλεγμένο πορτοκαλί εικονίδιο #F57C00. Μπορεί να χρειαστεί να επανεγκαταστήσετε την εφαρμογή στη χειρότερη περίπτωση.</string>
+    <string name="faq_7_title_commons">Τα χρήματα αφαιρέθηκαν από τον τραπεζικό μου λογαριασμό, αλλά δεν μπορώ να κατεβάσω την εφαρμογή. Τι μπορώ να κάνω?</string>
+    <string name="faq_7_text_commons">Οι πληρωμές διαχειρίζονται πλήρως από την Google, το σύστημα της δυσλειτουργεί περιστασιακά. Απλώς καθαρίστε την προσωρινή μνήμη εφαρμογών του Google Play, επανεκκινήστε τη συσκευή σας, και προσπαθήστε ξανά να την κατεβάσετε.</string>
+    <string name="faq_8_title_commons">Γιατί πρέπει να αναβαθμίσω σε έκδοση Pro;</string>
+    <string name="faq_8_text_commons">Καθώς η έκδοση της εφαρμογής σας δεν ενημερώνεται πλέον, τα σφάλματα που εντοπίσατε ίσως δεν θα διορθωθούν ποτέ. Επίσης, δεν θα προστεθούν νέες λειτουργίες. Μπορείτε να αγοράσετε την έκδοση Pro στο Google Play με ένα μικρό χρηματικό ποσό.
+        Πρόκειται για εφάπαξ πληρωμή, πράγμα που σημαίνει ότι μόλις την αγοράσετε, δεν θα χρειαστεί να την πληρώσετε ξανά. Ούτε καν μετά τη λήψη μιας νέας συσκευής. Εάν δεν σας αρέσει η έκδοση Pro, μπορείτε να την απεγκαταστήσετε μέσα σε λίγες ώρες και θα λάβετε αυτόματα τα χρήματά σας πίσω.
+        Αν θέλετε επιστροφή χρημάτων οποιαδήποτε στιγμή αργότερα, απλά επικοινωνήστε μαζί μας στη διεύθυνση goodwy.dev@gmail.com και θα τα λάβετε.</string>
+    <string name="faq_9_title_commons">Πώς μπορώ να επιλέξω πολλά στοιχεία ταυτόχρονα;</string>
+    <string name="faq_9_text_commons">Υπάρχουν πολλοί τρόποι για να γίνει αυτό. Το πρώτο είναι η εκκίνηση της λειτουργίας επιλογής πατώντας παρατεταμένα ένα στοιχείο και κατόπιν κάνοντας σύντομο κλικ σε άλλα για να τα επιλέξετε. Ο δεύτερος τρόπος είναι παρόμοιος με την επιλογή στοιχείων σε υπολογιστές με ποντίκι.
+        απλά ξεκινήστε τη λειτουργία επιλογής πατώντας παρατεταμένα ένα στοιχείο και, στη συνέχεια, κρατώντας πατημένο το δάχτυλό σας, σύρετέ το σε άλλα στοιχεία για επιλογή. Ο τρίτος τρόπος επιλογής πολλών στοιχείων είναι η μεγάλη διάρκεια πίεσης ενός στοιχείου και κατόπιν η μεγάλη διάρκεια πίεσης ενός άλλου και όλων των ενδιάμεσων γίνεται επιλεγμένη. Εάν
+        θέλετε να επιλέξετε όλα τα στοιχεία, πατήστε μόνο ένα στοιχείο και, στη συνέχεια, κάντε κλικ στον επιλεγμένο μετρητή στοιχείων στην επάνω αριστερή γωνία. Αυτό θα επιλέξει ή θα καταργήσει την επιλογή όλων των στοιχείων.</string>
+    <string name="faq_10_title_commons">Έχω αγοράσει την εφαρμογή, αλλά δεν μπορώ να πραγματοποιήσω λήψη της σε άλλη συσκευή.</string>
+    <string name="faq_10_text_commons">Δοκιμάστε να διαγράψετε την προσωρινή μνήμη εφαρμογών Google Play και να επανεκκινήσετε τη συσκευή σας. Πρόκειται για κάποιο πρόβλημα του Google Play, το οποίο δεν σχετίζεται με την ίδια την εφαρμογή.</string>
+
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Λάβετε την Pro έκδοση τώρα!</string>
+    <string name="why_upgrade_basic_version">Βασική</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">Χωρίς διαφ/σεις</string>
+    <string name="why_upgrade_no_internet_access">Χωρίς πρόσβαση στο internet</string>
+    <string name="why_upgrade_footer">+ 100% Εγγύηση επιστροφής χρημάτων</string>
+    <string name="why_upgrade_improved_design">Βελτιωμένος σχεδιασμός</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Προηγμένος επεξεργαστής φωτογραφιών</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF υποστήριξη αρχείων</string>
+    <string name="why_upgrade_batch_renaming">Προηγμένη μετονομασία αρχείων δέσμης</string>
+    <string name="why_upgrade_folder_locking">Κλείδωμα μεμονωμένων φακέλων</string>
+    <string name="why_upgrade_printing_support">Υποστήριξη εκτύπωσης</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Υποστήριξη ζώνης ώρας</string>
+    <string name="why_upgrade_attendees_emails">Συμμετέχοντες και υπενθυμίσεις email</string>
+    <string name="why_upgrade_easy_event_importing">Εύκολη εισαγωγή συμβάντων</string>
+    <string name="why_upgrade_new_widgets">Νέα γραφικά στοιχεία</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Βελτιωμένη συγχώνευση διπλών επαφών</string>
+    <string name="why_upgrade_font_size_customization">Προσαρμογή μεγέθους γραμ/σειράς</string>
+    <string name="why_upgrade_private_contact_sharing">Προαιρετική κοινή χρήση ιδιωτικών επαφών στις εφαρμογές μας</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Προσαρμόσιμοι ήχοι κλήσης επαφών</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Λίστες ελέγχου</string>
+    <string name="why_upgrade_different_note_per_widget">Διαφορετική σημείωση και χρώματα ανά γραφικό συστατικό</string>
+    <string name="why_upgrade_note_locking">Κλείδωμα Σημείωσης</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Προσαρμογή μορφής ημ/νίας και ώρας</string>
+    <string name="why_upgrade_shortcuts">Συντομεύσεις στην Αρχική οθόνη</string>
+    <string name="why_upgrade_file_compression">Υποστήριξη συμπίεσης αρχείων</string>
+    <string name="why_upgrade_recents_tab">Καρτέλα με πρόσφατα αρχεία</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Προσαρμογή χρώματος φόντου</string>
+    <string name="why_upgrade_file_importing">Υποστήριξη εισαγωγής αρχείων</string>
+
+    <!-- License -->
+    <string name="notice">Αυτή η εφαρμογή χρησιμοποιεί τις ακόλουθες βιβλιοθήκες τρίτων για να διευκολύνει τη ζωή μου. Ευχαριστώ.</string>
+    <string name="third_party_licences">Άδειες τρίτων</string>
+    <string name="kotlin_title">Kotlin (programming language)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
+    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
+
+    <!-- Google Play listing -->
+    <string name="deprecated_app">ΚΑΤΑΡΓΗΣΗ: Αυτή η έκδοση της εφαρμογής δεν υποστηρίζεται πλέον, λάβετε την έκδοση Pro εδώ https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund">Μην ξεχνάτε οτι αν απεγκατασταθεί εντός 2 ωρών, θα επιστραφούν αυτόματα τα χρήματα σας. Αν θέλετε επιστροφή χρημάτων οποιαδήποτε στιγμή αργότερα, απλά επικοινωνήστε μαζί μας στο goodwy.dev@gmail.com και θα τα λάβετε. Αυτό το κάνει εύκολότερο για να την δοκιμάσετε :)</string>
+
+    <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
+    <string name="developer_description">Μια ομάδα Απλών εφαρμογών Android ανοιχτού κώδικα με προσαρμόσιμα γραφικά στοιχεία, χωρίς διαφημίσεις και περιττά δικαιώματα.</string>
+</resources>
