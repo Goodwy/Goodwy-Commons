@@ -1,0 +1,86 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Mostrar miniatura do contacto</string>
+    <string name="use_icon_tabs_summary">Iconas no canto de texto nas pestanas</string>
+    <string name="use_icon_tabs">Usa iconas de pestanas</string>
+    <string name="round_play_icon_summary">A icona de reprodución / pausa está coloreada na cor primaria</string>
+    <string name="round_play_icon">Icona de reprodución redonda / pausa</string>
+    <string name="save_recordings_in_summary">A partir de Android 10+, a aplicación non ten acceso aos teus ficheiros</string>
+    <string name="gray_theme">Gris</string>
+    <string name="pref_category_appearance">Aspecto</string>
+    <string name="pref_theme_summary">Selecciona un tema preinstalado</string>
+    <string name="customization_theme_summary">Selección de temas e cores da interface</string>
+    <string name="recorder_g">Gravadora</string>
+    <string name="player_g">Xogador</string>
+    <string name="general">Xerais</string>
+    <string name="default_tab">Pestana predeterminada</string>
+    <string name="color">cor</string>
+    <string name="black">Negro</string>
+    <string name="show_dividers">Mostrar divisores</string>
+    <string name="colored_contacts">Iconas de cores dos contactos</string>
+    <string name="accent_color">Cor de acento</string>
+    <string name="incoming_call">Chamada entrante</string>
+    <string name="outgoing_call">Chamada saínte</string>
+    <string name="missed_call">Chamada perdida</string>
+    <string name="unblock_number">Número de desbloqueo</string>
+    <string name="recents">Recentes</string>
+    <string name="unblock_confirmation">Seguro que queres desbloquear \"%s\"?</string>
+    <string name="plus_summary">Todas as nosas aplicacións son de código aberto sen publicidade e seguirá sendo así. Coa túa axuda podemos implementar máis funcións e melloralas</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Comprar Goodwy Thank You</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Actualiza Goodwy Thank You á última versión</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Si, por suposto. Pode correr a voz sobre os aplicativos ou dar bos comentarios e valoracións. Tamén pode axudar traducindo os aplicativos nun novo idioma ou simplemente actualizar algunhas traducións existentes.
+        Puede encontrar la guía en https://github.com/Goodwy/Discussion, ou simplemente envíame unha mensaxe a goodwy.dev@gmail.com se necesitas axuda.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">Como non se vai actualizar máis o teu aplicativo, os bugs que teñas non serán corrixidos. Tampouco se engadirán novas funcións. Podes comprar a versión Pro en Google Play por unha cantidade pequena de cartos. É un pagamento que se fai só unha vez, é dicir, non volves pagar por isto.
+        Nin tan sequera ao cambiar de móbil. Se non che gusta a versión Pro, podes simplemente desinstalala e devolveráseche os cartos  automaticamente.Se queres que che devolvamos os cartos máis tarde, envíanos un correo electrónico a goodwy.dev@gmail.com e darémoscho.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">OBSOLETA: Esta versión do app xa non se está mantendo, obtén a versión Pro en https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Non esquezas que se desinstalas calquera app de pago antes de 2 horas, devolveránseche os cartos automáticamente. Se queres unha devolución máis tarde, contáctanos en goodwy.dev@gmail.com e terala. Isto fai que sexa fácil probala :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

@@ -1,11 +1,22 @@
 package com.goodwy.commons.extensions
 
 import android.app.Activity
+import android.graphics.Color
 import com.goodwy.commons.R
+import com.goodwy.commons.helpers.DARK_GREY
 
-fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop: Boolean = false) = when {
-    isBlackAndWhiteTheme() -> if (showTransparentTop) R.style.AppTheme_BlackAndWhite_NoActionBar else R.style.AppTheme_BlackAndWhite
-    isWhiteTheme() -> if (showTransparentTop) R.style.AppTheme_White_NoActionBar else R.style.AppTheme_White
+fun Activity.getThemeId(color: Int = baseConfig.backgroundColor, showTransparentTop: Boolean = false) = when {
+    baseConfig.isUsingSystemTheme -> if (isUsingSystemDarkTheme()) R.style.AppTheme_Base_System else R.style.AppTheme_Base_System_Light
+    isBlackAndWhiteTheme() -> when {
+        showTransparentTop -> R.style.AppTheme_BlackAndWhite_NoActionBar
+        baseConfig.primaryColor.getContrastColor() == DARK_GREY -> R.style.AppTheme_BlackAndWhite_DarkTextColor
+        else -> R.style.AppTheme_BlackAndWhite
+    }
+    isWhiteTheme() -> when {
+        showTransparentTop -> R.style.AppTheme_White_NoActionBar
+        baseConfig.primaryColor.getContrastColor() == Color.WHITE -> R.style.AppTheme_White_LightTextColor
+        else -> R.style.AppTheme_White
+    }
     showTransparentTop -> {
         when (color) {
             -12846 -> R.style.AppTheme_Red_100_core
@@ -198,7 +209,147 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop
             -12434878 -> R.style.AppTheme_Grey_800_core
             -16777216 -> R.style.AppTheme_Grey_900_core
 
-            else -> R.style.AppTheme_Orange_700_core
+            //-1 -> R.style.AppTheme_BW_10_core //-1 -> R.style.AppTheme_Grey_100_core
+            -65794 -> R.style.AppTheme_BW_20_core  //add
+            -1118482 -> R.style.AppTheme_BW_30_core  //add
+            -2171170 -> R.style.AppTheme_BW_40_core  //add
+            -3355444 -> R.style.AppTheme_BW_50_core
+            -4671304 -> R.style.AppTheme_BW_60_core
+            -5460820 -> R.style.AppTheme_BW_70_core  //add
+            -6052957 -> R.style.AppTheme_BW_80_core
+            -7368817 -> R.style.AppTheme_BW_90_core
+            -8092540 -> R.style.AppTheme_BW_100_core  //add
+            -8750470 -> R.style.AppTheme_BW_200_core
+            -10066330 -> R.style.AppTheme_BW_300_core
+            -10855846 -> R.style.AppTheme_BW_400_core  //add
+            -11382190 -> R.style.AppTheme_BW_500_core
+            -12763843 -> R.style.AppTheme_BW_600_core
+            -13487566 -> R.style.AppTheme_BW_700_core  //add
+            -14079703 -> R.style.AppTheme_BW_800_core
+            -15461356 -> R.style.AppTheme_BW_900_core
+            //-16777216 -> R.style.AppTheme_BW_000_core //-16777216 -> R.style.AppTheme_Grey_900_core
+
+            -16047054 -> R.style.AppTheme_I_Blue_100_core
+            -14593687 -> R.style.AppTheme_I_Blue_200_core
+            -12876375 -> R.style.AppTheme_I_Blue_300_core
+            -11552791 -> R.style.AppTheme_I_Blue_400_core
+            -10369543 -> R.style.AppTheme_I_Blue_500_core
+            -9054982 -> R.style.AppTheme_I_Blue_600_core
+            -7546118 -> R.style.AppTheme_I_Blue_700_core
+            -5511684 -> R.style.AppTheme_I_Blue_800_core
+            -4134148 -> R.style.AppTheme_I_Blue_900_core
+
+            -16576726 -> R.style.AppTheme_I_Indigo_100_core
+            -16245164 -> R.style.AppTheme_I_Indigo_200_core
+            -15584635 -> R.style.AppTheme_I_Indigo_300_core
+            -14725699 -> R.style.AppTheme_I_Indigo_400_core
+            -14065419 -> R.style.AppTheme_I_Indigo_500_core
+            -12354058 -> R.style.AppTheme_I_Indigo_600_core
+            -10053897 -> R.style.AppTheme_I_Indigo_700_core
+            -7491336 -> R.style.AppTheme_I_Indigo_800_core
+            -5389319 -> R.style.AppTheme_I_Indigo_900_core
+
+            -15793613 -> R.style.AppTheme_I_Deep_Purple_100_core
+            -14548114 -> R.style.AppTheme_I_Deep_Purple_200_core
+            -13498967 -> R.style.AppTheme_I_Deep_Purple_300_core
+            -12838970 -> R.style.AppTheme_I_Deep_Purple_400_core
+            -9285675 -> R.style.AppTheme_I_Deep_Purple_500_core
+            -8164131 -> R.style.AppTheme_I_Deep_Purple_600_core
+            -5928465 -> R.style.AppTheme_I_Deep_Purple_700_core
+            -4542993 -> R.style.AppTheme_I_Deep_Purple_800_core
+            -3226378 -> R.style.AppTheme_I_Deep_Purple_900_core
+
+            -14613965 -> R.style.AppTheme_I_Purple_100_core
+            -11990423 -> R.style.AppTheme_I_Purple_200_core
+            -9300831 -> R.style.AppTheme_I_Purple_300_core
+            -8053057 -> R.style.AppTheme_I_Purple_400_core
+            -6010162 -> R.style.AppTheme_I_Purple_500_core
+            -5347881 -> R.style.AppTheme_I_Purple_600_core
+            -4094239 -> R.style.AppTheme_I_Purple_700_core
+            -2774803 -> R.style.AppTheme_I_Purple_800_core
+            -1850379 -> R.style.AppTheme_I_Purple_900_core
+
+            -14153453 -> R.style.AppTheme_I_Pink_100_core
+            -11332825 -> R.style.AppTheme_I_Pink_200_core
+            -8249282 -> R.style.AppTheme_I_Pink_300_core
+            -4968872 -> R.style.AppTheme_I_Pink_400_core
+            -4042634 -> R.style.AppTheme_I_Pink_500_core
+            -3380080 -> R.style.AppTheme_I_Pink_600_core
+            -2585944 -> R.style.AppTheme_I_Pink_700_core
+            -1790526 -> R.style.AppTheme_I_Pink_800_core
+            -1063466 -> R.style.AppTheme_I_Pink_900_core
+
+            -14482175 -> R.style.AppTheme_I_Red_100_core
+            -11989499 -> R.style.AppTheme_I_Red_200_core
+            -9299700 -> R.style.AppTheme_I_Red_300_core
+            -6281451 -> R.style.AppTheme_I_Red_400_core
+            -2670558 -> R.style.AppTheme_I_Red_500_core
+            -1355214 -> R.style.AppTheme_I_Red_600_core
+            -1282476 -> R.style.AppTheme_I_Red_700_core
+            -1076607 -> R.style.AppTheme_I_Red_800_core
+            -938843 -> R.style.AppTheme_I_Red_900_core
+
+            -14348798 -> R.style.AppTheme_I_Deep_Orange_100_core
+            -11723257 -> R.style.AppTheme_I_Deep_Orange_200_core
+            -8901104 -> R.style.AppTheme_I_Deep_Orange_300_core
+            -5683684 -> R.style.AppTheme_I_Deep_Orange_400_core
+            -1215698 -> R.style.AppTheme_I_Deep_Orange_500_core
+            -1212867 -> R.style.AppTheme_I_Deep_Orange_600_core
+            -1010337 -> R.style.AppTheme_I_Deep_Orange_700_core
+            -806773 -> R.style.AppTheme_I_Deep_Orange_800_core
+            -670807 -> R.style.AppTheme_I_Deep_Orange_900_core
+
+            -14149372 -> R.style.AppTheme_I_Orange_100_core
+            -11390196 -> R.style.AppTheme_I_Orange_200_core
+            -8367591 -> R.style.AppTheme_I_Orange_300_core
+            -4884183 -> R.style.AppTheme_I_Orange_400_core
+            -1531603 -> R.style.AppTheme_I_Orange_500_core
+            -872117 -> R.style.AppTheme_I_Orange_600_core
+            -671640 -> R.style.AppTheme_I_Orange_700_core
+            -536433 -> R.style.AppTheme_I_Orange_800_core
+            -402515 -> R.style.AppTheme_I_Orange_900_core
+
+            -14148348 -> R.style.AppTheme_I_Amber_100_core
+            -11321840 -> R.style.AppTheme_I_Amber_200_core
+            -8232162 -> R.style.AppTheme_I_Amber_300_core
+            -4616145 -> R.style.AppTheme_I_Amber_400_core
+            -867793 -> R.style.AppTheme_I_Amber_500_core
+            -668590 -> R.style.AppTheme_I_Amber_600_core
+            -535442 -> R.style.AppTheme_I_Amber_700_core
+            -401261 -> R.style.AppTheme_I_Amber_800_core
+            -334160 -> R.style.AppTheme_I_Amber_900_core
+
+            -14540795 -> R.style.AppTheme_I_Yellow_100_core
+            -12238321 -> R.style.AppTheme_I_Yellow_200_core
+            -9804516 -> R.style.AppTheme_I_Yellow_300_core
+            -7173077 -> R.style.AppTheme_I_Yellow_400_core
+            -3620565 -> R.style.AppTheme_I_Yellow_500_core
+            -1581262 -> R.style.AppTheme_I_Yellow_600_core
+            -199342 -> R.style.AppTheme_I_Yellow_700_core
+            -264571 -> R.style.AppTheme_I_Yellow_800_core
+            -66907 -> R.style.AppTheme_I_Yellow_900_core
+
+            -14605302 -> R.style.AppTheme_I_Lime_100_core
+            -12302314 -> R.style.AppTheme_I_Lime_200_core
+            -9867228 -> R.style.AppTheme_I_Lime_300_core
+            -7235277 -> R.style.AppTheme_I_Lime_400_core
+            -4667581 -> R.style.AppTheme_I_Lime_500_core
+            -2300073 -> R.style.AppTheme_I_Lime_600_core
+            -1511310 -> R.style.AppTheme_I_Lime_700_core
+            -1051497 -> R.style.AppTheme_I_Lime_800_core
+            -591181 -> R.style.AppTheme_I_Lime_900_core
+
+            -14734572 -> R.style.AppTheme_I_Green_100_core
+            -13285090 -> R.style.AppTheme_I_Green_200_core
+            -11373777 -> R.style.AppTheme_I_Green_300_core
+            -9331137 -> R.style.AppTheme_I_Green_400_core
+            -7750314 -> R.style.AppTheme_I_Green_500_core
+            -6305425 -> R.style.AppTheme_I_Green_600_core
+            -4860274 -> R.style.AppTheme_I_Green_700_core
+            -3349330 -> R.style.AppTheme_I_Green_800_core
+            -2297915 -> R.style.AppTheme_I_Green_900_core
+
+            else -> R.style.AppTheme_Blue_600_core //TODO DEFAULT THEME
         }
     }
     else -> {
@@ -383,7 +534,7 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop
             -13154481 -> R.style.AppTheme_Blue_Grey_800
             -14273992 -> R.style.AppTheme_Blue_Grey_900
 
-            -1 -> R.style.AppTheme_Grey_100
+            -1 -> R.style.AppTheme_Grey_100 //TODO overflowIcon color for light theme
             -1118482 -> R.style.AppTheme_Grey_200
             -2039584 -> R.style.AppTheme_Grey_300
             -4342339 -> R.style.AppTheme_Grey_400
@@ -393,7 +544,147 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop
             -12434878 -> R.style.AppTheme_Grey_800
             -16777216 -> R.style.AppTheme_Grey_900
 
-            else -> R.style.AppTheme_Orange_700
+            //-1 -> R.style.AppTheme_BW_10 //-1 -> R.style.AppTheme_Grey_100
+            -65794 -> R.style.AppTheme_BW_20  //add
+            -1118482 -> R.style.AppTheme_BW_30  //add
+            -2171170 -> R.style.AppTheme_BW_40  //add
+            -3355444 -> R.style.AppTheme_BW_50
+            -4671304 -> R.style.AppTheme_BW_60
+            -5460820 -> R.style.AppTheme_BW_70  //add
+            -6052957 -> R.style.AppTheme_BW_80
+            -7368817 -> R.style.AppTheme_BW_90
+            -8092540 -> R.style.AppTheme_BW_100  //add
+            -8750470 -> R.style.AppTheme_BW_200
+            -10066330 -> R.style.AppTheme_BW_300
+            -10855846 -> R.style.AppTheme_BW_400  //add
+            -11382190 -> R.style.AppTheme_BW_500
+            -12763843 -> R.style.AppTheme_BW_600
+            -13487566 -> R.style.AppTheme_BW_700  //add
+            -14079703 -> R.style.AppTheme_BW_800
+            -15461356 -> R.style.AppTheme_BW_900
+            //-16777216 -> R.style.AppTheme_BW_000 //-16777216 -> R.style.AppTheme_Grey_900
+
+            -16047054 -> R.style.AppTheme_I_Blue_100
+            -14593687 -> R.style.AppTheme_I_Blue_200
+            -12876375 -> R.style.AppTheme_I_Blue_300
+            -11552791 -> R.style.AppTheme_I_Blue_400
+            -10369543 -> R.style.AppTheme_I_Blue_500
+            -9054982 -> R.style.AppTheme_I_Blue_600
+            -7546118 -> R.style.AppTheme_I_Blue_700
+            -5511684 -> R.style.AppTheme_I_Blue_800
+            -4134148 -> R.style.AppTheme_I_Blue_900
+
+            -16576726 -> R.style.AppTheme_I_Indigo_100
+            -16245164 -> R.style.AppTheme_I_Indigo_200
+            -15584635 -> R.style.AppTheme_I_Indigo_300
+            -14725699 -> R.style.AppTheme_I_Indigo_400
+            -14065419 -> R.style.AppTheme_I_Indigo_500
+            -12354058 -> R.style.AppTheme_I_Indigo_600
+            -10053897 -> R.style.AppTheme_I_Indigo_700
+            -7491336 -> R.style.AppTheme_I_Indigo_800
+            -5389319 -> R.style.AppTheme_I_Indigo_900
+
+            -15793613 -> R.style.AppTheme_I_Deep_Purple_100
+            -14548114 -> R.style.AppTheme_I_Deep_Purple_200
+            -13498967 -> R.style.AppTheme_I_Deep_Purple_300
+            -12838970 -> R.style.AppTheme_I_Deep_Purple_400
+            -9285675 -> R.style.AppTheme_I_Deep_Purple_500
+            -8164131 -> R.style.AppTheme_I_Deep_Purple_600
+            -5928465 -> R.style.AppTheme_I_Deep_Purple_700
+            -4542993 -> R.style.AppTheme_I_Deep_Purple_800
+            -3226378 -> R.style.AppTheme_I_Deep_Purple_900
+
+            -14613965 -> R.style.AppTheme_I_Purple_100
+            -11990423 -> R.style.AppTheme_I_Purple_200
+            -9300831 -> R.style.AppTheme_I_Purple_300
+            -8053057 -> R.style.AppTheme_I_Purple_400
+            -6010162 -> R.style.AppTheme_I_Purple_500
+            -5347881 -> R.style.AppTheme_I_Purple_600
+            -4094239 -> R.style.AppTheme_I_Purple_700
+            -2774803 -> R.style.AppTheme_I_Purple_800
+            -1850379 -> R.style.AppTheme_I_Purple_900
+
+            -14153453 -> R.style.AppTheme_I_Pink_100
+            -11332825 -> R.style.AppTheme_I_Pink_200
+            -8249282 -> R.style.AppTheme_I_Pink_300
+            -4968872 -> R.style.AppTheme_I_Pink_400
+            -4042634 -> R.style.AppTheme_I_Pink_500
+            -3380080 -> R.style.AppTheme_I_Pink_600
+            -2585944 -> R.style.AppTheme_I_Pink_700
+            -1790526 -> R.style.AppTheme_I_Pink_800
+            -1063466 -> R.style.AppTheme_I_Pink_900
+
+            -14482175 -> R.style.AppTheme_I_Red_100
+            -11989499 -> R.style.AppTheme_I_Red_200
+            -9299700 -> R.style.AppTheme_I_Red_300
+            -6281451 -> R.style.AppTheme_I_Red_400
+            -2670558 -> R.style.AppTheme_I_Red_500
+            -1355214 -> R.style.AppTheme_I_Red_600
+            -1282476 -> R.style.AppTheme_I_Red_700
+            -1076607 -> R.style.AppTheme_I_Red_800
+            -938843 -> R.style.AppTheme_I_Red_900
+
+            -14348798 -> R.style.AppTheme_I_Deep_Orange_100
+            -11723257 -> R.style.AppTheme_I_Deep_Orange_200
+            -8901104 -> R.style.AppTheme_I_Deep_Orange_300
+            -5683684 -> R.style.AppTheme_I_Deep_Orange_400
+            -1215698 -> R.style.AppTheme_I_Deep_Orange_500
+            -1212867 -> R.style.AppTheme_I_Deep_Orange_600
+            -1010337 -> R.style.AppTheme_I_Deep_Orange_700
+            -806773 -> R.style.AppTheme_I_Deep_Orange_800
+            -670807 -> R.style.AppTheme_I_Deep_Orange_900
+
+            -14149372 -> R.style.AppTheme_I_Orange_100
+            -11390196 -> R.style.AppTheme_I_Orange_200
+            -8367591 -> R.style.AppTheme_I_Orange_300
+            -4884183 -> R.style.AppTheme_I_Orange_400
+            -1531603 -> R.style.AppTheme_I_Orange_500
+            -872117 -> R.style.AppTheme_I_Orange_600
+            -671640 -> R.style.AppTheme_I_Orange_700
+            -536433 -> R.style.AppTheme_I_Orange_800
+            -402515 -> R.style.AppTheme_I_Orange_900
+
+            -14148348 -> R.style.AppTheme_I_Amber_100
+            -11321840 -> R.style.AppTheme_I_Amber_200
+            -8232162 -> R.style.AppTheme_I_Amber_300
+            -4616145 -> R.style.AppTheme_I_Amber_400
+            -867793 -> R.style.AppTheme_I_Amber_500
+            -668590 -> R.style.AppTheme_I_Amber_600
+            -535442 -> R.style.AppTheme_I_Amber_700
+            -401261 -> R.style.AppTheme_I_Amber_800
+            -334160 -> R.style.AppTheme_I_Amber_900
+
+            -14540795 -> R.style.AppTheme_I_Yellow_100
+            -12238321 -> R.style.AppTheme_I_Yellow_200
+            -9804516 -> R.style.AppTheme_I_Yellow_300
+            -7173077 -> R.style.AppTheme_I_Yellow_400
+            -3620565 -> R.style.AppTheme_I_Yellow_500
+            -1581262 -> R.style.AppTheme_I_Yellow_600
+            -199342 -> R.style.AppTheme_I_Yellow_700
+            -264571 -> R.style.AppTheme_I_Yellow_800
+            -66907 -> R.style.AppTheme_I_Yellow_900
+
+            -14605302 -> R.style.AppTheme_I_Lime_100
+            -12302314 -> R.style.AppTheme_I_Lime_200
+            -9867228 -> R.style.AppTheme_I_Lime_300
+            -7235277 -> R.style.AppTheme_I_Lime_400
+            -4667581 -> R.style.AppTheme_I_Lime_500
+            -2300073 -> R.style.AppTheme_I_Lime_600
+            -1511310 -> R.style.AppTheme_I_Lime_700
+            -1051497 -> R.style.AppTheme_I_Lime_800
+            -591181 -> R.style.AppTheme_I_Lime_900
+
+            -14734572 -> R.style.AppTheme_I_Green_100
+            -13285090 -> R.style.AppTheme_I_Green_200
+            -11373777 -> R.style.AppTheme_I_Green_300
+            -9331137 -> R.style.AppTheme_I_Green_400
+            -7750314 -> R.style.AppTheme_I_Green_500
+            -6305425 -> R.style.AppTheme_I_Green_600
+            -4860274 -> R.style.AppTheme_I_Green_700
+            -3349330 -> R.style.AppTheme_I_Green_800
+            -2297915 -> R.style.AppTheme_I_Green_900
+
+            else -> R.style.AppTheme_Blue_600 //TODO DEFAULT THEME
         }
     }
 }

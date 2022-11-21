@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
+    <string name="use_icon_tabs_summary">Biểu tượng thay vì văn bản trên tab</string>
+    <string name="use_icon_tabs">Dùng biểu tượng tab</string>
+    <string name="round_play_icon_summary">Biểu tượng phát/tạm dừng được tô màu theo màu chính</string>
+    <string name="round_play_icon">Biểu tượng phát/tạm dừng vòng tròn</string>
+    <string name="save_recordings_in_summary">Bắt đầu từ Android 10, ứng dụng không có quyền truy cập vào tệp của bạn</string>
+    <string name="gray_theme">Màu xám</string>
+    <string name="pref_category_appearance">Bề ngoài</string>
+    <string name="pref_theme_summary">Chọn chủ đề được cài đặt sẵn</string>
+    <string name="customization_theme_summary">Chọn chủ đề và màu giao diện</string>
+    <string name="recorder_g">Máy ghi âm</string>
+    <string name="player_g">Cầu thủ</string>
+    <string name="general">Tổng quát</string>
+    <string name="default_tab">Tab Mặc định</string>
+    <string name="color">màu</string>
+    <string name="black">Đen</string>
+    <string name="show_dividers">Hiện dải phân cách</string>
+    <string name="colored_contacts">Biểu tượng màu liên hệ</string>
+    <string name="accent_color">Màu nhấn</string>
+    <string name="incoming_call">Cuộc gọi đến</string>
+    <string name="outgoing_call">Cuộc gọi đi</string>
+    <string name="missed_call">Cuộc gọi nhỡ</string>
+    <string name="unblock_number">Bỏ chặn số</string>
+    <string name="recents">Gần đây</string>
+    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
+    <string name="plus_summary">Tất cả các ứng dụng của chúng tôi đều không có quảng cáo, Mã nguồn mở và nó sẽ luôn như vậy. Với sự giúp đỡ của bạn, chúng tôi có thể triển khai nhiều tính năng hơn và làm cho chúng thậm chí còn tốt hơn</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Cảm ơn vì đã mua hàng Goodwy</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Vui lòng cập nhật Goodwy Thank You lên phiên bản mới nhất</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Phải, tất nhiên. Bạn có thể truyền bá về các ứng dụng hoặc đưa ra phản hồi và xếp hạng tốt. Bạn cũng có thể giúp đỡ bằng cách dịch các ứng dụng bằng ngôn ngữ mới hoặc chỉ cập nhật một số bản dịch hiện có.
+         Bạn có thể tìm thấy hướng dẫn tại https://github.com/Goodwy/Discussion hoặc chỉ cần gửi tin nhắn cho tôi tại goodwy.dev@gmail.com nếu bạn cần trợ giúp.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">Vì phiên bản ứng dụng của bạn không còn được cập nhật, các lỗi bạn có thể phát hiện sẽ không bao giờ được sửa. Cũng sẽ không có chức năng mới được thêm vào. Bạn có thể mua phiên bản Pro trên Google Play với một khoản tiền nhỏ.
+         Đó là thanh toán một lần, có nghĩa là một khi bạn mua nó, bạn sẽ không bao giờ phải mua lại. Ngay cả sau khi nhận được một thiết bị mới. Nếu bạn không thích phiên bản Pro, bạn có thể gỡ cài đặt trong vòng vài giờ và bạn sẽ tự động lấy lại tiền.
+         Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại goodwy.dev@gmail.com và bạn sẽ nhận được nó.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">THÔNG BÁO: Phiên bản của ứng dụng này không còn được duy trì, hãy tải phiên bản Pro tại https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Đừng quên rằng nếu bạn gỡ cài đặt bất kỳ ứng dụng phải trả tiền nào trong vòng 2 giờ, bạn sẽ tự động được hoàn lại tiền. Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại goodwy.dev@gmail.com và bạn sẽ nhận được nó.Thật dễ dàng đúng không :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

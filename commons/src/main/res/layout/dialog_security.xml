@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.goodwy.commons.views.MyScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.goodwy.commons.views.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dialog_scrollview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -26,12 +25,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/pin"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/dialog_tab_fingerprint"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/fingerprint"/>
 
         </com.google.android.material.tabs.TabLayout>
 

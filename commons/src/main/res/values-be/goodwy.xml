@@ -1,0 +1,133 @@
+<resources>
+    <string name="recorder_g">Запіс</string>
+    <string name="player_g">Плэер</string>
+    <string name="general">Агульная</string>
+    <string name="default_tab">Укладка па змаўчанні</string>
+    <string name="color">Колер</string>
+    <string name="black">Чорны</string>
+    <string name="incoming_call">Уваходны</string>
+    <string name="outgoing_call">Выходны</string>
+    <string name="missed_call">Прапушчаны</string>
+    <string name="unblock_confirmation">Разблакаваць \"%s\"?</string>
+    <string name="unblock_number">Разблакаваць нумар</string>
+    <string name="recents">Нядаўнія</string>
+    <string name="message">Паведамленне</string>
+    <string name="settings_icon">Абразок настроек</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Падтрымка праекта</string>
+    <string name="pref_pay_summary">Набудзьце прыкладанне для падтрымкі будучых распрацовак і атрымання дадатковых функцый</string>
+    <string name="support_project_summary">Набудзьце адно з нашых платных прыкладанняў для падтрымкі будучых распрацовак і разблакіроўкі дадатковых функцый</string>
+    <string name="learn_more">Больш падрабязна</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Плэер для аўдыёкніг</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Дыктафон</string>
+    <string name="files">Files</string>
+    <string name="files_summary">Файлавы менеджэр</string>
+    <string name="themes">Тэмы</string>
+    <string name="themes_summary">Старанна падабраныя тэмы прыкладання, аўтаматычнае змяненне тэм і падтрымка сістэмных тэм для Андроід 12+</string>
+    <string name="color_title">Колеры</string>
+    <string name="color_summary">Ручная настройка асноўнага колеру, акцэнту, фону, тэксту і панэль навігацыі</string>
+    <string name="plus_title">Падтрымайце нас</string>
+    <string name="plus_summary">Усе нашы прыкладанні без рэкламы, з адкрытым зыходным кодам, і так будзе заўсёды. З Вашай дапамогай мы зможам рэалізаваць больш функцый і зрабіць іх яшчэ лепш</string>
+    <string name="lifebuoy_title">Мы падтрымаем Вас</string>
+    <string name="lifebuoy_summary">Калі па нейкай прычыне Вы не можаце дазволіць сабе наша дадатак, але вельмі хочаце выкарыстоўваць усе функцыі, проста напішыце нам</string>
+    <string name="participants_title">Удзельнікі</string>
+    <string name="special_thanks_to">Асаблівая падзяка</string>
+    <string name="tip_kind">Добрая падтрымка</string>
+    <string name="tip_excellent">Выдатная падтрымка</string>
+    <string name="tip_incredible">Узрушаючая падтрымка</string>
+    <string name="tip_jar">Падтрымаць</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Папярэднія пакупкі адноўлены. Перазагрузіце дадатак, каб выкарыстоўваць усе функцыі.</string>
+    <string name="no_purchase_found">Пакупкі не знойдзены.</string>
+    <string name="restore_purchase">Аднавіць пакупкі</string>
+    <string name="restoring_purchase">Аднаўленне пакупак…</string>
+    <string name="could_not_restore_purchase">Не ўдалося аднавіць пакупкі.</string>
+
+    <!-- Theme -->
+    <string name="customization_theme_summary">Выбар тэм і кветак інтэрфейсу</string>
+    <string name="pref_theme_summary">Абярыце прадусталяваную тэму</string>
+    <string name="pref_category_appearance">Знешні выгляд</string>
+    <string name="gray_theme">Шэрая</string>
+    <string name="accent_color">Колер акцэнту</string>
+
+    <!-- Settings -->
+    <string name="show_contact_thumbnails_g">Паказваць фота кантакту</string>
+    <string name="save_recordings_in_summary">Пачынаючы з Android 10+, прыкладанне не мае доступу да вашых файлаў</string>
+    <string name="round_play_icon">Круглы значок прайгравання/паўзы</string>
+    <string name="round_play_icon_summary">Значок прайгравання/паўзы будзе афарбаваны ў асноўны колер</string>
+    <string name="use_icon_tabs">Выкарыстоўваць абразкі ўкладак</string>
+    <string name="use_icon_tabs_summary">Абразкі замест тэксту на ўкладках</string>
+    <string name="show_dividers">Паказваць падзельнікі</string>
+    <string name="colored_contacts">Каляровыя абразкі кантактаў</string>
+    <string name="kids_mode">Дзіцячы рэжым</string>
+    <string name="kids_mode_summary">Спрошчаны інтэрфейс, выбар размалёвак</string>
+    <string name="restart_required">Патрабуецца перазапуск прыкладання</string>
+    <string name="transparent_bar">Празрыстыя панэлі</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Змяняе выгляд некаторых элементаў прыкладання</string>
+    <string name="bottom_navigation_bar">Ніжняя панэль навігацыі</string>
+    <string name="bottom_navigation_bar_summary">Панэль укладак перамесціцца ўніз</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
+    <string name="copyright_g">v %1$s\nАўтарскія правы © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Абнавіце \"Goodwy Thank You\" да апошняй версіі.</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Так, вядома. Вы можаце распаўсюджваць інфармацыю аб прыкладаннях або даваць добрыя водгукі і адзнакі. Таксама вы можаце дапамагчы, пераклаўшы прыкладанні на новую мову або проста абнавіўшы існуючыя пераклады.
+         Кіраўніцтва можна знайсці па адрасе <a href="https://github.com/Goodwy/Discussion">тут</a> ці проста напісаць мне кароткае паведамленне на <a href="goodwy.dev@gmail.com">goodwy.dev@gmail.com</a>, калі вам патрэбна дапамога.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">Паколькі версія прыкладання больш не абнаўляецца, памылкі, якія вы, магчыма, заўважылі, ніколі не будуць выпраўлены. Таксама не будзе дададзена ніякіх новых функцый. Вы можаце набыць Pro-версію на Google Play за вельмі невялікую суму.
+        Гэта разавая пакупка, якая азначае, што вам ніколі не прыйдзецца плаціць зноў. Нават пасля змены прылады. Калі вам не спадабаецца версія Pro, вы можаце проста выдаліць яе на працягу некалькіх гадзін, пасля чаго аўтаматычна атрымаеце свае грошы назад.
+        Калі вы захочаце вярнуць грошы ў любы час пазней, проста звяжыцеся з намі па адрасе goodwy.dev@gmail.com і мы вернем іх.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            У дадзеным спісе пералічаны ўсе, хто прыкметна дапамог любому з дадаткам Goodwy, а не толькі гэтаму. Пераклады выконваюцца валанцёрамі,
+             дайце нам ведаць, калі вы таксама хочаце дапамагчы. Кіраўніцтва па перакладзе знаходзіцца <a href="https://github.com/Goodwy/Discussion">тут</a>. Можна проста звязацца з намі па электроннай пошце, калі ў вас ёсць якія-небудзь пытанні.
+             Дзякуй усім удзельнікам і іншым памочнікам!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">Састарэлае: дадзеная версія прыкладання больш не падтрымліваецца, пераходзіце на версію Pro https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Не забывайце, што калі вы выдаліце любое платнае прыкладанне на працягу 2 гадзін, вам будзе аўтаматычна вернутая сума пакупкі. Калі вы захочаце вярнуць грошы пазней, проста зьвяжыцеся з намі па адрасе goodwy.dev@gmail.com і вы іх атрымаеце. Так што можна лёгка апрабаваць гэта дадатак :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Дадаць нумар</string>
+    <string name="add_email">Дадаць email</string>
+    <string name="add_address">Дадаць адрас</string>
+    <string name="add_im">Дадаць службу імгненных паведамленняў</string>
+    <string name="add_event">Дадаць падзею</string>
+    <string name="add_notes">Дадаць нататку</string>
+    <string name="add_website">Дадаць сайт</string>
+    <string name="add_group">Дадаць у групу</string>
+
+    <string name="video_call">Відэазванок</string>
+    <string name="screen_slide_animation">Анімацыя слайдаў экрана</string>
+    <string name="screen_slide_animation_zoomout">Памяншэнне</string>
+    <string name="screen_slide_animation_depth">Глыбіня</string>
+
+    <!-- Apps -->
+    <string name="get">Загрузіць</string>
+    <string name="open">Адкрыць</string>
+    <string name="collection">Калекцыя</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Прывітанне,<br><br>
+            калі вам падабаецца гэта дадатак, то рэкамендуем ўсталяваць наша дадатак для прагляду і рэдагавання кантактаў.<br><br>
+            Дзякуй
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Капіяваць код</string>
+    <string name="action_on_message_click">Дзеянне пры кліку па паведамленні</string>
+    <string name="invert_color">Інвертаваць колеры</string>
+    <string name="speech_bubble">Стыль паведамленняў</string>
+</resources>

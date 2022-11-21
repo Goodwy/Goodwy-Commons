@@ -1,0 +1,86 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Rodyti adresatų miniatiūras</string>
+    <string name="use_icon_tabs_summary">Piktogramos vietoj teksto skirtukuose</string>
+    <string name="use_icon_tabs">Skirtukų piktogramų naudojimas</string>
+    <string name="round_play_icon_summary">Leidimo / pauzės piktograma nuspalvinta pirmine spalva</string>
+    <string name="round_play_icon">Apvalaus leidimo / pauzės piktograma</string>
+    <string name="save_recordings_in_summary">Pradedant nuo \"Android 10\", programa neturi prieigos prie jūsų failų</string>
+    <string name="gray_theme">Pilkas</string>
+    <string name="pref_category_appearance">Veidas</string>
+    <string name="pref_theme_summary">Pasirinkite iš anksto įdiegtą temą</string>
+    <string name="customization_theme_summary">Temų ir sąsajos spalvų pasirinkimas</string>
+    <string name="recorder_g">Įrašymo</string>
+    <string name="player_g">Žaidėjas</string>
+    <string name="general">Bendra</string>
+    <string name="default_tab">Numatytasis skirtukas</string>
+    <string name="color">spalva</string>
+    <string name="black">Juodas</string>
+    <string name="show_dividers">Rodyti skyriklius</string>
+    <string name="colored_contacts">Kontaktų spalvotos piktogramos</string>
+    <string name="accent_color">Paryškinta spalva</string>
+    <string name="incoming_call">Skambutį</string>
+    <string name="outgoing_call">Išeinantis skambutis</string>
+    <string name="missed_call">Praleistas skambutis</string>
+    <string name="unblock_number">Atblokuoti numerį</string>
+    <string name="recents">Naujas</string>
+    <string name="unblock_confirmation">Ar tikrai norite atblokuoti \"%s\"?</string>
+    <string name="plus_summary">Visos mūsų programos yra be skelbimų, atviro kodo ir visada taip išliks. Su jūsų pagalba mes galime įgyvendinti daugiau funkcijų ir padaryti jas dar geresnes</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
+    <string name="copyright_g">v %1$s\nVisos teisės saugomos © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Taip, žinoma. Galite skleisti žodį apie programėles arba pateikti gerus atsiliepimus ir įvertinimus. Taip pat galite padėti verčiant programėles nauja kalba arba tiesiog atnaujinkite keletą esamų vertimų.Vadovą galite rasti adresu https://github.com/Goodwy/Discussion, arba tiesiog rašykite man žinutę goodwy.dev@gmail.com, jei jums reikia pagalbos.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
+        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
+        If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

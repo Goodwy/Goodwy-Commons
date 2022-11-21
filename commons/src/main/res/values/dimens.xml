@@ -6,24 +6,29 @@
     <dimen name="medium_margin">8dp</dimen>
     <dimen name="normal_margin">12dp</dimen>
     <dimen name="activity_margin">16dp</dimen>
+    <dimen name="larger_margin">18dp</dimen>
     <dimen name="bigger_margin">20dp</dimen>
     <dimen name="big_margin">24dp</dimen>
     <dimen name="section_margin">32dp</dimen>
+    <dimen name="settings_margin">8dp</dimen>
+    <dimen name="about_margin">20dp</dimen>
 
+    <dimen name="material_dialog_corner_radius">28dp</dimen>
+    <dimen name="material_button_corner_radius">24dp</dimen>
+    <dimen name="app_logo">80dp</dimen>
+    <dimen name="plus_logo">100dp</dimen>
     <dimen name="social_logo">40dp</dimen>
-    <dimen name="color_sample_size">30dp</dimen>
+    <dimen name="color_sample_size">35dp</dimen>
     <dimen name="shortcut_size">64dp</dimen>
-    <dimen name="colorpicker_size">240dp</dimen>
-    <dimen name="colorpicker_size_with_padding">272dp</dimen>
-    <dimen name="colorpicker_hue_width">30dp</dimen>
+    <dimen name="colorpicker_size">300dp</dimen>
+    <dimen name="colorpicker_size_with_padding">372dp</dimen>
+    <dimen name="colorpicker_hue_width">20dp</dimen> <!--30dp-->
     <dimen name="colorpicker_items_height">30dp</dimen>
-    <dimen name="colorpicker_color_width">70dp</dimen>
+    <dimen name="colorpicker_color_width">35dp</dimen>
+    <dimen name="colorpicker_color_height">70dp</dimen>
 
     <dimen name="normal_icon_size">48dp</dimen>
-    <dimen name="fastscroll_width">8dp</dimen>
-    <dimen name="fastscroll_height">40dp</dimen>
     <dimen name="fingerprint_icon_size">72dp</dimen>
-    <dimen name="fastscroll_bubble_offset">30dp</dimen>
     <dimen name="fab_size">56dp</dimen>
     <dimen name="secondary_fab_bottom_margin">76dp</dimen>
     <dimen name="file_picker_icon_size">54dp</dimen>
@@ -32,13 +37,17 @@
     <dimen name="top_shadow_height">100dp</dimen>
     <dimen name="rounded_corner_radius_small">4dp</dimen>
     <dimen name="rounded_corner_radius_big">10dp</dimen>
-    <dimen name="bottom_sheet_corner_radius">24dp</dimen>
+    <dimen name="bottom_sheet_corner_radius">10dp</dimen>
+    <dimen name="breadcrumbs_layout_height">48dp</dimen>
+    <dimen name="simple_list_item_height">56dp</dimen>
 
     <dimen name="dragselect_hotspot_height">56dp</dimen>
     <dimen name="selection_check_size">26dp</dimen>
-    <dimen name="widget_colorpicker_size">50dp</dimen>
-    <dimen name="line_color_picker_height">80dp</dimen>
-    <dimen name="line_color_picker_margin">10dp</dimen>
+    <dimen name="widget_colorpicker_size">46dp</dimen> <!--50dp -->
+    <dimen name="line_color_picker_height">80dp</dimen> <!--80dp высота строки-->
+    <dimen name="line_color_picker_margin">10dp</dimen> <!--10dp высота выбранного цвета-->
+    <dimen name="grid_color_picker_height">25dp</dimen>  <!--20dp для 19 граф, 25dp для 12, высота строки-->
+    <dimen name="grid_color_picker_margin">0dp</dimen> <!--высота выбранного цвета или расстояние между строками-->
     <dimen name="line_color_picker_app_icon_size">64dp</dimen>
 
     <dimen name="tiny_text_size">8sp</dimen>
@@ -48,6 +57,26 @@
     <dimen name="bigger_text_size">16sp</dimen>
     <dimen name="middle_text_size">17sp</dimen>
     <dimen name="big_text_size">18sp</dimen>
-    <dimen name="actionbar_text_size">20sp</dimen>
+    <dimen name="actionbar_text_size">21sp</dimen>
     <dimen name="extra_big_text_size">22sp</dimen>
+
+    <dimen name="cab_popup_menu_min_width">168dp</dimen>
+    <dimen name="cab_item_min_width">85dp</dimen>
+    <dimen name="popup_menu_elevation">4dp</dimen>
+
+    <dimen name="ten_dpi">10dp</dimen>
+    <dimen name="holder_corners">10dp</dimen>
+    <dimen name="holder_ripple_corners">8dp</dimen>
+
+    <dimen name="material2_corners">100dp</dimen>
+    <dimen name="settings_summary_top_margin">4dp</dimen>
+    <dimen name="settings_icon_end_margin">12dp</dimen>
+
+    <!--collapsing toolbar purchase-->
+    <dimen name="purchase_toolbar_height">102dp</dimen>
+    <dimen name="purchase_image_top_margin">34dp</dimen>
+    <dimen name="purchase_image_right_margin">26dp</dimen>
+    <dimen name="purchase_name_top_margin">24dp</dimen>
+    <dimen name="purchase_name_right_margin">12dp</dimen>
+    <dimen name="zero">0dp</dimen>
 </resources>

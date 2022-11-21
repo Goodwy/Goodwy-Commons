@@ -6,6 +6,7 @@ import android.os.Handler
 import android.provider.Settings
 import android.util.AttributeSet
 import android.widget.RelativeLayout
+import androidx.biometric.auth.AuthPromptHost
 import com.github.ajalt.reprint.core.AuthenticationFailureReason
 import com.github.ajalt.reprint.core.AuthenticationListener
 import com.github.ajalt.reprint.core.Reprint
@@ -24,7 +25,7 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        val textColor = context.baseConfig.textColor
+        val textColor = context.getProperTextColor()
         context.updateTextColors(fingerprint_lock_holder)
         fingerprint_image.applyColorFilter(textColor)
 
@@ -33,7 +34,13 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
         }
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView) {
+    override fun initTab(
+        requiredHash: String,
+        listener: HashListener,
+        scrollView: MyScrollView,
+        biometricPromptHost: AuthPromptHost,
+        showBiometricAuthentication: Boolean
+    ) {
         hashListener = listener
     }
 
@@ -55,10 +62,11 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
                 hashListener.receivedHash("", PROTECTION_FINGERPRINT)
             }
 
-            override fun onFailure(failureReason: AuthenticationFailureReason, fatal: Boolean, errorMessage: CharSequence?, moduleTag: Int, errorCode: Int) {
+            override fun onFailure(failureReason: AuthenticationFailureReason?, fatal: Boolean, errorMessage: CharSequence?, moduleTag: Int, errorCode: Int) {
                 when (failureReason) {
                     AuthenticationFailureReason.AUTHENTICATION_FAILED -> context.toast(R.string.authentication_failed)
                     AuthenticationFailureReason.LOCKED_OUT -> context.toast(R.string.authentication_blocked)
+                    else -> {}
                 }
             }
         })

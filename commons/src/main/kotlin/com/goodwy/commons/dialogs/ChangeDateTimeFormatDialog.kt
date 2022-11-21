@@ -2,18 +2,18 @@ package com.goodwy.commons.dialogs
 
 import android.app.Activity
 import android.text.format.DateFormat
-import androidx.appcompat.app.AlertDialog
 import com.goodwy.commons.R
 import com.goodwy.commons.R.id.*
 import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.getAlertDialogBuilder
 import com.goodwy.commons.extensions.setupDialogStuff
 import com.goodwy.commons.helpers.*
 import kotlinx.android.synthetic.main.dialog_change_date_time_format.view.*
 import java.util.*
 
 class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Unit) {
-    val view = activity.layoutInflater.inflate(R.layout.dialog_change_date_time_format, null)!!
-    val sampleTS = 1613422500000    // February 15, 2021
+    private val view = activity.layoutInflater.inflate(R.layout.dialog_change_date_time_format, null)!!
+    private val sampleTS = 1613422500000    // February 15, 2021
 
     init {
         view.apply {
@@ -41,12 +41,12 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
             formatButton.isChecked = true
         }
 
-        AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
-                .setNegativeButton(R.string.cancel, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this)
-                }
+        activity.getAlertDialogBuilder()
+            .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
+            .setNegativeButton(R.string.cancel, null)
+            .apply {
+                activity.setupDialogStuff(view, this)
+            }
     }
 
     private fun dialogConfirmed() {
@@ -67,7 +67,7 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
 
     private fun formatDateSample(format: String): String {
         val cal = Calendar.getInstance(Locale.ENGLISH)
-        cal.timeInMillis = sampleTS
+        //cal.timeInMillis = sampleTS
         return DateFormat.format(format, cal).toString()
     }
 }

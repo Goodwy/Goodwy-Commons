@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Dangos mân luniau cysylltiadau</string>
+    <string name="use_icon_tabs_summary">Eiconau yn lle testun ar dabiau</string>
+    <string name="use_icon_tabs">Defnyddio eiconau tabiau</string>
+    <string name="round_play_icon_summary">Mae\'r eicon chwarae/oedi wedi\'i lliwio yn y prif liw</string>
+    <string name="round_play_icon">Eicon chwarae/oedi crwn</string>
+    <string name="save_recordings_in_summary">Gan ddechrau o Android 10 , nid oes gan yr ap fynediad i\'ch ffeiliau</string>
+    <string name="gray_theme">Llwyd</string>
+    <string name="pref_category_appearance">Gwedd</string>
+    <string name="pref_theme_summary">Dewiswch thema sydd wedi\'i gosod ymlaen llaw</string>
+    <string name="customization_theme_summary">Dewis themâu a lliwiau rhyngwyneb</string>
+    <string name="recorder_g">Cofiadur</string>
+    <string name="player_g">Chwaraewr</string>
+    <string name="general">Cyffredinol</string>
+    <string name="default_tab">Tab diofyn</string>
+    <string name="color">lliw</string>
+    <string name="black">Du</string>
+    <string name="show_dividers">Dangos rhanwyr</string>
+    <string name="colored_contacts">Eiconau lliw cysylltiadau</string>
+    <string name="accent_color">Lliw acen</string>
+    <string name="incoming_call">Galwad i Mewn</string>
+    <string name="outgoing_call">Galwad Allanol</string>
+    <string name="missed_call">Galwad a Fethwyd</string>
+    <string name="unblock_number">Rhif dad-gloi</string>
+    <string name="recents">Diweddar</string>
+    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
+    <string name="plus_summary">Mae ein holl apiau yn rhad ac am ddim, yn Ffynhonnell Agored a bydd bob amser yn parhau felly. Gyda\'ch help chi gallwn weithredu mwy o nodweddion a\'u gwneud hyd yn oed yn well</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
+    <string name="copyright_g">f %1$s\nHawlfraint © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Diweddara Goodwy Thank You i\'r fersiwn diweddaraf</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Oes, wrth gwrs. Gallet ddweud wrth eraill mor dda yw\'r apiau neu roi adborth a sgôr da. Gallet hefyd helpu ehangu a chywiro cyfieithiadau i\'r Gymraeg a ieithoedd eraill.
+        Mae canllaw yma <a href="https://github.com/Goodwy/Discussion">https://github.com/Goodwy/Discussion</a>, neu anfona ebost ata\'i (yn Saesneg) <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> os oes angen help.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
+        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
+        If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

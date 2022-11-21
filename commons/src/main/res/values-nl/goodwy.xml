@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Miniaturen van contacten weergeven</string>
+    <string name="use_icon_tabs_summary">Pictogrammen in plaats van tekst op tabbladen</string>
+    <string name="use_icon_tabs">Tabbladpictogrammen gebruiken</string>
+    <string name="round_play_icon_summary">Het afspeel-/pauzepictogram wordt in de primaire kleur gekleurd</string>
+    <string name="round_play_icon">Pictogram Afspelen/pauzeren rond</string>
+    <string name="save_recordings_in_summary">Vanaf Android 10 heeft de app geen toegang tot uw bestanden</string>
+    <string name="gray_theme">Grijs</string>
+    <string name="pref_category_appearance">Uiterlijk</string>
+    <string name="pref_theme_summary">Selecteer een vooraf geïnstalleerd thema</string>
+    <string name="customization_theme_summary">Selectie van thema\'s en interfacekleuren</string>
+    <string name="recorder_g">Blokfluit</string>
+    <string name="player_g">Speler</string>
+    <string name="general">Algemeen</string>
+    <string name="default_tab">Standaardtabblad</string>
+    <string name="color">kleur</string>
+    <string name="black">Zwart</string>
+    <string name="show_dividers">Verdelers weergeven</string>
+    <string name="colored_contacts">Contacten gekleurde pictogrammen</string>
+    <string name="accent_color">Accentkleur</string>
+    <string name="incoming_call">Inkomend gesprek</string>
+    <string name="outgoing_call">Uitgaand gesprek</string>
+    <string name="missed_call">Gemiste oproep</string>
+    <string name="unblock_number">Deblokkeer nummer</string>
+    <string name="recents">Recent</string>
+    <string name="unblock_confirmation">Weet u zeker dat u \"%s\" wilt deblokkeren?</string>
+    <string name="plus_summary">Al onze apps zijn advertentievrij, Open Source en dat zal altijd zo blijven. Met uw hulp zijn we in staat om meer functies te implementeren en ze nog beter te maken</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Goodwy Bedankje kopen</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Er is een nieuwe versie van Goodwy Bedankje</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Maar natuurlijk! Vertel anderen over deze apps of geef feedback en positieve beoordelingen. Ook het vertalen van de apps in een nieuwe taal of het bijwerken van bestaande vertalingen wordt gewaardeerd.
+        Een handleiding is te vinden op https://github.com/Goodwy/Discussion , of stuur me een bericht via goodwy.dev@gmail.com voor hulp.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">Omdat deze versie van de app niet meer zal worden bijgewerkt, zullen eventuele fouten nooit meer worden opgelost. Ook zullen er geen nieuwe functies meer worden toegevoegd. De Pro-versie is voor een bescheiden bedrag te vinden in de Google Play Store.
+        Dit bedrag hoeft maar een keer te worden betaald, daarna nooit meer. Ook niet voor nieuwe apparaten. Als de Pro-versie toch niet bevalt, deïnstalleer de app dan binnen enkele uren en het bedrag zal worden teruggestort.
+        Ook een latere restitutie is nog mogelijk. Neem hiervoor contact op via goodwy.dev@gmail.com en het geld zal alsnog worden teruggestort.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">VEROUDERD: Deze versie van de app wordt niet langer doorontwikkeld. De Pro-versie is de vinden op https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Bij het deïnstalleren van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via goodwy.dev@gmail.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

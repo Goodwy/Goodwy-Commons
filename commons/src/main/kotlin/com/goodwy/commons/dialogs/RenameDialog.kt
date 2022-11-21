@@ -11,7 +11,6 @@ import com.goodwy.commons.helpers.RENAME_PATTERN
 import com.goodwy.commons.helpers.RENAME_SIMPLE
 import com.goodwy.commons.views.MyViewPager
 import kotlinx.android.synthetic.main.dialog_rename.view.*
-import java.util.*
 
 class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String>, val useMediaFileExtension: Boolean, val callback: () -> Unit) {
     var dialog: AlertDialog? = null
@@ -29,9 +28,19 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
             }
             viewPager.currentItem = activity.baseConfig.lastRenameUsed
 
-            val textColor = context.baseConfig.textColor
+            if (activity.baseConfig.isUsingSystemTheme) {
+                dialog_tab_layout.setBackgroundColor(activity.resources.getColor(R.color.you_dialog_background_color))
+            } else {
+                dialog_tab_layout.setBackgroundColor(context.getProperBackgroundColor())
+            }
+
+            val textColor = context.getProperTextColor()
             dialog_tab_layout.setTabTextColors(textColor, textColor)
-            dialog_tab_layout.setSelectedTabIndicatorColor(context.getAdjustedPrimaryColor())
+            dialog_tab_layout.setSelectedTabIndicatorColor(context.getProperPrimaryColor())
+
+            if (activity.baseConfig.isUsingSystemTheme) {
+                dialog_tab_layout.setBackgroundColor(activity.resources.getColor(R.color.you_dialog_background_color))
+            }
 
             dialog_tab_layout.onTabSelectionChanged(tabSelectedAction = {
                 viewPager.currentItem = when {
@@ -41,26 +50,27 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
             })
         }
 
-        dialog = AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, null)
-                .setNegativeButton(R.string.cancel) { dialog, which -> dismissDialog() }
-                .create().apply {
-                    activity.setupDialogStuff(view, this).apply {
-                        window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
-                        getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                            tabsAdapter.dialogConfirmed(useMediaFileExtension, viewPager.currentItem) {
-                                dismissDialog()
-                                if (it) {
-                                    activity.baseConfig.lastRenameUsed = viewPager.currentItem
-                                    callback()
-                                }
+        activity.getAlertDialogBuilder()
+            .setPositiveButton(R.string.ok, null)
+            .setNegativeButton(R.string.cancel) { dialog, which -> dismissDialog() }
+            .apply {
+                activity.setupDialogStuff(view, this) { alertDialog ->
+                    dialog = alertDialog
+                    alertDialog.window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                        tabsAdapter.dialogConfirmed(useMediaFileExtension, viewPager.currentItem) {
+                            dismissDialog()
+                            if (it) {
+                                activity.baseConfig.lastRenameUsed = viewPager.currentItem
+                                callback()
                             }
                         }
                     }
                 }
+            }
     }
 
     private fun dismissDialog() {
-        dialog!!.dismiss()
+        dialog?.dismiss()
     }
 }

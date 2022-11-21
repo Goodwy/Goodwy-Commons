@@ -1,19 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Hủy bỏ</string>
+    <string name="back">Quay lại</string>
+    <string name="nothing">Không có gì</string>
+    <string name="later">Sau</string>
     <string name="save_as">Lưu thành</string>
     <string name="file_saved">Tệp đã được lưu thành công</string>
     <string name="invalid_file_format">Định dạng tập tin không hợp lệ</string>
     <string name="out_of_memory_error">Lỗi bộ nhớ</string>
     <string name="an_error_occurred">Xảy ra lỗi: %s</string>
+    <string name="error">Error: %s</string>
     <string name="open_with">Mở với</string>
     <string name="edit_with">Chỉnh sửa với</string>
+    <string name="edit">Chỉnh sửa</string>
     <string name="no_app_found">Không tìm thấy ứng dụng hợp lệ</string>
-    <string name="set_as">Đặt làm...</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="no_browser_found">Không tìm thấy trình duyệt</string>
+    <string name="no_email_client_found">Không tìm thấy ứng dụng email</string>
+    <string name="set_as">Đặt làm</string>
+    <string name="copy_to_clipboard">Sao chép vào bộ nhớ tạm</string>
+    <string name="copy_number_to_clipboard">Sao chép số vào bộ nhớ tạm</string>
     <string name="value_copied_to_clipboard">Giá trị được sao chép vào clipboard</string>
-    <string name="dial_number">Dial number</string>
+    <string name="value_copied_to_clipboard_show">Giá trị được sao chép vào clipboard:\n%s</string>
+    <string name="dial_number">Quay số</string>
     <string name="unknown">Không xác định</string>
     <string name="always">Luôn luôn</string>
     <string name="never">Không bao giờ</string>
@@ -27,25 +36,67 @@
     <string name="select_a_different_color">Chọn một màu khác</string>
     <string name="download">Tải xuống</string>
     <string name="notification">Thông báo</string>
+    <string name="notifications">Notifications</string>
     <string name="email">Email</string>
-    <string name="previous">Previous</string>
-    <string name="playpause">Play / Pause</string>
+    <string name="previous">Trước đó</string>
+    <string name="playpause">Phát / Dừng</string>
     <string name="next">Next</string>
     <string name="number">Number</string>
-    <string name="no_contacts_found">No contacts found</string>
-    <string name="request_the_required_permissions">Request the required permissions</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
-
+    <string name="no_contacts_found">Không tìm thấy liên lạc</string>
+    <string name="request_the_required_permissions">Yêu cầu các quyền cần thiết</string>
+    <string name="no_access_to_contacts">Ứng dụng không thể truy cập vào danh bạ của bạn</string>
+    <string name="no_phone_call_permission">Ứng dụng không có quyền thực hiện cuộc gọi điện thoại, vui lòng cấp quyền đó trong cài đặt thiết bị</string>
+    <string name="insert_text_here">Chèn văn bản vào đây</string>
+    <string name="call_person">Gọi %s</string>
+    <string name="zero">Zero</string>
+    <string name="one">One</string>
+    <string name="two">Hai</string>
+    <string name="three">Ba</string>
+    <string name="four">Bốn</string>
+    <string name="five">Năm</string>
+    <string name="six">Sáu</string>
+    <string name="seven">Bảy</string>
+    <string name="eight">Tám</string>
+    <string name="nine">Chín</string>
+    <string name="value">Giá trị</string>
+    <string name="value_cannot_be_empty">Giá trị không thể bỏ trống</string>
+    <string name="create_new_contact">Tạo liên hệ mới</string>
+    <string name="add_to_existing_contact">Thêm vào một liên hệ hiện có</string>
+    <string name="app_corrupt">Ứng dụng bị gián đoạn</string>
+    <string name="disclaimer">Từ chối trách nhiệm</string>
+    <string name="take_photo">Chụp ảnh</string>    
+    <string name="choose_photo">Chọn hình ảnh</string>
+    <string name="choose_video">Choose video</string>
+    <string name="choose_contact">Choose contact</string>
+    <string name="choose_file">Choose file</string>
+    <string name="record_audio">Ghi âm</string>
+    <string name="record_video">Quay video</string>
+    <!-- Events -->
+    <string name="birthday">Ngày sinh nhật</string>
+    <string name="anniversary">Dịp kỉ niệm</string>
+    <!-- Emails -->
+    <string name="home">Home</string>
+    <string name="work">Công việc</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobile</string>
+    <string name="main_number">Chính</string>
+    <string name="work_fax">Work Fax</string>
+    <string name="home_fax">Home Fax</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">No phone number has been found</string>
     <!-- View types -->
     <string name="change_view_type">Thay đổi kiểu xem</string>
     <string name="grid">Lưới</string>
+    <string name="grid_pro">Lưới (Pro)</string>
+    <string name="uneven_grid">Uneven Grid</string>
     <string name="list">Danh sách</string>
     <string name="increase_column_count">Tăng số lượng cột</string>
     <string name="reduce_column_count">Giảm số lượng cột</string>
+    <string name="column_count">Column count</string>
+    <string name="portrait_column_count">Portrait column count</string>
+    <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Thay đổi ảnh bìa</string>
     <string name="select_photo">Chọn ảnh</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
     <string name="not_blocking_anyone">You are not blocking anyone.</string>
@@ -53,31 +104,34 @@
     <string name="block_number">Block number</string>
     <string name="block_numbers">Block numbers</string>
     <string name="blocked_numbers">Blocked numbers</string>
+    <string name="export_blocked_numbers">Export blocked numbers</string>
+    <string name="import_blocked_numbers">Import blocked numbers</string>
     <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
     <string name="set_as_default">Set as default</string>
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
-
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
+    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
     <string name="favorites">Yêu thích</string>
     <string name="add_favorites">Thêm mục yêu thích</string>
     <string name="add_to_favorites">Thêm vào mục yêu thích</string>
     <string name="remove_from_favorites">Loại bỏ khỏi mục ưa thích</string>
-
     <!-- Search -->
     <string name="search">Tìm kiếm</string>
     <string name="type_2_characters">Nhập ít nhất 2 ký tự để bắt đầu tìm kiếm.</string>
-
     <!-- Filters -->
     <string name="filter">Bộ lọc</string>
+    <string name="filter_pro">Bộ lọc (Pro)</string>
     <string name="no_items_found">Không tìm thấy mục nào.</string>
     <string name="change_filter">Thay đổi bộ lọc</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">Cần quyền lưu trữ</string>
     <string name="no_contacts_permission">Cần quyền truy cập danh bạ</string>
     <string name="no_camera_permissions">Cần quyền truy cập máy ảnh</string>
     <string name="no_audio_permissions">Cần quyền truy cập âm thanh</string>
-
+    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
     <!-- Renaming -->
     <string name="rename_file">Đổi tên tập tin</string>
     <string name="rename_folder">Đổi tên thư mục</string>
@@ -99,7 +153,10 @@
     <string name="pattern_renaming">Mẫu</string>
     <string name="string_to_add">Chuỗi để thêm</string>
     <string name="rename_date_time_pattern">%Y - năm\n%M - tháng\n%D - ngày\n%h - giờ\n%m - phút\n%s - giây\n%i - số tăng từ 1</string>
-
+    <string name="filename_without_txt">Filename (without .txt)</string>
+    <string name="filename_without_json">Filename (without .json)</string>
+    <string name="filename_without_zip">Filename (without .zip)</string>
+    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
     <!-- Copy / Move -->
     <string name="copy">Sao chép</string>
     <string name="move">Di chuyển</string>
@@ -116,9 +173,11 @@
     <string name="copy_failed">Không thể sao chép các tập tin</string>
     <string name="copying">Đang sao chép... </string>
     <string name="copying_success">Tập tin được sao chép thành công</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Đã xảy ra lỗi</string>
     <string name="moving">Di chuyển... </string>
     <string name="moving_success">Tập tin đã được chuyển thành công</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Một số tệp không thể di chuyển</string>
     <string name="copying_success_partial">Một số tệp không thể sao chép</string>
     <string name="no_files_selected">Không có tập tin nào được chọn</string>
@@ -127,7 +186,7 @@
     <string name="could_not_create_file">Không thể tạo tệp %s</string>
     <string name="no_new_items">Không có mục mới được tìm thấy</string>
     <string name="no_space">Đích đến không có đủ dung lượng khả dụng.\nRequired  %1$s, khả dụng %2$s</string>
-
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
     <!-- Create new -->
     <string name="create_new">Tạo mới</string>
     <string name="folder">Thư mục</string>
@@ -137,7 +196,6 @@
     <string name="invalid_name">Tên chứa các ký tự không hợp lệ</string>
     <string name="empty_name">Vui lòng nhập tên</string>
     <string name="unknown_error_occurred">Xảy ra lỗi không xác định</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">Tệp \"%s\" đã tồn tại</string>
     <string name="file_already_exists_overwrite">Tệp \"%s\" đã tồn tại. Ghi đè?</string>
@@ -148,39 +206,45 @@
     <string name="skip">Skip</string>
     <string name="append">Nối với \'_1\'</string>
     <string name="apply_to_all">Áp dụng cho tất cả</string>
-
+    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
+    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
+    <string name="cannot_rename_folder">Cannot rename this folder</string>
     <!-- File picker -->
     <string name="select_folder">Chọn một thư mục</string>
     <string name="select_file">Chọn một tập tin</string>
     <string name="confirm_storage_access_title">Xác nhận truy cập bộ nhớ ngoài</string>
+    <string name="confirm_folder_access_title">Confirm folder access</string>
     <string name="confirm_storage_access_text">Vui lòng chọn thư mục trên cùng của thẻ SD trên màn hình tiếp theo, để cấp quyền truy cập ghi</string>
     <string name="confirm_storage_access_text_sd">Nếu bạn không thấy thẻ SD, hãy thử điều này</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Xác nhận lựa chọn</string>
-
+    <string name="loading">Loading…</string>
+    <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Deleting %d item</item>
         <item quantity="other">Deleting %d items</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
         <item quantity="other">%d contacts</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Chọn nơi lưu trữ</string>
+    <string name="storage">Storage</string>
     <string name="internal">Bộ nhớ trong</string>
     <string name="sd_card">Thẻ SD</string>
     <string name="root">Root</string>
@@ -188,7 +252,7 @@
     <string name="sd_card_usb_same">Đường dẫn thẻ SD và thiết bị USB không thể giống nhau</string>
     <string name="app_on_sd_card">Bạn dường như đã cài đặt ứng dụng trên thẻ SD, điều đó làm cho các widget ứng dụng không khả dụng. Bạn thậm chí sẽ không nhìn thấy chúng trong danh sách các widget có sẵn.
          Đây là một giới hạn hệ thống, vì vậy nếu bạn muốn sử dụng các widget, bạn phải di chuyển ứng dụng vào bộ nhớ trong.</string>
-
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Chi tiết</string>
     <string name="path">Đường dẫn</string>
@@ -208,7 +272,9 @@
     <string name="song_title">Tên bài hát</string>
     <string name="gps_coordinates">tọa độ GPS</string>
     <string name="altitude">Độ cao</string>
-
+    <string name="remove_exif">Remove EXIF</string>
+    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
+    <string name="exif_removed">EXIF values removed successfully</string>
     <!-- Color customization -->
     <string name="background_color">Màu nền</string>
     <string name="text_color">Màu văn bản</string>
@@ -236,30 +302,31 @@
     <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Làm ơn hãy mua ứng dụng <a href="https://play.google.com/store/apps/details?id=com.goodwy.thankyou">Simple Thank You</a> để mở khóa tính năng này và hỗ trợ nhà phát triển. Cảm ơn!
+            Làm ơn hãy mua ứng dụng <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> để mở khóa tính năng này và hỗ trợ nhà phát triển. Cảm ơn!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Sáng</string>
     <string name="dark_theme">Tối</string>
+    <string name="auto_theme">Auto</string>
+    <string name="auto_light_dark_theme">Auto light / dark</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Đỏ sẫm</string>
     <string name="white">White</string>
     <string name="black_white">Đen &amp; trắng</string>
     <string name="custom">Tùy chỉnh</string>
     <string name="shared">Đã chia sẻ</string>
-
+    <string name="system_default">System default</string>
     <!-- What's new -->
     <string name="whats_new">Có gì mới ? </string>
     <string name="whats_new_disclaimer">* chỉ các bản cập nhật lớn hơn được liệt kê ở đây, luôn luôn cũng có một số cải tiến nhỏ hơn</string>
-
     <!-- Actionbar items -->
     <string name="delete">Xóa bỏ</string>
     <string name="remove">Xóa</string>
     <string name="rename">Đổi tên</string>
     <string name="share">Chia sẻ</string>
     <string name="share_via">Chia sẻ qua</string>
+    <string name="resize">Thay đổi kích thước</string>
     <string name="select_all">Chọn tất cả</string>
     <string name="select_text">Select text</string>
     <string name="hide">Ẩn</string>
@@ -273,7 +340,10 @@
     <string name="undo">Hoàn tác</string>
     <string name="redo">Khôi phục</string>
     <string name="print">In</string>
+    <string name="print_pro">In (Pro)</string>
+    <string name="shortcut">Shortcut</string>
     <string name="create_shortcut">Tạo phím tắt</string>
+    <string name="create_shortcut_pro">Tạo phím tắt (Pro)</string>
     <string name="add_number_to_contact">Add number to contact</string>
     <string name="view_contact_details">View contact details</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
@@ -281,12 +351,20 @@
     <string name="toggle_filename">Chuyển đổi khả năng hiển thị tên tệp</string>
     <string name="move_to_top">Move to the top</string>
     <string name="move_to_bottom">Move to the bottom</string>
-
+    <string name="pin_item">Pin item</string>
+    <string name="unpin_item">Unpin item</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="send_email">Send email</string>
+    <string name="call">Call</string>
+    <string name="contact_details">Contact details</string>
+    <string name="add_contact">Add contact</string>
+    <string name="wallpapers">Wallpapers</string>
     <!-- Sorting -->
     <string name="sort_by">Sắp xếp theo</string>
     <string name="name">Tên</string>
     <string name="size">Kích thước</string>
     <string name="last_modified">Sửa đổi lần cuối</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Ngày chụp</string>
     <string name="title">Tiêu đề</string>
     <string name="filename">Tên tệp</string>
@@ -303,23 +381,23 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Bạn có chắc chắn muốn tiến hành xóa?</string>
-    <string name="deletion_confirmation">Bạn có chắc chắn muốn xóa %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Bạn có chắc chắn muốn chuyển %s vào Thùng rác không?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Bạn có chắc chắn muốn xóa %s?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Bạn có chắc chắn muốn chuyển %s vào Thùng rác không?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Bạn có chắc bạn muốn xóa mục này?</string>
     <string name="are_you_sure_recycle_bin">Bạn có chắc chắn muốn chuyển mục này vào Thùng rác không?</string>
     <string name="do_not_ask_again">Đừng hỏi lại trong phần này</string>
+    <string name="do_not_show_again">Do not show again</string>
     <string name="yes">Có</string>
     <string name="no">Không</string>
     <string name="maybe">Có lẽ</string>
-
     <plurals name="delete_warning">
         <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Nhập PIN</string>
@@ -330,9 +408,12 @@
     <string name="insert_pattern">Chèn mẫu hình</string>
     <string name="wrong_pattern">Mẫu hình sai</string>
     <string name="repeat_pattern">Lặp lại mẫu hình</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Vân tay</string>
     <string name="add_fingerprint">Thêm dấu vân tay</string>
     <string name="place_finger">Vui lòng đặt ngón tay của bạn trên cảm biến vân tay</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Quá trình xác thực đã thất bại</string>
     <string name="authentication_blocked">Xác thực bị chặn, vui lòng thử lại sau giây lát</string>
     <string name="no_fingerprints_registered">Bạn chưa đăng ký dấu vân tay, vui lòng thêm trong Cài đặt của thiết bị</string>
@@ -340,13 +421,14 @@
     <string name="protection_setup_successfully">Thiết lập mật khẩu thành công. Vui lòng cài đặt lại ứng dụng trong trường hợp bạn quên nó.</string>
     <string name="fingerprint_setup_successfully">Thiết lập bảo vệ thành công. Vui lòng cài đặt lại ứng dụng trong trường hợp có vấn đề với việc thiết lập lại.</string>
     <string name="lock_folder">Khóa thư mục</string>
+    <string name="lock_folder_pro">Khóa thư mục (Pro)</string>
     <string name="unlock_folder">Mở khóa thư mục</string>
     <string name="lock_folder_notice">Bảo vệ này chỉ hoạt động trong ứng dụng này, nó không được phép thay thế mã hóa thư mục toàn hệ thống thực sự.</string>
-
     <!-- Times -->
     <string name="yesterday">Hôm qua</string>
     <string name="today">Hôm nay</string>
     <string name="tomorrow">Ngày mai</string>
+    <string name="every_day">Every day</string>
     <string name="hide_year">Hide year</string>
     <string name="seconds_raw">giây</string>
     <string name="minutes_raw">phút</string>
@@ -355,7 +437,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="one">%d second</item>
         <item quantity="other">%d seconds</item>
@@ -384,7 +465,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d second</item>
@@ -414,7 +494,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d second before</item>
@@ -444,7 +523,6 @@
         <item quantity="one">%d year before</item>
         <item quantity="other">%d years before</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d second</item>
@@ -474,14 +552,13 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Thời gian còn lại cho đến khi báo thức kêu: \n%s</string>
     <string name="reminder_triggers_in">Thời gian còn lại cho đến khi nhắc nhở kích hoạt: \n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Hãy chắc chắn rằng báo thức hoạt động đúng trước khi dựa vào nó. Nó có thể hoạt động sai do hạn chế hệ thống liên quan đến tiết kiệm pin.</string>
     <string name="reminder_warning">Hãy chắc chắn rằng các lời nhắc hoạt động đúng trước khi dựa vào chúng. Chúng có thể hoạt động sai do hạn chế hệ thống liên quan đến tiết kiệm pin.</string>
     <string name="notifications_disabled">Thông báo của ứng dụng này đã bị vô hiệu hóa. Vui lòng vào cài đặt thiết bị của bạn để kích hoạt chúng.</string>
-
     <!-- Alarms -->
     <string name="alarm">báo thức</string>
     <string name="snooze">Báo lại</string>
@@ -494,15 +571,18 @@
     <string name="no_sound">Không có âm báo</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Cài đặt</string>
     <string name="purchase_simple_thank_you">Cảm ơn vì đã mua hàng Simple</string>
+    <string name="general_settings">General</string>
+    <string name="color_customization">Color customization</string>
     <string name="customize_colors">Tùy chỉnh màu sắc</string>
     <string name="customize_colors_locked">Tùy chỉnh màu sắc (Locked)</string>
+    <string name="feature_locked">Locked</string>
     <string name="customize_widget_colors">Tùy chỉnh màu widget</string>
     <string name="customize_notifications">Customize notifications</string>
     <string name="use_english_language">Sử dụng tiếng anh</string>
+    <string name="language">Language</string>
     <string name="show_hidden_items">Hiển thị các mục ẩn</string>
     <string name="font_size">Cỡ chữ</string>
     <string name="small">Nhỏ</string>
@@ -534,7 +614,7 @@
     <string name="settings_imported_successfully">Cài đặt được nhập thành công</string>
     <string name="start_name_with_surname">Start name with surname</string>
     <string name="clear_cache">Clear cache</string>
-
+    <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
     <!-- Setting sections -->
     <string name="visibility">Hiển thị</string>
     <string name="security">Bảo vệ</string>
@@ -545,7 +625,20 @@
     <string name="startup">Mở đầu</string>
     <string name="text">Văn bản</string>
     <string name="migrating">Di chuyển</string>
-
+    <string name="quality">Quality</string>
+    <string name="main_screen">Main screen</string>
+    <string name="thumbnails">Thumbnails</string>
+    <string name="list_view">List view</string>
+    <!-- Excluding -->
+    <string name="exclude">Loại trừ</string>
+    <string name="exclude_folder">Exclude folder</string>
+    <string name="excluded_folders">Các thư mục bị loại trừ</string>
+    <string name="excluded">(không bao gồm)</string>
+    <string name="manage_excluded_folders">Quản lý các thư mục loại trừ</string>
+    <string name="remove_all">Xóa tất cả</string>
+    <string name="remove_all_description">Xóa tất cả các thư mục khỏi danh sách loại trừ\? Điều này sẽ không xóa các thư mục.</string>
+    <string name="temporarily_show_excluded">Temporarily show excluded</string>
+    <string name="stop_showing_excluded">Stop showing excluded</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -556,7 +649,6 @@
     <string name="last_used_tab">Last used one</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Khôi phục tập tin này</string>
     <string name="restore_selected_files">Khôi phục các tập tin đã chọn</string>
@@ -568,12 +660,10 @@
     <string name="moving_recycle_bin_items_disabled">Di chuyển mục trong Thùng rác bị vô hiệu hóa, vui lòng sử dụng Khôi phục</string>
     <string name="show_the_recycle_bin">Hiển thị thùng rác</string>
     <string name="hide_the_recycle_bin">Ẩn thùng rác</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>
         <item quantity="other">Moving %d items into the Recycle Bin</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Đang nhập… </string>
     <string name="exporting">Đang xuất… </string>
@@ -584,14 +674,13 @@
     <string name="importing_some_entries_failed">Nhập một số mục không thành công</string>
     <string name="exporting_some_entries_failed">Xuất một số mục không thành công</string>
     <string name="no_entries_for_importing">Không có mục để nhập được tìm thấy</string>
+    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">Không có mục nào để xuất được tìm thấy</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Bạn dường như có một USB được gắn vào thiết bị của bạn. Để đảm bảo các tệp của nó xuất hiện đúng, bạn cần cấp quyền bổ sung.</string>
     <string name="confirm_usb_storage_access_text">Vui lòng chọn thư mục trên cùng của thiết bị USB trên màn hình tiếp theo để cấp quyền truy cập</string>
     <string name="wrong_root_selected_usb">Đã chọn sai thư mục, vui lòng chọn thư mục gốc của thiết bị USB của bạn</string>
-
     <!-- Dates -->
     <string name="january">Tháng Một</string>
     <string name="february">Tháng Hai</string>
@@ -605,7 +694,6 @@
     <string name="october">Tháng Mười</string>
     <string name="november">Tháng Mười Một</string>
     <string name="december">Tháng Mười Hai</string>
-
     <!-- in January -->
     <string name="in_january">trong Tháng Một</string>
     <string name="in_february">trong Tháng Hai</string>
@@ -619,7 +707,6 @@
     <string name="in_october">trong Tháng Mười</string>
     <string name="in_november">trong Tháng Mười Một</string>
     <string name="in_december">trong tháng Mười Hai</string>
-
     <string name="monday">Thứ hai</string>
     <string name="tuesday">Thứ ba</string>
     <string name="wednesday">Thứ tư</string>
@@ -627,7 +714,6 @@
     <string name="friday">Thứ sáu</string>
     <string name="saturday">Thứ bảy</string>
     <string name="sunday">Chủ nhật</string>
-
     <string name="monday_letter">T.H</string>
     <string name="tuesday_letter">T.B</string>
     <string name="wednesday_letter">T.T</string>
@@ -635,7 +721,6 @@
     <string name="friday_letter">T.S</string>
     <string name="saturday_letter">T.B</string>
     <string name="sunday_letter">CN</string>
-
     <string name="monday_short">T.hai</string>
     <string name="tuesday_short">T.ba</string>
     <string name="wednesday_short">T.tư</string>
@@ -643,7 +728,6 @@
     <string name="friday_short">T.sáu</string>
     <string name="saturday_short">T.bảy</string>
     <string name="sunday_short">CN</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Phiên bản ứng dụng của bạn sẽ không được cập nhật nữa. Vui lòng nâng cấp lên phiên bản Pro để nhận bản sửa lỗi mới và các cải tiến khác.</string>
     <string name="upgrade_to_pro_long_click">Phiên bản ứng dụng của bạn sẽ không được cập nhật nữa. Vui lòng nâng cấp lên phiên bản Pro để nhận các bản sửa lỗi mới và các cải tiến khác bằng cách nhấp vào đây.</string>
@@ -651,50 +735,60 @@
     <string name="more_info">Thêm thông tin</string>
     <string name="upgrade">Nâng cấp</string>
     <string name="upgrade_calendar">Bạn phải di chuyển thủ công các sự kiện được lưu trữ cục bộ thông qua xuất trong tệp .ics, sau đó nhập. Bạn có thể tìm thấy cả hai nút xuất / nhập ở menu màn hình chính.</string>
-
+    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
+    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
+    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
     <!-- About -->
     <string name="about">Thông tin</string>
+    <string name="website">Website</string>
     <string name="website_label">Đối với các mã nguồn truy cập</string>
     <string name="email_label">Gửi phản hồi hoặc đề xuất của bạn tới</string>
     <string name="upgrade_to_pro">Nâng cấp lên Pro</string>
-    <string name="more_apps_underlined"><u>Các ứng dụng khác</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
-    <string name="third_party_licences_underlined"><u>Giấy phép bên thứ ba</u></string>
-    <string name="invite_friends_underlined"><u>Mời bạn bè</u></string>
+    <string name="more_apps">Các ứng dụng khác</string>
+    <string name="more_apps_from_us">More apps from us</string>
+    <string name="invite_friends">Mời bạn bè</string>
     <string name="share_text">Xin chào, hãy kiểm tra %1$s tại %2$s</string>
     <string name="invite_via">Mời qua</string>
-    <string name="rate_us_underlined"><u>Đánh giá chúng tôi</u></string>
+    <string name="rate_us">Đánh giá chúng tôi</string>
     <string name="rate">Đánh giá</string>
     <string name="donate">Donate</string>
-    <string name="donate_underlined"><u>Đóng góp</u></string>
     <string name="follow_us">Theo dõi chúng tôi</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="support">Support</string>
+    <string name="help_us">Help us</string>
+    <string name="social">Social</string>
+    <string name="other">Other</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="version_placeholder">Version %s</string>
+    <string name="hello">Hello :)</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Thông tin bổ sung</string>
     <string name="app_version">Phiên bản ứng dụng: %s</string>
     <string name="device_os">Hệ điều hành thiết bị: %s</string>
     <string name="donate_please">
         <![CDATA[
             Xin chào,<br><br>
-            hy vọng bạn đang thưởng thức ứng dụng. Nó không chứa quảng cáo, vui lòng hỗ trợ sự nhà phát triển bằng cách mua ứng dụng<a href="https://play.google.com/store/apps/details?id=com.goodwy.thankyou">Simple Thank You</a>  nó cũng sẽ ngăn hộp thoại này hiển thị lại.<br><br>
+            hy vọng bạn đang thưởng thức ứng dụng. Nó không chứa quảng cáo, vui lòng hỗ trợ sự nhà phát triển bằng cách mua ứng dụng<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>  nó cũng sẽ ngăn hộp thoại này hiển thị lại.<br><br>
             Thank you!
         ]]>
     </string>
+    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
     <string name="purchase">Mua hàng</string>
+    <string name="get_simple_phone">Get Simple Phone</string>
     <string name="update_thank_you">Vui lòng cập nhật Simple Thank You lên phiên bản mới nhất</string>
     <string name="before_asking_question_read_faq">Trước khi bạn đặt câu hỏi, vui lòng kiểm tra cài đặt ứng dụng và đọc Câu hỏi thường gặp trước. Có thể giải pháp ở đó.</string>
     <string name="before_rate_read_faq">Trước khi bạn đánh giá chúng tôi, vui lòng kiểm tra cài đặt ứng dụng và đọc Câu hỏi thường gặp trước. Nếu bạn gặp vấn đề, có thể giải pháp ở đó.</string>
     <string name="make_sure_latest">Hãy đảm bảo rằng bạn đang sử dụng phiên bản ứng dụng mới nhất.</string>
+    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
     <string name="read_it">Hãy đọc</string>
     <string name="read_faq">Đọc Câu hỏi thường gặp(FAQ)</string>
     <string name="rate_us_prompt">Xin chào,\n\ncó vẻ như bạn đang sử dụng ứng dụng này khá lâu và chúng tôi thực sự đánh giá cao nó.\n\nNếu có thể, vui lòng đánh giá chúng tôi trên Google Play. Điều đó thực sự sẽ giúp chúng tôi rất nhiều.\n\n Bất kể bạn quyết định như thế nào, bạn sẽ không thấy thông báo này nữa.\n\nCảm ơn!</string>
     <string name="rate_our_app">Rate our app please :)</string>
     <string name="thank_you">Thank you</string>
-    <string name="widget_locked">
-        <![CDATA[
-            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.goodwy.thankyou">Simple Thank You</a> to unlock it.
-        ]]>
-    </string>
-
+    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -707,7 +801,6 @@
             Thanks
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -719,12 +812,13 @@
     <string name="simple_file_manager">Simple File Manager</string>
     <string name="simple_flashlight">Simple Flashlight</string>
     <string name="simple_gallery">Simple Gallery</string>
+    <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_launcher">Simple Launcher</string>
     <string name="simple_music_player">Simple Music Player</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Calculator</string>
     <string name="calendar_short">Calendar</string>
@@ -736,27 +830,31 @@
     <string name="file_manager_short">File Manager</string>
     <string name="flashlight_short">Flashlight</string>
     <string name="gallery_short">Gallery</string>
+    <string name="keyboard_short">Keyboard</string>
+    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">Music Player</string>
     <string name="notes_short">Notes</string>
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             Có vẻ như phiên bản ứng dụng của bạn bị hỏng. Vui lòng tải phiên bản gốc <a href="%s">tại đây</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Các câu hỏi thường gặp</string>
     <string name="before_asking_question">Trước khi bạn đặt câu hỏi, trước tiên hãy đọc</string>
     <string name="faq_1_title_commons">Tại sao tôi không thấy widget ứng dụng này trong danh sách widget?</string>
     <string name="faq_1_text_commons">Rất có thể là do bạn đã di chuyển ứng dụng vào thẻ SD. Có một giới hạn hệ thống Android ẩn các widget ứng dụng đã cho
-         trong trường hợp đó. Giải pháp duy nhất là chuyển ứng dụng trở lại Bộ nhớ trong thông qua cài đặt thiết bị của bạn.</string>
+        trong trường hợp đó. Giải pháp duy nhất là chuyển ứng dụng trở lại Bộ nhớ trong thông qua cài đặt thiết bị của bạn.</string>
     <string name="faq_2_title_commons">Tôi muốn hỗ trợ bạn, nhưng tôi không thể quyên góp tiền. Tôi có thể làm gì khác không?</string>
-    <string name="faq_2_text_commons">Phải, tất nhiên. Bạn có thể truyền bá về các ứng dụng hoặc đưa ra phản hồi và xếp hạng tốt. Bạn cũng có thể giúp đỡ bằng cách dịch các ứng dụng bằng ngôn ngữ mới hoặc chỉ cập nhật một số bản dịch hiện có.
-         Bạn có thể tìm thấy hướng dẫn tại https://github.com/SimpleMobileTools/General-Discussion hoặc chỉ cần gửi tin nhắn cho tôi tại goodwy.dev@gmail.com nếu bạn cần trợ giúp.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Tôi đã xóa một số tệp do nhầm lẫn, làm cách nào để khôi phục chúng?</string>
     <string name="faq_3_text_commons">Đáng buồn thay, bạn không thể. Các tập tin sẽ bị xóa ngay lập tức sau hộp thoại xác nhận, không có thùng rác nào có sẵn.</string>
     <string name="faq_4_title_commons">Tôi không thích màu của widget, tôi có thể thay đổi chúng không?</string>
@@ -765,63 +863,117 @@
     <string name="faq_5_text_commons">Nếu chúng thực sự bị xóa, bạn không thể. Tuy nhiên, có một Thùng rác được bật theo mặc định, nó sẽ khiến các tệp được di chuyển vào Thùng thay vì xóa chúng.</string>
     <string name="faq_6_title_commons">Biểu tượng khởi chạy ứng dụng này biến mất. Tôi có thể làm gì?</string>
     <string name="faq_6_text_commons">Nguyên nhân là do trình khởi chạy của bạn không hỗ trợ tùy chỉnh biểu tượng đúng cách. Hãy thử khởi chạy ứng dụng thông qua Google Play hoặc một số tiện ích nếu có.
-         Sau khi khởi chạy, chỉ cần đặt lại biểu tượng màu cam mặc định #F57C00. Bạn có thể phải cài đặt lại ứng dụng trong trường hợp xấu nhất.</string>
+        Sau khi khởi chạy, chỉ cần đặt lại biểu tượng màu cam mặc định #F57C00. Bạn có thể phải cài đặt lại ứng dụng trong trường hợp xấu nhất.</string>
     <string name="faq_7_title_commons">Tiền đã được khấu trừ từ tài khoản ngân hàng của tôi, nhưng tôi không thể tải xuống ứng dụng. Tôi có thể làm gì?</string>
     <string name="faq_7_text_commons">Thanh toán được xử lý hoàn toàn bởi Google, hệ thống của họ thỉnh thoảng bị trục trặc. Chỉ cần xóa bộ nhớ cache ứng dụng Google Play của bạn và khởi động lại thiết bị của bạn, sau đó thử tải xuống lại.</string>
     <string name="faq_8_title_commons">Tại sao tôi nên nâng cấp lên phiên bản Pro?</string>
     <string name="faq_8_text_commons">Vì phiên bản ứng dụng của bạn không còn được cập nhật, các lỗi bạn có thể phát hiện sẽ không bao giờ được sửa. Cũng sẽ không có chức năng mới được thêm vào. Bạn có thể mua phiên bản Pro trên Google Play với một khoản tiền nhỏ.
-         Đó là thanh toán một lần, có nghĩa là một khi bạn mua nó, bạn sẽ không bao giờ phải mua lại. Ngay cả sau khi nhận được một thiết bị mới. Nếu bạn không thích phiên bản Pro, bạn có thể gỡ cài đặt trong vòng vài giờ và bạn sẽ tự động lấy lại tiền.
-         Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại goodwy.dev@gmail.com và bạn sẽ nhận được nó.</string>
+        Đó là thanh toán một lần, có nghĩa là một khi bạn mua nó, bạn sẽ không bao giờ phải mua lại. Ngay cả sau khi nhận được một thiết bị mới. Nếu bạn không thích phiên bản Pro, bạn có thể gỡ cài đặt trong vòng vài giờ và bạn sẽ tự động lấy lại tiền.
+        Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại hello@simplemobiletools.com và bạn sẽ nhận được nó.</string>
     <string name="faq_9_title_commons">How can I select multiple items at once?</string>
     <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
         just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
+    <!-- Contributors -->
+    <string name="contributors">Contributors</string>
+    <string name="translation">Translation</string>
+    <string name="development">Development</string>
+    <string name="other_help">Other help</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="translation_arabic">Arabic</string>
+    <string name="translation_azerbaijani">Azerbaijani</string>
+    <string name="translation_bengali">Bengali</string>
+    <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
+    <string name="translation_catalan">Catalan</string>
+    <string name="translation_czech">Czech</string>
+    <string name="translation_welsh">Welsh</string>
+    <string name="translation_danish">Danish</string>
+    <string name="translation_english">English</string>
+    <string name="translation_german">German</string>
+    <string name="translation_greek">Greek</string>
+    <string name="translation_spanish">Spanish</string>
+    <string name="translation_basque">Basque</string>
+    <string name="translation_persian">Persian</string>
+    <string name="translation_finnish">Finnish</string>
+    <string name="translation_french">French</string>
+    <string name="translation_galician">Galician</string>
+    <string name="translation_hindi">Hindi</string>
+    <string name="translation_croatian">Croatian</string>
+    <string name="translation_hungarian">Hungarian</string>
+    <string name="translation_indonesian">Indonesian</string>
+    <string name="translation_italian">Italian</string>
+    <string name="translation_hebrew">Hebrew</string>
+    <string name="translation_japanese">Japanese</string>
+    <string name="translation_korean">Korean</string>
+    <string name="translation_lithuanian">Lithuanian</string>
+    <string name="translation_nepali">Nepali</string>
+    <string name="translation_norwegian">Norwegian</string>
+    <string name="translation_dutch">Dutch</string>
+    <string name="translation_polish">Polish</string>
+    <string name="translation_portuguese">Portuguese</string>
+    <string name="translation_romanian">Romanian</string>
+    <string name="translation_russian">Russian</string>
+    <string name="translation_slovak">Slovak</string>
+    <string name="translation_slovenian">Slovenian</string>
+    <string name="translation_serbian">Serbian</string>
+    <string name="translation_swedish">Swedish</string>
+    <string name="translation_tamil">Tamil</string>
+    <string name="translation_turkish">Turkish</string>
+    <string name="translation_ukrainian">Ukrainian</string>
+    <string name="translation_vietnamese">Vietnamese</string>
+    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinese (Simplified)</string>
+    <string name="translation_chinese_tw">Chinese (Traditional)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">No ads</string>
     <string name="why_upgrade_no_internet_access">No internet access</string>
-    <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
+    <string name="why_upgrade_footer">100% Money Back Guarantee</string>
+    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">Printing support</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Time zone support</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">Easy event importing</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
-
+    <string name="why_upgrade_contact_filtering">Contact filtering</string>
+    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
-
+    <string name="why_upgrade_zooming">Zooming</string>
     <!-- License -->
     <string name="notice">Ứng dụng này sử dụng các thư viện bên thứ ba sau đây để giúp tôi thực hiện dễ dàng hơn. Cảm ơn.</string>
     <string name="third_party_licences">Giấy phép bên thứ ba</string>
@@ -854,11 +1006,12 @@
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
-
+    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
+    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
+    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
     <!-- Google Play listing -->
-    <string name="deprecated_app">THÔNG BÁO: Phiên bản của ứng dụng này không còn được duy trì, hãy tải phiên bản Pro tại https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
-    <string name="pro_app_refund">Đừng quên rằng nếu bạn gỡ cài đặt bất kỳ ứng dụng phải trả tiền nào trong vòng 2 giờ, bạn sẽ tự động được hoàn lại tiền. Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại goodwy.dev@gmail.com và bạn sẽ nhận được nó.Thật dễ dàng đúng không :)</string>
-
+    <string name="deprecated_app">THÔNG BÁO: Phiên bản của ứng dụng này không còn được duy trì, hãy tải phiên bản Pro tại https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Đừng quên rằng nếu bạn gỡ cài đặt bất kỳ ứng dụng phải trả tiền nào trong vòng 2 giờ, bạn sẽ tự động được hoàn lại tiền. Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại hello@simplemobiletools.com và bạn sẽ nhận được nó.Thật dễ dàng đúng không :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>

@@ -9,6 +9,7 @@
 -keep public class * extends java.lang.Exception
 
 -keep class android.support.v7.widget.SearchView { *; }
+-keep class com.goodwy.commons.models.PhoneNumber { *; }
 
 # Joda
 -dontwarn org.joda.convert.**

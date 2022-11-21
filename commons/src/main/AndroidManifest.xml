@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.goodwy.commons">
 
     <queries>
-        <package android:name="com.goodwy.thankyou.debug" />
-        <package android:name="com.goodwy.thankyou" />
+        <package android:name="com.goodwy.audiobook.debug" />
+        <package android:name="com.goodwy.audiobook" />
+        <package android:name="com.goodwy.voicerecorder.debug" />
+        <package android:name="com.goodwy.voicerecorder" />
+        <package android:name="com.goodwy.files.debug" />
+        <package android:name="com.goodwy.files" />
+        <package android:name="com.goodwy.dialer.debug" />
+        <package android:name="com.goodwy.dialer" />
+        <package android:name="com.goodwy.contacts.debug" />
+        <package android:name="com.goodwy.contacts" />
+        <package android:name="com.goodwy.smsmessenger.debug" />
+        <package android:name="com.goodwy.smsmessenger" />
     </queries>
 
     <uses-feature
@@ -15,7 +26,34 @@
         android:name="android.hardware.screen.portrait"
         android:required="false" />
 
-    <application>
+    <uses-permission
+        android:name="android.permission.USE_BIOMETRIC"
+        tools:node="remove" />
+
+    <!-- used by Reprint -->
+    <uses-permission
+        android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"
+        tools:node="remove" />
+
+    <application android:supportsRtl="true">
+        <activity
+            android:name="com.goodwy.commons.activities.ContributorsActivity"
+            android:exported="false"
+            android:label="@string/contributors"
+            android:parentActivityName="com.goodwy.commons.activities.AboutActivity" />
+
+        <activity
+            android:name="com.goodwy.commons.activities.FAQActivity"
+            android:exported="false"
+            android:label="@string/frequently_asked_questions"
+            android:parentActivityName="com.goodwy.commons.activities.AboutActivity" />
+
+        <activity
+            android:name="com.goodwy.commons.activities.LicenseActivity"
+            android:exported="false"
+            android:label="@string/third_party_licences"
+            android:parentActivityName="com.goodwy.commons.activities.AboutActivity" />
+
         <receiver
             android:name=".receivers.SharedThemeReceiver"
             android:enabled="true"

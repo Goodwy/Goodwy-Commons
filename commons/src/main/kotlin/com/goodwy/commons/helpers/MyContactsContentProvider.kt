@@ -7,6 +7,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.goodwy.commons.extensions.getIntValue
 import com.goodwy.commons.extensions.getStringValue
+import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 
 // used for sharing privately stored contacts in Simple Contacts with Simple Dialer, Simple SMS Messenger and Simple Calendar Pro
@@ -23,6 +24,7 @@ class MyContactsContentProvider {
         const val COL_PHONE_NUMBERS = "phone_numbers"
         const val COL_BIRTHDAYS = "birthdays"
         const val COL_ANNIVERSARIES = "anniversaries"
+        const val COL_PHONE_NUMBERS_INFO = "phone_numbers_info"
 
         fun getSimpleContacts(context: Context, cursor: Cursor?): ArrayList<SimpleContact> {
             val contacts = ArrayList<SimpleContact>()
@@ -42,11 +44,14 @@ class MyContactsContentProvider {
                             val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
                             val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
+                            val phoneNumbersInfoJson = cursor.getStringValue(COL_PHONE_NUMBERS_INFO)
 
-                            val token = object : TypeToken<ArrayList<String>>() {}.type
-                            val phoneNumbers = Gson().fromJson<ArrayList<String>>(phoneNumbersJson, token) ?: ArrayList()
-                            val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, token) ?: ArrayList()
-                            val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, token) ?: ArrayList()
+                            val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
+                            val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
+
+                            val stringsToken = object : TypeToken<ArrayList<String>>() {}.type
+                            val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
+                            val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
 
                             val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries)
                             contacts.add(contact)

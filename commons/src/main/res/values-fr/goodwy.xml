@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Afficher les vignettes des contacts</string>
+    <string name="use_icon_tabs_summary">Icônes au lieu de texte sur les onglets</string>
+    <string name="use_icon_tabs">Utiliser des icônes d’onglet</string>
+    <string name="round_play_icon_summary">L’icône de lecture/pause est colorée dans la couleur primaire</string>
+    <string name="round_play_icon">Icône De lecture/pause d’arrondi</string>
+    <string name="save_recordings_in_summary">À partir d’Android 10 , l’application n’a pas accès à vos fichiers</string>
+    <string name="gray_theme">Gris</string>
+    <string name="pref_category_appearance">Apparence</string>
+    <string name="pref_theme_summary">Sélectionnez un thème préinstallé</string>
+    <string name="customization_theme_summary">Sélection de thèmes et de couleurs d’interface</string>
+    <string name="recorder_g">Flûte à bec</string>
+    <string name="player_g">Joueur</string>
+    <string name="general">Généralités</string>
+    <string name="default_tab">Onglet par défaut</string>
+    <string name="color">couleur</string>
+    <string name="black">Noir</string>
+    <string name="show_dividers">Afficher les séparateurs</string>
+    <string name="colored_contacts">Icônes colorées des contacts</string>
+    <string name="accent_color">Couleur d’accentuation</string>
+    <string name="incoming_call">Appel entrant</string>
+    <string name="outgoing_call">Appel sortant</string>
+    <string name="missed_call">Appel manqué</string>
+    <string name="unblock_number">Débloquer le numéro</string>
+    <string name="recents">Récent</string>
+    <string name="unblock_confirmation">Êtes-vous sûr de vouloir débloquer \"%s\"?</string>
+    <string name="plus_summary">Toutes nos applications sont sans publicité, Open Source et cela restera toujours ainsi. Avec votre aide, nous sommes en mesure d’implémenter plus de fonctionnalités et de les rendre encore meilleures</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Acheter Goodwy Thank You</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Veuillez mettre à jour Goodwy Thank You</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Oui, bien sûr. Vous pouvez recommander cette application et/ou mettre une bonne évaluation. Vous pouvez aussi nous aider en traduisant les applications dans une nouvelle langue, ou en actualisant les traductions existantes.
+        Vous pouvez trouver le guide à l\'adresse https://github.com/Goodwy/Discussion , ou simplement m\'envoyer un courriel à goodwy.dev@gmail.com si vous avez besoin d\'aide.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">La version de votre application n\'étant plus mise à jour, les bugs que vous avez peut-être repérés ne seront jamais corrigés. Il n\'y aura pas non plus de nouvelles fonctions ajoutées. Vous pouvez acheter la version Pro sur Google Play pour une petite somme d\'argent.
+         C\'est un paiement unique, ce qui signifie qu\'une fois que vous l\'achetez, vous n\'aurez plus jamais à payer. Pas même après avoir acheté un nouvel appareil. Si vous n’aimez pas la version Pro, vous pouvez simplement la désinstaller après quelques heures et vous serez automatiquement remboursé.
+         Si vous souhaitez un remboursement à tout moment, contactez-nous à l\'adresse goodwy.dev@gmail.com et vous l\'obtiendrez. </string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">ATTENTION : cette version de l\'application n\'est plus maintenue. Procurez-vous la version Pro à l\'adresse https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">N’oubliez pas que si vous désinstallez une application payante dans les 2 heures, vous serez automatiquement remboursé. Si vous souhaitez un remboursement, à tout moment, contactez-nous à goodwy.dev@gmail.com et vous l\'obtiendrez. Alors n\'hésitez pas et essayez nos applications :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

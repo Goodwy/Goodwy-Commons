@@ -5,14 +5,12 @@ import android.os.Handler
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.widget.RelativeLayout
+import androidx.biometric.auth.AuthPromptHost
 import com.andrognito.patternlockview.PatternLockView
 import com.andrognito.patternlockview.listener.PatternLockViewListener
 import com.andrognito.patternlockview.utils.PatternLockUtils
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.getAdjustedPrimaryColor
-import com.goodwy.commons.extensions.toast
-import com.goodwy.commons.extensions.updateTextColors
+import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.PROTECTION_PATTERN
 import com.goodwy.commons.interfaces.HashListener
 import com.goodwy.commons.interfaces.SecurityTab
@@ -26,7 +24,7 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        val textColor = context.baseConfig.textColor
+        val textColor = context.getProperTextColor()
         context.updateTextColors(pattern_lock_holder)
 
         pattern_lock_view.setOnTouchListener { v, event ->
@@ -37,7 +35,7 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
             false
         }
 
-        pattern_lock_view.correctStateColor = context.getAdjustedPrimaryColor()
+        pattern_lock_view.correctStateColor = context.getProperPrimaryColor()
         pattern_lock_view.normalStateColor = textColor
         pattern_lock_view.addPatternLockListener(object : PatternLockViewListener {
             override fun onComplete(pattern: MutableList<PatternLockView.Dot>?) {
@@ -52,7 +50,13 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
         })
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView) {
+    override fun initTab(
+        requiredHash: String,
+        listener: HashListener,
+        scrollView: MyScrollView,
+        biometricPromptHost: AuthPromptHost,
+        showBiometricAuthentication: Boolean
+    ) {
         this.requiredHash = requiredHash
         this.scrollView = scrollView
         hash = requiredHash

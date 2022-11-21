@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Tampilkan foto kontak</string>
+    <string name="use_icon_tabs_summary">Ikon alih-alih teks pada tab</string>
+    <string name="use_icon_tabs">Gunakan ikon tab</string>
+    <string name="round_play_icon_summary">Ikon putar/jeda diwarnai dengan warna utama</string>
+    <string name="round_play_icon">Putaran putar/ikon jeda</string>
+    <string name="save_recordings_in_summary">Mulai dari Android 10+, aplikasi tidak memiliki akses ke file Anda</string>
+    <string name="gray_theme">Abu-abu</string>
+    <string name="pref_category_appearance">Penampilan</string>
+    <string name="pref_theme_summary">Pilih tema pra-instal</string>
+    <string name="customization_theme_summary">Pilih tema dan warna antarmuka</string>
+    <string name="recorder_g">Perekam</string>
+    <string name="player_g">Pemain</string>
+    <string name="general">Umum</string>
+    <string name="default_tab">Tab bawaan</string>
+    <string name="color">warna</string>
+    <string name="black">Hitam</string>
+    <string name="show_dividers">Tampilkan pembagi</string>
+    <string name="colored_contacts">Ikon berwarna kontak</string>
+    <string name="accent_color">Aksen warna</string>
+    <string name="incoming_call">Panggilan masuk</string>
+    <string name="outgoing_call">Panggilan keluar</string>
+    <string name="missed_call">Panggilan tidak terjawab</string>
+    <string name="unblock_number">Buka blokir nomor</string>
+    <string name="recents">Terbaru</string>
+    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
+    <string name="plus_summary">Semua aplikasi kami bebas iklan, Open Source dan akan selalu seperti itu. Dengan bantuan Anda, kami dapat menerapkan lebih banyak fitur dan menjadikannya lebih baik</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Beli Goodwy Thank You</string>
+    <string name="copyright_g">v %1$s\nHak cipta © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Silakan perbarui Goodwy Thank You ke versi terbaru</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Tentu saja ada. Anda bisa membagikan aplikasi ini atau memberikan umpanbalik dan nilai yang baik. Anda juga bisa membantu menerjemahkan aplikasi ke dalam bahasa baru, atau cukup perbarui terjemahan yang sudah ada.
+        Anda bisa melihat panduannya di https://github.com/Goodwy/Discussion , atau email saya di goodwy.dev@gmail.com jika butuh bantuan.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
+        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
+        If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">TIDAK DIDUKUNG: Versi aplikasi ini tidak lagi dikembangkan, dapatkan versi Pro di https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Jangan lupa, jika anda untuk mencopot aplikasi berbayar manapun dalam waktu 2 jam, uang anda akan otomatis dikembalikan. Jika anda ingin pengembalian dilakukan lain waktu, cukup hubungi goodwy.dev@gmail.com dan anda akan mendapatkannya. Mempermudah anda untuk mencobanya terlebih dahulu. :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

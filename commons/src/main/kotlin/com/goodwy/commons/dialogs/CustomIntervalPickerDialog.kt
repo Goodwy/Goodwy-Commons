@@ -1,6 +1,9 @@
 package com.goodwy.commons.dialogs
 
 import android.app.Activity
+import android.content.DialogInterface
+import android.view.KeyEvent
+import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import com.goodwy.commons.R
@@ -11,10 +14,20 @@ import com.goodwy.commons.helpers.MINUTE_SECONDS
 import kotlinx.android.synthetic.main.dialog_custom_interval_picker.view.*
 
 class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: Int = 0, val showSeconds: Boolean = false, val callback: (minutes: Int) -> Unit) {
-    var dialog: AlertDialog
-    var view = (activity.layoutInflater.inflate(R.layout.dialog_custom_interval_picker, null) as ViewGroup)
+    private var dialog: AlertDialog? = null
+    private var view = (activity.layoutInflater.inflate(R.layout.dialog_custom_interval_picker, null) as ViewGroup)
 
     init {
+        activity.getAlertDialogBuilder()
+            .setPositiveButton(R.string.ok) { dialogInterface, i -> confirmReminder() }
+            .setNegativeButton(R.string.cancel, null)
+            .apply {
+                activity.setupDialogStuff(view, this) { alertDialog ->
+                    dialog = alertDialog
+                    alertDialog.showKeyboard(view.findViewById(R.id.dialog_custom_interval_value))
+                }
+            }
+
         view.apply {
             dialog_radio_seconds.beVisibleIf(showSeconds)
             when {
@@ -36,16 +49,18 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
                     dialog_custom_interval_value.setText(selectedSeconds.toString())
                 }
             }
-        }
 
-        dialog = AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok) { dialogInterface, i -> confirmReminder() }
-                .setNegativeButton(R.string.cancel, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this) {
-                        showKeyboard(view.dialog_custom_interval_value)
+            dialog_custom_interval_value.setOnKeyListener(object : View.OnKeyListener {
+                override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
+                    if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                        dialog?.getButton(DialogInterface.BUTTON_POSITIVE)?.performClick()
+                        return true
                     }
+
+                    return false
                 }
+            })
+        }
     }
 
     private fun confirmReminder() {
@@ -54,7 +69,7 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
         val minutes = Integer.valueOf(if (value.isEmpty()) "0" else value)
         callback(minutes * multiplier)
         activity.hideKeyboard()
-        dialog.dismiss()
+        dialog?.dismiss()
     }
 
     private fun getMultiplier(id: Int) = when (id) {

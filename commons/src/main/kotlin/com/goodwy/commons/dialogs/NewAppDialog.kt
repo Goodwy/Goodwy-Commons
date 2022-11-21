@@ -1,29 +1,50 @@
 package com.goodwy.commons.dialogs
 
 import android.app.Activity
+import android.graphics.drawable.Drawable
 import android.text.Html
-import android.text.method.LinkMovementMethod
-import androidx.appcompat.app.AlertDialog
 import com.goodwy.commons.R
+import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.getAlertDialogBuilder
+import com.goodwy.commons.extensions.launchViewIntent
 import com.goodwy.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_textview.view.*
+import kotlinx.android.synthetic.main.dialog_new_apps.view.*
+import kotlinx.android.synthetic.main.dialog_new_apps.view.new_apps_text
 
-class NewAppDialog(val activity: Activity, val packageName: String, val title: String, val packageName2: String, val title2: String) {
+// run inside: runOnUiThread { }
+class NewAppDialog(
+    val activity: Activity,
+    private val packageName: String,
+    val title: String,
+    val text: String,
+    val drawable: Drawable?,
+    val callback: () -> Unit)
+{
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_textview, null).apply {
-            val text = String.format(activity.getString(R.string.new_app),
-                "https://play.google.com/store/apps/details?id=$packageName", title,
-                "https://play.google.com/store/apps/details?id=$packageName2", title2
-            )
-
-            text_view.text = Html.fromHtml(text)
-            text_view.movementMethod = LinkMovementMethod.getInstance()
+        val view = activity.layoutInflater.inflate(R.layout.dialog_new_apps, null).apply {
+            new_apps_title.text = Html.fromHtml(title)
+            new_apps_text.text = text
+            new_apps_icon.setImageDrawable(drawable!!)
+            new_apps_holder.setOnClickListener { dialogConfirmed() }
         }
 
-        AlertDialog.Builder(activity)
-            .setPositiveButton(R.string.ok, null)
-            .create().apply {
-                activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
+        activity.getAlertDialogBuilder()
+            .setPositiveButton(R.string.later) { dialog, which -> dialogDismissed(8) }
+            .setNeutralButton(R.string.do_not_show_again) { dialog, which -> dialogDismissed(1) }
+            .setOnCancelListener { dialogDismissed(8) }
+            .apply {
+                activity.setupDialogStuff(view, this)
             }
+    }
+
+    private fun dialogDismissed(count: Int) {
+        activity.baseConfig.appRecommendationDialogCount = count
+        callback()
+    }
+
+    private fun dialogConfirmed() {
+        val url = "https://play.google.com/store/apps/details?id=$packageName"
+        activity.launchViewIntent(url)
+        callback()
     }
 }

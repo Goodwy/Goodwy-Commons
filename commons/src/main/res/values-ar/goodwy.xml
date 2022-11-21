@@ -1,0 +1,84 @@
+<resources>
+    <!-- Events -->
+    <string name="show_contact_thumbnails_g">عرض صور مصغرة لجهات الإتصال</string>
+    <string name="use_icon_tabs_summary">الرموز بدلا من النص على علامات التبويب</string>
+    <string name="use_icon_tabs">استخدام رموز علامات التبويب</string>
+    <string name="round_play_icon_summary">رمز التشغيل/الإيقاف المؤقت ملون باللون الأساسي</string>
+    <string name="round_play_icon">رمز تشغيل/إيقاف مؤقت</string>
+    <string name="save_recordings_in_summary">بدءا من Android 10 ، لا يمكن للتطبيق الوصول إلى ملفاتك</string>
+    <string name="gray_theme">رمادي</string>
+    <string name="pref_category_appearance">مظهر</string>
+    <string name="pref_theme_summary">تحديد سمة مثبتة مسبقا</string>
+    <string name="customization_theme_summary">تحديد السمات وألوان الواجهة</string>
+    <string name="recorder_g">مسجل</string>
+    <string name="player_g">لاعب</string>
+    <string name="general">عام</string>
+    <string name="default_tab">علامة التبويب الافتراضية</string>
+    <string name="color">لون</string>
+    <string name="black">أسود</string>
+    <string name="show_dividers">إظهار المقسمات</string>
+    <string name="colored_contacts">رموز ملونة جهات الاتصال</string>
+    <string name="accent_color">لون التمييز</string>
+    <string name="incoming_call">مكالمة واردة</string>
+    <string name="outgoing_call">مكالمة صادرة</string>
+    <string name="missed_call">مكالمة لم يتم تفويتها</string>
+    <string name="unblock_number">إلغاء حظر الرقم</string>
+    <string name="recents">حديث</string>
+    <string name="unblock_confirmation">هل تريد بالتأكيد إلغاء حظر \"%s\"؟</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">شراء تطبيق (Goodwy Thank You)</string>
+    <string name="copyright_g">v %1$s\nحقوق النشر © Goodwy %2$d</string>
+    <string name="update_thank_you_g">يرجى تحديث تطبيق (Goodwy Thank You) إلى أحدث إصدار</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        نعم طبعاً. يمكنك نشر الكلمة عن التطبيقات أو تقديم تعليقات وتقييمات جيدة. يمكنك أيضاً المساعدة من خلال ترجمة التطبيقات بلغة جديدة ، أو تحديث بعض الترجمات الموجودة فقط.يمكنك العثور على الدليل على https://github.com/Goodwy/Discussion ، أو فقط أرسل رسالة على <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> إذا كنت بحاجة إلى مساعدة.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">نظراً لأن إصدار التطبيق الخاص بك لم يعد محدثاً ، فلن يتم إصلاح الأخطاء التي إكتشافها. كما لن تتم إضافة وظائف جديدة . يمكنك شراء الإصدار الـ Pro على Google Play مقابل مبلغ صغير من المال. إنها دفعة لمرة واحدة،مما يعني أنه بمجرد شرائه ، لن تضطر إلى الدفع مرة أخرى. ليس حتى بعد الحصول على جهاز جديد. إذا كنت لا تحب إصدار Pro ، يمكنك إلغاء تثبيته في غضون ساعات قليلة وستحصل على أموالك تلقائياً.إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على goodwy.dev@gmail.com وستحصل عليه.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">لم يعد يجري العمل عليه: لم يعد هذا الإصدار من التطبيق يجري العمل عليه، قم بالحصول على الإصدار الـ Pro على https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">لا تنسى أنه إذا قمت بإلغاء تثبيت أي تطبيق مدفوع في غضون ساعتين ، فسيتم إسترداد أموالك تلقائياً. إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على goodwy.dev@gmail.com وستحصل عليه. هذا يجعل من السهل تجربته :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

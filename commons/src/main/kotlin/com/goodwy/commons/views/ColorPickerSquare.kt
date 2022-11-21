@@ -1,11 +1,13 @@
 package com.goodwy.commons.views
 
+import android.R.attr.radius
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.graphics.Shader.TileMode
 import android.util.AttributeSet
 import android.view.View
+
 
 class ColorPickerSquare(context: Context, attrs: AttributeSet) : View(context, attrs) {
     var paint: Paint? = null
@@ -23,7 +25,10 @@ class ColorPickerSquare(context: Context, attrs: AttributeSet) : View(context, a
         val dalam = LinearGradient(0f, 0f, measuredWidth.toFloat(), 0f, Color.WHITE, rgb, TileMode.CLAMP)
         val shader = ComposeShader(luar, dalam, PorterDuff.Mode.MULTIPLY)
         paint!!.shader = shader
-        canvas.drawRect(0f, 0f, measuredWidth.toFloat(), measuredHeight.toFloat(), paint!!)
+        //TODO COLOR PICKER RADIUS
+        //canvas.drawRect(0f, 0f, measuredWidth.toFloat(), measuredHeight.toFloat(), paint!!)
+        val corners =  0.0f //28.0f
+        canvas.drawRoundRect(0f, 0f, measuredWidth.toFloat(), measuredHeight.toFloat(), corners, corners, paint!!)
     }
 
     fun setHue(hue: Float) {

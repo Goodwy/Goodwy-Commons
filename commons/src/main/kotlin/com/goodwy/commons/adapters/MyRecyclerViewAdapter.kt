@@ -1,34 +1,28 @@
 package com.goodwy.commons.adapters
 
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.graphics.Color
+import android.view.*
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
-import androidx.appcompat.view.ActionMode
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
-import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.getAdjustedPrimaryColor
-import com.goodwy.commons.extensions.getContrastColor
+import com.goodwy.commons.extensions.*
 import com.goodwy.commons.interfaces.MyActionModeCallback
-import com.goodwy.commons.views.FastScroller
 import com.goodwy.commons.views.MyRecyclerView
-import java.util.*
 
-abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val fastScroller: FastScroller? = null,
-                                     val itemClick: (Any) -> Unit) : RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
+abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val itemClick: (Any) -> Unit) :
+    RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
     protected val baseConfig = activity.baseConfig
     protected val resources = activity.resources!!
     protected val layoutInflater = activity.layoutInflater
-    protected var primaryColor = baseConfig.primaryColor
-    protected var adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
-    protected var contrastColor = adjustedPrimaryColor.getContrastColor()
-    protected var textColor = baseConfig.textColor
-    protected var backgroundColor = baseConfig.backgroundColor
+    protected var accentColor = baseConfig.accentColor
+    protected var textColor = activity.getProperTextColor()
+    protected var backgroundColor = activity.getProperBackgroundColor()
+    protected var properPrimaryColor = activity.getProperPrimaryColor()
+    protected var contrastColor = properPrimaryColor.getContrastColor()
     protected var actModeCallback: MyActionModeCallback
     protected var selectedKeys = LinkedHashSet<Int>()
     protected var positionOffset = 0
@@ -58,8 +52,6 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected fun isOneItemSelected() = selectedKeys.size == 1
 
     init {
-        fastScroller?.resetScrollPositions()
-
         actModeCallback = object : MyActionModeCallback() {
             override fun onActionItemClicked(mode: ActionMode, item: MenuItem): Boolean {
                 actionItemPressed(item.itemId)
@@ -71,6 +63,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                     return true
                 }
 
+                selectedKeys.clear()
                 isSelectable = true
                 actMode = actionMode
                 actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
@@ -83,8 +76,24 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                         selectAll()
                     }
                 }
+
                 activity.menuInflater.inflate(getActionMenuId(), menu)
+                val bgColor = if (baseConfig.isUsingSystemTheme) {
+                    resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
+                } else {
+                    Color.BLACK
+                }
+
+                actBarTextView!!.setTextColor(bgColor.getContrastColor())
+                activity.updateMenuItemColors(menu, baseColor = bgColor)
                 onActionModeCreated()
+
+                //if (baseConfig.isUsingSystemTheme) {
+                    actBarTextView?.onGlobalLayout {
+                        val backArrow = activity.findViewById<ImageView>(R.id.action_mode_close_button)
+                        backArrow?.applyColorFilter(bgColor.getContrastColor())
+                    }
+                //}
                 return true
             }
 
@@ -197,7 +206,12 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 }
 
                 override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
-                    selectItemRange(initialSelection, Math.max(0, lastDraggedIndex - positionOffset), Math.max(0, minReached - positionOffset), maxReached - positionOffset)
+                    selectItemRange(
+                        initialSelection,
+                        Math.max(0, lastDraggedIndex - positionOffset),
+                        Math.max(0, minReached - positionOffset),
+                        maxReached - positionOffset
+                    )
                     if (minReached != maxReached) {
                         lastLongPressedItem = -1
                     }
@@ -271,10 +285,9 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         notifyDataSetChanged()
     }
 
-    fun updatePrimaryColor(primaryColor: Int) {
-        this.primaryColor = primaryColor
-        adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
-        contrastColor = adjustedPrimaryColor.getContrastColor()
+    fun updatePrimaryColor() {
+        properPrimaryColor = activity.getProperPrimaryColor()
+        contrastColor = properPrimaryColor.getContrastColor()
     }
 
     fun updateBackgroundColor(backgroundColor: Int) {
@@ -295,7 +308,6 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             notifyItemRemoved(it)
         }
         finishActMode()
-        fastScroller?.measureRecyclerView()
     }
 
     open inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -313,7 +325,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             }
         }
 
-        private fun viewClicked(any: Any) {
+        fun viewClicked(any: Any) {
             if (actModeCallback.isSelectable) {
                 val currentPosition = adapterPosition - positionOffset
                 val isSelected = selectedKeys.contains(getItemSelectionKey(currentPosition))
@@ -324,10 +336,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             lastLongPressedItem = -1
         }
 
-        private fun viewLongClicked() {
+        fun viewLongClicked() {
             val currentPosition = adapterPosition - positionOffset
             if (!actModeCallback.isSelectable) {
-                activity.startSupportActionMode(actModeCallback)
+                activity.startActionMode(actModeCallback)
             }
 
             toggleItemSelection(true, currentPosition, true)

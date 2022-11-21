@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Vis kontakt miniature-billede</string>
+    <string name="use_icon_tabs_summary">Ikoner i stedet for tekst under faner</string>
+    <string name="use_icon_tabs">Bruge faneikoner</string>
+    <string name="round_play_icon_summary">Afspilnings-/pauseikonet er farvet i den primære farve</string>
+    <string name="round_play_icon">Ikon for afspil/pause</string>
+    <string name="save_recordings_in_summary">Fra Android 10 har appen ikke adgang til dine filer</string>
+    <string name="gray_theme">Grå</string>
+    <string name="pref_category_appearance">Udseende</string>
+    <string name="pref_theme_summary">Vælge et forudinstalleret tema</string>
+    <string name="customization_theme_summary">Vælg temaer og grænsefladefarver</string>
+    <string name="recorder_g">Blokfløjte</string>
+    <string name="player_g">Spiller</string>
+    <string name="general">Generel</string>
+    <string name="default_tab">Fanen Standard</string>
+    <string name="color">farve</string>
+    <string name="black">Sort</string>
+    <string name="show_dividers">Vis skillevægge</string>
+    <string name="colored_contacts">Ikoner med farvet kontakt</string>
+    <string name="accent_color">Fremhævningsfarve</string>
+    <string name="incoming_call">Indgående opkald</string>
+    <string name="outgoing_call">Udgående opkald</string>
+    <string name="missed_call">Ubesvaret opkald</string>
+    <string name="unblock_number">Fjern blokering af nummer</string>
+    <string name="recents">Frisk</string>
+    <string name="unblock_confirmation">Er du sikker på, at du vil fjerne blokeringen af \"%s\"?</string>
+    <string name="plus_summary">Alle vores apps er annoncefri, Open Source, og det vil altid forblive sådan. Med din hjælp er vi i stand til at implementere flere funktioner og gøre dem endnu bedre</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Køb Goodwy Thank You</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Opdater venligst Goodwy Thank You til den seneste version</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Ja, selvfølgelig. Du kan fortælle andre om appsene eller give god feedback og gode vurderinger. Du kan også hjælpe med at oversætte til et nyt sprog, eller med at opdatere en eksisterende oversættelse.
+        Du kan finde en guide på siden <a href="https://github.com/Goodwy/Discussion">https://github.com/Goodwy/Discussion</a>, eller send mig en besked på <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> hvis du har brug for hjælp.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">Da din version af appen ikke opdateres længere, kan den indeholde fejl der aldrig bliver rettet. Der vil heller ikke komme nye funktioner til den. Du kan købe Pro-versionen på Google Play for et lille beløb.
+        Det er en engangsinvestering, har du betalt een gang skal du aldrig gøre det igen, heller ikke hvis du skifter mobil eller tablet. Kan du ikke lide Pro-versionen, kan du afinstallere den indenfor nogle få timer og du vil automatisk få dine penge tilbage.
+        Vil du på et senere tidspunkt have pengene refunderet, skal du blot sende en mail til goodwy.dev@gmail.com, så klarer vi det.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">FORÆLDET: Denne version af appen vedligeholdes ikke længere, skift til Pro-versionen her https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Husk at hvis du afinstallerer en betalt app indenfor 2 timer, får du automatisk pengene tilbage. Vil du have refunderet beløbet på et senere tidspunkt, så send en mail til goodwy.dev@gmail.com . På den måde kan du prøvekøre appen uden omkostninger :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

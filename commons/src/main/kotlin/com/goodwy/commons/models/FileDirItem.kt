@@ -2,18 +2,28 @@ package com.goodwy.commons.models
 
 import android.content.Context
 import android.net.Uri
+import android.provider.MediaStore
 import com.bumptech.glide.signature.ObjectKey
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import java.io.File
 
-open class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L, var modified: Long = 0L) :
+open class FileDirItem(
+    val path: String,
+    val name: String = "",
+    var isDirectory: Boolean = false,
+    var children: Int = 0,
+    var size: Long = 0L,
+    var modified: Long = 0L,
+    var mediaStoreId: Long = 0L
+) :
     Comparable<FileDirItem> {
     companion object {
         var sorting = 0
     }
 
-    override fun toString() = "FileDirItem(path=$path, name=$name, isDirectory=$isDirectory, children=$children, size=$size, modified=$modified)"
+    override fun toString() =
+        "FileDirItem(path=$path, name=$name, isDirectory=$isDirectory, children=$children, size=$size, modified=$modified, mediaStoreId=$mediaStoreId)"
 
     override fun compareTo(other: FileDirItem): Int {
         return if (isDirectory && !other.isDirectory) {
@@ -25,9 +35,9 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
             when {
                 sorting and SORT_BY_NAME != 0 -> {
                     result = if (sorting and SORT_USE_NUMERIC_VALUE != 0) {
-                        AlphanumericComparator().compare(name.toLowerCase(), other.name.toLowerCase())
+                        AlphanumericComparator().compare(name.normalizeString().toLowerCase(), other.name.normalizeString().toLowerCase())
                     } else {
-                        name.toLowerCase().compareTo(other.name.toLowerCase())
+                        name.normalizeString().toLowerCase().compareTo(other.name.normalizeString().toLowerCase())
                     }
                 }
                 sorting and SORT_BY_SIZE != 0 -> result = when {
@@ -64,42 +74,43 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
     }
 
     fun getProperSize(context: Context, countHidden: Boolean): Long {
-        return if (context.isPathOnOTG(path)) {
-            context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
-        } else if (isNougatPlus() && path.startsWith("content://")) {
-            try {
-                context.contentResolver.openInputStream(Uri.parse(path))?.available()?.toLong() ?: 0L
-            } catch (e: Exception) {
-                context.getSizeFromContentUri(Uri.parse(path))
+        return when {
+            context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFFileSize(path)
+            context.isPathOnOTG(path) -> context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
+            isNougatPlus() && path.startsWith("content://") -> {
+                try {
+                    context.contentResolver.openInputStream(Uri.parse(path))?.available()?.toLong() ?: 0L
+                } catch (e: Exception) {
+                    context.getSizeFromContentUri(Uri.parse(path))
+                }
             }
-        } else {
-            File(path).getProperSize(countHidden)
+            else -> File(path).getProperSize(countHidden)
         }
     }
 
     fun getProperFileCount(context: Context, countHidden: Boolean): Int {
-        return if (context.isPathOnOTG(path)) {
-            context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
-        } else {
-            File(path).getFileCount(countHidden)
+        return when {
+            context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFFileCount(path, countHidden)
+            context.isPathOnOTG(path) -> context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
+            else -> File(path).getFileCount(countHidden)
         }
     }
 
     fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
-        return if (context.isPathOnOTG(path)) {
-            context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size ?: 0
-        } else {
-            File(path).getDirectChildrenCount(countHiddenItems)
+        return when {
+            context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFDirectChildrenCount(path, countHiddenItems)
+            context.isPathOnOTG(path) -> context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size
+                ?: 0
+            else -> File(path).getDirectChildrenCount(context, countHiddenItems)
         }
     }
 
     fun getLastModified(context: Context): Long {
-        return if (context.isPathOnOTG(path)) {
-            context.getFastDocumentFile(path)?.lastModified() ?: 0L
-        } else if (isNougatPlus() && path.startsWith("content://")) {
-            context.getMediaStoreLastModified(path)
-        } else {
-            File(path).lastModified()
+        return when {
+            context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFLastModified(path)
+            context.isPathOnOTG(path) -> context.getFastDocumentFile(path)?.lastModified() ?: 0L
+            isNougatPlus() && path.startsWith("content://") -> context.getMediaStoreLastModified(path)
+            else -> File(path).lastModified()
         }
     }
 
@@ -119,7 +130,7 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getVideoResolution(context: Context) = context.getVideoResolution(path)
 
-    fun getImageResolution() = path.getImageResolution()
+    fun getImageResolution(context: Context) = context.getImageResolution(path)
 
     fun getPublicUri(context: Context) = context.getDocumentFile(path)?.uri ?: ""
 
@@ -134,4 +145,14 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
     }
 
     fun getKey() = ObjectKey(getSignature())
+
+    fun assembleContentUri(): Uri {
+        val uri = when {
+            path.isImageFast() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+            path.isVideoFast() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+            else -> MediaStore.Files.getContentUri("external")
+        }
+
+        return Uri.withAppendedPath(uri, mediaStoreId.toString())
+    }
 }

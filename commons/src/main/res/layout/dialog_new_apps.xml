@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_margin">
+
+    <com.goodwy.commons.views.MyTextView
+        android:id="@+id/new_apps_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/big_margin"
+        android:textColorHighlight="@color/disabled_text_color_highlight"
+        android:textSize="@dimen/bigger_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/new_apps_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/medium_margin"
+        android:layout_below="@+id/new_apps_title"
+        android:background="@drawable/ripple_all_corners">
+
+        <ImageView
+            android:id="@+id/new_apps_icon"
+            android:layout_width="@dimen/min_row_height"
+            android:layout_height="@dimen/min_row_height"/>
+
+        <com.goodwy.commons.views.MyTextView
+            android:id="@+id/new_apps_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/new_apps_icon"
+            android:layout_alignBottom="@+id/new_apps_icon"
+            android:layout_toRightOf="@+id/new_apps_icon"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:textColorHighlight="@color/disabled_text_color_highlight"
+            android:textSize="@dimen/bigger_text_size" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

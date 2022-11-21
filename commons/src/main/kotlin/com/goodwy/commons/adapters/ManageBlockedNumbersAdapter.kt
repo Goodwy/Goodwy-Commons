@@ -1,29 +1,42 @@
 package com.goodwy.commons.adapters
 
-import android.view.Menu
-import android.view.View
-import android.view.ViewGroup
+import android.content.Context
+import android.view.*
+import android.widget.PopupMenu
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.extensions.copyToClipboard
 import com.goodwy.commons.extensions.deleteBlockedNumber
+import com.goodwy.commons.extensions.getPopupMenuTheme
+import com.goodwy.commons.extensions.getProperTextColor
 import com.goodwy.commons.interfaces.RefreshRecyclerViewListener
 import com.goodwy.commons.models.BlockedNumber
 import com.goodwy.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_manage_blocked_number.view.*
-import java.util.*
 
-class ManageBlockedNumbersAdapter(activity: BaseSimpleActivity, var blockedNumbers: ArrayList<BlockedNumber>, val listener: RefreshRecyclerViewListener?,
-                                  recyclerView: MyRecyclerView, itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
+class ManageBlockedNumbersAdapter(
+    activity: BaseSimpleActivity, var blockedNumbers: ArrayList<BlockedNumber>, val listener: RefreshRecyclerViewListener?,
+    recyclerView: MyRecyclerView, itemClick: (Any) -> Unit
+) : MyRecyclerViewAdapter(activity, recyclerView, itemClick) {
     init {
         setupDragListener(true)
     }
 
-    override fun getActionMenuId() = R.menu.cab_delete_only
+    override fun getActionMenuId() = R.menu.cab_blocked_numbers
 
-    override fun prepareActionMode(menu: Menu) {}
+    override fun prepareActionMode(menu: Menu) {
+        menu.apply {
+            findItem(R.id.cab_copy_number).isVisible = isOneItemSelected()
+        }
+    }
 
     override fun actionItemPressed(id: Int) {
+        if (selectedKeys.isEmpty()) {
+            return
+        }
+
         when (id) {
+            R.id.cab_copy_number -> copyNumberToClipboard()
             R.id.cab_delete -> deleteSelection()
         }
     }
@@ -44,7 +57,7 @@ class ManageBlockedNumbersAdapter(activity: BaseSimpleActivity, var blockedNumbe
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val blockedNumber = blockedNumbers[position]
-        holder.bindView(blockedNumber, true, true) { itemView, adapterPosition ->
+        holder.bindView(blockedNumber, true, true) { itemView, _ ->
             setupView(itemView, blockedNumber)
         }
         bindViewHolder(holder)
@@ -61,7 +74,55 @@ class ManageBlockedNumbersAdapter(activity: BaseSimpleActivity, var blockedNumbe
                 text = blockedNumber.number
                 setTextColor(textColor)
             }
+
+            overflow_menu_icon.drawable.apply {
+                mutate()
+                setTint(activity.getProperTextColor())
+            }
+
+            overflow_menu_icon.setOnClickListener {
+                showPopupMenu(overflow_menu_anchor, blockedNumber)
+            }
         }
+    }
+
+    private fun showPopupMenu(view: View, blockedNumber: BlockedNumber) {
+        finishActMode()
+        val theme = activity.getPopupMenuTheme()
+        val contextTheme = ContextThemeWrapper(activity, theme)
+
+        PopupMenu(contextTheme, view, Gravity.END).apply {
+            inflate(getActionMenuId())
+            setOnMenuItemClickListener { item ->
+                val blockedNumberId = blockedNumber.id.toInt()
+                when (item.itemId) {
+                    R.id.cab_copy_number -> {
+                        executeItemMenuOperation(blockedNumberId) {
+                            copyNumberToClipboard()
+                        }
+                    }
+                    R.id.cab_delete -> {
+                        executeItemMenuOperation(blockedNumberId) {
+                            deleteSelection()
+                        }
+                    }
+                }
+                true
+            }
+            show()
+        }
+    }
+
+    private fun executeItemMenuOperation(blockedNumberId: Int, callback: () -> Unit) {
+        selectedKeys.add(blockedNumberId)
+        callback()
+        selectedKeys.remove(blockedNumberId)
+    }
+
+    private fun copyNumberToClipboard() {
+        val selectedNumber = getSelectedItems().firstOrNull() ?: return
+        activity.copyToClipboard(selectedNumber.number)
+        finishActMode()
     }
 
     private fun deleteSelection() {

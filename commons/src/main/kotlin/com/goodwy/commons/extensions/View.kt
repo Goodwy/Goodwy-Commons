@@ -24,10 +24,12 @@ fun View.beGone() {
 }
 
 fun View.onGlobalLayout(callback: () -> Unit) {
-    viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+    viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
         override fun onGlobalLayout() {
-            viewTreeObserver.removeOnGlobalLayoutListener(this)
-            callback()
+            if (viewTreeObserver != null) {
+                viewTreeObserver.removeOnGlobalLayoutListener(this)
+                callback()
+            }
         }
     })
 }
@@ -38,7 +40,7 @@ fun View.isInvisible() = visibility == View.INVISIBLE
 
 fun View.isGone() = visibility == View.GONE
 
-fun View.performHapticFeedback() = performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
+fun View.performHapticFeedback() = performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING)
 
 fun View.fadeIn() {
     animate().alpha(1f).setDuration(SHORT_ANIMATION_DURATION).withStartAction { beVisible() }.start()

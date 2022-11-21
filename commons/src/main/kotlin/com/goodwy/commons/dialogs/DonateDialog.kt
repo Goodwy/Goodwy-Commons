@@ -3,23 +3,25 @@ package com.goodwy.commons.dialogs
 import android.app.Activity
 import android.text.Html
 import android.text.method.LinkMovementMethod
-import androidx.appcompat.app.AlertDialog
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.launchViewIntent
-import com.goodwy.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_textview.view.*
+import com.goodwy.commons.extensions.*
+import kotlinx.android.synthetic.main.dialog_donate.view.*
 
 class DonateDialog(val activity: Activity) {
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_textview, null).apply {
-            text_view.text = Html.fromHtml(activity.getString(R.string.donate_please))
-            text_view.movementMethod = LinkMovementMethod.getInstance()
+        val view = activity.layoutInflater.inflate(R.layout.dialog_donate, null).apply {
+            dialog_donate_image.applyColorFilter(activity.getProperTextColor())
+            dialog_donate_text.text = Html.fromHtml(activity.getString(R.string.donate_short))
+            dialog_donate_text.movementMethod = LinkMovementMethod.getInstance()
+            dialog_donate_image.setOnClickListener {
+                activity.launchViewIntent(R.string.thank_you_url)
+            }
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.purchase) { dialog, which -> activity.launchViewIntent(R.string.thank_you_url) }
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
+            .apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
             }
     }

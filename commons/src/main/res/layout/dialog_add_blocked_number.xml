@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/dialog_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,18 +10,19 @@
         android:id="@+id/add_blocked_number_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/medium_margin"
-        android:hint="@string/number">
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:hint="@string/number"
+        app:helperText="@string/add_blocked_number_helper_text"
+        app:helperTextEnabled="true">
 
-        <com.goodwy.commons.views.MyEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/add_blocked_number_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_margin"
-            android:layout_marginEnd="@dimen/activity_margin"
             android:inputType="phone"
             android:textCursorDrawable="@null"
             android:textSize="@dimen/bigger_text_size" />
-    </com.goodwy.commons.views.MyTextInputLayout>
 
+    </com.goodwy.commons.views.MyTextInputLayout>
 </RelativeLayout>

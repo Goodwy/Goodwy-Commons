@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Prikaži sličice kontakata</string>
+    <string name="use_icon_tabs_summary">Ikone umjesto teksta na karticama</string>
+    <string name="use_icon_tabs">Korištenje ikona kartica</string>
+    <string name="round_play_icon_summary">Ikona reprodukcije/pauze obojena je primarnom bojom</string>
+    <string name="round_play_icon">Ikona Zaokruži reprodukciju/pauziranje</string>
+    <string name="save_recordings_in_summary">Počevši od Androida 10 , aplikacija nema pristup vašim datotekama</string>
+    <string name="gray_theme">Siv</string>
+    <string name="pref_category_appearance">Izgled</string>
+    <string name="pref_theme_summary">Odabir unaprijed instalirane teme</string>
+    <string name="customization_theme_summary">Odabir tema i boja sučelja</string>
+    <string name="recorder_g">Snimalo</string>
+    <string name="player_g">Igrač</string>
+    <string name="general">Općenito</string>
+    <string name="default_tab">Zadana kartica</string>
+    <string name="color">boja</string>
+    <string name="black">Crn</string>
+    <string name="show_dividers">Pokaži razdjelnike</string>
+    <string name="colored_contacts">Ikone u boji kontakata</string>
+    <string name="accent_color">Boja isticanja</string>
+    <string name="incoming_call">Dolazni poziv</string>
+    <string name="outgoing_call">Odlazni poziv</string>
+    <string name="missed_call">Propušteni poziv</string>
+    <string name="unblock_number">Deblokiranje broja</string>
+    <string name="recents">Nedavni</string>
+    <string name="unblock_confirmation">Jeste li sigurni da želite deblokirati \"%s\"?</string>
+    <string name="plus_summary">Sve naše aplikacije su bez oglasa, Open Source i uvijek će tako i ostati. Uz vašu pomoć u mogućnosti smo implementirati više značajki i učiniti ih još boljima</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Kupite Jednostavno Hvala</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Molim ažurirajte Jednostavno hvala na najnoviju verziju</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Da naravno. Možete proširiti riječ o aplikacijama ili dati dobru povratnu informaciju i ocjene. Možete također pomoći prevođenjem aplikacija na novi jezik ili ažurirati neke postojeće prijevode.
+        Vodič možete pronaći na adresi https://github.com/Goodwy/Discussion , ili mi pošaljite poruku na goodwy.dev@gmail.com ako Vam treba pomoć.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
+        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
+        If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

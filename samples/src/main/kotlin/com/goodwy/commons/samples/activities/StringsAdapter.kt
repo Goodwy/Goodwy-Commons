@@ -18,8 +18,10 @@ import com.goodwy.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.list_item.view.*
 import java.util.*
 
-class StringsAdapter(activity: BaseSimpleActivity, var strings: MutableList<String>, recyclerView: MyRecyclerView, val swipeRefreshLayout: SwipeRefreshLayout,
-                     itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick), ItemTouchHelperContract {
+class StringsAdapter(
+    activity: BaseSimpleActivity, var strings: MutableList<String>, recyclerView: MyRecyclerView, val swipeRefreshLayout: SwipeRefreshLayout,
+    itemClick: (Any) -> Unit
+) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract {
 
     private var isChangingOrder = false
     private var startReorderDragListener: StartReorderDragListener
@@ -127,3 +129,5 @@ class StringsAdapter(activity: BaseSimpleActivity, var strings: MutableList<Stri
         swipeRefreshLayout.isEnabled = true
     }
 }
+
+

@@ -34,9 +34,9 @@
             android:id="@+id/export_settings_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/filename">
+            android:hint="@string/filename_without_txt">
 
-            <com.goodwy.commons.views.MyEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/export_settings_filename"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,6 +44,7 @@
                 android:singleLine="true"
                 android:textCursorDrawable="@null"
                 android:textSize="@dimen/normal_text_size" />
+
         </com.goodwy.commons.views.MyTextInputLayout>
     </LinearLayout>
 </ScrollView>

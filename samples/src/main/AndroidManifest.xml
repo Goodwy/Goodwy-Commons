@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.goodwy.commons.samples">
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+    <queries>
+        <package android:name="com.goodwy.dialer.debug" />
+        <package android:name="com.goodwy.dialer" />
+        <package android:name="com.goodwy.contacts.debug" />
+        <package android:name="com.goodwy.contacts" />
+        <package android:name="com.goodwy.smsmessenger.debug" />
+        <package android:name="com.goodwy.smsmessenger" />
+        <package android:name="com.goodwy.voicerecorder.debug" />
+        <package android:name="com.goodwy.voicerecorder" />
+    </queries>
 
     <application
         android:name=".App"
         android:allowBackup="true"
-        android:icon="@mipmap/commons_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/smtco_app_name"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:localeConfig="@xml/locale_config"
+        android:theme="@style/TranslucentTheme">
 
-        <activity android:name=".activities.MainActivity">
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.goodwy.commons.activities.FAQActivity"/>
-        <activity
-            android:name="com.goodwy.commons.activities.AboutActivity"/>
-        <activity
-            android:name="com.goodwy.commons.activities.LicenseActivity"/>
-        <activity
-            android:name="com.goodwy.commons.activities.CustomizationActivity"/>
+        <activity android:name="com.goodwy.commons.activities.AboutActivity"/>
+        <activity android:name="com.goodwy.commons.activities.CustomizationActivity"/>
+        <activity android:name="com.goodwy.commons.activities.PurchaseActivity"/>
     </application>
 </manifest>

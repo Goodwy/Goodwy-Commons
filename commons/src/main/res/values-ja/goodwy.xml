@@ -1,0 +1,88 @@
+<resources>
+    <string name="show_contact_thumbnails_g">連絡先のサムネイルを表示</string>
+    <string name="use_icon_tabs_summary">タブ上のテキストではなくアイコン</string>
+    <string name="use_icon_tabs">タブ アイコンを使用する</string>
+    <string name="round_play_icon_summary">再生/一時停止アイコンは、プライマリカラーで色付けされます</string>
+    <string name="round_play_icon">ラウンド再生/一時停止アイコン</string>
+    <string name="save_recordings_in_summary">Android 10以降、アプリはあなたのファイルにアクセスできません</string>
+    <string name="gray_theme">灰色</string>
+    <string name="pref_category_appearance">様子</string>
+    <string name="pref_theme_summary">プレインストールされたテーマを選択する</string>
+    <string name="customization_theme_summary">テーマとインターフェイスの色の選択</string>
+    <string name="recorder_g">リコーダー</string>
+    <string name="player_g">プレーヤー</string>
+    <string name="general">全般</string>
+    <string name="default_tab">既定のタブ</string>
+    <string name="color">色</string>
+    <string name="black">黒い</string>
+    <string name="show_dividers">仕切り線を表示する</string>
+    <string name="colored_contacts">連絡先の色付きアイコン</string>
+    <string name="accent_color">アクセントカラー</string>
+    <string name="incoming_call">着信呼び出し</string>
+    <string name="outgoing_call">発信コール</string>
+    <string name="missed_call">不在着信</string>
+    <string name="unblock_number">ブロック解除番号</string>
+    <string name="recents">最近</string>
+    <string name="unblock_confirmation">\"%s\" のブロックを解除してもよいですか?</string>
+    <string name="plus_summary">すべてのアプリは広告なしのオープンソースであり、常にそのまま残ります。あなたの助けを借りて、我々はより多くの機能を実装し、それらをさらに良くすることができます</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Goodwy Thank Youを購入</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">\"Goodwy Thank You\" アプリを最新版に更新してください</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        もちろんです。アプリについての良い口コミや、良いフィードバックや評価も支援になります。翻訳や、翻訳のチェックも支援になります。
+        こちらのWEBアドレスからガイドをご覧ください。https://github.com/Goodwy/Discussion もしくは、こちらのメールアドレスにお問い合わせください。goodwy.dev@gmail.com　
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">アプリのバージョンが更新されないので、アプリのバグが発見されても修復されません。新しい機能も追加されません。Pro版はGoogle Playで少額で販売されています。
+        1回のみのお支払いとなりますので、一度購入されるとその後はお支払いいただく必要がなくなります。機種の変更を行った場合も同じです。Pro版がお好みでなかったら、購入して数時間以内にアンインストールすれば自動的に返金されます。
+        それよりもあとに払い戻しが必要な場合はこちらにご連絡ください。goodwy.dev@gmail.com</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">非推奨: このバージョンのアプリはメンテナンスが行われなくなります。こちらのURLからPro版を入手してください。https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">どのアプリでも、購入後２時間以内にアンインストールすると自動的に払い戻しされることを覚えていてください。それ以降に払い戻しが必要な場合は、こちらにお問い合わせください。goodwy.dev@gmail.com
+お試ししやすいかと思います :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

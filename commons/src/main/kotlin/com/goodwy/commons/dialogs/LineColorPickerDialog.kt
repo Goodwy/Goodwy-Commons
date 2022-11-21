@@ -1,22 +1,23 @@
 package com.goodwy.commons.dialogs
 
-import android.view.Menu
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.appbar.MaterialToolbar
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.*
+import com.goodwy.commons.helpers.NavigationIcon
 import com.goodwy.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
-import java.util.*
 
-class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.md_primary_colors,
-                            val appIconIDs: ArrayList<Int>? = null, val menu: Menu? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
-
+class LineColorPickerDialog(
+    val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.md_primary_colors,
+    val appIconIDs: ArrayList<Int>? = null, val toolbar: MaterialToolbar? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
+) {
     private val PRIMARY_COLORS_COUNT = 19
-    private val DEFAULT_PRIMARY_COLOR_INDEX = 14
-    private val DEFAULT_SECONDARY_COLOR_INDEX = 6
+    private val DEFAULT_PRIMARY_COLOR_INDEX = 5 //TODO DEFAULT PRIMARY COLOR CURSOR
+    private val DEFAULT_SECONDARY_COLOR_INDEX = 5
     private val DEFAULT_COLOR_VALUE = activity.resources.getColor(R.color.color_primary)
 
     private var wasDimmedBackgroundRemoved = false
@@ -60,12 +61,14 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             }
         }
 
-        dialog = AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
             .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
             .setOnCancelListener { dialogDismissed() }
-            .create().apply {
-                activity.setupDialogStuff(view, this)
+            .apply {
+                activity.setupDialogStuff(view, this) { alertDialog ->
+                    dialog = alertDialog
+                }
             }
     }
 
@@ -74,9 +77,13 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
     private fun colorUpdated(color: Int) {
         view.hex_code.text = color.toHex()
         if (isPrimaryColorPicker) {
-            activity.updateActionbarColor(color)
+           // activity.updateActionbarColor(color)
             activity.setTheme(activity.getThemeId(color))
-            activity.updateMenuItemColors(menu, true, color)
+
+            if (toolbar != null) {
+                //activity.updateMenuItemColors(toolbar.menu, true, color)
+                activity.setupToolbar(toolbar, NavigationIcon.Cross, color)
+            }
 
             if (!wasDimmedBackgroundRemoved) {
                 dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
@@ -135,8 +142,8 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         14 -> getColors(R.array.md_oranges)
         15 -> getColors(R.array.md_deep_oranges)
         16 -> getColors(R.array.md_browns)
-        17 -> getColors(R.array.md_blue_greys)
-        18 -> getColors(R.array.md_greys)
+        17 -> getColors(R.array.md_greys)
+        18 -> getColors(R.array.md_blue_greys)
         else -> throw RuntimeException("Invalid color id $index")
     }
 

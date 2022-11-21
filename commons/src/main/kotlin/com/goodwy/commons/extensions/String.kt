@@ -1,9 +1,13 @@
 package com.goodwy.commons.extensions
 
+import android.annotation.SuppressLint
+import android.annotation.TargetApi
 import android.content.Context
+import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
+import android.os.Build
 import android.os.StatFs
 import android.provider.MediaStore
 import android.telephony.PhoneNumberUtils
@@ -20,6 +24,7 @@ import org.joda.time.format.DateTimeFormat
 import java.io.File
 import java.text.DateFormat
 import java.text.Normalizer
+import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
@@ -37,6 +42,39 @@ fun String.getBasePath(context: Context): String {
     }
 }
 
+fun String.getFirstParentDirName(context: Context, level: Int): String? {
+    val basePath = getBasePath(context)
+    val startIndex = basePath.length + 1
+    return if (length > startIndex) {
+        val pathWithoutBasePath = substring(startIndex)
+        val pathSegments = pathWithoutBasePath.split("/")
+        if (level < pathSegments.size) {
+            pathSegments.slice(0..level).joinToString("/")
+        } else {
+            null
+        }
+    } else {
+        null
+    }
+}
+
+fun String.getFirstParentPath(context: Context, level: Int): String {
+    val basePath = getBasePath(context)
+    val startIndex = basePath.length + 1
+    return if (length > startIndex) {
+        val pathWithoutBasePath = substring(basePath.length + 1)
+        val pathSegments = pathWithoutBasePath.split("/")
+        val firstParentPath = if (level < pathSegments.size) {
+            pathSegments.slice(0..level).joinToString("/")
+        } else {
+            pathWithoutBasePath
+        }
+        "$basePath/$firstParentPath"
+    } else {
+        basePath
+    }
+}
+
 fun String.isAValidFilename(): Boolean {
     val ILLEGAL_CHARACTERS = charArrayOf('/', '\n', '\r', '\t', '\u0000', '`', '?', '*', '\\', '<', '>', '|', '\"', ':')
     ILLEGAL_CHARACTERS.forEach {
@@ -46,9 +84,12 @@ fun String.isAValidFilename(): Boolean {
     return true
 }
 
-fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(context.baseConfig.OTGPath.length).replace("/", "%2F")}"
+fun String.getOTGPublicPath(context: Context) =
+    "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(context.baseConfig.OTGPath.length).replace("/", "%2F")}"
 
 fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg() || isPortrait()
+
+fun String.isApng() = endsWith(".apng", true)
 
 fun String.isWebP() = endsWith(".webp", true)
 
@@ -73,6 +114,8 @@ fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image") ||
 fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video") || startsWith(MediaStore.Video.Media.EXTERNAL_CONTENT_URI.toString())
 fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio") || startsWith(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI.toString())
 
+fun String.canModifyEXIF() = extensionsSupportingEXIF.any { endsWith(it, true) }
+
 fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) {
     "png" -> Bitmap.CompressFormat.PNG
     "webp" -> Bitmap.CompressFormat.WEBP
@@ -93,15 +136,22 @@ fun String.getGenericMimeType(): String {
 
 fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
 
+fun String.relativizeWith(path: String) = this.substring(path.length)
+
 fun String.containsNoMedia() = File(this).containsNoMedia()
 
 fun String.doesThisOrParentHaveNoMedia(folderNoMediaStatuses: HashMap<String, Boolean>, callback: ((path: String, hasNoMedia: Boolean) -> Unit)?) =
     File(this).doesThisOrParentHaveNoMedia(folderNoMediaStatuses, callback)
 
-fun String.getImageResolution(): Point? {
+fun String.getImageResolution(context: Context): Point? {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
+    if (context.isRestrictedSAFOnlyRoot(this)) {
+        BitmapFactory.decodeStream(context.contentResolver.openInputStream(context.getAndroidSAFUri(this)), null, options)
+    } else {
     BitmapFactory.decodeFile(this, options)
+    }
+
     val width = options.outWidth
     val height = options.outHeight
     return if (width > 0 && height > 0) {
@@ -224,14 +274,14 @@ fun String.getNameLetter() = normalizeString().toCharArray().getOrNull(0)?.toStr
 
 fun String.normalizePhoneNumber() = PhoneNumberUtils.normalizeNumber(this)
 
-fun String.highlightTextFromNumbers(textToHighlight: String, adjustedPrimaryColor: Int): SpannableString {
+fun String.highlightTextFromNumbers(textToHighlight: String, primaryColor: Int): SpannableString {
     val spannableString = SpannableString(this)
     val digits = PhoneNumberUtils.convertKeypadLettersToDigits(this)
     if (digits.contains(textToHighlight)) {
         val startIndex = digits.indexOf(textToHighlight, 0, true)
         val endIndex = Math.min(startIndex + textToHighlight.length, length)
         try {
-            spannableString.setSpan(ForegroundColorSpan(adjustedPrimaryColor), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+            spannableString.setSpan(ForegroundColorSpan(primaryColor), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
         } catch (ignored: IndexOutOfBoundsException) {
         }
     }
@@ -266,6 +316,20 @@ fun String.getDateTimeFromDateString(showYearsSince: Boolean, viewToUpdate: Text
         }
     }
     return date
+}
+
+@SuppressLint("SimpleDateFormat")
+fun getDateFormatFromDateString(context: Context, dateTime: String, dateFormat: String, field: String = context.baseConfig.dateFormat): String? {
+    val input = SimpleDateFormat(dateFormat)
+    val output = SimpleDateFormat(field)
+    try {
+        val getAbbreviate = input.parse(dateTime)    // parse input
+        return output.format(getAbbreviate!!)    // format output
+    } catch (e: ParseException) {
+        e.printStackTrace()
+    }
+
+    return null
 }
 
 fun String.getMimeType(): String {
@@ -873,3 +937,5 @@ fun String.getMimeType(): String {
 
     return typesMap[getFilenameExtension().toLowerCase()] ?: ""
 }
+
+fun String.isBlockedNumberPattern() = contains("*")

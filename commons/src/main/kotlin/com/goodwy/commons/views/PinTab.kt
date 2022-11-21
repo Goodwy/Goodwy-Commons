@@ -3,6 +3,7 @@ package com.goodwy.commons.views
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.RelativeLayout
+import androidx.biometric.auth.AuthPromptHost
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.PROTECTION_PIN
@@ -35,10 +36,16 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         pin_9.setOnClickListener { addNumber("9") }
         pin_c.setOnClickListener { clear() }
         pin_ok.setOnClickListener { confirmPIN() }
-        pin_ok.applyColorFilter(context.baseConfig.textColor)
+        pin_ok.applyColorFilter(context.getProperTextColor())
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView) {
+    override fun initTab(
+        requiredHash: String,
+        listener: HashListener,
+        scrollView: MyScrollView,
+        biometricPromptHost: AuthPromptHost,
+        showBiometricAuthentication: Boolean
+    ) {
         this.requiredHash = requiredHash
         hash = requiredHash
         hashListener = listener
@@ -98,7 +105,7 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         messageDigest.update(pin.toByteArray(charset("UTF-8")))
         val digest = messageDigest.digest()
         val bigInteger = BigInteger(1, digest)
-        return String.format(Locale.getDefault(), "%0${digest.size * 2}x", bigInteger).toLowerCase()
+        return String.format(Locale.getDefault(), "%0${digest.size * 2}x", bigInteger).lowercase(Locale.getDefault())
     }
 
     override fun visibilityChanged(isVisible: Boolean) {}

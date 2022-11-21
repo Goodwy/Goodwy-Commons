@@ -5,7 +5,6 @@ import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_rename_item.view.*
-import java.util.*
 
 class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val callback: (newPath: String) -> Unit) {
     init {
@@ -26,13 +25,13 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
             rename_item_name.setText(name)
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
-                activity.setupDialogStuff(view, this, R.string.rename) {
-                    showKeyboard(view.rename_item_name)
-                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+            .apply {
+                activity.setupDialogStuff(view, this, R.string.rename) { alertDialog ->
+                    alertDialog.showKeyboard(view.rename_item_name)
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         if (ignoreClicks) {
                             return@setOnClickListener
                         }
@@ -62,20 +61,24 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                         }
 
                         val newPath = "${path.getParentPath()}/$newName"
-                        if (activity.getDoesFilePathExist(newPath)) {
+
+                        if (path == newPath) {
+                            activity.toast(R.string.name_taken)
+                            return@setOnClickListener
+                        }
+
+                        if (!path.equals(newPath, ignoreCase = true) && activity.getDoesFilePathExist(newPath)) {
                             activity.toast(R.string.name_taken)
                             return@setOnClickListener
                         }
 
                         updatedPaths.add(newPath)
                         ignoreClicks = true
-                        activity.renameFile(path, newPath) {
+                        activity.renameFile(path, newPath, false) { success, _ ->
                             ignoreClicks = false
-                            if (it) {
+                            if (success) {
                                 callback(newPath)
-                                dismiss()
-                            } else {
-                                activity.toast(R.string.unknown_error_occurred)
+                                alertDialog.dismiss()
                             }
                         }
                     }

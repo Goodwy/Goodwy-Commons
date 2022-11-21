@@ -3,11 +3,8 @@ package com.goodwy.commons.dialogs
 import android.app.Activity
 import android.text.Html
 import android.text.method.LinkMovementMethod
-import androidx.appcompat.app.AlertDialog
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.launchPurchaseThankYouIntent
-import com.goodwy.commons.extensions.setupDialogStuff
+import com.goodwy.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_purchase_thank_you.view.*
 
 class PurchaseThankYouDialog(val activity: Activity) {
@@ -20,12 +17,13 @@ class PurchaseThankYouDialog(val activity: Activity) {
 
             purchase_thank_you.text = Html.fromHtml(text)
             purchase_thank_you.movementMethod = LinkMovementMethod.getInstance()
+            purchase_thank_you.removeUnderlines()
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.purchase) { dialog, which -> activity.launchPurchaseThankYouIntent() }
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
+            .apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
             }
     }

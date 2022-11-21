@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Näytä yhteystietojen kuvakkeet</string>
+    <string name="use_icon_tabs_summary">Kuvakkeet välilehtien tekstin sijaan</string>
+    <string name="use_icon_tabs">Välilehtikuvakkeiden käyttö</string>
+    <string name="round_play_icon_summary">Toisto-/taukokuvake on väritetty ensisijaisella värillä</string>
+    <string name="round_play_icon">Pyöreä toisto/tauko-kuvake</string>
+    <string name="save_recordings_in_summary">Android 10: stä alkaen sovelluksella ei ole pääsyä tiedostoihin</string>
+    <string name="gray_theme">Harmaa</string>
+    <string name="pref_category_appearance">Ulkonäkö</string>
+    <string name="pref_theme_summary">Esiasennetun teeman valitseminen</string>
+    <string name="customization_theme_summary">Teemojen ja käyttöliittymän värien valitseminen</string>
+    <string name="recorder_g">Nokkahuilu</string>
+    <string name="player_g">Pelaaja</string>
+    <string name="general">Yleiset</string>
+    <string name="default_tab">Oletus-välilehti</string>
+    <string name="color">väri</string>
+    <string name="black">Musta</string>
+    <string name="show_dividers">Näytä jakajat</string>
+    <string name="colored_contacts">Yhteystietojen värilliset kuvakkeet</string>
+    <string name="accent_color">Korostusväri</string>
+    <string name="incoming_call">Saapuva puhelu</string>
+    <string name="outgoing_call">Lähtevä puhelu</string>
+    <string name="missed_call">Puhelu jäi soittamaan</string>
+    <string name="unblock_number">Poista numeron esto</string>
+    <string name="recents">Tuore</string>
+    <string name="unblock_confirmation">Haluatko varmasti poistaa eston \"%s\"?</string>
+    <string name="plus_summary">Kaikki sovelluksemme ovat mainoksettomia, avoimen lähdekoodin ja se pysyy aina sellaisena. Sinun avullasi pystymme toteuttamaan lisää ominaisuuksia ja tekemään niistä entistä parempia</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Osta Goodwy Thank You</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Päivitä Goodwy Thank You viimeisimpään versioon</string>
+    <string name="faq_2_text_commons_g">
+         <![CDATA[
+        Tottakai. Voit kertoa ystävillesi sovelluksista ja antaa hyviä arvosteluja ja palautetta. Voit myös auttaa kääntämällä sovelluksen uudelle kielelle tai korjata käännösvirheitä.
+        Ohjeet löydät täältä https://github.com/Goodwy/Discussion , tai lähettämällä viestiä osoitteeseen goodwy.dev@gmail.com jos Sinulla on kysyttävää.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">Koska sovellusversiotasi ei enää päivitetä, et saa korjauksia mahdollisiin bugeihin etkä uusia ominaisuuksia. Voit ostaa Pro-version Google Playsta edullisesti.
+        Kyseessä on kertamaksu, joka tarkoittaa sitä, että oston jälkeen sinun ei koskaan enää tarvitse maksaa siitä. Ei edes uuden laitteen hankinnan jälkeen. Jos et pidä Pro-versiosta, voit poistaa sen muutaman tunnin kuluessa ja saat automaattisesti rahasi takaisin.
+        Jos haluat palauttaa myöhemmin. ota yhteyttä goodwy.dev@gmail.com ja maksusi palautetaan.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">VANHENTUNUT:: Tätä sovellusversiota ei enää ylläpidetä, hanki Pro-versio osoitteesta https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse goodwy.dev@gmail.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>

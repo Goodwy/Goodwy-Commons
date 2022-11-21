@@ -1,11 +1,13 @@
 package com.goodwy.commons.dialogs
 
 import android.app.Activity
-import androidx.appcompat.app.AlertDialog
 import com.goodwy.commons.R
-import com.goodwy.commons.R.id.*
+import com.goodwy.commons.R.id.conflict_dialog_radio_keep_both
+import com.goodwy.commons.R.id.conflict_dialog_radio_merge
+import com.goodwy.commons.R.id.conflict_dialog_radio_skip
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.beVisibleIf
+import com.goodwy.commons.extensions.getAlertDialogBuilder
 import com.goodwy.commons.extensions.setupDialogStuff
 import com.goodwy.commons.helpers.CONFLICT_KEEP_BOTH
 import com.goodwy.commons.helpers.CONFLICT_MERGE
@@ -14,8 +16,10 @@ import com.goodwy.commons.helpers.CONFLICT_SKIP
 import com.goodwy.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_file_conflict.view.*
 
-class FileConflictDialog(val activity: Activity, val fileDirItem: FileDirItem, val showApplyToAllCheckbox: Boolean,
-                         val callback: (resolution: Int, applyForAll: Boolean) -> Unit) {
+class FileConflictDialog(
+    val activity: Activity, val fileDirItem: FileDirItem, val showApplyToAllCheckbox: Boolean,
+    val callback: (resolution: Int, applyForAll: Boolean) -> Unit
+) {
     val view = activity.layoutInflater.inflate(R.layout.dialog_file_conflict, null)!!
 
     init {
@@ -24,6 +28,7 @@ class FileConflictDialog(val activity: Activity, val fileDirItem: FileDirItem, v
             conflict_dialog_title.text = String.format(activity.getString(stringBase), fileDirItem.name)
             conflict_dialog_apply_to_all.isChecked = activity.baseConfig.lastConflictApplyToAll
             conflict_dialog_apply_to_all.beVisibleIf(showApplyToAllCheckbox)
+            conflict_dialog_divider.beVisibleIf(showApplyToAllCheckbox)
             conflict_dialog_radio_merge.beVisibleIf(fileDirItem.isDirectory)
 
             val resolutionButton = when (activity.baseConfig.lastConflictResolution) {
@@ -34,12 +39,12 @@ class FileConflictDialog(val activity: Activity, val fileDirItem: FileDirItem, v
             resolutionButton.isChecked = true
         }
 
-        AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
-                .setNegativeButton(R.string.cancel, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this)
-                }
+        activity.getAlertDialogBuilder()
+            .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
+            .setNegativeButton(R.string.cancel, null)
+            .apply {
+                activity.setupDialogStuff(view, this)
+            }
     }
 
     private fun dialogConfirmed() {

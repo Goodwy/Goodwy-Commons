@@ -12,22 +12,27 @@ import androidx.documentfile.provider.DocumentFile
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.*
+import com.goodwy.commons.helpers.CONFLICT_KEEP_BOTH
+import com.goodwy.commons.helpers.CONFLICT_SKIP
+import com.goodwy.commons.helpers.getConflictResolution
+import com.goodwy.commons.helpers.isOreoPlus
 import com.goodwy.commons.interfaces.CopyMoveListener
 import com.goodwy.commons.models.FileDirItem
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
 import java.lang.ref.WeakReference
-import java.util.*
 
-class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
-                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, String>, Void, Boolean>() {
+class CopyMoveTask(
+    val activity: BaseSimpleActivity, val copyOnly: Boolean, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
+    listener: CopyMoveListener, val copyHidden: Boolean
+) : AsyncTask<Pair<ArrayList<FileDirItem>, String>, Void, Boolean>() {
     private val INITIAL_PROGRESS_DELAY = 3000L
     private val PROGRESS_RECHECK_INTERVAL = 500L
 
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mTransferredFiles = ArrayList<FileDirItem>()
+    private var mFileDirItemsToDelete = ArrayList<FileDirItem>()        // confirm the deletion of files on Android 11 from Downloads and Android at once
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
     private var mFiles = ArrayList<FileDirItem>()
     private var mFileCountToCopy = 0
@@ -62,6 +67,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
             if (file.size == 0L) {
                 file.size = file.getProperSize(activity, copyHidden)
             }
+
             val newPath = "$mDestinationPath/${file.name}"
             val fileExists = activity.getDoesFilePathExist(newPath)
             if (getConflictResolution(conflictResolutions, newPath) != CONFLICT_SKIP || !fileExists) {
@@ -83,12 +89,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
                     if (resolution == CONFLICT_SKIP) {
                         mFileCountToCopy--
                         continue
-                    } else if (resolution == CONFLICT_OVERWRITE) {
-                        newFileDirItem.isDirectory = if (activity.getDoesFilePathExist(newPath)) File(newPath).isDirectory else activity.getSomeDocumentFile(newPath)!!.isDirectory
-                        activity.deleteFileBg(newFileDirItem, true)
-                        if (!newFileDirItem.isDirectory) {
-                            activity.deleteFromMediaStore(newFileDirItem.path)
-                        }
                     } else if (resolution == CONFLICT_KEEP_BOTH) {
                         val newFile = activity.getAlternativeFile(File(newFileDirItem.path))
                         newFileDirItem = FileDirItem(newFile.path, newFile.name, newFile.isDirectory)
@@ -110,12 +110,13 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
             return
         }
 
+        deleteProtectedFiles()
         mProgressHandler.removeCallbacksAndMessages(null)
         activity.notificationManager.cancel(mNotifId)
         val listener = mListener?.get() ?: return
 
         if (success) {
-            listener.copySucceeded(copyOnly, mTransferredFiles.size >= mFileCountToCopy, mDestinationPath)
+            listener.copySucceeded(copyOnly, mTransferredFiles.size >= mFileCountToCopy, mDestinationPath, mTransferredFiles.size == 1)
         } else {
             listener.copyFailed()
         }
@@ -134,7 +135,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
         }
 
         mNotificationBuilder.setContentTitle(title)
-            .setSmallIcon(R.drawable.ic_copy)
+            .setSmallIcon(R.drawable.ic_copy_vector)
             .setChannelId(channelId)
     }
 
@@ -155,7 +156,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
         mProgressHandler.postDelayed({
             updateProgress()
 
-            if (mCurrentProgress / 1000 > mMaxSize) {
+            if (mCurrentProgress / 1000 >= mMaxSize) {
                 mIsTaskOver = true
             }
         }, PROGRESS_RECHECK_INTERVAL)
@@ -178,6 +179,35 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
 
         if (activity.isPathOnOTG(source.path)) {
             val children = activity.getDocumentFile(source.path)?.listFiles() ?: return
+            for (child in children) {
+                val newPath = "$destinationPath/${child.name}"
+                if (File(newPath).exists()) {
+                    continue
+                }
+
+                val oldPath = "${source.path}/${child.name}"
+                val oldFileDirItem = FileDirItem(oldPath, child.name!!, child.isDirectory, 0, child.length())
+                val newFileDirItem = FileDirItem(newPath, child.name!!, child.isDirectory)
+                copy(oldFileDirItem, newFileDirItem)
+            }
+            mTransferredFiles.add(source)
+        } else if (activity.isRestrictedSAFOnlyRoot(source.path)) {
+            activity.getAndroidSAFFileItems(source.path, true) { files ->
+                for (child in files) {
+                    val newPath = "$destinationPath/${child.name}"
+                    if (activity.getDoesFilePathExist(newPath)) {
+                        continue
+                    }
+
+                    val oldPath = "${source.path}/${child.name}"
+                    val oldFileDirItem = FileDirItem(oldPath, child.name, child.isDirectory, 0, child.size)
+                    val newFileDirItem = FileDirItem(newPath, child.name, child.isDirectory)
+                    copy(oldFileDirItem, newFileDirItem)
+                }
+                mTransferredFiles.add(source)
+            }
+        } else if (activity.isAccessibleWithSAFSdk30(source.path)) {
+            val children = activity.getDocumentSdk30(source.path)?.listFiles() ?: return
             for (child in children) {
                 val newPath = "$destinationPath/${child.name}"
                 if (File(newPath).exists()) {
@@ -228,6 +258,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
             if (!mDocuments.containsKey(directory) && activity.needsStupidWritePermissions(destination.path)) {
                 mDocuments[directory] = activity.getDocumentFile(directory)
             }
+
             out = activity.getFileOutputStreamSync(destination.path, source.path.getMimeType(), mDocuments[directory])
             inputStream = activity.getFileInputStreamSync(source.path)!!
 
@@ -245,23 +276,23 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
 
             if (source.size == copiedSize && activity.getDoesFilePathExist(destination.path)) {
                 mTransferredFiles.add(source)
-                if (copyOnly && destination.path.isAudioFast()) {
+                if (copyOnly) {
                     activity.rescanPath(destination.path) {
                         if (activity.baseConfig.keepLastModified) {
-                            copyOldLastModified(source.path, destination.path)
-                            File(destination.path).setLastModified(File(source.path).lastModified())
+                            updateLastModifiedValues(source, destination)
+                            activity.rescanPath(destination.path)
                         }
                     }
                 } else if (activity.baseConfig.keepLastModified) {
-                    copyOldLastModified(source.path, destination.path)
-                    File(destination.path).setLastModified(File(source.path).lastModified())
-                }
-
-                if (!copyOnly) {
+                    updateLastModifiedValues(source, destination)
+                    activity.rescanPath(destination.path)
                     inputStream.close()
                     out?.close()
-                    activity.deleteFileBg(source)
-                    activity.deleteFromMediaStore(source.path)
+                    deleteSourceFile(source)
+                } else {
+                    inputStream.close()
+                    out?.close()
+                    deleteSourceFile(source)
                 }
             }
         } catch (e: Exception) {
@@ -272,10 +303,43 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
         }
     }
 
+    private fun updateLastModifiedValues(source: FileDirItem, destination: FileDirItem) {
+        copyOldLastModified(source.path, destination.path)
+        val lastModified = File(source.path).lastModified()
+        if (lastModified != 0L) {
+            File(destination.path).setLastModified(lastModified)
+        }
+    }
+
+    private fun deleteSourceFile(source: FileDirItem) {
+        if (activity.isRestrictedWithSAFSdk30(source.path) && !activity.canManageMedia()) {
+            mFileDirItemsToDelete.add(source)
+        } else {
+            activity.deleteFileBg(source, isDeletingMultipleFiles = false)
+            activity.deleteFromMediaStore(source.path)
+        }
+    }
+
+    // if we delete multiple files from Downloads folder on Android 11 or 12 without being a Media Management app, show the confirmation dialog just once
+    private fun deleteProtectedFiles() {
+        if (mFileDirItemsToDelete.isNotEmpty()) {
+            val fileUris = activity.getFileUrisFromFileDirItems(mFileDirItemsToDelete)
+            activity.deleteSDK30Uris(fileUris) { success ->
+                if (success) {
+                    mFileDirItemsToDelete.forEach {
+                        activity.deleteFromMediaStore(it.path)
+                    }
+                }
+            }
+        }
+    }
+
     private fun copyOldLastModified(sourcePath: String, destinationPath: String) {
         val projection = arrayOf(
             MediaStore.Images.Media.DATE_TAKEN,
-            MediaStore.Images.Media.DATE_MODIFIED)
+            MediaStore.Images.Media.DATE_MODIFIED
+        )
+
         val uri = MediaStore.Files.getContentUri("external")
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
         var selectionArgs = arrayOf(sourcePath)

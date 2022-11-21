@@ -1,25 +1,39 @@
 package com.goodwy.commons.activities
 
+import android.annotation.SuppressLint
+import android.content.ComponentName
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.provider.ContactsContract
 import android.text.Html
 import android.text.method.LinkMovementMethod
-import android.view.Menu
-import android.view.View
 import com.goodwy.commons.R
+import com.goodwy.commons.dialogs.BottomSheetChooserDialog
 import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
 import com.goodwy.commons.dialogs.ConfirmationDialog
 import com.goodwy.commons.dialogs.RateStarsDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.FAQItem
+import com.goodwy.commons.models.SimpleListItem
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
 
 class AboutActivity : BaseSimpleActivity() {
     private var appName = ""
-    private var linkColor = 0
+    private var primaryColor = 0
+    private var licensingKey = ""
+    private var productIdX1 = ""
+    private var productIdX2 = ""
+    private var productIdX3 = ""
+
+    private var firstVersionClickTS = 0L
+    private var clicksSinceFirstClick = 0
+    private val EASTER_EGG_TIME_LIMIT = 3000L
+    private val EASTER_EGG_REQUIRED_CLICKS = 7
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
@@ -29,19 +43,30 @@ class AboutActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
         appName = intent.getStringExtra(APP_NAME) ?: ""
-        linkColor = getAdjustedPrimaryColor()
+        primaryColor = getProperPrimaryColor()
+        licensingKey = intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: ""
+        productIdX1 = intent.getStringExtra(PRODUCT_ID_X1) ?: ""
+        productIdX2 = intent.getStringExtra(PRODUCT_ID_X2) ?: ""
+        productIdX3 = intent.getStringExtra(PRODUCT_ID_X3) ?: ""
     }
 
     override fun onResume() {
         super.onResume()
-        updateTextColors(about_holder)
+        updateTextColors(about_nested_scrollview)
+        setupOptionsMenu()
+        setupToolbar(about_toolbar, NavigationIcon.Arrow)
+
+        setupAboutApp()
+
+        setupRateUs()
+        setupMoreApps()
+        setupFAQ()
+        setupTipJar()
+        setupCollection()
 
         setupWebsite()
         setupEmail()
-        setupFAQ()
         setupUpgradeToPro()
-        setupMoreApps()
-        setupRateUs()
         setupInvite()
         setupLicense()
         setupFacebook()
@@ -49,9 +74,27 @@ class AboutActivity : BaseSimpleActivity() {
         setupCopyright()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        updateMenuItemColors(menu)
-        return super.onCreateOptionsMenu(menu)
+    private fun setupOptionsMenu() {
+        about_toolbar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.share -> {
+                    launchShare()
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
+    private fun launchShare() {
+            val text = String.format(getString(R.string.share_text), appName, getStoreUrl())
+            Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_SUBJECT, appName)
+                putExtra(Intent.EXTRA_TEXT, text)
+                type = "text/plain"
+                startActivity(Intent.createChooser(this, getString(R.string.invite_via)))
+            }
     }
 
     private fun setupWebsite() {
@@ -78,7 +121,7 @@ class AboutActivity : BaseSimpleActivity() {
                 about_email.setOnClickListener(null)
                 val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
                 ConfirmationDialog(this, msg, 0, R.string.read_faq, R.string.skip) {
-                    about_faq_label.performClick()
+                    faqButton.performClick()
                 }
             }
         } else {
@@ -86,29 +129,13 @@ class AboutActivity : BaseSimpleActivity() {
         }
     }
 
-    private fun setupFAQ() {
-        val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
-        about_faq_label.beVisibleIf(faqItems.isNotEmpty())
-        about_faq_label.setOnClickListener {
-            openFAQ(faqItems)
-        }
-
-        about_faq.beVisibleIf(faqItems.isNotEmpty())
-        about_faq.setOnClickListener {
-            openFAQ(faqItems)
-        }
-
-        about_faq.setTextColor(linkColor)
-        about_faq.underlineText()
-    }
-
     private fun setupUpgradeToPro() {
-        about_upgrade_to_pro.beVisibleIf(getCanAppBeUpgraded())
+        about_upgrade_to_pro.beVisibleIf(false) // getCanAppBeUpgraded()
         about_upgrade_to_pro.setOnClickListener {
             launchUpgradeToProIntent()
         }
 
-        about_upgrade_to_pro.setTextColor(linkColor)
+        about_upgrade_to_pro.setTextColor(primaryColor)
         about_upgrade_to_pro.underlineText()
     }
 
@@ -119,13 +146,6 @@ class AboutActivity : BaseSimpleActivity() {
             putExtra(APP_FAQ, faqItems)
             startActivity(this)
         }
-    }
-
-    private fun setupMoreApps() {
-        about_more_apps.setOnClickListener {
-            launchViewIntent("https://play.google.com/store/apps/dev?id=8268163890866913014")
-        }
-        about_more_apps.setTextColor(linkColor)
     }
 
     private fun setupInvite() {
@@ -139,34 +159,137 @@ class AboutActivity : BaseSimpleActivity() {
                 startActivity(Intent.createChooser(this, getString(R.string.invite_via)))
             }
         }
-        about_invite.setTextColor(linkColor)
+        about_invite.setTextColor(primaryColor)
     }
 
+    @SuppressLint("NewApi")
     private fun setupRateUs() {
-        if (baseConfig.appRunCount < 5) {
-            about_rate_us.visibility = View.GONE
-        } else {
-            about_rate_us.setOnClickListener {
-                if (baseConfig.wasBeforeRateShown) {
-                    if (baseConfig.wasAppRated) {
-                        redirectToRateUs()
-                    } else {
-                        RateStarsDialog(this)
-                    }
+        /* if (baseConfig.appRunCount < 5) {
+             about_rate_us.visibility = View.GONE
+         } else {*/
+        rateButton.setOnClickListener {
+            if (baseConfig.wasBeforeRateShown) {
+                if (baseConfig.wasAppRated) {
+                    redirectToRateUs()
                 } else {
-                    baseConfig.wasBeforeRateShown = true
-                    val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
-                    ConfirmationAdvancedDialog(this, msg, 0, R.string.read_faq, R.string.skip) {
-                        if (it) {
-                            about_faq_label.performClick()
-                        } else {
-                            about_rate_us.performClick()
-                        }
+                    RateStarsDialog(this)
+                }
+            } else {
+                baseConfig.wasBeforeRateShown = true
+                val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
+                ConfirmationAdvancedDialog(this, msg, 0, R.string.read_faq, R.string.skip) {
+                    if (it) {
+                        faqButton.performClick()
+                    } else {
+                        rateButton.performClick()
                     }
                 }
             }
         }
-        about_rate_us.setTextColor(linkColor)
+        // }
+
+        rateButton.setTextColor(getProperTextColor())
+        rateButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
+        rateButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
+        /*rateButton.background = resources.getDrawable(R.drawable.button_gray_bg)
+        rateButton.setBackgroundColor(baseConfig.primaryColor)
+        rateButton.backgroundTintMode*/
+       // rateButton.setBackgroundColor(primaryColor)
+    }
+
+    @SuppressLint("NewApi")
+    private fun setupMoreApps() {
+        moreButton.setOnClickListener {
+            launchMoreAppsFromUsIntent()
+        }
+        moreButton.setTextColor(getProperTextColor())
+        moreButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
+        moreButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
+    }
+
+    @SuppressLint("NewApi")
+    private fun setupFAQ() {
+        val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
+        faqButton.setOnClickListener {
+            openFAQ(faqItems)
+        }
+        faqButton.setTextColor(getProperTextColor())
+        faqButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
+        faqButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
+    }
+
+    @SuppressLint("NewApi")
+    private fun setupTipJar() {
+        tipJarButton.setOnClickListener {
+            startPurchaseActivity(R.string.app_name_g, licensingKey, productIdX1, productIdX2, productIdX3, showLifebuoy = false)
+        }
+        tipJarButton.setTextColor(getProperTextColor())
+        tipJarButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
+        tipJarButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
+    }
+
+    @SuppressLint("NewApi", "SetTextI18n", "UseCompatTextViewDrawableApis")
+    private fun setupCollection() {
+        val appDialerPackage = "com.goodwy.dialer"
+        val appContactsPackage = "com.goodwy.contacts"
+        val appSmsMessengerPackage = "com.goodwy.smsmessenger"
+        val appVoiceRecorderPackage = "com.goodwy.voicerecorder"
+
+        val appDialerInstalled = isPackageInstalled(appDialerPackage)// || isPackageInstalled("com.goodwy.dialer.debug")
+        val appContactsInstalled = isPackageInstalled(appContactsPackage)// || isPackageInstalled("com.goodwy.contacts.debug")
+        val appSmsMessengerInstalled = isPackageInstalled(appSmsMessengerPackage)// || isPackageInstalled("com.goodwy.smsmessenger.debug")
+        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
+
+        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appVoiceRecorderInstalled
+
+        collectionButton.setTextColor(getProperTextColor())
+        collectionButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
+        if (!appAllInstalled) collectionButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
+
+        val items = arrayOf(
+            SimpleListItem(1, R.string.right_dialer, R.mipmap.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
+            SimpleListItem(2, R.string.right_contacts, R.mipmap.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
+            SimpleListItem(3, R.string.right_sms_messenger, R.mipmap.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
+            SimpleListItem(4, R.string.right_voice_recorder, R.mipmap.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage)
+        )
+
+        val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
+        collectionButton.text = getString(R.string.collection) + "  $percentage"
+
+        collectionButton.setOnClickListener {
+            BottomSheetChooserDialog.createChooser(
+                fragmentManager = supportFragmentManager,
+                title = R.string.collection,
+                items = items,
+                collection = true
+            ) {
+                if (it.selected) {
+                    launchApp(it.packageName)
+                } else {
+                    val url = "https://play.google.com/store/apps/details?id=${it.packageName}"
+                    launchViewIntent(url)
+                }
+            }
+        }
+    }
+
+    private fun launchApp(packageName: String) {
+        try {
+            Intent(Intent.ACTION_MAIN).apply {
+                addCategory(Intent.CATEGORY_LAUNCHER)
+                `package` = packageName
+                //component = ComponentName.unflattenFromString("$packageName/")
+                addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
+                startActivity(this)
+            }
+        } catch (e: Exception) {
+            try {
+                val launchIntent = packageManager.getLaunchIntentForPackage(packageName)
+                startActivity(launchIntent)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
+        }
     }
 
     private fun setupLicense() {
@@ -174,19 +297,19 @@ class AboutActivity : BaseSimpleActivity() {
             Intent(applicationContext, LicenseActivity::class.java).apply {
                 putExtra(APP_ICON_IDS, getAppIconIDs())
                 putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
-                putExtra(APP_LICENSES, intent.getIntExtra(APP_LICENSES, 0))
+                putExtra(APP_LICENSES, intent.getLongExtra(APP_LICENSES, 0))
                 startActivity(this)
             }
         }
-        about_license.setTextColor(linkColor)
+        about_license.setTextColor(primaryColor)
     }
 
     private fun setupFacebook() {
         about_facebook.setOnClickListener {
-            var link = "https://www.facebook.com/goodwy"
+            var link = "https://www.facebook.com/Goodwy"
             try {
                 packageManager.getPackageInfo("com.facebook.katana", 0)
-                link = "fb://page/150270895341774"
+                link = "fb://page/id"
             } catch (ignored: Exception) {
             }
 
@@ -196,7 +319,7 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupReddit() {
         about_reddit.setOnClickListener {
-            launchViewIntent("https://www.reddit.com/r/goodwy")
+            launchViewIntent("https://www.reddit.com/r/Goodwy")
         }
     }
 
@@ -207,6 +330,31 @@ class AboutActivity : BaseSimpleActivity() {
         }
 
         val year = Calendar.getInstance().get(Calendar.YEAR)
-        about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
+        about_copyright.text = String.format(getString(R.string.copyright_g), versionName, year)
+    }
+
+    private fun setupAboutApp() {
+        var versionName = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+        if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
+            versionName += " ${getString(R.string.pro)}"
+        }
+        about_app_version.text = "Version: " + versionName
+
+        about_app_holder.setOnClickListener {
+            if (firstVersionClickTS == 0L) {
+                firstVersionClickTS = System.currentTimeMillis()
+                Handler().postDelayed({
+                    firstVersionClickTS = 0L
+                    clicksSinceFirstClick = 0
+                }, EASTER_EGG_TIME_LIMIT)
+            }
+
+            clicksSinceFirstClick++
+            if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS) {
+                toast(R.string.hello)
+                firstVersionClickTS = 0L
+                clicksSinceFirstClick = 0
+            }
+        }
     }
 }

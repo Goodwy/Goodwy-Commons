@@ -2,8 +2,8 @@ package com.goodwy.commons.dialogs
 
 import android.app.Activity
 import android.view.LayoutInflater
-import androidx.appcompat.app.AlertDialog
 import com.goodwy.commons.R
+import com.goodwy.commons.extensions.getAlertDialogBuilder
 import com.goodwy.commons.extensions.setupDialogStuff
 import com.goodwy.commons.models.Release
 import kotlinx.android.synthetic.main.dialog_whats_new.view.*
@@ -13,11 +13,11 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
         val view = LayoutInflater.from(activity).inflate(R.layout.dialog_whats_new, null)
         view.whats_new_content.text = getNewReleases()
 
-        AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this, R.string.whats_new)
-                }
+        activity.getAlertDialogBuilder()
+            .setPositiveButton(R.string.ok, null)
+            .apply {
+                activity.setupDialogStuff(view, this, R.string.whats_new, cancelOnTouchOutside = false)
+            }
     }
 
     private fun getNewReleases(): String {

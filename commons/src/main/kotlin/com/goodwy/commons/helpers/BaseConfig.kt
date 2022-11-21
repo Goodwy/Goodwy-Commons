@@ -24,9 +24,33 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(LAST_VERSION, 0)
         set(lastVersion) = prefs.edit().putInt(LAST_VERSION, lastVersion).apply()
 
-    var treeUri: String
-        get() = prefs.getString(TREE_URI, "")!!
-        set(uri) = prefs.edit().putString(TREE_URI, uri).apply()
+    var primaryAndroidDataTreeUri: String
+        get() = prefs.getString(PRIMARY_ANDROID_DATA_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(PRIMARY_ANDROID_DATA_TREE_URI, uri).apply()
+
+    var sdAndroidDataTreeUri: String
+        get() = prefs.getString(SD_ANDROID_DATA_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(SD_ANDROID_DATA_TREE_URI, uri).apply()
+
+    var otgAndroidDataTreeUri: String
+        get() = prefs.getString(OTG_ANDROID_DATA_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(OTG_ANDROID_DATA_TREE_URI, uri).apply()
+
+    var primaryAndroidObbTreeUri: String
+        get() = prefs.getString(PRIMARY_ANDROID_OBB_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(PRIMARY_ANDROID_OBB_TREE_URI, uri).apply()
+
+    var sdAndroidObbTreeUri: String
+        get() = prefs.getString(SD_ANDROID_OBB_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(SD_ANDROID_OBB_TREE_URI, uri).apply()
+
+    var otgAndroidObbTreeUri: String
+        get() = prefs.getString(OTG_ANDROID_OBB_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(OTG_ANDROID_OBB_TREE_URI, uri).apply()
+
+    var sdTreeUri: String
+        get() = prefs.getString(SD_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(SD_TREE_URI, uri).apply()
 
     var OTGTreeUri: String
         get() = prefs.getString(OTG_TREE_URI, "")!!
@@ -52,6 +76,10 @@ open class BaseConfig(val context: Context) {
 
     private fun getDefaultInternalPath() = if (prefs.contains(INTERNAL_STORAGE_PATH)) "" else context.getInternalStoragePath()
 
+    var currentTheme: Int
+        get() = prefs.getInt(CURRENT_THEME, 4)
+        set(textColor) = prefs.edit().putInt(CURRENT_THEME, currentTheme).apply()
+
     var textColor: Int
         get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
         set(textColor) = prefs.edit().putInt(TEXT_COLOR, textColor).apply()
@@ -65,11 +93,11 @@ open class BaseConfig(val context: Context) {
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
     var accentColor: Int
-        get() = prefs.getInt(ACCENT_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(ACCENT_COLOR, context.resources.getColor(R.color.color_accent))
         set(accentColor) = prefs.edit().putInt(ACCENT_COLOR, accentColor).apply()
 
     var navigationBarColor: Int
-        get() = prefs.getInt(NAVIGATION_BAR_COLOR, INVALID_NAVIGATION_BAR_COLOR)
+        get() = prefs.getInt(NAVIGATION_BAR_COLOR, context.resources.getColor(R.color.theme_black_navigation_color)) //get() = prefs.getInt(NAVIGATION_BAR_COLOR, INVALID_NAVIGATION_BAR_COLOR)
         set(navigationBarColor) = prefs.edit().putInt(NAVIGATION_BAR_COLOR, navigationBarColor).apply()
 
     var defaultNavigationBarColor: Int
@@ -81,7 +109,7 @@ open class BaseConfig(val context: Context) {
         set(lastHandledShortcutColor) = prefs.edit().putInt(LAST_HANDLED_SHORTCUT_COLOR, lastHandledShortcutColor).apply()
 
     var appIconColor: Int
-        get() = prefs.getInt(APP_ICON_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(APP_ICON_COLOR, context.resources.getColor(R.color.color_primary)) // TODO APP ICON DEFAULT CUR
         set(appIconColor) {
             isUsingModifiedAppIcon = appIconColor != context.resources.getColor(R.color.color_primary)
             prefs.edit().putInt(APP_ICON_COLOR, appIconColor).apply()
@@ -116,11 +144,11 @@ open class BaseConfig(val context: Context) {
         set(customNavigationBarColor) = prefs.edit().putInt(CUSTOM_NAVIGATION_BAR_COLOR, customNavigationBarColor).apply()
 
     var widgetBgColor: Int
-        get() = prefs.getInt(WIDGET_BG_COLOR, DEFAULT_WIDGET_BG_COLOR)
+        get() = prefs.getInt(WIDGET_BG_COLOR, context.resources.getInteger(R.integer.default_widget_bg_color))
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
 
     var widgetTextColor: Int
-        get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getInteger(R.integer.default_widget_text_color))
         set(widgetTextColor) = prefs.edit().putInt(WIDGET_TEXT_COLOR, widgetTextColor).apply()
 
     // hidden folder visibility protection
@@ -198,6 +226,22 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(WAS_USE_ENGLISH_TOGGLED, false)
         set(wasUseEnglishToggled) = prefs.edit().putBoolean(WAS_USE_ENGLISH_TOGGLED, wasUseEnglishToggled).apply()
 
+    var useIconTabs: Boolean
+        get() = prefs.getBoolean(USE_ICON_TABS, false)
+        set(useIconTabs) = prefs.edit().putBoolean(USE_ICON_TABS, useIconTabs).apply()
+
+    var tabsChanged: Boolean
+        get() = prefs.getBoolean(TABS_CHANGED, true)
+        set(tabsChanged) = prefs.edit().putBoolean(TABS_CHANGED, tabsChanged).apply()
+
+    var useDividers: Boolean
+        get() = prefs.getBoolean(USE_DIVIDERS, false)
+        set(useDividers) = prefs.edit().putBoolean(USE_DIVIDERS, useDividers).apply()
+
+    var useColoredContacts: Boolean
+        get() = prefs.getBoolean(USE_COLORED_CONTACTS, false)
+        set(useColoredContacts) = prefs.edit().putBoolean(USE_COLORED_CONTACTS, useColoredContacts).apply()
+
     var wasSharedThemeEverActivated: Boolean
         get() = prefs.getBoolean(WAS_SHARED_THEME_EVER_ACTIVATED, false)
         set(wasSharedThemeEverActivated) = prefs.edit().putBoolean(WAS_SHARED_THEME_EVER_ACTIVATED, wasSharedThemeEverActivated).apply()
@@ -206,14 +250,23 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(IS_USING_SHARED_THEME, false)
         set(isUsingSharedTheme) = prefs.edit().putBoolean(IS_USING_SHARED_THEME, isUsingSharedTheme).apply()
 
-    // used by Simple Thank You, stop using shared Shared Theme if it has been changed in it
+    // used by Goodwy Thank You, stop using shared Shared Theme if it has been changed in it
     var shouldUseSharedTheme: Boolean
         get() = prefs.getBoolean(SHOULD_USE_SHARED_THEME, false)
         set(shouldUseSharedTheme) = prefs.edit().putBoolean(SHOULD_USE_SHARED_THEME, shouldUseSharedTheme).apply()
 
+    var isUsingAutoTheme: Boolean
+        get() = prefs.getBoolean(IS_USING_AUTO_THEME, true) //TODO DEFAULT AUTO THEME
+        set(isUsingAutoTheme) = prefs.edit().putBoolean(IS_USING_AUTO_THEME, isUsingAutoTheme).apply()
+
+    var isUsingSystemTheme: Boolean
+        get() = prefs.getBoolean(IS_USING_SYSTEM_THEME, false)
+        set(isUsingSystemTheme) = prefs.edit().putBoolean(IS_USING_SYSTEM_THEME, isUsingSystemTheme).apply()
+
     var wasCustomThemeSwitchDescriptionShown: Boolean
         get() = prefs.getBoolean(WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN, false)
-        set(wasCustomThemeSwitchDescriptionShown) = prefs.edit().putBoolean(WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN, wasCustomThemeSwitchDescriptionShown).apply()
+        set(wasCustomThemeSwitchDescriptionShown) = prefs.edit().putBoolean(WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN, wasCustomThemeSwitchDescriptionShown)
+            .apply()
 
     var wasSharedThemeForced: Boolean
         get() = prefs.getBoolean(WAS_SHARED_THEME_FORCED, false)
@@ -348,7 +401,8 @@ open class BaseConfig(val context: Context) {
 
     var wasAppIconCustomizationWarningShown: Boolean
         get() = prefs.getBoolean(WAS_APP_ICON_CUSTOMIZATION_WARNING_SHOWN, false)
-        set(wasAppIconCustomizationWarningShown) = prefs.edit().putBoolean(WAS_APP_ICON_CUSTOMIZATION_WARNING_SHOWN, wasAppIconCustomizationWarningShown).apply()
+        set(wasAppIconCustomizationWarningShown) = prefs.edit().putBoolean(WAS_APP_ICON_CUSTOMIZATION_WARNING_SHOWN, wasAppIconCustomizationWarningShown)
+            .apply()
 
     var appSideloadingStatus: Int
         get() = prefs.getInt(APP_SIDELOADING_STATUS, SIDELOADING_UNCHECKED)
@@ -362,6 +416,7 @@ open class BaseConfig(val context: Context) {
         val format = DateFormat.getDateFormat(context)
         val pattern = (format as SimpleDateFormat).toLocalizedPattern()
         return when (pattern.toLowerCase().replace(" ", "")) {
+            "d.M.y" -> DATE_FORMAT_ONE
             "dd/mm/y" -> DATE_FORMAT_TWO
             "mm/dd/y" -> DATE_FORMAT_THREE
             "y-mm-dd" -> DATE_FORMAT_FOUR
@@ -409,12 +464,16 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(LAST_EXPORTED_SETTINGS_FOLDER, "")!!
         set(lastExportedSettingsFolder) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FOLDER, lastExportedSettingsFolder).apply()
 
-    var lastExportedSettingsFile: String
-        get() = prefs.getString(LAST_EXPORTED_SETTINGS_FILE, "")!!
-        set(lastExportedSettingsFile) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FILE, lastExportedSettingsFile).apply()
+    var lastBlockedNumbersExportPath: String
+        get() = prefs.getString(LAST_BLOCKED_NUMBERS_EXPORT_PATH, "")!!
+        set(lastBlockedNumbersExportPath) = prefs.edit().putString(LAST_BLOCKED_NUMBERS_EXPORT_PATH, lastBlockedNumbersExportPath).apply()
+
+    var blockUnknownNumbers: Boolean
+        get() = prefs.getBoolean(BLOCK_UNKNOWN_NUMBERS, false)
+        set(blockUnknownNumbers) = prefs.edit().putBoolean(BLOCK_UNKNOWN_NUMBERS, blockUnknownNumbers).apply()
 
     var fontSize: Int
-        get() = prefs.getInt(FONT_SIZE, context.resources.getInteger(R.integer.default_font_size))
+        get() = prefs.getInt(FONT_SIZE, 1) //context.resources.getInteger(R.integer.default_font_size)
         set(size) = prefs.edit().putInt(FONT_SIZE, size).apply()
 
     // notify the users about new SMS Messenger and Voice Recorder released
@@ -433,4 +492,44 @@ open class BaseConfig(val context: Context) {
     var favorites: MutableSet<String>
         get() = prefs.getStringSet(FAVORITES, HashSet())!!
         set(favorites) = prefs.edit().remove(FAVORITES).putStringSet(FAVORITES, favorites).apply()
+
+    var showCallConfirmation: Boolean
+        get() = prefs.getBoolean(SHOW_CALL_CONFIRMATION, false)
+        set(showCallConfirmation) = prefs.edit().putBoolean(SHOW_CALL_CONFIRMATION, showCallConfirmation).apply()
+
+    // color picker last used colors
+    internal var colorPickerRecentColors: LinkedList<Int>
+        get(): LinkedList<Int> {
+            val defaultList = arrayListOf(
+                context.resources.getColor(R.color.md_red_700),
+                context.resources.getColor(R.color.md_blue_700),
+                context.resources.getColor(R.color.md_green_700),
+                context.resources.getColor(R.color.md_yellow_700),
+                context.resources.getColor(R.color.md_orange_700)
+            )
+            return LinkedList(prefs.getString(COLOR_PICKER_RECENT_COLORS, null)?.lines()?.map { it.toInt() } ?: defaultList)
+        }
+        set(recentColors) = prefs.edit().putString(COLOR_PICKER_RECENT_COLORS, recentColors.joinToString(separator = "\n")).apply()
+
+    var settingsIcon: Int
+        get() = prefs.getInt(SETTINGS_ICON, 1)
+        set(settingsIcon) = prefs.edit().putInt(SETTINGS_ICON, settingsIcon).apply()
+
+    var screenSlideAnimation: Int
+        get() = prefs.getInt(SCREEN_SLIDE_ANIMATION, 1)
+        set(screenSlideAnimation) = prefs.edit().putInt(SCREEN_SLIDE_ANIMATION, screenSlideAnimation).apply()
+
+    var materialDesign3: Boolean
+        get() = prefs.getBoolean(MATERIAL_DESIGN3, false)
+        set(materialDesign3) = prefs.edit().putBoolean(MATERIAL_DESIGN3, materialDesign3).apply()
+
+    var bottomNavigationBar: Boolean
+        get() = prefs.getBoolean(BOTTOM_NAVIGATION_BAR, false)
+        set(bottomNavigationBar) = prefs.edit().putBoolean(BOTTOM_NAVIGATION_BAR, bottomNavigationBar).apply()
+
+    var appRecommendationDialogCount: Int
+        get() = prefs.getInt(APP_RECOMMENDATION_DIALOG_COUNT, 3)
+        set(appRecommendationDialogCount) = prefs.edit().putInt(APP_RECOMMENDATION_DIALOG_COUNT, appRecommendationDialogCount).apply()
 }
+
+

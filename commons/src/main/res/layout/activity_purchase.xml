@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/purchase_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/purchase_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/purchase_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/purchase_toolbar_height"
+                app:menu="@menu/menu_purchase"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_chevron_left_vector"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/top_details"
+        layout="@layout/top_view_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.goodwy.commons.helpers.PurchaseTopBehavior"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/purchase_nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/purchase_app_bar_layout"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/purchase_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/normal_margin"
+            android:paddingStart="@dimen/about_margin"
+            android:paddingEnd="@dimen/about_margin">
+
+            <RelativeLayout
+                android:id="@+id/pay_app"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:id="@+id/app_one"
+                    android:layout_width="95dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/big_margin"
+                    android:layout_toLeftOf="@+id/app_two"
+                    android:background="@drawable/button_white_bg"
+                    android:elevation="8dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/app_one_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/app_one_button"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/tip_kind"
+                        android:textColor="@color/theme_light_text_color"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_one_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/medium_margin"
+                        android:alpha="0.6"
+                        android:background="@drawable/button_gray_bg"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/purchase"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="9sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/app_two"
+                    android:layout_width="95dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_white_bg"
+                    android:elevation="8dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/app_two_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/app_two_button"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/tip_excellent"
+                        android:textColor="@color/theme_light_text_color"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_two_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/medium_margin"
+                        android:alpha="0.8"
+                        android:background="@drawable/button_gray_bg"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/purchase"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="9sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/app_three"
+                    android:layout_width="95dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="8dp"
+                    android:layout_marginLeft="@dimen/big_margin"
+                    android:layout_toRightOf="@+id/app_two"
+                    android:background="@drawable/button_white_bg"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/app_three_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/app_three_button"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/tip_incredible"
+                        android:textColor="@color/theme_light_text_color"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_three_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/medium_margin"
+                        android:alpha="1.0"
+                        android:background="@drawable/button_gray_bg"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/purchase"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="9sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/theme_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pay_app"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <ImageView
+                    android:id="@+id/theme_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:src="@drawable/ic_invert_colors"
+                    android:tint="@color/color_primary"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/theme_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/theme_logo"
+                    android:paddingStart="@dimen/about_margin">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/theme_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/themes"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/theme_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/theme_title"
+                        android:alpha="0.6"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:text="@string/themes_summary"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/color_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/theme_holder"
+                android:layout_marginTop="@dimen/normal_margin">
+
+                <ImageView
+                    android:id="@+id/color_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:src="@drawable/ic_palette"
+                    android:tint="@color/color_primary"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/color_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/color_logo"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/about_margin">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/color_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/color_title"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/color_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below ="@+id/color_title"
+                        android:background="@null"
+                        android:alpha="0.6"
+                        android:clickable="false"
+                        android:text="@string/color_summary"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/plus_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/color_holder"
+                android:layout_marginTop="@dimen/normal_margin">
+
+                <ImageView
+                    android:id="@+id/plus_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_plus_round"
+                    android:tint="@color/color_primary"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/plus_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/plus_logo"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/about_margin">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/plus_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plus_title"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/plus_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/plus_title"
+                        android:alpha="0.6"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:text="@string/plus_summary"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lifebuoy_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plus_holder"
+                android:layout_marginTop="@dimen/normal_margin">
+
+                <ImageView
+                    android:id="@+id/lifebuoy_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_lifebuoy"
+                    android:tint="@color/color_primary"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/lifebuoy_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/lifebuoy_logo"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/about_margin">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/lifebuoy_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lifebuoy_title"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/lifebuoy_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lifebuoy_title"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginEnd="@dimen/normal_margin"
+                        android:layout_toLeftOf="@+id/lifebuoy_button"
+                        android:alpha="0.6"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:text="@string/lifebuoy_summary"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/lifebuoy_button"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="@dimen/normal_margin"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/lifebuoy_title"
+                        android:layout_alignBottom="@+id/lifebuoy_summary"
+                        android:alpha="0.6"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_mail_vector" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/goodwy_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/lifebuoy_holder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/big_margin"
+                android:src="@drawable/logo_goodwy"/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,17 +1,23 @@
 package com.goodwy.commons.helpers
 
 import android.content.Context
-import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Looper
 import android.util.Log
+import androidx.annotation.ChecksSdkIntAtLeast
 import com.goodwy.commons.R
 import com.goodwy.commons.overloads.times
-import java.util.*
+
+const val EXTERNAL_STORAGE_PROVIDER_AUTHORITY = "com.android.externalstorage.documents"
+const val EXTRA_SHOW_ADVANCED = "android.content.extra.SHOW_ADVANCED"
 
 const val APP_NAME = "app_name"
 const val APP_LICENSES = "app_licenses"
+const val GOOGLE_PLAY_LICENSING_KEY = "licensing_key"
+const val PRODUCT_ID_X1 = "product_id_x1"
+const val PRODUCT_ID_X2 = "product_id_x2"
+const val PRODUCT_ID_X3 = "product_id_x3"
 const val APP_FAQ = "app_faq"
 const val APP_VERSION_NAME = "app_version_name"
 const val APP_ICON_IDS = "app_icon_ids"
@@ -22,21 +28,28 @@ const val IS_FROM_GALLERY = "is_from_gallery"
 const val BROADCAST_REFRESH_MEDIA = "com.goodwy.REFRESH_MEDIA"
 const val REFRESH_PATH = "refresh_path"
 const val IS_CUSTOMIZING_COLORS = "is_customizing_colors"
+const val BLOCKED_NUMBERS_EXPORT_DELIMITER = ","
+const val BLOCKED_NUMBERS_EXPORT_EXTENSION = ".txt"
 const val NOMEDIA = ".nomedia"
 const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
 const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
 const val INVALID_NAVIGATION_BAR_COLOR = -1
 const val CHOPPED_LIST_DEFAULT_SIZE = 50
 const val SAVE_DISCARD_PROMPT_INTERVAL = 1000L
-val DEFAULT_WIDGET_BG_COLOR = Color.parseColor("#AA000000")
 const val SD_OTG_PATTERN = "^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val SD_OTG_SHORT = "^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val KEY_PHONE = "phone"
+const val KEY_MAILTO = "mailto"
 const val CONTACT_ID = "contact_id"
 const val IS_PRIVATE = "is_private"
+const val SMT_PRIVATE = "smt_private"   // used at the contact source of local contacts hidden from other apps
+const val FIRST_GROUP_ID = 10000L
 const val MD5 = "MD5"
 const val SHORT_ANIMATION_DURATION = 150L
 val DARK_GREY = 0xFF333333.toInt()
+const val CURRENT_PHONE_NUMBER = "number"
+const val SHOW_ACCENT_COLOR = "show_accent_color"
+const val SHOW_LIFEBUOY = "show_lifebuoy"
 
 const val LOWER_ALPHA = 0.25f
 const val MEDIUM_ALPHA = 0.5f
@@ -59,11 +72,18 @@ const val YEAR_SECONDS = YEAR_MINUTES * 60
 const val PREFS_KEY = "Prefs"
 const val APP_RUN_COUNT = "app_run_count"
 const val LAST_VERSION = "last_version"
-const val TREE_URI = "tree_uri_2"
+const val SD_TREE_URI = "tree_uri_2"
+const val PRIMARY_ANDROID_DATA_TREE_URI = "primary_android_data_tree_uri_2"
+const val OTG_ANDROID_DATA_TREE_URI = "otg_android_data_tree__uri_2"
+const val SD_ANDROID_DATA_TREE_URI = "sd_android_data_tree_uri_2"
+const val PRIMARY_ANDROID_OBB_TREE_URI = "primary_android_obb_tree_uri_2"
+const val OTG_ANDROID_OBB_TREE_URI = "otg_android_obb_tree_uri_2"
+const val SD_ANDROID_OBB_TREE_URI = "sd_android_obb_tree_uri_2"
 const val OTG_TREE_URI = "otg_tree_uri_2"
 const val SD_CARD_PATH = "sd_card_path_2"
 const val OTG_REAL_PATH = "otg_real_path_2"
 const val INTERNAL_STORAGE_PATH = "internal_storage_path"
+const val CURRENT_THEME = "current_theme"
 const val TEXT_COLOR = "text_color"
 const val BACKGROUND_COLOR = "background_color"
 const val PRIMARY_COLOR = "primary_color_2"
@@ -95,9 +115,15 @@ const val PROTECTED_FOLDER_HASH = "protected_folder_hash_"
 const val PROTECTED_FOLDER_TYPE = "protected_folder_type_"
 const val KEEP_LAST_MODIFIED = "keep_last_modified"
 const val USE_ENGLISH = "use_english"
+const val USE_ICON_TABS = "use_icon_tabs"
+const val USE_DIVIDERS = "use_dividers"
+const val USE_COLORED_CONTACTS = "colored_contacts"
+const val TABS_CHANGED = "tabs_changed"
 const val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
 const val WAS_SHARED_THEME_EVER_ACTIVATED = "was_shared_theme_ever_activated"
 const val IS_USING_SHARED_THEME = "is_using_shared_theme"
+const val IS_USING_AUTO_THEME = "is_using_auto_theme"
+const val IS_USING_SYSTEM_THEME = "is_using_system_theme"
 const val SHOULD_USE_SHARED_THEME = "should_use_shared_theme"
 const val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
 const val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
@@ -141,50 +167,84 @@ const val LAST_RENAME_USED = "last_rename_used"
 const val LAST_RENAME_PATTERN_USED = "last_rename_pattern_used"
 const val LAST_EXPORTED_SETTINGS_FOLDER = "last_exported_settings_folder"
 const val LAST_EXPORTED_SETTINGS_FILE = "last_exported_settings_file"
+const val LAST_BLOCKED_NUMBERS_EXPORT_PATH = "last_blocked_numbers_export_path"
+const val BLOCK_UNKNOWN_NUMBERS = "block_unknown_numbers"
 const val FONT_SIZE = "font_size"
 const val WAS_MESSENGER_RECORDER_SHOWN = "was_messenger_recorder_shown"
 const val DEFAULT_TAB = "default_tab"
 const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 const val FAVORITES = "favorites"
+const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
+const val SETTINGS_ICON = "settings_icon"
+const val SCREEN_SLIDE_ANIMATION = "Screen_slide_animation"
+const val MATERIAL_DESIGN3 = "material_design3"
+const val BOTTOM_NAVIGATION_BAR = "bottom_navigation_bar"
+const val APP_RECOMMENDATION_DIALOG_COUNT = "app_recommendation_dialog_count"
+internal const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
+
+// phone number/email types
+const val CELL = "CELL"
+const val WORK = "WORK"
+const val HOME = "HOME"
+const val OTHER = "OTHER"
+const val PREF = "PREF"
+const val MAIN = "MAIN"
+const val FAX = "FAX"
+const val WORK_FAX = "WORK;FAX"
+const val HOME_FAX = "HOME;FAX"
+const val PAGER = "PAGER"
+const val MOBILE = "MOBILE"
+
+// IMs not supported by Ez-vcard
+const val HANGOUTS = "Hangouts"
+const val QQ = "QQ"
+const val JABBER = "Jabber"
 
 // licenses
-internal const val LICENSE_KOTLIN = 1
-const val LICENSE_SUBSAMPLING = 2
-const val LICENSE_GLIDE = 4
-const val LICENSE_CROPPER = 8
-const val LICENSE_FILTERS = 16
-const val LICENSE_RTL = 32
-const val LICENSE_JODA = 64
-const val LICENSE_STETHO = 128
-const val LICENSE_OTTO = 256
-const val LICENSE_PHOTOVIEW = 512
-const val LICENSE_PICASSO = 1024
-const val LICENSE_PATTERN = 2048
-const val LICENSE_REPRINT = 4096
-const val LICENSE_GIF_DRAWABLE = 8192
-const val LICENSE_AUTOFITTEXTVIEW = 16384
-const val LICENSE_ROBOLECTRIC = 32768
-const val LICENSE_ESPRESSO = 65536
-const val LICENSE_GSON = 131072
-const val LICENSE_LEAK_CANARY = 262144
-const val LICENSE_NUMBER_PICKER = 524288
-const val LICENSE_EXOPLAYER = 1048576
-const val LICENSE_PANORAMA_VIEW = 2097152
-const val LICENSE_SANSELAN = 4194304
-const val LICENSE_GESTURE_VIEWS = 8388608
-const val LICENSE_INDICATOR_FAST_SCROLL = 16777216
-const val LICENSE_EVENT_BUS = 33554432
-const val LICENSE_AUDIO_RECORD_VIEW = 67108864
-const val LICENSE_SMS_MMS = 134217728
-const val LICENSE_APNG = 268435456
+internal const val LICENSE_KOTLIN = 1L
+const val LICENSE_SUBSAMPLING = 2L
+const val LICENSE_GLIDE = 4L
+const val LICENSE_CROPPER = 8L
+const val LICENSE_FILTERS = 16L
+const val LICENSE_RTL = 32L
+const val LICENSE_JODA = 64L
+const val LICENSE_STETHO = 128L
+const val LICENSE_OTTO = 256L
+const val LICENSE_PHOTOVIEW = 512L
+const val LICENSE_PICASSO = 1024L
+const val LICENSE_PATTERN = 2048L
+const val LICENSE_REPRINT = 4096L
+const val LICENSE_GIF_DRAWABLE = 8192L
+const val LICENSE_AUTOFITTEXTVIEW = 16384L
+const val LICENSE_ROBOLECTRIC = 32768L
+const val LICENSE_ESPRESSO = 65536L
+const val LICENSE_GSON = 131072L
+const val LICENSE_LEAK_CANARY = 262144L
+const val LICENSE_NUMBER_PICKER = 524288L
+const val LICENSE_EXOPLAYER = 1048576L
+const val LICENSE_PANORAMA_VIEW = 2097152L
+const val LICENSE_SANSELAN = 4194304L
+const val LICENSE_GESTURE_VIEWS = 8388608L
+const val LICENSE_INDICATOR_FAST_SCROLL = 16777216L
+const val LICENSE_EVENT_BUS = 33554432L
+const val LICENSE_AUDIO_RECORD_VIEW = 67108864L
+const val LICENSE_SMS_MMS = 134217728L
+const val LICENSE_APNG = 268435456L
+const val LICENSE_PDF_VIEWER = 536870912L
+const val LICENSE_M3U_PARSER = 1073741824L
+const val LICENSE_ANDROID_LAME = 2147483648L
 
 // global intents
-const val OPEN_DOCUMENT_TREE = 1000
+const val OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB = 1000
 const val OPEN_DOCUMENT_TREE_OTG = 1001
-const val REQUEST_SET_AS = 1002
-const val REQUEST_EDIT_IMAGE = 1003
-const val SELECT_EXPORT_SETTINGS_FILE_INTENT = 1004
-const val REQUEST_CODE_SET_DEFAULT_DIALER = 1005
+const val OPEN_DOCUMENT_TREE_SD = 1002
+const val OPEN_DOCUMENT_TREE_FOR_SDK_30 = 1003
+const val REQUEST_SET_AS = 1004
+const val REQUEST_EDIT_IMAGE = 1005
+const val SELECT_EXPORT_SETTINGS_FILE_INTENT = 1006
+const val REQUEST_CODE_SET_DEFAULT_DIALER = 1007
+const val CREATE_DOCUMENT_SDK_30 = 1008
+const val REQUEST_CODE_SET_DEFAULT_CALLER_ID = 1010
 
 // sorting
 const val SORT_ORDER = "sort_order"
@@ -207,6 +267,7 @@ const val SORT_BY_RANDOM = 16384
 const val SORT_USE_NUMERIC_VALUE = 32768
 const val SORT_BY_FULL_NAME = 65536
 const val SORT_BY_CUSTOM = 131072
+const val SORT_BY_DATE_CREATED = 262144
 
 // security
 const val WAS_PROTECTION_HANDLED = "was_protection_handled"
@@ -240,6 +301,11 @@ const val PERMISSION_GET_ACCOUNTS = 12
 const val PERMISSION_READ_SMS = 13
 const val PERMISSION_SEND_SMS = 14
 const val PERMISSION_READ_PHONE_STATE = 15
+const val PERMISSION_MEDIA_LOCATION = 16
+const val PERMISSION_POST_NOTIFICATIONS = 17
+const val PERMISSION_READ_MEDIA_IMAGES = 18
+const val PERMISSION_READ_MEDIA_VIDEO = 19
+const val PERMISSION_READ_MEDIA_AUDIO = 20
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
@@ -276,11 +342,14 @@ const val TAB_CALL_HISTORY = 4
 const val TAB_GROUPS = 8
 const val TAB_FILES = 16
 const val TAB_RECENT_FILES = 32
+const val TAB_STORAGE_ANALYSIS = 64
 
-val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".heic", ".heif")
+val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".heic", ".heif", ".apng", ".avif")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
 val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw", ".rw2", ".cr2", ".cr3")
+
+val extensionsSupportingEXIF: Array<String> get() = arrayOf(".jpg", ".jpeg", ".png", ".webp", ".dng")
 
 const val DATE_FORMAT_ONE = "dd.MM.yyyy"
 const val DATE_FORMAT_TWO = "dd/MM/yyyy"
@@ -290,9 +359,22 @@ const val DATE_FORMAT_FIVE = "d MMMM yyyy"
 const val DATE_FORMAT_SIX = "MMMM d yyyy"
 const val DATE_FORMAT_SEVEN = "MM-dd-yyyy"
 const val DATE_FORMAT_EIGHT = "dd-MM-yyyy"
+const val DATE_FORMAT_NINE = "yyyyMMdd"
+const val DATE_FORMAT_TEN = "yyyy.MM.dd"
+const val DATE_FORMAT_ELEVEN = "yy-MM-dd"
+const val DATE_FORMAT_TWELVE = "yyMMdd"
+const val DATE_FORMAT_THIRTEEN = "yy.MM.dd"
+const val DATE_FORMAT_FOURTEEN = "yy/MM/dd"
 
 const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
+
+// possible icons at the top left corner
+enum class NavigationIcon {
+    Cross,
+    Arrow,
+    None
+}
 
 val appIconColorStrings = arrayListOf(
     ".Red",
@@ -319,6 +401,18 @@ val appIconColorStrings = arrayListOf(
 // most app icon colors from md_app_icon_colors with reduced alpha
 // used at showing contact placeholders without image
 val letterBackgroundColors = arrayListOf(
+    0xFF06C9AF,
+    0xFF6DC966,
+    0xFFF1AF28,
+    0xFFFF8963,
+    0xFFFF6969,
+    0xFF5D99FF,
+    0xFF8899EC,
+    0xFF8CDAFA,
+    0xFFF7DF32,
+    0xFFA589EF
+)
+/*val letterBackgroundColors = arrayListOf(
     0xCCD32F2F,
     0xCCC2185B,
     0xCC1976D2,
@@ -329,7 +423,7 @@ val letterBackgroundColors = arrayListOf(
     0xCC689F38,
     0xCCF57C00,
     0xCCE64A19
-)
+)*/
 
 // view types
 const val VIEW_TYPE_GRID = 1
@@ -347,14 +441,35 @@ fun ensureBackgroundThread(callback: () -> Unit) {
     }
 }
 
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.M)
 fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.N)
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.N_MR1)
 fun isNougatMR1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.O)
 fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.O_MR1)
 fun isOreoMr1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.P)
 fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.Q)
 fun isQPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.R)
 fun isRPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
+fun isSPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.TIRAMISU)
+fun isTiramisuPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
 fun getDateFormats() = arrayListOf(
     "--MM-dd",
@@ -369,6 +484,16 @@ fun getDateFormats() = arrayListOf(
     "MMdd",
     "MM/dd",
     "MM.dd"
+)
+
+fun getDateFormatsWithYear() = arrayListOf(
+    DATE_FORMAT_FOUR,
+    DATE_FORMAT_NINE,
+    DATE_FORMAT_TEN,
+    DATE_FORMAT_ELEVEN,
+    DATE_FORMAT_TWELVE,
+    DATE_FORMAT_THIRTEEN,
+    DATE_FORMAT_FOURTEEN,
 )
 
 val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()

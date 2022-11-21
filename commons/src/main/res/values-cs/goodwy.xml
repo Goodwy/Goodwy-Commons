@@ -1,0 +1,87 @@
+<resources>
+    <string name="show_contact_thumbnails_g">Zobrazit obrázky kontaktů</string>
+    <string name="use_icon_tabs_summary">Ikony místo textu na kartách</string>
+    <string name="use_icon_tabs">Použití ikon tabulátoru</string>
+    <string name="round_play_icon_summary">Ikona přehrávání/pozastavení je zbarvena primární barvou</string>
+    <string name="round_play_icon">Ikona kulatého přehrávání/pozastavení</string>
+    <string name="save_recordings_in_summary">Počínaje Androidem 10 nemá aplikace přístup k vašim souborům</string>
+    <string name="gray_theme">Šedý</string>
+    <string name="pref_category_appearance">Vzhled</string>
+    <string name="pref_theme_summary">Výběr předinstalované motivu</string>
+    <string name="customization_theme_summary">Výběr motivů a barev rozhraní</string>
+    <string name="recorder_g">Zobcová flétna</string>
+    <string name="player_g">Hráč</string>
+    <string name="general">Obecné</string>
+    <string name="default_tab">Výchozí karta</string>
+    <string name="color">barva</string>
+    <string name="black">Černý</string>
+    <string name="show_dividers">Zobrazit oddělovače</string>
+    <string name="colored_contacts">Barevné ikony kontaktů</string>
+    <string name="accent_color">Zvýrazňující barva</string>
+    <string name="incoming_call">Příchozí hovor</string>
+    <string name="outgoing_call">Odchozí hovor</string>
+    <string name="missed_call">Zmeškaný hovor</string>
+    <string name="unblock_number">Odblokovací číslo</string>
+    <string name="recents">Nedávný</string>
+    <string name="unblock_confirmation">Opravdu chcete odblokovat \"%s\"?</string>
+    <string name="plus_summary">Všechny naše aplikace jsou bez add free, Open Source a vždy to tak zůstane. S vaší pomocí jsme schopni implementovat více funkcí a ještě lépe je zlepšit</string>
+
+    <!-- Other -->
+    <string name="purchase_simple_thank_you_g">Zakoupit Jednoduché děkuji</string>
+    <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Aktualizujte prosím Jednoduché děkuji na nejnovější verzi</string>
+    <string name="faq_2_text_commons_g">
+        <![CDATA[
+        Ano, samozřejmě. Např. doporučením aplikací mezi známými, či konstruktivní odezvou a hodnocením. Také můžete pomoci s překladem do nových jazyků, nebo jen s úpravou stávajících.
+        Návod naleznete na <a href="https://github.com/Goodwy/Discussion">https://github.com/Goodwy/Discussion</a> , nebo mi napište na <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> pokud potřebujete pomoc.
+        ]]>
+    </string>
+    <string name="faq_8_text_commons_g">Tato verze aplikace již nebude aktualizována. Chyby, které jste možná objevili, proto nebudou nikdy opraveny. Také již nepřibudou žádné nové funkce. Pro verzi získáte za malý poplatek v Obchodě Google Play.
+        Jde o jednorázovou platbu, což znamená, že po zakoupení již nebudete muset nic platit znovu. Ani při koupi nového zařízení. Pokud se vám Pro verze nebude líbit, můžete ji do pár hodin odinstalovat a peníze vám budou automaticky vráceny.
+        Pokud budete chtít aplikaci vrátit kdykoliv později, stačí nám napsat na goodwy.dev@gmail.com a peníze vám vrátíme.</string>
+    <string name="contributors_label_g">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+    <string name="deprecated_app_g">ZASTARALÁ: Tato verze aplikace již není podporována, stáhněte si Pro verzi na https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Nezapomeňte, že pokud odinstalujete kteroukoliv placenou aplikaci do 2 hodin, budou vám automaticky vráceny peníze. Pokud budete chtít vrátit platbu kdykoliv později, kontaktujte nás prosím na goodwy.dev@gmail.com. Tímto vám nic nebrání aplikace plně ozkoušet :)</string>
+
+    <!-- Contacts -->
+    <string name="add_number">Add number</string>
+    <string name="add_email">Add email</string>
+    <string name="add_address">Add address</string>
+    <string name="add_im">Add IM</string>
+    <string name="add_event">Add event</string>
+    <string name="add_notes">Add notes</string>
+    <string name="add_website">Add website</string>
+    <string name="add_group">Add a group</string>
+
+    <string name="video_call">Video call</string>
+    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="screen_slide_animation_zoomout">Zoom-out</string>
+    <string name="screen_slide_animation_depth">Depth</string>
+
+    <!-- Apps -->
+    <string name="get">Get</string>
+    <string name="open">Open</string>
+    <string name="collection">Collection</string>
+    <string name="right_contacts">Right Contacts</string>
+    <string name="right_dialer">Right Dialer</string>
+    <string name="right_sms_messenger">Right Messages</string>
+    <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="recommendation_dialog_contacts_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+
+    <!-- SMS -->
+    <string name="copy_code">Copy code</string>
+    <string name="action_on_message_click">Action on message click</string>
+    <string name="invert_color">Invert color</string>
+    <string name="speech_bubble">Speech bubble</string>
+</resources>
