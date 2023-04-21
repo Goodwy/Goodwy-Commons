@@ -25,7 +25,6 @@
             android:id="@+id/icon2"
             android:layout_width="@dimen/min_row_height"
             android:layout_height="@dimen/min_row_height"
-            android:layout_marginStart="@dimen/normal_margin"
             android:layout_marginTop="@dimen/larger_margin"
             android:layout_marginBottom="@dimen/medium_margin"
             android:layout_toEndOf="@+id/icon1"
@@ -37,7 +36,6 @@
             android:id="@+id/icon3"
             android:layout_width="@dimen/min_row_height"
             android:layout_height="@dimen/min_row_height"
-            android:layout_marginStart="@dimen/normal_margin"
             android:layout_marginTop="@dimen/larger_margin"
             android:layout_marginBottom="@dimen/medium_margin"
             android:layout_toEndOf="@+id/icon2"
@@ -49,7 +47,6 @@
             android:id="@+id/icon4"
             android:layout_width="@dimen/min_row_height"
             android:layout_height="@dimen/min_row_height"
-            android:layout_marginStart="@dimen/normal_margin"
             android:layout_marginTop="@dimen/larger_margin"
             android:layout_marginBottom="@dimen/medium_margin"
             android:layout_toEndOf="@+id/icon3"
@@ -61,13 +58,23 @@
             android:id="@+id/icon5"
             android:layout_width="@dimen/min_row_height"
             android:layout_height="@dimen/min_row_height"
-            android:layout_marginStart="@dimen/normal_margin"
             android:layout_marginTop="@dimen/larger_margin"
             android:layout_marginBottom="@dimen/medium_margin"
             android:layout_toEndOf="@+id/icon4"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="@dimen/activity_margin"
             android:src="@drawable/ic_settings_gear" />
+
+        <ImageView
+            android:id="@+id/icon6"
+            android:layout_width="@dimen/min_row_height"
+            android:layout_height="@dimen/min_row_height"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_toEndOf="@+id/icon5"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/activity_margin"
+            android:src="@drawable/ic_settings_toggles" />
     </RelativeLayout>
 
 </RelativeLayout>

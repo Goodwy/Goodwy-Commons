@@ -4,8 +4,7 @@
         <shape android:shape="rectangle">
 
             <corners
-                android:topLeftRadius="@dimen/bottom_sheet_corner_radius"
-                android:topRightRadius="@dimen/bottom_sheet_corner_radius" />
+                android:radius="@dimen/bottom_sheet_corner_radius"/>
 
         </shape>
     </item>

@@ -9,6 +9,8 @@
         android:id="@+id/pin_lock_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_centerHorizontal="true"
         android:paddingBottom="@dimen/small_margin"
         android:paddingLeft="@dimen/activity_margin"
         android:paddingRight="@dimen/activity_margin"
@@ -33,6 +35,8 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/pin_lock_current_pin"
         android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginStart="@dimen/about_margin"
+        android:layout_marginEnd="@dimen/about_margin"
         android:orientation="vertical">
 
         <LinearLayout
@@ -46,6 +50,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="1"/>
 
@@ -54,6 +60,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="2"/>
 
@@ -62,6 +70,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="3"/>
         </LinearLayout>
@@ -77,6 +87,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="4"/>
 
@@ -85,6 +97,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="5"/>
 
@@ -93,6 +107,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="6"/>
         </LinearLayout>
@@ -108,6 +124,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="7"/>
 
@@ -116,6 +134,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="8"/>
 
@@ -124,6 +144,8 @@
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="9"/>
         </LinearLayout>
@@ -134,30 +156,39 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <com.goodwy.commons.views.MyTextView
-                android:id="@+id/pin_c"
+            <ImageView
+                android:id="@+id/pin_ok"
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/ripple_all_corners_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
-                android:text="C"/>
+                android:padding="@dimen/activity_margin"
+                android:src="@drawable/ic_check"
+                android:visibility="invisible" />
 
             <com.goodwy.commons.views.MyTextView
                 android:id="@+id/pin_0"
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/button_background_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:text="0"/>
 
             <ImageView
-                android:id="@+id/pin_ok"
+                android:id="@+id/pin_c"
                 style="@style/PinNumberStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/ripple_all_corners_16dp"
+                android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
                 android:padding="@dimen/activity_margin"
-                android:src="@drawable/ic_check_vector"/>
+                android:src="@drawable/ic_backspace"
+                android:visibility="invisible"/>
 
         </LinearLayout>
     </LinearLayout>

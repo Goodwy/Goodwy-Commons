@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">Pranešimas</string>
+    <string name="settings_icon">Nustatymų piktograma</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Projekto palaikymas</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">Sužinoti daugiau</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">Temos</string>
+    <string name="themes_summary">"Kruopščiai atrinktos programų temos, automatinis temų keitiklis ir sistemos temų palaikymas, skirtas \"Android 12+\". "</string>
+    <string name="color_title">Spalvų</string>
+    <string name="color_summary">Rankinis pagrindinės spalvos, akcento, fono, teksto ir naršymo juostos reguliavimas</string>
+    <string name="plus_title">Paremkite mus</string>
+    <string name="plus_summary">Visos mūsų programos yra be skelbimų, atviro kodo ir visada taip išliks. Su jūsų pagalba mes galime įgyvendinti daugiau funkcijų ir padaryti jas dar geresnes</string>
+    <string name="lifebuoy_title">Mes jums padėsime</string>
+    <string name="lifebuoy_summary">Jei dėl kokių nors priežasčių negalite sau leisti mūsų programos, bet tikrai norite naudotis visomis funkcijomis, tiesiog atsiųskite mums el. laišką</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Rodyti adresatų miniatiūras</string>
     <string name="use_icon_tabs_summary">Piktogramos vietoj teksto skirtukuose</string>
     <string name="use_icon_tabs">Skirtukų piktogramų naudojimas</string>
@@ -17,6 +53,27 @@
     <string name="black">Juodas</string>
     <string name="show_dividers">Rodyti skyriklius</string>
     <string name="colored_contacts">Kontaktų spalvotos piktogramos</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Skirtuko naršymas</string>
+    <string name="top">Virš</string>
+    <string name="bottom">Žemiau</string>
+    <string name="relative_date">Santykinė data</string>
+    <string name="color_sim_card_icons">Spalvotos SIM kortelės piktogramos</string>
+    <string name="tabs">Skirtukai</string>
+    <string name="open_search_when_open_contacts">Atidarykite iešką, kai atidarote skirtuką Kontaktai</string>
+    <string name="call_screen_background">Skambučių ekrano fonas</string>
+    <string name="contact_photo">Kontaktų nuotrauka</string>
+    <string name="blurry_contact_photo">Neaiški kontaktų nuotrauka</string>
+    <string name="blurry_wallpaper">Užsklanda</string>
+
     <string name="accent_color">Paryškinta spalva</string>
     <string name="incoming_call">Skambutį</string>
     <string name="outgoing_call">Išeinantis skambutis</string>
@@ -24,7 +81,6 @@
     <string name="unblock_number">Atblokuoti numerį</string>
     <string name="recents">Naujas</string>
     <string name="unblock_confirmation">Ar tikrai norite atblokuoti \"%s\"?</string>
-    <string name="plus_summary">Visos mūsų programos yra be skelbimų, atviro kodo ir visada taip išliks. Su jūsų pagalba mes galime įgyvendinti daugiau funkcijų ir padaryti jas dar geresnes</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -49,38 +105,55 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Pridėti numerį</string>
+    <string name="add_email">Pridėti el. paštą</string>
+    <string name="add_address">Pridėti adresą</string>
+    <string name="add_im">Pridėti IM</string>
+    <string name="add_event">Pridėti įvykį</string>
+    <string name="add_notes">Pridėti pastabas</string>
+    <string name="add_website">Pridėti svetainę</string>
+    <string name="add_group">Pridėti grupę</string>
+    <string name="add_related_person">Pridėti susijusį asmenį</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Video skambutis</string>
+    <string name="screen_slide_animation">Ekrano skaidrių animacija</string>
+    <string name="screen_slide_animation_zoomout">Išplėtimas</string>
+    <string name="screen_slide_animation_depth">Gylis</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Gauti</string>
+    <string name="open">Atidaryti</string>
+    <string name="collection">Surinkimas</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Kodo kopijavimas</string>
+    <string name="action_on_message_click">Darbas paspaudus pranešimą</string>
+    <string name="invert_color">Invertuoti spalvą</string>
+    <string name="speech_bubble">Kalbos burbulas</string>
+
+    <!-- Gallery -->
+    <string name="library">Biblioteka</string>
+    <string name="open_in_maps">Atidaryti žemėlapiuose</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Ar galiu jums paskambinti vėliau?</string>
+    <string name="message_on_my_way">Aš einu savo keliu.</string>
+    <string name="message_cant_talk_right_now">Atsiprašau, dabar negaliu kalbėti.</string>
 </resources>

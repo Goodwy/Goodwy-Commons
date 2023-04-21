@@ -1,197 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/customization_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/customization_app_bar_layout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/customization_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/customization_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_primary"
-            app:menu="@menu/menu_customization"
-            app:title="@string/customize_colors"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_primary"
+        app:menu="@menu/menu_customization"
+        app:title="@string/customize_colors"
+        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/customization_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true"
+        android:scrollbars="none">
 
         <RelativeLayout
             android:id="@+id/customization_holder"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/bigger_margin">
+            android:layout_height="wrap_content">
 
             <RelativeLayout
-                android:id="@+id/customization_theme_holder"
-                style="@style/SettingsHolderSwitchStyle">
+                android:id="@+id/settings_purchase_thank_you_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:paddingEnd="@dimen/normal_margin"
+                tools:ignore="RtlSymmetry">
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/customization_theme_label"
-                    style="@style/SettingsTextLabelStyle"
-                    android:layout_alignParentStart="true"
-                    android:layout_toStartOf="@+id/customization_theme"
-                    android:text="@string/theme" />
+                <ImageView
+                    android:id="@+id/purchase_logo"
+                    android:layout_width="@dimen/app_logo"
+                    android:layout_height="@dimen/app_logo"
+                    android:layout_marginStart="@dimen/section_margin"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/normal_margin"
+                    android:background="@drawable/button_white_bg"
+                    android:elevation="8dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_plus_support"
+                    app:tint="@color/color_primary" />
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/customization_theme"
-                    style="@style/SettingsTextValueStyle"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/settings_margin"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/section_margin"
+                    android:layout_toEndOf="@+id/purchase_logo"
+                    android:layout_centerVertical="true">
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/settings_customize_colors_summary"
-                    style="@style/SettingsTextSummaryStyle"
-                    android:layout_below="@+id/customization_theme_label"
-                    android:layout_marginTop="@dimen/settings_summary_top_margin"
-                    android:layout_marginEnd="80dp"
-                    android:text="@string/pref_theme_summary"/>
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/settings_purchase_thank_you"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_support_project"/>
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/about_app_version"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/settings_purchase_thank_you"
+                        android:layout_marginTop="@dimen/tiny_margin"
+                        android:alpha="0.6"
+                        android:text="@string/pref_pay_summary"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/moreButton"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/about_app_version"
+                        android:layout_marginTop="@dimen/medium_margin"
+                        android:alpha="0.4"
+                        android:background="@drawable/button_gray_bg"
+                        android:saveEnabled="false"
+                        android:text="@string/learn_more"
+                        android:textAllCaps="true"
+                        android:textColor="@color/default_text_color"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+                    <!--style="@style/AppTheme.Button.Chip"-->
+
+                </RelativeLayout>
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/customization_primary_color_holder"
-                android:layout_below="@+id/customization_theme_holder"
-                style="@style/SettingsHolderSwitchStyle">
+            <LinearLayout
+                android:id="@+id/theme_holder"
+                style="@style/SettingsSectionHolder"
+                android:layout_below="@+id/settings_purchase_thank_you_holder"
+                android:paddingBottom='0dp'
+                android:orientation="vertical">
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/customization_primary_color_label"
-                    style="@style/SettingsTextLabelStyle"
-                    android:layout_centerVertical="true"
-                    android:text="@string/primary_color" />
+                <RelativeLayout
+                    android:id="@+id/customization_theme_holder"
+                    style="@style/SettingsHolderStyle"
+                    android:background="@drawable/ripple_all_corners_16dp">
 
-                <ImageView
-                    android:id="@+id/customization_primary_color"
-                    android:layout_width="@dimen/color_sample_size"
-                    android:layout_height="@dimen/color_sample_size"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/settings_margin"
-                    android:clickable="false" />
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_theme_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="68dp"
+                        android:text="@string/theme" />
 
-            </RelativeLayout>
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/settings_customize_colors_summary"
+                        style="@style/SettingsTextSummaryStyle"
+                        android:layout_below="@+id/customization_theme_label"
+                        android:layout_marginTop="@dimen/settings_summary_top_margin"
+                        android:layout_marginEnd="68dp"
+                        android:text="@string/pref_theme_summary"
+                        android:visibility="gone" />
 
-            <RelativeLayout
-                android:id="@+id/customization_accent_color_holder"
-                android:layout_below="@+id/customization_primary_color_holder"
-                style="@style/SettingsHolderSwitchStyle">
-                <!--android:visibility="gone"-->
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_theme"
+                        style="@style/SettingsTextValueStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/settings_margin" />
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/customization_accent_color_label"
-                    style="@style/SettingsTextLabelStyle"
-                    android:layout_centerVertical="true"
-                    android:text="@string/accent_color" />
-
-                <ImageView
-                    android:id="@+id/customization_accent_color"
-                    android:layout_width="@dimen/color_sample_size"
-                    android:layout_height="@dimen/color_sample_size"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/settings_margin"
-                    android:clickable="false" />
-
-            </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/customization_text_color_holder"
-                android:layout_below="@+id/customization_accent_color_holder"
-                style="@style/SettingsHolderSwitchStyle">
+                android:id="@+id/colors_holder"
+                style="@style/SettingsSectionHolder"
+                android:layout_below="@+id/theme_holder"
+                android:paddingTop='@dimen/medium_margin'>
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/customization_text_color_label"
-                    style="@style/SettingsTextLabelStyle"
-                    android:layout_centerVertical="true"
-                    android:text="@string/text_color" />
+                <RelativeLayout
+                    android:id="@+id/customization_primary_color_holder"
+                    style="@style/SettingsHolderStyle">
 
-                <ImageView
-                    android:id="@+id/customization_text_color"
-                    android:layout_width="@dimen/color_sample_size"
-                    android:layout_height="@dimen/color_sample_size"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/settings_margin"
-                    android:clickable="false" />
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_primary_color_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/primary_color" />
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/customization_primary_color"
+                        android:layout_width="@dimen/color_sample_size"
+                        android:layout_height="@dimen/color_sample_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        android:clickable="false" />
 
-            <RelativeLayout
-                android:id="@+id/customization_background_color_holder"
-                android:layout_below="@+id/customization_text_color_holder"
-                style="@style/SettingsHolderSwitchStyle">
+                </RelativeLayout>
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/customization_background_color_label"
-                    style="@style/SettingsTextLabelStyle"
-                    android:layout_centerVertical="true"
-                    android:text="@string/background_color" />
+                <RelativeLayout
+                    android:id="@+id/customization_accent_color_holder"
+                    android:layout_below="@+id/customization_primary_color_holder"
+                    style="@style/SettingsHolderStyle">
+                    <!--android:visibility="gone"-->
 
-                <ImageView
-                    android:id="@+id/customization_background_color"
-                    android:layout_width="@dimen/color_sample_size"
-                    android:layout_height="@dimen/color_sample_size"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/settings_margin"
-                    android:clickable="false" />
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_accent_color_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/accent_color" />
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/customization_accent_color"
+                        android:layout_width="@dimen/color_sample_size"
+                        android:layout_height="@dimen/color_sample_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        android:clickable="false" />
 
-            <RelativeLayout
-                android:id="@+id/customization_app_icon_color_holder"
-                android:layout_below="@+id/customization_background_color_holder"
-                style="@style/SettingsHolderSwitchStyle">
+                </RelativeLayout>
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/customization_app_icon_color_label"
-                    style="@style/SettingsTextLabelStyle"
-                    android:layout_centerVertical="true"
-                    android:text="@string/app_icon_color" />
+                <RelativeLayout
+                    android:id="@+id/customization_text_color_holder"
+                    android:layout_below="@+id/customization_accent_color_holder"
+                    style="@style/SettingsHolderStyle">
 
-                <ImageView
-                    android:id="@+id/customization_app_icon_color"
-                    android:layout_width="@dimen/color_sample_size"
-                    android:layout_height="@dimen/color_sample_size"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/settings_margin"
-                    android:clickable="false" />
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_text_color_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/text_color" />
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/customization_text_color"
+                        android:layout_width="@dimen/color_sample_size"
+                        android:layout_height="@dimen/color_sample_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        android:clickable="false" />
 
-            <RelativeLayout
-                android:id="@+id/customization_navigation_bar_color_holder"
-                android:layout_below="@+id/customization_app_icon_color_holder"
-                style="@style/SettingsHolderSwitchStyle">
+                </RelativeLayout>
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/customization_navigation_bar_color_label"
-                    style="@style/SettingsTextLabelStyle"
-                    android:layout_centerVertical="true"
-                    android:text="@string/bottom_navigation_bar_color" />
+                <RelativeLayout
+                    android:id="@+id/customization_background_color_holder"
+                    android:layout_below="@+id/customization_text_color_holder"
+                    style="@style/SettingsHolderStyle">
 
-                <ImageView
-                    android:id="@+id/customization_navigation_bar_color"
-                    android:layout_width="@dimen/color_sample_size"
-                    android:layout_height="@dimen/color_sample_size"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/settings_margin"
-                    android:clickable="false" />
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_background_color_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/background_color" />
 
+                    <ImageView
+                        android:id="@+id/customization_background_color"
+                        android:layout_width="@dimen/color_sample_size"
+                        android:layout_height="@dimen/color_sample_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        android:clickable="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/customization_app_icon_color_holder"
+                    android:layout_below="@+id/customization_background_color_holder"
+                    style="@style/SettingsHolderStyle">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_app_icon_color_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/app_icon_color" />
+
+                    <ImageView
+                        android:id="@+id/customization_app_icon_color"
+                        android:layout_width="@dimen/color_sample_size"
+                        android:layout_height="@dimen/color_sample_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        android:clickable="false" />
+
+                </RelativeLayout>
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/apply_to_all_holder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/customization_navigation_bar_color_holder"
+                android:layout_below="@+id/colors_holder"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/activity_margin"
                 android:background="?attr/selectableItemBackground">

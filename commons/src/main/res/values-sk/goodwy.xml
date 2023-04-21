@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">Správa</string>
+    <string name="settings_icon">Ikona Nastavenia</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Podpora projektov</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">Zistiť viac</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">Témy</string>
+    <string name="themes_summary">Starostlivo vybrané aplikačné témy, automatický menič tém a podpora systémových tém pre Android 12+</string>
+    <string name="color_title">Farby</string>
+    <string name="color_summary">Manuálna úprava primárnej farby, zvýraznenia, pozadia, textu a navigačného panela</string>
+    <string name="plus_title">Podporte nás</string>
+    <string name="plus_summary">Všetky naše aplikácie sú bez ad, Open Source a vždy to tak zostane. S vašou pomocou sme schopní implementovať viac funkcií a urobiť ich ešte lepšími</string>
+    <string name="lifebuoy_title">Podporíme vás</string>
+    <string name="lifebuoy_summary">Ak si z nejakého dôvodu nemôžete dovoliť našu aplikáciu, ale naozaj chcete používať všetky funkcie, stačí nám poslať e-mail</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Zobraziť obrázky kontaktov</string>
     <string name="use_icon_tabs_summary">Ikony namiesto textu na kartách</string>
     <string name="use_icon_tabs">Použitie ikon kariet</string>
@@ -17,6 +53,27 @@
     <string name="black">Čierny</string>
     <string name="show_dividers">Zobraziť rozdeľovače</string>
     <string name="colored_contacts">Farebné ikony kontaktov</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Navigácia na karte</string>
+    <string name="top">Nad</string>
+    <string name="bottom">Nižšie</string>
+    <string name="relative_date">Relatívny dátum</string>
+    <string name="color_sim_card_icons">Farebné ikony SIM karty</string>
+    <string name="tabs">Karty</string>
+    <string name="open_search_when_open_contacts">Po otvorení karty Kontakty otvorte vyhľadávanie</string>
+    <string name="call_screen_background">Pozadie obrazovky hovoru</string>
+    <string name="contact_photo">Obrázok kontaktu</string>
+    <string name="blurry_contact_photo">Rozmazaná fotografia kontaktu</string>
+    <string name="blurry_wallpaper">Rozmazaná tapeta</string>
+
     <string name="accent_color">Farba zvýraznenia</string>
     <string name="incoming_call">Prichádzajúci hovor</string>
     <string name="outgoing_call">Odchádzajúci hovor</string>
@@ -24,7 +81,6 @@
     <string name="unblock_number">Odblokovanie čísla</string>
     <string name="recents">Nedávny</string>
     <string name="unblock_confirmation">Naozaj chcete odblokovať \"%s\"?</string>
-    <string name="plus_summary">Všetky naše aplikácie sú bez ad, Open Source a vždy to tak zostane. S vašou pomocou sme schopní implementovať viac funkcií a urobiť ich ešte lepšími</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Kúpiť Goodwy Ďakujem</string>
@@ -50,38 +106,55 @@
     <string name="pro_app_refund_g">Nezabudnite, že ak odinštalujete platenú verziu do 2 hodín, peniaze vám budú automaticky vrátené. Ak ich budete chcieť späť hocikedy neskôr, len nám dajte vedieť na goodwy.dev@gmail.com. To vám zabezpečí jednoduchý spôsob na ich vyskúšanie :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Pridanie čísla</string>
+    <string name="add_email">Pridanie e-mailu</string>
+    <string name="add_address">Pridanie adresy</string>
+    <string name="add_im">Pridanie IM</string>
+    <string name="add_event">Pridanie udalosti</string>
+    <string name="add_notes">Pridanie poznámok</string>
+    <string name="add_website">Pridanie webovej stránky</string>
+    <string name="add_group">Pridanie skupiny</string>
+    <string name="add_related_person">Pridanie súvisiacej osoby</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Videohovor</string>
+    <string name="screen_slide_animation">Animácia snímky obrazovky</string>
+    <string name="screen_slide_animation_zoomout">Zväčšenie</string>
+    <string name="screen_slide_animation_depth">Hĺbka</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Získať</string>
+    <string name="open">Otvoriť</string>
+    <string name="collection">Zber</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Kód kopírovania</string>
+    <string name="action_on_message_click">Akcia na kliknutie na správu</string>
+    <string name="invert_color">Invertovať farbu</string>
+    <string name="speech_bubble">Mluvná bublina</string>
+
+    <!-- Gallery -->
+    <string name="library">Knižnica</string>
+    <string name="open_in_maps">Otvoriť v mapách</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Môžem vám zavolať neskôr?</string>
+    <string name="message_on_my_way">Som na ceste.</string>
+    <string name="message_cant_talk_right_now">Prepáčte, momentálne nemôžem hovoriť.</string>
 </resources>

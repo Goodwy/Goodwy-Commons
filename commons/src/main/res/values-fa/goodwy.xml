@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">پیام</string>
+    <string name="settings_icon">نماد تنظیمات</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">پشتیبانی پروژه</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">بیشتر بدانید</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">تم</string>
+    <string name="themes_summary">"با دقت انتخاب تم های نرم افزار ، تغییر خودکار تم و پشتیبانی از تم سیستم برای آندروید 12+ "</string>
+    <string name="color_title">رنگ</string>
+    <string name="color_summary">تنظیم دستی رنگ اولیه، لهجه، پس زمینه، متن و نوار ناوبری</string>
+    <string name="plus_title">از ما حمایت کنید</string>
+    <string name="plus_summary">همه برنامه های ما بدون آگهی، منبع باز هستند و همیشه به این شکل باقی خواهد ماند. با کمک شما ما قادر به پیاده سازی ویژگی های بیشتر و آنها را حتی بهتر</string>
+    <string name="lifebuoy_title">ما از شما حمایت خواهیم کرد</string>
+    <string name="lifebuoy_summary">اگر به دلایلی شما می توانید برنامه ما استطاعت نیست، اما واقعا می خواهید به استفاده از تمام ویژگی ها، فقط به ما ایمیل</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">آیکون ها به جای متن بر روی زبانه ها</string>
     <string name="use_icon_tabs">استفاده از آیکون های زبانه</string>
@@ -17,6 +53,27 @@
     <string name="black">سیاه</string>
     <string name="show_dividers">نمایش تقسیم کننده ها</string>
     <string name="colored_contacts">نمادهای رنگی مخاطبین</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">ناوبری زبانه</string>
+    <string name="top">بالا</string>
+    <string name="bottom">زیر</string>
+    <string name="relative_date">تاریخ نسبی</string>
+    <string name="color_sim_card_icons">رنگ آیکون سیم کارت</string>
+    <string name="tabs">برگه ها</string>
+    <string name="open_search_when_open_contacts">باز کردن جستجو هنگام باز کردن زبانه اشناها</string>
+    <string name="call_screen_background">پس‌زمینه صفحه تماس</string>
+    <string name="contact_photo">عکس تماس</string>
+    <string name="blurry_contact_photo">عکس مخاطب تار</string>
+    <string name="blurry_wallpaper">کاغذ دیواری تار</string>
+
     <string name="accent_color">رنگ لهجه</string>
     <string name="incoming_call">تماس ورودی</string>
     <string name="outgoing_call">تماس خروجی</string>
@@ -24,7 +81,6 @@
     <string name="unblock_number">شماره مسدود کردن</string>
     <string name="recents">اخیر</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="plus_summary">همه برنامه های ما بدون آگهی، منبع باز هستند و همیشه به این شکل باقی خواهد ماند. با کمک شما ما قادر به پیاده سازی ویژگی های بیشتر و آنها را حتی بهتر</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -50,38 +106,55 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">افزودن شماره</string>
+    <string name="add_email">افزودن ایمیل</string>
+    <string name="add_address">افزودن آدرس</string>
+    <string name="add_im">افزودن IM</string>
+    <string name="add_event">افزودن رویداد</string>
+    <string name="add_notes">یادداشت‌ها را اضافه کنید</string>
+    <string name="add_website">افزودن وب سایت</string>
+    <string name="add_group">یک گروه اضافه کنید</string>
+    <string name="add_related_person">افزودن شخص مرتبط</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">تماس تصویری</string>
+    <string name="screen_slide_animation">انیمیشن اسلاید صفحه</string>
+    <string name="screen_slide_animation_zoomout">بزرگنمایی</string>
+    <string name="screen_slide_animation_depth">عمق</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">دریافت</string>
+    <string name="open">باز کردن</string>
+    <string name="collection">مجموعه</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">کد را کپی کنید</string>
+    <string name="action_on_message_click">عملیات روی پیام کلیک</string>
+    <string name="invert_color">رنگ را معکوس کنید</string>
+    <string name="speech_bubble">حباب گفتار</string>
+
+    <!-- Gallery -->
+    <string name="library">کتابخانه</string>
+    <string name="open_in_maps">باز کردن در Maps</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">ميتونم بعدا بهت زنگ بزنم؟</string>
+    <string name="message_on_my_way">من در راهم .</string>
+    <string name="message_cant_talk_right_now">ببخشيد، الان نميتونم حرف بزنم.</string>
 </resources>

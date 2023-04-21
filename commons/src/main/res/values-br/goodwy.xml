@@ -11,6 +11,8 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="recents">Recents</string>
+    <string name="message">Message</string>
+    <string name="settings_icon">Settings icon</string>
 
     <!-- Support project -->
     <string name="action_support_project">Support project</string>
@@ -31,14 +33,19 @@
     <string name="plus_summary">All of our apps are ad-free, Open Source and it will always remain that way. With your help we are able to implement more features and make them even better</string>
     <string name="lifebuoy_title">We will support you</string>
     <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
-    <string name="message">Message</string>
     <string name="tip_kind">Kind tip of</string>
     <string name="tip_excellent">Excellent tip of</string>
     <string name="tip_incredible">Incredible tip of</string>
     <string name="tip_jar">Tip Jar</string>
-
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>
@@ -56,10 +63,26 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
     <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Tab navigation</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+    <string name="relative_date">Relative date</string>
+    <string name="color_sim_card_icons">Color SIM card icons</string>
+    <string name="tabs">Tabs</string>
+    <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
+    <string name="call_screen_background">Call screen background</string>
+    <string name="contact_photo">Contact photo</string>
+    <string name="blurry_contact_photo">Blurry contact photo</string>
+    <string name="blurry_wallpaper">Blurry wallpaper</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -93,6 +116,7 @@
     <string name="add_notes">Add notes</string>
     <string name="add_website">Add website</string>
     <string name="add_group">Add a group</string>
+    <string name="add_related_person">Add related person</string>
 
     <string name="video_call">Video call</string>
     <string name="screen_slide_animation">Screen slide animation</string>
@@ -107,10 +131,17 @@
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
             Thanks
         ]]></string>
 
@@ -119,4 +150,13 @@
     <string name="action_on_message_click">Action on message click</string>
     <string name="invert_color">Invert color</string>
     <string name="speech_bubble">Speech bubble</string>
+
+    <!-- Gallery -->
+    <string name="library">Library</string>
+    <string name="open_in_maps">Open in Maps</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Can I call you later?</string>
+    <string name="message_on_my_way">I\'m on my way.</string>
+    <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
 </resources>

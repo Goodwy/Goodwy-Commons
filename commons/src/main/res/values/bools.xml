@@ -5,4 +5,6 @@
     <bool name="hide_google_relations">false</bool>             <!-- hide everything related to Google, used in cases when our apps are preinstalled -->
     <bool name="hide_all_external_links">false</bool>           <!-- also used in cases when our apps are preinstalled on a device -->
     <bool name="pretend_thank_you_installed">false</bool>       <!-- do not require Thank You for color customization and widgets -->
+
+    <bool name="show_lifebuoy">false</bool>
 </resources>

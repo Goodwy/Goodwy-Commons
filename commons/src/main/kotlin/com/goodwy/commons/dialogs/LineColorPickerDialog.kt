@@ -7,7 +7,6 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.NavigationIcon
 import com.goodwy.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
 
@@ -77,12 +76,9 @@ class LineColorPickerDialog(
     private fun colorUpdated(color: Int) {
         view.hex_code.text = color.toHex()
         if (isPrimaryColorPicker) {
-           // activity.updateActionbarColor(color)
-            activity.setTheme(activity.getThemeId(color))
 
             if (toolbar != null) {
-                //activity.updateMenuItemColors(toolbar.menu, true, color)
-                activity.setupToolbar(toolbar, NavigationIcon.Cross, color)
+                activity.updateTopBarColors(toolbar, color)
             }
 
             if (!wasDimmedBackgroundRemoved) {

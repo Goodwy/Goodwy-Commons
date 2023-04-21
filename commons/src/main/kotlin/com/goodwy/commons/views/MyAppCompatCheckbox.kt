@@ -1,5 +1,6 @@
 package com.goodwy.commons.views
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
@@ -13,6 +14,7 @@ class MyAppCompatCheckbox : AppCompatCheckBox {
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
+    @SuppressLint("RestrictedApi")
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
         setTextColor(textColor)
         val colorStateList = ColorStateList(

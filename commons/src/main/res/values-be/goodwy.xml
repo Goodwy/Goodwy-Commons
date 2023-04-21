@@ -63,6 +63,7 @@
     <string name="use_icon_tabs_summary">Абразкі замест тэксту на ўкладках</string>
     <string name="show_dividers">Паказваць падзельнікі</string>
     <string name="colored_contacts">Каляровыя абразкі кантактаў</string>
+    <string name="transparent_navigation_bar">Празрыстая ніжняя панэль навігацыі</string>
     <string name="kids_mode">Дзіцячы рэжым</string>
     <string name="kids_mode_summary">Спрошчаны інтэрфейс, выбар размалёвак</string>
     <string name="restart_required">Патрабуецца перазапуск прыкладання</string>
@@ -71,6 +72,17 @@
     <string name="material_design_3_summary">Змяняе выгляд некаторых элементаў прыкладання</string>
     <string name="bottom_navigation_bar">Ніжняя панэль навігацыі</string>
     <string name="bottom_navigation_bar_summary">Панэль укладак перамесціцца ўніз</string>
+    <string name="tab_navigation">Навігацыя ўкладак</string>
+    <string name="top">Уверсе</string>
+    <string name="bottom">Унізе</string>
+    <string name="relative_date">Адносная дата</string>
+    <string name="color_sim_card_icons">Каляровыя абразкі SIM-карт</string>
+    <string name="tabs">Укладкі</string>
+    <string name="open_search_when_open_contacts">Адкрыць пошук пры адкрыцці ўкладкі кантакты</string>
+    <string name="call_screen_background">Фон экрана выкліку</string>
+    <string name="contact_photo">Фота кантакту</string>
+    <string name="blurry_contact_photo">Размытае фота кантакту</string>
+    <string name="blurry_wallpaper">Размытыя шпалеры</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
@@ -104,6 +116,7 @@
     <string name="add_notes">Дадаць нататку</string>
     <string name="add_website">Дадаць сайт</string>
     <string name="add_group">Дадаць у групу</string>
+    <string name="add_related_person">Дадаць кантактную асобу</string>
 
     <string name="video_call">Відэазванок</string>
     <string name="screen_slide_animation">Анімацыя слайдаў экрана</string>
@@ -118,10 +131,17 @@
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Прывітанне,<br><br>
             калі вам падабаецца гэта дадатак, то рэкамендуем ўсталяваць наша дадатак для прагляду і рэдагавання кантактаў.<br><br>
+            Дзякуй
+        ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Прывітанне,<br><br>
+            калі вам падабаецца гэта дадатак, мы рэкамендуем вам усталяваць наша дадатак для здзяйснення званкоў.<br><br>
             Дзякуй
         ]]></string>
 
@@ -130,4 +150,13 @@
     <string name="action_on_message_click">Дзеянне пры кліку па паведамленні</string>
     <string name="invert_color">Інвертаваць колеры</string>
     <string name="speech_bubble">Стыль паведамленняў</string>
+
+    <!-- Gallery -->
+    <string name="library">Медыятэка</string>
+    <string name="open_in_maps">Адкрыць у Картах</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Ператэлефаную пазней.</string>
+    <string name="message_on_my_way">Хутка буду.</string>
+    <string name="message_cant_talk_right_now">Цяпер не магу казаць.</string>
 </resources>

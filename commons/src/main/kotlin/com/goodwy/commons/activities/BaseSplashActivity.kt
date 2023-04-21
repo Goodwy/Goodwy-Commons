@@ -30,7 +30,6 @@ abstract class BaseSplashActivity : AppCompatActivity() {
                 isUsingSharedTheme = false
                 textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
                 backgroundColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
-                navigationBarColor = if (isUsingSystemDarkTheme) Color.BLACK else -2
             }
         }
 
@@ -45,7 +44,6 @@ abstract class BaseSplashActivity : AppCompatActivity() {
                         textColor = it.textColor
                         backgroundColor = it.backgroundColor
                         primaryColor = it.primaryColor
-                        navigationBarColor = it.navigationBarColor
                         accentColor = it.accentColor
                     }
 

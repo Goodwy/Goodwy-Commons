@@ -1,7 +1,6 @@
 package com.goodwy.commons.helpers
 
 import android.content.Context
-import android.content.res.Resources
 import android.util.AttributeSet
 import android.view.View
 import android.view.animation.LinearInterpolator
@@ -63,7 +62,7 @@ class PurchaseTopBehavior(
         )
     }
 
-    private fun actionBarSize(context: Context?): Float {
+    /*private fun actionBarSize(context: Context?): Float {
         val styledAttributes = context!!.theme?.obtainStyledAttributes(IntArray(1) { android.R.attr.actionBarSize })
         val actionBarSize = styledAttributes?.getDimension(0, 0F)
         styledAttributes?.recycle()
@@ -72,7 +71,7 @@ class PurchaseTopBehavior(
 
     private fun getScreenWidth(): Int {
         return Resources.getSystem().displayMetrics.widthPixels
-    }
+    }*/
 
 
     companion object {

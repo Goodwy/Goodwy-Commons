@@ -1,5 +1,41 @@
 <resources>
-    <!-- Events -->
+    <string name="message">رسالة</string>
+    <string name="settings_icon">أيقونة الإعدادات</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">دعم المشروع</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">التعرف على المزيد</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">المواضيع</string>
+    <string name="themes_summary">سمات التطبيق المختارة بعناية ، ومغير السمات التلقائي ودعم سمة النظام لنظام Android 12+</string>
+    <string name="color_title">الوان</string>
+    <string name="color_summary">الضبط اليدوي للون الأساسي واللكنة والخلفية والنص وشريط التنقل</string>
+    <string name="plus_title">ادعمنا</string>
+    <string name="plus_summary">جميع تطبيقاتنا خالية من الإعلانات ومفتوحة المصدر وستظل دائما على هذا النحو. بمساعدتكم ، نحن قادرون على تنفيذ المزيد من الميزات وجعلها أفضل</string>
+    <string name="lifebuoy_title">سوف ندعمك</string>
+    <string name="lifebuoy_summary">إذا كنت لا تستطيع تحمل تكاليف تطبيقنا لسبب ما ، ولكنك تريد حقا استخدام جميع الميزات ، فما عليك سوى مراسلتنا عبر البريد الإلكتروني</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <!-- Settings -->
     <string name="show_contact_thumbnails_g">عرض صور مصغرة لجهات الإتصال</string>
     <string name="use_icon_tabs_summary">الرموز بدلا من النص على علامات التبويب</string>
     <string name="use_icon_tabs">استخدام رموز علامات التبويب</string>
@@ -18,6 +54,27 @@
     <string name="black">أسود</string>
     <string name="show_dividers">إظهار المقسمات</string>
     <string name="colored_contacts">رموز ملونة جهات الاتصال</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">التنقل في علامات التبويب</string>
+    <string name="top">فوق</string>
+    <string name="bottom">ادناه</string>
+    <string name="relative_date">التاريخ النسبي</string>
+    <string name="color_sim_card_icons">أيقونات بطاقة SIM الملونة</string>
+    <string name="tabs">علامات التبويب</string>
+    <string name="open_search_when_open_contacts">افتح البحث عند فتح علامة التبويب جهات الاتصال</string>
+    <string name="call_screen_background">خلفية شاشة الاتصال</string>
+    <string name="contact_photo">صورة جهة الاتصال</string>
+    <string name="blurry_contact_photo">صورة غير واضحة لجهة الاتصال</string>
+    <string name="blurry_wallpaper">خلفية ضبابية</string>
+
     <string name="accent_color">لون التمييز</string>
     <string name="incoming_call">مكالمة واردة</string>
     <string name="outgoing_call">مكالمة صادرة</string>
@@ -47,38 +104,55 @@
     <string name="pro_app_refund_g">لا تنسى أنه إذا قمت بإلغاء تثبيت أي تطبيق مدفوع في غضون ساعتين ، فسيتم إسترداد أموالك تلقائياً. إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على goodwy.dev@gmail.com وستحصل عليه. هذا يجعل من السهل تجربته :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">إضافة رقم</string>
+    <string name="add_email">إضافة بريد إلكتروني</string>
+    <string name="add_address">إضافة عنوان</string>
+    <string name="add_im">إضافة خدمة المراسلة الفورية</string>
+    <string name="add_event">إضافة حدث</string>
+    <string name="add_notes">إضافة ملاحظة</string>
+    <string name="add_website">إضافة موقع ويب</string>
+    <string name="add_group">إضافة إلى المجموعة</string>
+    <string name="add_related_person">إضافة جهة اتصال</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">مكالمة فيديو</string>
+    <string name="screen_slide_animation">حركة شريحة الشاشة</string>
+    <string name="screen_slide_animation_zoomout">تصغير</string>
+    <string name="screen_slide_animation_depth">العمق</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">تنزيل</string>
+    <string name="open">فتح</string>
+    <string name="collection">المجموعة</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">نسخ الرمز</string>
+    <string name="action_on_message_click">إجراء عند النقر فوق الرسالة</string>
+    <string name="invert_color">عكس اللون</string>
+    <string name="speech_bubble">فقاعة كلامية</string>
+
+    <!-- Gallery -->
+    <string name="library">المكتبة</string>
+    <string name="open_in_maps">فتح في الخرائط</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">هل يمكنني الاتصال بك لاحقا؟</string>
+    <string name="message_on_my_way">أنا في طريقي.</string>
+    <string name="message_cant_talk_right_now">آسف ، لا أستطيع التحدث الآن.</string>
 </resources>

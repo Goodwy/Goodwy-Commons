@@ -16,6 +16,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+import kotlin.math.roundToInt
 
 
 /**
@@ -65,12 +66,25 @@ object BlurFactory {
     }
 
     fun fileToBlurBitmap(drawable: Drawable, context: Context, BITMAP_SCALE: Float = 0.6f, BLUR_RADIUS: Float = 15f): Bitmap? {
-        val image = drawableToBitmap(drawable)
-        if (image == null) {
-            return null
-        }
-        val width = Math.round(image.width * BITMAP_SCALE)
-        val height = Math.round(image.height * BITMAP_SCALE)
+        val image = drawableToBitmap(drawable) ?: return null
+        val width = (image.width * BITMAP_SCALE).roundToInt()
+        val height = (image.height * BITMAP_SCALE).roundToInt()
+        val inputBitmap = Bitmap.createScaledBitmap(image, width, height, false)
+        val outputBitmap = Bitmap.createBitmap(inputBitmap)
+        val rs = RenderScript.create(context)
+        val intrinsicBlur = ScriptIntrinsicBlur.create(rs, Element.U8_4(rs))
+        val tmpIn = Allocation.createFromBitmap(rs, inputBitmap)
+        val tmpOut = Allocation.createFromBitmap(rs, outputBitmap)
+        intrinsicBlur.setRadius(BLUR_RADIUS)
+        intrinsicBlur.setInput(tmpIn)
+        intrinsicBlur.forEach(tmpOut)
+        tmpOut.copyTo(outputBitmap)
+        return outputBitmap
+    }
+
+    fun fileToBlurBitmap(image: Bitmap, context: Context, BITMAP_SCALE: Float = 0.6f, BLUR_RADIUS: Float = 15f): Bitmap? {
+        val width = (image.width * BITMAP_SCALE).roundToInt()
+        val height = (image.height * BITMAP_SCALE).roundToInt()
         val inputBitmap = Bitmap.createScaledBitmap(image, width, height, false)
         val outputBitmap = Bitmap.createBitmap(inputBitmap)
         val rs = RenderScript.create(context)

@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.TargetApi
 import android.app.Activity
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.role.RoleManager
 import android.content.*
 import android.content.pm.PackageManager
@@ -38,6 +39,7 @@ import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import androidx.exifinterface.media.ExifInterface
 import androidx.loader.content.CursorLoader
@@ -99,7 +101,7 @@ val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 val Context.otgPath: String get() = baseConfig.OTGPath
 
-fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
+fun Context.isFingerPrintSensorAvailable() = Reprint.isHardwarePresent()
 
 fun Context.isBiometricIdAvailable(): Boolean = when (BiometricManager.from(this).canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_WEAK)) {
     BiometricManager.BIOMETRIC_SUCCESS, BiometricManager.BIOMETRIC_STATUS_UNKNOWN -> true
@@ -963,12 +965,25 @@ val Context.realScreenSize: Point
         windowManager.defaultDisplay.getRealSize(size)
         return size
     }
+
+fun Context.isUsingGestureNavigation(): Boolean {
+    return try {
+        val resourceId = resources.getIdentifier("config_navBarInteractionMode", "integer", "android")
+        if (resourceId > 0) {
+            resources.getInteger(resourceId) == 2
+        } else {
+            false
+        }
+    } catch (e: Exception) {
+        false
+    }
+}
+
 // TODO COLOR CIRCLE
 fun Context.getCornerRadius() = resources.getDimension(R.dimen.bottom_sheet_corner_radius) //R.dimen.rounded_corner_radius_small
 fun Context.getCornerRadiusBig() = resources.getDimension(R.dimen.rounded_corner_radius_big)
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
-@TargetApi(Build.VERSION_CODES.M)
 fun Context.isDefaultDialer(): Boolean {
     return if (!packageName.startsWith("com.goodwy.contacts") && !packageName.startsWith("com.goodwy.dialer")) {
         true
@@ -976,7 +991,7 @@ fun Context.isDefaultDialer(): Boolean {
         val roleManager = getSystemService(RoleManager::class.java)
         roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
-        isMarshmallowPlus() && telecomManager.defaultDialerPackage == packageName
+        telecomManager.defaultDialerPackage == packageName
     }
 }
 
@@ -1010,7 +1025,9 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
 fun Context.addBlockedNumber(number: String) {
     ContentValues().apply {
         put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, number)
-        put(BlockedNumbers.COLUMN_E164_NUMBER, PhoneNumberUtils.normalizeNumber(number))
+        if (number.isPhoneNumber()) {
+            put(BlockedNumbers.COLUMN_E164_NUMBER, PhoneNumberUtils.normalizeNumber(number))
+        }
         try {
             contentResolver.insert(BlockedNumbers.CONTENT_URI, this)
         } catch (e: Exception) {
@@ -1032,7 +1049,7 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     }
 
     val numberToCompare = number.trimToComparableNumber()
-    return blockedNumbers.any { numberToCompare in it.numberToCompare || numberToCompare in it.number } || isNumberBlockedByPattern(number, blockedNumbers)
+    return blockedNumbers.any { numberToCompare == it.numberToCompare || numberToCompare == it.number } || isNumberBlockedByPattern(number, blockedNumbers)
 }
 
 fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
@@ -1074,11 +1091,16 @@ fun Context.getPhoneNumberTypeText(type: Int, label: String): String {
     }
 }
 
-fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean) {
+fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean, drawableId: Int? = null) {
     val color = if (isActive) {
         getProperPrimaryColor()
     } else {
         getProperTextColor()
+    }
+
+    if (drawableId != null) {
+        val drawable = ResourcesCompat.getDrawable(resources, drawableId, theme)
+        view?.findViewById<ImageView>(R.id.tab_item_icon)?.setImageDrawable(drawable)
     }
 
     view?.findViewById<ImageView>(R.id.tab_item_icon)?.applyColorFilter(color)
@@ -1107,3 +1129,20 @@ fun Context.getScreenSlideAnimationText() = getString(
         else -> R.string.no
     }
 )
+
+fun Context.getNavigationBarStyleText() = getString(
+    when (baseConfig.bottomNavigationBar) {
+        true -> R.string.bottom
+        else -> R.string.top
+    }
+)
+
+fun Context.startCallPendingIntent(recipient: String): PendingIntent {
+    return PendingIntent.getActivity(this, 0,
+        Intent(Intent.ACTION_CALL, Uri.fromParts("tel", recipient, null)), PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+}
+
+fun Context.sendSMSPendingIntent(recipient: String): PendingIntent {
+    return PendingIntent.getActivity(this, 0,
+        Intent(Intent.ACTION_SENDTO, Uri.fromParts("smsto", recipient, null)), PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+}

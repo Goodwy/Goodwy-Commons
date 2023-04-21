@@ -14,7 +14,7 @@
             android:id="@+id/color_picker_title_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginTop="@dimen/normal_margin"
             android:layout_centerHorizontal="true">
 
             <com.goodwy.commons.views.MyTextView
@@ -34,7 +34,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/normal_margin"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_cancel" />
         </RelativeLayout>
@@ -105,124 +105,116 @@
                 <!--android:src="@drawable/ic_chevron_right_unpadded_vector"-->
             </androidx.cardview.widget.CardView>
 
-            <RelativeLayout
-                android:id="@+id/color_picker_hex_codes_holder"
-                android:layout_width="match_parent"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/color_picker_old_color"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="@dimen/big_margin"
                 android:layout_below="@id/color_picker_square_holder"
                 android:layout_alignStart="@+id/color_picker_square_holder"
-                android:layout_alignEnd="@+id/color_picker_hue_holder">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/color_picker_old_color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="@dimen/big_margin"
-                    android:layout_marginStart="36dp"
-                    android:layout_marginEnd="36dp"
-                    android:layout_marginBottom="@dimen/big_margin"
-                    app:cardBackgroundColor="@color/md_grey_white"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="12dp">
-
-                    <ImageView
-                        android:id="@+id/color_picker_new_color"
-                        android:layout_width="@dimen/colorpicker_color_height"
-                        android:layout_height="@dimen/colorpicker_color_height"
-                        android:layout_centerVertical="true" />
-                </androidx.cardview.widget.CardView>
-
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/color_picker_old_hex"
-                    android:layout_width="@dimen/colorpicker_color_width"
-                    android:layout_height="match_parent"
-                    android:layout_centerInParent="true"
-                    android:layout_toStartOf="@+id/color_picker_hex_arrow"
-                    android:gravity="center"
-                    android:textSize="@dimen/normal_text_size"
-                    android:visibility="invisible" />
+                app:cardBackgroundColor="@color/md_grey_white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12dp">
 
                 <ImageView
-                    android:id="@+id/color_picker_hex_arrow"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignTop="@+id/color_picker_new_hex"
-                    android:layout_alignBottom="@+id/color_picker_new_hex"
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="@dimen/normal_margin"
-                    android:layout_marginEnd="@dimen/normal_margin"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_arrow_right_vector"
-                    android:visibility="invisible" />
+                    android:id="@+id/color_picker_new_color"
+                    android:layout_width="@dimen/colorpicker_color_height"
+                    android:layout_height="@dimen/colorpicker_color_height"
+                    android:layout_centerVertical="true" />
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/color_picker_new_hex_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/colorpicker_items_height"
-                    android:layout_alignTop="@+id/color_picker_new_hex"
-                    android:layout_alignBottom="@+id/color_picker_new_hex"
-                    android:layout_toEndOf="@+id/color_picker_old_color"
-                    android:gravity="center"
-                    android:lines="1"
-                    android:text="@string/hex"
-                    android:textSize="@dimen/normal_text_size" />
+            </androidx.cardview.widget.CardView>
 
-                <com.goodwy.commons.views.MyTextView
-                    android:id="@+id/color_picker_new_color_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/colorpicker_items_height"
-                    android:layout_alignTop="@+id/color_picker_new_hex"
-                    android:layout_alignBottom="@+id/color_picker_new_hex"
-                    android:layout_toEndOf="@+id/color_picker_new_hex_label"
-                    android:gravity="center"
-                    android:lines="1"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="@string/color"
-                    android:textSize="@dimen/normal_text_size" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recent_colors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_toEndOf="@+id/color_picker_old_color"
+                android:layout_alignTop="@+id/color_picker_old_color"
+                android:layout_alignEnd="@+id/color_picker_hue_holder">
 
-                <com.goodwy.commons.views.MyEditText
-                    android:id="@+id/color_picker_new_hex"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/color_picker_old_color"
-                    android:layout_marginTop="-12dp"
-                    android:layout_toEndOf="@+id/color_picker_new_color_label"
-                    android:digits="0123456789ABCDEFabcdef"
-                    android:ems="5"
-                    android:gravity="center"
-                    android:lines="1"
-                    android:maxLength="6"
-                    android:textCursorDrawable="@null"
-                    android:textSize="@dimen/normal_text_size" />
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/recent_colors_flow"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:flow_horizontalAlign="start"
+                    app:flow_horizontalGap="@dimen/activity_margin"
+                    app:flow_horizontalStyle="packed"
+                    app:flow_maxElementsWrap="5"
+                    app:flow_verticalGap="@dimen/medium_margin"
+                    app:flow_wrapMode="chain"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/recent_colors"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/color_picker_new_hex_label"
-                    android:layout_alignBottom="@+id/color_picker_old_color"
-                    android:layout_marginTop="@dimen/activity_margin"
-                    android:layout_marginBottom="2dp">
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <androidx.constraintlayout.helper.widget.Flow
-                        android:id="@+id/recent_colors_flow"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        app:flow_horizontalAlign="start"
-                        app:flow_horizontalGap="@dimen/activity_margin"
-                        app:flow_horizontalStyle="packed"
-                        app:flow_maxElementsWrap="5"
-                        app:flow_verticalGap="@dimen/medium_margin"
-                        app:flow_wrapMode="chain"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+            <com.goodwy.commons.views.MyTextView
+                android:id="@+id/color_picker_new_hex_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/colorpicker_items_height"
+                android:layout_alignBottom="@+id/color_picker_old_color"
+                android:layout_toEndOf="@+id/color_picker_old_color"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/hex"
+                android:textSize="@dimen/normal_text_size" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.goodwy.commons.views.MyTextView
+                android:id="@+id/color_picker_new_color_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/colorpicker_items_height"
+                android:layout_alignTop="@+id/color_picker_new_hex_label"
+                android:layout_alignBottom="@+id/color_picker_new_hex_label"
+                android:layout_toEndOf="@+id/color_picker_new_hex_label"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/color"
+                android:textSize="@dimen/normal_text_size" />
 
-            </RelativeLayout>
+            <com.goodwy.commons.views.MyEditText
+                android:id="@+id/color_picker_new_hex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/color_picker_new_hex_label"
+                android:layout_alignBottom="@+id/color_picker_new_hex_label"
+                android:layout_marginBottom="-6dp"
+                android:layout_toEndOf="@+id/color_picker_new_color_label"
+                android:digits="0123456789ABCDEFabcdef"
+                android:ems="5"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLength="6"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/normal_text_size" />
+
+            <com.goodwy.commons.views.MyTextView
+                android:id="@+id/color_picker_old_hex"
+                android:layout_width="@dimen/colorpicker_color_width"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/color_picker_hex_arrow"
+                android:gravity="center"
+                android:textSize="@dimen/normal_text_size"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/color_picker_hex_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@+id/color_picker_new_hex"
+                android:layout_alignBottom="@+id/color_picker_new_hex"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_arrow_right_vector"
+                android:visibility="invisible" />
         </RelativeLayout>
     </RelativeLayout>
 </ScrollView>

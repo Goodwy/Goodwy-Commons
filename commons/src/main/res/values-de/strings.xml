@@ -45,9 +45,10 @@
     <string name="no_contacts_found">Keine Kontakte gefunden</string>
     <string name="request_the_required_permissions">Benötigte Berechtigungen anfordern</string>
     <string name="no_access_to_contacts">Die App kann nicht auf deine Kontakte zugreifen</string>
-    <string name="no_phone_call_permission">Die Anwendung hat nicht die Berechtigung, Telefonanrufe zu tätigen, bitte gewähre sie in den Geräteeinstellungen</string>
+    <string name="no_phone_call_permission">Die App hat nicht die Berechtigung, Telefonanrufe zu tätigen, bitte gewähre sie in den Geräteeinstellungen</string>
     <string name="insert_text_here">Text hier einfügen</string>
     <string name="call_person">%s anrufen</string>
+    <string name="confirm_calling_person">Anruf bestätigen %s</string>
     <string name="zero">Null</string>
     <string name="one">Eins</string>
     <string name="two">Zwei</string>
@@ -62,7 +63,7 @@
     <string name="value_cannot_be_empty">Wert darf nicht leer sein</string>
     <string name="create_new_contact">Neuen Kontakt erstellen</string>
     <string name="add_to_existing_contact">Zu einem existierenden Kontakt hinzufügen</string>
-    <string name="app_corrupt">Anwendung beschädigt</string>
+    <string name="app_corrupt">App beschädigt</string>
     <string name="disclaimer">Haftungsausschluss</string>
     <string name="take_photo">Foto aufnehmen</string>
     <string name="choose_photo">Foto auswählen</string>
@@ -71,6 +72,9 @@
     <string name="choose_file">Datei auswählen</string>
     <string name="record_audio">Audio aufnehmen</string>
     <string name="record_video">Video aufnehmen</string>
+    <string name="updating">Aktualisieren …</string>
+    <string name="phone_storage">Gerätespeicher</string>
+    <string name="phone_storage_hidden">Gerätespeicher (nicht sichtbar für andere Apps)</string>
     <!-- Events -->
     <string name="birthday">Geburtstag</string>
     <string name="anniversary">Jahrestag</string>
@@ -97,6 +101,10 @@
     <string name="landscape_column_count">Anzahl der Spalten im Querformat</string>
     <string name="change_cover_image">Coverbild ändern</string>
     <string name="select_photo">Auswählen</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d Spalte</item>
+        <item quantity="other">%d Spalten</item>
+    </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Blockierte Nummern verwalten</string>
     <string name="not_blocking_anyone">Du blockierst niemanden.</string>
@@ -108,10 +116,10 @@
     <string name="import_blocked_numbers">Blockierte Nummern importieren</string>
     <string name="must_make_default_dialer">Du musst diese App als Standardtelefonie-App einstellen, um Nummern blockieren zu können.</string>
     <string name="set_as_default">Als Standard auswählen</string>
-    <string name="block_confirmation">Soll „%s“ blockiert werden\?</string>
+    <string name="block_confirmation">„%s“ wirklich blockieren\?</string>
     <string name="block_unknown_calls">Anrufe von nicht gespeicherten Kontakten blockieren</string>
     <string name="block_unknown_messages">Nachrichten von nicht gespeicherten Kontakten blockieren</string>
-    <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
+    <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
     <string name="must_make_default_caller_id_app">Unbekannte Nummern können ohne Anrufer-ID-Berechtigung nicht blockiert werden.</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
@@ -120,18 +128,37 @@
     <string name="remove_from_favorites">Aus Favoriten entfernen</string>
     <!-- Search -->
     <string name="search">Suchen</string>
+    <string name="search_in_placeholder">Suchen in %s</string>
     <string name="type_2_characters">Du musst mindestens 2 Zeichen eingeben, um die Suche zu starten.</string>
+    <string name="search_contacts">Kontakte durchsuchen</string>
+    <string name="search_favorites">Favoriten durchsuchen</string>
+    <string name="search_apps">Apps durchsuchen</string>
+    <string name="search_events">Ereignisse durchsuchen</string>
+    <string name="search_groups">Gruppen durchsuchen</string>
+    <string name="search_history">Verlauf durchsuchen</string>
+    <string name="search_calls">Anrufe durchsuchen</string>
+    <string name="search_files">Dateien durchsuchen</string>
+    <string name="search_folders">Ordner durchsuchen</string>
+    <string name="search_files_and_folders">Dateien und Ordner durchsuchen</string>
+    <string name="search_playlists">Wiedergabelisten durchsuchen</string>
+    <string name="search_artists">Künstler durchsuchen</string>
+    <string name="search_albums">Alben durchsuchen</string>
+    <string name="search_tracks">Lieder durchsuchen</string>
+    <string name="search_text">Text durchsuchen</string>
+    <string name="search_conversations">Unterhaltungen durchsuchen</string>
+    <string name="search_recordings">Aufnahmen durchsuchen</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Filter (Pro)</string>
     <string name="no_items_found">Keine Elemente gefunden.</string>
     <string name="change_filter">Filter ändern</string>
     <!-- Permissions -->
-    <string name="no_storage_permissions">Speicher-Berechtigung wird benötigt</string>
-    <string name="no_contacts_permission">Kontakte-Berechtigung wird benötigt</string>
-    <string name="no_camera_permissions">Kamera-Berechtigung wird benötigt</string>
-    <string name="no_audio_permissions">Audio-Berechtigung wird benötigt</string>
-    <string name="no_post_notifications_permissions">Die Berechtigung zur Anzeige von Benachrichtigungen ist erforderlich</string>
+    <string name="no_storage_permissions">Speicherberechtigung wird benötigt</string>
+    <string name="no_contacts_permission">Kontaktberechtigung wird benötigt</string>
+    <string name="no_camera_permissions">Kameraberechtigung wird benötigt</string>
+    <string name="no_audio_permissions">Audioberechtigung wird benötigt</string>
+    <string name="no_post_notifications_permissions">Berechtigung zur Anzeige von Benachrichtigungen wird benötigt</string>
+    <string name="no_permission">Keine Berechtigung</string>
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
     <string name="rename_folder">Ordner umbenennen</string>
@@ -177,17 +204,17 @@
     <string name="please_select_destination">Bitte Ziel auswählen</string>
     <string name="source_and_destination_same">Quell- und Zielpfad sind identisch</string>
     <string name="copy_failed">Die Dateien konnten nicht kopiert werden</string>
-    <string name="copying">Kopieren…</string>
+    <string name="copying">Kopieren …</string>
     <string name="copying_success">Datei(en) erfolgreich kopiert</string>
     <string name="copying_success_one">Datei erfolgreich kopiert</string>
     <string name="copy_move_failed">Es ist ein Fehler aufgetreten</string>
-    <string name="moving">Verschieben…</string>
+    <string name="moving">Verschieben …</string>
     <string name="moving_success">Datei(en) erfolgreich verschoben</string>
     <string name="moving_success_one">Datei erfolgreich verschoben</string>
     <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
     <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
     <string name="no_files_selected">Keine Dateien ausgewählt</string>
-    <string name="saving">Speichern…</string>
+    <string name="saving">Speichern …</string>
     <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden</string>
     <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
     <string name="no_new_items">Keine neuen Elemente gefunden</string>
@@ -228,8 +255,8 @@
     <string name="confirm_storage_access_android_text_specific">Bitte auf dem nächsten Bildschirm durch Drücken auf „<b>Diesen Ordner verwenden</b>“ am unteren Bildschirmrand den Zugriff auf „<b>%s</b>“ gewähren.</string>
     <string name="confirm_create_doc_for_new_folder_text">Bitte am unteren Rand des nächsten Bildschirms auf „<b>Speichern</b>“ drücken, um den neuen Ordner zu erstellen.</string>
     <string name="confirm_selection">Auswahl bestätigen</string>
-    <string name="loading">Wird geladen …</string>
-    <string name="access_storage_prompt">Bitte unserer Anwendung Zugriff auf alle Dateien gewähren, da sie sonst möglicherweise nicht richtig funktioniert.</string>
+    <string name="loading">Wird geladen …</string>
+    <string name="access_storage_prompt">Bitte unserer App Zugriff auf alle Dateien gewähren, da sie sonst möglicherweise nicht richtig funktioniert.</string>
     <plurals name="items">
         <item quantity="one">%d Element</item>
         <item quantity="other">%d Elemente</item>
@@ -279,7 +306,7 @@
     <string name="gps_coordinates">GPS Koordinaten</string>
     <string name="altitude">Höhe</string>
     <string name="remove_exif">EXIF Daten entfernen</string>
-    <string name="remove_exif_confirmation">Sollen wirklich alle EXIF Daten, wie z.B. GPS Koordinaten oder Kameramodell, entfernt werden\?</string>
+    <string name="remove_exif_confirmation">Sollen wirklich alle EXIF-Daten, wie z. B. GPS Koordinaten oder Kameramodell, entfernt werden\?</string>
     <string name="exif_removed">EXIF Daten erfolgreich entfernt</string>
     <!-- Color customization -->
     <string name="background_color">Hintergrundfarbe</string>
@@ -291,7 +318,7 @@
     <string name="app_icon_color">Farbe des Anwendungssymbols</string>
     <string name="bottom_navigation_bar_color">Farbe der unteren Navigationsleiste</string>
     <string name="restore_defaults">Vorgabe wiederherstellen</string>
-    <string name="use_default">Vorgabe benutzen</string>
+    <string name="use_default">Standard verwenden</string>
     <string name="default_color">Vorgabe</string>
     <string name="change_color">Farbe ändern</string>
     <string name="theme">Thema</string>
@@ -299,7 +326,8 @@
     <string name="save">Speichern</string>
     <string name="discard">Verwerfen</string>
     <string name="undo_changes">Änderungen verwerfen</string>
-    <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen verwerfen willst?</string>
+    <string name="undo_changes_confirmation">Sollen wirklich alle Änderungen verworfen werden\?</string>
+    <string name="cannot_be_undone">Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vor dem Beenden?</string>
     <string name="apply_to_all_apps">Farben bei allen schlichten Apps anwenden</string>
     <string name="app_icon_color_warning">WARNUNG: Einige Launcher behandeln die Anpassung von App-Icons nicht richtig. Sollte das Icon verschwinden, versuche die App mit Google Play oder einem Widget (wenn verfügbar) zu starten.
@@ -339,7 +367,7 @@
     <string name="unhide">Nicht verstecken</string>
     <string name="hide_folder">Ordner verstecken</string>
     <string name="unhide_folder">Ordner nicht verstecken</string>
-    <string name="temporarily_show_hidden">Verstecktes temporär zeigen</string>
+    <string name="temporarily_show_hidden">Verstecktes temporär anzeigen</string>
     <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
     <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
     <string name="empty_and_disable_recycle_bin">Papierkorb leeren und deaktivieren</string>
@@ -388,10 +416,11 @@
     <string name="use_custom_sorting">Benutzerdefiniertes Sortieren anwenden</string>
     <string name="change_order">Reihenfolge ändern</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
-    <string name="deletion_confirmation">Sollen wirklich %s Elemente gelöscht werden?</string>
+    <string name="proceed_with_deletion">Soll wirklich mit dem Löschen fortgefahren werden\?</string>
+    <string name="deletion_confirmation">%s wirklich löschen\?</string>
+    <string name="deletion_confirmation_short">%s löschen\?</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Sollen wirklich %s Elemente in den Papierkorb verschoben werden?</string>
+    <string name="move_to_recycle_bin_confirmation">%s wirklich in den Papierkorb verschieben\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Soll dieses Element wirklich gelöscht werden?</string>
     <string name="are_you_sure_recycle_bin">Soll dieses Element wirklich in den Papierkorb verschoben werden?</string>
@@ -442,7 +471,8 @@
     <string name="days_raw">Tage</string>
     <string name="seconds_letter">Sek.</string>
     <string name="minutes_letter">Min.</string>
-    <string name="hours_letter">St.</string>
+    <string name="hours_letter">Std.</string>
+    <string name="week_number_short">KW</string>
     <plurals name="seconds">
         <item quantity="one">%d Sekunde</item>
         <item quantity="other">%d Sekunden</item>
@@ -583,11 +613,13 @@
     <string name="purchase_simple_thank_you">\"Simple Thank You\" App kaufen</string>
     <string name="general_settings">Allgemein</string>
     <string name="color_customization">Farbanpassung</string>
+    <string name="improved_color_customization">Verbesserte Farbanpassung</string>
     <string name="customize_colors">Farben anpassen</string>
     <string name="customize_colors_locked">Farben anpassen (Locked)</string>
     <string name="feature_locked">Gesperrt</string>
     <string name="customize_widget_colors">Widget-Farben anpassen</string>
     <string name="customize_notifications">Benachrichtigungen anpassen</string>
+    <string name="notification_sound">Benachrichtigungston</string>
     <string name="use_english_language">App in Englisch verwenden</string>
     <string name="language">Sprache</string>
     <string name="show_hidden_items">Versteckte Elemente anzeigen</string>
@@ -608,20 +640,20 @@
     <string name="change_date_and_time_format">Datums- und Zeitformat ändern</string>
     <string name="sunday_first">Wochenanfang am Sonntag</string>
     <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Immer dasselbe Schlummer-Intervall nutzen</string>
-    <string name="snooze_time">Schlummer-Intervall</string>
+    <string name="use_same_snooze">Immer dasselbe Schlummerintervall verwenden</string>
+    <string name="snooze_time">Schlummerintervall</string>
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
     <string name="move_items_into_recycle_bin">Elemente in den Papierkorb verschieben statt löschen</string>
     <string name="recycle_bin_cleaning_interval">Intervall zum Leeren des Papierkorbs</string>
     <string name="empty_recycle_bin">Papierkorb leeren</string>
-    <string name="force_portrait_mode">Porträt-Modus erzwingen</string>
+    <string name="force_portrait_mode">Porträtmodus erzwingen</string>
     <string name="export_settings">Einstellungen exportieren</string>
     <string name="import_settings">Einstellungen importieren</string>
     <string name="settings_exported_successfully">Einstellungen erfolgreich exportiert</string>
     <string name="settings_imported_successfully">Einstellungen erfolgreich importiert</string>
     <string name="start_name_with_surname">Namen mit Nachnamen beginnen</string>
     <string name="clear_cache">Cache leeren</string>
-    <string name="show_call_confirmation_dialog">Bestätigungsdialog zeigen, bevor ein Anruf durchgeführt wird</string>
+    <string name="show_call_confirmation_dialog">Bestätigungsdialog anzeigen, bevor ein Anruf durchgeführt wird</string>
     <!-- Setting sections -->
     <string name="visibility">Sichtbarkeit</string>
     <string name="security">Sicherheit</string>
@@ -635,7 +667,7 @@
     <string name="quality">Qualität</string>
     <string name="main_screen">Hauptbildschirm</string>
     <string name="thumbnails">Vorschaubilder</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Listenansicht</string>
     <!-- Excluding -->
     <string name="exclude">Ordner ausschließen</string>
     <string name="exclude_folder">Ordner ausschließen</string>
@@ -644,8 +676,8 @@
     <string name="manage_excluded_folders">Ausgeschlossene Ordner verwalten</string>
     <string name="remove_all">Alle entfernen</string>
     <string name="remove_all_description">Alle Ordner aus der Liste ausgeschlossener Ordner entfernen\? Die Ordner selbst werden dabei nicht gelöscht.</string>
-    <string name="temporarily_show_excluded">Ausgeschlossenes kurzfristig anzeigen</string>
-    <string name="stop_showing_excluded">Ausgeschlossene nicht mehr anzeigen</string>
+    <string name="temporarily_show_excluded">Ausgeschlossenes temporär anzeigen</string>
+    <string name="stop_showing_excluded">Ausgeschlossenes wieder verbergen</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Anzuzeigende Tabs festlegen</string>
     <string name="default_tab_to_open">Tab, der beim App-Start geöffnet werden soll</string>
@@ -662,18 +694,19 @@
     <string name="restore_all_files">Alle Dateien wiederherstellen</string>
     <string name="recycle_bin_emptied">Papierkorb erfolgreich geleert</string>
     <string name="files_restored_successfully">Dateien erfolgreich wiederhergestellt</string>
-    <string name="empty_recycle_bin_confirmation">Papierkorb wirklich leeren? Die Dateien sind dann unwiederbringlich gelöscht.</string>
+    <string name="empty_recycle_bin_confirmation">Den Papierkorb wirklich leeren\? Die Dateien sind dann unwiederbringlich gelöscht.</string>
     <string name="recycle_bin_empty">Der Papierkorb ist leer</string>
     <string name="moving_recycle_bin_items_disabled">Das Verschieben von Papierkorbobjekten ist deaktiviert, bitte Wiederherstellen verwenden</string>
     <string name="show_the_recycle_bin">Papierkorb anzeigen</string>
     <string name="hide_the_recycle_bin">Papierkorb verstecken</string>
+    <string name="open_the_recycle_bin">Papierkorb öffnen</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d Element wird in den Papierkorb verschoben</item>
         <item quantity="other">%d Elemente werden in den Papierkorb verschoben</item>
     </plurals>
     <!-- Import / Export -->
-    <string name="importing">Importieren…</string>
-    <string name="exporting">Exportieren…</string>
+    <string name="importing">Importieren …</string>
+    <string name="exporting">Exportieren …</string>
     <string name="importing_successful">Importieren erfolgreich</string>
     <string name="exporting_successful">Exportieren erfolgreich</string>
     <string name="importing_failed">Importieren fehlgeschlagen</string>
@@ -683,6 +716,17 @@
     <string name="no_entries_for_importing">Keine Einträge zum Importieren gefunden</string>
     <string name="no_new_entries_for_importing">Es wurden keine neuen Einträge zum Importieren gefunden</string>
     <string name="no_entries_for_exporting">Keine Einträge zum Exportieren gefunden</string>
+    <string name="backups">Sicherungen</string>
+    <string name="enable_automatic_backups">Automatische Sicherungen aktivieren</string>
+    <string name="manage_automatic_backups">Automatische Sicherungen verwalten</string>
+    <string name="date_time_pattern_info">Du kannst die folgenden Muster verwenden, um deine Datei automatisch zu benennen:
+\n
+\n%Y – Jahr
+\n%M – Monat
+\n%D – Tag
+\n%h – Stunde
+\n%m – Minute
+\n%s – Sekunde</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Es sieht so aus, als hättest du ein USB-Gerät an dein Gerät angeschlossen. Du musst zusätzliche Berechtigungen gewähren, damit die Dateien korrekt angezeigt werden.</string>
@@ -701,6 +745,19 @@
     <string name="october">Oktober</string>
     <string name="november">November</string>
     <string name="december">Dezember</string>
+    <!-- Short months -->
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mär</string>
+    <string name="april_short">Apr</string>
+    <string name="may_short">Mai</string>
+    <string name="june_short">Jun</string>
+    <string name="july_short">Jul</string>
+    <string name="august_short">Aug</string>
+    <string name="september_short">Sep</string>
+    <string name="october_short">Okt</string>
+    <string name="november_short">Nov</string>
+    <string name="december_short">Dez</string>
     <!-- in January -->
     <string name="in_january">im Januar</string>
     <string name="in_february">im Februar</string>
@@ -742,12 +799,43 @@
     <string name="more_info">Mehr Infos</string>
     <string name="upgrade">Pro-Version installieren</string>
     <string name="upgrade_calendar">Um lokal gespeicherte Termine zu migrieren, musst du sie als ics-Datei exportieren und anschließend importieren. Die beiden Schaltflächen befinden sich im Hauptmenü.</string>
+    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_to_pro_gallery">Hallo,
+\n
+\nes sieht so aus, als hättest du bereits die Pro-Version der App. Wenn du mit ihr zufrieden bist und deine Einstellungen und Favoriten übertragen hast, kannst du diese App deinstallieren, um zu vermeiden, dass sie versehentlich gestartet wird, da du sie nicht mehr benötigst.
+\n
+\nVielen Dank!</string>
+    <string name="upgraded_from_free">Hallo,
+\n
+\nes sieht so aus, als ob du gerade ein Upgrade von der kostenlosen Version durchgeführt hast. Wenn du mit ihr zufrieden bist und deine Daten migriert hast, kannst du die alte kostenlose Version deinstallieren, um zu vermeiden, dass sie versehentlich gestartet wird, da du sie nicht mehr benötigst.
+\n
+\nVielen Dank!</string>
     <string name="upgraded_to_pro">Hallo,
 \n
-\nes sieht so aus, als hättest du auch schon die Pro-Version der App. Du brauchst diese nicht mehr und kannst sie deinstallieren.</string>
-    <string name="upgraded_to_pro_calendar">Du musst lokal gespeicherte Termine manuell durch Exportieren in eine .ics-Datei und anschließendes Importieren migrieren. Die Schaltflächen für Export und Import befinden sich im oberen Menü.</string>
-    <string name="upgraded_to_pro_notes">Du musst deine Notizen manuell in die Pro-Version migrieren.</string>
-    <string name="upgraded_to_pro_contacts">Du musst privat gespeicherte Kontakte manuell durch Exportieren in eine .vcf-Datei und anschließendes Importieren migrieren. Die Schaltflächen für Export und Import befinden sich im oberen Menü.</string>
+\nes sieht so aus, als hättest du bereits die Pro-Version der App. Wenn du mit ihr zufrieden bist und deine Daten migriert hast, kannst du diese App deinstallieren, um zu vermeiden, dass sie versehentlich gestartet wird, da du sie nicht mehr benötigst.
+\n
+\nVielen Dank!</string>
+    <string name="upgraded_to_pro_calendar">Hallo,
+\n
+\nes sieht so aus, als ob du gerade ein Upgrade von der kostenlosen Version durchgeführt hast. Wenn du deine lokal gespeicherten Termine migrieren möchtest, musst du dies manuell durchführen, indem du sie in der kostenlosen App-Version in eine .ics-Datei exportierst und hier über das obere Menü importierst.
+\n
+\nSobald du mit deiner Einrichtung in der Pro-Version zufrieden bist, kannst du die alte kostenlose Version deinstallieren, da du sie nicht mehr benötigst.
+\n
+\nVielen Dank!</string>
+    <string name="upgraded_to_pro_contacts">Hallo,
+\n
+\nes sieht so aus, als ob du gerade ein Upgrade von der kostenlosen Version durchgeführt hast. Wenn du Kontakte unter \"%s\" gespeichert hast, musst du diese manuell migrieren, indem du sie in der kostenlosen App-Version in eine .vcf-Datei exportierst und hier über das obere Menü importierst.
+\n
+\nSobald du mit deiner Einrichtung in der Pro-Version zufrieden bist, kannst du die alte kostenlose Version deinstallieren, da du sie nicht mehr benötigst.
+\n
+\nVielen Dank!</string>
+    <string name="upgraded_to_pro_notes">Hallo,
+\n
+\nes sieht so aus, als ob du gerade ein Upgrade von der kostenlosen Version durchgeführt hast. Wenn du deine Notizen migrieren möchtest, musst du dies manuell durchführen, indem du sie in der kostenlosen App-Version in eine Datei exportierst und hier über das obere Menü importierst.
+\n
+\nSobald du mit deiner Einrichtung in der Pro-Version zufrieden bist, kannst du die alte kostenlose Version deinstallieren, da du sie nicht mehr benötigst.
+\n
+\nVielen Dank!</string>
     <!-- About -->
     <string name="about">Über</string>
     <string name="website">Website</string>
@@ -803,11 +891,11 @@
     <string name="features_locked">Diese Funktion ist gesperrt; bitte kaufe &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Schlichtes Dankeschön&lt;/a&gt;, um die volle Anwendung freizuschalten.&lt;br&gt;&lt;br&gt;Es ist eine einmalige Zahlung und wenn du nicht zufrieden bist, können wir das Geld zurückerstatten.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Hey,&lt;br&gt;&lt;br&gt; nur eine kleine Info zu einigen neu veröffentlichten Apps:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Du kannst sie durch Drücken auf den Namen herunterladen.&lt;br&gt;&lt;br&gt; Danke</string>
-    <string name="simple_app_launcher">Schlichter App-Launcher</string>
-    <string name="simple_calculator">Schlichter Taschenrechner</string>
+    <string name="simple_app_launcher">Einfacher App-Launcher</string>
+    <string name="simple_calculator">Schlichter Rechner</string>
     <string name="simple_calendar">Schlichter Kalender</string>
-    <string name="simple_camera">Schlichte Kamera</string>
-    <string name="simple_clock">Schlichte Uhr</string>
+    <string name="simple_camera">Einfache Kamera</string>
+    <string name="simple_clock">Einfache Uhr</string>
     <string name="simple_contacts">Schlichte Kontakte</string>
     <string name="simple_dialer">Schlichtes Telefon</string>
     <string name="simple_draw">Schlichter Zeichner</string>
@@ -816,11 +904,11 @@
     <string name="simple_gallery">Schlichte Galerie</string>
     <string name="simple_keyboard">Schlichte Tastatur</string>
     <string name="simple_launcher">Einfacher Launcher</string>
-    <string name="simple_music_player">Schlichter Musik-Player</string>
+    <string name="simple_music_player">Schlichter Musikplayer</string>
     <string name="simple_notes">Schlichte Notizen</string>
     <string name="simple_sms_messenger">Schlichter SMS-Messenger</string>
-    <string name="simple_thank_you">Schlichtes Dankeschön</string>
-    <string name="simple_voice_recorder">Schlichter Sprachrekorder</string>
+    <string name="simple_thank_you">Einfaches Dankeschön</string>
+    <string name="simple_voice_recorder">Einfaches Diktiergerät</string>
     <string name="app_launcher_short">App-Startprogramm</string>
     <string name="calculator_short">Rechner</string>
     <string name="calendar_short">Kalender</string>
@@ -834,7 +922,7 @@
     <string name="gallery_short">Galerie</string>
     <string name="keyboard_short">Tastatur</string>
     <string name="launcher_short">Startprogramm</string>
-    <string name="music_player_short">Musik-Player</string>
+    <string name="music_player_short">Musikplayer</string>
     <string name="notes_short">Notizblock</string>
     <string name="sms_messenger_short">SMS-Messenger</string>
     <string name="thank_you_short">Dankeschön</string>
@@ -926,11 +1014,11 @@
     <string name="why_upgrade_improved_design">Verbessertes Design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fortgeschrittener Fotoeditor</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Erweiterter Foto- und Videoeditor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF-Datei-Unterstützung</string>
-    <string name="why_upgrade_batch_renaming">Fortschrittliche Datei-Umbenennung im Stapelverfahren</string>
+    <string name="why_upgrade_advanced_photo_video_editor">Fortgeschrittener Foto- und Videoeditor</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF-Dateiunterstützung</string>
+    <string name="why_upgrade_batch_renaming">Fortschrittliche Dateiumbenennung im Stapelverfahren</string>
     <string name="why_upgrade_folder_locking">Individuelle Ordnersperre</string>
-    <string name="why_upgrade_printing_support">Druck-Unterstützung</string>
+    <string name="why_upgrade_printing_support">Druckunterstützung</string>
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Zeitzonen-Unterstützung</string>
     <string name="why_upgrade_attendees_emails">Teilnehmer und E-Mail-Erinnerungen</string>
@@ -978,19 +1066,39 @@
     <string name="gson_title">Gson (JSON-Parser)</string>
     <string name="leak_canary_title">Leak Canary (Memory-Leak-Detektor)</string>
     <string name="number_picker_title">Number Picker (Konfigurierbarer Zahlenwähler)</string>
-    <string name="exoplayer_title">ExoPlayer (Video-Player)</string>
+    <string name="exoplayer_title">ExoPlayer (Videoplayer)</string>
     <string name="panorama_view_title">VR Panorama View (Panoramabilder anzeigen)</string>
     <string name="sanselan_title">Apache Sanselan (Bild-Metadaten lesen)</string>
     <string name="filters_title">Android Photo Filters (Bilder filtern)</string>
     <string name="gesture_views_title">Gesture Views (Zoombare Bilder)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (Buchstaben auf dem Scrollbalken)</string>
     <string name="event_bus_title">Event Bus (Kommunikation innerhalb der App)</string>
-    <string name="audio_record_view_title">Audio Record View (Audio-Visualisierung)</string>
+    <string name="audio_record_view_title">Audio Record View (Audiovisualisierung)</string>
     <string name="sms_mms_title">SMS MMS (SMS- und MMS-Handhabung)</string>
     <string name="apng_title">APNG Android (animierte WebP-Unterstützung)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF-Betrachter)</string>
-    <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Wiedergabelisten-Dateien)</string>
+    <string name="pdf_view_pager_title">PDFViewPager (PDF-Betrachter)</string>
+    <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Wiedergabelistendateien)</string>
     <string name="android_lame_title">AndroidLame (mp3-Encoder)</string>
+    <!-- Trial -->
+    <string name="trial_expired">Testversion abgelaufen</string>
+    <string name="start_free_trial">Kostenlos testen</string>
+    <string name="trial_expires_soon">Deine Testversion läuft bald ab.</string>
+    <string name="unlock_for_one_final_day">Die App für einen letzten Tag freischalten</string>
+    <string name="welcome_to_app_name">Willkommen bei %s!</string>
+    <string name="trial_start_description">Vielen Dank, dass du unsere App benutzt. Du kannst diese freigeschaltete Version für <font color="#FFFFFF">%d Tage nutzen</font>. Nach Ablauf der Testphase solltest du ein Upgrade auf die Pro-Version in Betracht ziehen. Diese hat eine große Anzahl neuer Funktionen, ein modernes Design, keine Werbung und viele andere Verbesserungen.
+\n
+\nDu musst nur einmal im Leben dafür bezahlen und wenn du nicht zufrieden bist, kannst du die App deinstallieren und eine Rückerstattung erhalten.
+\n
+\nIch hoffe, es gefällt dir :)</string>
+    <string name="trial_end_description">Bitte führe ein Upgrade auf die Pro-Version durch, um die App in vollem Umfang genießen zu können.
+\n
+\nDu musst nur einmal im Leben dafür bezahlen und wenn du nicht zufrieden bist, kannst du die App deinstallieren und eine Rückerstattung erhalten.
+\n
+\nWir sehen uns dort :)</string>
+    <plurals name="trial_expires_days">
+        <item quantity="one">Deine Testversion läuft in %d Tag ab.</item>
+        <item quantity="other">Deine Testversion läuft in %d Tagen ab.</item>
+    </plurals>
     <!-- Google Play listing -->
     <string name="deprecated_app">Veraltet: Diese Version der App wird nicht länger unterstützt. Hole dir die Pro-Version unter https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Vergiss nicht, dass dir der Betrag erstattet wird, wenn du eine bezahlte App innerhalb von zwei Stunden wieder deinstallierst. Falls du später eine Rückerstattung wünschst, kontaktiere uns einfach unter hello@simplemobiletools.com, und du wirst sie bekommen. So kann man ganz einfach die App ausprobieren :)</string>

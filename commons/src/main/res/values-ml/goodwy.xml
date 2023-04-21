@@ -64,6 +64,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
@@ -72,6 +73,17 @@
     <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">ടാബ് നാവിഗേഷൻ</string>
+    <string name="top">മുകളിലേക്ക്</string>
+    <string name="bottom">താഴെ</string>
+    <string name="relative_date">ആപേക്ഷിക തീയതി</string>
+    <string name="color_sim_card_icons">വർണ്ണ സിം കാർഡ് ഐക്കണുകൾ</string>
+    <string name="tabs">ടാബുകൾ</string>
+    <string name="open_search_when_open_contacts">കോൺടാക്റ്റ് ടാബ് തുറക്കുമ്പോൾ തിരയൽ തുറക്കുക</string>
+    <string name="call_screen_background">കോൾ സ്‌ക്രീൻ പശ്ചാത്തലം</string>
+    <string name="contact_photo">കോൺടാക്റ്റ് ഫോട്ടോ</string>
+    <string name="blurry_contact_photo">മങ്ങിയ കോൺടാക്റ്റ് ഫോട്ടോ</string>
+    <string name="blurry_wallpaper">മങ്ങിയ വാൾപേപ്പർ</string>
 
     <!-- Other -->
     <string name="donate_please_g">
@@ -112,6 +124,7 @@
     <string name="add_notes">Add notes</string>
     <string name="add_website">Add website</string>
     <string name="add_group">Add a group</string>
+    <string name="add_related_person">Add related person</string>
 
     <string name="video_call">Video call</string>
     <string name="screen_slide_animation">Screen slide animation</string>
@@ -126,10 +139,17 @@
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
             Thanks
         ]]></string>
 
@@ -138,4 +158,13 @@
     <string name="action_on_message_click">Action on message click</string>
     <string name="invert_color">Invert color</string>
     <string name="speech_bubble">Speech bubble</string>
+
+    <!-- Gallery -->
+    <string name="library">Library</string>
+    <string name="open_in_maps">Open in Maps</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">ഞാൻ നിങ്ങളെ പിന്നീട് വിളിക്കാമോ?</string>
+    <string name="message_on_my_way">ഞാൻ യാത്രയിലാണ്.</string>
+    <string name="message_cant_talk_right_now">ക്ഷമിക്കണം, എനിക്ക് ഇപ്പോൾ സംസാരിക്കാൻ കഴിയില്ല.</string>
 </resources>

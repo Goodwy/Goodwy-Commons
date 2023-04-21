@@ -2,6 +2,7 @@ package com.goodwy.commons.extensions
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
 import android.app.TimePickerDialog
 import android.content.*
 import android.content.Intent.EXTRA_STREAM
@@ -31,6 +32,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.auth.AuthPromptCallback
 import androidx.biometric.auth.AuthPromptHost
 import androidx.biometric.auth.Class2BiometricAuthPrompt
+import androidx.core.view.WindowInsetsCompat
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -91,11 +93,6 @@ fun Activity.appLaunched(appId: String) {
         if (!resources.getBoolean(R.bool.hide_google_relations)) {
             RateStarsDialog(this)
         }
-    }
-
-    if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR && (window.attributes.flags and WindowManager.LayoutParams.FLAG_FULLSCREEN == 0)) {
-        baseConfig.defaultNavigationBarColor = window.navigationBarColor
-        baseConfig.navigationBarColor = window.navigationBarColor
     }
 }
 
@@ -349,6 +346,7 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
             putExtra(EXTRA_STREAM, newUri)
             type = getUriMimeType(path, newUri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            grantUriPermission("android", newUri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
             try {
                 startActivity(Intent.createChooser(this, getString(R.string.share_via)))
@@ -547,7 +545,7 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
         Intent(action).apply {
             data = Uri.fromParts("tel", recipient, null)
 
-            if (isMarshmallowPlus() && handle != null) {
+            if (handle != null) {
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
             }
 
@@ -705,18 +703,19 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
     }
 
     val firstFile = files.first()
-    handleSAFDialog(firstFile.path) {
+    val firstFilePath = firstFile.path
+    handleSAFDialog(firstFilePath) {
         if (!it) {
             return@handleSAFDialog
         }
 
-        checkManageMediaOrHandleSAFDialogSdk30(firstFile.path) {
+        checkManageMediaOrHandleSAFDialogSdk30(firstFilePath) {
             if (!it) {
                 return@checkManageMediaOrHandleSAFDialogSdk30
             }
 
             val recycleBinPath = firstFile.isRecycleBinPath(this)
-            if (canManageMedia() && !recycleBinPath) {
+            if (canManageMedia() && !recycleBinPath && !firstFilePath.doesThisOrParentHaveNoMedia(HashMap(), null)) {
                 val fileUris = getFileUrisFromFileDirItems(files)
 
                 deleteSDK30Uris(fileUris) { success ->
@@ -1210,7 +1209,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                 if (!getDoesFilePathExist(fileDirItem.path)) {
                     createAndroidSAFFile(fileDirItem.path)
                 }
-                callback.invoke(applicationContext.contentResolver.openOutputStream(uri))
+                callback.invoke(applicationContext.contentResolver.openOutputStream(uri, "wt"))
             }
         }
         needsStupidWritePermissions(fileDirItem.path) -> {
@@ -1236,7 +1235,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
 
             if (document?.exists() == true) {
                 try {
-                    callback(applicationContext.contentResolver.openOutputStream(document.uri))
+                    callback(applicationContext.contentResolver.openOutputStream(document.uri, "wt"))
                 } catch (e: FileNotFoundException) {
                     showErrorToast(e)
                     callback(null)
@@ -1258,8 +1257,8 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                         val uri = createDocumentUriUsingFirstParentTreeUri(fileDirItem.path)
                         if (!getDoesFilePathExist(fileDirItem.path)) {
                             createSAFFileSdk30(fileDirItem.path)
-            }
-            applicationContext.contentResolver.openOutputStream(uri)
+                        }
+                        applicationContext.contentResolver.openOutputStream(uri, "wt")
                     } catch (e: Exception) {
                         null
                     } ?: createCasualFileOutputStream(this, targetFile)
@@ -1270,7 +1269,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
             callback.invoke(
                 try {
                     val fileUri = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
-                    applicationContext.contentResolver.openOutputStream(fileUri.first())
+                    applicationContext.contentResolver.openOutputStream(fileUri.first(), "wt")
                 } catch (e: Exception) {
                     null
                 } ?: createCasualFileOutputStream(this, targetFile)
@@ -1297,7 +1296,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
             if (!getDoesFilePathExist(path)) {
                 createAndroidSAFFile(path)
             }
-            applicationContext.contentResolver.openOutputStream(uri)
+            applicationContext.contentResolver.openOutputStream(uri, "wt")
         }
         needsStupidWritePermissions(path) -> {
             var documentFile = parentDocumentFile
@@ -1326,7 +1325,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
                 } else {
                     documentFile.createFile(mimeType, path.getFilenameFromPath())!!.uri
                 }
-                applicationContext.contentResolver.openOutputStream(uri)
+                applicationContext.contentResolver.openOutputStream(uri, "wt")
             } catch (e: Exception) {
                 showErrorToast(e)
                 null
@@ -1338,7 +1337,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
                 if (!getDoesFilePathExist(path)) {
                     createSAFFileSdk30(path)
                 }
-                applicationContext.contentResolver.openOutputStream(uri)
+                applicationContext.contentResolver.openOutputStream(uri, "wt")
             } catch (e: Exception) {
                 null
             } ?: createCasualFileOutputStream(this, targetFile)
@@ -1519,7 +1518,12 @@ fun Activity.setupDialogStuff(
 
             setView(view)
             setCancelable(cancelOnTouchOutside)
-            show()
+            if (!isFinishing) {
+                show()
+            }
+            getButton(Dialog.BUTTON_POSITIVE)?.setTextColor(primaryColor)
+            getButton(Dialog.BUTTON_NEGATIVE)?.setTextColor(primaryColor)
+            getButton(Dialog.BUTTON_NEUTRAL)?.setTextColor(primaryColor)
             callback?.invoke(this)
         }
     } else {
@@ -1548,7 +1552,9 @@ fun Activity.setupDialogStuff(
             requestWindowFeature(Window.FEATURE_NO_TITLE)
             setCustomTitle(title)
             setCanceledOnTouchOutside(cancelOnTouchOutside)
-            show()
+            if (!isFinishing) {
+                show()
+            }
             getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(dialogButtonColor)
             getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(dialogButtonColor)
             getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
@@ -1556,7 +1562,8 @@ fun Activity.setupDialogStuff(
             val bgDrawable = when {
                 isBlackAndWhiteTheme() -> resources.getDrawable(R.drawable.black_dialog_background, theme)
                 baseConfig.isUsingSystemTheme -> resources.getDrawable(R.drawable.dialog_you_background, theme)
-                else -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
+                isBlackTheme() -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, getBottomNavigationBackgroundColor())
+                else -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor) //TODO Dialog background
             }
 
             window?.setBackgroundDrawable(bgDrawable)
@@ -1717,4 +1724,12 @@ fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? 
     }
 
     return File(folder, fileName)
+}
+
+fun Activity.onApplyWindowInsets(callback: (WindowInsetsCompat) -> Unit) {
+    window.decorView.setOnApplyWindowInsetsListener { view, insets ->
+        callback(WindowInsetsCompat.toWindowInsetsCompat(insets))
+        view.onApplyWindowInsets(insets)
+        insets
+    }
 }

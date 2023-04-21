@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">Üzenet</string>
+    <string name="settings_icon">Beállítások ikon</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Projekt támogatás</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">Tudj meg többet</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">Témák</string>
+    <string name="themes_summary">"Gondosan kiválasztott alkalmazási témák, automatikus témaváltó és rendszertéma támogatás az Android 12-hez "</string>
+    <string name="color_title">Színek</string>
+    <string name="color_summary">Az elsődleges szín, az ékezet, a háttér, a szöveg és a navigációs sáv kézi beállítása</string>
+    <string name="plus_title">Támogasson minket</string>
+    <string name="plus_summary">Minden alkalmazásunk hirdetésmentes, nyílt forráskódú, és ez mindig így is marad. Az Ön segítségével több funkciót tudunk megvalósítani, és még jobbá tenni azokat</string>
+    <string name="lifebuoy_title">Támogatjuk Önt</string>
+    <string name="lifebuoy_summary">Ha valamilyen oknál fogva nem engedheti meg magának az alkalmazásunkat, de valóban szeretné használni az összes funkciót, csak írjon nekünk e-mailt</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Névjegyek bélyegképének megjelenítése</string>
     <string name="use_icon_tabs_summary">Ikonok szöveg helyett a lapokban</string>
     <string name="use_icon_tabs">Lapikonok használata</string>
@@ -17,6 +53,27 @@
     <string name="black">Fekete</string>
     <string name="show_dividers">Osztók megjelenítése</string>
     <string name="colored_contacts">Névjegyek színes ikonjai</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Lapnavigáció</string>
+    <string name="top">Felett</string>
+    <string name="bottom">Alul</string>
+    <string name="relative_date">Relatív dátum</string>
+    <string name="color_sim_card_icons">Színes SIM-kártya ikonok</string>
+    <string name="tabs">Lapok</string>
+    <string name="open_search_when_open_contacts">A Keresés megnyitása a Névjegyek lap megnyitásakor</string>
+    <string name="call_screen_background">Hívás képernyő háttere</string>
+    <string name="contact_photo">Kapcsolat képe</string>
+    <string name="blurry_contact_photo">Elmosódott kontaktkép</string>
+    <string name="blurry_wallpaper">Homályos háttérkép</string>
+
     <string name="accent_color">Ékezet színe</string>
     <string name="incoming_call">Bejövő hívás</string>
     <string name="outgoing_call">Kimenő hívás</string>
@@ -24,7 +81,6 @@
     <string name="unblock_number">Feloldás száma</string>
     <string name="recents">Friss</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="plus_summary">Minden alkalmazásunk hirdetésmentes, nyílt forráskódú, és ez mindig így is marad. Az Ön segítségével több funkciót tudunk megvalósítani, és még jobbá tenni azokat</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Goodwy Thank You megvásárlása</string>
@@ -48,38 +104,55 @@
     <string name="pro_app_refund_g">Ne felejtse el, hogy ha 2 órán belül eltávolítja a fizetős alkalmazásunkat, akkor automatikusan visszatérítjük az árát. Ha később bármikor mégis visszatérítést szeretne, lépjen kapcsolatba velünk a goodwy.dev@gmail.com címen, és visszakapja. Ez is megkönnyíti a kipróbálást :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Szám hozzáadása</string>
+    <string name="add_email">E-mail hozzáadása</string>
+    <string name="add_address">Cím hozzáadása</string>
+    <string name="add_im">IM hozzáadása</string>
+    <string name="add_event">Esemény hozzáadása</string>
+    <string name="add_notes">Jegyzetek hozzáadása</string>
+    <string name="add_website">Honlap hozzáadása</string>
+    <string name="add_group">Csoport hozzáadása</string>
+    <string name="add_related_person">Kapcsolódó személy hozzáadása</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Videohívás</string>
+    <string name="screen_slide_animation">Képernyő dia animáció</string>
+    <string name="screen_slide_animation_zoomout">Kicsinyítés</string>
+    <string name="screen_slide_animation_depth">Mélység</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Letöltés</string>
+    <string name="open">Nyitott</string>
+    <string name="collection">Gyűjtemény</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Kód másolása</string>
+    <string name="action_on_message_click">Művelet az üzenetre kattintva</string>
+    <string name="invert_color">Szín invertálása</string>
+    <string name="speech_bubble">Beszédbuborék</string>
+
+    <!-- Gallery -->
+    <string name="library">Könyvtár</string>
+    <string name="open_in_maps">Megnyitás a térképeken</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Felhívhatom később?</string>
+    <string name="message_on_my_way">Úton vagyok.</string>
+    <string name="message_cant_talk_right_now">Sajnálom, most nem tudok beszélni.</string>
 </resources>

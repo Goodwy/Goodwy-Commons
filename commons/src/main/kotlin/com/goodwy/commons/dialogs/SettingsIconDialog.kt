@@ -13,7 +13,7 @@ class SettingsIconDialog(val activity: Activity, val callback: (newValue: Any) -
 
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_settings_icon, null).apply {
-            arrayOf(icon1, icon2, icon3, icon4, icon5).forEach {
+            arrayOf(icon1, icon2, icon3, icon4, icon5, icon6).forEach {
                 it.applyColorFilter(activity.getProperTextColor())
             }
 
@@ -23,6 +23,7 @@ class SettingsIconDialog(val activity: Activity, val callback: (newValue: Any) -
                 2 -> icon3.applyColorFilter(activity.getProperPrimaryColor())
                 3 -> icon4.applyColorFilter(activity.getProperPrimaryColor())
                 4 -> icon5.applyColorFilter(activity.getProperPrimaryColor())
+                5 -> icon6.applyColorFilter(activity.getProperPrimaryColor())
             }
 
             icon1.setOnClickListener { itemSelected(0) }
@@ -30,6 +31,7 @@ class SettingsIconDialog(val activity: Activity, val callback: (newValue: Any) -
             icon3.setOnClickListener { itemSelected(2) }
             icon4.setOnClickListener { itemSelected(3) }
             icon5.setOnClickListener { itemSelected(4) }
+            icon6.setOnClickListener { itemSelected(5) }
         }
 
         val builder = activity.getAlertDialogBuilder()

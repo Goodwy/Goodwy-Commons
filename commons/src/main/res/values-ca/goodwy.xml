@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">Missatge</string>
+    <string name="settings_icon">Icona Configuració</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Suport al projecte</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">Aprèn més</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">Temes</string>
+    <string name="themes_summary">Temes d\'aplicació acuradament seleccionats, canvi automàtic de temes i compatibilitat amb temes del sistema per a Android 12+</string>
+    <string name="color_title">Colors</string>
+    <string name="color_summary">Ajust manual del color primari, accent, fons, text i barra de navegació</string>
+    <string name="plus_title">Dóna\'ns suport</string>
+    <string name="plus_summary">Totes les nostres aplicacions són gratuïtes per a anuncis, de codi obert i sempre serà així. Amb la teva ajuda som capaços d\'implementar més funcionalitats i fer-les encara millors</string>
+    <string name="lifebuoy_title">T\'acompanyem</string>
+    <string name="lifebuoy_summary">Si per algun motiu no us podeu permetre la nostra aplicació, però realment voleu utilitzar totes les funcions, només cal que ens envieu un correu electrònic</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Mostra les miniatures dels contactes</string>
     <string name="use_icon_tabs_summary">Icones en lloc de text a les pestanyes</string>
     <string name="use_icon_tabs">Utilitza icones de pestanyes</string>
@@ -17,6 +53,27 @@
     <string name="black">Negre</string>
     <string name="show_dividers">Mostra els divisors</string>
     <string name="colored_contacts">Icones de colors de contactes</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Navegació de pestanyes</string>
+    <string name="top">Dalt</string>
+    <string name="bottom">Sota</string>
+    <string name="relative_date">Data relativa</string>
+    <string name="color_sim_card_icons">Icones de targetes SIM de color</string>
+    <string name="tabs">Pestanyes</string>
+    <string name="open_search_when_open_contacts">Obriu la cerca quan obriu la pestanya Contactes</string>
+    <string name="call_screen_background">Fond de pantalla de trucada</string>
+    <string name="contact_photo">Foto de contacte</string>
+    <string name="blurry_contact_photo">Foto de contacte borrosa</string>
+    <string name="blurry_wallpaper">Fond de pantalla borrós</string>
+
     <string name="accent_color">Color d\'èmfasi</string>
     <string name="incoming_call">Trucada entrant</string>
     <string name="outgoing_call">Trucada sortint</string>
@@ -25,7 +82,6 @@
     <string name="recents">Recents</string>
     <string name="unblock_confirmation">Jeste li sigurni da želite deblokirati \'%s\'?</string>
     <string name="pro">Jeste li sigurni da želite deblokirati \"%s\"?</string>
-    <string name="plus_summary">Totes les nostres aplicacions són gratuïtes per a anuncis, de codi obert i sempre serà així. Amb la teva ajuda som capaços d\'implementar més funcionalitats i fer-les encara millors</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Compra Goodwy Thank You</string>
@@ -51,38 +107,55 @@
     <string name="pro_app_refund_g">No us oblideu que si desinstal·leu qualsevol aplicació de pagament en un termini de 2 hores, se us retornarà automàticament. Si voleu un reemborsament en qualsevol moment més tard, poseu-vos en contacte amb nosaltres a goodwy.dev@gmail.com i ho rebreu. Això fa que sigui fàcil provar-ho :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Afegeix un número</string>
+    <string name="add_email">Afegeix un correu electrònic</string>
+    <string name="add_address">Afegeix una adreça</string>
+    <string name="add_im">Afegeix missatgeria instantània</string>
+    <string name="add_event">Afegeix un esdeveniment</string>
+    <string name="add_notes">Afegeix notes</string>
+    <string name="add_website">Afegeix un lloc web</string>
+    <string name="add_group">Afegeix un grup</string>
+    <string name="add_related_person">Afegeix una persona relacionada</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Videotrucada</string>
+    <string name="screen_slide_animation">Animació de la diapositiva de la pantalla</string>
+    <string name="screen_slide_animation_zoomout">Redueix</string>
+    <string name="screen_slide_animation_depth">Profunditat</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Obtén</string>
+    <string name="open">Obre</string>
+    <string name="collection">Col·lecció</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Copia el codi</string>
+    <string name="action_on_message_click">Acció en fer clic al missatge</string>
+    <string name="invert_color">Inverteix el color</string>
+    <string name="speech_bubble">Bafarola</string>
+
+    <!-- Gallery -->
+    <string name="library">Biblioteca</string>
+    <string name="open_in_maps">Obre a Maps</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Puc trucar-te més tard?</string>
+    <string name="message_on_my_way">Estic de camí.</string>
+    <string name="message_cant_talk_right_now">Ho sento, ara mateix no puc parlar.</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.goodwy.commons.models.contacts
 
 import android.graphics.Bitmap
+import android.provider.ContactsContract
 import android.telephony.PhoneNumberUtils
 import com.goodwy.commons.extensions.normalizePhoneNumber
 import com.goodwy.commons.extensions.normalizeString
@@ -9,30 +10,36 @@ import com.goodwy.commons.models.PhoneNumber
 
 data class Contact(
     var id: Int,
-    var prefix: String,
-    var firstName: String,
-    var middleName: String,
-    var surname: String,
-    var suffix: String,
-    var nickname: String,
-    var photoUri: String,
-    var phoneNumbers: ArrayList<PhoneNumber>,
-    var emails: ArrayList<Email>,
-    var addresses: ArrayList<Address>,
-    var events: ArrayList<Event>,
-    var source: String,
-    var starred: Int,
+    var prefix: String= "",
+    var firstName: String= "",
+    var middleName: String= "",
+    var surname: String= "",
+    var suffix: String= "",
+    var nickname: String= "",
+    var photoUri: String= "",
+    var phoneNumbers: ArrayList<PhoneNumber> = ArrayList(),
+    var emails: ArrayList<Email> = ArrayList(),
+    var addresses: ArrayList<Address> = ArrayList(),
+    var events: ArrayList<Event> = ArrayList(),
+    var source: String= "",
+    var starred: Int = 0,
     var contactId: Int,
-    var thumbnailUri: String,
-    var photo: Bitmap?,
-    var notes: String,
-    var groups: ArrayList<Group>,
-    var organization: Organization,
-    var websites: ArrayList<String>,
-    var IMs: ArrayList<IM>,
-    var mimetype: String,
-    var ringtone: String?
+    var thumbnailUri: String= "",
+    var photo: Bitmap? = null,
+    var notes: String= "",
+    var groups: ArrayList<Group> = ArrayList(),
+    var organization: Organization = Organization("",""),
+    var websites: ArrayList<String> = ArrayList(),
+    var relations: ArrayList<ContactRelation> = ArrayList(),
+    var IMs: ArrayList<IM> = ArrayList(),
+    var mimetype: String = "",
+    var ringtone: String? = ""
 ) : Comparable<Contact> {
+    val rawId = id
+    val name = getNameToDisplay()
+    var birthdays = events.filter { it.type == ContactsContract.CommonDataKinds.Event.TYPE_BIRTHDAY }.map { it.value }.toMutableList() as ArrayList<String>
+    var anniversaries = events.filter { it.type == ContactsContract.CommonDataKinds.Event.TYPE_ANNIVERSARY }.map { it.value }.toMutableList() as ArrayList<String>
+
     companion object {
         var sorting = 0
         var startWithSurname = false
@@ -92,9 +99,16 @@ data class Contact(
             }
         }
 
-        return if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
+        /*return if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
             -1
         } else if (firstValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isLetter() == true) {
+            1*/
+        //TODO Contacts sorting: symbols at the top
+        return if (firstValue.firstOrNull()?.isLetter() == true && firstValue.firstOrNull()?.isDigit() == false
+            && secondValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isDigit() == true) {
+            -1
+        } else if (firstValue.firstOrNull()?.isLetter() == false && firstValue.firstOrNull()?.isDigit() == true
+            && secondValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isDigit() == false) {
             1
         } else {
             if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
@@ -178,6 +192,7 @@ data class Contact(
             groups = ArrayList(),
             websites = ArrayList(),
             organization = Organization("", ""),
+            relations= ArrayList(),
             IMs = ArrayList(),
             ringtone = ""
         ).toString()
@@ -194,14 +209,42 @@ data class Contact(
     fun isABusinessContact() =
         prefix.isEmpty() && firstName.isEmpty() && middleName.isEmpty() && surname.isEmpty() && suffix.isEmpty() && organization.isNotEmpty()
 
-    fun doesContainPhoneNumber(text: String, convertLetters: Boolean): Boolean {
+    fun doesContainPhoneNumber(text: String, convertLetters: Boolean = false, search: Boolean = false): Boolean {
         return if (text.isNotEmpty()) {
             val normalizedText = if (convertLetters) text.normalizePhoneNumber() else text
             phoneNumbers.any {
-                PhoneNumberUtils.compare(it.normalizedNumber, normalizedText) ||
-                    it.value.contains(text) ||
-                    it.normalizedNumber.contains(normalizedText) ||
-                    it.value.normalizePhoneNumber().contains(normalizedText)
+                if (search) {
+                    PhoneNumberUtils.compare(it.normalizedNumber, normalizedText) ||
+                        it.value.contains(text) ||
+                        it.normalizedNumber.contains(normalizedText) ||
+                        it.value.normalizePhoneNumber().contains(normalizedText)
+                } else {
+                    // TODO does not work correctly if only some digits of the number match
+                    PhoneNumberUtils.compare(it.normalizedNumber, normalizedText) ||
+                        (it.value.contains(text) && text.length > 7) ||
+                        (it.normalizedNumber.contains(normalizedText) && normalizedText.length > 7) ||
+                        (it.value.normalizePhoneNumber().contains(normalizedText) && normalizedText.length > 7)
+                }
+            }
+        } else {
+            false
+        }
+    }
+
+    fun doesHavePhoneNumber(text: String): Boolean {
+        return if (text.isNotEmpty()) {
+            val normalizedText = text.normalizePhoneNumber()
+            if (normalizedText.isEmpty()) {
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
+                    phoneNumber == text
+                }
+            } else {
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
+                    PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
+                        phoneNumber == text ||
+                        phoneNumber.normalizePhoneNumber() == normalizedText ||
+                        phoneNumber == normalizedText
+                }
             }
         } else {
             false
@@ -211,4 +254,9 @@ data class Contact(
     fun isPrivate() = source == SMT_PRIVATE
 
     fun getSignatureKey() = if (photoUri.isNotEmpty()) photoUri else hashCode()
+
+    fun getPrimaryNumber(): String? {
+        val primaryNumber = phoneNumbers.firstOrNull { it.isPrimary }
+        return primaryNumber?.normalizedNumber ?: phoneNumbers.firstOrNull()?.normalizedNumber
+    }
 }

@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">Message</string>
+    <string name="settings_icon">Icône Paramètres</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Appui au projet</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">Pour en savoir plus</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">Thèmes</string>
+    <string name="themes_summary">Thèmes d’application soigneusement sélectionnés, changeur de thème automatique et prise en charge des thèmes système pour Android 12+</string>
+    <string name="color_title">Couleurs</string>
+    <string name="color_summary">Réglage manuel de la couleur primaire, de l’accent, de l’arrière-plan, du texte et de la barre de navigation</string>
+    <string name="plus_title">Soutenez-nous</string>
+    <string name="plus_summary">Toutes nos applications sont sans publicité, Open Source et cela restera toujours ainsi. Avec votre aide, nous sommes en mesure d’implémenter plus de fonctionnalités et de les rendre encore meilleures</string>
+    <string name="lifebuoy_title">Nous vous soutiendrons</string>
+    <string name="lifebuoy_summary">Si, pour une raison quelconque, vous ne pouvez pas vous permettre notre application, mais que vous voulez vraiment utiliser toutes les fonctionnalités, envoyez-nous simplement un e-mail</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Afficher les vignettes des contacts</string>
     <string name="use_icon_tabs_summary">Icônes au lieu de texte sur les onglets</string>
     <string name="use_icon_tabs">Utiliser des icônes d’onglet</string>
@@ -17,14 +53,34 @@
     <string name="black">Noir</string>
     <string name="show_dividers">Afficher les séparateurs</string>
     <string name="colored_contacts">Icônes colorées des contacts</string>
-    <string name="accent_color">Couleur d’accentuation</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Navigation par onglets</string>
+    <string name="top">Au-dessus</string>
+    <string name="bottom">Sous</string>
+    <string name="relative_date">Date relative</string>
+    <string name="color_sim_card_icons">Icônes couleur de la carte SIM</string>
+    <string name="tabs">Onglets</string>
+    <string name="open_search_when_open_contacts">Ouvrez la recherche lorsque vous ouvrez l\’onglet Contacts</string>
+    <string name="call_screen_background">Arrière-plan de l\'écran d\'appel</string>
+    <string name="contact_photo">Photo du contact</string>
+    <string name="blurry_contact_photo">photo de contact floue</string>
+    <string name="blurry_wallpaper">fond d\'écran flou</string>
+
+    <string name="accent_color">Couleur d\'accentuation</string>
     <string name="incoming_call">Appel entrant</string>
     <string name="outgoing_call">Appel sortant</string>
     <string name="missed_call">Appel manqué</string>
     <string name="unblock_number">Débloquer le numéro</string>
     <string name="recents">Récent</string>
     <string name="unblock_confirmation">Êtes-vous sûr de vouloir débloquer \"%s\"?</string>
-    <string name="plus_summary">Toutes nos applications sont sans publicité, Open Source et cela restera toujours ainsi. Avec votre aide, nous sommes en mesure d’implémenter plus de fonctionnalités et de les rendre encore meilleures</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Acheter Goodwy Thank You</string>
@@ -50,38 +106,55 @@
     <string name="pro_app_refund_g">N’oubliez pas que si vous désinstallez une application payante dans les 2 heures, vous serez automatiquement remboursé. Si vous souhaitez un remboursement, à tout moment, contactez-nous à goodwy.dev@gmail.com et vous l\'obtiendrez. Alors n\'hésitez pas et essayez nos applications :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Ajouter un numéro</string>
+    <string name="add_email">Ajouter un email</string>
+    <string name="add_address">Ajouter une adresse</string>
+    <string name="add_im">Ajouter IM</string>
+    <string name="add_event">Ajouter un événement</string>
+    <string name="add_notes">Ajouter des notes</string>
+    <string name="add_website">Ajouter un site web</string>
+    <string name="add_group">Ajouter un groupe</string>
+    <string name="add_related_person">Ajouter une personne liée</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Appel vidéo</string>
+    <string name="screen_slide_animation">Animation de la diapositive d\'écran</string>
+    <string name="screen_slide_animation_zoomout">Zoom arrière</string>
+    <string name="screen_slide_animation_depth">Profondeur</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
+    <string name="get">Obtenir</string>
+    <string name="open">Ouverture</string>
     <string name="collection">Collection</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Copier le code</string>
+    <string name="action_on_message_click">Action sur le clic du message</string>
+    <string name="invert_color">Inverser la couleur</string>
+    <string name="speech_bubble">Bulle de dialogue</string>
+
+    <!-- Gallery -->
+    <string name="library">Bibliothèque</string>
+    <string name="open_in_maps">Ouvrir dans les cartes</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Puis-je vous appeler plus tard?</string>
+    <string name="message_on_my_way">J’arrive.</string>
+    <string name="message_cant_talk_right_now">Désolé, je ne peux pas parler maintenant.</string>
 </resources>

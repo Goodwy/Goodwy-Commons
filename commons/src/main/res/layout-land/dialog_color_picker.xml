@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/color_picker_scrollview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/color_picker_holder"
@@ -36,6 +34,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/medium_margin"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_cancel" />
         </RelativeLayout>

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/restorePurchases"
+        android:icon="@drawable/ic_restore_vector"
         android:title="@string/restore_purchase"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>

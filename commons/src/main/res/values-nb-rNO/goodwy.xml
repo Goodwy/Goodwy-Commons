@@ -12,28 +12,28 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="recents">Recents</string>
-    <string name="message">Message</string>
-    <string name="settings_icon">Settings icon</string>
+    <string name="message">Budskap</string>
+    <string name="settings_icon">Innstillinger-ikonet</string>
 
     <!-- Support project -->
-    <string name="action_support_project">Support project</string>
+    <string name="action_support_project">Prosjektstøtte</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
-    <string name="learn_more">Learn more</string>
+    <string name="learn_more">Få mer informasjon</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
     <string name="voicerecorder">VoiceMemos</string>
     <string name="voicerecorder_summary">Voice recorder</string>
     <string name="files">Files</string>
     <string name="files_summary">File manager</string>
-    <string name="themes">Themes</string>
-    <string name="themes_summary">Carefully selected application themes, automatic theme changer and system theme support for Android 12+</string>
-    <string name="color_title">Colors</string>
-    <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
-    <string name="plus_title">Support us</string>
-    <string name="plus_summary">All of our apps are ad-free, Open Source and it will always remain that way. With your help we are able to implement more features and make them even better</string>
-    <string name="lifebuoy_title">We will support you</string>
-    <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
+    <string name="themes">Temaer</string>
+    <string name="themes_summary">Nøye utvalgte applikasjonstemaer, automatisk temaskifter og systemtemastøtte for Android 12+</string>
+    <string name="color_title">Farger</string>
+    <string name="color_summary">Manuell justering av primærfarge, utheving, bakgrunn, tekst og navigasjonsfelt</string>
+    <string name="plus_title">Støtt oss</string>
+    <string name="plus_summary">Alle appene våre er annonsefrie, Open Source, og det vil alltid forbli slik. Med din hjelp er vi i stand til å implementere flere funksjoner og gjøre dem enda bedre</string>
+    <string name="lifebuoy_title">Vi støtter deg</string>
+    <string name="lifebuoy_summary">Hvis du av en eller annen grunn ikke har råd til appen vår, men virkelig vil bruke alle funksjonene, er det bare å sende oss en e-post</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Kind tip of</string>
@@ -64,6 +64,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
@@ -72,6 +73,17 @@
     <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Navigering via faner</string>
+    <string name="top">Over</string>
+    <string name="bottom">Under</string>
+    <string name="relative_date">Relativ dato</string>
+    <string name="color_sim_card_icons">SIM-kortikoner i farger</string>
+    <string name="tabs">Faner</string>>.
+    <string name="open_search_when_open_contacts">Åpne Søk når du åpner kategorien Kontakter</string>>.
+    <string name="call_screen_background">Bakgrunnen for innkallingsskjermbildet</string>
+    <string name="contact_photo">Foto av kontakten</string>
+    <string name="blurry_contact_photo">Uklart kontaktbilde</string>
+    <string name="blurry_wallpaper">Sløret bakgrunnsbilde</string>
 
     <!-- Other -->
     <string name="donate_please_g">
@@ -104,38 +116,55 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Legg til nummer</string>
+    <string name="add_email">Legg til e-post</string>
+    <string name="add_address">Legg til adresse</string>
+    <string name="add_im">Legg til IM</string>
+    <string name="add_event">Legg til hendelse</string>
+    <string name="add_notes">Legg til notater</string>
+    <string name="add_website">Legg til nettsted</string>
+    <string name="add_group">Legg til en gruppe</string>
+    <string name="add_related_person">Legg til en relatert person</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Videosamtale</string>>
+    <string name="screen_slide_animation">Skjermanimasjon av lysbilde</string>
+    <string name="screen_slide_animation_zoomout">Zoom ut</string>
+    <string name="screen_slide_animation_depth">Dybde</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Få</string>
+    <string name="open">Åpent</string>
+    <string name="collection">Innsamling</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Kopieringskode</string>>.
+    <string name="action_on_message_click">Handling ved klikk på melding</string>
+    <string name="invert_color">Inverter farge</string>
+    <string name="speech_bubble">Snakkeboble</string>
+
+    <!-- Gallery -->
+    <string name="library">Bibliotek</string>
+    <string name="open_in_maps">Åpne i Maps</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Kan jeg ringe deg senere?</string>
+    <string name="message_on_my_way">Jeg er på vei.</string>
+    <string name="message_cant_talk_right_now">Beklager, jeg kan ikke snakke akkurat nå.</string>
 </resources>

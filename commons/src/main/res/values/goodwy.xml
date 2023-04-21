@@ -1,5 +1,5 @@
-<resources>
-    <string name="app_name_g">Goodwy Commons</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name_g" tools:ignore="MissingTranslation">Goodwy Commons</string>
     <string name="recorder_g">Recorder</string>
     <string name="player_g">Player</string>
     <string name="general">General</string>
@@ -64,6 +64,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
@@ -72,6 +73,17 @@
     <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Tab navigation</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+    <string name="relative_date">Relative date</string>
+    <string name="color_sim_card_icons">Color SIM card icons</string>
+    <string name="tabs">Tabs</string>
+    <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
+    <string name="call_screen_background">Call screen background</string>
+    <string name="contact_photo">Contact photo</string>
+    <string name="blurry_contact_photo">Blurry contact photo</string>
+    <string name="blurry_wallpaper">Blurry wallpaper</string>
 
     <!-- Other -->
     <string name="donate_please_g">
@@ -112,11 +124,13 @@
     <string name="add_notes">Add notes</string>
     <string name="add_website">Add website</string>
     <string name="add_group">Add a group</string>
+    <string name="add_related_person">Add related person</string>
 
     <string name="video_call">Video call</string>
     <string name="screen_slide_animation">Screen slide animation</string>
     <string name="screen_slide_animation_zoomout">Zoom-out</string>
     <string name="screen_slide_animation_depth">Depth</string>
+    <string name="show_phone_numbers_g">Show phone numbers</string>
 
     <!-- Apps -->
     <string name="get">Get</string>
@@ -126,10 +140,17 @@
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
             Thanks
         ]]></string>
 
@@ -138,4 +159,14 @@
     <string name="action_on_message_click">Action on message click</string>
     <string name="invert_color">Invert colors</string>
     <string name="speech_bubble">Speech bubble</string>
+
+    <!-- Gallery -->
+    <string name="library">Library</string>
+    <string name="open_in_maps">Open in Maps</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Can I call you later?</string>
+    <string name="message_on_my_way">I\'m on my way.</string>
+    <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
+    <string name="remind_me">Remind Me</string>
 </resources>

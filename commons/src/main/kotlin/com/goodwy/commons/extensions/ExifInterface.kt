@@ -90,15 +90,7 @@ fun ExifInterface.getExifProperties(): String {
     getAttribute(ExifInterface.TAG_F_NUMBER).let {
         if (it?.isNotEmpty() == true) {
             val number = it.trimEnd('0').trimEnd('.')
-            exifString += "F/$number  "
-        }
-    }
-
-    getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
-        if (it?.isNotEmpty() == true) {
-            val values = it.split('/')
-            val focalLength = "${values[0].toDouble() / values[1].toDouble()}mm"
-            exifString += "$focalLength  "
+            exifString += "ƒ/$number  "
         }
     }
 
@@ -106,16 +98,24 @@ fun ExifInterface.getExifProperties(): String {
         if (it?.isNotEmpty() == true) {
             val exposureValue = it.toFloat()
             exifString += if (exposureValue > 1f) {
-                "${exposureValue}s  "
+                "•  ${exposureValue}s  "
             } else {
-                "1/${Math.round(1 / exposureValue)}s  "
+                "•  1/${Math.round(1 / exposureValue)}s  "
             }
+        }
+    }
+
+    getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
+        if (it?.isNotEmpty() == true) {
+            val values = it.split('/')
+            val focalLength = "${values[0].toDouble() / values[1].toDouble()}mm"
+            exifString += "•  $focalLength  "
         }
     }
 
     getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
         if (it?.isNotEmpty() == true) {
-            exifString += "ISO-$it"
+            exifString += "•  ISO-$it"
         }
     }
 

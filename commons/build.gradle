@@ -35,11 +35,12 @@ dependencies {
     implementation "com.googlecode.ez-vcard:ez-vcard:0.11.3"
 
     api "joda-time:joda-time:2.11.0"
-    api "com.github.tibbi:RecyclerView-FastScroller:5a95285b1f"
+    api "com.github.goodwy:RecyclerView-FastScroller:cd067e83e4"
+    //api "com.github.tibbi:RecyclerView-FastScroller:5a95285b1f"
     api "com.github.tibbi:reprint:2cb206415d"
     api "androidx.core:core-ktx:1.8.0"
     api "androidx.appcompat:appcompat:1.5.0"
-    api "com.google.android.material:material:1.8.0-alpha01"
+    api "com.google.android.material:material:1.8.0"
     api "com.google.code.gson:gson:2.9.1"
     api "com.duolingo.open:rtl-viewpager:2.0.0"
 
@@ -54,4 +55,5 @@ dependencies {
     // My
     implementation "com.anjlab.android.iab.v3:library:2.0.3"
     implementation "com.github.Liverm0r:BehavioRule:1.0.1"
+    implementation 'com.mikhaellopez:rxanimation:2.1.0'
 }

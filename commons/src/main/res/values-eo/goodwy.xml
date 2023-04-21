@@ -12,28 +12,28 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="recents">Recents</string>
-    <string name="message">Message</string>
-    <string name="settings_icon">Settings icon</string>
+    <string name="message">Mesaĝo</string>
+    <string name="settings_icon">Ikono de agordoj</string>
 
     <!-- Support project -->
-    <string name="action_support_project">Support project</string>
+    <string name="action_support_project">Projekta subteno</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
-    <string name="learn_more">Learn more</string>
+    <string name="learn_more">Lernu pli</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
     <string name="voicerecorder">VoiceMemos</string>
     <string name="voicerecorder_summary">Voice recorder</string>
     <string name="files">Files</string>
     <string name="files_summary">File manager</string>
-    <string name="themes">Themes</string>
-    <string name="themes_summary">Carefully selected application themes, automatic theme changer and system theme support for Android 12+</string>
-    <string name="color_title">Colors</string>
-    <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
-    <string name="plus_title">Support us</string>
-    <string name="plus_summary">All of our apps are ad-free, Open Source and it will always remain that way. With your help we are able to implement more features and make them even better</string>
-    <string name="lifebuoy_title">We will support you</string>
-    <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
+    <string name="themes">Temoj</string>
+    <string name="themes_summary">Zorge elektitaj aplikaj temoj, aŭtomata temoŝanĝilo kaj sistema temosubteno por Android 12+</string>
+    <string name="color_title">Koloroj</string>
+    <string name="color_summary">Mana alĝustigo de la primara koloro, akcento, fono, teksto kaj navigadbreto</string>
+    <string name="plus_title">Subtenu nin</string>
+    <string name="plus_summary">Ĉiuj niaj programoj estas sen reklamoj, Malferma Fonto kaj ĝi ĉiam restos tiel. Kun via helpo ni povas efektivigi pli da funkcioj kaj fari ilin eĉ pli bonaj</string>
+    <string name="lifebuoy_title">Ni subtenos vin</string>
+    <string name="lifebuoy_summary">Se ial vi ne povas pagi nian apon, sed vere volas uzi ĉiujn funkciojn, simple retpoŝtu al ni</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Kind tip of</string>
@@ -64,6 +64,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
@@ -72,6 +73,17 @@
     <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Tab navigado</string>
+    <string name="top">Supren</string>
+    <string name="bottom">Malsupre</string>
+    <string name="relative_date">Relativa dato</string>
+    <string name="color_sim_card_icons">Koloraj SIM-karto-ikonoj</string>
+    <string name="tabs">Lapetoj</string>
+    <string name="open_search_when_open_contacts">Malfermu serĉon kiam vi malfermas la langeton de kontaktoj</string>
+    <string name="call_screen_background">Alvoka ekranfono</string>
+    <string name="contact_photo">Kontakta foto</string>
+    <string name="blurry_contact_photo">Malklara kontaktfoto</string>
+    <string name="blurry_wallpaper">Malklara tapeto</string>
 
     <!-- Other -->
     <string name="donate_please_g">
@@ -104,38 +116,55 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Aldoni numeron</string>
+    <string name="add_email">Aldoni retpoŝton</string>
+    <string name="add_address">Aldoni adreson</string>
+    <string name="add_im">Aldoni IM</string>
+    <string name="add_event">Aldoni eventon</string>
+    <string name="add_notes">Aldonu notojn</string>
+    <string name="add_website">Aldonu retejon</string>
+    <string name="add_group">Aldoni grupon</string>
+    <string name="add_related_person">Aldonu rilatan personon</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Videovoko</string>
+    <string name="screen_slide_animation">Animiĝo pri ekrano</string>
+    <string name="screen_slide_animation_zoomout">Malgrandigi</string>
+    <string name="screen_slide_animation_depth">Profundo</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Akiri</string>
+    <string name="open">Malfermu</string>
+    <string name="collection">Kolekto</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Kopiu kodon</string>
+    <string name="action_on_message_click">Ago ĉe mesaĝo klako</string>
+    <string name="invert_color">Inverti koloron</string>
+    <string name="speech_bubble">Parolveziko</string>
+
+    <!-- Gallery -->
+    <string name="library">Biblioteko</string>
+    <string name="open_in_maps">Malfermu en Mapoj</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Ĉu mi povas voki vin poste?</string>
+    <string name="message_on_my_way">Mi estas survoje.</string>
+    <string name="message_cant_talk_right_now">Pardonu, mi ne povas paroli nun.</string>
 </resources>

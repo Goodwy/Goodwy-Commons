@@ -8,7 +8,7 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.exifinterface.media.ExifInterface
@@ -86,11 +86,11 @@ class PropertiesDialog() {
             }
 
             this.mActivity.runOnUiThread {
-                (mDialogView.findViewById<LinearLayout>(R.id.properties_size).property_value as TextView).text = size
+                (mDialogView.findViewById<RelativeLayout>(R.id.properties_size).property_value as TextView).text = size
 
                 if (fileDirItem.isDirectory) {
-                    (mDialogView.findViewById<LinearLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
-                    (mDialogView.findViewById<LinearLayout>(R.id.properties_direct_children_count).property_value as TextView).text =
+                    (mDialogView.findViewById<RelativeLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
+                    (mDialogView.findViewById<RelativeLayout>(R.id.properties_direct_children_count).property_value as TextView).text =
                         directChildrenCount.toString()
                 }
             }
@@ -165,7 +165,8 @@ class PropertiesDialog() {
             fileDirItem.path.isVideoSlow() -> {
                 fileDirItem.getDuration(mActivity)?.let { addProperty(R.string.duration, it) }
                 fileDirItem.getResolution(mActivity)?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
-                fileDirItem.getArtist(mActivity)?.let { addProperty(R.string.artist, it) }
+                val artist = fileDirItem.getArtist(mActivity)
+                if (artist != null && artist != "<unknown>")artist.let { addProperty(R.string.artist, it) }
                 fileDirItem.getAlbum(mActivity)?.let { addProperty(R.string.album, it) }
             }
         }
@@ -192,9 +193,9 @@ class PropertiesDialog() {
 
                     mActivity.runOnUiThread {
                         if (md5 != null) {
-                            (mDialogView.findViewById<LinearLayout>(R.id.properties_md5).property_value as TextView).text = md5
+                            (mDialogView.findViewById<RelativeLayout>(R.id.properties_md5).property_value as TextView).text = md5
                         } else {
-                            mDialogView.findViewById<LinearLayout>(R.id.properties_md5).beGone()
+                            mDialogView.findViewById<RelativeLayout>(R.id.properties_md5).beGone()
                         }
                     }
                 }
@@ -204,7 +205,7 @@ class PropertiesDialog() {
 
     private fun updateLastModified(activity: Activity, view: View, timestamp: Long) {
         activity.runOnUiThread {
-            (view.findViewById<LinearLayout>(R.id.properties_last_modified).property_value as TextView).text = timestamp.formatDate(activity)
+            (view.findViewById<RelativeLayout>(R.id.properties_last_modified).property_value as TextView).text = timestamp.formatDate(activity)
         }
     }
 
@@ -243,8 +244,8 @@ class PropertiesDialog() {
             val fileCount = fileDirItems.sumByInt { it.getProperFileCount(activity, countHiddenItems) }
             val size = fileDirItems.sumByLong { it.getProperSize(activity, countHiddenItems) }.formatSize()
             activity.runOnUiThread {
-                (mDialogView.findViewById<LinearLayout>(R.id.properties_size).property_value as TextView).text = size
-                (mDialogView.findViewById<LinearLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
+                (mDialogView.findViewById<RelativeLayout>(R.id.properties_size).property_value as TextView).text = size
+                (mDialogView.findViewById<RelativeLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
             }
         }
 
@@ -363,6 +364,9 @@ class PropertiesDialog() {
                 setOnClickListener {
                     mActivity.showLocationOnMap(value)
                 }
+                property_button.beVisible()
+                property_button.text = mResources.getString(R.string.open_in_maps)
+                property_button.setTextColor(mActivity.getProperPrimaryColor())
             }
 
             if (viewId != 0) {

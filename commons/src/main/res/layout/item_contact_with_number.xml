@@ -35,6 +35,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:paddingEnd="@dimen/activity_margin"
+            android:textDirection="locale"
             android:textSize="@dimen/big_text_size"
             tools:text="John Doe" />
 

@@ -15,7 +15,7 @@
         android:id="@+id/grid_color_title_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/big_margin"
+        android:layout_marginTop="@dimen/normal_margin"
         android:layout_centerHorizontal="true">
 
         <com.goodwy.commons.views.MyTextView
@@ -35,7 +35,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="@dimen/normal_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_cancel" />
     </RelativeLayout>
@@ -156,7 +156,7 @@
             android:layout_marginBottom="@dimen/big_margin"
             app:cardBackgroundColor="@color/md_grey_white"
             app:cardCornerRadius="8dp"
-            app:cardElevation="12dp">
+            app:cardElevation="@dimen/normal_margin">
 
             <ImageView
                 android:id="@+id/grid_color_new_color"

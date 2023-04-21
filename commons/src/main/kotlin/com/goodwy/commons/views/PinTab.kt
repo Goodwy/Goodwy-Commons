@@ -35,8 +35,26 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         pin_8.setOnClickListener { addNumber("8") }
         pin_9.setOnClickListener { addNumber("9") }
         pin_c.setOnClickListener { clear() }
+        pin_c.setOnLongClickListener { resetPin(); true }
+        pin_c.applyColorFilter(context.getProperTextColor())
         pin_ok.setOnClickListener { confirmPIN() }
         pin_ok.applyColorFilter(context.getProperTextColor())
+
+        arrayOf(
+            pin_1, pin_2, pin_3,
+            pin_4, pin_5, pin_6,
+            pin_7, pin_8, pin_9,
+            pin_0//, pin_c, pin_ok
+        ).forEach {
+            if (context.baseConfig.isUsingSystemTheme) {
+                it.background.applyColorFilter(context.getProperBackgroundColor())
+            } else if (context.isBlackTheme()) {
+                it.background.applyColorFilter(context.getProperBackgroundColor())
+            } else {
+                it.background.applyColorFilter(context.getBottomNavigationBackgroundColor())
+            }
+            //it.background.applyColorFilter(context.getBottomNavigationBackgroundColor())
+        }
     }
 
     override fun initTab(
@@ -91,12 +109,24 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
     private fun resetPin() {
         pin = ""
         pin_lock_current_pin.text = ""
+        updateButton()
     }
 
     private fun updatePinCode() {
         pin_lock_current_pin.text = "*".repeat(pin.length)
         if (hash.isNotEmpty() && hash == getHashedPin()) {
             hashListener.receivedHash(hash, PROTECTION_PIN)
+        }
+        updateButton()
+    }
+
+    private fun updateButton() {
+        if (pin.isNotEmpty()) {
+            pin_ok.beVisible()
+            pin_c.beVisible()
+        } else {
+            pin_ok.beInvisible()
+            pin_c.beInvisible()
         }
     }
 

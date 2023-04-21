@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.Intent.*
 import android.os.Bundle
 import android.util.Log
+import android.view.ViewGroup
 import androidx.core.net.toUri
 import com.anjlab.android.iab.v3.BillingProcessor
 import com.anjlab.android.iab.v3.BillingProcessor.ISkuDetailsResponseListener
@@ -34,6 +35,7 @@ class PurchaseActivity : BaseSimpleActivity(), BillingProcessor.IBillingHandler 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = false
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_purchase)
         appName = intent.getStringExtra(APP_NAME) ?: ""
@@ -45,6 +47,12 @@ class PurchaseActivity : BaseSimpleActivity(), BillingProcessor.IBillingHandler 
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
 
         billingProcessor = BillingProcessor(this, licensingKey, this)
+
+        // TODO TRANSPARENT Navigation Bar
+        setWindowTransparency(true) { _, bottomNavigationBarSize, leftNavigationBarSize, rightNavigationBarSize ->
+            purchase_coordinator.setPadding(leftNavigationBarSize, 0, rightNavigationBarSize, 0)
+            updateNavigationBarColor(getProperBackgroundColor())
+        }
     }
 
     override fun onResume() {
@@ -52,8 +60,9 @@ class PurchaseActivity : BaseSimpleActivity(), BillingProcessor.IBillingHandler 
         updateTextColors(purchase_holder)
         setupOptionsMenu()
         setupToolbar(purchase_toolbar, NavigationIcon.Arrow)
-        collapsing_toolbar.setBackgroundColor(getProperStatusBarColor())
+        collapsing_toolbar.setBackgroundColor(getProperBackgroundColor())
         purchase_apps.setTextColor(getProperTextColor())
+        updateTopBarColors(purchase_toolbar, getProperBackgroundColor())
 
         setupButtonOne()
         setupButtonTwo()
@@ -116,7 +125,7 @@ class PurchaseActivity : BaseSimpleActivity(), BillingProcessor.IBillingHandler 
 
     private fun setupParticipants() {
         goodwy_logo.setOnClickListener {
-            launchMoreAppsFromUsIntent()
+           // launchMoreAppsFromUsIntent()
         }
     }
 

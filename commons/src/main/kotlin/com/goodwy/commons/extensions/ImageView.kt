@@ -44,6 +44,7 @@ fun ImageView.setImageResourceOrBeGone(@DrawableRes imageRes: Int?) {
         beGone()
     }
 }
+
 fun ImageView.setFillWithStrokeLeft(fillColor: Int, backgroundColor: Int, cornerRadiusSize: Float = 0f) {
     val strokeColor = backgroundColor.getContrastColor()
     GradientDrawable().apply {

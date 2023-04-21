@@ -20,6 +20,7 @@ open class BottomSheetChooserDialog(collection: Boolean = false) : BaseBottomShe
                         else layoutInflater.inflate(R.layout.item_simple_list, parent, false)
             setupSimpleListItem(view, item, collection) {
                 onItemClick?.invoke(it)
+                dismiss()
             }
             parent.addView(view)
         }

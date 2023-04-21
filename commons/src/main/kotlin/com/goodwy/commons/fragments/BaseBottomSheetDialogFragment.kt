@@ -20,13 +20,14 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
     ): View? {
         val view = inflater.inflate(R.layout.dialog_bottom_sheet, container, false)
         val context = requireContext()
-        val config = context.baseConfig
 
+        view.background = null
         if (requireContext().isBlackAndWhiteTheme()) {
-            view.background = ResourcesCompat.getDrawable(context.resources, R.drawable.bottom_sheet_bg_black, context.theme)
-        } else if (!config.isUsingSystemTheme) {
-            view.background = ResourcesCompat.getDrawable(context.resources, R.drawable.bottom_sheet_bg, context.theme).apply {
-                (this as LayerDrawable).findDrawableByLayerId(R.id.bottom_sheet_background).applyColorFilter(context.getProperBackgroundColor())
+            view.bottom_sheet_holder.background = ResourcesCompat.getDrawable(context.resources, R.drawable.bottom_sheet_bg_black, context.theme)
+        } else /*if (!config.isUsingSystemTheme)*/ {
+            view.bottom_sheet_holder.background = ResourcesCompat.getDrawable(context.resources, R.drawable.bottom_sheet_bg, context.theme).apply {
+                val backgroundColor = if (requireContext().isBlackTheme()) context.getBottomNavigationBackgroundColor() else context.getProperBackgroundColor()
+                (this as LayerDrawable).findDrawableByLayerId(R.id.bottom_sheet_background).applyColorFilter(backgroundColor)
             }
         }
         return view
@@ -40,7 +41,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
             bottom_sheet_title.setTextOrBeGone(title)
             setupContentView(bottom_sheet_content_holder)
 
-            bottom_sheet_cancel.applyColorFilter(context.baseConfig.textColor)
+            bottom_sheet_cancel.applyColorFilter(context.getProperTextColor())
             bottom_sheet_cancel.setOnClickListener { dialog?.dismiss() }
         }
     }

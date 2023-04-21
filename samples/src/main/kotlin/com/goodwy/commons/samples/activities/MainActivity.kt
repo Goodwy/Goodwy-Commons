@@ -3,11 +3,13 @@ package com.goodwy.commons.samples.activities
 import android.os.Bundle
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
+import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.appLaunched
 import com.goodwy.commons.extensions.updateTextColors
 import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.models.SimpleListItem
 import com.goodwy.commons.helpers.LICENSE_GLIDE
+import com.goodwy.commons.helpers.SHOW_ALL_TABS
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
@@ -26,6 +28,9 @@ class MainActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
+
+        updateMaterialActivityViews(main_coordinator, main_holder, useTransparentNavigation = true, useTopSearchMenu = true)
+        setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
 
         main_color_customization.setOnClickListener {
             startCustomizationActivity()
@@ -48,6 +53,11 @@ class MainActivity : BaseSimpleActivity() {
 
         bottom_sheet_chooser.setOnClickListener {
             launchBottomSheetDemo()
+        }
+
+        security.setOnClickListener {
+            SecurityDialog(this, "", SHOW_ALL_TABS) { hash, type, success ->
+            }
         }
 
         //startCustomizationActivity()

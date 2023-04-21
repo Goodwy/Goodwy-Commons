@@ -74,7 +74,9 @@ fun setupSimpleListItem(view: View, item: SimpleListItem, collection: Boolean, o
             bottom_sheet_item_title.setTextColor(color)
             bottom_sheet_item_icon.setImageResourceOrBeGone(item.imageRes)
             bottom_sheet_item_icon.applyColorFilter(color)
-            bottom_sheet_selected_icon.beVisibleIf(item.selected)
+            //bottom_sheet_selected_icon.beVisibleIf(item.selected)
+            val selectedIcon = if (item.selected) R.drawable.ic_radio_button else R.drawable.ic_circle
+            bottom_sheet_selected_icon.setImageResource(selectedIcon)
             bottom_sheet_selected_icon.applyColorFilter(color)
         }
 

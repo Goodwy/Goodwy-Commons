@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">Viesti</string>
+    <string name="settings_icon">Asetukset-kuvake</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Projektien tuki</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">Opi lisää</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">Teemoja</string>
+    <string name="themes_summary">"Huolellisesti valitut sovellusteemat, automaattinen teemanvaihtaja ja järjestelmäteeman tuki Android 12: lle "</string>
+    <string name="color_title">Värit</string>
+    <string name="color_summary">Päävärin, korostuksen, taustan, tekstin ja siirtymispalkin manuaalinen säätö</string>
+    <string name="plus_title">Tue meitä</string>
+    <string name="plus_summary">Kaikki sovelluksemme ovat mainoksettomia, avoimen lähdekoodin ja se pysyy aina sellaisena. Sinun avullasi pystymme toteuttamaan lisää ominaisuuksia ja tekemään niistä entistä parempia</string>
+    <string name="lifebuoy_title">Tuemme sinua</string>
+    <string name="lifebuoy_summary">Jos jostain syystä sinulla ei ole varaa sovellukseemme, mutta haluat todella käyttää kaikkia ominaisuuksia, lähetä meille sähköpostia</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Näytä yhteystietojen kuvakkeet</string>
     <string name="use_icon_tabs_summary">Kuvakkeet välilehtien tekstin sijaan</string>
     <string name="use_icon_tabs">Välilehtikuvakkeiden käyttö</string>
@@ -17,6 +53,27 @@
     <string name="black">Musta</string>
     <string name="show_dividers">Näytä jakajat</string>
     <string name="colored_contacts">Yhteystietojen värilliset kuvakkeet</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Välilehtien navigointi</string>
+    <string name="top">Yläpuolella</string>
+    <string name="bottom">Alla</string>
+    <string name="relative_date">Suhteellinen päivämäärä</string>
+    <string name="color_sim_card_icons">Värilliset SIM-kortin kuvakkeet</string>
+    <string name="tabs">Välilehdet</string>
+    <string name="open_search_when_open_contacts">Avaa haku, kun avaat Yhteystiedot-välilehden</string>
+    <string name="call_screen_background">Puhelunäytön tausta</string>
+    <string name="contact_photo">Kontaktin kuva</string>
+    <string name="blurry_contact_photo">Hämärtynyt yhteystietokuva</string>
+    <string name="blurry_wallpaper">Selkeä taustakuva</string>
+
     <string name="accent_color">Korostusväri</string>
     <string name="incoming_call">Saapuva puhelu</string>
     <string name="outgoing_call">Lähtevä puhelu</string>
@@ -24,7 +81,6 @@
     <string name="unblock_number">Poista numeron esto</string>
     <string name="recents">Tuore</string>
     <string name="unblock_confirmation">Haluatko varmasti poistaa eston \"%s\"?</string>
-    <string name="plus_summary">Kaikki sovelluksemme ovat mainoksettomia, avoimen lähdekoodin ja se pysyy aina sellaisena. Sinun avullasi pystymme toteuttamaan lisää ominaisuuksia ja tekemään niistä entistä parempia</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Osta Goodwy Thank You</string>
@@ -50,38 +106,55 @@
     <string name="pro_app_refund_g">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse goodwy.dev@gmail.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
+    <string name="add_number">Lisää numero</string>
+    <string name="add_email">Lisää sähköpostiosoite</string>
+    <string name="add_address">Lisää osoite</string>
+    <string name="add_im">Lisää pikaviestintä</string>
+    <string name="add_event">Lisää tapahtuma</string>
+    <string name="add_notes">Lisää muistiinpanoja</string>
     <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_group">Lisää ryhmä</string>
+    <string name="add_related_person">Lisää läheinen henkilö</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Videopuhelu</string>
+    <string name="screen_slide_animation">Ruudun dia-animaatio</string>
+    <string name="screen_slide_animation_zoomout">Pienennä</string>
+    <string name="screen_slide_animation_depth">Syvyys</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Hanki</string>
+    <string name="open">Avaa</string>
+    <string name="collection">Kokoelma</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Kopioi koodi</string>
+    <string name="action_on_message_click">Toiminto viestin klikkauksen yhteydessä</string>
+    <string name="invert_color">Käännä väri</string>
+    <string name="speech_bubble">Puhekupla</string>
+
+    <!-- Gallery -->
+    <string name="library">Kirjasto</string>
+    <string name="open_in_maps">Avaa kartoissa</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Voinko soittaa sinulle myöhemmin?</string>
+    <string name="message_on_my_way">Olen matkalla.</string>
+    <string name="message_cant_talk_right_now">Anteeksi, en voi puhua juuri nyt.</string>
 </resources>

@@ -12,28 +12,28 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="recents">Recents</string>
-    <string name="message">Message</string>
-    <string name="settings_icon">Settings icon</string>
+    <string name="message">Съобщение</string>
+    <string name="settings_icon">Икона за настройки</string>
 
     <!-- Support project -->
-    <string name="action_support_project">Support project</string>
+    <string name="action_support_project">Подкрепа по проекта</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
-    <string name="learn_more">Learn more</string>
+    <string name="learn_more">Научете повече</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
     <string name="voicerecorder">VoiceMemos</string>
     <string name="voicerecorder_summary">Voice recorder</string>
     <string name="files">Files</string>
     <string name="files_summary">File manager</string>
-    <string name="themes">Themes</string>
-    <string name="themes_summary">Carefully selected application themes, automatic theme changer and system theme support for Android 12+</string>
-    <string name="color_title">Colors</string>
-    <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
-    <string name="plus_title">Support us</string>
-    <string name="plus_summary">All of our apps are ad-free, Open Source and it will always remain that way. With your help we are able to implement more features and make them even better</string>
-    <string name="lifebuoy_title">We will support you</string>
-    <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
+    <string name="themes">Теми</string>
+    <string name="themes_summary">Внимателно подбрани теми за приложения, автоматична промяна на темата и поддръжка на системни теми за Android 12+</string>
+    <string name="color_title">Цветове</string>
+    <string name="color_summary">Ръчно регулиране на основния цвят, акцент, фон, текст и навигационна лента</string>
+    <string name="plus_title">Подкрепете ни</string>
+    <string name="plus_summary">Всички наши приложения са без реклами, с отворен код и винаги ще остане така. С ваша помощ можем да внедрим повече функции и да ги направим още по-добри</string>
+    <string name="lifebuoy_title">Ние ще ви подкрепим</string>
+    <string name="lifebuoy_summary">Ако по някаква причина не можете да си позволите нашето приложение, но наистина искате да използвате всички функции, просто ни пишете</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Kind tip of</string>
@@ -64,6 +64,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
@@ -72,6 +73,17 @@
     <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Навигация в раздели</string>
+    <string name="top">Над</string>
+    <string name="bottom">Под</string>
+    <string name="relative_date">Относителна дата</string>
+    <string name="color_sim_card_icons">Цветни икони на SIM карти</string>
+    <string name="tabs"> Таблици</string>
+    <string name="open_search_when_open_contacts">Отваряне на търсенето, когато отворите раздела \"Контакти\"</string>
+    <string name="call_screen_background">Фон на екрана за повиквания</string>
+    <string name="contact_photo">Снимка на контакта</string>
+    <string name="blurry_contact_photo">размазана снимка на контакта</string>
+    <string name="blurry_wallpaper">размазан тапет</string>
 
     <!-- Other -->
     <string name="donate_please_g">
@@ -104,38 +116,55 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Добавяне на номер</string>
+    <string name="add_email">Добавете имейл</string>
+    <string name="add_address">Добавяне на адрес</string>
+    <string name="add_im">Прибавете услуга за незабавни съобщения</string>
+    <string name="add_event">Прибавяне на събитие</string>
+    <string name="add_notes">Прибавяне на бележка</string>
+    <string name="add_website">Прибавяне на уебсайт</string>
+    <string name="add_group">Прибавяне към група</string>
+    <string name="add_related_person">Добавяне на лице за контакт</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Видеоразговор</string>
+    <string name="screen_slide_animation">Анимация на слайд на екрана</string>
+    <string name="screen_slide_animation_zoomout">Свиване</string>
+    <string name="screen_slide_animation_depth">Дълбочина</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Зареждане</string>
+    <string name="open">Отваряне</string>
+    <string name="collection">Колекция</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Копиране на кода</string>
+    <string name="action_on_message_click">Действие за кликване върху съобщението</string>
+    <string name="invert_color">Инвертиране на цветовете</string>
+    <string name="speech_bubble">Стил на съобщението</string>
+
+    <!-- Gallery -->
+    <string name="library">Библиотека на медиите</string>
+    <string name="open_in_maps">Отваряне в карти</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Може ли да ти се обадя по-късно?</string>
+    <string name="message_on_my_way">На път съм.</string>
+    <string name="message_cant_talk_right_now">Съжалявам, не мога да говоря в момента.</string>
 </resources>

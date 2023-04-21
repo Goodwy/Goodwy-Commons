@@ -9,6 +9,7 @@ import com.goodwy.commons.extensions.getIntValue
 import com.goodwy.commons.extensions.getStringValue
 import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
+import com.goodwy.commons.models.contacts.*
 
 // used for sharing privately stored contacts in Simple Contacts with Simple Dialer, Simple SMS Messenger and Simple Calendar Pro
 class MyContactsContentProvider {
@@ -24,12 +25,11 @@ class MyContactsContentProvider {
         const val COL_PHONE_NUMBERS = "phone_numbers"
         const val COL_BIRTHDAYS = "birthdays"
         const val COL_ANNIVERSARIES = "anniversaries"
-        const val COL_PHONE_NUMBERS_INFO = "phone_numbers_info"
 
         fun getSimpleContacts(context: Context, cursor: Cursor?): ArrayList<SimpleContact> {
             val contacts = ArrayList<SimpleContact>()
             val packageName = context.packageName.removeSuffix(".debug")
-            if (packageName != "com.goodwy.dialer" && packageName != "com.goodwy.smsmessenger" && packageName != "com.goodwy.calendar.pro") {
+            if (packageName != "com.goodwy.dialer" && packageName != "com.goodwy.smsmessenger" && packageName != "com.goodwy.calendar") {
                 return contacts
             }
 
@@ -44,7 +44,6 @@ class MyContactsContentProvider {
                             val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
                             val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
-                            val phoneNumbersInfoJson = cursor.getStringValue(COL_PHONE_NUMBERS_INFO)
 
                             val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
                             val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
@@ -54,6 +53,62 @@ class MyContactsContentProvider {
                             val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
 
                             val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries)
+                            contacts.add(contact)
+                        } while (cursor.moveToNext())
+                    }
+                }
+            } catch (ignored: Exception) {
+            }
+            return contacts
+        }
+        fun getContacts(context: Context, cursor: Cursor?): ArrayList<Contact> {
+            val contacts = ArrayList<Contact>()
+            val packageName = context.packageName.removeSuffix(".debug")
+            if (packageName != "com.simplemobiletools.dialer" && packageName != "com.simplemobiletools.smsmessenger" && packageName != "com.simplemobiletools.calendar.pro") {
+                return contacts
+            }
+
+            try {
+                cursor?.use {
+                    if (cursor.moveToFirst()) {
+                        do {
+                            val rawId = cursor.getIntValue(COL_RAW_ID)
+                            val contactId = cursor.getIntValue(COL_CONTACT_ID)
+                            val name = cursor.getStringValue(COL_NAME)
+                            val photoUri = cursor.getStringValue(COL_PHOTO_URI)
+                            val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
+                            val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
+                            val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
+
+                            val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
+                            val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
+
+                            val stringsToken = object : TypeToken<ArrayList<String>>() {}.type
+                            val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
+                            val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
+                            val names = name.split(" ")
+                            val firstName = names.firstOrNull() ?: ""
+                            val middleName = if (names.size == 3) names[2] else ""
+                            val surname = if (names.size > 1) {
+                                names.lastOrNull() ?: ""
+                            } else {
+                                ""
+                            }
+
+                            val contact = Contact(
+                                id = rawId,
+                                contactId = contactId,
+                                firstName = firstName,
+                                middleName = middleName,
+                                surname = surname,
+                                photoUri = photoUri,
+                                phoneNumbers = phoneNumbers,
+                                source = SMT_PRIVATE
+                            ).also {
+                                it.birthdays = birthdays
+                                it.anniversaries = anniversaries
+                            }
+
                             contacts.add(contact)
                         } while (cursor.moveToNext())
                     }

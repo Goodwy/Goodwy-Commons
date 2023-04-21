@@ -11,9 +11,11 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="recents">Recente</string>
+    <string name="message">Mesaj</string>
+    <string name="settings_icon">Pictograma Setări</string>
 
     <!-- Support project -->
-    <string name="action_support_project">Proiect de sprijin</string>
+    <string name="action_support_project">Suport de proiect</string>
     <string name="pref_pay_summary">Achiziționați aplicația pentru a sprijini evoluțiile viitoare și pentru a obține mai multe funcții</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Află mai multe</string>
@@ -23,12 +25,27 @@
     <string name="voicerecorder_summary">Voice recorder</string>
     <string name="files">Files</string>
     <string name="files_summary">File manager</string>
+    <string name="themes">Teme</string>
+    <string name="themes_summary">Teme de aplicații atent selectate, schimbător automat de teme și suport pentru teme de sistem pentru Android 12+</string>
+    <string name="color_title">Culori</string>
     <string name="color_summary">Ajustarea manuală a culorii primare, a accentului, a fundalului, a textului și a barei de navigare</string>
-    <string name="lifebuoy_title">We will support you</string>
+    <string name="plus_title">Sustine-ne</string>
+    <string name="plus_summary">Toate aplicațiile noastre sunt fără anunțuri, Open Source și vor rămâne întotdeauna așa. Cu ajutorul dumneavoastră suntem capabili să implementăm mai multe caracteristici și să le facem și mai bune</string>
+    <string name="lifebuoy_title">Vă vom sprijini</string>
     <string name="lifebuoy_summary">Dacă, din anumite motive, nu vă puteți permite aplicația noastră, dar doriți cu adevărat să utilizați toate funcțiile, trebuie doar să ne trimiteți un e-mail</string>
-
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>
@@ -46,10 +63,26 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
     <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Navigarea pe file</string>
+    <string name="top">Deasupra</string>
+    <string name="bottom">Sub</string>
+    <string name="relative_date">Data relativă</string>
+    <string name="color_sim_card_icons">Pictograme color ale cartelei SIM</string>
+    <string name="tabs">Tabs</string>
+    <string name="open_search_when_open_contacts">Deschideți Căutarea atunci când deschideți fila Persoane de contact</string>
+    <string name="call_screen_background">Fundalul ecranului de apeluri</string>
+    <string name="contact_photo">Imaginea contactului</string>
+    <string name="blurry_contact_photo">fotografie neclară a contactului</string>
+    <string name="blurry_wallpaper">Papier de fundal neclar</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -75,38 +108,55 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Adaugați un număr</string>
+    <string name="add_email">Adaugă un email</string>
+    <string name="add_address">Adaugă adresa</string>
+    <string name="add_im">Adaugă un mesaj instantaneu</string>
+    <string name="add_event">Adaugă un eveniment</string>
+    <string name="add_notes">Adaugă note</string>
+    <string name="add_website">Adaugă un site web</string>
+    <string name="add_group">Adaugă un grup</string>
+    <string name="add_related_person">Adaugă o persoană legată</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
+    <string name="video_call">Apel video</string>.
+    <string name="screen_slide_animation">Animație slide pe ecran</string>
     <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="screen_slide_animation_depth">Adâncime</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Obțineți</string>
+    <string name="open">Deschideți</string>
+    <string name="collection">Colecție</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Copiază codul</string>
+    <string name="action_on_message_click">Acțiune la click pe mesaj</string>
+    <string name="invert_color">Inversează culoarea</string>
+    <string name="speech_bubble">Bula de vorbire</string>
+
+    <!-- Gallery -->
+    <string name="library">Bibliotecă</string>
+    <string name="open_in_maps">Deschis în hărți</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Pot să vă sun mai târziu?</string>
+    <string name="message_on_my_way">Sunt pe drumul meu.</string>
+    <string name="message_cant_talk_right_now">Îmi pare rău, eu nu pot vorbi chiar acum.</string>
 </resources>

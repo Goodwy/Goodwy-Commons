@@ -7,9 +7,7 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.NavigationIcon
 import com.goodwy.commons.interfaces.LineColorPickerListener
-import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 import kotlinx.android.synthetic.main.dialog_grid_color_picker.view.*
 
 // Material colors
@@ -263,11 +261,9 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         view.hex_code.text = color.toHex().substring(1)
         view.grid_color_new_color.setFillWithStrokeRigth(color, backgroundColor)
         if (isPrimaryColorPicker) {
-           // activity.updateActionbarColor(color)
-            activity.setTheme(activity.getThemeId(color))
 
             if (toolbar != null) {
-                //activity.setupToolbar(toolbar, NavigationIcon.Cross, color)
+                activity.updateTopBarColors(toolbar, color)
             }
 
             if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {

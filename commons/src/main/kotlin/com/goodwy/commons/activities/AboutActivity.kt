@@ -1,15 +1,19 @@
 package com.goodwy.commons.activities
 
 import android.annotation.SuppressLint
-import android.content.ComponentName
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.content.Intent.*
 import android.content.res.ColorStateList
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
-import android.provider.ContactsContract
 import android.text.Html
 import android.text.method.LinkMovementMethod
+import android.view.LayoutInflater
+import android.view.View
+import androidx.core.net.toUri
+import androidx.core.view.isEmpty
 import com.goodwy.commons.R
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
 import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
@@ -25,6 +29,9 @@ import java.util.*
 class AboutActivity : BaseSimpleActivity() {
     private var appName = ""
     private var primaryColor = 0
+    private var textColor = 0
+    private var backgroundColor = 0
+    private var inflater: LayoutInflater? = null
     private var licensingKey = ""
     private var productIdX1 = ""
     private var productIdX2 = ""
@@ -40,10 +47,18 @@ class AboutActivity : BaseSimpleActivity() {
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
-        appName = intent.getStringExtra(APP_NAME) ?: ""
         primaryColor = getProperPrimaryColor()
+        textColor = getProperTextColor()
+        backgroundColor = getProperBackgroundColor()
+        inflater = LayoutInflater.from(this)
+
+        updateMaterialActivityViews(about_coordinator, about_holder, useTransparentNavigation = true, useTopSearchMenu = false)
+        setupMaterialScrollListener(about_nested_scrollview, about_toolbar)
+
+        appName = intent.getStringExtra(APP_NAME) ?: ""
         licensingKey = intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: ""
         productIdX1 = intent.getStringExtra(PRODUCT_ID_X1) ?: ""
         productIdX2 = intent.getStringExtra(PRODUCT_ID_X2) ?: ""
@@ -60,6 +75,7 @@ class AboutActivity : BaseSimpleActivity() {
 
         setupRateUs()
         setupMoreApps()
+        setupPrivacyPolicy()
         setupFAQ()
         setupTipJar()
         setupCollection()
@@ -162,7 +178,43 @@ class AboutActivity : BaseSimpleActivity() {
         about_invite.setTextColor(primaryColor)
     }
 
-    @SuppressLint("NewApi")
+    private fun launchEmailIntent() {
+        val appVersion = String.format(getString(R.string.app_version, intent.getStringExtra(APP_VERSION_NAME)))
+        val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
+        val newline = "\n"
+        val separator = "------------------------------"
+        val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline"
+
+        val address = if (packageName.startsWith("com.goodwy")) {
+            getString(R.string.my_email)
+        } else {
+            getString(R.string.my_fake_email)
+        }
+
+        val selectorIntent = Intent(ACTION_SENDTO)
+            .setData("mailto:$address".toUri())
+        val emailIntent = Intent(ACTION_SEND).apply {
+            putExtra(EXTRA_EMAIL, arrayOf(address))
+            putExtra(EXTRA_SUBJECT, appName)
+            putExtra(EXTRA_TEXT, body)
+            selector = selectorIntent
+        }
+
+        try {
+            startActivity(emailIntent)
+        } catch (e: ActivityNotFoundException) {
+            val chooser = createChooser(emailIntent, getString(R.string.send_email))
+            try {
+                startActivity(chooser)
+            } catch (e: Exception) {
+                toast(R.string.no_email_client_found)
+            }
+        } catch (e: Exception) {
+            showErrorToast(e)
+        }
+    }
+
+    @SuppressLint("NewApi", "UseCompatTextViewDrawableApis")
     private fun setupRateUs() {
         /* if (baseConfig.appRunCount < 5) {
              about_rate_us.visibility = View.GONE
@@ -197,7 +249,7 @@ class AboutActivity : BaseSimpleActivity() {
        // rateButton.setBackgroundColor(primaryColor)
     }
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi", "UseCompatTextViewDrawableApis")
     private fun setupMoreApps() {
         moreButton.setOnClickListener {
             launchMoreAppsFromUsIntent()
@@ -207,7 +259,23 @@ class AboutActivity : BaseSimpleActivity() {
         moreButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
     }
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi", "UseCompatTextViewDrawableApis")
+    private fun setupPrivacyPolicy() {
+        privacyButton.setOnClickListener {
+            val appId = baseConfig.appId.removeSuffix(".debug")
+            val url = when (appId) {
+                "com.goodwy.smsmessenger" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-messages"
+                "com.goodwy.contacts" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-contacts"
+                else -> "https://sites.google.com/view/goodwy/about/privacy-policy"
+            }
+            launchViewIntent(url)
+        }
+        privacyButton.setTextColor(getProperTextColor())
+        privacyButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
+        privacyButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
+    }
+
+    @SuppressLint("NewApi", "UseCompatTextViewDrawableApis")
     private fun setupFAQ() {
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         faqButton.setOnClickListener {
@@ -218,7 +286,7 @@ class AboutActivity : BaseSimpleActivity() {
         faqButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
     }
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi", "UseCompatTextViewDrawableApis")
     private fun setupTipJar() {
         tipJarButton.setOnClickListener {
             startPurchaseActivity(R.string.app_name_g, licensingKey, productIdX1, productIdX2, productIdX3, showLifebuoy = false)
@@ -234,11 +302,13 @@ class AboutActivity : BaseSimpleActivity() {
         val appContactsPackage = "com.goodwy.contacts"
         val appSmsMessengerPackage = "com.goodwy.smsmessenger"
         val appVoiceRecorderPackage = "com.goodwy.voicerecorder"
+        val appGalleryPackage = "com.goodwy.gallery"
 
         val appDialerInstalled = isPackageInstalled(appDialerPackage)// || isPackageInstalled("com.goodwy.dialer.debug")
         val appContactsInstalled = isPackageInstalled(appContactsPackage)// || isPackageInstalled("com.goodwy.contacts.debug")
         val appSmsMessengerInstalled = isPackageInstalled(appSmsMessengerPackage)// || isPackageInstalled("com.goodwy.smsmessenger.debug")
         val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
+        val appGalleryInstalled = isPackageInstalled(appGalleryPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
 
         val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appVoiceRecorderInstalled
 
@@ -250,7 +320,8 @@ class AboutActivity : BaseSimpleActivity() {
             SimpleListItem(1, R.string.right_dialer, R.mipmap.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
             SimpleListItem(2, R.string.right_contacts, R.mipmap.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
             SimpleListItem(3, R.string.right_sms_messenger, R.mipmap.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
-            SimpleListItem(4, R.string.right_voice_recorder, R.mipmap.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage)
+            SimpleListItem(4, R.string.right_voice_recorder, R.mipmap.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage),
+            SimpleListItem(5, R.string.right_gallery, R.mipmap.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage)
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
@@ -333,12 +404,13 @@ class AboutActivity : BaseSimpleActivity() {
         about_copyright.text = String.format(getString(R.string.copyright_g), versionName, year)
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setupAboutApp() {
         var versionName = intent.getStringExtra(APP_VERSION_NAME) ?: ""
         if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
             versionName += " ${getString(R.string.pro)}"
         }
-        about_app_version.text = "Version: " + versionName
+        about_app_version.text = "Version: $versionName"
 
         about_app_holder.setOnClickListener {
             if (firstVersionClickTS == 0L) {

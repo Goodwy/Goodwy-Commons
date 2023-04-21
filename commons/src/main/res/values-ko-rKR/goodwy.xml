@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">메시지</string>
+    <string name="settings_icon">설정 아이콘</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">프로젝트 지원</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">더 알아보세요</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">테마</string>
+    <string name="themes_summary">"엄선 된 애플리케이션 테마, 자동 테마 체인저 및 Android 12+ 용 시스템 테마 지원 "</string>
+    <string name="color_title">색상</string>
+    <string name="color_summary">기본 색상, 악센트, 배경, 텍스트 및 탐색 모음의 수동 조정</string>
+    <string name="plus_title">우리를 지원</string>
+    <string name="plus_summary">우리의 모든 앱은 광고무료, 오픈 소스이며, 항상 그런 식으로 유지됩니다. 귀하의 도움으로 우리는 더 많은 기능을 구현하고 더 나은 만들 수 있습니다</string>
+    <string name="lifebuoy_title">우리는 당신을 지원할 것입니다</string>
+    <string name="lifebuoy_summary">어떤 이유로 당신은 우리의 응용 프로그램을 감당할 수 없습니다, 하지만 정말 모든 기능을 사용하고 싶다면, 그냥 이메일을 보내 주시기 바랍니다</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">탭의 텍스트 대신 아이콘</string>
     <string name="use_icon_tabs">탭 아이콘 사용</string>
@@ -17,6 +53,27 @@
     <string name="black">검정</string>
     <string name="show_dividers">구분 표시</string>
     <string name="colored_contacts">연락처 색상 아이콘</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">탭 탐색</string>
+    <string name="top">위</string>
+    <string name="bottom">아래</string>
+    <string name="relative_date">상대 날짜</string>
+    <string name="color_sim_card_icons">컬러 SIM 카드 아이콘</string>
+    <string name="tabs">탭</string>
+    <string name="open_search_when_open_contacts">연락처 탭을 열 때 검색 열기</string>
+    <string name="call_screen_background">통화 화면 배경</string>
+    <string name="contact_photo">연락처 사진</string>
+    <string name="blurry_contact_photo">흐릿한 연락처 사진</string>
+    <string name="blurry_wallpaper">흐릿한 배경화면</string>
+
     <string name="accent_color">악센트 색상</string>
     <string name="incoming_call">수신 전화</string>
     <string name="outgoing_call">나가는 전화</string>
@@ -24,7 +81,6 @@
     <string name="unblock_number">차단 해제 번호</string>
     <string name="recents">최근</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="plus_summary">우리의 모든 앱은 광고무료, 오픈 소스이며, 항상 그런 식으로 유지됩니다. 귀하의 도움으로 우리는 더 많은 기능을 구현하고 더 나은 만들 수 있습니다</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">심플 Thank You 구매하기</string>
@@ -50,38 +106,55 @@
     <string name="pro_app_refund_g">플레이스토어에서 구매한 앱은 2시간 내에 삭제하면 자동으로 환불받을 수 있다는 사실을 항상 잊지 마시기 바랍니다. 만약 이후에 환불이 필요하시다면, goodwy.dev@gmail.com 으로 연락 주시면 해결해 드리겠습니다. 이제 한번 써보는 것도 나쁘지 않겠죠 :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">번호 추가</string>
+    <string name="add_email">이메일 추가</string>
+    <string name="add_address">주소 추가</string>
+    <string name="add_im">IM 추가</string>
+    <string name="add_event">이벤트 추가</string>
+    <string name="add_notes">노트 추가</string>
+    <string name="add_website">웹사이트 추가</string>
+    <string name="add_group">그룹 추가</string>
+    <string name="add_related_person">관련자 추가</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">영상 통화</string>
+    <string name="screen_slide_animation">화면 슬라이드 애니메이션</string>
+    <string name="screen_slide_animation_zoomout">줌아웃</string>
+    <string name="screen_slide_animation_depth">심도</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">받기</string>
+    <string name="open">열기</string>
+    <string name="collection">컬렉션</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">코드 복사</string>
+    <string name="action_on_message_click">메시지 클릭 시 동작</string>
+    <string name="invert_color">색상 반전</string>
+    <string name="speech_bubble">말풍선</string>
+
+    <!-- Gallery -->
+    <string name="library">도서관</string>
+    <string name="open_in_maps">지도에서 열기</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">나중에 전화해도 될까요?</string>
+    <string name="message_on_my_way">지금 가요.</string>
+    <string name="message_cant_talk_right_now">죄송합니다, 지금은 말할 수 없습니다.</string>
 </resources>

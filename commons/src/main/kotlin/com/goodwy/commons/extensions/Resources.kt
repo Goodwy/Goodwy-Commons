@@ -46,6 +46,7 @@ fun getSettingsIcon(id: Int): Int {
         2 -> R.drawable.ic_settings_cog_vector
         3 -> R.drawable.ic_settings
         4 -> R.drawable.ic_settings_gear
+        5 -> R.drawable.ic_settings_toggles
         else -> R.drawable.ic_more_horiz
     }
 }

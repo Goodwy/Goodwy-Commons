@@ -4,30 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/main_app_bar_layout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/main_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_primary"
-            app:menu="@menu/menu"
-            app:title="@string/simple_commons"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/simple_commons"
+        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/main_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true"
+        android:scrollbars="none">
 
         <RelativeLayout
-            android:id="@+id/customization_holder"
+            android:id="@+id/main_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -90,6 +83,16 @@
                 android:layout_marginTop="16dp"
                 android:elevation="4dp"
                 android:text="Bottom sheet chooser" />
+
+            <Button
+                android:id="@+id/security"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bottom_sheet_chooser"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                android:text="@string/security" />
 
         </RelativeLayout>
 

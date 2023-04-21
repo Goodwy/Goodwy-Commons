@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">İleti</string>
+    <string name="settings_icon">Ayarlar simgesi</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Proje desteği</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">Daha fazla bilgi edinin</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">Temalar</string>
+    <string name="themes_summary">"Özenle seçilmiş uygulama temaları, otomatik tema değiştirici ve Android 12+ için sistem teması desteği "</string>
+    <string name="color_title">Renk</string>
+    <string name="color_summary">Ana renk, vurgu, arka plan, metin ve gezinme çubuğunun manuel olarak ayarlanması</string>
+    <string name="plus_title">Bize destek olun</string>
+    <string name="plus_summary">Tüm uygulamalarımız reklamsız, Açık Kaynak kodludur ve her zaman böyle kalacaktır. Sizin yardımınızla daha fazla özellik uygulayabilir ve daha da iyi hale getirebiliriz</string>
+    <string name="lifebuoy_title">Sizi destekleyeceğiz</string>
+    <string name="lifebuoy_summary">Herhangi bir nedenle uygulamamızı karşılayamıyorsanız, ancak gerçekten tüm özellikleri kullanmak istiyorsanız, bize e-posta göndermeniz yeterlidir.</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">Kişi küçük resimlerini göster</string>
     <string name="use_icon_tabs_summary">Sekmelerdeki metin yerine simgeler</string>
     <string name="use_icon_tabs">Sekme simgelerini kullanma</string>
@@ -17,6 +53,27 @@
     <string name="black">Siyah</string>
     <string name="show_dividers">Bölücüleri göster</string>
     <string name="colored_contacts">Kişiler renkli simgeler</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Sekme gezintisi</string>
+    <string name="top">Üstünde</string>
+    <string name="bottom">Aşağıda</string>
+    <string name="relative_date">Göreli tarih</string>
+    <string name="color_sim_card_icons">Renkli SIM kart simgeleri</string>
+    <string name="tabs">Sekmeler</string>
+    <string name="open_search_when_open_contacts">Kişiler sekmesi açıkken aramayı aç</string>
+    <string name="call_screen_background">Çağrı ekranı arka planı</string>
+    <string name="contact_photo">İletişim resmi</string>
+    <string name="blurry_contact_photo">Bulanık kişi fotoğrafı</string>
+    <string name="blurry_wallpaper">Bulanık duvar kağıdı</string>
+
     <string name="accent_color">Vurgu rengi</string>
     <string name="incoming_call">Gelen Arama</string>
     <string name="outgoing_call">Giden Arama</string>
@@ -24,7 +81,6 @@
     <string name="unblock_number">Numaranın engellemesini kaldır</string>
     <string name="recents">Gecmis</string>
     <string name="unblock_confirmation">\"%s\" engellemesini kaldırmak istediğinizden emin misiniz?</string>
-    <string name="plus_summary">Tüm uygulamalarımız reklamsız, Açık Kaynak kodludur ve her zaman böyle kalacaktır. Sizin yardımınızla daha fazla özellik uygulayabilir ve daha da iyi hale getirebiliriz</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Goodwy Teşekkürler\'i Satın Al</string>
@@ -50,38 +106,55 @@
     <string name="pro_app_refund_g">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, goodwy.dev@gmail.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Sayı ekle</string>
+    <string name="add_email">E-posta ekle</string>
+    <string name="add_address">Adres ekle</string>
+    <string name="add_im">Anlık İleti Ekle</string>
+    <string name="add_event">Etkinlik ekle</string>
+    <string name="add_notes">Not ekle</string>
+    <string name="add_website">Web sitesi ekle</string>
+    <string name="add_group">Grup ekle</string>
+    <string name="add_related_person">İlgili kişiyi ekle</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Video araması</string>
+    <string name="screen_slide_animation">Ekran slayt animasyonu</string>
+    <string name="screen_slide_animation_zoomout">Uzaklaştır</string>
+    <string name="screen_slide_animation_depth">Derinlik</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Almak</string>
+    <string name="open">Açık</string>
+    <string name="collection">Koleksiyon</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Kopya kodu</string>
+    <string name="action_on_message_click">İleti tıklandığında eylem</string>
+    <string name="invert_color">Rengi ters çevir</string>
+    <string name="speech_bubble">Konuşma balonu</string>
+
+    <!-- Gallery -->
+    <string name="library">Kütüphane</string>
+    <string name="open_in_maps">Haritalarda Aç</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Sizi daha sonra arayabilir miyim?</string>
+    <string name="message_on_my_way">Yoluma devam ediyorum.</string>
+    <string name="message_cant_talk_right_now">Üzgünüm, şu anda konuşamıyorum.</string>
 </resources>

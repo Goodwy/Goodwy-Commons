@@ -1,4 +1,40 @@
 <resources>
+    <string name="message">消息</string>
+    <string name="settings_icon">“設置”圖示</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">項目支援</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">瞭解更多資訊</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">主題</string>
+    <string name="themes_summary">精心挑選的應用程式主題，自動主題更換器和Android 12+的系統主題支援</string>
+    <string name="color_title">顏色</string>
+    <string name="color_summary">手動調整原色、強調色、背景、文本和導航欄</string>
+    <string name="plus_title">支持我們</string>
+    <string name="plus_summary">我們所有的應用程式都是無廣告的，開源的，它將永遠保持這樣。在您的説明下，我們能夠實現更多的功能，並使它們變得更好</string>
+    <string name="lifebuoy_title">我們將為您提供支援</string>
+    <string name="lifebuoy_summary">如果由於某種原因您買不起我們的應用程式，但真的想使用所有功能，只需給我們發電子郵件</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
     <string name="show_contact_thumbnails_g">顯示聯絡人縮圖</string>
     <string name="use_icon_tabs_summary">圖示而不是選項卡上的文本</string>
     <string name="use_icon_tabs">使用選項卡圖示</string>
@@ -17,6 +53,27 @@
     <string name="black">黑</string>
     <string name="show_dividers">顯示分隔線</string>
     <string name="colored_contacts">聯繫人彩色圖示</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">選項卡導航</string>
+    <string name="top">以上</string>
+    <string name="bottom">下面</string>
+    <string name="relative_date">相對日期</string>
+    <string name="color_sim_card_icons">彩色SIM卡圖示</string>
+    <string name="tabs">製表符</string>
+    <string name="open_search_when_open_contacts">打開聯繫人標籤時打開搜索</string>
+    <string name="call_screen_background">​​通話界面背景</string>
+    <string name="contact_photo">聯繫照片</string>
+    <string name="blurry_contact_photo">模糊聯繫人照片</string>
+    <string name="blurry_wallpaper">模糊壁紙</string>
+
     <string name="accent_color">重音顏色</string>
     <string name="incoming_call">來電</string>
     <string name="outgoing_call">傳出呼叫</string>
@@ -24,7 +81,6 @@
     <string name="unblock_number">解鎖號碼</string>
     <string name="recents">最近</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="plus_summary">我們所有的應用程式都是無廣告的，開源的，它將永遠保持這樣。在您的説明下，我們能夠實現更多的功能，並使它們變得更好</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">購買Goodwy Thank You</string>
@@ -50,38 +106,55 @@
     <string name="pro_app_refund_g">別忘記如果您在2小時內解除安裝任何付費應用程式，將會自動被退款。若您在之後隨時想退款，只要透過 goodwy.dev@gmail.com 聯絡我們，即可收到退款。這麼一來輕鬆就能試用了 :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">添加號碼</string>
+    <string name="add_email">添加郵箱</string>
+    <string name="add_address">添加地址</string>
+    <string name="add_im">添加即時消息</string>
+    <string name="add_event">添加事件</string>
+    <string name="add_notes">添加註釋</string>
+    <string name="add_website">添加網站</string>
+    <string name="add_group">添加群組</string>
+    <string name="add_related_person">添加相關人員</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">視頻通話</string>
+    <string name="screen_slide_animation">屏幕滑動動畫</string>
+    <string name="screen_slide_animation_zoomout">縮小</string>
+    <string name="screen_slide_animation_depth">深度</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">獲取</string>
+    <string name="open">打開</string>
+    <string name="collection">收藏</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">複製代碼</string>
+    <string name="action_on_message_click">消息點擊動作</string>
+    <string name="invert_color">反轉顏色</string>
+    <string name="speech_bubble">對話泡泡</string>
+
+    <!-- Gallery -->
+    <string name="library">圖書館</string>
+    <string name="open_in_maps">在地圖中打開</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">我可以晚点给你打电话吗？</string>
+    <string name="message_on_my_way">我在路上。</string>
+    <string name="message_cant_talk_right_now">對不起，我現在不能說話。</string>
 </resources>

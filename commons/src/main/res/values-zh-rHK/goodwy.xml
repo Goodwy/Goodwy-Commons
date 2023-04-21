@@ -12,28 +12,28 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="recents">Recents</string>
-    <string name="message">Message</string>
-    <string name="settings_icon">Settings icon</string>
+    <string name="message">消息</string>
+    <string name="settings_icon">“设置”图标</string>
 
     <!-- Support project -->
-    <string name="action_support_project">Support project</string>
+    <string name="action_support_project">项目支持</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
-    <string name="learn_more">Learn more</string>
+    <string name="learn_more">了解更多信息</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
     <string name="voicerecorder">VoiceMemos</string>
     <string name="voicerecorder_summary">Voice recorder</string>
     <string name="files">Files</string>
     <string name="files_summary">File manager</string>
-    <string name="themes">Themes</string>
-    <string name="themes_summary">Carefully selected application themes, automatic theme changer and system theme support for Android 12+</string>
-    <string name="color_title">Colors</string>
-    <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
-    <string name="plus_title">Support us</string>
-    <string name="plus_summary">All of our apps are ad-free, Open Source and it will always remain that way. With your help we are able to implement more features and make them even better</string>
-    <string name="lifebuoy_title">We will support you</string>
-    <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
+    <string name="themes">主题</string>
+    <string name="themes_summary">精心挑选的应用程序主题，自动主题更换器和Android 12+的系统主题支持</string>
+    <string name="color_title">颜色</string>
+    <string name="color_summary">手动调整原色、强调色、背景、文本和导航栏</string>
+    <string name="plus_title">支持我们</string>
+    <string name="plus_summary">我们所有的应用程序都是无广告的开源，并将永远保持这种状态。在您的帮助下，我们能够实现更多功能并使其变得更好</string>
+    <string name="lifebuoy_title">我们将为您提供支持</string>
+    <string name="lifebuoy_summary">如果由于某种原因您买不起我们的应用程序，但真的想使用所有功能，只需给我们发电子邮件</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Kind tip of</string>
@@ -64,6 +64,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
@@ -72,6 +73,17 @@
     <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Tab navigation</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+    <string name="relative_date">Relative date</string>
+    <string name="color_sim_card_icons">Color SIM card icons</string>
+    <string name="tabs">Tabs</string>
+    <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
+    <string name="call_screen_background">Call screen background</string>
+    <string name="contact_photo">Contact photo</string>
+    <string name="blurry_contact_photo">Blurry contact photo</string>
+    <string name="blurry_wallpaper">Blurry wallpaper</string>
 
     <!-- Other -->
     <string name="donate_please_g">
@@ -112,6 +124,7 @@
     <string name="add_notes">Add notes</string>
     <string name="add_website">Add website</string>
     <string name="add_group">Add a group</string>
+    <string name="add_related_person">Add related person</string>
 
     <string name="video_call">Video call</string>
     <string name="screen_slide_animation">Screen slide animation</string>
@@ -126,10 +139,17 @@
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            Thanks
+        ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
             Thanks
         ]]></string>
 
@@ -138,4 +158,13 @@
     <string name="action_on_message_click">Action on message click</string>
     <string name="invert_color">Invert color</string>
     <string name="speech_bubble">Speech bubble</string>
+
+    <!-- Gallery -->
+    <string name="library">Library</string>
+    <string name="open_in_maps">Open in Maps</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">我可以晚点给你打电话吗？</string>
+    <string name="message_on_my_way">我在路上。</string>
+    <string name="message_cant_talk_right_now">对不起，我现在不能说话。</string>
 </resources>

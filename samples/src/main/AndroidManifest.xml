@@ -20,13 +20,14 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/smtco_app_name"
+        android:localeConfig="@xml/locale_config"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
-        android:localeConfig="@xml/locale_config"
         android:theme="@style/TranslucentTheme">
 
         <activity
             android:name=".activities.MainActivity"
+            android:configChanges="orientation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -34,8 +35,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.goodwy.commons.activities.AboutActivity"/>
-        <activity android:name="com.goodwy.commons.activities.CustomizationActivity"/>
-        <activity android:name="com.goodwy.commons.activities.PurchaseActivity"/>
+
+        <activity android:name="com.goodwy.commons.activities.AboutActivity"
+            android:configChanges="orientation" />
+
+        <activity android:name="com.goodwy.commons.activities.CustomizationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity android:name="com.goodwy.commons.activities.PurchaseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity
+            android:name="com.goodwy.commons.activities.ManageBlockedNumbersActivity"
+            android:label="@string/blocked_numbers" />
     </application>
 </manifest>

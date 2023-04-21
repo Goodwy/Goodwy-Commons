@@ -1,4 +1,39 @@
 <resources>
+    <string name="message">Neges</string>
+    <string name="settings_icon">Gosodiadau\'r eicon</string>
+
+    <!-- Support project -->
+    <string name="action_support_project">Cymorth prosiect</string>
+    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
+    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="learn_more">Dysgu mwy</string>
+    <string name="playbooks">PlayBooks</string>
+    <string name="playbooks_summary">Audiobook player</string>
+    <string name="voicerecorder">VoiceMemos</string>
+    <string name="voicerecorder_summary">Voice recorder</string>
+    <string name="files">Files</string>
+    <string name="files_summary">File manager</string>
+    <string name="themes">Themâu</string>
+    <string name="themes_summary">Themâu ceisiadau a ddewiswyd yn ofalus, newidydd thema awtomatig a chymorth thema\'r system ar gyfer Android 12+</string>
+    <string name="color_title">Màu sắc</string>
+    <string name="color_summary">Addasiad â llaw o\'r prif liw, acen, cefndir, testun a bar llywio</string>
+    <string name="plus_title">Cefnogwch ni</string>
+    <string name="plus_summary">Mae ein holl apiau yn rhad ac am ddim, yn Ffynhonnell Agored a bydd bob amser yn parhau felly. Gyda\'ch help chi gallwn weithredu mwy o nodweddion a\'u gwneud hyd yn oed yn well</string>
+    <string name="lifebuoy_title">Byddwn yn eich cefnogi</string>
+    <string name="lifebuoy_summary">Os nad ydych chi\'n gallu fforddio ein ap am ryw reswm, ond wir eisiau defnyddio\'r holl nodweddion, dim ond anfon e-bost atom</string>
+    <string name="participants_title">Participants</string>
+    <string name="special_thanks_to">Special thanks to</string>
+    <string name="tip_kind">Kind tip of</string>
+    <string name="tip_excellent">Excellent tip of</string>
+    <string name="tip_incredible">Incredible tip of</string>
+    <string name="tip_jar">Tip Jar</string>
+
+    <!--Billing-->
+    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="could_not_restore_purchase">Could not restore purchase.</string>
     <string name="show_contact_thumbnails_g">Dangos mân luniau cysylltiadau</string>
     <string name="use_icon_tabs_summary">Eiconau yn lle testun ar dabiau</string>
     <string name="use_icon_tabs">Defnyddio eiconau tabiau</string>
@@ -17,6 +52,27 @@
     <string name="black">Du</string>
     <string name="show_dividers">Dangos rhanwyr</string>
     <string name="colored_contacts">Eiconau lliw cysylltiadau</string>
+    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
+    <string name="kids_mode">Kids mode</string>
+    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
+    <string name="restart_required">Application restart required</string>
+    <string name="transparent_bar">Transparent bars</string>
+    <string name="material_design_3">Material Design 3</string>
+    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
+    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="tab_navigation">Llywio tablau</string>
+    <string name="top">Uwchlaw</string>
+    <string name="bottom">Isod</string>
+    <string name="relative_date">Dyddiad cymharol</string>
+    <string name="color_sim_card_icons">Eiconau cerdyn SIM lliw</string>
+    <string name="tabs">Tabs</string>
+    <string name="open_search_when_open_contacts">Agor Chwilio pan fyddwch yn agor y tab Cysylltiadau</string>
+    <string name="call_screen_background">Cefndir sgrin galwadau</string>
+    <string name="contact_photo">Llun cyswllt</string>
+    <string name="blurry_contact_photo">Llun cyswllt aneglur</string>
+    <string name="blurry_wallpaper">Papur wal aneglur</string>
+
     <string name="accent_color">Lliw acen</string>
     <string name="incoming_call">Galwad i Mewn</string>
     <string name="outgoing_call">Galwad Allanol</string>
@@ -24,7 +80,6 @@
     <string name="unblock_number">Rhif dad-gloi</string>
     <string name="recents">Diweddar</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="plus_summary">Mae ein holl apiau yn rhad ac am ddim, yn Ffynhonnell Agored a bydd bob amser yn parhau felly. Gyda\'ch help chi gallwn weithredu mwy o nodweddion a\'u gwneud hyd yn oed yn well</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
@@ -50,38 +105,55 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
+    <string name="add_number">Ychwanegu rhif</string>
+    <string name="add_email">Ychwanegu e-bost</string>
+    <string name="add_address">Ychwanegu cyfeiriad</string>
+    <string name="add_im">Ychwanegu IM</string>
+    <string name="add_event">Ychwanegu digwyddiad</string>
+    <string name="add_notes">Ychwanegu nodiadau</string>
+    <string name="add_website">Ychwanegu gwefan</string>
+    <string name="add_group">Ychwanegu grŵp</string>
+    <string name="add_related_person">Ychwanegu person cysylltiedig</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">Galwad fideo</string>
+    <string name="screen_slide_animation">Animeiddiad sleid sgrin</string>
+    <string name="screen_slide_animation_zoomout">Chwyddo allan</string>
+    <string name="screen_slide_animation_depth">Dyfnder</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="get">Cael</string>
+    <string name="open">Agor</string>
+    <string name="collection">Casgliad</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
+    <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
             if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
             Thanks
         ]]></string>
+    <string name="recommendation_dialog_dialer_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app then we recommend you to install our call making app.<br><br>
+            Thanks
+        ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">Copïo cod</string>
+    <string name="action_on_message_click">Cliciwch gweithredu ar neges</string>
+    <string name="invert_color">Gwrthdroi lliw</string>
+    <string name="speech_bubble">Swigen lleferydd</string>
+
+    <!-- Gallery -->
+    <string name="library">Llyfrgell</string>
+    <string name="open_in_maps">Agor mewn Mapiau</string>
+
+    <!-- Dialer -->
+    <string name="message_call_later">Alla i dy alw di\'n hwyrach?</string>
+    <string name="message_on_my_way">Dwi ar fy ffordd.</string>
+    <string name="message_cant_talk_right_now">Sori, fedra i ddim siarad ar hyn o bryd.</string>
 </resources>

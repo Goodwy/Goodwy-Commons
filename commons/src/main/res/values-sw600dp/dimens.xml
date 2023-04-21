@@ -24,4 +24,6 @@
 
     <!--collapsing toolbar purchase-->
     <dimen name="purchase_name_right_margin">14dp</dimen>
+
+    <dimen name="settings_value_width">208dp</dimen>
 </resources>

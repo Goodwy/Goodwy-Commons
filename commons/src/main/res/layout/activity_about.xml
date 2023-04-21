@@ -6,30 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/about_app_bar_layout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/about_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/about_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_primary"
-            app:menu="@menu/menu_about"
-            app:title="@string/about"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
-        <!--app:layout_scrollFlags="scroll|enterAlways"-->
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_primary"
+        app:title="@string/about"
+        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/about_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:scrollbars="none">
 
         <RelativeLayout
             android:id="@+id/about_holder"
@@ -42,14 +33,14 @@
                 android:id="@+id/about_app_holder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/big_margin"
-                android:layout_marginRight="@dimen/big_margin">
+                android:layout_marginLeft="@dimen/about_margin"
+                android:layout_marginRight="@dimen/about_margin">
 
                 <ImageView
                     android:id="@+id/app_logo"
                     android:layout_width="@dimen/app_logo"
                     android:layout_height="@dimen/app_logo"
-                    android:layout_marginLeft="@dimen/normal_margin"
+                    android:layout_marginStart="@dimen/normal_margin"
                     android:layout_marginTop="@dimen/normal_margin"
                     android:layout_marginBottom="@dimen/activity_margin"
                     android:src="@mipmap/ic_launcher" />
@@ -59,8 +50,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/section_margin"
-                    android:layout_toRightOf="@+id/app_logo">
+                    android:layout_marginStart="@dimen/section_margin"
+                    android:layout_toEndOf="@+id/app_logo">
 
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/about_app_name"
@@ -86,10 +77,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/about_app_holder"
-                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/about_margin"
                 android:layout_marginTop="-2dp"
-                android:layout_marginRight="@dimen/big_margin"
+                android:layout_marginRight="@dimen/about_margin"
                 android:paddingTop="@dimen/bigger_margin"
+                android:paddingStart="@dimen/small_margin"
+                android:paddingEnd="@dimen/small_margin"
                 android:text="@string/plus_summary"
                 android:textSize="16sp" />
 
@@ -161,10 +154,37 @@
                     android:textSize="14sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/faqButton"
+                    android:id="@+id/privacyButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/moreButton"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/about_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/about_margin"
+                    android:background="@drawable/button_gray_bg"
+                    android:drawableEnd="@drawable/ic_privacy_vector"
+                    android:drawablePadding="16dp"
+                    android:elevation="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/privacy_policy"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Widget.MaterialComponents.Button"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/faqButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/privacyButton"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"

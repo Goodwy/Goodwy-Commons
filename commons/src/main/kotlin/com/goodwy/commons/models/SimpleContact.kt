@@ -7,8 +7,13 @@ import com.goodwy.commons.helpers.SORT_BY_FULL_NAME
 import com.goodwy.commons.helpers.SORT_DESCENDING
 
 data class SimpleContact(
-        val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumbers: ArrayList<PhoneNumber>,
-        var birthdays: ArrayList<String>, var anniversaries: ArrayList<String>
+        val rawId: Int,
+        val contactId: Int,
+        var name: String,
+        var photoUri: String,
+        var phoneNumbers: ArrayList<PhoneNumber>,
+        var birthdays: ArrayList<String>,
+        var anniversaries: ArrayList<String>
     ) : Comparable<SimpleContact> {
 
     companion object {
@@ -58,19 +63,27 @@ data class SimpleContact(
         }
     }
 
-    fun doesContainPhoneNumber(text: String): Boolean {
+    fun doesContainPhoneNumber(text: String, search: Boolean = false): Boolean {
         return if (text.isNotEmpty()) {
             val normalizedText = text.normalizePhoneNumber()
             if (normalizedText.isEmpty()) {
                 phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     phoneNumber.contains(text)
                 }
-            } else {
+            } else if (search) {
                 phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
                             phoneNumber.contains(text) ||
                             phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
                             phoneNumber.contains(normalizedText)
+                }
+            } else {
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
+                    PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText)
+                        // does not work correctly if only some digits of the number match
+                        || (phoneNumber.contains(text) && text.length > 7)
+                        || (phoneNumber.normalizePhoneNumber().contains(normalizedText) && normalizedText.length > 7)
+                        || (phoneNumber.contains(normalizedText) && normalizedText.length > 7)
                 }
             }
         } else {

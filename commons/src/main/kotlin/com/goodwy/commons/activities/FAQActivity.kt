@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
-import android.widget.LinearLayout
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.*
+import com.goodwy.commons.extensions.getProperBackgroundColor
+import com.goodwy.commons.extensions.getProperPrimaryColor
+import com.goodwy.commons.extensions.getProperTextColor
+import com.goodwy.commons.extensions.removeUnderlines
 import com.goodwy.commons.helpers.APP_FAQ
 import com.goodwy.commons.helpers.APP_ICON_IDS
 import com.goodwy.commons.helpers.APP_LAUNCHER_NAME
@@ -22,35 +24,37 @@ class FAQActivity : BaseSimpleActivity() {
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_faq)
 
-        val dividerMargin = resources.getDimension(R.dimen.activity_margin).toInt()
-        val titleColor = getProperPrimaryColor()
-        val backgroundColor = getProperBackgroundColor()
+        updateMaterialActivityViews(faq_coordinator, faq_holder, useTransparentNavigation = true, useTopSearchMenu = false)
+        setupMaterialScrollListener(faq_nested_scrollview, faq_toolbar)
         val textColor = getProperTextColor()
+        val backgroundColor = getProperBackgroundColor()
+        val primaryColor = getProperPrimaryColor()
 
         val inflater = LayoutInflater.from(this)
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         faqItems.forEach {
             val faqItem = it
             inflater.inflate(R.layout.item_faq, null).apply {
-                background.applyColorFilter(getBottomNavigationBackgroundColor()) //backgroundColor.getContrastColor()
+                faq_card.setCardBackgroundColor(backgroundColor)
                 faq_title.apply {
                     text = if (faqItem.title is Int) getString(faqItem.title) else faqItem.title as String
-                    setTextColor(titleColor)
+                    setTextColor(primaryColor)
                 }
 
                 faq_text.apply {
                     text = if (faqItem.text is Int) Html.fromHtml(getString(faqItem.text)) else faqItem.text as String
                     setTextColor(textColor)
-                    setLinkTextColor(titleColor)
+                    setLinkTextColor(primaryColor)
 
                     movementMethod = LinkMovementMethod.getInstance()
                     removeUnderlines()
                 }
+
                 faq_holder.addView(this)
-                (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
     }
