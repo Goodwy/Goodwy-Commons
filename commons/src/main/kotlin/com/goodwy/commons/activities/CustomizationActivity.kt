@@ -59,6 +59,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getProductIdX2() = intent.getStringExtra(PRODUCT_ID_X2) ?: ""
     private fun getProductIdX3() = intent.getStringExtra(PRODUCT_ID_X3) ?: ""
 
+    private fun playStoreInstalled() = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
@@ -801,7 +803,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun launchPurchase() {
-        startPurchaseActivity(R.string.app_name_g, getLicensingKey(), getProductIdX1(), getProductIdX2(), getProductIdX3())
+        startPurchaseActivity(R.string.app_name_g, getLicensingKey(), getProductIdX1(), getProductIdX2(), getProductIdX3(), playStoreInstalled = playStoreInstalled())
     }
 
     private fun shakePurchase() {

@@ -3,7 +3,10 @@ package com.goodwy.commons.activities
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.*
+import android.content.res.ColorStateList
+import android.os.Build
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import android.view.ViewGroup
 import androidx.core.net.toUri
@@ -29,6 +32,7 @@ class PurchaseActivity : BaseSimpleActivity(), BillingProcessor.IBillingHandler 
     private var productIdX2 = ""
     private var productIdX3 = ""
     private var showLifebuoy = true
+    private var playStoreInstalled = true
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
@@ -45,23 +49,38 @@ class PurchaseActivity : BaseSimpleActivity(), BillingProcessor.IBillingHandler 
         productIdX3 = intent.getStringExtra(PRODUCT_ID_X3) ?: ""
         primaryColor = getProperPrimaryColor()
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
+        playStoreInstalled = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
 
         billingProcessor = BillingProcessor(this, licensingKey, this)
 
         // TODO TRANSPARENT Navigation Bar
-        setWindowTransparency(true) { _, bottomNavigationBarSize, leftNavigationBarSize, rightNavigationBarSize ->
+        setWindowTransparency(true) { _, _, leftNavigationBarSize, rightNavigationBarSize ->
             purchase_coordinator.setPadding(leftNavigationBarSize, 0, rightNavigationBarSize, 0)
             updateNavigationBarColor(getProperBackgroundColor())
+        }
+
+        arrayOf(
+            purchase_nested_scrollview,
+            top_details
+        ).forEach {
+            it.beInvisibleIf(!playStoreInstalled)
+        }
+
+        arrayOf(
+            pro_holder,
+            pro_donate_text,
+            pro_donate_button
+        ).forEach {
+            it.beGoneIf(playStoreInstalled)
         }
     }
 
     override fun onResume() {
         super.onResume()
-        updateTextColors(purchase_holder)
+        updateTextColors(purchase_coordinator)
         setupOptionsMenu()
         setupToolbar(purchase_toolbar, NavigationIcon.Arrow)
         collapsing_toolbar.setBackgroundColor(getProperBackgroundColor())
-        purchase_apps.setTextColor(getProperTextColor())
         updateTopBarColors(purchase_toolbar, getProperBackgroundColor())
 
         setupButtonOne()
@@ -70,9 +89,13 @@ class PurchaseActivity : BaseSimpleActivity(), BillingProcessor.IBillingHandler 
         setupEmail()
         setupParticipants()
         setupIcon()
+        setupNoPlayStoreInstalled()
     }
 
     private fun setupOptionsMenu() {
+        purchase_toolbar.menu.apply {
+            findItem(R.id.restorePurchases).isVisible = playStoreInstalled
+        }
         purchase_toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.restorePurchases -> {
@@ -264,6 +287,24 @@ class PurchaseActivity : BaseSimpleActivity(), BillingProcessor.IBillingHandler 
                 toast(error!!)
             }
         })
+    }
+
+    private fun setupNoPlayStoreInstalled() {
+        pro_donate_text.text = Html.fromHtml(getString(R.string.donate_text_g))
+        pro_donate_button.apply {
+            setOnClickListener {
+                launchViewIntent("https://sites.google.com/view/goodwy/support-project")
+            }
+            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, primaryColor)
+            background = drawable
+            //setTextColor(baseConfig.backgroundColor)
+            setPadding(2,2,2,2)
+        }
+        pro_switch.isChecked = baseConfig.isPro
+        pro_switch_holder.setOnClickListener {
+            pro_switch.toggle()
+            baseConfig.isPro = pro_switch.isChecked
+        }
     }
 
     companion object {

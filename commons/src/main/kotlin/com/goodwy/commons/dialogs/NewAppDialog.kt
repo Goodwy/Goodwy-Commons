@@ -29,8 +29,8 @@ class NewAppDialog(
         }
 
         activity.getAlertDialogBuilder()
-            .setPositiveButton(R.string.later) { dialog, which -> dialogDismissed(8) }
-            .setNeutralButton(R.string.do_not_show_again) { dialog, which -> dialogDismissed(1) }
+            .setPositiveButton(R.string.later) { _, _ -> dialogDismissed(8) }
+            .setNeutralButton(R.string.do_not_show_again) { _, _ -> dialogDismissed(1) }
             .setOnCancelListener { dialogDismissed(8) }
             .apply {
                 activity.setupDialogStuff(view, this)

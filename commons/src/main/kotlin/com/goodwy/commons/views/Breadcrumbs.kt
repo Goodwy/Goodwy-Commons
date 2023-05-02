@@ -180,6 +180,8 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         if (itemsLayout.childCount == 0) {
             val firstItemBgColor = if (isShownInDialog && context.baseConfig.isUsingSystemTheme) {
                 resources.getColor(R.color.you_dialog_background_color, context.theme)
+            } else if (context.isBlackTheme()) {
+                context.getBottomNavigationBackgroundColor()
             } else {
                 context.getProperBackgroundColor()
             }

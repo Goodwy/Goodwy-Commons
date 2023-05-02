@@ -27,6 +27,14 @@
     <string name="tip_excellent">Excellent tip of</string>
     <string name="tip_incredible">Incredible tip of</string>
     <string name="tip_jar">Tip Jar</string>
+    <string name="unlock">Unlock</string>
+    <string name="donate_text_g">
+        <![CDATA[
+            For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
+            If you like our apps which are offline, non-intrusive and have no ads, please consider supporting us in some way. We would be very grateful.<br><br>
+            Thank you!
+        ]]>
+    </string>
 
     <!--Billing-->
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
@@ -93,6 +101,11 @@
         ]]>
     </string>
     <string name="faq_8_text_commons_g">Mivel ezt az alkalmazásverziót már nem frissítjük, az esetleges hibák soha nem lesznek kijavítva, ahogy új funkciókat sem fog kapni az alkalmazás. A Pro verziót egy egyszeri kis összegért megvásárolhatja a Google Play áruházban. Az egyszeri fizetés azt jelenti, hogy ha egyszer megvette, soha többet nem kell fizetnie, még egy új eszközön sem. Ha nem tetszik a Pro verzió, a vásárlás után pár órán belül eltávolítva automatikusan visszakapja az árát. Ha később szeretne visszatérítést, csak írjon nekünk a hello@simplemobiletools.com címre, és meg fogja kapni.</string>
+    <string name="faq_100_title_commons_g">What is a private contact?</string>
+    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
+        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_101_title_commons_g">How to create a private contact?</string>
+    <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g">
         <![CDATA[
             This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
@@ -118,6 +131,7 @@
     <string name="screen_slide_animation">Képernyő dia animáció</string>
     <string name="screen_slide_animation_zoomout">Kicsinyítés</string>
     <string name="screen_slide_animation_depth">Mélység</string>
+    <string name="show_phone_numbers_g">Telefonszámok megjelenítése</string>
 
     <!-- Apps -->
     <string name="get">Letöltés</string>
@@ -131,13 +145,25 @@
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
-            if you like this application, then we recommend you to install our application to view and edit contacts.<br><br>
+            if you like this app, we recommend that you install our app to view and edit contacts.<br><br>
             Thanks
         ]]></string>
     <string name="recommendation_dialog_dialer_g">
         <![CDATA[
             Hey,<br><br>
-            if you like this app then we recommend you to install our call making app.<br><br>
+            if you like this app, we recommend that you install our call app.<br><br>
+            Thanks
+        ]]></string>
+    <string name="recommendation_dialog_messages_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app, we recommend that you install our messaging app.<br><br>
+            Thanks
+        ]]></string>
+    <string name="recommendation_dialog_gallery_g">
+        <![CDATA[
+            Hey,<br><br>
+            if you like this app, we recommend that you install our photo viewing and editing app.<br><br>
             Thanks
         ]]></string>
 
@@ -155,4 +181,67 @@
     <string name="message_call_later">Felhívhatom később?</string>
     <string name="message_on_my_way">Úton vagyok.</string>
     <string name="message_cant_talk_right_now">Sajnálom, most nem tudok beszélni.</string>
+    <string name="remind_me">Emlékeztess</string>
+    <string name="mute">Néma</string>
+
+    <!-- Relation types -->
+    <string name="relation_g">Relation</string>
+    <string name="relations_g">Related Persons</string>
+    <string name="relation_hint_g">Related Person</string>
+    <!-- Android ContactContract.Relation types -->
+    <string name="relation_assistant_g">Assistant</string>
+    <string name="relation_brother_g">Brother</string>
+    <string name="relation_child_g">Child</string>
+    <string name="relation_domestic_partner_g">Domestic Partner</string>
+    <string name="relation_father_g">Father</string>
+    <string name="relation_friend_g">Friend</string>
+    <string name="relation_manager_g">Manager</string>
+    <string name="relation_mother_g">Mother</string>
+    <string name="relation_parent_g">Parent</string>
+    <string name="relation_partner_g">Partner</string>
+    <string name="relation_referred_by_g">Referred by</string>
+    <string name="relation_relative_g">Relative</string>
+    <string name="relation_sister_g">Sister</string>
+    <string name="relation_spouse_g">Spouse</string>
+    <!-- vCard 4.0 relation types -->
+    <string name="relation_contact_g">Contact</string>
+    <string name="relation_acquaintance_g">Acquaintance</string>
+    <string name="relation_met_g">Met</string>
+    <string name="relation_co_worker_g">Co-worker</string>
+    <string name="relation_colleague_g">Colleague</string>
+    <string name="relation_co_resident_g">Co-resident</string>
+    <string name="relation_neighbor_g">Neighbor</string>
+    <string name="relation_sibling_g">Sibling</string>
+    <string name="relation_kin_g">Kin</string>
+    <string name="relation_kin_alt_g">Relative</string>
+    <string name="relation_muse_g">Muse</string>
+    <string name="relation_crush_g">Crush</string>
+    <string name="relation_date_g">Date</string>
+    <string name="relation_sweetheart_g">Sweetheart</string>
+    <string name="relation_me_g">Me</string>
+    <string name="relation_agent_g">Agent</string>
+    <string name="relation_emergency_g">Emergency Contact</string>
+    <!-- Additional relation types -->
+    <string name="relation_superior_g">Boss</string>
+    <string name="relation_subordinate_g">Subordinate</string>
+    <string name="relation_husband_g">Husband</string>
+    <string name="relation_wife_g">Wife</string>
+    <string name="relation_son_g">Son</string>
+    <string name="relation_daughter_g">Daughter</string>
+    <string name="relation_grandparent_g">Grandparent</string>
+    <string name="relation_grandfather_g">Grandfather</string>
+    <string name="relation_grandmother_g">Grandmother</string>
+    <string name="relation_grandchild_g">Grandchild</string>
+    <string name="relation_grandson_g">Grandson</string>
+    <string name="relation_granddaughter_g">Granddaughter</string>
+    <string name="relation_uncle_g">Uncle</string>
+    <string name="relation_aunt_g">Aunt</string>
+    <string name="relation_nephew_g">Nephew</string>
+    <string name="relation_niece_g">Niece</string>
+    <string name="relation_father_in_law_g">Father-in-law</string>
+    <string name="relation_mother_in_law_g">Mother-in-law</string>
+    <string name="relation_son_in_law_g">Son-in-law</string>
+    <string name="relation_daughter_in_law_g">Daughter-in-law</string>
+    <string name="relation_brother_in_law_g">Brother-in-law</string>
+    <string name="relation_sister_in_law_g">Sister-in-law</string>
 </resources>

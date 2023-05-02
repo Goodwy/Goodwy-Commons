@@ -262,7 +262,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     }
 
     private fun maybeSetDefaultCallerIdApp() {
-        if (isQPlus() && baseConfig.appId.startsWith("com.simplemobiletools.dialer")) {
+        if (isQPlus() && baseConfig.appId.startsWith("com.goodwy.dialer")) {
             setDefaultCallerIdApp()
         }
     }

@@ -64,7 +64,8 @@ class MyContactsContentProvider {
         fun getContacts(context: Context, cursor: Cursor?): ArrayList<Contact> {
             val contacts = ArrayList<Contact>()
             val packageName = context.packageName.removeSuffix(".debug")
-            if (packageName != "com.simplemobiletools.dialer" && packageName != "com.simplemobiletools.smsmessenger" && packageName != "com.simplemobiletools.calendar.pro") {
+            if (packageName != "com.goodwy.dialer" && packageName != "com.goodwy.smsmessenger" && packageName != "com.goodwy.calendar"
+                && packageName != "com.goodwy.dialer.debug" && packageName != "com.goodwy.smsmessenger.debug" && packageName != "com.goodwy.calendar.debug") {
                 return contacts
             }
 

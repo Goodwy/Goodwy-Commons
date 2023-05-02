@@ -49,10 +49,11 @@ const val SMT_PRIVATE = "smt_private"   // used at the contact source of local c
 const val FIRST_GROUP_ID = 10000L
 const val MD5 = "MD5"
 const val SHORT_ANIMATION_DURATION = 150L
-val DARK_GREY = 0xFF333333.toInt()
+const val DARK_GREY = 0xFF333333.toInt()
 const val CURRENT_PHONE_NUMBER = "number"
 const val SHOW_ACCENT_COLOR = "show_accent_color"
 const val SHOW_LIFEBUOY = "show_lifebuoy"
+const val PLAY_STORE_INSTALLED = "play_store_installed"
 
 const val ZERO_ALPHA = 0f
 const val LOWER_ALPHA = 0.25f
@@ -606,7 +607,8 @@ const val SHOW_WEBSITES_FIELD = 8192
 const val SHOW_NICKNAME_FIELD = 16384
 const val SHOW_IMS_FIELD = 32768
 const val SHOW_RINGTONE_FIELD = 65536
-const val SHOW_RELATIONS_FIELD = (1 shl 17)
+const val SHOW_MESSENGERS_ACTIONS_FIELD = 131072
+const val SHOW_RELATIONS_FIELD = 262144
 
 const val DEFAULT_EMAIL_TYPE = ContactsContract.CommonDataKinds.Email.TYPE_HOME
 const val DEFAULT_PHONE_NUMBER_TYPE = ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE

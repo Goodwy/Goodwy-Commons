@@ -269,6 +269,13 @@ class ContactsHelper(val context: Context) {
             val key = websites.keyAt(i)
             contacts[key]?.websites = websites.valueAt(i)
         }
+
+        val relations = getRelations()
+        size = relations.size()
+        for (i in 0 until size) {
+            val key = relations.keyAt(i)
+            contacts[key]?.relations = relations.valueAt(i)
+        }
     }
 
     private fun getPhoneNumbers(contactId: Int? = null): SparseArray<ArrayList<PhoneNumber>> {
@@ -905,7 +912,7 @@ class ContactsHelper(val context: Context) {
 
                 // if first line is an Organization type contact, go to next line
                 if (mimetype != CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE) {
-                    if (cursor.moveToNext()) {
+                    if (!cursor.isLast && cursor.moveToNext()) {
                         mimetype = cursor.getStringValue(Data.MIMETYPE)
                     }
                 }

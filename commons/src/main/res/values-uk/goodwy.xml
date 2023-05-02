@@ -39,6 +39,14 @@
     <string name="tip_excellent">Відмінна підтримка</string>
     <string name="tip_incredible">Чудова підтримка</string>
     <string name="tip_jar">Підтримати</string>
+    <string name="unlock">Розблокувати</string>
+    <string name="donate_text_g">
+        <![CDATA[
+            Для тих, хто не користується Google Play, є можливість розблокувати всі функції програми. <br>
+            Якщо вам подобаються наші додатки, які працюють автономно, не нав\'язливі та не містять реклами, будь ласка, подумайте про те, щоб підтримати нас якимось чином. Ми будемо дуже вдячні.<br><br>
+            Спасибі!
+        ]]>
+    </string>
 
     <!--Billing-->
     <string name="restored_previous_purchase_please_restart">Попередні покупки відновлено. Перезавантажте програму, щоб використовувати всі функції.</string>
@@ -97,6 +105,11 @@
     <string name="faq_8_text_commons_g">Оскільки версія вашого додатка більше не оновлюється, помилки, які ви можливо виявили, ніколи не будуть виправлені. Також не буде додано ніяких нових функцій. Ви можете придбати версію Pro через Google Play за деяку незначну плату.
         Це одноразова плата і означає, що як тільки ви придбаєте його, вам більше не доведеться знову платити. Навіть якщо ви придбаєте новий пристрій. Якщо вам не сподобається версія Pro, ви можете просто деінсталювати її протягом кількох годин, і ви автоматично отримаєте сплачені кошти назад.
         Якщо ви захочете повернути кошти пізніше, просто напишіть нам сюди hello@simplemobiletools.com, і ви їх отримаєте.</string>
+    <string name="faq_100_title_commons_g">Що таке особистий контакт?</string>
+    <string name="faq_100_text_commons_g">Особистий контакт створюється всередині програми. Цей контакт не буде видно іншим додаткам.
+        Якщо ви видалите застосунок, то всі особисті контакти видаляться разом із застосунком, тому перед видаленням застосунку зробіть резервну копію контактів.</string>
+    <string name="faq_101_title_commons_g">Як створити особистий контакт?</string>
+    <string name="faq_101_text_commons_g">Під час створення контакту необхідно вибрати джерело контакту: %s</string>
     <string name="contributors_label_g">
         <![CDATA[
             У цьому списку перераховані всі, хто помітно допоміг будь-якому додатку Goodwy, а не лише цьому. Переклади виконуються волонтерами,
@@ -116,12 +129,13 @@
     <string name="add_notes">Додати замітку</string>
     <string name="add_website">Додати сайт</string>
     <string name="add_group">Додати до групи</string>
-    <string name="add_related_person">Додати контактну особу</string>
+    <string name="add_related_person">Додати пов\'язану особу</string>
 
     <string name="video_call">Відеодзвінок</string>
     <string name="screen_slide_animation">Анімація слайдів екрану</string>
     <string name="screen_slide_animation_zoomout">Зменшення</string>
     <string name="screen_slide_animation_depth">Глибина</string>
+    <string name="show_phone_numbers_g">Показувати телефонні номери</string>
 
     <!-- Apps -->
     <string name="get">Завантажити</string>
@@ -134,15 +148,27 @@
     <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
-            Вітання,<br><br>
-            якщо вам подобається ця програма, то рекомендуємо встановити нашу програму для перегляду та редагування контактів.<br><br>
-            Дякую
+            Привіт,<br><br>
+            якщо вам подобається цей застосунок, ми рекомендуємо вам встановити наш застосунок для перегляду та редагування контактів.<br><br>
+            Спасибі
         ]]></string>
     <string name="recommendation_dialog_dialer_g">
         <![CDATA[
-            Вітання,<br><br>
-            якщо вам подобається ця програма, ми рекомендуємо вам встановити наш додаток для здійснення дзвінків.<br><br>
-            Дякую
+            Привіт,<br><br>
+            якщо вам подобається цей додаток, ми рекомендуємо вам встановити наш додаток для здійснення дзвінків.<br><br>
+            Спасибі
+        ]]></string>
+    <string name="recommendation_dialog_messages_g">
+        <![CDATA[
+            Привіт,<br><br>
+            якщо вам подобається цей додаток, ми рекомендуємо вам встановити наш додаток для обміну повідомленнями.<br><br>
+            Спасибі
+        ]]></string>
+    <string name="recommendation_dialog_gallery_g">
+        <![CDATA[
+            Привіт,<br><br>
+            якщо вам подобається цей додаток, ми рекомендуємо вам встановити наш додаток для перегляду та редагування фото.<br><br>
+            Спасибі
         ]]></string>
 
     <!-- SMS -->
@@ -159,4 +185,67 @@
     <string name="message_call_later">Перетелефоную пізніше.</string>
     <string name="message_on_my_way">Скоро буду.</string>
     <string name="message_cant_talk_right_now">Зараз не можу говорити.</string>
+    <string name="remind_me">Нагадати</string>
+    <string name="mute">Вимк. звук</string>
+
+    <!-- Relation types -->
+    <string name="relation_g">Відносини</string>
+    <string name="relations_g">Пов\'язані особи</string>
+    <string name="relation_hint_g">Пов\'язана особа</string>
+    <!-- Android ContactContract.Relation types -->
+    <string name="relation_assistant_g">Асистент</string>
+    <string name="relation_brother_g">Брат</string>
+    <string name="relation_child_g">Дитина</string>
+    <string name="relation_domestic_partner_g">Співмешканець</string>
+    <string name="relation_father_g">Батько</string>
+    <string name="relation_friend_g">Друг</string>
+    <string name="relation_manager_g">Менеджер</string>
+    <string name="relation_mother_g">Мати</string>
+    <string name="relation_parent_g">Батько або мати</string>
+    <string name="relation_partner_g">Партнер</string>
+    <string name="relation_referred_by_g">Направив</string>
+    <string name="relation_relative_g">Родственник</string>
+    <string name="relation_sister_g">Сестра</string>
+    <string name="relation_spouse_g">Подружжя</string>
+    <!-- vCard 4.0 relation types -->
+    <string name="relation_contact_g">Контакт</string>
+    <string name="relation_acquaintance_g">Знайомий</string>
+    <string name="relation_met_g">Зустрічний</string>
+    <string name="relation_co_worker_g">Колега по роботі</string>
+    <string name="relation_colleague_g">Колега</string>
+    <string name="relation_co_resident_g">Співробітник</string>
+    <string name="relation_neighbor_g">Сусід</string>
+    <string name="relation_sibling_g">Брат і сестра</string>
+    <string name="relation_kin_g">Двоюрідна сестра</string>
+    <string name="relation_kin_alt_g">Сім\'я</string>
+    <string name="relation_muse_g">Муза</string>
+    <string name="relation_crush_g">Краш</string>
+    <string name="relation_date_g">Побачення</string>
+    <string name="relation_sweetheart_g">Коханий</string>
+    <string name="relation_me_g">Я</string>
+    <string name="relation_agent_g">Агент</string>
+    <string name="relation_emergency_g">Контакт для екстрених випадків</string>
+    <!-- Additional relation types -->
+    <string name="relation_superior_g">Бос</string>
+    <string name="relation_subordinate_g">Підлеглий</string>
+    <string name="relation_husband_g">Чоловік</string>
+    <string name="relation_wife_g">Дружина</string>
+    <string name="relation_son_g">Син</string>
+    <string name="relation_daughter_g">Дочка</string>
+    <string name="relation_grandparent_g">Бабуся і дідусь</string>
+    <string name="relation_grandfather_g">Дідусь</string>
+    <string name="relation_grandmother_g">Бабуся</string>
+    <string name="relation_grandchild_g">Онуки</string>
+    <string name="relation_grandson_g">Онук</string>
+    <string name="relation_granddaughter_g">Онука</string>
+    <string name="relation_uncle_g">Дядько</string>
+    <string name="relation_aunt_g">Тітка</string>
+    <string name="relation_nephew_g">Племінник</string>
+    <string name="relation_niece_g">Племінниця</string>
+    <string name="relation_father_in_law_g">Тесть</string>
+    <string name="relation_mother_in_law_g">Свекруха</string>
+    <string name="relation_son_in_law_g">Зять</string>
+    <string name="relation_daughter_in_law_g">Невістка</string>
+    <string name="relation_brother_in_law_g">Шурин</string>
+    <string name="relation_sister_in_law_g">Золовка</string>
 </resources>

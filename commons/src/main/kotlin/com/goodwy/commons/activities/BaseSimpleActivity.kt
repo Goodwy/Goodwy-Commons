@@ -352,7 +352,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
         statusBarColor: Int = getProperBackgroundColor(),
         searchMenuItem: MenuItem? = null,
-        appBarLayout: AppBarLayout? = null
+        appBarLayout: AppBarLayout? = null,
+        navigationClick: Boolean = true
     ) {
         val contrastColor = statusBarColor.getContrastColor()
 
@@ -361,9 +362,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
         }
 
-        toolbar.setNavigationOnClickListener {
-            hideKeyboard()
-            finish()
+        if (navigationClick) {
+            toolbar.setNavigationOnClickListener {
+                hideKeyboard()
+                finish()
+            }
         }
 
         updateTopBarColors(toolbar, statusBarColor)
@@ -644,7 +647,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun startAboutActivity(appNameId: Int, licenseMask: Long, versionName: String,
                            faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean,
-                           licensingKey: String, productIdX1: String, productIdX2: String, productIdX3: String) {
+                           licensingKey: String, productIdX1: String, productIdX2: String, productIdX3: String, playStoreInstalled: Boolean = true) {
         hideKeyboard()
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
@@ -658,12 +661,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_X1, productIdX1)
             putExtra(PRODUCT_ID_X2, productIdX2)
             putExtra(PRODUCT_ID_X3, productIdX3)
+            putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             startActivity(this)
         }
     }
 
-    fun startPurchaseActivity(appNameId: Int, licensingKey: String, productIdX1: String, productIdX2: String,
-                              productIdX3: String, showLifebuoy: Boolean = resources.getBoolean(R.bool.default_vibrate_on_press)) {
+    fun startPurchaseActivity(appNameId: Int, licensingKey: String, productIdX1: String, productIdX2: String, productIdX3: String,
+                              showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy), playStoreInstalled: Boolean = true) {
         Intent(applicationContext, PurchaseActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
@@ -673,12 +677,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_X2, productIdX2)
             putExtra(PRODUCT_ID_X3, productIdX3)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
+            putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             startActivity(this)
         }
     }
 
     fun startCustomizationActivity(showAccentColor : Boolean = true, isProVersion : Boolean = true, licensingKey: String = "", productIdX1: String = "", productIdX2: String = "",
-                                   productIdX3: String = "", showLifebuoy: Boolean = resources.getBoolean(R.bool.default_vibrate_on_press)) {
+                                   productIdX3: String = "", showLifebuoy: Boolean = resources.getBoolean(R.bool.default_vibrate_on_press), playStoreInstalled: Boolean = true) {
         if (!packageName.contains("ywdoog".reversed(), true)) {
             if (baseConfig.appRunCount > 100) {
                 val label = "You are using a fake version of the app. For your own safety download the original one from play.google.com. Thanks"
@@ -699,6 +704,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_X2, productIdX2)
             putExtra(PRODUCT_ID_X3, productIdX3)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
+            putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             startActivity(this)
         }
     }

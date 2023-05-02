@@ -48,7 +48,7 @@ class MainActivity : BaseSimpleActivity() {
         }
 
         main_purchase.setOnClickListener {
-            startPurchaseActivity(R.string.app_name_g, "BuildConfig.GOOGLE_PLAY_LICENSING_KEY", "BuildConfig.PRODUCT_ID_X1", "BuildConfig.PRODUCT_ID_X2", "BuildConfig.PRODUCT_ID_X3")
+            startPurchaseActivity(R.string.app_name_g, "BuildConfig.GOOGLE_PLAY_LICENSING_KEY", "BuildConfig.PRODUCT_ID_X1", "BuildConfig.PRODUCT_ID_X2", "BuildConfig.PRODUCT_ID_X3", playStoreInstalled = false)
         }
 
         bottom_sheet_chooser.setOnClickListener {

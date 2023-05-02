@@ -5,14 +5,8 @@ import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.getProperBackgroundColor
-import com.goodwy.commons.extensions.getProperPrimaryColor
-import com.goodwy.commons.extensions.getProperTextColor
-import com.goodwy.commons.extensions.removeUnderlines
-import com.goodwy.commons.helpers.APP_FAQ
-import com.goodwy.commons.helpers.APP_ICON_IDS
-import com.goodwy.commons.helpers.APP_LAUNCHER_NAME
-import com.goodwy.commons.helpers.NavigationIcon
+import com.goodwy.commons.extensions.*
+import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.FAQItem
 import kotlinx.android.synthetic.main.activity_faq.*
 import kotlinx.android.synthetic.main.item_faq.view.*
@@ -31,22 +25,28 @@ class FAQActivity : BaseSimpleActivity() {
         updateMaterialActivityViews(faq_coordinator, faq_holder, useTransparentNavigation = true, useTopSearchMenu = false)
         setupMaterialScrollListener(faq_nested_scrollview, faq_toolbar)
         val textColor = getProperTextColor()
-        val backgroundColor = getProperBackgroundColor()
+        //val backgroundColor = getProperBackgroundColor()
         val primaryColor = getProperPrimaryColor()
+        val bottomNavigationBackgroundColor = getBottomNavigationBackgroundColor()
 
         val inflater = LayoutInflater.from(this)
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         faqItems.forEach {
             val faqItem = it
             inflater.inflate(R.layout.item_faq, null).apply {
-                faq_card.setCardBackgroundColor(backgroundColor)
+                faq_card.setCardBackgroundColor(bottomNavigationBackgroundColor)
                 faq_title.apply {
                     text = if (faqItem.title is Int) getString(faqItem.title) else faqItem.title as String
                     setTextColor(primaryColor)
                 }
 
                 faq_text.apply {
-                    text = if (faqItem.text is Int) Html.fromHtml(getString(faqItem.text)) else faqItem.text as String
+                    text = if (faqItem.value != null && faqItem.text is Int) {
+                        val value = if (faqItem.value is Int) getString(faqItem.value) else faqItem.value as String
+                        String.format(getString(faqItem.text, value))
+                    } else {
+                        if (faqItem.text is Int) Html.fromHtml(getString(faqItem.text)) else faqItem.text as String
+                    }
                     setTextColor(textColor)
                     setLinkTextColor(primaryColor)
 

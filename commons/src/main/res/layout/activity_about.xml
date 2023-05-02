@@ -354,7 +354,7 @@
                 android:layout_alignParentBottom="true"
                 android:gravity="center_horizontal|bottom"
                 android:paddingTop="@dimen/activity_margin"
-                android:text="v1.0\nCopyright © Goodwy 2021"
+                android:text="v1.0\nCopyright © Goodwy 2023"
                 android:visibility="gone"/>
 
         </RelativeLayout>

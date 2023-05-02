@@ -36,6 +36,7 @@ class AboutActivity : BaseSimpleActivity() {
     private var productIdX1 = ""
     private var productIdX2 = ""
     private var productIdX3 = ""
+    private var playStoreInstalled = true
 
     private var firstVersionClickTS = 0L
     private var clicksSinceFirstClick = 0
@@ -63,6 +64,7 @@ class AboutActivity : BaseSimpleActivity() {
         productIdX1 = intent.getStringExtra(PRODUCT_ID_X1) ?: ""
         productIdX2 = intent.getStringExtra(PRODUCT_ID_X2) ?: ""
         productIdX3 = intent.getStringExtra(PRODUCT_ID_X3) ?: ""
+        playStoreInstalled = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
     }
 
     override fun onResume() {
@@ -289,7 +291,7 @@ class AboutActivity : BaseSimpleActivity() {
     @SuppressLint("NewApi", "UseCompatTextViewDrawableApis")
     private fun setupTipJar() {
         tipJarButton.setOnClickListener {
-            startPurchaseActivity(R.string.app_name_g, licensingKey, productIdX1, productIdX2, productIdX3, showLifebuoy = false)
+            startPurchaseActivity(R.string.app_name_g, licensingKey, productIdX1, productIdX2, productIdX3, playStoreInstalled = playStoreInstalled)
         }
         tipJarButton.setTextColor(getProperTextColor())
         tipJarButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
