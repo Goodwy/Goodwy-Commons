@@ -1,136 +1,136 @@
-<resources>
-    <string name="message">Poruku</string>
-    <string name="settings_icon">Ikona \"Settings\"</string>
+ <resources>
+    <string name="message">Порука</string>
+    <string name="settings_icon">Иконица подешавања</string>
 
     <!-- Support project -->
-    <string name="action_support_project">Podrška za projekat</string>
-    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
-    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
-    <string name="learn_more">Uči više</string>
+    <string name="action_support_project">Подржите пројекат</string>
+    <string name="pref_pay_summary">Набавите апликацију која се плаћа да бисте подржали будући развој и додатне функције</string>
+    <string name="support_project_summary">Набавите једну од наших апликација које се плаћају да бисте подржали будући развој и откључали додатне функције</string>
+    <string name="learn_more">Сазнајте више</string>
     <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
+    <string name="playbooks_summary">Плејер аудио књига</string>
     <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
-    <string name="themes">Teme</string>
-    <string name="themes_summary">Pažljivo odabrane teme aplikacije, automatski menjač tema i podrška za sistemsku temu za Android 12+</string>
-    <string name="color_title">Boje</string>
-    <string name="color_summary">Ručno podešavanje primarne boje, akcenta, pozadine, teksta i trake za navigaciju</string>
-    <string name="plus_title">Podržite nas</string>
-    <string name="plus_summary">Sve naše aplikacije su bez reklama, Open Source i uvek će tako i ostati. Uz vašu pomoć u mogućnosti smo da implementišemo više funkcija i učinimo ih još boljim</string>
-    <string name="lifebuoy_title">Mi ćemo vas podržati</string>
-    <string name="lifebuoy_summary">Ako iz nekog razloga ne možete da priuštite našu aplikaciju, ali zaista želite da koristite sve funkcije, samo nam pošaljite e-mail</string>
-    <string name="participants_title">Participants</string>
-    <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
-    <string name="unlock">Unlock</string>
+    <string name="voicerecorder_summary">Снимач гласа</string>
+    <string name="files">Датотеке</string>
+    <string name="files_summary">Управљач датотекама</string>
+    <string name="themes">Теме</string>
+    <string name="themes_summary">Пажљиво одабране теме апликације, аутоматски мењач тема и подршка за системску тему за Android 12+</string>
+    <string name="color_title">Боје</string>
+    <string name="color_summary">Ручно подешавање примарне боје, наглашене боје, позадине, текста и навигационе траке</string>
+    <string name="plus_title">Подржите нас</string>
+    <string name="plus_summary">Све наше апликације су без реклама, отвореног кода и увек ће тако и остати. Уз вашу помоћ у могућности смо да имплементирамо још више функција и учинимо их још бољим</string>
+    <string name="lifebuoy_title">Ми ћемо подржати вас</string>
+    <string name="lifebuoy_summary">Ако из неког разлога не можете да приуштите нашу апликацију али заиста желите да користите све функције, само нам пошаљите е-пошту</string>
+    <string name="participants_title">Учесници</string>
+    <string name="special_thanks_to">Посебна захвалност за</string>
+    <string name="tip_kind">Љубазна напојница</string>
+    <string name="tip_excellent">Одлична напојница</string>
+    <string name="tip_incredible">Невероватна напојница</string>
+    <string name="tip_jar">Напојнице</string>
+    <string name="unlock">Откључај</string>
     <string name="donate_text_g">
         <![CDATA[
-            For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
-            If you like our apps which are offline, non-intrusive and have no ads, please consider supporting us in some way. We would be very grateful.<br><br>
-            Thank you!
+            За оне који не користе Google Play, могуће је откључати све функције апликације. <br>
+            Ако вам се свиђају наше апликације које су ван мреже, ненаметљиве и немају рекламе, размислите о томе да нас на неки начин подржите. Били бисмо веома захвални.<br><br>
+            Хвала!
         ]]>
     </string>
 
     <!--Billing-->
-    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
-    <string name="no_purchase_found">No purchase found.</string>
-    <string name="restore_purchase">Restore purchase</string>
-    <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+    <string name="restored_previous_purchase_please_restart">Обновљена је претходна куповина. Поново покрените апликацију да бисте искористили све функције.</string>
+    <string name="no_purchase_found">Није пронађена ниједна куповина.</string>
+    <string name="restore_purchase">Обнови куповину</string>
+    <string name="restoring_purchase">Обнављање куповине…</string>
+    <string name="could_not_restore_purchase">Није могуће обновити куповину.</string>
 
-    <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
-    <string name="use_icon_tabs_summary">Ikone umesto teksta na karticama</string>
-    <string name="use_icon_tabs">Korišćenje ikona kartica</string>
-    <string name="round_play_icon_summary">Ikona \"Reprodukuj/pauziraj\" je obojena u primarnu boju</string>
-    <string name="round_play_icon">Ikona \"Round play/pause\"</string>
-    <string name="save_recordings_in_summary">Počevši od Androida 10 , aplikacija nema pristup vašim fajlovima</string>
-    <string name="gray_theme">Grej</string>
-    <string name="pref_category_appearance">Izgled</string>
-    <string name="pref_theme_summary">Izbor unapred instalirane teme</string>
-    <string name="customization_theme_summary">Izbor tema i boja interfejsa</string>
-    <string name="recorder_g">Snimač</string>
-    <string name="player_g">Player</string>
-    <string name="general">Opšte</string>
-    <string name="default_tab">Podrazumevana kartica</string>
-    <string name="color">boja</string>
-    <string name="black">Crna</string>
-    <string name="show_dividers">Prikaži razdelnike</string>
-    <string name="colored_contacts">Ikone u boji kontakata</string>
-    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
-    <string name="kids_mode">Kids mode</string>
-    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
-    <string name="restart_required">Application restart required</string>
-    <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
-    <string name="bottom_navigation_bar">Bottom navigation bar</string>
-    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
-    <string name="tab_navigation">Navigacija kartice</string>
-    <string name="top">Iznad</string>
-    <string name="bottom">Ispod</string>
-    <string name="relative_date">Relativan datum</string>
-    <string name="color_sim_card_icons">Ikone SIM kartice u boji</string>
-    <string name="tabs">Kartice</string>
-    <string name="open_search_when_open_contacts">Otvori pretraživanje pri otvaranju kartice s kontaktima</string>
-    <string name="call_screen_background">Pozadina zaslona poziva</string>
-    <string name="contact_photo">Fotografija kontakta</string>
-    <string name="blurry_contact_photo">Mutna fotografija kontakta</string>
-    <string name="blurry_wallpaper">Mutna pozadina</string>
+    <string name="show_contact_thumbnails_g">Прикажи сличице контаката</string>
+    <string name="use_icon_tabs_summary">Иконице уместо текста на картицама</string>
+    <string name="use_icon_tabs">Користи иконице картица</string>
+    <string name="round_play_icon_summary">Иконица за репродукцију/паузирање је обојена у примарну боју</string>
+    <string name="round_play_icon">Округла иконица за репродукцију/паузирање"</string>
+    <string name="save_recordings_in_summary">Почевши од Android 10+, апликација нема приступ вашим датотекама</string>
+    <string name="gray_theme">Сива</string>
+    <string name="pref_category_appearance">Изглед</string>
+    <string name="pref_theme_summary">Избор преинсталиране теме</string>
+    <string name="customization_theme_summary">Избор теме и боја окружења</string>
+    <string name="recorder_g">Снимач</string>
+    <string name="player_g">Плејер</string>
+    <string name="general">Опште</string>
+    <string name="default_tab">Подразумевана картица</string>
+    <string name="color">боја</string>
+    <string name="black">Црна</string>
+    <string name="show_dividers">Прикажи разделнике</string>
+    <string name="colored_contacts">Обојене иконице контакатa</string>
+    <string name="transparent_navigation_bar">Провидна доња навигациона трака</string>
+    <string name="kids_mode">Режим за децу</string>
+    <string name="kids_mode_summary">Поједностављено окружење, изаберите бојење</string>
+    <string name="restart_required">Неопходно је поновно покретање апликације</string>
+    <string name="transparent_bar">Провидне траке</string>
+    <string name="material_design_3">Материјални дизајн 3</string>
+    <string name="material_design_3_summary">Мења изглед неких елемената апликације</string>
+    <string name="bottom_navigation_bar">Доња навигациона трака</string>
+    <string name="bottom_navigation_bar_summary">Трака картица ће се преместити на дно</string>
+    <string name="tab_navigation">Навигација картицама</string>
+    <string name="top">Врх</string>
+    <string name="bottom">Дно</string>
+    <string name="relative_date">Релативан датум</string>
+    <string name="color_sim_card_icons">Обоји иконице SIM картица</string>
+    <string name="tabs">Картице</string>
+    <string name="open_search_when_open_contacts">Отвори претрагу при отварању картице контаката</string>
+    <string name="call_screen_background">Позадина екрана позива</string>
+    <string name="contact_photo">Фотографија контакта</string>
+    <string name="blurry_contact_photo">Замагљена фотографија контакта</string>
+    <string name="blurry_wallpaper">Замагљена позадина</string>
 
-    <string name="accent_color">Boja za naglašavanje</string>
-    <string name="incoming_call">Dolazni poziv</string>
-    <string name="outgoing_call">Odlazni poziv</string>
-    <string name="missed_call">Propušten poziv</string>
-    <string name="unblock_number">Deblokidni broj</string>
-    <string name="recents">Nedavne</string>
-    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
+    <string name="accent_color">Наглашена боја</string>
+    <string name="incoming_call">Долазни позив</string>
+    <string name="outgoing_call">Одлазни позив</string>
+    <string name="missed_call">Пропуштени позив</string>
+    <string name="unblock_number">Одблокирај број</string>
+    <string name="recents">Недавно</string>
+    <string name="unblock_confirmation">Да ли сте сигурни да желите да одблокирате \"%s\"?</string>
 
     <!-- Other -->
-    <string name="purchase_simple_thank_you_g">Пазарите Goodwy Thank You</string>
-    <string name="copyright_g">v %1$s\nАуторска права © Goodwy %2$d</string>
-    <string name="update_thank_you_g">Молимо вас ажурирајте Goodwy Thank You на најскорију верзију</string>
+    <string name="purchase_simple_thank_you_g">Купите Goodwy Thank You</string>
+    <string name="copyright_g">v %1$s\nАуторско право © Goodwy %2$d</string>
+    <string name="update_thank_you_g">Молимо ажурирајте Goodwy Thank You на најновију верзију</string>
     <string name="faq_2_text_commons_g">
         <![CDATA[
-        Наравно. Можете да ширите информацију о апликацијама или да сачините добру повратну информацију (рецензију) и дате нам добру оцену. Такође можете помоћи тако што ћете превести апликације на нови језик, или да освежите неке већ постојеће преводе. Можете наћи упутство на https://github.com/Goodwy/Discussion , или ми једноставно послати поруку на goodwy.dev@gmail.com ако вам треба помоћ.
+        Наравно. Можете да ширите причу о апликацијама или да сачините добру повратну информацију (рецензију) и дате нам добру оцену. Такође можете помоћи тако што ћете превести апликације на нови језик или ажурирати неке већ постојеће преводе. Упутство можете пронаћи на <a href="https://github.com/Goodwy/Discussion">овом веб сајту</a>, или ми једноставно пошаљите поруку на <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> ако вам је потребна помоћ.
         ]]>
     </string>
-    <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
-    <string name="faq_101_title_commons_g">How to create a private contact?</string>
-    <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
+    <string name="faq_8_text_commons_g">Пошто се верзија ваше апликације више не ажурира, грешке које сте можда приметили никада неће бити исправљене. Такође неће бити додаvane нове функције. Про верзију можете купити на Google Play-у за малу суму новца.
+         То је једнократно плаћање, што значи да када једном купите, више никада нећете морати поново да плаћате. Чак ни након добијања новог уређаја. Ако вам се не свиђа Про верзија, можете је само деинсталирати у року од неколико сати и аутоматски ћете добити свој новац назад.
+         Ако желите повраћај новца било када касније, само нас контактирајте на goodwy.dev@gmail.com и добићете га.</string>
+    <string name="faq_100_title_commons_g">Шта је приватни контакт?</string>
+    <string name="faq_100_text_commons_g">Приватни контакт се креира у оквиру апликације. Овај контакт неће бити видљив другим апликацијама.
+         Ако деинсталирате апликацију, сви приватни контакти ће бити избрисани заједно са апликацијом, па направите резервну копију својих контаката пре него што деинсталирате апликацију.</string>
+    <string name="faq_101_title_commons_g">Како креирати приватни контакт?</string>
+    <string name="faq_101_text_commons_g">Када креирате контакт, морате изабрати извор контакта: %s</string>
     <string name="contributors_label_g">
         <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
+            Ова листа садржи све који су приметно помогли било којој апликацији у оквиру Goodwy пакета, не само овој. Преводима се баве волонтери,
+            јавите нам ако и ви желите да помогнете. Водич за превођење је на <a href="https://github.com/Goodwy/Discussion">овом веб сајту</a>, или нас контактирајте на <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> ако имате питања.
+            Хвала свим сарадницима и осталим присталицама!
         ]]>
     </string>
-    <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
-    <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app_g">ЗАСТАРЕЛО: Ова верзија апликације се више не одржава, преузмите Про верзију на https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="pro_app_refund_g">Не заборавите да ако деинсталирате било коју плаћену апликацију у року од 2 сата, новац ће вам аутоматски бити враћен. Ако желите повраћај новца било када касније, само нас контактирајте на goodwy.dev@gmail.com и добићете га. То олакшава испробавање :)</string>
 
     <!-- Contacts -->
     <string name="add_number">Додај број</string>
-    <string name="add_email">Додај имејл</string>
+    <string name="add_email">Додај е-пошту</string>
     <string name="add_address">Додај адресу</string>
     <string name="add_im">Додај IM</string>
     <string name="add_event">Додај догађај</string>
     <string name="add_notes">Додај белешке</string>
-    <string name="add_website">Додај веб локацију</string>
-    <string name="add_group">Додајте групу</string>
+    <string name="add_website">Додај веб сајт</string>
+    <string name="add_group">Додај групу</string>
     <string name="add_related_person">Додај сродну особу</string>
 
     <string name="video_call">Видео позив</string>
     <string name="screen_slide_animation">Анимација слајда екрана</string>
-    <string name="screen_slide_animation_zoomout">Смањење</string>
+    <string name="screen_slide_animation_zoomout">Умањење</string>
     <string name="screen_slide_animation_depth">Дубина</string>
     <string name="show_phone_numbers_g">Прикажи бројеве телефона</string>
 
@@ -145,104 +145,105 @@
     <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our app to view and edit contacts.<br><br>
-            Thanks
+            Хеј,<br><br>
+            ако вам се свиђа ова апликација, препоручујемо вам да инсталирате нашу апликацију за прегледање и уређивање контаката.<br><br>
+            Хвала
         ]]></string>
     <string name="recommendation_dialog_dialer_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our call app.<br><br>
-            Thanks
+            Хеј,<br><br>
+            ако вам се свиђа ова апликација, препоручујемо вам да инсталирате нашу апликацију за позиве.<br><br>
+            Хвала
         ]]></string>
     <string name="recommendation_dialog_messages_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our messaging app.<br><br>
-            Thanks
+            Хеј,<br><br>
+            ако вам се свиђа ова апликација, препоручујемо вам да инсталирате нашу апликацију за поруке.<br><br>
+            Хвала
         ]]></string>
     <string name="recommendation_dialog_gallery_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our photo viewing and editing app.<br><br>
-            Thanks
+            Хеј,<br><br>
+            ако вам се свиђа ова апликација, препоручујемо вам да инсталирате нашу апликацију за прегледање и уређивање фотографија.<br><br>
+            Хвала
         ]]></string>
 
     <!-- SMS -->
     <string name="copy_code">Копирај код</string>
     <string name="action_on_message_click">Радња при клику на поруку</string>
-    <string name="invert_color">Инвертовање боје</string>
-    <string name="speech_bubble">Облачић са говором</string>
+    <string name="invert_color">Инвертуј боје</string>
+    <string name="speech_bubble">Облачић за говор</string>
 
     <!-- Gallery -->
     <string name="library">Библиотека</string>
     <string name="open_in_maps">Отвори у Мапама</string>
 
     <!-- Dialer -->
-    <string name="message_call_later">Mogu li da te nazovem kasnije?</string>
-    <string name="message_on_my_way">Dolazim.</string>
-    <string name="message_cant_talk_right_now">Izvini, ne mogu sada da priиam.</string>
-    <string name="remind_me">Podseti me</string>
-    <string name="mute">Иск. звук</string>
+    <string name="message_call_later">Могу ли те назвати касније?</string>
+    <string name="message_on_my_way">Долазим.</string>
+    <string name="message_cant_talk_right_now">Извини, не могу сада да причам.</string>
+    <string name="remind_me">Подсети ме</string>
+    <string name="mute">Искључи звук</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">Однос</string>
+    <string name="relations_g">Повезане особе</string>
+    <string name="relation_hint_g">Повезана особа</string>
     <!-- Android ContactContract.Relation types -->
-    <string name="relation_assistant_g">Assistant</string>
-    <string name="relation_brother_g">Brother</string>
-    <string name="relation_child_g">Child</string>
-    <string name="relation_domestic_partner_g">Domestic Partner</string>
-    <string name="relation_father_g">Father</string>
-    <string name="relation_friend_g">Friend</string>
-    <string name="relation_manager_g">Manager</string>
-    <string name="relation_mother_g">Mother</string>
-    <string name="relation_parent_g">Parent</string>
-    <string name="relation_partner_g">Partner</string>
-    <string name="relation_referred_by_g">Referred by</string>
-    <string name="relation_relative_g">Relative</string>
-    <string name="relation_sister_g">Sister</string>
-    <string name="relation_spouse_g">Spouse</string>
+    <string name="relation_assistant_g">Помоћник</string>
+    <string name="relation_brother_g">Брат</string>
+    <string name="relation_child_g">Дете</string>
+    <string name="relation_domestic_partner_g">Домаћи партнер</string>
+    <string name="relation_father_g">Отац</string>
+    <string name="relation_friend_g">Пријатељ</string>
+    <string name="relation_manager_g">Менаџер</string>
+    <string name="relation_mother_g">Мајка</string>
+    <string name="relation_parent_g">Родитељ</string>
+    <string name="relation_partner_g">Партнер</string>
+    <string name="relation_referred_by_g">Препоручени од</string>
+    <string name="relation_relative_g">Рођак</string>
+    <string name="relation_sister_g">Сестра</string>
+    <string name="relation_spouse_g">Супруга</string>
     <!-- vCard 4.0 relation types -->
-    <string name="relation_contact_g">Contact</string>
-    <string name="relation_acquaintance_g">Acquaintance</string>
-    <string name="relation_met_g">Met</string>
-    <string name="relation_co_worker_g">Co-worker</string>
-    <string name="relation_colleague_g">Colleague</string>
-    <string name="relation_co_resident_g">Co-resident</string>
-    <string name="relation_neighbor_g">Neighbor</string>
-    <string name="relation_sibling_g">Sibling</string>
-    <string name="relation_kin_g">Kin</string>
-    <string name="relation_kin_alt_g">Relative</string>
+    <string name="relation_contact_g">Контакт</string>
+    <string name="relation_acquaintance_g">Познанство</string>
+    <string name="relation_met_g">Сусрет</string>
+    <string name="relation_co_worker_g">Сарадник</string>
+    <string name="relation_colleague_g">Колега</string>
+    <string name="relation_co_resident_g">Цимер</string>
+    <string name="relation_neighbor_g">Сусед</string>
+    <string name="relation_sibling_g">Полубрат</string>
+    <string name="relation_kin_g">Родбина</string>
+    <string name="relation_kin_alt_g">Рођак</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Crush</string>
-    <string name="relation_date_g">Date</string>
-    <string name="relation_sweetheart_g">Sweetheart</string>
-    <string name="relation_me_g">Me</string>
-    <string name="relation_agent_g">Agent</string>
-    <string name="relation_emergency_g">Emergency Contact</string>
+    <string name="relation_date_g">Састанак</string>
+    <string name="relation_sweetheart_g">Драги</string>
+    <string name="relation_me_g">Ја</string>
+    <string name="relation_agent_g">Заступник</string>
+    <string name="relation_emergency_g">Контакт за хитне случајеве</string>
     <!-- Additional relation types -->
-    <string name="relation_superior_g">Boss</string>
-    <string name="relation_subordinate_g">Subordinate</string>
-    <string name="relation_husband_g">Husband</string>
-    <string name="relation_wife_g">Wife</string>
-    <string name="relation_son_g">Son</string>
-    <string name="relation_daughter_g">Daughter</string>
-    <string name="relation_grandparent_g">Grandparent</string>
-    <string name="relation_grandfather_g">Grandfather</string>
-    <string name="relation_grandmother_g">Grandmother</string>
-    <string name="relation_grandchild_g">Grandchild</string>
-    <string name="relation_grandson_g">Grandson</string>
-    <string name="relation_granddaughter_g">Granddaughter</string>
-    <string name="relation_uncle_g">Uncle</string>
-    <string name="relation_aunt_g">Aunt</string>
-    <string name="relation_nephew_g">Nephew</string>
-    <string name="relation_niece_g">Niece</string>
-    <string name="relation_father_in_law_g">Father-in-law</string>
-    <string name="relation_mother_in_law_g">Mother-in-law</string>
-    <string name="relation_son_in_law_g">Son-in-law</string>
-    <string name="relation_daughter_in_law_g">Daughter-in-law</string>
-    <string name="relation_brother_in_law_g">Brother-in-law</string>
-    <string name="relation_sister_in_law_g">Sister-in-law</string>
+    <string name="relation_superior_g">Шеф</string>
+    <string name="relation_subordinate_g">Подређени</string>
+    <string name="relation_husband_g">Муж</string>
+    <string name="relation_wife_g">Супруга</string>
+    <string name="relation_son_g">Син</string>
+    <string name="relation_daughter_g">Ћерка</string>
+    <string name="relation_grandparent_g">Дека и бака</string>
+    <string name="relation_grandfather_g">Дека</string>
+    <string name="relation_grandmother_g">Бака</string>
+    <string name="relation_grandchild_g">Унуче</string>
+    <string name="relation_grandson_g">Унук</string>
+    <string name="relation_granddaughter_g">Унука</string>
+    <string name="relation_uncle_g">Ујак</string>
+    <string name="relation_aunt_g">Тетка</string>
+    <string name="relation_nephew_g">Нећак</string>
+    <string name="relation_niece_g">Нећака</string>
+    <string name="relation_father_in_law_g">Таст</string>
+    <string name="relation_mother_in_law_g">Ташта</string>
+    <string name="relation_son_in_law_g">Зет</string>
+    <string name="relation_daughter_in_law_g">Снаха</string>
+    <string name="relation_brother_in_law_g">Девер</string>
+    <string name="relation_sister_in_law_g">Свастика</string>
 </resources>
+
