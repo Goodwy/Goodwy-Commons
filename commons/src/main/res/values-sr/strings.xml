@@ -399,6 +399,7 @@
     <string name="contact_details">Детаљи контакта</string>
     <string name="add_contact">Додај контакт</string>
     <string name="wallpapers">Позадине</string>
+        
     <!-- Sorting -->
     <string name="sort_by">Сортирај према</string>
     <string name="name">Име</string>
@@ -421,31 +422,33 @@
     <string name="full_name">Пуно име</string>
     <string name="use_custom_sorting">Користи прилагођено сортирање</string>
     <string name="change_order">Промени редослед</string>
+        
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Да ли сте сигурни да желите да наставите са брисањем?</string>
-    <string name="deletion_confirmation">Да ли сте сигурни да желите обришете %s?</string>
-    <string name="deletion_confirmation_short">Delete %s?</string>
+    <string name="deletion_confirmation">Да ли сте сигурни да желите избришете %s?</string>
+    <string name="deletion_confirmation_short">Избрисати %s?</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Да ли сте сигурни да желите да преместите %s у канту за отпатке?</string>
+    <string name="move_to_recycle_bin_confirmation">Да ли сте сигурни да желите да преместите %s у корпу за отпатке?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Да ли сте сигурни да желите да обришете ову ставку?</string>
-    <string name="are_you_sure_recycle_bin">Да ли сте сигурни да желите да преместите ову ставку у канту за отпатке?</string>
-    <string name="do_not_ask_again">Не питај више у овој сеанси</string>
-    <string name="do_not_show_again">Не показуј поново</string>
+    <string name="are_you_sure_recycle_bin">Да ли сте сигурни да желите да преместите ову ставку у корпу за отпатке?</string>
+    <string name="do_not_ask_again">Не питај више у овој сесији</string>
+    <string name="do_not_show_again">Не приказуј поново</string>
     <string name="yes">Да</string>
     <string name="no">Не</string>
     <string name="maybe">Можда</string>
     <plurals name="delete_warning">
         <item quantity="one">УПОЗОРЕЊЕ: Бришете %d фасциклу</item>
-        <item quantity="few">УПОЗОРЕЊЕ: Бришете %d фасцикли</item>
-        <item quantity="other">УПОЗОРЕЊЕ: Бришете %d фасциклe</item>
+        <item quantity="few">УПОЗОРЕЊЕ: Бришете %d фасцикле</item>
+        <item quantity="other">УПОЗОРЕЊЕ: Бришете %d фасцикли</item>
     </plurals>
+        
     <!-- Password protection -->
-    <string name="pin">ПИН</string>
-    <string name="enter_pin">Унесите ПИН</string>
-    <string name="please_enter_pin">Молимо вас унесите ПИН</string>
-    <string name="wrong_pin">Погрешан ПИН</string>
-    <string name="repeat_pin">Поновите ПИН</string>
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Унесите PIN</string>
+    <string name="please_enter_pin">Унесите PIN</string>
+    <string name="wrong_pin">Погрешан PIN</string>
+    <string name="repeat_pin">Поновите PIN</string>
     <string name="pattern">Шаблон</string>
     <string name="insert_pattern">Унесите шаблон</string>
     <string name="wrong_pattern">Погрешан шаблон</string>
@@ -453,82 +456,82 @@
     <string name="biometrics">Биометрија</string>
     <string name="fingerprint">Отисак прста</string>
     <string name="add_fingerprint">Додајте отисак прста</string>
-    <string name="place_finger">Молимо вас ставите ваш прст на сензор за отисак прста</string>
+    <string name="place_finger">Ставите ваш прст на сензор за отисак прста</string>
     <string name="open_biometric_dialog">Отворите дијалог за верификацију биометријског ИД-а</string>
-    <string name="authenticate">Аутхентицате</string>
-    <string name="authentication_failed">Провера идентитета неуспешна</string>
-    <string name="authentication_blocked">Провера идентитета блокирана, покушајте поново касније</string>
-    <string name="no_fingerprints_registered">Немате регистрованих отисака прстију, додајте неке у Подешавања вашег уређаја</string>
+    <string name="authenticate">Потврда идентитета</string>
+    <string name="authentication_failed">Потврда идентитета неуспешна</string>
+    <string name="authentication_blocked">Потврда идентитета блокирана, покушајте поново касније</string>
+    <string name="no_fingerprints_registered">Немате регистрованих отисака прстију, додајте неке у подешавања вашег уређаја</string>
     <string name="go_to_settings">Иди у подешавања</string>
-    <string name="protection_setup_successfully">Успешно подешена шифра. Поново инсталирајте апликацију за случај да изгубите шифру.</string>
+    <string name="protection_setup_successfully">Успешно подешена лозинка. Поново инсталирајте апликацију у случају да је заборавите.</string>
     <string name="fingerprint_setup_successfully">Заштита је успешно подешена. Поново инсталирајте апликацију за случај да имате проблема са ресетовањем отиска прста.</string>
-    <string name="lock_folder">Закључај мапу</string>
-    <string name="lock_folder_pro">Закључај мапу (Про)</string>
-    <string name="unlock_folder">Откључај мапу</string>
+    <string name="lock_folder">Закључај фасциклу</string>
+    <string name="lock_folder_pro">Закључај фасциклу (Про)</string>
+    <string name="unlock_folder">Откључај фасциклу</string>
     <string name="lock_folder_notice">Ова заштита функционише само у овој апликацији, не би требало да замени право шифровање директоријума у целом систему.</string>
     <!-- Times -->
     <string name="yesterday">Јуче</string>
     <string name="today">Данас</string>
     <string name="tomorrow">Сутра</string>
-    <string name="every_day">Сваки дан</string>
+    <string name="every_day">Сваког дана</string>
     <string name="hide_year">Сакриј годину</string>
     <string name="seconds_raw">секунде</string>
-    <string name="minutes_raw">минуте</string>
+    <string name="minutes_raw">минути</string>
     <string name="hours_raw">сати</string>
     <string name="days_raw">дани</string>
-    <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
-    <string name="week_number_short">wk.</string>
+    <string name="seconds_letter">сек</string>
+    <string name="minutes_letter">м</string>
+    <string name="hours_letter">с</string>
+    <string name="week_number_short">седм.</string>
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
-        <item quantity="few">%d секунди</item>
-        <item quantity="other">%d секунда</item>
+        <item quantity="few">%d секунде</item>
+        <item quantity="other">%d секунди</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d минут</item>
         <item quantity="few">%d минутa</item>
-        <item quantity="other">%d минутe</item>
+        <item quantity="other">%d минута</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d сат</item>
-        <item quantity="few">%d сати</item>
+        <item quantity="few">%d сата</item>
         <item quantity="other">%d сати</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d дан</item>
         <item quantity="few">%d данa</item>
-        <item quantity="other">%d дани</item>
+        <item quantity="other">%d дана</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d недеља</item>
-        <item quantity="few">%d недеља</item>
-        <item quantity="other">%d недељe</item>
+        <item quantity="one">%d седмица</item>
+        <item quantity="few">%d седмице</item>
+        <item quantity="other">%d седмица</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d месец</item>
-        <item quantity="few">%d месеци</item>
+        <item quantity="few">%d месеца</item>
         <item quantity="other">%d месеци</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d година</item>
-        <item quantity="few">%d година</item>
-        <item quantity="other">%d годинe</item>
+        <item quantity="few">%d године</item>
+        <item quantity="other">%d година</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d секунда</item>
-        <item quantity="few">%d секунди</item>
-        <item quantity="other">%d секундe</item>
+        <item quantity="one">%d секунд</item>
+        <item quantity="few">%d секунде</item>
+        <item quantity="other">%d секунди</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d минут</item>
-        <item quantity="few">%d минути</item>
-        <item quantity="other">%d минутe</item>
+        <item quantity="few">%d минута</item>
+        <item quantity="other">%d минута</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d сат</item>
-        <item quantity="few">%d сати</item>
+        <item quantity="few">%d сата</item>
         <item quantity="other">%d сати</item>
     </plurals>
     <plurals name="in_days">
@@ -537,9 +540,9 @@
         <item quantity="other">%d дани</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d недеља</item>
-        <item quantity="few">%d недеља</item>
-        <item quantity="other">%d недељe</item>
+        <item quantity="one">%d седмицу</item>
+        <item quantity="few">%d седмице</item>
+        <item quantity="other">%d седмица</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d месец</item>
@@ -547,81 +550,82 @@
         <item quantity="other">%d месеци</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d година</item>
-        <item quantity="few">%d година</item>
-        <item quantity="other">%d годинe</item>
+        <item quantity="one">%d годину</item>
+        <item quantity="few">%d године</item>
+        <item quantity="other">%d година</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d секунд пре тога</item>
-        <item quantity="few">%d секунди пре тога</item>
-        <item quantity="other">%d секундe пре тога</item>
+        <item quantity="one">%d секунд пре</item>
+        <item quantity="few">%d секунде пре</item>
+        <item quantity="other">%d секунди пре</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d минут пре тога</item>
-        <item quantity="few">%d минути пре тога</item>
-        <item quantity="other">%d минутe пре тога</item>
+        <item quantity="one">%d минут пре</item>
+        <item quantity="few">%d минута пре</item>
+        <item quantity="other">%d минута пре</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d сат пре тога</item>
-        <item quantity="few">%d сати пре тога</item>
-        <item quantity="other">%d сати пре тога</item>
+        <item quantity="one">%d сат пре</item>
+        <item quantity="few">%d сата пре</item>
+        <item quantity="other">%d сати пре</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d дан пре тога</item>
-        <item quantity="few">%d дана пре тога</item>
-        <item quantity="other">%d дани пре тога</item>
+        <item quantity="one">%d дан пре</item>
+        <item quantity="few">%d дана пре</item>
+        <item quantity="other">%d дана пре</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d недељу пре тога</item>
-        <item quantity="few">%d недељи пре тога</item>
-        <item quantity="other">%d недељe пре тога</item>
+        <item quantity="one">%d седмицу пре</item>
+        <item quantity="few">%d седмице пре</item>
+        <item quantity="other">%d седмица пре</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d месец пре тога</item>
-        <item quantity="few">%d месеци пре тога</item>
-        <item quantity="other">%d месеци пре тога</item>
+        <item quantity="one">%d месец пре</item>
+        <item quantity="few">%d месеца пре</item>
+        <item quantity="other">%d месеци пре</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d годину пре тога</item>
-        <item quantity="few">%d година пре тога</item>
-        <item quantity="other">%d годинe пре тога</item>
+        <item quantity="one">%d годину пре</item>
+        <item quantity="few">%d године пре</item>
+        <item quantity="other">%d година пре</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d секунда</item>
-        <item quantity="few">%d секунди</item>
-        <item quantity="other">%d секундe</item>
+        <item quantity="one">%d секунд</item>
+        <item quantity="few">%d секунде</item>
+        <item quantity="other">%d секунди</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d минут</item>
-        <item quantity="few">%d минути</item>
-        <item quantity="other">%d минутe</item>
+        <item quantity="few">%d минута</item>
+        <item quantity="other">%d минута</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d сат</item>
-        <item quantity="few">%d сати</item>
+        <item quantity="few">%d сата</item>
         <item quantity="other">%d сати</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d дан</item>
         <item quantity="few">%d данa</item>
-        <item quantity="other">%d дани</item>
+        <item quantity="other">%d дана</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d недеља</item>
-        <item quantity="few">%d недеља</item>
-        <item quantity="other">%d недељe</item>
+        <item quantity="one">%d седмицу</item>
+        <item quantity="few">%d седмице</item>
+        <item quantity="other">%d седмица</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d месец</item>
-        <item quantity="few">%d месеци</item>
+        <item quantity="few">%d месеца</item>
         <item quantity="other">%d месеци</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d година</item>
-        <item quantity="few">%d година</item>
-        <item quantity="other">%d годинe</item>
+        <item quantity="one">%d годину</item>
+        <item quantity="few">%d године</item>
+        <item quantity="other">%d година</item>
+        
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Преостало време до активације аларма:\n%s</string>
@@ -633,28 +637,29 @@
     <string name="notifications_disabled">Обавештења ове апликације су онемогућена. У подешавањима уређаја их можете укључити.</string>
     <!-- Alarms -->
     <string name="alarm">Аларм</string>
-    <string name="snooze">Успавај</string>
-    <string name="dismiss">Вољно</string>
+    <string name="snooze">Одложи</string>
+    <string name="dismiss">Одбаци</string>
     <string name="no_reminder">Без подсетника</string>
-    <string name="at_start">Приликом старта</string>
-    <string name="system_sounds">Системски звукови</string>
-    <string name="your_sounds">Ваши звукови</string>
+    <string name="at_start">Приликом покретања</string>
+    <string name="system_sounds">Системски звуци</string>
+    <string name="your_sounds">Ваши звуци</string>
     <string name="add_new_sound">Додај нови звук</string>
     <string name="no_sound">Без звука</string>
     <string name="during_day_at_hh_mm">Током дана у cc:мм</string>
     <string name="during_day_at">Током дана у %02d:%02d</string>
+        
     <!-- Settings -->
     <string name="settings">Подешавања</string>
     <string name="purchase_simple_thank_you">Пазарите Simple Thank You</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">Опште</string>
     <string name="color_customization">Прилагођавање боја</string>
-    <string name="improved_color_customization">Improved color customization</string>
+    <string name="improved_color_customization">Побољшано прилагођавање боја</string>
     <string name="customize_colors">Прилагодите боје</string>
-    <string name="customize_colors_locked">Прилагодите боје (Locked)</string>
+    <string name="customize_colors_locked">Прилагођавање боја (Закључано)</string>
     <string name="feature_locked">Закључано</string>
-    <string name="customize_widget_colors">Прилагодите боје виџета</string>
-    <string name="customize_notifications">Прилагодите обавештења</string>
-    <string name="notification_sound">Notification sound</string>
+    <string name="customize_widget_colors">Прилагођавање боје виџета</string>
+    <string name="customize_notifications">Прилагођавање обавештења</string>
+    <string name="notification_sound">Звук обавештења</string>
     <string name="use_english_language">Користи енглески језик</string>
     <string name="language">Језик</string>
     <string name="show_hidden_items">Прикажи скривене ставке</string>
@@ -662,7 +667,7 @@
     <string name="small">Мали</string>
     <string name="medium">Средњи</string>
     <string name="large">Велики</string>
-    <string name="extra_large">Додатно велик</string>
+    <string name="extra_large">Веома велик</string>
     <string name="password_protect_hidden_items">Заштити шифром видљивост скривених ставки</string>
     <string name="password_protect_whole_app">Заштити шифром целу апликацију</string>
     <string name="password_protect_file_deletion">Заштити шифром брисање фајла и премештање</string>
