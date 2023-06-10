@@ -124,7 +124,7 @@
     <string name="add_blocked_number_helper_text">Унесите број или образац (нпр. *12345*, +1*8888) за блокирање свих позива и порука са бројева који одговарају шаблону.</string>
     <string name="must_make_default_caller_id_app">Не могу се блокирати непознати бројеви без дозволе за ID позиваоца.</string>
     <!-- Favorites -->
-    <string name="favorites">Омиљено</string>
+    <string name="favorites">Омиљени</string>
     <string name="add_favorites">Додај омиљене</string>
     <string name="add_to_favorites">Додај у омиљене</string>
     <string name="remove_from_favorites">Уклони из омиљених</string>
@@ -376,7 +376,7 @@
     <string name="temporarily_show_hidden">Привремено прикажи скривено</string>
     <string name="stop_showing_hidden">Заустави приказивање скривених медија</string>
     <string name="maximum_share_reached">Не можете поделити оволико садржаја одједном</string>
-    <string name="empty_and_disable_recycle_bin">Испразни и онемогући канту за отпатке</string>
+    <string name="empty_and_disable_recycle_bin">Испразни и онемогући корпу за отпатке</string>
     <string name="undo">Опозови радњу</string>
     <string name="redo">Понови радњу</string>
     <string name="print">Штампај</string>
@@ -969,7 +969,7 @@
     <string name="faq_2_title_commons">Желим да вам дам подршку, али не могу да донирам новац. Да ли могу да учиним нешто друго?</string>
     <string name="faq_2_text_commons">Да наравно. Можете ширити вест о апликацијама или дати добре повратне информације и оцене. Такође можете помоћи тако што ћете превести апликације на нови језик или једноставно ажурирати неке постојеће преводе. Водич за превођење налази се на &lt;а хреф=хттпс://гитхуб.цом/СимплеМобилеТоолс/Генерал-Дисцуссион#хов-цан-и-суггест-ан-едит-то-а-филе&gt;овом веб-сајту&lt;/а&gt;, или само нас контактирајте на &lt;а хреф=маилто:хелло@симплемобилетоолс.цом&gt;хелло@симплемобилетоолс.цом&lt;/а&gt; ако имате питања.</string>
     <string name="faq_3_title_commons">Обрисао сам неке датотеке грешком, како их могу повратити?</string>
-    <string name="faq_3_text_commons">Нажалост не можете. Датотеке се бришу одмах након дијалога за потврду, не постоји канта за отпатке.</string>
+    <string name="faq_3_text_commons">Нажалост не можете. Датотеке се бришу одмах након дијалога за потврду, не постоји корпа за отпатке.</string>
     <string name="faq_4_title_commons">Не свиђају ми се боје виџета, да ли могу да их променим?</string>
     <string name="faq_4_text_commons">Да, како вучете виџет на ваш екран, прозор за подешавање виџета се појављује. Видећете квадрате у бојама у доњем левом ћошку, једноставно их притисните да изаберете нову боју. Можете употребити и клизач да одредите финесе боје.</string>
     <string name="faq_5_title_commons">Да ли могу да повратим обрисане датотеке?</string>
