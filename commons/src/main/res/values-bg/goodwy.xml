@@ -5,12 +5,14 @@
     <string name="general">General</string>
     <string name="default_tab">Default tab</string>
     <string name="color">color</string>
-    <string name="black">Black</string>
+    <string name="black">Черно</string>
+    <string name="black_locked">Черно (заключено)</string>
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="unblock_number">Unblock number</string>
+    <string name="unblock_number">Отблокиране на номер</string>
+    <string name="unblock_numbers">Отблокиране на номера</string>
     <string name="recents">Recents</string>
     <string name="message">Съобщение</string>
     <string name="settings_icon">Икона за настройки</string>
@@ -36,10 +38,10 @@
     <string name="lifebuoy_summary">Ако по някаква причина не можете да си позволите нашето приложение, но наистина искате да използвате всички функции, просто ни пишете</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Добра подкрепа</string>
+    <string name="tip_excellent">Отлична поддръжка</string>
+    <string name="tip_incredible">Страхотна поддръжка</string>
+    <string name="tip_jar">Поддръжка</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -54,7 +56,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Няма връзка</string>
+    <string name="per_month">%s/месец</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>
@@ -72,6 +76,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="contact_color_list">Списък с цветове на контактите</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -92,6 +97,12 @@
     <string name="contact_photo">Снимка на контакта</string>
     <string name="blurry_contact_photo">размазана снимка на контакта</string>
     <string name="blurry_wallpaper">размазан тапет</string>
+    <string name="text_cursor_color">Цвят на курсора на текста</string>
+    <string name="lines_count">Брой редове</string>
+    <string name="show_button_blocked_numbers">Показвай бутона да не скрива блокираните повиквания</string>
+    <string name="flash_for_alerts">Светкавица за предупреждения</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -142,6 +153,9 @@
     <string name="get">Зареждане</string>
     <string name="open">Отваряне</string>
     <string name="collection">Колекция</string>
+    <string name="collection_summary">Създайте колекция, за да отключите приложението</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

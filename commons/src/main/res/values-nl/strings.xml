@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuleren</string>
+    <string name="close">Sluiten</string>
     <string name="back">Terug</string>
     <string name="nothing">Niets</string>
     <string name="later">Later</string>
@@ -75,6 +76,8 @@
     <string name="updating">Bijwerken…</string>
     <string name="phone_storage">Telefoonopslag</string>
     <string name="phone_storage_hidden">Telefoonopslag (niet zichtbaar voor andere apps)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Bezig met zoeken…</string>
     <!-- Events -->
     <string name="birthday">Verjaardag</string>
     <string name="anniversary">Jubileum</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Meer kolommen</string>
     <string name="reduce_column_count">Minder kolommen</string>
     <string name="column_count">Aantal kolommen</string>
+    <string name="row_count">Aantal rijen</string>
     <string name="portrait_column_count">Aantal kolommen in portretmodus</string>
     <string name="landscape_column_count">Aantal kolommen in landschapsmodus</string>
     <string name="change_cover_image">Omslagafbeelding wijzigen</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d kolom</item>
         <item quantity="other">%d kolommen</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d rij</item>
+        <item quantity="other">%d rijen</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">Maak van deze app de standaard telefoon-app om nummers te kunnen blokkeren.</string>
     <string name="set_as_default">Als standaard instellen</string>
     <string name="block_confirmation">Nummer \"%s\" echt blokkeren\?</string>
-    <string name="block_unknown_calls">Oproepen van onopgeslagen contacten blokkeren</string>
-    <string name="block_unknown_messages">Berichten van onopgeslagen contacten blokkeren</string>
+    <string name="block_not_stored_calls">Oproepen van niet-opgeslagen contacten blokkeren</string>
+    <string name="block_hidden_calls">Oproepen van verborgen nummers blokkeren</string>
+    <string name="block_not_stored_messages">Berichten van niet-opgeslagen contacten blokkeren</string>
+    <string name="block_hidden_messages">Berichten van verborgen nummers blokkeren</string>
     <string name="add_blocked_number_helper_text">Voer een nummer of patroon in (bijv. *12345*, +31*8888) om alle oproepen en berichten te blokkeren van nummers die overeenkomen met het patroon.</string>
     <string name="must_make_default_caller_id_app">Kan onbekende nummers niet blokkeren zonder toegang tot beller-ID\'s.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Zoeken</string>
     <string name="search_in_placeholder">Zoeken in %s</string>
     <string name="type_2_characters">Vul tenminste 2 tekens in om de zoekopdracht te starten.</string>
+    <string name="show_search">Zoekbalk tonen</string>
     <string name="search_contacts">Contact zoeken</string>
     <string name="search_favorites">Favoriet zoeken</string>
     <string name="search_apps">App zoeken</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Recht voor contacten is vereist</string>
     <string name="no_camera_permissions">Recht voor camera is vereist</string>
     <string name="no_audio_permissions">Recht voor audio is vereist</string>
-    <string name="no_post_notifications_permissions">Recht voor het plaatsen van meldingen is vereist</string>
     <string name="no_permission">Geen toegang</string>
+    <string name="allow_notifications_reminders">Deze app heeft het recht om meldingen te tonen nodig om herinneringen te kunnen laten zien.</string>
+    <string name="allow_notifications_files">Deze app heeft het recht om meldingen te tonen nodig om een voortgangsindicator te kunnen weergeven.</string>
+    <string name="allow_notifications_music_player">Deze app heeft het recht om meldingen te tonen nodig om nummers te kunnen afspelen.</string>
+    <string name="allow_notifications_voice_recorder">Deze app heeft het recht om meldingen te tonen nodig om geluid te kunnen opnemen.</string>
+    <string name="allow_notifications_incoming_calls">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij inkomende gesprekken.</string>
+    <string name="allow_notifications_incoming_messages">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij nieuwe berichten.</string>
+    <string name="allow_alarm_scheduled_messages">Geef de app toegang tot interne alarmen om geplande berichten te kunnen versturen.</string>
+    <string name="grant_permission">Toestemming geven</string>
+    <string name="permission_required">Toestemming vereist</string>
     <!-- Renaming -->
     <string name="rename_file">Bestand hernoemen</string>
     <string name="rename_folder">Map hernoemen</string>
@@ -289,6 +308,7 @@
     <string name="duration">Looptijd</string>
     <string name="artist">Artiest</string>
     <string name="album">Album</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Brandpuntsafstand</string>
     <string name="exposure_time">Sluitertijd</string>
     <string name="iso_speed">ISO-waarde</string>
@@ -388,6 +408,7 @@
     <string name="last_modified">Laatst gewijzigd</string>
     <string name="date_created">Datum gemaakt</string>
     <string name="date_taken">Datum opname</string>
+    <string name="date_added">Datum toevoeging</string>
     <string name="title">Titel</string>
     <string name="filename">Bestandsnaam</string>
     <string name="extension">Extensie</string>
@@ -447,6 +468,12 @@
     <string name="lock_folder_pro">Map vergrendelen (Pro)</string>
     <string name="unlock_folder">Map ontgrendelen</string>
     <string name="lock_folder_notice">Deze bescherming werkt alleen in deze app, het is niet de bedoeling dat het een echte systeembrede mapversleuteling vervangt.</string>
+    <string name="enter_password">Wachtwoord invoeren</string>
+    <string name="password">Wachtwoord</string>
+    <string name="add_password">Wachtwoord toevoegen</string>
+    <string name="empty_password_new">Voer een wachtwoord in</string>
+    <string name="empty_password">Voer het wachtwoord in</string>
+    <string name="invalid_password">Onjuist wachtwoord</string>
     <!-- Times -->
     <string name="yesterday">Gisteren</string>
     <string name="today">Vandaag</string>
@@ -626,6 +653,7 @@
     <string name="use_24_hour_time_format">24-uurs tijdnotatie gebruiken</string>
     <string name="change_date_and_time_format">Datum- en tijdnotatie wijzigen</string>
     <string name="sunday_first">Week op zondag beginnen</string>
+    <string name="start_week_on">Week beginnen op</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Altijd dezelfde sluimertijd gebruiken</string>
     <string name="snooze_time">Interval bij sluimertijd</string>
@@ -687,6 +715,7 @@
     <string name="show_the_recycle_bin">De prullenbak tonen</string>
     <string name="hide_the_recycle_bin">De prullenbak verbergen</string>
     <string name="open_the_recycle_bin">Prullenbak openen</string>
+    <string name="skip_the_recycle_bin">Bestanden niet naar de prullenbak verplaatsen, maar direct verwijderen</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d item naar de prullenbak verplaatsen</item>
         <item quantity="other">%d items naar de prullenbak verplaatsen</item>
@@ -786,19 +815,19 @@
     <string name="more_info">Meer informatie</string>
     <string name="upgrade">Upgraden</string>
     <string name="upgrade_calendar">Lokaal opgeslagen agenda\'s migreren kan alleen door exporteren naar een .ics bestand, en dan weer importeren. Deze functies zijn te vinden in het menu van de app.</string>
-    <string name="upgraded_from_free_gallery">De gratis versie van deze app is ook (nog) geïnstalleerd. Als de Pro-versie bevalt en de instellingen en favorieten zijn overgezet, dan kan de gratis versie worden verwijderd.</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">De gratis versie van deze app is ook (nog) geïnstalleerd. Als de Pro-versie bevalt en de gegevens zijn overgezet, dan kan de gratis versie worden verwijderd.</string>
+    <string name="upgraded_from_free_gallery">De gratis versie van deze app is ook (nog) geïnstalleerd. Als de Pro-versie bevalt en de instellingen en favorieten zijn overgezet, dan kan de gratis versie worden verwijderd. Deze melding zal dan niet meer worden getoond.</string>
+    <string name="upgraded_to_pro_gallery">De Pro-versie van deze app is ook al geïnstalleerd. Als de Pro-versie bevalt en de instellingen en favorieten (indien gewenst) zijn overgezet vanuit deze versie, dan kan deze app worden verwijderd.</string>
+    <string name="upgraded_from_free">De gratis versie van deze app is ook (nog) geïnstalleerd. Als de Pro-versie bevalt en de gegevens zijn overgezet, dan kan de gratis versie worden verwijderd zodat die niet per abuis wordt gestart. Ook zal deze melding dan niet meer worden getoond.</string>
     <string name="upgraded_to_pro">De Pro-versie van deze app is ook al geïnstalleerd. Als de Pro-versie bevalt en de app-gegevens (indien gewenst) zijn overgezet vanuit deze versie, dan kan deze app worden verwijderd.</string>
-    <string name="upgraded_to_pro_calendar">De gratis versie van deze app is ook (nog) geïnstalleerd. Lokaal opgeslagen afspraken uit de gratis versie zullen handmatig moeten worden overgezet door ze eerst te exporteren naar een .ics-bestand en ze vervolgens weer te importeren in de Pro-versie. Beide functies zijn te vinden in het menu.
+    <string name="upgraded_from_free_calendar">De gratis versie van deze app is ook (nog) geïnstalleerd. Lokaal opgeslagen afspraken uit de gratis versie zullen handmatig moeten worden overgezet door ze eerst te exporteren naar een .ics-bestand en ze vervolgens weer te importeren in de Pro-versie. Beide functies zijn te vinden in het menu.
 \n
-\nAls de Pro-versie bevalt, kan de gratis versie worden verwijderd.</string>
-    <string name="upgraded_to_pro_contacts">De gratis versie van deze app is ook (nog) geïnstalleerd. Eventueel opgeslagen contacten in \"%s\" zullen handmatig moeten worden overgezet door ze eerst te exporteren naar een .vcf-bestand en ze vervolgens weer te importeren in de Pro-versie. Beide functies zijn te vinden in het menu.
+\nAls de Pro-versie bevalt, kan de gratis versie worden verwijderd. Deze melding zal dan niet meer worden getoond.</string>
+    <string name="upgraded_from_free_contacts">De gratis versie van deze app is ook (nog) geïnstalleerd. Eventueel opgeslagen contacten in \"%s\" zullen handmatig moeten worden overgezet door ze eerst te exporteren naar een .vcf-bestand en ze vervolgens weer te importeren in de Pro-versie. Beide functies zijn te vinden in het menu.
 \n
-\nAls de Pro-versie bevalt, kan de gratis versie worden verwijderd.</string>
-    <string name="upgraded_to_pro_notes">De gratis versie van deze app is ook (nog) geïnstalleerd. De notities uit de gratis versie zullen handmatig moeten worden overgezet door ze eerst te exporteren naar een bestand en ze vervolgens weer te importeren in de Pro-versie. Beide functies zijn te vinden in het menu.
+\nAls de Pro-versie bevalt, kan de gratis versie worden verwijderd. Deze melding zal dan niet meer worden getoond.</string>
+    <string name="upgraded_from_free_notes">De gratis versie van deze app is ook (nog) geïnstalleerd. De notities uit de gratis versie zullen handmatig moeten worden overgezet door ze eerst te exporteren naar een bestand en ze vervolgens weer te importeren in de Pro-versie. Beide functies zijn te vinden in het menu.
 \n
-\nAls de Pro-versie bevalt, kan de gratis versie worden verwijderd.</string>
+\nAls de Pro-versie bevalt, kan de gratis versie worden verwijderd. Deze melding zal dan niet meer worden getoond.</string>
     <!-- About -->
     <string name="about">Over</string>
     <string name="website">Website</string>
@@ -996,6 +1025,7 @@
     <string name="why_upgrade_footer">100% Niet-goed-geld-teruggarantie</string>
     <string name="why_upgrade_footer_one_time_payment">Eenmalige betaling</string>
     <string name="why_upgrade_improved_design">Verbeterd ontwerp</string>
+    <string name="why_upgrade_many_other_improvements">Nog vele andere verbeteringen</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Geavanceerde fotobewerking</string>
     <string name="why_upgrade_advanced_photo_video_editor">Geavanceerde foto- en videobewerking</string>
@@ -1061,8 +1091,10 @@
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Proefperiode verlopen</string>
     <string name="start_free_trial">Start gratis proefperiode</string>

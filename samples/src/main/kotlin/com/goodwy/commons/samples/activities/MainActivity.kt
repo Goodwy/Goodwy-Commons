@@ -44,11 +44,11 @@ class MainActivity : BaseSimpleActivity() {
                 FAQItem(R.string.faq_7_title_commons, R.string.faq_7_text_commons),
                 FAQItem(R.string.faq_9_title_commons, R.string.faq_9_text_commons)
             )
-            startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true, "", "", "", "")
+            startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true, "", "", "", "", "", "", "", true)
         }
 
         main_purchase.setOnClickListener {
-            startPurchaseActivity(R.string.app_name_g, "BuildConfig.GOOGLE_PLAY_LICENSING_KEY", "BuildConfig.PRODUCT_ID_X1", "BuildConfig.PRODUCT_ID_X2", "BuildConfig.PRODUCT_ID_X3", playStoreInstalled = false)
+            startPurchaseActivity(R.string.app_name_g, "BuildConfig.GOOGLE_PLAY_LICENSING_KEY", "BuildConfig.PRODUCT_ID_X1", "BuildConfig.PRODUCT_ID_X2", "BuildConfig.PRODUCT_ID_X3", "", "", "", showLifebuoy = true, playStoreInstalled = true, showCollection = true)
         }
 
         bottom_sheet_chooser.setOnClickListener {
@@ -56,7 +56,7 @@ class MainActivity : BaseSimpleActivity() {
         }
 
         security.setOnClickListener {
-            SecurityDialog(this, "", SHOW_ALL_TABS) { hash, type, success ->
+            SecurityDialog(this, "", SHOW_ALL_TABS) { _, _, _ ->
             }
         }
 
@@ -81,9 +81,9 @@ class MainActivity : BaseSimpleActivity() {
             fragmentManager = supportFragmentManager,
             title = R.string.please_select_destination,
             items = arrayOf(
-                SimpleListItem(1, R.string.record_video, R.drawable.ic_camera_vector),
-                SimpleListItem(2, R.string.record_audio, R.drawable.ic_microphone_vector, selected = true),
-                SimpleListItem(4, R.string.choose_contact, R.drawable.ic_add_person_vector)
+                SimpleListItem(1, R.string.record_video, imageRes = R.drawable.ic_camera_vector),
+                SimpleListItem(2, R.string.record_audio, imageRes = R.drawable.ic_microphone_vector, selected = true),
+                SimpleListItem(4, R.string.choose_contact, imageRes = R.drawable.ic_add_person_vector)
             )
         ) {
             toast("Clicked ${it.id}")

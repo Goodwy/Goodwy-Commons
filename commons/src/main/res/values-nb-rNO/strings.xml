@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
+    <string name="close">Close</string>
     <string name="back">Back</string>
     <string name="nothing">Ingenting</string>
     <string name="later">Later</string>
@@ -30,13 +31,13 @@
     <string name="notes">Notes</string>
     <string name="deleting_folder">Sletter mappen \'%s\'</string>
     <string name="none">Ingen</string>
-    <string name="label">Label</string>
+    <string name="label">Påskrift</string>
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Transparent color</string>
     <string name="select_a_different_color">Select a different color</string>
     <string name="download">Download</string>
-    <string name="notification">Notification</string>
-    <string name="notifications">Notifications</string>
+    <string name="notification">Varsel</string>
+    <string name="notifications">Varsler</string>
     <string name="email">Email</string>
     <string name="previous">Previous</string>
     <string name="playpause">Play / Pause</string>
@@ -59,24 +60,26 @@
     <string name="seven">Seven</string>
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
-    <string name="value">Value</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value">Verdi</string>
+    <string name="value_cannot_be_empty">Verdien kan ikke være tom</string>
     <string name="create_new_contact">Opprett ny kontakt</string>
     <string name="add_to_existing_contact">Legg til i eksisterende kontakt</string>
     <string name="app_corrupt">App Corrupt</string>
     <string name="disclaimer">Disclaimer</string>
     <string name="take_photo">Ta bilde</string>
     <string name="choose_photo">Velg bilde</string>
-    <string name="choose_video">Choose video</string>
-    <string name="choose_contact">Choose contact</string>
-    <string name="choose_file">Choose file</string>
-    <string name="record_audio">Record audio</string>
-    <string name="record_video">Record video</string>
+    <string name="choose_video">Velg video</string>
+    <string name="choose_contact">Velg kontakt</string>
+    <string name="choose_file">Velg fil</string>
+    <string name="record_audio">Ta opp lyd</string>
+    <string name="record_video">Ta opp video</string>
     <string name="updating">Oppdaterer …</string>
     <string name="phone_storage">Telefonlager</string>
     <string name="phone_storage_hidden">Telefonlager (ikke synlig for andre programmer)</string>
+    <string name="audio">Lyd</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
-    <string name="birthday">Geburtsdag</string>
+    <string name="birthday">Fødselsdag</string>
     <string name="anniversary">Jubileum</string>
     <!-- Emails -->
     <string name="home">Privat</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Øk antall kolonner</string>
     <string name="reduce_column_count">Reduser antall kolonner</string>
     <string name="column_count">Column count</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Portrait column count</string>
     <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Endre omslagsbilde</string>
@@ -105,8 +109,12 @@
         <item quantity="one">%d column</item>
         <item quantity="other">%d columns</item>
     </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
+    </plurals>
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
+    <string name="manage_blocked_numbers">Håndter blokkerte numre</string>
     <string name="not_blocking_anyone">You are not blocking anyone.</string>
     <string name="add_a_blocked_number">Add a blocked number</string>
     <string name="block_number">Block number</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
     <string name="set_as_default">Set as default</string>
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_not_stored_calls">Block calls from not stored contacts</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Block messages from not stored contacts</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Søk</string>
     <string name="search_in_placeholder">Search in %s</string>
     <string name="type_2_characters">Skriv inn minst 2 tegn for å starte søket.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Search contacts</string>
     <string name="search_favorites">Search favorites</string>
     <string name="search_apps">Search apps</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Tillatelse for kontakter kreves</string>
     <string name="no_camera_permissions">Tillatelse for kamera kreves</string>
     <string name="no_audio_permissions">Tillatelse for lyd kreves</string>
-    <string name="no_post_notifications_permissions">Permission to post notifications is required</string>
     <string name="no_permission">No permission</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">Endre navn på fil</string>
     <string name="rename_folder">Endre navn på mappe</string>
@@ -290,6 +309,7 @@
     <string name="duration">Varighet</string>
     <string name="artist">Artist</string>
     <string name="album">Album</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Brennvidde</string>
     <string name="exposure_time">Eksponeringstid</string>
     <string name="iso_speed">ISO-verdi</string>
@@ -321,7 +341,7 @@
     <string name="discard">Forkast</string>
     <string name="undo_changes">Angre endringer</string>
     <string name="undo_changes_confirmation">Er du sikker på at du vil angre dine endringer?</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">Denne handlingen kan ikke angres.</string>
     <string name="save_before_closing">Du har endringer som ikke er lagret. Lagre før du avslutter?</string>
     <string name="apply_to_all_apps">Bruk fargene i alle Simple Apps</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
@@ -394,6 +414,7 @@
     <string name="last_modified">Sist endret</string>
     <string name="date_created">Dato opprettet</string>
     <string name="date_taken">Dato tatt</string>
+    <string name="date_added">Date added</string>
     <string name="title">Tittel</string>
     <string name="filename">Filnavn</string>
     <string name="extension">Filendelse</string>
@@ -453,6 +474,12 @@
     <string name="lock_folder_pro">Lås mappe (Pro)</string>
     <string name="unlock_folder">Lås opp mappe</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">I går</string>
     <string name="today">I dag</string>
@@ -585,14 +612,15 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tid igjen til alarmen går:\n%s</string>
     <string name="reminder_triggers_in">Tid som gjenstår til påminnelsen utløser:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Tid igjen:
+\n%s</string>
     <string name="alarm_warning">Sørg for at alarmen fungerer ordentlig før du stoler på den. Den kan fungere dårlig på grunn av systembegrensninger relatert til batterisparing.</string>
     <string name="reminder_warning">Sørg for at påminnelsene fungerer riktig før du stoler på dem. De kan fungere dårlig på grunn av systembegrensninger relatert til batterisparing.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Snooze</string>
-    <string name="dismiss">Avvis</string>
+    <string name="dismiss">Slå av</string>
     <string name="no_reminder">Ingen påminnelse</string>
     <string name="at_start">Ved start</string>
     <string name="system_sounds">Systemlyder</string>
@@ -612,7 +640,7 @@
     <string name="feature_locked">Locked</string>
     <string name="customize_widget_colors">Tilpass modulfarger</string>
     <string name="customize_notifications">Tilpass varsler</string>
-    <string name="notification_sound">Notification sound</string>
+    <string name="notification_sound">Varslingslyd</string>
     <string name="use_english_language">Bruk engelsk språk</string>
     <string name="language">Language</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
@@ -632,9 +660,10 @@
     <string name="use_24_hour_time_format">Bruk 24-timers tidsformat</string>
     <string name="change_date_and_time_format">Endre format for dato og klokkeslett</string>
     <string name="sunday_first">Start uken på søndag</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Moduler</string>
     <string name="use_same_snooze">Bruk alltid samme intervall for Snooze</string>
-    <string name="snooze_time">Intervall for Snooze</string>
+    <string name="snooze_time">Intervall for Snooze (Slumre)</string>
     <string name="vibrate_on_button_press">Vibrer ved trykk på knapper</string>
     <string name="move_items_into_recycle_bin">Flytt elementer til papirkurven istedenfor å slette dem</string>
     <string name="recycle_bin_cleaning_interval">Tømmeintervall for papirkurven</string>
@@ -693,6 +722,7 @@
     <string name="show_the_recycle_bin">Vis papirkurven</string>
     <string name="hide_the_recycle_bin">Skjul papirkurven</string>
     <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flytter %d element til papirkurven</item>
         <item quantity="other">Flytter %d elementer til papirkurven</item>
@@ -789,9 +819,9 @@
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Om</string>
     <string name="website">Website</string>
@@ -995,6 +1025,7 @@
     <string name="why_upgrade_footer">100% Money Back Guarantee</string>
     <string name="why_upgrade_footer_one_time_payment">One time payment</string>
     <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
@@ -1056,19 +1087,21 @@
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="audio_record_view_title">Audio Record View (lydvisualisering)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Trial expired</string>
     <string name="start_free_trial">Start free trial</string>
     <string name="trial_expires_soon">Your trial expires soon.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">

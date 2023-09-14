@@ -4,8 +4,8 @@
 
     <!-- Support project -->
     <string name="action_support_project">परियोजना का समर्थन</string>
-    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
-    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="pref_pay_summary">भविष्य के विकास और अतिरिक्त सुविधाओं का समर्थन करने के लिए सशुल्क ऐप प्राप्त करें</string>
+    <string name="support_project_summary">भविष्य के विकास में सहायता करने और अतिरिक्त सुविधाओं को अनलॉक करने के लिए हमारा एक सशुल्क ऐप प्राप्त करें</string>
     <string name="learn_more">और जानो</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
@@ -21,29 +21,31 @@
     <string name="plus_summary">हमारे सभी ऐप विज्ञापन-मुक्त, ओपन सोर्स हैं और यह हमेशा उस तरह रहेगा। आपकी मदद से हम और अधिक सुविधाओं को लागू करने और उन्हें और भी बेहतर बनाने में सक्षम हैं</string>
     <string name="lifebuoy_title">हम आपका समर्थन करेंगे</string>
     <string name="lifebuoy_summary">यदि किसी कारण से आप हमारे ऐप को बर्दाश्त नहीं कर सकते हैं, लेकिन वास्तव में सभी सुविधाओं का उपयोग करना चाहते हैं, तो बस हमें ईमेल करें</string>
-    <string name="participants_title">Participants</string>
-    <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
-    <string name="unlock">Unlock</string>
+    <string name="participants_title">प्रतिभागियों</string>
+    <string name="special_thanks_to">को विशेष धन्यवाद</string>
+    <string name="tip_kind">अच्छा समर्थन</string>
+    <string name="tip_excellent">उत्कृष्ट समर्थन</string>
+    <string name="tip_incredible">बहुत बढ़िया समर्थन</string>
+    <string name="tip_jar">जीविका</string>
+    <string name="unlock">अनलॉक</string>
     <string name="donate_text_g">
         <![CDATA[
-            For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
-            If you like our apps which are offline, non-intrusive and have no ads, please consider supporting us in some way. We would be very grateful.<br><br>
-            Thank you!
+            जो लोग Google Play का उपयोग नहीं करते हैं, उनके लिए एप्लिकेशन के सभी कार्यों को अनलॉक करना संभव है। <br>
+            यदि आपको हमारे ऐप्स पसंद हैं जो ऑफ़लाइन, गैर-दखल देने वाले और कोई विज्ञापन नहीं हैं, तो कृपया किसी तरह से हमें समर्थन देने पर विचार करें। हम बहुत आभारी होंगे.<br><br>
+            धन्यवाद!
         ]]>
     </string>
 
     <!--Billing-->
-    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
-    <string name="no_purchase_found">No purchase found.</string>
-    <string name="restore_purchase">Restore purchase</string>
-    <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+    <string name="restored_previous_purchase_please_restart">पिछली खरीदारी बहाल की गई. कृपया सभी सुविधाओं का उपयोग करने के लिए ऐप को पुनः आरंभ करें।</string>
+    <string name="no_purchase_found">कोई खरीदारी नहीं मिली.</string>
+    <string name="restore_purchase">पुनःस्थापन क्रय</string>
+    <string name="restoring_purchase">खरीदारी बहाल की जा रही है...</string>
 
-    <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
+    <string name="no_connection">कोई कनेक्शन नहीं</string>
+    <string name="per_month">%s/month</string>
+
+    <string name="show_contact_thumbnails_g">संपर्क थंबनेल दिखाएँ</string>
     <string name="use_icon_tabs_summary">टैब पर पाठ के बजाय प्रतीक</string>
     <string name="use_icon_tabs">टैब आइकन का उपयोग करें</string>
     <string name="round_play_icon_summary">नाटक/ठहराव आइकन प्राथमिक रंग में रंगा हुआ है</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">डिफ़ॉल्ट टैब</string>
     <string name="color">रंग</string>
     <string name="black">काला</string>
+    <string name="black_locked">काला (लॉक)</string>
     <string name="show_dividers">डिवाइडर दिखाएं</string>
     <string name="colored_contacts">संपर्क रंगीन माउस</string>
+    <string name="contact_color_list">संपर्क रंग सूची</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,14 +85,21 @@
     <string name="contact_photo">संपर्क फोटो</string>
     <string name="blurry_contact_photo">धुँधली संपर्क फ़ोटो</string>
     <string name="blurry_wallpaper">धुंधला वॉलपेपर</string>
+    <string name="text_cursor_color">पाठ कर्सर रंग</string>
+    <string name="lines_count">लाइनों की गिनती</string>
+    <string name="show_button_blocked_numbers">ब्लॉक किए गए कॉल को छिपाने के लिए बटन न दिखाएँ</string>
+    <string name="flash_for_alerts">अलर्ट के लिए फ्लैश</string>
+    <string name="clean_theme_g">साफ़</string>
+    <string name="concept_theme_g">अवधारणा</string>
 
     <string name="accent_color">एक्सेंट रंग</string>
     <string name="incoming_call">इनकमिंग कॉल</string>
     <string name="outgoing_call">आउटगोइंग कॉल</string>
     <string name="missed_call">मिस्ड कॉल</string>
     <string name="unblock_number">अनब्लॉक नंबर</string>
+    <string name="unblock_numbers">नंबरों को अनब्लॉक करें</string>
     <string name="recents">हाल में</string>
-    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
+    <string name="unblock_confirmation">क्या आप वाकई \"%s\" को अनब्लॉक करना चाहते हैं?</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -133,12 +144,15 @@
     <string name="screen_slide_animation">स्क्रीन स्लाइड एनिमेशन</string>
     <string name="screen_slide_animation_zoomout">ज़ूम आउट करें</string>
     <string name="screen_slide_animation_depth">गहराई</string>
-    <string name="show_phone_numbers_g">Show phone numbers</string>
+    <string name="show_phone_numbers_g">फ़ोन नंबर दिखाएं</string>
 
     <!-- Apps -->
     <string name="get">प्राप्त करें</string>
     <string name="open">खुला</string>
     <string name="collection">संग्रह</string>
+    <string name="collection_summary">ऐप अनलॉक करने के लिए एक संग्रह बनाएं</string>
+    <string name="limited_supply">सीमित आपूर्ति</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
@@ -146,27 +160,27 @@
     <string name="right_gallery">Right Gallery</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our app to view and edit contacts.<br><br>
-            Thanks
+            अरे,<br><br>
+            यदि आपको यह ऐप पसंद है, तो हम अनुशंसा करते हैं कि आप संपर्कों को देखने और संपादित करने के लिए हमारा ऐप इंस्टॉल करें।<br><br>
+            धन्यवाद
         ]]></string>
     <string name="recommendation_dialog_dialer_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our call app.<br><br>
-            Thanks
+            अरे,<br><br>
+            यदि आपको यह ऐप पसंद है, तो हम अनुशंसा करते हैं कि आप हमारा कॉल ऐप इंस्टॉल करें।<br><br>
+            धन्यवाद
         ]]></string>
     <string name="recommendation_dialog_messages_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our messaging app.<br><br>
-            Thanks
+            अरे,<br><br>
+            यदि आपको यह ऐप पसंद है, तो हम अनुशंसा करते हैं कि आप हमारा मैसेजिंग ऐप इंस्टॉल करें।<br><br>
+            धन्यवाद
         ]]></string>
     <string name="recommendation_dialog_gallery_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our photo viewing and editing app.<br><br>
-            Thanks
+            अरे,<br><br>
+            यदि आपको यह ऐप पसंद है, तो हम अनुशंसा करते हैं कि आप हमारा फोटो देखने और संपादन ऐप इंस्टॉल करें।<br><br>
+            धन्यवाद
         ]]></string>
 
     <!-- SMS -->
@@ -187,9 +201,9 @@
     <string name="mute">मूक</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">रिश्ता</string>
+    <string name="relations_g">संबंधित व्यक्ति</string>
+    <string name="relation_hint_g">संबंधित व्यक्ति</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

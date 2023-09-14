@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Ακύρωση</string>
+    <string name="close">Κλείσιμο</string>
     <string name="back">Πίσω</string>
     <string name="nothing">Τίποτα</string>
     <string name="later">Αργότερα</string>
@@ -75,6 +76,8 @@
     <string name="updating">Ενημέρωση…</string>
     <string name="phone_storage">Αποθηκευτικός χώρος Τηλεφώνου</string>
     <string name="phone_storage_hidden">Ο Αποθηκευτικός χώρος του τηλεφώνου (δεν είναι ορατός από άλλες εφαρμογές)</string>
+    <string name="audio">Ήχος</string>
+    <string name="scanning">Scanning…</string>
 
     <!-- Events -->
     <string name="birthday">Γενέθλια</string>
@@ -98,6 +101,7 @@
     <string name="increase_column_count">Αύξηση αριθμού στηλών</string>
     <string name="reduce_column_count">Μείωση αριθμού στηλών</string>
     <string name="column_count">Αρίθμηση στηλών</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Αρίθμηση στηλών πορτρέτου</string>
     <string name="landscape_column_count">Αρίθμηση στηλών τοπίου</string>
     <string name="change_cover_image">Αλλαγή εξώφυλλου φακέλου</string>
@@ -105,6 +109,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d στήλη</item>
         <item quantity="other">%d στήλες</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
@@ -118,8 +126,10 @@
     <string name="must_make_default_dialer">Θα πρέπει να οριστεί προεπιλεγμένη εφαρμογή για χρήση αποκλεισμένων αριθμών.</string>
     <string name="set_as_default">Ορισμός ως προεπιλογής</string>
     <string name="block_confirmation">Σίγουρα να αποκλειστεί ο \"%s\"?</string>
-    <string name="block_unknown_calls">Αποκλεισμός κλήσεων από μη αποθηκευμένες επαφές</string>
-    <string name="block_unknown_messages">Αποκλεισμός μηνυμάτων από μη αποθηκευμένες επαφές</string>
+    <string name="block_not_stored_calls">Αποκλεισμός κλήσεων από μη αποθηκευμένες επαφές</string>
+    <string name="block_hidden_calls">Αποκλεισμός κλήσεων από κρυφούς αριθμούς</string>
+    <string name="block_not_stored_messages">Αποκλεισμός μηνυμάτων από μη αποθηκευμένες επαφές</string>
+    <string name="block_hidden_messages">Αποκλεισμός μηνυμάτων από κρυφούς αριθμούς</string>
     <string name="add_blocked_number_helper_text">Εισάγετε έναν αριθμό ή ένα μοτίβο (π.χ. *12345*, +1*8888) για να μπλοκάρετε όλες τις κλήσεις και τα μηνύματα από αριθμούς που αντιστοιχούν στο μοτίβο.</string>
     <string name="must_make_default_caller_id_app">Αδύνατη η φραγή αγνώστων αριθμών χωρίς άδεια ID κλήσεων.</string>
     <!-- Favorites -->
@@ -131,6 +141,7 @@
     <string name="search">Αναζήτηση</string>
     <string name="search_in_placeholder">Αναζήτηση σε %s</string>
     <string name="type_2_characters">Πληκτρολογήστε τουλάχιστον 2 χαρακτήρες για να ξεκινήσετε την αναζήτηση.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Αναζήτηση επαφών</string>
     <string name="search_favorites">Αναζήτηση αγαπημένων</string>
     <string name="search_apps">Αναζήτηση εφαρμογών</string>
@@ -158,8 +169,16 @@
     <string name="no_contacts_permission">Απαιτείται άδεια Επαφών</string>
     <string name="no_camera_permissions">Απαιτείται άδεια Κάμερας</string>
     <string name="no_audio_permissions">Απαιτείται άδεια Ήχου</string>
-    <string name="no_post_notifications_permissions">Απαιτείται άδεια για την ανάρτηση ειδοποιήσεων</string>
     <string name="no_permission">Χωρίς άδεια</string>
+    <string name="allow_notifications_reminders">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει υπενθυμίσεις.</string>
+    <string name="allow_notifications_files">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τη γραμμή προόδου..</string>
+    <string name="allow_notifications_music_player">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να αναπαράγει τραγούδια..</string>
+    <string name="allow_notifications_voice_recorder">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να καταγράψει ήχο.</string>
+    <string name="allow_notifications_incoming_calls">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τις εισερχόμενες κλήσεις.</string>
+    <string name="allow_notifications_incoming_messages">Πρέπει να επιτρέψετε στην εφαρμογή να εμφανίζει ειδοποιήσεις, διαφορετικά δεν μπορεί να εμφανίσει τα εισερχόμενα μηνύματα.</string>
+    <string name="allow_alarm_scheduled_messages">Πρέπει να επιτρέψετε στην εφαρμογή την πρόσβαση σε εσωτερικές ειδοποιήσεις, διαφορετικά δεν μπορεί να στείλει προγραμματισμένα μηνύματα.</string>
+    <string name="grant_permission">Χορήγηση άδειας</string>
+    <string name="permission_required">Απαιτείται άδεια</string>
     <!-- Renaming -->
     <string name="rename_file">Μετονομασία αρχείου</string>
     <string name="rename_folder">Μετονομασία φακέλου</string>
@@ -291,6 +310,7 @@
     <string name="duration">Διάρκεια</string>
     <string name="artist">Καλλιτέχνης</string>
     <string name="album">Αλμπουμ</string>
+    <string name="genre">Είδος</string>
     <string name="focal_length">Εστιακό μήκος</string>
     <string name="exposure_time">Χρόνος έκθεσης</string>
     <string name="iso_speed">Ταχύτητα ISO</string>
@@ -395,6 +415,7 @@
     <string name="last_modified">Τελευταία τροπ/ηση</string>
     <string name="date_created">Ημερ. δημιουργίας</string>
     <string name="date_taken">Ημερ. λήψης</string>
+    <string name="date_added">Ημερ. προσθήκης</string>
     <string name="title">Τίτλο</string>
     <string name="filename">Όνομα αρχείου</string>
     <string name="extension">Επέκταση</string>
@@ -454,6 +475,12 @@
     <string name="lock_folder_pro">Κλείδωμα Φακέλου (Pro)</string>
     <string name="unlock_folder">Ξεκλείδωμα Φακέλου</string>
     <string name="lock_folder_notice">Αυτή η προστασία λειτουργεί μόνο για αυτήν την εφαρμογή, δεν πρόκειται να αντικαταστήσει την πραγματική κρυπτογράφηση του Συστήματος.</string>
+    <string name="enter_password">Εισαγωγή κωδικού</string>
+    <string name="password">Κωδικός πρόσβασης</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Παρακαλώ εισάγετε τον κωδικό</string>
+    <string name="invalid_password">Εσφαλμένος κωδικός</string>
     <!-- Times -->
     <string name="yesterday">Χθές</string>
     <string name="today">Σήμερα</string>
@@ -633,6 +660,7 @@
     <string name="use_24_hour_time_format">Χρήση 24ώρου</string>
     <string name="change_date_and_time_format">Αλλαγή μορφής ημερομηνίας και ώρας</string>
     <string name="sunday_first">Έναρξη εβδομάδας την Κυριακή</string>
+    <string name="start_week_on">Έναρξη εβδομάδας την</string>
     <string name="widgets">Γραφικά στοιχεία</string>
     <string name="use_same_snooze">Χρήση πάντα του ίδιου χρόνου αναβολής</string>
     <string name="snooze_time">Χρόνος αναβολής</string>
@@ -694,6 +722,7 @@
     <string name="show_the_recycle_bin">Εμφάνιση Κάδου Ανακύκλωσης</string>
     <string name="hide_the_recycle_bin">Απόκρυψη Κάδου Ανακύκλωσης</string>
     <string name="open_the_recycle_bin">Άνοιγμα Κάδου Ανακύκλωσης</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Μετακινήθηκε %d στοιχείο στον Κάδο</item>
         <item quantity="other">Μετακινήθηκαν %d στοιχεία στον Κάδο</item>
@@ -790,9 +819,9 @@
     <string name="upgraded_to_pro_gallery">Γεια σας,\n\nφαίνεται ότι έχετε ήδη την έκδοση της εφαρμογής Pro. Μόλις μείνετε ευχαριστημένοι με αυτήν και ίσως μεταφέρατε τις ρυθμίσεις και τα αγαπημένα σας, μπορείτε να την απεγκαταστήσετε για να αποφύγετε την τυχαία εκκίνησή της, καθώς δεν θα τη χρειάζεστε πλέον.\n\nΕυχαριστούμε!</string>
     <string name="upgraded_from_free">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Μόλις μείνετε ευχαριστημένοι με αυτή και ίσως μεταφέρετε τα δεδομένα σας, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση για να αποφύγετε τυχαία εκκίνησή της, καθώς δεν θα την χρειάζεστε πλέον.\n\nΕυχαριστώ!</string>
     <string name="upgraded_to_pro">Γεια σας,\n\nφαίνεται ότι έχετε ήδη την έκδοση της εφαρμογής Pro επίσης. Μόλις μείνετε ευχαριστημένοι με αυτήν και ίσως μεταφέρατε τα δεδομένα σας, μπορείτε να την απεγκαταστήσετε για να αποφύγετε την τυχαία εκκίνησή της, καθώς δεν θα την χρειάζεστε πια.\n\nΕυχαριστούμε!</string>
-    <string name="upgraded_to_pro_calendar">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Αν θέλετε να μεταφέρετε τα τοπικά αποθηκευμένα συμβάντα σας, θα πρέπει να το κάνετε χειροκίνητα, εξάγοντάς τα σε αρχείο .ics στην έκδοση της δωρεάν εφαρμογής και εισάγοντας τα εδώ μέσω του μενού επάνω. \n\nΜόλις μείνετε ικανοποιημένοι με την εγκατάστασή σας στην έκδοση Pro, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση, καθώς δεν την χρειάζεστε πλέον.\n\nΕυχαριστούμε!</string>
-    <string name="upgraded_to_pro_contacts">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Αν είχατε αποθηκεύσει επαφές στο \"%s\", θα πρέπει να τις μεταφέρετε χειροκίνητα, εξάγοντας σε αρχείο .vcf από την έκδοση της δωρεάν εφαρμογής και εισάγοντας εδώ μέσω του επάνω μενού.\n\nΜόλις είστε ικανοποιημένοι με τη ρύθμιση στην έκδοση Pro, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση, καθώς δεν τη χρειάζεστε πλέον.\n\n Ευχαριστούμε!</string>
-    <string name="upgraded_to_pro_notes">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Αν θέλετε να μεταφέρετε τις σημειώσεις σας, θα πρέπει να το κάνετε χειροκίνητα εξάγοντας τις σε ένα αρχείο στην έκδοση της δωρεάν εφαρμογής και εισάγοντας τις εδώ μέσω του επάνω μενού. \n\nΜόλις μείνετε ικανοποιημένοι με την εγκατάστασή σας στην έκδοση Pro, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση, καθώς δεν θα την χρειάζεστε πλέον.\n\nΕυχαριστούμε!</string>
+    <string name="upgraded_from_free_calendar">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Αν θέλετε να μεταφέρετε τα τοπικά αποθηκευμένα συμβάντα σας, θα πρέπει να το κάνετε χειροκίνητα, εξάγοντάς τα σε αρχείο .ics στην έκδοση της δωρεάν εφαρμογής και εισάγοντας τα εδώ μέσω του μενού επάνω. \n\nΜόλις μείνετε ικανοποιημένοι με την εγκατάστασή σας στην έκδοση Pro, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση, καθώς δεν την χρειάζεστε πλέον.\n\nΕυχαριστούμε!</string>
+    <string name="upgraded_from_free_contacts">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Αν είχατε αποθηκεύσει επαφές στο \"%s\", θα πρέπει να τις μεταφέρετε χειροκίνητα, εξάγοντας σε αρχείο .vcf από την έκδοση της δωρεάν εφαρμογής και εισάγοντας εδώ μέσω του επάνω μενού.\n\nΜόλις είστε ικανοποιημένοι με τη ρύθμιση στην έκδοση Pro, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση, καθώς δεν τη χρειάζεστε πλέον.\n\n Ευχαριστούμε!</string>
+    <string name="upgraded_from_free_notes">Γεια σας,\n\nφαίνεται ότι μόλις αναβαθμίσατε από την δωρεάν έκδοση. Αν θέλετε να μεταφέρετε τις σημειώσεις σας, θα πρέπει να το κάνετε χειροκίνητα εξάγοντας τις σε ένα αρχείο στην έκδοση της δωρεάν εφαρμογής και εισάγοντας τις εδώ μέσω του επάνω μενού. \n\nΜόλις μείνετε ικανοποιημένοι με την εγκατάστασή σας στην έκδοση Pro, μπορείτε να απεγκαταστήσετε την παλιά δωρεάν έκδοση, καθώς δεν θα την χρειάζεστε πλέον.\n\nΕυχαριστούμε!</string>
     <!-- About -->
     <string name="about">Σχετικά</string>
     <string name="website">Ιστοσελίδα</string>
@@ -996,6 +1025,7 @@
     <string name="why_upgrade_footer">100% Εγγύηση επιστροφής χρημάτων</string>
     <string name="why_upgrade_footer_one_time_payment">Εφάπαξ πληρωμή</string>
     <string name="why_upgrade_improved_design">Βελτιωμένος σχεδιασμός</string>
+    <string name="why_upgrade_many_other_improvements">Πολλές άλλες βελτιώσεις</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Προηγμένος επεξεργαστής φωτογραφιών</string>
     <string name="why_upgrade_advanced_photo_video_editor">Προηγμένος επεξεργαστής Φώτο &amp; Βίντεο</string>
@@ -1061,8 +1091,10 @@
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Η Δοκιμή έληξε</string>
     <string name="start_free_trial">Ξεκινήστε δωρεάν δοκιμή</string>

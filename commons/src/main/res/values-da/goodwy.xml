@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Hvis du af en eller anden grund ikke har råd til vores app, men virkelig vil bruge alle funktionerne, skal du bare sende os en e-mail</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">God support</string>
+    <string name="tip_excellent">Fremragende support</string>
+    <string name="tip_incredible">Fantastisk support</string>
+    <string name="tip_jar">Støtte</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Ingen forbindelse</string>
+    <string name="per_month">%s/måned</string>
 
     <string name="show_contact_thumbnails_g">Vis kontakt miniature-billede</string>
     <string name="use_icon_tabs_summary">Ikoner i stedet for tekst under faner</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Fanen Standard</string>
     <string name="color">farve</string>
     <string name="black">Sort</string>
+    <string name="black_locked">Black (Locked)</string>
     <string name="show_dividers">Vis skillevægge</string>
     <string name="colored_contacts">Ikoner med farvet kontakt</string>
+    <string name="contact_color_list">Kontakt farveliste</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,14 +85,19 @@
     <string name="contact_photo">Kontaktbillede</string>
     <string name="blurry_contact_photo">blurry kontaktbillede</string>
     <string name="blurry_wallpaper">blurry wallpaper</string>
-
-    Translated with www.DeepL.com/Translator (free version)
+    <string name="text_cursor_color">Farve på tekstmarkør</string>
+    <string name="lines_count">Antal linjer</string>
+    <string name="show_button_blocked_numbers">Vis knappen for ikke at skjule blokerede opkald</string>
+    <string name="flash_for_alerts">Flash til advarsler</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Fremhævningsfarve</string>
     <string name="incoming_call">Indgående opkald</string>
     <string name="outgoing_call">Udgående opkald</string>
     <string name="missed_call">Ubesvaret opkald</string>
     <string name="unblock_number">Fjern blokering af nummer</string>
+    <string name="unblock_numbers">Fjern blokering af numre</string>
     <string name="recents">Frisk</string>
     <string name="unblock_confirmation">Er du sikker på, at du vil fjerne blokeringen af \"%s\"?</string>
 
@@ -141,6 +150,9 @@
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Kollektion</string>
+    <string name="collection_summary">Opret en samling for at låse appen op</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

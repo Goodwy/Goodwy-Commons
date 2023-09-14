@@ -30,6 +30,7 @@ import android.provider.OpenableColumns
 import android.provider.Settings
 import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
+import android.text.TextUtils
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
@@ -44,16 +45,19 @@ import androidx.core.os.bundleOf
 import androidx.exifinterface.media.ExifInterface
 import androidx.loader.content.CursorLoader
 import com.github.ajalt.reprint.core.Reprint
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.AlarmSound
 import com.goodwy.commons.models.BlockedNumber
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.io.BufferedReader
 import java.io.File
+import java.io.IOException
+import java.io.InputStreamReader
 import java.text.SimpleDateFormat
 import java.util.*
-import android.content.Intent
+
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -491,8 +495,8 @@ fun PackageManager.isAppInstalled(packageName: String): Boolean =
     getInstalledApplications(PackageManager.GET_META_DATA)
         .firstOrNull { it.packageName == packageName } != null
 
-fun Context.addLockedLabelIfNeeded(stringId: Int): String {
-    return if (isOrWasThankYouInstalled()) {
+fun Context.addLockedLabelIfNeeded(stringId: Int, lock: Boolean = false): String {
+    return if (lock) {
         getString(stringId)
     } else {
         "${getString(stringId)} (${getString(R.string.feature_locked)})"
@@ -893,7 +897,7 @@ fun Context.getFontSizeText() = getString(
 )
 
 fun Context.getTextSize() = when (baseConfig.fontSize) {
-    FONT_SIZE_SMALL -> resources.getDimension(R.dimen.smaller_text_size)
+    FONT_SIZE_SMALL -> resources.getDimension(R.dimen.normal_text_size)
     FONT_SIZE_MEDIUM -> resources.getDimension(R.dimen.bigger_text_size)
     FONT_SIZE_LARGE -> resources.getDimension(R.dimen.big_text_size)
     else -> resources.getDimension(R.dimen.extra_big_text_size)
@@ -1095,7 +1099,7 @@ fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean, drawableId
     val color = if (isActive) {
         getProperPrimaryColor()
     } else {
-        getProperTextColor()
+        getProperTextColor().adjustAlpha(0.6f)
     }
 
     if (drawableId != null) {
@@ -1111,6 +1115,29 @@ fun Context.sendEmailIntent(recipient: String) {
     Intent(Intent.ACTION_SENDTO).apply {
         data = Uri.fromParts(KEY_MAILTO, recipient, null)
         launchActivityIntent(this)
+    }
+}
+
+fun Context.openNotificationSettings() {
+    if (isOreoPlus()) {
+        val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+        intent.putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+        startActivity(intent)
+    } else {
+        // For Android versions below Oreo, you can't directly open the app's notification settings.
+        // You can open the general notification settings instead.
+        val intent = Intent(Settings.ACTION_SETTINGS)
+        startActivity(intent)
+    }
+}
+
+@RequiresApi(Build.VERSION_CODES.S)
+fun Context.openRequestExactAlarmSettings(appId: String) {
+    if (isSPlus()) {
+        val uri = Uri.fromParts("package", appId, null)
+        val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
+        intent.data = uri
+        startActivity(intent)
     }
 }
 
@@ -1145,4 +1172,39 @@ fun Context.startCallPendingIntent(recipient: String): PendingIntent {
 fun Context.sendSMSPendingIntent(recipient: String): PendingIntent {
     return PendingIntent.getActivity(this, 0,
         Intent(Intent.ACTION_SENDTO, Uri.fromParts("smsto", recipient, null)), PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+}
+
+fun Context.getLetterBackgroundColors(): ArrayList<Long> {
+    return when (baseConfig.contactColorList) {
+        LBC_ORIGINAL -> letterBackgroundColors
+        LBC_IOS -> letterBackgroundColorsIOS
+        LBC_ARC -> letterBackgroundColorsArc
+        else -> letterBackgroundColorsAndroid
+    }
+}
+
+fun isMiUi(): Boolean {
+    return !TextUtils.isEmpty(getSystemProperty("ro.miui.ui.version.name"))
+}
+
+fun getSystemProperty(propName: String): String? {
+    val line: String
+    var input: BufferedReader? = null
+    try {
+        val p = Runtime.getRuntime().exec("getprop $propName")
+        input = BufferedReader(InputStreamReader(p.inputStream), 1024)
+        line = input.readLine()
+        input.close()
+    } catch (ex: IOException) {
+        return null
+    } finally {
+        if (input != null) {
+            try {
+                input.close()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+        }
+    }
+    return line
 }

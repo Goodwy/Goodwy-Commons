@@ -12,8 +12,8 @@
         android:layout_marginTop="@dimen/activity_margin"
         android:layout_centerHorizontal="true"
         android:paddingBottom="@dimen/small_margin"
-        android:paddingLeft="@dimen/activity_margin"
-        android:paddingRight="@dimen/activity_margin"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
         android:paddingTop="@dimen/activity_margin"
         android:text="@string/enter_pin"/>
 

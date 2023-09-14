@@ -5,12 +5,14 @@
     <string name="general">General</string>
     <string name="default_tab">Default tab</string>
     <string name="color">color</string>
-    <string name="black">Black</string>
+    <string name="black">Svart</string>
+    <string name="black_locked">Svart (låst)</string>
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="unblock_number">Unblock number</string>
+    <string name="unblock_number">Fjern blokkering av nummer</string>
+    <string name="unblock_numbers">Oppheve blokkeringen av numre</string>
     <string name="recents">Recents</string>
     <string name="message">Budskap</string>
     <string name="settings_icon">Innstillinger-ikonet</string>
@@ -36,10 +38,10 @@
     <string name="lifebuoy_summary">Hvis du av en eller annen grunn ikke har råd til appen vår, men virkelig vil bruke alle funksjonene, er det bare å sende oss en e-post</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">God støtte</string>
+    <string name="tip_excellent">Utmerket støtte</string>
+    <string name="tip_incredible">Fantastisk støtte</string>
+    <string name="tip_jar">Støtte</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -54,7 +56,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Ingen forbindelse</string>
+    <string name="per_month">%s/måned</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>
@@ -72,6 +76,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="contact_color_list">Fargeliste for kontakt</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -92,6 +97,12 @@
     <string name="contact_photo">Foto av kontakten</string>
     <string name="blurry_contact_photo">Uklart kontaktbilde</string>
     <string name="blurry_wallpaper">Sløret bakgrunnsbilde</string>
+    <string name="text_cursor_color">Farge på tekstmarkør</string>
+    <string name="lines_count">Linjer teller</string>
+    <string name="show_button_blocked_numbers">Vis knappen for ikke å skjule blokkerte anrop</string>
+    <string name="flash_for_alerts">Flash for varsler</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -142,6 +153,9 @@
     <string name="get">Få</string>
     <string name="open">Åpent</string>
     <string name="collection">Innsamling</string>
+    <string name="collection_summary">Bygge en samling for å låse opp appen</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

@@ -1,4 +1,4 @@
- <resources>
+<resources>
     <string name="message">Порука</string>
     <string name="settings_icon">Иконица подешавања</string>
 
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">Није пронађена ниједна куповина.</string>
     <string name="restore_purchase">Обнови куповину</string>
     <string name="restoring_purchase">Обнављање куповине…</string>
-    <string name="could_not_restore_purchase">Није могуће обновити куповину.</string>
+
+    <string name="no_connection">Без конекције</string>
+    <string name="per_month">%s/месечно</string>
 
     <string name="show_contact_thumbnails_g">Прикажи сличице контаката</string>
     <string name="use_icon_tabs_summary">Иконице уместо текста на картицама</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Подразумевана картица</string>
     <string name="color">боја</string>
     <string name="black">Црна</string>
+    <string name="black_locked">Црна (закљуцано)</string>
     <string name="show_dividers">Прикажи разделнике</string>
     <string name="colored_contacts">Обојене иконице контакатa</string>
+    <string name="contact_color_list">Сет боја контакта</string>
     <string name="transparent_navigation_bar">Провидна доња навигациона трака</string>
     <string name="kids_mode">Режим за децу</string>
     <string name="kids_mode_summary">Поједностављено окружење, изаберите бојење</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Фотографија контакта</string>
     <string name="blurry_contact_photo">Замагљена фотографија контакта</string>
     <string name="blurry_wallpaper">Замагљена позадина</string>
+    <string name="text_cursor_color">Боја курсора текста</string>
+    <string name="lines_count">Број линија</string>
+    <string name="show_button_blocked_numbers">Прикажите дугме да не сакривате блокиране позиве</string>
+    <string name="flash_for_alerts">Блиц за упозорења</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Наглашена боја</string>
     <string name="incoming_call">Долазни позив</string>
     <string name="outgoing_call">Одлазни позив</string>
     <string name="missed_call">Пропуштени позив</string>
     <string name="unblock_number">Одблокирај број</string>
+    <string name="unblock_numbers">Одблокирај бројеве</string>
     <string name="recents">Недавно</string>
     <string name="unblock_confirmation">Да ли сте сигурни да желите да одблокирате \"%s\"?</string>
 
@@ -138,6 +149,9 @@
     <string name="get">Преузми</string>
     <string name="open">Отвори</string>
     <string name="collection">Колекција</string>
+    <string name="collection_summary">Направите колекцију да бисте откључали апликацију</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
@@ -246,4 +260,3 @@
     <string name="relation_brother_in_law_g">Девер</string>
     <string name="relation_sister_in_law_g">Свастика</string>
 </resources>
-

@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">Aceptar</string>
     <string name="cancel">Cancelar</string>
+    <string name="close">Close</string>
     <string name="back">De volta</string>
     <string name="nothing">Nada</string>
     <string name="later">Despois</string>
@@ -75,6 +76,8 @@
     <string name="updating">Actualizando…</string>
     <string name="phone_storage">Almacenaxe do móbil</string>
     <string name="phone_storage_hidden">Almacenaxe do móbil (non visible por outras apps)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Aniversario</string>
     <string name="anniversary">Aniversario</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Aumenta o número de columnas</string>
     <string name="reduce_column_count">Reduce o número de columnas</string>
     <string name="column_count">Conta columnas</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Número das columnas do retrato</string>
     <string name="landscape_column_count">Número das columnas horizontais</string>
     <string name="change_cover_image">Cambiar a imaxe de portada</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d columna</item>
         <item quantity="other">%d columnas</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">Para facer uso dos números bloqueados, tes que poñer este aplicativo como o marcador telefónico por defecto.</string>
     <string name="set_as_default">Poñer por defecto</string>
     <string name="block_confirmation">Seguro que queres bloquear a \"%s\"?</string>
-    <string name="block_unknown_calls">Bloquealas chamadas dos contactos non gardados</string>
-    <string name="block_unknown_messages">Bloquealas mensaxes do contactos non gardados</string>
+    <string name="block_not_stored_calls">Bloquealas chamadas dos contactos non gardados</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Bloquealas mensaxes do contactos non gardados</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Introduce un número ou un patrón (por exemplo, *12345*, +1*8888) para bloquear todalas chamadas e mensaxes dos números que coincidan co patrón.</string>
     <string name="must_make_default_caller_id_app">Non se poden bloquealos números descoñecidos sen o permiso do identificador das chamadas.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Buscar</string>
     <string name="search_in_placeholder">Busca en %s</string>
     <string name="type_2_characters">Escribe polo menos dous caracteres para iniciar a busca.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Buscar contactos</string>
     <string name="search_favorites">Atopalos favoritos</string>
     <string name="search_apps">Atopalas aplicacións</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Requírese permiso de Contactos</string>
     <string name="no_camera_permissions">Requírese permiso da cámara</string>
     <string name="no_audio_permissions">Requírese permiso de audio</string>
-    <string name="no_post_notifications_permissions">Requírese permiso para publicar notificacións</string>
     <string name="no_permission">Sen permiso</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">Renomear ficheiro</string>
     <string name="rename_folder">Renomear cartafol</string>
@@ -296,6 +315,7 @@
     <string name="duration">Duración</string>
     <string name="artist">Artista</string>
     <string name="album">Álbum</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Lonxitude focal</string>
     <string name="exposure_time">Tempo de exposición</string>
     <string name="iso_speed">Velocidade ISO</string>
@@ -396,6 +416,7 @@
     <string name="last_modified">Modificación</string>
     <string name="date_created">Data de creación</string>
     <string name="date_taken">Creación</string>
+    <string name="date_added">Date added</string>
     <string name="title">Título</string>
     <string name="filename">Nome do ficheiro</string>
     <string name="extension">Extensión</string>
@@ -455,6 +476,12 @@
     <string name="lock_folder_pro">Bloquear cartafol (Pro)</string>
     <string name="unlock_folder">Desbloquear cartafol</string>
     <string name="lock_folder_notice">Esta protección só funciona neste app, non está pensado para reemprazar un cifrado de cartafois real a nivel de sistema.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Onte</string>
     <string name="today">Hoxe</string>
@@ -635,6 +662,7 @@
     <string name="use_24_hour_time_format">Usalo formato de 24 horas</string>
     <string name="change_date_and_time_format">Cambiar formato de hora e data</string>
     <string name="sunday_first">Comezar semana no domingo</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Usar sempre o mesmo tempo de aprazamento</string>
     <string name="snooze_time">Tempo de aprazamento</string>
@@ -696,6 +724,7 @@
     <string name="show_the_recycle_bin">Amosar a Papeleira</string>
     <string name="hide_the_recycle_bin">Ocultar a Papeleira</string>
     <string name="open_the_recycle_bin">Abrila papeleira de reciclaxe</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movendo %d elemento á Papeleira</item>
         <item quantity="other">Movendo %d elementos á Papeleira</item>
@@ -800,21 +829,21 @@
 \nParece que xa tela versión pro da aplicación. Unha vez que esteas satisfeito con el e migraches os teus datos, podes desinstalar esta aplicación. Para evitar iniciala accidentalmente porque xa non a necesitas.
 \n
 \nMoitas grazas!</string>
-    <string name="upgraded_to_pro_calendar">Ola,
+    <string name="upgraded_from_free_calendar">Ola,
 \n
 \nParece que actualizaches a versión gratuíta á versión profesional. Se queres migralos teus eventos almacenados localmente dende a versión gratuíta, debes exportalos manualmente como ficheiros .ics na versión gratuíta e importalos á versión profesional a través do menú superior.
 \n
 \nSe estás satisfeito coa configuración profesional, podes desinstalala versión gratuíta anterior xa que xa non a necesitas.
 \n
 \nGrazas!</string>
-    <string name="upgraded_to_pro_contacts">Ola,
+    <string name="upgraded_from_free_contacts">Ola,
 \n
 \nParece que acabas de actualizar dende a versión gratuíta. Se tes contactos gardados en \"%s\", terás que migralos manualmente exportándoos a un ficheiro .vcf na versión gratuíta da aplicación e importándoos aquí desde o menú superior.
 \n
 \nUnha vez que estea satisfeito coa súa configuración na versión Pro, pode desinstalala versión gratuíta anterior porque xa non a necesita.
 \n
 \nMoitas grazas!</string>
-    <string name="upgraded_to_pro_notes">Ola,
+    <string name="upgraded_from_free_notes">Ola,
 \n
 \nParece que acabas de actualizar desde a versión gratuíta. Se queres migralas notas, debes facelo manualmente exportándoas a un ficheiro na versión gratuíta da aplicación e importándoas aquí a través do menú superior.
 \n
@@ -998,6 +1027,7 @@
     <string name="why_upgrade_footer">100% garantía da devolución do diñeiro</string>
     <string name="why_upgrade_footer_one_time_payment">Pago unha soa vez</string>
     <string name="why_upgrade_improved_design">Deseño mellorado</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor"> Editor de fotos avanzado</string>
     <string name="why_upgrade_advanced_photo_video_editor">Editor avanzado de fotos e vídeos</string>
@@ -1063,8 +1093,10 @@
     <string name="sms_mms_title">SMS MMS (Manexo dos SMS e MMS)</string>
     <string name="apng_title">APNG Android (soporte para o WebP animado)</string>
     <string name="pdf_view_pager_title">PDFViewPager (visor de PDF)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (visor de PDF)</string>
     <string name="m3u_parser_title">M3U Parser (xestor de ficheiros da lista de reprodución m3u)</string>
     <string name="android_lame_title">AndroidLame (codificador mp3)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">A proba caducou</string>
     <string name="start_free_trial">Comezala proba gratuíta</string>

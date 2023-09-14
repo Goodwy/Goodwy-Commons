@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Скасувати</string>
+    <string name="close">Закрити</string>
     <string name="back">Назад</string>
     <string name="nothing">Нічого</string>
     <string name="later">Пізніше</string>
@@ -29,7 +30,7 @@
     <string name="details">Подробиці</string>
     <string name="notes">Нотатки</string>
     <string name="deleting_folder">Видалення теки \'%s\'</string>
-    <string name="none">Нічого</string>
+    <string name="none">Немає</string>
     <string name="label">Позначка</string>
     <string name="transparent">Прозорий</string>
     <string name="transparent_color">Колір прозорості</string>
@@ -75,6 +76,8 @@
     <string name="updating">Триває оновлення…</string>
     <string name="phone_storage">Пам\'ять пристрою</string>
     <string name="phone_storage_hidden">Пам\'ять пристрою (прихована від інших застосунків)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">День народження</string>
     <string name="anniversary">Річниця</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Збільшити кількість колонок</string>
     <string name="reduce_column_count">Зменшити кількість колонок</string>
     <string name="column_count">Кількість стовпців</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Кількість портретних стовпців</string>
     <string name="landscape_column_count">Альбомна кількість стовпців</string>
     <string name="change_cover_image">Змінити обкладинку</string>
@@ -106,6 +110,10 @@
         <item quantity="few">%d стовпці</item>
         <item quantity="many">%d стовпців</item>
         <item quantity="other">%d стовпців</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
@@ -119,8 +127,10 @@
     <string name="must_make_default_dialer">Щоб використовувати функцію блокування номерів, вам необхідно встановити цей додаток як стандартний для роботи з контактами.</string>
     <string name="set_as_default">Встановити додаток як стандартний</string>
     <string name="block_confirmation">Ви впевнені що хочете заблокувати \"%s\"?</string>
-    <string name="block_unknown_calls">Блокувати дзвінки від не збережених контактів</string>
-    <string name="block_unknown_messages">Блокувати повідомлення від не збережених контактів</string>
+    <string name="block_not_stored_calls">Блокувати дзвінки від не збережених контактів</string>
+    <string name="block_hidden_calls">Блокувати дзвінки з прихованих номерів</string>
+    <string name="block_not_stored_messages">Блокувати повідомлення від не збережених контактів</string>
+    <string name="block_hidden_messages">Блокувати повідомлення з прихованих номерів</string>
     <string name="add_blocked_number_helper_text">Введіть номер або шаблон (наприклад, *12345*, +1*8888), щоб заблокувати всі дзвінки та повідомлення з номерів, що відповідають шаблону.</string>
     <string name="must_make_default_caller_id_app">Неможливо заблокувати невідомі номери без дозволу ідентифікатора абонента.</string>
     <!-- Favorites -->
@@ -132,6 +142,7 @@
     <string name="search">Пошук</string>
     <string name="search_in_placeholder">Пошук в %s</string>
     <string name="type_2_characters">Введіть принаймні 2 символи, щоб почати пошук.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Пошук контактів</string>
     <string name="search_favorites">Пошук улюблених</string>
     <string name="search_apps">Пошук застосунків</string>
@@ -159,8 +170,16 @@
     <string name="no_contacts_permission">Необхідний дозвіл на доступ до контактів</string>
     <string name="no_camera_permissions">Необхідний дозвіл на доступ до камери</string>
     <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
-    <string name="no_post_notifications_permissions">Потрібен дозвіл на публікацію сповіщень</string>
     <string name="no_permission">Без дозволу</string>
+    <string name="allow_notifications_reminders">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати нагадування.</string>
+    <string name="allow_notifications_files">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати індикатор виконання.</string>
+    <string name="allow_notifications_music_player">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе відтворювати пісні.</string>
+    <string name="allow_notifications_voice_recorder">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе записувати аудіо.</string>
+    <string name="allow_notifications_incoming_calls">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні дзвінки.</string>
+    <string name="allow_notifications_incoming_messages">Ви повинні дозволити застосунку відображати сповіщення, інакше вона не зможе показувати вхідні повідомлення.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Надати дозвіл</string>
+    <string name="permission_required">Потрібен дозвіл</string>
     <!-- Renaming -->
     <string name="rename_file">Перейменувати файл</string>
     <string name="rename_folder">Перейменувати теку</string>
@@ -300,6 +319,7 @@
     <string name="duration">Тривалість</string>
     <string name="artist">Виконавець</string>
     <string name="album">Альбом</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Фокальна відстань</string>
     <string name="exposure_time">Час експозиції</string>
     <string name="iso_speed">Світлочутливість за ISO</string>
@@ -400,6 +420,7 @@
     <string name="last_modified">Остання зміна</string>
     <string name="date_created">Дата створення</string>
     <string name="date_taken">Дата зйомки</string>
+    <string name="date_added">Дата додавання</string>
     <string name="title">Заголовок</string>
     <string name="filename">Ім\'я файла</string>
     <string name="extension">Розширення</string>
@@ -461,6 +482,12 @@
     <string name="lock_folder_pro">Заблокувати теку (Pro)</string>
     <string name="unlock_folder">Розблокувати теку</string>
     <string name="lock_folder_notice">Цей захист працює тільки у цьому додатку, він не призначений для заміни загальносистемного шифрування тек.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Будь ласка, введіть пароль</string>
+    <string name="invalid_password">Неправильний пароль</string>
     <!-- Times -->
     <string name="yesterday">Вчора</string>
     <string name="today">Сьогодні</string>
@@ -697,6 +724,7 @@
     <string name="use_24_hour_time_format">Використовувати 24-годинний формат дати</string>
     <string name="change_date_and_time_format">Змінити формат дати й часу</string>
     <string name="sunday_first">Починати тиждень з неділі</string>
+    <string name="start_week_on">Початок тижня</string>
     <string name="widgets">Віджети</string>
     <string name="use_same_snooze">Завжди використовувати однаковий час відкладання</string>
     <string name="snooze_time">Час відкладання</string>
@@ -758,6 +786,7 @@
     <string name="show_the_recycle_bin">Показати Кошик</string>
     <string name="hide_the_recycle_bin">Приховати Кошик</string>
     <string name="open_the_recycle_bin">Відкрити Кошик</string>
+    <string name="skip_the_recycle_bin">Пропустити кошик, видалити файли безпосередньо</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Переміщення %d елемента в Кошик</item>
         <item quantity="few">Переміщення %d елементів у Кошик</item>
@@ -859,39 +888,47 @@
     <string name="more_info">Більше інформації</string>
     <string name="upgrade">Оновити</string>
     <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, а потім імпортувавши з нього. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Привіт,
+\n
+\nсхоже, ви щойно оновили безплатну версію. Якщо ви задоволені цією версією і, можливо, перенесли свої налаштування і вибране, ви можете видалити стару безплатну версію, щоб уникнути її випадкового запуску, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
+\n
+\nДякуємо!</string>
+    <string name="upgraded_to_pro_gallery">Привіт,
+\n
+\nсхоже, що у вас вже є Pro-версія застосунку. Якщо ви задоволені нею і, можливо, перенесли свої налаштування та дані, ви можете видалити цю версію, щоб не запускати її випадково, оскільки вона вам більше не знадобиться.
+\n
+\nДякуємо!</string>
     <string name="upgraded_from_free">Привіт,
 \n
-\nздається, ви щойно оновили безплатну версію. Коли ви задоволені цим і, можливо, перенесете свої дані, ви можете видалити старий безплатний, щоб уникнути його випадкового запуску, оскільки він вам більше не знадобиться.
+\nсхоже, що ви щойно оновили безплатну версію. Якщо ви задоволені цією версією і, можливо, перенесли свої дані, ви можете видалити стару безплатну версію, щоб уникнути її випадкового запуску, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
-\nДякую!</string>
+\nДякуємо!</string>
     <string name="upgraded_to_pro">Привіт,
 \n
 \nздається, у вас уже є версія застосунку Pro. Коли ви задоволені ним і, можливо, перенесете свої дані, ви можете видалити його, щоб уникнути його випадкового запуску, оскільки він вам більше не знадобиться.
 \n
 \nДякую!</string>
-    <string name="upgraded_to_pro_calendar">Привіт,
+    <string name="upgraded_from_free_calendar">Привіт,
 \n
-\nздається, ви щойно оновили безкоштовну версію. Якщо ви хочете перенести локально збережені події, ви повинні зробити це вручну, експортувавши їх у файл .ics у безкоштовній версії застосунку та імпортувавши сюди через верхнє меню.
+\nсхоже, ви щойно оновили безплатну версію. Якщо ви хочете перенести ваші локально збережені події, вам доведеться зробити це вручну, експортувавши їх у файл .ics у безплатній версії застосунку та імпортувавши сюди через верхнє меню.
 \n
-\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\nЯкщо ви задоволені налаштуваннями Pro-версії, ви можете видалити стару безплатну версію, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
-\nДякую!</string>
-    <string name="upgraded_to_pro_contacts">Привіт,
+\nДякуємо!</string>
+    <string name="upgraded_from_free_contacts">Привіт,
 \n
-\nздається, ви щойно оновили безкоштовну версію. Якщо у вас були будь-які контакти, збережені в \"%s\", вам потрібно перенести їх вручну, експортувавши у файл .vcf із безкоштовної версії застосунку та імпортувавши сюди через верхнє меню.
+\nсхоже, ви щойно оновили безплатну версію. Якщо у вас були контакти, збережені за адресою \"%s\", вам потрібно перенести їх вручну, експортувавши у .vcf-файл з безплатної версії застосунку та імпортувавши сюди через верхнє меню.
 \n
-\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\nПісля того, як ви будете задоволені налаштуваннями Pro-версії, ви можете видалити стару безплатну версію, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
-\nДякую!</string>
-    <string name="upgraded_to_pro_notes">Привіт,
+\nДякуємо!</string>
+    <string name="upgraded_from_free_notes">Привіт,
 \n
-\nздається, ви щойно оновили безкоштовну версію. Якщо ви хочете перенести свої нотатки, ви повинні зробити це вручну, експортувавши їх у файл у безкоштовній версії застосунку та імпортувавши сюди через верхнє меню.
+\nсхоже, що ви щойно оновили безплатну версію. Якщо ви хочете перенести свої нотатки, вам доведеться зробити це вручну, експортувавши їх у файл у безплатній версії застосунку та імпортувавши сюди через верхнє меню.
 \n
-\nКоли ви задоволені налаштуваннями версії Pro, ви можете видалити стару безкоштовну версію, оскільки вона вам більше не знадобиться.
+\nКоли ви будете задоволені налаштуваннями Pro-версії, ви можете видалити стару безплатну версію, оскільки вона вам більше не знадобиться, а також запобігти появі цього діалогового вікна.
 \n
-\nДякую!</string>
+\nДякуємо!</string>
     <!-- About -->
     <string name="about">Про додаток</string>
     <string name="website">Веб-сайт</string>
@@ -1079,6 +1116,7 @@
     <string name="why_upgrade_footer">100% гарантія повернення коштів</string>
     <string name="why_upgrade_footer_one_time_payment">Одноразовий платіж</string>
     <string name="why_upgrade_improved_design">Покращений дизайн</string>
+    <string name="why_upgrade_many_other_improvements">Багато інших поліпшень</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Удосконалений редактор світлин</string>
     <string name="why_upgrade_advanced_photo_video_editor">Розширений редактор фото &amp; відео</string>
@@ -1144,8 +1182,10 @@
     <string name="sms_mms_title">SMS MMS (обробка SMS та MMS)</string>
     <string name="apng_title">APNG Android (підтримка анімацій WebP)</string>
     <string name="pdf_view_pager_title">PDFViewPager (переглядач PDF)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (переглядач PDF)</string>
     <string name="m3u_parser_title">M3U Парсер (обробка m3u-файлів списків відтворення)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (стиснення та розпакування ZIP)</string>
     <!-- Trial -->
     <string name="trial_expired">Термін пробного періоду закінчився</string>
     <string name="start_free_trial">Почати безкоштовну пробну версію</string>

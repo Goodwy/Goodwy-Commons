@@ -16,9 +16,16 @@
         android:scaleX="1.14"
         android:scaleY="1.14"
         android:translateX="-1.7"
-        android:translateY="-0.8">
+        android:translateY="-0.86">
         <path
             android:fillColor="@android:color/white"
             android:pathData="M12,12m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    </group>
+    <group
+        android:translateX="9.8"
+        android:translateY="5">
+        <path
+            android:fillColor="@color/yellow_800"
+            android:pathData="M7.8053,3.1636C8.4053,3.1636 8.8907,3.6498 8.8907,4.248C8.8907,4.848 8.4053,5.3342 7.8053,5.3342C7.2053,5.3342 6.72,4.848 6.72,4.248C6.72,3.6498 7.2053,3.1636 7.8053,3.1636Z"/>
     </group>
 </vector>

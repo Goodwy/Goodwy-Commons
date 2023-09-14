@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.FileDirItem
-import kotlinx.android.synthetic.main.item_breadcrumb.view.*
+import kotlinx.android.synthetic.main.item_breadcrumb.view.breadcrumb_text
 
 class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(context, attrs) {
     private val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -101,19 +101,6 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         recomputeStickyRootLocation(left)
     }
 
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val heightMode = MeasureSpec.getMode(heightMeasureSpec)
-        var heightMeasureSpec = heightMeasureSpec
-        if (heightMode == MeasureSpec.UNSPECIFIED || heightMode == MeasureSpec.AT_MOST) {
-            var height = context.resources.getDimensionPixelSize(R.dimen.breadcrumbs_layout_height)
-            if (heightMode == MeasureSpec.AT_MOST) {
-                height = height.coerceAtMost(MeasureSpec.getSize(heightMeasureSpec))
-            }
-            heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY)
-        }
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-    }
-
     private fun scrollToSelectedItem() {
         if (isLayoutDirty) {
             isScrollToSelectedItemPending = true
@@ -178,22 +165,23 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
 
     private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
         if (itemsLayout.childCount == 0) {
-            val firstItemBgColor = if (isShownInDialog && context.baseConfig.isUsingSystemTheme) {
-                resources.getColor(R.color.you_dialog_background_color, context.theme)
-            } else if (context.isBlackTheme()) {
-                context.getBottomNavigationBackgroundColor()
-            } else {
-                context.getProperBackgroundColor()
-            }
+//            val firstItemBgColor = if (isShownInDialog && context.baseConfig.isUsingSystemTheme) {
+//                resources.getColor(R.color.you_dialog_background_color, context.theme)
+//            } else if (context.isBlackTheme()) {
+//                context.getBottomNavigationBackgroundColor()
+//            } else {
+//                context.getProperBackgroundColor()
+//            }
 
             inflater.inflate(R.layout.item_breadcrumb_first, itemsLayout, false).apply {
                 resources.apply {
-                    breadcrumb_text.background = ContextCompat.getDrawable(context, R.drawable.button_background)
-                    breadcrumb_text.background.applyColorFilter(textColor)
+                    breadcrumb_text.background = ContextCompat.getDrawable(context, R.drawable.button_background_stroke)
+                    breadcrumb_text.background.applyColorFilter(textColor.adjustAlpha(0.6f))
                     elevation = 1f
-                    background = ColorDrawable(firstItemBgColor)
+                    //background = ColorDrawable(firstItemBgColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
-                    breadcrumb_text.setPadding(medium, medium, medium, medium)
+                    val smaller = getDimension(R.dimen.smaller_margin).toInt()
+                    breadcrumb_text.setPadding(medium, smaller, medium, medium)
                     setPadding(rootStartPadding, 0, 0, 0)
                 }
 

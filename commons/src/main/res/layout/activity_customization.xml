@@ -19,6 +19,7 @@
         android:id="@+id/customization_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/activity_padding_left_right"
         android:layout_marginTop="?attr/actionBarSize"
         android:fillViewport="true"
         android:scrollbars="none">
@@ -180,29 +181,8 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/customization_text_color_holder"
-                    android:layout_below="@+id/customization_accent_color_holder"
-                    style="@style/SettingsHolderStyle">
-
-                    <com.goodwy.commons.views.MyTextView
-                        android:id="@+id/customization_text_color_label"
-                        style="@style/SettingsTextLabelStyle"
-                        android:layout_centerVertical="true"
-                        android:text="@string/text_color" />
-
-                    <ImageView
-                        android:id="@+id/customization_text_color"
-                        android:layout_width="@dimen/color_sample_size"
-                        android:layout_height="@dimen/color_sample_size"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="@dimen/settings_margin"
-                        android:clickable="false" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
                     android:id="@+id/customization_background_color_holder"
-                    android:layout_below="@+id/customization_text_color_holder"
+                    android:layout_below="@+id/customization_accent_color_holder"
                     style="@style/SettingsHolderStyle">
 
                     <com.goodwy.commons.views.MyTextView
@@ -222,8 +202,60 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/customization_app_icon_color_holder"
+                    android:id="@+id/customization_text_color_holder"
                     android:layout_below="@+id/customization_background_color_holder"
+                    style="@style/SettingsHolderStyle">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_text_color_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/text_color" />
+
+                    <ImageView
+                        android:id="@+id/customization_text_color"
+                        android:layout_width="@dimen/color_sample_size"
+                        android:layout_height="@dimen/color_sample_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        android:clickable="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/customization_text_cursor_color_holder"
+                    android:layout_below="@+id/customization_text_color_holder"
+                    style="@style/SettingsHolderStyle">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_text_cursor_color_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/text_cursor_color" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/customization_text_cursor_color_default"
+                        style="@style/SettingsTextValueStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        android:text="@string/default_color"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/customization_text_cursor_color"
+                        android:layout_width="@dimen/color_sample_size"
+                        android:layout_height="@dimen/color_sample_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        android:clickable="false"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/customization_app_icon_color_holder"
+                    android:layout_below="@+id/customization_text_cursor_color_holder"
                     style="@style/SettingsHolderStyle">
 
                     <com.goodwy.commons.views.MyTextView

@@ -12,6 +12,7 @@
     <dimen name="section_margin">32dp</dimen>
     <dimen name="label_start_margin">72dp</dimen>
     <dimen name="settings_label_start_margin">22dp</dimen>
+    <dimen name="min_radio_checkbox_height">44dp</dimen>
     <dimen name="settings_margin">8dp</dimen>
     <dimen name="about_margin">20dp</dimen>
 
@@ -34,14 +35,14 @@
     <dimen name="fingerprint_icon_size">72dp</dimen>
     <dimen name="fab_size">56dp</dimen>
     <dimen name="secondary_fab_bottom_margin">76dp</dimen>
-    <dimen name="file_picker_icon_size">54dp</dimen>
+    <dimen name="file_picker_icon_size">68dp</dimen> <!--54dp -->
     <dimen name="list_avatar_size">40dp</dimen>
     <dimen name="min_row_height">60dp</dimen>
     <dimen name="top_shadow_height">100dp</dimen>
     <dimen name="rounded_corner_radius_small">4dp</dimen>
     <dimen name="rounded_corner_radius_big">10dp</dimen>
     <dimen name="bottom_sheet_corner_radius">24dp</dimen>
-    <dimen name="breadcrumbs_layout_height">48dp</dimen>
+    <dimen name="breadcrumbs_layout_height">36dp</dimen> <!--48dp -->
     <dimen name="simple_list_item_height">56dp</dimen>
 
     <dimen name="dragselect_hotspot_height">56dp</dimen>
@@ -69,6 +70,8 @@
     <dimen name="popup_menu_elevation">4dp</dimen>
     <dimen name="divider_height">2px</dimen>
 
+    <dimen name="contact_grid_item_max_size">100dp</dimen>
+
     <dimen name="ten_dpi">10dp</dimen>
     <dimen name="holder_corners">10dp</dimen>
     <dimen name="holder_ripple_corners">8dp</dimen>
@@ -85,5 +88,9 @@
     <dimen name="purchase_name_right_margin">12dp</dimen>
     <dimen name="zero">0dp</dimen>
 
+    <dimen name="top_toolbar_search_height">48dp</dimen>
+
     <dimen name="settings_value_width">108dp</dimen>
+
+    <dimen name="activity_padding_left_right">0dp</dimen>
 </resources>

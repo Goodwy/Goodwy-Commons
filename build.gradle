@@ -5,14 +5,14 @@ buildscript {
         propCompileSdkVersion = 33
         propMinSdkVersion = 23
         propTargetSdkVersion = propCompileSdkVersion
-        propVersionCode = 400
-        propVersionName = '4.0.0'
+        propVersionCode = 410
+        propVersionName = '4.1.0'
         kotlin_version = '1.7.10'
     }
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -28,7 +28,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }

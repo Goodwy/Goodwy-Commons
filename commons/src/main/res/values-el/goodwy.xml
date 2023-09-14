@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Εάν για κάποιο λόγο δεν μπορείτε να αντέξετε οικονομικά την εφαρμογή μας, αλλά θέλετε πραγματικά να χρησιμοποιήσετε όλες τις δυνατότητες, απλώς στείλτε μας email</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Καλή υποστήριξη</string>
+    <string name="tip_excellent">Εξαιρετική υποστήριξη</string>
+    <string name="tip_incredible">Καταπληκτική υποστήριξη</string>
+    <string name="tip_jar">Υποστηρίζω</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Καμία σύνδεση</string>
+    <string name="per_month">%s/μήνα</string>
 
     <string name="show_contact_thumbnails_g">Εμφάνιση μικρογραφιών επαφής</string>
     <string name="use_icon_tabs_summary">Εικονίδια αντί για κείμενο σε καρτέλες</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Προεπιλεγμένη καρτέλα</string>
     <string name="color">χρώμα</string>
     <string name="black">Μαύρος</string>
+    <string name="black_locked">Μαύρο (κλειδωμένο)</string>
     <string name="show_dividers">Εμφάνιση διαχωριστικών</string>
     <string name="colored_contacts">Εικονίδια έγχρωμων επαφών</string>
+    <string name="contact_color_list">Λίστα χρωμάτων επαφών</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Εικόνα επαφής</string>
     <string name="blurry_contact_photo">Θολή φωτογραφία επαφής</string>
     <string name="blurry_wallpaper">blurry wallpaper</string>
+    <string name="text_cursor_color">Χρώμα δρομέα κειμένου</string>
+    <string name="lines_count">Πλήθος γραμμών</string>
+    <string name="show_button_blocked_numbers">Εμφάνιση του κουμπιού για να μην αποκρύπτονται αποκλεισμένες κλήσεις</string>
+    <string name="flash_for_alerts">Flash για ειδοποιήσεις</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Χρώμα έμφασης</string>
     <string name="incoming_call">Εισερχόμενη κλήση</string>
     <string name="outgoing_call">Εξερχόμενη κλήση</string>
     <string name="missed_call">Αναπάντητη κλήση</string>
     <string name="unblock_number">Αριθμός ξεμπλοκαρίσματος</string>
+    <string name="unblock_numbers">Κατάργηση αποκλεισμού αριθμών</string>
     <string name="recents">Πρόσφατος</string>
     <string name="unblock_confirmation">Είστε βέβαιοι ότι θέλετε να ξεμπλοκάρετε το \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Λήψη</string>
     <string name="open">Ανοίξτε το</string>
     <string name="collection">Συλλογή</string>
+    <string name="collection_summary">Δημιουργήστε μια συλλογή για να ξεκλειδώσετε την εφαρμογή</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

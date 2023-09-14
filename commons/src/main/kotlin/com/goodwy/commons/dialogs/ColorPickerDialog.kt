@@ -16,7 +16,7 @@ import com.goodwy.commons.helpers.isQPlus
 import com.goodwy.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 import kotlinx.android.synthetic.main.dialog_color_picker.view.color_picker_holder
-import java.util.*
+import java.util.LinkedList
 
 private const val RECENT_COLORS_NUMBER = 5
 
@@ -25,7 +25,7 @@ class ColorPickerDialog(
     val activity: Activity,
     color: Int,
     val removeDimmedBackground: Boolean = false,
-    showUseDefaultButton: Boolean = false,
+    val addDefaultColorButton: Boolean = false,
     colorDefault: Int = -1,
     val currentColorCallback: ((color: Int) -> Unit)? = null,
     val title: String = activity.resources.getString(R.string.color_title),
@@ -168,13 +168,14 @@ class ColorPickerDialog(
 
         val textColor = activity.getProperTextColor()
         val builder = activity.getAlertDialogBuilder() //val builder = AlertDialog.Builder(activity, R.style.MyDialog)
-                .setPositiveButton(R.string.ok) { dialog, which -> confirmNewColor() }
-                .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
-                .setOnCancelListener { dialogDismissed() }
-
-        if (showUseDefaultButton) {
-            builder.setNeutralButton(R.string.use_default) { dialog, which -> useDefault(colorDefault) }
-        }
+            .setPositiveButton(R.string.ok) { _, _ -> confirmNewColor() }
+            .setNegativeButton(R.string.cancel) { _, _ -> dialogDismissed() }
+            .setOnCancelListener { dialogDismissed() }
+            .apply {
+                if (addDefaultColorButton) {
+                    setNeutralButton(R.string.default_color) { _, _ -> confirmDefaultColor(colorDefault) }
+                }
+            }
 
         builder.apply {
             activity.setupDialogStuff(view, this) { alertDialog ->
@@ -211,6 +212,13 @@ class ColorPickerDialog(
         callback(false, 0)
     }
 
+    private fun confirmDefaultColor(colorDefault: Int) {
+        val defaultColor = if (colorDefault == -1) baseConfig.primaryColor else colorDefault
+        addRecentColor(defaultColor)
+
+        callback(true, defaultColor)
+    }
+
     private fun confirmNewColor() {
         val hexValue = newHexField.value
         val newColor = if (hexValue.length == 6) {
@@ -221,13 +229,6 @@ class ColorPickerDialog(
 
         addRecentColor(newColor)
         callback(true, newColor)
-    }
-
-    private fun useDefault(colorDefault: Int) {
-        val defaultColor = if (colorDefault == -1) baseConfig.primaryColor else colorDefault
-        addRecentColor(defaultColor)
-
-        callback(true, defaultColor)
     }
 
     private fun addRecentColor(color: Int) {

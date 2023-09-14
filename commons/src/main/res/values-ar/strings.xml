@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">موافق</string>
     <string name="cancel">إلغاء</string>
+    <string name="close">اغلاق</string>
     <string name="back">العودة</string>
     <string name="nothing">لا شيء</string>
     <string name="later">لاحقًا</string>
@@ -75,6 +76,8 @@
     <string name="updating">تحديث…</string>
     <string name="phone_storage">ذاكرة الهاتف</string>
     <string name="phone_storage_hidden">ذاكرة الهاتف (غير مرئية من قبل التطبيقات الأخرى)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">يفحص…</string>
     <!-- Events -->
     <string name="birthday">تاريخ الميلاد</string>
     <string name="anniversary">مناسبة</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">زيادة عدد الأعمدة</string>
     <string name="reduce_column_count">تقليل عدد الأعمدة</string>
     <string name="column_count">عدد الأعمدة</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">عدد الأعمدة الرأسية</string>
     <string name="landscape_column_count">عدد الأعمدة الأفقية</string>
     <string name="change_cover_image">تغيير صورة الغلاف</string>
@@ -108,6 +112,14 @@
         <item quantity="few">%d أعمدة</item>
         <item quantity="many">%d أعمدة</item>
         <item quantity="other">%d أعمدة</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="zero">صف %d</item>
+        <item quantity="one">صف %d</item>
+        <item quantity="two">صفوف %d</item>
+        <item quantity="few">صفوف %d</item>
+        <item quantity="many">صفوف %d</item>
+        <item quantity="other">صفوف %d</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -121,8 +133,10 @@
     <string name="must_make_default_dialer">عليك أن تجعل هذا التطبيق المتصل الافتراضي للاستفادة من الأرقام المحظورة.</string>
     <string name="set_as_default">ضبط الى الافتراضي</string>
     <string name="block_confirmation">هل تريد بالتأكيد حظر \"%s\"؟</string>
-    <string name="block_unknown_calls">حظر المكالمات من جهات الاتصال غير المخزنة</string>
-    <string name="block_unknown_messages">حظر الرسائل من جهات الاتصال غير المخزنة</string>
+    <string name="block_not_stored_calls">حظر المكالمات من جهات الاتصال غير المخزنة</string>
+    <string name="block_hidden_calls">حظر المكالمات من الأرقام المخفية</string>
+    <string name="block_not_stored_messages">حظر الرسائل من جهات الاتصال غير المخزنة</string>
+    <string name="block_hidden_messages">حظر الرسائل من الأرقام المخفية</string>
     <string name="add_blocked_number_helper_text">أدخل رقما أو نمطا (على سبيل المثال، *12345*، +1*8888) لحظر جميع المكالمات والرسائل من الأرقام المطابقة للنمط.</string>
     <string name="must_make_default_caller_id_app">لا يمكن حظر الأرقام غير المعروفة دون إذن معرف المتصل.</string>
     <!-- Favorites -->
@@ -134,6 +148,7 @@
     <string name="search">بحث</string>
     <string name="search_in_placeholder">البحث في %s</string>
     <string name="type_2_characters">أكتب ما لا يقل عن حرفين لبدء البحث.</string>
+    <string name="show_search">عرض شريط البحث</string>
     <string name="search_contacts">بحث في جهات الاتصال</string>
     <string name="search_favorites">بحث في المفضلة</string>
     <string name="search_apps">البحث في التطبيقات</string>
@@ -161,8 +176,16 @@
     <string name="no_contacts_permission">مطلوب إذن جهات الإتصال</string>
     <string name="no_camera_permissions">مطلوب إذن الكاميرا</string>
     <string name="no_audio_permissions">مطلوب إذن الصوت</string>
-    <string name="no_post_notifications_permissions">مطلوب إذن لنشر الإخطارات</string>
     <string name="no_permission">لاتوجد صلاحيات</string>
+    <string name="allow_notifications_reminders">يجب أن تسمح للتطبيقات لعرض الإخطارات ، أو أنها لن تكون قادرة على عرض تذكير .</string>
+    <string name="allow_notifications_files">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار شريط التقدم.</string>
+    <string name="allow_notifications_music_player">يجب أن تسمح للتطبيق بعرض الإخطارات ، أو أنه لن يكون قادرا على تشغيل الموسيقى.</string>
+    <string name="allow_notifications_voice_recorder">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من تسجيل الصوت.</string>
+    <string name="allow_notifications_incoming_calls">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار المكالمات الواردة.</string>
+    <string name="allow_notifications_incoming_messages">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار الرسائل الواردة.</string>
+    <string name="allow_alarm_scheduled_messages">يجب أن تسمح للتطبيق بالوصول إلى التنبيهات الداخلية ، وإلا فلن يتمكن من إرسال رسائل مجدولة.</string>
+    <string name="grant_permission">منح الإذن</string>
+    <string name="permission_required">الإذن مطلوب</string>
     <!-- Renaming -->
     <string name="rename_file">إعادة تسمية الملف</string>
     <string name="rename_folder">إعادة تسمية المجلد</string>
@@ -309,6 +332,7 @@
     <string name="duration">المدة</string>
     <string name="artist">الفنان</string>
     <string name="album">الألبوم</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">البعد البؤري</string>
     <string name="exposure_time">زمن التعرض للضوء</string>
     <string name="iso_speed">سرعة الـ (ISO)</string>
@@ -412,6 +436,7 @@
     <string name="last_modified">آخر تعديل</string>
     <string name="date_created">تاريخ الإنشاء</string>
     <string name="date_taken">تاريخ الإلتقاط</string>
+    <string name="date_added">تاريخ الإضافة</string>
     <string name="title">العنوان</string>
     <string name="filename">إسم الملف</string>
     <string name="extension">الإمتداد</string>
@@ -475,6 +500,12 @@
     <string name="lock_folder_pro">قفل المجلد (Pro)</string>
     <string name="unlock_folder">فتح المجلد</string>
     <string name="lock_folder_notice">تعمل هذه الحماية فقط في هذا التطبيق، ومن المفترض ألا تحل محل تشفير المجلد الحقيقي علي مستوي النظام.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">الرجاء إدخال كلمة المرور</string>
+    <string name="empty_password">الرجاء إدخال كلمة المرور</string>
+    <string name="invalid_password">كلمة المرور غير صحيحة</string>
     <!-- Times -->
     <string name="yesterday">أمس</string>
     <string name="today">اليوم</string>
@@ -767,6 +798,7 @@
     <string name="use_24_hour_time_format">استخدام تنسيق الوقت 24 ساعة</string>
     <string name="change_date_and_time_format">تغيير تنسيق التاريخ والوقت</string>
     <string name="sunday_first">بداية الأسبوع يوم الأحد</string>
+    <string name="start_week_on">يبدأ الأسبوع في</string>
     <string name="widgets">الويدجت</string>
     <string name="use_same_snooze">استخدام نفس مدة الغفوة دائماً</string>
     <string name="snooze_time">مدة الغفوة</string>
@@ -828,6 +860,7 @@
     <string name="show_the_recycle_bin">إظهار سلة المحذوفات</string>
     <string name="hide_the_recycle_bin">إخفاء سلة المحذوفات</string>
     <string name="open_the_recycle_bin">فتح سلة المحذوفات</string>
+    <string name="skip_the_recycle_bin">تخطي سلة المحذوفات ، وحذف الملفات مباشرة</string>
     <plurals name="moving_items_into_bin">
         <item quantity="zero">نقل عنصر %d إلى سلة المحذوفات</item>
         <item quantity="one">نقل عنصر %d إلى سلة المحذوفات</item>
@@ -931,11 +964,19 @@
     <string name="more_info">المزيد من المعلومات</string>
     <string name="upgrade">ترقية</string>
     <string name="upgrade_calendar">يجب عليك ترحيل الأحداث المخزنة محلياً يدوياً عن طريق التصدير في ملف .ics ، ثم الإستيراد. يمكنك العثور على أزرار التصدير / الإستيراد في قائمة الشاشة الرئيسية.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">مرحبًا
+    <string name="upgraded_from_free_gallery">مرحبًا،
 \n
-\nيبدو أنك قمت بالترقية للتو من الإصدار المجاني. بمجرد أن تكون راضيا عن هذا وربما تقوم بترحيل بياناتك ، يمكنك إلغاء تثبيت الإصدار المجاني القديم لتجنب تشغيله عن طريق الخطأ لأنك لن تحتاج إليه بعد الآن.
+\nيبدو أنك قمت بالترقية للتو من الإصدار المجاني. بمجرد أن تكون سعيدًا بهذا الإعداد وربما تقوم بترحيل الإعدادات والمفضلات الخاصة بك ، يمكنك إلغاء تثبيت الإصدار المجاني القديم لتجنب تشغيله عن طريق الخطأ لأنك لن تحتاج إليه بعد الآن ، كما سيمنع ظهور مربع الحوار هذا.
+\n
+\nشكرًا!</string>
+    <string name="upgraded_to_pro_gallery">مرحبًا،
+\n
+\nيبدو أن لديك بالفعل إصدار تطبيق Pro أيضًا. بمجرد أن تكون سعيدًا به وربما تقوم بترحيل الإعدادات والمفضلات الخاصة بك ، يمكنك إلغاء تثبيت هذا لتجنب تشغيله عن طريق الخطأ لأنك لن تحتاج إليه بعد الآن.
+\n
+\nشكرًا!</string>
+    <string name="upgraded_from_free">مرحبا
+\n
+\nيبدو أنك قمت بالترقية للتو من الإصدار المجاني. بمجرد أن تكون راضيا عن هذا وربما ترحيل بياناتك ، يمكنك إلغاء تثبيت القديم المجاني لتجنب تشغيله عن طريق الخطأ لأنك لن تحتاج إليه بعد الآن ، كما أنه سيمنع مربع الحوار هذا من الظهور.
 \n
 \nشكرا!</string>
     <string name="upgraded_to_pro">مرحبًا
@@ -943,25 +984,25 @@
 \nيبدو أن لديك بالفعل إصدار تطبيق Pro أيضا. بمجرد أن تكون راضيا عنها وربما تقوم بترحيل بياناتك ، يمكنك إلغاء تثبيت هذا الجهاز لتجنب تشغيله عن طريق الخطأ لأنك لن تحتاج إليه بعد الآن.
 \n
 \nشكرا!</string>
-    <string name="upgraded_to_pro_calendar">مرحبًا
+    <string name="upgraded_from_free_calendar">مرحبًا،
 \n
-\nيبدو أنك قمت بالترقية للتو من الإصدار المجاني. إذا كنت ترغب في ترحيل الأحداث المخزنة محليا ، فيجب عليك القيام بذلك يدويا عن طريق تصديرها إلى ملف .ics في إصدار التطبيق المجاني واستيرادها هنا من خلال القائمة العلوية.
+\nيبدو أنك قمت بالترقية للتو من الإصدار المجاني. إذا كنت ترغب في ترحيل الأحداث المخزنة محليًا ، فيجب عليك القيام بذلك يدويًا عن طريق تصديرها إلى ملف ics في إصدار التطبيق المجاني والاستيراد هنا من خلال القائمة العلوية.
 \n
-\nبمجرد أن تشعر بالرضا عن الإعداد الخاص بك في الإصدار Pro ، يمكنك إلغاء تثبيت الإصدار المجاني القديم حيث لن تحتاج إليه بعد الآن.
+\nبمجرد أن تشعر بالرضا عن الإعداد الخاص بك في إصدار Pro ، يمكنك إلغاء تثبيت الإصدار المجاني القديم لأنك لن تحتاج إليه بعد الآن ، كما سيمنع ظهور مربع الحوار هذا.
 \n
-\nشكرا!</string>
-    <string name="upgraded_to_pro_contacts">مرحبًا
+\nشكرًا!</string>
+    <string name="upgraded_from_free_contacts">مرحبا
 \n
 \nيبدو أنك قمت بالترقية للتو من الإصدار المجاني. إذا كان لديك أي جهات اتصال مخزنة ضمن \"%s\" ، فيجب عليك ترحيلها يدويا عن طريق التصدير في ملف .vcf من إصدار التطبيق المجاني والاستيراد هنا من خلال القائمة العلوية.
 \n
-\nبمجرد أن تشعر بالرضا عن الإعداد الخاص بك في الإصدار Pro ، يمكنك إلغاء تثبيت الإصدار المجاني القديم حيث لن تحتاج إليه بعد الآن.
+\nبمجرد أن تشعر بالرضا عن الإعداد الخاص بك في الإصدار Pro ، يمكنك إلغاء تثبيت الإصدار المجاني القديم لأنك لن تحتاج إليه بعد الآن ، كما أنه سيمنع ظهور مربع الحوار هذا.
 \n
 \nشكرا!</string>
-    <string name="upgraded_to_pro_notes">مرحبًا
+    <string name="upgraded_from_free_notes">مرحبا
 \n
 \nيبدو أنك قمت بالترقية للتو من الإصدار المجاني. إذا كنت ترغب في ترحيل ملاحظاتك ، فعليك القيام بذلك يدويا عن طريق تصديرها إلى ملف في إصدار التطبيق المجاني والاستيراد هنا من خلال القائمة العلوية.
 \n
-\nبمجرد أن تشعر بالرضا عن الإعداد الخاص بك في الإصدار Pro ، يمكنك إلغاء تثبيت الإصدار المجاني القديم حيث لن تحتاج إليه بعد الآن.
+\nبمجرد أن تشعر بالرضا عن الإعداد الخاص بك في الإصدار Pro ، يمكنك إلغاء تثبيت الإصدار المجاني القديم لأنك لن تحتاج إليه بعد الآن ، كما أنه سيمنع ظهور مربع الحوار هذا.
 \n
 \nشكرا!</string>
     <!-- About -->
@@ -1151,6 +1192,7 @@
     <string name="why_upgrade_footer">ضمان استرداد الأموال بنسبة 100٪</string>
     <string name="why_upgrade_footer_one_time_payment">دفعة لمرة واحدة</string>
     <string name="why_upgrade_improved_design">تصميم مطور</string>
+    <string name="why_upgrade_many_other_improvements">تحسينات أخرى كثيرة</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">محرر متقدم للصور</string>
     <string name="why_upgrade_advanced_photo_video_editor">محرر صور وفيديو متقدم</string>
@@ -1216,8 +1258,10 @@
     <string name="sms_mms_title">SMS MMS (معالجة الرسائل القصيرة ورسائل الوسائط المتعددة)</string>
     <string name="apng_title">APNG Android (دعم WebP المتحرك)</string>
     <string name="pdf_view_pager_title">برنامج PDFViewPager (عارض PDF)</string>
+    <string name="pdf_viewer_title">برنامج Android PdfViewer (عارض PDF)</string>
     <string name="m3u_parser_title">محلل M3U (معالجة ملف قائمة التشغيل m3u)</string>
     <string name="android_lame_title">AndroidLame (برنامج ترميز mp3)</string>
+    <string name="zip4j_title">Zip4j (ضغط ZIP وإلغاء الضغط)</string>
     <!-- Trial -->
     <string name="trial_expired">انتهت صلاحية الإصدار التجريبي</string>
     <string name="start_free_trial">بدء الإصدار التجريبي المجاني</string>

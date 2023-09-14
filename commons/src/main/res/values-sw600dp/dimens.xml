@@ -26,4 +26,6 @@
     <dimen name="purchase_name_right_margin">14dp</dimen>
 
     <dimen name="settings_value_width">208dp</dimen>
+
+    <dimen name="activity_padding_left_right">72dp</dimen>
 </resources>

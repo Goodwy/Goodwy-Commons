@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Herhangi bir nedenle uygulamamızı karşılayamıyorsanız, ancak gerçekten tüm özellikleri kullanmak istiyorsanız, bize e-posta göndermeniz yeterlidir.</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">İyi destek</string>
+    <string name="tip_excellent">Mükemmel destek</string>
+    <string name="tip_incredible">Harika destek</string>
+    <string name="tip_jar">Destek</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Bağlantı yok</string>
+    <string name="per_month">%s/ay</string>
 
     <string name="show_contact_thumbnails_g">Kişi küçük resimlerini göster</string>
     <string name="use_icon_tabs_summary">Sekmelerdeki metin yerine simgeler</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Varsayılan sekme</string>
     <string name="color">renk</string>
     <string name="black">Siyah</string>
+    <string name="black_locked">Siyah (Kilitli)</string>
     <string name="show_dividers">Bölücüleri göster</string>
     <string name="colored_contacts">Kişiler renkli simgeler</string>
+    <string name="contact_color_list">Kişi renk listesi</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">İletişim resmi</string>
     <string name="blurry_contact_photo">Bulanık kişi fotoğrafı</string>
     <string name="blurry_wallpaper">Bulanık duvar kağıdı</string>
+    <string name="text_cursor_color">Metin imleci rengi</string>
+    <string name="lines_count">Satır sayısı</string>
+    <string name="show_button_blocked_numbers">Engellenen aramaları gizlememek için düğmeyi göster</string>
+    <string name="flash_for_alerts">Uyarılar için Flash</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Vurgu rengi</string>
     <string name="incoming_call">Gelen Arama</string>
     <string name="outgoing_call">Giden Arama</string>
     <string name="missed_call">Cevapsız Çağrı</string>
     <string name="unblock_number">Numaranın engellemesini kaldır</string>
+    <string name="unblock_numbers">Numaraların engelini kaldırın</string>
     <string name="recents">Gecmis</string>
     <string name="unblock_confirmation">\"%s\" engellemesini kaldırmak istediğinizden emin misiniz?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Almak</string>
     <string name="open">Açık</string>
     <string name="collection">Koleksiyon</string>
+    <string name="collection_summary">Uygulamanın kilidini açmak için bir koleksiyon oluşturun</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

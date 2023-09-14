@@ -3,10 +3,9 @@
     android:id="@+id/manage_blocked_number_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackground"
+    android:layout_marginBottom="@dimen/tiny_margin"
     android:clickable="true"
-    android:focusable="true"
-    android:foreground="@drawable/selector">
+    android:focusable="true">
 
     <com.goodwy.commons.views.MyTextView
         android:id="@+id/manage_blocked_number_title"

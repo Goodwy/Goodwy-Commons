@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">何らかの理由で私たちのアプリを買う余裕がないが、本当にすべての機能を使用したい場合は、メールでお問い合わせください</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">良いサポート</string>
+    <string name="tip_excellent">優れたサポート</string>
+    <string name="tip_incredible">素晴らしいサポート</string>
+    <string name="tip_jar">支える</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">接続なし</string>
+    <string name="per_month">%s/月</string>
 
     <string name="show_contact_thumbnails_g">連絡先のサムネイルを表示</string>
     <string name="use_icon_tabs_summary">タブ上のテキストではなくアイコン</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">既定のタブ</string>
     <string name="color">色</string>
     <string name="black">黒い</string>
+    <string name="black_locked">黒(ロック)</string>
     <string name="show_dividers">仕切り線を表示する</string>
     <string name="colored_contacts">連絡先の色付きアイコン</string>
+    <string name="contact_color_list">連絡先の色リスト</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">連絡先写真</string>
     <string name="blurry_contact_photo">ボケた連絡先写真</string>
     <string name="blurry_wallpaper">ボケた壁紙</string>
+    <string name="text_cursor_color">テキストカーソルの色</string>
+    <string name="lines_count">行数</string>
+    <string name="show_button_blocked_numbers">ブロックされた通話を非表示にしないボタンを表示する</string>
+    <string name="flash_for_alerts">アラートのフラッシュ</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">アクセントカラー</string>
     <string name="incoming_call">着信呼び出し</string>
     <string name="outgoing_call">発信コール</string>
     <string name="missed_call">不在着信</string>
     <string name="unblock_number">ブロック解除番号</string>
+    <string name="unblock_numbers">番号のブロックを解除する</string>
     <string name="recents">最近</string>
     <string name="unblock_confirmation">\"%s\" のブロックを解除してもよいですか?</string>
 
@@ -140,6 +151,9 @@
     <string name="get">ゲット</string>
     <string name="open">開く</string>
     <string name="collection">コレクション</string>
+    <string name="collection_summary">コレクションを構築してアプリのロックを解除する</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/icon_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="@dimen/fingerprint_icon_size"
+            android:layout_height="@dimen/fingerprint_icon_size"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/medium_margin"
+            android:src="@drawable/ic_color_list" />
+
+        <ImageView
+            android:id="@+id/icon1_check"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/icon1"
+            android:layout_alignStart="@+id/icon1"
+            android:layout_alignEnd="@+id/icon1"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:src="@drawable/ic_oval"
+            android:visibility="invisible"
+            tools:tint="@color/primary" />
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="@dimen/fingerprint_icon_size"
+            android:layout_height="@dimen/fingerprint_icon_size"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:layout_toEndOf="@+id/icon1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/medium_margin"
+            android:src="@drawable/ic_color_list_android" />
+
+        <ImageView
+            android:id="@+id/icon2_check"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_below="@+id/icon2"
+            android:layout_alignStart="@+id/icon2"
+            android:layout_alignEnd="@+id/icon2"
+            android:src="@drawable/ic_oval"
+            android:visibility="invisible"
+            tools:tint="@color/primary"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/icon3"
+            android:layout_width="@dimen/fingerprint_icon_size"
+            android:layout_height="@dimen/fingerprint_icon_size"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:layout_toEndOf="@+id/icon2"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/medium_margin"
+            android:src="@drawable/ic_color_list_ios" />
+
+        <ImageView
+            android:id="@+id/icon3_check"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_below="@+id/icon3"
+            android:layout_alignStart="@+id/icon3"
+            android:layout_alignEnd="@+id/icon3"
+            android:src="@drawable/ic_oval"
+            android:visibility="invisible"
+            tools:tint="@color/primary" />
+
+        <ImageView
+            android:id="@+id/icon4"
+            android:layout_width="@dimen/fingerprint_icon_size"
+            android:layout_height="@dimen/fingerprint_icon_size"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:layout_toEndOf="@+id/icon3"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/medium_margin"
+            android:src="@drawable/ic_color_list_arc" />
+
+        <ImageView
+            android:id="@+id/icon4_check"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_below="@+id/icon4"
+            android:layout_alignStart="@+id/icon4"
+            android:layout_alignEnd="@+id/icon4"
+            android:src="@drawable/ic_oval"
+            android:visibility="invisible"
+            tools:tint="@color/primary" />
+    </RelativeLayout>
+
+</RelativeLayout>

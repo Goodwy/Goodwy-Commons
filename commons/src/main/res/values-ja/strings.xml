@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
+    <string name="close">Close</string>
     <string name="back">戻る</string>
     <string name="nothing">なし</string>
     <string name="later">後で</string>
@@ -75,6 +76,8 @@
     <string name="updating">更新中…</string>
     <string name="phone_storage">内部ストレージ</string>
     <string name="phone_storage_hidden">内部ストレージ (他のアプリからは表示されません)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">誕生日</string>
     <string name="anniversary">記念日</string>
@@ -97,12 +100,17 @@
     <string name="increase_column_count">列数を増やす</string>
     <string name="reduce_column_count">列数を減らす</string>
     <string name="column_count">列数</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">縦向きの列数</string>
     <string name="landscape_column_count">横向きの列数</string>
     <string name="change_cover_image">カバー画像を変更</string>
     <string name="select_photo">写真を選択</string>
     <plurals name="column_counts">
         <item quantity="other">%d 列</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ブロックした番号を管理</string>
@@ -116,8 +124,10 @@
     <string name="must_make_default_dialer">番号ブロックを活用するには、このアプリをデフォルトの電話アプリにする必要があります。</string>
     <string name="set_as_default">デフォルトとして設定</string>
     <string name="block_confirmation">本当に\"%s\"をブロックしますか？</string>
-    <string name="block_unknown_calls">連絡先に登録されていない相手からの着信をブロックする</string>
-    <string name="block_unknown_messages">連絡先に登録されていない相手からのメッセージをブロックする</string>
+    <string name="block_not_stored_calls">連絡先に登録されていない相手からの着信をブロックする</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">連絡先に登録されていない相手からのメッセージをブロックする</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">番号やパターンを入力すると、番号やパターンに一致する番号からの着信やメッセージをすべてブロックできます (パターンの例：*12345*, +1*8888) 。</string>
     <string name="must_make_default_caller_id_app">不明な番号をブロックするには、発信者番号へのアクセス許可が必要です。</string>
     <!-- Favorites -->
@@ -129,6 +139,7 @@
     <string name="search">検索</string>
     <string name="search_in_placeholder">%s内を検索</string>
     <string name="type_2_characters">検索を開始するには少なくとも2文字以上の入力が必要です。</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">連絡先を検索</string>
     <string name="search_favorites">お気に入りを検索</string>
     <string name="search_apps">アプリを検索</string>
@@ -156,8 +167,16 @@
     <string name="no_contacts_permission">連絡先へのアクセス許可が必要です</string>
     <string name="no_camera_permissions">カメラへのアクセス許可が必要です</string>
     <string name="no_audio_permissions">マイクへのアクセス許可が必要です</string>
-    <string name="no_post_notifications_permissions">通知を送るために許可が必要です</string>
     <string name="no_permission">許可なし</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">ファイルの名前を変更</string>
     <string name="rename_folder">フォルダの名前を変更</string>
@@ -286,6 +305,7 @@
     <string name="duration">長さ</string>
     <string name="artist">アーティスト</string>
     <string name="album">アルバム</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">焦点距離</string>
     <string name="exposure_time">露出時間</string>
     <string name="iso_speed">ISO感度</string>
@@ -389,6 +409,7 @@
     <string name="last_modified">最終更新日時</string>
     <string name="date_created">作成日</string>
     <string name="date_taken">撮影日時</string>
+    <string name="date_added">Date added</string>
     <string name="title">タイトル</string>
     <string name="filename">ファイル名</string>
     <string name="extension">拡張子</string>
@@ -447,6 +468,12 @@
     <string name="lock_folder_pro">フォルダに鍵をかける (Pro)</string>
     <string name="unlock_folder">フォルダの鍵を外す</string>
     <string name="lock_folder_notice">この保護はアプリ内のみの機能となっており、実際にフォルダ全体を暗号化保護しているわけではありません。</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">昨日</string>
     <string name="today">今日</string>
@@ -599,6 +626,7 @@
     <string name="use_24_hour_time_format">24時間表示を使用</string>
     <string name="change_date_and_time_format">日付と時刻の表示形式を変更</string>
     <string name="sunday_first">週の始めを日曜にする</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">ウィジェット</string>
     <string name="use_same_snooze">毎回同じスヌーズ時間を使用する</string>
     <string name="snooze_time">スヌーズ時間</string>
@@ -660,6 +688,7 @@
     <string name="show_the_recycle_bin">ごみ箱を表示</string>
     <string name="hide_the_recycle_bin">ごみ箱を隠す</string>
     <string name="open_the_recycle_bin">ごみ箱を開く</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="other">%d件のアイテムをごみ箱に移動しています</item>
     </plurals>
@@ -763,21 +792,21 @@
 \nすでにPro版のアプリをお持ちのようですね。データの移行が完了したら、誤って起動しないように、こちらのアプリをアンインストールしてください。
 \n
 \nありがとうございます！</string>
-    <string name="upgraded_to_pro_calendar">こんにちは、
+    <string name="upgraded_from_free_calendar">こんにちは、
 \n
 \n無料版からアップグレードされたようですね。ローカルに保存された予定を移行したい場合は、手動で予定を移行する必要があります。無料版のアプリのトップメニューから.icsファイルにエクスポートした後に、Pro版のアプリのトップメニューから.icsファイルをインポートしてください。
 \n
 \n予定の移行やセットアップが完了したら、不要になった無料版のアプリをアンインストールできます。
 \n
 \nありがとうございます！</string>
-    <string name="upgraded_to_pro_contacts">こんにちは、
+    <string name="upgraded_from_free_contacts">こんにちは、
 \n
 \n無料版からアップグレードされたようですね。「%s」以下に保存されている連絡先がある場合は、手動で連絡先を移行する必要があります。無料版のアプリのトップメニューから.vcfファイルにエクスポートした後に、Pro版のアプリのトップメニューから.vcfファイルをインポートしてください。
 \n
 \n連絡先の移行やセットアップが完了したら、不要になった無料版のアプリをアンインストールできます。
 \n
 \nありがとうございます！</string>
-    <string name="upgraded_to_pro_notes">こんにちは、
+    <string name="upgraded_from_free_notes">こんにちは、
 \n
 \n無料版からアップグレードされたようですね。メモを移行したい場合は、手動でメモを移行する必要があります。無料版のアプリのトップメニューからメモをエクスポートした後に、Pro版のアプリのトップメニューからメモをインポートしてください。
 \n
@@ -963,6 +992,7 @@
     <string name="why_upgrade_footer">100％返金保証</string>
     <string name="why_upgrade_footer_one_time_payment">1回払い</string>
     <string name="why_upgrade_improved_design">改良されたデザイン</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">高度な写真編集機能</string>
     <string name="why_upgrade_advanced_photo_video_editor">高度な写真＆動画編集機能</string>
@@ -1028,8 +1058,10 @@
     <string name="sms_mms_title">SMS MMS (SMSやMMSの取り扱い)</string>
     <string name="apng_title">APNG Android (アニメーションWebPサポート)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDFビューア)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDFビューア)</string>
     <string name="m3u_parser_title">M3U Parser (m3uプレイリストの取り扱い)</string>
     <string name="android_lame_title">AndroidLame (mp3エンコーダ)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">試用期間の終了</string>
     <string name="start_free_trial">試用を開始</string>

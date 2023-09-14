@@ -29,8 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/fingerprint_image"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/activity_margin"
-        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
         android:gravity="center"
         android:padding="@dimen/activity_margin"
         android:text="@string/place_finger"/>

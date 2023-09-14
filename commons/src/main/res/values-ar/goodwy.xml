@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">إذا كنت لا تستطيع تحمل تكاليف تطبيقنا لسبب ما ، ولكنك تريد حقا استخدام جميع الميزات ، فما عليك سوى مراسلتنا عبر البريد الإلكتروني</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">دعم جيد</string>
+    <string name="tip_excellent">دعم ممتاز</string>
+    <string name="tip_incredible">دعم رائع</string>
+    <string name="tip_jar">دعم</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">لا يوجد اتصال</string>
+    <string name="per_month">شهر/%s</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">عرض صور مصغرة لجهات الإتصال</string>
@@ -60,8 +62,10 @@
     <string name="default_tab">علامة التبويب الافتراضية</string>
     <string name="color">لون</string>
     <string name="black">أسود</string>
+    <string name="black_locked">أسود (مقفل)</string>
     <string name="show_dividers">إظهار المقسمات</string>
     <string name="colored_contacts">رموز ملونة جهات الاتصال</string>
+    <string name="contact_color_list">قائمة ألوان جهات الاتصال</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -82,12 +86,19 @@
     <string name="contact_photo">صورة جهة الاتصال</string>
     <string name="blurry_contact_photo">صورة غير واضحة لجهة الاتصال</string>
     <string name="blurry_wallpaper">خلفية ضبابية</string>
+    <string name="text_cursor_color">لون مؤشر النص</string>
+    <string name="lines_count">عدد الأسطر</string>
+    <string name="show_button_blocked_numbers">إظهار الزر لعدم إخفاء المكالمات المحظورة</string>
+    <string name="flash_for_alerts">فلاش للتنبيهات</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">لون التمييز</string>
     <string name="incoming_call">مكالمة واردة</string>
     <string name="outgoing_call">مكالمة صادرة</string>
     <string name="missed_call">مكالمة لم يتم تفويتها</string>
     <string name="unblock_number">إلغاء حظر الرقم</string>
+    <string name="unblock_numbers">إلغاء حظر الأرقام</string>
     <string name="recents">حديث</string>
     <string name="unblock_confirmation">هل تريد بالتأكيد إلغاء حظر \"%s\"؟</string>
 
@@ -137,6 +148,9 @@
     <string name="get">تنزيل</string>
     <string name="open">فتح</string>
     <string name="collection">المجموعة</string>
+    <string name="collection_summary">إنشاء مجموعة لإلغاء قفل التطبيق</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

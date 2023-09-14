@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">如果由於某種原因您買不起我們的應用程式，但真的想使用所有功能，只需給我們發電子郵件</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">良好的支援</string>
+    <string name="tip_excellent">出色的支援</string>
+    <string name="tip_incredible">真棒支援</string>
+    <string name="tip_jar">支援</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">無連接</string>
+    <string name="per_month">%s/月</string>
 
     <string name="show_contact_thumbnails_g">顯示聯絡人縮圖</string>
     <string name="use_icon_tabs_summary">圖示而不是選項卡上的文本</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">默認選項卡</string>
     <string name="color">顏色</string>
     <string name="black">黑</string>
+    <string name="black_locked">黑（鎖定）</string>
     <string name="show_dividers">顯示分隔線</string>
     <string name="colored_contacts">聯繫人彩色圖示</string>
+    <string name="contact_color_list">聯繫人顏色清單</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">聯繫照片</string>
     <string name="blurry_contact_photo">模糊聯繫人照片</string>
     <string name="blurry_wallpaper">模糊壁紙</string>
+    <string name="text_cursor_color">文字游標顏色</string>
+    <string name="lines_count">行數</string>
+    <string name="show_button_blocked_numbers">顯示按鈕以不隱藏阻止的呼叫</string>
+    <string name="flash_for_alerts">用於警報的快閃記憶體</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">重音顏色</string>
     <string name="incoming_call">來電</string>
     <string name="outgoing_call">傳出呼叫</string>
     <string name="missed_call">未接來電</string>
     <string name="unblock_number">解鎖號碼</string>
+    <string name="unblock_numbers">取消阻止號碼</string>
     <string name="recents">最近</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">獲取</string>
     <string name="open">打開</string>
     <string name="collection">收藏</string>
+    <string name="collection_summary">構建集合以解鎖應用</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

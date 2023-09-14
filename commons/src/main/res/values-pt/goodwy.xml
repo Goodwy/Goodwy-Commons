@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Se, por algum motivo, você não puder pagar pelo nosso aplicativo, mas realmente quiser usar todos os recursos, basta nos enviar um e-mail</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Bom suporte</string>
+    <string name="tip_excellent">Excelente suporte</string>
+    <string name="tip_incredible">Suporte perfeito</string>
+    <string name="tip_jar">Apoio</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Sem ligação</string>
+    <string name="per_month">%s/mês</string>
 
     <string name="show_contact_thumbnails_g">Mostrar miniatura do contacto</string>
     <string name="use_icon_tabs_summary">Ícones em vez de texto em guias</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Guia padrão</string>
     <string name="color">cor</string>
     <string name="black">Preto</string>
+    <string name="black_locked">Preto (Fechado)</string>
     <string name="show_dividers">Mostrar divisores</string>
     <string name="colored_contacts">Contatos ícones coloridos</string>
+    <string name="contact_color_list">Lista de cores do contato</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Foto do contacto</string>
     <string name="blurry_contact_photo">Fotografia de contacto desfocada</string>
     <string name="blurry_wallpaper">Papel de parede embaçado</string>
+    <string name="text_cursor_color">Cor do cursor de texto</string>
+    <string name="lines_count">Contagem de linhas</string>
+    <string name="show_button_blocked_numbers">Mostrar o botão para não ocultar as chamadas bloqueadas</string>
+    <string name="flash_for_alerts">Flash para alertas</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Cor do sotaque</string>
     <string name="incoming_call">Chamada recebida</string>
     <string name="outgoing_call">Chamada de saída</string>
     <string name="missed_call">Chamada perdida</string>
     <string name="unblock_number">Desbloquear número</string>
+    <string name="unblock_numbers">Desbloquear números</string>
     <string name="recents">Recentes</string>
     <string name="unblock_confirmation">Tem certeza que quer desbloquear \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Obter</string>
     <string name="open">Abrir</string>
     <string name="collection">Colecção</string>
+    <string name="collection_summary">Criar uma colecção para desbloquear a aplicação</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

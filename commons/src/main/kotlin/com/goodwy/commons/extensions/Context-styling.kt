@@ -57,6 +57,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
         isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
         else -> getProperPrimaryColor()
     }
+    val textCursorColor = getProperTextCursorColor()
 
     val cnt = viewGroup.childCount
     (0 until cnt).map { viewGroup.getChildAt(it) }.forEach {
@@ -66,7 +67,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
             is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
             is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
             is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyEditText -> it.setColors(textColor, accentColor, textCursorColor)
             is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
             is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
             is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor.getContrastColor())
@@ -186,4 +187,10 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
         else -> baseConfig.backgroundColor.lightenColor(4)
     }
     return bottomColor
+}
+
+fun Context.getProperTextCursorColor() = when {
+    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color, theme)
+    isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
+    else -> baseConfig.textCursorColor
 }

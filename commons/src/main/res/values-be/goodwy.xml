@@ -5,11 +5,13 @@
     <string name="default_tab">Укладка па змаўчанні</string>
     <string name="color">Колер</string>
     <string name="black">Чорны</string>
+    <string name="black_locked">Чорны (заблакіравана)</string>
     <string name="incoming_call">Уваходны</string>
     <string name="outgoing_call">Выходны</string>
     <string name="missed_call">Прапушчаны</string>
     <string name="unblock_confirmation">Разблакаваць \"%s\"?</string>
     <string name="unblock_number">Разблакаваць нумар</string>
+    <string name="unblock_numbers">Разблакаваць нумары</string>
     <string name="recents">Нядаўнія</string>
     <string name="message">Паведамленне</string>
     <string name="settings_icon">Абразок настроек</string>
@@ -53,7 +55,9 @@
     <string name="no_purchase_found">Пакупкі не знойдзены.</string>
     <string name="restore_purchase">Аднавіць пакупкі</string>
     <string name="restoring_purchase">Аднаўленне пакупак…</string>
-    <string name="could_not_restore_purchase">Не ўдалося аднавіць пакупкі.</string>
+
+    <string name="no_connection">Няма сувязі</string>
+    <string name="per_month">%s/месяц</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Выбар тэм і кветак інтэрфейсу</string>
@@ -71,6 +75,7 @@
     <string name="use_icon_tabs_summary">Абразкі замест тэксту на ўкладках</string>
     <string name="show_dividers">Паказваць падзельнікі</string>
     <string name="colored_contacts">Каляровыя абразкі кантактаў</string>
+    <string name="contact_color_list">Набор кветак кантактаў</string>
     <string name="transparent_navigation_bar">Празрыстая ніжняя панэль навігацыі</string>
     <string name="kids_mode">Дзіцячы рэжым</string>
     <string name="kids_mode_summary">Спрошчаны інтэрфейс, выбар размалёвак</string>
@@ -91,6 +96,12 @@
     <string name="contact_photo">Фота кантакту</string>
     <string name="blurry_contact_photo">Размытае фота кантакту</string>
     <string name="blurry_wallpaper">Размытыя шпалеры</string>
+    <string name="text_cursor_color">Колер курсора тэксту</string>
+    <string name="lines_count">Колькасць радкоў</string>
+    <string name="show_button_blocked_numbers">Паказаць кнопку не хаваць заблакаваныя званкі</string>
+    <string name="flash_for_alerts">Успышка для абвесткі</string>
+    <string name="clean_theme_g">Чыстая</string>
+    <string name="concept_theme_g">Канцэпт</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
@@ -141,6 +152,9 @@
     <string name="get">Загрузіць</string>
     <string name="open">Адкрыць</string>
     <string name="collection">Калекцыя</string>
+    <string name="collection_summary">Збярыце калекцыю для разблакіроўкі прыкладання</string>
+    <string name="limited_supply">Абмежаваную прапанову</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

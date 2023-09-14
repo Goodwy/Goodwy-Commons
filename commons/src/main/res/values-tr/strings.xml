@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">Tamam</string>
     <string name="cancel">İptal</string>
+    <string name="close">Kapat</string>
     <string name="back">Geri</string>
     <string name="nothing">Hiçbir şey</string>
     <string name="later">Sonra</string>
@@ -75,6 +76,8 @@
     <string name="updating">Güncelleniyor…</string>
     <string name="phone_storage">Telefon belleği</string>
     <string name="phone_storage_hidden">Telefon belleği (diğer uygulamalar tarafından görülmez)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Taranıyor…</string>
     <!-- Events -->
     <string name="birthday">Doğum günü</string>
     <string name="anniversary">Yıldönümü</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Sütun sayısını artır</string>
     <string name="reduce_column_count">Sütun sayısını azalt</string>
     <string name="column_count">Sütun sayısı</string>
+    <string name="row_count">Satır sayısı</string>
     <string name="portrait_column_count">Dikey sütun sayısı</string>
     <string name="landscape_column_count">Yatay sütun sayısı</string>
     <string name="change_cover_image">Kapak resmini değiştir</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d sütun</item>
         <item quantity="other">%d sütun</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d satır</item>
+        <item quantity="other">%d satır</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Engellenen numaraları yönet</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">Engellenen numaraları kullanmak için bu uygulamayı öntanımlı çevirici uygulaması yapmalısınız.</string>
     <string name="set_as_default">Öntanımlı olarak ayarla</string>
     <string name="block_confirmation">\"%s\" gerçekten engellensin mi?</string>
-    <string name="block_unknown_calls">Kayıtlı olmayan kişilerden gelen aramaları engelle</string>
-    <string name="block_unknown_messages">Kayıtlı olmayan kişilerden gelen mesajları engelle</string>
+    <string name="block_not_stored_calls">Kayıtlı olmayan kişilerden gelen aramaları engelle</string>
+    <string name="block_hidden_calls">Gizli numaralardan gelen aramaları engelle</string>
+    <string name="block_not_stored_messages">Kayıtlı olmayan kişilerden gelen mesajları engelle</string>
+    <string name="block_hidden_messages">Gizli numaralardan gelen mesajları engelle</string>
     <string name="add_blocked_number_helper_text">Eşleşen numaralardan gelen tüm aramaları ve mesajları engellemek için bir numara veya desen (örn. *12345*, +1*8888) girin.</string>
     <string name="must_make_default_caller_id_app">Arayan kimliği izni olmadan bilinmeyen numaralar engellenemiyor.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Ara</string>
     <string name="search_in_placeholder">%s içinde ara</string>
     <string name="type_2_characters">Aramaya başlamak için en az 2 karakter yazın.</string>
+    <string name="show_search">Arama çubuğu göster</string>
     <string name="search_contacts">Kişileri ara</string>
     <string name="search_favorites">Favorileri ara</string>
     <string name="search_apps">Uygulama ara</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Kişiler izni gerekiyor</string>
     <string name="no_camera_permissions">Kamera izni gerekiyor</string>
     <string name="no_audio_permissions">Ses izni gerekiyor</string>
-    <string name="no_post_notifications_permissions">Bildirim göndermek için izin gereklidir</string>
     <string name="no_permission">İzin yok</string>
+    <string name="allow_notifications_reminders">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde hatırlatıcıları gösteremez.</string>
+    <string name="allow_notifications_files">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde ilerleme çubuğunu gösteremez.</string>
+    <string name="allow_notifications_music_player">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde şarkı çalamaz.</string>
+    <string name="allow_notifications_voice_recorder">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde ses kaydedemez.</string>
+    <string name="allow_notifications_incoming_calls">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen aramaları gösteremez.</string>
+    <string name="allow_notifications_incoming_messages">Uygulamanın bildirimleri göstermesine izin vermelisiniz, aksi halde gelen mesajları gösteremez.</string>
+    <string name="allow_alarm_scheduled_messages">Uygulamanın dahili alarmlara erişmesine izin vermelisiniz, aksi takdirde zamanlanan mesajlar gönderemez.</string>
+    <string name="grant_permission">İzin Ver</string>
+    <string name="permission_required">İzin Gerekli</string>
     <!-- Renaming -->
     <string name="rename_file">Dosyayı yeniden adlandır</string>
     <string name="rename_folder">Klasörü yeniden adlandır</string>
@@ -289,6 +308,7 @@
     <string name="duration">Süre</string>
     <string name="artist">Sanatçı</string>
     <string name="album">Albüm</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Odak uzaklığı</string>
     <string name="exposure_time">Pozlama süresi</string>
     <string name="iso_speed">ISO hızı</string>
@@ -392,6 +412,7 @@
     <string name="last_modified">Son değiştirilme</string>
     <string name="date_created">Oluşturma tarihi</string>
     <string name="date_taken">Alınan tarih</string>
+    <string name="date_added">Eklenme tarihi</string>
     <string name="title">Başlık</string>
     <string name="filename">Dosya adı</string>
     <string name="extension">Uzantı</string>
@@ -451,6 +472,12 @@
     <string name="lock_folder_pro">Klasörü kilitle (Pro)</string>
     <string name="unlock_folder">Klasörün kilidini aç</string>
     <string name="lock_folder_notice">Bu koruma yalnızca bu uygulamada çalışır, gerçek bir sistem çapında klasör şifrelemesinin yerini almaz.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Lütfen bir parola girin</string>
+    <string name="empty_password">Lütfen parolayı girin</string>
+    <string name="invalid_password">Yanlış parola</string>
     <!-- Times -->
     <string name="yesterday">Dün</string>
     <string name="today">Bugün</string>
@@ -630,6 +657,7 @@
     <string name="use_24_hour_time_format">24 saat biçimini kullan</string>
     <string name="change_date_and_time_format">Tarih ve saat biçimini değiştir</string>
     <string name="sunday_first">Pazar günü hafta başlangıcı</string>
+    <string name="start_week_on">Hafta başlangıcı</string>
     <string name="widgets">Widget\'lar</string>
     <string name="use_same_snooze">Her zaman aynı erteleme süresini kullan</string>
     <string name="snooze_time">Erteleme süresi</string>
@@ -691,6 +719,7 @@
     <string name="show_the_recycle_bin">Geri Dönüşüm Kutusunu göster</string>
     <string name="hide_the_recycle_bin">Geri Dönüşüm Kutusunu gizle</string>
     <string name="open_the_recycle_bin">Geri Dönüşüm Kutusunu aç</string>
+    <string name="skip_the_recycle_bin">Geri dönüşüm kutusunu atla, dosyaları doğrudan sil</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d öge Geri Dönüşüm Kutusu\'na taşınıyor</item>
         <item quantity="other">%d öge Geri Dönüşüm Kutusu\'na taşınıyor</item>
@@ -792,7 +821,7 @@
     <string name="upgrade_calendar">Yerel olarak depolanan etkinlikleri bir .ics dosyasına dışa aktarıp ardından içe aktarma yoluyla el ile geçirmeniz gerekir. Her iki dışa aktarma/içe aktarma düğmelerini ana ekran menüsünde bulabilirsiniz.</string>
     <string name="upgraded_from_free_gallery">Merhaba,
 \n
-\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Bu sürümden memnun kaldığınızda ve belki de ayarlarınızı ve favorilerinizi taşıdığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatmaktan kaçınmak için eski ücretsiz sürümü kaldırabilirsiniz.
+\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Bu sürümden memnun kaldığınızda ve belki de ayarlarınızı ve favorilerinizi taşıdığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatmaktan kaçınmak için eski ücretsiz sürümü kaldırabilirsiniz, ayrıca bu iletişim kutusunun görünmesini de önleyecektir.
 \n
 \nTeşekkürler!</string>
     <string name="upgraded_to_pro_gallery">Merhaba,
@@ -802,7 +831,7 @@
 \nTeşekkürler!</string>
     <string name="upgraded_from_free">Merhaba,
 \n
-\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Bundan memnun olduğunuzda ve belki de verilerinizi aktardığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatılmasını önlemek için eski ücretsiz olanı kaldırabilirsiniz.
+\nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Bundan memnun olduğunuzda ve belki de verilerinizi aktardığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatılmasını önlemek için eski ücretsiz olanı kaldırabilirsiniz, ayrıca bu iletişim kutusunun görünmesini de önleyecektir.
 \n
 \nTeşekkürler!</string>
     <string name="upgraded_to_pro">Merhaba,
@@ -810,25 +839,25 @@
 \nGörünüşe göre zaten Pro uygulama sürümüne de sahipsiniz. Bundan memnun olduğunuzda ve belki de verilerinizi taşıdığınızda, artık ihtiyacınız olmayacağı için yanlışlıkla başlatmaktan kaçınmak için bunu kaldırabilirsiniz.
 \n
 \nTeşekkürler!</string>
-    <string name="upgraded_to_pro_calendar">Merhaba,
+    <string name="upgraded_from_free_calendar">Merhaba,
 \n
 \nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Yerel olarak depolanan etkinliklerinizi taşımak istiyorsanız, ücretsiz uygulama sürümünde bunları bir .ics dosyasına aktararak ve üst menüden buraya aktararak bunu elle yapmanız gerekir.
 \n
-\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz.
+\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz, ayrıca bu iletişim kutusunun görünmesini de önleyecektir.
 \n
 \nTeşekkürler!</string>
-    <string name="upgraded_to_pro_contacts">Merhaba,
+    <string name="upgraded_from_free_contacts">Merhaba,
 \n
 \nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. \"%s\" altında kayıtlı kişileriniz varsa, ücretsiz uygulama sürümünde bunları bir .vcf dosyasına aktararak ve üst menüden buraya aktararak bunu elle yapmanız gerekir.
 \n
-\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz.
+\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz, ayrıca bu iletişim kutusunun görünmesini de önleyecektir.
 \n
 \nTeşekkürler!</string>
-    <string name="upgraded_to_pro_notes">Merhaba,
+    <string name="upgraded_from_free_notes">Merhaba,
 \n
 \nGörünüşe göre ücretsiz sürümden yeni yükseltme yaptınız. Notlarınızı taşımak istiyorsanız, ücretsiz uygulama sürümünde bunları bir dosyaya aktararak ve üst menüden buraya aktararak bunu elle yapmanız gerekir.
 \n
-\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz.
+\nPro sürümdeki kurulumunuzdan memnun olduğunuzda, artık ihtiyacınız olmayacağı için eski ücretsiz sürümü kaldırabilirsiniz, ayrıca bu iletişim kutusunun görünmesini de önleyecektir.
 \n
 \nTeşekkürler!</string>
     <!-- About -->
@@ -1028,6 +1057,7 @@
     <string name="why_upgrade_footer">%100 Para İadesi Garantisi</string>
     <string name="why_upgrade_footer_one_time_payment">Tek seferlik ödeme</string>
     <string name="why_upgrade_improved_design">Geliştirilmiş tasarım</string>
+    <string name="why_upgrade_many_other_improvements">Diğer birçok iyileştirme</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Gelişmiş fotoğraf düzenleyici</string>
     <string name="why_upgrade_advanced_photo_video_editor">Gelişmiş fotoğraf ve video düzenleyici</string>
@@ -1093,8 +1123,10 @@
     <string name="sms_mms_title">SMS MMS (SMS ve MMS yönetimi)</string>
     <string name="apng_title">APNG Android (hareketli WebP desteği)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF görüntüleyici)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF görüntüleyici)</string>
     <string name="m3u_parser_title">M3U Ayrıştırıcı (m3u çalma listesi dosyası işleme)</string>
     <string name="android_lame_title">AndroidLame (mp3 kodlayıcı)</string>
+    <string name="zip4j_title">Zip4j (ZIP sıkıştırma ve açma)</string>
     <!-- Trial -->
     <string name="trial_expired">Deneme süresi sona erdi</string>
     <string name="start_free_trial">Deneme sürümünü başlat</string>

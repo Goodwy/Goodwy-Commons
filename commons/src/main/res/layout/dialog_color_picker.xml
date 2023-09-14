@@ -99,7 +99,7 @@
                 <ImageView
                     android:id="@+id/color_picker_hue_cursor"
                     android:layout_width="@dimen/colorpicker_hue_width"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/colorpicker_hue_width"
                     android:elevation="16dp"
                     android:src="@drawable/ic_circle" />
                 <!--android:src="@drawable/ic_chevron_right_unpadded_vector"-->

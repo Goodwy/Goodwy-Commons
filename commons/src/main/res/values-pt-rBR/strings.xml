@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
+    <string name="close">Close</string>
     <string name="back">Voltar</string>
     <string name="nothing">Nada</string>
     <string name="later">Mais tarde</string>
@@ -75,6 +76,8 @@
     <string name="updating">Atualizando…</string>
     <string name="phone_storage">Armazenamento do telefone</string>
     <string name="phone_storage_hidden">Armazenamento do telefone (não visível por outros aplicativos)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Data de Nascimento</string>
     <string name="anniversary">Data Especial</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Aumentar número de colunas</string>
     <string name="reduce_column_count">Reduzir número de colunas</string>
     <string name="column_count">Número de colunas</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Colunas em retrato</string>
     <string name="landscape_column_count">Colunas em paisagem</string>
     <string name="change_cover_image">Trocar imagem de capa</string>
@@ -105,6 +109,10 @@
         <item quantity="one">%d coluna</item>
         <item quantity="many">%d colunas</item>
         <item quantity="other">%d colunas</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gerenciar números bloqueados</string>
@@ -118,8 +126,10 @@
     <string name="must_make_default_dialer">Você precisa tornar este aplicativo padrão para poder bloquear números.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="block_confirmation">Tem certeza que deseja bloquear \"%s\"?</string>
-    <string name="block_unknown_calls">Bloquear chamadas de contatos não salvos</string>
-    <string name="block_unknown_messages">Bloquear mensagens de contatos não salvos</string>
+    <string name="block_not_stored_calls">Bloquear chamadas de contatos não salvos</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Bloquear mensagens de contatos não salvos</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Digite um número ou um padrão (ex. *12345*, +1*8888) para bloquear todas as chamadas de números correspondentes.</string>
     <string name="must_make_default_caller_id_app">Não é possível bloquear números desconhecidos sem a permissão de ID de chamadas.</string>
     <!-- Favorites -->
@@ -131,6 +141,7 @@
     <string name="search">Pesquisar</string>
     <string name="search_in_placeholder">Pesquisar em %s</string>
     <string name="type_2_characters">Digite pelo menos 2 letras para iniciar a pesquisa.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Pesquisar contatos</string>
     <string name="search_favorites">Pesquisar favoritos</string>
     <string name="search_apps">Pesquisar apps</string>
@@ -158,8 +169,16 @@
     <string name="no_contacts_permission">A permissão de Contatos é necessária</string>
     <string name="no_camera_permissions">A permissão de Câmera é necessária</string>
     <string name="no_audio_permissions">A permissão de Áudio é necessária</string>
-    <string name="no_post_notifications_permissions">É necessária a permissão para emitir notificações</string>
     <string name="no_permission">Sem permissão</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">Renomear arquivo</string>
     <string name="rename_folder">Renomear pasta</string>
@@ -295,6 +314,7 @@
     <string name="duration">Duração</string>
     <string name="artist">Artista</string>
     <string name="album">Álbum</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Distância focal</string>
     <string name="exposure_time">Tempo de exposição</string>
     <string name="iso_speed">Velocidade ISO</string>
@@ -399,6 +419,7 @@
     <string name="last_modified">Data de modificação</string>
     <string name="date_created">Data de criação</string>
     <string name="date_taken">Data de criação</string>
+    <string name="date_added">Date added</string>
     <string name="title">Título</string>
     <string name="filename">Nome do arquivo</string>
     <string name="extension">Extensão</string>
@@ -459,6 +480,12 @@
     <string name="lock_folder_pro">Bloquear pasta (Pro)</string>
     <string name="unlock_folder">Desbloquear pasta</string>
     <string name="lock_folder_notice">Esta proteção funciona apenas neste aplicativo, não foi criada para substituir uma criptografia de pasta real a nível de sistema.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Ontem</string>
     <string name="today">Hoje</string>
@@ -667,6 +694,7 @@
     <string name="use_24_hour_time_format">Usar horário do formato 24-horas</string>
     <string name="change_date_and_time_format">Alterar formato de data e hora</string>
     <string name="sunday_first">Iniciar a semana no Domingo</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Sempre usar o mesmo tempo de soneca</string>
     <string name="snooze_time">Tempo de soneca</string>
@@ -728,6 +756,7 @@
     <string name="show_the_recycle_bin">Exibir a Lixeira</string>
     <string name="hide_the_recycle_bin">Ocultar a Lixeira</string>
     <string name="open_the_recycle_bin">Abrir a Lixeira</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movendo %d item para a Lixeira</item>
         <item quantity="many">Movendo %d itens para a Lixeira</item>
@@ -833,15 +862,15 @@
 \nparece que você já tem a versão Pro também. Uma vez que você esteja feliz com e já tenha migrado seus dados, você pode desinstalar esta versão para evitar lançá-la acidentalmente, pois você não precisará mais dela.
 \n
 \nObrigado!</string>
-    <string name="upgraded_to_pro_calendar">Olá
+    <string name="upgraded_from_free_calendar">Olá
 \n
 \nparece que você acabou de atualizar a partir da versão gratuita. Se você quiser migrar seus eventos armazenados localmente, você tem que fazê-lo manualmente, exportando-os para um arquivo .ics na versão gratuita do aplicativo e importando aqui através do menu superior.
 \n
 \nUma vez que você esteja satisfeito com sua configuração na versão Pro, você pode desinstalar o antigo gratuito, pois você não precisará mais dele.
 \n
 \nObrigado!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Sobre</string>
     <string name="website">Website</string>
@@ -1032,6 +1061,7 @@
     <string name="why_upgrade_footer">Garantia 100% de Reembolso</string>
     <string name="why_upgrade_footer_one_time_payment">Pagamento único</string>
     <string name="why_upgrade_improved_design">Design aprimorado</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançado</string>
     <string name="why_upgrade_advanced_photo_video_editor">Editor avançado de foto e vídeo</string>
@@ -1097,8 +1127,10 @@
     <string name="sms_mms_title">SMS MMS (uso de SMS e MMS)</string>
     <string name="apng_title">APNG Android (suporte para WebP animado)</string>
     <string name="pdf_view_pager_title">Visualizador PDF Android</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF Viewer)</string>
     <string name="m3u_parser_title">M3U Parser (Gerenciador de Arquivo de Playlist m3u)</string>
     <string name="android_lame_title">AndroidLame (codificador de mp3)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Teste expirado</string>
     <string name="start_free_trial">Iniciar teste grátis</string>

@@ -5,7 +5,7 @@
     android:id="@+id/item_contact_frame"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackground"
+    android:background="@drawable/selector_clickable"
     android:clickable="true"
     android:focusable="true"
     android:foreground="@drawable/selector">
@@ -26,7 +26,7 @@
             android:layout_marginBottom="@dimen/medium_margin"
             android:src="@drawable/ic_person_vector"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -43,8 +43,8 @@
             tools:text="John Doe"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/item_contact_image"
-            app:layout_constraintRight_toLeftOf="@+id/item_contact_info_holder" />
+            app:layout_constraintStart_toEndOf="@+id/item_contact_image"
+            app:layout_constraintEnd_toStartOf="@+id/item_contact_info_holder" />
 
         <FrameLayout
             android:id="@+id/item_contact_info_holder"
@@ -54,7 +54,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
                 android:id="@+id/item_contact_info"
@@ -71,7 +71,7 @@
             android:layout_marginEnd="@dimen/activity_margin"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
             android:id="@+id/divider"
@@ -81,8 +81,8 @@
             android:background="@drawable/divider_settings"
             android:alpha="0.2"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="@+id/item_contact_name"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/item_contact_name"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

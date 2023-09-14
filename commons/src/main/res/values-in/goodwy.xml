@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Jika karena alasan tertentu Anda tidak mampu membeli aplikasi kami, tetapi benar-benar ingin menggunakan semua fiturnya, cukup kirimkan email kepada kami</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Dukungan yang baik</string>
+    <string name="tip_excellent">Dukungan yang sangat baik</string>
+    <string name="tip_incredible">Dukungan yang luar biasa</string>
+    <string name="tip_jar">Mendukung</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Tidak ada koneksi</string>
+    <string name="per_month">%s/bulan</string>
 
     <string name="show_contact_thumbnails_g">Tampilkan foto kontak</string>
     <string name="use_icon_tabs_summary">Ikon alih-alih teks pada tab</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Tab bawaan</string>
     <string name="color">warna</string>
     <string name="black">Hitam</string>
+    <string name="black_locked">Hitam (Terkunci)</string>
     <string name="show_dividers">Tampilkan pembagi</string>
     <string name="colored_contacts">Ikon berwarna kontak</string>
+    <string name="contact_color_list">Daftar warna kontak</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Foto kontak</string>
     <string name="blurry_contact_photo">Foto kontak buram</string>
     <string name="blurry_wallpaper">Wallpaper buram</string>
+    <string name="text_cursor_color">Warna kursor teks</string>
+    <string name="lines_count">Garis dihitung</string>
+    <string name="show_button_blocked_numbers">Tampilkan tombol untuk tidak menyembunyikan panggilan yang diblokir</string>
+    <string name="flash_for_alerts">Flash untuk peringatan</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Aksen warna</string>
     <string name="incoming_call">Panggilan masuk</string>
     <string name="outgoing_call">Panggilan keluar</string>
     <string name="missed_call">Panggilan tidak terjawab</string>
     <string name="unblock_number">Buka blokir nomor</string>
+    <string name="unblock_numbers">Buka blokir nomor</string>
     <string name="recents">Terbaru</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Dapatkan</string>
     <string name="open">Buka</string>
     <string name="collection">Koleksi</string>
+    <string name="collection_summary">Bangun koleksi untuk membuka kunci aplikasi</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

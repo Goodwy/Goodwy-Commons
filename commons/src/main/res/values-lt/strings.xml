@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">Gerai</string>
     <string name="cancel">Atšaukti</string>
+    <string name="close">Close</string>
     <string name="back">Atgal</string>
     <string name="nothing">Nieko</string>
     <string name="later">Vėliau</string>
@@ -75,6 +76,8 @@
     <string name="updating">Atnaujinama…</string>
     <string name="phone_storage">Telefono atmintis</string>
     <string name="phone_storage_hidden">Telefono atmintis (nematoma kitoms programėlėms)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Gimtadienis</string>
     <string name="anniversary">Metinės</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Padidinti stulpelių skaičių</string>
     <string name="reduce_column_count">Sumažinti stulpelių skaičių</string>
     <string name="column_count">Stulpelių skaičius</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Stulpelių skaičius portretiniame rėžime</string>
     <string name="landscape_column_count">"Stulpelių skaičius  paverstame rėžime"</string>
     <string name="change_cover_image">Pakeisti viršelio paveikslą</string>
@@ -105,6 +109,10 @@
         <item quantity="one">%d stulpelis</item>
         <item quantity="few">%d stulpeliai</item>
         <item quantity="other">%d stulpelių</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Tvarkyti blokuojamus numerius</string>
@@ -118,8 +126,10 @@
     <string name="must_make_default_dialer">Norėdami blokuoti numerius, turite nustatyti šią programėlę kaip numatytąją numerių rinkimo programėlę.</string>
     <string name="set_as_default">Nustatyti kaip numatytąją</string>
     <string name="block_confirmation">Ar tikrai norite užblokuoti „%s“\?</string>
-    <string name="block_unknown_calls">Blokuoti skambučius iš neįvestų numerių</string>
-    <string name="block_unknown_messages">Blokuoti žinutes iš neįvestų numerių</string>
+    <string name="block_not_stored_calls">Blokuoti skambučius iš neįvestų numerių</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Blokuoti žinutes iš neįvestų numerių</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Įvesti skaičių ar šabloną (pvz. *12345*, +370*8888) kad blokuoti skambučius ir žinutes iš numerių atitinkančių šabloną.</string>
     <string name="must_make_default_caller_id_app">Negalima blokuoti nežinomų numerių be skambintojo ID leidimo.</string>
     <!-- Favorites -->
@@ -131,6 +141,7 @@
     <string name="search">Ieškoti</string>
     <string name="search_in_placeholder">Ieškoti %s</string>
     <string name="type_2_characters">Norėdami pradėti paiešką, įveskite bent 2 simbolius.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Ieškoti kontaktuose</string>
     <string name="search_favorites">Ieškoti mėgiamiausiuose</string>
     <string name="search_apps">Ieškoti programėlėse</string>
@@ -158,8 +169,16 @@
     <string name="no_contacts_permission">Yra reikalingas kontaktų leidimas</string>
     <string name="no_camera_permissions">Yra reikalingas fotoaparato leidimas</string>
     <string name="no_audio_permissions">Yra reikalingas garso leidimas</string>
-    <string name="no_post_notifications_permissions">Reikalingas leidimas rodyti pranešimus</string>
     <string name="no_permission">Nėra leidimo</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">Pervadinti failą</string>
     <string name="rename_folder">Pervadinti aplanką</string>
@@ -300,6 +319,7 @@
     <string name="duration">Trukmė</string>
     <string name="artist">Atlikėjas</string>
     <string name="album">Albumas</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Židinio nuotolis</string>
     <string name="exposure_time">Išlaikymas</string>
     <string name="iso_speed">ISO greitis</string>
@@ -399,6 +419,7 @@
     <string name="last_modified">Paskutinį modifikavimą</string>
     <string name="date_created">Sukūrimo datą</string>
     <string name="date_taken">Fotografavimo datą</string>
+    <string name="date_added">Date added</string>
     <string name="title">Pavadinimą</string>
     <string name="filename">Failo pavadinimą</string>
     <string name="extension">Failo prievardį</string>
@@ -459,6 +480,12 @@
     <string name="lock_folder_pro">Užrakinti aplanką (Pro)</string>
     <string name="unlock_folder">Atrakinti aplanką</string>
     <string name="lock_folder_notice">Ši apsauga veikia tik šioje programėlėje ir ji nepakeičia tikrojo aplankų šifravimo sistemos mastu.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Vakar</string>
     <string name="today">Šiandien</string>
@@ -666,6 +693,7 @@
     <string name="use_24_hour_time_format">Naudoti 24 valandų formatą</string>
     <string name="change_date_and_time_format">Keisti datos ir laiko formatą</string>
     <string name="sunday_first">Pradėti savaitę nuo sekmadienio</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Valdikliai</string>
     <string name="use_same_snooze">Visada naudoti tokį patį snaudimo laikotarpį</string>
     <string name="snooze_time">Snaudimo laikotarpis</string>
@@ -727,6 +755,7 @@
     <string name="show_the_recycle_bin">Rodyti šiukšlinę</string>
     <string name="hide_the_recycle_bin">Slėpti šiukšlinę</string>
     <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Perkeliamas %d elementas į šiukšlinę</item>
         <item quantity="few">Perkeliami %d elementai į šiukšlinę</item>
@@ -824,9 +853,9 @@
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Apie</string>
     <string name="website">Website</string>
@@ -1003,6 +1032,7 @@
     <string name="why_upgrade_footer">100% pinigų grąžinimo garantija</string>
     <string name="why_upgrade_footer_one_time_payment">One time payment</string>
     <string name="why_upgrade_improved_design">Patobulintas dizainas</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Išplėstinis nuotraukų redaktorius</string>
     <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
@@ -1068,8 +1098,10 @@
     <string name="sms_mms_title">SMS MMS (SMS ir MMS apdorojimas)</string>
     <string name="apng_title">APNG Android (animuotų WebP palaikymas)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Trial expired</string>
     <string name="start_free_trial">Start free trial</string>

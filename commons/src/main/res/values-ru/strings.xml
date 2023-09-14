@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
+    <string name="close">Закрыть</string>
     <string name="back">Назад</string>
     <string name="nothing">Ничего</string>
     <string name="later">Позже</string>
@@ -75,6 +76,8 @@
     <string name="updating">Обновление…</string>
     <string name="phone_storage">Память устройства</string>
     <string name="phone_storage_hidden">Память устройства (не видна другим приложениям)</string>
+    <string name="audio">Аудио</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">День рождения</string>
     <string name="anniversary">Годовщина</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Добавить колонку</string>
     <string name="reduce_column_count">Убрать колонку</string>
     <string name="column_count">Количество колонок</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Количество колонок в портретной ориентации</string>
     <string name="landscape_column_count">Количество колонок в альбомной ориентации</string>
     <string name="change_cover_image">Изменить обложку</string>
@@ -106,6 +110,10 @@
         <item quantity="few">%d колонки</item>
         <item quantity="many">%d колонок</item>
         <item quantity="other">%d колонок</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
@@ -119,8 +127,10 @@
     <string name="must_make_default_dialer">Чтобы использовать блокировку, необходимо сделать \"Простые контакты\" приложением по умолчанию для набора номера.</string>
     <string name="set_as_default">Установить по умолчанию</string>
     <string name="block_confirmation">Заблокировать \"%s\"?</string>
-    <string name="block_unknown_calls">Блокировать вызовы от несохранённых контактов</string>
-    <string name="block_unknown_messages">Блокировать сообщения от несохранённых контактов</string>
+    <string name="block_not_stored_calls">Блокировать вызовы от несохранённых контактов</string>
+    <string name="block_hidden_calls">Блокировать вызовы со скрытых номеров</string>
+    <string name="block_not_stored_messages">Блокировать сообщения от несохранённых контактов</string>
+    <string name="block_hidden_messages">Блокировать сообщения со скрытых номеров</string>
     <string name="add_blocked_number_helper_text">Введите номер или шаблон (например: *12345*, +1*8888), чтобы блокировать все вызовы и сообщения с номеров, соответствующих шаблону.</string>
     <string name="must_make_default_caller_id_app">Невозможно блокировать неизвестные номера без разрешения идентификации вызывающего абонента.</string>
     <!-- Favorites -->
@@ -132,6 +142,7 @@
     <string name="search">Поиск</string>
     <string name="search_in_placeholder">Поиск в %s</string>
     <string name="type_2_characters">Введите как минимум 2 символа для начала поиска.</string>
+    <string name="show_search">Показывать панель поиска</string>
     <string name="search_contacts">Поиск контактов</string>
     <string name="search_favorites">Поиск избранного</string>
     <string name="search_apps">Поиск приложений</string>
@@ -159,8 +170,16 @@
     <string name="no_contacts_permission">Требуется разрешение для доступа к контактам</string>
     <string name="no_camera_permissions">Требуется разрешение для доступа к камере</string>
     <string name="no_audio_permissions">Требуется разрешение для доступа аудиосистеме</string>
-    <string name="no_post_notifications_permissions">Требуется разрешение на отображение уведомлений</string>
     <string name="no_permission">Отсутствует разрешение</string>
+    <string name="allow_notifications_reminders">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать напоминания.</string>
+    <string name="allow_notifications_files">Необходимо разрешить приложению отображать уведомления, иначе оно не может показывать индикатор выполнения.</string>
+    <string name="allow_notifications_music_player">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет воспроизводить композиции.</string>
+    <string name="allow_notifications_voice_recorder">Необходимо разрешить приложению отображать уведомления, иначе оно не может записывать звук.</string>
+    <string name="allow_notifications_incoming_calls">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие вызовы.</string>
+    <string name="allow_notifications_incoming_messages">Необходимо разрешить приложению отображать уведомления, иначе оно не сможет показывать входящие сообщения.</string>
+    <string name="allow_alarm_scheduled_messages">Необходимо разрешить приложению доступ к внутренним будильникам, иначе оно не сможет отправлять запланированные сообщения.</string>
+    <string name="grant_permission">Разрешить</string>
+    <string name="permission_required">Требуется разрешение</string>
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
     <string name="rename_folder">Изменение имени папки</string>
@@ -203,7 +222,7 @@
     <string name="select_destination">Выберите путь назначения</string>
     <string name="click_select_destination">Нажмите здесь, чтобы выбрать расположение</string>
     <string name="invalid_destination">Невозможно записать в выбранное расположение</string>
-    <string name="please_select_destination">Выберите путь назначения</string>
+    <string name="please_select_destination">Пожалуйста, выберите путь назначения</string>
     <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
     <string name="copy_failed">Невозможно скопировать файлы</string>
     <string name="copying">Копирование…</string>
@@ -303,6 +322,7 @@
     <string name="duration">Длительность</string>
     <string name="artist">Исполнитель</string>
     <string name="album">Альбом</string>
+    <string name="genre">Жанр</string>
     <string name="focal_length">Фокусное расстояние</string>
     <string name="exposure_time">Выдержка</string>
     <string name="iso_speed">Светочувствительность (ISO)</string>
@@ -403,6 +423,7 @@
     <string name="last_modified">Время изменения</string>
     <string name="date_created">Время создания</string>
     <string name="date_taken">Время создания</string>
+    <string name="date_added">Дата добавления</string>
     <string name="title">Название</string>
     <string name="filename">Имя файла</string>
     <string name="extension">Расширение</string>
@@ -463,6 +484,12 @@
     <string name="lock_folder_pro">Защитить папку (Pro)</string>
     <string name="unlock_folder">Снять защиту папки</string>
     <string name="lock_folder_notice">Данная защита работает только в этом приложении, она не должна заменять собой реальное общесистемное шифрование.</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="password">Пароль</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Пожалуйста, введите пароль</string>
+    <string name="invalid_password">Неправильный пароль</string>
     <!-- Times -->
     <string name="yesterday">Вчера</string>
     <string name="today">Сегодня</string>
@@ -670,6 +697,7 @@
     <string name="use_24_hour_time_format">24-часовой формат времени</string>
     <string name="change_date_and_time_format">Формат даты и времени</string>
     <string name="sunday_first">Воскресенье — начало недели</string>
+    <string name="start_week_on">Начало недели</string>
     <string name="widgets">Виджеты</string>
     <string name="use_same_snooze">Всегда использовать один и тот же интервал повтора</string>
     <string name="snooze_time">Интервал повтора</string>
@@ -731,6 +759,7 @@
     <string name="show_the_recycle_bin">Показать корзину</string>
     <string name="hide_the_recycle_bin">Скрыть корзину</string>
     <string name="open_the_recycle_bin">Открыть корзину</string>
+    <string name="skip_the_recycle_bin">Удалять файлы сразу (не в корзину)</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d элемент перемещается в корзину</item>
         <item quantity="few">%d элемента перемещаются в корзину</item>
@@ -833,7 +862,7 @@
     <string name="upgrade_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в главном меню.</string>
     <string name="upgraded_from_free_gallery">Привет,
 \n
-\nпохоже, вы только что обновились с бесплатной версии. Когда вы будете довольны pro-версией и, возможно, перенесёте в неё свои данные, можно будет удалить бесплатную версию, чтобы избежать случайного запуска, поскольку она вам больше не понадобится.
+\nпохоже, вы только что обновились с бесплатной версии. Когда вы будете довольны pro-версией и, возможно, перенесёте в неё свои данные, можно будет удалить бесплатную версию, чтобы избежать случайного запуска, поскольку она вам больше не понадобится, а также появления этого уведомления.
 \n
 \nСпасибо!</string>
     <string name="upgraded_to_pro_gallery">Привет,
@@ -843,7 +872,7 @@
 \nСпасибо!</string>
     <string name="upgraded_from_free">Привет,
 \n
-\nпохоже, что вы обновились с бесплатного приложения. Если вы будете довольны работой этого приложения и, возможно, перенесёте в него свои данные, то можете удалить старую бесплатную версию, чтобы избежать её случайного запуска, поскольку она вам больше не понадобится.
+\nпохоже, что вы обновились с бесплатного приложения. Если вы будете довольны работой этого приложения и, возможно, перенесёте в него свои данные, то можете удалить старую бесплатную версию, чтобы избежать её случайного запуска, поскольку она вам больше не понадобится, а также появления этого уведомления.
 \n
 \nСпасибо!</string>
     <string name="upgraded_to_pro">Привет,
@@ -851,25 +880,25 @@
 \nпохоже, что у вас уже есть Pro-версия приложения. Когда вы будете довольны им и, возможно, перенесёте в него свои данные, можно будет удалить это, чтобы избежать случайного запуска, поскольку эта версия вам больше не понадобится.
 \n
 \nСпасибо!</string>
-    <string name="upgraded_to_pro_calendar">Привет,
+    <string name="upgraded_from_free_calendar">Привет,
 \n
 \nпохоже, что вы только что перешли с бесплатной версии. Если вы хотите перенести локально сохранённые события, вам нужно сделать это вручную, экспортировав их в ics-файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
 \n
-\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится, а также это предотвратит появление данного уведомления.
 \n
 \nСпасибо!</string>
-    <string name="upgraded_to_pro_contacts">Привет,
+    <string name="upgraded_from_free_contacts">Привет,
 \n
 \nпохоже, что вы только что перешли с бесплатной версии. Если у вас есть какие-нибудь контакты, сохранённые в \"%s\", вам нужно перенести их вручную, экспортировав их в vcf-файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
 \n
-\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится, а также это предотвратит появление данного уведомления.
 \n
 \nСпасибо!</string>
-    <string name="upgraded_to_pro_notes">Привет,
+    <string name="upgraded_from_free_notes">Привет,
 \n
 \nпохоже, что вы только что перешли с бесплатной версии. Если вы хотите перенести свои заметки, вам нужно сделать это вручную, экспортировав их в файл в бесплатной версии приложения и импортировав сюда через верхнее меню.
 \n
-\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится.
+\nКак только вы будете довольны настройкой Рго-версии, вы сможете удалить старую бесплатную версию, так как она вам больше не понадобится, а также это предотвратит появление данного уведомления.
 \n
 \nСпасибо!</string>
     <!-- About -->
@@ -1067,6 +1096,7 @@
     <string name="why_upgrade_footer">100% гарантия возврата денег</string>
     <string name="why_upgrade_footer_one_time_payment">Разовый платёж</string>
     <string name="why_upgrade_improved_design">Улучшенный дизайн</string>
+    <string name="why_upgrade_many_other_improvements">Множество других улучшений</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Мощный фоторедактор</string>
     <string name="why_upgrade_advanced_photo_video_editor">Расширенный редактор фото и видео</string>
@@ -1132,8 +1162,10 @@
     <string name="sms_mms_title">SMS, MMS (обработка SMS и MMS)</string>
     <string name="apng_title">APNG Android (отображение анимации WebP)</string>
     <string name="pdf_view_pager_title">PDFViewPager (просмотр PDF)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (просмотр PDF)</string>
     <string name="m3u_parser_title">M3U Parser (обработка файлов списков воспроизведения m3u)</string>
     <string name="android_lame_title">AndroidLame (кодировщик в mp3)</string>
+    <string name="zip4j_title">Zip4j (работа с форматом ZIP)</string>
     <!-- Trial -->
     <string name="trial_expired">Пробный период истёк</string>
     <string name="start_free_trial">Начать пробный период</string>

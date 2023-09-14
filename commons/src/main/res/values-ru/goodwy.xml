@@ -5,11 +5,13 @@
     <string name="default_tab">Вкладка по умолчанию</string>
     <string name="color">Цвет</string>
     <string name="black">Черный</string>
+    <string name="black_locked">Черный (заблокировано)</string>
     <string name="incoming_call">Входящий</string>
     <string name="outgoing_call">Исходящий</string>
     <string name="missed_call">Пропущенный</string>
     <string name="unblock_confirmation">Разблокировать \"%s\"?</string>
     <string name="unblock_number">Разблокировать номер</string>
+    <string name="unblock_numbers">Разблокировать номера</string>
     <string name="recents">Недавние</string>
     <string name="message">Сообщение</string>
     <string name="settings_icon">Иконка настроек</string>
@@ -53,7 +55,9 @@
     <string name="no_purchase_found">Покупки не найдены.</string>
     <string name="restore_purchase">Восстановить покупки</string>
     <string name="restoring_purchase">Восстановление покупок…</string>
-    <string name="could_not_restore_purchase">Не удалось восстановить покупки.</string>
+
+    <string name="no_connection">Нет связи</string>
+    <string name="per_month">%s/месяц</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Выбор тем и цветов интерфейса</string>
@@ -71,6 +75,7 @@
     <string name="use_icon_tabs_summary">Иконки вместо текста на вкладках</string>
     <string name="show_dividers">Показывать разделители</string>
     <string name="colored_contacts">Цветные иконки контактов</string>
+    <string name="contact_color_list">Набор цветов контактов</string>
     <string name="transparent_navigation_bar">Прозрачная нижняя панель навигации</string>
     <string name="kids_mode">Детский режим</string>
     <string name="kids_mode_summary">Упрощенный интерфейс, выбор раскрасок</string>
@@ -91,6 +96,12 @@
     <string name="contact_photo">Фото контакта</string>
     <string name="blurry_contact_photo">Размытое фото контакта</string>
     <string name="blurry_wallpaper">Размытые обои</string>
+    <string name="text_cursor_color">Цвет курсора текста</string>
+    <string name="lines_count">Количество строк</string>
+    <string name="show_button_blocked_numbers">Показать кнопку не скрывать заблокированные звонки</string>
+    <string name="flash_for_alerts">Вспышка для оповещения</string>
+    <string name="clean_theme_g">Чистая</string>
+    <string name="concept_theme_g">Концепт</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>
@@ -141,6 +152,9 @@
     <string name="get">Загрузить</string>
     <string name="open">Открыть</string>
     <string name="collection">Коллекция</string>
+    <string name="collection_summary">Соберите коллекцию для разблокировки приложения</string>
+    <string name="limited_supply">Ограниченное предложение</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Pokud si z nějakého důvodu nemůžete dovolit naši aplikaci, ale opravdu chcete používat všechny funkce, stačí nám poslat e-mail</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Dobrá podpora</string>
+    <string name="tip_excellent">Vynikající podpora</string>
+    <string name="tip_incredible">Úžasná podpora</string>
+    <string name="tip_jar">Podpora</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Žádné připojení</string>
+    <string name="per_month">%s/měsíc</string>
 
     <string name="show_contact_thumbnails_g">Zobrazit obrázky kontaktů</string>
     <string name="use_icon_tabs_summary">Ikony místo textu na kartách</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Výchozí karta</string>
     <string name="color">barva</string>
     <string name="black">Černý</string>
+    <string name="black_locked">Černá (uzamčena)</string>
     <string name="show_dividers">Zobrazit oddělovače</string>
     <string name="colored_contacts">Barevné ikony kontaktů</string>
+    <string name="contact_color_list">Seznam barev kontaktů</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,14 +85,19 @@
     <string name="contact_photo">Obrázek kontaktu</string>
     <string name="blurry_contact_photo">rozmazaná fotografie kontaktu</string>
     <string name="blurry_wallpaper">rozmazaná tapeta</string>
-
-    Translated with www.DeepL.com/Translator (free version)
+    <string name="text_cursor_color">Barva textového kurzoru</string>
+    <string name="lines_count">Počet řádků</string>
+    <string name="show_button_blocked_numbers">Zobrazení tlačítka pro neskrývání blokovaných hovorů</string>
+    <string name="flash_for_alerts">Flash pro výstrahy</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Zvýrazňující barva</string>
     <string name="incoming_call">Příchozí hovor</string>
     <string name="outgoing_call">Odchozí hovor</string>
     <string name="missed_call">Zmeškaný hovor</string>
     <string name="unblock_number">Odblokovací číslo</string>
+    <string name="unblock_numbers">Odblokování čísel</string>
     <string name="recents">Nedávný</string>
     <string name="unblock_confirmation">Opravdu chcete odblokovat \"%s\"?</string>
 
@@ -141,6 +150,9 @@
     <string name="get">Získat</string>
     <string name="open">Otevřít</string>
     <string name="collection">Sbírka</string>
+    <string name="collection_summary">Vytvoření kolekce pro odemknutí aplikace</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

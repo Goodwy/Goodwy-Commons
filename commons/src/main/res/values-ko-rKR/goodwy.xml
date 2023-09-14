@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">어떤 이유로 당신은 우리의 응용 프로그램을 감당할 수 없습니다, 하지만 정말 모든 기능을 사용하고 싶다면, 그냥 이메일을 보내 주시기 바랍니다</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">좋은 지원</string>
+    <string name="tip_excellent">우수한 지원</string>
+    <string name="tip_incredible">굉장한 지원</string>
+    <string name="tip_jar">지원</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">연결 없음</string>
+    <string name="per_month">%s/월</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">탭의 텍스트 대신 아이콘</string>
@@ -58,9 +60,11 @@
     <string name="general">일반</string>
     <string name="default_tab">기본 탭</string>
     <string name="color">색</string>
-    <string name="black">검정</string>
+    <string name="black">ブラック</string>
+    <string name="black_locked">ブラック(ロック式)</string>
     <string name="show_dividers">구분 표시</string>
     <string name="colored_contacts">연락처 색상 아이콘</string>
+    <string name="contact_color_list">연락처 색상 목록</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">연락처 사진</string>
     <string name="blurry_contact_photo">흐릿한 연락처 사진</string>
     <string name="blurry_wallpaper">흐릿한 배경화면</string>
+    <string name="text_cursor_color">텍스트 커서 색상</string>
+    <string name="lines_count">줄 수</string>
+    <string name="show_button_blocked_numbers">차단된 통화를 숨기지 않는 버튼 표시</string>
+    <string name="flash_for_alerts">경고용 플래시</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">악센트 색상</string>
     <string name="incoming_call">수신 전화</string>
     <string name="outgoing_call">나가는 전화</string>
     <string name="missed_call">부재중 전화</string>
     <string name="unblock_number">차단 해제 번호</string>
+    <string name="unblock_numbers">번호 차단 해제</string>
     <string name="recents">최근</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">받기</string>
     <string name="open">열기</string>
     <string name="collection">컬렉션</string>
+    <string name="collection_summary">앱 잠금을 해제하는 컬렉션 빌드Build a collection to unlock the app</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

@@ -32,6 +32,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.auth.AuthPromptCallback
 import androidx.biometric.auth.AuthPromptHost
 import androidx.biometric.auth.Class2BiometricAuthPrompt
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
@@ -547,6 +548,12 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
 
             if (handle != null) {
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
+            }
+
+            if (isDefaultDialer()) {
+                val packageName = if (baseConfig.appId.contains(".debug", true)) "com.goodwy.dialer.debug" else "com.goodwy.dialer"
+                val className = "com.goodwy.dialer.activities.DialerActivity"
+                setClassName(packageName, className)
             }
 
             launchActivityIntent(this)
@@ -1560,8 +1567,8 @@ fun Activity.setupDialogStuff(
             getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
 
             val bgDrawable = when {
-                isBlackAndWhiteTheme() -> resources.getDrawable(R.drawable.black_dialog_background, theme)
-                baseConfig.isUsingSystemTheme -> resources.getDrawable(R.drawable.dialog_you_background, theme)
+                isBlackAndWhiteTheme() -> ResourcesCompat.getDrawable(resources, R.drawable.black_dialog_background, theme)
+                baseConfig.isUsingSystemTheme -> ResourcesCompat.getDrawable(resources, R.drawable.dialog_you_background, theme)
                 isBlackTheme() -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, getBottomNavigationBackgroundColor())
                 else -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor) //TODO Dialog background
             }

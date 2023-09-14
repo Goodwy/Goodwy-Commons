@@ -37,12 +37,12 @@ class ConfirmationAdvancedDialog(
     }
 
     private fun positivePressed() {
-        dialog?.dismiss()
         callback(true)
+        dialog?.dismiss()
     }
 
     private fun negativePressed() {
-        dialog?.dismiss()
         callback(false)
+        dialog?.dismiss()
     }
 }

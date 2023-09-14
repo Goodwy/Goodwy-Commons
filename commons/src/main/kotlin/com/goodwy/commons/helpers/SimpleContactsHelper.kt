@@ -296,20 +296,35 @@ class SimpleContactsHelper(val context: Context) {
         val canvas = Canvas(bitmap)
         val view = TextView(context)
         view.layout(0, 0, size, size)
+        val letterBackgroundColors = context.getLetterBackgroundColors()
 
-        val circlePaint = Paint().apply {
-            color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
-            isAntiAlias = true
+//        val circlePaint = Paint().apply {
+//            color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
+//            isAntiAlias = true
+//        }
+//
+//        val gradient = Paint().apply {
+//            color = Color.BLACK
+//            //strokeWidth = 1F
+//            style = Paint.Style.FILL_AND_STROKE
+//            shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
+//            isAntiAlias = true
+//        }
+//        val backgroundPaint = if (context.baseConfig.useColoredContacts) circlePaint else gradient
+        val backgroundPaint = if (context.baseConfig.useColoredContacts) {
+            Paint().apply {
+                color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
+                isAntiAlias = true
+            }
+        } else {
+            Paint().apply {
+                color = Color.BLACK
+                //strokeWidth = 1F
+                style = Paint.Style.FILL_AND_STROKE
+                shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
+                isAntiAlias = true
+            }
         }
-
-        val gradient = Paint().apply {
-            color = Color.BLACK
-            //strokeWidth = 1F
-            style = Paint.Style.FILL_AND_STROKE
-            shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
-            isAntiAlias = true
-        }
-        val backgroundPaint = if (context.baseConfig.useColoredContacts) circlePaint else gradient
 
         val wantedTextSize = size / 2f
         val textPaint = Paint().apply {
@@ -334,19 +349,34 @@ class SimpleContactsHelper(val context: Context) {
         val output = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(output)
         val paint = Paint()
+        val letterBackgroundColors = context.getLetterBackgroundColors()
 
-        val circlePaint = Paint().apply {
-            color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
-            isAntiAlias = true
+//        val circlePaint = Paint().apply {
+//            color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
+//            isAntiAlias = true
+//        }
+//        val gradient = Paint().apply {
+//            color = Color.BLACK
+//            //strokeWidth = 1F
+//            style = Paint.Style.FILL_AND_STROKE
+//            shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
+//            isAntiAlias = true
+//        }
+//        val backgroundPaint = if (context.baseConfig.useColoredContacts) circlePaint else gradient
+        val backgroundPaint = if (context.baseConfig.useColoredContacts) {
+            Paint().apply {
+                color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
+                isAntiAlias = true
+            }
+        } else {
+            Paint().apply {
+                color = Color.BLACK
+                //strokeWidth = 1F
+                style = Paint.Style.FILL_AND_STROKE
+                shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
+                isAntiAlias = true
+            }
         }
-        val gradient = Paint().apply {
-            color = Color.BLACK
-            //strokeWidth = 1F
-            style = Paint.Style.FILL_AND_STROKE
-            shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
-            isAntiAlias = true
-        }
-        val backgroundPaint = if (context.baseConfig.useColoredContacts) circlePaint else gradient
 
         paint.isAntiAlias = true
         canvas.drawARGB(0, 0, 0, 0)
@@ -357,16 +387,18 @@ class SimpleContactsHelper(val context: Context) {
 
     fun getColoredGroupIcon(title: String): Drawable {
         val icon = context.resources.getDrawable(R.drawable.ic_group_circle_bg)
+        val letterBackgroundColors = context.getLetterBackgroundColors()
         val bgColor = letterBackgroundColors[Math.abs(title.hashCode()) % letterBackgroundColors.size].toInt()
         if (context.baseConfig.useColoredContacts) (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
         return icon
     }
-
     fun getContactLookupKey(contactId: String): String {
         val uri = Data.CONTENT_URI
         val projection = arrayOf(Data.CONTACT_ID, Data.LOOKUP_KEY)
-        val selection = "${Data.MIMETYPE} = ? AND ${Data.RAW_CONTACT_ID} = ?"
-        val selectionArgs = arrayOf(StructuredName.CONTENT_ITEM_TYPE, contactId)
+        //val selection = "${Data.MIMETYPE} = ? AND ${Data.RAW_CONTACT_ID} = ?"
+        //val selectionArgs = arrayOf(StructuredName.CONTENT_ITEM_TYPE, contactId)
+        val selection = "${Data.RAW_CONTACT_ID} = ?"
+        val selectionArgs = arrayOf(contactId)
 
         val cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
         cursor?.use {

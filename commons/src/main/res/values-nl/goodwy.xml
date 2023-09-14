@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Als u om wat voor reden dan ook onze app niet kunt betalen, maar echt alle functies wilt gebruiken, stuur ons dan een e-mail</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Goede ondersteuning</string>
+    <string name="tip_excellent">Uitstekende ondersteuning</string>
+    <string name="tip_incredible">Geweldige ondersteuning</string>
+    <string name="tip_jar">Steunen</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Geen verbinding</string>
+    <string name="per_month">%s/maand</string>
 
     <string name="show_contact_thumbnails_g">Miniaturen van contacten weergeven</string>
     <string name="use_icon_tabs_summary">Pictogrammen in plaats van tekst op tabbladen</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Standaardtabblad</string>
     <string name="color">kleur</string>
     <string name="black">Zwart</string>
+    <string name="black_locked">Zwart (vergrendeld)</string>
     <string name="show_dividers">Verdelers weergeven</string>
     <string name="colored_contacts">Contacten gekleurde pictogrammen</string>
+    <string name="contact_color_list">Kleurenlijst contactpersoon</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Contactfoto</string>
     <string name="blurry_contact_photo">Wazige contactfoto</string>
     <string name="blurry_wallpaper">Wazig behang</string>
+    <string name="text_cursor_color">Kleur van tekstcursor</string>
+    <string name="lines_count">Aantal lijnen</string>
+    <string name="show_button_blocked_numbers">Toon de knop om geblokkeerde oproepen niet te verbergen</string>
+    <string name="flash_for_alerts">Flash voor waarschuwingen</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Accentkleur</string>
     <string name="incoming_call">Inkomend gesprek</string>
     <string name="outgoing_call">Uitgaand gesprek</string>
     <string name="missed_call">Gemiste oproep</string>
     <string name="unblock_number">Deblokkeer nummer</string>
+    <string name="unblock_numbers">Nummers deblokkeren</string>
     <string name="recents">Recent</string>
     <string name="unblock_confirmation">Weet u zeker dat u \"%s\" wilt deblokkeren?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Haal</string>
     <string name="open">Open</string>
     <string name="collection">Collectie</string>
+    <string name="collection_summary">Een verzameling samenstellen om de app te ontgrendelen</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

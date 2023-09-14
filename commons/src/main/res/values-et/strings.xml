@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">Sobib</string>
     <string name="cancel">Katkesta</string>
+    <string name="close">Sulge</string>
     <string name="back">Tagasi</string>
     <string name="nothing">Mitte midagi</string>
     <string name="later">Hiljem</string>
@@ -75,6 +76,8 @@
     <string name="updating">Uuendame…</string>
     <string name="phone_storage">Andmeruum telefonis</string>
     <string name="phone_storage_hidden">Telefonimälu (muud rakendused ei saa siia ligi)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Sünnipäev</string>
     <string name="anniversary">Aastapäev</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Suurenda veergude arvu</string>
     <string name="reduce_column_count">Vähenda veergude arvu</string>
     <string name="column_count">Veergude arv</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Portree veergude arv</string>
     <string name="landscape_column_count">Maastikuline veergude arv</string>
     <string name="change_cover_image">Muuda kaanepilti</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d veerg</item>
         <item quantity="other">%d veergu</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Halda blokeeritud telefoninumbreid</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">Kui soovid kasutada blokeeritud telefoninumbrite funktsionaalsust, siis peab see rakendus olema vaikimisi telefonirakendus.</string>
     <string name="set_as_default">Määra vaikimisi</string>
     <string name="block_confirmation">Kas sa oled kindel, et soovid blokeerida „%s“ telefoninumbrit\?</string>
-    <string name="block_unknown_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
-    <string name="block_unknown_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
+    <string name="block_not_stored_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
+    <string name="block_hidden_calls">Blokeeri kõned varjatud numbritelt</string>
+    <string name="block_not_stored_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
+    <string name="block_hidden_messages">Blokeeri sõnumid varjatud numbritelt</string>
     <string name="add_blocked_number_helper_text">Sisestage number või muster (nt *12345*, +1*8888), et blokeerida kõik kõned ja sõnumid mustrile vastavatelt numbritelt.</string>
     <string name="must_make_default_caller_id_app">Ilma helistajanäidu tuvastamise loata ei ole võimalik võõraid helistajaid blokeerida.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Otsi</string>
     <string name="search_in_placeholder">Otsi siit: %s</string>
     <string name="type_2_characters">Otsingu alustamiseks kirjuta vähemalt 2 tähemärki.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Otsi kontaktide hulgast</string>
     <string name="search_favorites">Otsi lemmikute hulgast</string>
     <string name="search_apps">Otsi rakendusi</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Vajalik on õigus kasutada telefoniraamatut</string>
     <string name="no_camera_permissions">Vajalik on õigus kasutada kaamerat</string>
     <string name="no_audio_permissions">Vajalik on õigus kasutada helisüsteemi</string>
-    <string name="no_post_notifications_permissions">Teatiste postitamiseks on vaja luba</string>
     <string name="no_permission">Õigused puuduvad</string>
+    <string name="allow_notifications_reminders">Selleks et rakendus saaks näidata meeldetuletusi, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_files">Selleks et rakendus saaks näidata edenemisriba, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_music_player">Selleks et rakendus saaks esitada muusikat, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_voice_recorder">Selleks et rakendus saaks salvestada heli, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_incoming_calls">Selleks et rakendus saaks näidata kõnesid, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_notifications_incoming_messages">Selleks et rakendus saaks näidata saabunud sõnumeid, pead lubama tal kuvada teavitusi.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Anna vastavad õigused</string>
+    <string name="permission_required">Luba on nõutav</string>
     <!-- Renaming -->
     <string name="rename_file">Muuda faili nime</string>
     <string name="rename_folder">Muuda kausta nime</string>
@@ -295,6 +314,7 @@
     <string name="duration">Kestus</string>
     <string name="artist">Kunstnik</string>
     <string name="album">Album</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Fookuskaugus</string>
     <string name="exposure_time">Säriaeg</string>
     <string name="iso_speed">ISO kiirus</string>
@@ -394,9 +414,10 @@
     <string name="last_modified">Viimati muutmise alusel</string>
     <string name="date_created">Loomise aja alusel</string>
     <string name="date_taken">Pildistamise aja alusel</string>
+    <string name="date_added">Lisamise kuupäev</string>
     <string name="title">Pealkiri</string>
     <string name="filename">Faili nimi</string>
-    <string name="extension">Faili tüüp</string>
+    <string name="extension">Faili laiend</string>
     <string name="random">Juhuslik</string>
     <string name="sort_randomly">Sorteeri juhuslikult</string>
     <string name="ascending">Kasvavalt</string>
@@ -453,6 +474,12 @@
     <string name="lock_folder_pro">Lukusta kaust (Pro)</string>
     <string name="unlock_folder">Eemalda kausta lukustus</string>
     <string name="lock_folder_notice">See turvameede toimib vaid selles rakenduses ega ole mõeldud asendama süsteemiülest krüptimist.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Palun sisesta salasõna</string>
+    <string name="invalid_password">Vigane salasõna</string>
     <!-- Times -->
     <string name="yesterday">Eile</string>
     <string name="today">Täna</string>
@@ -633,6 +660,7 @@
     <string name="use_24_hour_time_format">Kasuta 24-tunni ajavormingut</string>
     <string name="change_date_and_time_format">Muuda kuupäeva ja kellaaja vormingut</string>
     <string name="sunday_first">Nädal algab pühapäevaga</string>
+    <string name="start_week_on">Nädala algus on</string>
     <string name="widgets">Vidinad</string>
     <string name="use_same_snooze">Alati kasuta sama tukastamise aega</string>
     <string name="snooze_time">Tukastamise aeg</string>
@@ -694,6 +722,7 @@
     <string name="show_the_recycle_bin">Näita prügikasti</string>
     <string name="hide_the_recycle_bin">Peida prügikast</string>
     <string name="open_the_recycle_bin">Ava prügikast</string>
+    <string name="skip_the_recycle_bin">Ära viska faile prügikasti, vaid kustuta nad kohe jäädavalt</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Viskan %d faili prügikasti</item>
         <item quantity="other">Viskan %d faili prügikasti</item>
@@ -793,11 +822,19 @@
     <string name="more_info">Lisateave</string>
     <string name="upgrade">Uuenda</string>
     <string name="upgrade_calendar">Palun tõsta kohalikku andmekogusse salvestatud sündmused uude rakendusse kasutades eksportimist .ics faili ning seejärel importimist saast failist. Vastavad eksportimise/importimise nupud leiad põhivaates asuvast rakenduse menüüst.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Tere,
+\n
+\nTundub, et sa oled hiljuti teinud uuenduse tasuta versioonist. Kui sa oled rakenduse uue versiooniga rahul ning oled eelistused ja järjehoidjad üle tõstnud, siis vältimaks vana rakenduse juhuslikku käivitamist palun eemalda ta oma nutiseadmest. Samaga väldid ka selle teate uuesti kuvamist.
+\n
+\nTänud!</string>
+    <string name="upgraded_to_pro_gallery">Tere,
+\n
+\nTundub, et sul on nutiseadmes ka selle rakenduse Pro-versioon. Kui sa oled rakenduse Pro-versiooniga rahul ning oled eelistused ja järjehoidjad üle tõstnud, siis vältimaks selle vana rakenduse juhuslikku käivitamist palun eemalda ta oma nutiseadmest.
+\n
+\nTänud!</string>
     <string name="upgraded_from_free">Tere,
 \n
-\nTundub, et sa just uuendasid tasuta versioonist. Kui oled selle versiooniga rahul ja võib-olla oled ka vanad andmed üle viinud, siis võid eelmise tasuta versiooni eemaldada ja seeläbi vältida selle mittevajaliku versiooni juhuslikku käivitamist.
+\nTundub, et sa just uuendasid tasuta versioonist. Kui oled selle versiooniga rahul ja võib-olla oled ka vanad andmed üle viinud, siis võid eelmise tasuta versiooni eemaldada ja seeläbi vältida selle mittevajaliku versiooni juhuslikku käivitamist. Samaga väldid ka selle teate uuesti kuvamist.
 \n
 \nAitäh!</string>
     <string name="upgraded_to_pro">Hei,
@@ -805,15 +842,27 @@
 \ntundub, et sul on juba olemas ka rakenduse Pro-versioon. Kui sa oled selle versiooniga rahul ning oled andmed üle tõstnud, siis vältimaks rakenduste risti-rästi kasutamist võid selle teise eemaldada.
 \n
 \nTänud!</string>
-    <string name="upgraded_to_pro_calendar">Hello,
+    <string name="upgraded_from_free_calendar">Hello,
 \n
 \nTundub, et sa oled just teinud uuenduse tasuta versioonist. Kui sa soovid vanas rakenduses salvestatud sündmused uude kolida, siis ekspordi nad vanast tasuta rakendusest .ics failina ning siin uues rakenduses impordi nad ülamenüüs leiduvast valikust.
 \n
-\nKui sa oled Pro-versiooniga rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada.
+\nKui sa oled Pro-versiooni ja tema seadistustega rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada. Samaga väldid ka selle teate uuesti kuvamist.
 \n
 \nTänud!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_contacts">Hello,
+\n
+\nTundub, et sa oled just teinud uuenduse tasuta versioonist. Kui sul oli vanas rakenduses „%s“ kontakte, siis ekspordi nad vanast tasuta rakendusest .vcf failina ning siin uues rakenduses impordi nad ülamenüüs leiduvast valikust.
+\n
+\nKui sa oled Pro-versiooni ja tema seadistustega rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada. Samaga väldid ka selle teate uuesti kuvamist.
+\n
+\nTänud!</string>
+    <string name="upgraded_from_free_notes">Hello,
+\n
+\nTundub, et sa oled just teinud uuenduse tasuta versioonist. Kui sa soovid vanast rakendusest märkmed üle kolida, siis ekspordi nad vanast tasuta rakendusest .failina ning siin uues rakenduses impordi nad ülamenüüs leiduvast valikust.
+\n
+\nKui sa oled Pro-versiooni ja tema seadistustega rahul ja kuna vana versiooni enam vaja pole, siis võid selle eelmise versiooni eemaldada. Samaga väldid ka selle teate uuesti kuvamist.
+\n
+\nTänud!</string>
     <!-- About -->
     <string name="about">Rakenduse teave</string>
     <string name="website">Veebileht</string>
@@ -990,6 +1039,7 @@
     <string name="why_upgrade_footer">100% raha tagasi garantii</string>
     <string name="why_upgrade_footer_one_time_payment">Ühekordne makse</string>
     <string name="why_upgrade_improved_design">Parem disain</string>
+    <string name="why_upgrade_many_other_improvements">Palju täiendavaid parandusi</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Täiustatud fototöötlusprogramm</string>
     <string name="why_upgrade_advanced_photo_video_editor">Täiustatud foto- ja videotöötlusprogramm</string>
@@ -1055,13 +1105,15 @@
     <string name="sms_mms_title">SMS MMS (SMS- ja MMS-sõnumite käsitlemine)</string>
     <string name="apng_title">APNG Android (animeeritud WebP tugi)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF failide kuvamise teek)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF failide kuvamise teek)</string>
     <string name="m3u_parser_title">M3U Parser (m3u esitusloendi käitleja)</string>
     <string name="android_lame_title">AndroidLame (mp3 kodeerija)</string>
+    <string name="zip4j_title">Zip4j (ZIP-failide kokku- ja lahtipakkimine)</string>
     <!-- Trial -->
     <string name="trial_expired">Prooviperiood on lõppenud</string>
     <string name="start_free_trial">Alusta tasuta prooviperioodi</string>
     <string name="trial_expires_soon">Selle rakenduse prooviperiood lõppeb peagi.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
+    <string name="unlock_for_one_final_day">Luba lukustatud rakendust kasutada veel ühe viimase päeva</string>
     <string name="welcome_to_app_name">Tere tulemast %s kasutajaks!</string>
     <string name="trial_start_description">Täname, et võtsid kasutusele meie rakenduse. Praeguses olekus on ta pruugitav <font color="#FFFFFF">%d päeva</font>. Kui testperiood lõppeb, siis palun kaalu uuendust Pro-versiooniks. Sellel palju lisavõimalusi, moodne kujundus, reklaamivaba lahendus ning paljugi veel.
 \n

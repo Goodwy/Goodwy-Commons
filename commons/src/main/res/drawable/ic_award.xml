@@ -14,9 +14,12 @@
         android:scaleY="0.8">
         <path
             android:pathData="M10,2l1.669,0.864 1.858,0.282 0.842,1.68 1.337,1.32L15.4,8l0.306,1.854 -1.337,1.32 -0.842,1.68 -1.858,0.282L10,14l-1.669,-0.864 -1.858,-0.282 -0.842,-1.68 -1.337,-1.32L4.6,8l-0.306,-1.854 1.337,-1.32 0.842,-1.68 1.858,-0.282L10,2z"
-            android:fillColor="@color/yellow_700"/>
+            android:fillColor="@color/yellow_700"
+            android:strokeAlpha="0.8"
+            android:fillAlpha="0.8"/>
         <path
             android:pathData="M6,13.794V18l4,-1 4,1v-4.206l-2.018,0.306L10,15.126 8.018,14.1 6,13.794z"
-            android:fillColor="@color/red_missed"/>
-    </group>
-</vector>
+            android:fillColor="@color/red_missed"
+            android:strokeAlpha="0.8"
+            android:fillAlpha="0.8"/>
+    </group></vector>

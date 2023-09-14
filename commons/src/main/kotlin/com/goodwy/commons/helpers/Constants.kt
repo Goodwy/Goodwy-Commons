@@ -7,6 +7,7 @@ import android.os.Looper
 import android.provider.ContactsContract
 import android.util.Log
 import androidx.annotation.ChecksSdkIntAtLeast
+import androidx.annotation.StringRes
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.normalizeString
 import com.goodwy.commons.models.contacts.LocalContact
@@ -21,7 +22,11 @@ const val GOOGLE_PLAY_LICENSING_KEY = "licensing_key"
 const val PRODUCT_ID_X1 = "product_id_x1"
 const val PRODUCT_ID_X2 = "product_id_x2"
 const val PRODUCT_ID_X3 = "product_id_x3"
+const val SUBSCRIPTION_ID_X1 = "subscription_id_x1"
+const val SUBSCRIPTION_ID_X2 = "subscription_id_x2"
+const val SUBSCRIPTION_ID_X3 = "subscription_id_x3"
 const val IS_PRO_VERSION = "is_pro_version"
+const val IS_PRO_SUBS_VERSION = "is_pro_subs_version"
 const val APP_FAQ = "app_faq"
 const val APP_VERSION_NAME = "app_version_name"
 const val APP_ICON_IDS = "app_icon_ids"
@@ -51,9 +56,6 @@ const val MD5 = "MD5"
 const val SHORT_ANIMATION_DURATION = 150L
 const val DARK_GREY = 0xFF333333.toInt()
 const val CURRENT_PHONE_NUMBER = "number"
-const val SHOW_ACCENT_COLOR = "show_accent_color"
-const val SHOW_LIFEBUOY = "show_lifebuoy"
-const val PLAY_STORE_INSTALLED = "play_store_installed"
 
 const val ZERO_ALPHA = 0f
 const val LOWER_ALPHA = 0.25f
@@ -135,6 +137,7 @@ const val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_d
 const val SHOW_INFO_BUBBLE = "show_info_bubble"
 const val LAST_CONFLICT_RESOLUTION = "last_conflict_resolution"
 const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
+const val LAST_COPY_PATH = "last_copy_path"
 const val HAD_THANK_YOU_INSTALLED = "had_thank_you_installed"
 const val SKIP_DELETE_CONFIRMATION = "skip_delete_confirmation"
 const val ENABLE_PULL_TO_REFRESH = "enable_pull_to_refresh"
@@ -174,6 +177,7 @@ const val LAST_EXPORTED_SETTINGS_FOLDER = "last_exported_settings_folder"
 const val LAST_EXPORTED_SETTINGS_FILE = "last_exported_settings_file"
 const val LAST_BLOCKED_NUMBERS_EXPORT_PATH = "last_blocked_numbers_export_path"
 const val BLOCK_UNKNOWN_NUMBERS = "block_unknown_numbers"
+const val BLOCK_HIDDEN_NUMBERS = "block_hidden_numbers"
 const val FONT_SIZE = "font_size"
 const val WAS_MESSENGER_RECORDER_SHOWN = "was_messenger_recorder_shown"
 const val DEFAULT_TAB = "default_tab"
@@ -197,6 +201,12 @@ const val SHOW_PRIVATE_CONTACTS = "show_private_contacts"
 const val MERGE_DUPLICATE_CONTACTS = "merge_duplicate_contacts"
 const val FAVORITES_CONTACTS_ORDER = "favorites_contacts_order"
 const val FAVORITES_CUSTOM_ORDER_SELECTED = "favorites_custom_order_selected"
+const val VIEW_TYPE = "view_type"
+const val CONTACTS_GRID_COLUMN_COUNT = "contacts_grid_column_count"
+const val AUTO_BACKUP = "auto_backup"
+const val AUTO_BACKUP_FOLDER = "auto_backup_folder"
+const val AUTO_BACKUP_FILENAME = "auto_backup_filename"
+const val LAST_AUTO_BACKUP_TIME = "last_auto_backup_time"
 //Goodwy
 const val SETTINGS_ICON = "settings_icon"
 const val SCREEN_SLIDE_ANIMATION = "Screen_slide_animation"
@@ -207,6 +217,21 @@ const val APP_RECOMMENDATION_DIALOG_COUNT = "app_recommendation_dialog_count"
 const val USE_RELATIVE_DATE = "use_relative_date"
 const val COLOR_SIM_ICON = "color_sim_icons"
 const val OPEN_SEARCH = "open_search"
+const val SHOW_ACCENT_COLOR = "show_accent_color"
+const val SHOW_LIFEBUOY = "show_lifebuoy"
+const val SHOW_COLLECTION = "show_collection"
+const val PLAY_STORE_INSTALLED = "play_store_installed"
+const val CONTACT_COLOR_LIST = "contact_color_list"
+const val SIM_ICON_COLORS = "sim_icons_colors"
+const val TEXT_CURSOR_COLOR = "text_cursor_color"
+const val LINES_COUNT = "lines_count"
+const val SHOW_BLOCK_NUMBERS = "show_blocked_numbers"
+const val SHOW_BUTTON_BLOCK_NUMBERS = "show_button_blocked_numbers"
+const val FLASH_FOR_ALERTS = "flash_for_alerts"
+
+// contact grid view constants
+const val CONTACTS_GRID_MIN_COLUMNS_COUNT = 1
+const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
 
 // phone number/email types
 const val CELL = "CELL"
@@ -259,6 +284,8 @@ const val LICENSE_APNG = 268435456L
 const val LICENSE_PDF_VIEW_PAGER = 536870912L
 const val LICENSE_M3U_PARSER = 1073741824L
 const val LICENSE_ANDROID_LAME = 2147483648L
+const val LICENSE_PDF_VIEWER = 4294967296L
+const val LICENSE_ZIP4J = 8589934592L
 
 // global intents
 const val OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB = 1000
@@ -372,7 +399,7 @@ const val TAB_STORAGE_ANALYSIS = 64
 
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".heic", ".heif", ".apng", ".avif")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
-val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
+val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac", ".m4b")
 val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw", ".rw2", ".cr2", ".cr3")
 
 val extensionsSupportingEXIF: Array<String> get() = arrayOf(".jpg", ".jpeg", ".png", ".webp", ".dng")
@@ -396,10 +423,10 @@ const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
 
 // possible icons at the top left corner
-enum class NavigationIcon {
-    Cross,
-    Arrow,
-    None
+enum class NavigationIcon(@StringRes val accessibilityResId: Int) {
+    Cross(R.string.close),
+    Arrow(R.string.back),
+    None(0)
 }
 
 val appIconColorStrings = arrayListOf(
@@ -424,19 +451,57 @@ val appIconColorStrings = arrayListOf(
     ".Grey_black"
 )
 
+// letter background colors
+const val LBC_ORIGINAL = 1 //letterBackgroundColors
+const val LBC_ANDROID = 2 //letterBackgroundColorsAndroid
+const val LBC_IOS = 3 //letterBackgroundColorsIOS
+const val LBC_ARC = 4 //letterBackgroundColorsArc
+
 // most app icon colors from md_app_icon_colors with reduced alpha
 // used at showing contact placeholders without image
 val letterBackgroundColors = arrayListOf(
-    0xFF06C9AF,
-    0xFF6DC966,
-    0xFFF1AF28,
-    0xFFFF8963,
-    0xFFFF6969,
-    0xFF5D99FF,
-    0xFF8899EC,
     0xFF8CDAFA,
+    0xFF5D99FF,
+    0xFFA589EF,
+    0xFFFF6969,
+    0xFFFF8963,
+    0xFFF1AF28,
     0xFFF7DF32,
-    0xFFA589EF
+    0xFF06C9AF
+)
+
+//TODO Random color
+val letterBackgroundColorsAndroid = arrayListOf( // Android
+    0xFF00D0EA,
+    0xFF0075F0,
+    0xFFBC56FF,
+    0xFFFF54BB,
+    0xFFFF5B55,
+    0xFFFF891D,
+    0xFFFFC600,
+    0xFF26BC6D
+)
+
+val letterBackgroundColorsArc = arrayListOf( // Arc
+    0xFF6DBAD9,
+    0xFF666789,
+    0xFFA6729E,
+    0xFFF29BBB,
+    0xFFF25E6B,
+    0xFFFF8558,
+    0xFFF8D558,
+    0xFF34E895
+)
+
+val letterBackgroundColorsIOS = arrayListOf( // iOS
+    0xFF64D1FF,
+    0xFF0B84FE,
+    0xFF5D5CE6,
+    0xFFBF5AF3,
+    0xFFFE375E,
+    0xFFFF5713,
+    0xFFFE9F0C,
+    0xFF2ED158
 )
 /*val letterBackgroundColors = arrayListOf(
     0xCCD32F2F,
@@ -454,6 +519,7 @@ val letterBackgroundColors = arrayListOf(
 // view types
 const val VIEW_TYPE_GRID = 1
 const val VIEW_TYPE_LIST = 2
+const val VIEW_TYPE_UNEVEN_GRID = 3
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 

@@ -7,4 +7,6 @@
     <bool name="pretend_thank_you_installed">false</bool>       <!-- do not require Thank You for color customization and widgets -->
 
     <bool name="show_lifebuoy">false</bool>
+    <bool name="show_collection">false</bool>
+    <bool name="is_pro_app">false</bool>
 </resources>

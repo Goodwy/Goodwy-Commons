@@ -11,9 +11,7 @@ import android.os.Handler
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
-import android.view.View
 import androidx.core.net.toUri
-import androidx.core.view.isEmpty
 import com.goodwy.commons.R
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
 import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
@@ -36,6 +34,9 @@ class AboutActivity : BaseSimpleActivity() {
     private var productIdX1 = ""
     private var productIdX2 = ""
     private var productIdX3 = ""
+    private var subscriptionIdX1 = ""
+    private var subscriptionIdX2 = ""
+    private var subscriptionIdX3 = ""
     private var playStoreInstalled = true
 
     private var firstVersionClickTS = 0L
@@ -64,6 +65,9 @@ class AboutActivity : BaseSimpleActivity() {
         productIdX1 = intent.getStringExtra(PRODUCT_ID_X1) ?: ""
         productIdX2 = intent.getStringExtra(PRODUCT_ID_X2) ?: ""
         productIdX3 = intent.getStringExtra(PRODUCT_ID_X3) ?: ""
+        subscriptionIdX1 = intent.getStringExtra(SUBSCRIPTION_ID_X1) ?: ""
+        subscriptionIdX2 = intent.getStringExtra(SUBSCRIPTION_ID_X2) ?: ""
+        subscriptionIdX3 = intent.getStringExtra(SUBSCRIPTION_ID_X3) ?: ""
         playStoreInstalled = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
     }
 
@@ -291,7 +295,7 @@ class AboutActivity : BaseSimpleActivity() {
     @SuppressLint("NewApi", "UseCompatTextViewDrawableApis")
     private fun setupTipJar() {
         tipJarButton.setOnClickListener {
-            startPurchaseActivity(R.string.app_name_g, licensingKey, productIdX1, productIdX2, productIdX3, playStoreInstalled = playStoreInstalled)
+            startPurchaseActivity(R.string.app_name_g, licensingKey, productIdX1, productIdX2, productIdX3, subscriptionIdX1, subscriptionIdX2, subscriptionIdX3, playStoreInstalled = playStoreInstalled)
         }
         tipJarButton.setTextColor(getProperTextColor())
         tipJarButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
@@ -309,21 +313,21 @@ class AboutActivity : BaseSimpleActivity() {
         val appDialerInstalled = isPackageInstalled(appDialerPackage)// || isPackageInstalled("com.goodwy.dialer.debug")
         val appContactsInstalled = isPackageInstalled(appContactsPackage)// || isPackageInstalled("com.goodwy.contacts.debug")
         val appSmsMessengerInstalled = isPackageInstalled(appSmsMessengerPackage)// || isPackageInstalled("com.goodwy.smsmessenger.debug")
-        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
         val appGalleryInstalled = isPackageInstalled(appGalleryPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
+        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
 
-        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appVoiceRecorderInstalled
+        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled && appVoiceRecorderInstalled
 
         collectionButton.setTextColor(getProperTextColor())
         collectionButton.background = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getBottomNavigationBackgroundColor())
         if (!appAllInstalled) collectionButton.compoundDrawableTintList = ColorStateList.valueOf(getProperTextColor())
 
         val items = arrayOf(
-            SimpleListItem(1, R.string.right_dialer, R.mipmap.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
-            SimpleListItem(2, R.string.right_contacts, R.mipmap.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
-            SimpleListItem(3, R.string.right_sms_messenger, R.mipmap.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
-            SimpleListItem(4, R.string.right_voice_recorder, R.mipmap.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage),
-            SimpleListItem(5, R.string.right_gallery, R.mipmap.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage)
+            SimpleListItem(1, R.string.right_dialer, imageRes = R.mipmap.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
+            SimpleListItem(2, R.string.right_contacts, imageRes = R.mipmap.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
+            SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.mipmap.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
+            SimpleListItem(4, R.string.right_gallery, imageRes = R.mipmap.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
+            SimpleListItem(5, R.string.right_voice_recorder, imageRes = R.mipmap.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage)
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()

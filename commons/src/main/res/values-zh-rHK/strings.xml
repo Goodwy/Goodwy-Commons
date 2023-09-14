@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ok">确认</string>
+    <string name="ok">確定</string>
     <string name="cancel">取消</string>
+    <string name="close">關閉</string>
     <string name="back">返回</string>
-    <string name="nothing">没有东西</string>
-    <string name="later">稍后</string>
-    <string name="save_as">保存</string>
-    <string name="file_saved">文件保存成功</string>
-    <string name="invalid_file_format">无效文件格式</string>
-    <string name="out_of_memory_error">内存不足</string>
-    <string name="an_error_occurred">啊哦，出错啦：%s</string>
-    <string name="error">错误: %s</string>
-    <string name="open_with">打开方式</string>
-    <string name="edit_with">编辑方式</string>
-    <string name="edit">编辑</string>
-    <string name="no_app_found">未找到可用应用</string>
-    <string name="no_browser_found">未找到浏览器</string>
-    <string name="no_email_client_found">未找到电子邮件客户端</string>
-    <string name="set_as">设置为</string>
-    <string name="copy_to_clipboard">复制到剪贴板</string>
-    <string name="copy_number_to_clipboard">复制号码到剪贴板</string>
-    <string name="value_copied_to_clipboard">内容已复制到剪贴板</string>
-    <string name="value_copied_to_clipboard_show">内容已复制到剪贴板:\n%s</string>
-    <string name="dial_number">拨号</string>
-    <string name="unknown">未知</string>
-    <string name="always">总是</string>
-    <string name="never">从不</string>
-    <string name="details">详细</string>
-    <string name="notes">笔记</string>
-    <string name="deleting_folder">正在删除目录 \'%s\'</string>
-    <string name="none">无</string>
-    <string name="label">标签</string>
+    <string name="nothing">没有東西</string>
+    <string name="later">稍後</string>
+    <string name="save_as">儲存</string>
+    <string name="file_saved">成功儲存檔案</string>
+    <string name="invalid_file_format">檔案格式無效</string>
+    <string name="out_of_memory_error">記憶體不足</string>
+    <string name="an_error_occurred">發生錯誤：%s</string>
+    <string name="error">錯誤: %s</string>
+    <string name="open_with">以其他應用程式開啟</string>
+    <string name="edit_with">用其他程式編輯</string>
+    <string name="edit">編輯</string>
+    <string name="no_app_found">找不到應用程式</string>
+    <string name="no_browser_found">找不到瀏覽器</string>
+    <string name="no_email_client_found">找不到電郵用户端</string>
+    <string name="set_as">設置為</string>
+    <string name="copy_to_clipboard">複製到剪貼簿</string>
+    <string name="copy_number_to_clipboard">複製號碼到剪貼簿</string>
+    <string name="value_copied_to_clipboard">數值已複製到剪貼簿</string>
+    <string name="value_copied_to_clipboard_show">數值已製到剪貼簿:\n%s</string>
+    <string name="dial_number">撥號</string>
+    <string name="unknown">未知的</string>
+    <string name="always">總是</string>
+    <string name="never">從不</string>
+    <string name="details">詳細資料</string>
+    <string name="notes">筆記</string>
+    <string name="deleting_folder">資料夾 \'%s\' 刪除中</string>
+    <string name="none">無</string>
+    <string name="label">標籤</string>
     <string name="transparent">透明</string>
-    <string name="transparent_color">透明颜色</string>
-    <string name="select_a_different_color">选择一个不同的颜色</string>
-    <string name="download">下载</string>
+    <string name="transparent_color">透明顏色</string>
+    <string name="select_a_different_color">選擇不同的顏色</string>
+    <string name="download">下載</string>
     <string name="notification">通知</string>
     <string name="notifications">通知</string>
-    <string name="email">电子邮件</string>
+    <string name="email">電郵</string>
     <string name="previous">上一首</string>
-    <string name="playpause">播放/暂停</string>
+    <string name="playpause">播放 / 暫停</string>
     <string name="next">下一首</string>
-    <string name="number">号码</string>
-    <string name="no_contacts_found">未发现联系人</string>
-    <string name="request_the_required_permissions">请求必要的权限</string>
-    <string name="no_access_to_contacts">该应用无法访问联系人</string>
-    <string name="no_phone_call_permission">应用没有发起呼叫的权限，请在设备设置中授予该权限</string>
-    <string name="insert_text_here">在此输入文本</string>
-    <string name="call_person">打电话给 %s</string>
-    <string name="confirm_calling_person">Confirm calling %s</string>
+    <string name="number">號碼</string>
+    <string name="no_contacts_found">未發現聯絡人</string>
+    <string name="request_the_required_permissions">要求必要的權限</string>
+    <string name="no_access_to_contacts">應用程式無法存取你的聯絡人</string>
+    <string name="no_phone_call_permission">應用程式沒有撥打電話的權限，請在裝置設定裏授予該權限</string>
+    <string name="insert_text_here">在此輸入文字</string>
+    <string name="call_person">打電話給 %s</string>
+    <string name="confirm_calling_person">確定打電話給 %s</string>
     <string name="zero">零</string>
     <string name="one">一</string>
     <string name="two">二</string>
@@ -59,35 +60,37 @@
     <string name="seven">七</string>
     <string name="eight">八</string>
     <string name="nine">九</string>
-    <string name="value">值</string>
-    <string name="value_cannot_be_empty">值不能为空</string>
-    <string name="create_new_contact">建立新联系人</string>
-    <string name="add_to_existing_contact">添加至已存在的联系人</string>
-    <string name="app_corrupt">应用损坏</string>
-    <string name="disclaimer">免责声明</string>
+    <string name="value">數值</string>
+    <string name="value_cannot_be_empty">數值不可以空白</string>
+    <string name="create_new_contact">建立新聯絡人</string>
+    <string name="add_to_existing_contact">添加至已存在的聯絡人</string>
+    <string name="app_corrupt">應用程式損壞</string>
+    <string name="disclaimer">免責聲明</string>
     <string name="take_photo">拍照</string>
-    <string name="choose_photo">选择照片</string>
-    <string name="choose_video">选择视频</string>
-    <string name="choose_contact">选择联系人</string>
-    <string name="choose_file">选择文件</string>
-    <string name="record_audio">录音</string>
-    <string name="record_video">录像</string>
-    <string name="updating">Updating…</string>
-    <string name="phone_storage">Phone storage</string>
-    <string name="phone_storage_hidden">Phone storage (not visible by other apps)</string>
+    <string name="choose_photo">選擇相片</string>
+    <string name="choose_video">選擇影片</string>
+    <string name="choose_contact">選擇聯絡人</string>
+    <string name="choose_file">選擇檔案</string>
+    <string name="record_audio">錄音</string>
+    <string name="record_video">拍片</string>
+    <string name="updating">正在更新…</string>
+    <string name="phone_storage">手機容量</string>
+    <string name="phone_storage_hidden">手機容量 (其他程式不可見)</string>
+    <string name="audio">音訊</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">生日</string>
-    <string name="anniversary">纪念日</string>
+    <string name="anniversary">紀念日</string>
     <!-- Emails -->
     <string name="home">家庭</string>
     <string name="work">工作</string>
     <!-- Phone numbers -->
-    <string name="mobile">手机</string>
+    <string name="mobile">手機</string>
     <string name="main_number">主用</string>
-    <string name="work_fax">工作传真</string>
-    <string name="home_fax">家庭传真</string>
+    <string name="work_fax">工作傳真</string>
+    <string name="home_fax">家庭傳真</string>
     <string name="pager">呼叫器</string>
-    <string name="no_phone_number_found">未发现电话号码</string>
+    <string name="no_phone_number_found">未發現電話號碼</string>
     <!-- View types -->
     <string name="change_view_type">更改视图类型</string>
     <string name="grid">网格</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">显示更多项目</string>
     <string name="reduce_column_count">显示更少项目</string>
     <string name="column_count">列数</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">垂直列数</string>
     <string name="landscape_column_count">水平列数</string>
     <string name="change_cover_image">更换封面图片</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d column</item>
         <item quantity="other">%d columns</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">您必须将这应用程序设为默认的拨号程序来使用黑名单。</string>
     <string name="set_as_default">设为默认</string>
     <string name="block_confirmation">您确定要将 \"%s\" 添加到黑名单吗？</string>
-    <string name="block_unknown_calls">拦截来自未存储联系人的通话</string>
-    <string name="block_unknown_messages">拦截来自未存储联系人的消息</string>
+    <string name="block_not_stored_calls">拦截来自未存储联系人的通话</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">拦截来自未存储联系人的消息</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">输入号码或模式（例如 *12345*、+1*8888）以阻止来自匹配模式的号码的所有来电和消息。</string>
     <string name="must_make_default_caller_id_app">要拦截未知号码，你必须将应用设为默认的来电显示和骚扰电话屏蔽应用。</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">搜索</string>
     <string name="search_in_placeholder">Search in %s</string>
     <string name="type_2_characters">请输入至少两个字符来开始搜索。</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Search contacts</string>
     <string name="search_favorites">Search favorites</string>
     <string name="search_apps">Search apps</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">请授予通讯录权限</string>
     <string name="no_camera_permissions">请授予相机权限</string>
     <string name="no_audio_permissions">请授予音频权限</string>
-    <string name="no_post_notifications_permissions">需要发送通知权限</string>
     <string name="no_permission">无权限</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">重命名文件</string>
     <string name="rename_folder">重命名文件夹</string>
@@ -287,6 +306,7 @@
     <string name="duration">时长</string>
     <string name="artist">艺术家</string>
     <string name="album">专辑</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">焦距</string>
     <string name="exposure_time">曝光时间</string>
     <string name="iso_speed">ISO 速度</string>
@@ -318,7 +338,7 @@
     <string name="discard">丢弃</string>
     <string name="undo_changes">撤销更改</string>
     <string name="undo_changes_confirmation">是否撤销您的更改？</string>
-    <string name="cannot_be_undone">This action cannot be undone.</string>
+    <string name="cannot_be_undone">此操作無法撤消。</string>
     <string name="save_before_closing">您尚未保存更改，是否保存？</string>
     <string name="apply_to_all_apps">应用到所有简约系列应用</string>
     <string name="app_icon_color_warning">警告：某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
@@ -387,6 +407,7 @@
     <string name="last_modified">修改日期</string>
     <string name="date_created">创建日期</string>
     <string name="date_taken">拍摄日期</string>
+    <string name="date_added">Date added</string>
     <string name="title">标题</string>
     <string name="filename">文件名</string>
     <string name="extension">扩展名</string>
@@ -445,6 +466,12 @@
     <string name="lock_folder_pro">锁定文件夹 (Pro)</string>
     <string name="unlock_folder">解锁文件夹</string>
     <string name="lock_folder_notice">此保护仅适用于此应用程序，不应取代真正的系统级文件夹加密。</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">昨天</string>
     <string name="today">今天</string>
@@ -596,6 +623,7 @@
     <string name="use_24_hour_time_format">使用 24 小时制</string>
     <string name="change_date_and_time_format">更改日期和时间格式</string>
     <string name="sunday_first">每周以周日开头</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">小部件</string>
     <string name="use_same_snooze">始终使用相同的贪睡时间</string>
     <string name="snooze_time">贪睡时间</string>
@@ -657,6 +685,7 @@
     <string name="show_the_recycle_bin">显示回收站</string>
     <string name="hide_the_recycle_bin">隐藏回收站</string>
     <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="other">正在移动 %d 个项目到回收站</item>
     </plurals>
@@ -752,9 +781,9 @@
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">关于</string>
     <string name="website">网站</string>
@@ -779,15 +808,15 @@
     <string name="privacy_policy">隐私政策</string>
     <string name="version_placeholder">版本 %s</string>
     <string name="hello">你好 :)</string>
-    <string name="about_footer">饱含 ❤️ 于斯洛伐克制作</string>
-    <string name="additional_info">额外信息</string>
-    <string name="app_version">应用版本：%s</string>
-    <string name="device_os">设备系统：%s</string>
+    <string name="about_footer">在斯洛伐克用 ❤️ 製作</string>
+    <string name="additional_info">額外資訊</string>
+    <string name="app_version">應用程式版本：%s</string>
+    <string name="device_os">裝置系統：%s</string>
     <string name="donate_please">
         <![CDATA[
-            您好，<br><br>
-            希望您喜欢这个应用。它不包含广告，所以请购买<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 这个应用支持一下，这样此对话框将不再出现。<br><br>
-            非常感谢！
+            哈囉，<br><br>
+            希望您喜歡這個應用程式。它不包含廣告，所以請購買<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 以支持應用程式開發，這個對話框也不會再出現。<br><br>
+            多謝！
         ]]>
     </string>
     <string name="donate_new">你好，&lt;br&gt;&lt;br&gt;希望您喜欢这个应用程序。它不包含广告，我们也不收集您的数据，要支持它的开发， 请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. 您将解锁所有的应用功能，包括颜色自定义。&lt;br&gt;&lt;br&gt;谢谢你！</string>
@@ -938,6 +967,7 @@
     <string name="why_upgrade_footer">100% 退款保证</string>
     <string name="why_upgrade_footer_one_time_payment">一次性付款</string>
     <string name="why_upgrade_improved_design">改进的设计</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">高级照片编辑器</string>
     <string name="why_upgrade_advanced_photo_video_editor">高级照片和视频编辑器</string>
@@ -1003,15 +1033,17 @@
     <string name="sms_mms_title">SMS MMS (短信和彩信处理)</string>
     <string name="apng_title">APNG Android (动画 WebP 支持)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF 查看器)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF 查看器)</string>
     <string name="m3u_parser_title">M3U 解析器 (m3u 播放列表文件处理)</string>
     <string name="android_lame_title">AndroidLame (mp3 编码器)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Trial expired</string>
     <string name="start_free_trial">Start free trial</string>
     <string name="trial_expires_soon">Your trial expires soon.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
+    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'&gt;%d days&lt;/font&gt;. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
         \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
     <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
     <plurals name="trial_expires_days">

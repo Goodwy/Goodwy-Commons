@@ -1,97 +1,108 @@
 <resources>
     <string name="app_name_g">Goodwy Commons</string>
-    <string name="recorder_g">Recorder</string>
-    <string name="player_g">Player</string>
-    <string name="general">General</string>
-    <string name="default_tab">Default tab</string>
-    <string name="color">color</string>
-    <string name="black">Black</string>
-    <string name="incoming_call">Incoming Call</string>
-    <string name="outgoing_call">Outgoing Call</string>
-    <string name="missed_call">Missed Call</string>
-    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="unblock_number">Unblock number</string>
-    <string name="recents">Recents</string>
-    <string name="message">Message</string>
-    <string name="settings_icon">Settings icon</string>
+    <string name="recorder_g">ریکارڈر</string>
+    <string name="player_g"> پلیئر</string>
+    <string name="general"> جنرل</string>
+    <string name="default_tab"> ڈیفالٹ ٹیب</string>
+    <string name="color">رنگ</string>
+    <string name="black">سیاہ</string>
+    <string name="black_locked">سیاہ (مقفل)</string>
+    <string name="incoming_call">آنے والی کال</string>
+    <string name = "outgoing_call">آؤٹ گوئنگ کال</string>
+    <string name = "missed_call">مسڈ کال</string>
+    <string name="unblock_confirmation">کیا آپ واقعی \"%s\" کو غیر مسدود کرنا چاہتے ہیں؟</string>
+    <string name="unblock_number">غیر مسدود نمبر</string>
+    <string name="unblock_numbers">ان بلاک نمبرز</string>
+    <string name="recents">حالیہ</string>
+    <string name="message">پیغام</string>
+    <string name = "settings_icon">ترتیبات کا آئیکن</string>
 
     <!-- Support project -->
-    <string name="action_support_project">Support project</string>
-    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
-    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
-    <string name="learn_more">Learn more</string>
+    <string name="action_support_project">منصوبے کی حمایت</string>
+    <string name="pref_pay_summary">مستقبل کی پیشرفت اور اضافی خصوصیات کو سپورٹ کرنے کے لیے بامعاوضہ ایپ حاصل کریں۔</string>
+    <string name="support_project_summary">مستقبل کی ترقی اور اضافی خصوصیات کو غیر مقفل کرنے کے لیے ہماری بامعاوضہ ایپس میں سے ایک حاصل کریں۔</string>
+    <string name="learn_more">اورجانیے</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
     <string name="voicerecorder">VoiceMemos</string>
     <string name="voicerecorder_summary">Voice recorder</string>
     <string name="files">Files</string>
     <string name="files_summary">File manager</string>
-    <string name="themes">Themes</string>
-    <string name="themes_summary">Carefully selected application themes, automatic theme changer and system theme support for Android 12+</string>
-    <string name="color_title">Colors</string>
-    <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
-    <string name="plus_title">Support us</string>
-    <string name="plus_summary">All of our apps are ad-free, Open Source and it will always remain that way. With your help we are able to implement more features and make them even better</string>
-    <string name="lifebuoy_title">We will support you</string>
-    <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
-    <string name="participants_title">Participants</string>
-    <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
-    <string name="unlock">Unlock</string>
+    <string name="themes">تھیمز</string>
+    <string name="themes_summary">Android 12+ کے لیے احتیاط سے منتخب کردہ ایپلیکیشن تھیمز، خودکار تھیم چینجر اور سسٹم تھیم سپورٹ</string>
+    <string name="color_title">رنگ</string>
+    <string name="color_summary">بنیادی رنگ، لہجہ، پس منظر، متن اور نیویگیشن بار کی دستی ایڈجسٹمنٹ</string>
+    <string name="plus_title">ہمیں سپورٹ کریں</string>
+    <string name="plus_summary">ہماری سبھی ایپس اشتہارات سے پاک، اوپن سورس ہیں اور یہ ہمیشہ اسی طرح رہیں گی۔ آپ کی مدد سے ہم مزید خصوصیات کو نافذ کرنے اور انہیں مزید بہتر بنانے کے قابل ہیں</string>
+    <string name="lifebuoy_title">ہم آپ کو سپورٹ کریں گے</string>
+    <string name="lifebuoy_summary">اگر کسی وجہ سے آپ ہماری ایپ کو برداشت نہیں کر سکتے، لیکن واقعی تمام خصوصیات استعمال کرنا چاہتے ہیں، تو بس ہمیں ای میل کریں</string>
+    <string name="participants_title">شرکاء</string>
+    <string name="special_thanks_to">کا خصوصی شکریہ</string>
+    <string name="tip_kind">اچھی حمایت</string>
+    <string name="tip_excellent">بہترین سپورٹ</string>
+    <string name="tip_incredible">حیرت انگیز سپورٹ</string>
+    <string name="tip_jar">حمایت</string>
+    <string name="unlock">غیر مقفل کریں</string>
     <string name="donate_text_g">
         <![CDATA[
-            For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
-            If you like our apps which are offline, non-intrusive and have no ads, please consider supporting us in some way. We would be very grateful.<br><br>
-            Thank you!
+            جو لوگ گوگل پلے استعمال نہیں کرتے ان کے لیے ایپلی کیشن کے تمام فنکشنز کو ان لاک کرنا ممکن ہے۔ <br>
+            اگر آپ کو ہماری ایپس پسند ہیں جو آف لائن ہیں، غیر مداخلت کرنے والی ہیں اور جن میں کوئی اشتہار نہیں ہے، تو براہ کرم کسی طرح سے ہماری مدد کرنے پر غور کریں۔ ہم بہت مشکور ہوں گے۔<br><br>
+            شکریہ!
         ]]>
     </string>
 
     <!--Billing-->
-    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
-    <string name="no_purchase_found">No purchase found.</string>
-    <string name="restore_purchase">Restore purchase</string>
-    <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+    <string name="restored_previous_purchase_please_restart">پچھلی خریداری بحال کر دی گئی۔ تمام خصوصیات کا استعمال کرنے کے لیے براہ کرم ایپ کو دوبارہ شروع کریں۔</string>
+    <string name="no_purchase_found">کوئی خریداری نہیں ملی۔</string>
+    <string name="restore_purchase">خریداری بحال کریں</string>
+    <string name="restoring_purchase">خریداری بحال کی جا رہی ہے…</string>
+
+    <string name="no_connection">کوئی رابطہ نہیں</string>
+    <string name="per_month">%s/مہینہ</string>
 
     <!-- Theme -->
-    <string name="customization_theme_summary">Select of themes and interface colors</string>
-    <string name="pref_theme_summary">Select a pre-installed theme</string>
-    <string name="pref_category_appearance">Appearance</string>
-    <string name="gray_theme">Gray</string>
-    <string name="accent_color">Accent color</string>
+    <string name="customization_theme_summary">تھیمز اور انٹرفیس کے رنگوں کا انتخاب کریں</string>
+    <string name="pref_theme_summary">پہلے سے نصب تھیم کو منتخب کریں</string>
+    <string name="pref_category_appearance">ظاہری شکل</string>
+    <string name="gray_theme"> گرے</string>
+    <string name="accent_color">لہجے کا رنگ</string>
 
     <!-- Settings -->
-    <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
-    <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
-    <string name="round_play_icon">Round play/pause icon</string>
-    <string name="round_play_icon_summary">The play/pause icon is colored in the primary color</string>
-    <string name="use_icon_tabs">Use tab icons</string>
-    <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
-    <string name="show_dividers">Show dividers</string>
-    <string name="colored_contacts">Contacts colored icons</string>
-    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
-    <string name="kids_mode">Kids mode</string>
-    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
-    <string name="restart_required">Application restart required</string>
-    <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
-    <string name="bottom_navigation_bar">Bottom navigation bar</string>
-    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
-    <string name="tab_navigation">Tab navigation</string>
-    <string name="top">Top</string>
-    <string name="bottom">Bottom</string>
-    <string name="relative_date">Relative date</string>
-    <string name="color_sim_card_icons">Color SIM card icons</string>
-    <string name="tabs">Tabs</string>
-    <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
-    <string name="call_screen_background">Call screen background</string>
-    <string name="contact_photo">Contact photo</string>
-    <string name="blurry_contact_photo">Blurry contact photo</string>
-    <string name="blurry_wallpaper">Blurry wallpaper</string>
+    <string name="show_contact_thumbnails_g">رابطے کے تھمب نیلز دکھائیں</string>
+    <string name="save_recordings_in_summary">Android 10+ سے شروع کرتے ہوئے، ایپ کو آپ کی فائلوں تک رسائی حاصل نہیں ہے</string>
+    <string name="round_play_icon"> راؤنڈ پلے/پوز آئیکن</string>
+    <string name="round_play_icon_summary">پلے/پاز آئیکن بنیادی رنگ میں رنگین ہے</string>
+    <string name="use_icon_tabs">ٹیب آئیکنز استعمال کریں</string>
+    <string name="use_icon_tabs_summary">ٹیبز پر متن کے بجائے شبیہیں</string>
+    <string name="show_dividers">تقسیم دکھائیں</string>
+    <string name="colored_contacts">رنگوں والے آئیکنز</string>
+    <string name="contact_color_list">رابطہ رنگ کی فہرست</string>
+    <string name="transparent_navigation_bar">شفاف نیچے نیویگیشن بار</string>
+    <string name="kids_mode">بچوں کا موڈ</string>
+    <string name="kids_mode_summary">آسان انٹرفیس، رنگ منتخب کریں</string>
+    <string name="restart_required">ایپلیکیشن دوبارہ شروع کرنا ضروری ہے</string>
+    <string name="transparent_bar"> شفاف بارز</string>
+    <string name="material_design_3">میٹریل ڈیزائن 3</string>
+    <string name="material_design_3_summary">ایپلی کیشن کے کچھ عناصر کی ظاہری شکل کو تبدیل کرتا ہے</string>
+    <string name="bottom_navigation_bar">نیچے نیویگیشن بار</string>
+    <string name="bottom_navigation_bar_summary">ٹیب بار نیچے چلے جائیں گے</string>
+    <string name="tab_navigation">ٹیب نیویگیشن</string>
+    <string name="top">اوپر</string>
+    <string name="bottom">نیچے</string>
+    <string name="relative_date">متعلقہ تاریخ</string>
+    <string name="color_sim_card_icons">رنگین سم کارڈ آئیکنز</string>
+    <string name="tabs">ٹیبز</string>
+    <string name="open_search_when_open_contacts">جب آپ رابطے کا ٹیب کھولیں تو تلاش کھولیں</string>
+    <string name="call_screen_background">کال اسکرین کا پس منظر</string>
+    <string name="contact_photo">رابطہ تصویر</string>
+    <string name="blurry_contact_photo">دھندلی رابطے کی تصویر</string>
+    <string name="blurry_wallpaper">دھندلا وال پیپر</string>
+    <string name="text_cursor_color">ٹیکسٹ کرسر کا رنگ</string>
+    <string name="lines_count">لائنوں کی گنتی</string>
+    <string name="show_button_blocked_numbers">مسدود کالوں کو نہ چھپانے کے لیے بٹن دکھائیں</string>
+    <string name="flash_for_alerts">الرٹس کے لیے ایل ای ڈی فلیش</string>
+    <string name="clean_theme_g">صاف کریں</string>
+    <string name="concept_theme_g">تصور</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -122,31 +133,34 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
-    <string name="add_related_person">Add related person</string>
+    <string name="add_number">نمبر شامل کریں</string>
+    <string name="add_email">ای میل شامل کریں</string>
+    <string name="add_address">پتہ شامل کریں</string>
+    <string name="add_im">IM شامل کریں</string>
+    <string name="add_event">ایونٹ شامل کریں</string>
+    <string name="add_notes">نوٹس شامل کریں</string>
+    <string name="add_website">ویب سائٹ شامل کریں</string>
+    <string name="add_group">ایک گروپ شامل کریں</string>
+    <string name="add_related_person">متعلقہ شخص کو شامل کریں</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
+    <string name="video_call">ویڈیو کال</string>
+    <string name="screen_slide_animation">اسکرین سلائیڈ اینیمیشن</string>
+    <string name="screen_slide_animation_zoomout">زوم آؤٹ</string>
+    <string name="screen_slide_animation_depth">گہرائی</string>
     <string name="show_phone_numbers_g">فون نمبر ویکھو</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
+    <string name="get">حاصل کریں</string>
+    <string name="open">کھولیں</string>
+    <string name="collection">مجموعہ</string>
+    <string name="collection_summary">ایپ کو غیر مقفل کرنے کے لیے ایک مجموعہ بنائیں</string>
+    <string name="limited_supply">محدود فراہمی</string>
+    <string name="playbook">پلے بک</string>
+    <string name="right_contacts">دائیں رابطے</string>
+    <string name="right_dialer">دائیں ڈائلر</string>
+    <string name="right_sms_messenger">دائیں پیغامات</string>
+    <string name="right_voice_recorder">رائٹ وائس میمو</string>
+    <string name="right_gallery">دائیں گیلری</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
@@ -173,26 +187,26 @@
         ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">کوڈ کاپی کریں</string>
+    <string name="action_on_message_click">پیغام پر ایکشن کلک</string>
+    <string name="invert_color">رنگ تبدیل کریں</string>
+    <string name="speech_bubble">اسپیچ ببل</string>
 
     <!-- Gallery -->
-    <string name="library">Library</string>
-    <string name="open_in_maps">Open in Maps</string>
+    <string name="library">کتب خانہ</string>
+    <string name="open_in_maps">نقشوں میں کھولیں۔</string>
 
     <!-- Dialer -->
-    <string name="message_call_later">Can I call you later?</string>
-    <string name="message_on_my_way">I\'m on my way.</string>
-    <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
-    <string name="remind_me">ਮੈਨੂੰ ਯਾਦ</string>
+    <string name="message_call_later">کیا میں آپ کو بعد میں کال کر سکتا ہوں؟</string>
+    <string name="message_on_my_way">میں راستے میں ہوں.</string>
+    <string name="message_cant_talk_right_now">معذرت، میں ابھی بات نہیں کر سکتا۔</string>
+    <string name="remind_me">مجھے یاد دلانا</string>
     <string name="mute">خاموش</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g"> تعلق</string>
+    <string name="relations_g"> متعلقہ افراد</string>
+    <string name="relation_hint_g">متعلقہ شخص</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

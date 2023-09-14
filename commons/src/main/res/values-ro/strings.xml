@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Anulează</string>
+    <string name="close">Close</string>
     <string name="back">Back</string>
     <string name="nothing">Nimic</string>
     <string name="later">Mai târziu</string>
@@ -75,6 +76,8 @@
     <string name="updating">Actualizare…</string>
     <string name="phone_storage">Stocarea telefonului</string>
     <string name="phone_storage_hidden">Stocarea telefonului (nu este vizibilă de către alte aplicații)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Ziua de naștere</string>
     <string name="anniversary">Aniversare</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Creşte numărul de coloane</string>
     <string name="reduce_column_count">Reduce numărul de coloane</string>
     <string name="column_count">Număr de coloane</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Număr de coloane în mod portret</string>
     <string name="landscape_column_count">Număr de coloane în mod peisaj</string>
     <string name="change_cover_image">Schimbă imaginea de copertă</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d column</item>
         <item quantity="other">%d columns</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestionaţi numerele blocate</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">Trebuie să setaţi aceasta aplicaţie ca aplicaţie implicită de apelare pentru a putea beneficia de funcţia de blocare de numere.</string>
     <string name="set_as_default">Setează ca implicit</string>
     <string name="block_confirmation">Eşti sigur că vrei să îl/o blochezi pe \"%s\"\?</string>
-    <string name="block_unknown_calls">Blocați apelurile de la contacte care nu sunt stocate</string>
-    <string name="block_unknown_messages">Blocați mesajele de la contactele care nu sunt stocate</string>
+    <string name="block_not_stored_calls">Blocați apelurile de la contacte care nu sunt stocate</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Blocați mesajele de la contactele care nu sunt stocate</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Introduceți un număr sau un model (de exemplu, *12345*, +1*8888) pentru a bloca toate apelurile și mesajele de la numere care corespund modelului.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Căutare</string>
     <string name="search_in_placeholder">Search in %s</string>
     <string name="type_2_characters">Introduceţi cel puţin 2 caractere pentru a începe căutarea.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Search contacts</string>
     <string name="search_favorites">Search favorites</string>
     <string name="search_apps">Search apps</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Este necesară permisiunea la contacte</string>
     <string name="no_camera_permissions">Este necesară permisiunea la cameră</string>
     <string name="no_audio_permissions">Este necesară permisiunea la audio</string>
-    <string name="no_post_notifications_permissions">Este necesară permisiunea de a posta notificări</string>
     <string name="no_permission">No permission</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">Redenumire fişierul</string>
     <string name="rename_folder">Redenumire dosar</string>
@@ -294,6 +313,7 @@
     <string name="duration">Durată</string>
     <string name="artist">Artist</string>
     <string name="album">Album</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Distanță focală</string>
     <string name="exposure_time">Timp de expunere</string>
     <string name="iso_speed">viteza ISO</string>
@@ -397,6 +417,7 @@
     <string name="last_modified">Ultima modificare</string>
     <string name="date_created">Data creării</string>
     <string name="date_taken">Data realizării</string>
+    <string name="date_added">Date added</string>
     <string name="title">Titlu</string>
     <string name="filename">Nume de fişier</string>
     <string name="extension">Extensie</string>
@@ -457,6 +478,12 @@
     <string name="lock_folder_pro">Blocare dosar (Pro)</string>
     <string name="unlock_folder">Deblocare dosar</string>
     <string name="lock_folder_notice">Această protecție funcționează doar în această aplicație, ea nu ar trebui să înlocuiască o criptare reală a dosarelor la nivel de sistem.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Ieri</string>
     <string name="today">Astăzi</string>
@@ -665,6 +692,7 @@
     <string name="use_24_hour_time_format">Utilizați formatul de timp de 24 de ore</string>
     <string name="change_date_and_time_format">Modifică formatul de dată și oră</string>
     <string name="sunday_first">Începeţi săptămâna cu ziua de Duminică</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Widgeturi</string>
     <string name="use_same_snooze">Utilizați întotdeauna aceeaşi durată de timp pentru amânare</string>
     <string name="snooze_time">Durata de timp pentru amânare</string>
@@ -726,6 +754,7 @@
     <string name="show_the_recycle_bin">Afișați coșul de reciclare</string>
     <string name="hide_the_recycle_bin">Ascundeţi coșul de reciclare</string>
     <string name="open_the_recycle_bin">Open the Recycle Bin</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Mutarea elementului %d în coşul de recilare</item>
         <item quantity="few">Mutarea elementelor %d în coşul de recilare</item>
@@ -823,9 +852,9 @@
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
     <!-- About -->
     <string name="about">Despre</string>
     <string name="website">Website</string>
@@ -1023,6 +1052,7 @@
     <string name="why_upgrade_footer">Garanția de 100% a returnării banilor</string>
     <string name="why_upgrade_footer_one_time_payment">O singură plată</string>
     <string name="why_upgrade_improved_design">Design îmbunătățit</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor foto avansat</string>
     <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
@@ -1088,8 +1118,10 @@
     <string name="sms_mms_title">SMS MMS (Gestionarea SMS și MMS)</string>
     <string name="apng_title">APNG Android (suport WebP animat)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Trial expired</string>
     <string name="start_free_trial">Start free trial</string>

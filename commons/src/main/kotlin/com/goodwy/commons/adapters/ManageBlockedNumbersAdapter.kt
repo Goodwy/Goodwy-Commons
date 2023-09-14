@@ -4,10 +4,7 @@ import android.view.*
 import android.widget.PopupMenu
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
-import com.goodwy.commons.extensions.copyToClipboard
-import com.goodwy.commons.extensions.deleteBlockedNumber
-import com.goodwy.commons.extensions.getPopupMenuTheme
-import com.goodwy.commons.extensions.getProperTextColor
+import com.goodwy.commons.extensions.*
 import com.goodwy.commons.interfaces.RefreshRecyclerViewListener
 import com.goodwy.commons.models.BlockedNumber
 import com.goodwy.commons.views.MyRecyclerView
@@ -68,6 +65,7 @@ class ManageBlockedNumbersAdapter(
 
     private fun setupView(view: View, blockedNumber: BlockedNumber) {
         view.apply {
+            setupViewBackground(activity)
             manage_blocked_number_holder?.isSelected = selectedKeys.contains(blockedNumber.id.toInt())
             manage_blocked_number_title.apply {
                 text = blockedNumber.number

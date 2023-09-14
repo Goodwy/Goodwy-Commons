@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">אם מסיבה כלשהי אתה לא יכול להרשות לעצמך את האפליקציה שלנו, אבל באמת רוצה להשתמש בכל התכונות, פשוט שלח לנו דוא\"ל</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">תמיכה טובה</string>
+    <string name="tip_excellent">תמיכה מעולה</string>
+    <string name="tip_incredible">תמיכה מדהימה</string>
+    <string name="tip_jar">תמיכה</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">אין קשר</string>
+    <string name="per_month">sחודש/%</string>
 
     <string name="show_contact_thumbnails_g">הצג תמונות ממוזערות של אנשי קשר</string>
     <string name="use_icon_tabs_summary">סמלים במקום טקסט בכרטיסיות</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">הכרטיסיה \'ברירת מחדל\'</string>
     <string name="color">צבע</string>
     <string name="black">שחור</string>
+    <string name="black_locked">שחור (נעול)</string>
     <string name="show_dividers">הצג חוצץ</string>
     <string name="colored_contacts">סמלים צבעוניים של אנשי קשר</string>
+    <string name="contact_color_list">רשימת צבעי אנשי קשר</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">תמונת איש קשר</string>
     <string name="blurry_contact_photo">תמונת איש קשר מטושטשת</string>
     <string name="blurry_wallpaper">טפט מטושטש</string>
+    <string name="text_cursor_color">צבע סמן טקסט</string>
+    <string name="lines_count">ספירת שורות</string>
+    <string name="show_button_blocked_numbers">הצג את הלחצן כדי לא להסתיר שיחות חסומות</string>
+    <string name="flash_for_alerts">מבזק להתראות</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">צבע הדגשה</string>
     <string name="incoming_call">שיחה נכנסת</string>
     <string name="outgoing_call">שיחה יוצאת</string>
     <string name="missed_call">שיחה שלא נענתה</string>
     <string name="unblock_number">בטל חסימה של מספר</string>
+    <string name="unblock_numbers">ביטול חסימת מספרים</string>
     <string name="recents">חדש</string>
     <string name="unblock_confirmation">לבטל את חסימת \"% s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">קבל</string>
     <string name="open">פתח</string>
     <string name="collection">אוסף</string>
+    <string name="collection_summary">בניית אוסף כדי לבטל את נעילת האפליקציה</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
@@ -184,7 +198,7 @@
     <string name="message_on_my_way">אני בדרך.</string>
     <string name="message_cant_talk_right_now">סליחה, אני לא יכול לדבר כרגע.</string>
     <string name="remind_me">תזכיר לי</string>
-    <string name="mute">אילם</string>
+    <string name="mute">השתק</string>
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>

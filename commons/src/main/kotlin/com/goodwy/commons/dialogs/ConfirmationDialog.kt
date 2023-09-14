@@ -42,7 +42,7 @@ class ConfirmationDialog(
     }
 
     private fun dialogConfirmed() {
-        dialog?.dismiss()
         callback()
+        dialog?.dismiss()
     }
 }

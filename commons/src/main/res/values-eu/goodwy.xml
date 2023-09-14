@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Arrazoiren batengatik ezin baduzu gure aplikazioa ordaindu, baina benetan eginbide guztiak erabili nahi badituzu, bidali mezu elektroniko bat</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">laguntza ona</string>
+    <string name="tip_excellent">Laguntza bikaina</string>
+    <string name="tip_incredible">Laguntza harrigarria</string>
+    <string name="tip_jar">Laguntza</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Ez dago konexiorik</string>
+    <string name="per_month">%s/hilean</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Fitxetako testuaren ordez ikonoak</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Fitxa lehenetsia</string>
     <string name="color">kolore</string>
     <string name="black">Beltza</string>
+    <string name="black_locked">Beltza (blokeatuta)</string>
     <string name="show_dividers">Erakutsi banatzaileak</string>
     <string name="colored_contacts">Kontaktuak koloreko ikonoak</string>
+    <string name="contact_color_list">Kontaktu koloreen zerrenda</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Harremanetarako argazkia</string>
     <string name="blurry_contact_photo">Kontaktuaren argazki lausoa</string>
     <string name="blurry_wallpaper">Horpaper lausoa</string>
+    <string name="text_cursor_color">Testuaren kurtsorearen kolorea</string>
+    <string name="lines_count">Lerroak zenbatzen dira</string>
+    <string name="show_button_blocked_numbers">Erakutsi blokeatutako deiak ez ezkutatzeko botoia</string>
+    <string name="flash_for_alerts">Flash abisuetarako</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="incoming_call">Sarrerako deia</string>
     <string name="outgoing_call">Irteerako deia</string>
     <string name="missed_call">Dei galdua</string>
     <string name="unblock_number">Desblokeatu zenbakia</string>
+    <string name="unblock_numbers">Desblokeatu zenbakiak</string>
     <string name="recents">Azken aldiak</string>
     <string name="unblock_confirmation">Ziur \"% s\" desblokeatu nahi duzula?</string>
 
@@ -138,7 +149,10 @@
     <!-- Apps -->
     <string name="get">Get</string>
     <string name="open">Open</string>
-    <string name="collection">Collection</string>
+    <string name="collection">Bilduma</string>
+    <string name="collection_summary">Sortu bilduma bat aplikazioa desblokeatzeko</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
@@ -171,7 +185,7 @@
 
     <!-- SMS -->
     <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
+    <string name="action_on_message_click">Ekintza mezuan klik egitean</string>
     <string name="invert_color">Invert color</string>
     <string name="speech_bubble">Speech bubble</string>
 
@@ -180,9 +194,9 @@
     <string name="open_in_maps">Open in Maps</string>
 
     <!-- Dialer -->
-    <string name="message_call_later">Can I call you later?</string>
-    <string name="message_on_my_way">I\'m on my way.</string>
-    <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
+    <string name="message_call_later">Geroago deituko dizut?</string>
+    <string name="message_on_my_way">Bidean nago.</string>
+    <string name="message_cant_talk_right_now">Barkatu, orain ezin dut hitz egin.</string>
     <string name="remind_me">Remind Me</string>
     <string name="mute">Mute</string>
 

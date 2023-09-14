@@ -161,6 +161,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 hideKeyboard()
                 finish()
             }
+
             else -> return super.onOptionsItemSelected(item)
         }
         return true
@@ -235,8 +236,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (navigationBarHeight > 0 || isUsingGestureNavigation()) {
                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
                 updateTopBottomInsets(statusBarHeight, navigationBarHeight)
+                // Don't touch this. Window Inset API often has a domino effect and things will most likely break.
                 onApplyWindowInsets {
-                    val insets = it.getInsets(WindowInsetsCompat.Type.systemBars())
+                    val insets = it.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime())
                     updateTopBottomInsets(insets.top, insets.bottom)
                 }
             } else {
@@ -246,15 +248,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateTopBottomInsets(statusBarHeight: Int, navigationBarHeight: Int) {
+    private fun updateTopBottomInsets(top: Int, bottom: Int) {
         nestedView?.run {
-            setPadding(paddingLeft, paddingTop, paddingRight, navigationBarHeight)
+            setPadding(paddingLeft, paddingTop, paddingRight, bottom)
         }
-        (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = statusBarHeight
+        (mainCoordinatorLayout?.layoutParams as? FrameLayout.LayoutParams)?.topMargin = top
     }
 
     // colorize the top toolbar and statusbar at scrolling down a bit
-    fun setupMaterialScrollListener(scrollingView: ScrollingView, toolbar: Toolbar) {
+    fun setupMaterialScrollListener(scrollingView: ScrollingView?, toolbar: Toolbar) {
         this.scrollingView = scrollingView
         this.toolbar = toolbar
         if (scrollingView is RecyclerView) {
@@ -356,10 +358,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         navigationClick: Boolean = true
     ) {
         val contrastColor = statusBarColor.getContrastColor()
-
         if (toolbarNavigationIcon != NavigationIcon.None) {
             val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_chevron_left_vector
             toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
+            toolbar.setNavigationContentDescription(toolbarNavigationIcon.accessibilityResId)
         }
 
         if (navigationClick) {
@@ -646,8 +648,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun startAboutActivity(appNameId: Int, licenseMask: Long, versionName: String,
-                           faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean,
-                           licensingKey: String, productIdX1: String, productIdX2: String, productIdX3: String, playStoreInstalled: Boolean = true) {
+                           faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean, licensingKey: String,
+                           productIdX1: String, productIdX2: String, productIdX3: String,
+                           subscriptionIdX1: String, subscriptionIdX2: String, subscriptionIdX3: String,
+                           playStoreInstalled: Boolean = true) {
         hideKeyboard()
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
@@ -661,13 +665,18 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_X1, productIdX1)
             putExtra(PRODUCT_ID_X2, productIdX2)
             putExtra(PRODUCT_ID_X3, productIdX3)
+            putExtra(SUBSCRIPTION_ID_X1, subscriptionIdX1)
+            putExtra(SUBSCRIPTION_ID_X2, subscriptionIdX2)
+            putExtra(SUBSCRIPTION_ID_X3, subscriptionIdX3)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             startActivity(this)
         }
     }
 
-    fun startPurchaseActivity(appNameId: Int, licensingKey: String, productIdX1: String, productIdX2: String, productIdX3: String,
-                              showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy), playStoreInstalled: Boolean = true) {
+    fun startPurchaseActivity(appNameId: Int, licensingKey: String,
+                              productIdX1: String, productIdX2: String, productIdX3: String,
+                              subscriptionIdX1: String, subscriptionIdX2: String, subscriptionIdX3: String,
+                              showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy), playStoreInstalled: Boolean = true, showCollection: Boolean = resources.getBoolean(R.bool.show_collection)) {
         Intent(applicationContext, PurchaseActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
@@ -676,14 +685,20 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_X1, productIdX1)
             putExtra(PRODUCT_ID_X2, productIdX2)
             putExtra(PRODUCT_ID_X3, productIdX3)
+            putExtra(SUBSCRIPTION_ID_X1, subscriptionIdX1)
+            putExtra(SUBSCRIPTION_ID_X2, subscriptionIdX2)
+            putExtra(SUBSCRIPTION_ID_X3, subscriptionIdX3)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
+            putExtra(SHOW_COLLECTION, showCollection)
             startActivity(this)
         }
     }
 
-    fun startCustomizationActivity(showAccentColor : Boolean = true, isProVersion : Boolean = true, licensingKey: String = "", productIdX1: String = "", productIdX2: String = "",
-                                   productIdX3: String = "", showLifebuoy: Boolean = resources.getBoolean(R.bool.default_vibrate_on_press), playStoreInstalled: Boolean = true) {
+    fun startCustomizationActivity(showAccentColor : Boolean = true, isProVersion : Boolean = true, licensingKey: String = "",
+                                   productIdX1: String = "", productIdX2: String = "", productIdX3: String = "",
+                                   subscriptionIdX1: String = "", subscriptionIdX2: String = "", subscriptionIdX3: String = "",
+                                   showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy), playStoreInstalled: Boolean = true) {
         if (!packageName.contains("ywdoog".reversed(), true)) {
             if (baseConfig.appRunCount > 100) {
                 val label = "You are using a fake version of the app. For your own safety download the original one from play.google.com. Thanks"
@@ -703,6 +718,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_X1, productIdX1)
             putExtra(PRODUCT_ID_X2, productIdX2)
             putExtra(PRODUCT_ID_X3, productIdX3)
+            putExtra(SUBSCRIPTION_ID_X1, subscriptionIdX1)
+            putExtra(SUBSCRIPTION_ID_X2, subscriptionIdX2)
+            putExtra(SUBSCRIPTION_ID_X3, subscriptionIdX3)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             startActivity(this)
@@ -1035,7 +1053,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     if (granted) {
                         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
                     } else {
-                        toast(R.string.no_post_notifications_permissions, Toast.LENGTH_LONG)
+                        PermissionRequiredDialog(this, R.string.allow_notifications_files, { openNotificationSettings() })
                     }
                 }
             }
@@ -1056,19 +1074,25 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         val file = files[index]
         val newFileDirItem = FileDirItem("$destinationPath/${file.name}", file.name, file.isDirectory)
-        if (getDoesFilePathExist(newFileDirItem.path)) {
-            FileConflictDialog(this, newFileDirItem, files.size > 1) { resolution, applyForAll ->
-                if (applyForAll) {
-                    conflictResolutions.clear()
-                    conflictResolutions[""] = resolution
-                    checkConflicts(files, destinationPath, files.size, conflictResolutions, callback)
-                } else {
-                    conflictResolutions[newFileDirItem.path] = resolution
+        ensureBackgroundThread {
+            if (getDoesFilePathExist(newFileDirItem.path)) {
+                runOnUiThread {
+                    FileConflictDialog(this, newFileDirItem, files.size > 1) { resolution, applyForAll ->
+                        if (applyForAll) {
+                            conflictResolutions.clear()
+                            conflictResolutions[""] = resolution
+                            checkConflicts(files, destinationPath, files.size, conflictResolutions, callback)
+                        } else {
+                            conflictResolutions[newFileDirItem.path] = resolution
+                            checkConflicts(files, destinationPath, index + 1, conflictResolutions, callback)
+                        }
+                    }
+                }
+            } else {
+                runOnUiThread {
                     checkConflicts(files, destinationPath, index + 1, conflictResolutions, callback)
                 }
             }
-        } else {
-            checkConflicts(files, destinationPath, index + 1, conflictResolutions, callback)
         }
     }
 

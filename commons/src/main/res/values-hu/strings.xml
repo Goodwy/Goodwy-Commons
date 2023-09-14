@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Mégse</string>
+    <string name="close">Close</string>
     <string name="back">Vissza</string>
     <string name="nothing">Semmi</string>
     <string name="later">Később</string>
@@ -48,7 +49,7 @@
     <string name="no_phone_call_permission">Az alkalmazásnak nincs jogosultsága telefonhívást indítani, adja meg az eszközbeállításokban</string>
     <string name="insert_text_here">Illeszben be ide szöveget</string>
     <string name="call_person">%s hívása</string>
-    <string name="confirm_calling_person">Confirm calling %s</string>
+    <string name="confirm_calling_person">%s hívásának megerősítése</string>
     <string name="zero">Nulla</string>
     <string name="one">Egy</string>
     <string name="two">Kettő</string>
@@ -75,6 +76,8 @@
     <string name="updating">Módosítás…</string>
     <string name="phone_storage">Telefon tárhelye</string>
     <string name="phone_storage_hidden">Telefon tárhelye (többi alkalmazás számára nem látható)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Születésnap</string>
     <string name="anniversary">Évforduló</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Oszlopszám növelése</string>
     <string name="reduce_column_count">Oszlopszám csökkentése</string>
     <string name="column_count">Oszlopszám</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Oszlopszám álló módban</string>
     <string name="landscape_column_count">Oszlopszám fekvő módban</string>
     <string name="change_cover_image">Borítókép módosítása</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d oszlop</item>
         <item quantity="other">%d oszlop</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Letiltott telefonszámok kezelése</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">A letiltott telefonszámok használatához be kell állítani, hogy ez az alkalmazás legyen az alapértelmezett tárcsázó.</string>
     <string name="set_as_default">Beállítás alapértelmezettként</string>
     <string name="block_confirmation">Biztos, hogy letiltja a következőt: „%s”\?</string>
-    <string name="block_unknown_calls">Nem tárolt névjegyektől érkező hívások blokkolása</string>
-    <string name="block_unknown_messages">Nem tárolt névjegyektől érkező üzenetek blokkolása</string>
+    <string name="block_not_stored_calls">Nem tárolt névjegyektől érkező hívások blokkolása</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Nem tárolt névjegyektől érkező üzenetek blokkolása</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Adjon meg egy számot vagy mintát (például *12345*, +1*8888) hogy blokkolja a számokról érkező hívásokat és üzeneteket.</string>
     <string name="must_make_default_caller_id_app">Hívásazonosítási engedély nélkül nem lehet blokkolni az ismeretlen számokat.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Keresés</string>
     <string name="search_in_placeholder">Keresés itt: %s</string>
     <string name="type_2_characters">Legalább 2 karaktert írjon be a keresés indításához.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Névjegyek keresése</string>
     <string name="search_favorites">Kedvencek keresése</string>
     <string name="search_apps">Alkalmazások keresése</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Névjegyek engedély szükséges</string>
     <string name="no_camera_permissions">Kamera engedély szükséges</string>
     <string name="no_audio_permissions">Hang engedély szükséges</string>
-    <string name="no_post_notifications_permissions">Értesítési engedély szükséges</string>
     <string name="no_permission">Nem szükséges engedély</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">Fájl átnevezése</string>
     <string name="rename_folder">Mappa átnevezése</string>
@@ -295,6 +314,7 @@
     <string name="duration">Időtartam</string>
     <string name="artist">Előadó</string>
     <string name="album">Album</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Fókusztávolság</string>
     <string name="exposure_time">Expozíciós idő</string>
     <string name="iso_speed">ISO érzékenység</string>
@@ -394,6 +414,7 @@
     <string name="last_modified">Utolsó módosítás</string>
     <string name="date_created">Létrehozás dátuma</string>
     <string name="date_taken">Készítés dátuma</string>
+    <string name="date_added">Date added</string>
     <string name="title">Cím</string>
     <string name="filename">Fájlnév</string>
     <string name="extension">Kiterjesztés</string>
@@ -453,6 +474,12 @@
     <string name="lock_folder_pro">Mappa zárolása (Pro)</string>
     <string name="unlock_folder">Mappa zárolásának feloldása</string>
     <string name="lock_folder_notice">Ez a védelem csak ezen az alkalmazáson belül működik, nem célja egy valódi rendszerszintű mappatitkosítás helyettesítése.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Tegnap</string>
     <string name="today">Ma</string>
@@ -633,6 +660,7 @@
     <string name="use_24_hour_time_format">24 órás idő formátum használata</string>
     <string name="change_date_and_time_format">Dátum- és időformátum módosítása</string>
     <string name="sunday_first">A hét kezdete a vasárnap</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Modulok</string>
     <string name="use_same_snooze">Mindig ugyanazt a szundi időt használja</string>
     <string name="snooze_time">Szundi ideje</string>
@@ -694,6 +722,7 @@
     <string name="show_the_recycle_bin">Lomtár megjelenítése</string>
     <string name="hide_the_recycle_bin">Lomtár elrejtése</string>
     <string name="open_the_recycle_bin">Lomtár megnyitása</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d elem áthelyezése a Lomtárba</item>
         <item quantity="other">%d elem áthelyezése a Lomtárba</item>
@@ -798,21 +827,21 @@
 \nÚgy néz ki, hogy már rendelkezik a Pro verzióval. Ha elégedett vele, és átköltöztette az adatait, akkor eltávolíthatja a régi, ingyenes verziót, hogy nehogy azt indítsa el véletlenül, ha már nincs rá szüksége.
 \n
 \nKöszönöm!</string>
-    <string name="upgraded_to_pro_calendar">Üdv,
+    <string name="upgraded_from_free_calendar">Üdv,
 \n
 \nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha át akarja költöztetni a helyileg tárolt eseményeit, akkor ezt kézzel kell megtennie, exportálja egy .ics fájlba az ingyenes verzióból, majd importálja a felső menüből.
 \n
 \nHa elégedett a beállításokkal a Pro verzióban, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
 \n
 \nKöszönöm!</string>
-    <string name="upgraded_to_pro_contacts">Üdv,
+    <string name="upgraded_from_free_contacts">Üdv,
 \n
 \nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha voltak névjegyei a(z) „%s” alatt, akkor az átköltöztetéshez kézzel kell exportálnia egy .vcf fájlba az ingyenes verzióból, majd importálnia kell a felső menüből.
 \n
 \nHa elégedett a beállításokkal a Pro verzióban, akkor eltávolíthatja a régi, ingyenes verziót, mert már nem lesz rá szüksége.
 \n
 \nKöszönöm!</string>
-    <string name="upgraded_to_pro_notes">Üdv,
+    <string name="upgraded_from_free_notes">Üdv,
 \n
 \nÚgy néz ki, hogy frissített az ingyenes verzióról. Ha át akarja költöztetni a jegyzeteit, akkor kézzel kell exportálnia egy fájlba az ingyenes verzióból, majd importálnia kell a felső menüből.
 \n
@@ -994,6 +1023,7 @@
     <string name="why_upgrade_footer">100% pénzvisszatérítési garancia</string>
     <string name="why_upgrade_footer_one_time_payment">Egyszeri fizetés</string>
     <string name="why_upgrade_improved_design">Továbbfejlesztett megjelenés</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fejlett képszerkesztő</string>
     <string name="why_upgrade_advanced_photo_video_editor">Fejlett fénykép- és videószerkesztő</string>
@@ -1059,8 +1089,10 @@
     <string name="sms_mms_title">SMS MMS (SMS- és MMS-kezelés)</string>
     <string name="apng_title">APNG Android (animált WebP támogatása)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF megjelenítő)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF megjelenítő)</string>
     <string name="m3u_parser_title">M3U Parser (m3u lejátszási listák kezelése)</string>
     <string name="android_lame_title">AndroidLame (mp3 kódoló)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">A próbaidőszak lejárt</string>
     <string name="start_free_trial">Ingyenes próbaidőszak elkezdése</string>

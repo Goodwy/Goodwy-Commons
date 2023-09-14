@@ -65,6 +65,9 @@
 
 package com.goodwy.commons.models.contacts
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class ContactRelation(var name: String, var type: Int, var label: String) {
     fun deepCopy(): ContactRelation = ContactRelation(name, type, label)
     companion object {

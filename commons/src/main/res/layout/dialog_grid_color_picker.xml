@@ -56,8 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/line_color_picker_icon"
         android:layout_marginTop="@dimen/big_margin"
-        android:layout_marginLeft="@dimen/activity_margin"
-        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
         app:cardElevation="16dp"
         app:cardBackgroundColor="@android:color/transparent"
         app:cardCornerRadius="8dp">

@@ -306,6 +306,7 @@ abstract class MyRecyclerViewListAdapter<T>(
     fun updatePrimaryColor() {
         properPrimaryColor = activity.getProperPrimaryColor()
         contrastColor = properPrimaryColor.getContrastColor()
+        onRefresh.invoke()
     }
 
     fun updateBackgroundColor(backgroundColor: Int) {

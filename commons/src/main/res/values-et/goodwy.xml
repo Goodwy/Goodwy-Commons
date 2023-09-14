@@ -4,12 +4,14 @@
     <string name="general">General</string>
     <string name="default_tab">Default tab</string>
     <string name="color">color</string>
-    <string name="black">Black</string>
+    <string name="black">Must</string>
+    <string name="black_locked">Must (lukustatud)</string>
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
+    <string name="unblock_numbers">Unblock numbers</string>
     <string name="recents">Viimased</string>
     <string name="message">Sõnum</string>
     <string name="settings_icon">Ikoon Sätted</string>
@@ -35,7 +37,7 @@
     <string name="lifebuoy_summary">Kui te mingil põhjusel ei saa meie rakendust endale lubada, kuid soovite tõesti kõiki funktsioone kasutada, saatke meile lihtsalt e-kiri.</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Hea toetus</string>
+    <string name="tip_kind">Hea tugi</string>
     <string name="tip_excellent">Suurepärane tugi</string>
     <string name="tip_incredible">Hämmastav toetus</string>
     <string name="tip_jar">Otsapurk</string>
@@ -53,7 +55,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Ühendust pole</string>
+    <string name="per_month">%s/kuus</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>
@@ -71,6 +75,7 @@
     <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
     <string name="show_dividers">Show dividers</string>
     <string name="colored_contacts">Contacts colored icons</string>
+    <string name="contact_color_list">Kontaktide värviloend</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -91,7 +96,12 @@
     <string name="contact_photo">Kontaktide pilt</string>
     <string name="blurry_contact_photo">Ebatäpne kontaktfoto</string>
     <string name="blurry_wallpaper">Hämarad taustapildid</string>
-
+    <string name="text_cursor_color">Tekstikursori värv</string>
+    <string name="lines_count">Ridade arv</string>
+    <string name="show_button_blocked_numbers">Kuva nupp, et mitte peita blokeeritud kõnesid</string>
+    <string name="flash_for_alerts">Välk hoiatuste jaoks</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -142,6 +152,9 @@
     <string name="get">Hangi</string>
     <string name="open">Ava</string>
     <string name="collection">Kogu</string>
+    <string name="collection_summary">Rakenduse avamiseks kollektsiooni koostamine</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

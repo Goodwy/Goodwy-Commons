@@ -7,7 +7,10 @@ import com.goodwy.commons.extensions.normalizePhoneNumber
 import com.goodwy.commons.extensions.normalizeString
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.PhoneNumber
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Contact(
     var id: Int,
     var prefix: String= "",
@@ -25,6 +28,7 @@ data class Contact(
     var starred: Int = 0,
     var contactId: Int,
     var thumbnailUri: String= "",
+    @Contextual
     var photo: Bitmap? = null,
     var notes: String= "",
     var groups: ArrayList<Group> = ArrayList(),
@@ -151,14 +155,16 @@ data class Contact(
         val lastPart = if (startWithSurname) firstMiddle else surname
         val suffixComma = if (suffix.isEmpty()) "" else ", $suffix"
         val fullName = "$prefix $firstPart $lastPart$suffixComma".trim()
-        return if (fullName.isEmpty()) {
-            if (organization.isNotEmpty()) {
-                getFullCompany()
-            } else {
-                emails.firstOrNull()?.value?.trim() ?: ""
-            }
-        } else {
-            fullName
+        val organization = getFullCompany()
+        val email = emails.firstOrNull()?.value?.trim()
+        val phoneNumber = phoneNumbers.firstOrNull()?.normalizedNumber
+
+        return when {
+            fullName.isNotBlank() -> fullName
+            organization.isNotBlank() -> organization
+            !email.isNullOrBlank() -> email
+            !phoneNumber.isNullOrBlank() -> phoneNumber
+            else -> return ""
         }
     }
 

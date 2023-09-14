@@ -1,6 +1,8 @@
 package com.goodwy.commons.helpers
 
 import android.content.Context
+import android.content.res.Configuration
+import android.os.Environment
 import android.text.format.DateFormat
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.getInternalStoragePath
@@ -195,6 +197,10 @@ open class BaseConfig(val context: Context) {
 
     fun getFolderProtectionType(path: String) = prefs.getInt("$PROTECTED_FOLDER_TYPE$path", PROTECTION_NONE)
 
+    var lastCopyPath: String
+        get() = prefs.getString(LAST_COPY_PATH, "")!!
+        set(lastCopyPath) = prefs.edit().putString(LAST_COPY_PATH, lastCopyPath).apply()
+
     var keepLastModified: Boolean
         get() = prefs.getBoolean(KEEP_LAST_MODIFIED, true)
         set(keepLastModified) = prefs.edit().putBoolean(KEEP_LAST_MODIFIED, keepLastModified).apply()
@@ -225,6 +231,10 @@ open class BaseConfig(val context: Context) {
     var useColoredContacts: Boolean
         get() = prefs.getBoolean(USE_COLORED_CONTACTS, false)
         set(useColoredContacts) = prefs.edit().putBoolean(USE_COLORED_CONTACTS, useColoredContacts).apply()
+
+    var contactColorList: Int
+        get() = prefs.getInt(CONTACT_COLOR_LIST, LBC_ANDROID)
+        set(contactsColorList) = prefs.edit().putInt(CONTACT_COLOR_LIST, contactsColorList).apply()
 
     var wasSharedThemeEverActivated: Boolean
         get() = prefs.getBoolean(WAS_SHARED_THEME_EVER_ACTIVATED, false)
@@ -399,7 +409,7 @@ open class BaseConfig(val context: Context) {
     private fun getDefaultDateFormat(): String {
         val format = DateFormat.getDateFormat(context)
         val pattern = (format as SimpleDateFormat).toLocalizedPattern()
-        return when (pattern.toLowerCase().replace(" ", "")) {
+        return when (pattern.lowercase().replace(" ", "")) {
             "d.M.y" -> DATE_FORMAT_ONE
             "dd/mm/y" -> DATE_FORMAT_TWO
             "mm/dd/y" -> DATE_FORMAT_THREE
@@ -456,6 +466,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(BLOCK_UNKNOWN_NUMBERS, false)
         set(blockUnknownNumbers) = prefs.edit().putBoolean(BLOCK_UNKNOWN_NUMBERS, blockUnknownNumbers).apply()
 
+    var blockHiddenNumbers: Boolean
+        get() = prefs.getBoolean(BLOCK_HIDDEN_NUMBERS, false)
+        set(blockHiddenNumbers) = prefs.edit().putBoolean(BLOCK_HIDDEN_NUMBERS, blockHiddenNumbers).apply()
+
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, 1) //context.resources.getInteger(R.integer.default_font_size)
         set(size) = prefs.edit().putInt(FONT_SIZE, size).apply()
@@ -482,7 +496,7 @@ open class BaseConfig(val context: Context) {
         set(showCallConfirmation) = prefs.edit().putBoolean(SHOW_CALL_CONFIRMATION, showCallConfirmation).apply()
 
     // color picker last used colors
-    internal var colorPickerRecentColors: LinkedList<Int>
+    var colorPickerRecentColors: LinkedList<Int>
         get(): LinkedList<Int> {
             val defaultList = arrayListOf(
                 context.resources.getColor(R.color.md_red_700),
@@ -559,6 +573,39 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(FAVORITES_CUSTOM_ORDER_SELECTED, false)
         set(selected) = prefs.edit().putBoolean(FAVORITES_CUSTOM_ORDER_SELECTED, selected).apply()
 
+    var viewType: Int
+        get() = prefs.getInt(VIEW_TYPE, VIEW_TYPE_LIST)
+        set(viewType) = prefs.edit().putInt(VIEW_TYPE, viewType).apply()
+
+    var contactsGridColumnCount: Int
+        get() = prefs.getInt(CONTACTS_GRID_COLUMN_COUNT, getDefaultContactColumnsCount())
+        set(contactsGridColumnCount) = prefs.edit().putInt(CONTACTS_GRID_COLUMN_COUNT, contactsGridColumnCount).apply()
+
+    private fun getDefaultContactColumnsCount(): Int {
+        val isPortrait = context.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
+        return if (isPortrait) {
+            context.resources.getInteger(R.integer.contacts_grid_columns_count_portrait)
+        } else {
+            context.resources.getInteger(R.integer.contacts_grid_columns_count_landscape)
+        }
+    }
+
+    var autoBackup: Boolean
+        get() = prefs.getBoolean(AUTO_BACKUP, false)
+        set(autoBackup) = prefs.edit().putBoolean(AUTO_BACKUP, autoBackup).apply()
+
+    var autoBackupFolder: String
+        get() = prefs.getString(AUTO_BACKUP_FOLDER, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).absolutePath)!!
+        set(autoBackupFolder) = prefs.edit().putString(AUTO_BACKUP_FOLDER, autoBackupFolder).apply()
+
+    var autoBackupFilename: String
+        get() = prefs.getString(AUTO_BACKUP_FILENAME, "")!!
+        set(autoBackupFilename) = prefs.edit().putString(AUTO_BACKUP_FILENAME, autoBackupFilename).apply()
+
+    var lastAutoBackupTime: Long
+        get() = prefs.getLong(LAST_AUTO_BACKUP_TIME, 0L)
+        set(lastAutoBackupTime) = prefs.edit().putLong(LAST_AUTO_BACKUP_TIME, lastAutoBackupTime).apply()
+
     //Goodwy
     var settingsIcon: Int
         get() = prefs.getInt(SETTINGS_ICON, 1)
@@ -600,6 +647,43 @@ open class BaseConfig(val context: Context) {
     var isPro: Boolean
         get() = prefs.getBoolean(IS_PRO_VERSION, false)
         set(isPro) = prefs.edit().putBoolean(IS_PRO_VERSION, isPro).apply()
+
+    var isProSubs: Boolean
+        get() = prefs.getBoolean(IS_PRO_SUBS_VERSION, false)
+        set(isProSubs) = prefs.edit().putBoolean(IS_PRO_SUBS_VERSION, isProSubs).apply()
+
+    var simIconsColors: LinkedList<Int>
+        get(): LinkedList<Int> {
+            val defaultList = arrayListOf(
+                context.resources.getColor(R.color.md_red_500),
+                context.resources.getColor(R.color.ic_dialer),
+                context.resources.getColor(R.color.color_primary),
+                context.resources.getColor(R.color.md_yellow_500),
+                context.resources.getColor(R.color.md_orange_500)
+            )
+            return LinkedList(prefs.getString(SIM_ICON_COLORS, null)?.lines()?.map { it.toInt() } ?: defaultList)
+        }
+        set(simIconsColors) = prefs.edit().putString(SIM_ICON_COLORS, simIconsColors.joinToString(separator = "\n")).apply()
+
+    var textCursorColor: Int
+        get() = prefs.getInt(TEXT_CURSOR_COLOR, -2)
+        set(textCursorColor) = prefs.edit().putInt(TEXT_CURSOR_COLOR, textCursorColor).apply()
+
+    var linesCount: Int
+        get() = prefs.getInt(LINES_COUNT, 2)
+        set(linesCount) = prefs.edit().putInt(LINES_COUNT, linesCount).apply()
+
+    var showBlockedNumbers: Boolean
+        get() = prefs.getBoolean(SHOW_BLOCK_NUMBERS, false)
+        set(showBlockedNumbers) = prefs.edit().putBoolean(SHOW_BLOCK_NUMBERS, showBlockedNumbers).apply()
+
+    var showButtonBlockedNumbers: Boolean
+        get() = prefs.getBoolean(SHOW_BUTTON_BLOCK_NUMBERS, false)
+        set(showButtonBlockedNumbers) = prefs.edit().putBoolean(SHOW_BUTTON_BLOCK_NUMBERS, showButtonBlockedNumbers).apply()
+
+    var flashForAlerts: Boolean
+        get() = prefs.getBoolean(FLASH_FOR_ALERTS, false)
+        set(flashForAlerts) = prefs.edit().putBoolean(FLASH_FOR_ALERTS, flashForAlerts).apply()
 }
 
 

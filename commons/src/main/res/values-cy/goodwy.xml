@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Os nad ydych chi\'n gallu fforddio ein ap am ryw reswm, ond wir eisiau defnyddio\'r holl nodweddion, dim ond anfon e-bost atom</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Cefnogaeth dda</string>
+    <string name="tip_excellent">Cefnogaeth ardderchog</string>
+    <string name="tip_incredible">Cefnogaeth anhygoel</string>
+    <string name="tip_jar">Cefnogi</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,10 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Dim cysylltiad</string>
+    <string name="per_month">%s/mis</string>
+
     <string name="show_contact_thumbnails_g">Dangos mân luniau cysylltiadau</string>
     <string name="use_icon_tabs_summary">Eiconau yn lle testun ar dabiau</string>
     <string name="use_icon_tabs">Defnyddio eiconau tabiau</string>
@@ -58,8 +61,10 @@
     <string name="default_tab">Tab diofyn</string>
     <string name="color">lliw</string>
     <string name="black">Du</string>
+    <string name="black_locked">Du (Dan Glo)</string>
     <string name="show_dividers">Dangos rhanwyr</string>
     <string name="colored_contacts">Eiconau lliw cysylltiadau</string>
+    <string name="contact_color_list">Rhestr lliw cyswllt</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -80,12 +85,19 @@
     <string name="contact_photo">Llun cyswllt</string>
     <string name="blurry_contact_photo">Llun cyswllt aneglur</string>
     <string name="blurry_wallpaper">Papur wal aneglur</string>
+    <string name="text_cursor_color">Lliw cyrchwr testun</string>
+    <string name="lines_count">Cyfri llinellau</string>
+    <string name="show_button_blocked_numbers">Dangoswch y botwm i beidio â chuddio galwadau sydd wedi\'u blocio</string>
+    <string name="flash_for_alerts">Flash ar gyfer rhybuddion</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Lliw acen</string>
     <string name="incoming_call">Galwad i Mewn</string>
     <string name="outgoing_call">Galwad Allanol</string>
     <string name="missed_call">Galwad a Fethwyd</string>
     <string name="unblock_number">Rhif dad-gloi</string>
+    <string name="unblock_numbers">Rhifau dadflocio</string>
     <string name="recents">Diweddar</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -138,6 +150,9 @@
     <string name="get">Cael</string>
     <string name="open">Agor</string>
     <string name="collection">Casgliad</string>
+    <string name="collection_summary">Adeiladu casgliad i ddatgloi\'r app</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

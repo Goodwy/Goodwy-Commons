@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Si por alguna razón no puede pagar nuestra aplicación, pero realmente desea usar todas las funciones, simplemente envíenos un correo electrónico</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Buen soporte</string>
+    <string name="tip_excellent">Excelente soporte</string>
+    <string name="tip_incredible">Soporte impresionante</string>
+    <string name="tip_jar">Apoyo</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Sin conexión</string>
+    <string name="per_month">%s/mes</string>
 
     <string name="show_contact_thumbnails_g">Mostrar minaturas de contactos</string>
     <string name="use_icon_tabs_summary">Iconos en lugar de texto en las pestañas</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Ficha predeterminada</string>
     <string name="color">color</string>
     <string name="black">Negro</string>
+    <string name="black_locked">Negro (bloqueado)</string>
     <string name="show_dividers">Mostrar divisores</string>
     <string name="colored_contacts">Iconos de colores de contactos</string>
+    <string name="contact_color_list">Contact color list</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Foto de contacto</string>
     <string name="blurry_contact_photo">Foto borrosa de contacto</string>
     <string name="blurry_wallpaper">Fondo de pantalla borroso</string>
+    <string name="text_cursor_color">Color del cursor de texto</string>
+    <string name="lines_count">Recuento de líneas</string>
+    <string name="show_button_blocked_numbers">Mostrar el botón para no ocultar llamadas bloqueadas</string>
+    <string name="flash_for_alerts">Flash para alertas</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Color de acento</string>
     <string name="incoming_call">Llamada entrante</string>
     <string name="outgoing_call">Llamada saliente</string>
     <string name="missed_call">Llamada perdida</string>
     <string name="unblock_number">Número de desbloqueo</string>
+    <string name="unblock_numbers">Desbloquear números</string>
     <string name="recents">Reciente</string>
     <string name="unblock_confirmation">¿Estás seguro de que quieres desbloquear \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Obtener</string>
     <string name="open">Abrir</string>
     <string name="collection">Colección</string>
+    <string name="collection_summary">Crear una colección para desbloquear la aplicación</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

@@ -23,6 +23,8 @@
         <item name="android:windowBackground">#000000</item>
         <item name="android:statusBarColor">#000000</item>
         <item name="android:navigationBarColor">#000000</item>
+        <item name="android:radioButtonStyle">@style/MyRadioButtonStyle</item>
+        <item name="radioButtonStyle">@style/MyRadioButtonStyle</item>
     </style>
 
     <style name="AppTheme.Base.Core" parent="Theme.Material3.Dark.NoActionBar">
@@ -59,6 +61,8 @@
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
+        <item name="android:radioButtonStyle">@style/MyRadioButtonStyle</item>
+        <item name="radioButtonStyle">@style/MyRadioButtonStyle</item>
     </style>
 
     <style name="AppTheme.Base.System.Light" parent="Theme.Material3.Light.NoActionBar">
@@ -85,6 +89,8 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
         <item name="android:itemTextAppearance">@style/MenuTextAppearance</item>
+        <item name="android:radioButtonStyle">@style/MyRadioButtonStyle</item>
+        <item name="radioButtonStyle">@style/MyRadioButtonStyle</item>
     </style>
 
     <!-- remove the shadow under actionBar, keep it there around Overflow menu that appears at pressing the 3 dots -->
@@ -180,6 +186,11 @@
         <item name="android:paddingEnd">@dimen/activity_margin</item>
         <item name="android:textColor">@color/dark_grey</item>
         <item name="android:textSize">@dimen/big_text_size</item>
+    </style>
+
+    <style name="MyRadioButtonStyle" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="minHeight">@dimen/min_radio_checkbox_height</item>
+        <item name="android:minHeight">@dimen/min_radio_checkbox_height</item>
     </style>
 
     <style name="AppTheme.ActionBar.TitleTextStyle">
@@ -445,7 +456,7 @@
         <item name="android:layout_marginStart">@dimen/activity_margin</item>
         <item name="android:layout_marginEnd">@dimen/activity_margin</item>
         <item name="android:paddingBottom">@dimen/medium_margin</item>
-        <item name="android:background">@drawable/section_holder_stroke</item>
+        <item name="android:background">@drawable/section_holder</item>
     </style>
 
     <style name="SettingsHolderStyle">
@@ -461,6 +472,7 @@
     <style name="SettingsHolderSwitchStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
         <item name="android:background">@drawable/ripple_all_corners</item>
         <item name="android:paddingStart">@dimen/normal_margin</item>
         <item name="android:paddingTop">@dimen/medium_margin</item>

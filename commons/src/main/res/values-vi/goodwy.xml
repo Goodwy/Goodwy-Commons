@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Nếu vì lý do nào đó bạn không đủ khả năng mua ứng dụng của chúng tôi, nhưng thực sự muốn sử dụng tất cả các tính năng, chỉ cần gửi email cho chúng tôi</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Hỗ trợ tốt</string>
+    <string name="tip_excellent">Hỗ trợ tuyệt vời</string>
+    <string name="tip_incredible">Hỗ trợ hoàn hảo</string>
+    <string name="tip_jar">Hỗ trợ</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Không có kết nối</string>
+    <string name="per_month">%s/tháng</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Biểu tượng thay vì văn bản trên tab</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Tab Mặc định</string>
     <string name="color">màu</string>
     <string name="black">Đen</string>
+    <string name="black_locked">Đen (Đã khóa)</string>
     <string name="show_dividers">Hiện dải phân cách</string>
     <string name="colored_contacts">Biểu tượng màu liên hệ</string>
+    <string name="contact_color_list">Danh sách màu liên hệ</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Ảnh liên hệ</string>
     <string name="blurry_contact_photo">Ảnh liên hệ mờ</string>
     <string name="blurry_wallpaper">Hình nền mờ</string>
+    <string name="text_cursor_color">Màu con trỏ văn bản</string>
+    <string name="lines_count">Số dòng</string>
+    <string name="show_button_blocked_numbers">Hiển thị nút không ẩn cuộc gọi bị chặn</string>
+    <string name="flash_for_alerts">Flash cho cảnh báo</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Màu nhấn</string>
     <string name="incoming_call">Cuộc gọi đến</string>
     <string name="outgoing_call">Cuộc gọi đi</string>
     <string name="missed_call">Cuộc gọi nhỡ</string>
     <string name="unblock_number">Bỏ chặn số</string>
+    <string name="unblock_numbers">Bỏ chặn số</string>
     <string name="recents">Gần đây</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Nhận</string>
     <string name="open">Mở</string>
     <string name="collection">Bộ sưu tập</string>
+    <string name="collection_summary">Xây dựng bộ sưu tập để mở khóa ứng dụng</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

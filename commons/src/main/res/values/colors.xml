@@ -40,6 +40,11 @@
     <color name="theme_dark_navigation_color">@color/theme_dark_background_color</color> <!--#313436-->
     <color name="theme_black_navigation_color">@color/theme_black_background_color</color> <!--#1b1b1b-->
 
+    <!-- icon apps colors -->
+    <color name="ic_dialer">#FF15B76C</color>
+    <color name="ic_contacts">#FF405B98</color>
+    <color name="ic_messages">#FF0D81DE</color>
+
     <!-- iOS colors -->
     <color name="red_missed">#FFEB5545</color>
 
@@ -634,26 +639,42 @@
     <color name="green_900">#dcefc5</color>
 
     <!--letterBackgroundColors-->
-    <color name="random_100">#FF06C9AF</color>
-    <color name="random_200">#FF6DC966</color>
-    <color name="random_300">#FFF1AF28</color>
-    <color name="random_400">#FFFF8963</color>
-    <color name="random_500">#FFFF6969</color>
-    <color name="random_600">#FF5D99FF</color>
-    <color name="random_700">#FF8899EC</color>
-    <color name="random_800">#FF8CDAFA</color>
-    <color name="random_900">#FFF7DF32</color>
-    <color name="random_000">#FFA589EF</color>
+    <color name="random_100">#FF8CDAFA</color>
+    <color name="random_200">#FF5D99FF</color>
+    <color name="random_300">#FFA589EF</color>
+    <color name="random_400">#FFFF6969</color>
+    <color name="random_500">#FFFF8963</color>
+    <color name="random_600">#FFF1AF28</color>
+    <color name="random_700">#FFF7DF32</color>
+    <color name="random_800">#FF06C9AF</color>
 
-    <!--letterBackgroundColors-->
-    <color name="random_arc_100">#FFEAD0DE</color>
-    <color name="random_arc_200">#FFF29BBB</color>
+    <!--letterBackgroundColors Arc-->
+    <color name="random_arc_100">#FF6DBAD9</color>
+    <color name="random_arc_200">#FF666789</color>
     <color name="random_arc_300">#FFA6729E</color>
-    <color name="random_arc_400">#FFF25E6B</color>
-    <color name="random_arc_500">#FFFF8558</color>
-    <color name="random_arc_600">#FFF8D558</color>
-    <color name="random_arc_700">#FF34E895</color>
-    <color name="random_arc_800">#FF6DBAD9</color>
-    <color name="random_arc_900">#FF607D87</color>
-    <color name="random_arc_000">#FF666789</color>
+    <color name="random_arc_400">#FFF29BBB</color>
+    <color name="random_arc_500">#FFF25E6B</color>
+    <color name="random_arc_600">#FFFF8558</color>
+    <color name="random_arc_700">#FFF8D558</color>
+    <color name="random_arc_800">#FF34E895</color>
+
+    <!--letterBackgroundColors Android-->
+    <color name="random_android_100">#FF00D0EA</color>
+    <color name="random_android_200">#FF0075F0</color>
+    <color name="random_android_300">#FFBC56FF</color>
+    <color name="random_android_400">#FFFF54BB</color>
+    <color name="random_android_500">#FFFF5B55</color>
+    <color name="random_android_600">#FFFF891D</color>
+    <color name="random_android_700">#FFFFC600</color>
+    <color name="random_android_800">#FF26BC6D</color>
+
+    <!--letterBackgroundColors iOS-->
+    <color name="random_ios_100">#FF64D1FF</color>
+    <color name="random_ios_200">#FF0B84FE</color>
+    <color name="random_ios_300">#FF5D5CE6</color>
+    <color name="random_ios_400">#FFBF5AF3</color>
+    <color name="random_ios_500">#FFFE375E</color>
+    <color name="random_ios_600">#FFFF5713</color>
+    <color name="random_ios_700">#FFFE9F0C</color>
+    <color name="random_ios_800">#FF2ED158</color>
 </resources>

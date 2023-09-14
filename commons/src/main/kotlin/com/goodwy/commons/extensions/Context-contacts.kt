@@ -8,10 +8,14 @@ import android.os.Handler
 import android.os.Looper
 import android.provider.ContactsContract
 import com.goodwy.commons.R
+import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.databases.ContactsDatabase
+import com.goodwy.commons.dialogs.CallConfirmationDialog
+import com.goodwy.commons.dialogs.RadioGroupDialog
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.interfaces.ContactsDao
 import com.goodwy.commons.interfaces.GroupsDao
+import com.goodwy.commons.models.RadioItem
 import com.goodwy.commons.models.contacts.Contact
 import com.goodwy.commons.models.contacts.ContactSource
 import com.goodwy.commons.models.contacts.Organization
@@ -320,4 +324,35 @@ fun Context.getSocialActions(id: Int): ArrayList<SocialAction> {
         socialActions.add(socialAction)
     }
     return socialActions
+}
+
+fun BaseSimpleActivity.initiateCall(contact: Contact, onStartCallIntent: (phoneNumber: String) -> Unit) {
+    val numbers = contact.phoneNumbers
+    if (numbers.size == 1) {
+        onStartCallIntent(numbers.first().value)
+    } else if (numbers.size > 1) {
+        val primaryNumber = contact.phoneNumbers.find { it.isPrimary }
+        if (primaryNumber != null) {
+            onStartCallIntent(primaryNumber.value)
+        } else {
+            val items = ArrayList<RadioItem>()
+            numbers.forEachIndexed { index, phoneNumber ->
+                items.add(RadioItem(index, "${phoneNumber.value} (${getPhoneNumberTypeText(phoneNumber.type, phoneNumber.label)})", phoneNumber.value))
+            }
+
+            RadioGroupDialog(this, items) {
+                onStartCallIntent(it as String)
+            }
+        }
+    }
+}
+
+fun BaseSimpleActivity.tryInitiateCall(contact: Contact, onStartCallIntent: (phoneNumber: String) -> Unit) {
+    if (baseConfig.showCallConfirmation) {
+        CallConfirmationDialog(this, contact.getNameToDisplay()) {
+            initiateCall(contact, onStartCallIntent)
+        }
+    } else {
+        initiateCall(contact, onStartCallIntent)
+    }
 }

@@ -17,6 +17,9 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.contacts.*
 import com.goodwy.commons.overloads.times
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import java.io.OutputStream
 import java.util.Locale
 
 class ContactsHelper(val context: Context) {
@@ -910,7 +913,7 @@ class ContactsHelper(val context: Context) {
                 var suffix = ""
                 var mimetype = cursor.getStringValue(Data.MIMETYPE)
 
-                // if first line is an Organization type contact, go to next line
+                // if first line is an Organization type contact, go to next line if available
                 if (mimetype != CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE) {
                     if (!cursor.isLast && cursor.moveToNext()) {
                         mimetype = cursor.getStringValue(Data.MIMETYPE)
@@ -1765,6 +1768,25 @@ class ContactsHelper(val context: Context) {
                 }
                 callback(duplicates)
             }
+        }
+    }
+
+    fun getContactsToExport(selectedContactSources: Set<String>, callback: (List<Contact>) -> Unit) {
+        getContacts(getAll = true) { receivedContacts ->
+            val contacts = receivedContacts.filter { it.source in selectedContactSources }
+            callback(contacts)
+        }
+    }
+
+    fun exportContacts(contacts: List<Contact>, outputStream: OutputStream): ExportResult {
+        return try {
+            val jsonString = Json.encodeToString(contacts)
+            outputStream.use {
+                it.write(jsonString.toByteArray())
+            }
+            ExportResult.EXPORT_OK
+        } catch (_: Error) {
+            ExportResult.EXPORT_FAIL
         }
     }
 }

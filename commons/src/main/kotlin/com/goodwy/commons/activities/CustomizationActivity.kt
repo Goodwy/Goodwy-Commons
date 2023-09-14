@@ -6,6 +6,7 @@ import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
 import android.os.Bundle
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.updateLayoutParams
 import com.behaviorule.arturdumchev.library.pixels
 import com.goodwy.commons.R
@@ -53,11 +54,14 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun getShowAccentColor() = intent.getBooleanExtra(SHOW_ACCENT_COLOR, true)
 
-    private fun isProVersion() = intent.getBooleanExtra(IS_PRO_VERSION, false)
+    private fun isProVersion() = intent.getBooleanExtra(IS_PRO_VERSION, false) || baseConfig.isPro
     private fun getLicensingKey() = intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: ""
     private fun getProductIdX1() = intent.getStringExtra(PRODUCT_ID_X1) ?: ""
     private fun getProductIdX2() = intent.getStringExtra(PRODUCT_ID_X2) ?: ""
     private fun getProductIdX3() = intent.getStringExtra(PRODUCT_ID_X3) ?: ""
+    private fun getSubscriptionIdX1() = intent.getStringExtra(SUBSCRIPTION_ID_X1) ?: ""
+    private fun getSubscriptionIdX2() = intent.getStringExtra(SUBSCRIPTION_ID_X2) ?: ""
+    private fun getSubscriptionIdX3() = intent.getStringExtra(SUBSCRIPTION_ID_X3) ?: ""
 
     private fun playStoreInstalled() = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
 
@@ -448,17 +452,17 @@ class CustomizationActivity : BaseSimpleActivity() {
             alpha = if (!isProVersion()) 0.3f else 1f
         }
         //customization_primary_color_holder.beVisibleIf(curSelectedThemeId != THEME_SYSTEM)
-        customization_primary_color_holder.apply {
+        arrayOf(customization_primary_color_holder, customization_text_cursor_color_holder).forEach {
             if (!isProVersion()) {
-                isEnabled = true
-                alpha = 0.3f
+                it.isEnabled = true
+                it.alpha = 0.3f
             } else {
                 if (curSelectedThemeId == THEME_SYSTEM) {
-                    isEnabled = false
-                    alpha = 0.3f
+                    it.isEnabled = false
+                    it.alpha = 0.3f
                 } else {
-                    isEnabled = true
-                    alpha = 1f
+                    it.isEnabled = true
+                    it.alpha = 1f
                 }
             }
         }
@@ -560,8 +564,10 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_background_color.setFillWithStroke(backgroundColor, backgroundColor)
         customization_app_icon_color.setFillWithStroke(curAppIconColor, backgroundColor)
         //apply_to_all.setTextColor(primaryColor.getContrastColor())
+        updateTextCursor(baseConfig.textCursorColor)
 
         customization_text_color_holder.setOnClickListener { if (isProVersion()) pickTextColor() else shakePurchase() }
+        customization_text_cursor_color_holder.setOnClickListener { if (isProVersion()) pickTextCursorColor() else shakePurchase() }
         customization_background_color_holder.setOnClickListener { if (isProVersion()) pickBackgroundColor() else shakePurchase() }
         customization_primary_color_holder.setOnClickListener { if (isProVersion()) pickPrimaryColor() else shakePurchase() }
         customization_accent_color_holder.setOnClickListener { pickAccentColor() }
@@ -610,7 +616,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         if (newColor == baseConfig.primaryColor && !baseConfig.isUsingSystemTheme) {
             apply_to_all.setBackgroundResource(R.drawable.button_background_rounded)
         } else {
-            val applyBackground = resources.getDrawable(R.drawable.button_background_rounded, theme) as RippleDrawable
+            val applyBackground = ResourcesCompat.getDrawable(resources, R.drawable.button_background_rounded, theme) as RippleDrawable
             (applyBackground as LayerDrawable).findDrawableByLayerId(R.id.button_background_holder).applyColorFilter(newColor)
             apply_to_all.background = applyBackground
         }
@@ -639,6 +645,30 @@ class CustomizationActivity : BaseSimpleActivity() {
                     updateColorTheme(getUpdatedTheme())
                 }
             }
+        }
+    }
+
+    private fun pickTextCursorColor() {
+        val textCursorColor = if (baseConfig.textCursorColor == -2) baseConfig.primaryColor else baseConfig.textCursorColor
+        ColorPickerDialog(this, textCursorColor, addDefaultColorButton = true, colorDefault = -2, title = resources.getString(R.string.text_cursor_color)) { wasPositivePressed, color ->
+            if (wasPositivePressed) {
+                updateTextCursor(color)
+                val newColor = if (color == -2) getCurrentPrimaryColor() else color
+                baseConfig.textCursorColor = color
+                customization_text_cursor_color.setFillWithStroke(newColor, getCurrentBackgroundColor())
+                baseConfig.tabsChanged = true //without it the color of the cursor in the search menu does not change
+            }
+        }
+    }
+
+    private fun updateTextCursor(color: Int) {
+        customization_text_cursor_color.setFillWithStroke(baseConfig.textCursorColor, getCurrentBackgroundColor())
+        if (color == -2) {
+            customization_text_cursor_color.beGone()
+            customization_text_cursor_color_default.beVisible()
+        } else {
+            customization_text_cursor_color_default.beGone()
+            customization_text_cursor_color.beVisible()
         }
     }
 
@@ -689,7 +719,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAccentColor() {
-        ColorPickerDialog(this, curAccentColor, showUseDefaultButton = true, colorDefault = resources.getColor(R.color.default_accent_color), title = resources.getString(R.string.accent_color)) { wasPositivePressed, color ->
+        ColorPickerDialog(this, curAccentColor, addDefaultColorButton = true, colorDefault = resources.getColor(R.color.default_accent_color), title = resources.getString(R.string.accent_color)) { wasPositivePressed, color ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curAccentColor, color)) {
                     curAccentColor = color
@@ -745,6 +775,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             customization_theme,
             settings_customize_colors_summary,
             customization_text_color_label,
+            customization_text_cursor_color_label,
+            customization_text_cursor_color_default,
             customization_background_color_label,
             customization_primary_color_label,
             customization_accent_color_label,
@@ -803,7 +835,10 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun launchPurchase() {
-        startPurchaseActivity(R.string.app_name_g, getLicensingKey(), getProductIdX1(), getProductIdX2(), getProductIdX3(), playStoreInstalled = playStoreInstalled())
+        startPurchaseActivity(R.string.app_name_g, getLicensingKey(),
+            getProductIdX1(), getProductIdX2(), getProductIdX3(),
+            getSubscriptionIdX1(), getSubscriptionIdX2(), getSubscriptionIdX3(),
+            playStoreInstalled = playStoreInstalled())
     }
 
     private fun shakePurchase() {

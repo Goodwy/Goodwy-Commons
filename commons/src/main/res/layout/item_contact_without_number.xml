@@ -4,7 +4,7 @@
     android:id="@+id/item_contact_frame"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackground"
+    android:background="@drawable/selector_clickable"
     android:clickable="true"
     android:focusable="true"
     android:foreground="@drawable/selector">
@@ -57,7 +57,7 @@
             android:background="@drawable/divider_settings"
             android:alpha="0.2"
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/item_contact_name"/>
+            android:layout_alignStart="@+id/item_contact_name"/>
 
     </RelativeLayout>
 </RelativeLayout>

@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
+    <string name="close">Fermer</string>
     <string name="back">Retour</string>
     <string name="nothing">Aucun</string>
     <string name="later">Plus tard</string>
@@ -75,6 +76,8 @@
     <string name="updating">Actualisation…</string>
     <string name="phone_storage">Mémoire du téléphone</string>
     <string name="phone_storage_hidden">Mémoire du téléphone (invisible pour les autres applis)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Date de naissance</string>
     <string name="anniversary">Autre anniversaire</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Ajouter une colonne</string>
     <string name="reduce_column_count">Supprimer une colonne</string>
     <string name="column_count">Nombre de colonnes</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Nombre de colonnes Portrait</string>
     <string name="landscape_column_count">Nombre de colonnes Paysage</string>
     <string name="change_cover_image">Modifier l\'image du dossier</string>
@@ -105,6 +109,10 @@
         <item quantity="one">%d colonne</item>
         <item quantity="many">%d colonnes</item>
         <item quantity="other">%d colonnes</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gérer les numéros bloqués</string>
@@ -118,8 +126,10 @@
     <string name="must_make_default_dialer">Cette application doit être l\'application de numérotation par défaut pour utiliser les numéros bloqués.</string>
     <string name="set_as_default">Définir par défaut</string>
     <string name="block_confirmation">Voulez-vous vraiment bloquer "%s" \?</string>
-    <string name="block_unknown_calls">Bloquer les appels des contacts non enregistrés</string>
-    <string name="block_unknown_messages">Bloquer les messages des contacts non enregistrés</string>
+    <string name="block_not_stored_calls">Bloquer les appels des contacts non enregistrés</string>
+    <string name="block_hidden_calls">Bloquer les appels provenant de numéros masqués</string>
+    <string name="block_not_stored_messages">Bloquer les messages des contacts non enregistrés</string>
+    <string name="block_hidden_messages">Bloquer les messages provenant de numéros masqués</string>
     <string name="add_blocked_number_helper_text">Saisissez un numéro ou un modèle (par exemple, *12345*, +1*8888) pour bloquer tous les appels et messages provenant de numéros correspondant au modèle.</string>
     <string name="must_make_default_caller_id_app">Impossible de bloquer les numéros inconnus sans l\'autorisation de l\'appelant.</string>
     <!-- Favorites -->
@@ -131,6 +141,7 @@
     <string name="search">Rechercher</string>
     <string name="search_in_placeholder">Rechercher dans %s</string>
     <string name="type_2_characters">Saisissez au moins deux caractères pour lancer la recherche.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Rechercher des contacts</string>
     <string name="search_favorites">Rechercher des favoris</string>
     <string name="search_apps">Rechercher des applications</string>
@@ -158,8 +169,16 @@
     <string name="no_contacts_permission">L\'autorisation d\'accès aux contacts est nécessaire</string>
     <string name="no_camera_permissions">L\'autorisation d\'accès à l\'appareil photo est nécessaire</string>
     <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audios est nécessaire</string>
-    <string name="no_post_notifications_permissions">L\'autorisation de publier des notifications est requise</string>
     <string name="no_permission">Pas d\'autorisation</string>
+    <string name="allow_notifications_reminders">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher de rappels.</string>
+    <string name="allow_notifications_files">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher la barre de progression.</string>
+    <string name="allow_notifications_music_player">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne peut pas jouer de chansons.</string>
+    <string name="allow_notifications_voice_recorder">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne peut pas enregistrer de données audio.</string>
+    <string name="allow_notifications_incoming_calls">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher les appels entrants.</string>
+    <string name="allow_notifications_incoming_messages">Vous devez autoriser l\'application à afficher des notifications, sinon elle ne pourra pas afficher les messages entrants.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Accorder l\'autorisation</string>
+    <string name="permission_required">Autorisation requise</string>
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
     <string name="rename_folder">Renommer le dossier</string>
@@ -295,6 +314,7 @@
     <string name="duration">Durée</string>
     <string name="artist">Artiste</string>
     <string name="album">Album</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Longueur de focale</string>
     <string name="exposure_time">Durée d\'exposition</string>
     <string name="iso_speed">Sensibilité ISO</string>
@@ -399,6 +419,7 @@
     <string name="last_modified">Date de modification</string>
     <string name="date_created">Date de création</string>
     <string name="date_taken">Date de prise de vue</string>
+    <string name="date_added">Date d’ajout</string>
     <string name="title">Titre</string>
     <string name="filename">Nom de fichier</string>
     <string name="extension">Extension</string>
@@ -447,7 +468,7 @@
     <string name="fingerprint">Empreinte</string>
     <string name="add_fingerprint">Capturer une empreinte</string>
     <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreinte digitale</string>
-    <string name="open_biometric_dialog">Ouvrir la boîte de dialogue de vérification d\'identité biométrique</string>
+    <string name="open_biometric_dialog">Ouvrir la fenêtre de vérification biométrique</string>
     <string name="authenticate">Authentifier</string>
     <string name="authentication_failed">Échec de l\'identification</string>
     <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants</string>
@@ -459,6 +480,12 @@
     <string name="lock_folder_pro">Verrouiller le dossier (Pro)</string>
     <string name="unlock_folder">Déverrouiller le dossier</string>
     <string name="lock_folder_notice">Le verrouillage ne fonctionne que dans cette application. Cette protection ne remplace pas un chiffrage système.</string>
+    <string name="enter_password">Entrer un mot de passe</string>
+    <string name="password">Mot de passe</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Veuillez entrer le mot de passe</string>
+    <string name="invalid_password">Mot de passe incorrect</string>
     <!-- Times -->
     <string name="yesterday">Hier</string>
     <string name="today">Aujourd\'hui</string>
@@ -667,6 +694,7 @@
     <string name="use_24_hour_time_format">Utiliser le format horaire 24 heures</string>
     <string name="change_date_and_time_format">Modifier le format de date et heure</string>
     <string name="sunday_first">Démarrer la semaine le dimanche</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Toujours utiliser le même intervalle de répétition</string>
     <string name="snooze_time">Intervalle de répétition</string>
@@ -697,7 +725,7 @@
     <string name="thumbnails">Vignettes</string>
     <string name="list_view">Liste</string>
     <!-- Excluding -->
-    <string name="exclude">Exclure le dossier</string>
+    <string name="exclude">Exclure</string>
     <string name="exclude_folder">Exclure le dossier</string>
     <string name="excluded_folders">Dossiers exclus</string>
     <string name="excluded">(exclu)</string>
@@ -728,6 +756,7 @@
     <string name="show_the_recycle_bin">Afficher la corbeille</string>
     <string name="hide_the_recycle_bin">Cacher la corbeille</string>
     <string name="open_the_recycle_bin">Ouvrir la corbeille</string>
+    <string name="skip_the_recycle_bin">Oubliez la corbeille, supprimez directement les fichiers</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d élément déplacé dans la corbeille</item>
         <item quantity="many">%d éléments déplacés dans la corbeille</item>
@@ -828,8 +857,16 @@
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
     <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Bonjour,
+\n
+\nIl semble que vous ayez mis à jour la version gratuite. Une fois que vous êtes satisfait·e de cette version et que vous avez peut-être migré vos paramètres et vos favoris, vous pouvez désinstaller l\'ancienne version gratuite pour éviter de la lancer accidentellement car vous n\'en aurez plus besoin, ce qui empêchera également cette boîte de dialogue de s\'afficher.
+\n
+\nMerci !</string>
+    <string name="upgraded_to_pro_gallery">Bonjour,
+\n
+\nil semble que vous ayez déjà la version Pro de l\'application. Une fois que vous en serez satisfait et que vous aurez peut-être migré vos paramètres et vos favoris, vous pourrez désinstaller celle-ci pour éviter de la lancer accidentellement, car vous n\'en aurez plus besoin.
+\n
+\nMerci de votre compréhension !</string>
     <string name="upgraded_from_free">Bonjour,
 \n
 \nil semble que vous ayez effectué une mise à niveau depuis la version gratuite. Une fois que vous serez satisfait de celle-ci et que vous aurez peut-être migré vos données, vous pourrez désinstaller l\'ancienne version gratuite pour éviter de la lancer accidentellement car vous n\'en aurez plus besoin.
@@ -840,25 +877,25 @@
 \nil semble que vous ayez déjà la version Pro de l\'application également. Une fois que vous en serez satisfait et que vous aurez peut-être migré vos données, vous pourrez désinstaller celle-ci pour éviter de la lancer accidentellement car vous n\'en aurez plus besoin.
 \n
 \nMerci !</string>
-    <string name="upgraded_to_pro_calendar">Bonjour,
+    <string name="upgraded_from_free_calendar">Bonjour,
 \n
-\nIl semble que vous ayez effectué une mise à niveau depuis la version gratuite. Si vous souhaitez migrer vos évènements stockés localement, vous devez le faire manuellement en les exportant dans un fichier .ics dans la version gratuite de l\'application et en les important ici via le menu supérieur.
+\nIl semblerait que vous soyez passé de la version gratuite à la version supérieure. Si vous souhaitez migrer vos événements stockés localement, vous devez le faire manuellement en les exportant dans un fichier .ics dans la version gratuite de l\'application et en les important ici via le menu supérieur.
 \n
-\nUne fois que vous êtes satisfait de votre installation dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin.
-\n
-\nMerci !</string>
-    <string name="upgraded_to_pro_contacts">Bonjour,
-\n
-\nIl semble que vous ayez effectué une mise à jour depuis la version gratuite. Si vous aviez des contacts stockés sous « %s », vous devez les migrer manuellement en les exportant dans un fichier .vcf depuis la version gratuite de l\'application et en les important ici via le menu supérieur.
-\n
-\nUne fois que vous êtes satisfait de votre installation dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin.
+\nUne fois que vous êtes satisfait de votre configuration dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin, ce qui empêchera également cette boîte de dialogue de s\'afficher.
 \n
 \nMerci !</string>
-    <string name="upgraded_to_pro_notes">Bonjour,
+    <string name="upgraded_from_free_contacts">Bonjour,
 \n
-\nIl semble que vous ayez effectué une mise à niveau depuis la version gratuite. Si vous souhaitez migrer vos notes, vous devez le faire manuellement en les exportant dans un fichier dans la version gratuite de l\'application et en les important ici via le menu supérieur.
+\nIl semblerait que vous veniez de passer à la version gratuite. Si vous aviez des contacts stockés sous \"%s\", vous devez les migrer manuellement en les exportant dans un fichier .vcf depuis la version gratuite de l\'application et en les important ici via le menu supérieur.
 \n
-\nUne fois que vous êtes satisfait de votre installation dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin.
+\nUne fois que vous êtes satisfait de votre configuration dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin, ce qui empêchera également cette boîte de dialogue de s\'afficher.
+\n
+\nMerci !</string>
+    <string name="upgraded_from_free_notes">Bonjour,
+\n
+\nIl semblerait que vous soyez passé de la version gratuite à la version supérieure. Si vous voulez migrer vos notes, vous devez le faire manuellement en les exportant dans un fichier dans la version gratuite de l\'application et en les important ici par le menu supérieur.
+\n
+\nUne fois que vous êtes satisfait de votre configuration dans la version Pro, vous pouvez désinstaller l\'ancienne version gratuite car vous n\'en aurez plus besoin, ce qui empêchera également cette boîte de dialogue de s\'afficher.
 \n
 \nMerci !</string>
     <!-- About -->
@@ -1052,6 +1089,7 @@
     <string name="why_upgrade_footer">Garantie de remboursement à 100%</string>
     <string name="why_upgrade_footer_one_time_payment">Paiement unique</string>
     <string name="why_upgrade_improved_design">Design amélioré</string>
+    <string name="why_upgrade_many_other_improvements">De nombreuses autres améliorations</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Éditeur de photos avancé</string>
     <string name="why_upgrade_advanced_photo_video_editor">Éditeur photo et vidéo avancé</string>
@@ -1117,13 +1155,15 @@
     <string name="sms_mms_title">SMS MMS (gestion SMS et MMS)</string>
     <string name="apng_title">APNG Android (support WebP animé)</string>
     <string name="pdf_view_pager_title">PDFViewPager (visionneuse de PDF)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (visionneuse de PDF)</string>
     <string name="m3u_parser_title">M3U Parser (traitement des fichiers de listes de lecture m3u)</string>
     <string name="android_lame_title">AndroidLame (encodeur mp3)</string>
+    <string name="zip4j_title">Zip4j (compression et décompression ZIP)</string>
     <!-- Trial -->
     <string name="trial_expired">Essai expiré</string>
     <string name="start_free_trial">Commencer un essai gratuit</string>
     <string name="trial_expires_soon">Votre essai expire bientôt.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
+    <string name="unlock_for_one_final_day">Déverrouiller l\'application pour un dernier jour</string>
     <string name="welcome_to_app_name">Bienvenue sur %s !</string>
     <string name="trial_start_description">Merci d\'utiliser notre application. Vous pouvez utiliser cette version déverrouillée pendant <font color="#FFFFFF">%d jours</font>. Une fois la période d\'essai terminée, pensez à passer à la version Pro. Elle comporte un grand nombre de nouvelles fonctionnalités, un design moderne, aucune publicité et de nombreuses autres améliorations.
 \n

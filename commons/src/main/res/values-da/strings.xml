@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuller</string>
+    <string name="close">Luk</string>
     <string name="back">Tilbage </string>
     <string name="nothing">Intet</string>
     <string name="later">Senere</string>
@@ -75,6 +76,8 @@
     <string name="updating">Opdaterer…</string>
     <string name="phone_storage">Telefon lager</string>
     <string name="phone_storage_hidden">Telefon lager (ikke synlig for andre apps)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Fødselsdag</string>
     <string name="anniversary">Årsdag</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Flere kolonner</string>
     <string name="reduce_column_count">Færre kolonner</string>
     <string name="column_count">Antal kolonner</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Antal kolonner stående format</string>
     <string name="landscape_column_count">Antal kolonner liggende format</string>
     <string name="change_cover_image">Skift cover-billede</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d kolonne</item>
         <item quantity="other">%d kolonner</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrér blokerede numre</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">Du skal gøre denne app til standardopkaldsappen for at gøre brug af blokerede numre.</string>
     <string name="set_as_default">Gør til standard</string>
     <string name="block_confirmation">Er du sikker på at du vil blokere \"%s\"?</string>
-    <string name="block_unknown_calls">Blokér opkald fra ukendte</string>
-    <string name="block_unknown_messages">Blokér beskeder fra ukendte</string>
+    <string name="block_not_stored_calls">Blokér opkald fra ukendte</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Blokér beskeder fra ukendte</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
@@ -130,23 +140,24 @@
     <string name="search">Søg</string>
     <string name="search_in_placeholder">Søg i %s</string>
     <string name="type_2_characters">Start søgningen ved at skrive mindst to tegn.</string>
-    <string name="search_contacts">Search contacts</string>
-    <string name="search_favorites">Search favorites</string>
-    <string name="search_apps">Search apps</string>
-    <string name="search_events">Search events</string>
-    <string name="search_groups">Search groups</string>
-    <string name="search_history">Search history</string>
-    <string name="search_calls">Search calls</string>
-    <string name="search_files">Search files</string>
-    <string name="search_folders">Search folders</string>
-    <string name="search_files_and_folders">Search files and folders</string>
-    <string name="search_playlists">Search playlists</string>
-    <string name="search_artists">Search artists</string>
-    <string name="search_albums">Search albums</string>
-    <string name="search_tracks">Search tracks</string>
-    <string name="search_text">Search text</string>
-    <string name="search_conversations">Search conversations</string>
-    <string name="search_recordings">Search recordings</string>
+    <string name="show_search">Show a search bar</string>
+    <string name="search_contacts">Søg i kontakter</string>
+    <string name="search_favorites">Søg i favoritter</string>
+    <string name="search_apps">Søg blandt apps</string>
+    <string name="search_events">Søg i begivenheder</string>
+    <string name="search_groups">Søg i grupper</string>
+    <string name="search_history">Søgehistorik</string>
+    <string name="search_calls">Søg i opkald</string>
+    <string name="search_files">Søg i filer</string>
+    <string name="search_folders">Søg i mapper</string>
+    <string name="search_files_and_folders">Søg i filer og mapper</string>
+    <string name="search_playlists">Søg i spillelister</string>
+    <string name="search_artists">Søg i kunstnere</string>
+    <string name="search_albums">Søg i album</string>
+    <string name="search_tracks">Søg i numre</string>
+    <string name="search_text">Søgetekst</string>
+    <string name="search_conversations">Søg i samtaler</string>
+    <string name="search_recordings">Søg i optagelser</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Filter (Pro)</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Adgang til kontakter påkrævet</string>
     <string name="no_camera_permissions">Adgang til kamera påkrævet</string>
     <string name="no_audio_permissions">Adgang til lyd påkrævet</string>
-    <string name="no_post_notifications_permissions">Der kræves tilladelse til at sende meddelelser</string>
     <string name="no_permission">Ingen tilladelse</string>
+    <string name="allow_notifications_reminders">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise påmindelser.</string>
+    <string name="allow_notifications_files">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise statuslinjen.</string>
+    <string name="allow_notifications_music_player">Du skal tillade, at appen viser notifikationer, ellers kan den ikke afspille sange.</string>
+    <string name="allow_notifications_voice_recorder">Du skal tillade, at appen viser notifikationer, ellers kan den ikke optage lyd.</string>
+    <string name="allow_notifications_incoming_calls">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise indgående opkald.</string>
+    <string name="allow_notifications_incoming_messages">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise indgående meddelelser.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Giv tilladelse</string>
+    <string name="permission_required">Tilladelse påkrævet</string>
     <!-- Renaming -->
     <string name="rename_file">Omdøb fil</string>
     <string name="rename_folder">Omdøb mappe</string>
@@ -290,6 +309,7 @@
     <string name="duration">Varighed</string>
     <string name="artist">Forfatter</string>
     <string name="album">Album</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Brændvidde</string>
     <string name="exposure_time">Eksponeringstid</string>
     <string name="iso_speed">ISO</string>
@@ -394,6 +414,7 @@
     <string name="last_modified">Senest ændret</string>
     <string name="date_created">Oprettelsesdato</string>
     <string name="date_taken">Eksponeringsdato</string>
+    <string name="date_added">Date added</string>
     <string name="title">Titel</string>
     <string name="filename">Filnavn</string>
     <string name="extension">Filtype</string>
@@ -453,6 +474,12 @@
     <string name="lock_folder_pro">Lås mappe (Pro)</string>
     <string name="unlock_folder">Lås mappe op</string>
     <string name="lock_folder_notice">Denne beskyttelse virker kun i denne app, den er ikke beregnet som erstatning for rigtig kryptering af mapper på systemniveau.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">I går</string>
     <string name="today">I dag</string>
@@ -632,6 +659,7 @@
     <string name="use_24_hour_time_format">Brug 24-timersformat</string>
     <string name="change_date_and_time_format">Skift format på dato og tid</string>
     <string name="sunday_first">Søndag første ugedag</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Brug altid samme udsættelsestid</string>
     <string name="snooze_time">Udsættelsestid</string>
@@ -693,6 +721,7 @@
     <string name="show_the_recycle_bin">Vis papirkurven</string>
     <string name="hide_the_recycle_bin">Skjul papirkurven</string>
     <string name="open_the_recycle_bin">Åbn papirkurven</string>
+    <string name="skip_the_recycle_bin">Spring papirkurven over, slet filer direkte</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flytter en fil til papirkurven</item>
         <item quantity="other">Flytter %d filer til papirkurven</item>
@@ -785,13 +814,13 @@
     <string name="more_info">Yderligere oplysninger</string>
     <string name="upgrade">Opgrader</string>
     <string name="upgrade_calendar">Du må overføre lokalt gemte begivenheder ved at eksportere til en ics-fil og derpå importere den. Du finder eksport- og importknapper i hovedmenuen.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Hej\n\nDet ser ud til, at du lige har opgraderet fra den gratis version. Når du er tilfreds med denne version og måske har flyttet dine indstillinger og favoritter over, kan du afinstallere den gamle gratis version for at undgå at starte den ved et uheld, da du ikke længere har brug for den..\n\nTak!</string>
+    <string name="upgraded_to_pro_gallery">Hej\n\nDet ser ud til, at du også allerede har Pro-app-versionen. Når du er tilfreds med den og måske har flyttet dine indstillinger og favoritter over, kan du afinstallere denne for at undgå at starte den ved et uheld, da du ikke længere har brug for den.\n\nTak!</string>
     <string name="upgraded_from_free">Hej\n\nDet ser ud til at du lige har opgraderet fra den gratis version. Så snart du er tilfreds med denne og måske har flyttet dine data over, kan du afinstallere den gamle og dermed undgå at åbne den ved et uheld, du vil ikke have brug for den mere.\n\nTak!</string>
-    <string name="upgraded_to_pro">Hej,\n\ndet ser ud til, at du også allerede har Pro app-versionen. Når du er tilfreds med den og måske har overført dine data, kan du afinstallere denne for at undgå at starte den ved et uheld, da du ikke har brug for den længere.\n\nTak!</string>
-    <string name="upgraded_to_pro_calendar">Hej,\n\ndet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du ønsker at overføre dine lokalt gemte begivenheder, skal du gøre det manuelt ved at eksportere dem til en .ics-fil i den gratis app-version og importere dem her via topmenuen. \n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den. \n\n\nTak!</string>
-    <string name="upgraded_to_pro_contacts">Hej,\n\ndet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du havde nogen kontakter gemt under \"%s\", skal du overføre dem manuelt ved at eksportere dem i en .vcf-fil fra den gratis app-version og importere dem her via topmenuen.\n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den.\n\n\nTak!</string>
-    <string name="upgraded_to_pro_notes">HHej,\n\ndet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du vil overføre dine noter, skal du gøre det manuelt ved at eksportere dem til en fil i den gratis app-version og importere dem her via topmenuen. \n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den. \n\n\nTak!</string>
+    <string name="upgraded_to_pro">Hej\n\nDet ser ud til, at du også allerede har Pro app-versionen. Når du er tilfreds med den og måske har overført dine data, kan du afinstallere denne for at undgå at starte den ved et uheld, da du ikke har brug for den længere.\n\nTak!</string>
+    <string name="upgraded_from_free_calendar">Hej\n\nDet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du ønsker at overføre dine lokalt gemte begivenheder, skal du gøre det manuelt ved at eksportere dem til en .ics-fil i den gratis app-version og importere dem her via topmenuen. \n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den. \n\n\nTak!</string>
+    <string name="upgraded_from_free_contacts">Hej\n\nDet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du havde nogen kontakter gemt under \"%s\", skal du overføre dem manuelt ved at eksportere dem i en .vcf-fil fra den gratis app-version og importere dem her via topmenuen.\n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den.\n\n\nTak!</string>
+    <string name="upgraded_from_free_notes">Hej\n\nDet ser ud til, at du lige har opgraderet fra den gratis version. Hvis du vil overføre dine noter, skal du gøre det manuelt ved at eksportere dem til en fil i den gratis app-version og importere dem her via topmenuen. \n\nNår du er tilfreds med din opsætning i Pro-versionen, kan du afinstallere den gamle gratis version, da du ikke længere har brug for den. \n\n\nTak!</string>
     <!-- About -->
     <string name="about">Om</string>
     <string name="website">Website</string>
@@ -995,6 +1024,7 @@
     <string name="why_upgrade_footer">Fuld tilfredshed eller pengene tilbage</string>
     <string name="why_upgrade_footer_one_time_payment">Engangsbetaling</string>
     <string name="why_upgrade_improved_design">Forbedret design</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Avanceret fotoredigering</string>
     <string name="why_upgrade_advanced_photo_video_editor">Advanceret photo- &amp; videoeditor</string>
@@ -1060,15 +1090,17 @@
     <string name="sms_mms_title">SMS MMS (håndtering af SMS og MMS)</string>
     <string name="apng_title">APNG Android (animeret WebP-understøttelse)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viser)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF viser)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Prøveperioden er udløbet</string>
     <string name="start_free_trial">Start en gratis prøveperiode</string>
     <string name="trial_expires_soon">Din prøveperiode udløber snart.</string>
     <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
     <string name="welcome_to_app_name">Velkommen til %s!</string>
-    <string name="trial_start_description">Tak, fordi du bruger vores app. Du kan bruge denne ulåste version i &lt;font color=\'#FFFFFFFF\'>%d dage&lt;/font>. Når prøveversionen udløber, skal du overveje at opgradere til Pro-versionen. Den har en enorm mængde nye funktioner, et moderne design, ingen reklamer og mange andre forbedringer.
+    <string name="trial_start_description">Tak, fordi du bruger vores app. Du kan bruge denne ulåste version i &lt;font color=\'#FFFFFFFF\'&gt;%d dage&lt;/font&gt;. Når prøveversionen udløber, skal du overveje at opgradere til Pro-versionen. Den har en enorm mængde nye funktioner, et moderne design, ingen reklamer og mange andre forbedringer.
         \n\nDu skal bare betale for det en gang for alle, og hvis du ikke er tilfreds, kan du afinstallere det og få pengene tilbage.\n\nHåber du vil kunne lide den :)</string>
     <string name="trial_end_description">Opgrader venligst til Pro-versionen for at nyde appen fuldt ud.\n\nDu skal kun betale for den én gang i livet, og hvis du ikke er tilfreds, kan du afinstallere den og få pengene tilbage.\n\n\nVi ses :)</string>
     <plurals name="trial_expires_days">

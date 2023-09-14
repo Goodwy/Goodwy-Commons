@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Če si iz nekega razloga ne morete privoščiti naše aplikacije, vendar res želite uporabiti vse funkcije, nam pišite po e-pošti</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Dobra podpora</string>
+    <string name="tip_excellent">Odlična podpora</string>
+    <string name="tip_incredible">Odlična podpora</string>
+    <string name="tip_jar">Podpora</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Brez povezave</string>
+    <string name="per_month">%s/mesec</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Ikone namesto besedila na zavihku</string>
@@ -58,9 +60,11 @@
     <string name="general">Splošno</string>
     <string name="default_tab">Privzeti zavihek</string>
     <string name="color">barva</string>
-    <string name="black">Črn</string>
+    <string name="black">Črna</string>
+    <string name="black_locked">Črna (zaklenjena)</string>
     <string name="show_dividers">Pokaži delilnike</string>
     <string name="colored_contacts">Ikone v barvah stikov</string>
+    <string name="contact_color_list">Barvni seznam stikov</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Slika stikov</string>
     <string name="blurry_contact_photo">Zaostrena kontaktna fotografija</string>
     <string name="blurry_wallpaper">Zamegljeno ozadje</string>
+    <string name="text_cursor_color">Barva kazalca besedila</string>
+    <string name="lines_count">Število vrstic</string>
+    <string name="show_button_blocked_numbers">Pokaži gumb, da ne skriva blokiranih klicev</string>
+    <string name="flash_for_alerts">Bliskavica za opozorila</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Barva naglasa</string>
     <string name="incoming_call">Dohodni klic</string>
     <string name="outgoing_call">Odhodni klic</string>
     <string name="missed_call">Zamujani klic</string>
     <string name="unblock_number">Odklepanje številke</string>
+    <string name="unblock_numbers">Odklepanje številk</string>
     <string name="recents">Nedavni</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Pridobi</string>
     <string name="open">Odpri</string>
     <string name="collection">Zbirka</string>
+    <string name="collection_summary">Ustvarite zbirko za odklepanje aplikacije</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

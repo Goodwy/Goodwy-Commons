@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">சில காரணங்களால் நீங்கள் எங்கள் பயன்பாட்டை வாங்க முடியாது, ஆனால் உண்மையில் அனைத்து அம்சங்களையும் பயன்படுத்த விரும்பினால், எங்களுக்கு மின்னஞ்சல் அனுப்பவும்</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">நல்ல ஆதரவு</string>
+    <string name="tip_excellent">சிறந்த ஆதரவு</string>
+    <string name="tip_incredible">அற்புதமான ஆதரவு</string>
+    <string name="tip_jar">ஆதரவு</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">இணைப்பு இல்லை</string>
+    <string name="per_month">%s/மாதம்</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">தாவல்களில் உரைக்கு பதிலாக சின்னங்கள்</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">இயல்புநிலை தாவல்</string>
     <string name="color">நிறம்</string>
     <string name="black">கருப்பு</string>
+    <string name="black_locked">கருப்பு (பூட்டப்பட்டது)</string>
     <string name="show_dividers">வகுப்பிகளைக் காட்டு</string>
     <string name="colored_contacts">தொடர்புகள் வண்ண சின்னங்கள்</string>
+    <string name="contact_color_list">தொடர்பு வண்ண பட்டியல்</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">தொடர்பு புகைப்படம்</string>
     <string name="blurry_contact_photo">மங்கலான தொடர்பு புகைப்படம்</string>
     <string name="blurry_wallpaper">மங்கலான வால்பேப்பர்</string>
+    <string name="text_cursor_color">உரை கர்சர் நிறம்</string>
+    <string name="lines_count">கோடுகள் எண்ணிக்கை</string>
+    <string name="show_button_blocked_numbers">தடுக்கப்பட்ட அழைப்புகளை மறைக்க வேண்டாம் என்ற பொத்தானைக் காட்டு</string>
+    <string name="flash_for_alerts">விழிப்பூட்டல்களுக்கான ஃபிளாஷ்</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">உச்சரிப்பு நிறம்</string>
     <string name="incoming_call">உள்வரும் அழைப்பு</string>
     <string name="outgoing_call">வெளிசெல்லும் அழைப்பு</string>
     <string name="missed_call">தவறிய அழைப்பு</string>
     <string name="unblock_number">எண்ணைத் தடு</string>
+    <string name="unblock_numbers">எண்களைத் தடைநீக்கு</string>
     <string name="recents">சமீபத்தியவை</string>
     <string name="unblock_confirmation">\"%s\" ஐ நிச்சயமாக நீக்க விரும்புகிறீர்களா?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">பெறு</string>
     <string name="open">திற</string>
     <string name="collection">சேகரிப்பு</string>
+    <string name="collection_summary">பயன்பாட்டைத் திறக்க ஒரு தொகுப்பை உருவாக்கவும்</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Jos jostain syystä sinulla ei ole varaa sovellukseemme, mutta haluat todella käyttää kaikkia ominaisuuksia, lähetä meille sähköpostia</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Hyvä tuki</string>
+    <string name="tip_excellent">Erinomainen tuki</string>
+    <string name="tip_incredible">Mahtava tuki</string>
+    <string name="tip_jar">Tuki</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Ei yhteyttä</string>
+    <string name="per_month">%s/kuukausi</string>
 
     <string name="show_contact_thumbnails_g">Näytä yhteystietojen kuvakkeet</string>
     <string name="use_icon_tabs_summary">Kuvakkeet välilehtien tekstin sijaan</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Oletus-välilehti</string>
     <string name="color">väri</string>
     <string name="black">Musta</string>
+    <string name="black_locked">Musta (lukittu)</string>
     <string name="show_dividers">Näytä jakajat</string>
     <string name="colored_contacts">Yhteystietojen värilliset kuvakkeet</string>
+    <string name="contact_color_list">Yhteystietojen väriluettelo</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Kontaktin kuva</string>
     <string name="blurry_contact_photo">Hämärtynyt yhteystietokuva</string>
     <string name="blurry_wallpaper">Selkeä taustakuva</string>
+    <string name="text_cursor_color">Tekstin kohdistimen väri</string>
+    <string name="lines_count">Rivien määrä</string>
+    <string name="show_button_blocked_numbers">Näytä painike, joka ei piilota estettyjä puheluita</string>
+    <string name="flash_for_alerts">Salama hälytyksiä varten</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Korostusväri</string>
     <string name="incoming_call">Saapuva puhelu</string>
     <string name="outgoing_call">Lähtevä puhelu</string>
     <string name="missed_call">Puhelu jäi soittamaan</string>
     <string name="unblock_number">Poista numeron esto</string>
+    <string name="unblock_numbers">Poista numeroiden esto</string>
     <string name="recents">Tuore</string>
     <string name="unblock_confirmation">Haluatko varmasti poistaa eston \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">Hanki</string>
     <string name="open">Avaa</string>
     <string name="collection">Kokoelma</string>
+    <string name="collection_summary">Luo kokoelma sovelluksen lukituksen avaamiseksi</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

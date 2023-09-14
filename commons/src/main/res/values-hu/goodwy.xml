@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Ha valamilyen oknál fogva nem engedheti meg magának az alkalmazásunkat, de valóban szeretné használni az összes funkciót, csak írjon nekünk e-mailt</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Jó támogatás</string>
+    <string name="tip_excellent">Kiváló támogatás</string>
+    <string name="tip_incredible">Fantasztikus támogatás</string>
+    <string name="tip_jar">Támogat</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Nincs kapcsolat</string>
+    <string name="per_month">%s/hó</string>
 
     <string name="show_contact_thumbnails_g">Névjegyek bélyegképének megjelenítése</string>
     <string name="use_icon_tabs_summary">Ikonok szöveg helyett a lapokban</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Alapértelmezett lap</string>
     <string name="color">szín</string>
     <string name="black">Fekete</string>
+    <string name="black_locked">Fekete (zárolt)</string>
     <string name="show_dividers">Osztók megjelenítése</string>
     <string name="colored_contacts">Névjegyek színes ikonjai</string>
+    <string name="contact_color_list">Kapcsolat színlistája</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Kapcsolat képe</string>
     <string name="blurry_contact_photo">Elmosódott kontaktkép</string>
     <string name="blurry_wallpaper">Homályos háttérkép</string>
+    <string name="text_cursor_color">Szövegkurzor színe</string>
+    <string name="lines_count">Sorok száma</string>
+    <string name="show_button_blocked_numbers">A blokkolt hívások elrejtésének mellőzésére szolgáló gomb megjelenítése</string>
+    <string name="flash_for_alerts">Flash riasztásokhoz</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Ékezet színe</string>
     <string name="incoming_call">Bejövő hívás</string>
     <string name="outgoing_call">Kimenő hívás</string>
     <string name="missed_call">Elmulasztott hívás</string>
-    <string name="unblock_number">Feloldás száma</string>
+    <string name="unblock_number">Szám feloldása</string>
+    <string name="unblock_numbers">Számok feloldása</string>
     <string name="recents">Friss</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -137,6 +148,9 @@
     <string name="get">Letöltés</string>
     <string name="open">Nyitott</string>
     <string name="collection">Gyűjtemény</string>
+    <string name="collection_summary">Gyűjtemény létrehozása az alkalmazás feloldásához</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
+    <string name="close">关闭</string>
     <string name="back">返回</string>
     <string name="nothing">没有东西</string>
     <string name="later">稍后</string>
@@ -75,6 +76,8 @@
     <string name="updating">更新中…</string>
     <string name="phone_storage">手机存储</string>
     <string name="phone_storage_hidden">手机空间 (其他程序不可见)</string>
+    <string name="audio">音频</string>
+    <string name="scanning">扫描中…</string>
     <!-- Events -->
     <string name="birthday">生日</string>
     <string name="anniversary">纪念日</string>
@@ -97,12 +100,16 @@
     <string name="increase_column_count">显示更多项目</string>
     <string name="reduce_column_count">显示更少项目</string>
     <string name="column_count">列数</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">垂直列数</string>
     <string name="landscape_column_count">水平列数</string>
     <string name="change_cover_image">更换封面图片</string>
     <string name="select_photo">选择图片</string>
     <plurals name="column_counts">
         <item quantity="other">%d 列</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="other">%d 行</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
@@ -116,8 +123,10 @@
     <string name="must_make_default_dialer">您必须将这应用程序设为默认的拨号程序来使用黑名单。</string>
     <string name="set_as_default">设为默认</string>
     <string name="block_confirmation">您确定要将 \"%s\" 添加到黑名单吗？</string>
-    <string name="block_unknown_calls">拦截来自未存储联系人的通话</string>
-    <string name="block_unknown_messages">拦截来自未存储联系人的消息</string>
+    <string name="block_not_stored_calls">拦截来自未存储联系人的来电</string>
+    <string name="block_hidden_calls">拦截来自隐藏号码的电话</string>
+    <string name="block_not_stored_messages">拦截来自未存储联系人的消息</string>
+    <string name="block_hidden_messages">拦截来自隐藏号码的短信</string>
     <string name="add_blocked_number_helper_text">输入号码或模式（例如 *12345*、+1*8888）以阻止来自匹配模式的号码的所有来电和消息。</string>
     <string name="must_make_default_caller_id_app">要拦截未知号码，你必须将应用设为默认的来电显示和骚扰电话屏蔽应用。</string>
     <!-- Favorites -->
@@ -129,6 +138,7 @@
     <string name="search">搜索</string>
     <string name="search_in_placeholder">在 %s 中搜索</string>
     <string name="type_2_characters">请输入至少两个字符来开始搜索。</string>
+    <string name="show_search">显示搜索栏</string>
     <string name="search_contacts">搜索联系人</string>
     <string name="search_favorites">搜索收藏</string>
     <string name="search_apps">搜索应用</string>
@@ -156,8 +166,16 @@
     <string name="no_contacts_permission">请授予通讯录权限</string>
     <string name="no_camera_permissions">请授予相机权限</string>
     <string name="no_audio_permissions">请授予音频权限</string>
-    <string name="no_post_notifications_permissions">需要发送通知权限</string>
     <string name="no_permission">无权限</string>
+    <string name="allow_notifications_reminders">你必须允许应用展示通知，否则它无法显示提醒。</string>
+    <string name="allow_notifications_files">你必须允许应用展示通知，否则它无法显示进度条。</string>
+    <string name="allow_notifications_music_player">你必须允许应用展示通知，否则它无法播放歌曲。</string>
+    <string name="allow_notifications_voice_recorder">你必须允许应用展示通知，否则它无法录音。</string>
+    <string name="allow_notifications_incoming_calls">你必须允许应用展示通知，否则它无法显示来电。</string>
+    <string name="allow_notifications_incoming_messages">你必须允许应用展示通知，否则它无法显示消息。</string>
+    <string name="allow_alarm_scheduled_messages">你必须允许应用访问内部闹铃，否则它无法发送定时消息。</string>
+    <string name="grant_permission">授予权限</string>
+    <string name="permission_required">权限是必需的</string>
     <!-- Renaming -->
     <string name="rename_file">重命名文件</string>
     <string name="rename_folder">重命名文件夹</string>
@@ -286,6 +304,7 @@
     <string name="duration">时长</string>
     <string name="artist">艺术家</string>
     <string name="album">专辑</string>
+    <string name="genre">流派</string>
     <string name="focal_length">焦距</string>
     <string name="exposure_time">曝光时间</string>
     <string name="iso_speed">ISO 速度</string>
@@ -386,6 +405,7 @@
     <string name="last_modified">修改日期</string>
     <string name="date_created">创建日期</string>
     <string name="date_taken">拍摄日期</string>
+    <string name="date_added">添加了日期</string>
     <string name="title">标题</string>
     <string name="filename">文件名</string>
     <string name="extension">扩展名</string>
@@ -444,6 +464,12 @@
     <string name="lock_folder_pro">锁定文件夹 (Pro)</string>
     <string name="unlock_folder">解锁文件夹</string>
     <string name="lock_folder_notice">此保护仅适用于此应用程序，不应取代真正的系统级文件夹加密。</string>
+    <string name="enter_password">输入密码</string>
+    <string name="password">密码</string>
+    <string name="add_password">添加密码</string>
+    <string name="empty_password_new">请输入密码</string>
+    <string name="empty_password">请输入密码</string>
+    <string name="invalid_password">密码不正确</string>
     <!-- Times -->
     <string name="yesterday">昨天</string>
     <string name="today">今天</string>
@@ -595,6 +621,7 @@
     <string name="use_24_hour_time_format">使用 24 小时制</string>
     <string name="change_date_and_time_format">更改日期和时间格式</string>
     <string name="sunday_first">每周以周日开头</string>
+    <string name="start_week_on">一周开始于</string>
     <string name="widgets">小部件</string>
     <string name="use_same_snooze">始终使用相同的贪睡时间</string>
     <string name="snooze_time">贪睡时间</string>
@@ -656,6 +683,7 @@
     <string name="show_the_recycle_bin">显示回收站</string>
     <string name="hide_the_recycle_bin">隐藏回收站</string>
     <string name="open_the_recycle_bin">打开回收站</string>
+    <string name="skip_the_recycle_bin">跳过回收站，直接删除文件</string>
     <plurals name="moving_items_into_bin">
         <item quantity="other">正在移动 %d 个项目到回收站</item>
     </plurals>
@@ -756,7 +784,7 @@
     <string name="upgrade_calendar">您必须通过导出/导入.ics文件来自行转移本地存储的事件。您可以在主界面菜单中找到导出/导入选项。</string>
     <string name="upgraded_from_free_gallery">嘿，
 \n
-\n你似乎刚从免费版升级过来。 如果你对专业版感到满意，而且已经迁移了设置和收藏等必要项目，你可以卸载旧的免费版以免意外启动，因你不再需要它。
+\n你似乎刚从免费版升级过来。 如果你对专业版感到满意，而且已经迁移了设置和收藏等必要项目，你可以卸载旧的免费版以免意外启动，因你不再需要它。它也会阻止该对话框再次出现。
 \n
 \n谢谢！</string>
     <string name="upgraded_to_pro_gallery">嘿，
@@ -766,7 +794,7 @@
 \n谢谢！</string>
     <string name="upgraded_from_free">嘿，
 \n
-\n你似乎刚从免费版升级过来。 如果你对收费版用得满意并且已经迁移了数据，你可以卸载旧的免费版避免意外启动，因为你不再需要它了。
+\n你似乎刚从免费版升级过来。 如果你对收费版用得满意并且已经迁移了数据，你可以卸载旧的免费版避免意外启动，因为你不再需要它了。它也会阻止该对话框再次出现。
 \n
 \n谢谢！</string>
     <string name="upgraded_to_pro">嘿，
@@ -774,25 +802,25 @@
 \n除了免费版，你似乎也已经安装了专业版。如果你觉得满意并且迁移了数据，你可以卸载免费版避免意外启动，因你不再需要它。
 \n
 \n谢谢！</string>
-    <string name="upgraded_to_pro_calendar">嘿，
+    <string name="upgraded_from_free_calendar">嘿，
 \n
 \n你似乎从免费版升级到了专业版。如果你想把免费版中本地存储的事件迁移过来，你必须手动在免费版中把它们导出为 .ics 文件，并通过顶部菜单导入到专业版中。
 \n
-\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。它也会阻止该对话框再次出现。
 \n
 \n谢谢！</string>
-    <string name="upgraded_to_pro_contacts">嘿，
+    <string name="upgraded_from_free_contacts">嘿，
 \n
 \n你似乎刚从免费版升级到了专业版。如果你有任何存储在 \"%s\" 下的联系人，你必须手动在免费版中把它们导出为 .vcf 文件，并通过顶部菜单导入到专业版中。
 \n
-\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。它也会阻止该对话框再次出现。
 \n
 \n谢谢！</string>
-    <string name="upgraded_to_pro_notes">嘿，
+    <string name="upgraded_from_free_notes">嘿，
 \n
 \n你似乎刚从免费版升级到了专业版。如果你想迁移笔记数据，你必须手动在免费版中把它们导出为文件，并通过顶部菜单导入到专业版中。
 \n
-\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。
+\n如果你对专业版设置感到满意，你就可以卸载旧的免费版，因你不再需要它。它也会阻止该对话框再次出现。
 \n
 \n谢谢！</string>
     <!-- About -->
@@ -978,6 +1006,7 @@
     <string name="why_upgrade_footer">100% 退款保证</string>
     <string name="why_upgrade_footer_one_time_payment">一次性付款</string>
     <string name="why_upgrade_improved_design">改进的设计</string>
+    <string name="why_upgrade_many_other_improvements">许多其他改进</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">高级照片编辑器</string>
     <string name="why_upgrade_advanced_photo_video_editor">高级照片和视频编辑器</string>
@@ -1043,8 +1072,10 @@
     <string name="sms_mms_title">SMS MMS (短信和彩信处理)</string>
     <string name="apng_title">APNG Android (动画 WebP 支持)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF 查看器)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF 查看器)</string>
     <string name="m3u_parser_title">M3U 解析器 (m3u 播放列表文件处理)</string>
     <string name="android_lame_title">AndroidLame (mp3 编码器)</string>
+    <string name="zip4j_title">Zip4j（ZIP 压缩和解压缩）</string>
     <!-- Trial -->
     <string name="trial_expired">试用期已过</string>
     <string name="start_free_trial">开始免费试用</string>

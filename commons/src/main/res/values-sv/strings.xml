@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
+    <string name="close">Close</string>
     <string name="back">Tillbaka</string>
     <string name="nothing">Ingenting</string>
     <string name="later">Senare</string>
@@ -75,6 +76,8 @@
     <string name="updating">Updaterar…</string>
     <string name="phone_storage">Telefonlagring</string>
     <string name="phone_storage_hidden">Telefonlagring (inte synligt för andra appar)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">Scanning…</string>
     <!-- Events -->
     <string name="birthday">Födelsedag</string>
     <string name="anniversary">Årsdag</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Öka antalet kolumner</string>
     <string name="reduce_column_count">Minska antalet kolumner</string>
     <string name="column_count">Antal kolumner</string>
+    <string name="row_count">Row count</string>
     <string name="portrait_column_count">Antal kolumner i stående läge</string>
     <string name="landscape_column_count">Antal kolumner i liggande läge</string>
     <string name="change_cover_image">Byt omslagsbild</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d kolumn</item>
         <item quantity="other">%d kolumner</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d row</item>
+        <item quantity="other">%d rows</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Hantera blockerade nummer</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">Du måste ställa in den här appen som standardtelefonapp för att kunna använda blockerade nummer.</string>
     <string name="set_as_default">Ange som standard</string>
     <string name="block_confirmation">Är du säker på att du vill blockera \"%s\"?</string>
-    <string name="block_unknown_calls">Blockera samtal från okända nummer</string>
-    <string name="block_unknown_messages">Blockera meddelanden från okända nummer</string>
+    <string name="block_not_stored_calls">Blockera samtal från okända nummer</string>
+    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_not_stored_messages">Blockera meddelanden från okända nummer</string>
+    <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Ange ett nummer eller en nummerserie (exempel *12345*, +1*8888) för att blockera alla samtal och meddelanden som matchar nummret eller nummerserien.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Sök</string>
     <string name="search_in_placeholder">Sök i %s</string>
     <string name="type_2_characters">Skriv in minst två tecken för att starta sökningen.</string>
+    <string name="show_search">Show a search bar</string>
     <string name="search_contacts">Sök efter kontakter</string>
     <string name="search_favorites">Sök efter favoriter</string>
     <string name="search_apps">Sök efter appar</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Kontaktbehörighet krävs</string>
     <string name="no_camera_permissions">Kamerabehörighet krävs</string>
     <string name="no_audio_permissions">Mikrofonbehörighet krävs</string>
-    <string name="no_post_notifications_permissions">Behörighet att skicka aviseringar krävs</string>
     <string name="no_permission">Ingen behörighet</string>
+    <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
+    <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
+    <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
+    <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
     <string name="rename_file">Byt namn på fil</string>
     <string name="rename_folder">Byt namn på mapp</string>
@@ -291,6 +310,7 @@
     <string name="duration">Varaktighet</string>
     <string name="artist">Artist</string>
     <string name="album">Album</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Brännvidd</string>
     <string name="exposure_time">Exponeringstid</string>
     <string name="iso_speed">ISO-grader</string>
@@ -395,6 +415,7 @@
     <string name="last_modified">Senast ändrad</string>
     <string name="date_created">Date created</string>
     <string name="date_taken">Fotodatum</string>
+    <string name="date_added">Date added</string>
     <string name="title">Titel</string>
     <string name="filename">Filnamn</string>
     <string name="extension">Filnamnstillägg</string>
@@ -454,6 +475,12 @@
     <string name="lock_folder_pro">Lås mapp (Pro)</string>
     <string name="unlock_folder">Lås upp mapp</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Please enter a password</string>
+    <string name="empty_password">Please enter the password</string>
+    <string name="invalid_password">Incorrect password</string>
     <!-- Times -->
     <string name="yesterday">Igår</string>
     <string name="today">Idag</string>
@@ -633,6 +660,7 @@
     <string name="use_24_hour_time_format">Använd 24-timmarsformat</string>
     <string name="change_date_and_time_format">Ändra datum- och tidsformat</string>
     <string name="sunday_first">Börja veckan på söndag</string>
+    <string name="start_week_on">Start week on</string>
     <string name="widgets">Widgetar</string>
     <string name="use_same_snooze">Använd alltid samma snooze-intervall</string>
     <string name="snooze_time">Snooze-intervall</string>
@@ -694,6 +722,7 @@
     <string name="show_the_recycle_bin">Visa papperskorgen</string>
     <string name="hide_the_recycle_bin">Dölj papperskorgen</string>
     <string name="open_the_recycle_bin">Öppna papperskorgen</string>
+    <string name="skip_the_recycle_bin">Skip the Recycle Bin, delete files directly</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flyttar %d objekt till papperskorgen</item>
         <item quantity="other">Flyttar %d objekt till papperskorgen</item>
@@ -793,29 +822,37 @@
     <string name="more_info">Mer information</string>
     <string name="upgrade">Uppgradera</string>
     <string name="upgrade_calendar">Lokalt sparade händelser kan bara migreras manuellt genom att exportera och importera dem till och från en .ics-fil. Du hittar knappar för både export och import i huvudvymenyn.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Hallå,
+\n
+\nDet verkar som att du precis har uppgraderat från gratisversionen. När du är nöjd med den här och kanske migrerat dina inställningar och favoriter över, kan du avinstallera den gamla gratis för att undvika att starta den av misstag eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
+\n
+\nTack!</string>
     <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free">Hallå,
+\n
+\nDet verkar som att du precis har uppgraderat från gratisversionen. När du är nöjd med den här och kanske migrerat dina data över, kan du avinstallera den gamla gratis för att undvika att starta den av misstag eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
+\n
+\nTack!</string>
     <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_calendar">Hej,
+    <string name="upgraded_from_free_calendar">Hallå,
 \n
-\ndet ser ut som du precis upgraderat från gratisversionen. Om du vill migrera dina lokalt sparade händelser, så behöver du manuellt exportera dem till en .ics-fil i gratisappen och importera de här genom menyn.
+\nDet verkar som att du precis har uppgraderat från gratisversionen. Om du vill migrera dina lokalt lagrade händelser över måste du göra det manuellt genom att exportera dem till en .ics-fil i gratisappversionen och importera hit via toppmenyn.
 \n
-\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
-\n
-\nTack!</string>
-    <string name="upgraded_to_pro_contacts">Hej,
-\n
-\ndet ser ut som du precis upgraderat från gratisversionen. Om du hade några kontakter lagrat under \"%s\" så behöver du manuellt exportera dem till en .vcf-fil i gratisappen och importera de här genom menyn.
-\n
-\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
+\nNär du är nöjd med din installation i Pro-versionen kan du avinstallera den gamla gratis eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
 \n
 \nTack!</string>
-    <string name="upgraded_to_pro_notes">Hej,
+    <string name="upgraded_from_free_contacts">Hallå,
 \n
-\ndet ser ut som du precis upgraderat från gratisversionen. Om du vill migrera dina anteckningar över, så behöver du manuellt exportera dem till en fil i gratisappen och importera de här genom menyn.
+\nDet verkar som att du precis har uppgraderat från gratisversionen. Om du hade några kontakter lagrade under \"%s\" måste du migrera dem manuellt genom att exportera i en .vcf-fil från gratisappversionen och importera hit via toppmenyn.
 \n
-\nNär du är nöjd med dina ändringar i Pro-versionen så kan du avinstallera den gamla gratisversionen.
+\nNär du är nöjd med din installation i Pro-versionen kan du avinstallera den gamla gratis eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
+\n
+\nTack!</string>
+    <string name="upgraded_from_free_notes">Hallå,
+\n
+\nDet verkar som att du precis har uppgraderat från gratisversionen. Om du vill migrera dina anteckningar över måste du göra det manuellt genom att exportera dem till en fil i gratisappversionen och importera hit via toppmenyn.
+\n
+\nNär du är nöjd med din installation i Pro-versionen kan du avinstallera den gamla gratis eftersom du inte behöver den längre, det kommer också att förhindra att den här dialogrutan visas.
 \n
 \nTack!</string>
     <!-- About -->
@@ -1021,6 +1058,7 @@
     <string name="why_upgrade_footer">100% Money Back Guarantee</string>
     <string name="why_upgrade_footer_one_time_payment">One time payment</string>
     <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
@@ -1086,8 +1124,10 @@
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
     <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
     <!-- Trial -->
     <string name="trial_expired">Trial expired</string>
     <string name="start_free_trial">Start free trial</string>

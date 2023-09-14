@@ -48,7 +48,8 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
 fun setupSimpleListItem(view: View, item: SimpleListItem, collection: Boolean, onItemClicked: (SimpleListItem) -> Unit) {
     view.apply {
         if (collection) {
-            bottom_sheet_item_title.setText(item.textRes)
+            if (item.textRes != null) bottom_sheet_item_title.setText(item.textRes)
+            if (item.text != null) bottom_sheet_item_title.text = item.text
             bottom_sheet_item_title.setTextColor(context.getProperTextColor())
             bottom_sheet_item_icon.setImageResourceOrBeGone(item.imageRes)
             //bottom_sheet_item_icon.applyColorFilter(color)
@@ -70,7 +71,8 @@ fun setupSimpleListItem(view: View, item: SimpleListItem, collection: Boolean, o
                 context.getProperTextColor()
             }
 
-            bottom_sheet_item_title.setText(item.textRes)
+            if (item.textRes != null) bottom_sheet_item_title.setText(item.textRes)
+            if (item.text != null) bottom_sheet_item_title.text = item.text
             bottom_sheet_item_title.setTextColor(color)
             bottom_sheet_item_icon.setImageResourceOrBeGone(item.imageRes)
             bottom_sheet_item_icon.applyColorFilter(color)

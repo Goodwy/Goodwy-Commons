@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">اگر به دلایلی شما می توانید برنامه ما استطاعت نیست، اما واقعا می خواهید به استفاده از تمام ویژگی ها، فقط به ما ایمیل</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">پشتیبانی خوب</string>
+    <string name="tip_excellent">پشتیبانی عالی</string>
+    <string name="tip_incredible">پشتیبانی عالی</string>
+    <string name="tip_jar">پشتیبانی</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">بدون اتصال</string>
+    <string name="per_month">%s/ماه</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">آیکون ها به جای متن بر روی زبانه ها</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">زبانه پیش فرض</string>
     <string name="color">رنگ</string>
     <string name="black">سیاه</string>
+    <string name="black_locked">مشکی (قفل شده)</string>
     <string name="show_dividers">نمایش تقسیم کننده ها</string>
     <string name="colored_contacts">نمادهای رنگی مخاطبین</string>
+    <string name="contact_color_list">فهرست رنگهای اشنا</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">عکس تماس</string>
     <string name="blurry_contact_photo">عکس مخاطب تار</string>
     <string name="blurry_wallpaper">کاغذ دیواری تار</string>
+    <string name="text_cursor_color">رنگ مکاننمای متن</string>
+    <string name="lines_count">شمارش خطوط</string>
+    <string name="show_button_blocked_numbers">نشان دادن دکمه برای مخفی نکردن تماسهای مسدود شده</string>
+    <string name="flash_for_alerts">فلش برای هشدار</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">رنگ لهجه</string>
     <string name="incoming_call">تماس ورودی</string>
     <string name="outgoing_call">تماس خروجی</string>
     <string name="missed_call">تماس از دست رفته</string>
     <string name="unblock_number">شماره مسدود کردن</string>
+    <string name="unblock_numbers">باز کردن قفل شماره ها</string>
     <string name="recents">اخیر</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -139,6 +150,9 @@
     <string name="get">دریافت</string>
     <string name="open">باز کردن</string>
     <string name="collection">مجموعه</string>
+    <string name="collection_summary">ساخت یک مجموعه برای باز کردن برنامه</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

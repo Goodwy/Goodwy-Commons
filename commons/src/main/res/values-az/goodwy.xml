@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Əgər nədənsə bizim tətbiqimizi ödəyə bilmirsinizsə, lakin həqiqətən bütün funksiyalardan istifadə etmək istəyirsinizsə, bizə e-poçt göndərin</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">yaxşı dəstək</string>
+    <string name="tip_excellent">Əla dəstək</string>
+    <string name="tip_incredible">İnanılmaz dəstək</string>
+    <string name="tip_jar">Dəstək</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Əlaqə yoxdur</string>
+    <string name="per_month">%s/ay</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Kontakt görüntülərini göstər</string>
@@ -60,8 +62,10 @@
     <string name="default_tab">Varsayılan nişan</string>
     <string name="color">rəng</string>
     <string name="black">Qara</string>
+    <string name="black_locked">Qara (Bağlı)</string>
     <string name="show_dividers">Bölücüləri göstərin</string>
     <string name="colored_contacts">Əlaqə rəngli nişanlar</string>
+    <string name="contact_color_list">Əlaqə rəng siyahısı</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -82,12 +86,19 @@
     <string name="contact_photo">Əlaqə şəkli</string>
     <string name="blurry_contact_photo">Bulanıq kontakt şəkli</string>
     <string name="blurry_wallpaper">Bulanıq divar kağızı</string>
+    <string name="text_cursor_color">Mətn kursorunun rəngi</string>
+    <string name="lines_count">Xətlər sayılır</string>
+    <string name="show_button_blocked_numbers">Bloklanmış zəngləri gizlətməmək üçün düyməni göstərin</string>
+    <string name="flash_for_alerts">Xəbərdarlıqlar üçün flaş</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="incoming_call">Daxil olan zəng</string>
     <string name="outgoing_call">Çıxan zəng</string>
     <string name="missed_call">Buraxılmış zəng</string>
     <string name="unblock_number">Nömrəni blokdan çıxarın</string>
+    <string name="unblock_numbers">Nömrələri blokdan çıxarın</string>
     <string name="recents">Son zamanlar</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -140,6 +151,9 @@
     <string name="get">Yüklə</string>
     <string name="open">Açıq</string>
     <string name="collection">Kolleksiya</string>
+    <string name="collection_summary">Proqramın kilidini açmaq üçün kolleksiya yaradın</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>

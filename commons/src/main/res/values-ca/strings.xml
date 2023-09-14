@@ -2,6 +2,7 @@
 <resources>
     <string name="ok">D\'acord</string>
     <string name="cancel">Cancel·la</string>
+    <string name="close">Tanca</string>
     <string name="back">Enrere</string>
     <string name="nothing">Res</string>
     <string name="later">Més tard</string>
@@ -75,6 +76,8 @@
     <string name="updating">S\'està actualitzant…</string>
     <string name="phone_storage">Emmagatzematge del telèfon</string>
     <string name="phone_storage_hidden">Emmagatzematge del telèfon (no visible per altres aplicacions)</string>
+    <string name="audio">Audio</string>
+    <string name="scanning">S\'està explorant…</string>
     <!-- Events -->
     <string name="birthday">Data de naixement</string>
     <string name="anniversary">Aniversari</string>
@@ -97,6 +100,7 @@
     <string name="increase_column_count">Augmenta el nombre de columnes</string>
     <string name="reduce_column_count">Redueix el nombre de columnes</string>
     <string name="column_count">Comptador de columnes</string>
+    <string name="row_count">Nombre de files</string>
     <string name="portrait_column_count">Nombre de columnes verticals</string>
     <string name="landscape_column_count">Nombre de columnes horitzontals</string>
     <string name="change_cover_image">Canvia la imatge de la portada</string>
@@ -104,6 +108,10 @@
     <plurals name="column_counts">
         <item quantity="one">%d columna</item>
         <item quantity="other">%d columnes</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d fila</item>
+        <item quantity="other">%d files</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestió dels números bloquejats</string>
@@ -117,8 +125,10 @@
     <string name="must_make_default_dialer">Cal fer que aquesta aplicació sigui l\'aplicació predeterminada de marcatge per utilitzar els números bloquejats.</string>
     <string name="set_as_default">Estableix com a predeterminada</string>
     <string name="block_confirmation">Segur que voleu bloquejar «%s»\?</string>
-    <string name="block_unknown_calls">Bloqueja les trucades de contactes no emmagatzemats</string>
-    <string name="block_unknown_messages">Bloqueja els missatges dels contactes no emmagatzemats</string>
+    <string name="block_not_stored_calls">Bloqueja les trucades de contactes no emmagatzemats</string>
+    <string name="block_hidden_calls">Bloqueja les trucades des de números ocults</string>
+    <string name="block_not_stored_messages">Bloqueja els missatges dels contactes no emmagatzemats</string>
+    <string name="block_hidden_messages">Bloqueja els missatges des de números ocults</string>
     <string name="add_blocked_number_helper_text">Introduïu un número o un patró (per exemple, *12345*, +1*8888) per bloquejar totes les trucades i missatges dels números que coincideixin amb el patró.</string>
     <string name="must_make_default_caller_id_app">No es poden bloquejar números desconeguts sense el permís d\'identificació de trucades.</string>
     <!-- Favorites -->
@@ -130,6 +140,7 @@
     <string name="search">Cerca</string>
     <string name="search_in_placeholder">Cerca a %s</string>
     <string name="type_2_characters">Escriviu com a mínim 2 caràcters per iniciar la cerca.</string>
+    <string name="show_search">Mostra una barra de cerca</string>
     <string name="search_contacts">Cerca contactes</string>
     <string name="search_favorites">Cerca als preferits</string>
     <string name="search_apps">Cerca aplicacions</string>
@@ -157,8 +168,16 @@
     <string name="no_contacts_permission">Es requereix permís d\'accés als contactes</string>
     <string name="no_camera_permissions">Es requereix permís d\'accés a la càmera</string>
     <string name="no_audio_permissions">Es requereix permís d\'accés a l\'àudio</string>
-    <string name="no_post_notifications_permissions">Cal permís per publicar notificacions</string>
     <string name="no_permission">Sense permís</string>
+    <string name="allow_notifications_reminders">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els recordatoris.</string>
+    <string name="allow_notifications_files">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar la barra de progrés.</string>
+    <string name="allow_notifications_music_player">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà reproduir cançons.</string>
+    <string name="allow_notifications_voice_recorder">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà enregistrar àudio.</string>
+    <string name="allow_notifications_incoming_calls">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar les trucades entrants.</string>
+    <string name="allow_notifications_incoming_messages">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els missatges entrants.</string>
+    <string name="allow_alarm_scheduled_messages">Heu de permetre que l\'aplicació accedeixi a alarmes internes, en cas contrari no pot enviar missatges programats.</string>
+    <string name="grant_permission">Atorga el permís</string>
+    <string name="permission_required">Es requereix permís</string>
     <!-- Renaming -->
     <string name="rename_file">Canvia el nom del fitxer</string>
     <string name="rename_folder">Canvia el nom de la carpeta</string>
@@ -295,6 +314,7 @@
     <string name="duration">Durada</string>
     <string name="artist">Artista</string>
     <string name="album">Àlbum</string>
+    <string name="genre">Genre</string>
     <string name="focal_length">Distància focal</string>
     <string name="exposure_time">Temps d\'exposició</string>
     <string name="iso_speed">Velocitat ISO</string>
@@ -394,6 +414,7 @@
     <string name="last_modified">Última modificació</string>
     <string name="date_created">Data de creació</string>
     <string name="date_taken">Data de realització</string>
+    <string name="date_added">Data d\'incorporació</string>
     <string name="title">Títol</string>
     <string name="filename">Nom de fitxer</string>
     <string name="extension">Extensió</string>
@@ -453,6 +474,12 @@
     <string name="lock_folder_pro">Bloqueja la carpeta (Pro)</string>
     <string name="unlock_folder">Desbloqueja la carpeta</string>
     <string name="lock_folder_notice">Aquesta protecció només funciona en aquesta aplicació. No substituirà un xifratge real de carpetes de tot el sistema.</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="add_password">Add password</string>
+    <string name="empty_password_new">Introduïu una contrasenya</string>
+    <string name="empty_password">Introduïu la contrasenya</string>
+    <string name="invalid_password">Contrasenya incorrecta</string>
     <!-- Times -->
     <string name="yesterday">Ahir</string>
     <string name="today">Avui</string>
@@ -632,6 +659,7 @@
     <string name="use_24_hour_time_format">Utilitza el format horari de 24 hores</string>
     <string name="change_date_and_time_format">Canvia el format de data i hora</string>
     <string name="sunday_first">Comença la setmana el diumenge</string>
+    <string name="start_week_on">Comença la setmana el</string>
     <string name="widgets">Ginys</string>
     <string name="use_same_snooze">Utilitza sempre el mateix temps d\'ajornament</string>
     <string name="snooze_time">Temps d\'ajornament</string>
@@ -693,6 +721,7 @@
     <string name="show_the_recycle_bin">Mostra la paperera de reciclatge</string>
     <string name="hide_the_recycle_bin">Oculta la paperera de reciclatge</string>
     <string name="open_the_recycle_bin">Obre la paperera de reciclatge</string>
+    <string name="skip_the_recycle_bin">Omet la paperera de reciclatge, suprimeix directament els fitxers</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">S\'està movent %d element a la paperera de reciclatge</item>
         <item quantity="other">S\'estan movent %d elements a la paperera de reciclatge</item>
@@ -794,7 +823,7 @@
     <string name="upgrade_calendar">Cal migrar els esdeveniments emmagatzemats localment de manera manual mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació/importació al menú de la pantalla principal.</string>
     <string name="upgraded_from_free_gallery">Hola,
 \n
-\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat la vostra configuració i els favorits, podeu desinstal·lar l\'antiga gratuïta per evitar que l\'inicieu accidentalment, ja que no la necessitareu.
+\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat la vostra configuració i els favorits, podeu desinstal·lar l\'antiga gratuïta per evitar que l\'inicieu accidentalment, ja que no la necessitareu. També evitarà que es mostri aquest diàleg.
 \n
 \nGràcies!</string>
     <string name="upgraded_to_pro_gallery">Hola,
@@ -804,7 +833,7 @@
 \nGràcies!</string>
     <string name="upgraded_from_free">Hola
 \n
-\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat les vostres dades, podeu desinstal·lar l\'antiga gratuïta per evitar llançar-la accidentalment, ja que ja no la necessitareu més.
+\nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Un cop estigueu satisfet amb aquesta i potser hàgiu migrat les vostres dades, podeu desinstal·lar l\'antiga gratuïta per evitar llançar-la accidentalment, ja que ja no la necessitareu més. També evitarà que es mostri aquest diàleg.
 \n
 \nGràcies!</string>
     <string name="upgraded_to_pro">Hola,
@@ -812,25 +841,25 @@
 \nsembla que ja teniu també la versió Pro de l\'aplicació. Un cop estigueu satisfet amb ella i potser hàgiu migrat les dades, podeu desinstal·lar-la per evitar que l\'inicieu accidentalment, ja que ja no la necessitareu.
 \n
 \nGràcies!</string>
-    <string name="upgraded_to_pro_calendar">Hola,
+    <string name="upgraded_from_free_calendar">Hola,
 \n
 \nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Si voleu migrar els esdeveniments emmagatzemats localment, heu de fer-ho manualment exportant-los a un fitxer .ics en la versió gratuïta de l\'aplicació i important-los aquí a través del menú superior.
 \n
-\nQuan estigueu satisfet amb la vostra configuració de la versió Pro, podeu desinstal·lar l\'antiga gratuïta perquè ja no la necessitareu.
+\nQuan estigueu satisfet amb la vostra configuració de la versió Pro, podeu desinstal·lar l\'antiga gratuïta perquè ja no la necessitareu. També evitarà que es mostri aquest diàleg.
 \n
 \nGràcies!</string>
-    <string name="upgraded_to_pro_contacts">Hola,
+    <string name="upgraded_from_free_contacts">Hola,
 \n
 \nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Si teníeu contactes emmagatzemats a «%s», cal migrar-los manualment exportant-los en un fitxer .vcf des de la versió gratuïta de l\'aplicació i important-los aquí a través del menú superior.
 \n
-\nQuan estigueu satisfet amb la vostra configuració de la versió Pro, podeu desinstal·lar l\'antiga gratuïta perquè ja no la necessitareu.
+\nQuan estigueu satisfet amb la vostra configuració de la versió Pro, podeu desinstal·lar l\'antiga gratuïta perquè ja no la necessitareu. També evitarà que es mostri aquest diàleg.
 \n
 \nGràcies!</string>
-    <string name="upgraded_to_pro_notes">Hola,
+    <string name="upgraded_from_free_notes">Hola,
 \n
 \nsembla que acabeu d\'actualitzar a partir de la versió gratuïta. Si voleu migrar les notes, cal fer-ho manualment exportant-les a un fitxer en la versió gratuïta de l\'aplicació i important-les aquí a través del menú superior.
 \n
-\nQuan estigueu satisfet amb la vostra configuració de la versió Pro, podeu desinstal·lar l\'antiga gratuïta perquè ja no la necessitareu.
+\nQuan estigueu satisfet amb la vostra configuració de la versió Pro, podeu desinstal·lar l\'antiga gratuïta perquè ja no la necessitareu. També evitarà que es mostri aquest diàleg.
 \n
 \nGràcies!</string>
     <!-- About -->
@@ -1008,6 +1037,7 @@
     <string name="why_upgrade_footer">Garantia de devolució de diners 100%</string>
     <string name="why_upgrade_footer_one_time_payment">Pagament únic</string>
     <string name="why_upgrade_improved_design">Disseny millorat</string>
+    <string name="why_upgrade_many_other_improvements">Moltes altres millores</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançat</string>
     <string name="why_upgrade_advanced_photo_video_editor">Editor avançat de fotos i vídeos</string>
@@ -1073,8 +1103,10 @@
     <string name="sms_mms_title">SMS MMS (gestió d\'SMS i MMS)</string>
     <string name="apng_title">APNG Android (implementa WebP animades)</string>
     <string name="pdf_view_pager_title">PDFViewPager (visualitzador de PDF)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (visualitzador de PDF)</string>
     <string name="m3u_parser_title">Analitzador M3U (gestió de fitxers «m3u» de llistes de reproducció)</string>
     <string name="android_lame_title">AndroidLame (codificador «mp3»)</string>
+    <string name="zip4j_title">Zip4j (compressió i descompressió ZIP)</string>
     <!-- Trial -->
     <string name="trial_expired">La prova ha caducat</string>
     <string name="start_free_trial">Comença la prova gratuïta</string>

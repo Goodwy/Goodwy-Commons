@@ -13,7 +13,6 @@ import com.goodwy.commons.dialogs.ExportBlockedNumbersDialog
 import com.goodwy.commons.dialogs.FilePickerDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
-import com.goodwy.commons.helpers.BlockedNumbersExporter.ExportResult
 import com.goodwy.commons.interfaces.RefreshRecyclerViewListener
 import com.goodwy.commons.models.BlockedNumber
 import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.*
@@ -40,10 +39,49 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         updateTextColors(manage_blocked_numbers_wrapper)
         updatePlaceholderTexts()
 
-        val blockTitleRes = if (baseConfig.appId.startsWith("com.goodwy.dialer")) R.string.block_unknown_calls else R.string.block_unknown_messages
+        setupBlockUnknown()
+        setupBlockHidden()
+
+        manage_blocked_numbers_placeholder_2.apply {
+            underlineText()
+            setTextColor(getProperPrimaryColor())
+            setOnClickListener {
+                if (isDefaultDialer()) {
+                    addOrEditBlockedNumber()
+                } else {
+                    launchSetDefaultDialerIntent()
+                }
+            }
+        }
+    }
+
+    private fun setupBlockHidden() {
+        val blockHiddenTitleRes =
+            if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_hidden_calls else R.string.block_hidden_messages
+
+        block_hidden.apply {
+            setText(blockHiddenTitleRes)
+            isChecked = baseConfig.blockHiddenNumbers
+            if (isChecked) {
+                maybeSetDefaultCallerIdApp()
+            }
+        }
+
+        block_hidden_holder.setOnClickListener {
+            block_hidden.toggle()
+            baseConfig.blockHiddenNumbers = block_hidden.isChecked
+            if (block_hidden.isChecked) {
+                maybeSetDefaultCallerIdApp()
+            }
+        }
+    }
+
+    private fun setupBlockUnknown() {
+        val blockUnknownTitleRes =
+            if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_not_stored_calls else R.string.block_not_stored_messages
 
         block_unknown.apply {
-            setText(blockTitleRes)
+            setText(blockUnknownTitleRes)
             isChecked = baseConfig.blockUnknownNumbers
             if (isChecked) {
                 maybeSetDefaultCallerIdApp()
@@ -55,18 +93,6 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             baseConfig.blockUnknownNumbers = block_unknown.isChecked
             if (block_unknown.isChecked) {
                 maybeSetDefaultCallerIdApp()
-            }
-        }
-
-        manage_blocked_numbers_placeholder_2.apply {
-            underlineText()
-            setTextColor(getProperPrimaryColor())
-            setOnClickListener {
-                if (isDefaultDialer()) {
-                    addOrEditBlockedNumber()
-                } else {
-                    launchSetDefaultDialerIntent()
-                }
             }
         }
     }
@@ -83,14 +109,17 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                     addOrEditBlockedNumber()
                     true
                 }
+
                 R.id.import_blocked_numbers -> {
                     tryImportBlockedNumbers()
                     true
                 }
+
                 R.id.export_blocked_numbers -> {
                     tryExportBlockedNumbers()
                     true
                 }
+
                 else -> false
             }
         }
@@ -109,7 +138,9 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         } else if (requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK) {
             toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
             baseConfig.blockUnknownNumbers = false
+            baseConfig.blockHiddenNumbers = false
             block_unknown.isChecked = false
+            block_hidden.isChecked = false
         }
     }
 
@@ -190,6 +221,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                     showErrorToast(e)
                 }
             }
+
             else -> toast(R.string.invalid_file_format)
         }
     }
@@ -253,7 +285,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                     toast(
                         when (it) {
                             ExportResult.EXPORT_OK -> R.string.exporting_successful
-                            ExportResult.EXPORT_FAIL -> R.string.exporting_failed
+                            else -> R.string.exporting_failed
                         }
                     )
                 }

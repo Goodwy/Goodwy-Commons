@@ -7,6 +7,9 @@ import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
 import com.goodwy.commons.R
+import com.goodwy.commons.helpers.LBC_ARC
+import com.goodwy.commons.helpers.LBC_IOS
+import com.goodwy.commons.helpers.LBC_ORIGINAL
 
 fun Resources.getColoredBitmap(resourceId: Int, newColor: Int): Bitmap {
     val drawable = getDrawable(resourceId)
@@ -48,5 +51,14 @@ fun getSettingsIcon(id: Int): Int {
         4 -> R.drawable.ic_settings_gear
         5 -> R.drawable.ic_settings_toggles
         else -> R.drawable.ic_more_horiz
+    }
+}
+
+fun getContactsColorListIcon(id: Int): Int {
+    return when (id) {
+        LBC_ORIGINAL -> R.drawable.ic_color_list
+        LBC_IOS -> R.drawable.ic_color_list_ios
+        LBC_ARC -> R.drawable.ic_color_list_arc
+        else -> R.drawable.ic_color_list_android
     }
 }

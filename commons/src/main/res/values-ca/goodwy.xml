@@ -23,10 +23,10 @@
     <string name="lifebuoy_summary">Si per algun motiu no us podeu permetre la nostra aplicació, però realment voleu utilitzar totes les funcions, només cal que ens envieu un correu electrònic</string>
     <string name="participants_title">Participants</string>
     <string name="special_thanks_to">Special thanks to</string>
-    <string name="tip_kind">Kind tip of</string>
-    <string name="tip_excellent">Excellent tip of</string>
-    <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
+    <string name="tip_kind">Bon suport</string>
+    <string name="tip_excellent">Excel·lent suport</string>
+    <string name="tip_incredible">Suport impressionant</string>
+    <string name="tip_jar">Recolzar</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -41,7 +41,9 @@
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="could_not_restore_purchase">Could not restore purchase.</string>
+
+    <string name="no_connection">Sense connexió</string>
+    <string name="per_month">%s/mes</string>
 
     <string name="show_contact_thumbnails_g">Mostra les miniatures dels contactes</string>
     <string name="use_icon_tabs_summary">Icones en lloc de text a les pestanyes</string>
@@ -59,8 +61,10 @@
     <string name="default_tab">Pestanya per defecte</string>
     <string name="color">color</string>
     <string name="black">Negre</string>
+    <string name="black_locked">Negre (tancat amb clau)</string>
     <string name="show_dividers">Mostra els divisors</string>
     <string name="colored_contacts">Icones de colors de contactes</string>
+    <string name="contact_color_list">Llista de colors de contactes</string>
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
@@ -81,12 +85,19 @@
     <string name="contact_photo">Foto de contacte</string>
     <string name="blurry_contact_photo">Foto de contacte borrosa</string>
     <string name="blurry_wallpaper">Fond de pantalla borrós</string>
+    <string name="text_cursor_color">Color del cursor del text</string>
+    <string name="lines_count">Recompte de línies</string>
+    <string name="show_button_blocked_numbers">Mostra el botó per no amagar les trucades bloquejades</string>
+    <string name="flash_for_alerts">Flash per a alertes</string>
+    <string name="clean_theme_g">Clean</string>
+    <string name="concept_theme_g">Concept</string>
 
     <string name="accent_color">Color d\'èmfasi</string>
     <string name="incoming_call">Trucada entrant</string>
     <string name="outgoing_call">Trucada sortint</string>
     <string name="missed_call">Trucada perduda</string>
     <string name="unblock_number">Desbloqueja el número</string>
+    <string name="unblock_numbers">Desbloquejar números</string>
     <string name="recents">Recents</string>
     <string name="unblock_confirmation">Jeste li sigurni da želite deblokirati \'%s\'?</string>
     <string name="pro">Jeste li sigurni da želite deblokirati \"%s\"?</string>
@@ -140,6 +151,9 @@
     <string name="get">Obtén</string>
     <string name="open">Obre</string>
     <string name="collection">Col·lecció</string>
+    <string name="collection_summary">Crear una col·lecció per desbloquejar l\'aplicació</string>
+    <string name="limited_supply">Limited supply</string>
+    <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
     <string name="right_sms_messenger">Right Messages</string>
