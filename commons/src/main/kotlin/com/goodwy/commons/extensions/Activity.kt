@@ -25,7 +25,6 @@ import android.view.Window
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.biometric.BiometricPrompt
@@ -39,12 +38,12 @@ import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.databinding.DialogTitleBinding
 import com.goodwy.commons.dialogs.*
 import com.goodwy.commons.dialogs.WritePermissionDialog.Mode
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.*
 import com.goodwy.commons.views.MyTextView
-import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.*
 import java.util.*
 
@@ -1288,71 +1287,6 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
     }
 }
 
-fun BaseSimpleActivity.showFileCreateError(path: String) {
-    val error = String.format(getString(R.string.could_not_create_file), path)
-    baseConfig.sdTreeUri = ""
-    showErrorToast(error)
-}
-
-fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, parentDocumentFile: DocumentFile? = null): OutputStream? {
-    val targetFile = File(path)
-
-    return when {
-        isRestrictedSAFOnlyRoot(path) -> {
-            val uri = getAndroidSAFUri(path)
-            if (!getDoesFilePathExist(path)) {
-                createAndroidSAFFile(path)
-            }
-            applicationContext.contentResolver.openOutputStream(uri, "wt")
-        }
-        needsStupidWritePermissions(path) -> {
-            var documentFile = parentDocumentFile
-            if (documentFile == null) {
-                if (getDoesFilePathExist(targetFile.parentFile.absolutePath)) {
-                    documentFile = getDocumentFile(targetFile.parent)
-                } else {
-                    documentFile = getDocumentFile(targetFile.parentFile.parent)
-                    documentFile = documentFile!!.createDirectory(targetFile.parentFile.name) ?: getDocumentFile(targetFile.parentFile.absolutePath)
-                }
-            }
-
-            if (documentFile == null) {
-                val casualOutputStream = createCasualFileOutputStream(this, targetFile)
-                return if (casualOutputStream == null) {
-                showFileCreateError(targetFile.parent)
-                    null
-                } else {
-                    casualOutputStream
-                }
-            }
-
-            try {
-                val uri = if (getDoesFilePathExist(path)) {
-                    createDocumentUriFromRootTree(path)
-                } else {
-                    documentFile.createFile(mimeType, path.getFilenameFromPath())!!.uri
-                }
-                applicationContext.contentResolver.openOutputStream(uri, "wt")
-            } catch (e: Exception) {
-                showErrorToast(e)
-                null
-            }
-        }
-        isAccessibleWithSAFSdk30(path) -> {
-            try {
-                val uri = createDocumentUriUsingFirstParentTreeUri(path)
-                if (!getDoesFilePathExist(path)) {
-                    createSAFFileSdk30(path)
-                }
-                applicationContext.contentResolver.openOutputStream(uri, "wt")
-            } catch (e: Exception) {
-                null
-            } ?: createCasualFileOutputStream(this, targetFile)
-        }
-        else -> return createCasualFileOutputStream(this, targetFile)
-    }
-}
-
 private fun createCasualFileOutputStream(activity: BaseSimpleActivity, targetFile: File): OutputStream? {
     if (targetFile.parentFile?.exists() == false) {
         targetFile.parentFile?.mkdirs()
@@ -1463,28 +1397,6 @@ fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean
     }
 }
 
-fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
-    if (getDoesFilePathExist(directory)) {
-        return true
-    }
-
-    if (needsStupidWritePermissions(directory)) {
-        val documentFile = getDocumentFile(directory.getParentPath()) ?: return false
-        val newDir = documentFile.createDirectory(directory.getFilenameFromPath()) ?: getDocumentFile(directory)
-        return newDir != null
-    }
-
-    if (isRestrictedSAFOnlyRoot(directory)) {
-        return createAndroidSAFDirectory(directory)
-    }
-
-    if (isAccessibleWithSAFSdk30(directory)) {
-        return createSAFDirectorySdk30(directory)
-    }
-
-    return File(directory).mkdirs()
-}
-
 fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     try {
         val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
@@ -1534,10 +1446,10 @@ fun Activity.setupDialogStuff(
             callback?.invoke(this)
         }
     } else {
-        var title: TextView? = null
+        var title: DialogTitleBinding? = null
         if (titleId != 0 || titleText.isNotEmpty()) {
-            title = layoutInflater.inflate(R.layout.dialog_title, null) as TextView
-            title.dialog_title_textview.apply {
+            title = DialogTitleBinding.inflate(layoutInflater, null, false)
+            title.dialogTitleTextview.apply {
                 if (titleText.isNotEmpty()) {
                     text = titleText
                 } else {
@@ -1557,7 +1469,7 @@ fun Activity.setupDialogStuff(
         dialog.create().apply {
             setView(view)
             requestWindowFeature(Window.FEATURE_NO_TITLE)
-            setCustomTitle(title)
+            setCustomTitle(title?.root)
             setCanceledOnTouchOutside(cancelOnTouchOutside)
             if (!isFinishing) {
                 show()
@@ -1719,18 +1631,6 @@ fun Activity.showSideloadingDialog() {
     AppSideloadedDialog(this) {
         finish()
     }
-}
-
-fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? {
-    val folder = File(cacheDir, folderName)
-    if (!folder.exists()) {
-        if (!folder.mkdir()) {
-            toast(R.string.unknown_error_occurred)
-            return null
-        }
-    }
-
-    return File(folder, fileName)
 }
 
 fun Activity.onApplyWindowInsets(callback: (WindowInsetsCompat) -> Unit) {

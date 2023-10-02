@@ -535,7 +535,7 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop
             -14273992 -> R.style.AppTheme_Blue_Grey_900
 
             -1 -> R.style.AppTheme_Grey_100 //TODO overflowIcon color for light theme
-            -1118482 -> R.style.AppTheme_Grey_200
+            //-1118482 -> R.style.AppTheme_Grey_200
             -2039584 -> R.style.AppTheme_Grey_300
             -4342339 -> R.style.AppTheme_Grey_400
             -6381922 -> R.style.AppTheme_Grey_500

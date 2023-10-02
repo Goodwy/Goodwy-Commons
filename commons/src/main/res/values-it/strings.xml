@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annulla</string>
-    <string name="close">Close</string>
+    <string name="close">Chiudi</string>
     <string name="back">Indietro</string>
     <string name="nothing">Niente</string>
     <string name="later">Dopo</string>
@@ -77,7 +77,7 @@
     <string name="phone_storage">Memoria del telefono</string>
     <string name="phone_storage_hidden">Memoria del telefono (non visibile alle altre applicazioni)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Scansione in corso…</string>
     <!-- Events -->
     <string name="birthday">Compleanno</string>
     <string name="anniversary">Anniversario</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Aumenta numero colonne</string>
     <string name="reduce_column_count">Riduci numero colonne</string>
     <string name="column_count">Conteggio colonne</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Numero delle righe</string>
     <string name="portrait_column_count">Conteggio delle colonne del ritratto</string>
     <string name="landscape_column_count">Conteggio delle colonne del paesaggio</string>
     <string name="change_cover_image">Cambia immagine copertina</string>
@@ -111,8 +111,9 @@
         <item quantity="other">%d colonne</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d riga</item>
+        <item quantity="many">%d righe</item>
+        <item quantity="other">%d righe</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestisci i numeri bloccati</string>
@@ -127,11 +128,17 @@
     <string name="set_as_default">Imposta come predefinita</string>
     <string name="block_confirmation">Sei sicuro/a di volere bloccare «%s»\?</string>
     <string name="block_not_stored_calls">Blocca le chiamate dai contatti non memorizzati</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
+    <string name="block_hidden_calls">Blocca le chiamate da numeri nascosti</string>
     <string name="block_not_stored_messages">Blocca i messaggi dei contatti non memorizzati</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
+    <string name="block_hidden_messages">Blocca i messaggi provenienti da numeri nascosti</string>
     <string name="add_blocked_number_helper_text">Inserisci un numero o un modello (ad esempio *12345*, +1*8888) per bloccare tutte le chiamate e i messaggi provenienti da numeri corrispondenti al modello.</string>
     <string name="must_make_default_caller_id_app">Impossibile bloccare i numeri sconosciuti senza l\'autorizzazione dell\'ID chiamante.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Preferiti</string>
     <string name="add_favorites">Aggiungi preferiti</string>
@@ -141,7 +148,7 @@
     <string name="search">Cerca</string>
     <string name="search_in_placeholder">Ricerca in %s</string>
     <string name="type_2_characters">Digita almeno 2 caratteri per iniziare la ricerca.</string>
-    <string name="show_search">Show a search bar</string>
+    <string name="show_search">Mostra una barra di ricerca</string>
     <string name="search_contacts">Cerca contatti</string>
     <string name="search_favorites">Cerca preferiti</string>
     <string name="search_apps">Cerca applicazioni</string>
@@ -171,12 +178,16 @@
     <string name="no_audio_permissions">L\'autorizzazione Microfono è necessaria</string>
     <string name="no_permission">Nessun permesso</string>
     <string name="allow_notifications_reminders">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare i promemoria.</string>
+    <string name="allow_full_screen_notifications_reminders">Devi consentire all\'app di visualizzare le notifiche a schermo intero, altrimenti potresti perdere alcuni promemoria.</string>
     <string name="allow_notifications_files">È necessario consentire all\'applicazione di visualizzare le notifiche, altrimenti non potrà mostrare la barra di avanzamento.</string>
     <string name="allow_notifications_music_player">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà riprodurre i brani.</string>
     <string name="allow_notifications_voice_recorder">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà registrare l\'audio.</string>
     <string name="allow_notifications_incoming_calls">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare le chiamate in arrivo.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Devi consentire all\'app di visualizzare le notifiche a schermo intero, altrimenti potresti perdere alcune chiamate in arrivo.</string>
     <string name="allow_notifications_incoming_messages">È necessario consentire all\'app di visualizzare le notifiche, altrimenti non potrà mostrare i messaggi in arrivo.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Devi consentire all\'app di accedere agli allarmi interni, altrimenti non potrà inviare messaggi programmati.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_location_permission">Devi consentire all\'app di accedere alla tua posizione, altrimenti non lo saprà.</string>
     <string name="grant_permission">Concedi autorizzazione</string>
     <string name="permission_required">Autorizzazione richiesta</string>
     <!-- Renaming -->
@@ -297,6 +308,7 @@
     <string name="select_storage">Seleziona archiviazione</string>
     <string name="storage">Memoria</string>
     <string name="internal">Interna</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">Scheda SD</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">È stata selezionata una cartella errata, selezionare la cartella di root della scheda SD</string>
@@ -388,6 +400,7 @@
     <string name="unhide_folder">Non nascondere cartella</string>
     <string name="temporarily_show_hidden">Mostra temporaneamente nascosti</string>
     <string name="stop_showing_hidden">Non mostrare i file nascosti</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">Non puoi condividere così tanto in una volta sola</string>
     <string name="empty_and_disable_recycle_bin">Svuota e disattiva il cestino</string>
     <string name="undo">Annulla</string>
@@ -412,6 +425,10 @@
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
     <string name="wallpapers">Sfondi</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Timer di spegnimento</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
     <string name="name">Nome</string>
@@ -435,6 +452,7 @@
     <string name="full_name">Nome completo</string>
     <string name="use_custom_sorting">Usa ordinamento personalizzato</string>
     <string name="change_order">Cambia ordine</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Procedere davvero con l\'eliminazione?</string>
     <string name="deletion_confirmation">Eliminare davvero %s?</string>
@@ -459,6 +477,8 @@
     <string name="enter_pin">Inserisci un PIN</string>
     <string name="please_enter_pin">Per favore inserisci un PIN</string>
     <string name="wrong_pin">PIN errato</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Ripeti il PIN</string>
     <string name="pattern">Sequenza</string>
     <string name="insert_pattern">Inserisci una sequenza</string>
@@ -482,10 +502,10 @@
     <string name="lock_folder_notice">Questa protezione funziona solo nell\'app, non è pensata per sostituire una vera cifratura delle cartelle a livello di sistema.</string>
     <string name="enter_password">Enter password</string>
     <string name="password">Password</string>
-    <string name="add_password">Add password</string>
-    <string name="empty_password_new">Please enter a password</string>
-    <string name="empty_password">Please enter the password</string>
-    <string name="invalid_password">Incorrect password</string>
+    <string name="add_password">Aggiungi una password</string>
+    <string name="empty_password_new">Si prega di inserire una password</string>
+    <string name="empty_password">Si prega di inserire la password</string>
+    <string name="invalid_password">Password errata</string>
     <!-- Times -->
     <string name="yesterday">Ieri</string>
     <string name="today">Oggi</string>
@@ -694,7 +714,7 @@
     <string name="use_24_hour_time_format">Usa il formato 24 ore</string>
     <string name="change_date_and_time_format">Cambia la data e il formato dell\'ora</string>
     <string name="sunday_first">Inizio settimana di domenica</string>
-    <string name="start_week_on">Start week on</string>
+    <string name="start_week_on">Inizia la settimana il</string>
     <string name="widgets">Widget</string>
     <string name="use_same_snooze">Usa sempre lo stesso tempo di ripetizione</string>
     <string name="snooze_time">Tempo di ripetizione</string>
@@ -1091,7 +1111,7 @@
     <string name="why_upgrade_footer">100% garantito soddisfatti o rimborsati</string>
     <string name="why_upgrade_footer_one_time_payment">Pagamento unico</string>
     <string name="why_upgrade_improved_design">Design migliorato</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
+    <string name="why_upgrade_many_other_improvements">Molti altri miglioramenti</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor fotografico avanzato</string>
     <string name="why_upgrade_advanced_photo_video_editor">Editor avanzato di foto e video</string>
@@ -1160,7 +1180,7 @@
     <string name="pdf_viewer_title">Android PdfViewer (visualizzatore di PDF)</string>
     <string name="m3u_parser_title">Parser M3U (gestione dei file playlist m3u)</string>
     <string name="android_lame_title">AndroidLame (codificatore mp3)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="zip4j_title">Zip4j (compressione e decompressione ZIP)</string>
     <!-- Trial -->
     <string name="trial_expired">Prova scaduta</string>
     <string name="start_free_trial">Inizia la prova gratuita</string>

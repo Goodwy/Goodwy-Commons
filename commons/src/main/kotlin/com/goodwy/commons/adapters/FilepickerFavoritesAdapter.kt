@@ -2,13 +2,12 @@ package com.goodwy.commons.adapters
 
 import android.util.TypedValue
 import android.view.Menu
-import android.view.View
 import android.view.ViewGroup
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.databinding.FilepickerFavoriteBinding
 import com.goodwy.commons.extensions.getTextSize
 import com.goodwy.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.filepicker_favorite.view.*
 
 class FilepickerFavoritesAdapter(
     activity: BaseSimpleActivity, val paths: List<String>, recyclerView: MyRecyclerView,
@@ -27,8 +26,8 @@ class FilepickerFavoritesAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val path = paths[position]
-        holder.bindView(path, true, false) { itemView, adapterPosition ->
-            setupView(itemView, path)
+        holder.bindView(path, allowSingleClick = true, allowLongClick = false) { itemView, adapterPosition ->
+            setupView(FilepickerFavoriteBinding.bind(itemView), path)
         }
         bindViewHolder(holder)
     }
@@ -51,11 +50,11 @@ class FilepickerFavoritesAdapter(
 
     override fun onActionModeDestroyed() {}
 
-    private fun setupView(view: View, path: String) {
+    private fun setupView(view: FilepickerFavoriteBinding, path: String) {
         view.apply {
-            filepicker_favorite_label.text = path
-            filepicker_favorite_label.setTextColor(textColor)
-            filepicker_favorite_label.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+            filepickerFavoriteLabel.text = path
+            filepickerFavoriteLabel.setTextColor(textColor)
+            filepickerFavoriteLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
         }
     }
 }

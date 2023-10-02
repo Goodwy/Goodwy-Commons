@@ -12,12 +12,12 @@ import com.goodwy.commons.helpers.FIRST_CONTACT_ID
 import com.goodwy.commons.helpers.FIRST_GROUP_ID
 import com.goodwy.commons.helpers.getEmptyLocalContact
 import com.goodwy.commons.interfaces.ContactsDao
+import com.goodwy.commons.interfaces.GroupsDao
 import com.goodwy.commons.models.contacts.Group
 import com.goodwy.commons.models.contacts.LocalContact
-import com.goodwy.commons.interfaces.GroupsDao
 import java.util.concurrent.Executors
 
-@Database(entities = [LocalContact::class, Group::class], version = 4)
+@Database(entities = [LocalContact::class, Group::class], version = 4, exportSchema = true)
 @TypeConverters(Converters::class)
 abstract class ContactsDatabase : RoomDatabase() {
 

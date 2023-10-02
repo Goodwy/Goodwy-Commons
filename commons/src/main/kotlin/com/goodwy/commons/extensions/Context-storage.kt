@@ -23,9 +23,7 @@ import androidx.documentfile.provider.DocumentFile
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.FileDirItem
-import java.io.File
-import java.io.FileInputStream
-import java.io.InputStream
+import java.io.*
 import java.net.URLDecoder
 import java.util.*
 import java.util.regex.Pattern
@@ -164,7 +162,7 @@ fun Context.isRestrictedSAFOnlyRoot(path: String): Boolean {
 }
 
 // no need to use DocumentFile if an SD card is set as the default storage
-fun Context.needsStupidWritePermissions(path: String) = !isRPlus() && (isPathOnSD(path) || isPathOnOTG(path)) && !isSDCardSetAsDefaultStorage()
+fun Context.needsStupidWritePermissions(path: String) = (!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage()) || isPathOnOTG(path)
 
 fun Context.isSDCardSetAsDefaultStorage() = sdCardPath.isNotEmpty() && Environment.getExternalStorageDirectory().absolutePath.equals(sdCardPath, true)
 
@@ -1005,5 +1003,105 @@ fun Context.getDefaultCopyDestinationPath(showHidden: Boolean, currentPath: Stri
         }
     } else {
         currentPath
+    }
+}
+
+fun Context.createDirectorySync(directory: String): Boolean {
+    if (getDoesFilePathExist(directory)) {
+        return true
+    }
+
+    if (needsStupidWritePermissions(directory)) {
+        val documentFile = getDocumentFile(directory.getParentPath()) ?: return false
+        val newDir = documentFile.createDirectory(directory.getFilenameFromPath()) ?: getDocumentFile(directory)
+        return newDir != null
+    }
+
+    if (isRestrictedSAFOnlyRoot(directory)) {
+        return createAndroidSAFDirectory(directory)
+    }
+
+    if (isAccessibleWithSAFSdk30(directory)) {
+        return createSAFDirectorySdk30(directory)
+    }
+
+    return File(directory).mkdirs()
+}
+
+fun Context.getFileOutputStreamSync(path: String, mimeType: String, parentDocumentFile: DocumentFile? = null): OutputStream? {
+    val targetFile = File(path)
+
+    return when {
+        isRestrictedSAFOnlyRoot(path) -> {
+            val uri = getAndroidSAFUri(path)
+            if (!getDoesFilePathExist(path)) {
+                createAndroidSAFFile(path)
+            }
+            applicationContext.contentResolver.openOutputStream(uri, "wt")
+        }
+        needsStupidWritePermissions(path) -> {
+            var documentFile = parentDocumentFile
+            if (documentFile == null) {
+                if (getDoesFilePathExist(targetFile.parentFile.absolutePath)) {
+                    documentFile = getDocumentFile(targetFile.parent)
+                } else {
+                    documentFile = getDocumentFile(targetFile.parentFile.parent)
+                    documentFile = documentFile!!.createDirectory(targetFile.parentFile.name) ?: getDocumentFile(targetFile.parentFile.absolutePath)
+                }
+            }
+
+            if (documentFile == null) {
+                val casualOutputStream = createCasualFileOutputStream(targetFile)
+                return if (casualOutputStream == null) {
+                    showFileCreateError(targetFile.parent)
+                    null
+                } else {
+                    casualOutputStream
+                }
+            }
+
+            try {
+                val uri = if (getDoesFilePathExist(path)) {
+                    createDocumentUriFromRootTree(path)
+                } else {
+                    documentFile.createFile(mimeType, path.getFilenameFromPath())!!.uri
+                }
+                applicationContext.contentResolver.openOutputStream(uri, "wt")
+            } catch (e: Exception) {
+                showErrorToast(e)
+                null
+            }
+        }
+        isAccessibleWithSAFSdk30(path) -> {
+            try {
+                val uri = createDocumentUriUsingFirstParentTreeUri(path)
+                if (!getDoesFilePathExist(path)) {
+                    createSAFFileSdk30(path)
+                }
+                applicationContext.contentResolver.openOutputStream(uri, "wt")
+            } catch (e: Exception) {
+                null
+            } ?: createCasualFileOutputStream(targetFile)
+        }
+        else -> return createCasualFileOutputStream(targetFile)
+    }
+}
+
+fun Context.showFileCreateError(path: String) {
+    val error = String.format(getString(R.string.could_not_create_file), path)
+    baseConfig.sdTreeUri = ""
+    showErrorToast(error)
+}
+
+private fun Context.createCasualFileOutputStream(targetFile: File): OutputStream? {
+    if (targetFile.parentFile?.exists() == false) {
+        targetFile.parentFile?.mkdirs()
+    }
+
+    return try {
+        FileOutputStream(targetFile)
+    } catch (e: Exception) {
+        showErrorToast(e)
+        null
     }
 }

@@ -11,11 +11,11 @@ import com.github.ajalt.reprint.core.AuthenticationFailureReason
 import com.github.ajalt.reprint.core.AuthenticationListener
 import com.github.ajalt.reprint.core.Reprint
 import com.goodwy.commons.R
+import com.goodwy.commons.databinding.TabFingerprintBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.PROTECTION_FINGERPRINT
 import com.goodwy.commons.interfaces.HashListener
 import com.goodwy.commons.interfaces.SecurityTab
-import kotlinx.android.synthetic.main.tab_fingerprint.view.*
 
 class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), SecurityTab {
     private val RECHECK_PERIOD = 3000L
@@ -23,14 +23,17 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
 
     lateinit var hashListener: HashListener
 
+    private lateinit var binding: TabFingerprintBinding
+
     override fun onFinishInflate() {
         super.onFinishInflate()
+        binding = TabFingerprintBinding.bind(this)
         val textColor = context.getProperTextColor()
-        context.updateTextColors(fingerprint_lock_holder)
-        fingerprint_image.applyColorFilter(textColor)
+        context.updateTextColors(binding.fingerprintLockHolder)
+        binding.fingerprintImage.applyColorFilter(textColor)
 
-        fingerprint_settings.background.applyColorFilter(context.getBottomNavigationBackgroundColor())
-        fingerprint_settings.setOnClickListener {
+        binding.fingerprintSettings.background.applyColorFilter(context.getBottomNavigationBackgroundColor())
+        binding.fingerprintSettings.setOnClickListener {
             context.startActivity(Intent(Settings.ACTION_SETTINGS))
         }
     }
@@ -55,8 +58,8 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
 
     private fun checkRegisteredFingerprints() {
         val hasFingerprints = Reprint.hasFingerprintRegistered()
-        fingerprint_settings.beGoneIf(hasFingerprints)
-        fingerprint_label.text = context.getString(if (hasFingerprints) R.string.place_finger else R.string.no_fingerprints_registered)
+        binding.fingerprintSettings.beGoneIf(hasFingerprints)
+        binding.fingerprintLabel.text = context.getString(if (hasFingerprints) R.string.place_finger else R.string.no_fingerprints_registered)
 
         Reprint.authenticate(object : AuthenticationListener {
             override fun onSuccess(moduleTag: Int) {

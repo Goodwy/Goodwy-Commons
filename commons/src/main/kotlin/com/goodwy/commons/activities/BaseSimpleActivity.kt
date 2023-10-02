@@ -78,11 +78,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private val RECOVERABLE_SECURITY_HANDLER = 301
     private val UPDATE_FILE_SDK_30_HANDLER = 302
     private val MANAGE_MEDIA_RC = 303
+    private val TRASH_FILE_SDK_30_HANDLER = 304
 
     companion object {
         var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
         var funAfterSdk30Action: ((success: Boolean) -> Unit)? = null
         var funAfterUpdate30File: ((success: Boolean) -> Unit)? = null
+        var funAfterTrash30File: ((success: Boolean) -> Unit)? = null
         var funRecoverableSecurity: ((success: Boolean) -> Unit)? = null
         var funAfterManageMediaPermission: (() -> Unit)? = null
     }
@@ -613,6 +615,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             funAfterUpdate30File?.invoke(resultCode == Activity.RESULT_OK)
         } else if (requestCode == MANAGE_MEDIA_RC) {
             funAfterManageMediaPermission?.invoke()
+        } else if (requestCode == TRASH_FILE_SDK_30_HANDLER) {
+            funAfterTrash30File?.invoke(resultCode == Activity.RESULT_OK)
         }
     }
 
@@ -651,7 +655,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                            faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean, licensingKey: String,
                            productIdX1: String, productIdX2: String, productIdX3: String,
                            subscriptionIdX1: String, subscriptionIdX2: String, subscriptionIdX3: String,
-                           playStoreInstalled: Boolean = true) {
+                           playStoreInstalled: Boolean = true,
+                           ruStoreInstalled: Boolean = false,) {
         hideKeyboard()
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
@@ -661,6 +666,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(APP_VERSION_NAME, versionName)
             putExtra(APP_FAQ, faqItems)
             putExtra(SHOW_FAQ_BEFORE_MAIL, showFAQBeforeMail)
+            //Goodwy
             putExtra(GOOGLE_PLAY_LICENSING_KEY, licensingKey)
             putExtra(PRODUCT_ID_X1, productIdX1)
             putExtra(PRODUCT_ID_X2, productIdX2)
@@ -669,6 +675,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(SUBSCRIPTION_ID_X2, subscriptionIdX2)
             putExtra(SUBSCRIPTION_ID_X3, subscriptionIdX3)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
+            putExtra(RU_STORE, ruStoreInstalled)
             startActivity(this)
         }
     }
@@ -676,7 +683,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun startPurchaseActivity(appNameId: Int, licensingKey: String,
                               productIdX1: String, productIdX2: String, productIdX3: String,
                               subscriptionIdX1: String, subscriptionIdX2: String, subscriptionIdX3: String,
-                              showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy), playStoreInstalled: Boolean = true, showCollection: Boolean = resources.getBoolean(R.bool.show_collection)) {
+                              showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
+                              playStoreInstalled: Boolean = true,
+                              ruStoreInstalled: Boolean = false,
+                              showCollection: Boolean = resources.getBoolean(R.bool.show_collection)) {
         Intent(applicationContext, PurchaseActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
@@ -691,6 +701,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(SHOW_COLLECTION, showCollection)
+            putExtra(RU_STORE, ruStoreInstalled)
             startActivity(this)
         }
     }
@@ -698,7 +709,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun startCustomizationActivity(showAccentColor : Boolean = true, isProVersion : Boolean = true, licensingKey: String = "",
                                    productIdX1: String = "", productIdX2: String = "", productIdX3: String = "",
                                    subscriptionIdX1: String = "", subscriptionIdX2: String = "", subscriptionIdX3: String = "",
-                                   showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy), playStoreInstalled: Boolean = true) {
+                                   showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
+                                   playStoreInstalled: Boolean = true,
+                                   ruStoreInstalled: Boolean = true) {
         if (!packageName.contains("ywdoog".reversed(), true)) {
             if (baseConfig.appRunCount > 100) {
                 val label = "You are using a fake version of the app. For your own safety download the original one from play.google.com. Thanks"
@@ -723,6 +736,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(SUBSCRIPTION_ID_X3, subscriptionIdX3)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
+            putExtra(RU_STORE, ruStoreInstalled)
             startActivity(this)
         }
     }
@@ -751,14 +765,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 startActivity(this)
             }
         } catch (e: Exception) {
-            try {
-                Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-                    data = Uri.fromParts("package", packageName, null)
-                    startActivity(this)
-                }
-            } catch (e: Exception) {
-                showErrorToast(e)
-            }
+            openDeviceSettings()
         }
     }
 
@@ -865,6 +872,22 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             try {
                 val deleteRequest = MediaStore.createDeleteRequest(contentResolver, uris).intentSender
                 startIntentSenderForResult(deleteRequest, DELETE_FILE_SDK_30_HANDLER, null, 0, 0, 0)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
+        } else {
+            callback(false)
+        }
+    }
+
+    @SuppressLint("NewApi")
+    fun trashSDK30Uris(uris: List<Uri>, toTrash: Boolean, callback: (success: Boolean) -> Unit) {
+        hideKeyboard()
+        if (isRPlus()) {
+            funAfterTrash30File = callback
+            try {
+                val trashRequest = MediaStore.createTrashRequest(contentResolver, uris, toTrash).intentSender
+                startIntentSenderForResult(trashRequest, TRASH_FILE_SDK_30_HANDLER, null, 0, 0, 0)
             } catch (e: Exception) {
                 showErrorToast(e)
             }
@@ -1104,6 +1127,27 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             isAskingPermissions = true
             actionOnPermission = callback
             ActivityCompat.requestPermissions(this, arrayOf(getPermissionString(permissionId)), GENERIC_PERM_HANDLER)
+        }
+    }
+
+    fun handlePartialMediaPermissions(permissionIds: Collection<Int>, force: Boolean = false, callback: (granted: Boolean) -> Unit) {
+        actionOnPermission = null
+        if (isUpsideDownCakePlus()) {
+            if (hasPermission(PERMISSION_READ_MEDIA_VISUAL_USER_SELECTED) && !force) {
+                callback(true)
+            } else {
+                isAskingPermissions = true
+                actionOnPermission = callback
+                ActivityCompat.requestPermissions(this, permissionIds.map { getPermissionString(it) }.toTypedArray(), GENERIC_PERM_HANDLER)
+            }
+        } else {
+            if (hasAllPermissions(permissionIds)) {
+                callback(true)
+            } else {
+                isAskingPermissions = true
+                actionOnPermission = callback
+                ActivityCompat.requestPermissions(this, permissionIds.map { getPermissionString(it) }.toTypedArray(), GENERIC_PERM_HANDLER)
+            }
         }
     }
 

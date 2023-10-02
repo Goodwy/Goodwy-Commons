@@ -1,44 +1,102 @@
 package com.goodwy.commons.dialogs
 
-import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.KeyboardType
 import com.goodwy.commons.R
-import com.goodwy.commons.activities.BaseSimpleActivity
-import com.goodwy.commons.extensions.*
+import com.goodwy.commons.compose.alert_dialog.AlertDialogState
+import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.models.BlockedNumber
-import kotlinx.android.synthetic.main.dialog_add_blocked_number.view.*
 
-class AddBlockedNumberDialog(val activity: BaseSimpleActivity, val originalNumber: BlockedNumber? = null, val callback: () -> Unit) {
-    init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_add_blocked_number, null).apply {
-            if (originalNumber != null) {
-                add_blocked_number_edittext.setText(originalNumber.number)
-            }
-        }
+@Composable
+fun AddOrEditBlockedNumberAlertDialog(
+    modifier: Modifier = Modifier,
+    blockedNumber: BlockedNumber?,
+    alertDialogState: AlertDialogState,
+    deleteBlockedNumber: (String) -> Unit,
+    addBlockedNumber: (String) -> Unit
+) {
+    val focusRequester = remember { FocusRequester() }
+    var textFieldValue by remember { mutableStateOf(blockedNumber?.number.orEmpty()) }
 
-        activity.getAlertDialogBuilder()
-            .setPositiveButton(R.string.ok, null)
-            .setNegativeButton(R.string.cancel, null)
-            .apply {
-                activity.setupDialogStuff(view, this) { alertDialog ->
-                    alertDialog.showKeyboard(view.add_blocked_number_edittext)
-                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        var newBlockedNumber = view.add_blocked_number_edittext.value
-                        if (originalNumber != null && newBlockedNumber != originalNumber.number) {
-                            activity.deleteBlockedNumber(originalNumber.number)
-                        }
-
-                        if (newBlockedNumber.isNotEmpty()) {
-                            // in case the user also added a '.' in the pattern, remove it
-                            if (newBlockedNumber.contains(".*")) {
-                                newBlockedNumber = newBlockedNumber.replace(".*", "*")
-                            }
-                            activity.addBlockedNumber(newBlockedNumber)
-                        }
-
-                        callback()
-                        alertDialog.dismiss()
-                    }
+    AlertDialog(
+        containerColor = dialogContainerColor,
+        modifier = modifier
+            .dialogBorder,
+        onDismissRequest = alertDialogState::hide,
+        confirmButton = {
+            TextButton(onClick = {
+                var newBlockedNumber = textFieldValue
+                if (blockedNumber != null && newBlockedNumber != blockedNumber.number) {
+                    deleteBlockedNumber(blockedNumber.number)
                 }
+
+                if (newBlockedNumber.isNotEmpty()) {
+                    // in case the user also added a '.' in the pattern, remove it
+                    if (newBlockedNumber.contains(".*")) {
+                        newBlockedNumber = newBlockedNumber.replace(".*", "*")
+                    }
+                    addBlockedNumber(newBlockedNumber)
+                }
+                alertDialogState.hide()
+            }) {
+                Text(text = stringResource(id = R.string.ok))
             }
+        },
+        dismissButton = {
+            TextButton(onClick = {
+                alertDialogState.hide()
+            }) {
+                Text(text = stringResource(id = R.string.cancel))
+            }
+        },
+        shape = dialogShape,
+        text = {
+            OutlinedTextField(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(focusRequester),
+                value = textFieldValue,
+                onValueChange = {
+                    textFieldValue = it
+                },
+                supportingText = {
+                    Text(
+                        text = stringResource(id = R.string.add_blocked_number_helper_text),
+                        color = dialogTextColor
+                    )
+                },
+                label = {
+                    Text(text = stringResource(id = R.string.number))
+                },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone)
+            )
+        },
+        tonalElevation = dialogElevation
+    )
+    ShowKeyboardWhenDialogIsOpenedAndRequestFocus(focusRequester = focusRequester)
+}
+
+@Composable
+@MyDevices
+private fun AddOrEditBlockedNumberAlertDialogPreview() {
+    AppThemeSurface {
+        AddOrEditBlockedNumberAlertDialog(
+            blockedNumber = null,
+            deleteBlockedNumber = {},
+            addBlockedNumber = {},
+            alertDialogState = rememberAlertDialogState()
+        )
     }
 }

@@ -3,20 +3,15 @@ package com.goodwy.commons.views
 import android.app.Activity
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.DrawableCompat
+import android.view.LayoutInflater
 import com.google.android.material.appbar.AppBarLayout
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.databinding.MenuSearchBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.LOWER_ALPHA
 import com.goodwy.commons.helpers.MEDIUM_ALPHA
-import com.goodwy.commons.helpers.isQPlus
-import kotlinx.android.synthetic.main.menu_search.view.*
-import java.lang.reflect.Field
 
 class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
     var isSearchOpen = false
@@ -26,67 +21,65 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
     var onSearchTextChangedListener: ((text: String) -> Unit)? = null
     var onNavigateBackClickListener: (() -> Unit)? = null
 
-    init {
-        inflate(context, R.layout.menu_search, this)
-    }
+    val binding = MenuSearchBinding.inflate(LayoutInflater.from(context), this, true)
 
-    fun getToolbar() = top_toolbar
+    fun getToolbar() = binding.topToolbar
 
     fun setupMenu() {
-        top_toolbar_search_icon.setOnClickListener {
+        binding.topToolbarSearchIcon.setOnClickListener {
             if (isSearchOpen) {
                 closeSearch()
             } else if (useArrowIcon && onNavigateBackClickListener != null) {
                 onNavigateBackClickListener!!()
             } else {
-                top_toolbar_search.requestFocus()
-                (context as? Activity)?.showKeyboard(top_toolbar_search)
+                binding.topToolbarSearch.requestFocus()
+                (context as? Activity)?.showKeyboard(binding.topToolbarSearch)
             }
         }
 
         post {
-            top_toolbar_search.setOnFocusChangeListener { v, hasFocus ->
+            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
                 if (hasFocus) {
                     openSearch()
                 }
             }
         }
 
-        top_toolbar_search.onTextChangeListener { text ->
+        binding.topToolbarSearch.onTextChangeListener { text ->
             onSearchTextChangedListener?.invoke(text)
         }
     }
 
     fun focusView() {
-        top_toolbar_search.requestFocus()
+        binding.topToolbarSearch.requestFocus()
     }
 
     private fun openSearch() {
         isSearchOpen = true
         onSearchOpenListener?.invoke()
-        top_toolbar_search_icon.setImageResource(R.drawable.ic_chevron_left_vector)
-        top_toolbar_search_icon.contentDescription = resources.getString(R.string.back)
+        binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_chevron_left_vector)
+        binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.back)
     }
 
     fun closeSearch() {
         isSearchOpen = false
         onSearchClosedListener?.invoke()
-        top_toolbar_search.setText("")
+        binding.topToolbarSearch.setText("")
         if (!useArrowIcon) {
-            top_toolbar_search_icon.setImageResource(R.drawable.ic_search_vector)
-            top_toolbar_search_icon.contentDescription = resources.getString(R.string.search)
+            binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_search_vector)
+            binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.search)
         }
         (context as? Activity)?.hideKeyboard()
     }
 
-    fun getCurrentQuery() = top_toolbar_search.text.toString()
+    fun getCurrentQuery() = binding.topToolbarSearch.text.toString()
 
     fun updateHintText(text: String) {
-        top_toolbar_search.hint = text
+        binding.topToolbarSearch.hint = text
     }
 
     fun toggleHideOnScroll(hideOnScroll: Boolean) {
-        val params = top_app_bar_layout.layoutParams as LayoutParams
+        val params = binding.topAppBarLayout.layoutParams as LayoutParams
         if (hideOnScroll) {
             params.scrollFlags = LayoutParams.SCROLL_FLAG_SCROLL or LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
         } else {
@@ -102,8 +95,8 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
             Pair(R.drawable.ic_search_vector, R.string.search)
         }
 
-        top_toolbar_search_icon.setImageResource(icon)
-        top_toolbar_search_icon.contentDescription = resources.getString(accessibilityString)
+        binding.topToolbarSearchIcon.setImageResource(icon)
+        binding.topToolbarSearchIcon.contentDescription = resources.getString(accessibilityString)
     }
 
     fun updateColors() {
@@ -112,36 +105,36 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         val primaryColor = context.getProperPrimaryColor()
 
         setBackgroundColor(backgroundColor)
-        top_app_bar_layout.setBackgroundColor(backgroundColor)
-        top_toolbar_search_icon.applyColorFilter(contrastColor)
-        top_toolbar_holder.background?.applyColorFilter(primaryColor.adjustAlpha(LOWER_ALPHA))
-        //top_toolbar_search.setTextColor(contrastColor)
-        //top_toolbar_search.setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
-        top_toolbar_search.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
-        (context as? BaseSimpleActivity)?.updateTopBarColors(top_toolbar, backgroundColor)
+        binding.topAppBarLayout.setBackgroundColor(backgroundColor)
+        binding.topToolbarSearchIcon.applyColorFilter(contrastColor)
+        binding.topToolbarHolder.background?.applyColorFilter(context.getProperPrimaryColor().adjustAlpha(LOWER_ALPHA))
+        //binding.topToolbarSearch.setTextColor(contrastColor)
+        //binding.topToolbarSearch.setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
+        binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
+        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, backgroundColor)
 
-        top_toolbar_search_holder.setBackgroundResource(R.drawable.search_bg)
-        top_toolbar_search_holder.backgroundTintList = ColorStateList.valueOf(context.getBottomNavigationBackgroundColor())
-        top_toolbar_search_clear.applyColorFilter(contrastColor)
+        binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)
+        binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(context.getBottomNavigationBackgroundColor())
+        binding.topToolbarSearchClear.applyColorFilter(contrastColor)
     }
 
     fun updateTitle(title: String) {
-        top_toolbar.title = title
+        binding.topToolbar.title = title
     }
 
     fun searchBeVisibleIf(visible: Boolean = true) {
-        top_toolbar_search_holder.beVisibleIf(visible)
+        binding.topToolbarSearchHolder.beVisibleIf(visible)
     }
 
     fun requestFocusAndShowKeyboard() {
-        top_toolbar_search.requestFocus()
-        (context as? Activity)?.showKeyboard(top_toolbar_search)
+        binding.topToolbarSearch.requestFocus()
+        (context as? Activity)?.showKeyboard(binding.topToolbarSearch)
     }
 
     fun clearSearch() {
-        top_toolbar_search_clear.beVisibleIf(top_toolbar_search.text!!.isNotEmpty())
-        top_toolbar_search_clear.setOnClickListener {
-            top_toolbar_search.setText("")
+        binding.topToolbarSearchClear.beVisibleIf(binding.topToolbarSearch.text!!.isNotEmpty())
+        binding.topToolbarSearchClear.setOnClickListener {
+            binding.topToolbarSearch.setText("")
         }
     }
 }

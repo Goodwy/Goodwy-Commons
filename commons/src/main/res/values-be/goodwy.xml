@@ -160,6 +160,7 @@
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
     <string name="right_gallery">Right Gallery</string>
+    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Прывітанне,<br><br>
@@ -262,4 +263,11 @@
     <string name="relation_daughter_in_law_g">Нявестка</string>
     <string name="relation_brother_in_law_g">Шурын</string>
     <string name="relation_sister_in_law_g">Залоўка</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Памылка</string>
+    <string name="billing_purchase_confirm_in_progress">Пацвярджаем пакупку…</string>
+    <string name="billing_purchase_delete_in_progress">Выдаляем куплю…</string>
+    <string name="billing_product_confirmed">Прадукт пацверджаны/папатрабаваны</string>
+    <string name="billing_product_deleted">Купля адменена</string>
 </resources>

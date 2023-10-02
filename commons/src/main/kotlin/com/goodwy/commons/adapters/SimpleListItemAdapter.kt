@@ -7,12 +7,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.R
+import com.goodwy.commons.databinding.ItemCollectionListBinding
+import com.goodwy.commons.databinding.ItemSimpleListBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
-import kotlinx.android.synthetic.main.item_collection_list.view.*
-import kotlinx.android.synthetic.main.item_simple_list.view.bottom_sheet_item_icon
-import kotlinx.android.synthetic.main.item_simple_list.view.bottom_sheet_item_title
-import kotlinx.android.synthetic.main.item_simple_list.view.bottom_sheet_selected_icon
 
 open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (SimpleListItem) -> Unit) :
     ListAdapter<SimpleListItem, SimpleListItemAdapter.SimpleItemViewHolder>(SimpleListItemDiffCallback()) {
@@ -28,9 +26,10 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
     }
 
     open inner class SimpleItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        val binding = ItemSimpleListBinding.bind(itemView)
+        val bindingCollect = ItemCollectionListBinding.bind(itemView)
         fun bindView(item: SimpleListItem) {
-            setupSimpleListItem(itemView, item, false, onItemClicked)
+            setupSimpleListItem(binding, bindingCollect, item, false, onItemClicked)
         }
     }
 
@@ -45,45 +44,53 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
     }
 }
 
-fun setupSimpleListItem(view: View, item: SimpleListItem, collection: Boolean, onItemClicked: (SimpleListItem) -> Unit) {
-    view.apply {
-        if (collection) {
-            if (item.textRes != null) bottom_sheet_item_title.setText(item.textRes)
-            if (item.text != null) bottom_sheet_item_title.text = item.text
-            bottom_sheet_item_title.setTextColor(context.getProperTextColor())
-            bottom_sheet_item_icon.setImageResourceOrBeGone(item.imageRes)
-            //bottom_sheet_item_icon.applyColorFilter(color)
+fun setupSimpleListItem(view: ItemSimpleListBinding, viewCollect: ItemCollectionListBinding, item: SimpleListItem, collection: Boolean, onItemClicked: (SimpleListItem) -> Unit) {
+    if (collection) {
+        viewCollect.apply {
+            view.root.beGone()
+            if (item.textRes != null) bottomSheetItemTitle.setText(item.textRes)
+            if (item.text != null) bottomSheetItemTitle.text = item.text
+            bottomSheetItemTitle.setTextColor(root.context.getProperTextColor())
+            bottomSheetItemIcon.setImageResourceOrBeGone(item.imageRes)
+            //bottomSheetItemIcon.applyColorFilter(color)
 
             val textButton = if (item.selected) R.string.open else R.string.get
-            bottom_sheet_button.setText(textButton)
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, context.getProperPrimaryColor())
-            bottom_sheet_button.background = drawable
-            bottom_sheet_button.setTextColor(context.getProperBackgroundColor())
-            bottom_sheet_button.setPadding(2,2,2,2)
+            bottomSheetButton.setText(textButton)
+            val drawable = root.resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, root.context.getProperPrimaryColor())
+            bottomSheetButton.background = drawable
+            bottomSheetButton.setTextColor(root.context.getProperBackgroundColor())
+            bottomSheetButton.setPadding(2,2,2,2)
             if (!item.selected) {
-                bottom_sheet_item_title.alpha = 0.4f
-                bottom_sheet_item_icon.alpha = 0.4f
-            }
-        } else {
-            val color = if (item.selected) {
-                context.getProperPrimaryColor()
-            } else {
-                context.getProperTextColor()
+                bottomSheetItemTitle.alpha = 0.4f
+                bottomSheetItemIcon.alpha = 0.4f
             }
 
-            if (item.textRes != null) bottom_sheet_item_title.setText(item.textRes)
-            if (item.text != null) bottom_sheet_item_title.text = item.text
-            bottom_sheet_item_title.setTextColor(color)
-            bottom_sheet_item_icon.setImageResourceOrBeGone(item.imageRes)
-            bottom_sheet_item_icon.applyColorFilter(color)
-            //bottom_sheet_selected_icon.beVisibleIf(item.selected)
-            val selectedIcon = if (item.selected) R.drawable.ic_radio_button else R.drawable.ic_circle
-            bottom_sheet_selected_icon.setImageResource(selectedIcon)
-            bottom_sheet_selected_icon.applyColorFilter(color)
+            root.setOnClickListener {
+                onItemClicked(item)
+            }
         }
+    } else {
+        view.apply {
+            viewCollect.root.beGone()
+            val color = if (item.selected) {
+                root.context.getProperPrimaryColor()
+            } else {
+                root.context.getProperTextColor()
+            }
 
-        setOnClickListener {
-            onItemClicked(item)
+            if (item.textRes != null) bottomSheetItemTitle.setText(item.textRes)
+            if (item.text != null) bottomSheetItemTitle.text = item.text
+            bottomSheetItemTitle.setTextColor(color)
+            bottomSheetItemIcon.setImageResourceOrBeGone(item.imageRes)
+            bottomSheetItemIcon.applyColorFilter(color)
+            //bottomSheetSelectedIcon.beVisibleIf(item.selected)
+            val selectedIcon = if (item.selected) R.drawable.ic_radio_button else R.drawable.ic_circle
+            bottomSheetSelectedIcon.setImageResource(selectedIcon)
+            bottomSheetSelectedIcon.applyColorFilter(color)
+
+            root.setOnClickListener {
+                onItemClicked(item)
+            }
         }
     }
 }

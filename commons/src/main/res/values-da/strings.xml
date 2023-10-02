@@ -77,7 +77,7 @@
     <string name="phone_storage">Telefon lager</string>
     <string name="phone_storage_hidden">Telefon lager (ikke synlig for andre apps)</string>
     <string name="audio">Audio</string>
-    <string name="scanning">Scanning…</string>
+    <string name="scanning">Scanner…</string>
     <!-- Events -->
     <string name="birthday">Fødselsdag</string>
     <string name="anniversary">Årsdag</string>
@@ -100,7 +100,7 @@
     <string name="increase_column_count">Flere kolonner</string>
     <string name="reduce_column_count">Færre kolonner</string>
     <string name="column_count">Antal kolonner</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">Antal rækker</string>
     <string name="portrait_column_count">Antal kolonner stående format</string>
     <string name="landscape_column_count">Antal kolonner liggende format</string>
     <string name="change_cover_image">Skift cover-billede</string>
@@ -110,8 +110,8 @@
         <item quantity="other">%d kolonner</item>
     </plurals>
     <plurals name="row_counts">
-        <item quantity="one">%d row</item>
-        <item quantity="other">%d rows</item>
+        <item quantity="one">%d række</item>
+        <item quantity="other">%d rækker</item>
     </plurals>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrér blokerede numre</string>
@@ -125,12 +125,18 @@
     <string name="must_make_default_dialer">Du skal gøre denne app til standardopkaldsappen for at gøre brug af blokerede numre.</string>
     <string name="set_as_default">Gør til standard</string>
     <string name="block_confirmation">Er du sikker på at du vil blokere \"%s\"?</string>
-    <string name="block_not_stored_calls">Blokér opkald fra ukendte</string>
-    <string name="block_hidden_calls">Block calls from hidden numbers</string>
-    <string name="block_not_stored_messages">Blokér beskeder fra ukendte</string>
-    <string name="block_hidden_messages">Block messages from hidden numbers</string>
-    <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
-    <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="block_not_stored_calls">Bloker opkald fra ukendte</string>
+    <string name="block_hidden_calls">Bloker opkald fra skjulte numre</string>
+    <string name="block_not_stored_messages">Bloker beskeder fra ukendte</string>
+    <string name="block_hidden_messages">Bloker beskeder fra skjulte numre</string>
+    <string name="add_blocked_number_helper_text">Angiv et nummer eller et mønster (fx *12345*, +1*8888) for at blokere alle opkald og beskeder fra numre, der matcher mønsteret.</string>
+    <string name="must_make_default_caller_id_app">Kan ikke blokere ukendte numre uden tilladelse fra den, der ringer op.</string>
+    <string name="block_contact">Bloker kontakt</string>
+    <string name="block_contact_success">Kontakt blokeret</string>
+    <string name="block_contact_fail">Kontakten kunne ikke blokeres</string>
+    <string name="unblock_contact">Fjern blokering af kontakt</string>
+    <string name="unblock_contact_success">Blokering af kontakt ophævet</string>
+    <string name="unblock_contact_fail">Blokering af kontakt kunne ikke ophæves</string>
     <!-- Favorites -->
     <string name="favorites">Bogmærker</string>
     <string name="add_favorites">Tilføj bogmærker</string>
@@ -170,12 +176,16 @@
     <string name="no_audio_permissions">Adgang til lyd påkrævet</string>
     <string name="no_permission">Ingen tilladelse</string>
     <string name="allow_notifications_reminders">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise påmindelser.</string>
+    <string name="allow_full_screen_notifications_reminders">Du skal tillade, at appen viser notifikationer på fuld skærm, ellers kan du gå glip af nogle påmindelser.</string>
     <string name="allow_notifications_files">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise statuslinjen.</string>
     <string name="allow_notifications_music_player">Du skal tillade, at appen viser notifikationer, ellers kan den ikke afspille sange.</string>
     <string name="allow_notifications_voice_recorder">Du skal tillade, at appen viser notifikationer, ellers kan den ikke optage lyd.</string>
     <string name="allow_notifications_incoming_calls">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise indgående opkald.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Du skal tillade, at appen viser notifikationer i fuld skærm, ellers kan du gå glip af nogle indgående opkald.</string>
     <string name="allow_notifications_incoming_messages">Du skal tillade, at appen viser meddelelser, ellers kan den ikke vise indgående meddelelser.</string>
-    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_scheduled_messages">Du skal give appen adgang til interne alarmer, ellers kan den ikke sende planlagte beskeder.</string>
+    <string name="allow_alarm_sleep_timer">Du skal give appen adgang til interne alarmer, ellers kan den ikke slukke for applikationen efter slumretimeren.</string>
+    <string name="allow_location_permission">Du skal tillade, at appen får adgang til din placering, ellers kender den den ikke.</string>
     <string name="grant_permission">Giv tilladelse</string>
     <string name="permission_required">Tilladelse påkrævet</string>
     <!-- Renaming -->
@@ -292,6 +302,7 @@
     <string name="select_storage">Vælg lager</string>
     <string name="storage">Lagerplads</string>
     <string name="internal">Intern</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">SD-kort</string>
     <string name="root">Rod</string>
     <string name="wrong_root_selected">Forkert mappe valgt, vælg rodmappen på SD-kortet</string>
@@ -383,6 +394,7 @@
     <string name="unhide_folder">Vis mappe</string>
     <string name="temporarily_show_hidden">Vis midlertidigt skjulte</string>
     <string name="stop_showing_hidden">Stop visning af skjulte medier</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">Du kan ikke dele så meget indhold ad gangen</string>
     <string name="empty_and_disable_recycle_bin">Tøm og deaktiver papirkurven</string>
     <string name="undo">Fortryd</string>
@@ -402,11 +414,15 @@
     <string name="pin_item">Fastgør emne</string>
     <string name="unpin_item">Frigør emne</string>
     <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
+    <string name="send_email">Send e-mail</string>
     <string name="call">Opkald</string>
-    <string name="contact_details">Contact details</string>
-    <string name="add_contact">Add contact</string>
+    <string name="contact_details">Kontaktoplysninger</string>
+    <string name="add_contact">Tilføj kontakt</string>
     <string name="wallpapers">Tapeter</string>
+    <string name="show_line_numbers">Vis linjenumre</string>
+    <string name="hide_line_numbers">Skjul linjenumre</string>
+    <string name="sleep_timer">Timer til slumretilstand</string>
+    <string name="unblock">Fjern blokering</string>
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
     <string name="name">Navn</string>
@@ -430,6 +446,7 @@
     <string name="full_name">Fulde navn</string>
     <string name="use_custom_sorting">Brug brugerdefineret rækkefølge</string>
     <string name="change_order">Skift rækkefølge</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsætte med at slette?</string>
     <string name="deletion_confirmation">Er du sikker på at du vil slette %s?</string>
@@ -453,6 +470,8 @@
     <string name="enter_pin">Indtast PIN</string>
     <string name="please_enter_pin">Indtast en PIN</string>
     <string name="wrong_pin">Forkert PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Gentag PIN</string>
     <string name="pattern">Mønster</string>
     <string name="insert_pattern">Indsæt mønster</string>
@@ -1093,7 +1112,7 @@
     <string name="pdf_viewer_title">Android PdfViewer (PDF viser)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
+    <string name="zip4j_title">Zip4j (ZIP-komprimering og dekomprimering)</string>
     <!-- Trial -->
     <string name="trial_expired">Prøveperioden er udløbet</string>
     <string name="start_free_trial">Start en gratis prøveperiode</string>

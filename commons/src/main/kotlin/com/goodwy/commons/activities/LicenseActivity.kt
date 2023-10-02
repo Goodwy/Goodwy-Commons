@@ -1,63 +1,36 @@
 package com.goodwy.commons.activities
 
 import android.os.Bundle
-import android.view.LayoutInflater
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.remember
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.*
+import com.goodwy.commons.compose.extensions.enableEdgeToEdgeSimple
+import com.goodwy.commons.compose.screens.LicenseScreen
+import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.extensions.launchViewIntent
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.License
-import kotlinx.android.synthetic.main.activity_license.*
-import kotlinx.android.synthetic.main.item_license.view.*
+import kotlinx.collections.immutable.toImmutableList
 
-class LicenseActivity : BaseSimpleActivity() {
-    override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
-
-    override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
-
+class LicenseActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_license)
-        updateTextColors(licenses_holder)
-
-        updateMaterialActivityViews(licenses_coordinator, licenses_holder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(licenses_nested_scrollview, licenses_toolbar)
-
-        val textColor = getProperTextColor()
-        val backgroundColor = getProperBackgroundColor()
-        val primaryColor = getProperPrimaryColor()
-
-        val inflater = LayoutInflater.from(this)
-        val licenses = initLicenses()
-        val licenseMask = intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN
-        licenses.filter { licenseMask and it.id != 0L }.forEach {
-            val license = it
-            inflater.inflate(R.layout.item_license, null).apply {
-                license_card.setCardBackgroundColor(backgroundColor)
-                license_title.apply {
-                    text = getString(license.titleId)
-                    setTextColor(primaryColor)
-                    setOnClickListener {
-                        launchViewIntent(license.urlId)
-                    }
-                }
-
-                license_text.apply {
-                    text = getString(license.textId)
-                    setTextColor(textColor)
-                }
-
-                licenses_holder.addView(this)
+        enableEdgeToEdgeSimple()
+        setContent {
+            val licenseMask = remember { intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN }
+            val thirdPartyLicenses = remember { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() }
+            AppThemeSurface {
+                LicenseScreen(
+                    goBack = ::finish,
+                    thirdPartyLicenses = thirdPartyLicenses,
+                    onLicenseClick = ::launchViewIntent
+                )
             }
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        setupToolbar(licenses_toolbar, NavigationIcon.Arrow)
-    }
-
-    private fun initLicenses() = arrayOf(
+    private fun initLicenses() = listOf(
         License(LICENSE_KOTLIN, R.string.kotlin_title, R.string.kotlin_text, R.string.kotlin_url),
         License(LICENSE_SUBSAMPLING, R.string.subsampling_title, R.string.subsampling_text, R.string.subsampling_url),
         License(LICENSE_GLIDE, R.string.glide_title, R.string.glide_text, R.string.glide_url),

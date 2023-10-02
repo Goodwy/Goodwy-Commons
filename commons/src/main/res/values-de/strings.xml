@@ -45,7 +45,7 @@
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Keine Kontakte gefunden</string>
     <string name="request_the_required_permissions">Benötigte Berechtigungen anfordern</string>
-    <string name="no_access_to_contacts">Die App kann nicht auf deine Kontakte zugreifen</string>
+    <string name="no_access_to_contacts">Die App konnte nicht auf deine Kontakte zugreifen</string>
     <string name="no_phone_call_permission">Die App hat nicht die Berechtigung, Telefonanrufe zu tätigen, bitte gewähre sie in den Geräteeinstellungen</string>
     <string name="insert_text_here">Text hier einfügen</string>
     <string name="call_person">%s anrufen</string>
@@ -100,9 +100,9 @@
     <string name="increase_column_count">Kacheln verkleinern</string>
     <string name="reduce_column_count">Kacheln vergrößern</string>
     <string name="column_count">Spaltenanzahl</string>
-    <string name="row_count">Row count</string>
-    <string name="portrait_column_count">Anzahl der Spalten im Hochformat</string>
-    <string name="landscape_column_count">Anzahl der Spalten im Querformat</string>
+    <string name="row_count">Zeilenanzahl</string>
+    <string name="portrait_column_count">Spaltenanzahl im Hochformat</string>
+    <string name="landscape_column_count">Spaltenanzahl im Querformat</string>
     <string name="change_cover_image">Coverbild ändern</string>
     <string name="select_photo">Auswählen</string>
     <plurals name="column_counts">
@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Nachrichten von unterdrückten Nummern blockieren</string>
     <string name="add_blocked_number_helper_text">Gib eine Nummer oder ein Muster (z. B. *12345*, +1*8888) ein, um alle Anrufe und Nachrichten von Nummern zu blockieren, die dem Muster entsprechen.</string>
     <string name="must_make_default_caller_id_app">Unbekannte Nummern können ohne Anrufer-ID-Berechtigung nicht blockiert werden.</string>
+    <string name="block_contact">Kontakt blockieren</string>
+    <string name="block_contact_success">Kontakt blockiert</string>
+    <string name="block_contact_fail">Kontakt konnte nicht blockiert werden</string>
+    <string name="unblock_contact">Kontakt entblocken</string>
+    <string name="unblock_contact_success">Kontakt entblockt</string>
+    <string name="unblock_contact_fail">Kontakt konnte nicht entblockt werden</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>
@@ -138,7 +144,7 @@
     <string name="remove_from_favorites">Aus Favoriten entfernen</string>
     <!-- Search -->
     <string name="search">Suchen</string>
-    <string name="search_in_placeholder">Suchen in %s</string>
+    <string name="search_in_placeholder">In %s suchen</string>
     <string name="type_2_characters">Du musst mindestens 2 Zeichen eingeben, um die Suche zu starten.</string>
     <string name="show_search">Eine Suchleiste anzeigen</string>
     <string name="search_contacts">Kontakte durchsuchen</string>
@@ -170,19 +176,23 @@
     <string name="no_audio_permissions">Audioberechtigung wird benötigt</string>
     <string name="no_permission">Keine Berechtigung</string>
     <string name="allow_notifications_reminders">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine Erinnerungen anzeigen.</string>
+    <string name="allow_full_screen_notifications_reminders">Der App die Anzeige von Benachrichtigungen im Vollbild erlauben, sonst könntest du einige Erinnerungen verpassen.</string>
     <string name="allow_notifications_files">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie den Fortschrittsbalken nicht anzeigen.</string>
     <string name="allow_notifications_music_player">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine Lieder abspielen.</string>
     <string name="allow_notifications_voice_recorder">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keinen Ton aufnehmen.</string>
     <string name="allow_notifications_incoming_calls">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Anrufe anzeigen.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Der App die Anzeige von Benachrichtigungen im Vollbild erlauben, sonst könntest du einige eingehende Anrufe verpassen.</string>
     <string name="allow_notifications_incoming_messages">Der App die Anzeige von Benachrichtigungen erlauben, sonst kann sie keine eingehenden Nachrichten anzeigen.</string>
     <string name="allow_alarm_scheduled_messages">Der App den Zugriff auf interne Alarme erlauben, sonst kann sie keine geplanten Nachrichten senden.</string>
+    <string name="allow_alarm_sleep_timer">Der App den Zugriff auf interne Alarme erlauben, sonst kann sie die Anwendung nach dem Sleeptimer nicht ausschalten.</string>
+    <string name="allow_location_permission">Der App den Zugriff auf deinen Standort erlauben, sonst kennt sie ihn nicht.</string>
     <string name="grant_permission">Berechtigung erteilen</string>
     <string name="permission_required">Berechtigung erforderlich</string>
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
     <string name="rename_folder">Ordner umbenennen</string>
-    <string name="rename_file_error">Konnte die Datei nicht umbenennen</string>
-    <string name="rename_folder_error">Konnte den Ordner nicht umbenennen</string>
+    <string name="rename_file_error">Datei konnte nicht umbenannt werden</string>
+    <string name="rename_folder_error">Ordner konnte nicht umbenannt werden</string>
     <string name="rename_folder_empty">Ordnername darf nicht leer sein</string>
     <string name="rename_folder_exists">Ein Ordner mit diesem Namen existiert bereits</string>
     <string name="rename_folder_root">Das Hauptverzeichnis des Speichers kann nicht umbenannt werden</string>
@@ -219,7 +229,7 @@
     <string name="destination">Ziel</string>
     <string name="select_destination">Ziel auswählen</string>
     <string name="click_select_destination">Klicken um Ziel auszuwählen</string>
-    <string name="invalid_destination">Schreiben in ausgewählten Zielordner war nicht möglich</string>
+    <string name="invalid_destination">In ausgewählten Zielordner konnte nicht geschrieben werden</string>
     <string name="please_select_destination">Bitte Ziel auswählen</string>
     <string name="source_and_destination_same">Quell- und Zielpfad sind identisch</string>
     <string name="copy_failed">Die Dateien konnten nicht kopiert werden</string>
@@ -298,6 +308,7 @@
     <string name="select_storage">Speicher auswählen</string>
     <string name="storage">Speicherplatz</string>
     <string name="internal">Intern</string>
+    <string name="internal_storage">Interner Speicher</string>
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
     <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
@@ -389,6 +400,7 @@
     <string name="unhide_folder">Ordner nicht verstecken</string>
     <string name="temporarily_show_hidden">Verstecktes temporär anzeigen</string>
     <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
+    <string name="allow_access_more_media">Zugriff auf mehr Medien erlauben</string>
     <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
     <string name="empty_and_disable_recycle_bin">Papierkorb leeren und deaktivieren</string>
     <string name="undo">Rückgängig</string>
@@ -413,6 +425,10 @@
     <string name="contact_details">Kontaktdetails</string>
     <string name="add_contact">Kontakt hinzufügen</string>
     <string name="wallpapers">Bildschirmhintergründe</string>
+    <string name="show_line_numbers">Zeilennummern anzeigen</string>
+    <string name="hide_line_numbers">Zeilennummern ausblenden</string>
+    <string name="sleep_timer">Sleeptimer</string>
+    <string name="unblock">Entblocken</string>
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
     <string name="name">Name</string>
@@ -436,6 +452,7 @@
     <string name="full_name">Vollständiger Name</string>
     <string name="use_custom_sorting">Benutzerdefiniertes Sortieren anwenden</string>
     <string name="change_order">Reihenfolge ändern</string>
+    <string name="more_options">Weitere Optionen</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Soll wirklich mit dem Löschen fortgefahren werden\?</string>
     <string name="deletion_confirmation">%s wirklich löschen\?</string>
@@ -459,6 +476,9 @@
     <string name="enter_pin">PIN eingeben</string>
     <string name="please_enter_pin">Bitte eine PIN eingeben</string>
     <string name="wrong_pin">Falsche PIN</string>
+    <string name="pin_must_be_4_digits_long">Die PIN muss mindestens 4-stellig sein</string>
+    <string name="too_many_incorrect_attempts">Zu viele falsche Entsperrversuche.
+\nVersuche es in %d Sekunden erneut.</string>
     <string name="repeat_pin">PIN wiederholen</string>
     <string name="pattern">Muster</string>
     <string name="insert_pattern">Muster zeichnen</string>
@@ -662,7 +682,7 @@
     <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
     <string name="prevent_phone_from_sleeping">Verhindern, dass das Gerät in den Ruhemodus wechselt, solange die App im Vordergrund läuft</string>
     <string name="skip_delete_confirmation">Keinen Löschen-bestätigen-Dialog anzeigen</string>
-    <string name="enable_pull_to_refresh">„Auffrischen“ durch Ziehen von der oberen Kante ermöglichen</string>
+    <string name="enable_pull_to_refresh">„Auffrischen“ durch Ziehen von der oberen Kante aktivieren</string>
     <string name="use_24_hour_time_format">24-Stunden-Zählung verwenden</string>
     <string name="change_date_and_time_format">Datums- und Zeitformat ändern</string>
     <string name="sunday_first">Wochenanfang am Sonntag</string>
@@ -728,7 +748,7 @@
     <string name="show_the_recycle_bin">Papierkorb anzeigen</string>
     <string name="hide_the_recycle_bin">Papierkorb verstecken</string>
     <string name="open_the_recycle_bin">Papierkorb öffnen</string>
-    <string name="skip_the_recycle_bin">Den Papierkorb überspringen, Dateien sofort löschen</string>
+    <string name="skip_the_recycle_bin">Den Papierkorb auslassen, Dateien sofort löschen</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d Element wird in den Papierkorb verschoben</item>
         <item quantity="other">%d Elemente werden in den Papierkorb verschoben</item>

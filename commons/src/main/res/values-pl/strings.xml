@@ -135,6 +135,12 @@
     <string name="block_hidden_messages">Blokuj wiadomości od ukrytych numerów</string>
     <string name="add_blocked_number_helper_text">Wprowadź numer lub wzorzec (np. *12345*, +48*8888), aby blokować wszystkie połączenia i wiadomości z numerów pasujących do wzorca</string>
     <string name="must_make_default_caller_id_app">Nie można blokować nieznanych numerów bez uprawnienia do identyfikacji rozmówcy</string>
+    <string name="block_contact">Zablokuj kontakt</string>
+    <string name="block_contact_success">Kontakt został zablokowany</string>
+    <string name="block_contact_fail">Nie udało się zablokować kontaktu</string>
+    <string name="unblock_contact">Odblokuj kontakt</string>
+    <string name="unblock_contact_success">Kontakt został odblokowany</string>
+    <string name="unblock_contact_fail">Nie udało się odblokować kontaktu</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>
@@ -174,12 +180,16 @@
     <string name="no_audio_permissions">Wymagane jest uprawnienie „Mikrofon”</string>
     <string name="no_permission">Brak uprawnienia</string>
     <string name="allow_notifications_reminders">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać przypomnień.</string>
+    <string name="allow_full_screen_notifications_reminders">Musisz zezwolić aplikacji na wyświetlanie powiadomień na pełnym ekranie, w przeciwnym razie możesz przegapić niektóre przypomnienia.</string>
     <string name="allow_notifications_files">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać paska postępu.</string>
     <string name="allow_notifications_music_player">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła odtwarzać utworów.</string>
     <string name="allow_notifications_voice_recorder">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła nagrywać dźwięku.</string>
     <string name="allow_notifications_incoming_calls">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać połączeń przychodzących.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Musisz zezwolić aplikacji na wyświetlanie powiadomień na pełnym ekranie, w przeciwnym razie możesz przegapić niektóre połączenia przychodzące.</string>
     <string name="allow_notifications_incoming_messages">Musisz zezwolić aplikacji na wyświetlanie powiadomień, w przeciwnym razie nie będzie mogła wyświetlać wiadomości przychodzących.</string>
     <string name="allow_alarm_scheduled_messages">Musisz zezwolić aplikacji na dostęp do alarmów, w przeciwnym razie nie będzie mogła wysyłać zaplanowanych wiadomości.</string>
+    <string name="allow_alarm_sleep_timer">Musisz zezwolić aplikacji na dostęp do alarmów, w przeciwnym razie nie będzie mogła się wyłączyć po upływie czasu uśpienia.</string>
+    <string name="allow_location_permission">Musisz zezwolić aplikacji na dostęp do Twojej lokalizacji, w przeciwnym razie nie będzie jej znać.</string>
     <string name="grant_permission">Nadaj uprawnienie</string>
     <string name="permission_required">Wymagane uprawnienie</string>
     <!-- Renaming -->
@@ -304,6 +314,7 @@
     <string name="select_storage">Wybierz pamięć</string>
     <string name="storage">Pamięć</string>
     <string name="internal">Wewnętrzna</string>
+    <string name="internal_storage">Pamięć wewnętrzna</string>
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz folder główny karty pamięci.</string>
@@ -390,6 +401,7 @@
     <string name="unhide_folder">Odkryj folder</string>
     <string name="temporarily_show_hidden">Tymczasowo pokaż ukryte elementy</string>
     <string name="stop_showing_hidden">Przestań pokazywać ukryte elementy</string>
+    <string name="allow_access_more_media">Zezwól na dostęp do większej liczby multimediów</string>
     <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
     <string name="empty_and_disable_recycle_bin">Opróżnij i wyłącz kosz</string>
     <string name="undo">Cofnij</string>
@@ -414,6 +426,10 @@
     <string name="contact_details">Szczegóły kontaktu</string>
     <string name="add_contact">Dodaj kontakt</string>
     <string name="wallpapers">Tapety</string>
+    <string name="show_line_numbers">Pokaż numery linii</string>
+    <string name="hide_line_numbers">Ukryj numery linii</string>
+    <string name="sleep_timer">Wyłącznik czasowy</string>
+    <string name="unblock">Odblokuj</string>
     <!-- Sorting -->
     <string name="sort_by">Sortuj według</string>
     <string name="name">Nazwa</string>
@@ -437,6 +453,7 @@
     <string name="full_name">Pełna nazwa</string>
     <string name="use_custom_sorting">Użyj własnego sortowania</string>
     <string name="change_order">Zmień kolejność</string>
+    <string name="more_options">Więcej opcji</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Czy kontynuować usuwanie\?</string>
     <string name="deletion_confirmation">Czy usunąć %s\?</string>
@@ -462,6 +479,9 @@
     <string name="enter_pin">Wprowadź PIN</string>
     <string name="please_enter_pin">Wprowadź PIN</string>
     <string name="wrong_pin">Nieprawidłowy PIN</string>
+    <string name="pin_must_be_4_digits_long">PIN musi mieć co najmniej 4 cyfry</string>
+    <string name="too_many_incorrect_attempts">Zbyt wiele błędnych prób odblokowania.
+\nSpróbuj ponownie za %d sek.</string>
     <string name="repeat_pin">Wprowadź PIN ponownie</string>
     <string name="pattern">Wzór</string>
     <string name="insert_pattern">Wprowadź wzór</string>
@@ -786,7 +806,7 @@
     <string name="show_the_recycle_bin">Pokaż kosz</string>
     <string name="hide_the_recycle_bin">Ukryj kosz</string>
     <string name="open_the_recycle_bin">Otwórz kosz</string>
-    <string name="skip_the_recycle_bin">Pomiń kosz, usuń pliki bezpośrednio</string>
+    <string name="skip_the_recycle_bin">Pomiń kosz, usuń bezpośrednio</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Przenoszenie %d elementu do kosza</item>
         <item quantity="few">Przenoszenie %d elementów do kosza</item>

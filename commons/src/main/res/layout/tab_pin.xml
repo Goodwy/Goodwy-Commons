@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.goodwy.commons.views.PinTab
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.goodwy.commons.views.PinTab xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/pin_lock_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pin_lock_icon"
+        android:layout_width="@dimen/medium_icon_size"
+        android:layout_height="@dimen/medium_icon_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:src="@drawable/ic_lock_outlined_vector" />
 
     <com.goodwy.commons.views.MyTextView
         android:id="@+id/pin_lock_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_margin"
-        android:layout_centerHorizontal="true"
-        android:paddingBottom="@dimen/small_margin"
-        android:paddingStart="@dimen/activity_margin"
-        android:paddingEnd="@dimen/activity_margin"
+        android:layout_below="@id/pin_lock_icon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:minLines="2"
+        android:paddingLeft="@dimen/activity_margin"
         android:paddingTop="@dimen/activity_margin"
-        android:text="@string/enter_pin"/>
+        android:paddingRight="@dimen/activity_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:text="@string/enter_pin"
+        android:textAlignment="center"
+        android:textSize="@dimen/bigger_text_size" />
 
     <com.goodwy.commons.views.MyTextView
         android:id="@+id/pin_lock_current_pin"
@@ -26,9 +38,10 @@
         android:letterSpacing="1.05"
         android:lines="1"
         android:maxLength="10"
-        android:paddingBottom="@dimen/small_margin"
         android:paddingTop="@dimen/small_margin"
-        android:textSize="@dimen/big_text_size"/>
+        android:paddingBottom="@dimen/small_margin"
+        android:textSize="@dimen/big_text_size"
+        tools:text="****" />
 
     <LinearLayout
         android:layout_width="match_parent"

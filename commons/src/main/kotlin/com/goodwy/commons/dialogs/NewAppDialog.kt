@@ -4,12 +4,11 @@ import android.app.Activity
 import android.graphics.drawable.Drawable
 import android.text.Html
 import com.goodwy.commons.R
+import com.goodwy.commons.databinding.DialogNewAppsBinding
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.getAlertDialogBuilder
 import com.goodwy.commons.extensions.launchViewIntent
 import com.goodwy.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_new_apps.view.*
-import kotlinx.android.synthetic.main.dialog_new_apps.view.new_apps_text
 
 // run inside: runOnUiThread { }
 class NewAppDialog(
@@ -21,11 +20,11 @@ class NewAppDialog(
     val callback: () -> Unit)
 {
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_new_apps, null).apply {
-            new_apps_title.text = Html.fromHtml(title)
-            new_apps_text.text = text
-            new_apps_icon.setImageDrawable(drawable!!)
-            new_apps_holder.setOnClickListener { dialogConfirmed() }
+        val view = DialogNewAppsBinding.inflate(activity.layoutInflater, null, false).apply {
+            newAppsTitle.text = Html.fromHtml(title)
+            newAppsText.text = text
+            newAppsIcon.setImageDrawable(drawable!!)
+            newAppsHolder.setOnClickListener { dialogConfirmed() }
         }
 
         activity.getAlertDialogBuilder()
@@ -33,7 +32,7 @@ class NewAppDialog(
             .setNeutralButton(R.string.do_not_show_again) { _, _ -> dialogDismissed(1) }
             .setOnCancelListener { dialogDismissed(8) }
             .apply {
-                activity.setupDialogStuff(view, this)
+                activity.setupDialogStuff(view.root, this)
             }
     }
 

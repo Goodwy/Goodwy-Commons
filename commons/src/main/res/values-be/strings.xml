@@ -133,6 +133,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Увядзіце нумар або шаблон (напрыклад, *12345*, +1*8888), каб заблакіраваць усе выклікі і паведамленні з нумароў, якія адпавядаюць шаблону.</string>
     <string name="must_make_default_caller_id_app">Немагчыма заблакіраваць невядомыя нумары без дазволу ідэнтыфікатара абанента.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Абраныя</string>
     <string name="add_favorites">Дадаць абранае</string>
@@ -172,12 +178,16 @@
     <string name="no_audio_permissions">Патрабуецца дазвол на доступ да мікрафону</string>
     <string name="no_permission">Няма дазволу</string>
     <string name="allow_notifications_reminders">Вы павінны дазволіць праграме паказваць апавяшчэнні, інакш яна не можа паказваць напаміны.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Вы павінны дазволіць праграме паказваць апавяшчэнні, у адваротным выпадку яна не можа паказваць панэль прагрэсу.</string>
     <string name="allow_notifications_music_player">Вы павінны дазволіць праграме паказ апавяшчэнняў, інакш яна не можа прайграваць песні.</string>
     <string name="allow_notifications_voice_recorder">Вы павінны дазволіць праграме паказ апавяшчэнняў, у адваротным выпадку яна не можа запісваць аўдыя.</string>
     <string name="allow_notifications_incoming_calls">Вы павінны дазволіць праграме паказваць апавяшчэнні, інакш яна не зможа паказваць ўваходныя выклікі.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Вы павінны дазволіць праграме паказваць апавяшчэнні, у адваротным выпадку яна не можа паказваць ўваходныя паведамленні.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Даць дазвол</string>
     <string name="permission_required">Патрабуецца дазвол</string>
     <!-- Renaming -->
@@ -308,6 +318,7 @@
     <string name="select_storage">Выбраць сховішча</string>
     <string name="storage">Сховішча</string>
     <string name="internal">Унутраны</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">SD-карта</string>
     <string name="root">Корань</string>
     <string name="wrong_root_selected">Выбрана няправільная папка, абярыце галоўную папку вашай SD-карты</string>
@@ -393,6 +404,7 @@
     <string name="unhide_folder">Паказаць папку</string>
     <string name="temporarily_show_hidden">Часова паказаць схаванае</string>
     <string name="stop_showing_hidden">Спыніць паказ схаваных мультымедыя</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">Вы не можаце абагуліць столькі змесціва адначасова</string>
     <string name="empty_and_disable_recycle_bin">Ачысціце і адключыце кошык</string>
     <string name="undo">Адрабіць</string>
@@ -417,6 +429,10 @@
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
     <string name="wallpapers">Шпалеры</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Таймер сну</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Сартаваць па…</string>
     <string name="name">Назва</string>
@@ -440,6 +456,7 @@
     <string name="full_name">Поўнае імя</string>
     <string name="use_custom_sorting">Выкарыстоўвайце карыстацкую сартаванне</string>
     <string name="change_order">Змяніць парадак</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Вы ўпэўнены, што хочаце працягнуць выдаленне\?</string>
     <string name="deletion_confirmation">Выдаліць %s\?</string>
@@ -463,6 +480,8 @@
     <string name="enter_pin">Увядзіце PIN-код</string>
     <string name="please_enter_pin">Увядзіце PIN-код</string>
     <string name="wrong_pin">Няправільны PIN-код</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Паўтарыце PIN-код</string>
     <string name="pattern">Графічны ключ</string>
     <string name="insert_pattern">Намалюйце графічны ключ</string>
@@ -891,7 +910,7 @@
     <string name="upgrade_calendar">Вы павінны перанесці лакальна захаваныя падзеі ўручную шляхам экспарту ў файл .ics, а затым імпарту. Вы можаце знайсці абедзве кнопкі экспарту/імпарту ў галоўным меню экрана.</string>
     <string name="upgraded_from_free_gallery">Добры дзень,
 \n
-\nздаецца, вы толькі што перайшлі з бясплатнай версіі. Калі вы задаволены гэтым і, магчыма, перанясеце свае налады і абранае, вы можаце выдаліць старую бясплатную праграму, каб пазбегнуць яе выпадковага запуску, бо яна вам больш не спатрэбіцца.
+\nздаецца, вы толькі што перайшлі з бясплатнай версіі. Калі вы задаволены гэтым і, магчыма, перанясеце свае налады і абранае, вы можаце выдаліць старую бясплатную праграму, каб пазбегнуць яе выпадковага запуску, бо яна вам больш не спатрэбіцца, гэта таксама прадухіліць з\'яўленне гэтага дыялогу.
 \n
 \nДзякуй!</string>
     <string name="upgraded_to_pro_gallery">Добры дзень,
@@ -901,7 +920,7 @@
 \nДзякуй!</string>
     <string name="upgraded_from_free">Добры дзень,
 \n
-\nздаецца, вы толькі што перайшлі з бясплатнай версіі. Калі вы будзеце задаволены гэтым і, магчыма, перанясеце свае даныя, вы можаце выдаліць старую бясплатную праграму, каб пазбегнуць яе выпадковага запуску, бо яна вам больш не спатрэбіцца.
+\nздаецца, вы толькі што перайшлі з бясплатнай версіі. Калі вы будзеце задаволены гэтым і, магчыма, перанясеце свае даныя, вы можаце выдаліць старую бясплатную праграму, каб пазбегнуць яе выпадковага запуску, бо яна вам больш не спатрэбіцца, гэта таксама прадухіліць з\'яўленне гэтага дыялогу.
 \n
 \nДзякуй!</string>
     <string name="upgraded_to_pro">Добры дзень,
@@ -913,7 +932,7 @@
 \n
 \nздаецца, вы толькі што перайшлі з бясплатнай версіі. Калі вы хочаце перанесці свае лакальна захаваныя падзеі, вам трэба зрабіць гэта ўручную, экспартаваўшы іх у файл .ics у бясплатнай версіі праграмы і імпартаваўшы сюды праз верхняе меню.
 \n
-\nКалі вы будзеце задаволены сваімі наладамі ў версіі Pro, вы можаце выдаліць старую бясплатную версію, бо яна вам больш не спатрэбіцца.
+\nКалі вы будзеце задаволены сваімі наладамі ў версіі Pro, вы можаце выдаліць старую бясплатную версію, бо яна вам больш не спатрэбіцца, гэта таксама прадухіліць з\'яўленне гэтага дыялогу.
 \n
 \nДзякуй!</string>
     <string name="upgraded_from_free_contacts">Добры дзень,

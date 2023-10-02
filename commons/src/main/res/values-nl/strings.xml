@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Berichten van verborgen nummers blokkeren</string>
     <string name="add_blocked_number_helper_text">Voer een nummer of patroon in (bijv. *12345*, +31*8888) om alle oproepen en berichten te blokkeren van nummers die overeenkomen met het patroon.</string>
     <string name="must_make_default_caller_id_app">Kan onbekende nummers niet blokkeren zonder toegang tot beller-ID\'s.</string>
+    <string name="block_contact">Contact blokkeren</string>
+    <string name="block_contact_success">Contact geblokkeerd</string>
+    <string name="block_contact_fail">Contact kon niet worden geblokkeerd</string>
+    <string name="unblock_contact">Contact deblokkeren</string>
+    <string name="unblock_contact_success">Contact gedeblokkeerd</string>
+    <string name="unblock_contact_fail">Contact kon niet worden gedeblokkeerd</string>
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
     <string name="add_favorites">Favorieten toevoegen</string>
@@ -170,12 +176,16 @@
     <string name="no_audio_permissions">Recht voor audio is vereist</string>
     <string name="no_permission">Geen toegang</string>
     <string name="allow_notifications_reminders">Deze app heeft het recht om meldingen te tonen nodig om herinneringen te kunnen laten zien.</string>
+    <string name="allow_full_screen_notifications_reminders">Geef deze app het recht om meldingen over het hele scherm te tonen om geen herinneringen te missen.</string>
     <string name="allow_notifications_files">Deze app heeft het recht om meldingen te tonen nodig om een voortgangsindicator te kunnen weergeven.</string>
     <string name="allow_notifications_music_player">Deze app heeft het recht om meldingen te tonen nodig om nummers te kunnen afspelen.</string>
     <string name="allow_notifications_voice_recorder">Deze app heeft het recht om meldingen te tonen nodig om geluid te kunnen opnemen.</string>
     <string name="allow_notifications_incoming_calls">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij inkomende gesprekken.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Geef deze app het recht om meldingen over het hele scherm te tonen om geen inkomende gesprekken te missen.</string>
     <string name="allow_notifications_incoming_messages">Deze app heeft het recht om meldingen te tonen nodig om te kunnen waarschuwen bij nieuwe berichten.</string>
     <string name="allow_alarm_scheduled_messages">Geef de app toegang tot interne alarmen om geplande berichten te kunnen versturen.</string>
+    <string name="allow_alarm_sleep_timer">Geef de app toegang tot interne alarmen om de app te kunnen afsluiten nadat de slaaptimer is verlopen.</string>
+    <string name="allow_location_permission">Geef de app toegang tot de huidige locatie om gebruik te kunnen maken van de desbetreffende functie(s).</string>
     <string name="grant_permission">Toestemming geven</string>
     <string name="permission_required">Toestemming vereist</string>
     <!-- Renaming -->
@@ -253,7 +263,7 @@
     <string name="append">Voeg \'_1\' toe</string>
     <string name="apply_to_all">Toepassen op alle</string>
     <string name="system_folder_restriction">Het systeem staat de bewerking in deze map niet toe, kies een andere map</string>
-    <string name="system_folder_copy_restriction">Het systeem staat het kopiëren naar deze map niet toe</string>
+    <string name="system_folder_copy_restriction">Het systeem staat het kopiëren naar deze map niet toe, kies een andere map</string>
     <string name="rename_in_sd_card_system_restriction">Het systeem staat niet toe om in deze map namen te wijzigen</string>
     <string name="rename_internal_system_restriction">Kan hoofdmappen op de interne opslag niet hernoemen, alleen submappen</string>
     <string name="cannot_rename_folder">Kan deze map niet hernoemen</string>
@@ -264,7 +274,7 @@
     <string name="confirm_folder_access_title">Toegang tot map bevestigen</string>
     <string name="confirm_storage_access_text">Op het volgende scherm schrijfrecht verlenen op de hoofdmap van de SD-kaart</string>
     <string name="confirm_storage_access_text_sd">Probeer het volgende als de SD-kaart niet wordt getoond</string>
-    <string name="confirm_storage_access_android_text">Verleen de app toegang tot de gekozen map door in het volgende scherm op \'Deze map gebruiken\' te klikken.</string>
+    <string name="confirm_storage_access_android_text">Geef de app toegang tot de gekozen map door in het volgende scherm op \'Deze map gebruiken\' te klikken.</string>
     <string name="confirm_storage_access_android_text_specific">Geef toegang tot \'&lt;b&gt;%s&lt;/b&gt;\' door onderaan in het volgende scherm op \'&lt;b&gt;Deze map gebruiken&lt;/b&gt;\' te drukken.</string>
     <string name="confirm_create_doc_for_new_folder_text">Druk in het volgende scherm onderaan op \'&lt;b&gt;Opslaan&lt;/b&gt;\' om de nieuwe map aan te maken.</string>
     <string name="confirm_selection">Keuze bevestigen</string>
@@ -292,6 +302,7 @@
     <string name="select_storage">Opslag kiezen</string>
     <string name="storage">Opslag</string>
     <string name="internal">Interne opslag</string>
+    <string name="internal_storage">Interne Opslag</string>
     <string name="sd_card">SD-kaart</string>
     <string name="root">Hoofdmap</string>
     <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
@@ -377,6 +388,7 @@
     <string name="unhide_folder">Map zichtbaar maken</string>
     <string name="temporarily_show_hidden">Verborgen items tijdelijk tonen</string>
     <string name="stop_showing_hidden">Stop met tonen van verborgen media</string>
+    <string name="allow_access_more_media">Toegang tot meer media geven</string>
     <string name="maximum_share_reached">Zoveel inhoud tegelijk delen kan niet</string>
     <string name="empty_and_disable_recycle_bin">Prullenbak legen en uitschakelen</string>
     <string name="undo">Ongedaan maken</string>
@@ -401,6 +413,10 @@
     <string name="contact_details">Contactgegevens</string>
     <string name="add_contact">Contact toevoegen</string>
     <string name="wallpapers">Achtergronden</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Slaaptimer</string>
+    <string name="unblock">Deblokkeren</string>
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
     <string name="name">Naam</string>
@@ -424,6 +440,7 @@
     <string name="full_name">Volledige naam</string>
     <string name="use_custom_sorting">Aangepast sorteren</string>
     <string name="change_order">Volgorde aanpassen</string>
+    <string name="more_options">Meer opties</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deze items verwijderen\?</string>
     <string name="deletion_confirmation">%s verwijderen\?</string>
@@ -445,8 +462,11 @@
     <!-- Password protection -->
     <string name="pin">Pincode</string>
     <string name="enter_pin">Pincode invoeren</string>
-    <string name="please_enter_pin">Graag pincode invoeren</string>
+    <string name="please_enter_pin">Voer een pincode in</string>
     <string name="wrong_pin">Verkeerde pincode</string>
+    <string name="pin_must_be_4_digits_long">De pincode moet uit tenminste 4 tekens bestaan</string>
+    <string name="too_many_incorrect_attempts">Te veel incorrecte pogingen.
+\nProbeer het nogmaals over %d seconden.</string>
     <string name="repeat_pin">Pincode herhalen</string>
     <string name="pattern">Patroon</string>
     <string name="insert_pattern">Patroon invoeren</string>

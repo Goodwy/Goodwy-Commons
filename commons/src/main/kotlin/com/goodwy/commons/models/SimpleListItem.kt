@@ -1,7 +1,7 @@
 package com.goodwy.commons.models
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class SimpleListItem(val id: Int, val textRes: Int? = null, val text: String? = null, val imageRes: Int? = null, val selected: Boolean = false, val packageName: String = "") : Parcelable {

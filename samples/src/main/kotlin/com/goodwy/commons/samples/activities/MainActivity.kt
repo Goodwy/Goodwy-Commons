@@ -1,19 +1,20 @@
 package com.goodwy.commons.samples.activities
 
+import android.content.Intent
 import android.os.Bundle
 import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.activities.ManageBlockedNumbersActivity
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
+import com.goodwy.commons.dialogs.CallConfirmationDialog
 import com.goodwy.commons.dialogs.SecurityDialog
-import com.goodwy.commons.extensions.appLaunched
-import com.goodwy.commons.extensions.updateTextColors
-import com.goodwy.commons.extensions.toast
+import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
-import com.goodwy.commons.helpers.LICENSE_GLIDE
+import com.goodwy.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.goodwy.commons.helpers.SHOW_ALL_TABS
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
-import kotlinx.android.synthetic.main.activity_main.*
+import com.goodwy.commons.samples.databinding.ActivityMainBinding
 
 class MainActivity : BaseSimpleActivity() {
     override fun getAppLauncherName() = getString(R.string.smtco_app_name)
@@ -24,66 +25,79 @@ class MainActivity : BaseSimpleActivity() {
         return ids
     }
 
+    private val binding by viewBinding(ActivityMainBinding::inflate)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
 
-        updateMaterialActivityViews(main_coordinator, main_holder, useTransparentNavigation = true, useTopSearchMenu = true)
-        setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
+        updateMaterialActivityViews(binding.mainCoordinator, binding.mainHolder, useTransparentNavigation = true, useTopSearchMenu = true)
+        setupMaterialScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
 
-        main_color_customization.setOnClickListener {
-            startCustomizationActivity()
+        binding.mainColorCustomization.setOnClickListener {
+            startCustomizationActivity(
+                isProVersion = baseConfig.isPro || baseConfig.isProSubs,
+                playStoreInstalled = false, //isPlayStoreInstalled()
+                ruStoreInstalled = false, //isRuStoreInstalled()
+                )
         }
-
-        main_about.setOnClickListener {
-            val licenses = LICENSE_GLIDE
-
-            val faqItems = arrayListOf(
-                FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons),
-                FAQItem(R.string.faq_7_title_commons, R.string.faq_7_text_commons),
-                FAQItem(R.string.faq_9_title_commons, R.string.faq_9_text_commons)
-            )
-            startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true, "", "", "", "", "", "", "", true)
+        binding.mainAbout.setOnClickListener {
+            launchAbout()
         }
-
-        main_purchase.setOnClickListener {
-            startPurchaseActivity(R.string.app_name_g, "BuildConfig.GOOGLE_PLAY_LICENSING_KEY", "BuildConfig.PRODUCT_ID_X1", "BuildConfig.PRODUCT_ID_X2", "BuildConfig.PRODUCT_ID_X3", "", "", "", showLifebuoy = true, playStoreInstalled = true, showCollection = true)
+        binding.mainPurchase.setOnClickListener {
+            startPurchaseActivity(R.string.app_name_g, "", "", "", "", "", "", "",
+                showLifebuoy = false,
+                playStoreInstalled = isPlayStoreInstalled(),
+                ruStoreInstalled = isRuStoreInstalled(),
+                showCollection = true)
         }
-
-        bottom_sheet_chooser.setOnClickListener {
+        binding.bottomSheetChooser.setOnClickListener {
             launchBottomSheetDemo()
         }
-
-        security.setOnClickListener {
+        binding.security.setOnClickListener {
             SecurityDialog(this, "", SHOW_ALL_TABS) { _, _, _ ->
             }
         }
-
-        //startCustomizationActivity()
-        //startAboutActivity(R.string.smtco_app_name, 3, "0.2", arrayListOf(FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons)), false)
-
-        /*val letters = arrayListOf("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q")
-        StringsAdapter(this, letters, media_grid, media_refresh_layout) {
-        }.apply {
-            media_grid.adapter = this
+        binding.manageBlockedNumbers.setOnClickListener {
+            startActivity(Intent(this, ManageBlockedNumbersActivity::class.java))
         }
-
-        media_refresh_layout.setOnRefreshListener {
-            Handler().postDelayed({
-                media_refresh_layout.isRefreshing = false
-            }, 1000L)
-        }*/
+        binding.composeDialogs.setOnClickListener {
+            startActivity(Intent(this, TestDialogActivity::class.java))
+        }
     }
 
+    private fun launchAbout() {
+        val licenses = LICENSE_AUTOFITTEXTVIEW
+
+        val faqItems = arrayListOf(
+            FAQItem(com.goodwy.commons.R.string.faq_1_title_commons, com.goodwy.commons.R.string.faq_1_text_commons),
+            FAQItem(com.goodwy.commons.R.string.faq_1_title_commons, com.goodwy.commons.R.string.faq_1_text_commons),
+            FAQItem(com.goodwy.commons.R.string.faq_4_title_commons, com.goodwy.commons.R.string.faq_4_text_commons)
+        )
+
+        if (!resources.getBoolean(com.goodwy.commons.R.bool.hide_google_relations)) {
+            faqItems.add(FAQItem(com.goodwy.commons.R.string.faq_2_title_commons, com.goodwy.commons.R.string.faq_2_text_commons))
+            faqItems.add(FAQItem(com.goodwy.commons.R.string.faq_6_title_commons, com.goodwy.commons.R.string.faq_6_text_commons))
+        }
+
+        startAboutActivity(R.string.app_name_g, licenses, BuildConfig.VERSION_NAME, faqItems, true, "", "", "", "", "", "", "",
+            playStoreInstalled = isPlayStoreInstalled(),
+            ruStoreInstalled = isRuStoreInstalled())
+    }
     private fun launchBottomSheetDemo() {
         BottomSheetChooserDialog.createChooser(
             fragmentManager = supportFragmentManager,
-            title = R.string.please_select_destination,
+            title = com.goodwy.commons.R.string.please_select_destination,
             items = arrayOf(
-                SimpleListItem(1, R.string.record_video, imageRes = R.drawable.ic_camera_vector),
-                SimpleListItem(2, R.string.record_audio, imageRes = R.drawable.ic_microphone_vector, selected = true),
-                SimpleListItem(4, R.string.choose_contact, imageRes = R.drawable.ic_add_person_vector)
+                SimpleListItem(1, com.goodwy.commons.R.string.record_video, imageRes = com.goodwy.commons.R.drawable.ic_camera_vector),
+                SimpleListItem(
+                    2,
+                    com.goodwy.commons.R.string.record_audio,
+                    imageRes = com.goodwy.commons.R.drawable.ic_microphone_vector,
+                    selected = true
+                ),
+                SimpleListItem(4, com.goodwy.commons.R.string.choose_contact, imageRes = com.goodwy.commons.R.drawable.ic_add_person_vector)
             )
         ) {
             toast("Clicked ${it.id}")
@@ -92,8 +106,11 @@ class MainActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(main_toolbar)
+        setupToolbar(binding.mainToolbar)
+//        CallConfirmationDialog(this, callee = "Goodwy Common"){
+//
+//        }
 
-        updateTextColors(main_coordinator)
+        updateTextColors(binding.mainCoordinator)
     }
 }

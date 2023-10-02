@@ -2,38 +2,31 @@ package com.goodwy.commons.dialogs
 
 import android.app.Activity
 import android.content.res.Resources
-import android.net.Uri
-import android.os.Environment
-import android.provider.MediaStore
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
-import androidx.exifinterface.media.ExifInterface
 import com.goodwy.commons.R
-import com.goodwy.commons.activities.BaseSimpleActivity
-import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.*
-import com.goodwy.commons.models.FileDirItem
-import kotlinx.android.synthetic.main.dialog_properties.view.*
-import kotlinx.android.synthetic.main.item_property.view.*
-import java.io.File
-import java.util.*
+import com.goodwy.commons.databinding.DialogPropertiesBinding
+import com.goodwy.commons.databinding.ItemPropertyBinding
+import com.goodwy.commons.extensions.copyToClipboard
+import com.goodwy.commons.extensions.getProperTextColor
+import com.goodwy.commons.extensions.showLocationOnMap
+import com.goodwy.commons.extensions.value
+
+
 
 abstract class BasePropertiesDialog(activity: Activity) {
     protected val mInflater: LayoutInflater
     protected val mPropertyView: ViewGroup
     protected val mResources: Resources
     protected val mActivity: Activity = activity
-    protected val mDialogView: View
+    protected val mDialogView: DialogPropertiesBinding
 
     init {
         mInflater = LayoutInflater.from(activity)
         mResources = activity.resources
-        mDialogView = mInflater.inflate(R.layout.dialog_properties, null)
-        mPropertyView = mDialogView.properties_holder!!
+        mDialogView = DialogPropertiesBinding.inflate(mInflater, null, false)
+        mPropertyView = mDialogView.propertiesHolder
     }
 
     protected fun addProperty(labelId: Int, value: String?, viewId: Int = 0) {
@@ -41,27 +34,27 @@ abstract class BasePropertiesDialog(activity: Activity) {
             return
         }
 
-        mInflater.inflate(R.layout.item_property, mPropertyView, false).apply {
-            property_value.setTextColor(mActivity.getProperTextColor())
-            property_label.setTextColor(mActivity.getProperTextColor())
+        ItemPropertyBinding.inflate(mInflater, null, false).apply {
+            propertyValue.setTextColor(mActivity.getProperTextColor())
+            propertyLabel.setTextColor(mActivity.getProperTextColor())
 
-            property_label.text = mResources.getString(labelId)
-            property_value.text = value
-            mPropertyView.properties_holder.addView(this)
+            propertyLabel.text = mResources.getString(labelId)
+            propertyValue.text = value
+            mPropertyView.findViewById<LinearLayout>(R.id.properties_holder).addView(root)
 
-            setOnLongClickListener {
-                mActivity.copyToClipboard(property_value.value)
+            root.setOnLongClickListener {
+                mActivity.copyToClipboard(propertyValue.value)
                 true
             }
 
             if (labelId == R.string.gps_coordinates) {
-                setOnClickListener {
+                root.setOnClickListener {
                     mActivity.showLocationOnMap(value)
                 }
             }
 
             if (viewId != 0) {
-                id = viewId
+                root.id = viewId
             }
         }
     }

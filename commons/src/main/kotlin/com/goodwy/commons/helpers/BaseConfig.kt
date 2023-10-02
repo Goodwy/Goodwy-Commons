@@ -8,8 +8,14 @@ import com.goodwy.commons.R
 import com.goodwy.commons.extensions.getInternalStoragePath
 import com.goodwy.commons.extensions.getSDCardPath
 import com.goodwy.commons.extensions.getSharedPrefs
+import com.goodwy.commons.extensions.sharedPreferencesCallback
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.LinkedList
+import java.util.Locale
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.filterNotNull
+import kotlin.reflect.KProperty0
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()
@@ -466,9 +472,13 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(BLOCK_UNKNOWN_NUMBERS, false)
         set(blockUnknownNumbers) = prefs.edit().putBoolean(BLOCK_UNKNOWN_NUMBERS, blockUnknownNumbers).apply()
 
+    val isBlockingUnknownNumbers: Flow<Boolean> = ::blockUnknownNumbers.asFlowNonNull()
+
     var blockHiddenNumbers: Boolean
         get() = prefs.getBoolean(BLOCK_HIDDEN_NUMBERS, false)
         set(blockHiddenNumbers) = prefs.edit().putBoolean(BLOCK_HIDDEN_NUMBERS, blockHiddenNumbers).apply()
+
+    val isBlockingHiddenNumbers: Flow<Boolean> = ::blockHiddenNumbers.asFlowNonNull()
 
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, 1) //context.resources.getInteger(R.integer.default_font_size)
@@ -605,6 +615,18 @@ open class BaseConfig(val context: Context) {
     var lastAutoBackupTime: Long
         get() = prefs.getLong(LAST_AUTO_BACKUP_TIME, 0L)
         set(lastAutoBackupTime) = prefs.edit().putLong(LAST_AUTO_BACKUP_TIME, lastAutoBackupTime).apply()
+
+    var passwordRetryCount: Int
+        get() = prefs.getInt(PASSWORD_RETRY_COUNT, 0)
+        set(passwordRetryCount) = prefs.edit().putInt(PASSWORD_RETRY_COUNT, passwordRetryCount).apply()
+
+    var passwordCountdownStartMs: Long
+        get() = prefs.getLong(PASSWORD_COUNTDOWN_START_MS, 0L)
+        set(passwordCountdownStartMs) = prefs.edit().putLong(PASSWORD_COUNTDOWN_START_MS, passwordCountdownStartMs).apply()
+
+    protected fun <T> KProperty0<T>.asFlow(): Flow<T?> = prefs.run { sharedPreferencesCallback { this@asFlow.get() } }
+
+    protected fun <T> KProperty0<T>.asFlowNonNull(): Flow<T> = asFlow().filterNotNull()
 
     //Goodwy
     var settingsIcon: Int

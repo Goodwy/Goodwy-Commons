@@ -100,7 +100,7 @@
     <string name="increase_column_count">显示更多项目</string>
     <string name="reduce_column_count">显示更少项目</string>
     <string name="column_count">列数</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">行数</string>
     <string name="portrait_column_count">垂直列数</string>
     <string name="landscape_column_count">水平列数</string>
     <string name="change_cover_image">更换封面图片</string>
@@ -129,6 +129,12 @@
     <string name="block_hidden_messages">拦截来自隐藏号码的短信</string>
     <string name="add_blocked_number_helper_text">输入号码或模式（例如 *12345*、+1*8888）以阻止来自匹配模式的号码的所有来电和消息。</string>
     <string name="must_make_default_caller_id_app">要拦截未知号码，你必须将应用设为默认的来电显示和骚扰电话屏蔽应用。</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">已封禁联系人</string>
+    <string name="block_contact_fail">无法封禁联系人</string>
+    <string name="unblock_contact">取消封禁联系人</string>
+    <string name="unblock_contact_success">已取消封禁联系人</string>
+    <string name="unblock_contact_fail">无法取消封禁联系人</string>
     <!-- Favorites -->
     <string name="favorites">收藏</string>
     <string name="add_favorites">添加收藏</string>
@@ -168,12 +174,16 @@
     <string name="no_audio_permissions">请授予音频权限</string>
     <string name="no_permission">无权限</string>
     <string name="allow_notifications_reminders">你必须允许应用展示通知，否则它无法显示提醒。</string>
+    <string name="allow_full_screen_notifications_reminders">你必须允许应用展示全屏通知，不然你可能错失某些通知。</string>
     <string name="allow_notifications_files">你必须允许应用展示通知，否则它无法显示进度条。</string>
     <string name="allow_notifications_music_player">你必须允许应用展示通知，否则它无法播放歌曲。</string>
     <string name="allow_notifications_voice_recorder">你必须允许应用展示通知，否则它无法录音。</string>
     <string name="allow_notifications_incoming_calls">你必须允许应用展示通知，否则它无法显示来电。</string>
+    <string name="allow_full_screen_notifications_incoming_calls">你必须允许应用展示全屏通知，否则你可能错失某些来电。</string>
     <string name="allow_notifications_incoming_messages">你必须允许应用展示通知，否则它无法显示消息。</string>
     <string name="allow_alarm_scheduled_messages">你必须允许应用访问内部闹铃，否则它无法发送定时消息。</string>
+    <string name="allow_alarm_sleep_timer">你必须允许应用访问内部闹铃，否则它无法在睡眠定时器后关闭应用。</string>
+    <string name="allow_location_permission">你必须允许应用访问你的位置，否则它不知道位置。</string>
     <string name="grant_permission">授予权限</string>
     <string name="permission_required">权限是必需的</string>
     <!-- Renaming -->
@@ -287,6 +297,7 @@
     <string name="select_storage">选择存储器</string>
     <string name="storage">存储</string>
     <string name="internal">内部存储器</string>
+    <string name="internal_storage">内部存储</string>
     <string name="sd_card">SD 卡</string>
     <string name="root">根目录</string>
     <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
@@ -374,6 +385,7 @@
     <string name="unhide_folder">取消隐藏文件夹</string>
     <string name="temporarily_show_hidden">暂时显示隐藏内容</string>
     <string name="stop_showing_hidden">停止显示隐藏的媒体文件</string>
+    <string name="allow_access_more_media">允许访问更多媒体文件</string>
     <string name="maximum_share_reached">您不能一次分享太多的内容</string>
     <string name="empty_and_disable_recycle_bin">清空并禁用回收站</string>
     <string name="undo">撤销</string>
@@ -398,6 +410,10 @@
     <string name="contact_details">联系人详情</string>
     <string name="add_contact">添加联系人</string>
     <string name="wallpapers">壁纸</string>
+    <string name="show_line_numbers">显示行编号</string>
+    <string name="hide_line_numbers">隐藏行编号</string>
+    <string name="sleep_timer">睡眠定时器</string>
+    <string name="unblock">取消封禁</string>
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
     <string name="name">名称</string>
@@ -421,6 +437,7 @@
     <string name="full_name">全名</string>
     <string name="use_custom_sorting">使用自定义排序</string>
     <string name="change_order">更改排序</string>
+    <string name="more_options">更多选项</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
     <string name="deletion_confirmation">您确定要删除 %s？</string>
@@ -443,6 +460,9 @@
     <string name="enter_pin">输入密码</string>
     <string name="please_enter_pin">请输入密码</string>
     <string name="wrong_pin">密码错误</string>
+    <string name="pin_must_be_4_digits_long">PIN 码至少需要 4 个数字</string>
+    <string name="too_many_incorrect_attempts">太多不正确的解锁尝试。
+\n%d 秒后重试。</string>
     <string name="repeat_pin">重复密码</string>
     <string name="pattern">图案</string>
     <string name="insert_pattern">绘制图案</string>

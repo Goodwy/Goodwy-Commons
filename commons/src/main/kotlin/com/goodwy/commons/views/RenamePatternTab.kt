@@ -8,17 +8,17 @@ import android.util.AttributeSet
 import android.widget.RelativeLayout
 import androidx.exifinterface.media.ExifInterface
 import com.goodwy.commons.R
+import com.goodwy.commons.databinding.DialogRenameItemsPatternBinding
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.isNougatPlus
 import com.goodwy.commons.interfaces.RenameTab
 import com.goodwy.commons.models.Android30RenameFormat
 import com.goodwy.commons.models.FileDirItem
-import kotlinx.android.synthetic.main.dialog_rename_items_pattern.view.*
 import java.io.File
 import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.collections.ArrayList
+import java.util.Calendar
+import java.util.Locale
 
 class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
     var ignoreClicks = false
@@ -28,15 +28,18 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
     var activity: BaseSimpleActivity? = null
     var paths = ArrayList<String>()
 
+    private lateinit var binding: DialogRenameItemsPatternBinding
+
     override fun onFinishInflate() {
         super.onFinishInflate()
-        context.updateTextColors(rename_items_holder)
+        binding = DialogRenameItemsPatternBinding.bind(this)
+        context.updateTextColors(binding.renameItemsHolder)
     }
 
     override fun initTab(activity: BaseSimpleActivity, paths: ArrayList<String>) {
         this.activity = activity
         this.paths = paths
-        rename_items_value.setText(activity.baseConfig.lastRenamePatternUsed)
+        binding.renameItemsValue.setText(activity.baseConfig.lastRenamePatternUsed)
     }
 
     override fun dialogConfirmed(useMediaFileExtension: Boolean, callback: (success: Boolean) -> Unit) {
@@ -45,7 +48,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             return
         }
 
-        val newNameRaw = rename_items_value.value
+        val newNameRaw = binding.renameItemsValue.value
         if (newNameRaw.isEmpty()) {
             callback(false)
             return
@@ -59,7 +62,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             return
         }
 
-        activity?.baseConfig?.lastRenamePatternUsed = rename_items_value.value
+        activity?.baseConfig?.lastRenamePatternUsed = binding.renameItemsValue.value
         activity?.handleSAFDialog(sdFilePath) {
             if (!it) {
                 return@handleSAFDialog
@@ -132,7 +135,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             val minutes = (cal.get(Calendar.MINUTE)).ensureTwoDigits()
             val seconds = (cal.get(Calendar.SECOND)).ensureTwoDigits()
 
-            var newName = rename_items_value.value
+            var newName = binding.renameItemsValue.value
                 .replace("%Y", year, false)
                 .replace("%M", month, false)
                 .replace("%D", day, false)
@@ -211,12 +214,14 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                                     activity.scanPathsRecursively(arrayListOf(newPath))
                                 }
                             }
+
                             Android30RenameFormat.CONTENT_RESOLVER -> {
                                 val values = ContentValues().apply {
                                     put(MediaStore.Images.Media.DISPLAY_NAME, newFileName)
                                 }
                                 context.contentResolver.update(uri, values, null, null)
                             }
+
                             Android30RenameFormat.NONE -> {
                                 activity.runOnUiThread {
                                     callback(true)

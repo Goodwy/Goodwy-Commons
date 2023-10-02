@@ -3,8 +3,8 @@ package com.goodwy.commons.dialogs
 import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import com.goodwy.commons.R
+import com.goodwy.commons.databinding.DialogSettingsIconBinding
 import com.goodwy.commons.extensions.*
-import kotlinx.android.synthetic.main.dialog_settings_icon.view.*
 
 class SettingsIconDialog(val activity: Activity, val callback: (newValue: Any) -> Unit) {
 
@@ -12,7 +12,7 @@ class SettingsIconDialog(val activity: Activity, val callback: (newValue: Any) -
     private var wasInit = false
 
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_settings_icon, null).apply {
+        val view = DialogSettingsIconBinding.inflate(activity.layoutInflater, null, false).apply {
             arrayOf(icon1, icon2, icon3, icon4, icon5, icon6).forEach {
                 it.applyColorFilter(activity.getProperTextColor())
             }
@@ -38,7 +38,7 @@ class SettingsIconDialog(val activity: Activity, val callback: (newValue: Any) -
             .setPositiveButton(R.string.ok, null)
 
         builder.apply {
-            activity.setupDialogStuff(view, this, R.string.settings_icon, cancelOnTouchOutside = true) { alertDialog ->
+            activity.setupDialogStuff(view.root, this, R.string.settings_icon, cancelOnTouchOutside = true) { alertDialog ->
                 dialog = alertDialog
             }
         }

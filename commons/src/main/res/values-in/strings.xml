@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Masukkan nomor atau pola (mis. *12345*, +62*8888) untuk memblokir semua panggilan dan pesan dari nomor yang sesuai dengan pola.</string>
     <string name="must_make_default_caller_id_app">Tidak dapat memblokir nomor yang tidak diketahui tanpa izin ID pemanggil.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">Favorit</string>
     <string name="add_favorites">Tambah favorit</string>
@@ -170,12 +176,16 @@
     <string name="no_audio_permissions">Izin audio diperlukan</string>
     <string name="no_permission">Tidak ada izin</string>
     <string name="allow_notifications_reminders">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya bisa menampilkan pengingat.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat menampilkan bilah proses.</string>
     <string name="allow_notifications_music_player">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat memutar lagu.</string>
     <string name="allow_notifications_voice_recorder">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat merekam audio.</string>
     <string name="allow_notifications_incoming_calls">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat menampilkan panggilan masuk.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">Anda harus memperbolehkan aplikasi untuk menampilkan notifikasi supaya dapat menampilkan pesan masuk.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Berikan Izin</string>
     <string name="permission_required">Izin Dibutuhkan</string>
     <!-- Renaming -->
@@ -289,6 +299,7 @@
     <string name="select_storage">Pilih penyimpanan</string>
     <string name="storage">Penyimpanan</string>
     <string name="internal">Internal</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">Kartu SD</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Folder salah, silakan pilih folder root kartu SD anda</string>
@@ -376,6 +387,7 @@
     <string name="unhide_folder">Tampilkan folder</string>
     <string name="temporarily_show_hidden">Sementara tampilkan yang tersembunyi</string>
     <string name="stop_showing_hidden">Berhenti tampilkan media tersembunyi</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">Anda tidak bisa membagikan konten sebanyak ini sekaligus</string>
     <string name="empty_and_disable_recycle_bin">Kosongkan dan nonaktifkan Keranjang Sampah</string>
     <string name="undo">Urungkan</string>
@@ -400,6 +412,10 @@
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
     <string name="wallpapers">Wallpaper</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">Timer tidur</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">Urutkan menurut</string>
     <string name="name">Nama</string>
@@ -423,6 +439,7 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Gunakan urutan khusus</string>
     <string name="change_order">Ubah urutan</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Apakah anda yakin ingin melanjutkan penghapusan?</string>
     <string name="deletion_confirmation">Apakah anda yakin ingin menghapus %s?</string>
@@ -445,6 +462,8 @@
     <string name="enter_pin">Masukkan PIN</string>
     <string name="please_enter_pin">Silakan masukkan PIN</string>
     <string name="wrong_pin">PIN salah</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">Ulangi PIN</string>
     <string name="pattern">Pola</string>
     <string name="insert_pattern">Masukkan pola</string>

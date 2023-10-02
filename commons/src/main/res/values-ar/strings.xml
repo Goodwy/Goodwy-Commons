@@ -100,7 +100,7 @@
     <string name="increase_column_count">زيادة عدد الأعمدة</string>
     <string name="reduce_column_count">تقليل عدد الأعمدة</string>
     <string name="column_count">عدد الأعمدة</string>
-    <string name="row_count">Row count</string>
+    <string name="row_count">عدد الصفوف</string>
     <string name="portrait_column_count">عدد الأعمدة الرأسية</string>
     <string name="landscape_column_count">عدد الأعمدة الأفقية</string>
     <string name="change_cover_image">تغيير صورة الغلاف</string>
@@ -139,6 +139,12 @@
     <string name="block_hidden_messages">حظر الرسائل من الأرقام المخفية</string>
     <string name="add_blocked_number_helper_text">أدخل رقما أو نمطا (على سبيل المثال، *12345*، +1*8888) لحظر جميع المكالمات والرسائل من الأرقام المطابقة للنمط.</string>
     <string name="must_make_default_caller_id_app">لا يمكن حظر الأرقام غير المعروفة دون إذن معرف المتصل.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">تم حظر جهة الاتصال</string>
+    <string name="block_contact_fail">لا يمكن حظر جهة الاتصال</string>
+    <string name="unblock_contact">إلغاء حظر جهة الاتصال</string>
+    <string name="unblock_contact_success">تم إلغاء حظر جهة الاتصال</string>
+    <string name="unblock_contact_fail">لا يمكن إلغاء حظر جهة الاتصال</string>
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>
     <string name="add_favorites">إضافة مفضلة</string>
@@ -178,12 +184,16 @@
     <string name="no_audio_permissions">مطلوب إذن الصوت</string>
     <string name="no_permission">لاتوجد صلاحيات</string>
     <string name="allow_notifications_reminders">يجب أن تسمح للتطبيقات لعرض الإخطارات ، أو أنها لن تكون قادرة على عرض تذكير .</string>
+    <string name="allow_full_screen_notifications_reminders">يجب أن تسمح للتطبيق بأن يظهر اشعارات الشاشة كاملة، وإلا قد تفوتك بعض التذكيرات.</string>
     <string name="allow_notifications_files">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار شريط التقدم.</string>
     <string name="allow_notifications_music_player">يجب أن تسمح للتطبيق بعرض الإخطارات ، أو أنه لن يكون قادرا على تشغيل الموسيقى.</string>
     <string name="allow_notifications_voice_recorder">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من تسجيل الصوت.</string>
     <string name="allow_notifications_incoming_calls">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار المكالمات الواردة.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">يجب أن تسمح للتطبيق بأن يظهر إخطارات الشاشة كاملة وإلا قد تفوتك بعض المكالمات الواردة.</string>
     <string name="allow_notifications_incoming_messages">يجب أن تسمح للتطبيق بعرض الإشعارات ، وإلا فلن يتمكن من إظهار الرسائل الواردة.</string>
     <string name="allow_alarm_scheduled_messages">يجب أن تسمح للتطبيق بالوصول إلى التنبيهات الداخلية ، وإلا فلن يتمكن من إرسال رسائل مجدولة.</string>
+    <string name="allow_alarm_sleep_timer">يجب عليك السماح للتطبيق بالوصول إلى المنبهات الداخلية، وإلا فلن يتمكن من إيقاف تشغيل التطبيق بعد مؤقت النوم.</string>
+    <string name="allow_location_permission">يجب أن تسمح للتطبيق بالوصول إلى موقعك ، وإلا فلن يعرفه.</string>
     <string name="grant_permission">منح الإذن</string>
     <string name="permission_required">الإذن مطلوب</string>
     <!-- Renaming -->
@@ -316,6 +326,7 @@
     <string name="select_storage">حدد وحدة التخزين</string>
     <string name="storage">التخزين</string>
     <string name="internal">وحدة التخزين الداخلية</string>
+    <string name="internal_storage">وحدة التخزين الداخلية</string>
     <string name="sd_card">بطاقة الذاكرة (SD)</string>
     <string name="root">الروت</string>
     <string name="wrong_root_selected">تم تحديد مجلد خاطئ ، يرجى تحديد المجلد الأصلي لبطاقة الذاكرة (SD)</string>
@@ -405,6 +416,7 @@
     <string name="unhide_folder">إظهار المجلد</string>
     <string name="temporarily_show_hidden">إظهار المخفي مؤقتاً</string>
     <string name="stop_showing_hidden">إيقاف عرض الوسائط المخفية</string>
+    <string name="allow_access_more_media">السماح بالوصول إلى المزيد من الوسائط</string>
     <string name="maximum_share_reached">لا يمكنك مشاركة هذا المحتوى الكبير مرة واحدة</string>
     <string name="empty_and_disable_recycle_bin">إفراغ "سلة المحذوفات" وتعطيلها</string>
     <string name="undo">تراجع</string>
@@ -429,6 +441,10 @@
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
     <string name="wallpapers">خلفيات</string>
+    <string name="show_line_numbers">إظهار خطوط الأرقام</string>
+    <string name="hide_line_numbers">إظهار خطوط الأرقام</string>
+    <string name="sleep_timer">مؤقت النوم</string>
+    <string name="unblock">إلغاء الحظر</string>
     <!-- Sorting -->
     <string name="sort_by">فرز حسب</string>
     <string name="name">الإسم</string>
@@ -452,6 +468,7 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">استخدم الفرز المخصص</string>
     <string name="change_order">تغيير الترتيب</string>
+    <string name="more_options">المزيد من الخيارات</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">هل تريد بالتأكيد متابعة عملية الحذف ؟</string>
     <string name="deletion_confirmation">هل تريد بالتأكيد حذف%s ؟</string>
@@ -479,6 +496,9 @@
     <string name="enter_pin">ادخل رمز الـ PIN</string>
     <string name="please_enter_pin">يرجى إدخال رمز الـ PIN</string>
     <string name="wrong_pin">رمز الـ PIN غير صحيح</string>
+    <string name="pin_must_be_4_digits_long">PIN يجب أن يكون على الأقل 4 أرقام طويلة</string>
+    <string name="too_many_incorrect_attempts">عدد كبير جدًا من محاولات إلغاء القفل غير الصحيحة.
+\nحاول مرة أخرى خلال %d ثانية.</string>
     <string name="repeat_pin">تكرار رمز الـ PIN</string>
     <string name="pattern">النمط</string>
     <string name="insert_pattern">إدراج النمط</string>

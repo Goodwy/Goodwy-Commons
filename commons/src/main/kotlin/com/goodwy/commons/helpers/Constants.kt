@@ -207,6 +207,12 @@ const val AUTO_BACKUP = "auto_backup"
 const val AUTO_BACKUP_FOLDER = "auto_backup_folder"
 const val AUTO_BACKUP_FILENAME = "auto_backup_filename"
 const val LAST_AUTO_BACKUP_TIME = "last_auto_backup_time"
+const val PASSWORD_RETRY_COUNT = "password_retry_count"
+const val PASSWORD_COUNTDOWN_START_MS = "password_count_down_start_ms"
+
+const val MAX_PASSWORD_RETRY_COUNT = 3
+const val DEFAULT_PASSWORD_COUNTDOWN = 5
+const val MINIMUM_PIN_LENGTH = 4
 //Goodwy
 const val SETTINGS_ICON = "settings_icon"
 const val SCREEN_SLIDE_ANIMATION = "Screen_slide_animation"
@@ -228,9 +234,9 @@ const val LINES_COUNT = "lines_count"
 const val SHOW_BLOCK_NUMBERS = "show_blocked_numbers"
 const val SHOW_BUTTON_BLOCK_NUMBERS = "show_button_blocked_numbers"
 const val FLASH_FOR_ALERTS = "flash_for_alerts"
+const val RU_STORE = "ru_store"
 
 // contact grid view constants
-const val CONTACTS_GRID_MIN_COLUMNS_COUNT = 1
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
 
 // phone number/email types
@@ -359,6 +365,10 @@ const val PERMISSION_POST_NOTIFICATIONS = 17
 const val PERMISSION_READ_MEDIA_IMAGES = 18
 const val PERMISSION_READ_MEDIA_VIDEO = 19
 const val PERMISSION_READ_MEDIA_AUDIO = 20
+const val PERMISSION_ACCESS_COARSE_LOCATION = 21
+const val PERMISSION_ACCESS_FINE_LOCATION = 22
+const val PERMISSION_READ_MEDIA_VISUAL_USER_SELECTED = 23
+const val PERMISSION_READ_SYNC_SETTINGS = 24
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
@@ -560,6 +570,9 @@ fun isSPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.TIRAMISU)
 fun isTiramisuPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+fun isUpsideDownCakePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
+
 fun getDateFormats() = arrayListOf(
     "--MM-dd",
     "yyyy-MM-dd",
@@ -633,6 +646,8 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
         put("ogg", R.drawable.ic_file_ogg)
         put("pdf", R.drawable.ic_file_pdf)
         put("plproj", R.drawable.ic_file_plproj)
+        put("ppt", R.drawable.ic_file_ppt)
+        put("pptx", R.drawable.ic_file_ppt)
         put("prproj", R.drawable.ic_file_prproj)
         put("psd", R.drawable.ic_file_psd)
         put("rtf", R.drawable.ic_file_rtf)
@@ -644,6 +659,7 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
         put("wav", R.drawable.ic_file_wav)
         put("wmv", R.drawable.ic_file_wmv)
         put("xls", R.drawable.ic_file_xls)
+        put("xlsx", R.drawable.ic_file_xls)
         put("xml", R.drawable.ic_file_xml)
         put("zip", R.drawable.ic_file_zip)
     }.forEach { (key, value) ->

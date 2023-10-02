@@ -2,49 +2,61 @@ package com.goodwy.commons.views
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.RelativeLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.biometric.auth.AuthPromptHost
 import com.goodwy.commons.R
+import com.goodwy.commons.databinding.TabPinBinding
 import com.goodwy.commons.extensions.*
+import com.goodwy.commons.helpers.MINIMUM_PIN_LENGTH
 import com.goodwy.commons.helpers.PROTECTION_PIN
+import com.goodwy.commons.interfaces.BaseSecurityTab
 import com.goodwy.commons.interfaces.HashListener
-import com.goodwy.commons.interfaces.SecurityTab
-import kotlinx.android.synthetic.main.tab_pin.view.*
 import java.math.BigInteger
 import java.security.MessageDigest
-import java.util.*
+import java.util.Locale
 
-class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), SecurityTab {
-    private var hash = ""
-    private var requiredHash = ""
+class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, attrs) {
     private var pin = ""
-    lateinit var hashListener: HashListener
+
+    private lateinit var binding: TabPinBinding
+
+    override val protectionType = PROTECTION_PIN
+    override val defaultTextRes = R.string.enter_pin
+    override val wrongTextRes = R.string.wrong_pin
+    override val titleTextView: TextView
+        get() = binding.pinLockTitle
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        context.updateTextColors(pin_lock_holder)
+        binding = TabPinBinding.bind(this)
 
-        pin_0.setOnClickListener { addNumber("0") }
-        pin_1.setOnClickListener { addNumber("1") }
-        pin_2.setOnClickListener { addNumber("2") }
-        pin_3.setOnClickListener { addNumber("3") }
-        pin_4.setOnClickListener { addNumber("4") }
-        pin_5.setOnClickListener { addNumber("5") }
-        pin_6.setOnClickListener { addNumber("6") }
-        pin_7.setOnClickListener { addNumber("7") }
-        pin_8.setOnClickListener { addNumber("8") }
-        pin_9.setOnClickListener { addNumber("9") }
-        pin_c.setOnClickListener { clear() }
-        pin_c.setOnLongClickListener { resetPin(); true }
-        pin_c.applyColorFilter(context.getProperTextColor())
-        pin_ok.setOnClickListener { confirmPIN() }
-        pin_ok.applyColorFilter(context.getProperTextColor())
+        val textColor = context.getProperTextColor()
+        context.updateTextColors(binding.pinLockHolder)
+
+        binding.pin0.setOnClickListener { addNumber("0") }
+        binding.pin1.setOnClickListener { addNumber("1") }
+        binding.pin2.setOnClickListener { addNumber("2") }
+        binding.pin3.setOnClickListener { addNumber("3") }
+        binding.pin4.setOnClickListener { addNumber("4") }
+        binding.pin5.setOnClickListener { addNumber("5") }
+        binding.pin6.setOnClickListener { addNumber("6") }
+        binding.pin7.setOnClickListener { addNumber("7") }
+        binding.pin8.setOnClickListener { addNumber("8") }
+        binding.pin9.setOnClickListener { addNumber("9") }
+        binding.pinC.setOnClickListener { clear() }
+        binding.pinC.setOnLongClickListener { resetPin(); true }
+        binding.pinC.applyColorFilter(textColor)
+        binding.pinOk.setOnClickListener { confirmPIN() }
+        binding.pinOk.applyColorFilter(textColor)
+        binding.pinLockIcon.applyColorFilter(textColor)
+        maybeShowCountdown()
 
         arrayOf(
-            pin_1, pin_2, pin_3,
-            pin_4, pin_5, pin_6,
-            pin_7, pin_8, pin_9,
-            pin_0//, pin_c, pin_ok
+            binding.pin1, binding.pin2, binding.pin3,
+            binding.pin4, binding.pin5, binding.pin6,
+            binding.pin7, binding.pin8, binding.pin9,
+            binding.pin0//, binding.pinC, binding.pinOk
         ).forEach {
             if (context.baseConfig.isUsingSystemTheme) {
                 it.background.applyColorFilter(context.getProperBackgroundColor())
@@ -53,7 +65,6 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
             } else {
                 it.background.applyColorFilter(context.getBottomNavigationBackgroundColor())
             }
-            //it.background.applyColorFilter(context.getBottomNavigationBackgroundColor())
         }
     }
 
@@ -65,15 +76,18 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         showBiometricAuthentication: Boolean
     ) {
         this.requiredHash = requiredHash
-        hash = requiredHash
+        computedHash = requiredHash
         hashListener = listener
     }
 
     private fun addNumber(number: String) {
-        if (pin.length < 10) {
-            pin += number
-            updatePinCode()
+        if (!isLockedOut()) {
+            if (pin.length < 10) {
+                pin += number
+                updatePinCode()
+            }
         }
+
         performHapticFeedback()
     }
 
@@ -86,47 +100,59 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
     }
 
     private fun confirmPIN() {
-        val newHash = getHashedPin()
-        if (pin.isEmpty()) {
-            context.toast(R.string.please_enter_pin)
-        } else if (hash.isEmpty()) {
-            hash = newHash
-            resetPin()
-            pin_lock_title.setText(R.string.repeat_pin)
-        } else if (hash == newHash) {
-            hashListener.receivedHash(hash, PROTECTION_PIN)
-        } else {
-            resetPin()
-            context.toast(R.string.wrong_pin)
-            if (requiredHash.isEmpty()) {
-                hash = ""
-                pin_lock_title.setText(R.string.enter_pin)
+        if (!isLockedOut()) {
+            val newHash = getHashedPin()
+            when {
+                pin.isEmpty() -> {
+                    context.toast(id = R.string.please_enter_pin, length = Toast.LENGTH_LONG)
+                }
+
+                computedHash.isEmpty() && pin.length < MINIMUM_PIN_LENGTH -> {
+                    resetPin()
+                    context.toast(id = R.string.pin_must_be_4_digits_long, length = Toast.LENGTH_LONG)
+                }
+
+                computedHash.isEmpty() -> {
+                    computedHash = newHash
+                    resetPin()
+                    binding.pinLockTitle.setText(R.string.repeat_pin)
+                }
+
+                computedHash == newHash -> {
+                    onCorrectPassword()
+                }
+
+                else -> {
+                    resetPin()
+                    onIncorrectPassword()
+                    if (requiredHash.isEmpty()) {
+                        computedHash = ""
+                    }
+                }
             }
         }
+
         performHapticFeedback()
     }
 
     private fun resetPin() {
         pin = ""
-        pin_lock_current_pin.text = ""
+        binding.pinLockCurrentPin.text = ""
         updateButton()
     }
 
     private fun updatePinCode() {
-        pin_lock_current_pin.text = "*".repeat(pin.length)
-        if (hash.isNotEmpty() && hash == getHashedPin()) {
-            hashListener.receivedHash(hash, PROTECTION_PIN)
-        }
+        binding.pinLockCurrentPin.text = "*".repeat(pin.length)
         updateButton()
     }
 
     private fun updateButton() {
         if (pin.isNotEmpty()) {
-            pin_ok.beVisible()
-            pin_c.beVisible()
+            binding.pinOk.beVisible()
+            binding.pinC.beVisible()
         } else {
-            pin_ok.beInvisible()
-            pin_c.beInvisible()
+            binding.pinOk.beInvisible()
+            binding.pinC.beInvisible()
         }
     }
 
@@ -137,6 +163,4 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         val bigInteger = BigInteger(1, digest)
         return String.format(Locale.getDefault(), "%0${digest.size * 2}x", bigInteger).lowercase(Locale.getDefault())
     }
-
-    override fun visibilityChanged(isVisible: Boolean) {}
 }

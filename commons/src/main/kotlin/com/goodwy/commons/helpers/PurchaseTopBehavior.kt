@@ -6,29 +6,32 @@ import android.view.View
 import android.view.animation.LinearInterpolator
 import com.behaviorule.arturdumchev.library.*
 import com.goodwy.commons.R
+import com.goodwy.commons.databinding.ActivityPurchaseBinding
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import kotlinx.android.synthetic.main.activity_purchase.view.*
-import kotlinx.android.synthetic.main.top_view_purchase.view.*
 
 class PurchaseTopBehavior(
     context: Context?,
     attrs: AttributeSet?
 ) : BehaviorByRules(context, attrs) {
+    private lateinit var binding: ActivityPurchaseBinding
 
     override fun calcAppbarHeight(child: View): Int = with(child) {
         return height
     }
 
-    override fun View.provideAppbar(): AppBarLayout = purchase_app_bar_layout
-    override fun View.provideCollapsingToolbar(): CollapsingToolbarLayout = collapsing_toolbar
+    override fun View.provideAppbar(): AppBarLayout {
+        binding = ActivityPurchaseBinding.bind(this)
+        return  binding.purchaseAppBarLayout
+    }
+    override fun View.provideCollapsingToolbar(): CollapsingToolbarLayout = binding.collapsingToolbar
     override fun canUpdateHeight(progress: Float): Boolean = progress >= GONE_VIEW_THRESHOLD
 
     override fun View.setUpViews(): List<RuledView> {
         val height = height
         return listOf(
             RuledView(
-                top_details,
+                binding.topDetails.root,
                 BRuleYOffset(
                     min = -(height/4).toFloat(),
                     max = pixels(R.dimen.zero),
@@ -36,7 +39,7 @@ class PurchaseTopBehavior(
                 )
             ),
             RuledView(
-                app_logo,
+                binding.topDetails.appLogo,
                 BRuleXOffset(
                     min = 0f, max = pixels(R.dimen.purchase_image_right_margin),
                     interpolator = ReverseInterpolator(LinearInterpolator())
@@ -48,7 +51,7 @@ class PurchaseTopBehavior(
                 BRuleScale(min = 0.5f, max = 1f)
             ),
             RuledView(
-                purchase_apps,
+                binding.topDetails.purchaseApps,
                 BRuleXOffset(
                     min = 0f, max = pixels(R.dimen.purchase_name_right_margin),
                     interpolator = ReverseInterpolator(LinearInterpolator())

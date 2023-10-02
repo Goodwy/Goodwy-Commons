@@ -2,10 +2,23 @@ package com.goodwy.commons.dialogs
 
 import android.app.Activity
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.DialogProperties
 import com.goodwy.commons.R
+import com.goodwy.commons.compose.alert_dialog.AlertDialogState
+import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.databinding.DialogMessageBinding
 import com.goodwy.commons.extensions.getAlertDialogBuilder
 import com.goodwy.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_message.view.*
 
 /**
  * A simple dialog without any view, just a messageId, a positive button and optionally a negative button
@@ -18,24 +31,29 @@ import kotlinx.android.synthetic.main.dialog_message.view.*
  * @param callback an anonymous function
  */
 class ConfirmationDialog(
-    activity: Activity, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
-    negative: Int = R.string.no, val cancelOnTouchOutside: Boolean = true, dialogTitle: String = "", val callback: () -> Unit
+    activity: Activity,
+    message: String = "",
+    messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
+    negative: Int = R.string.no,
+    val cancelOnTouchOutside: Boolean = true,
+    dialogTitle: String = "",
+    val callback: () -> Unit
 ) {
     private var dialog: AlertDialog? = null
 
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_message, null)
-        view.message.text = if (message.isEmpty()) activity.resources.getString(messageId) else message
+        val view = DialogMessageBinding.inflate(activity.layoutInflater, null, false)
+        view.message.text = message.ifEmpty { activity.resources.getString(messageId) }
 
         val builder = activity.getAlertDialogBuilder()
-            .setPositiveButton(positive) { dialog, which -> dialogConfirmed() }
+            .setPositiveButton(positive) { _, _ -> dialogConfirmed() }
 
         if (negative != 0) {
             builder.setNegativeButton(negative, null)
         }
 
         builder.apply {
-            activity.setupDialogStuff(view, this, titleText = dialogTitle, cancelOnTouchOutside = cancelOnTouchOutside) { alertDialog ->
+            activity.setupDialogStuff(view.root, this, titleText = dialogTitle, cancelOnTouchOutside = cancelOnTouchOutside) { alertDialog ->
                 dialog = alertDialog
             }
         }
@@ -44,5 +62,75 @@ class ConfirmationDialog(
     private fun dialogConfirmed() {
         callback()
         dialog?.dismiss()
+    }
+}
+
+@Composable
+fun ConfirmationAlertDialog(
+    modifier: Modifier = Modifier,
+    alertDialogState: AlertDialogState,
+    message: String = "",
+    messageId: Int = R.string.proceed_with_deletion,
+    positive: Int = R.string.yes,
+    negative: Int = R.string.no,
+    cancelOnTouchOutside: Boolean = true,
+    dialogTitle: String = "",
+    callback: () -> Unit
+) {
+
+    androidx.compose.material3.AlertDialog(
+        containerColor = dialogContainerColor,
+        modifier = modifier
+            .dialogBorder,
+        properties = DialogProperties(dismissOnClickOutside = cancelOnTouchOutside),
+        onDismissRequest = {
+            alertDialogState.hide()
+            callback()
+        },
+        shape = dialogShape,
+        tonalElevation = dialogElevation,
+        dismissButton = {
+            TextButton(onClick = {
+                alertDialogState.hide()
+                callback()
+            }) {
+                Text(text = stringResource(id = negative))
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                alertDialogState.hide()
+                callback()
+            }) {
+                Text(text = stringResource(id = positive))
+            }
+        },
+        title = {
+            if (dialogTitle.isNotBlank() || dialogTitle.isNotEmpty()) {
+                Text(
+                    text = dialogTitle,
+                    color = dialogTextColor,
+                    fontSize = 21.sp,
+                    fontWeight = FontWeight.Bold,
+                )
+            }
+        },
+        text = {
+            Text(
+                modifier = Modifier.fillMaxWidth(),
+                text = message.ifEmpty { stringResource(id = messageId) },
+                fontSize = 16.sp,
+                color = dialogTextColor,
+            )
+        }
+    )
+}
+
+@Composable
+@MyDevices
+private fun ConfirmationAlertDialogPreview() {
+    AppThemeSurface {
+        ConfirmationAlertDialog(alertDialogState = rememberAlertDialogState(),
+            callback = {})
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.goodwy.commons">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <queries>
         <package android:name="com.goodwy.audiobook.debug" />
@@ -60,6 +59,14 @@
             android:exported="false"
             android:label="@string/third_party_licences"
             android:parentActivityName="com.goodwy.commons.activities.AboutActivity" />
+
+        <activity
+            android:name=".activities.ManageBlockedNumbersActivity"
+            android:configChanges="orientation"
+            android:enableOnBackInvokedCallback="true"
+            android:exported="false"
+            android:label="@string/manage_blocked_numbers"
+            tools:targetApi="tiramisu" />
 
         <receiver
             android:name=".receivers.SharedThemeReceiver"

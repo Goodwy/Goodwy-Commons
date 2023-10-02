@@ -1,0 +1,78 @@
+package com.goodwy.commons.compose.settings
+
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import com.goodwy.commons.R
+import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.preferenceLabelColor
+import com.goodwy.commons.compose.theme.preferenceValueColor
+
+@Composable
+fun SettingsPreferenceComponent(
+    modifier: Modifier = Modifier,
+    label: String,
+    value: String? = null,
+    isPreferenceEnabled: Boolean = true,
+    doOnPreferenceLongClick: (() -> Unit)? = null,
+    doOnPreferenceClick: (() -> Unit)? = null,
+    preferenceValueColor: Color = preferenceValueColor(isEnabled = isPreferenceEnabled),
+    preferenceLabelColor: Color = preferenceLabelColor(isEnabled = isPreferenceEnabled)
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .combinedClickable(
+                enabled = isPreferenceEnabled,
+                onClick = { doOnPreferenceClick?.invoke() },
+                onLongClick = { doOnPreferenceLongClick?.invoke() },
+            )
+            .padding(20.dp)
+            .then(modifier),
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = label,
+            modifier = Modifier.fillMaxWidth(),
+            color = preferenceLabelColor,
+            fontSize = with(LocalDensity.current) {
+                dimensionResource(id = R.dimen.normal_text_size).toSp()
+            }
+        )
+        AnimatedVisibility(visible = !value.isNullOrBlank()) {
+            Text(
+                text = value.toString(),
+                modifier = Modifier
+                    .fillMaxWidth(),
+                color = preferenceValueColor,
+                fontSize = with(LocalDensity.current) {
+                    dimensionResource(id = R.dimen.normal_text_size).toSp()
+                }
+            )
+        }
+    }
+}
+
+@MyDevices
+@Composable
+private fun SettingsPreferencePreview() {
+    AppThemeSurface {
+        SettingsPreferenceComponent(
+            label = stringResource(id = R.string.language),
+            value = stringResource(id = R.string.translation_english),
+            isPreferenceEnabled = true,
+        )
+    }
+}

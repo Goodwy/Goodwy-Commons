@@ -7,11 +7,11 @@ import android.util.AttributeSet
 import android.widget.RelativeLayout
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.databinding.TabRenameSimpleBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.interfaces.RenameTab
 import com.goodwy.commons.models.Android30RenameFormat
 import com.goodwy.commons.models.FileDirItem
-import kotlinx.android.synthetic.main.tab_rename_simple.view.*
 import java.io.File
 
 class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
@@ -20,9 +20,12 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
     var activity: BaseSimpleActivity? = null
     var paths = ArrayList<String>()
 
+    private lateinit var binding: TabRenameSimpleBinding
+
     override fun onFinishInflate() {
         super.onFinishInflate()
-        context.updateTextColors(rename_simple_holder)
+        binding = TabRenameSimpleBinding.bind(this)
+        context.updateTextColors(binding.renameSimpleHolder)
     }
 
     override fun initTab(activity: BaseSimpleActivity, paths: ArrayList<String>) {
@@ -32,8 +35,8 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
 
     override fun dialogConfirmed(useMediaFileExtension: Boolean, callback: (success: Boolean) -> Unit) {
         stopLooping = false
-        val valueToAdd = rename_simple_value.text.toString()
-        val append = rename_simple_radio_group.checkedRadioButtonId == rename_simple_radio_append.id
+        val valueToAdd = binding.renameSimpleValue.text.toString()
+        val append = binding.renameSimpleRadioGroup.checkedRadioButtonId == binding.renameSimpleRadioAppend.id
 
         if (valueToAdd.isEmpty()) {
             callback(false)
@@ -165,12 +168,14 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                                     activity.scanPathsRecursively(arrayListOf(newPath))
                                 }
                             }
+
                             Android30RenameFormat.CONTENT_RESOLVER -> {
                                 val values = ContentValues().apply {
                                     put(MediaStore.Images.Media.DISPLAY_NAME, newName)
                                 }
                                 context.contentResolver.update(uri, values, null, null)
                             }
+
                             Android30RenameFormat.NONE -> {
                                 activity.runOnUiThread {
                                     callback(true)

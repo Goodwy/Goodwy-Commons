@@ -131,6 +131,12 @@
     <string name="block_hidden_messages">Block messages from hidden numbers</string>
     <string name="add_blocked_number_helper_text">Enter a number or a pattern (e.g. *12345*, +1*8888) to block all calls and messages from numbers matching the pattern.</string>
     <string name="must_make_default_caller_id_app">Can\'t block unknown numbers without caller ID permission.</string>
+    <string name="block_contact">Block contact</string>
+    <string name="block_contact_success">Contact blocked</string>
+    <string name="block_contact_fail">Contact could not be blocked</string>
+    <string name="unblock_contact">Unblock contact</string>
+    <string name="unblock_contact_success">Contact unblocked</string>
+    <string name="unblock_contact_fail">Contact could not be unblocked</string>
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
     <string name="add_favorites">添加我的最愛</string>
@@ -170,12 +176,16 @@
     <string name="no_audio_permissions">音訊權限是必要的</string>
     <string name="no_permission">No permission</string>
     <string name="allow_notifications_reminders">You must allow the app displaying notifications, else it cannot show reminders.</string>
+    <string name="allow_full_screen_notifications_reminders">You must allow the app displaying full screen notifications, else you may miss some reminders.</string>
     <string name="allow_notifications_files">You must allow the app displaying notifications, else it cannot show the progress bar.</string>
     <string name="allow_notifications_music_player">You must allow the app displaying notifications, else it cannot play songs.</string>
     <string name="allow_notifications_voice_recorder">You must allow the app displaying notifications, else it cannot record audio.</string>
     <string name="allow_notifications_incoming_calls">You must allow the app displaying notifications, else it cannot show incoming calls.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">You must allow the app displaying full screen notifications, else you may miss some incoming calls.</string>
     <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
     <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="allow_alarm_sleep_timer">You must allow the app accessing internal alarms, else it cannot turn off the application after sleep timer.</string>
+    <string name="allow_location_permission">You must allow the app accessing your location, else it won\'t know it.</string>
     <string name="grant_permission">Grant Permission</string>
     <string name="permission_required">Permission Required</string>
     <!-- Renaming -->
@@ -289,6 +299,7 @@
     <string name="select_storage">選擇儲存空間</string>
     <string name="storage">Storage</string>
     <string name="internal">內部儲存空間</string>
+    <string name="internal_storage">Internal Storage</string>
     <string name="sd_card">SD卡</string>
     <string name="root">根目錄</string>
     <string name="wrong_root_selected">選擇了錯誤的資料夾，請選擇SD卡的根目錄</string>
@@ -380,6 +391,7 @@
     <string name="unhide_folder">取消隱藏資料夾</string>
     <string name="temporarily_show_hidden">暫時顯示隱藏的檔案</string>
     <string name="stop_showing_hidden">停止顯示隱藏的檔案</string>
+    <string name="allow_access_more_media">Allow access to more media</string>
     <string name="maximum_share_reached">你不能一次分享這麼多內容</string>
     <string name="empty_and_disable_recycle_bin">清空並停用回收桶</string>
     <string name="undo">復原</string>
@@ -404,6 +416,10 @@
     <string name="contact_details">Contact details</string>
     <string name="add_contact">Add contact</string>
     <string name="wallpapers">Wallpapers</string>
+    <string name="show_line_numbers">Show line numbers</string>
+    <string name="hide_line_numbers">Hide line numbers</string>
+    <string name="sleep_timer">睡眠定時器</string>
+    <string name="unblock">Unblock</string>
     <!-- Sorting -->
     <string name="sort_by">排序</string>
     <string name="name">名稱</string>
@@ -427,6 +443,7 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
+    <string name="more_options">More options</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">確定要進行刪除嗎?</string>
     <string name="deletion_confirmation">你確定要刪除%s嗎?</string>
@@ -449,6 +466,8 @@
     <string name="enter_pin">輸入PIN碼</string>
     <string name="please_enter_pin">請輸入PIN碼</string>
     <string name="wrong_pin">PIN碼錯誤</string>
+    <string name="pin_must_be_4_digits_long">PIN must be at least 4 digits long</string>
+    <string name="too_many_incorrect_attempts">Too many incorrect unlock attempts.\nTry again in %d seconds.</string>
     <string name="repeat_pin">再次輸入PIN碼</string>
     <string name="pattern">圖形</string>
     <string name="insert_pattern">畫出解鎖圖形</string>
@@ -661,7 +680,7 @@
     <string name="exclude">排除</string>
     <string name="exclude_folder">Exclude folder</string>
     <string name="excluded_folders">排除資料夾</string>
-    <string name="excluded">(排除)</string>
+    <string name="excluded">(已排除)</string>
     <string name="manage_excluded_folders">管理排除資料夾</string>
     <string name="remove_all">移除全部</string>
     <string name="remove_all_description">是否將排除列表中的所有資料夾都移除？這不會刪除資料夾。</string>

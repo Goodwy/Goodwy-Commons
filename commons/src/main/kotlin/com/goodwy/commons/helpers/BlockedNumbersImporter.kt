@@ -1,13 +1,13 @@
 package com.goodwy.commons.helpers
 
+import android.app.Activity
 import android.telephony.PhoneNumberUtils
-import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.addBlockedNumber
 import com.goodwy.commons.extensions.showErrorToast
 import java.io.File
 
 class BlockedNumbersImporter(
-    private val activity: BaseSimpleActivity,
+    private val activity: Activity,
 ) {
     enum class ImportResult {
         IMPORT_FAIL, IMPORT_OK

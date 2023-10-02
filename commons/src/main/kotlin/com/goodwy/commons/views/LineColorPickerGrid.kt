@@ -11,7 +11,12 @@ import com.goodwy.commons.extensions.onGlobalLayout
 import com.goodwy.commons.interfaces.LineColorPickerListener
 import java.util.*
 
-class LineColorPickerGrid(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
+
+class LineColorPickerGrid @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyle: Int = 0
+) : LinearLayout(context, attrs, defStyle) {
     private var colorsCount = 0
     private var pickerWidth = 0
     private var stripeWidth = 0

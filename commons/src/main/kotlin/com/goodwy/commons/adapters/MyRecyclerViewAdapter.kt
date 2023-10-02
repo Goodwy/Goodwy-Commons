@@ -92,7 +92,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
                 //if (baseConfig.isUsingSystemTheme) {
                     actBarTextView?.onGlobalLayout {
-                        val backArrow = activity.findViewById<ImageView>(R.id.action_mode_close_button)
+                        val backArrow = activity.findViewById<ImageView>(androidx.appcompat.R.id.action_mode_close_button)
                         backArrow?.applyColorFilter(bgColor.getContrastColor())
                     }
                 //}
@@ -299,6 +299,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     protected fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
         val view = layoutInflater.inflate(layoutType, parent, false)
+        return ViewHolder(view)
+    }
+
+    protected fun createViewHolder(view: View): ViewHolder {
         return ViewHolder(view)
     }
 
