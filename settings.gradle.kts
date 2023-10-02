@@ -10,8 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { setUrl("https://jitpack.io") }
         maven { url = uri("https://artifactory-external.vkpartner.ru/artifactory/maven") }
+        maven { setUrl("https://jitpack.io") }
     }
 }
 rootProject.name = "Goodwy-Commons"
