@@ -63,7 +63,7 @@ android {
 
 publishing.publications {
     create<MavenPublication>("release") {
-        groupId = libs.versions.app.version.groupId.get()
+        groupId = "Goodwy"
         artifactId = "Goodwy-Commons"
         version = libs.versions.app.version.versionName.get()
 //        afterEvaluate {
