@@ -57,7 +57,7 @@ app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
 #versioning
 app-version-appId = "com.goodwy.commons"
-app-version-groupId = "com.github.Goodwy"
+app-version-groupId = "com.goodwy.commons"
 app-version-versionCode = "420"
 app-version-versionName = "4.2.0"
 [libraries]
