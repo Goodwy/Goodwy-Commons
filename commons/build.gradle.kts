@@ -66,9 +66,9 @@ publishing.publications {
         groupId = "Goodwy"
         artifactId = "Goodwy-Commons"
         version = libs.versions.app.version.versionName.get()
-//        afterEvaluate {
-//            from(components["release"])
-//        }
+        afterEvaluate {
+            from(components["release"])
+        }
     }
 }
 
