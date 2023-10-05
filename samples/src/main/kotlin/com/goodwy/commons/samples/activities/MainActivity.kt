@@ -32,8 +32,9 @@ class MainActivity : BaseSimpleActivity() {
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
 
-        updateMaterialActivityViews(binding.mainCoordinator, binding.mainHolder, useTransparentNavigation = true, useTopSearchMenu = true)
-        setupMaterialScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
+        updateMaterialActivityViews(binding.mainCoordinator, null, useTransparentNavigation = true, useTopSearchMenu = true)
+        //setupMaterialScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
+        binding.mainToolbar.updateTitle(getString(com.goodwy.commons.R.string.simple_commons))
 
         binding.mainColorCustomization.setOnClickListener {
             startCustomizationActivity(
@@ -106,7 +107,11 @@ class MainActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.mainToolbar)
+        //setupToolbar(binding.mainToolbar)
+
+        updateStatusbarColor(getProperBackgroundColor())
+        binding.mainToolbar.updateColors()
+
 //        CallConfirmationDialog(this, callee = "Goodwy Common"){
 //
 //        }

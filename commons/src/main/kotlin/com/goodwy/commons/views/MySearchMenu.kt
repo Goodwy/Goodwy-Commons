@@ -113,8 +113,8 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
         (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, backgroundColor)
 
-        binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)
-        binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(context.getBottomNavigationBackgroundColor())
+        binding.topToolbarSearchHolder.setBackgroundResource(R.drawable.search_bg)
+        binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(context.getBottomNavigationBackgroundColor())
         binding.topToolbarSearchClear.applyColorFilter(contrastColor)
     }
 
