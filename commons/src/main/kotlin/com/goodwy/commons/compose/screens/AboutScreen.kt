@@ -315,13 +315,13 @@ internal fun AboutNewSection(
                             modifier = Modifier
                                 .size(68.dp)
                                 .shadow(elevation = 10.dp, shape = RoundedCornerShape(34.dp), clip = true),
-                            painter = painterResource(id = R.mipmap.ic_files),
+                            painter = painterResource(id = R.drawable.ic_launcher),
                             contentDescription = null,
                         )
                         Icon(
                             modifier = Modifier
                                 .size(72.dp),
-                            painter = painterResource(id = R.mipmap.ic_launcher),
+                            painter = painterResource(id = R.drawable.ic_launcher),
                             contentDescription = appName,
                             tint = Color.Unspecified
                         )

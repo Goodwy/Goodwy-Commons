@@ -496,13 +496,13 @@ class PurchaseActivity : BaseSimpleActivity() {
         binding.collectionSubtitle.background.applyColorFilter(getBottomNavigationBackgroundColor())
 
         val items = arrayOf(
-            SimpleListItem(1, R.string.right_dialer, imageRes = R.mipmap.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
-            SimpleListItem(2, R.string.right_contacts, imageRes = R.mipmap.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
-            SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.mipmap.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
-            SimpleListItem(4, R.string.right_gallery, imageRes = R.mipmap.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
-            SimpleListItem(5, R.string.playbook, imageRes = R.mipmap.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
-            //SimpleListItem(6, R.string.right_voice_recorder, R.mipmap.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage),
-            SimpleListItem(5, R.string.right_files, imageRes = R.mipmap.ic_files, selected = appFilesInstalled, packageName = appFilesPackage)
+            SimpleListItem(1, R.string.right_dialer, imageRes = R.drawable.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
+            SimpleListItem(2, R.string.right_contacts, imageRes = R.drawable.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
+            SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.drawable.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
+            SimpleListItem(4, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
+            SimpleListItem(5, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
+            //SimpleListItem(6, R.string.right_voice_recorder, R.drawable.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage),
+            SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage)
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
