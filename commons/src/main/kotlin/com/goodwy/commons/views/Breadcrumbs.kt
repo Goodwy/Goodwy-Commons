@@ -205,7 +205,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
             ItemBreadcrumbBinding.inflate(inflater, itemsLayout, false).apply {
                 var textToAdd = item.name
                 if (addPrefix) {
-                    textToAdd = "> $textToAdd"
+                    textToAdd = "› $textToAdd"
                 }
 
                 isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
