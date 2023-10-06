@@ -455,17 +455,19 @@
         <item name="android:layout_marginTop">@dimen/bigger_margin</item>
         <item name="android:layout_marginStart">@dimen/activity_margin</item>
         <item name="android:layout_marginEnd">@dimen/activity_margin</item>
-        <item name="android:paddingBottom">@dimen/medium_margin</item>
+        <item name="android:paddingStart">@dimen/smaller_margin</item>
+        <item name="android:paddingEnd">@dimen/smaller_margin</item>
+        <item name="android:paddingBottom">@dimen/smaller_margin</item>
         <item name="android:background">@drawable/section_holder</item>
     </style>
 
     <style name="SettingsHolderStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/ripple_all_corners_16dp</item>
-        <item name="android:paddingStart">@dimen/normal_margin</item>
+        <item name="android:background">@drawable/ripple_all_corners_12dp</item>
+        <item name="android:paddingStart">@dimen/smaller_margin</item>
         <item name="android:paddingTop">@dimen/normal_margin</item>
-        <item name="android:paddingEnd">@dimen/normal_margin</item>
+        <item name="android:paddingEnd">@dimen/smaller_margin</item>
         <item name="android:paddingBottom">@dimen/normal_margin</item>
     </style>
 
@@ -473,10 +475,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">48dp</item>
-        <item name="android:background">@drawable/ripple_all_corners_16dp</item>
-        <item name="android:paddingStart">@dimen/normal_margin</item>
+        <item name="android:background">@drawable/ripple_all_corners_12dp</item>
+        <item name="android:paddingStart">@dimen/smaller_margin</item>
         <item name="android:paddingTop">@dimen/medium_margin</item>
-        <item name="android:paddingEnd">@dimen/normal_margin</item>
+        <item name="android:paddingEnd">@dimen/smaller_margin</item>
         <item name="android:paddingBottom">@dimen/medium_margin</item>
     </style>
 
