@@ -98,6 +98,7 @@
                 android:id="@+id/theme_holder"
                 style="@style/SettingsSectionHolder"
                 android:layout_below="@+id/settings_purchase_thank_you_holder"
+                android:layout_marginTop="@dimen/activity_margin"
                 android:paddingTop='@dimen/smaller_margin'
                 android:paddingBottom='@dimen/smaller_margin'
                 android:orientation="vertical">
