@@ -98,19 +98,24 @@
                 android:id="@+id/theme_holder"
                 style="@style/SettingsSectionHolder"
                 android:layout_below="@+id/settings_purchase_thank_you_holder"
-                android:paddingBottom='0dp'
+                android:paddingTop='@dimen/smaller_margin'
+                android:paddingBottom='@dimen/smaller_margin'
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:id="@+id/customization_theme_holder"
                     style="@style/SettingsHolderStyle"
-                    android:background="@drawable/ripple_all_corners_16dp">
+                    android:paddingTop="@dimen/medium_margin"
+                    android:paddingBottom="@dimen/medium_margin"
+                    android:background="@drawable/ripple_all_corners_12dp">
 
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_theme_label"
                         style="@style/SettingsTextLabelStyle"
+                        android:layout_width="match_parent"
                         android:layout_centerVertical="true"
-                        android:layout_marginEnd="68dp"
+                        android:layout_toStartOf="@+id/customization_theme"
+                        android:layout_marginEnd="8dp"
                         android:text="@string/theme" />
 
                     <com.goodwy.commons.views.MyTextView
@@ -125,9 +130,11 @@
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_theme"
                         style="@style/SettingsTextValueStyle"
+                        android:maxWidth="@dimen/settings_value_width_long"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginEnd="@dimen/settings_margin" />
+                        android:layout_marginEnd="@dimen/settings_margin"
+                        tools:text="@string/auto_light_dark_theme" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -136,7 +143,7 @@
                 android:id="@+id/colors_holder"
                 style="@style/SettingsSectionHolder"
                 android:layout_below="@+id/theme_holder"
-                android:paddingTop='@dimen/medium_margin'>
+                android:paddingTop='@dimen/smaller_margin'>
 
                 <RelativeLayout
                     android:id="@+id/customization_primary_color_holder"

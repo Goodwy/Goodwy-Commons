@@ -92,6 +92,7 @@
     <dimen name="top_toolbar_search_height">48dp</dimen>
 
     <dimen name="settings_value_width">108dp</dimen>
+    <dimen name="settings_value_width_long">168dp</dimen>
 
     <dimen name="activity_padding_left_right">0dp</dimen>
 </resources>
