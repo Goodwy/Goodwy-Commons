@@ -45,7 +45,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var ruStoreInstalled = false
     private var showCollection = false
 
-    private var billingIsConnected = false
+    private var ruStoreIsConnected = false
 
     private val purchaseHelper = PurchaseHelper(this)
     private val ruStoreHelper = RuStoreHelper(this)
@@ -168,7 +168,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                             //price update
                             setupButtonRuStore(state)
                             //update pro version
-                            if (billingIsConnected) {
+                            if (ruStoreIsConnected) {
                                 baseConfig.isPro =
                                     state.products.firstOrNull { it.productId == productIdX1 || it.productId == productIdX2 || it.productId == productIdX3 } != null
                                 baseConfig.isProSubs =
@@ -698,7 +698,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     is FeatureAvailabilityResult.Available -> {
                         //Process purchases available
                         updateProducts()
-                        billingIsConnected = true
+                        ruStoreIsConnected = true
                     }
 
                     is FeatureAvailabilityResult.Unavailable -> {
