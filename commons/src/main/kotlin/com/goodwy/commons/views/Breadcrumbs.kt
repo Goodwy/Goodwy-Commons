@@ -208,7 +208,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
                     textToAdd = "› $textToAdd"
                 }
 
-                //isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
+                isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
 
                 breadcrumbText.text = textToAdd
                 breadcrumbText.setTextColor(textColorStateList)
