@@ -68,7 +68,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             val isBlockingHiddenNumbers by config.isBlockingHiddenNumbers.collectAsStateWithLifecycle(initialValue = config.blockHiddenNumbers)
             val isBlockingUnknownNumbers by config.isBlockingUnknownNumbers.collectAsStateWithLifecycle(initialValue = config.blockUnknownNumbers)
             val isDialer = remember {
-                config.appId.startsWith("com.simplemobiletools.dialer")
+                config.appId.startsWith("com.goodwy.dialer")
             }
             val isDefaultDialer: Boolean = onEventValue {
                 context.isDefaultDialer()

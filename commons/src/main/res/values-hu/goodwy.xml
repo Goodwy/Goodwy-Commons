@@ -111,7 +111,7 @@
         Az útmutatót megtalálhatja a https://github.com/Goodwy/Discussion címen, vagy csak írjon egy üzenetet a goodwy.dev@gmail.com, ha segítségre van szüksége.
         ]]>
     </string>
-    <string name="faq_8_text_commons_g">Mivel ezt az alkalmazásverziót már nem frissítjük, az esetleges hibák soha nem lesznek kijavítva, ahogy új funkciókat sem fog kapni az alkalmazás. A Pro verziót egy egyszeri kis összegért megvásárolhatja a Google Play áruházban. Az egyszeri fizetés azt jelenti, hogy ha egyszer megvette, soha többet nem kell fizetnie, még egy új eszközön sem. Ha nem tetszik a Pro verzió, a vásárlás után pár órán belül eltávolítva automatikusan visszakapja az árát. Ha később szeretne visszatérítést, csak írjon nekünk a hello@simplemobiletools.com címre, és meg fogja kapni.</string>
+    <string name="faq_8_text_commons_g">Mivel ezt az alkalmazásverziót már nem frissítjük, az esetleges hibák soha nem lesznek kijavítva, ahogy új funkciókat sem fog kapni az alkalmazás. A Pro verziót egy egyszeri kis összegért megvásárolhatja a Google Play áruházban. Az egyszeri fizetés azt jelenti, hogy ha egyszer megvette, soha többet nem kell fizetnie, még egy új eszközön sem. Ha nem tetszik a Pro verzió, a vásárlás után pár órán belül eltávolítva automatikusan visszakapja az árát. Ha később szeretne visszatérítést, csak írjon nekünk a goodwy.dev@gmail.com címre, és meg fogja kapni.</string>
     <string name="faq_100_title_commons_g">What is a private contact?</string>
     <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
@@ -124,7 +124,7 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-    <string name="deprecated_app_g">ELAVULT: Az alkalmazás ezen verziója már nem fog frissülni, töltse le a Pro verziót a https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro címről</string>
+    <string name="deprecated_app_g">ELAVULT: Az alkalmazás ezen verziója már nem fog frissülni, töltse le a Pro verziót a https://play.google.com/store/apps/details\?id=com.goodwy.xxx.pro címről</string>
     <string name="pro_app_refund_g">Ne felejtse el, hogy ha 2 órán belül eltávolítja a fizetős alkalmazásunkat, akkor automatikusan visszatérítjük az árát. Ha később bármikor mégis visszatérítést szeretne, lépjen kapcsolatba velünk a goodwy.dev@gmail.com címen, és visszakapja. Ez is megkönnyíti a kipróbálást :)</string>
 
     <!-- Contacts -->
