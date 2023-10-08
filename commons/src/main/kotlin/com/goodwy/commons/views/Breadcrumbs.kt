@@ -208,7 +208,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
                     textToAdd = "› $textToAdd"
                 }
 
-                isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
+                //isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
 
                 breadcrumbText.text = textToAdd
                 breadcrumbText.setTextColor(textColorStateList)
@@ -221,7 +221,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
                         if ((v.tag as? FileDirItem)?.path?.trimEnd('/') == lastPath.trimEnd('/')) {
                             scrollToSelectedItem()
                         } else {
-                            //listener?.breadcrumbClicked(index)
+                            listener?.breadcrumbClicked(index)
                         }
                     }
                 }
