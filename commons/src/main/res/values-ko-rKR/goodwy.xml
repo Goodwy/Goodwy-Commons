@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">경고용 플래시</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">앱 시작 시 열 폴더</string>
+    <string name="last_used_g">마지막 사용</string>
+    <string name="home_folder_g">홈 폴더</string>
 
     <string name="accent_color">악센트 색상</string>
     <string name="incoming_call">수신 전화</string>

@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Flash για ειδοποιήσεις</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Άνοιγμα φακέλου κατά την έναρξη της εφαρμογής</string>
+    <string name="last_used_g">Τελευταία χρήση</string>
+    <string name="home_folder_g">Αρχικός φάκελος</string>
 
     <string name="accent_color">Χρώμα έμφασης</string>
     <string name="incoming_call">Εισερχόμενη κλήση</string>

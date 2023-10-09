@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Įspėjimų blykstė</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Aplankas, kuris bus rodomas atidarius šią programą</string>
+    <string name="last_used_g">Paskutinį kartą naudota</string>
+    <string name="home_folder_g">Namų aplankas</string>
 
     <string name="accent_color">Paryškinta spalva</string>
     <string name="incoming_call">Skambutį</string>

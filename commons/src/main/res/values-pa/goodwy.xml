@@ -103,6 +103,9 @@
     <string name="flash_for_alerts">ਚੇਤਾਵਨੀਆਂ ਲਈ ਫਲੈਸ਼</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">ਐਪ ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ ਖੋਲ੍ਹਣ ਲਈ ਫੋਲਡਰ</string>
+    <string name="last_used_g">ਪਿਛਲੀ ਵਾਰ ਵਰਤਿਆ ਗਿਆ</string>
+    <string name="home_folder_g">ਹੋਮ ਫੋਲਡਰ</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

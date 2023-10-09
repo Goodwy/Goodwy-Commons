@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Flash cho cảnh báo</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Thư mục để mở khi bắt đầu ứng dụng</string>
+    <string name="last_used_g">Sử dụng lần cuối</string>
+    <string name="home_folder_g">Thư mục chính</string>
 
     <string name="accent_color">Màu nhấn</string>
     <string name="incoming_call">Cuộc gọi đến</string>

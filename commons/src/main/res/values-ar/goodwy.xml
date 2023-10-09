@@ -92,6 +92,9 @@
     <string name="flash_for_alerts">فلاش للتنبيهات</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">مجلد لفتحه عند بدء التطبيق</string>
+    <string name="last_used_g">اخر استخدام</string>
+    <string name="home_folder_g">المجلد الرئيسي</string>
 
     <string name="accent_color">لون التمييز</string>
     <string name="incoming_call">مكالمة واردة</string>

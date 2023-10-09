@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Blitzlicht für Warnungen</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Ordner, der beim App-Start geöffnet werden soll</string>
+    <string name="last_used_g">Zuletzt verwendet</string>
+    <string name="home_folder_g">Benutzerordner</string>
 
     <string name="accent_color">Akzentfarbe</string>
     <string name="incoming_call">Eingehender Anruf</string>

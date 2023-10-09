@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Flash dla alertów</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Folder otwierana przy uruchomieniu aplikacji</string>
+    <string name="last_used_g">Ostatnio używane</string>
+    <string name="home_folder_g">Katalog domowy</string>
 
     <string name="accent_color">Kolor wiodący</string>
     <string name="incoming_call">Połączenie przychodzące</string>

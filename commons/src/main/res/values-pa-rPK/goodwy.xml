@@ -103,6 +103,9 @@
     <string name="flash_for_alerts">الرٹس کے لیے ایل ای ڈی فلیش</string>
     <string name="clean_theme_g">صاف کریں</string>
     <string name="concept_theme_g">تصور</string>
+    <string name="default_folder_to_open_g">پہلا فولڈر کھولیں۔</string>
+    <string name="last_used_g">آخری بار استعمال کیا گیا۔</string>
+    <string name="home_folder_g">ہوم فولڈر</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

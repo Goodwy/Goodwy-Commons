@@ -102,6 +102,9 @@
     <string name="flash_for_alerts">Вспышка для оповещения</string>
     <string name="clean_theme_g">Чистая</string>
     <string name="concept_theme_g">Концепт</string>
+    <string name="default_folder_to_open_g">Открываемая при запуске папка</string>
+    <string name="last_used_g">Последняя использованная</string>
+    <string name="home_folder_g">Домашняя папка</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>

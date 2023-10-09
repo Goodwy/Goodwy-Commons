@@ -103,6 +103,9 @@
     <string name="flash_for_alerts">แฟลชสําหรับการแจ้งเตือน</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">โฟลเดอร์ที่จะเปิดเมื่อเริ่มแอป</string>
+    <string name="last_used_g">ใช้ล่าสุด</string>
+    <string name="home_folder_g">โฟลเดอร์เริ่มต้น</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

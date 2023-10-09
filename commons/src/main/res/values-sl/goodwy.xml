@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Bliskavica za opozorila</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Mapa za odpiranje ob zagonu aplikacije</string>
+    <string name="last_used_g">Zadnja uporaba</string>
+    <string name="home_folder_g">Domača mapa</string>
 
     <string name="accent_color">Barva naglasa</string>
     <string name="incoming_call">Dohodni klic</string>

@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Блиц за упозорења</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Фасцикла за отварање при покретању апликације</string>
+    <string name="last_used_g">Последњи пут коришћен</string>
+    <string name="home_folder_g">Почетна фасцикла</string>
 
     <string name="accent_color">Наглашена боја</string>
     <string name="incoming_call">Долазни позив</string>

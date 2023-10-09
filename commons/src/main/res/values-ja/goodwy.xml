@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">アラートのフラッシュ</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">アプリ起動時に開くフォルダー</string>
+    <string name="last_used_g">最終使用日時</string>
+    <string name="home_folder_g">ホームフォルダ</string>
 
     <string name="accent_color">アクセントカラー</string>
     <string name="incoming_call">着信呼び出し</string>

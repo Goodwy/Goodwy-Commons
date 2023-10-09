@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">用于警报的闪存</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">应用启动时要打开的文件夹</string>
+    <string name="last_used_g">上次使用</string>
+    <string name="home_folder_g">主文件夹</string>
 
     <string name="accent_color">重音顏色</string>
     <string name="incoming_call">來電</string>

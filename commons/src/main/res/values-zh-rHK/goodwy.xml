@@ -103,6 +103,9 @@
     <string name="flash_for_alerts">LED Flash for alerts</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">应用启动时要打开的文件夹</string>
+    <string name="last_used_g">上次使用</string>
+    <string name="home_folder_g">主文件夹</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

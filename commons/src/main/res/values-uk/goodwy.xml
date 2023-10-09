@@ -102,6 +102,9 @@
     <string name="flash_for_alerts">Спалах для оповіщення</string>
     <string name="clean_theme_g">Чиста</string>
     <string name="concept_theme_g">Концепт</string>
+    <string name="default_folder_to_open_g">Папка, що відкривається при запуску додатка</string>
+    <string name="last_used_g">Остання використана</string>
+    <string name="home_folder_g">Домашня папка</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купити Goodwy Thank You</string>

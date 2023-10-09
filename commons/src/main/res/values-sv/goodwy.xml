@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Flash för varningar</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Mapp som öppnas när appen startas</string>
+    <string name="last_used_g">Senast använd</string>
+    <string name="home_folder_g">Hemmapp</string>
 
     <string name="accent_color">Färg på accent</string>
     <string name="incoming_call">Inkommande samtal</string>

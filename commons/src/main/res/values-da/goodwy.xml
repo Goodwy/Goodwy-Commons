@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Flash til advarsler</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Mappe for at åbne ved appstart</string>
+    <string name="last_used_g">Sidst brugt</string>
+    <string name="home_folder_g">Hjemmemappe</string>
 
     <string name="accent_color">Fremhævningsfarve</string>
     <string name="incoming_call">Indgående opkald</string>

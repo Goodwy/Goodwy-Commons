@@ -103,6 +103,9 @@
     <string name="flash_for_alerts">Светкавица за предупреждения</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Папка за отваряне при стартиране на приложението</string>
+    <string name="last_used_g">Последно използван</string>
+    <string name="home_folder_g">Домашна папка</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

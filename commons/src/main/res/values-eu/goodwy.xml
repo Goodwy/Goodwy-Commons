@@ -91,6 +91,9 @@
     <string name="flash_for_alerts">Flash abisuetarako</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
+    <string name="default_folder_to_open_g">Aplikazioa hasten denean irekitzeko karpeta</string>
+    <string name="last_used_g">Azken erabilia</string>
+    <string name="home_folder_g">Hasierako karpeta</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="incoming_call">Sarrerako deia</string>
