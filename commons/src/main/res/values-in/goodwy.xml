@@ -18,7 +18,13 @@
     <string name="color_title">Warna</string>
     <string name="color_summary">Penyesuaian warna primer, aksen, latar belakang, teks, dan bilah navigasi secara manual</string>
     <string name="plus_title">Dukung kami</string>
-    <string name="plus_summary">Semua aplikasi kami bebas iklan, Open Source dan akan selalu seperti itu. Dengan bantuan Anda, kami dapat menerapkan lebih banyak fitur dan menjadikannya lebih baik</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Kami menghargai waktu Anda dan ingin Anda menikmati aplikasi kami tanpa iklan. Jika hal ini memberi Anda kesenangan dan manfaat, pertimbangkan untuk berdonasi untuk pengembangannya.<br><br>
+            Hargai kerja keras kami dan bagikan kesan Anda, ini akan membantu kami mewujudkan ide-ide baru dan menawarkan fitur-fitur yang lebih menakjubkan kepada Anda.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Kami akan mendukung Anda</string>
     <string name="lifebuoy_summary">Jika karena alasan tertentu Anda tidak mampu membeli aplikasi kami, tetapi benar-benar ingin menggunakan semua fiturnya, cukup kirimkan email kepada kami</string>
     <string name="participants_title">Participants</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

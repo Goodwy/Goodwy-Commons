@@ -32,7 +32,13 @@
     <string name="color_title">Colors</string>
     <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
     <string name="plus_title">Support us</string>
-    <string name="plus_summary">All of our apps are ad-free, Open Source and it will always remain that way. With your help we are able to implement more features and make them even better</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            We value your time and want you to enjoy our app without ads. If it has brought you pleasure and usefulness, consider donating to its development.<br><br>
+            Appreciate our hard work and share your impressions, it will help us to realize new ideas and offer you even more amazing features.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">We will support you</string>
     <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
     <string name="tip_kind">Kind tip of</string>
@@ -266,4 +272,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

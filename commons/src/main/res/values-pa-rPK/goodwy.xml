@@ -33,7 +33,13 @@
     <string name="color_title">رنگ</string>
     <string name="color_summary">بنیادی رنگ، لہجہ، پس منظر، متن اور نیویگیشن بار کی دستی ایڈجسٹمنٹ</string>
     <string name="plus_title">ہمیں سپورٹ کریں</string>
-    <string name="plus_summary">ہماری سبھی ایپس اشتہارات سے پاک، اوپن سورس ہیں اور یہ ہمیشہ اسی طرح رہیں گی۔ آپ کی مدد سے ہم مزید خصوصیات کو نافذ کرنے اور انہیں مزید بہتر بنانے کے قابل ہیں</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            ہم آپ کے وقت کی قدر کرتے ہیں اور چاہتے ہیں کہ آپ اشتہارات کے بغیر ہماری ایپ سے لطف اندوز ہوں۔ اگر اس سے آپ کو خوشی اور افادیت حاصل ہوئی ہے تو اس کی ترقی کے لیے عطیہ کرنے پر غور کریں۔<br><br>
+             ہماری محنت کی تعریف کریں اور اپنے تاثرات کا اشتراک کریں، اس سے ہمیں نئے آئیڈیاز کو سمجھنے اور آپ کو مزید حیرت انگیز خصوصیات پیش کرنے میں مدد ملے گی۔
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">ہم آپ کو سپورٹ کریں گے</string>
     <string name="lifebuoy_summary">اگر کسی وجہ سے آپ ہماری ایپ کو برداشت نہیں کر سکتے، لیکن واقعی تمام خصوصیات استعمال کرنا چاہتے ہیں، تو بس ہمیں ای میل کریں</string>
     <string name="participants_title">شرکاء</string>
@@ -267,4 +273,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

@@ -18,7 +18,13 @@
     <string name="color_title">Värit</string>
     <string name="color_summary">Päävärin, korostuksen, taustan, tekstin ja siirtymispalkin manuaalinen säätö</string>
     <string name="plus_title">Tue meitä</string>
-    <string name="plus_summary">Kaikki sovelluksemme ovat mainoksettomia, avoimen lähdekoodin ja se pysyy aina sellaisena. Sinun avullasi pystymme toteuttamaan lisää ominaisuuksia ja tekemään niistä entistä parempia</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Arvostamme aikaasi ja haluamme sinun nauttivan sovelluksestamme ilman mainoksia. Jos se on tuonut sinulle iloa ja hyötyä, harkitse lahjoittamista sen kehittämiseen. <br><br>
+            Arvosta kovaa työtämme ja jaa vaikutelmasi, se auttaa meitä toteuttamaan uusia ideoita ja tarjoamaan sinulle entistä upeampia ominaisuuksia.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Tuemme sinua</string>
     <string name="lifebuoy_summary">Jos jostain syystä sinulla ei ole varaa sovellukseemme, mutta haluat todella käyttää kaikkia ominaisuuksia, lähetä meille sähköpostia</string>
     <string name="participants_title">Participants</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

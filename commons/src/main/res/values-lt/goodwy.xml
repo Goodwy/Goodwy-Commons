@@ -18,7 +18,13 @@
     <string name="color_title">Spalvų</string>
     <string name="color_summary">Rankinis pagrindinės spalvos, akcento, fono, teksto ir naršymo juostos reguliavimas</string>
     <string name="plus_title">Paremkite mus</string>
-    <string name="plus_summary">Visos mūsų programos yra be skelbimų, atviro kodo ir visada taip išliks. Su jūsų pagalba mes galime įgyvendinti daugiau funkcijų ir padaryti jas dar geresnes</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Mes vertiname jūsų laiką ir norime, kad galėtumėte mėgautis mūsų programa be skelbimų. Jei tai suteikė jums malonumą ir naudingumą, apsvarstykite galimybę paaukoti jo plėtrai. <br><br>
+            Įvertinkite mūsų sunkų darbą ir pasidalykite savo įspūdžiais, tai padės mums įgyvendinti naujas idėjas ir pasiūlyti jums dar daugiau nuostabių funkcijų.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Mes jums padėsime</string>
     <string name="lifebuoy_summary">Jei dėl kokių nors priežasčių negalite sau leisti mūsų programos, bet tikrai norite naudotis visomis funkcijomis, tiesiog atsiųskite mums el. laišką</string>
     <string name="participants_title">Participants</string>
@@ -263,4 +269,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

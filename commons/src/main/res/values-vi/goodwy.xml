@@ -18,7 +18,13 @@
     <string name="color_title">Màu sắc</string>
     <string name="color_summary">Điều chỉnh thủ công màu chính, dấu, nền, văn bản và thanh điều hướng</string>
     <string name="plus_title">Hỗ trợ chúng tôi</string>
-    <string name="plus_summary">Tất cả các ứng dụng của chúng tôi đều không có quảng cáo, Mã nguồn mở và nó sẽ luôn như vậy. Với sự giúp đỡ của bạn, chúng tôi có thể triển khai nhiều tính năng hơn và làm cho chúng thậm chí còn tốt hơn</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Chúng tôi coi trọng thời gian của bạn và muốn bạn tận hưởng ứng dụng của chúng tôi mà không có quảng cáo. Nếu nó đã mang lại cho bạn niềm vui và sự hữu ích, hãy xem xét quyên góp cho sự phát triển của nó. <br><br>
+            Đánh giá cao công việc khó khăn của chúng tôi và chia sẻ ấn tượng của bạn, nó sẽ giúp chúng tôi hiện thực hóa những ý tưởng mới và cung cấp cho bạn nhiều tính năng tuyệt vời hơn nữa.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Chúng tôi sẽ hỗ trợ bạn</string>
     <string name="lifebuoy_summary">Nếu vì lý do nào đó bạn không đủ khả năng mua ứng dụng của chúng tôi, nhưng thực sự muốn sử dụng tất cả các tính năng, chỉ cần gửi email cho chúng tôi</string>
     <string name="participants_title">Participants</string>
@@ -93,7 +99,7 @@
     <string name="concept_theme_g">Concept</string>
     <string name="default_folder_to_open_g">Thư mục để mở khi bắt đầu ứng dụng</string>
     <string name="last_used_g">Sử dụng lần cuối</string>
-    <string name="home_folder_g">Thư mục chính</string>
+    <string name="home_folder_g">Home folder</string>
 
     <string name="accent_color">Màu nhấn</string>
     <string name="incoming_call">Cuộc gọi đến</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

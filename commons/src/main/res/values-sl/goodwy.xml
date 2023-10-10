@@ -18,7 +18,13 @@
     <string name="color_title">Barve</string>
     <string name="color_summary">Ročno prilagajanje primarne barve, naglasa, ozadja, besedila in vrstice za krmarjenje</string>
     <string name="plus_title">Podprite nas</string>
-    <string name="plus_summary">Vse naše aplikacije so brez oglasov, Odprta koda in vedno bo tako tudi ostalo. Z vašo pomočjo lahko izvajamo več funkcij in jih še bolje</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Cenimo vaš čas in želimo, da uživate v naši aplikaciji brez oglasov. Če vam je prinesel užitek in uporabnost, razmislite o donaciji za njegov razvoj. <br><br>
+            Cenite naše trdo delo in delite svoje vtise, pomagalo nam bo uresničiti nove ideje in vam ponuditi še več neverjetnih funkcij.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Podprli vas bomo</string>
     <string name="lifebuoy_summary">Če si iz nekega razloga ne morete privoščiti naše aplikacije, vendar res želite uporabiti vse funkcije, nam pišite po e-pošti</string>
     <string name="participants_title">Participants</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

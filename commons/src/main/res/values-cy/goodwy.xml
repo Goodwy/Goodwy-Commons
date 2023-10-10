@@ -18,7 +18,13 @@
     <string name="color_title">Màu sắc</string>
     <string name="color_summary">Addasiad â llaw o\'r prif liw, acen, cefndir, testun a bar llywio</string>
     <string name="plus_title">Cefnogwch ni</string>
-    <string name="plus_summary">Mae ein holl apiau yn rhad ac am ddim, yn Ffynhonnell Agored a bydd bob amser yn parhau felly. Gyda\'ch help chi gallwn weithredu mwy o nodweddion a\'u gwneud hyd yn oed yn well</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Rydym yn gwerthfawrogi eich amser ac eisiau i chi fwynhau ein app heb hysbysebion. Os yw wedi dod â phleser a defnyddioldeb i chi, ystyriwch gyfrannu at ei ddatblygiad. <br><br>
+            Gwerthfawrogi ein gwaith caled a rhannu eich argraffiadau, bydd yn ein helpu i wireddu syniadau newydd a chynnig nodweddion hyd yn oed yn fwy anhygoel i chi.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Byddwn yn eich cefnogi</string>
     <string name="lifebuoy_summary">Os nad ydych chi\'n gallu fforddio ein ap am ryw reswm, ond wir eisiau defnyddio\'r holl nodweddion, dim ond anfon e-bost atom</string>
     <string name="participants_title">Participants</string>
@@ -93,7 +99,7 @@
     <string name="concept_theme_g">Concept</string>
     <string name="default_folder_to_open_g">Ffolder i agor ar ddechrau\'r app</string>
     <string name="last_used_g">Last used</string>
-    <string name="home_folder_g">Hafan ffolder</string>
+    <string name="home_folder_g">Home folder</string>
 
     <string name="accent_color">Lliw acen</string>
     <string name="incoming_call">Galwad i Mewn</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

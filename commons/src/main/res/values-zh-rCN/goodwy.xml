@@ -18,7 +18,13 @@
     <string name="color_title">颜色</string>
     <string name="color_summary">手动调整原色、强调色、背景、文本和导航栏</string>
     <string name="plus_title">支持我们</string>
-    <string name="plus_summary">我们所有的应用程序都是无广告的开源，并将永远保持这种状态。在您的帮助下，我们能够实现更多功能并使其变得更好</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            我们重视您的时间，并希望您在没有广告的情况下享受我们的应用程序。如果它给你带来了快乐和有用性，请考虑捐赠给它的发展。<br><br>
+            感谢我们的辛勤工作并分享您的印象，它将帮助我们实现新的想法并为您提供更多令人惊叹的功能。
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">我们将为您提供支持</string>
     <string name="lifebuoy_summary">如果由于某种原因您买不起我们的应用程序，但真的想使用所有功能，只需给我们发电子邮件</string>
     <string name="participants_title">Participants</string>
@@ -259,4 +265,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

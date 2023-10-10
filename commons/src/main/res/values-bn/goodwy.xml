@@ -33,7 +33,13 @@
     <string name="color_title">Colors</string>
     <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
     <string name="plus_title">Support us</string>
-    <string name="plus_summary">All of our apps are ad-free, Open Source and it will always remain that way. With your help we are able to implement more features and make them even better</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            আমরা আপনার সময়কে মূল্য দিই এবং চাই আপনি বিজ্ঞাপন ছাড়াই আমাদের অ্যাপ উপভোগ করুন। যদি এটি আপনাকে আনন্দ এবং উপযোগিতা এনে দেয়, তাহলে এর উন্নয়নে দান করার কথা বিবেচনা করুন।<br><br>
+            আমাদের কঠোর পরিশ্রমের প্রশংসা করুন এবং আপনার ইমপ্রেশনগুলি ভাগ করুন, এটি আমাদের নতুন ধারণাগুলি উপলব্ধি করতে এবং আপনাকে আরও আশ্চর্যজনক বৈশিষ্ট্যগুলি অফার করতে সহায়তা করবে৷
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">We will support you</string>
     <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
     <string name="participants_title">Participants</string>
@@ -267,4 +273,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

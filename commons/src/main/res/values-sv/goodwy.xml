@@ -18,7 +18,13 @@
     <string name="color_title">Färger</string>
     <string name="color_summary">Manuell justering av primärfärg, accent, bakgrund, text och navigeringsfält</string>
     <string name="plus_title">Stöd oss</string>
-    <string name="plus_summary">Alla våra appar är annonsfria, öppen källkod och det kommer alltid att förbli så. Med din hjälp kan vi implementera fler funktioner och göra dem ännu bättre</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Vi värdesätter din tid och vill att du ska njuta av vår app utan annonser. Om det har gett dig nöje och användbarhet, överväga att donera till dess utveckling. <br><br>
+            Uppskatta vårt hårda arbete och dela dina intryck, det hjälper oss att förverkliga nya idéer och erbjuda dig ännu fler fantastiska funktioner.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Vi kommer att stödja dig</string>
     <string name="lifebuoy_summary">Om du av någon anledning inte har råd med vår app, men verkligen vill använda alla funktioner, är det bara att maila oss</string>
     <string name="participants_title">Participants</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

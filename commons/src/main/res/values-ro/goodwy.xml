@@ -32,7 +32,13 @@
     <string name="color_title">Culori</string>
     <string name="color_summary">Ajustarea manuală a culorii primare, a accentului, a fundalului, a textului și a barei de navigare</string>
     <string name="plus_title">Sustine-ne</string>
-    <string name="plus_summary">Toate aplicațiile noastre sunt fără anunțuri, Open Source și vor rămâne întotdeauna așa. Cu ajutorul dumneavoastră suntem capabili să implementăm mai multe caracteristici și să le facem și mai bune</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Apreciem timpul dvs. și dorim să vă bucurați de aplicația noastră fără reclame. Dacă v-a adus plăcere și utilitate, luați în considerare donarea pentru dezvoltarea sa. <br><br>
+            Apreciați munca noastră grea și împărtășiți-vă impresiile, ne va ajuta să realizăm idei noi și să vă oferim caracteristici și mai uimitoare.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Vă vom sprijini</string>
     <string name="lifebuoy_summary">Dacă, din anumite motive, nu vă puteți permite aplicația noastră, dar doriți cu adevărat să utilizați toate funcțiile, trebuie doar să ne trimiteți un e-mail</string>
     <string name="participants_title">Participants</string>
@@ -266,4 +272,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

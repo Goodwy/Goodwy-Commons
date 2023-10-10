@@ -18,7 +18,13 @@
     <string name="color_title">색상</string>
     <string name="color_summary">기본 색상, 악센트, 배경, 텍스트 및 탐색 모음의 수동 조정</string>
     <string name="plus_title">우리를 지원</string>
-    <string name="plus_summary">우리의 모든 앱은 광고무료, 오픈 소스이며, 항상 그런 식으로 유지됩니다. 귀하의 도움으로 우리는 더 많은 기능을 구현하고 더 나은 만들 수 있습니다</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            우리는 당신의 시간을 소중히 여기며 당신이 광고 없이 우리 앱을 즐기기를 바랍니다. 그것이 당신에게 즐거움과 유용성을 가져다 주었다면, 그 발전에 기부하는 것을 고려하십시오. <br><br>
+            우리의 노고에 감사하고 인상을 공유하면 새로운 아이디어를 실현하고 더욱 놀라운 기능을 제공하는 데 도움이 될 것입니다.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">우리는 당신을 지원할 것입니다</string>
     <string name="lifebuoy_summary">어떤 이유로 당신은 우리의 응용 프로그램을 감당할 수 없습니다, 하지만 정말 모든 기능을 사용하고 싶다면, 그냥 이메일을 보내 주시기 바랍니다</string>
     <string name="participants_title">Participants</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

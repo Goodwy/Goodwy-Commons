@@ -33,7 +33,13 @@
     <string name="color_title">ธง</string>
     <string name="color_summary">การปรับสีหลัก การเน้นเสียง พื้นหลัง ข้อความ และแถบนําทางด้วยตนเอง</string>
     <string name="plus_title">สนับสนุนเรา</string>
-    <string name="plus_summary">แอพทั้งหมดของเราไม่มีโฆษณาโอเพนซอร์สและจะยังคงเป็นเช่นนั้นเสมอ ด้วยความช่วยเหลือของคุณเราสามารถใช้คุณสมบัติเพิ่มเติมและทําให้ดียิ่งขึ้น</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            เราให้ความสําคัญกับเวลาของคุณและต้องการให้คุณเพลิดเพลินกับแอพของเราโดยไม่มีโฆษณา หากมันทําให้คุณมีความสุขและมีประโยชน์ให้พิจารณาบริจาคเพื่อการพัฒนา <br><br>
+            ชื่นชมการทํางานหนักของเราและแบ่งปันความประทับใจของคุณมันจะช่วยให้เราตระหนักถึงแนวคิดใหม่ ๆ และนําเสนอคุณสมบัติที่น่าทึ่งยิ่งขึ้น
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">เราจะสนับสนุนคุณ</string>
     <string name="lifebuoy_summary">หากด้วยเหตุผลบางอย่างที่คุณไม่สามารถซื้อแอพของเรา ได้ แต่ต้องการใช้คุณสมบัติทั้งหมดเพียงส่งอีเมลถึงเรา</string>
     <string name="participants_title">Participants</string>
@@ -267,4 +273,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

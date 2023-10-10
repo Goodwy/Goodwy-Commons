@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -343,12 +344,12 @@ internal fun AboutNewSection(
                 },
             )
             Spacer(modifier = Modifier.size(8.dp))
-            //HtmlText(stringResource(R.string.plus_summary))
-            Text(modifier = Modifier.padding(horizontal = 4.dp),
-                text = stringResource(R.string.plus_summary),
-                fontSize = 16.sp,
-                lineHeight = 20.sp,
-                color = textColor,)
+            HtmlText(stringResource(R.string.plus_summary), textColor = textColor)
+//            Text(modifier = Modifier.padding(horizontal = 4.dp),
+//                text = stringResource(R.string.plus_summary),
+//                fontSize = 14.sp,
+//                lineHeight = 20.sp,
+//                color = textColor,)
             Spacer(modifier = Modifier.size(24.dp))
             Card(
                 shape = RoundedCornerShape(16.dp),
@@ -524,10 +525,12 @@ internal fun AboutNewSection(
 }
 
 @Composable
-fun HtmlText(html: String, modifier: Modifier = Modifier) {
+fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Color.Unspecified,) {
     AndroidView(
-        modifier = modifier.padding(horizontal = 8.dp),
-        factory = { context -> TextView(context) },
+        modifier = modifier.padding(horizontal = 4.dp),
+        factory = { context -> TextView(context).apply {
+            setTextColor(textColor.toArgb())
+        } },
         update = { it.text = HtmlCompat.fromHtml(html, HtmlCompat.FROM_HTML_MODE_COMPACT) }
     )
 }

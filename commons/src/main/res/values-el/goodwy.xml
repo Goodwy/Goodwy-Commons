@@ -18,7 +18,13 @@
     <string name="color_title">Χρώματα</string>
     <string name="color_summary">Μη αυτόματη ρύθμιση του κύριου χρώματος, της έμφασης, του φόντου, του κειμένου και της γραμμής περιήγησης</string>
     <string name="plus_title">Υποστηρίξτε μας</string>
-    <string name="plus_summary">Όλες οι εφαρμογές μας είναι χωρίς διαφημίσεις, Ανοιχτού Κώδικα και θα παραμένουν πάντα έτσι. Με τη βοήθειά σας είμαστε σε θέση να εφαρμόσουμε περισσότερες δυνατότητες και να τις κάνουμε ακόμα καλύτερες</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Εκτιμούμε το χρόνο σας και θέλουμε να απολαμβάνετε την εφαρμογή μας χωρίς διαφημίσεις. Εάν σας έχει φέρει ευχαρίστηση και χρησιμότητα, σκεφτείτε να κάνετε δωρεά στην ανάπτυξή του. <br><br>
+            Εκτιμήστε τη σκληρή δουλειά μας και μοιραστείτε τις εντυπώσεις σας, θα μας βοηθήσει να πραγματοποιήσουμε νέες ιδέες και να σας προσφέρουμε ακόμα πιο εκπληκτικά χαρακτηριστικά.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Θα σας υποστηρίξουμε</string>
     <string name="lifebuoy_summary">Εάν για κάποιο λόγο δεν μπορείτε να αντέξετε οικονομικά την εφαρμογή μας, αλλά θέλετε πραγματικά να χρησιμοποιήσετε όλες τις δυνατότητες, απλώς στείλτε μας email</string>
     <string name="participants_title">Participants</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

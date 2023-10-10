@@ -33,7 +33,13 @@
     <string name="color_title">Koloroj</string>
     <string name="color_summary">Mana alĝustigo de la primara koloro, akcento, fono, teksto kaj navigadbreto</string>
     <string name="plus_title">Subtenu nin</string>
-    <string name="plus_summary">Ĉiuj niaj programoj estas sen reklamoj, Malferma Fonto kaj ĝi ĉiam restos tiel. Kun via helpo ni povas efektivigi pli da funkcioj kaj fari ilin eĉ pli bonaj</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Ni taksas vian tempon kaj volas, ke vi ĝuu nian apon sen reklamoj. Se ĝi alportis al vi plezuron kaj utilecon, konsideru donaci al ĝia evoluo.<br><br>
+            Estimu nian malfacilan laboron kaj dividu viajn impresojn, ĝi helpos nin realigi novajn ideojn kaj oferti al vi eĉ pli mirindajn funkciojn.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Ni subtenos vin</string>
     <string name="lifebuoy_summary">Se ial vi ne povas pagi nian apon, sed vere volas uzi ĉiujn funkciojn, simple retpoŝtu al ni</string>
     <string name="participants_title">Participants</string>
@@ -267,4 +273,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

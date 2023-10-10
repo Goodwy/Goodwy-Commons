@@ -18,7 +18,13 @@
     <string name="color_title">色</string>
     <string name="color_summary">原色、アクセント、背景、テキスト、ナビゲーションバーの手動調整</string>
     <string name="plus_title">私たちをサポートしてください</string>
-    <string name="plus_summary">すべてのアプリは広告なしのオープンソースであり、常にそのまま残ります。あなたの助けを借りて、我々はより多くの機能を実装し、それらをさらに良くすることができます</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            私たちはあなたの時間を大切にし、あなたが広告なしで私たちのアプリを楽しむことを望んでいます。それがあなたに喜びと有用性をもたらしたならば、その開発に寄付することを検討してください。<br><br>
+            私たちの努力に感謝し、あなたの印象を共有してください、それは私たちが新しいアイデアを実現し、あなたにさらに素晴らしい機能を提供するのに役立ちます。
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">私たちはあなたをサポートします</string>
     <string name="lifebuoy_summary">何らかの理由で私たちのアプリを買う余裕がないが、本当にすべての機能を使用したい場合は、メールでお問い合わせください</string>
     <string name="participants_title">Participants</string>
@@ -265,4 +271,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

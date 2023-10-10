@@ -18,7 +18,13 @@
     <string name="color_title">צבעים</string>
     <string name="color_summary">התאמה ידנית של צבע היסוד, ההדגשה, הרקע, הטקסט וסרגל הניווט</string>
     <string name="plus_title">תמכו בנו</string>
-    <string name="plus_summary">כל האפליקציות שלנו הן ללא פרסומות, קוד פתוח וזה תמיד יישאר כך. בעזרתך אנו מסוגלים ליישם תכונות נוספות ולהפוך אותן לטובות עוד יותר</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            אנו מעריכים את הזמן שלך ורוצים שתהנה מהאפליקציה שלנו ללא פרסומות. אם זה הביא לך הנאה ושימושיות, שקול לתרום לפיתוח שלו.<br><br>
+             תעריך את העבודה הקשה שלנו ושתף את ההתרשמות שלך, זה יעזור לנו לממש רעיונות חדשים ולהציע לך תכונות מדהימות עוד יותר.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">אנו נתמוך בך</string>
     <string name="lifebuoy_summary">אם מסיבה כלשהי אתה לא יכול להרשות לעצמך את האפליקציה שלנו, אבל באמת רוצה להשתמש בכל התכונות, פשוט שלח לנו דוא\"ל</string>
     <string name="participants_title">Participants</string>
@@ -27,7 +33,7 @@
     <string name="tip_excellent">תמיכה מעולה</string>
     <string name="tip_incredible">תמיכה מדהימה</string>
     <string name="tip_jar">תמיכה</string>
-    <string name="unlock">Unlock</string>
+    <string name="unlock">לבטל נעילה</string>
     <string name="donate_text_g">
         <![CDATA[
             For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
@@ -154,7 +160,7 @@
     <string name="open">פתח</string>
     <string name="collection">אוסף</string>
     <string name="collection_summary">בניית אוסף כדי לבטל את נעילת האפליקציה</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">אספקה מוגבלת</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

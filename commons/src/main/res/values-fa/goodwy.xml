@@ -18,7 +18,13 @@
     <string name="color_title">رنگ</string>
     <string name="color_summary">تنظیم دستی رنگ اولیه، لهجه، پس زمینه، متن و نوار ناوبری</string>
     <string name="plus_title">از ما حمایت کنید</string>
-    <string name="plus_summary">همه برنامه های ما بدون آگهی، منبع باز هستند و همیشه به این شکل باقی خواهد ماند. با کمک شما ما قادر به پیاده سازی ویژگی های بیشتر و آنها را حتی بهتر</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            ما برای زمان شما ارزش قائل هستیم و می خواهیم بدون تبلیغات از برنامه ما لذت ببرید. اگر برای شما لذت و سودمندی به ارمغان اورده است، در نظر بگیرید که به توسعه ان کمک کنید. <br><br>
+             قدردانی از کار سخت ما و به اشتراک گذاشتن برداشت خود را، ان را به ما کمک خواهد کرد برای تحقق بخشیدن به ایده های جدید و به شما ارائه ویژگی های شگفت انگیز حتی بیشتر.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">ما از شما حمایت خواهیم کرد</string>
     <string name="lifebuoy_summary">اگر به دلایلی شما می توانید برنامه ما استطاعت نیست، اما واقعا می خواهید به استفاده از تمام ویژگی ها، فقط به ما ایمیل</string>
     <string name="participants_title">Participants</string>
@@ -264,4 +270,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>

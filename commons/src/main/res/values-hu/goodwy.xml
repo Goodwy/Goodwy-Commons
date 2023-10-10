@@ -18,7 +18,13 @@
     <string name="color_title">Színek</string>
     <string name="color_summary">Az elsődleges szín, az ékezet, a háttér, a szöveg és a navigációs sáv kézi beállítása</string>
     <string name="plus_title">Támogasson minket</string>
-    <string name="plus_summary">Minden alkalmazásunk hirdetésmentes, nyílt forráskódú, és ez mindig így is marad. Az Ön segítségével több funkciót tudunk megvalósítani, és még jobbá tenni azokat</string>
+    <string name="plus_summary">
+        <![CDATA[
+            <i>
+            Nagyra értékeljük az idejét, és azt szeretnénk, ha hirdetések nélkül élvezné alkalmazásunkat. Ha örömet és hasznosságot hozott neked, fontold meg, hogy adományozol a fejlesztéséhez. <br><br>
+            Értékelje kemény munkánkat és ossza meg benyomásait, ez segít nekünk új ötletek megvalósításában és még csodálatosabb funkciókat kínálunk Önnek.
+            </i>
+        ]]></string>
     <string name="lifebuoy_title">Támogatjuk Önt</string>
     <string name="lifebuoy_summary">Ha valamilyen oknál fogva nem engedheti meg magának az alkalmazásunkat, de valóban szeretné használni az összes funkciót, csak írjon nekünk e-mailt</string>
     <string name="participants_title">Participants</string>
@@ -262,4 +268,11 @@
     <string name="relation_daughter_in_law_g">Daughter-in-law</string>
     <string name="relation_brother_in_law_g">Brother-in-law</string>
     <string name="relation_sister_in_law_g">Sister-in-law</string>
+
+    <!-- RuStore -->
+    <string name="billing_general_error">Error</string>
+    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
+    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
+    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
+    <string name="billing_product_deleted">Purchase canceled</string>
 </resources>
