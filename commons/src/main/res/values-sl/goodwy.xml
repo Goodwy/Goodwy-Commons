@@ -18,7 +18,8 @@
     <string name="color_title">Barve</string>
     <string name="color_summary">Ročno prilagajanje primarne barve, naglasa, ozadja, besedila in vrstice za krmarjenje</string>
     <string name="plus_title">Podprite nas</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Z vašo pomočjo lahko implementiramo več funkcij in naredimo aplikacijo še boljšo</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Cenimo vaš čas in želimo, da uživate v naši aplikaciji brez oglasov. Če vam je prinesel užitek in uporabnost, razmislite o donaciji za njegov razvoj. <br><br>

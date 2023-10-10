@@ -18,7 +18,8 @@
     <string name="color_title">Warna</string>
     <string name="color_summary">Penyesuaian warna primer, aksen, latar belakang, teks, dan bilah navigasi secara manual</string>
     <string name="plus_title">Dukung kami</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Dengan bantuan Anda, kami dapat mengimplementasikan lebih banyak fitur dan membuat aplikasi menjadi lebih baik</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Kami menghargai waktu Anda dan ingin Anda menikmati aplikasi kami tanpa iklan. Jika hal ini memberi Anda kesenangan dan manfaat, pertimbangkan untuk berdonasi untuk pengembangannya.<br><br>

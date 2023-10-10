@@ -18,7 +18,8 @@
     <string name="color_title">Colors</string>
     <string name="color_summary">Ajust manual del color primari, accent, fons, text i barra de navegació</string>
     <string name="plus_title">Dóna\'ns suport</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Amb la teva ajuda podem implementar més funcionalitats i fer que l\'aplicació sigui encara millor</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Valorem el teu temps i volem que gaudeixis de la nostra app sense anuncis. Si us ha aportat plaer i utilitat, penseu a donar al seu desenvolupament. <br><br>

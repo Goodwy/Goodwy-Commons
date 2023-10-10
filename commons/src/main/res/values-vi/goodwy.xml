@@ -18,7 +18,8 @@
     <string name="color_title">Màu sắc</string>
     <string name="color_summary">Điều chỉnh thủ công màu chính, dấu, nền, văn bản và thanh điều hướng</string>
     <string name="plus_title">Hỗ trợ chúng tôi</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Với sự giúp đỡ của bạn, chúng tôi có thể triển khai nhiều tính năng hơn và làm cho ứng dụng tốt hơn nữa</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Chúng tôi coi trọng thời gian của bạn và muốn bạn tận hưởng ứng dụng của chúng tôi mà không có quảng cáo. Nếu nó đã mang lại cho bạn niềm vui và sự hữu ích, hãy xem xét quyên góp cho sự phát triển của nó. <br><br>

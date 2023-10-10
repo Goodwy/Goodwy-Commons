@@ -33,7 +33,8 @@
     <string name="color_title">Farger</string>
     <string name="color_summary">Manuell justering av primærfarge, utheving, bakgrunn, tekst og navigasjonsfelt</string>
     <string name="plus_title">Støtt oss</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Med din hjelp kan vi implementere flere funksjoner og gjøre applikasjonen enda bedre</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Vi verdsetter tiden din og vil at du skal nyte appen vår uten annonser. Hvis det har gitt deg glede og nytte, bør du vurdere å donere til utviklingen. <br><br>

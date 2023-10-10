@@ -3,9 +3,7 @@ package com.goodwy.commons.compose.screens
 import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
@@ -344,7 +342,7 @@ internal fun AboutNewSection(
                 },
             )
             Spacer(modifier = Modifier.size(8.dp))
-            HtmlText(stringResource(R.string.plus_summary), textColor = textColor)
+            HtmlText(stringResource(R.string.about_summary), textColor = textColor)
 //            Text(modifier = Modifier.padding(horizontal = 4.dp),
 //                text = stringResource(R.string.plus_summary),
 //                fontSize = 14.sp,

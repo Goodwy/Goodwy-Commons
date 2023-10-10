@@ -33,7 +33,8 @@
     <string name="color_title">Koloroj</string>
     <string name="color_summary">Mana alĝustigo de la primara koloro, akcento, fono, teksto kaj navigadbreto</string>
     <string name="plus_title">Subtenu nin</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Kun via helpo ni povas efektivigi pli da funkcioj kaj fari la aplikaĵon eĉ pli bona</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Ni taksas vian tempon kaj volas, ke vi ĝuu nian apon sen reklamoj. Se ĝi alportis al vi plezuron kaj utilecon, konsideru donaci al ĝia evoluo.<br><br>

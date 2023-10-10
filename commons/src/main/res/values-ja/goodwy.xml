@@ -18,7 +18,8 @@
     <string name="color_title">色</string>
     <string name="color_summary">原色、アクセント、背景、テキスト、ナビゲーションバーの手動調整</string>
     <string name="plus_title">私たちをサポートしてください</string>
-    <string name="plus_summary">
+    <string name="plus_summary">あなたの助けを借りて、私たちはより多くの機能を実装し、アプリケーションをさらに良くすることができます</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             私たちはあなたの時間を大切にし、あなたが広告なしで私たちのアプリを楽しむことを望んでいます。それがあなたに喜びと有用性をもたらしたならば、その開発に寄付することを検討してください。<br><br>

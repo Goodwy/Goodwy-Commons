@@ -18,7 +18,8 @@
     <string name="color_title">Boje</string>
     <string name="color_summary">Ručno podešavanje primarne boje, naglaska, pozadine, teksta i navigacijske trake</string>
     <string name="plus_title">Podržite nas</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Uz vašu pomoć možemo implementirati više značajki i učiniti aplikaciju još boljom</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Cijenimo vaše vrijeme i želimo da uživate u našoj aplikaciji bez oglasa. Ako vam je donio zadovoljstvo i korisnost, razmislite o doniranju za njegov razvoj. <br><br>

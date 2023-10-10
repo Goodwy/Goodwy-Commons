@@ -18,7 +18,8 @@
     <string name="color_title">Cores</string>
     <string name="color_summary">Axuste manual da cor principal, acento, fondo, texto e barra de navegación</string>
     <string name="plus_title">Acompáñanos</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Coa túa axuda podemos implementar máis funcións e mellorar aínda máis a aplicación</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Valoramos o teu tempo e queremos que goces da nosa aplicación sen anuncios. Se che trouxo pracer e utilidade, considera doar para o seu desenvolvemento.<br><br>

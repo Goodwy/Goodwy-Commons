@@ -18,7 +18,8 @@
     <string name="color_title">צבעים</string>
     <string name="color_summary">התאמה ידנית של צבע היסוד, ההדגשה, הרקע, הטקסט וסרגל הניווט</string>
     <string name="plus_title">תמכו בנו</string>
-    <string name="plus_summary">
+    <string name="plus_summary">בעזרתך נוכל ליישם תכונות נוספות ולהפוך את היישום לטוב עוד יותר</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             אנו מעריכים את הזמן שלך ורוצים שתהנה מהאפליקציה שלנו ללא פרסומות. אם זה הביא לך הנאה ושימושיות, שקול לתרום לפיתוח שלו.<br><br>

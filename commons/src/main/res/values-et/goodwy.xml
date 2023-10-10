@@ -32,7 +32,8 @@
     <string name="color_title">Värvid</string>
     <string name="color_summary">Põhivärvi, rõhu, tausta, teksti ja navigeerimisriba käsitsi reguleerimine</string>
     <string name="plus_title">Toetage meid</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Teie abiga saame rakendada rohkem funktsioone ja muuta rakenduse veelgi paremaks</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Hindame teie aega ja soovime, et saaksite meie rakendust nautida ilma reklaamideta. Kui see on toonud teile rõõmu ja kasulikkust, kaaluge annetamist selle arendamiseks. <br><br>

@@ -18,7 +18,8 @@
     <string name="color_title">Renk</string>
     <string name="color_summary">Ana renk, vurgu, arka plan, metin ve gezinme çubuğunun manuel olarak ayarlanması</string>
     <string name="plus_title">Bize destek olun</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Yardımınızla daha fazla özellik uygulayabilir ve uygulamayı daha da iyi hale getirebiliriz</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Zamanınıza değer veriyoruz ve uygulamamızın reklamsız keyfini çıkarmanızı istiyoruz. Size zevk ve kullanışlılık getirdiyse, gelişimine bağış yapmayı düşünün. <br><br>

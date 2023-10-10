@@ -18,7 +18,8 @@
     <string name="color_title">Spalvų</string>
     <string name="color_summary">Rankinis pagrindinės spalvos, akcento, fono, teksto ir naršymo juostos reguliavimas</string>
     <string name="plus_title">Paremkite mus</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Su jūsų pagalba galime įdiegti daugiau funkcijų ir padaryti programą dar geresnę</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Mes vertiname jūsų laiką ir norime, kad galėtumėte mėgautis mūsų programa be skelbimų. Jei tai suteikė jums malonumą ir naudingumą, apsvarstykite galimybę paaukoti jo plėtrai. <br><br>

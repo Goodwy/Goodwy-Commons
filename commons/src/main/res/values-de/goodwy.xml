@@ -18,7 +18,8 @@
     <string name="color_title">Farben</string>
     <string name="color_summary">Manuelle Anpassung von Grundfarbe, Akzent, Hintergrund, Text und Navigationsleiste</string>
     <string name="plus_title">Unterstütze uns</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Mit Ihrer Hilfe können wir weitere Funktionen implementieren und die Anwendung noch besser machen</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Wir schätzen Ihre Zeit und möchten, dass Sie unsere App ohne Werbung genießen. Wenn es Ihnen Freude und Nutzen gebracht hat, sollten Sie in Betracht ziehen, für seine Entwicklung zu spenden. <br><br>

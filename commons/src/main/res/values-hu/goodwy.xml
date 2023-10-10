@@ -18,7 +18,8 @@
     <string name="color_title">Színek</string>
     <string name="color_summary">Az elsődleges szín, az ékezet, a háttér, a szöveg és a navigációs sáv kézi beállítása</string>
     <string name="plus_title">Támogasson minket</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Az Ön segítségével több funkciót valósíthatunk meg, és még jobbá tehetjük az alkalmazást</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Nagyra értékeljük az idejét, és azt szeretnénk, ha hirdetések nélkül élvezné alkalmazásunkat. Ha örömet és hasznosságot hozott neked, fontold meg, hogy adományozol a fejlesztéséhez. <br><br>

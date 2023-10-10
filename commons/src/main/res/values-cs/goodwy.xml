@@ -18,7 +18,8 @@
     <string name="color_title">Barvy</string>
     <string name="color_summary">Ruční nastavení primární barvy, zvýraznění, pozadí, textu a navigačního panelu</string>
     <string name="plus_title">Podpořte nás</string>
-    <string name="plus_summary">
+    <string name="plus_summary">S vaší pomocí můžeme implementovat více funkcí a aplikaci ještě vylepšit</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Vážíme si vašeho času a chceme, abyste si naši aplikaci užili bez reklam. Pokud vám přinesla potěšení a užitečnost, zvažte darování na její rozvoj. <br><br>

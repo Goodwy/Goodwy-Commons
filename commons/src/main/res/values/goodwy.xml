@@ -33,7 +33,8 @@
     <string name="color_title">Colors</string>
     <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
     <string name="plus_title">Support us</string>
-    <string name="plus_summary">
+    <string name="plus_summary">With your help we can implement more features and make the application even better</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             We value your time and want you to enjoy our app without ads. If it has brought you pleasure and usefulness, consider donating to its development.<br><br>

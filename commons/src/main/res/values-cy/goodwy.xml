@@ -18,7 +18,8 @@
     <string name="color_title">Màu sắc</string>
     <string name="color_summary">Addasiad â llaw o\'r prif liw, acen, cefndir, testun a bar llywio</string>
     <string name="plus_title">Cefnogwch ni</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Gyda\'ch help chi, gallwn weithredu mwy o nodweddion a gwneud y cais hyd yn oed yn well</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Rydym yn gwerthfawrogi eich amser ac eisiau i chi fwynhau ein app heb hysbysebion. Os yw wedi dod â phleser a defnyddioldeb i chi, ystyriwch gyfrannu at ei ddatblygiad. <br><br>

@@ -18,7 +18,8 @@
     <string name="color_title">顏色</string>
     <string name="color_summary">手動調整原色、強調色、背景、文本和導航欄</string>
     <string name="plus_title">支持我們</string>
-    <string name="plus_summary">
+    <string name="plus_summary">在您的説明下，我們可以實現更多功能並使應用程式變得更好</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             我們重視您的時間，並希望您在沒有廣告的情況下享受我們的應用程式。如果它給你帶來了快樂和有用性，請考慮捐贈給它的發展。<br><br>

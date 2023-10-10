@@ -18,7 +18,8 @@
     <string name="color_title">Kolory</string>
     <string name="color_summary">Ręczna regulacja koloru podstawowego, akcentu, tła, tekstu i paska nawigacyjnego</string>
     <string name="plus_title">Wesprzyj nas</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Z Twoją pomocą możemy wdrożyć więcej funkcji i uczynić aplikację jeszcze lepszą</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Cenimy Twój czas i chcemy, abyś cieszył się naszą aplikacją bez reklam. Jeśli przyniósł ci przyjemność i użyteczność, rozważ przekazanie darowizny na jego rozwój. <br><br>

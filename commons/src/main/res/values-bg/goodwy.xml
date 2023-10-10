@@ -33,7 +33,8 @@
     <string name="color_title">Цветове</string>
     <string name="color_summary">Ръчно регулиране на основния цвят, акцент, фон, текст и навигационна лента</string>
     <string name="plus_title">Подкрепете ни</string>
-    <string name="plus_summary">
+    <string name="plus_summary">С ваша помощ можем да внедрим повече функции и да направим приложението още по-добро</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Ние ценим вашето време и искаме да се наслаждавате на нашето приложение без реклами. Ако ви е донесло удоволствие и полза, помислете за дарение за развитието му.<br><br>

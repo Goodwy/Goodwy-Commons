@@ -18,7 +18,8 @@
     <string name="color_title">색상</string>
     <string name="color_summary">기본 색상, 악센트, 배경, 텍스트 및 탐색 모음의 수동 조정</string>
     <string name="plus_title">우리를 지원</string>
-    <string name="plus_summary">
+    <string name="plus_summary">귀하의 도움으로 더 많은 기능을 구현하고 응용 프로그램을 더욱 향상시킬 수 있습니다</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             우리는 당신의 시간을 소중히 여기며 당신이 광고 없이 우리 앱을 즐기기를 바랍니다. 그것이 당신에게 즐거움과 유용성을 가져다 주었다면, 그 발전에 기부하는 것을 고려하십시오. <br><br>

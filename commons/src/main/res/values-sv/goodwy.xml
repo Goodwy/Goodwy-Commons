@@ -18,7 +18,8 @@
     <string name="color_title">Färger</string>
     <string name="color_summary">Manuell justering av primärfärg, accent, bakgrund, text och navigeringsfält</string>
     <string name="plus_title">Stöd oss</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Med din hjälp kan vi implementera fler funktioner och göra applikationen ännu bättre</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Vi värdesätter din tid och vill att du ska njuta av vår app utan annonser. Om det har gett dig nöje och användbarhet, överväga att donera till dess utveckling. <br><br>

@@ -33,7 +33,8 @@
     <string name="color_title">颜色</string>
     <string name="color_summary">手动调整原色、强调色、背景、文本和导航栏</string>
     <string name="plus_title">支持我们</string>
-    <string name="plus_summary">
+    <string name="plus_summary">在您的帮助下，我们可以实现更多功能并使应用程序变得更好</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             我们重视您的时间，并希望您在没有广告的情况下享受我们的应用程序。如果它给你带来了快乐和有用性，请考虑捐赠给它的发展。<br><br>

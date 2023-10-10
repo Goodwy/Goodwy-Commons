@@ -32,7 +32,8 @@
     <string name="color_title">Culori</string>
     <string name="color_summary">Ajustarea manuală a culorii primare, a accentului, a fundalului, a textului și a barei de navigare</string>
     <string name="plus_title">Sustine-ne</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Cu ajutorul dvs. putem implementa mai multe funcții și putem îmbunătăți aplicația</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Apreciem timpul dvs. și dorim să vă bucurați de aplicația noastră fără reclame. Dacă v-a adus plăcere și utilitate, luați în considerare donarea pentru dezvoltarea sa. <br><br>

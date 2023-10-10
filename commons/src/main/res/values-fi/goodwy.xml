@@ -18,7 +18,8 @@
     <string name="color_title">Värit</string>
     <string name="color_summary">Päävärin, korostuksen, taustan, tekstin ja siirtymispalkin manuaalinen säätö</string>
     <string name="plus_title">Tue meitä</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Avullasi voimme toteuttaa lisää ominaisuuksia ja tehdä sovelluksesta entistä paremman</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Arvostamme aikaasi ja haluamme sinun nauttivan sovelluksestamme ilman mainoksia. Jos se on tuonut sinulle iloa ja hyötyä, harkitse lahjoittamista sen kehittämiseen. <br><br>

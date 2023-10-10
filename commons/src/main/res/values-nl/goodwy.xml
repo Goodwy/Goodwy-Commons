@@ -18,7 +18,8 @@
     <string name="color_title">Kleuren</string>
     <string name="color_summary">Handmatige aanpassing van de primaire kleur, accent, achtergrond, tekst en navigatiebalk</string>
     <string name="plus_title">Steun ons</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Met uw hulp kunnen we meer functies implementeren en de applicatie nog beter maken</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             We waarderen uw tijd en willen dat u zonder advertenties van onze app kunt genieten. Als het je plezier en nut heeft gebracht, overweeg dan om te doneren aan de ontwikkeling ervan. <br><br>

@@ -18,7 +18,8 @@
     <string name="color_title">Colori</string>
     <string name="color_summary">Regolazione manuale del colore primario, dell\'accento, dello sfondo, del testo e della barra di navigazione</string>
     <string name="plus_title">Sostienici</string>
-    <string name="plus_summary">
+    <string name="plus_summary">Con il tuo aiuto possiamo implementare più funzionalità e rendere l\'applicazione ancora migliore</string>
+    <string name="about_summary">
         <![CDATA[
             <i>
             Apprezziamo il tuo tempo e vogliamo che tu possa goderti la nostra app senza pubblicità. Se ti ha portato piacere e utilità, considera di donare al suo sviluppo. <br><br>
