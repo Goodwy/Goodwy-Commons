@@ -38,6 +38,7 @@ class FilePickerDialog(
     val canAddShowHiddenButton: Boolean = false,
     val forceShowRoot: Boolean = false,
     val showFavoritesButton: Boolean = false,
+    val title: Int = R.string.select_folder,
     private val enforceStorageRestrictions: Boolean = true,
     val callback: (pickedPath: String) -> Unit
 ) : Breadcrumbs.BreadcrumbsListener {
@@ -142,7 +143,7 @@ class FilePickerDialog(
         }
     }
 
-    private fun getTitle() = if (pickFile) R.string.select_file else R.string.select_folder
+    private fun getTitle() = if (pickFile) R.string.select_file else title
 
     private fun createNewFolder() {
         CreateNewFolderDialog(activity, currPath) {

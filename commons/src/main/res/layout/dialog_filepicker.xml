@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/filepicker_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -90,7 +91,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/activity_margin"
         android:orientation="vertical">
 
         <com.goodwy.commons.views.MyFloatingActionButton
@@ -117,6 +117,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/activity_margin"
         android:src="@drawable/ic_plus_vector"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:visibility="visible" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
