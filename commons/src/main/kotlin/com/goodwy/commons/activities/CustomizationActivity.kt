@@ -53,7 +53,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun getShowAccentColor() = intent.getBooleanExtra(SHOW_ACCENT_COLOR, true)
 
-    private fun isProVersion() = intent.getBooleanExtra(IS_PRO_VERSION, false) || baseConfig.isPro
+    private fun isProVersion() = intent.getBooleanExtra(IS_COLLECTION, false) || isPro()
     private fun getLicensingKey() = intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: ""
     private fun getProductIdX1() = intent.getStringExtra(PRODUCT_ID_X1) ?: ""
     private fun getProductIdX2() = intent.getStringExtra(PRODUCT_ID_X2) ?: ""
@@ -823,9 +823,9 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.moreButton.setOnClickListener {
             launchPurchase()
         }
-        val appDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_plus_support, getProperPrimaryColor())
+        val appDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_plus_support, getProperPrimaryColor())
         binding.purchaseLogo.setImageDrawable(appDrawable)
-        val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, getProperPrimaryColor())
+        val drawable = resources.getColoredDrawableWithColor(this, R.drawable.button_gray_bg, getProperPrimaryColor())
         binding.moreButton.background = drawable
         binding.moreButton.setTextColor(getProperBackgroundColor())
         binding.moreButton.setPadding(2,2,2,2)

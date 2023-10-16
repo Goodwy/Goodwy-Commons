@@ -2,6 +2,7 @@ package com.goodwy.commons.helpers.rustore
 
 import android.app.Activity
 import com.goodwy.commons.R
+import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.helpers.rustore.model.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.BufferOverflow
@@ -128,6 +129,10 @@ class RuStoreHelper constructor(
 
     private fun handlePaymentResult(paymentResult: PaymentResult) {
         when (paymentResult) {
+            is PaymentResult.Cancelled -> {
+                deletePurchase(paymentResult.purchaseId)
+            }
+
             is PaymentResult.Failure -> {
                 paymentResult.purchaseId?.let { deletePurchase(it) }
             }
@@ -165,7 +170,7 @@ class RuStoreHelper constructor(
             }
     }
 
-    fun deletePurchase(purchaseId: String) {
+    private fun deletePurchase(purchaseId: String) {
         _stateBilling.value = _stateBilling.value.copy(
             isLoading = true,
             snackbarResId = R.string.billing_purchase_delete_in_progress

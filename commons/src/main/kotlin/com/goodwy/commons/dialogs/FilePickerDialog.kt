@@ -326,7 +326,7 @@ class FilePickerDialog(
         mDialogView.apply {
             filepickerFavoritesHolder.beVisible()
             filepickerFilesHolder.beGone()
-            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_folder_vector, activity.getProperPrimaryColor().getContrastColor())
+            val drawable = activity.resources.getColoredDrawableWithColor(activity, R.drawable.ic_folder_vector, activity.getProperPrimaryColor().getContrastColor())
             filepickerFabShowFavorites.setImageDrawable(drawable)
         }
     }
@@ -335,7 +335,7 @@ class FilePickerDialog(
         mDialogView.apply {
             filepickerFavoritesHolder.beGone()
             filepickerFilesHolder.beVisible()
-            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_star_vector, activity.getProperPrimaryColor().getContrastColor())
+            val drawable = activity.resources.getColoredDrawableWithColor(activity, R.drawable.ic_star_vector, activity.getProperPrimaryColor().getContrastColor())
             filepickerFabShowFavorites.setImageDrawable(drawable)
         }
     }

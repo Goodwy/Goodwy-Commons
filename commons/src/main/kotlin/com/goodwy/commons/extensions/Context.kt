@@ -1358,3 +1358,5 @@ fun Context.isPlayStoreInstalled(): Boolean {
 fun Context.isRuStoreInstalled(): Boolean {
     return isPackageInstalled("ru.vk.store")
 }
+
+fun Context.isPro() = baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore

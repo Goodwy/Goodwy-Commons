@@ -51,7 +51,7 @@ fun ImageView.setFillWithStrokeLeft(fillColor: Int, backgroundColor: Int, corner
         shape = GradientDrawable.RECTANGLE
         setColor(fillColor)
         setStroke(2, strokeColor)
-        val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.picker_old_color_left, fillColor)
+        val bgDrawable = resources.getColoredDrawableWithColor(context, R.drawable.picker_old_color_left, fillColor)
         background = bgDrawable
 
         if (cornerRadiusSize != 0f) {
@@ -66,7 +66,7 @@ fun ImageView.setFillWithStrokeRigth(fillColor: Int, backgroundColor: Int, corne
         shape = GradientDrawable.RECTANGLE
         setColor(fillColor)
         setStroke(2, strokeColor)
-        val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_delta, fillColor)
+        val bgDrawable = resources.getColoredDrawableWithColor(context, R.drawable.ic_delta, fillColor)
         background = bgDrawable
 
         if (cornerRadiusSize != 0f) {

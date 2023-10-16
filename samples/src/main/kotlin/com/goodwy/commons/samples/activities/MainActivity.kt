@@ -38,9 +38,9 @@ class MainActivity : BaseSimpleActivity() {
 
         binding.mainColorCustomization.setOnClickListener {
             startCustomizationActivity(
-                isProVersion = baseConfig.isPro || baseConfig.isProSubs,
-                playStoreInstalled = false, //isPlayStoreInstalled()
-                ruStoreInstalled = false, //isRuStoreInstalled()
+                isCollection = false,
+                playStoreInstalled = isPlayStoreInstalled(), //isPlayStoreInstalled()
+                ruStoreInstalled = isRuStoreInstalled(), //isRuStoreInstalled()
                 )
         }
         binding.mainAbout.setOnClickListener {

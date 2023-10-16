@@ -1481,8 +1481,8 @@ fun Activity.setupDialogStuff(
             val bgDrawable = when {
                 isBlackAndWhiteTheme() -> ResourcesCompat.getDrawable(resources, R.drawable.black_dialog_background, theme)
                 baseConfig.isUsingSystemTheme -> ResourcesCompat.getDrawable(resources, R.drawable.dialog_you_background, theme)
-                isBlackTheme() -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, getBottomNavigationBackgroundColor())
-                else -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor) //TODO Dialog background
+                isBlackTheme() -> resources.getColoredDrawableWithColor(this@setupDialogStuff, R.drawable.dialog_bg, getBottomNavigationBackgroundColor())
+                else -> resources.getColoredDrawableWithColor(this@setupDialogStuff, R.drawable.dialog_bg, baseConfig.backgroundColor) //TODO Dialog background
             }
 
             window?.setBackgroundDrawable(bgDrawable)

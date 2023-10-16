@@ -56,7 +56,7 @@ fun setupSimpleListItem(view: ItemSimpleListBinding, viewCollect: ItemCollection
 
             val textButton = if (item.selected) R.string.open else R.string.get
             bottomSheetButton.setText(textButton)
-            val drawable = root.resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, root.context.getProperPrimaryColor())
+            val drawable = root.resources.getColoredDrawableWithColor(root.context, R.drawable.button_gray_bg, root.context.getProperPrimaryColor())
             bottomSheetButton.background = drawable
             bottomSheetButton.setTextColor(root.context.getProperBackgroundColor())
             bottomSheetButton.setPadding(2,2,2,2)

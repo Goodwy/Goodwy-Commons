@@ -1,11 +1,13 @@
 package com.goodwy.commons.extensions
 
+import android.content.Context
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
+import androidx.appcompat.content.res.AppCompatResources
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.LBC_ARC
 import com.goodwy.commons.helpers.LBC_IOS
@@ -27,6 +29,13 @@ fun Resources.getColoredDrawableWithColor(drawableId: Int, color: Int, alpha: In
     val drawable = getDrawable(drawableId)
     drawable.mutate().applyColorFilter(color)
     drawable.mutate().alpha = alpha
+    return drawable
+}
+
+fun Resources.getColoredDrawableWithColor(context: Context, drawableId: Int, color: Int, alpha: Int = 255): Drawable? {
+    val drawable = AppCompatResources.getDrawable(context, drawableId)
+    drawable?.mutate()?.applyColorFilter(color)
+    drawable?.mutate()?.alpha = alpha
     return drawable
 }
 

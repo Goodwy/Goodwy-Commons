@@ -35,7 +35,7 @@ class MyEditText : AppCompatEditText {
         setLinkTextColor(accentColor)
         if (backgroundColor != -2) {
             if (isQPlus()) {
-                textCursorDrawable = resources.getColoredDrawableWithColor(R.drawable.cursor_text_vertical, backgroundColor)
+                textCursorDrawable = resources.getColoredDrawableWithColor(context, R.drawable.cursor_text_vertical, backgroundColor)
                 if (!isMiUi()) {
                     setTextSelectHandle(resources.getColoredDrawableWithColor(R.drawable.ic_drop_vector, backgroundColor))
                     setTextSelectHandleLeft(resources.getColoredDrawableWithColor(R.drawable.ic_drop_left_vector, backgroundColor))
@@ -53,9 +53,9 @@ class MyEditText : AppCompatEditText {
                         fSelectHandleLeft.isAccessible = true
                         fSelectHandleRight.isAccessible = true
                         fSelectHandleCenter.isAccessible = true
-                        fSelectHandleLeft.set(editor, resources.getColoredDrawableWithColor(R.drawable.ic_drop_left_vector, backgroundColor))
-                        fSelectHandleRight.set(editor, resources.getColoredDrawableWithColor(R.drawable.ic_drop_right_vector, backgroundColor))
-                        fSelectHandleCenter.set(editor, resources.getColoredDrawableWithColor(R.drawable.ic_drop_vector, backgroundColor))
+                        fSelectHandleLeft.set(editor, resources.getColoredDrawableWithColor(context, R.drawable.ic_drop_left_vector, backgroundColor))
+                        fSelectHandleRight.set(editor, resources.getColoredDrawableWithColor(context, R.drawable.ic_drop_right_vector, backgroundColor))
+                        fSelectHandleCenter.set(editor, resources.getColoredDrawableWithColor(context, R.drawable.ic_drop_vector, backgroundColor))
                     }
 
                     // Get the cursor resource id

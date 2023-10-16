@@ -169,10 +169,9 @@ class PurchaseActivity : BaseSimpleActivity() {
                             setupButtonRuStore(state)
                             //update pro version
                             if (ruStoreIsConnected) {
-                                baseConfig.isPro =
-                                    state.products.firstOrNull { it.productId == productIdX1 || it.productId == productIdX2 || it.productId == productIdX3 } != null
-                                baseConfig.isProSubs =
-                                    state.products.firstOrNull { it.productId == subscriptionIdX1 || it.productId == subscriptionIdX2 || it.productId == subscriptionIdX3 } != null
+                                baseConfig.isProRuStore =
+                                    state.products.firstOrNull { it.productId == productIdX1 || it.productId == productIdX2 || it.productId == productIdX3
+                                        || it.productId == subscriptionIdX1 || it.productId == subscriptionIdX2 || it.productId == subscriptionIdX3 } != null
                             }
                         }
                     }
@@ -262,7 +261,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         lifebuoy_summary.movementMethod = LinkMovementMethod.getInstance()*/
 
         binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
-        val lifebuoyButtonDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_mail_vector, getProperTextColor())
+        val lifebuoyButtonDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
         binding.lifebuoyButton.setImageDrawable(lifebuoyButtonDrawable)
         binding.lifebuoyButton.setOnClickListener {
             ConfirmationDialog(this, getString(R.string.send_email)) {
@@ -297,7 +296,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             setOnClickListener {
                 purchaseHelper.getDonation(productIdX1)
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
             if (purchaseHelper.isIapPurchased(productIdX1)) {
@@ -313,7 +312,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             setOnClickListener {
                 purchaseHelper.getDonation(productIdX2)
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
             if (purchaseHelper.isIapPurchased(productIdX2)) {
@@ -329,7 +328,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             setOnClickListener {
                 purchaseHelper.getDonation(productIdX3)
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
             if (purchaseHelper.isIapPurchased(productIdX3)) {
@@ -354,7 +353,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
             if (purchaseHelper.isSubPurchased(subscriptionIdX1)) {
@@ -375,7 +374,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
             if (purchaseHelper.isSubPurchased(subscriptionIdX2)) {
@@ -396,7 +395,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
             if (purchaseHelper.isSubPurchased(subscriptionIdX3)) {
@@ -440,15 +439,15 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupIcon() {
-        val appDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_plus_support, primaryColor)
+        val appDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_plus_support, primaryColor)
         binding.topDetails.appLogo.setImageDrawable(appDrawable)
-        val themeDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_invert_colors, primaryColor)
+        val themeDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_invert_colors, primaryColor)
         binding.themeLogo.setImageDrawable(themeDrawable)
-        val colorDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_palette, primaryColor)
+        val colorDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_palette, primaryColor)
         binding.colorLogo.setImageDrawable(colorDrawable)
-        val plusDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_plus_round, primaryColor)
+        val plusDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_plus_round, primaryColor)
         binding.plusLogo.setImageDrawable(plusDrawable)
-        val lifebuoyDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_lifebuoy, primaryColor)
+        val lifebuoyDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_lifebuoy, primaryColor)
         binding.lifebuoyLogo.setImageDrawable(lifebuoyDrawable)
     }
 
@@ -458,7 +457,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             setOnClickListener {
                 launchViewIntent("https://sites.google.com/view/goodwy/support-project")
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg, primaryColor)
             background = drawable
             //setTextColor(baseConfig.backgroundColor)
             setPadding(2,2,2,2)
@@ -557,7 +556,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     ruStoreHelper.purchaseProduct(product)
                 }
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
         }
@@ -573,7 +572,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     ruStoreHelper.purchaseProduct(product)
                 }
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
         }
@@ -589,7 +588,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     ruStoreHelper.purchaseProduct(product)
                 }
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
         }
@@ -610,7 +609,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
         }
@@ -631,7 +630,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
         }
@@ -652,7 +651,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg_8dp, primaryColor)
+            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
         }
@@ -703,7 +702,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
                     is FeatureAvailabilityResult.Unavailable -> {
                         event.availability.cause.resolveForBilling(this) //Show error dialog
-                        //toast(event.availability.cause.message ?: "Process purchases unavailable", Toast.LENGTH_LONG)
+                        //showErrorToast(event.availability.cause.message ?: "Process purchases unavailable", Toast.LENGTH_LONG)
                     }
 
                     else -> {}
@@ -711,7 +710,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
 
             is StartPurchasesEvent.Error -> {
-                toast(event.throwable.message ?: "Process unknown error", Toast.LENGTH_LONG)
+                showErrorToast(event.throwable.message ?: "Process unknown error", Toast.LENGTH_LONG)
             }
         }
     }
@@ -719,22 +718,14 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun handleEventBilling(event: BillingEvent) {
         when (event) {
             is BillingEvent.ShowDialog -> {
-//                requireContext().showAlertDialog(
-//                    title = getString(event.dialogInfo.titleRes),
-//                    message = event.dialogInfo.message,
-//                )
-                toast(event.dialogInfo.message, Toast.LENGTH_LONG)
+                toast(event.dialogInfo.titleRes, Toast.LENGTH_LONG)
             }
 
             is BillingEvent.ShowError -> {
                 if (event.error is RuStoreException) {
                     event.error.resolveForBilling(this)
                 }
-//                showToast(
-//                    message = "${getString(R.string.billing_general_error)}: ${event.error.message.orEmpty()}",
-//                    lengthLong = true
-//                )
-                toast("${getString(R.string.billing_general_error)}: ${event.error.message.orEmpty()}", Toast.LENGTH_LONG)
+                showErrorToast("${getString(R.string.billing_general_error)}: ${event.error.message.orEmpty()}", Toast.LENGTH_LONG)
             }
         }
     }

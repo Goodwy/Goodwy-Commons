@@ -54,7 +54,7 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, private val calle
                         }
                     }
                     view.cancelButton.apply {
-                        val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, 0xFFEB5545.toInt())
+                        val drawable = resources.getColoredDrawableWithColor(activity, R.drawable.button_gray_bg, 0xFFEB5545.toInt())
                         background = drawable
                         setPadding(2,2,2,2)
                         setOnClickListener {
@@ -62,7 +62,7 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, private val calle
                         }
                     }
                     view.callButton.apply {
-                        val drawable = resources.getColoredDrawableWithColor(R.drawable.button_gray_bg, activity.baseConfig.accentColor)
+                        val drawable = resources.getColoredDrawableWithColor(activity, R.drawable.button_gray_bg, activity.baseConfig.accentColor)
                         background = drawable
                         setPadding(2,2,2,2)
                         setOnClickListener {

@@ -323,9 +323,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             toolbar.setBackgroundColor(color)
             toolbar.setTitleTextColor(contrastColor)
             toolbar.navigationIcon?.applyColorFilter(contrastColor)
-            toolbar.collapseIcon = resources.getColoredDrawableWithColor(R.drawable.ic_chevron_left_vector, contrastColor)
+            toolbar.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, contrastColor)
         //}
-        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
+        toolbar.overflowIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_three_dots_vector, contrastColor)
 
         val menu = toolbar.menu
         for (i in 0 until menu.size()) {
@@ -362,7 +362,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         val contrastColor = statusBarColor.getContrastColor()
         if (toolbarNavigationIcon != NavigationIcon.None) {
             val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_chevron_left_vector
-            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
+            toolbar.navigationIcon = resources.getColoredDrawableWithColor(this, drawableId, contrastColor)
             toolbar.setNavigationContentDescription(toolbarNavigationIcon.accessibilityResId)
         }
 
@@ -706,7 +706,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startCustomizationActivity(showAccentColor : Boolean = true, isProVersion : Boolean = true, licensingKey: String = "",
+    fun startCustomizationActivity(showAccentColor : Boolean = true, isCollection : Boolean = false, licensingKey: String = "",
                                    productIdX1: String = "", productIdX2: String = "", productIdX3: String = "",
                                    subscriptionIdX1: String = "", subscriptionIdX2: String = "", subscriptionIdX3: String = "",
                                    showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
@@ -726,7 +726,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             putExtra(SHOW_ACCENT_COLOR, showAccentColor)
-            putExtra(IS_PRO_VERSION, isProVersion)
+            putExtra(IS_COLLECTION, isCollection)
             putExtra(GOOGLE_PLAY_LICENSING_KEY, licensingKey)
             putExtra(PRODUCT_ID_X1, productIdX1)
             putExtra(PRODUCT_ID_X2, productIdX2)

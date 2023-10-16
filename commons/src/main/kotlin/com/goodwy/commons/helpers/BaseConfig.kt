@@ -674,6 +674,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(IS_PRO_SUBS_VERSION, false)
         set(isProSubs) = prefs.edit().putBoolean(IS_PRO_SUBS_VERSION, isProSubs).apply()
 
+    var isProRuStore: Boolean
+        get() = prefs.getBoolean(IS_PRO_RUSTORE_VERSION, false)
+        set(isProSubs) = prefs.edit().putBoolean(IS_PRO_RUSTORE_VERSION, isProSubs).apply()
+
     var simIconsColors: LinkedList<Int>
         get(): LinkedList<Int> {
             val defaultList = arrayListOf(
