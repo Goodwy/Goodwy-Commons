@@ -45,6 +45,8 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var ruStoreInstalled = false
     private var showCollection = false
 
+    private var ruStoreIsConnected = false
+
     private val purchaseHelper = PurchaseHelper(this)
     private val ruStoreHelper = RuStoreHelper(this)
     private val ruStoreBillingClient: RuStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
@@ -180,7 +182,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 ruStoreHelper.statePurchased
                     .flowWithLifecycle(lifecycle)
                     .collect { state ->
-                        if (!state.isLoading) {
+                        if (!state.isLoading && ruStoreIsConnected) {
                             //update of purchased
                             setupButtonCheckedRuStore(state.purchases)
                             //update pro version
@@ -695,6 +697,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     is FeatureAvailabilityResult.Available -> {
                         //Process purchases available
                         updateProducts()
+                        ruStoreIsConnected = true
                     }
 
                     is FeatureAvailabilityResult.Unavailable -> {
