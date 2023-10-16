@@ -45,8 +45,6 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var ruStoreInstalled = false
     private var showCollection = false
 
-    private var ruStoreIsConnected = false
-
     private val purchaseHelper = PurchaseHelper(this)
     private val ruStoreHelper = RuStoreHelper(this)
     private val ruStoreBillingClient: RuStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
@@ -145,13 +143,13 @@ class PurchaseActivity : BaseSimpleActivity() {
             //RuStore
             ruStoreHelper.checkPurchasesAvailability()
 
-            lifecycleScope.launch {
-                ruStoreHelper.stateStart
-                    .flowWithLifecycle(lifecycle)
-                    .collect { state ->
-                        // update button
-                    }
-            }
+//            lifecycleScope.launch {
+//                ruStoreHelper.stateStart
+//                    .flowWithLifecycle(lifecycle)
+//                    .collect { state ->
+//                        // update button
+//                    }
+//            }
             lifecycleScope.launch {
                 ruStoreHelper.eventStart
                     .flowWithLifecycle(lifecycle)
@@ -167,12 +165,6 @@ class PurchaseActivity : BaseSimpleActivity() {
                         if (!state.isLoading) {
                             //price update
                             setupButtonRuStore(state)
-                            //update pro version
-                            if (ruStoreIsConnected) {
-                                baseConfig.isProRuStore =
-                                    state.products.firstOrNull { it.productId == productIdX1 || it.productId == productIdX2 || it.productId == productIdX3
-                                        || it.productId == subscriptionIdX1 || it.productId == subscriptionIdX2 || it.productId == subscriptionIdX3 } != null
-                            }
                         }
                     }
             }
@@ -188,8 +180,14 @@ class PurchaseActivity : BaseSimpleActivity() {
                 ruStoreHelper.statePurchased
                     .flowWithLifecycle(lifecycle)
                     .collect { state ->
-                        //update of purchased
-                        if (!state.isLoading) setupButtonCheckedRuStore(state.purchases)
+                        if (!state.isLoading) {
+                            //update of purchased
+                            setupButtonCheckedRuStore(state.purchases)
+                            //update pro version
+                            baseConfig.isProRuStore =
+                                state.purchases.firstOrNull { it.productId == productIdX1 || it.productId == productIdX2 || it.productId == productIdX3
+                                    || it.productId == subscriptionIdX1 || it.productId == subscriptionIdX2 || it.productId == subscriptionIdX3 } != null
+                        }
                     }
             }
         }
@@ -697,7 +695,6 @@ class PurchaseActivity : BaseSimpleActivity() {
                     is FeatureAvailabilityResult.Available -> {
                         //Process purchases available
                         updateProducts()
-                        ruStoreIsConnected = true
                     }
 
                     is FeatureAvailabilityResult.Unavailable -> {
