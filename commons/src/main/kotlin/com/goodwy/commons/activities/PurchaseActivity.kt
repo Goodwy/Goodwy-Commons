@@ -186,9 +186,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                             //update of purchased
                             setupButtonCheckedRuStore(state.purchases)
                             //update pro version
-                            baseConfig.isProRuStore =
-                                state.purchases.firstOrNull { it.productId == productIdX1 || it.productId == productIdX2 || it.productId == productIdX3
-                                    || it.productId == subscriptionIdX1 || it.productId == subscriptionIdX2 || it.productId == subscriptionIdX3 } != null
+                            baseConfig.isProRuStore = state.purchases.firstOrNull() != null
                         }
                     }
             }
