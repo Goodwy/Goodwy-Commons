@@ -254,7 +254,9 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun setupChangeStoreMenu() {
         binding.purchaseToolbar.menu.findItem(R.id.changeStore).apply {
             isVisible = playStoreInstalled && ruStoreInstalled
-            title = if (baseConfig.useGooglePlay) getString(R.string.billing_change_to_ru_store) else  getString(R.string.billing_change_to_google_play)
+            title = if (baseConfig.useGooglePlay) getString(R.string.billing_change_to_ru_store) else getString(R.string.billing_change_to_google_play)
+            icon = if (baseConfig.useGooglePlay) AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_google_play_vector)
+                    else AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_rustore)
             setOnMenuItemClickListener {
                 if (baseConfig.useGooglePlay) {
                     baseConfig.useGooglePlay = false

@@ -284,4 +284,6 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_google_play">Google Play</string>
+    <string name="billing_ru_store">RuStore</string>
 </resources>
