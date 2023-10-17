@@ -710,6 +710,10 @@ open class BaseConfig(val context: Context) {
     var flashForAlerts: Boolean
         get() = prefs.getBoolean(FLASH_FOR_ALERTS, false)
         set(flashForAlerts) = prefs.edit().putBoolean(FLASH_FOR_ALERTS, flashForAlerts).apply()
+
+    var useGooglePlay: Boolean
+        get() = prefs.getBoolean(USE_GOOGLE_PLAY, false)
+        set(useGooglePlay) = prefs.edit().putBoolean(USE_GOOGLE_PLAY, useGooglePlay).apply()
 }
 
 

@@ -12,6 +12,7 @@ import androidx.core.net.toUri
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import com.goodwy.commons.R
+import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.databinding.ActivityPurchaseBinding
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
 import com.goodwy.commons.dialogs.ConfirmationDialog
@@ -99,7 +100,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             it.beGoneIf(playStoreInstalled || ruStoreInstalled)
         }
 
-        if (playStoreInstalled && !ruStoreInstalled) {
+        if ((playStoreInstalled && !ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && baseConfig.useGooglePlay)) {
             //PlayStore
             purchaseHelper.initBillingClient()
             val iapList: ArrayList<String> = arrayListOf(productIdX1, productIdX2, productIdX3)
@@ -141,7 +142,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             purchaseHelper.isSupPurchasedList.observe(this) {
                 setupButtonSupPurchased()
             }
-        } else if (ruStoreInstalled) {
+        } else if ((!playStoreInstalled && ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && !baseConfig.useGooglePlay)) {
             //RuStore
             ruStoreHelper.checkPurchasesAvailability()
 
@@ -188,6 +189,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                             //update pro version
                             baseConfig.isProRuStore = state.purchases.firstOrNull() != null
                         }
+                        binding.purchaseToolbar.menu.findItem(R.id.openSubscriptions).isVisible = ruStoreIsConnected
                     }
             }
         }
@@ -209,6 +211,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         binding.collapsingToolbar.setBackgroundColor(backgroundColor)
         updateTopBarColors(binding.purchaseToolbar, backgroundColor)
 
+        setupChangeStoreMenu()
         setupEmail()
         if (showCollection) setupCollection()
         //setupParticipants()
@@ -230,7 +233,6 @@ class PurchaseActivity : BaseSimpleActivity() {
         binding.purchaseToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.restorePurchases -> {
-                    //restorePurchase()
                     setupButtonReset()
                     if (ruStoreInstalled) updateProducts()
                     else {
@@ -240,7 +242,28 @@ class PurchaseActivity : BaseSimpleActivity() {
                     }
                     true
                 }
+                R.id.openSubscriptions -> {
+                    launchViewIntent("rustore://profile/subscriptions")
+                    true
+                }
                 else -> false
+            }
+        }
+    }
+
+    private fun setupChangeStoreMenu() {
+        binding.purchaseToolbar.menu.findItem(R.id.changeStore).apply {
+            isVisible = playStoreInstalled && ruStoreInstalled
+            title = if (baseConfig.useGooglePlay) getString(R.string.billing_change_to_ru_store) else  getString(R.string.billing_change_to_google_play)
+            setOnMenuItemClickListener {
+                if (baseConfig.useGooglePlay) {
+                    baseConfig.useGooglePlay = false
+                    recreate()
+                } else {
+                    baseConfig.useGooglePlay = true
+                    recreate()
+                }
+                true
             }
         }
     }
@@ -723,7 +746,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 if (event.error is RuStoreException) {
                     event.error.resolveForBilling(this)
                 }
-                showErrorToast("${getString(R.string.billing_general_error)}: ${event.error.message.orEmpty()}", Toast.LENGTH_LONG)
+                showErrorToast(event.error.message.orEmpty(), Toast.LENGTH_LONG)
             }
         }
     }

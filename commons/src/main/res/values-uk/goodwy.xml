@@ -280,4 +280,7 @@
     <string name="billing_purchase_delete_in_progress">Видаляємо покупку…</string>
     <string name="billing_product_confirmed">Продукт підтверджено/спожито</string>
     <string name="billing_product_deleted">Купівлю скасовано</string>
+    <string name="billing_subscriptions">Підписки</string>
+    <string name="billing_change_to_google_play">Використовувати Google Play</string>
+    <string name="billing_change_to_ru_store">Використовувати RuStore</string>
 </resources>

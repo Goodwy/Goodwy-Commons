@@ -279,4 +279,7 @@
     <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
     <string name="billing_product_confirmed">Product confirmed/substantiated</string>
     <string name="billing_product_deleted">Purchase canceled</string>
+    <string name="billing_subscriptions">Subscriptions</string>
+    <string name="billing_change_to_google_play">Change to Google Play</string>
+    <string name="billing_change_to_ru_store">Change to RuStore</string>
 </resources>
