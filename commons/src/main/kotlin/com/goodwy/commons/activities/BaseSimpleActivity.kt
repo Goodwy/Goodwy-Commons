@@ -136,7 +136,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                 updateActionbarColor(color)
         }
-        updateRecentsAppIcon()
+        //updateRecentsAppIcon()
 
         var navBarColor = getProperBackgroundColor()
         if (isMaterialActivity) {

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.*
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Html
 import android.widget.Toast
@@ -257,6 +258,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             title = if (baseConfig.useGooglePlay) getString(R.string.billing_change_to_ru_store) else getString(R.string.billing_change_to_google_play)
             icon = if (baseConfig.useGooglePlay) AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_google_play_vector)
                     else AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_rustore)
+            icon?.setTint(getProperTextColor())
             setOnMenuItemClickListener {
                 if (baseConfig.useGooglePlay) {
                     baseConfig.useGooglePlay = false
