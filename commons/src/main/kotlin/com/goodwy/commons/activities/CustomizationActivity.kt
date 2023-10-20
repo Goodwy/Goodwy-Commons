@@ -87,14 +87,14 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
 
-        isThankYou = packageName.removeSuffix(".debug") == "com.goodwy.thankyou"
+        isThankYou = packageName.removeSuffix(".debug") == "com.goodwy.sharedtheme"
         initColorVariables()
 
         //TODO HIDE
         binding.applyToAllHolder.beGone()
         binding.customizationAppIconColorHolder.beGone()
 
-        if (isThankYouInstalled()) {
+        if (isSharedThemeInstalled()) {
             val cursorLoader = getMyContentProviderCursorLoader()
             ensureBackgroundThread {
                 try {
@@ -122,8 +122,6 @@ class CustomizationActivity : BaseSimpleActivity() {
             setupThemes()
             baseConfig.isUsingSharedTheme = false
         }
-
-        setupPurchaseThankYou()
 
         //supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross_vector)
         val textColor = if (baseConfig.isUsingSystemTheme) {
@@ -160,6 +158,9 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         setupToolbar(binding.customizationToolbar, NavigationIcon.Arrow)
         updateHoldersColor()
+
+        setupPurchaseThankYou()
+        updateAutoThemeFields()
     }
 
     private fun updateHoldersColor(color: Int = getBottomNavigationBackgroundColor()) {
@@ -300,7 +301,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
-            if (it == THEME_SHARED && !isThankYouInstalled()) {
+            if (it == THEME_SHARED && !isSharedThemeInstalled()) {
                 PurchaseThankYouDialog(this)
                 return@RadioGroupDialog
             }
@@ -746,7 +747,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getUpdatedTheme() = if (curSelectedThemeId == THEME_SHARED) THEME_SHARED else getCurrentThemeId()
 
     private fun applyToAll() {
-        if (isThankYouInstalled()) {
+        if (isSharedThemeInstalled()) {
             ConfirmationDialog(this, "", R.string.share_colors_success, R.string.ok, 0) {
                 Intent().apply {
                     action = MyContentProvider.SHARED_THEME_ACTIVATED

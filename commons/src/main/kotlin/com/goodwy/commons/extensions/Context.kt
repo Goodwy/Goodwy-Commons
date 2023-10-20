@@ -479,8 +479,9 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
     }
     return mimeType
 }
-// TODO thankyou
-//fun Context.isThankYouInstalled() = isPackageInstalled("com.goodwy.audiobook")
+// TODO thank you = SharedTheme
+fun Context.isSharedThemeInstalled() = isPackageInstalled("com.goodwy.sharedtheme")
+
 fun Context.isThankYouInstalled(): Boolean {
     return when {
         isPackageInstalled("com.goodwy.audiobook") -> true
