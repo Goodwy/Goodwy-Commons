@@ -1361,3 +1361,12 @@ fun Context.isRuStoreInstalled(): Boolean {
 }
 
 fun Context.isPro() = baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore
+
+fun Context.isCollection(): Boolean {
+    return isPackageInstalled("com.goodwy.dialer")
+        && isPackageInstalled("com.goodwy.contacts")
+        && isPackageInstalled("com.goodwy.smsmessenger")
+        && isPackageInstalled("com.goodwy.gallery")
+        && isPackageInstalled("com.goodwy.audiobooklite")
+        && isPackageInstalled("com.goodwy.filemanager")
+}
