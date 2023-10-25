@@ -108,6 +108,13 @@ class PurchaseActivity : BaseSimpleActivity() {
             val subList: ArrayList<String> = arrayListOf(subscriptionIdX1, subscriptionIdX2, subscriptionIdX3)
             purchaseHelper.retrieveDonation(iapList, subList)
 
+            purchaseHelper.iapSkuDetailsInitialized.observe(this) {
+                if (it) setupButtonIapPurchased()
+            }
+            purchaseHelper.subSkuDetailsInitialized.observe(this) {
+                if (it) setupButtonSupPurchased()
+            }
+
             purchaseHelper.isIapPurchased.observe(this) {
                 when (it) {
                     is Tipping.Succeeded -> {

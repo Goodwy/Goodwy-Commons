@@ -833,7 +833,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun launchPurchase() {
-        startPurchaseActivity(R.string.app_name_g, getLicensingKey(),
+        startPurchaseActivity(
+            R.string.app_name_g,
+            getLicensingKey(),
             getProductIdX1(), getProductIdX2(), getProductIdX3(),
             getSubscriptionIdX1(), getSubscriptionIdX2(), getSubscriptionIdX3(),
             playStoreInstalled = playStoreInstalled(),

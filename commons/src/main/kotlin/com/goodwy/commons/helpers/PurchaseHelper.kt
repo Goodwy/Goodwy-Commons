@@ -31,6 +31,8 @@ class PurchaseHelper constructor(
     private lateinit var billingClient: BillingClient
     private val iapSkuDetails: ArrayList<ProductDetails> = arrayListOf()
     private val subSkuDetails: ArrayList<ProductDetails> = arrayListOf()
+    val iapSkuDetailsInitialized = MutableLiveData<Boolean>(false)
+    val subSkuDetailsInitialized = MutableLiveData<Boolean>(false)
 
     private var iapList = ArrayList<String>() // = arrayListOf(BuildConfig.PRODUCT_ID_X1, BuildConfig.PRODUCT_ID_X2, BuildConfig.PRODUCT_ID_X3)
     private var subList = ArrayList<String>() // = arrayListOf(BuildConfig.SUBSCRIPTION_ID_X1, BuildConfig.SUBSCRIPTION_ID_X2, BuildConfig.SUBSCRIPTION_ID_X3)
@@ -189,6 +191,7 @@ class PurchaseHelper constructor(
                                         params.build()
                                     ) { _: BillingResult?, productDetailsList: List<ProductDetails> ->
                                         iapSkuDetails.addAll(productDetailsList)
+                                        iapSkuDetailsInitialized.postValue(true)
                                         billingClient.queryPurchaseHistoryAsync(
                                             QueryPurchaseHistoryParams.newBuilder().setProductType(
                                                 BillingClient.ProductType.INAPP
@@ -207,6 +210,7 @@ class PurchaseHelper constructor(
                                         params.build()
                                     ) { _: BillingResult?, productDetailsList: List<ProductDetails> ->
                                         subSkuDetails.addAll(productDetailsList)
+                                        subSkuDetailsInitialized.postValue(true)
                                         billingClient.queryPurchaseHistoryAsync(
                                             QueryPurchaseHistoryParams.newBuilder().setProductType(
                                                 BillingClient.ProductType.SUBS
