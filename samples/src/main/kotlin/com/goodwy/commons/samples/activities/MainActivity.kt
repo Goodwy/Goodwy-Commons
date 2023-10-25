@@ -47,7 +47,7 @@ class MainActivity : BaseSimpleActivity() {
             launchAbout()
         }
         binding.mainPurchase.setOnClickListener {
-            startPurchaseActivity(R.string.app_name_g, "", "pro_version", "pro_version_x2", "", "", "", "",
+            startPurchaseActivity(R.string.app_name_g, "", "", "", "", "", "", "",
                 showLifebuoy = false,
                 playStoreInstalled = isPlayStoreInstalled(),
                 ruStoreInstalled = isRuStoreInstalled(),

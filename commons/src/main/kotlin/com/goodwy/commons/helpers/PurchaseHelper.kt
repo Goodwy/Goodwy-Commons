@@ -31,8 +31,8 @@ class PurchaseHelper constructor(
     private lateinit var billingClient: BillingClient
     private val iapSkuDetails: ArrayList<ProductDetails> = arrayListOf()
     private val subSkuDetails: ArrayList<ProductDetails> = arrayListOf()
-    val iapSkuDetailsInitialized = MutableLiveData<Boolean>(false)
-    val subSkuDetailsInitialized = MutableLiveData<Boolean>(false)
+    val iapSkuDetailsInitialized = MutableLiveData(false)
+    val subSkuDetailsInitialized = MutableLiveData(false)
 
     private var iapList = ArrayList<String>() // = arrayListOf(BuildConfig.PRODUCT_ID_X1, BuildConfig.PRODUCT_ID_X2, BuildConfig.PRODUCT_ID_X3)
     private var subList = ArrayList<String>() // = arrayListOf(BuildConfig.SUBSCRIPTION_ID_X1, BuildConfig.SUBSCRIPTION_ID_X2, BuildConfig.SUBSCRIPTION_ID_X3)

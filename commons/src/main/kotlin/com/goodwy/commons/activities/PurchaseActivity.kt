@@ -145,10 +145,10 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
 
             purchaseHelper.isIapPurchasedList.observe(this) {
-                setupButtonIapPurchased()
+                setupButtonIapChecked()
             }
             purchaseHelper.isSupPurchasedList.observe(this) {
-                setupButtonSupPurchased()
+                setupButtonSupChecked()
             }
         } else if ((!playStoreInstalled && ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && !baseConfig.useGooglePlay)) {
             //RuStore
@@ -242,7 +242,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             when (menuItem.itemId) {
                 R.id.restorePurchases -> {
                     setupButtonReset()
-                    if (ruStoreInstalled) updateProducts()
+                    if (ruStoreInstalled && !baseConfig.useGooglePlay) updateProducts()
                     else {
                         val iapList: ArrayList<String> = arrayListOf(productIdX1, productIdX2, productIdX3)
                         val subList: ArrayList<String> = arrayListOf(subscriptionIdX1, subscriptionIdX2, subscriptionIdX3)
@@ -319,8 +319,6 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupButtonIapPurchased() {
-        val check = AppCompatResources.getDrawable(this, R.drawable.ic_check_circle_vector)
-
         binding.appOneButton.apply {
             val price = purchaseHelper.getPriceDonation(productIdX1)
             isEnabled = price != getString(R.string.no_connection)
@@ -331,10 +329,6 @@ class PurchaseActivity : BaseSimpleActivity() {
             val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
-            if (purchaseHelper.isIapPurchased(productIdX1)) {
-                setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
-                isEnabled = false
-            }
         }
 
         binding.appTwoButton.apply {
@@ -347,10 +341,6 @@ class PurchaseActivity : BaseSimpleActivity() {
             val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
-            if (purchaseHelper.isIapPurchased(productIdX2)) {
-                setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
-                isEnabled = false
-            }
         }
 
         binding.appThreeButton.apply {
@@ -363,16 +353,26 @@ class PurchaseActivity : BaseSimpleActivity() {
             val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
-            if (purchaseHelper.isIapPurchased(productIdX3)) {
-                setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
-                isEnabled = false
-            }
+        }
+    }
+
+    private fun setupButtonIapChecked() {
+        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_vector)
+        if (purchaseHelper.isIapPurchased(productIdX1)) {
+            binding.appOneButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appOneButton.isEnabled = false
+        }
+        if (purchaseHelper.isIapPurchased(productIdX2)) {
+            binding.appTwoButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appTwoButton.isEnabled = false
+        }
+        if (purchaseHelper.isIapPurchased(productIdX3)) {
+            binding.appThreeButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appThreeButton.isEnabled = false
         }
     }
 
     private fun setupButtonSupPurchased() {
-        val check = AppCompatResources.getDrawable(this, R.drawable.ic_check_circle_vector)
-
         binding.appOneSubButton.apply {
             val price = purchaseHelper.getPriceSubscription(subscriptionIdX1)
             if (price != getString(R.string.no_connection)) {
@@ -388,10 +388,6 @@ class PurchaseActivity : BaseSimpleActivity() {
             val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
-            if (purchaseHelper.isSubPurchased(subscriptionIdX1)) {
-                setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
-                isEnabled = false
-            }
         }
 
         binding.appTwoSubButton.apply {
@@ -409,10 +405,6 @@ class PurchaseActivity : BaseSimpleActivity() {
             val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
-            if (purchaseHelper.isSubPurchased(subscriptionIdX2)) {
-                setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
-                isEnabled = false
-            }
         }
 
         binding.appThreeSubButton.apply {
@@ -430,10 +422,22 @@ class PurchaseActivity : BaseSimpleActivity() {
             val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
             background = drawable
             setPadding(2,2,2,2)
-            if (purchaseHelper.isSubPurchased(subscriptionIdX3)) {
-                setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
-                isEnabled = false
-            }
+        }
+    }
+
+    private fun setupButtonSupChecked() {
+        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_vector)
+        if (purchaseHelper.isSubPurchased(subscriptionIdX1)) {
+            binding.appOneSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appOneSubButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionIdX2)) {
+            binding.appTwoSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appTwoSubButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionIdX3)) {
+            binding.appThreeSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appThreeSubButton.isEnabled = false
         }
     }
 
