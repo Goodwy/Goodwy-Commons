@@ -651,7 +651,7 @@ open class BaseConfig(val context: Context) {
 
     // Tab bar
     var bottomNavigationBar: Boolean
-        get() = prefs.getBoolean(BOTTOM_NAVIGATION_BAR, false)
+        get() = prefs.getBoolean(BOTTOM_NAVIGATION_BAR, true)
         set(bottomNavigationBar) = prefs.edit().putBoolean(BOTTOM_NAVIGATION_BAR, bottomNavigationBar).apply()
 
     var transparentNavigationBar: Boolean
