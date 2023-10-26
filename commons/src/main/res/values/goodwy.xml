@@ -13,6 +13,8 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="unblock_numbers">Unblock numbers</string>
+    <string name="show_blocked_numbers">Show blocked numbers</string>
+    <string name="hide_blocked_numbers">Hide blocked numbers</string>
     <string name="recents">Recents</string>
     <string name="message">Message</string>
     <string name="settings_icon">Settings icon</string>
