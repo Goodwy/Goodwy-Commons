@@ -71,7 +71,8 @@ class ContactsHelper(val context: Context) {
             }
 
             if (context.baseConfig.mergeDuplicateContacts && ignoredContactSources.isEmpty() && !getAll) {
-                tempContacts.filter { displayContactSources.contains(it.source) }.groupBy { it.getNameToDisplay().toLowerCase() }.values.forEach { it ->
+                tempContacts.filter { displayContactSources.contains(it.source) }.groupBy { it.getNameToDisplay()
+                    .lowercase(Locale.getDefault()) }.values.forEach { it ->
                     if (it.size == 1) {
                         resultContacts.add(it.first())
                     } else {
@@ -93,7 +94,7 @@ class ContactsHelper(val context: Context) {
 
             Contact.sorting = context.baseConfig.sorting
             Contact.startWithSurname = context.baseConfig.startNameWithSurname
-            resultContacts.sort()
+            if (!showOnlyNumberAndName) resultContacts.sort()
 
             Handler(Looper.getMainLooper()).post {
                 callback(resultContacts)
@@ -129,7 +130,7 @@ class ContactsHelper(val context: Context) {
         }
     }
 
-    private fun getDeviceContacts(contacts: SparseArray<Contact>, ignoredContactSources: HashSet<String>?, gettingDuplicates: Boolean, showOnlyNumberAndName: Boolean = false) {
+    private fun getDeviceContacts(contacts: SparseArray<Contact>, ignoredContactSources: HashSet<String>?, gettingDuplicates: Boolean, showOnlyNumberAndName: Boolean) {
         if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
             return
         }
