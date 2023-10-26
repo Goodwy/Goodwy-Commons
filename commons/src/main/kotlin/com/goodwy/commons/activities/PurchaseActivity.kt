@@ -51,7 +51,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private val purchaseHelper = PurchaseHelper(this)
     private val ruStoreHelper = RuStoreHelper(this)
-    private val ruStoreBillingClient: RuStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
+    //private val ruStoreBillingClient: RuStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
@@ -63,7 +63,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         isMaterialActivity = false
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null && ruStoreInstalled) {
-            ruStoreBillingClient.onNewIntent(intent)
+            RuStoreModule.provideRuStoreBillingClient().onNewIntent(intent)
         }
         setContentView(binding.root)
         appName = intent.getStringExtra(APP_NAME) ?: ""
@@ -206,7 +206,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         if (ruStoreInstalled) {
-            ruStoreBillingClient.onNewIntent(intent)
+            RuStoreModule.provideRuStoreBillingClient().onNewIntent(intent)
         }
     }
 
