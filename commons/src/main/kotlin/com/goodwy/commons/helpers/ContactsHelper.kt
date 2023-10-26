@@ -31,6 +31,7 @@ class ContactsHelper(val context: Context) {
         gettingDuplicates: Boolean = false,
         ignoredContactSources: HashSet<String> = HashSet(),
         showOnlyContactsWithNumbers: Boolean = context.baseConfig.showOnlyContactsWithNumbers,
+        showOnlyNumberAndName: Boolean = false,
         callback: (ArrayList<Contact>) -> Unit
     ) {
         ensureBackgroundThread {
@@ -47,7 +48,7 @@ class ContactsHelper(val context: Context) {
                 }
             }
 
-            getDeviceContacts(contacts, ignoredContactSources, gettingDuplicates)
+            getDeviceContacts(contacts, ignoredContactSources, gettingDuplicates, showOnlyNumberAndName)
 
             if (displayContactSources.contains(SMT_PRIVATE)) {
                 LocalContactsHelper(context).getAllContacts().forEach {
@@ -128,7 +129,7 @@ class ContactsHelper(val context: Context) {
         }
     }
 
-    private fun getDeviceContacts(contacts: SparseArray<Contact>, ignoredContactSources: HashSet<String>?, gettingDuplicates: Boolean) {
+    private fun getDeviceContacts(contacts: SparseArray<Contact>, ignoredContactSources: HashSet<String>?, gettingDuplicates: Boolean, showOnlyNumberAndName: Boolean = false) {
         if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
             return
         }
@@ -202,7 +203,7 @@ class ContactsHelper(val context: Context) {
             }
         }
 
-        val emails = getEmails()
+        val emails = if (showOnlyNumberAndName) SparseArray<ArrayList<Email>>() else getEmails()
         var size = emails.size()
         for (i in 0 until size) {
             val key = emails.keyAt(i)
@@ -231,28 +232,28 @@ class ContactsHelper(val context: Context) {
             }
         }
 
-        val addresses = getAddresses()
+        val addresses = if (showOnlyNumberAndName) SparseArray<ArrayList<Address>>() else getAddresses()
         size = addresses.size()
         for (i in 0 until size) {
             val key = addresses.keyAt(i)
             contacts[key]?.addresses = addresses.valueAt(i)
         }
 
-        val IMs = getIMs()
+        val IMs = if (showOnlyNumberAndName) SparseArray<ArrayList<IM>>() else getIMs()
         size = IMs.size()
         for (i in 0 until size) {
             val key = IMs.keyAt(i)
             contacts[key]?.IMs = IMs.valueAt(i)
         }
 
-        val events = getEvents()
+        val events = if (showOnlyNumberAndName) SparseArray<ArrayList<Event>>() else getEvents()
         size = events.size()
         for (i in 0 until size) {
             val key = events.keyAt(i)
             contacts[key]?.events = events.valueAt(i)
         }
 
-        val notes = getNotes()
+        val notes = if (showOnlyNumberAndName) SparseArray<String>() else getNotes()
         size = notes.size()
         for (i in 0 until size) {
             val key = notes.keyAt(i)
@@ -266,14 +267,14 @@ class ContactsHelper(val context: Context) {
             contacts[key]?.nickname = nicknames.valueAt(i)
         }
 
-        val websites = getWebsites()
+        val websites = if (showOnlyNumberAndName) SparseArray<ArrayList<String>>() else getWebsites()
         size = websites.size()
         for (i in 0 until size) {
             val key = websites.keyAt(i)
             contacts[key]?.websites = websites.valueAt(i)
         }
 
-        val relations = getRelations()
+        val relations = if (showOnlyNumberAndName) SparseArray<ArrayList<ContactRelation>>() else getRelations()
         size = relations.size()
         for (i in 0 until size) {
             val key = relations.keyAt(i)
