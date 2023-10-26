@@ -325,7 +325,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             toolbar.navigationIcon?.applyColorFilter(contrastColor)
             toolbar.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, contrastColor)
         //}
-        toolbar.overflowIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_three_dots_vector, contrastColor)
+        toolbar.overflowIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_more_horiz, contrastColor) //ic_three_dots_vector
 
         val menu = toolbar.menu
         for (i in 0 until menu.size()) {
