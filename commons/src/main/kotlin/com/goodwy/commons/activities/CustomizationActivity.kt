@@ -75,17 +75,17 @@ class CustomizationActivity : BaseSimpleActivity() {
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(binding.customizationCoordinator, binding.customizationHolder, useTransparentNavigation = false, useTopSearchMenu = false)
+        updateMaterialActivityViews(binding.customizationCoordinator, binding.customizationHolder, useTransparentNavigation = true, useTopSearchMenu = false)
         setupMaterialScrollListener(binding.customizationNestedScrollview, binding.customizationToolbar)
 
-        // TODO TRANSPARENT Navigation Bar
-        setWindowTransparency(true) { _, bottomNavigationBarSize, leftNavigationBarSize, rightNavigationBarSize ->
-            binding.customizationCoordinator.setPadding(leftNavigationBarSize, 0, rightNavigationBarSize, 0)
-            updateNavigationBarColor(getProperBackgroundColor())
-            binding.customizationHolder.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                setMargins(0, 0, 0, bottomNavigationBarSize + pixels(R.dimen.activity_margin).toInt())
-            }
-        }
+//        // TODO TRANSPARENT Navigation Bar
+//        setWindowTransparency(true) { _, bottomNavigationBarSize, leftNavigationBarSize, rightNavigationBarSize ->
+//            binding.customizationCoordinator.setPadding(leftNavigationBarSize, 0, rightNavigationBarSize, 0)
+//            updateNavigationBarColor(getProperBackgroundColor())
+//            binding.customizationHolder.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+//                setMargins(0, 0, 0, bottomNavigationBarSize + pixels(R.dimen.activity_margin).toInt())
+//            }
+//        }
 
         isThankYou = packageName.removeSuffix(".debug") == "com.goodwy.sharedtheme"
         initColorVariables()
