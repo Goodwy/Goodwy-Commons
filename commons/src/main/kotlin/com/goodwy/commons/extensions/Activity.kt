@@ -1620,7 +1620,6 @@ fun Activity.checkAppSideloading(): Boolean {
 
 fun Activity.isAppSideloaded(): Boolean {
     return try {
-        getDrawable(R.drawable.ic_camera_vector)
         false
     } catch (e: Exception) {
         true
