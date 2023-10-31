@@ -296,7 +296,7 @@
                     android:id="@+id/apply_to_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_background"
+                    android:background="@drawable/ripple_all_corners_12dp"
                     android:clickable="false"
                     android:padding="@dimen/activity_margin"
                     android:text="@string/apply_to_all_apps"
