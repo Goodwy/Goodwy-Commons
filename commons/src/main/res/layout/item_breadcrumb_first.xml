@@ -3,6 +3,7 @@
     android:id="@+id/breadcrumb_holder"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:layout_marginStart="@dimen/tiny_margin">
 
     <com.goodwy.commons.views.MyTextView
