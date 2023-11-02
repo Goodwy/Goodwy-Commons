@@ -20,6 +20,7 @@ import com.goodwy.commons.models.FileDirItem
 class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(context, attrs) {
     private val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     private val itemsLayout: LinearLayout
+    private val backgroundColor = context.getProperBackgroundColor()
     private var textColor = context.getProperTextColor()
     private var fontSize = resources.getDimension(R.dimen.bigger_text_size)
     private var lastPath = ""
@@ -176,9 +177,10 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
 
             ItemBreadcrumbFirstBinding.inflate(inflater, itemsLayout, false).apply {
                 resources.apply {
-                    breadcrumbText.background = ContextCompat.getDrawable(context, R.drawable.button_background_16dp)
-                    breadcrumbText.background.applyColorFilter(textColor)
-                    elevation = 3f
+                    breadcrumbText.background = ContextCompat.getDrawable(context, R.drawable.button_background_stroke)
+                    breadcrumbText.background.applyColorFilter(textColor.adjustAlpha(0.6f))
+                    breadcrumbHolder.background.applyColorFilter(backgroundColor)
+                    elevation = 1f
                     //background = ColorDrawable(firstItemBgColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     val smaller = getDimension(R.dimen.smaller_margin).toInt()
