@@ -178,7 +178,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
                 resources.apply {
                     breadcrumbText.background = ContextCompat.getDrawable(context, R.drawable.button_background_stroke)
                     breadcrumbText.background.applyColorFilter(textColor.adjustAlpha(0.6f))
-                    elevation = 1f
+                    elevation = 3f
                     //background = ColorDrawable(firstItemBgColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     val smaller = getDimension(R.dimen.smaller_margin).toInt()
