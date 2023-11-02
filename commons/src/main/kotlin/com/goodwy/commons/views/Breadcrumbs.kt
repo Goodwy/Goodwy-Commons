@@ -166,20 +166,20 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
 
     private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
         if (itemsLayout.childCount == 0) {
-            val firstItemBgColor = if (isShownInDialog && context.baseConfig.isUsingSystemTheme) {
-                resources.getColor(R.color.you_dialog_background_color, context.theme)
-            } else if (context.isBlackTheme()) {
-                context.getBottomNavigationBackgroundColor()
-            } else {
-                context.getProperBackgroundColor()
-            }
+//            val firstItemBgColor = if (isShownInDialog && context.baseConfig.isUsingSystemTheme) {
+//                resources.getColor(R.color.you_dialog_background_color, context.theme)
+//            } else if (context.isBlackTheme()) {
+//                context.getBottomNavigationBackgroundColor()
+//            } else {
+//                context.getProperBackgroundColor()
+//            }
 
             ItemBreadcrumbFirstBinding.inflate(inflater, itemsLayout, false).apply {
                 resources.apply {
-                    breadcrumbText.background = ContextCompat.getDrawable(context, R.drawable.button_background_stroke)
-                    breadcrumbText.background.applyColorFilter(textColor.adjustAlpha(0.6f))
+                    breadcrumbText.background = ContextCompat.getDrawable(context, R.drawable.button_background_16dp)
+                    breadcrumbText.background.applyColorFilter(textColor)
                     elevation = 3f
-                    background = ColorDrawable(firstItemBgColor)
+                    //background = ColorDrawable(firstItemBgColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     val smaller = getDimension(R.dimen.smaller_margin).toInt()
                     breadcrumbText.setPadding(medium, smaller, medium, medium)
