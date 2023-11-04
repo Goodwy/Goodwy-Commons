@@ -1,6 +1,8 @@
 package com.goodwy.commons.dialogs
 
 import android.app.Activity
+import android.text.Html
+import android.text.method.LinkMovementMethod
 import androidx.appcompat.app.AlertDialog
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Text
@@ -22,13 +24,15 @@ import com.goodwy.commons.extensions.setupDialogStuff
 // similar fo ConfirmationDialog, but has a callback for negative button too
 class ConfirmationAdvancedDialog(
     activity: Activity, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
-    negative: Int = R.string.no, val cancelOnTouchOutside: Boolean = true, val callback: (result: Boolean) -> Unit
+    negative: Int = R.string.no, val cancelOnTouchOutside: Boolean = true, val fromHtml: Boolean = false, val callback: (result: Boolean) -> Unit
 ) {
     private var dialog: AlertDialog? = null
 
     init {
         val view = DialogMessageBinding.inflate(activity.layoutInflater, null, false)
-        view.message.text = message.ifEmpty { activity.resources.getString(messageId) }
+        val text = message.ifEmpty { activity.resources.getString(messageId) }
+        view.message.text = if (fromHtml) Html.fromHtml(text) else text
+        if (fromHtml) view.message.movementMethod = LinkMovementMethod.getInstance()
 
         val builder = activity.getAlertDialogBuilder()
             .setPositiveButton(positive) { _, _ -> positivePressed() }
