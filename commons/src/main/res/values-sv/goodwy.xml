@@ -108,6 +108,9 @@
     <string name="missed_call">Missat samtal</string>
     <string name="unblock_number">Avblockera nummer</string>
     <string name="unblock_numbers">Avblockera nummer</string>
+    <string name="show_blocked_numbers">Show blocked numbers</string>
+    <string name="hide_blocked_numbers">Hide blocked numbers</string>
+    <string name="paste_g">Paste</string>
     <string name="recents">Ny</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 

@@ -12,6 +12,9 @@
     <string name="unblock_confirmation">Разблокировать \"%s\"?</string>
     <string name="unblock_number">Разблокировать номер</string>
     <string name="unblock_numbers">Разблокировать номера</string>
+    <string name="show_blocked_numbers">Показать заблокированные номера</string>
+    <string name="hide_blocked_numbers">Скрыть заблокированные номера</string>
+    <string name="paste_g">Вставить</string>
     <string name="recents">Недавние</string>
     <string name="message">Сообщение</string>
     <string name="settings_icon">Иконка настроек</string>

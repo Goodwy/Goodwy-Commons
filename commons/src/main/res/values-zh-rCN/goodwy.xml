@@ -108,6 +108,9 @@
     <string name="missed_call">未接來電</string>
     <string name="unblock_number">解鎖號碼</string>
     <string name="unblock_numbers">取消阻止号码</string>
+    <string name="show_blocked_numbers">Show blocked numbers</string>
+    <string name="hide_blocked_numbers">Hide blocked numbers</string>
+    <string name="paste_g">Paste</string>
     <string name="recents">最近</string>
     <string name="unblock_confirmation">你確定要疏通 \"%s\" 嗎？</string>
 

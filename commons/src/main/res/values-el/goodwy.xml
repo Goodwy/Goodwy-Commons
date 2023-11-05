@@ -108,6 +108,9 @@
     <string name="missed_call">Αναπάντητη κλήση</string>
     <string name="unblock_number">Αριθμός ξεμπλοκαρίσματος</string>
     <string name="unblock_numbers">Κατάργηση αποκλεισμού αριθμών</string>
+    <string name="show_blocked_numbers">Show blocked numbers</string>
+    <string name="hide_blocked_numbers">Hide blocked numbers</string>
+    <string name="paste_g">Paste</string>
     <string name="recents">Πρόσφατος</string>
     <string name="unblock_confirmation">Είστε βέβαιοι ότι θέλετε να ξεμπλοκάρετε το \"%s\"?</string>
 

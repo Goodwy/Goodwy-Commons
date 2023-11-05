@@ -108,6 +108,9 @@
     <string name="missed_call">Chiamata persa</string>
     <string name="unblock_number">Numero di sblocco</string>
     <string name="unblock_numbers">Sblocca numeri</string>
+    <string name="show_blocked_numbers">Show blocked numbers</string>
+    <string name="hide_blocked_numbers">Hide blocked numbers</string>
+    <string name="paste_g">Paste</string>
     <string name="recents">Recente</string>
     <string name="unblock_confirmation">Sei sicuro di voler sbloccare \"%s\"?</string>
 
