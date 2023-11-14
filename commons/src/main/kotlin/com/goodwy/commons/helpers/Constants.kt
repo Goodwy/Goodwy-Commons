@@ -487,6 +487,7 @@ val letterBackgroundColors = arrayListOf(
 val letterBackgroundColorsAndroid = arrayListOf( // Android
     0xFF00D0EA,
     0xFF0075F0,
+    0xFF7C4DFF,
     0xFFBC56FF,
     0xFFFF54BB,
     0xFFFF5B55,
@@ -498,6 +499,7 @@ val letterBackgroundColorsAndroid = arrayListOf( // Android
 val letterBackgroundColorsArc = arrayListOf( // Arc
     0xFF6DBAD9,
     0xFF666789,
+    0xFFC5C6E5,
     0xFFA6729E,
     0xFFF29BBB,
     0xFFF25E6B,
@@ -514,6 +516,7 @@ val letterBackgroundColorsIOS = arrayListOf( // iOS
     0xFFFE375E,
     0xFFFF5713,
     0xFFFE9F0C,
+    0xFFFECB00,
     0xFF2ED158
 )
 /*val letterBackgroundColors = arrayListOf(

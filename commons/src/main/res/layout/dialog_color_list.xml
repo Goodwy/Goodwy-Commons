@@ -19,7 +19,7 @@
             android:layout_height="@dimen/fingerprint_icon_size"
             android:layout_marginTop="@dimen/larger_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="@dimen/medium_margin"
+            android:padding="10dp"
             android:src="@drawable/ic_color_list" />
 
         <ImageView
@@ -41,7 +41,7 @@
             android:layout_marginTop="@dimen/larger_margin"
             android:layout_toEndOf="@+id/icon1"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="@dimen/medium_margin"
+            android:padding="10dp"
             android:src="@drawable/ic_color_list_android" />
 
         <ImageView
@@ -64,7 +64,7 @@
             android:layout_marginTop="@dimen/larger_margin"
             android:layout_toEndOf="@+id/icon2"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="@dimen/medium_margin"
+            android:padding="10dp"
             android:src="@drawable/ic_color_list_ios" />
 
         <ImageView
@@ -86,7 +86,7 @@
             android:layout_marginTop="@dimen/larger_margin"
             android:layout_toEndOf="@+id/icon3"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="@dimen/medium_margin"
+            android:padding="10dp"
             android:src="@drawable/ic_color_list_arc" />
 
         <ImageView

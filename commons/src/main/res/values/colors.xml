@@ -641,32 +641,35 @@
     <!--letterBackgroundColors-->
     <color name="random_100">#FF8CDAFA</color>
     <color name="random_200">#FF5D99FF</color>
-    <color name="random_300">#FFA589EF</color>
-    <color name="random_400">#FFFF6969</color>
-    <color name="random_500">#FFFF8963</color>
-    <color name="random_600">#FFF1AF28</color>
-    <color name="random_700">#FFF7DF32</color>
-    <color name="random_800">#FF06C9AF</color>
+    <color name="random_300">#FF6D73ED</color>
+    <color name="random_400">#FFA589EF</color>
+    <color name="random_500">#FFFF6969</color>
+    <color name="random_600">#FFFF8963</color>
+    <color name="random_700">#FFF1AF28</color>
+    <color name="random_800">#FFF7DF32</color>
+    <color name="random_900">#FF06C9AF</color>
 
     <!--letterBackgroundColors Arc-->
     <color name="random_arc_100">#FF6DBAD9</color>
     <color name="random_arc_200">#FF666789</color>
-    <color name="random_arc_300">#FFA6729E</color>
-    <color name="random_arc_400">#FFF29BBB</color>
-    <color name="random_arc_500">#FFF25E6B</color>
-    <color name="random_arc_600">#FFFF8558</color>
-    <color name="random_arc_700">#FFF8D558</color>
-    <color name="random_arc_800">#FF34E895</color>
+    <color name="random_arc_300">#FFC5C6E5</color>
+    <color name="random_arc_400">#FFA6729E</color>
+    <color name="random_arc_500">#FFF29BBB</color>
+    <color name="random_arc_600">#FFF25E6B</color>
+    <color name="random_arc_700">#FFFF8558</color>
+    <color name="random_arc_800">#FFF8D558</color>
+    <color name="random_arc_900">#FF34E895</color>
 
     <!--letterBackgroundColors Android-->
     <color name="random_android_100">#FF00D0EA</color>
     <color name="random_android_200">#FF0075F0</color>
-    <color name="random_android_300">#FFBC56FF</color>
-    <color name="random_android_400">#FFFF54BB</color>
-    <color name="random_android_500">#FFFF5B55</color>
-    <color name="random_android_600">#FFFF891D</color>
-    <color name="random_android_700">#FFFFC600</color>
-    <color name="random_android_800">#FF26BC6D</color>
+    <color name="random_android_300">#FF7C4DFF</color>
+    <color name="random_android_400">#FFBC56FF</color>
+    <color name="random_android_500">#FFFF54BB</color>
+    <color name="random_android_600">#FFFF5B55</color>
+    <color name="random_android_700">#FFFF891D</color>
+    <color name="random_android_800">#FFFFC600</color>
+    <color name="random_android_900">#FF26BC6D</color>
 
     <!--letterBackgroundColors iOS-->
     <color name="random_ios_100">#FF64D1FF</color>
@@ -676,5 +679,6 @@
     <color name="random_ios_500">#FFFE375E</color>
     <color name="random_ios_600">#FFFF5713</color>
     <color name="random_ios_700">#FFFE9F0C</color>
-    <color name="random_ios_800">#FF2ED158</color>
+    <color name="random_ios_800">#FFFECB00</color>
+    <color name="random_ios_900">#FF2ED158</color>
 </resources>

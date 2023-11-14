@@ -243,7 +243,7 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             .setOnCancelListener { dialogDismissed() }
             .apply {
                 if (showUseDefaultButton) {
-                    setNeutralButton(R.string.use_default) { _, _ -> useDefault() }
+                    setNeutralButton(R.string.default_color) { _, _ -> useDefault() }
                 }
                 activity.setupDialogStuff(view.root, this) { alertDialog ->
                     dialog = alertDialog

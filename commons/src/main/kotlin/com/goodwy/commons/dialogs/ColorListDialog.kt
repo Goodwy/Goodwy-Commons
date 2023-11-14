@@ -21,6 +21,10 @@ class ColorListDialog(val activity: Activity, val callback: (newValue: Any) -> U
                 it.applyColorFilter(activity.getProperPrimaryColor())
             }
 
+//            arrayOf(icon1, icon2, icon3, icon4).forEach {
+//                it.background.applyColorFilter(activity.getBottomNavigationBackgroundColor())
+//            }
+
             when (activity.baseConfig.contactColorList) {
                 LBC_ORIGINAL -> icon1Check.beVisible()
                 LBC_ANDROID -> icon2Check.beVisible()

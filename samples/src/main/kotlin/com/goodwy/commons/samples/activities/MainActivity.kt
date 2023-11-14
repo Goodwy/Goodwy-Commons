@@ -6,6 +6,7 @@ import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.activities.ManageBlockedNumbersActivity
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
 import com.goodwy.commons.dialogs.CallConfirmationDialog
+import com.goodwy.commons.dialogs.ColorListDialog
 import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
@@ -57,8 +58,9 @@ class MainActivity : BaseSimpleActivity() {
             launchBottomSheetDemo()
         }
         binding.security.setOnClickListener {
-            SecurityDialog(this, "", SHOW_ALL_TABS) { _, _, _ ->
-            }
+//            SecurityDialog(this, "", SHOW_ALL_TABS) { _, _, _ ->
+//            }
+            ColorListDialog(this@MainActivity) {}
         }
         binding.manageBlockedNumbers.setOnClickListener {
             startActivity(Intent(this, ManageBlockedNumbersActivity::class.java))
