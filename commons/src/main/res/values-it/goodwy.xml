@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Cartella da aprire all\'avvio dell\'app</string>
     <string name="last_used_g">Ultimo utilizzo</string>
     <string name="home_folder_g">Cartella Inizio</string>
+    <string name="primary_sim_card">Scheda SIM principale</string>
 
     <string name="accent_color">Colore accento</string>
     <string name="incoming_call">Chiamata in arrivo</string>

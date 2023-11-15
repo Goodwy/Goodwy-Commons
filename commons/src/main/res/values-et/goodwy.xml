@@ -115,6 +115,7 @@
     <string name="default_folder_to_open_g">Rakenduse käivitamisel avatav kaust</string>
     <string name="last_used_g">Viimati kasutatud</string>
     <string name="home_folder_g">Kaust Avaleht</string>
+    <string name="primary_sim_card">Esmane SIM-kaart</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Pasta a mostrar ao iniciar</string>
     <string name="last_used_g">Última utilização</string>
     <string name="home_folder_g">Pasta inicial</string>
+    <string name="primary_sim_card">Cartão SIM principal</string>
 
     <string name="accent_color">Cor do sotaque</string>
     <string name="incoming_call">Chamada recebida</string>

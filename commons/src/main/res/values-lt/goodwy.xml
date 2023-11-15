@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Aplankas, kuris bus rodomas atidarius šią programą</string>
     <string name="last_used_g">Paskutinį kartą naudota</string>
     <string name="home_folder_g">Namų aplankas</string>
+    <string name="primary_sim_card">Pagrindinė SIM kortelė</string>
 
     <string name="accent_color">Paryškinta spalva</string>
     <string name="incoming_call">Skambutį</string>

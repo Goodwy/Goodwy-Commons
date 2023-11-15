@@ -102,6 +102,7 @@
     <string name="default_folder_to_open_g">Proqram başlanğıcında açılacaq qovluq</string>
     <string name="last_used_g">Son istifadə olunub</string>
     <string name="home_folder_g">Ev qovluğu</string>
+    <string name="primary_sim_card">Əsas SİM kart</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="incoming_call">Daxil olan zəng</string>

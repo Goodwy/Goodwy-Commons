@@ -116,6 +116,7 @@
     <string name="default_folder_to_open_g">অ্যাপ শুরুতে খুলতে ফোল্ডার</string>
     <string name="last_used_g">সর্বশেষ ব্যবহৃত</string>
     <string name="home_folder_g">হোম ফোল্ডার</string>
+    <string name="primary_sim_card">Primary SIM card</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

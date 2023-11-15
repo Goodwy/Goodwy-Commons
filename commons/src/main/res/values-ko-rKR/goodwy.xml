@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">앱 시작 시 열 폴더</string>
     <string name="last_used_g">마지막 사용</string>
     <string name="home_folder_g">홈 폴더</string>
+    <string name="primary_sim_card">기본 SIM 카드</string>
 
     <string name="accent_color">악센트 색상</string>
     <string name="incoming_call">수신 전화</string>

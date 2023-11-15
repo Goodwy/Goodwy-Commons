@@ -1,3 +1,4 @@
+
 <resources>
     <string name="message">Mensaxe</string>
     <string name="settings_icon">Icona de configuración</string>
@@ -101,6 +102,7 @@
     <string name="default_folder_to_open_g">Cartafol para abrir no inicio da aplicación</string>
     <string name="last_used_g">Último uso</string>
     <string name="home_folder_g">Cartafol de inicio</string>
+    <string name="primary_sim_card">Tarxeta SIM principal</string>
 
     <string name="accent_color">Cor de acento</string>
     <string name="incoming_call">Chamada entrante</string>

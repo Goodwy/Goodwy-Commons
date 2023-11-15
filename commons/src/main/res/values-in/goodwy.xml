@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Folder untuk dibuka pada saat aplikasi dibuka</string>
     <string name="last_used_g">Terakhir digunakan</string>
     <string name="home_folder_g">Folder rumah</string>
+    <string name="primary_sim_card">Kartu SIM utama</string>
 
     <string name="accent_color">Aksen warna</string>
     <string name="incoming_call">Panggilan masuk</string>

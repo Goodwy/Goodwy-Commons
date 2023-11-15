@@ -116,6 +116,7 @@
     <string name="default_folder_to_open_g">Mappe som skal åpnes ved appstart</string>
     <string name="last_used_g">Sist brukt</string>
     <string name="home_folder_g">Hjem-mappen</string>
+    <string name="primary_sim_card">Primært SIM-kort</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

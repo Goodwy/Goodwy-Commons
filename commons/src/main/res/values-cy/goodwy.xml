@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Ffolder i agor ar ddechrau\'r app</string>
     <string name="last_used_g">Last used</string>
     <string name="home_folder_g">Home folder</string>
+    <string name="primary_sim_card">Cerdyn SIM cynradd</string>
 
     <string name="accent_color">Lliw acen</string>
     <string name="incoming_call">Galwad i Mewn</string>

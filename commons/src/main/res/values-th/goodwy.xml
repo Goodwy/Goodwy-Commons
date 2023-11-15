@@ -116,6 +116,7 @@
     <string name="default_folder_to_open_g">โฟลเดอร์ที่จะเปิดเมื่อเริ่มแอป</string>
     <string name="last_used_g">ใช้ล่าสุด</string>
     <string name="home_folder_g">โฟลเดอร์เริ่มต้น</string>
+    <string name="primary_sim_card">ซิมการ์ดหลัก</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

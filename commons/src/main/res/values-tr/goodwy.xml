@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Uygulama başlatıldığında açılacak klasör</string>
     <string name="last_used_g">Son kullanılan</string>
     <string name="home_folder_g">Ana klasör</string>
+    <string name="primary_sim_card">Birincil SIM kart</string>
 
     <string name="accent_color">Vurgu rengi</string>
     <string name="incoming_call">Gelen Arama</string>

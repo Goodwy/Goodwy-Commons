@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Mapa za odpiranje ob zagonu aplikacije</string>
     <string name="last_used_g">Zadnja uporaba</string>
     <string name="home_folder_g">Domača mapa</string>
+    <string name="primary_sim_card">Primarna kartica SIM</string>
 
     <string name="accent_color">Barva naglasa</string>
     <string name="incoming_call">Dohodni klic</string>

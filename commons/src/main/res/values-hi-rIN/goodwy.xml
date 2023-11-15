@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">एप्लिकेशन प्रारंभ में खुलने के लिए फ़ोल्डर</string>
     <string name="last_used_g">अंतिम बार इस्तेमाल किया गया</string>
     <string name="home_folder_g">होम फ़ोल्डर</string>
+    <string name="primary_sim_card">प्राथमिक सिम कार्ड</string>
 
     <string name="accent_color">एक्सेंट रंग</string>
     <string name="incoming_call">इनकमिंग कॉल</string>

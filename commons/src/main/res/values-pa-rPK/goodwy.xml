@@ -116,6 +116,7 @@
     <string name="default_folder_to_open_g">پہلا فولڈر کھولیں۔</string>
     <string name="last_used_g">آخری بار استعمال کیا گیا۔</string>
     <string name="home_folder_g">ہوم فولڈر</string>
+    <string name="primary_sim_card">بنیادی سم کارڈ</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

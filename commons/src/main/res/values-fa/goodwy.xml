@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">پوشه برای باز کردن در شروع برنامه</string>
     <string name="last_used_g">اخرین استفاده</string>
     <string name="home_folder_g">پوشهی خانه</string>
+    <string name="primary_sim_card">سیم کارت اصلی</string>
 
     <string name="accent_color">رنگ لهجه</string>
     <string name="incoming_call">تماس ورودی</string>

@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">תיקייה בעת פתיחת האפליקציה</string>
     <string name="last_used_g">שימוש אחרון</string>
     <string name="home_folder_g">תיקיית בית</string>
+    <string name="primary_sim_card">כרטיס SIM ראשי</string>
 
     <string name="accent_color">צבע הדגשה</string>
     <string name="incoming_call">שיחה נכנסת</string>

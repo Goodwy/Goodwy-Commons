@@ -115,6 +115,7 @@
     <string name="default_folder_to_open_g">Folder to open at app start</string>
     <string name="last_used_g">Last used</string>
     <string name="home_folder_g">Home folder</string>
+    <string name="primary_sim_card">Primary SIM card</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

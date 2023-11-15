@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">应用启动时要打开的文件夹</string>
     <string name="last_used_g">上次使用</string>
     <string name="home_folder_g">主文件夹</string>
+    <string name="primary_sim_card">主SIM卡</string>
 
     <string name="accent_color">重音顏色</string>
     <string name="incoming_call">來電</string>

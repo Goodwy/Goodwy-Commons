@@ -116,6 +116,7 @@
     <string name="default_folder_to_open_g">ਐਪ ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ ਖੋਲ੍ਹਣ ਲਈ ਫੋਲਡਰ</string>
     <string name="last_used_g">ਪਿਛਲੀ ਵਾਰ ਵਰਤਿਆ ਗਿਆ</string>
     <string name="home_folder_g">ਹੋਮ ਫੋਲਡਰ</string>
+    <string name="primary_sim_card">ਪ੍ਰਾਇਮਰੀ ਸਿਮ ਕਾਰਡ</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

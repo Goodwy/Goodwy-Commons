@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">ஆப்ஸ் தொடக்கத்தில் திறக்க கோப்புறை</string>
     <string name="last_used_g">கடைசியாக பயன்படுத்தப்பட்டது</string>
     <string name="home_folder_g">முகப்பு கோப்புறை</string>
+    <string name="primary_sim_card">முதன்மை சிம் கார்டு</string>
 
     <string name="accent_color">உச்சரிப்பு நிறம்</string>
     <string name="incoming_call">உள்வரும் அழைப்பு</string>

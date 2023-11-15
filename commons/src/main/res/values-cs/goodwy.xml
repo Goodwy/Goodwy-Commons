@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Složka, která se otevře při spuštění aplikace</string>
     <string name="last_used_g">Naposledy použité</string>
     <string name="home_folder_g">Domovská složka</string>
+    <string name="primary_sim_card">Primární SIM karta</string>
 
     <string name="accent_color">Zvýrazňující barva</string>
     <string name="incoming_call">Příchozí hovor</string>

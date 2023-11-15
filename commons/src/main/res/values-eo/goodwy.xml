@@ -116,6 +116,7 @@
     <string name="default_folder_to_open_g">Dosierujo por malfermi ĉe la komenco de la aplikaĵo</string>
     <string name="last_used_g">Laste uzata</string>
     <string name="home_folder_g">Hejma dosierujo</string>
+    <string name="primary_sim_card">Primara SIM-karto</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

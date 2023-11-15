@@ -101,6 +101,7 @@
     <string name="default_folder_to_open_g">Alkalmazás indításakor megnyitandó mappa</string>
     <string name="last_used_g">Utoljára használt</string>
     <string name="home_folder_g">Saját mappa</string>
+    <string name="primary_sim_card">Elsődleges SIM-kártya</string>
 
     <string name="accent_color">Ékezet színe</string>
     <string name="incoming_call">Bejövő hívás</string>
