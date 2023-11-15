@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.goodwy.commons.views.PatternTab
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.goodwy.commons.views.PatternTab xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/pattern_lock_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -34,6 +34,8 @@
         android:layout_width="280dp"
         android:layout_height="280dp"
         android:layout_below="@+id/pattern_lock_title"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        app:dotNormalSize="14dp"
+        app:pathWidth="18dp"/>
 
 </com.goodwy.commons.views.PatternTab>

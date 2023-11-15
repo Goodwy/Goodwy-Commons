@@ -38,10 +38,10 @@ class AboutActivity : ComponentActivity() {
         enableEdgeToEdgeSimple()
         setContent {
             val context = LocalContext.current
-            val resources = context.resources
+//            val resources = context.resources
             AppThemeSurface {
-                val showExternalLinks = remember { !resources.getBoolean(R.bool.hide_all_external_links) }
-                val showGoogleRelations = remember { !resources.getBoolean(R.bool.hide_google_relations) }
+//                val showExternalLinks = remember { !resources.getBoolean(R.bool.hide_all_external_links) }
+//                val showGoogleRelations = remember { !resources.getBoolean(R.bool.hide_google_relations) }
                 AboutScreen(
                     goBack = ::finish,
 //                    helpUsSection = {

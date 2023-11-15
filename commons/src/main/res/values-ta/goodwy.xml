@@ -108,9 +108,9 @@
     <string name="missed_call">தவறிய அழைப்பு</string>
     <string name="unblock_number">எண்ணைத் தடு</string>
     <string name="unblock_numbers">எண்களைத் தடைநீக்கு</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">காட்சி தடுக்கப்பட்டது</string>
+    <string name="hide_blocked_numbers">மறை தடுக்கப்பட்டது</string>
+    <string name="paste_g">செருகு</string>
     <string name="recents">சமீபத்தியவை</string>
     <string name="unblock_confirmation">\"%s\" ஐ நிச்சயமாக நீக்க விரும்புகிறீர்களா?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">திற</string>
     <string name="collection">சேகரிப்பு</string>
     <string name="collection_summary">பயன்பாட்டைத் திறக்க ஒரு தொகுப்பை உருவாக்கவும்</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">வரையறுக்கப்பட்ட வழங்கல்</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">முடக்கு</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">உறவு</string>
+    <string name="relations_g">தொடர்புடைய நபர்கள்</string>
+    <string name="relation_hint_g">தொடர்புடைய நபர்</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

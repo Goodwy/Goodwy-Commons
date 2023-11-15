@@ -108,9 +108,9 @@
     <string name="missed_call">Chamada perdida</string>
     <string name="unblock_number">Número de desbloqueo</string>
     <string name="unblock_numbers">Desbloquear números</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Mostra bloqueada</string>
+    <string name="hide_blocked_numbers">Ocultar bloqueado</string>
+    <string name="paste_g">Inserir</string>
     <string name="recents">Recentes</string>
     <string name="unblock_confirmation">Seguro que queres desbloquear \"%s\"?</string>
 
@@ -163,7 +163,7 @@
     <string name="open">Abrir</string>
     <string name="collection">Colección</string>
     <string name="collection_summary">Crea unha colección para desbloquear a aplicación</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Oferta limitada</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -214,9 +214,9 @@
     <string name="mute">Silenciar</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">Relación</string>
+    <string name="relations_g">Persoas relacionadas</string>
+    <string name="relation_hint_g">Persoa relacionada</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

@@ -13,9 +13,9 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">ปลดบล็อกหมายเลข</string>
     <string name="unblock_numbers">ปลดบล็อกหมายเลข</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">แสดงถูกบล็อก</string>
+    <string name="hide_blocked_numbers">ซ่อนถูกบล็อก</string>
+    <string name="paste_g">สอด</string>
     <string name="recents">ล่าสุด</string>
     <string name="message">ข้อความ</string>
     <string name="settings_icon">ไอคอนการตั้งค่า</string>
@@ -167,7 +167,7 @@
     <string name="open">เปิด</string>
     <string name="collection">คอลเลคชัน</string>
     <string name="collection_summary">สร้างคอลเลกชันเพื่อปลดล็อกแอป</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">อุปทานจํากัด</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -218,9 +218,9 @@
     <string name="mute">ใบ้</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">ความสัมพันธ์</string>
+    <string name="relations_g">บุคคลที่เกี่ยวข้อง</string>
+    <string name="relation_hint_g">บุคคลที่เกี่ยวข้อง</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

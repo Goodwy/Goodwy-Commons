@@ -108,9 +108,9 @@
     <string name="missed_call">Dei galdua</string>
     <string name="unblock_number">Desblokeatu zenbakia</string>
     <string name="unblock_numbers">Desblokeatu zenbakiak</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Erakusketa blokeatuta</string>
+    <string name="hide_blocked_numbers">Ezkutatu blokeatuta</string>
+    <string name="paste_g">Txertatu</string>
     <string name="recents">Azken aldiak</string>
     <string name="unblock_confirmation">Ziur \"% s\" desblokeatu nahi duzula?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">Open</string>
     <string name="collection">Bilduma</string>
     <string name="collection_summary">Sortu bilduma bat aplikazioa desblokeatzeko</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Eskaintza mugatua</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">Mute</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">Harremana</string>
+    <string name="relations_g">Lotutako pertsonak</string>
+    <string name="relation_hint_g">Lotutako pertsona</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

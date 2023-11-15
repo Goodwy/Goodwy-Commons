@@ -108,9 +108,9 @@
     <string name="missed_call">Ubesvaret opkald</string>
     <string name="unblock_number">Fjern blokering af nummer</string>
     <string name="unblock_numbers">Fjern blokering af numre</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Vis blokeret</string>
+    <string name="hide_blocked_numbers">Skjul blokeret</string>
+    <string name="paste_g">Indsætte</string>
     <string name="recents">Frisk</string>
     <string name="unblock_confirmation">Er du sikker på, at du vil fjerne blokeringen af \"%s\"?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">Open</string>
     <string name="collection">Kollektion</string>
     <string name="collection_summary">Opret en samling for at låse appen op</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Begrænset udbud</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">Stum</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">Forhold</string>
+    <string name="relations_g">Nærtstående personer</string>
+    <string name="relation_hint_g">Nærtstående person</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

@@ -108,9 +108,9 @@
     <string name="missed_call">שיחה שלא נענתה</string>
     <string name="unblock_number">בטל חסימה של מספר</string>
     <string name="unblock_numbers">ביטול חסימת מספרים</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">הצג חסום</string>
+    <string name="hide_blocked_numbers">הסתר חסום</string>
+    <string name="paste_g">להוסיף</string>
     <string name="recents">חדש</string>
     <string name="unblock_confirmation">לבטל את חסימת \"% s\"?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">פתח</string>
     <string name="collection">אוסף</string>
     <string name="collection_summary">בניית אוסף כדי לבטל את נעילת האפליקציה</string>
-    <string name="limited_supply">אספקה מוגבלת</string>
+    <string name="limited_supply">היצע מוגבל</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">השתק</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">קשר</string>
+    <string name="relations_g">אנשים קשורים</string>
+    <string name="relation_hint_g">אדם קשור</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

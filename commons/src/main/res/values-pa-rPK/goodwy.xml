@@ -8,14 +8,14 @@
     <string name="black">سیاہ</string>
     <string name="black_locked">سیاہ (مقفل)</string>
     <string name="incoming_call">آنے والی کال</string>
-    <string name = "outgoing_call">آؤٹ گوئنگ کال</string>
-    <string name = "missed_call">مسڈ کال</string>
+    <string name="outgoing_call">آؤٹ گوئنگ کال</string>
+    <string name="missed_call">مسڈ کال</string>
     <string name="unblock_confirmation">کیا آپ واقعی \"%s\" کو غیر مسدود کرنا چاہتے ہیں؟</string>
     <string name="unblock_number">غیر مسدود نمبر</string>
     <string name="unblock_numbers">ان بلاک نمبرز</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">شو مسدود</string>
+    <string name="hide_blocked_numbers">چھپائیں مسدود</string>
+    <string name="paste_g">داخل کریں</string>
     <string name="recents">حالیہ</string>
     <string name="message">پیغام</string>
     <string name = "settings_icon">ترتیبات کا آئیکن</string>
@@ -219,7 +219,7 @@
 
     <!-- Relation types -->
     <string name="relation_g"> تعلق</string>
-    <string name="relations_g"> متعلقہ افراد</string>
+    <string name="relations_g">متعلقہ افراد</string>
     <string name="relation_hint_g">متعلقہ شخص</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>

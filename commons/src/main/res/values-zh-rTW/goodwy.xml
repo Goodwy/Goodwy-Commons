@@ -108,9 +108,9 @@
     <string name="missed_call">未接來電</string>
     <string name="unblock_number">解鎖號碼</string>
     <string name="unblock_numbers">取消阻止號碼</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">顯示已阻止</string>
+    <string name="hide_blocked_numbers">隱藏被阻止</string>
+    <string name="paste_g">插入</string>
     <string name="recents">最近</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">打開</string>
     <string name="collection">收藏</string>
     <string name="collection_summary">構建集合以解鎖應用</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">供應有限</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">靜音</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">關係</string>
+    <string name="relations_g">相關人員</string>
+    <string name="relation_hint_g">相關人員</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

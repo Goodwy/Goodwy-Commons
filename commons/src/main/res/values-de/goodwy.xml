@@ -108,9 +108,9 @@
     <string name="missed_call">Verpasster Anruf</string>
     <string name="unblock_number">Nummer entsperren</string>
     <string name="unblock_numbers">Nummern entsperren</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Blockiert anzeigen</string>
+    <string name="hide_blocked_numbers">Blockiert ausblenden</string>
+    <string name="paste_g">Einfügen</string>
     <string name="recents">Aktuell</string>
     <string name="unblock_confirmation">Soll \"%s\" entsperren werden?</string>
 
@@ -165,7 +165,7 @@
     <string name="open">Öffnen</string>
     <string name="collection">Sammlung</string>
     <string name="collection_summary">Erstellen Sie eine Sammlung, um die App zu entsperren</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Begrenztes Angebot</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -216,9 +216,9 @@
     <string name="mute">Stumm</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">Beziehung</string>
+    <string name="relations_g">Verwandte Personen</string>
+    <string name="relation_hint_g">Verwandte Person</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistent</string>
     <string name="relation_brother_g">Bruder</string>

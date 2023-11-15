@@ -108,9 +108,9 @@
     <string name="missed_call">Пропуштени позив</string>
     <string name="unblock_number">Одблокирај број</string>
     <string name="unblock_numbers">Одблокирај бројеве</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Прикажи блокирано</string>
+    <string name="hide_blocked_numbers">Сакриј блокирано</string>
+    <string name="paste_g">Уметните</string>
     <string name="recents">Недавно</string>
     <string name="unblock_confirmation">Да ли сте сигурни да желите да одблокирате \"%s\"?</string>
 
@@ -163,7 +163,7 @@
     <string name="open">Отвори</string>
     <string name="collection">Колекција</string>
     <string name="collection_summary">Направите колекцију да бисте откључали апликацију</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Ограничено снабдевање</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>

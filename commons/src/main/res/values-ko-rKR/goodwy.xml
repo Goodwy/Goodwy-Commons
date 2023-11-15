@@ -108,9 +108,9 @@
     <string name="missed_call">부재중 전화</string>
     <string name="unblock_number">차단 해제 번호</string>
     <string name="unblock_numbers">번호 차단 해제</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">차단된 표시</string>
+    <string name="hide_blocked_numbers">차단된 숨기기</string>
+    <string name="paste_g">삽입하다</string>
     <string name="recents">최근</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">열기</string>
     <string name="collection">컬렉션</string>
     <string name="collection_summary">앱 잠금을 해제하는 컬렉션 빌드Build a collection to unlock the app</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">제한된 공급</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">음소거</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">관계</string>
+    <string name="relations_g">관련자</string>
+    <string name="relation_hint_g">관련자</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

@@ -108,9 +108,9 @@
     <string name="missed_call">Cevapsız Çağrı</string>
     <string name="unblock_number">Numaranın engellemesini kaldır</string>
     <string name="unblock_numbers">Numaraların engelini kaldırın</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Engellenenleri göster</string>
+    <string name="hide_blocked_numbers">Engellenenleri gizle</string>
+    <string name="paste_g">Sokmak</string>
     <string name="recents">Gecmis</string>
     <string name="unblock_confirmation">\"%s\" engellemesini kaldırmak istediğinizden emin misiniz?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">Açık</string>
     <string name="collection">Koleksiyon</string>
     <string name="collection_summary">Uygulamanın kilidini açmak için bir koleksiyon oluşturun</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Sınırlı tedarik</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">Dilsiz</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">İlişki</string>
+    <string name="relations_g">İlgili Kişiler</string>
+    <string name="relation_hint_g">İlgili Kişi</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

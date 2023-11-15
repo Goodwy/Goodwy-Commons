@@ -108,9 +108,9 @@
     <string name="missed_call">Trucada perduda</string>
     <string name="unblock_number">Desbloqueja el número</string>
     <string name="unblock_numbers">Desbloquejar números</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Mostra bloquejat</string>
+    <string name="hide_blocked_numbers">Amaga bloquejat</string>
+    <string name="paste_g">Inserir</string>
     <string name="recents">Recents</string>
     <string name="unblock_confirmation">Jeste li sigurni da želite deblokirati \'%s\'?</string>
     <string name="pro">Jeste li sigurni da želite deblokirati \"%s\"?</string>
@@ -165,7 +165,7 @@
     <string name="open">Obre</string>
     <string name="collection">Col·lecció</string>
     <string name="collection_summary">Crear una col·lecció per desbloquejar l\'aplicació</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Oferta limitada</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -217,8 +217,8 @@
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relations_g">Persones relacionades</string>
+    <string name="relation_hint_g">Persona relacionada</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

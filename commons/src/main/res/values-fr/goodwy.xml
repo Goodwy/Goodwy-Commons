@@ -108,9 +108,9 @@
     <string name="missed_call">Appel manqué</string>
     <string name="unblock_number">Débloquer le numéro</string>
     <string name="unblock_numbers">Débloquer les numéros</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Afficher bloqué</string>
+    <string name="hide_blocked_numbers">Masquer bloqué</string>
+    <string name="paste_g">Insérer</string>
     <string name="recents">Récent</string>
     <string name="unblock_confirmation">Êtes-vous sûr de vouloir débloquer \"%s\"?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">Ouverture</string>
     <string name="collection">Collection</string>
     <string name="collection_summary">Créer une collection pour déverrouiller l’application</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Offre limitée</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -216,8 +216,8 @@
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relations_g">Personnes apparentées</string>
+    <string name="relation_hint_g">Personne apparentée</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

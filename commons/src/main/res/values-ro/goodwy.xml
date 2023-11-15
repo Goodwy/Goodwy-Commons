@@ -12,9 +12,9 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="unblock_numbers">Unblock numbers</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Afișați blocat</string>
+    <string name="hide_blocked_numbers">Ascundere blocată</string>
+    <string name="paste_g">Insera</string>
     <string name="recents">Recente</string>
     <string name="message">Mesaj</string>
     <string name="settings_icon">Pictograma Setări</string>
@@ -166,7 +166,7 @@
     <string name="open">Deschideți</string>
     <string name="collection">Colecție</string>
     <string name="collection_summary">Construiți o colecție pentru a debloca aplicația</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Ofertă limitată</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -217,9 +217,9 @@
     <string name="mute">Mut</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">Relație</string>
+    <string name="relations_g">Persoane înrudite</string>
+    <string name="relation_hint_g">Persoană înrudită</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

@@ -108,9 +108,9 @@
     <string name="missed_call">تماس از دست رفته</string>
     <string name="unblock_number">شماره مسدود کردن</string>
     <string name="unblock_numbers">باز کردن قفل شماره ها</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">نمایش مسدود شده</string>
+    <string name="hide_blocked_numbers">مخفی کردن مسدود شده</string>
+    <string name="paste_g">درج</string>
     <string name="recents">اخیر</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">باز کردن</string>
     <string name="collection">مجموعه</string>
     <string name="collection_summary">ساخت یک مجموعه برای باز کردن برنامه</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">عرضه محدود</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">قطع</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">ارتباط</string>
+    <string name="relations_g">شخص ذي صلة</string>
+    <string name="relation_hint_g">شخص مرتبط</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

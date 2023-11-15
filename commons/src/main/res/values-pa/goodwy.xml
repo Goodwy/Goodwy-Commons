@@ -2,40 +2,40 @@
     <string name="app_name_g">Goodwy Commons</string>
     <string name="recorder_g">Recorder</string>
     <string name="player_g">Player</string>
-    <string name="general">General</string>
-    <string name="default_tab">Default tab</string>
-    <string name="color">color</string>
+    <string name="general">ਜਨਰਲ</string>
+    <string name="default_tab">ਡਿਫਾਲਟ ਟੈਬ</string>
+    <string name="color">ਰੰਗ</string>
     <string name="black">ਕਾਲਾ</string>
     <string name="black_locked">ਕਾਲਾ (ਲਾਕ)</string>
-    <string name="incoming_call">Incoming Call</string>
-    <string name="outgoing_call">Outgoing Call</string>
-    <string name="missed_call">Missed Call</string>
-    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="unblock_number">Unblock number</string>
-    <string name="unblock_numbers">Unblock numbers</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
-    <string name="recents">Recents</string>
-    <string name="message">Message</string>
-    <string name="settings_icon">Settings icon</string>
+    <string name="incoming_call">ਇਨਕਮਿੰਗ ਕਾਲ</string>
+    <string name="outgoing_call">ਆਊਟਗੋਇੰਗ ਕਾਲ</string>
+    <string name="missed_call">ਮਿਸਡ ਕਾਲ</string>
+    <string name="unblock_confirmation">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ \'ਤੇ \"%s\ ਨੂੰ ਅਨਬਲੌਕ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ"?</string>
+    <string name="unblock_number">ਨੰਬਰ ਨੂੰ ਅਨਬਲੌਕ ਕਰੋ</string>
+    <string name="unblock_numbers">ਨੰਬਰਾਂ ਨੂੰ ਅਨਬਲੌਕ ਕਰੋ</string>
+    <string name="show_blocked_numbers">ਬਲੌਕ ਕੀਤਾ ਦਿਖਾਓ</string>
+    <string name="hide_blocked_numbers">ਬਲਾਕ ਕੀਤਾ ਓਹਲੇ</string>
+    <string name="paste_g">ਪਾਓ</string>
+    <string name="recents">ਹਾਲੀਆ</string>
+    <string name="message">ਸੁਨੇਹਾ</string>
+    <string name="settings_icon">ਸੈਟਿੰਗ ਆਈਕਨ</string>
 
     <!-- Support project -->
-    <string name="action_support_project">Project support</string>
-    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
-    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
-    <string name="learn_more">Learn more</string>
+    <string name="action_support_project">ਪ੍ਰੋਜੈਕਟ ਸਹਾਇਤਾ</string>
+    <string name="pref_pay_summary">ਭਵਿੱਖ ਦੇ ਵਿਕਾਸ ਅਤੇ ਵਾਧੂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦਾ ਸਮਰਥਨ ਕਰਨ ਲਈ ਅਦਾਇਗੀ ਐਪ ਪ੍ਰਾਪਤ ਕਰੋ</string>
+    <string name="support_project_summary">ਭਵਿੱਖ ਦੇ ਵਿਕਾਸ ਦਾ ਸਮਰਥਨ ਕਰਨ ਅਤੇ ਵਾਧੂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਅਨਲੌਕ ਕਰਨ ਲਈ ਸਾਡੀਆਂ ਭੁਗਤਾਨਸ਼ੁਦਾ ਐਪਾਂ ਵਿੱਚੋਂ ਇੱਕ ਪ੍ਰਾਪਤ ਕਰੋ</string>
+    <string name="learn_more">ਹੋਰ ਜਾਣੋ</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
     <string name="voicerecorder">VoiceMemos</string>
     <string name="voicerecorder_summary">Voice recorder</string>
     <string name="files">Files</string>
     <string name="files_summary">File manager</string>
-    <string name="themes">Themes</string>
-    <string name="themes_summary">Carefully selected application themes, automatic theme changer and system theme support for Android 12+</string>
-    <string name="color_title">Colors</string>
-    <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
-    <string name="plus_title">Support us</string>
+    <string name="themes">ਥੀਮ</string>
+    <string name="themes_summary">Android 12+ ਲਈ ਧਿਆਨ ਨਾਲ ਚੁਣੇ ਗਏ ਐਪਲੀਕੇਸ਼ਨ ਥੀਮ, ਆਟੋਮੈਟਿਕ ਥੀਮ ਚੇਂਜਰ ਅਤੇ ਸਿਸਟਮ ਥੀਮ ਸਮਰਥਨ</string>
+    <string name="color_title">ਰੰਗ</string>
+    <string name="color_summary">ਪ੍ਰਾਇਮਰੀ ਰੰਗ, ਲਹਿਜ਼ਾ, ਬੈਕਗ੍ਰਾਊਂਡ, ਟੈਕਸਟ ਅਤੇ ਨੈਵੀਗੇਸ਼ਨ ਬਾਰ ਦਾ ਮੈਨੁਅਲ ਐਡਜਸਟਮੈਂਟ</string>
+    <string name="plus_title">ਸਾਡਾ ਸਮਰਥਨ ਕਰੋ</string>
     <string name="plus_summary">ਤੁਹਾਡੀ ਮਦਦ ਨਾਲ ਅਸੀਂ ਹੋਰ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਲਾਗੂ ਕਰ ਸਕਦੇ ਹਾਂ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਹੋਰ ਬਿਹਤਰ ਬਣਾ ਸਕਦੇ ਹਾਂ</string>
     <string name="about_summary">
         <![CDATA[
@@ -44,15 +44,15 @@
             ਸਾਡੀ ਮਿਹਨਤ ਦੀ ਸ਼ਲਾਘਾ ਕਰੋ ਅਤੇ ਆਪਣੇ ਪ੍ਰਭਾਵ ਸਾਂਝੇ ਕਰੋ, ਇਹ ਸਾਨੂੰ ਨਵੇਂ ਵਿਚਾਰਾਂ ਨੂੰ ਸਮਝਣ ਅਤੇ ਤੁਹਾਨੂੰ ਹੋਰ ਵੀ ਸ਼ਾਨਦਾਰ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰੇਗਾ।
             </i>
         ]]></string>
-    <string name="lifebuoy_title">We will support you</string>
-    <string name="lifebuoy_summary">If for some reason you can\'t afford our app, but really want to use all the features, just email us</string>
-    <string name="participants_title">Participants</string>
-    <string name="special_thanks_to">Special thanks to</string>
+    <string name="lifebuoy_title">ਅਸੀਂ ਤੁਹਾਡਾ ਸਮਰਥਨ ਕਰਾਂਗੇ</string>
+    <string name="lifebuoy_summary">ਜੇਕਰ ਕਿਸੇ ਕਾਰਨ ਕਰਕੇ ਤੁਸੀਂ ਸਾਡੀ ਐਪ ਨੂੰ ਬਰਦਾਸ਼ਤ ਨਹੀਂ ਕਰ ਸਕਦੇ, ਪਰ ਅਸਲ ਵਿੱਚ ਸਾਰੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਬੱਸ ਸਾਨੂੰ ਈਮੇਲ ਕਰੋ</string>
+    <string name="participants_title">ਭਾਗੀਦਾਰ</string>
+    <string name = "special_thanks_to">ਦਾ ਵਿਸ਼ੇਸ਼ ਧੰਨਵਾਦ</string>
     <string name="tip_kind">ਚੰਗਾ ਸਮਰਥਨ</string>
     <string name="tip_excellent">ਸ਼ਾਨਦਾਰ ਸਮਰਥਨ</string>
     <string name="tip_incredible">ਹੈਰਾਨੀਜਨਕ ਸਮਰਥਨ</string>
     <string name="tip_jar">ਸਪੋਰਟ</string>
-    <string name="unlock">Unlock</string>
+    <string name="unlock">ਅਨਲੌਕ ਕਰੋ</string>
     <string name="donate_text_g">
         <![CDATA[
             For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
@@ -62,57 +62,57 @@
     </string>
 
     <!--Billing-->
-    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
-    <string name="no_purchase_found">No purchase found.</string>
-    <string name="restore_purchase">Restore purchase</string>
-    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="restored_previous_purchase_please_restart">ਪਿਛਲੀ ਖਰੀਦ ਨੂੰ ਬਹਾਲ ਕੀਤਾ ਗਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਐਪ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰੋ।</string>
+    <string name="no_purchase_found">ਕੋਈ ਖਰੀਦਦਾਰੀ ਨਹੀਂ ਮਿਲੀ।</string>
+    <string name="restore_purchase">ਖਰੀਦ ਨੂੰ ਬਹਾਲ ਕਰੋ</string>
+    <string name="restoring_purchase">ਖਰੀਦ ਨੂੰ ਬਹਾਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
 
     <string name="no_connection">ਕੋਈ ਕਨੈਕਸ਼ਨ ਨਹੀਂ</string>
     <string name="per_month">%s/ਮਹੀਨਾ</string>
 
     <!-- Theme -->
-    <string name="customization_theme_summary">Select of themes and interface colors</string>
-    <string name="pref_theme_summary">Select a pre-installed theme</string>
-    <string name="pref_category_appearance">Appearance</string>
-    <string name="gray_theme">Gray</string>
-    <string name="accent_color">Accent color</string>
+    <string name="customization_theme_summary">ਥੀਮਾਂ ਅਤੇ ਇੰਟਰਫੇਸ ਰੰਗਾਂ ਦੀ ਚੋਣ ਕਰੋ</string>
+    <string name="pref_theme_summary">ਪਹਿਲਾਂ ਤੋਂ ਸਥਾਪਿਤ ਥੀਮ ਚੁਣੋ</string>
+    <string name="pref_category_appearance">ਦਿੱਖ</string>
+    <string name="gray_theme">ਸਲੇਟੀ</string>
+    <string name="accent_color">ਲਹਿਜ਼ੇ ਦਾ ਰੰਗ</string>
 
     <!-- Settings -->
-    <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
-    <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
-    <string name="round_play_icon">Round play/pause icon</string>
-    <string name="round_play_icon_summary">The play/pause icon is colored in the primary color</string>
-    <string name="use_icon_tabs">Use tab icons</string>
-    <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
-    <string name="show_dividers">Show dividers</string>
-    <string name="colored_contacts">Contacts colored icons</string>
-    <string name="contact_color_list">Contact color list</string>
-    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
-    <string name="kids_mode">Kids mode</string>
-    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
-    <string name="restart_required">Application restart required</string>
-    <string name="transparent_bar">Transparent bars</string>
+    <string name="show_contact_thumbnails_g">ਸੰਪਰਕ ਥੰਬਨੇਲ ਦਿਖਾਓ</string>
+    <string name="save_recordings_in_summary">Android 10+ ਤੋਂ ਸ਼ੁਰੂ ਕਰਕੇ, ਐਪ ਕੋਲ ਤੁਹਾਡੀਆਂ ਫ਼ਾਈਲਾਂ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੈ</string>
+    <string name="round_play_icon">ਰਾਊਂਡ ਪਲੇ/ਪੌਜ਼ ਆਈਕਨ</string>
+    <string name="round_play_icon_summary">ਪਲੇ/ਪੌਜ਼ ਆਈਕਨ ਪ੍ਰਾਇਮਰੀ ਰੰਗ ਵਿੱਚ ਰੰਗਿਆ ਹੋਇਆ ਹੈ</string>
+    <string name="use_icon_tabs">ਟੈਬ ਆਈਕਨਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+    <string name="use_icon_tabs_summary">ਟੈਬਾਂ \'ਤੇ ਟੈਕਸਟ ਦੀ ਬਜਾਏ ਆਈਕਾਨ</string>
+    <string name="show_dividers">ਡਿਵਾਈਡਰ ਦਿਖਾਓ</string>
+    <string name="colored_contacts">ਸੰਪਰਕ ਰੰਗਦਾਰ ਆਈਕਨ</string>
+    <string name="contact_color_list">ਸੰਪਰਕ ਰੰਗ ਸੂਚੀ</string>
+    <string name="transparent_navigation_bar"> ਪਾਰਦਰਸ਼ੀ ਹੇਠਾਂ ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ</string>
+    <string name="kids_mode">ਬੱਚਿਆਂ ਦਾ ਮੋਡ</string>
+    <string name="kids_mode_summary"> ਸਰਲ ਇੰਟਰਫੇਸ, ਰੰਗ ਚੁਣੋ</string>
+    <string name="restart_required">ਐਪਲੀਕੇਸ਼ਨ ਰੀਸਟਾਰਟ ਦੀ ਲੋੜ ਹੈ</string>
+    <string name="transparent_bar">ਪਾਰਦਰਸ਼ੀ ਬਾਰ</string>
     <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
-    <string name="bottom_navigation_bar">Bottom navigation bar</string>
-    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
-    <string name="tab_navigation">Tab navigation</string>
-    <string name="top">Top</string>
-    <string name="bottom">Bottom</string>
-    <string name="relative_date">Relative date</string>
-    <string name="color_sim_card_icons">Color SIM card icons</string>
-    <string name="tabs">Tabs</string>
-    <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
-    <string name="call_screen_background">Call screen background</string>
-    <string name="contact_photo">Contact photo</string>
-    <string name="blurry_contact_photo">Blurry contact photo</string>
-    <string name="blurry_wallpaper">Blurry wallpaper</string>
+    <string name="material_design_3_summary">ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਕੁਝ ਤੱਤਾਂ ਦੀ ਦਿੱਖ ਨੂੰ ਬਦਲਦਾ ਹੈ</string>
+    <string name="bottom_navigation_bar"> ਹੇਠਲਾ ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ</string>
+    <string name="bottom_navigation_bar_summary">ਟੈਬ ਬਾਰ ਹੇਠਾਂ ਵੱਲ ਚਲੇ ਜਾਵੇਗੀ</string>
+    <string name="tab_navigation">ਟੈਬ ਨੈਵੀਗੇਸ਼ਨ</string>
+    <string name="top"> ਸਿਖਰ</string>
+    <string name="bottom"> ਥੱਲੇ</string>
+    <string name="relative_date">ਸਬੰਧਤ ਮਿਤੀ</string>
+    <string name="color_sim_card_icons">ਰੰਗ ਸਿਮ ਕਾਰਡ ਆਈਕਨ</string>
+    <string name="tabs">ਟੈਬਾਂ</string>
+    <string name="open_search_when_open_contacts">ਜਦੋਂ ਤੁਸੀਂ ਸੰਪਰਕ ਟੈਬ ਖੋਲ੍ਹਦੇ ਹੋ ਤਾਂ ਇੱਕ ਖੋਜ ਖੋਲ੍ਹੋ</string>
+    <string name="call_screen_background">ਕਾਲ ਸਕ੍ਰੀਨ ਬੈਕਗਰਾਊਂਡ</string>
+    <string name="contact_photo">ਸੰਪਰਕ ਫੋਟੋ</string>
+    <string name="blurry_contact_photo">ਧੁੰਦਲੀ ਸੰਪਰਕ ਫੋਟੋ</string>
+    <string name="blurry_wallpaper">ਧੁੰਦਲਾ ਵਾਲਪੇਪਰ</string>
     <string name="text_cursor_color">ਟੈਕਸਟ ਕਰਸਰ ਦਾ ਰੰਗ</string>
     <string name="lines_count">ਲਾਈਨਾਂ ਦੀ ਗਿਣਤੀ</string>
     <string name="show_button_blocked_numbers">ਬਲਾਕ ਕੀਤੀਆਂ ਕਾਲਾਂ ਨੂੰ ਨਾ ਲੁਕਾਉਣ ਲਈ ਬਟਨ ਦਿਖਾਓ</string>
     <string name="flash_for_alerts">ਚੇਤਾਵਨੀਆਂ ਲਈ ਫਲੈਸ਼</string>
-    <string name="clean_theme_g">Clean</string>
-    <string name="concept_theme_g">Concept</string>
+    <string name="clean_theme_g">ਸਾਫ਼ ਕਰੋ</string>
+    <string name="concept_theme_g">ਸੰਕਲਪ</string>
     <string name="default_folder_to_open_g">ਐਪ ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ ਖੋਲ੍ਹਣ ਲਈ ਫੋਲਡਰ</string>
     <string name="last_used_g">ਪਿਛਲੀ ਵਾਰ ਵਰਤਿਆ ਗਿਆ</string>
     <string name="home_folder_g">ਹੋਮ ਫੋਲਡਰ</string>
@@ -146,28 +146,28 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
-    <string name="add_related_person">Add related person</string>
+    <string name="add_number">ਨੰਬਰ ਜੋੜੋ</string>
+    <string name="add_email">ਈਮੇਲ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="add_address">ਪਤਾ ਜੋੜੋ</string>
+    <string name="add_im">IM ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="add_event">ਈਵੈਂਟ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="add_notes">ਨੋਟ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="add_website">ਵੈੱਬਸਾਈਟ ਜੋੜੋ</string>
+    <string name="add_group">ਇੱਕ ਸਮੂਹ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="add_related_person">ਸੰਬੰਧਿਤ ਵਿਅਕਤੀ ਨੂੰ ਸ਼ਾਮਲ ਕਰੋ</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
-    <string name="show_phone_numbers_g">Show phone numbers</string>
+    <string name="video_call">ਵੀਡੀਓ ਕਾਲ</string>
+    <string name="screen_slide_animation">ਸਕ੍ਰੀਨ ਸਲਾਈਡ ਐਨੀਮੇਸ਼ਨ</string>
+    <string name="screen_slide_animation_zoomout">ਜ਼ੂਮ-ਆਊਟ</string>
+    <string name="screen_slide_animation_depth">ਡੂੰਘਾਈ</string>
+    <string name="show_phone_numbers_g">ਫ਼ੋਨ ਨੰਬਰ ਦਿਖਾਓ</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
-    <string name="collection_summary">Build a collection to unlock the app</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="get">ਪ੍ਰਾਪਤ ਕਰੋ</string>
+    <string name="open">ਖੋਲੋ</string>
+    <string name="collection">ਸੰਗ੍ਰਹਿ</string>
+    <string name="collection_summary">ਐਪ ਨੂੰ ਅਨਲੌਕ ਕਰਨ ਲਈ ਇੱਕ ਸੰਗ੍ਰਹਿ ਬਣਾਓ</string>
+    <string name="limited_supply">ਸੀਮਤ ਸਪਲਾਈ</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -201,14 +201,14 @@
         ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
+    <string name="copy_code">ਕੋਡ ਕਾਪੀ ਕਰੋ</string>
     <string name="action_on_message_click">ਸੁਨੇਹਾ ਕਲਿੱਕ ਕਰਨ \'ਤੇ ਕਾਰਵਾਈ</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="invert_color">ਇਨਵਰਟ ਰੰਗ</string>
+    <string name="speech_bubble">ਸਪੀਚ ਬੁਲਬੁਲਾ</string>
 
     <!-- Gallery -->
-    <string name="library">Library</string>
-    <string name="open_in_maps">Open in Maps</string>
+    <string name="library">ਲਾਇਬ੍ਰੇਰੀ</string>
+    <string name="open_in_maps">ਨਕਸ਼ੇ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
 
     <!-- Dialer -->
     <string name="message_call_later">ਕੀ ਮੈਂ ਤੁਹਾਨੂੰ ਬਾਅਦ ਵਿੱਚ ਕਾਲ ਕਰ ਸਕਦਾ ਹਾਂ?</string>
@@ -218,9 +218,9 @@
     <string name="mute">ਚੁੱਪ</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">ਸਬੰਧ</string>
+    <string name="relations_g">ਸਬੰਧਤ ਵਿਅਕਤੀ</string>
+    <string name="relation_hint_g">ਸੰਬੰਧਿਤ ਵਿਅਕਤੀ</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

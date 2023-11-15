@@ -109,9 +109,9 @@
     <string name="missed_call">مكالمة لم يتم تفويتها</string>
     <string name="unblock_number">إلغاء حظر الرقم</string>
     <string name="unblock_numbers">إلغاء حظر الأرقام</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">إظهار المحظور</string>
+    <string name="hide_blocked_numbers">إخفاء المحظور</string>
+    <string name="paste_g">أدخل</string>
     <string name="recents">حديث</string>
     <string name="unblock_confirmation">هل تريد بالتأكيد إلغاء حظر \"%s\"؟</string>
 
@@ -162,7 +162,7 @@
     <string name="open">فتح</string>
     <string name="collection">المجموعة</string>
     <string name="collection_summary">إنشاء مجموعة لإلغاء قفل التطبيق</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">العرض المحدود</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -213,9 +213,9 @@
     <string name="mute">أخرس</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">العلاقة</string>
+    <string name="relations_g">الأشخاص ذوو الصلة</string>
+    <string name="relation_hint_g">الشخص ذو الصلة</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

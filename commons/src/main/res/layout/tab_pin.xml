@@ -177,7 +177,7 @@
                 android:background="@drawable/ripple_all_corners_16dp"
                 android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
-                android:padding="@dimen/activity_margin"
+                android:padding="@dimen/normal_margin"
                 android:src="@drawable/ic_check"
                 android:visibility="invisible" />
 
@@ -199,7 +199,7 @@
                 android:background="@drawable/ripple_all_corners_16dp"
                 android:layout_margin="@dimen/tiny_margin"
                 android:layout_weight="1"
-                android:padding="@dimen/activity_margin"
+                android:padding="@dimen/normal_margin"
                 android:src="@drawable/ic_backspace"
                 android:visibility="invisible"/>
 

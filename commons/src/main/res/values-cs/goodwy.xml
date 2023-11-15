@@ -108,9 +108,9 @@
     <string name="missed_call">Zmeškaný hovor</string>
     <string name="unblock_number">Odblokovací číslo</string>
     <string name="unblock_numbers">Odblokování čísel</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Zobrazit blokované</string>
+    <string name="hide_blocked_numbers">Skrýt blokované</string>
+    <string name="paste_g">Vložit</string>
     <string name="recents">Nedávný</string>
     <string name="unblock_confirmation">Opravdu chcete odblokovat \"%s\"?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">Otevřít</string>
     <string name="collection">Sbírka</string>
     <string name="collection_summary">Vytvoření kolekce pro odemknutí aplikace</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Omezená nabídka</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">Ztlumit</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">Vztah</string>
+    <string name="relations_g">Související osoby</string>
+    <string name="relation_hint_g">Související osoba</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

@@ -108,9 +108,9 @@
     <string name="missed_call">Panggilan tidak terjawab</string>
     <string name="unblock_number">Buka blokir nomor</string>
     <string name="unblock_numbers">Buka blokir nomor</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Tampilkan diblokir</string>
+    <string name="hide_blocked_numbers">Sembunyikan diblokir</string>
+    <string name="paste_g">Menyisipkan</string>
     <string name="recents">Terbaru</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
@@ -164,7 +164,7 @@
     <string name="open">Buka</string>
     <string name="collection">Koleksi</string>
     <string name="collection_summary">Bangun koleksi untuk membuka kunci aplikasi</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Persediaan terbatas</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -215,9 +215,9 @@
     <string name="mute">Bisu</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">Hubungan</string>
+    <string name="relations_g">Orang Terkait</string>
+    <string name="relation_hint_g">Orang Terkait</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

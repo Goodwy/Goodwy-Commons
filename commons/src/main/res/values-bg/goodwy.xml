@@ -13,9 +13,9 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Отблокиране на номер</string>
     <string name="unblock_numbers">Отблокиране на номера</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">Покажи блокиран</string>
+    <string name="hide_blocked_numbers">Скрий блокираното</string>
+    <string name="paste_g">Вмъквам</string>
     <string name="recents">Recents</string>
     <string name="message">Съобщение</string>
     <string name="settings_icon">Икона за настройки</string>
@@ -167,7 +167,7 @@
     <string name="open">Отваряне</string>
     <string name="collection">Колекция</string>
     <string name="collection_summary">Създайте колекция, за да отключите приложението</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">Ограничено предлагане</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -219,8 +219,8 @@
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relations_g">Свързани лица</string>
+    <string name="relation_hint_g">Свързано лице</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

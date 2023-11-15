@@ -108,9 +108,9 @@
     <string name="missed_call">不在着信</string>
     <string name="unblock_number">ブロック解除番号</string>
     <string name="unblock_numbers">番号のブロックを解除する</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
+    <string name="show_blocked_numbers">ブロックされた表示</string>
+    <string name="hide_blocked_numbers">ブロックを隠す</string>
+    <string name="paste_g">挿入する</string>
     <string name="recents">最近</string>
     <string name="unblock_confirmation">\"%s\" のブロックを解除してもよいですか?</string>
 
@@ -165,7 +165,7 @@
     <string name="open">開く</string>
     <string name="collection">コレクション</string>
     <string name="collection_summary">コレクションを構築してアプリのロックを解除する</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="limited_supply">限られた供給</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -216,9 +216,9 @@
     <string name="mute">唖</string>
 
     <!-- Relation types -->
-    <string name="relation_g">Relation</string>
-    <string name="relations_g">Related Persons</string>
-    <string name="relation_hint_g">Related Person</string>
+    <string name="relation_g">関係</string>
+    <string name="relations_g">関係者</string>
+    <string name="relation_hint_g">関係者</string>
     <!-- Android ContactContract.Relation types -->
     <string name="relation_assistant_g">Assistant</string>
     <string name="relation_brother_g">Brother</string>

@@ -475,6 +475,7 @@ const val LBC_ARC = 4 //letterBackgroundColorsArc
 val letterBackgroundColors = arrayListOf(
     0xFF8CDAFA,
     0xFF5D99FF,
+    0xFF6D73ED,
     0xFFA589EF,
     0xFFFF6969,
     0xFFFF8963,
