@@ -61,9 +61,6 @@ class PurchaseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = false
         super.onCreate(savedInstanceState)
-        if (savedInstanceState == null && ruStoreInstalled) {
-            RuStoreModule.provideRuStoreBillingClient().onNewIntent(intent)
-        }
         setContentView(binding.root)
         appName = intent.getStringExtra(APP_NAME) ?: ""
         licensingKey = intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: ""
@@ -78,6 +75,10 @@ class PurchaseActivity : BaseSimpleActivity() {
         playStoreInstalled = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
         ruStoreInstalled = intent.getBooleanExtra(RU_STORE, false)
         showCollection = intent.getBooleanExtra(SHOW_COLLECTION, false)
+
+        if (savedInstanceState == null && ruStoreInstalled) {
+            RuStoreModule.provideRuStoreBillingClient().onNewIntent(intent)
+        }
 
         // TODO TRANSPARENT Navigation Bar
         setWindowTransparency(true) { _, _, leftNavigationBarSize, rightNavigationBarSize ->

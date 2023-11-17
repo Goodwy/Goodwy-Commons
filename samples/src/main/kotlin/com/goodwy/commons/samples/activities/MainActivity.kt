@@ -5,7 +5,6 @@ import android.os.Bundle
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.activities.ManageBlockedNumbersActivity
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
-import com.goodwy.commons.dialogs.CallConfirmationDialog
 import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
