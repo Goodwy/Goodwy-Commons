@@ -556,10 +556,10 @@
 
     <style name="DragHandleIconStyle">
         <item name="android:src">@drawable/ic_drag_handle_vector</item>
-        <item name="android:layout_width">@dimen/medium_icon_size</item>
-        <item name="android:layout_height">@dimen/medium_icon_size</item>
-        <item name="android:paddingTop">@dimen/normal_margin</item>
-        <item name="android:paddingBottom">@dimen/normal_margin</item>
+        <item name="android:layout_width">42dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:paddingTop">@dimen/smaller_margin</item>
+        <item name="android:paddingBottom">@dimen/smaller_margin</item>
         <item name="android:visibility">gone</item>
     </style>
 
