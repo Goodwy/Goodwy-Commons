@@ -115,7 +115,9 @@
     <string name="default_folder_to_open_g">Открываемая при запуске папка</string>
     <string name="last_used_g">Последняя использованная</string>
     <string name="home_folder_g">Домашняя папка</string>
-    <string name="primary_sim_card">Основна SIM-карта</string>
+    <string name="primary_sim_card">Основная SIM-карта</string>
+    <string name="button_primary">Основная кнопка</string>
+    <string name="button_secondary">Дополнительная кнопка</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>
