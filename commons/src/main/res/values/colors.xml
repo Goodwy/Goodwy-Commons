@@ -6,7 +6,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="pressed_item_foreground">#08000000</color>
-    <color name="activated_item_foreground">#44666666</color> <!--#44888888 цвет баров-->
+    <color name="activated_item_foreground">#44666666</color> <!--#44888888 bar color-->
     <color name="button_no_pressed_bg">#FF666666</color>
     <color name="button_pressed_bg">#66666666</color>
     <color name="divider_grey">#55808080</color> <!--#88808080-->
@@ -14,7 +14,7 @@
     <color name="dark_grey">#FF333333</color>
     <color name="divider">#80c6c6c7</color>
     <color name="bottom_tabs_light_background">#FFF1F1F1</color>
-    <color name="bottom_tabs_black_background">#FF1B1B1B</color> <!--#44666666 прозрачность иногда мешает-->
+    <color name="bottom_tabs_black_background">#FF1B1B1B</color> <!--#44666666 transparency sometimes gets in the way-->
     <color name="disabled_text_color_highlight">#00FFFFFF</color>
 
     <color name="hint_white">#99FFFFFF</color>

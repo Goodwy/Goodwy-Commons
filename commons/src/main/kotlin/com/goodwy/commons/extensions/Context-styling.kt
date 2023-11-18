@@ -84,13 +84,13 @@ fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.pri
 
 fun Context.isUsingSystemDarkTheme() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0
 
-fun Context.isLightTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_light_background_color) //&& baseConfig.textColor == resources.getColor(R.color.theme_light_text_color)
+fun Context.isLightTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_light_background_color, theme) //&& baseConfig.textColor == resources.getColor(R.color.theme_light_text_color)
 
-fun Context.isGrayTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_gray_background_color) //&& baseConfig.textColor == resources.getColor(R.color.theme_gray_text_color)
+fun Context.isGrayTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_gray_background_color, theme) //&& baseConfig.textColor == resources.getColor(R.color.theme_gray_text_color)
 
-fun Context.isDarkTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_dark_background_color) //&& baseConfig.textColor == resources.getColor(R.color.theme_dark_text_color)
+fun Context.isDarkTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_dark_background_color, theme) //&& baseConfig.textColor == resources.getColor(R.color.theme_dark_text_color)
 
-fun Context.isBlackTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_black_background_color) //&& baseConfig.textColor == resources.getColor(R.color.theme_black_text_color)
+fun Context.isBlackTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_black_background_color, theme) //&& baseConfig.textColor == resources.getColor(R.color.theme_black_text_color)
 
 fun Context.getTimePickerDialogTheme() = when {
     baseConfig.isUsingSystemTheme -> if (isUsingSystemDarkTheme()) {
@@ -182,8 +182,8 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
     val baseColor = baseConfig.backgroundColor
     val bottomColor = when {
         baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_status_bar_color, theme)
-        baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background)
-        baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background)
+        baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
+        baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
         else -> baseConfig.backgroundColor.lightenColor(4)
     }
     return bottomColor
