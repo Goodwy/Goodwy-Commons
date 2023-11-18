@@ -83,11 +83,11 @@
         <ImageView
             android:id="@+id/drag_handle_icon"
             style="@style/DragHandleIconStyle"
-            android:layout_marginBottom="@dimen/medium_margin"
             android:layout_marginEnd="@dimen/activity_margin"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/medium_margin"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/divider"
