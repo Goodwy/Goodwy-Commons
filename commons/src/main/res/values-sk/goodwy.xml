@@ -102,6 +102,8 @@
     <string name="last_used_g">Naposledy použité</string>
     <string name="home_folder_g">Domovský priečinok</string>
     <string name="primary_sim_card">Primárna SIM karta</string>
+    <string name="button_primary">Primárne tlačidlo</string>
+    <string name="button_secondary">Sekundárne tlačidlo</string>
 
     <string name="accent_color">Farba zvýraznenia</string>
     <string name="incoming_call">Prichádzajúci hovor</string>

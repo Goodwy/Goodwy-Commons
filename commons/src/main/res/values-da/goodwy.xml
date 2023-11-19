@@ -102,6 +102,8 @@
     <string name="last_used_g">Sidst brugt</string>
     <string name="home_folder_g">Hjemmemappe</string>
     <string name="primary_sim_card">Primært SIM-kort</string>
+    <string name="button_primary">Primær knap</string>
+    <string name="button_secondary">Sekundær knap</string>
 
     <string name="accent_color">Fremhævningsfarve</string>
     <string name="incoming_call">Indgående opkald</string>

@@ -103,6 +103,8 @@
     <string name="last_used_g">Último uso</string>
     <string name="home_folder_g">Cartafol de inicio</string>
     <string name="primary_sim_card">Tarxeta SIM principal</string>
+    <string name="button_primary">Botón principal</string>
+    <string name="button_secondary">Botón secundario</string>
 
     <string name="accent_color">Cor de acento</string>
     <string name="incoming_call">Chamada entrante</string>

@@ -102,6 +102,8 @@
     <string name="last_used_g">Ultimo utilizzo</string>
     <string name="home_folder_g">Cartella Inizio</string>
     <string name="primary_sim_card">Scheda SIM principale</string>
+    <string name="button_primary">Pulsante principale</string>
+    <string name="button_secondary">Pulsante secondario</string>
 
     <string name="accent_color">Colore accento</string>
     <string name="incoming_call">Chiamata in arrivo</string>

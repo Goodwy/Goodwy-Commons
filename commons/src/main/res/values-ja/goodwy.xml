@@ -102,6 +102,8 @@
     <string name="last_used_g">最終使用日時</string>
     <string name="home_folder_g">ホームフォルダ</string>
     <string name="primary_sim_card">メインのSIMカード</string>
+    <string name="button_primary">主ボタン</string>
+    <string name="button_secondary">セカンダリボタン</string>
 
     <string name="accent_color">アクセントカラー</string>
     <string name="incoming_call">着信呼び出し</string>

@@ -117,6 +117,8 @@
     <string name="last_used_g">上次使用</string>
     <string name="home_folder_g">主文件夹</string>
     <string name="primary_sim_card">主SIM卡</string>
+    <string name="button_primary">主按鈕</string>
+    <string name="button_secondary">輔助按鈕</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

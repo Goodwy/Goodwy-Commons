@@ -117,6 +117,8 @@
     <string name="last_used_g">সর্বশেষ ব্যবহৃত</string>
     <string name="home_folder_g">হোম ফোল্ডার</string>
     <string name="primary_sim_card">Primary SIM card</string>
+    <string name="button_primary">Primary button</string>
+    <string name="button_secondary">Secondary button</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

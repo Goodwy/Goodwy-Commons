@@ -102,6 +102,8 @@
     <string name="last_used_g">Ostatnio używane</string>
     <string name="home_folder_g">Katalog domowy</string>
     <string name="primary_sim_card">Podstawowa karta SIM</string>
+    <string name="button_primary">Przycisk główny</string>
+    <string name="button_secondary">Przycisk pomocniczy</string>
 
     <string name="accent_color">Kolor wiodący</string>
     <string name="incoming_call">Połączenie przychodzące</string>

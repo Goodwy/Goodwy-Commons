@@ -116,6 +116,8 @@
     <string name="last_used_g">Ultima utilizare</string>
     <string name="home_folder_g">Dosarul de pornire</string>
     <string name="primary_sim_card">Cartela SIM principală</string>
+    <string name="button_primary">Butonul principal</string>
+    <string name="button_secondary">Buton secundar</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

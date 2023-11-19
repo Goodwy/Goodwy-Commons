@@ -103,6 +103,8 @@
     <string name="last_used_g">Son istifadə olunub</string>
     <string name="home_folder_g">Ev qovluğu</string>
     <string name="primary_sim_card">Əsas SİM kart</string>
+    <string name="button_primary">Əsas düymə</string>
+    <string name="button_secondary">İkinci dərəcəli düymə</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="incoming_call">Daxil olan zəng</string>

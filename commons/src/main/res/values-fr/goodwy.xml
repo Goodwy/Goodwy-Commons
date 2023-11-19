@@ -102,6 +102,8 @@
     <string name="last_used_g">Dernière utilisation</string>
     <string name="home_folder_g">Dossier de base</string>
     <string name="primary_sim_card">Carte SIM principale</string>
+    <string name="button_primary">Bouton principal</string>
+    <string name="button_secondary">Bouton secondaire</string>
 
     <string name="accent_color">Couleur d\'accentuation</string>
     <string name="incoming_call">Appel entrant</string>

@@ -102,6 +102,8 @@
     <string name="last_used_g">Utilitzat per darrera vegada</string>
     <string name="home_folder_g">Carpeta d\'inici</string>
     <string name="primary_sim_card">Targeta SIM principal</string>
+    <string name="button_primary">Botó principal</string>
+    <string name="button_secondary">Botó secundari</string>
 
     <string name="accent_color">Color d\'èmfasi</string>
     <string name="incoming_call">Trucada entrant</string>

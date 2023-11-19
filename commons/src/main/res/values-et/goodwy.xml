@@ -116,6 +116,8 @@
     <string name="last_used_g">Viimati kasutatud</string>
     <string name="home_folder_g">Kaust Avaleht</string>
     <string name="primary_sim_card">Esmane SIM-kaart</string>
+    <string name="button_primary">Nupp Esmane</string>
+    <string name="button_secondary">Sekundaarne nupp</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -102,6 +102,8 @@
     <string name="last_used_g">שימוש אחרון</string>
     <string name="home_folder_g">תיקיית בית</string>
     <string name="primary_sim_card">כרטיס SIM ראשי</string>
+    <string name="button_primary">לחצן ראשי</string>
+    <string name="button_secondary">לחצן משני</string>
 
     <string name="accent_color">צבע הדגשה</string>
     <string name="incoming_call">שיחה נכנסת</string>

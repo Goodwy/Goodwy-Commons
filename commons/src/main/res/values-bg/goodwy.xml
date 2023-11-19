@@ -117,6 +117,8 @@
     <string name="last_used_g">Последно използван</string>
     <string name="home_folder_g">Домашна папка</string>
     <string name="primary_sim_card">Основна SIM карта</string>
+    <string name="button_primary">Основен бутон</string>
+    <string name="button_secondary">Вторичен бутон</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

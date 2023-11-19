@@ -102,6 +102,8 @@
     <string name="last_used_g">Последњи пут коришћен</string>
     <string name="home_folder_g">Почетна фасцикла</string>
     <string name="primary_sim_card">Примарна СИМ картица</string>
+    <string name="button_primary">Примарно дугме</string>
+    <string name="button_secondary">Секундарни тастер</string>
 
     <string name="accent_color">Наглашена боја</string>
     <string name="incoming_call">Долазни позив</string>

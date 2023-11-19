@@ -102,6 +102,8 @@
     <string name="last_used_g">Last used</string>
     <string name="home_folder_g">Home folder</string>
     <string name="primary_sim_card">Cerdyn SIM cynradd</string>
+    <string name="button_primary">Botwm cynradd</string>
+    <string name="button_secondary">Botwm eilaidd</string>
 
     <string name="accent_color">Lliw acen</string>
     <string name="incoming_call">Galwad i Mewn</string>

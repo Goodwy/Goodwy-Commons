@@ -102,6 +102,8 @@
     <string name="last_used_g">Τελευταία χρήση</string>
     <string name="home_folder_g">Αρχικός φάκελος</string>
     <string name="primary_sim_card">Κύρια κάρτα SIM</string>
+    <string name="button_primary">Πρωτεύον κουμπί</string>
+    <string name="button_secondary">Δευτερεύον κουμπί</string>
 
     <string name="accent_color">Χρώμα έμφασης</string>
     <string name="incoming_call">Εισερχόμενη κλήση</string>

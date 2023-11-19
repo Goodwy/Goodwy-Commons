@@ -117,6 +117,8 @@
     <string name="last_used_g">ใช้ล่าสุด</string>
     <string name="home_folder_g">โฟลเดอร์เริ่มต้น</string>
     <string name="primary_sim_card">ซิมการ์ดหลัก</string>
+    <string name="button_primary">ปุ่มหลัก</string>
+    <string name="button_secondary">ปุ่มรอง</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

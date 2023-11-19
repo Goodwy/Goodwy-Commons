@@ -102,6 +102,8 @@
     <string name="last_used_g">Zadnji put korišteno</string>
     <string name="home_folder_g">Polazna mapa</string>
     <string name="primary_sim_card">Primarna SIM kartica</string>
+    <string name="button_primary">Primarni gumb</string>
+    <string name="button_secondary">Sekundarni gumb</string>
 
     <string name="accent_color">Boja isticanja</string>
     <string name="incoming_call">Dolazni poziv</string>

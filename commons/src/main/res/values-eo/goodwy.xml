@@ -117,6 +117,8 @@
     <string name="last_used_g">Laste uzata</string>
     <string name="home_folder_g">Hejma dosierujo</string>
     <string name="primary_sim_card">Primara SIM-karto</string>
+    <string name="button_primary">Primara butono</string>
+    <string name="button_secondary">Malĉefa butono</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

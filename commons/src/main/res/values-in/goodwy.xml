@@ -102,6 +102,8 @@
     <string name="last_used_g">Terakhir digunakan</string>
     <string name="home_folder_g">Folder rumah</string>
     <string name="primary_sim_card">Kartu SIM utama</string>
+    <string name="button_primary">Tombol utama</string>
+    <string name="button_secondary">Tombol sekunder</string>
 
     <string name="accent_color">Aksen warna</string>
     <string name="incoming_call">Panggilan masuk</string>

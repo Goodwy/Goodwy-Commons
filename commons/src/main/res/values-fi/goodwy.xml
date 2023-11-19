@@ -102,6 +102,8 @@
     <string name="last_used_g">Viimeksi käytetty</string>
     <string name="home_folder_g">Kotikansio</string>
     <string name="primary_sim_card">Ensisijainen SIM-kortti</string>
+    <string name="button_primary">Ensisijainen-painike</string>
+    <string name="button_secondary">Toissijainen painike</string>
 
     <string name="accent_color">Korostusväri</string>
     <string name="incoming_call">Saapuva puhelu</string>

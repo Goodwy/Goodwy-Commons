@@ -102,6 +102,8 @@
     <string name="last_used_g">Laatst gebruikt</string>
     <string name="home_folder_g">Thuismap</string>
     <string name="primary_sim_card">Primaire simkaart</string>
+    <string name="button_primary">Primaire knop</string>
+    <string name="button_secondary">Secundaire knop</string>
 
     <string name="accent_color">Accentkleur</string>
     <string name="incoming_call">Inkomend gesprek</string>

@@ -103,6 +103,8 @@
     <string name="last_used_g">اخر استخدام</string>
     <string name="home_folder_g">المجلد الرئيسي</string>
     <string name="primary_sim_card">بطاقة SIM الأساسية</string>
+    <string name="button_primary">الزر الأساسي</string>
+    <string name="button_secondary">الزر الثانوي</string>
 
     <string name="accent_color">لون التمييز</string>
     <string name="incoming_call">مكالمة واردة</string>
