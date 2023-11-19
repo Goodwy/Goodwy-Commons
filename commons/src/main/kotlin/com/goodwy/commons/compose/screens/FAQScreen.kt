@@ -5,9 +5,12 @@ import android.text.Html
 import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -41,8 +44,12 @@ internal fun FAQScreen(
         contentPadding = PaddingValues(bottom = 8.dp)
     ) {
         itemsIndexed(faqItems) { index, faqItem ->
-            Column(modifier = Modifier.fillMaxWidth()) {
+            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)
+                .background(color = MaterialTheme.colorScheme.surfaceVariant, shape = RoundedCornerShape(12.dp))
+            ) {
                 ListItem(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 8.dp),
+                    colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                     headlineContent = {
                         val text = if (faqItem.title is Int) stringResource(faqItem.title) else faqItem.title as String
                         Text(
@@ -71,14 +78,14 @@ internal fun FAQScreen(
                         }
                     },
                 )
-                Spacer(modifier = Modifier.padding(bottom = 8.dp))
-                if (index != faqItems.lastIndex) {
-                    SettingsHorizontalDivider(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(bottom = 4.dp)
-                    )
-                }
+//                Spacer(modifier = Modifier.padding(bottom = 8.dp))
+//                if (index != faqItems.lastIndex) {
+//                    SettingsHorizontalDivider(
+//                        modifier = Modifier
+//                            .fillMaxWidth()
+//                            .padding(bottom = 4.dp)
+//                    )
+//                }
             }
         }
     }
