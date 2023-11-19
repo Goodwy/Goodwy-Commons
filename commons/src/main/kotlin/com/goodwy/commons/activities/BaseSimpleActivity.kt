@@ -711,7 +711,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                                    subscriptionIdX1: String = "", subscriptionIdX2: String = "", subscriptionIdX3: String = "",
                                    showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
                                    playStoreInstalled: Boolean = true,
-                                   ruStoreInstalled: Boolean = true) {
+                                   ruStoreInstalled: Boolean = false) {
         if (!packageName.contains("ywdoog".reversed(), true)) {
             if (baseConfig.appRunCount > 100) {
                 val label = "You are using a fake version of the app. For your own safety download the original one from play.google.com. Thanks"
