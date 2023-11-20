@@ -367,7 +367,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
                 if (curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM) {
                     curPrimaryColor = getColor(theme.primaryColorId)
-                    curAccentColor = getColor(R.color.color_accent) // (R.color.color_primary) TODO цвет акцента при выборе темы R.color.color_primary
+                    curAccentColor = getColor(R.color.color_accent) // (R.color.color_primary) TODO accent color when choosing a theme R.color.color_primary
                     curAppIconColor = getColor(theme.appIconColorId)
                 }
 

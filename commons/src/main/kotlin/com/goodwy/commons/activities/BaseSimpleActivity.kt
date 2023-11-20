@@ -61,8 +61,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
-    var showTransparentTop = false      // TODO Theme цвет топ бара
+    var showTransparentTop = false      // TODO Theme bar top color
     var isMaterialActivity = false      // by material activity we mean translucent navigation bar and opaque status and action bars
+    var updateNavigationBarColor = true
     var checkedDocumentPath = ""
     var currentScrollY = 0
     var configItemsToExport = LinkedHashMap<String, Any>()
@@ -138,12 +139,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
         //updateRecentsAppIcon()
 
-        var navBarColor = getProperBackgroundColor()
-        if (isMaterialActivity) {
-            navBarColor = navBarColor.adjustAlpha(ZERO_ALPHA) //HIGHER_ALPHA
-        }
+        if (updateNavigationBarColor) {
+            var navBarColor = getProperBackgroundColor()
+            if (isMaterialActivity) {
+                navBarColor = navBarColor.adjustAlpha(ZERO_ALPHA) //HIGHER_ALPHA
+            }
 
-        updateNavigationBarColor(navBarColor)
+            updateNavigationBarColor(navBarColor)
+        }
     }
 
     override fun onDestroy() {
