@@ -48,6 +48,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/top_toolbar_search_icon"
+                android:layout_toStartOf="@+id/top_toolbar_search_clear"
                 android:background="@null"
                 android:ellipsize="end"
                 android:gravity="start|center_vertical"

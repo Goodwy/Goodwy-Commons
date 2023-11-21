@@ -435,10 +435,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (forceWhiteIcons) {
             color = Color.WHITE
         }
+        val itemColor = if (baseConfig.topAppBarColored) getProperPrimaryColor() else color
 
         for (i in 0 until menu.size()) {
             try {
-                menu.getItem(i)?.icon?.setTint(color)
+                menu.getItem(i)?.icon?.setTint(itemColor)
             } catch (ignored: Exception) {
             }
         }
