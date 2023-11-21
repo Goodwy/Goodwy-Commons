@@ -101,6 +101,7 @@ fun SettingsScaffoldTopBar(
     statusBarColor: Int,
     colorTransitionFraction: Float,
     contrastColor: Color,
+    iconColor: Color? = null,
     goBack: () -> Unit,
 ) {
     TopAppBar(
@@ -111,7 +112,7 @@ fun SettingsScaffoldTopBar(
             SettingsNavigationIcon(
                 goBack = goBack,
                 navigationIconInteractionSource = navigationIconInteractionSource,
-                iconColor = scrolledColor
+                iconColor = iconColor ?: scrolledColor
             )
         },
         actions = actions,

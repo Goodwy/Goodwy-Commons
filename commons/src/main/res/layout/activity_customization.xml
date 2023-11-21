@@ -59,7 +59,7 @@
                     android:layout_centerVertical="true">
 
                     <com.goodwy.commons.views.MyTextView
-                        android:id="@+id/settings_purchase_thank_you"
+                        android:id="@+id/settingsPurchaseThankYou"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/action_support_project"/>
@@ -102,7 +102,7 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/customization_theme_holder"
+                    android:id="@+id/customizationThemeHolder"
                     style="@style/SettingsHolderStyle"
                     android:paddingTop="@dimen/medium_margin"
                     android:paddingBottom="@dimen/medium_margin"
@@ -164,11 +164,11 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/settings_top_app_bar_colored_holder"
+                    android:id="@+id/settingsTopAppBarColoredHolder"
                     style="@style/SettingsHolderSwitchStyle">
 
                     <com.goodwy.commons.views.MySwitchCompat
-                        android:id="@+id/settings_top_app_bar_colored"
+                        android:id="@+id/settingsTopAppBarColored"
                         style="@style/SettingsSwitchStyle"
                         android:text="@string/top_app_bar_colored"
                         app:switchPadding="@dimen/bigger_margin"/>

@@ -161,7 +161,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         setupPurchaseThankYou()
         updateAutoThemeFields()
-        setupTopAppBbarColored()
+        setupTopAppBarColored()
     }
 
     private fun updateHoldersColor(color: Int = getBottomNavigationBackgroundColor()) {
@@ -379,6 +379,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 setupToolbar(binding.customizationToolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
                 updateActionbarColor(curBackgroundColor)
             }
+            binding.settingsTopAppBarColored.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         }
 
         val holdersColor = when {
@@ -850,8 +851,9 @@ class CustomizationActivity : BaseSimpleActivity() {
             .subscribe()
     }
 
-    private fun setupTopAppBbarColored() {
+    private fun setupTopAppBarColored() {
         binding.apply {
+            updateTextColors(settingsTopAppBarColoredHolder)
             settingsTopAppBarColored.isChecked = baseConfig.topAppBarColored
             settingsTopAppBarColoredHolder.setOnClickListener {
                 settingsTopAppBarColored.toggle()

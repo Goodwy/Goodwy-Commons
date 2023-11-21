@@ -703,6 +703,8 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(TOP_APP_BAR_COLORED, false)
         set(topAppBarColored) = prefs.edit().putBoolean(TOP_APP_BAR_COLORED, topAppBarColored).apply()
 
+    val isTopAppBarColored: Flow<Boolean> = ::topAppBarColored.asFlowNonNull()
+
     var linesCount: Int
         get() = prefs.getInt(LINES_COUNT, 2)
         set(linesCount) = prefs.edit().putInt(LINES_COUNT, linesCount).apply()

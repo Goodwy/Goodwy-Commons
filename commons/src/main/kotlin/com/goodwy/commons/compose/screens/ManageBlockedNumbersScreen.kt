@@ -15,10 +15,10 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ContentCopy
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.rounded.Add
+import androidx.compose.material.icons.rounded.ContentCopy
+import androidx.compose.material.icons.rounded.Delete
+import androidx.compose.material.icons.rounded.MoreVert
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -74,6 +74,7 @@ internal fun ManageBlockedNumbersScreen(
     onImportBlockedNumbers: () -> Unit,
     onExportBlockedNumbers: () -> Unit,
     setAsDefault: () -> Unit,
+    isTopAppBarColored: Boolean,
     isDialer: Boolean,
     hasGivenPermissionToBlock: Boolean,
     isBlockUnknownSelected: Boolean,
@@ -133,6 +134,7 @@ internal fun ManageBlockedNumbersScreen(
                             statusBarColor = statusBarColor,
                             colorTransitionFraction = colorTransitionFraction,
                             contrastColor = contrastColor,
+                            isTopAppBarColored = isTopAppBarColored,
                             onAdd = onAdd,
                             onImportBlockedNumbers = onImportBlockedNumbers,
                             onExportBlockedNumbers = onExportBlockedNumbers
@@ -425,7 +427,7 @@ private fun BlockedNumberTrailingContent(modifier: Modifier = Modifier, onDelete
     IconButton(onClick = {
         isMenuVisible = true
     }) {
-        Icon(Icons.Default.MoreVert, contentDescription = stringResource(id = R.string.more_options), tint = iconsColor)
+        Icon(Icons.Rounded.MoreVert, contentDescription = stringResource(id = R.string.more_options), tint = iconsColor)
     }
 }
 
@@ -504,7 +506,7 @@ private fun BlockedNumberActionMenu(
         val delete =
             ActionItem(
                 nameRes = R.string.delete,
-                icon = Icons.Default.Delete,
+                icon = Icons.Rounded.Delete,
                 doAction = onDelete,
                 overflowMode = OverflowMode.NEVER_OVERFLOW,
                 iconColor = iconColor
@@ -514,7 +516,7 @@ private fun BlockedNumberActionMenu(
             listOf(
                 ActionItem(
                     nameRes = R.string.copy,
-                    icon = Icons.Default.ContentCopy,
+                    icon = Icons.Rounded.ContentCopy,
                     doAction = onCopy,
                     overflowMode = OverflowMode.NEVER_OVERFLOW,
                     iconColor = iconColor
@@ -538,10 +540,12 @@ private fun NonActionModeToolbar(
     statusBarColor: Int,
     colorTransitionFraction: Float,
     contrastColor: Color,
+    isTopAppBarColored: Boolean,
     onAdd: () -> Unit,
     onImportBlockedNumbers: () -> Unit,
     onExportBlockedNumbers: () -> Unit
 ) {
+    val iconColor = if (isTopAppBarColored) MaterialTheme.colorScheme.primary else null
     SettingsScaffoldTopBar(
         title = { scrolledTextColor ->
             Text(
@@ -559,16 +563,17 @@ private fun NonActionModeToolbar(
         statusBarColor = statusBarColor,
         colorTransitionFraction = colorTransitionFraction,
         contrastColor = contrastColor,
+        iconColor = iconColor,
         actions = {
             val actionMenus = remember {
                 listOf(
-                    ActionItem(R.string.add_a_blocked_number, icon = Icons.Filled.Add, doAction = onAdd),
+                    ActionItem(R.string.add_a_blocked_number, icon = Icons.Rounded.Add, doAction = onAdd),
                     ActionItem(R.string.import_blocked_numbers, doAction = onImportBlockedNumbers, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                     ActionItem(R.string.export_blocked_numbers, doAction = onExportBlockedNumbers, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                 ).toImmutableList()
             }
             var isMenuVisible by remember { mutableStateOf(false) }
-            ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = isMenuVisible, onMenuToggle = { isMenuVisible = it }, iconsColor = scrolledColor)
+            ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = isMenuVisible, onMenuToggle = { isMenuVisible = it }, iconsColor = iconColor)
         }
     )
 }
@@ -659,6 +664,7 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
             onImportBlockedNumbers = {},
             onExportBlockedNumbers = {},
             setAsDefault = {},
+            isTopAppBarColored = true,
             isDialer = isDialer,
             hasGivenPermissionToBlock = !isDialer,
             isBlockUnknownSelected = false,

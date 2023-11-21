@@ -67,6 +67,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             }
             val isBlockingHiddenNumbers by config.isBlockingHiddenNumbers.collectAsStateWithLifecycle(initialValue = config.blockHiddenNumbers)
             val isBlockingUnknownNumbers by config.isBlockingUnknownNumbers.collectAsStateWithLifecycle(initialValue = config.blockUnknownNumbers)
+            val isTopAppBarColored by config.isTopAppBarColored.collectAsStateWithLifecycle(initialValue = config.topAppBarColored)
             val isDialer = remember {
                 config.appId.startsWith("com.goodwy.dialer")
             }
@@ -103,6 +104,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     onImportBlockedNumbers = ::tryImportBlockedNumbers,
                     onExportBlockedNumbers = ::tryExportBlockedNumbers,
                     setAsDefault = ::maybeSetDefaultCallerIdApp,
+                    isTopAppBarColored = isTopAppBarColored,
                     isDialer = isDialer,
                     hasGivenPermissionToBlock = isDefaultDialer,
                     isBlockUnknownSelected = isBlockingUnknownNumbers,
@@ -125,7 +127,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     },
                     onCopy = { blockedNumber ->
                         copyToClipboard(blockedNumber.number)
-                    }
+                    },
                 )
             }
         }
