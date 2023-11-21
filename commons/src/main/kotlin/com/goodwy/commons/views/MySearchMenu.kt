@@ -116,6 +116,8 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         binding.topToolbarSearchHolder.setBackgroundResource(R.drawable.search_bg)
         binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(context.getBottomNavigationBackgroundColor())
         binding.topToolbarSearchClear.applyColorFilter(contrastColor)
+
+        if (context.baseConfig.topAppBarColored) binding.topToolbar.setTitleTextColor(ColorStateList.valueOf(primaryColor))
     }
 
     fun updateTitle(title: String) {

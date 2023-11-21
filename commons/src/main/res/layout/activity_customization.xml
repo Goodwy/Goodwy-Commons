@@ -7,10 +7,9 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/customization_toolbar"
+        android:id="@+id/customizationToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/color_primary"
         app:menu="@menu/menu_customization"
         app:title="@string/customize_colors"
         app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle"/>
@@ -33,9 +32,9 @@
                 android:id="@+id/settings_purchase_thank_you_holder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
                 android:background="?attr/selectableItemBackground"
-                android:paddingEnd="@dimen/normal_margin"
-                tools:ignore="RtlSymmetry">
+                android:paddingEnd="@dimen/normal_margin">
 
                 <ImageView
                     android:id="@+id/purchase_logo"
@@ -48,8 +47,9 @@
                     android:elevation="8dp"
                     android:padding="10dp"
                     android:src="@drawable/ic_plus_support"
+                    android:tint="@color/color_primary"
                     android:contentDescription="@string/donate"
-                    app:tint="@color/color_primary"/>
+                    tools:ignore="UseAppTint"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -85,9 +85,9 @@
                         android:background="@drawable/button_gray_bg"
                         android:saveEnabled="false"
                         android:text="@string/learn_more"
+                        android:textSize="10sp"
                         android:textAllCaps="true"
                         android:textColor="@color/default_text_color"
-                        android:textSize="10sp"
                         tools:ignore="SmallSp"/>
                 </RelativeLayout>
             </RelativeLayout>
@@ -111,7 +111,7 @@
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_theme_label"
                         style="@style/SettingsTextLabelStyle"
-                        android:layout_width="match_parent"
+                        android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:layout_toStartOf="@+id/customization_theme"
                         android:layout_marginEnd="8dp"
@@ -137,10 +137,11 @@
                 </RelativeLayout>
             </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/colors_holder"
+            <LinearLayout
+                android:id="@+id/primary_colors_holder"
                 style="@style/SettingsSectionHolder"
                 android:layout_below="@+id/theme_holder"
+                android:orientation="vertical"
                 android:paddingTop='@dimen/smaller_margin'>
 
                 <RelativeLayout
@@ -163,8 +164,25 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/settings_top_app_bar_colored_holder"
+                    style="@style/SettingsHolderSwitchStyle">
+
+                    <com.goodwy.commons.views.MySwitchCompat
+                        android:id="@+id/settings_top_app_bar_colored"
+                        style="@style/SettingsSwitchStyle"
+                        android:text="@string/top_app_bar_colored"
+                        app:switchPadding="@dimen/bigger_margin"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/colors_holder"
+                style="@style/SettingsSectionHolder"
+                android:layout_below="@+id/primary_colors_holder"
+                android:paddingTop='@dimen/smaller_margin'>
+
+                <RelativeLayout
                     android:id="@+id/customization_accent_color_holder"
-                    android:layout_below="@+id/customization_primary_color_holder"
                     style="@style/SettingsHolderStyle">
 
                     <com.goodwy.commons.views.MyTextView

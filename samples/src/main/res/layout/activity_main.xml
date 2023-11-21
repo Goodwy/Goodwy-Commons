@@ -1,15 +1,17 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.goodwy.commons.views.MySearchMenu
-        android:id="@+id/main_toolbar"
+        android:id="@+id/mainToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@string/simple_commons"
-        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
+        app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle"
+        tools:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/main_nested_scrollview"
@@ -106,10 +108,20 @@
                 android:text="@string/security" />
 
             <Button
-                android:id="@+id/manage_blocked_numbers"
+                android:id="@+id/overflowIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/security"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                android:text="@string/overflow_icon" />
+
+            <Button
+                android:id="@+id/manage_blocked_numbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/overflowIcon"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
                 android:elevation="4dp"

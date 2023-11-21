@@ -315,25 +315,23 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateTopBarColors(toolbar: Toolbar, color: Int) {
-        val contrastColor = if (useTopSearchMenu) {
-            color.getContrastColor() //getProperBackgroundColor().getContrastColor()
-        } else {
-            color.getContrastColor()
-        }
+        val contrastColor = color.getContrastColor()
+        val itemColor = if (baseConfig.topAppBarColored) getProperPrimaryColor() else contrastColor
 
         //if (!useTopSearchMenu) {
             updateStatusbarColor(color)
             toolbar.setBackgroundColor(color)
             toolbar.setTitleTextColor(contrastColor)
-            toolbar.navigationIcon?.applyColorFilter(contrastColor)
-            toolbar.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, contrastColor)
+            toolbar.navigationIcon?.applyColorFilter(itemColor)
+            toolbar.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, itemColor)
         //}
-        toolbar.overflowIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_more_horiz, contrastColor) //ic_three_dots_vector
+        val overflowIconRes = getOverflowIcon(baseConfig.overflowIcon)
+        toolbar.overflowIcon = resources.getColoredDrawableWithColor(this, overflowIconRes, itemColor)
 
         val menu = toolbar.menu
         for (i in 0 until menu.size()) {
             try {
-                menu.getItem(i)?.icon?.setTint(contrastColor)
+                menu.getItem(i)?.icon?.setTint(itemColor)
             } catch (ignored: Exception) {
             }
         }

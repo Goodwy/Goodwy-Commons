@@ -161,11 +161,13 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         setupPurchaseThankYou()
         updateAutoThemeFields()
+        setupTopAppBbarColored()
     }
 
     private fun updateHoldersColor(color: Int = getBottomNavigationBackgroundColor()) {
         arrayOf(
             binding.themeHolder,
+            binding.primaryColorsHolder,
             binding.colorsHolder
         ).forEach {
             it.background.applyColorFilter(color)
@@ -846,6 +848,17 @@ class CustomizationActivity : BaseSimpleActivity() {
         RxAnimation.from(binding.settingsPurchaseThankYouHolder)
             .shake()
             .subscribe()
+    }
+
+    private fun setupTopAppBbarColored() {
+        binding.apply {
+            settingsTopAppBarColored.isChecked = baseConfig.topAppBarColored
+            settingsTopAppBarColoredHolder.setOnClickListener {
+                settingsTopAppBarColored.toggle()
+                baseConfig.topAppBarColored = settingsTopAppBarColored.isChecked
+                updateTopBarColors(binding.customizationToolbar, getProperBackgroundColor())
+            }
+        }
     }
 }
 

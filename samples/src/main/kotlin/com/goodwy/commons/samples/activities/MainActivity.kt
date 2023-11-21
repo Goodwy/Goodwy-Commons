@@ -6,10 +6,12 @@ import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.activities.ManageBlockedNumbersActivity
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
 import com.goodwy.commons.dialogs.SecurityDialog
+import com.goodwy.commons.dialogs.OverflowIconDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
 import com.goodwy.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.goodwy.commons.helpers.SHOW_ALL_TABS
+import com.goodwy.commons.helpers.VIEW_TYPE_GRID
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
@@ -32,6 +34,7 @@ class MainActivity : BaseSimpleActivity() {
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
 
+        setupOptionsMenu()
         updateMaterialActivityViews(binding.mainCoordinator, null, useTransparentNavigation = true, useTopSearchMenu = true)
         //setupMaterialScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
         binding.mainToolbar.updateTitle(getString(com.goodwy.commons.R.string.simple_commons))
@@ -60,6 +63,11 @@ class MainActivity : BaseSimpleActivity() {
             SecurityDialog(this, "", SHOW_ALL_TABS) { _, _, _ ->
             }
         }
+        binding.overflowIcon.setOnClickListener {
+            OverflowIconDialog(this) {
+                binding.mainToolbar.updateColors()
+            }
+        }
         binding.manageBlockedNumbers.setOnClickListener {
             startActivity(Intent(this, ManageBlockedNumbersActivity::class.java))
         }
@@ -86,6 +94,11 @@ class MainActivity : BaseSimpleActivity() {
             playStoreInstalled = isPlayStoreInstalled(),
             ruStoreInstalled = isRuStoreInstalled())
     }
+
+    private fun setupOptionsMenu() {
+        binding.mainToolbar.getToolbar().inflateMenu(R.menu.menu)
+    }
+
     private fun launchBottomSheetDemo() {
         BottomSheetChooserDialog.createChooser(
             fragmentManager = supportFragmentManager,

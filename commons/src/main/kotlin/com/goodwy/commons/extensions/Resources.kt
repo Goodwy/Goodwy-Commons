@@ -9,9 +9,7 @@ import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
 import androidx.appcompat.content.res.AppCompatResources
 import com.goodwy.commons.R
-import com.goodwy.commons.helpers.LBC_ARC
-import com.goodwy.commons.helpers.LBC_IOS
-import com.goodwy.commons.helpers.LBC_ORIGINAL
+import com.goodwy.commons.helpers.*
 
 fun Resources.getColoredBitmap(resourceId: Int, newColor: Int): Bitmap {
     val drawable = getDrawable(resourceId)
@@ -59,6 +57,14 @@ fun getSettingsIcon(id: Int): Int {
         3 -> R.drawable.ic_settings
         4 -> R.drawable.ic_settings_gear
         5 -> R.drawable.ic_settings_toggles
+        else -> R.drawable.ic_more_horiz
+    }
+}
+
+fun getOverflowIcon(id: Int): Int {
+    return when (id) {
+        OVERFLOW_ICON_VERTICAL -> R.drawable.ic_three_dots_vector
+        OVERFLOW_ICON_HORIZONTAL_ROUND -> R.drawable.ic_more_horiz_round
         else -> R.drawable.ic_more_horiz
     }
 }

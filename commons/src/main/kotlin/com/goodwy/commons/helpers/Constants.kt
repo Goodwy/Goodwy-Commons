@@ -216,6 +216,7 @@ const val DEFAULT_PASSWORD_COUNTDOWN = 5
 const val MINIMUM_PIN_LENGTH = 4
 //Goodwy
 const val SETTINGS_ICON = "settings_icon"
+const val OVERFLOW_ICON = "overflow_icon"
 const val SCREEN_SLIDE_ANIMATION = "Screen_slide_animation"
 const val MATERIAL_DESIGN3 = "material_design3"
 const val BOTTOM_NAVIGATION_BAR = "bottom_navigation_bar"
@@ -232,6 +233,7 @@ const val PLAY_STORE_INSTALLED = "play_store_installed"
 const val CONTACT_COLOR_LIST = "contact_color_list"
 const val SIM_ICON_COLORS = "sim_icons_colors"
 const val TEXT_CURSOR_COLOR = "text_cursor_color"
+const val TOP_APP_BAR_COLORED = "top_app_bar_colored"
 const val LINES_COUNT = "lines_count"
 const val SHOW_BLOCK_NUMBERS = "show_blocked_numbers"
 const val SHOW_BUTTON_BLOCK_NUMBERS = "show_button_blocked_numbers"
@@ -469,6 +471,11 @@ const val LBC_ORIGINAL = 1 //letterBackgroundColors
 const val LBC_ANDROID = 2 //letterBackgroundColorsAndroid
 const val LBC_IOS = 3 //letterBackgroundColorsIOS
 const val LBC_ARC = 4 //letterBackgroundColorsArc
+
+//Overflow icon
+const val OVERFLOW_ICON_HORIZONTAL = 0
+const val OVERFLOW_ICON_VERTICAL = 1
+const val OVERFLOW_ICON_HORIZONTAL_ROUND = 2
 
 // most app icon colors from md_app_icon_colors with reduced alpha
 // used at showing contact placeholders without image

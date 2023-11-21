@@ -633,6 +633,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(SETTINGS_ICON, 1)
         set(settingsIcon) = prefs.edit().putInt(SETTINGS_ICON, settingsIcon).apply()
 
+    var overflowIcon: Int
+        get() = prefs.getInt(OVERFLOW_ICON, OVERFLOW_ICON_HORIZONTAL)
+        set(overflowIcon) = prefs.edit().putInt(OVERFLOW_ICON, overflowIcon).apply()
+
     var screenSlideAnimation: Int
         get() = prefs.getInt(SCREEN_SLIDE_ANIMATION, 1)
         set(screenSlideAnimation) = prefs.edit().putInt(SCREEN_SLIDE_ANIMATION, screenSlideAnimation).apply()
@@ -694,6 +698,10 @@ open class BaseConfig(val context: Context) {
     var textCursorColor: Int
         get() = prefs.getInt(TEXT_CURSOR_COLOR, -2)
         set(textCursorColor) = prefs.edit().putInt(TEXT_CURSOR_COLOR, textCursorColor).apply()
+
+    var topAppBarColored: Boolean
+        get() = prefs.getBoolean(TOP_APP_BAR_COLORED, false)
+        set(topAppBarColored) = prefs.edit().putBoolean(TOP_APP_BAR_COLORED, topAppBarColored).apply()
 
     var linesCount: Int
         get() = prefs.getInt(LINES_COUNT, 2)
