@@ -84,7 +84,7 @@ class ColorPickerDialog(
             viewCursor.setFillWithStroke(getColor(), backgroundColor) //, cornerRadius)
             //viewNewColor.setFillWithStroke(getColor(), backgroundColor, cornerRadius)
             //colorPickerOldColor.setFillWithStroke(color, backgroundColor, cornerRadius)
-            viewNewColor.setFillWithStrokeRigth(color, backgroundColor)
+            viewNewColor.setFillWithStrokeRight(color, backgroundColor)
             colorPickerOldColor.setCardBackgroundColor(color)
 
             val hexCode = getHexCode(color)
@@ -146,7 +146,7 @@ class ColorPickerDialog(
                 currentColorHsv[2] = 1f - 1f / viewSatVal.measuredHeight * y
 
                 moveColorPicker()
-                viewNewColor.setFillWithStrokeRigth(getColor(), backgroundColor) //setFillWithStroke(getColor(), backgroundColor, cornerRadius)
+                viewNewColor.setFillWithStrokeRight(getColor(), backgroundColor) //setFillWithStroke(getColor(), backgroundColor, cornerRadius)
                 viewTarget.setFillWithStroke(getColor(), backgroundColor)//, cornerRadius)
                 viewCursor.setFillWithStroke(getColor(), backgroundColor)//, cornerRadius)
                 newHexField.setText(getHexCode(getColor()))
@@ -250,7 +250,7 @@ class ColorPickerDialog(
     private fun updateHue() {
         viewSatVal.setHue(getHue())
         moveHuePicker()
-        viewNewColor.setFillWithStrokeRigth(getColor(), backgroundColor) //setFillWithStroke(getColor(), backgroundColor, cornerRadius)
+        viewNewColor.setFillWithStrokeRight(getColor(), backgroundColor) //setFillWithStroke(getColor(), backgroundColor, cornerRadius)
         if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {
             dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
             wasDimmedBackgroundRemoved = true

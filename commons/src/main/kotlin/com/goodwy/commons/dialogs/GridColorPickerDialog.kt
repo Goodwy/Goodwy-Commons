@@ -220,7 +220,7 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             secondaryLineColorPicker.beVisibleIf(false) //secondaryLineColorPicker.beVisibleIf(isPrimaryColorPicker)
             secondaryLineColorPicker.updateColors(getColorsForIndex(primaryColorIndex), indexes.second)
             secondaryLineColorPicker.listener = LineColorPickerListener { _, color -> colorUpdated(color) }
-            gridColorNewColor.setFillWithStrokeRigth(color, backgroundColor)
+            gridColorNewColor.setFillWithStrokeRight(color, backgroundColor)
             gridColorOldColor.setCardBackgroundColor(color)
         }
 
@@ -255,7 +255,7 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
 
     private fun colorUpdated(color: Int) {
         view.hexCode.text = color.toHex().substring(1)
-        view.gridColorNewColor.setFillWithStrokeRigth(color, backgroundColor)
+        view.gridColorNewColor.setFillWithStrokeRight(color, backgroundColor)
         if (isPrimaryColorPicker) {
 
             if (toolbar != null) {

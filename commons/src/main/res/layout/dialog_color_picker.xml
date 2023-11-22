@@ -102,7 +102,6 @@
                     android:layout_height="@dimen/colorpicker_hue_width"
                     android:elevation="16dp"
                     android:src="@drawable/ic_circle" />
-                <!--android:src="@drawable/ic_chevron_right_unpadded_vector"-->
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
