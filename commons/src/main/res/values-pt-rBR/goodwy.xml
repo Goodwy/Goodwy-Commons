@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Foto de contato desfocada</string>
     <string name="blurry_wallpaper">Papel de parede embaçado</string>
     <string name="text_cursor_color">Cor do cursor de texto</string>
+    <string name="top_app_bar_colored">Barra superior de aplicativos colorida</string>
+    <string name="overflow_icon">Ícone de estouro</string>
     <string name="lines_count">Contagem de linhas</string>
     <string name="show_button_blocked_numbers">Mostrar o botão para não ocultar chamadas bloqueadas</string>
     <string name="flash_for_alerts">Flash para alertas</string>

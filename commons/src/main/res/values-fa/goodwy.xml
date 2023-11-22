@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">عکس مخاطب تار</string>
     <string name="blurry_wallpaper">کاغذ دیواری تار</string>
     <string name="text_cursor_color">رنگ مکاننمای متن</string>
+    <string name="top_app_bar_colored">نوار برنامه رنگی بالا</string>
+    <string name="overflow_icon">شمایل سرریز</string>
     <string name="lines_count">شمارش خطوط</string>
     <string name="show_button_blocked_numbers">نشان دادن دکمه برای مخفی نکردن تماسهای مسدود شده</string>
     <string name="flash_for_alerts">فلش برای هشدار</string>

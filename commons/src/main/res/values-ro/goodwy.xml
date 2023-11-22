@@ -107,6 +107,8 @@
     <string name="blurry_contact_photo">fotografie neclară a contactului</string>
     <string name="blurry_wallpaper">Papier de fundal neclar</string>
     <string name="text_cursor_color">Culoarea cursorului de text</string>
+    <string name="top_app_bar_colored">Bară de aplicații colorată de sus</string>
+    <string name="overflow_icon">Pictogramă depășire</string>
     <string name="lines_count">Număr de linii</string>
     <string name="show_button_blocked_numbers">Afișați butonul pentru a nu ascunde apelurile blocate</string>
     <string name="flash_for_alerts">Bliț pentru alerte</string>

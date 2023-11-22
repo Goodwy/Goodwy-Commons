@@ -108,6 +108,8 @@
     <string name="blurry_contact_photo">เบลอรูปภาพติดต่อ</string>
     <string name="blurry_wallpaper">วอลเปเปอร์พร่ามัว</string>
     <string name="text_cursor_color">สีเคอร์เซอร์ข้อความ</string>
+    <string name="top_app_bar_colored">แถบแอปด้านบนที่มีสี</string>
+    <string name="overflow_icon">ไอคอนล้น</string>
     <string name="lines_count">จํานวนบรรทัด</string>
     <string name="show_button_blocked_numbers">แสดงปุ่มที่จะไม่ซ่อนสายที่ถูกบล็อก</string>
     <string name="flash_for_alerts">แฟลชสําหรับการแจ้งเตือน</string>

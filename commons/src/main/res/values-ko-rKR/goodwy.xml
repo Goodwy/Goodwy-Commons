@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">흐릿한 연락처 사진</string>
     <string name="blurry_wallpaper">흐릿한 배경화면</string>
     <string name="text_cursor_color">텍스트 커서 색상</string>
+    <string name="top_app_bar_colored">색이 지정된 위쪽 앱 바</string>
+    <string name="overflow_icon">오버플로 아이콘</string>
     <string name="lines_count">줄 수</string>
     <string name="show_button_blocked_numbers">차단된 통화를 숨기지 않는 버튼 표시</string>
     <string name="flash_for_alerts">경고용 플래시</string>

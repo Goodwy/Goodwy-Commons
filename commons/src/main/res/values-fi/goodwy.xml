@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Hämärtynyt yhteystietokuva</string>
     <string name="blurry_wallpaper">Selkeä taustakuva</string>
     <string name="text_cursor_color">Tekstin kohdistimen väri</string>
+    <string name="top_app_bar_colored">Värillinen yläsovelluspalkki</string>
+    <string name="overflow_icon">Ylivuoto-kuvake</string>
     <string name="lines_count">Rivien määrä</string>
     <string name="show_button_blocked_numbers">Näytä painike, joka ei piilota estettyjä puheluita</string>
     <string name="flash_for_alerts">Salama hälytyksiä varten</string>

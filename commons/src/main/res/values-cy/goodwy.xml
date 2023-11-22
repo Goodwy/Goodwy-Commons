@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Llun cyswllt aneglur</string>
     <string name="blurry_wallpaper">Papur wal aneglur</string>
     <string name="text_cursor_color">Lliw cyrchwr testun</string>
+    <string name="top_app_bar_colored">Bar app top lliw</string>
+    <string name="overflow_icon">Eicon gorlif</string>
     <string name="lines_count">Cyfri llinellau</string>
     <string name="show_button_blocked_numbers">Dangoswch y botwm i beidio â chuddio galwadau sydd wedi\'u blocio</string>
     <string name="flash_for_alerts">Flash ar gyfer rhybuddion</string>

@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Foto de contacte borrosa</string>
     <string name="blurry_wallpaper">Fond de pantalla borrós</string>
     <string name="text_cursor_color">Color del cursor del text</string>
+    <string name="top_app_bar_colored">Barra d\'aplicacions superior de colors</string>
+    <string name="overflow_icon">Icona de desbordament</string>
     <string name="lines_count">Recompte de línies</string>
     <string name="show_button_blocked_numbers">Mostra el botó per no amagar les trucades bloquejades</string>
     <string name="flash_for_alerts">Flash per a alertes</string>

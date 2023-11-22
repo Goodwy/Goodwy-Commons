@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Замагљена фотографија контакта</string>
     <string name="blurry_wallpaper">Замагљена позадина</string>
     <string name="text_cursor_color">Боја курсора текста</string>
+    <string name="top_app_bar_colored">Горња трака апликације у боји</string>
+    <string name="overflow_icon">Икона за преливање менија</string>
     <string name="lines_count">Број линија</string>
     <string name="show_button_blocked_numbers">Прикажите дугме да не сакривате блокиране позиве</string>
     <string name="flash_for_alerts">Блиц за упозорења</string>

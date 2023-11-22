@@ -108,6 +108,8 @@
     <string name="blurry_contact_photo">മങ്ങിയ കോൺടാക്റ്റ് ഫോട്ടോ</string>
     <string name="blurry_wallpaper">മങ്ങിയ വാൾപേപ്പർ</string>
     <string name="text_cursor_color">ടെക്സ്റ്റ് കഴ്സർ നിറം</string>
+    <string name="top_app_bar_colored">നിറമുള്ള മുകളിലെ ആപ്പ് ബാർ</string>
+    <string name="overflow_icon">ഓവർഫ്ലോ ഐക്കൺ</string>
     <string name="lines_count">വരികളുടെ എണ്ണം</string>
     <string name="show_button_blocked_numbers">ബ്ലോക്ക് ചെയ്‌ത കോളുകൾ മറയ്‌ക്കാതിരിക്കാൻ ബട്ടൺ കാണിക്കുക</string>
     <string name="flash_for_alerts">അലേർട്ടുകൾക്കായി ഫ്ലാഷ് ചെയ്യുക</string>

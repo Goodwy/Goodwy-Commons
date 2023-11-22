@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Zaostrena kontaktna fotografija</string>
     <string name="blurry_wallpaper">Zamegljeno ozadje</string>
     <string name="text_cursor_color">Barva kazalca besedila</string>
+    <string name="top_app_bar_colored">Barvna zgornja vrstica s programi</string>
+    <string name="overflow_icon">Ikona prekoračitve</string>
     <string name="lines_count">Število vrstic</string>
     <string name="show_button_blocked_numbers">Pokaži gumb, da ne skriva blokiranih klicev</string>
     <string name="flash_for_alerts">Bliskavica za opozorila</string>

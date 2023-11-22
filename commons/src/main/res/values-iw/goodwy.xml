@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">תמונת איש קשר מטושטשת</string>
     <string name="blurry_wallpaper">טפט מטושטש</string>
     <string name="text_cursor_color">צבע סמן טקסט</string>
+    <string name="top_app_bar_colored">סרגל אפליקציה עליון צבעוני</string>
+    <string name="overflow_icon">סמל גלישה</string>
     <string name="lines_count">ספירת שורות</string>
     <string name="show_button_blocked_numbers">הצג את הלחצן כדי לא להסתיר שיחות חסומות</string>
     <string name="flash_for_alerts">מבזק להתראות</string>

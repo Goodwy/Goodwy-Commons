@@ -108,6 +108,8 @@
     <string name="blurry_contact_photo">دھندلی رابطے کی تصویر</string>
     <string name="blurry_wallpaper">دھندلا وال پیپر</string>
     <string name="text_cursor_color">ٹیکسٹ کرسر کا رنگ</string>
+    <string name="top_app_bar_colored">رنگین ٹاپ ایپ بار</string>
+    <string name="overflow_icon">اوور فلو آئیکن</string>
     <string name="lines_count">لائنوں کی گنتی</string>
     <string name="show_button_blocked_numbers">مسدود کالوں کو نہ چھپانے کے لیے بٹن دکھائیں</string>
     <string name="flash_for_alerts">الرٹس کے لیے ایل ای ڈی فلیش</string>

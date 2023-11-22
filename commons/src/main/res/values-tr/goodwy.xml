@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Bulanık kişi fotoğrafı</string>
     <string name="blurry_wallpaper">Bulanık duvar kağıdı</string>
     <string name="text_cursor_color">Metin imleci rengi</string>
+    <string name="top_app_bar_colored">Renkli üst uygulama çubuğu</string>
+    <string name="overflow_icon">Taşma simgesi</string>
     <string name="lines_count">Satır sayısı</string>
     <string name="show_button_blocked_numbers">Engellenen aramaları gizlememek için düğmeyi göster</string>
     <string name="flash_for_alerts">Uyarılar için Flash</string>

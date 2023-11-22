@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Neaiški kontaktų nuotrauka</string>
     <string name="blurry_wallpaper">Užsklanda</string>
     <string name="text_cursor_color">Teksto žymeklio spalva</string>
+    <string name="top_app_bar_colored">Spalvota viršutinė programos juosta</string>
+    <string name="overflow_icon">Perpildymo piktograma</string>
     <string name="lines_count">Eilučių skaičius</string>
     <string name="show_button_blocked_numbers">Rodyti mygtuką, kad neslėptumėte užblokuotų skambučių</string>
     <string name="flash_for_alerts">Įspėjimų blykstė</string>

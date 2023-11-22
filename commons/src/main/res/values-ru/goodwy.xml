@@ -107,6 +107,8 @@
     <string name="blurry_contact_photo">Размытое фото контакта</string>
     <string name="blurry_wallpaper">Размытые обои</string>
     <string name="text_cursor_color">Цвет курсора текста</string>
+    <string name="top_app_bar_colored">Цветная верхняя панель приложения</string>
+    <string name="overflow_icon">Иконка переполнения меню</string>
     <string name="lines_count">Количество строк</string>
     <string name="show_button_blocked_numbers">Показать кнопку не скрывать заблокированные звонки</string>
     <string name="flash_for_alerts">Вспышка для оповещения</string>

@@ -107,6 +107,8 @@
     <string name="blurry_contact_photo">Розмите фото контакту</string>
     <string name="blurry_wallpaper">Розмиті шпалери</string>
     <string name="text_cursor_color">Колір курсору тексту</string>
+    <string name="top_app_bar_colored">Кольорова верхня панель додатка</string>
+    <string name="overflow_icon">Іконка переповнення меню</string>
     <string name="lines_count">Кількість рядків</string>
     <string name="show_button_blocked_numbers">Показати кнопку не приховувати заблоковані дзвінки</string>
     <string name="flash_for_alerts">Спалах для оповіщення</string>

@@ -108,6 +108,8 @@
     <string name="blurry_contact_photo">Blurry contact photo</string>
     <string name="blurry_wallpaper">Blurry wallpaper</string>
     <string name="text_cursor_color">Text cursor color</string>
+    <string name="top_app_bar_colored">彩色頂部應用欄</string>
+    <string name="overflow_icon">溢出圖示</string>
     <string name="lines_count">Lines count</string>
     <string name="show_button_blocked_numbers">Show the button not to hide blocked calls</string>
     <string name="flash_for_alerts">LED Flash for alerts</string>

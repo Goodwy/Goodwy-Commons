@@ -107,6 +107,8 @@
     <string name="blurry_contact_photo">Ebatäpne kontaktfoto</string>
     <string name="blurry_wallpaper">Hämarad taustapildid</string>
     <string name="text_cursor_color">Tekstikursori värv</string>
+    <string name="top_app_bar_colored">Värviline ülemine rakenduseriba</string>
+    <string name="overflow_icon">Ületäitumise ikoon</string>
     <string name="lines_count">Ridade arv</string>
     <string name="show_button_blocked_numbers">Kuva nupp, et mitte peita blokeeritud kõnesid</string>
     <string name="flash_for_alerts">Välk hoiatuste jaoks</string>

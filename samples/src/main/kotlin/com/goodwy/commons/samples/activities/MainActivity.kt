@@ -11,7 +11,6 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
 import com.goodwy.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.goodwy.commons.helpers.SHOW_ALL_TABS
-import com.goodwy.commons.helpers.VIEW_TYPE_GRID
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R

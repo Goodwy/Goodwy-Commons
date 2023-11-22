@@ -94,6 +94,8 @@
     <string name="blurry_contact_photo">صورة غير واضحة لجهة الاتصال</string>
     <string name="blurry_wallpaper">خلفية ضبابية</string>
     <string name="text_cursor_color">لون مؤشر النص</string>
+    <string name="top_app_bar_colored">شريط التطبيقات العلوي الملون</string>
+    <string name="overflow_icon">أيقونة تجاوز السعة</string>
     <string name="lines_count">عدد الأسطر</string>
     <string name="show_button_blocked_numbers">إظهار الزر لعدم إخفاء المكالمات المحظورة</string>
     <string name="flash_for_alerts">فلاش للتنبيهات</string>

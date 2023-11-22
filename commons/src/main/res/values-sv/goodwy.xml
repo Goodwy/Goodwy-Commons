@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Suddig kontaktbild</string>
     <string name="blurry_wallpaper">Suddig bakgrundsbild</string>
     <string name="text_cursor_color">Färg på textmarkören</string>
+    <string name="top_app_bar_colored">Färgat övre appfält</string>
+    <string name="overflow_icon">Ikon för spill</string>
     <string name="lines_count">Antal rader</string>
     <string name="show_button_blocked_numbers">Visa knappen för att inte dölja blockerade samtal</string>
     <string name="flash_for_alerts">Flash för varningar</string>

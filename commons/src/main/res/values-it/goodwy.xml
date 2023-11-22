@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Foto sfocata del contatto</string>
     <string name="blurry_wallpaper">Sfondo sfocato</string>
     <string name="text_cursor_color">Colore del cursore di testo</string>
+    <string name="top_app_bar_colored">Barra dell\'app superiore colorata</string>
+    <string name="overflow_icon">Icona di overflow</string>
     <string name="lines_count">Numero di righe</string>
     <string name="show_button_blocked_numbers">Mostra il pulsante per non nascondere le chiamate bloccate</string>
     <string name="flash_for_alerts">Flash per gli avvisi</string>

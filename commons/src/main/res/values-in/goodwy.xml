@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Foto kontak buram</string>
     <string name="blurry_wallpaper">Wallpaper buram</string>
     <string name="text_cursor_color">Warna kursor teks</string>
+    <string name="top_app_bar_colored">Bilah aplikasi atas berwarna</string>
+    <string name="overflow_icon">Ikon meluap</string>
     <string name="lines_count">Garis dihitung</string>
     <string name="show_button_blocked_numbers">Tampilkan tombol untuk tidak menyembunyikan panggilan yang diblokir</string>
     <string name="flash_for_alerts">Flash untuk peringatan</string>

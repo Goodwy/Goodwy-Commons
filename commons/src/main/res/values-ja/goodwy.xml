@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">ボケた連絡先写真</string>
     <string name="blurry_wallpaper">ボケた壁紙</string>
     <string name="text_cursor_color">テキストカーソルの色</string>
+    <string name="top_app_bar_colored">色付きのトップ アプリ バー</string>
+    <string name="overflow_icon">オーバーフロー アイコン</string>
     <string name="lines_count">行数</string>
     <string name="show_button_blocked_numbers">ブロックされた通話を非表示にしないボタンを表示する</string>
     <string name="flash_for_alerts">アラートのフラッシュ</string>

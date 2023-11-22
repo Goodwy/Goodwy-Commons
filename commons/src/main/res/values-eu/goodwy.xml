@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Kontaktuaren argazki lausoa</string>
     <string name="blurry_wallpaper">Horpaper lausoa</string>
     <string name="text_cursor_color">Testuaren kurtsorearen kolorea</string>
+    <string name="top_app_bar_colored">Koloretako goiko aplikazio-barra</string>
+    <string name="overflow_icon">Gainerako ikonoa</string>
     <string name="lines_count">Lerroak zenbatzen dira</string>
     <string name="show_button_blocked_numbers">Erakutsi blokeatutako deiak ez ezkutatzeko botoia</string>
     <string name="flash_for_alerts">Flash abisuetarako</string>

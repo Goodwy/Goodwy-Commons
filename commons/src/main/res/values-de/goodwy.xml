@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Unscharfes Kontaktfoto</string>
     <string name="blurry_wallpaper">unscharfer Bildschirmhintergrund</string>
     <string name="text_cursor_color">Farbe des Textcursors</string>
+    <string name="top_app_bar_colored">Farbige obere Anwendungsleiste</string>
+    <string name="overflow_icon">Überlauf-Symbol</string>
     <string name="lines_count">Anzahl der Zeilen</string>
     <string name="show_button_blocked_numbers">Zeigen Sie die Schaltfläche an, um blockierte Anrufe nicht auszublenden</string>
     <string name="flash_for_alerts">Blitzlicht für Warnungen</string>

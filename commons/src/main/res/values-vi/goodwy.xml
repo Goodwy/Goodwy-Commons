@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Ảnh liên hệ mờ</string>
     <string name="blurry_wallpaper">Hình nền mờ</string>
     <string name="text_cursor_color">Màu con trỏ văn bản</string>
+    <string name="top_app_bar_colored">Thanh ứng dụng trên cùng có màu</string>
+    <string name="overflow_icon">Biểu tượng tràn</string>
     <string name="lines_count">Số dòng</string>
     <string name="show_button_blocked_numbers">Hiển thị nút không ẩn cuộc gọi bị chặn</string>
     <string name="flash_for_alerts">Flash cho cảnh báo</string>

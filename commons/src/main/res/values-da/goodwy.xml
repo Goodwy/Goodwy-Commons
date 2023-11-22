@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">blurry kontaktbillede</string>
     <string name="blurry_wallpaper">blurry wallpaper</string>
     <string name="text_cursor_color">Farve på tekstmarkør</string>
+    <string name="top_app_bar_colored">Applinjen øverst på farvelagt applinje</string>
+    <string name="overflow_icon">Ikonet Overløb</string>
     <string name="lines_count">Antal linjer</string>
     <string name="show_button_blocked_numbers">Vis knappen for ikke at skjule blokerede opkald</string>
     <string name="flash_for_alerts">Flash til advarsler</string>

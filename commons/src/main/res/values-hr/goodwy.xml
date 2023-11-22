@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Mutna fotografija kontakta</string>
     <string name="blurry_wallpaper">Mutna pozadina</string>
     <string name="text_cursor_color">Boja pokazivača teksta</string>
+    <string name="top_app_bar_colored">Gornja traka aplikacije u boji</string>
+    <string name="overflow_icon">Ikona prelijevanja</string>
     <string name="lines_count">Broj redaka</string>
     <string name="show_button_blocked_numbers">Pokaži gumb da ne biste sakrili blokirane pozive</string>
     <string name="flash_for_alerts">Bljesak za upozorenja</string>

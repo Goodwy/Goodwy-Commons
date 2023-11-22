@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">模糊聯繫人照片</string>
     <string name="blurry_wallpaper">模糊壁紙</string>
     <string name="text_cursor_color">文字游標顏色</string>
+    <string name="top_app_bar_colored">彩色頂部應用欄</string>
+    <string name="overflow_icon">溢出圖示</string>
     <string name="lines_count">行數</string>
     <string name="show_button_blocked_numbers">顯示按鈕以不隱藏阻止的呼叫</string>
     <string name="flash_for_alerts">用於警報的快閃記憶體</string>

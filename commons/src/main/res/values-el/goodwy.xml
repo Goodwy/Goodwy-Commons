@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">Θολή φωτογραφία επαφής</string>
     <string name="blurry_wallpaper">blurry wallpaper</string>
     <string name="text_cursor_color">Χρώμα δρομέα κειμένου</string>
+    <string name="top_app_bar_colored">Χρωματιστή επάνω γραμμή εφαρμογών</string>
+    <string name="overflow_icon">Εικονίδιο υπερχείλισης</string>
     <string name="lines_count">Πλήθος γραμμών</string>
     <string name="show_button_blocked_numbers">Εμφάνιση του κουμπιού για να μην αποκρύπτονται αποκλεισμένες κλήσεις</string>
     <string name="flash_for_alerts">Flash για ειδοποιήσεις</string>

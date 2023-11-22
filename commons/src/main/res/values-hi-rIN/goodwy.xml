@@ -93,6 +93,8 @@
     <string name="blurry_contact_photo">धुँधली संपर्क फ़ोटो</string>
     <string name="blurry_wallpaper">धुंधला वॉलपेपर</string>
     <string name="text_cursor_color">पाठ कर्सर रंग</string>
+    <string name="top_app_bar_colored">रंगीन शीर्ष एप्लिकेशन बार</string>
+    <string name="overflow_icon">अतिप्रवाह आइकन</string>
     <string name="lines_count">लाइनों की गिनती</string>
     <string name="show_button_blocked_numbers">ब्लॉक किए गए कॉल को छिपाने के लिए बटन न दिखाएँ</string>
     <string name="flash_for_alerts">अलर्ट के लिए फ्लैश</string>
