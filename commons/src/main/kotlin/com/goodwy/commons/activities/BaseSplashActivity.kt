@@ -1,12 +1,9 @@
 package com.goodwy.commons.activities
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.SIDELOADING_TRUE
-import com.goodwy.commons.helpers.SIDELOADING_UNCHECKED
 
 abstract class BaseSplashActivity : AppCompatActivity() {
     abstract fun initActivity()
@@ -14,14 +11,14 @@ abstract class BaseSplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (baseConfig.appSideloadingStatus == SIDELOADING_UNCHECKED) {
-            if (checkAppSideloading()) {
-                return
-            }
-        } else if (baseConfig.appSideloadingStatus == SIDELOADING_TRUE) {
-            showSideloadingDialog()
-            return
-        }
+//        if (baseConfig.appSideloadingStatus == SIDELOADING_UNCHECKED) {
+//            if (checkAppSideloading()) {
+//                return
+//            }
+//        } else if (baseConfig.appSideloadingStatus == SIDELOADING_TRUE) {
+//            showSideloadingDialog()
+//            return
+//        }
 
         //TODO AutoTheme
         baseConfig.apply {
