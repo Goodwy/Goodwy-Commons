@@ -255,7 +255,6 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_ACCESS_FINE_LOCATION -> Manifest.permission.ACCESS_FINE_LOCATION
     PERMISSION_READ_MEDIA_VISUAL_USER_SELECTED -> Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED
     PERMISSION_READ_SYNC_SETTINGS -> Manifest.permission.READ_SYNC_SETTINGS
-    PERMISSION_READ_WALLPAPER_INTERNAL -> "android.permission.READ_WALLPAPER_INTERNAL"
     else -> ""
 }
 
