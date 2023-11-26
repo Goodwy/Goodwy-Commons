@@ -213,9 +213,9 @@
     <string name="open_in_maps">Aprire in Mappe</string>
 
     <!-- Dialer -->
-    <string name="message_call_later">Posso chiamarvi più tardi?</string>
-    <string name="message_on_my_way">Sono sulla buona strada.</string>
-    <string name="message_cant_talk_right_now">Mi dispiace, non posso parlare in questo momento.</string>
+    <string name="message_call_later">Posso chiamarti più tardi?</string>
+    <string name="message_on_my_way">Sto arrivando.</string>
+    <string name="message_cant_talk_right_now">Scusa, non posso parlare.</string>
     <string name="remind_me">Ricordami</string>
     <string name="mute">Muto</string>
 
