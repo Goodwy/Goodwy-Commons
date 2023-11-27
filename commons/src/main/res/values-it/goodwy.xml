@@ -54,7 +54,7 @@
 
     <string name="show_contact_thumbnails_g">Mostra le anteprime dei contatti</string>
     <string name="use_icon_tabs_summary">Icone anziché testo nelle schede</string>
-    <string name="use_icon_tabs">Usare le icone delle schede</string>
+    <string name="use_icon_tabs">Usa le icone delle schede</string>
     <string name="round_play_icon_summary">L\'icona di riproduzione/pausa è colorata nel colore primario</string>
     <string name="round_play_icon">Icona di riproduzione/pausa rotonda</string>
     <string name="save_recordings_in_summary">A partire da Android 10, l\'app non ha accesso ai tuoi file</string>
@@ -116,7 +116,7 @@
     <string name="show_blocked_numbers">Mostra bloccato</string>
     <string name="hide_blocked_numbers">Nascondi bloccato</string>
     <string name="paste_g">Inserire</string>
-    <string name="recents">Recente</string>
+    <string name="recents">Recenti</string>
     <string name="unblock_confirmation">Sei sicuro di voler sbloccare \"%s\"?</string>
 
     <!-- Other -->
