@@ -1,6 +1,7 @@
 <resources>
     <string name="message">संदेश</string>
     <string name="settings_icon">सेटिंग्स आइकन</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">परियोजना का समर्थन</string>

@@ -1,6 +1,7 @@
 <resources>
     <string name="message">Zpráva</string>
     <string name="settings_icon">Ikona Nastavení</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projektová podpora</string>

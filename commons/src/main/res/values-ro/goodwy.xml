@@ -18,6 +18,7 @@
     <string name="recents">Recente</string>
     <string name="message">Mesaj</string>
     <string name="settings_icon">Pictograma Setări</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Suport de proiect</string>

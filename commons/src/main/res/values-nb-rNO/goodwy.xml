@@ -19,6 +19,7 @@
     <string name="recents">Recents</string>
     <string name="message">Budskap</string>
     <string name="settings_icon">Innstillinger-ikonet</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Prosjektstøtte</string>

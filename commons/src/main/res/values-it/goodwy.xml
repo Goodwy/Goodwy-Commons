@@ -1,6 +1,7 @@
 <resources>
     <string name="message">Messaggio</string>
     <string name="settings_icon">Icona Impostazioni</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Supporto al progetto</string>

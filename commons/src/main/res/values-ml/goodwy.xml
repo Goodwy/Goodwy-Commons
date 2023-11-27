@@ -19,6 +19,7 @@
     <string name="recents">സമീപകാലങ്ങൾ</string>
     <string name="message">സന്ദേശം</string>
     <string name="settings_icon">ക്രമീകരണ ഐക്കൺ</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">പ്രോജക്റ്റ് പിന്തുണ</string>

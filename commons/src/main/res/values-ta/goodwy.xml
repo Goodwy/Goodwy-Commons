@@ -1,6 +1,7 @@
 <resources>
     <string name="message">செய்தி</string>
     <string name="settings_icon">அமைப்புகள் ஐகான்</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">திட்ட ஆதரவு</string>

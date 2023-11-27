@@ -1,6 +1,7 @@
 <resources>
     <string name="message">消息</string>
     <string name="settings_icon">“設置”圖示</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">項目支援</string>

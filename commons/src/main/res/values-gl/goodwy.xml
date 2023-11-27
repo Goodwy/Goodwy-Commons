@@ -2,6 +2,7 @@
 <resources>
     <string name="message">Mensaxe</string>
     <string name="settings_icon">Icona de configuración</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Apoio ao proxecto</string>

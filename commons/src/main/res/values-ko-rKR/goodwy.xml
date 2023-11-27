@@ -1,6 +1,7 @@
 <resources>
     <string name="message">메시지</string>
     <string name="settings_icon">설정 아이콘</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">프로젝트 지원</string>

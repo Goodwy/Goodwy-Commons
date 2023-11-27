@@ -1,6 +1,7 @@
 <resources>
     <string name="message">İleti</string>
     <string name="settings_icon">Ayarlar simgesi</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Proje desteği</string>

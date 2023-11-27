@@ -1,6 +1,7 @@
 <resources>
     <string name="message">Üzenet</string>
     <string name="settings_icon">Beállítások ikon</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projekt támogatás</string>

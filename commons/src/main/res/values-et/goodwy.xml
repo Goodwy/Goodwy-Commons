@@ -18,6 +18,7 @@
     <string name="recents">Viimased</string>
     <string name="message">Sõnum</string>
     <string name="settings_icon">Ikoon Sätted</string>
+    <string name="total_g">Total: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projekti tugi</string>
