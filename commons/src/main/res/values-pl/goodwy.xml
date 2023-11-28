@@ -1,7 +1,7 @@
 <resources>
     <string name="message">Komunikat</string>
     <string name="settings_icon">Ikona Ustawienia</string>
-    <string name="total_g">Total: %s</string>
+    <string name="total_g">Ogółem: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Wsparcie projektowe</string>

@@ -1,7 +1,7 @@
 <resources>
     <string name="message">Mesaj</string>
     <string name="settings_icon">Parametrlər ikonu</string>
-    <string name="total_g">Total: %s</string>
+    <string name="total_g">Cəmi: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Layihə dəstəyi</string>

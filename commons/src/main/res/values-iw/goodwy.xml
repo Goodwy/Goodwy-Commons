@@ -1,7 +1,7 @@
 <resources>
     <string name="message">הודעה</string>
     <string name="settings_icon">סמל הגדרות</string>
-    <string name="total_g">Total: %s</string>
+    <string name="total_g">סה\"כ: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">תמיכה בפרויקטים</string>

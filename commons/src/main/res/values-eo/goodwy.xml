@@ -19,7 +19,7 @@
     <string name="recents">Recents</string>
     <string name="message">Mesaĝo</string>
     <string name="settings_icon">Ikono de agordoj</string>
-    <string name="total_g">Total: %s</string>
+    <string name="total_g">Sumo: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projekta subteno</string>

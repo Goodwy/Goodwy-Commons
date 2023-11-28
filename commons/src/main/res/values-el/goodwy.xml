@@ -1,7 +1,7 @@
 <resources>
     <string name="message">Μήνυμα</string>
     <string name="settings_icon">Εικονίδιο ρυθμίσεων</string>
-    <string name="total_g">Total: %s</string>
+    <string name="total_g">Σύνολο: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Υποστήριξη έργου</string>

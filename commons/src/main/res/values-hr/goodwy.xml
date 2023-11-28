@@ -1,7 +1,7 @@
 <resources>
     <string name="message">Poruka</string>
     <string name="settings_icon">Ikona Postavke</string>
-    <string name="total_g">Total: %s</string>
+    <string name="total_g">Ukupno: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Podrška za projekt</string>

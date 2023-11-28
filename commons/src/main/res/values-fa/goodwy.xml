@@ -1,7 +1,7 @@
 <resources>
     <string name="message">پیام</string>
     <string name="settings_icon">نماد تنظیمات</string>
-    <string name="total_g">Total: %s</string>
+    <string name="total_g">مجموع: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">پشتیبانی پروژه</string>

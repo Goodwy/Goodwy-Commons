@@ -1,7 +1,7 @@
 <resources>
     <string name="message">Meddelande</string>
     <string name="settings_icon">Ikonen Inställningar</string>
-    <string name="total_g">Total: %s</string>
+    <string name="total_g">Totalt: %s</string>
 
     <!-- Support project -->
     <string name="action_support_project">Stöd till projekt</string>
