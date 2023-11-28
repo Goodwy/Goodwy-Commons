@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import com.goodwy.commons.adapters.setupSimpleListItem
-import com.goodwy.commons.databinding.ItemCollectionListBinding
 import com.goodwy.commons.databinding.ItemSimpleListBinding
 import com.goodwy.commons.fragments.BaseBottomSheetDialogFragment
 import com.goodwy.commons.models.SimpleListItem
@@ -18,13 +17,11 @@ open class BottomSheetChooserDialog(collection: Boolean = false) : BaseBottomShe
         val listItems = arguments?.getParcelableArray(ITEMS) as Array<SimpleListItem>
         listItems.forEach { item ->
             val view = ItemSimpleListBinding.inflate(layoutInflater, parent, false)
-            val viewCollect = ItemCollectionListBinding.inflate(layoutInflater, parent, false)
-            setupSimpleListItem(view, viewCollect, item, collection) {
+            setupSimpleListItem(view, item, collection) {
                 onItemClick?.invoke(it)
                 dismiss()
             }
             parent.addView(view.root)
-            parent.addView(viewCollect.root)
         }
     }
 

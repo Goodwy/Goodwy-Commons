@@ -357,7 +357,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupButtonIapChecked() {
-        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_vector)
+        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_mini)
         if (purchaseHelper.isIapPurchased(productIdX1)) {
             binding.appOneButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appOneButton.isEnabled = false
@@ -426,7 +426,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupButtonSupChecked() {
-        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_vector)
+        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_mini)
         if (purchaseHelper.isSubPurchased(subscriptionIdX1)) {
             binding.appOneSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appOneSubButton.isEnabled = false
@@ -694,7 +694,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupButtonCheckedRuStore(state: List<ru.rustore.sdk.billingclient.model.purchase.Purchase>) {
-        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_vector)
+        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_mini)
         if (state.firstOrNull {  it.productId == productIdX1  } != null) {
             binding.appOneButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appOneButton.isEnabled = false

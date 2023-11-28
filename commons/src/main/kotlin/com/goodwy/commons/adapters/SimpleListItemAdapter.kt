@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.R
-import com.goodwy.commons.databinding.ItemCollectionListBinding
 import com.goodwy.commons.databinding.ItemSimpleListBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
@@ -27,9 +26,8 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
 
     open inner class SimpleItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding = ItemSimpleListBinding.bind(itemView)
-        val bindingCollect = ItemCollectionListBinding.bind(itemView)
         fun bindView(item: SimpleListItem) {
-            setupSimpleListItem(binding, bindingCollect, item, false, onItemClicked)
+            setupSimpleListItem(binding, item, false, onItemClicked)
         }
     }
 
@@ -44,47 +42,52 @@ open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (Sim
     }
 }
 
-fun setupSimpleListItem(view: ItemSimpleListBinding, viewCollect: ItemCollectionListBinding, item: SimpleListItem, collection: Boolean, onItemClicked: (SimpleListItem) -> Unit) {
-    if (collection) {
-        viewCollect.apply {
-            view.root.beGone()
-            if (item.textRes != null) bottomSheetItemTitle.setText(item.textRes)
-            if (item.text != null) bottomSheetItemTitle.text = item.text
-            bottomSheetItemTitle.setTextColor(root.context.getProperTextColor())
+fun setupSimpleListItem(view: ItemSimpleListBinding, item: SimpleListItem, collection: Boolean, onItemClicked: (SimpleListItem) -> Unit) {
+    view.apply {
+        if (collection) {
+            bottomSheetSelectedIcon.beGone()
+
             bottomSheetItemIcon.setImageResourceOrBeGone(item.imageRes)
             //bottomSheetItemIcon.applyColorFilter(color)
 
+            if (item.textRes != null) bottomSheetItemTitle.setText(item.textRes)
+            if (item.text != null) bottomSheetItemTitle.text = item.text
+            bottomSheetItemTitle.setTextColor(root.context.getProperTextColor())
+            if (!item.selected) {
+                bottomSheetItemTitle.alpha = 0.4f
+                bottomSheetItemIcon.alpha = 0.4f
+            }
+
+            bottomSheetButton.beVisible()
             val textButton = if (item.selected) R.string.open else R.string.get
             bottomSheetButton.setText(textButton)
             val drawable = root.resources.getColoredDrawableWithColor(root.context, R.drawable.button_gray_bg, root.context.getProperPrimaryColor())
             bottomSheetButton.background = drawable
             bottomSheetButton.setTextColor(root.context.getProperBackgroundColor())
             bottomSheetButton.setPadding(2,2,2,2)
-            if (!item.selected) {
-                bottomSheetItemTitle.alpha = 0.4f
-                bottomSheetItemIcon.alpha = 0.4f
-            }
 
             root.setOnClickListener {
                 onItemClicked(item)
             }
-        }
-    } else {
-        view.apply {
-            viewCollect.root.beGone()
+        } else {
+            bottomSheetButton.beGone()
+
             val color = if (item.selected) {
                 root.context.getProperPrimaryColor()
             } else {
                 root.context.getProperTextColor()
             }
 
+            bottomSheetItemIcon.setImageResourceOrBeGone(item.imageRes)
+            bottomSheetItemIcon.applyColorFilter(color)
+
             if (item.textRes != null) bottomSheetItemTitle.setText(item.textRes)
             if (item.text != null) bottomSheetItemTitle.text = item.text
             bottomSheetItemTitle.setTextColor(color)
-            bottomSheetItemIcon.setImageResourceOrBeGone(item.imageRes)
-            bottomSheetItemIcon.applyColorFilter(color)
+
             //bottomSheetSelectedIcon.beVisibleIf(item.selected)
-            val selectedIcon = if (item.selected) R.drawable.ic_radio_button else R.drawable.ic_circle
+            bottomSheetSelectedIcon.beVisible()
+            val selectedIcon = if (item.selected) R.drawable.ic_check_circle_vector else R.drawable.ic_circle
             bottomSheetSelectedIcon.setImageResource(selectedIcon)
             bottomSheetSelectedIcon.applyColorFilter(color)
 
