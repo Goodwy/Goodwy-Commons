@@ -28,8 +28,13 @@ fun Context.getProperBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
 
 fun Context.getProperPrimaryColor() = when {
     baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color, theme)
-    isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
+    //isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.primaryColor
+}
+
+fun Context.getProperAccentColor() = when {
+    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_dark_color, theme)
+    else -> baseConfig.accentColor
 }
 
 fun Context.getProperStatusBarColor() = when {

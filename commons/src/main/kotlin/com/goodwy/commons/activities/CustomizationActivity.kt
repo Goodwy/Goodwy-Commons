@@ -459,7 +459,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             alpha = if (!isProVersion()) 0.3f else 1f
         }
         //binding.customizationPrimaryColorHolder.beVisibleIf(curSelectedThemeId != THEME_SYSTEM)
-        arrayOf(binding.customizationPrimaryColorHolder, binding.customizationTextCursorColorHolder).forEach {
+        arrayOf(binding.customizationPrimaryColorHolder, binding.customizationAccentColorHolder, binding.customizationTextCursorColorHolder).forEach {
             if (!isProVersion()) {
                 it.isEnabled = true
                 it.alpha = 0.3f
@@ -559,9 +559,10 @@ class CustomizationActivity : BaseSimpleActivity() {
         val textColor = getCurrentTextColor()
         val backgroundColor = getCurrentBackgroundColor()
         val primaryColor = getCurrentPrimaryColor()
+        val accentColor = getCurrentAccentColor()
         binding.customizationTextColor.setFillWithStroke(textColor, backgroundColor)
         binding.customizationPrimaryColor.setFillWithStroke(primaryColor, backgroundColor)
-        binding.customizationAccentColor.setFillWithStroke(curAccentColor, backgroundColor)
+        binding.customizationAccentColor.setFillWithStroke(accentColor, backgroundColor)
         binding.customizationBackgroundColor.setFillWithStroke(backgroundColor, backgroundColor)
         binding.customizationAppIconColor.setFillWithStroke(curAppIconColor, backgroundColor)
         //binding.applyToAll.setTextColor(primaryColor.getContrastColor())
@@ -807,6 +808,12 @@ class CustomizationActivity : BaseSimpleActivity() {
         resources.getColor(R.color.you_primary_color)
     } else {
         curPrimaryColor
+    }
+
+    private fun getCurrentAccentColor() = if (curSelectedThemeId == THEME_SYSTEM) {
+        resources.getColor(R.color.you_primary_dark_color)
+    } else {
+        curAccentColor
     }
 
     private fun getCurrentStatusBarColor() = if (curSelectedThemeId == THEME_SYSTEM) {

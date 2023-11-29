@@ -20,7 +20,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected val baseConfig = activity.baseConfig
     protected val resources = activity.resources!!
     protected val layoutInflater = activity.layoutInflater
-    protected var accentColor = baseConfig.accentColor
+    protected var accentColor = activity.getProperAccentColor()
     protected var textColor = activity.getProperTextColor()
     protected var backgroundColor = activity.getProperBackgroundColor()
     protected var properPrimaryColor = activity.getProperPrimaryColor()
@@ -290,7 +290,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     fun updatePrimaryColor() {
         properPrimaryColor = activity.getProperPrimaryColor()
         contrastColor = properPrimaryColor.getContrastColor()
-        accentColor = baseConfig.accentColor
+        accentColor = activity.getProperAccentColor()
     }
 
     fun updateBackgroundColor(backgroundColor: Int) {

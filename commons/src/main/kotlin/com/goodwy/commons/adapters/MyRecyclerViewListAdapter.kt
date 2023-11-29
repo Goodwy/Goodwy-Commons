@@ -29,6 +29,7 @@ abstract class MyRecyclerViewListAdapter<T>(
     protected val baseConfig = activity.baseConfig
     protected val resources = activity.resources!!
     protected val layoutInflater = activity.layoutInflater
+    protected var accentColor = activity.getProperAccentColor()
     protected var textColor = activity.getProperTextColor()
     protected var backgroundColor = activity.getProperBackgroundColor()
     protected var properPrimaryColor = activity.getProperPrimaryColor()
@@ -306,6 +307,7 @@ abstract class MyRecyclerViewListAdapter<T>(
     fun updatePrimaryColor() {
         properPrimaryColor = activity.getProperPrimaryColor()
         contrastColor = properPrimaryColor.getContrastColor()
+        accentColor = activity.getProperAccentColor()
         onRefresh.invoke()
     }
 

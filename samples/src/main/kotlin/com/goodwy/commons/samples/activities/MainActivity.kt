@@ -129,5 +129,6 @@ class MainActivity : BaseSimpleActivity() {
 //        }
 
         updateTextColors(binding.mainCoordinator)
+        binding.switchOn.setColors(getProperTextColor(), getProperAccentColor(), getProperBackgroundColor())
     }
 }
