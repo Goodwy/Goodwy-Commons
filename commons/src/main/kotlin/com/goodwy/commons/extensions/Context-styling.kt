@@ -59,10 +59,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
     }
 
     val backgroundColor = baseConfig.backgroundColor
-    val accentColor = when {
-        //isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-        else -> getProperPrimaryColor()
-    }
+    val accentColor = getProperPrimaryColor()
     val textCursorColor = getProperTextCursorColor()
 
     val cnt = viewGroup.childCount

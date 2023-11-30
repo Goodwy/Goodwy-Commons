@@ -278,18 +278,10 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationTheme.text = getThemeText()
         updateAutoThemeFields()
         handleAccentColorLayout()
+
+        binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         binding.customizationThemeHolder.setOnClickListener {
             if (isProVersion()) themePickerClicked() else shakePurchase()
-            // TODO HIDE
-            /*if (baseConfig.wasAppIconCustomizationWarningShown) {
-                themePickerClicked()
-            } else {
-                ConfirmationDialog(this, "", R.string.app_icon_color_warning, R.string.ok, 0) {
-                    baseConfig.wasAppIconCustomizationWarningShown = true
-                    themePickerClicked()
-                }
-            }*/
-
         }
 
 //        if (binding.customizationTheme.value == getMaterialYouString()) {
