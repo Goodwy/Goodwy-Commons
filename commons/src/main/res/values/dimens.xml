@@ -25,6 +25,7 @@
     <dimen name="color_sample_size">35dp</dimen>
     <dimen name="shortcut_size">64dp</dimen>
     <dimen name="colorpicker_size">240dp</dimen>
+    <dimen name="colorpicker_size_small">180dp</dimen>
     <dimen name="colorpicker_size_with_padding">372dp</dimen>
     <dimen name="colorpicker_hue_width">20dp</dimen> <!--30dp-->
     <dimen name="colorpicker_items_height">30dp</dimen>

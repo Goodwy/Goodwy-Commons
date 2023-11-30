@@ -156,7 +156,7 @@
             android:layout_marginBottom="@dimen/big_margin"
             app:cardBackgroundColor="@color/md_grey_white"
             app:cardCornerRadius="8dp"
-            app:cardElevation="@dimen/normal_margin">
+            app:cardElevation="6dp">
 
             <ImageView
                 android:id="@+id/grid_color_new_color"
