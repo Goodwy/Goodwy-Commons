@@ -33,7 +33,8 @@ fun Context.getProperPrimaryColor() = when {
 }
 
 fun Context.getProperAccentColor() = when {
-    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_dark_color, theme)
+        !baseConfig.isUsingAccentColor -> getProperPrimaryColor()
+        baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_dark_color, theme)
     else -> baseConfig.accentColor
 }
 
@@ -59,7 +60,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
 
     val backgroundColor = baseConfig.backgroundColor
     val accentColor = when {
-        isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
+        //isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
         else -> getProperPrimaryColor()
     }
     val textCursorColor = getProperTextCursorColor()
@@ -196,6 +197,6 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
 
 fun Context.getProperTextCursorColor() = when {
     baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color, theme)
-    isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
+    //isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.textCursorColor
 }

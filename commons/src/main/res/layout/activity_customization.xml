@@ -182,7 +182,19 @@
                 android:paddingTop='@dimen/smaller_margin'>
 
                 <RelativeLayout
+                    android:id="@+id/customizationUseAccentColorHolder"
+                    style="@style/SettingsHolderSwitchStyle">
+
+                    <com.goodwy.commons.views.MySwitchCompat
+                        android:id="@+id/customizationUseAccentColor"
+                        style="@style/SettingsSwitchStyle"
+                        android:text="@string/use_accent_color"
+                        app:switchPadding="@dimen/bigger_margin"/>
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:id="@+id/customization_accent_color_holder"
+                    android:layout_below="@+id/customizationUseAccentColorHolder"
                     style="@style/SettingsHolderStyle">
 
                     <com.goodwy.commons.views.MyTextView

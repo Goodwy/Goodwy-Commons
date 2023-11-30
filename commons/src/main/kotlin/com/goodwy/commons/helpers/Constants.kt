@@ -240,6 +240,8 @@ const val SHOW_BUTTON_BLOCK_NUMBERS = "show_button_blocked_numbers"
 const val FLASH_FOR_ALERTS = "flash_for_alerts"
 const val RU_STORE = "ru_store"
 const val USE_GOOGLE_PLAY = "use_google_play"
+const val CURRENT_SIM_CARD_INDEX = "current_sim_card_index"
+const val IS_USING_ACCENT_COLOR = "is_using_accent_color"
 
 // contact grid view constants
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10

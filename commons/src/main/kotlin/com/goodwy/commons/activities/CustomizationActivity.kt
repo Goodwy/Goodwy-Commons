@@ -162,6 +162,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         setupPurchaseThankYou()
         updateAutoThemeFields()
         setupTopAppBarColored()
+        setupUseAccentColor()
     }
 
     private fun updateHoldersColor(color: Int = getBottomNavigationBackgroundColor()) {
@@ -865,6 +866,18 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColoredHolder.setOnClickListener {
                 settingsTopAppBarColored.toggle()
                 baseConfig.topAppBarColored = settingsTopAppBarColored.isChecked
+                updateTopBarColors(binding.customizationToolbar, getProperBackgroundColor())
+            }
+        }
+    }
+
+    private fun setupUseAccentColor() {
+        binding.apply {
+            updateTextColors(customizationUseAccentColorHolder)
+            customizationUseAccentColor.isChecked = baseConfig.isUsingAccentColor
+            customizationUseAccentColorHolder.setOnClickListener {
+                customizationUseAccentColor.toggle()
+                baseConfig.isUsingAccentColor = customizationUseAccentColor.isChecked
                 updateTopBarColors(binding.customizationToolbar, getProperBackgroundColor())
             }
         }

@@ -62,7 +62,8 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, private val calle
                         }
                     }
                     view.callButton.apply {
-                        val drawable = resources.getColoredDrawableWithColor(activity, R.drawable.button_gray_bg, activity.baseConfig.accentColor)
+                        val simPrimaryColor = if (activity.baseConfig.currentSIMCardIndex == 0) activity.baseConfig.simIconsColors[1] else activity.baseConfig.simIconsColors[2]
+                        val drawable = resources.getColoredDrawableWithColor(activity, R.drawable.button_gray_bg, simPrimaryColor)
                         background = drawable
                         setPadding(2,2,2,2)
                         setOnClickListener {

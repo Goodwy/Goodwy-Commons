@@ -724,6 +724,14 @@ open class BaseConfig(val context: Context) {
     var useGooglePlay: Boolean
         get() = prefs.getBoolean(USE_GOOGLE_PLAY, false)
         set(useGooglePlay) = prefs.edit().putBoolean(USE_GOOGLE_PLAY, useGooglePlay).apply()
+
+    var currentSIMCardIndex: Int
+        get() = prefs.getInt(CURRENT_SIM_CARD_INDEX, 0) //0 - sim1, 1 - sim2
+        set(currentSIMCardIndex) = prefs.edit().putInt(CURRENT_SIM_CARD_INDEX, currentSIMCardIndex).apply()
+
+    var isUsingAccentColor: Boolean
+        get() = prefs.getBoolean(IS_USING_ACCENT_COLOR, false)
+        set(isUsingAccentColor) = prefs.edit().putBoolean(IS_USING_ACCENT_COLOR, isUsingAccentColor).apply()
 }
 
 
