@@ -109,6 +109,8 @@
     <string name="button_secondary">Toissijainen painike</string>
 
     <string name="accent_color">Korostusväri</string>
+    <string name="use_accent_color">Käytä korostusväriä</string>
+    <string name="system_theme_description">Tämä teema ei salli värien säätämistä manuaalisesti. Värit muuttuvat dynaamisesti järjestelmän asetusten mukaan.</string>
     <string name="incoming_call">Saapuva puhelu</string>
     <string name="outgoing_call">Lähtevä puhelu</string>
     <string name="missed_call">Puhelu jäi soittamaan</string>

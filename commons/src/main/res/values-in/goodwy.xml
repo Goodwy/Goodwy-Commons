@@ -109,6 +109,8 @@
     <string name="button_secondary">Tombol sekunder</string>
 
     <string name="accent_color">Aksen warna</string>
+    <string name="use_accent_color">Gunakan warna aksen</string>
+    <string name="system_theme_description">Tema ini tidak memungkinkan Anda menyesuaikan warna secara manual. Warna berubah secara dinamis tergantung pada pengaturan sistem.</string>
     <string name="incoming_call">Panggilan masuk</string>
     <string name="outgoing_call">Panggilan keluar</string>
     <string name="missed_call">Panggilan tidak terjawab</string>

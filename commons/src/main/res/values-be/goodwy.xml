@@ -76,6 +76,8 @@
     <string name="pref_category_appearance">Знешні выгляд</string>
     <string name="gray_theme">Шэрая</string>
     <string name="accent_color">Колер акцэнту</string>
+    <string name="use_accent_color">Выкарыстоўваць колер акцэнту</string>
+    <string name="system_theme_description">Гэтая тэма не дазваляе наладжваць колеры ўручную. Колеры мяняюцца дынамічна ў залежнасці ад налад сістэмы.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Паказваць фота кантакту</string>

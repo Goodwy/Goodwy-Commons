@@ -109,6 +109,8 @@
     <string name="button_secondary">辅助按钮</string>
 
     <string name="accent_color">重音顏色</string>
+    <string name="use_accent_color">使用主题色</string>
+    <string name="system_theme_description">此主题不允许您手动调整颜色。颜色会根据系统设置动态变化。</string>
     <string name="incoming_call">來電</string>
     <string name="outgoing_call">傳出呼叫</string>
     <string name="missed_call">未接來電</string>

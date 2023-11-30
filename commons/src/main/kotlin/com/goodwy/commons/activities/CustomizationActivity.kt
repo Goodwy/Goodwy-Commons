@@ -381,6 +381,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                 updateActionbarColor(curBackgroundColor)
             }
             binding.settingsTopAppBarColored.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
+            binding.customizationUseAccentColor.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
+            binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         }
 
         val holdersColor = when {
@@ -456,11 +458,12 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun updateAutoThemeFields() {
+        binding.customizationThemeDescription.beVisibleIf(curSelectedThemeId == THEME_SYSTEM)
         binding.customizationThemeHolder.apply {
             alpha = if (!isProVersion()) 0.3f else 1f
         }
         //binding.customizationPrimaryColorHolder.beVisibleIf(curSelectedThemeId != THEME_SYSTEM)
-        arrayOf(binding.customizationPrimaryColorHolder, binding.customizationAccentColorHolder, binding.customizationTextCursorColorHolder).forEach {
+        arrayOf(binding.customizationPrimaryColorHolder, binding.customizationTextCursorColorHolder).forEach {
             if (!isProVersion()) {
                 it.isEnabled = true
                 it.alpha = 0.3f
@@ -471,6 +474,20 @@ class CustomizationActivity : BaseSimpleActivity() {
                 } else {
                     it.isEnabled = true
                     it.alpha = 1f
+                }
+            }
+        }
+        binding.customizationAccentColorHolder.apply {
+            if (!isProVersion()) {
+                this.isEnabled = true
+                this.alpha = 0.3f
+            } else {
+                if (curSelectedThemeId == THEME_SYSTEM || !baseConfig.isUsingAccentColor) {
+                    this.isEnabled = false
+                    this.alpha = 0.3f
+                } else {
+                    this.isEnabled = true
+                    this.alpha = 1f
                 }
             }
         }
@@ -573,7 +590,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationTextCursorColorHolder.setOnClickListener { if (isProVersion()) pickTextCursorColor() else shakePurchase() }
         binding.customizationBackgroundColorHolder.setOnClickListener { if (isProVersion()) pickBackgroundColor() else shakePurchase() }
         binding.customizationPrimaryColorHolder.setOnClickListener { if (isProVersion()) pickPrimaryColor() else shakePurchase() }
-        binding.customizationAccentColorHolder.setOnClickListener { pickAccentColor() }
+        binding.customizationAccentColorHolder.setOnClickListener { if (isProVersion()) pickAccentColor() else shakePurchase() }
 
         handleAccentColorLayout()
         //binding.applyToAllHolder.setOnClickListener { applyToAll() }
@@ -866,7 +883,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColoredHolder.setOnClickListener {
                 settingsTopAppBarColored.toggle()
                 baseConfig.topAppBarColored = settingsTopAppBarColored.isChecked
-                updateTopBarColors(binding.customizationToolbar, getProperBackgroundColor())
+                updateTopBarColors(binding.customizationToolbar, curBackgroundColor)
             }
         }
     }
@@ -878,7 +895,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             customizationUseAccentColorHolder.setOnClickListener {
                 customizationUseAccentColor.toggle()
                 baseConfig.isUsingAccentColor = customizationUseAccentColor.isChecked
-                updateTopBarColors(binding.customizationToolbar, getProperBackgroundColor())
+                updateAutoThemeFields()
             }
         }
     }

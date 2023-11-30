@@ -110,6 +110,8 @@
     <string name="button_secondary">Botón secundario</string>
 
     <string name="accent_color">Cor de acento</string>
+    <string name="use_accent_color">Use unha cor de acento</string>
+    <string name="system_theme_description">Este tema non che permite personalizar as cores manualmente. As cores cambian de forma dinámica dependendo da configuración do sistema.</string>
     <string name="incoming_call">Chamada entrante</string>
     <string name="outgoing_call">Chamada saínte</string>
     <string name="missed_call">Chamada perdida</string>

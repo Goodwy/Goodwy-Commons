@@ -109,6 +109,8 @@
     <string name="button_secondary">Δευτερεύον κουμπί</string>
 
     <string name="accent_color">Χρώμα έμφασης</string>
+    <string name="use_accent_color">Χρήση χρώματος έμφασης</string>
+    <string name="system_theme_description">Αυτό το θέμα δεν σας επιτρέπει να προσαρμόσετε τα χρώματα χειροκίνητα. Τα χρώματα αλλάζουν δυναμικά ανάλογα με τις ρυθμίσεις του συστήματος.</string>
     <string name="incoming_call">Εισερχόμενη κλήση</string>
     <string name="outgoing_call">Εξερχόμενη κλήση</string>
     <string name="missed_call">Αναπάντητη κλήση</string>

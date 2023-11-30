@@ -76,6 +76,8 @@
     <string name="pref_category_appearance">Appearance</string>
     <string name="gray_theme">Gray</string>
     <string name="accent_color">Accent color</string>
+    <string name="use_accent_color">Use an accent color</string>
+    <string name="system_theme_description">This theme does not allow you to adjust colors manually. Colors change dynamically depending on your system settings.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>

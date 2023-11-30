@@ -109,6 +109,8 @@
     <string name="button_secondary">Másodlagos gomb</string>
 
     <string name="accent_color">Ékezet színe</string>
+    <string name="use_accent_color">Kiemelő szín használata</string>
+    <string name="system_theme_description">Ez a téma nem teszi lehetővé a színek kézi beállítását. A színek dinamikusan változnak a rendszerbeállításoktól függően.</string>
     <string name="incoming_call">Bejövő hívás</string>
     <string name="outgoing_call">Kimenő hívás</string>
     <string name="missed_call">Elmulasztott hívás</string>

@@ -77,6 +77,8 @@
     <string name="pref_category_appearance">രൂപഭാവം</string>
     <string name="gray_theme">ചാരനിറം</string>
     <string name="accent_color">ആക്സന്റ് നിറം</string>
+    <string name="use_accent_color">ഒരു ആക്സന്റ് നിറം ഉപയോഗിക്കുക</string>
+    <string name="system_theme_description">നിറങ്ങൾ സ്വമേധയാ ഇഷ്ടാനുസൃതമാക്കാൻ ഈ തീം നിങ്ങളെ അനുവദിക്കുന്നില്ല. സിസ്റ്റം ക്രമീകരണങ്ങൾ അനുസരിച്ച് നിറങ്ങൾ ചലനാത്മകമായി മാറുന്നു.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">കോൺടാക്റ്റ് ലഘുചിത്രങ്ങൾ കാണിക്കുക</string>

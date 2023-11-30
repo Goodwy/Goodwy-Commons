@@ -109,6 +109,8 @@
     <string name="button_secondary">Nút phụ</string>
 
     <string name="accent_color">Màu nhấn</string>
+    <string name="use_accent_color">Sử dụng màu nhấn</string>
+    <string name="system_theme_description">Chủ đề này không cho phép bạn điều chỉnh màu sắc theo cách thủ công. Màu sắc thay đổi động tùy thuộc vào cài đặt hệ thống.</string>
     <string name="incoming_call">Cuộc gọi đến</string>
     <string name="outgoing_call">Cuộc gọi đi</string>
     <string name="missed_call">Cuộc gọi nhỡ</string>

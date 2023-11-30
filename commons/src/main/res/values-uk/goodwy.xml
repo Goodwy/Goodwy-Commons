@@ -76,6 +76,8 @@
     <string name="pref_category_appearance">Зовнішній вигляд</string>
     <string name="gray_theme">Сіра</string>
     <string name="accent_color">Колір акценту</string>
+    <string name="use_accent_color">Використовувати колір акценту</string>
+    <string name="system_theme_description">Ця тема не дає змоги налаштовувати кольори вручну. Кольори змінюються динамічно залежно від налаштувань системи.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Показувати світлину контакту</string>

@@ -109,6 +109,8 @@
     <string name="button_secondary">İkincil düğme</string>
 
     <string name="accent_color">Vurgu rengi</string>
+    <string name="use_accent_color">Vurgu Rengi Kullan</string>
+    <string name="system_theme_description">Bu tema, renkleri manuel olarak ayarlamanıza izin vermez. Renkler, sistem ayarlarına bağlı olarak dinamik olarak değişir.</string>
     <string name="incoming_call">Gelen Arama</string>
     <string name="outgoing_call">Giden Arama</string>
     <string name="missed_call">Cevapsız Çağrı</string>

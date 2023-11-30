@@ -76,6 +76,8 @@
     <string name="pref_category_appearance">Внешний вид</string>
     <string name="gray_theme">Серая</string>
     <string name="accent_color">Цвет акцента</string>
+    <string name="use_accent_color">Использовать цвет акцента</string>
+    <string name="system_theme_description">Эта тема не позволяет настраивать цвета вручную. Цвета меняются динамически в зависимости от настроек системы.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Показывать фото контакта</string>

@@ -77,6 +77,8 @@
     <string name="pref_category_appearance">ظاہری شکل</string>
     <string name="gray_theme"> گرے</string>
     <string name="accent_color">لہجے کا رنگ</string>
+    <string name="use_accent_color">لہجے کا رنگ استعمال کریں۔</string>
+    <string name="system_theme_description">یہ تھیم آپ کو رنگوں کو دستی طور پر اپنی مرضی کے مطابق کرنے کی اجازت نہیں دیتا ہے۔ نظام کی ترتیبات کے لحاظ سے رنگ متحرک طور پر تبدیل ہوتے ہیں۔</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">رابطے کے تھمب نیلز دکھائیں</string>

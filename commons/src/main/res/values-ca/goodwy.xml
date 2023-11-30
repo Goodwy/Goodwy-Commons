@@ -109,6 +109,8 @@
     <string name="button_secondary">Botó secundari</string>
 
     <string name="accent_color">Color d\'èmfasi</string>
+    <string name="use_accent_color">Utilitzeu el color d\'accent</string>
+    <string name="system_theme_description">Aquest tema no us permet ajustar els colors manualment. Els colors canvien dinàmicament en funció de la configuració del sistema.</string>
     <string name="incoming_call">Trucada entrant</string>
     <string name="outgoing_call">Trucada sortint</string>
     <string name="missed_call">Trucada perduda</string>

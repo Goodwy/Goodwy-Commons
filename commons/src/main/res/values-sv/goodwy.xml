@@ -109,6 +109,8 @@
     <string name="button_secondary">Sekundär knapp</string>
 
     <string name="accent_color">Färg på accent</string>
+    <string name="use_accent_color">Använd accentfärg</string>
+    <string name="system_theme_description">Detta tema tillåter dig inte att justera färgerna manuellt. Färgerna ändras dynamiskt beroende på systeminställningarna.</string>
     <string name="incoming_call">Inkommande samtal</string>
     <string name="outgoing_call">Utgående samtal</string>
     <string name="missed_call">Missat samtal</string>

@@ -109,6 +109,8 @@
     <string name="button_secondary">இரண்டாம் நிலை பொத்தான்</string>
 
     <string name="accent_color">உச்சரிப்பு நிறம்</string>
+    <string name="use_accent_color">உச்சரிப்பு நிறத்தைப் பயன்படுத்தவும்</string>
+    <string name="system_theme_description">வண்ணங்களை கைமுறையாகத் தனிப்பயனாக்க இந்தத் தீம் உங்களை அனுமதிக்காது. கணினி அமைப்புகளைப் பொறுத்து நிறங்கள் மாறும்.</string>
     <string name="incoming_call">உள்வரும் அழைப்பு</string>
     <string name="outgoing_call">வெளிசெல்லும் அழைப்பு</string>
     <string name="missed_call">தவறிய அழைப்பு</string>

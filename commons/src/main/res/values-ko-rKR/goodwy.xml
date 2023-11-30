@@ -109,6 +109,8 @@
     <string name="button_secondary">보조 버튼</string>
 
     <string name="accent_color">악센트 색상</string>
+    <string name="use_accent_color">강조 색상 사용</string>
+    <string name="system_theme_description">이 테마에서는 색상을 수동으로 조정할 수 없습니다. 색상은 시스템 설정에 따라 동적으로 변경됩니다.</string>
     <string name="incoming_call">수신 전화</string>
     <string name="outgoing_call">나가는 전화</string>
     <string name="missed_call">부재중 전화</string>

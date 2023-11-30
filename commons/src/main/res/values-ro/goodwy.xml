@@ -76,6 +76,8 @@
     <string name="pref_category_appearance">Appearance</string>
     <string name="gray_theme">Gray</string>
     <string name="accent_color">Accent color</string>
+    <string name="use_accent_color">Utilizarea culorii de accent</string>
+    <string name="system_theme_description">Această temă nu vă permite să reglați manual culorile. Culorile se schimbă dinamic în funcție de setările sistemului.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Afișați miniaturi la contact</string>

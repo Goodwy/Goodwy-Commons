@@ -2,4 +2,5 @@
 <com.goodwy.commons.views.MyCompatRadioButton xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dialog_radio_button"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/normal_margin" />

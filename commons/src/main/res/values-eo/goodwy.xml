@@ -77,6 +77,8 @@
     <string name="pref_category_appearance">Appearance</string>
     <string name="gray_theme">Gray</string>
     <string name="accent_color">Accent color</string>
+    <string name="use_accent_color">Uzu akcentkoloron</string>
+    <string name="system_theme_description">Ĉi tiu temo ne permesas al vi mane personecigi kolorojn. Koloroj ŝanĝiĝas dinamike depende de sistemaj agordoj.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>

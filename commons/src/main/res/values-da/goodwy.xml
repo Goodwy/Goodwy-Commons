@@ -109,6 +109,8 @@
     <string name="button_secondary">Sekundær knap</string>
 
     <string name="accent_color">Fremhævningsfarve</string>
+    <string name="use_accent_color">Brug accentfarve</string>
+    <string name="system_theme_description">Dette tema tillader dig ikke at justere farverne manuelt. Farverne ændres dynamisk afhængigt af systemindstillingerne.</string>
     <string name="incoming_call">Indgående opkald</string>
     <string name="outgoing_call">Udgående opkald</string>
     <string name="missed_call">Ubesvaret opkald</string>

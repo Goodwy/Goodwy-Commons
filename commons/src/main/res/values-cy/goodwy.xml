@@ -109,6 +109,8 @@
     <string name="button_secondary">Botwm eilaidd</string>
 
     <string name="accent_color">Lliw acen</string>
+    <string name="use_accent_color">Defnyddiwch Lliw acen</string>
+    <string name="system_theme_description">Nid yw\'r thema hon yn caniatáu ichi addasu\'r lliwiau â llaw. Mae lliwiau\'n newid yn ddeinamig yn dibynnu ar osodiadau\'r system.</string>
     <string name="incoming_call">Galwad i Mewn</string>
     <string name="outgoing_call">Galwad Allanol</string>
     <string name="missed_call">Galwad a Fethwyd</string>

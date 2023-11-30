@@ -109,6 +109,8 @@
     <string name="button_secondary">Bouton secondaire</string>
 
     <string name="accent_color">Couleur d\'accentuation</string>
+    <string name="use_accent_color">Utiliser la couleur d’accentuation</string>
+    <string name="system_theme_description">Ce thème ne vous permet pas d’ajuster les couleurs manuellement. Les couleurs changent dynamiquement en fonction des paramètres du système.</string>
     <string name="incoming_call">Appel entrant</string>
     <string name="outgoing_call">Appel sortant</string>
     <string name="missed_call">Appel manqué</string>

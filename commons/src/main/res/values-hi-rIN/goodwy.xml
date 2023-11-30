@@ -109,6 +109,8 @@
     <string name="button_secondary">द्वितीयक बटन</string>
 
     <string name="accent_color">एक्सेंट रंग</string>
+    <string name="use_accent_color">एक्सेंट रंग का उपयोग करें</string>
+    <string name="system_theme_description">यह विषय आपको रंगों को मैन्युअल रूप से समायोजित करने की अनुमति नहीं देता है। रंग सिस्टम सेटिंग्स के आधार पर गतिशील रूप से बदलते हैं।</string>
     <string name="incoming_call">इनकमिंग कॉल</string>
     <string name="outgoing_call">आउटगोइंग कॉल</string>
     <string name="missed_call">मिस्ड कॉल</string>

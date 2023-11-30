@@ -109,6 +109,8 @@
     <string name="button_secondary">دکمه ثانویه</string>
 
     <string name="accent_color">رنگ لهجه</string>
+    <string name="use_accent_color">استفاده از رنگ لهجه</string>
+    <string name="system_theme_description">این تم به شما اجازه نمی دهد که رنگ ها را به صورت دستی تنظیم کنید. رنگ ها به صورت پویا بسته به تنظیمات سیستم تغییر می کنند.</string>
     <string name="incoming_call">تماس ورودی</string>
     <string name="outgoing_call">تماس خروجی</string>
     <string name="missed_call">تماس از دست رفته</string>

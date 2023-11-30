@@ -77,6 +77,8 @@
     <string name="pref_category_appearance">ਦਿੱਖ</string>
     <string name="gray_theme">ਸਲੇਟੀ</string>
     <string name="accent_color">ਲਹਿਜ਼ੇ ਦਾ ਰੰਗ</string>
+    <string name="use_accent_color">ਇੱਕ ਐਕਸੈਂਟ ਰੰਗ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+    <string name="system_theme_description">ਇਹ ਥੀਮ ਤੁਹਾਨੂੰ ਰੰਗਾਂ ਨੂੰ ਹੱਥੀਂ ਅਨੁਕੂਲਿਤ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੰਦਾ ਹੈ। ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਦੇ ਆਧਾਰ \'ਤੇ ਰੰਗ ਗਤੀਸ਼ੀਲ ਤੌਰ \'ਤੇ ਬਦਲਦੇ ਹਨ।</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">ਸੰਪਰਕ ਥੰਬਨੇਲ ਦਿਖਾਓ</string>

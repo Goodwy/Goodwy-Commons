@@ -109,6 +109,8 @@
     <string name="button_secondary">Secundaire knop</string>
 
     <string name="accent_color">Accentkleur</string>
+    <string name="use_accent_color">Accentkleur gebruiken</string>
+    <string name="system_theme_description">Met dit thema kunt u de kleuren niet handmatig aanpassen. Kleuren veranderen dynamisch, afhankelijk van de systeeminstellingen.</string>
     <string name="incoming_call">Inkomend gesprek</string>
     <string name="outgoing_call">Uitgaand gesprek</string>
     <string name="missed_call">Gemiste oproep</string>

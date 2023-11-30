@@ -109,6 +109,8 @@
     <string name="button_secondary">לחצן משני</string>
 
     <string name="accent_color">צבע הדגשה</string>
+    <string name="use_accent_color">שימוש בצבע הדגשה</string>
+    <string name="system_theme_description">ערכת נושא זו אינה מאפשרת לך להתאים את הצבעים באופן ידני. הצבעים משתנים באופן דינמי בהתאם להגדרות המערכת.</string>
     <string name="incoming_call">שיחה נכנסת</string>
     <string name="outgoing_call">שיחה יוצאת</string>
     <string name="missed_call">שיחה שלא נענתה</string>

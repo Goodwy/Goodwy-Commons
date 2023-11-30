@@ -109,6 +109,8 @@
     <string name="button_secondary">Sekundárne tlačidlo</string>
 
     <string name="accent_color">Farba zvýraznenia</string>
+    <string name="use_accent_color">Používanie farby motívu</string>
+    <string name="system_theme_description">Táto téma vám neumožňuje manuálne upravovať farby. Farby sa menia dynamicky v závislosti od systémových nastavení.</string>
     <string name="incoming_call">Prichádzajúci hovor</string>
     <string name="outgoing_call">Odchádzajúci hovor</string>
     <string name="missed_call">Zmeškaný hovor</string>

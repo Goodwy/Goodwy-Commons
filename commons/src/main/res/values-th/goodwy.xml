@@ -77,6 +77,8 @@
     <string name="pref_category_appearance">Appearance</string>
     <string name="gray_theme">Gray</string>
     <string name="accent_color">Accent color</string>
+    <string name="use_accent_color">ใช้สีเน้น</string>
+    <string name="system_theme_description">ชุดรูปแบบนี้ไม่อนุญาตให้คุณปรับสีด้วยตนเอง สีจะเปลี่ยนแบบไดนามิกขึ้นอยู่กับการตั้งค่าระบบ</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>

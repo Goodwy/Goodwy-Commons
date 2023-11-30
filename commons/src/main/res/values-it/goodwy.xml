@@ -109,6 +109,8 @@
     <string name="button_secondary">Pulsante secondario</string>
 
     <string name="accent_color">Colore accento</string>
+    <string name="use_accent_color">Usa colore principale</string>
+    <string name="system_theme_description">Questo tema non consente di regolare manualmente i colori. I colori cambiano dinamicamente a seconda delle impostazioni di sistema.</string>
     <string name="incoming_call">Chiamata in arrivo</string>
     <string name="outgoing_call">Chiamata in uscita</string>
     <string name="missed_call">Chiamata persa</string>

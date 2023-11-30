@@ -110,6 +110,8 @@
     <string name="button_secondary">İkinci dərəcəli düymə</string>
 
     <string name="accent_color">Vurğu rəng</string>
+    <string name="use_accent_color">Vurğu rəngindən istifadə edin</string>
+    <string name="system_theme_description">Bu mövzu rəngləri əl ilə fərdiləşdirməyə imkan vermir. Sistem parametrlərindən asılı olaraq rənglər dinamik olaraq dəyişir.</string>
     <string name="incoming_call">Daxil olan zəng</string>
     <string name="outgoing_call">Çıxan zəng</string>
     <string name="missed_call">Buraxılmış zəng</string>

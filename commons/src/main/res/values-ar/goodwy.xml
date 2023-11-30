@@ -110,6 +110,8 @@
     <string name="button_secondary">الزر الثانوي</string>
 
     <string name="accent_color">لون التمييز</string>
+    <string name="use_accent_color">استخدام لون التمييز</string>
+    <string name="system_theme_description">لا يسمح لك هذا المظهر بضبط الألوان يدويا. تتغير الألوان ديناميكيا وفقا لإعدادات النظام.</string>
     <string name="incoming_call">مكالمة واردة</string>
     <string name="outgoing_call">مكالمة صادرة</string>
     <string name="missed_call">مكالمة لم يتم تفويتها</string>

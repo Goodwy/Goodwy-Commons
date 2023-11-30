@@ -77,6 +77,8 @@
     <string name="pref_category_appearance">Appearance</string>
     <string name="gray_theme">Gray</string>
     <string name="accent_color">Accent color</string>
+    <string name="use_accent_color">使用主題色</string>
+    <string name="system_theme_description">此主題不允許您手動調整顏色。顏色會根據系統設置動態變化。</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>

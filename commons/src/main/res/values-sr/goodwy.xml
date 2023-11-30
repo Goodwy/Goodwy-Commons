@@ -110,6 +110,8 @@
     <string name="button_secondary">Секундарни тастер</string>
 
     <string name="accent_color">Наглашена боја</string>
+    <string name="use_accent_color">Користите акцентну боју</string>
+    <string name="system_theme_description">Ова тема вам не дозвољава да ручно прилагодите боје. Боје се мењају динамички у зависности од подешавања система.</string>
     <string name="incoming_call">Долазни позив</string>
     <string name="outgoing_call">Одлазни позив</string>
     <string name="missed_call">Пропуштени позив</string>

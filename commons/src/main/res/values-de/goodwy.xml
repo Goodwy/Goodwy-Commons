@@ -109,6 +109,8 @@
     <string name="button_secondary">Sekundäre Taste</string>
 
     <string name="accent_color">Akzentfarbe</string>
+    <string name="use_accent_color">Akzentfarbe verwenden</string>
+    <string name="system_theme_description">Bei diesem Thema können Sie die Farben nicht manuell anpassen. Die Farben ändern sich dynamisch in Abhängigkeit von den Systemeinstellungen.</string>
     <string name="incoming_call">Eingehender Anruf</string>
     <string name="outgoing_call">Ausgehender Anruf</string>
     <string name="missed_call">Verpasster Anruf</string>

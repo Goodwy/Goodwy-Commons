@@ -93,7 +93,7 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:id="@+id/theme_holder"
+                android:id="@+id/themeHolder"
                 style="@style/SettingsSectionHolder"
                 android:layout_below="@+id/settings_purchase_thank_you_holder"
                 android:layout_marginTop="@dimen/activity_margin"
@@ -137,15 +137,27 @@
                 </RelativeLayout>
             </LinearLayout>
 
+            <com.goodwy.commons.views.MyTextView
+                android:id="@+id/customizationThemeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_margin"
+                android:paddingHorizontal="14dp"
+                android:maxWidth="@dimen/settings_value_width_long"
+                android:layout_below="@+id/themeHolder"
+                android:text="@string/system_theme_description"
+                android:textSize="@dimen/smaller_text_size"
+                android:alpha="0.6"/>
+
             <LinearLayout
                 android:id="@+id/primary_colors_holder"
                 style="@style/SettingsSectionHolder"
-                android:layout_below="@+id/theme_holder"
+                android:layout_below="@+id/customizationThemeDescription"
                 android:orientation="vertical"
                 android:paddingTop='@dimen/smaller_margin'>
 
                 <RelativeLayout
-                    android:id="@+id/customization_primary_color_holder"
+                    android:id="@+id/customizationPrimaryColorHolder"
                     style="@style/SettingsHolderStyle">
 
                     <com.goodwy.commons.views.MyTextView

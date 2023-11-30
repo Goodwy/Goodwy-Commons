@@ -109,6 +109,8 @@
     <string name="button_secondary">Sekundarni gumb</string>
 
     <string name="accent_color">Barva naglasa</string>
+    <string name="use_accent_color">Uporaba barve poudarkov</string>
+    <string name="system_theme_description">Ta tema vam ne omogoča ročnega prilagajanja barv. Barve se dinamično spreminjajo glede na sistemske nastavitve.</string>
     <string name="incoming_call">Dohodni klic</string>
     <string name="outgoing_call">Odhodni klic</string>
     <string name="missed_call">Zamujani klic</string>

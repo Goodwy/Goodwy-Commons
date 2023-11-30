@@ -109,6 +109,8 @@
     <string name="button_secondary">Przycisk pomocniczy</string>
 
     <string name="accent_color">Kolor wiodący</string>
+    <string name="use_accent_color">Użyj koloru wiodącego</string>
+    <string name="system_theme_description">Ten motyw nie pozwala na ręczne dostosowanie kolorów. Kolory zmieniają się dynamicznie w zależności od ustawień systemowych.</string>
     <string name="incoming_call">Połączenie przychodzące</string>
     <string name="outgoing_call">Połączenie wychodzące</string>
     <string name="missed_call">Nieodebranych</string>

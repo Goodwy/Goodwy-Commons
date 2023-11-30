@@ -109,6 +109,8 @@
     <string name="button_secondary">Bigarren mailako botoia</string>
 
     <string name="accent_color">Vurğu rəng</string>
+    <string name="use_accent_color">Erabili azentu kolore bat</string>
+    <string name="system_theme_description">Gai honek ez dizu koloreak eskuz pertsonalizatzeko aukera ematen. Koloreak modu dinamikoan aldatzen dira sistemaren ezarpenen arabera.</string>
     <string name="incoming_call">Sarrerako deia</string>
     <string name="outgoing_call">Irteerako deia</string>
     <string name="missed_call">Dei galdua</string>
