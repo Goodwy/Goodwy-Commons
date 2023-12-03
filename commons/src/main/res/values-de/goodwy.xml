@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">unscharfer Bildschirmhintergrund</string>
     <string name="text_cursor_color">Farbe des Textcursors</string>
     <string name="top_app_bar_colored">Farbige obere Anwendungsleiste</string>
+    <string name="top_app_bar_color_icon">Farbige Symbole in der oberen Leiste der App</string>
+    <string name="top_app_bar_color_title">Farbiger Titel der oberen App-Leiste</string>
     <string name="overflow_icon">Überlauf-Symbol</string>
     <string name="lines_count">Anzahl der Zeilen</string>
     <string name="show_button_blocked_numbers">Zeigen Sie die Schaltfläche an, um blockierte Anrufe nicht auszublenden</string>

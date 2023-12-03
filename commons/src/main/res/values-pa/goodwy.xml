@@ -112,6 +112,8 @@
     <string name="blurry_wallpaper">ਧੁੰਦਲਾ ਵਾਲਪੇਪਰ</string>
     <string name="text_cursor_color">ਟੈਕਸਟ ਕਰਸਰ ਦਾ ਰੰਗ</string>
     <string name="top_app_bar_colored">ਰੰਗਦਾਰ ਸਿਖਰ ਐਪ ਬਾਰ</string>
+    <string name="top_app_bar_color_icon">ਐਪ ਟਾਪ ਬਾਰ ਦੇ ਰੰਗੀਨ ਆਈਕਨ</string>
+    <string name="top_app_bar_color_title">ਰੰਗਦਾਰ ਐਪ ਸਿਖਰ ਪੱਟੀ ਸਿਰਲੇਖ</string>
     <string name="overflow_icon">ਓਵਰਫਲੋ ਆਈਕਨ</string>
     <string name="lines_count">ਲਾਈਨਾਂ ਦੀ ਗਿਣਤੀ</string>
     <string name="show_button_blocked_numbers">ਬਲਾਕ ਕੀਤੀਆਂ ਕਾਲਾਂ ਨੂੰ ਨਾ ਲੁਕਾਉਣ ਲਈ ਬਟਨ ਦਿਖਾਓ</string>

@@ -161,7 +161,8 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         setupPurchaseThankYou()
         updateAutoThemeFields()
-        setupTopAppBarColored()
+        setupTopAppBarColorIcon()
+        setupTopAppBarColorTitle()
         setupUseAccentColor()
     }
 
@@ -313,6 +314,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             //)
             updateMenuItemColors(binding.customizationToolbar.menu, getCurrentStatusBarColor())
             setupToolbar(binding.customizationToolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
+            updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
         }
     }
 
@@ -364,6 +366,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curPrimaryColor = getColor(theme.primaryColorId)
                     curAccentColor = getColor(R.color.color_accent) // (R.color.color_primary) TODO accent color when choosing a theme R.color.color_primary
                     curAppIconColor = getColor(theme.appIconColorId)
+                } else if (curSelectedThemeId == THEME_SYSTEM) {
+                    curPrimaryColor = getColor(R.color.you_primary_color)
                 }
 
                 setTheme(getThemeId(getCurrentPrimaryColor())) //setTheme(getThemeId(curPrimaryColor))
@@ -372,7 +376,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                 setupToolbar(binding.customizationToolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
                 updateActionbarColor(curBackgroundColor)
             }
-            binding.settingsTopAppBarColored.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
+            binding.settingsTopAppBarColorIcon.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
+            binding.settingsTopAppBarColorTitle.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
             binding.customizationUseAccentColor.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
             binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         }
@@ -705,8 +710,14 @@ class CustomizationActivity : BaseSimpleActivity() {
             return
         }
 
-        curPrimaryGridColorPicker = GridColorPickerDialog(this, curPrimaryColor, true,
-            showUseDefaultButton = true, toolbar = binding.customizationToolbar, title = resources.getString(R.string.primary_color)) { wasPositivePressed, color ->
+        curPrimaryGridColorPicker = GridColorPickerDialog(
+            this,
+            color = curPrimaryColor,
+            colorBackground = curBackgroundColor,
+            true,
+            showUseDefaultButton = true,
+            toolbar = binding.customizationToolbar,
+            title = resources.getString(R.string.primary_color)) { wasPositivePressed, color ->
             curPrimaryGridColorPicker = null
             if (wasPositivePressed) {
                 if (hasColorChanged(curPrimaryColor, color)) {
@@ -718,14 +729,14 @@ class CustomizationActivity : BaseSimpleActivity() {
                 updateMenuItemColors(binding.customizationToolbar.menu, getCurrentStatusBarColor())
                 val navigationIcon = if (hasUnsavedChanges) NavigationIcon.Cross else NavigationIcon.Arrow
                 setupToolbar(binding.customizationToolbar, navigationIcon, getCurrentStatusBarColor())
-                //updateMenuItemColors(menu, true, color)
+                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
             } else {
                 //TODO actionbar color
                 updateActionbarColor(curBackgroundColor)//curPrimaryColor
                 setTheme(getThemeId(curPrimaryColor))
                 updateMenuItemColors(binding.customizationToolbar.menu, curBackgroundColor) //curPrimaryColor
                 setupToolbar(binding.customizationToolbar, NavigationIcon.Arrow, curBackgroundColor) //curPrimaryColor
-                updateTopBarColors(binding.customizationToolbar, curBackgroundColor) //curPrimaryColor
+                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor) //curPrimaryColor
             }
         }
     }
@@ -875,7 +886,31 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColoredHolder.setOnClickListener {
                 settingsTopAppBarColored.toggle()
                 baseConfig.topAppBarColored = settingsTopAppBarColored.isChecked
-                updateTopBarColors(binding.customizationToolbar, curBackgroundColor)
+                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
+            }
+        }
+    }
+
+    private fun setupTopAppBarColorIcon() {
+        binding.apply {
+            updateTextColors(settingsTopAppBarColorIconHolder)
+            settingsTopAppBarColorIcon.isChecked = baseConfig.topAppBarColorIcon
+            settingsTopAppBarColorIconHolder.setOnClickListener {
+                settingsTopAppBarColorIcon.toggle()
+                baseConfig.topAppBarColorIcon = settingsTopAppBarColorIcon.isChecked
+                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
+            }
+        }
+    }
+
+    private fun setupTopAppBarColorTitle() {
+        binding.apply {
+            updateTextColors(settingsTopAppBarColorTitleHolder)
+            settingsTopAppBarColorTitle.isChecked = baseConfig.topAppBarColorTitle
+            settingsTopAppBarColorTitleHolder.setOnClickListener {
+                settingsTopAppBarColorTitle.toggle()
+                baseConfig.topAppBarColorTitle = settingsTopAppBarColorTitle.isChecked
+                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
             }
         }
     }

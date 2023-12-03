@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Suddig bakgrundsbild</string>
     <string name="text_cursor_color">Färg på textmarkören</string>
     <string name="top_app_bar_colored">Färgat övre appfält</string>
+    <string name="top_app_bar_color_icon">Färgade ikoner i appens övre fält</string>
+    <string name="top_app_bar_color_title">Färgad rubrik för appens övre fält</string>
     <string name="overflow_icon">Ikon för spill</string>
     <string name="lines_count">Antal rader</string>
     <string name="show_button_blocked_numbers">Visa knappen för att inte dölja blockerade samtal</string>

@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Rozmazaná tapeta</string>
     <string name="text_cursor_color">Farba textového kurzora</string>
     <string name="top_app_bar_colored">Farebný horný panel aplikácie</string>
+    <string name="top_app_bar_color_icon">Farebné ikony hornej lišty aplikácie</string>
+    <string name="top_app_bar_color_title">Farebný názov hornej lišty aplikácie</string>
     <string name="overflow_icon">Ikona Pretečenia</string>
     <string name="lines_count">Počet riadkov</string>
     <string name="show_button_blocked_numbers">Zobraziť tlačidlo, aby ste neskrývali blokované hovory</string>

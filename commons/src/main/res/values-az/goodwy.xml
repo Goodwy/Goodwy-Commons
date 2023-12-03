@@ -96,6 +96,8 @@
     <string name="blurry_wallpaper">Bulanıq divar kağızı</string>
     <string name="text_cursor_color">Mətn kursorunun rəngi</string>
     <string name="top_app_bar_colored">Rəngli üst proqram çubuğu</string>
+    <string name="top_app_bar_color_icon">Proqramın yuxarı panelinin rəngli nişanları</string>
+    <string name="top_app_bar_color_title">Rəngli proqramın yuxarı çubuğunun başlığı</string>
     <string name="overflow_icon">Daşmaq ikonu</string>
     <string name="lines_count">Xətlər sayılır</string>
     <string name="show_button_blocked_numbers">Bloklanmış zəngləri gizlətməmək üçün düyməni göstərin</string>

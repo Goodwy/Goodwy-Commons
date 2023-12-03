@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Užsklanda</string>
     <string name="text_cursor_color">Teksto žymeklio spalva</string>
     <string name="top_app_bar_colored">Spalvota viršutinė programos juosta</string>
+    <string name="top_app_bar_color_icon">Spalvotos programos viršutinės juostos piktogramos</string>
+    <string name="top_app_bar_color_title">Spalvotas programos viršutinės juostos pavadinimas</string>
     <string name="overflow_icon">Perpildymo piktograma</string>
     <string name="lines_count">Eilučių skaičius</string>
     <string name="show_button_blocked_numbers">Rodyti mygtuką, kad neslėptumėte užblokuotų skambučių</string>

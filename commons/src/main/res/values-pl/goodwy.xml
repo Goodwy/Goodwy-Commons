@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">rozmazana tapeta</string>
     <string name="text_cursor_color">Kolor kursora tekstowego</string>
     <string name="top_app_bar_colored">Kolorowy górny pasek aplikacji</string>
+    <string name="top_app_bar_color_icon">Kolorowe ikony górnego paska aplikacji</string>
+    <string name="top_app_bar_color_title">Tytuł kolorowego górnego paska aplikacji</string>
     <string name="overflow_icon">Ikona przepełnienia</string>
     <string name="lines_count">Liczba linii</string>
     <string name="show_button_blocked_numbers">Pokaż przycisk, aby nie ukrywać zablokowanych połączeń</string>

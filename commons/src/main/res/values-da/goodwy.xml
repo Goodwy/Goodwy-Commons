@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">blurry wallpaper</string>
     <string name="text_cursor_color">Farve på tekstmarkør</string>
     <string name="top_app_bar_colored">Applinjen øverst på farvelagt applinje</string>
+    <string name="top_app_bar_color_icon">Farvede ikoner i appens øverste bjælke</string>
+    <string name="top_app_bar_color_title">Farvet app-topbjælketitel</string>
     <string name="overflow_icon">Ikonet Overløb</string>
     <string name="lines_count">Antal linjer</string>
     <string name="show_button_blocked_numbers">Vis knappen for ikke at skjule blokerede opkald</string>

@@ -111,6 +111,8 @@
     <string name="blurry_wallpaper">Blurry wallpaper</string>
     <string name="text_cursor_color">Text cursor color</string>
     <string name="top_app_bar_colored">Colored top app bar</string>
+    <string name="top_app_bar_color_icon">Colored icons of the app top bar</string>
+    <string name="top_app_bar_color_title">Colored app top bar title</string>
     <string name="overflow_icon">Overflow icon</string>
     <string name="lines_count">Lines count</string>
     <string name="show_button_blocked_numbers">Show the button not to hide blocked calls</string>

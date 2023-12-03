@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">மங்கலான வால்பேப்பர்</string>
     <string name="text_cursor_color">உரை கர்சர் நிறம்</string>
     <string name="top_app_bar_colored">வண்ண மேல் பயன்பாட்டுப் பட்டி</string>
+    <string name="top_app_bar_color_icon">பயன்பாட்டின் மேல் பட்டையின் வண்ண ஐகான்கள்</string>
+    <string name="top_app_bar_color_title">வண்ண பயன்பாட்டின் மேல் பட்டை தலைப்பு</string>
     <string name="overflow_icon">வழிதல் ஐகான்</string>
     <string name="lines_count">கோடுகள் எண்ணிக்கை</string>
     <string name="show_button_blocked_numbers">தடுக்கப்பட்ட அழைப்புகளை மறைக்க வேண்டாம் என்ற பொத்தானைக் காட்டு</string>

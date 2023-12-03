@@ -117,7 +117,7 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(context.getBottomNavigationBackgroundColor())
         binding.topToolbarSearchClear.applyColorFilter(contrastColor)
 
-        if (context.baseConfig.topAppBarColored) binding.topToolbar.setTitleTextColor(ColorStateList.valueOf(primaryColor))
+        if (context.baseConfig.topAppBarColorTitle) binding.topToolbar.setTitleTextColor(ColorStateList.valueOf(primaryColor))
     }
 
     fun updateTitle(title: String) {

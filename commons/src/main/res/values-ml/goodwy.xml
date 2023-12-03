@@ -112,6 +112,8 @@
     <string name="blurry_wallpaper">മങ്ങിയ വാൾപേപ്പർ</string>
     <string name="text_cursor_color">ടെക്സ്റ്റ് കഴ്സർ നിറം</string>
     <string name="top_app_bar_colored">നിറമുള്ള മുകളിലെ ആപ്പ് ബാർ</string>
+    <string name="top_app_bar_color_icon">ആപ്പ് ടോപ്പ് ബാറിന്റെ നിറമുള്ള ഐക്കണുകൾ</string>
+    <string name="top_app_bar_color_title">നിറമുള്ള ആപ്പ് ടോപ്പ് ബാർ ശീർഷകം</string>
     <string name="overflow_icon">ഓവർഫ്ലോ ഐക്കൺ</string>
     <string name="lines_count">വരികളുടെ എണ്ണം</string>
     <string name="show_button_blocked_numbers">ബ്ലോക്ക് ചെയ്‌ത കോളുകൾ മറയ്‌ക്കാതിരിക്കാൻ ബട്ടൺ കാണിക്കുക</string>

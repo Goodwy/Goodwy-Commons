@@ -699,12 +699,6 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(TEXT_CURSOR_COLOR, -2)
         set(textCursorColor) = prefs.edit().putInt(TEXT_CURSOR_COLOR, textCursorColor).apply()
 
-    var topAppBarColored: Boolean
-        get() = prefs.getBoolean(TOP_APP_BAR_COLORED, false)
-        set(topAppBarColored) = prefs.edit().putBoolean(TOP_APP_BAR_COLORED, topAppBarColored).apply()
-
-    val isTopAppBarColored: Flow<Boolean> = ::topAppBarColored.asFlowNonNull()
-
     var linesCount: Int
         get() = prefs.getInt(LINES_COUNT, 2)
         set(linesCount) = prefs.edit().putInt(LINES_COUNT, linesCount).apply()
@@ -732,6 +726,24 @@ open class BaseConfig(val context: Context) {
     var isUsingAccentColor: Boolean
         get() = prefs.getBoolean(IS_USING_ACCENT_COLOR, false)
         set(isUsingAccentColor) = prefs.edit().putBoolean(IS_USING_ACCENT_COLOR, isUsingAccentColor).apply()
+
+    var topAppBarColored: Boolean
+        get() = prefs.getBoolean(TOP_APP_BAR_COLORED, false)
+        set(topAppBarColored) = prefs.edit().putBoolean(TOP_APP_BAR_COLORED, topAppBarColored).apply()
+
+    val isTopAppBarColored: Flow<Boolean> = ::topAppBarColored.asFlowNonNull()
+
+    var topAppBarColorIcon: Boolean
+        get() = prefs.getBoolean(TOP_APP_BAR_COLOR_ICON, false)
+        set(topAppBarColorIcon) = prefs.edit().putBoolean(TOP_APP_BAR_COLOR_ICON, topAppBarColorIcon).apply()
+
+    val isTopAppBarColorIcon: Flow<Boolean> = ::topAppBarColorIcon.asFlowNonNull()
+
+    var topAppBarColorTitle: Boolean
+        get() = prefs.getBoolean(TOP_APP_BAR_COLOR_TITLE, false)
+        set(topAppBarColorTitle) = prefs.edit().putBoolean(TOP_APP_BAR_COLOR_TITLE, topAppBarColorTitle).apply()
+
+    val isTopAppBarColorTitle: Flow<Boolean> = ::topAppBarColorTitle.asFlowNonNull()
 }
 
 

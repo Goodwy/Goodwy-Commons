@@ -33,7 +33,7 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.interfaces.LineColorPickerListener
 
 
-class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.line_00,
+class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val colorBackground: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.line_00,
                             val primaryColors50: Int = R.array.line_10, val primaryColors100: Int = R.array.line_20, val primaryColors200: Int = R.array.line_30,
                             val primaryColors300: Int = R.array.line_40, val primaryColors400: Int = R.array.line_50, val primaryColors500: Int = R.array.line_60,
                             val primaryColors600: Int = R.array.line_70, val primaryColors700: Int = R.array.line_80, val primaryColors800: Int = R.array.line_90,
@@ -259,7 +259,7 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         if (isPrimaryColorPicker) {
 
             if (toolbar != null) {
-                activity.updateTopBarColors(toolbar, color)
+                activity.updateTopBarColors(toolbar, colorBackground, color)
             }
 
             if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {

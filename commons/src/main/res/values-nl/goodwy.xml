@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Wazig behang</string>
     <string name="text_cursor_color">Kleur van tekstcursor</string>
     <string name="top_app_bar_colored">Gekleurde app-balk bovenaan</string>
+    <string name="top_app_bar_color_icon">Gekleurde pictogrammen van de bovenste balk van de app</string>
+    <string name="top_app_bar_color_title">Gekleurde titel van de bovenste balk van de app</string>
     <string name="overflow_icon">Overloop icoon</string>
     <string name="lines_count">Aantal lijnen</string>
     <string name="show_button_blocked_numbers">Toon de knop om geblokkeerde oproepen niet te verbergen</string>

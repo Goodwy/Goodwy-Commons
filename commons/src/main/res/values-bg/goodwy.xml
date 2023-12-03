@@ -112,6 +112,8 @@
     <string name="blurry_wallpaper">размазан тапет</string>
     <string name="text_cursor_color">Цвят на курсора на текста</string>
     <string name="top_app_bar_colored">Цветна горна лента на приложението</string>
+    <string name="top_app_bar_color_icon">Цветни икони на горната лента на приложението</string>
+    <string name="top_app_bar_color_title">Цветно заглавие на горната лента на приложението</string>
     <string name="overflow_icon">Икона за преливане на менюто</string>
     <string name="lines_count">Брой редове</string>
     <string name="show_button_blocked_numbers">Показвай бутона да не скрива блокираните повиквания</string>

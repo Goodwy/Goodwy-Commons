@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Horpaper lausoa</string>
     <string name="text_cursor_color">Testuaren kurtsorearen kolorea</string>
     <string name="top_app_bar_colored">Koloretako goiko aplikazio-barra</string>
+    <string name="top_app_bar_color_icon">Aplikazioaren goiko barraren koloretako ikonoak</string>
+    <string name="top_app_bar_color_title">Koloretako aplikazioaren goiko barraren izenburua</string>
     <string name="overflow_icon">Gainerako ikonoa</string>
     <string name="lines_count">Lerroak zenbatzen dira</string>
     <string name="show_button_blocked_numbers">Erakutsi blokeatutako deiak ez ezkutatzeko botoia</string>

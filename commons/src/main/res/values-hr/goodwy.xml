@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Mutna pozadina</string>
     <string name="text_cursor_color">Boja pokazivača teksta</string>
     <string name="top_app_bar_colored">Gornja traka aplikacije u boji</string>
+    <string name="top_app_bar_color_icon">Obojene ikone gornje trake aplikacije</string>
+    <string name="top_app_bar_color_title">Naslov gornje trake aplikacije u boji</string>
     <string name="overflow_icon">Ikona prelijevanja</string>
     <string name="lines_count">Broj redaka</string>
     <string name="show_button_blocked_numbers">Pokaži gumb da ne biste sakrili blokirane pozive</string>

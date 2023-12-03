@@ -314,14 +314,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateTopBarColors(toolbar: Toolbar, color: Int) {
-        val contrastColor = color.getContrastColor()
-        val itemColor = if (baseConfig.topAppBarColored) getProperPrimaryColor() else contrastColor
+    fun updateTopBarColors(toolbar: Toolbar, colorBackground: Int, colorPrimary: Int = getProperPrimaryColor()) {
+        val contrastColor = colorBackground.getContrastColor()
+        val itemColor = if (baseConfig.topAppBarColorIcon) colorPrimary else contrastColor
+        val titleColor = if (baseConfig.topAppBarColorTitle) colorPrimary else contrastColor
 
         //if (!useTopSearchMenu) {
-            updateStatusbarColor(color)
-            toolbar.setBackgroundColor(color)
-            toolbar.setTitleTextColor(contrastColor)
+            updateStatusbarColor(colorBackground)
+            toolbar.setBackgroundColor(colorBackground)
+            toolbar.setTitleTextColor(titleColor)
             toolbar.navigationIcon?.applyColorFilter(itemColor)
             toolbar.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, itemColor)
         //}
@@ -435,7 +436,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (forceWhiteIcons) {
             color = Color.WHITE
         }
-        val itemColor = if (baseConfig.topAppBarColored) getProperPrimaryColor() else color
+        val itemColor = if (baseConfig.topAppBarColorIcon) getProperPrimaryColor() else color
 
         for (i in 0 until menu.size()) {
             try {

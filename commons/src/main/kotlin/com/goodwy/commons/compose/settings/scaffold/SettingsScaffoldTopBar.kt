@@ -102,11 +102,12 @@ fun SettingsScaffoldTopBar(
     colorTransitionFraction: Float,
     contrastColor: Color,
     iconColor: Color? = null,
+    textColor: Color? = null,
     goBack: () -> Unit,
 ) {
     TopAppBar(
         title = {
-            title(scrolledColor)
+            title(textColor ?: scrolledColor)
         },
         navigationIcon = {
             SettingsNavigationIcon(

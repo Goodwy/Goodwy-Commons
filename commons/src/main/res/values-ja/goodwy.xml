@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">ボケた壁紙</string>
     <string name="text_cursor_color">テキストカーソルの色</string>
     <string name="top_app_bar_colored">色付きのトップ アプリ バー</string>
+    <string name="top_app_bar_color_icon">アプリのトップバーの色付きのアイコン</string>
+    <string name="top_app_bar_color_title">色付きのアプリ トップ バーのタイトル</string>
     <string name="overflow_icon">オーバーフロー アイコン</string>
     <string name="lines_count">行数</string>
     <string name="show_button_blocked_numbers">ブロックされた通話を非表示にしないボタンを表示する</string>

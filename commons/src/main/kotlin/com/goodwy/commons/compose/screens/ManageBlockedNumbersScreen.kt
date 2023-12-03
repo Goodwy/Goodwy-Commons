@@ -74,7 +74,8 @@ internal fun ManageBlockedNumbersScreen(
     onImportBlockedNumbers: () -> Unit,
     onExportBlockedNumbers: () -> Unit,
     setAsDefault: () -> Unit,
-    isTopAppBarColored: Boolean,
+    isTopAppBarColorIcon: Boolean,
+    isTopAppBarColorTitle: Boolean,
     isDialer: Boolean,
     hasGivenPermissionToBlock: Boolean,
     isBlockUnknownSelected: Boolean,
@@ -134,7 +135,8 @@ internal fun ManageBlockedNumbersScreen(
                             statusBarColor = statusBarColor,
                             colorTransitionFraction = colorTransitionFraction,
                             contrastColor = contrastColor,
-                            isTopAppBarColored = isTopAppBarColored,
+                            isTopAppBarColorIcon = isTopAppBarColorIcon,
+                            isTopAppBarColorTitle = isTopAppBarColorTitle,
                             onAdd = onAdd,
                             onImportBlockedNumbers = onImportBlockedNumbers,
                             onExportBlockedNumbers = onExportBlockedNumbers
@@ -540,12 +542,14 @@ private fun NonActionModeToolbar(
     statusBarColor: Int,
     colorTransitionFraction: Float,
     contrastColor: Color,
-    isTopAppBarColored: Boolean,
+    isTopAppBarColorIcon: Boolean,
+    isTopAppBarColorTitle: Boolean,
     onAdd: () -> Unit,
     onImportBlockedNumbers: () -> Unit,
     onExportBlockedNumbers: () -> Unit
 ) {
-    val iconColor = if (isTopAppBarColored) MaterialTheme.colorScheme.primary else null
+    val iconColor = if (isTopAppBarColorIcon) MaterialTheme.colorScheme.primary else null
+    val titleColor = if (isTopAppBarColorTitle) MaterialTheme.colorScheme.primary else null
     SettingsScaffoldTopBar(
         title = { scrolledTextColor ->
             Text(
@@ -564,6 +568,7 @@ private fun NonActionModeToolbar(
         colorTransitionFraction = colorTransitionFraction,
         contrastColor = contrastColor,
         iconColor = iconColor,
+        textColor = titleColor,
         actions = {
             val actionMenus = remember {
                 listOf(
@@ -664,7 +669,8 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
             onImportBlockedNumbers = {},
             onExportBlockedNumbers = {},
             setAsDefault = {},
-            isTopAppBarColored = true,
+            isTopAppBarColorIcon = true,
+            isTopAppBarColorTitle = true,
             isDialer = isDialer,
             hasGivenPermissionToBlock = !isDialer,
             isBlockUnknownSelected = false,

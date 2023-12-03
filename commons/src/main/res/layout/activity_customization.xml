@@ -177,12 +177,35 @@
 
                 <RelativeLayout
                     android:id="@+id/settingsTopAppBarColoredHolder"
-                    style="@style/SettingsHolderSwitchStyle">
+                    style="@style/SettingsHolderSwitchStyle"
+                    android:visibility="gone">
 
                     <com.goodwy.commons.views.MySwitchCompat
                         android:id="@+id/settingsTopAppBarColored"
                         style="@style/SettingsSwitchStyle"
                         android:text="@string/top_app_bar_colored"
+                        app:switchPadding="@dimen/bigger_margin" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/settingsTopAppBarColorIconHolder"
+                    style="@style/SettingsHolderSwitchStyle">
+
+                    <com.goodwy.commons.views.MySwitchCompat
+                        android:id="@+id/settingsTopAppBarColorIcon"
+                        style="@style/SettingsSwitchStyle"
+                        android:text="@string/top_app_bar_color_icon"
+                        app:switchPadding="@dimen/bigger_margin"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/settingsTopAppBarColorTitleHolder"
+                    style="@style/SettingsHolderSwitchStyle">
+
+                    <com.goodwy.commons.views.MySwitchCompat
+                        android:id="@+id/settingsTopAppBarColorTitle"
+                        style="@style/SettingsSwitchStyle"
+                        android:text="@string/top_app_bar_color_title"
                         app:switchPadding="@dimen/bigger_margin"/>
                 </RelativeLayout>
             </LinearLayout>

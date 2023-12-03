@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Wallpaper buram</string>
     <string name="text_cursor_color">Warna kursor teks</string>
     <string name="top_app_bar_colored">Bilah aplikasi atas berwarna</string>
+    <string name="top_app_bar_color_icon">Ikon berwarna pada bilah atas aplikasi</string>
+    <string name="top_app_bar_color_title">Judul bilah atas aplikasi berwarna</string>
     <string name="overflow_icon">Ikon meluap</string>
     <string name="lines_count">Garis dihitung</string>
     <string name="show_button_blocked_numbers">Tampilkan tombol untuk tidak menyembunyikan panggilan yang diblokir</string>

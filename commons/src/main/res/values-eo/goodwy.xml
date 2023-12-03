@@ -112,6 +112,8 @@
     <string name="blurry_wallpaper">Malklara tapeto</string>
     <string name="text_cursor_color">Text cursor color</string>
     <string name="top_app_bar_colored">Kolora supra aplika stango</string>
+    <string name="top_app_bar_color_icon">Koloraj ikonoj de la supra stango de la aplikaĵo</string>
+    <string name="top_app_bar_color_title">Kolora app supra trinkejo titolo</string>
     <string name="overflow_icon">Superflua ikono</string>
     <string name="lines_count">Lines count</string>
     <string name="show_button_blocked_numbers">Montru la butonon por ne kaŝi blokitajn vokojn</string>

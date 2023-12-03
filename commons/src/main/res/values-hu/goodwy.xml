@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Homályos háttérkép</string>
     <string name="text_cursor_color">Szövegkurzor színe</string>
     <string name="top_app_bar_colored">Színes felső alkalmazássáv</string>
+    <string name="top_app_bar_color_icon">Az alkalmazás felső sávjának színes ikonjai</string>
+    <string name="top_app_bar_color_title">Színes alkalmazás-felső sáv címe</string>
     <string name="overflow_icon">Túlcsordulás ikon</string>
     <string name="lines_count">Sorok száma</string>
     <string name="show_button_blocked_numbers">A blokkolt hívások elrejtésének mellőzésére szolgáló gomb megjelenítése</string>

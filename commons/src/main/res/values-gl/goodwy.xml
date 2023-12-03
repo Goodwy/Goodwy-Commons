@@ -96,6 +96,8 @@
     <string name="blurry_wallpaper">Fondo de pantalla borroso</string>
     <string name="text_cursor_color">Cor do cursor do texto</string>
     <string name="top_app_bar_colored">Barra de aplicacións superior coloreada</string>
+    <string name="top_app_bar_color_icon">Iconas de cores da barra superior da aplicación</string>
+    <string name="top_app_bar_color_title">Título da barra superior da aplicación coloreada</string>
     <string name="overflow_icon">Icona de desbordamento</string>
     <string name="lines_count">As liñas contan</string>
     <string name="show_button_blocked_numbers">Mostra o botón para non ocultar as chamadas bloqueadas</string>

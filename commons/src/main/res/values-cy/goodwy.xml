@@ -95,6 +95,8 @@
     <string name="blurry_wallpaper">Papur wal aneglur</string>
     <string name="text_cursor_color">Lliw cyrchwr testun</string>
     <string name="top_app_bar_colored">Bar app top lliw</string>
+    <string name="top_app_bar_color_icon">Eiconau lliw o\'r bar uchaf app</string>
+    <string name="top_app_bar_color_title">Teitl bar uchaf app lliw</string>
     <string name="overflow_icon">Eicon gorlif</string>
     <string name="lines_count">Cyfri llinellau</string>
     <string name="show_button_blocked_numbers">Dangoswch y botwm i beidio â chuddio galwadau sydd wedi\'u blocio</string>
