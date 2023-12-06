@@ -24,9 +24,7 @@
                 app:menu="@menu/menu_purchase"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/ic_chevron_left_vector"/>
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <include

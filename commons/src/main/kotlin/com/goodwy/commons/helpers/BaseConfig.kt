@@ -724,7 +724,7 @@ open class BaseConfig(val context: Context) {
         set(currentSIMCardIndex) = prefs.edit().putInt(CURRENT_SIM_CARD_INDEX, currentSIMCardIndex).apply()
 
     var isUsingAccentColor: Boolean
-        get() = prefs.getBoolean(IS_USING_ACCENT_COLOR, false)
+        get() = prefs.getBoolean(IS_USING_ACCENT_COLOR, context.resources.getBoolean(R.bool.using_accent_color))
         set(isUsingAccentColor) = prefs.edit().putBoolean(IS_USING_ACCENT_COLOR, isUsingAccentColor).apply()
 
     var topAppBarColored: Boolean
