@@ -412,7 +412,7 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
                 else -> color_primary
             }
             val primaryContainer =
-                if (isSystemInDarkTheme || context.isBlackTheme() || context.isDarkTheme()) customPrimaryColor.toArgb().darkenColor(45)
+                if ((baseConfig.isUsingSystemTheme && isSystemInDarkTheme) || context.isBlackTheme() || context.isDarkTheme()) customPrimaryColor.toArgb().darkenColor(45)
                 else if (context.isLightTheme() || context.isGrayTheme()) customPrimaryColor.toArgb().lightenColor(30)
                 else statusBarColor.lightenColor(6)
             Theme.Custom(

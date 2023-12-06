@@ -43,19 +43,19 @@ internal fun Theme(
                 primaryContainer = theme.primaryContainer
             )
 
-            theme is Theme.White -> darkColorScheme(
-                primary = Color(theme.accentColor),
-                surface = theme.backgroundColor,
-                tertiary = theme.primaryColor,
-                onSurface = theme.textColor,
-            )
-
-            theme is Theme.BlackAndWhite -> darkColorScheme(
-                primary = Color(theme.accentColor),
-                surface = theme.backgroundColor,
-                tertiary = theme.primaryColor,
-                onSurface = theme.textColor
-            )
+//            theme is Theme.White -> darkColorScheme(
+//                primary = Color(theme.accentColor),
+//                surface = theme.backgroundColor,
+//                tertiary = theme.primaryColor,
+//                onSurface = theme.textColor,
+//            )
+//
+//            theme is Theme.BlackAndWhite -> darkColorScheme(
+//                primary = Color(theme.accentColor),
+//                surface = theme.backgroundColor,
+//                tertiary = theme.primaryColor,
+//                onSurface = theme.textColor
+//            )
 
             else -> darkColorScheme
         }
