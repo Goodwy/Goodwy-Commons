@@ -2,7 +2,6 @@ package com.goodwy.commons.adapters
 
 import android.graphics.Color
 import android.view.*
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
@@ -86,20 +85,15 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 } else {
                     Color.BLACK
                 }
-                val primaryColor = activity.getProperPrimaryColor()
-                val titleColor = if (baseConfig.topAppBarColorTitle) primaryColor else bgColor.getContrastColor()
 
-                actBarTextView!!.setTextColor(titleColor)
-                activity.updateMenuItemColors(menu, baseColor = bgColor)
+                actBarTextView!!.setTextColor(bgColor.getContrastColor())
+                activity.updateMenuItemColors(menu, baseColor = bgColor, forceWhiteIcons = true)
                 onActionModeCreated()
 
                 //if (baseConfig.isUsingSystemTheme) {
                     actBarTextView?.onGlobalLayout {
-                        val iconColor = if (baseConfig.topAppBarColorIcon) primaryColor else bgColor.getContrastColor()
                         val backArrow = activity.findViewById<ImageView>(androidx.appcompat.R.id.action_mode_close_button)
-                        backArrow?.applyColorFilter(iconColor)
-                        val overflow = activity.findViewById<ImageButton>(R.id.dropdown_menu)
-                        overflow?.applyColorFilter(iconColor)
+                        backArrow?.applyColorFilter(bgColor.getContrastColor())
                     }
                 //}
                 return true

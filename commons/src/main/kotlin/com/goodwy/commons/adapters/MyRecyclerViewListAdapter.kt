@@ -95,7 +95,7 @@ abstract class MyRecyclerViewListAdapter<T>(
                 }
 
                 actBarTextView!!.setTextColor(bgColor.getContrastColor())
-                activity.updateMenuItemColors(menu, baseColor = bgColor)
+                activity.updateMenuItemColors(menu, baseColor = bgColor, forceWhiteIcons = true)
                 onActionModeCreated()
 
                 //if (baseConfig.isUsingSystemTheme) {
