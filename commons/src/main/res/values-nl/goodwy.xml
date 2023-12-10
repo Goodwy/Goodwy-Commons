@@ -88,7 +88,7 @@
     <string name="relative_date">Relatieve datum</string>
     <string name="color_sim_card_icons">Kleuren SIM-kaart iconen</string>
     <string name="tabs">Tabbladen</string>
-    <string name="open_search_when_open_contacts">Zoeken openen wanneer u het tabblad Contactpersonen opent</string>
+    <string name="open_search_when_open_contacts">Toetsenbord openen wanneer u het tabblad Contactpersonen opent</string>
     <string name="call_screen_background">Belschermachtergrond</string>
     <string name="contact_photo">Contactfoto</string>
     <string name="blurry_contact_photo">Wazige contactfoto</string>
@@ -100,7 +100,7 @@
     <string name="overflow_icon">Overloop icoon</string>
     <string name="lines_count">Aantal lijnen</string>
     <string name="show_button_blocked_numbers">Toon de knop om geblokkeerde oproepen niet te verbergen</string>
-    <string name="flash_for_alerts">Flash voor waarschuwingen</string>
+    <string name="flash_for_alerts">Flikkeren bij waarschuwingen</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
     <string name="default_folder_to_open_g">Mappen openen bij start</string>
