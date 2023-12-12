@@ -16,7 +16,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cancel_button"
-        style="@style/AppTheme.Button.Chip"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_below="@+id/call_confirm_phone"
@@ -26,15 +26,17 @@
         android:layout_marginBottom="@dimen/normal_margin"
         android:background="@drawable/button_gray_bg"
         android:lines="1"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/cancel"
         android:textAllCaps="true"
         android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/call_button"
-        style="@style/AppTheme.Button.Chip"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_below="@+id/call_confirm_phone"
@@ -44,8 +46,10 @@
         android:layout_marginBottom="@dimen/normal_margin"
         android:background="@drawable/button_gray_bg"
         android:lines="1"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/call"
         android:textAllCaps="true"
         android:textSize="16sp" />

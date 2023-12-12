@@ -297,4 +297,5 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">За да платите през RuStore е необходимо да инсталирате версията на приложението от RuStore</string>
 </resources>

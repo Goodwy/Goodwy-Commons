@@ -1,27 +1,12 @@
 package com.goodwy.commons.helpers
 
 import android.app.Activity
-import android.content.DialogInterface
-import android.content.Intent
-import android.content.res.Resources
-import android.net.Uri
-import android.os.Handler
-import android.provider.Settings
-import android.util.TypedValue
-import android.widget.Button
-import android.widget.LinearLayout
-import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.MutableLiveData
 import com.android.billingclient.api.*
 import com.android.billingclient.api.BillingFlowParams.ProductDetailsParams
 import com.android.billingclient.api.QueryProductDetailsParams.Product
 import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.R
-import com.goodwy.commons.activities.PurchaseActivity
-import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
-import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.models.Android30RenameFormat
 import kotlinx.coroutines.*
 import java.util.*
 

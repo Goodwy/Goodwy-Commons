@@ -56,7 +56,7 @@ app-build-minimumSDK = "23"
 app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
 #versioning
-app-version-appId = "com.goodwy.smsmessenger"
+app-version-appId = "com.goodwy.dialer"
 app-version-groupId = "com.goodwy.commons"
 app-version-versionCode = "420"
 app-version-versionName = "4.2.0"

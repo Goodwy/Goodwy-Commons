@@ -16,6 +16,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.databinding.ActivityPurchaseBinding
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
+import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
 import com.goodwy.commons.dialogs.ConfirmationDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
@@ -738,7 +739,20 @@ class PurchaseActivity : BaseSimpleActivity() {
                     }
 
                     is FeatureAvailabilityResult.Unavailable -> {
-                        event.availability.cause.resolveForBilling(this) //Show error dialog
+                        val error = event.availability.cause.message ?: "Process purchases unavailable"
+                        if (error == "Application signature not correct") {
+                            ConfirmationAdvancedDialog(
+                                activity = this,
+                                messageId = R.string.billing_error_application_signature_not_correct,
+                                positive = R.string.get,
+                                negative = R.string.cancel
+                            ) { success ->
+                                if (success) {
+                                    val url = "https://apps.rustore.ru/app/$packageName"
+                                    this.launchViewIntent(url)
+                                }
+                            }
+                        } else event.availability.cause.resolveForBilling(this) //Show error dialog
                         //showErrorToast(event.availability.cause.message ?: "Process purchases unavailable", Toast.LENGTH_LONG)
                     }
 

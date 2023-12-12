@@ -296,4 +296,5 @@
     <string name="billing_subscriptions">Падпіскі</string>
     <string name="billing_change_to_google_play">Выкарыстоўваць Google Play</string>
     <string name="billing_change_to_ru_store">Выкарыстоўваць RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Для аплаты праз RuStore неабходна ўсталяваць версію прыкладання з RuStore</string>
 </resources>
