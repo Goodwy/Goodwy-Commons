@@ -75,8 +75,8 @@ class ContactsHelper(val context: Context) {
                         resultContacts.add(it.first())
                     } else {
                         val sorted = it.sortedByDescending { it.getStringToCompare().length }
-                        val result = sorted.firstOrNull { it.phoneNumbers.isNotEmpty() }
-                        resultContacts.add(result ?: sorted.first())
+                        val sortedWithNumbers = sorted.firstOrNull { it.phoneNumbers.isNotEmpty() }
+                        resultContacts.add(sortedWithNumbers ?: sorted.first())
                     }
                 }
             } else {
