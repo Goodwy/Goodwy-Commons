@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_contact_frame"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,55 +10,60 @@
     android:focusable="true"
     android:foreground="@drawable/selector">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item_contact_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="@dimen/min_row_height"
         android:paddingStart="@dimen/larger_margin"
-        android:paddingTop="@dimen/medium_margin"
-        android:paddingEnd="@dimen/activity_margin">
+        android:paddingTop="@dimen/medium_margin">
 
         <ImageView
             android:id="@+id/item_contact_image"
             android:layout_width="@dimen/normal_icon_size"
             android:layout_height="@dimen/normal_icon_size"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="@dimen/medium_margin"
             android:padding="@dimen/tiny_margin"
-            android:src="@drawable/ic_person_vector" />
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:src="@drawable/ic_person_vector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/item_contact_name"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/drag_handle_icon"
-            android:layout_toEndOf="@+id/item_contact_image"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
             android:ellipsize="end"
-            android:gravity="center_vertical"
             android:maxLines="1"
-            android:paddingStart="@dimen/medium_margin"
             android:paddingEnd="@dimen/activity_margin"
             android:textDirection="locale"
             android:textSize="@dimen/big_text_size"
-            tools:text="John Doe" />
+            tools:text="John Doe"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_contact_image"
+            app:layout_constraintEnd_toStartOf="@+id/drag_handle_icon" />
 
         <ImageView
             android:id="@+id/drag_handle_icon"
             style="@style/DragHandleIconStyle"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true" />
+            android:layout_marginEnd="@dimen/activity_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
             android:id="@+id/divider"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="1px"
-            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
             android:background="@drawable/divider_settings"
             android:alpha="0.2"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/item_contact_name"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/item_contact_name"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
