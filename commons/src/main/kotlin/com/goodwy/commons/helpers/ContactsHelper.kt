@@ -74,7 +74,7 @@ class ContactsHelper(val context: Context) {
                     if (it.size == 1) {
                         resultContacts.add(it.first())
                     } else {
-                        val sorted = it.sortedByDescending { it.getStringToCompare().length }
+                        val sorted = it.sortedBy { it.getStringToCompare().length }
                         resultContacts.add(sorted.first())
                     }
                 }
