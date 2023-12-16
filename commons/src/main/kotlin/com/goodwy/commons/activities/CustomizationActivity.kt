@@ -307,11 +307,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 baseConfig.wasCustomThemeSwitchDescriptionShown = true
                 toast(R.string.changing_color_description)
             }
-
-            //val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations) && !isThankYou
-            //binding.applyToAllHolder.beVisibleIf(
-            //    curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
-            //)
+            
             updateMenuItemColors(binding.customizationToolbar.menu, getCurrentStatusBarColor())
             setupToolbar(binding.customizationToolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
             updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
