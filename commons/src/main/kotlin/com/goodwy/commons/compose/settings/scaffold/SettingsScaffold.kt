@@ -28,8 +28,12 @@ fun SettingsScaffold(
         if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     scrollState: ScrollState = rememberScrollState(),
+    isTopAppBarColorIcon: Boolean = false,
+    isTopAppBarColorTitle: Boolean = false,
     content: @Composable() (ColumnScope.(PaddingValues) -> Unit)
 ) {
+    val iconColor = if (isTopAppBarColorIcon) MaterialTheme.colorScheme.primary else null
+    val titleColor = if (isTopAppBarColorTitle) MaterialTheme.colorScheme.primary else null
     val context = LocalContext.current
     val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
@@ -51,7 +55,9 @@ fun SettingsScaffold(
                 scrollBehavior = scrollBehavior,
                 statusBarColor = statusBarColor,
                 colorTransitionFraction = colorTransitionFraction,
-                contrastColor = contrastColor
+                contrastColor = contrastColor,
+                iconColor = iconColor,
+                textColor = titleColor,
             )
         },
     ) { paddingValues ->

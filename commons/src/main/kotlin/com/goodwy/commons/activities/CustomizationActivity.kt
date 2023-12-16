@@ -144,7 +144,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         if (!baseConfig.isUsingSystemTheme) {
             updateBackgroundColor(getCurrentBackgroundColor())
-            updateActionbarColor(getCurrentStatusBarColor()) //TODO actionbar color
+            updateActionbarColor(getCurrentBackgroundColor()) //TODO actionbar color
         }
 
        /* curPrimaryLineColorPicker?.getSpecificColor()?.apply {
@@ -314,7 +314,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             //)
             updateMenuItemColors(binding.customizationToolbar.menu, getCurrentStatusBarColor())
             setupToolbar(binding.customizationToolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
-            updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
+            updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
         }
     }
 
@@ -729,14 +729,14 @@ class CustomizationActivity : BaseSimpleActivity() {
                 updateMenuItemColors(binding.customizationToolbar.menu, getCurrentStatusBarColor())
                 val navigationIcon = if (hasUnsavedChanges) NavigationIcon.Cross else NavigationIcon.Arrow
                 setupToolbar(binding.customizationToolbar, navigationIcon, getCurrentStatusBarColor())
-                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
+                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
             } else {
                 //TODO actionbar color
                 updateActionbarColor(curBackgroundColor)//curPrimaryColor
                 setTheme(getThemeId(curPrimaryColor))
                 updateMenuItemColors(binding.customizationToolbar.menu, curBackgroundColor) //curPrimaryColor
                 setupToolbar(binding.customizationToolbar, NavigationIcon.Arrow, curBackgroundColor) //curPrimaryColor
-                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor) //curPrimaryColor
+                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor) //curPrimaryColor
             }
         }
     }
@@ -751,7 +751,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     /*if (isCurrentWhiteTheme() || isCurrentBlackAndWhiteTheme()) {
                         updateActionbarColor(getCurrentBackgroundColor())
                     }*/
-                    updateActionbarColor(getCurrentBackgroundColor())
+                    updateActionbarColor(curBackgroundColor)
                 }
             }
         }
@@ -886,7 +886,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColoredHolder.setOnClickListener {
                 settingsTopAppBarColored.toggle()
                 baseConfig.topAppBarColored = settingsTopAppBarColored.isChecked
-                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
+                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
             }
         }
     }
@@ -898,7 +898,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColorIconHolder.setOnClickListener {
                 settingsTopAppBarColorIcon.toggle()
                 baseConfig.topAppBarColorIcon = settingsTopAppBarColorIcon.isChecked
-                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
+                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
             }
         }
     }
@@ -910,7 +910,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColorTitleHolder.setOnClickListener {
                 settingsTopAppBarColorTitle.toggle()
                 baseConfig.topAppBarColorTitle = settingsTopAppBarColorTitle.isChecked
-                updateTopBarColors(binding.customizationToolbar, curBackgroundColor, curPrimaryColor)
+                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
             }
         }
     }

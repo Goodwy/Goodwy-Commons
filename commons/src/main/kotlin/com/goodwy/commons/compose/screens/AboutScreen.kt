@@ -42,8 +42,15 @@ internal fun AboutScreen(
     aboutSection: @Composable () -> Unit,
     //socialSection: @Composable () -> Unit,
     //otherSection: @Composable () -> Unit,
+    isTopAppBarColorIcon: Boolean,
+    isTopAppBarColorTitle: Boolean,
 ) {
-    SettingsScaffold(title = stringResource(id = R.string.about), goBack = goBack) {
+    SettingsScaffold(
+        title = stringResource(id = R.string.about),
+        goBack = goBack,
+        isTopAppBarColorIcon = isTopAppBarColorIcon,
+        isTopAppBarColorTitle = isTopAppBarColorTitle,
+    ) {
         aboutSection()
         //helpUsSection()
         //socialSection()
@@ -265,6 +272,8 @@ private fun AboutScreenPreview() {
 ////                    onTelegramClick = {}
 ////                )
 //            }
+            isTopAppBarColorIcon = true,
+            isTopAppBarColorTitle = true,
         ) //{
 //            OtherSection(
 //                showMoreApps = true,

@@ -32,6 +32,8 @@ fun SettingsScaffoldTopBar(
     statusBarColor: Int,
     colorTransitionFraction: Float,
     contrastColor: Color,
+    iconColor: Color? = null,
+    textColor: Color? = null,
     goBack: () -> Unit,
 ) {
     TopAppBar(
@@ -41,7 +43,7 @@ fun SettingsScaffoldTopBar(
                 modifier = Modifier
                     .padding(start = 8.dp)
                     .fillMaxWidth(),
-                color = scrolledColor,
+                color = textColor ?: scrolledColor,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -50,7 +52,7 @@ fun SettingsScaffoldTopBar(
             SettingsNavigationIcon(
                 goBack = goBack,
                 navigationIconInteractionSource = navigationIconInteractionSource,
-                iconColor = scrolledColor
+                iconColor = iconColor ?: scrolledColor
             )
         },
         scrollBehavior = scrollBehavior,
@@ -70,17 +72,19 @@ fun SettingsScaffoldTopBar(
     statusBarColor: Int,
     colorTransitionFraction: Float,
     contrastColor: Color,
+    iconColor: Color? = null,
+    textColor: Color? = null,
     goBack: () -> Unit,
 ) {
     TopAppBar(
         title = {
-            title(scrolledColor)
+            title(textColor ?: scrolledColor)
         },
         navigationIcon = {
             SettingsNavigationIcon(
                 goBack = goBack,
                 navigationIconInteractionSource = navigationIconInteractionSource,
-                iconColor = scrolledColor
+                iconColor = iconColor ?: scrolledColor
             )
         },
         scrollBehavior = scrollBehavior,

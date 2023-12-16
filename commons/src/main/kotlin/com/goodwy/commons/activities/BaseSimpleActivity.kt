@@ -132,7 +132,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 val color = if (baseConfig.isUsingSystemTheme) {
                     resources.getColor(R.color.you_status_bar_color)
                 } else {
-                    getProperStatusBarColor()
+                    getProperBackgroundColor() //getProperStatusBarColor()
                 }
 
                 updateActionbarColor(color)
@@ -195,7 +195,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     //TODO actionbar color
-    fun updateActionbarColor(color: Int = getProperStatusBarColor()) { //getProperBackgroundColor() //getProperStatusBarColor()
+    fun updateActionbarColor(color: Int = getProperBackgroundColor()) { //getProperStatusBarColor()
         //supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
         supportActionBar?.elevation = 0F //TODO actionbar shadow
         //updateActionBarTitle(supportActionBar?.title.toString(), color)
@@ -425,7 +425,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateMenuItemColors(menu: Menu?, baseColor: Int = getProperStatusBarColor(), forceWhiteIcons: Boolean = false,
+    fun updateMenuItemColors(menu: Menu?, baseColor: Int = getProperBackgroundColor() /*getProperStatusBarColor()*/, forceWhiteIcons: Boolean = false,
                              noContrastColor: Boolean = false) {
         if (menu == null) {
             return

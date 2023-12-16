@@ -9,10 +9,13 @@ import android.os.Handler
 import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodwy.commons.R
+import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.goodwy.commons.compose.screens.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
@@ -37,8 +40,10 @@ class AboutActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdgeSimple()
         setContent {
-            val context = LocalContext.current
+//            val context = LocalContext.current
 //            val resources = context.resources
+            val isTopAppBarColorIcon by config.isTopAppBarColorIcon.collectAsStateWithLifecycle(initialValue = config.topAppBarColorIcon)
+            val isTopAppBarColorTitle by config.isTopAppBarColorTitle.collectAsStateWithLifecycle(initialValue = config.topAppBarColorTitle)
             AppThemeSurface {
 //                val showExternalLinks = remember { !resources.getBoolean(R.bool.hide_all_external_links) }
 //                val showGoogleRelations = remember { !resources.getBoolean(R.bool.hide_google_relations) }
@@ -82,6 +87,8 @@ class AboutActivity : ComponentActivity() {
 //                            )
 //                        }
 //                    }
+                    isTopAppBarColorIcon = isTopAppBarColorIcon,
+                    isTopAppBarColorTitle = isTopAppBarColorTitle,
                 ) //{
 //                    val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
 //                    var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""

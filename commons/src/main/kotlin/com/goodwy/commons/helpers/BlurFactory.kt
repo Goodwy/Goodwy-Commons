@@ -11,7 +11,6 @@ import android.renderscript.Allocation
 import android.renderscript.Element
 import android.renderscript.RenderScript
 import android.renderscript.ScriptIntrinsicBlur
-import com.goodwy.commons.extensions.getProperStatusBarColor
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
