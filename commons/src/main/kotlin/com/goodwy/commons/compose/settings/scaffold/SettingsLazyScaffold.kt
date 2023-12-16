@@ -38,8 +38,12 @@ fun SettingsLazyScaffold(
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     userScrollEnabled: Boolean = true,
     state: LazyListState = rememberLazyListState(),
+    isTopAppBarColorIcon: Boolean = false,
+    isTopAppBarColorTitle: Boolean = false,
     lazyContent: LazyListScope.(PaddingValues) -> Unit
 ) {
+    val iconColor = if (isTopAppBarColorIcon) MaterialTheme.colorScheme.primary else null
+    val titleColor = if (isTopAppBarColorTitle) MaterialTheme.colorScheme.primary else null
     val context = LocalContext.current
 
     val (statusBarColor, contrastColor) = statusBarAndContrastColor(context)
@@ -62,7 +66,9 @@ fun SettingsLazyScaffold(
                 scrollBehavior = scrollBehavior,
                 statusBarColor = statusBarColor,
                 colorTransitionFraction = colorTransitionFraction,
-                contrastColor = contrastColor
+                contrastColor = contrastColor,
+                iconColor = iconColor,
+                textColor = titleColor,
             )
         }
     ) { paddingValues ->

@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
-import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.extensions.removeUnderlines
@@ -37,11 +36,15 @@ import kotlinx.collections.immutable.toImmutableList
 internal fun FAQScreen(
     goBack: () -> Unit,
     faqItems: ImmutableList<FAQItem>,
+    isTopAppBarColorIcon: Boolean,
+    isTopAppBarColorTitle: Boolean,
 ) {
     SettingsLazyScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
         goBack = goBack,
-        contentPadding = PaddingValues(bottom = 8.dp)
+        contentPadding = PaddingValues(bottom = 8.dp),
+        isTopAppBarColorIcon = isTopAppBarColorIcon,
+        isTopAppBarColorTitle = isTopAppBarColorTitle,
     ) {
         itemsIndexed(faqItems) { index, faqItem ->
             Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)
@@ -62,7 +65,30 @@ internal fun FAQScreen(
                         )
                     },
                     supportingContent = {
-                        if (faqItem.text is Int) {
+//                        if (faqItem.text is Int) {
+//                            val text = stringFromHTML(stringResource(id = faqItem.text))
+//                            LinkifyText(
+//                                text = { text },
+//                                modifier = Modifier.fillMaxWidth(),
+//                                fontSize = 14.sp
+//                            )
+//                        } else {
+//                            Text(
+//                                text = faqItem.text as String,
+//                                modifier = Modifier.fillMaxWidth(),
+//                                fontSize = 14.sp
+//                            )
+//                        }
+                        val context = LocalContext.current
+                        if (faqItem.value != null && faqItem.text is Int) {
+                            val value = if (faqItem.value is Int) context.resources.getString(faqItem.value) else faqItem.value as String
+                            val text = stringFromHTML(stringResource(id = faqItem.text, value))
+                            LinkifyText(
+                                text = { text },
+                                modifier = Modifier.fillMaxWidth(),
+                                fontSize = 14.sp
+                            )
+                        } else if (faqItem.text is Int) {
                             val text = stringFromHTML(stringResource(id = faqItem.text))
                             LinkifyText(
                                 text = { text },
@@ -134,12 +160,14 @@ private fun FAQScreenPreview() {
         FAQScreen(
             goBack = {},
             faqItems = listOf(
-                FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons),
+                FAQItem(R.string.app_name_g, R.string.welcome_to_app_name, R.string.app_name_g),
                 FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons),
                 FAQItem(R.string.faq_4_title_commons, R.string.faq_4_text_commons),
                 FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons),
                 FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons)
-            ).toImmutableList()
+            ).toImmutableList(),
+            isTopAppBarColorIcon = true,
+            isTopAppBarColorTitle = true,
         )
     }
 }

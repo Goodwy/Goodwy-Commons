@@ -307,7 +307,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 baseConfig.wasCustomThemeSwitchDescriptionShown = true
                 toast(R.string.changing_color_description)
             }
-            
+
             updateMenuItemColors(binding.customizationToolbar.menu, getCurrentStatusBarColor())
             setupToolbar(binding.customizationToolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
             updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
