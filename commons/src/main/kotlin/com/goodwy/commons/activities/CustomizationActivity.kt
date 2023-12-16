@@ -913,6 +913,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupUseAccentColor() {
         binding.apply {
+            customizationUseAccentColorHolder.beVisibleIf(getShowAccentColor())
             updateTextColors(customizationUseAccentColorHolder)
             customizationUseAccentColor.isChecked = baseConfig.isUsingAccentColor
             customizationUseAccentColorHolder.setOnClickListener {
