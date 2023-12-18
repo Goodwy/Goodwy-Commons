@@ -20,6 +20,8 @@
     <string name="message">Съобщение</string>
     <string name="settings_icon">Икона за настройки</string>
     <string name="total_g">Общо: %s</string>
+    <string name="time">Време</string>
+    <string name="interval">Интервал</string>
 
     <!-- Support project -->
     <string name="action_support_project">Подкрепа по проекта</string>

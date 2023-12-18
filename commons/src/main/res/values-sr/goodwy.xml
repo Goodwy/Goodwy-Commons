@@ -3,6 +3,8 @@
     <string name="message">Порука</string>
     <string name="settings_icon">Иконица подешавања</string>
     <string name="total_g">Укупно: %s</string>
+    <string name="time">Време</string>
+    <string name="interval">Интервал</string>
 
     <!-- Support project -->
     <string name="action_support_project">Подржите пројекат</string>

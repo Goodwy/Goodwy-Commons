@@ -19,6 +19,8 @@
     <string name="message">Повідомлення</string>
     <string name="settings_icon">Іконка налаштувань</string>
     <string name="total_g">Всього: %s</string>
+    <string name="time">Час</string>
+    <string name="interval">Інтервал</string>
 
     <!-- Support project -->
     <string name="action_support_project">Підтримка проекту</string>
