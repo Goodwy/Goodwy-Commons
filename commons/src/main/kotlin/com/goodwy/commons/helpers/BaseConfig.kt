@@ -744,6 +744,10 @@ open class BaseConfig(val context: Context) {
         set(topAppBarColorTitle) = prefs.edit().putBoolean(TOP_APP_BAR_COLOR_TITLE, topAppBarColorTitle).apply()
 
     val isTopAppBarColorTitle: Flow<Boolean> = ::topAppBarColorTitle.asFlowNonNull()
+
+    var autoBackupTime: Int
+        get() = prefs.getInt(AUTO_BACKUP_TIME, 360)
+        set(autoBackupTime) = prefs.edit().putInt(AUTO_BACKUP_TIME, autoBackupTime).apply()
 }
 
 

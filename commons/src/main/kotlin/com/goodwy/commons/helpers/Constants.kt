@@ -244,6 +244,7 @@ const val RU_STORE = "ru_store"
 const val USE_GOOGLE_PLAY = "use_google_play"
 const val CURRENT_SIM_CARD_INDEX = "current_sim_card_index"
 const val IS_USING_ACCENT_COLOR = "is_using_accent_color"
+const val AUTO_BACKUP_TIME = "auto_backup_time"
 
 // contact grid view constants
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
