@@ -9,7 +9,8 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/purchase_app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -568,7 +569,8 @@
         android:layout_height="match_parent"
         android:paddingStart="@dimen/about_margin"
         android:paddingEnd="@dimen/about_margin"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:visibility="gone">
 
         <com.goodwy.commons.views.MyTextView
             android:id="@+id/pro_donate_title"
@@ -597,14 +599,14 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/pro_donate_button"
-            style="@style/AppTheme.Button.Chip"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margin"
             android:background="@drawable/button_gray_bg"
             android:lines="1"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
+            android:ellipsize="end"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="16dp"
             android:text="@string/donate"
             android:textAllCaps="true"
             android:textColor="@color/white"
