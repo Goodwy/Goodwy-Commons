@@ -328,9 +328,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             setOnClickListener {
                 purchaseHelper.getDonation(productIdX1)
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appTwoButton.apply {
@@ -340,9 +338,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             setOnClickListener {
                 purchaseHelper.getDonation(productIdX2)
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appThreeButton.apply {
@@ -352,9 +348,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             setOnClickListener {
                 purchaseHelper.getDonation(productIdX3)
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
     }
 
@@ -387,9 +381,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appTwoSubButton.apply {
@@ -404,9 +396,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appThreeSubButton.apply {
@@ -421,9 +411,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
     }
 
@@ -495,10 +483,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             setOnClickListener {
                 launchViewIntent("https://sites.google.com/view/goodwy/support-project")
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg, primaryColor)
-            background = drawable
-            //setTextColor(baseConfig.backgroundColor)
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
         binding.proSwitch.isChecked = baseConfig.isPro
         binding.proSwitchHolder.setOnClickListener {
@@ -594,9 +579,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     ruStoreHelper.purchaseProduct(product)
                 }
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appTwoButton.apply {
@@ -610,9 +593,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     ruStoreHelper.purchaseProduct(product)
                 }
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appThreeButton.apply {
@@ -626,9 +607,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     ruStoreHelper.purchaseProduct(product)
                 }
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appOneSubButton.apply {
@@ -647,9 +626,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appTwoSubButton.apply {
@@ -668,9 +645,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
 
         binding.appThreeSubButton.apply {
@@ -689,9 +664,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             } else {
                 text = price
             }
-            val drawable = resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg_8dp, primaryColor)
-            background = drawable
-            setPadding(2,2,2,2)
+            background.setTint(primaryColor)
         }
     }
 

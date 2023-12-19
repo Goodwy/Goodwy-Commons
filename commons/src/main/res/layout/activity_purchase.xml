@@ -559,7 +559,6 @@
                 android:layout_marginTop="@dimen/big_margin"
                 android:layout_marginBottom="48dp"
                 android:src="@drawable/logo_goodwy"/>
-
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -570,7 +569,7 @@
         android:paddingStart="@dimen/about_margin"
         android:paddingEnd="@dimen/about_margin"
         android:visibility="gone"
-        tools:visibility="gone">
+        tools:visibility="visible">
 
         <com.goodwy.commons.views.MyTextView
             android:id="@+id/pro_donate_title"
@@ -597,23 +596,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pro_donate_title" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/pro_donate_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margin"
-            android:background="@drawable/button_gray_bg"
+            android:text="@string/donate"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="16dp"
             android:lines="1"
             android:ellipsize="end"
-            android:paddingVertical="8dp"
-            android:paddingHorizontal="16dp"
-            android:text="@string/donate"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pro_donate_text" />
+
+        <com.goodwy.commons.views.MyTextView
+            android:id="@+id/pro_unlock_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bigger_margin"
+            android:gravity="center"
+            android:text="@string/unlock"
+            android:textAllCaps="true"
+            android:textColor="@color/theme_light_text_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/pro_switch_holder" />
 
         <RelativeLayout
             android:id="@+id/pro_switch_holder"
@@ -634,21 +646,6 @@
                 android:layout_height="wrap_content" />
 
         </RelativeLayout>
-
-        <com.goodwy.commons.views.MyTextView
-            android:id="@+id/pro_unlock_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/bigger_margin"
-            android:gravity="center"
-            android:text="@string/unlock"
-            android:textAllCaps="true"
-            android:textColor="@color/theme_light_text_color"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pro_switch_holder" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
