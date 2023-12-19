@@ -752,6 +752,10 @@ open class BaseConfig(val context: Context) {
     var autoBackupInterval: Int
         get() = prefs.getInt(AUTO_BACKUP_INTERVAL, 10)
         set(autoBackupInterval) = prefs.edit().putInt(AUTO_BACKUP_INTERVAL, autoBackupInterval).apply()
+
+    var nextAutoBackupTime: Long
+        get() = prefs.getLong(NEXT_AUTO_BACKUP_TIME, 0L)
+        set(nextAutoBackupTime) = prefs.edit().putLong(NEXT_AUTO_BACKUP_TIME, nextAutoBackupTime).apply()
 }
 
 
