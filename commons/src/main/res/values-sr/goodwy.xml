@@ -3,6 +3,8 @@
     <string name="message">Порука</string>
     <string name="settings_icon">Иконица подешавања</string>
     <string name="total_g">Укупно: %s</string>
+    <string name="last_g">Ласт: %s</string>
+    <string name="next_g">Следећи: %s</string>
     <string name="time">Време</string>
     <string name="interval">Интервал</string>
 

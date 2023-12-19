@@ -20,6 +20,8 @@
     <string name="message">Съобщение</string>
     <string name="settings_icon">Икона за настройки</string>
     <string name="total_g">Общо: %s</string>
+    <string name="last_g">Последно: %s</string>
+    <string name="next_g">Следващия: %s</string>
     <string name="time">Време</string>
     <string name="interval">Интервал</string>
 
