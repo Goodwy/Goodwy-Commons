@@ -7,6 +7,7 @@ import androidx.appcompat.widget.SwitchCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.adjustAlpha
+import com.goodwy.commons.extensions.getContrastColor
 import com.google.android.material.materialswitch.MaterialSwitch
 
 class MySwitchCompat : MaterialSwitch {
@@ -19,7 +20,7 @@ class MySwitchCompat : MaterialSwitch {
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
         setTextColor(textColor)
         val states = arrayOf(intArrayOf(-android.R.attr.state_checked), intArrayOf(android.R.attr.state_checked))
-        val thumbCheckedColors = if (accentColor == resources.getColor(R.color.white)) backgroundColor else resources.getColor(R.color.white)
+        val thumbCheckedColors = accentColor.getContrastColor() //if (accentColor == resources.getColor(R.color.white)) backgroundColor else resources.getColor(R.color.white)
         val thumbColors = intArrayOf(resources.getColor(R.color.thumb_deactivated), thumbCheckedColors)
         val trackColors = intArrayOf(resources.getColor(R.color.track_deactivated), accentColor) //accentColor.adjustAlpha(0.3f)
         //DrawableCompat.setTintList(DrawableCompat.wrap(thumbDrawable!!), ColorStateList(states, thumbColors))
