@@ -106,7 +106,7 @@
                     style="@style/SettingsHolderStyle"
                     android:paddingTop="@dimen/medium_margin"
                     android:paddingBottom="@dimen/medium_margin"
-                    android:background="@drawable/ripple_all_corners_12dp">
+                    android:background="@drawable/ripple_all_corners_11dp">
 
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_theme_label"
@@ -351,7 +351,7 @@
                     android:id="@+id/apply_to_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_all_corners_12dp"
+                    android:background="@drawable/ripple_all_corners_11dp"
                     android:clickable="false"
                     android:padding="@dimen/activity_margin"
                     android:text="@string/apply_to_all_apps"
