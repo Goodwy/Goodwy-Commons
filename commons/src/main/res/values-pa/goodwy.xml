@@ -20,6 +20,10 @@
     <string name="message">ਸੁਨੇਹਾ</string>
     <string name="settings_icon">ਸੈਟਿੰਗ ਆਈਕਨ</string>
     <string name="total_g">ਕੁੱਲ: %s</string>
+    <string name="last_g">Last: %s</string>
+    <string name="next_g">Next: %s</string>
+    <string name="time">Time</string>
+    <string name="interval">Interval</string>
 
     <!-- Support project -->
     <string name="action_support_project">ਪ੍ਰੋਜੈਕਟ ਸਹਾਇਤਾ</string>

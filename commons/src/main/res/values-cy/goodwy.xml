@@ -2,6 +2,10 @@
     <string name="message">Neges</string>
     <string name="settings_icon">Gosodiadau\'r eicon</string>
     <string name="total_g">Cyfanswm: %s</string>
+    <string name="last_g">Last: %s</string>
+    <string name="next_g">Next: %s</string>
+    <string name="time">Time</string>
+    <string name="interval">Interval</string>
 
     <!-- Support project -->
     <string name="action_support_project">Cymorth prosiect</string>

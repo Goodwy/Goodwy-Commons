@@ -2,6 +2,10 @@
     <string name="message">Nachricht</string>
     <string name="settings_icon">Symbol \"Einstellungen\"</string>
     <string name="total_g">Gesamt: %s</string>
+    <string name="last_g">Last: %s</string>
+    <string name="next_g">Next: %s</string>
+    <string name="time">Time</string>
+    <string name="interval">Interval</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projektbegleitung</string>

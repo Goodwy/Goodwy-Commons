@@ -2,6 +2,10 @@
     <string name="message">Sporočilo</string>
     <string name="settings_icon">Ikona »Nastavitve«</string>
     <string name="total_g">Skupaj: %s</string>
+    <string name="last_g">Last: %s</string>
+    <string name="next_g">Next: %s</string>
+    <string name="time">Time</string>
+    <string name="interval">Interval</string>
 
     <!-- Support project -->
     <string name="action_support_project">Podpora projektu</string>

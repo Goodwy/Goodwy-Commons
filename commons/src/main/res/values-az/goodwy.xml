@@ -2,6 +2,10 @@
     <string name="message">Mesaj</string>
     <string name="settings_icon">Parametrlər ikonu</string>
     <string name="total_g">Cəmi: %s</string>
+    <string name="last_g">Last: %s</string>
+    <string name="next_g">Next: %s</string>
+    <string name="time">Time</string>
+    <string name="interval">Interval</string>
 
     <!-- Support project -->
     <string name="action_support_project">Layihə dəstəyi</string>
