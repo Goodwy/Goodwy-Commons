@@ -2,9 +2,9 @@
     <string name="message">Bericht</string>
     <string name="settings_icon">Pictogram Instellingen</string>
     <string name="total_g">Totaal: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
+    <string name="last_g">Laatste: %s</string>
+    <string name="next_g">Volgende: %s</string>
+    <string name="time">Tijd</string>
     <string name="interval">Interval</string>
 
     <!-- Support project -->
