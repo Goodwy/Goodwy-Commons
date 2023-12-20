@@ -309,9 +309,9 @@ internal fun AboutNewSection(
         Column(Modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp, bottom = 26.dp)) {
             ListItem(
                 modifier = Modifier
-                    .clickable {
-                        //openAbout()
-                    }
+//                    .clickable {
+//                        openAbout()
+//                    }
                     .fillMaxWidth(),
                 leadingContent = {
                     Box(
