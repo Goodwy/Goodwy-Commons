@@ -882,7 +882,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColoredHolder.setOnClickListener {
                 settingsTopAppBarColored.toggle()
                 baseConfig.topAppBarColored = settingsTopAppBarColored.isChecked
-                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
+                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), getCurrentPrimaryColor())
             }
         }
     }
@@ -894,7 +894,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColorIconHolder.setOnClickListener {
                 settingsTopAppBarColorIcon.toggle()
                 baseConfig.topAppBarColorIcon = settingsTopAppBarColorIcon.isChecked
-                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
+                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), getCurrentPrimaryColor())
             }
         }
     }
@@ -906,7 +906,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             settingsTopAppBarColorTitleHolder.setOnClickListener {
                 settingsTopAppBarColorTitle.toggle()
                 baseConfig.topAppBarColorTitle = settingsTopAppBarColorTitle.isChecked
-                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), curPrimaryColor)
+                updateTopBarColors(binding.customizationToolbar, getCurrentBackgroundColor(), getCurrentPrimaryColor())
             }
         }
     }
