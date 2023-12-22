@@ -23,6 +23,7 @@
     <string name="next_g">Наступны: %s</string>
     <string name="time">Час</string>
     <string name="interval">Інтэрвал</string>
+    <string name="symbols_first">Спачатку знакі (напрыклад !@#$)</string>
 
     <!-- Support project -->
     <string name="action_support_project">Падтрымка праекта</string>

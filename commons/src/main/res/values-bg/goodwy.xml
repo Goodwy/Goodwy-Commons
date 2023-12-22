@@ -24,6 +24,7 @@
     <string name="next_g">Следващия: %s</string>
     <string name="time">Време</string>
     <string name="interval">Интервал</string>
+    <string name="symbols_first">Първо символите (напр. !@#$)</string>
 
     <!-- Support project -->
     <string name="action_support_project">Подкрепа по проекта</string>
