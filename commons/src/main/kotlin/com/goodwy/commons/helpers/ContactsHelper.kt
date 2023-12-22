@@ -93,6 +93,7 @@ class ContactsHelper(val context: Context) {
 
             Contact.sorting = context.baseConfig.sorting
             Contact.startWithSurname = context.baseConfig.startNameWithSurname
+            Contact.sortingSymbolsFirst = context.baseConfig.sortingSymbolsFirst
             resultContacts.sort()
 
             Handler(Looper.getMainLooper()).post {
