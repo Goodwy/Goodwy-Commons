@@ -6,6 +6,7 @@
     <string name="next_g">Volgende: %s</string>
     <string name="time">Tijd</string>
     <string name="interval">Interval</string>
+    <string name="symbols_first">Eerst symbolen (e.g. !@#$)</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projectondersteuning</string>
@@ -215,7 +216,7 @@
     <string name="copy_code">Kopieer code</string>
     <string name="action_on_message_click">Actie op berichtklik</string>
     <string name="invert_color">Kleur omkeren</string>
-    <string name="speech_bubble">Spraakbel</string>
+    <string name="speech_bubble">Tekstballon stijl</string>
 
     <!-- Gallery -->
     <string name="library">Bibliotheek</string>
