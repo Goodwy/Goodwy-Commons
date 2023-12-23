@@ -756,6 +756,10 @@ open class BaseConfig(val context: Context) {
     var nextAutoBackupTime: Long
         get() = prefs.getLong(NEXT_AUTO_BACKUP_TIME, 0L)
         set(nextAutoBackupTime) = prefs.edit().putLong(NEXT_AUTO_BACKUP_TIME, nextAutoBackupTime).apply()
+
+    var sortingSymbolsFirst: Boolean
+        get() = prefs.getBoolean(SORT_SYMBOLS_FIRST, true)
+        set(sortingSymbolsFirst) = prefs.edit().putBoolean(SORT_SYMBOLS_FIRST, sortingSymbolsFirst).apply()
 }
 
 

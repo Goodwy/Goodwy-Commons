@@ -47,6 +47,7 @@ data class Contact(
     companion object {
         var sorting = 0
         var startWithSurname = false
+        var sortingSymbolsFirst = true
     }
 
     override fun compareTo(other: Contact): Int {
@@ -103,27 +104,45 @@ data class Contact(
             }
         }
 
-        /*return if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
-            -1
-        } else if (firstValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isLetter() == true) {
-            1*/
-        //TODO Contacts sorting: symbols at the top
-        return if (firstValue.firstOrNull()?.isLetter() == true && firstValue.firstOrNull()?.isDigit() == false
-            && secondValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isDigit() == true) {
-            -1
-        } else if (firstValue.firstOrNull()?.isLetter() == false && firstValue.firstOrNull()?.isDigit() == true
-            && secondValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isDigit() == false) {
-            1
-        } else {
-            if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
-                1
-            } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
+        if (sortingSymbolsFirst) {
+            //TODO Contacts sorting: symbols at the top
+            return if (firstValue.firstOrNull()?.isLetter() == true && firstValue.firstOrNull()?.isDigit() == false
+                && secondValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isDigit() == true
+            ) {
                 -1
+            } else if (firstValue.firstOrNull()?.isLetter() == false && firstValue.firstOrNull()?.isDigit() == true
+                && secondValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isDigit() == false
+            ) {
+                1
             } else {
-                if (firstValue.equals(secondValue, ignoreCase = true)) {
-                    getNameToDisplay().compareTo(other.getNameToDisplay(), true)
+                if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
+                    1
+                } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
+                    -1
                 } else {
-                    firstValue.compareTo(secondValue, true)
+                    if (firstValue.equals(secondValue, ignoreCase = true)) {
+                        getNameToDisplay().compareTo(other.getNameToDisplay(), true)
+                    } else {
+                        firstValue.compareTo(secondValue, true)
+                    }
+                }
+            }
+        } else {
+            return if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
+                -1
+            } else if (firstValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isLetter() == true) {
+                1
+            } else {
+                if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
+                    1
+                } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
+                    -1
+                } else {
+                    if (firstValue.equals(secondValue, ignoreCase = true)) {
+                        getNameToDisplay().compareTo(other.getNameToDisplay(), true)
+                    } else {
+                        firstValue.compareTo(secondValue, true)
+                    }
                 }
             }
         }

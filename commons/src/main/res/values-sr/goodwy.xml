@@ -7,6 +7,7 @@
     <string name="next_g">Следећи: %s</string>
     <string name="time">Време</string>
     <string name="interval">Интервал</string>
+    <string name="symbols_first">Прво знакови (нпр. !@#$)</string>
 
     <!-- Support project -->
     <string name="action_support_project">Подржите пројекат</string>
