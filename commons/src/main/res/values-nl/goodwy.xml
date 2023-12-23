@@ -6,6 +6,7 @@
     <string name="next_g">Volgende: %s</string>
     <string name="time">Tijd</string>
     <string name="interval">Interval</string>
+    <string name="symbols_first">Eerst symbolen (e.g. !@#$)</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projectondersteuning</string>
