@@ -215,7 +215,7 @@
     <string name="copy_code">Kopieer code</string>
     <string name="action_on_message_click">Actie op berichtklik</string>
     <string name="invert_color">Kleur omkeren</string>
-    <string name="speech_bubble">Spraakbel</string>
+    <string name="speech_bubble">Tekstballon stijl</string>
 
     <!-- Gallery -->
     <string name="library">Bibliotheek</string>
