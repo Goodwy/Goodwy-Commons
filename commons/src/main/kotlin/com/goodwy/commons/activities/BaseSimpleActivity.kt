@@ -125,7 +125,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             updateBackgroundColor(backgroundColor)
         }
 
-        // если включить, то при отключении верхнего бара в светлой теме не видно иконок статус бара, нужно ставить тень
+        // if enabled, then when disabling the top bar in the light theme can not see the status bar icons, you need to put a shadow?
         if (showTransparentTop) {
             window.statusBarColor = Color.TRANSPARENT
         } else if (!isMaterialActivity) {
