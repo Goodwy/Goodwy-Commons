@@ -760,6 +760,10 @@ open class BaseConfig(val context: Context) {
     var sortingSymbolsFirst: Boolean
         get() = prefs.getBoolean(SORT_SYMBOLS_FIRST, true)
         set(sortingSymbolsFirst) = prefs.edit().putBoolean(SORT_SYMBOLS_FIRST, sortingSymbolsFirst).apply()
+
+    var hideTopBarWhenScroll: Boolean
+        get() = prefs.getBoolean(HIDE_TOP_BAR_WHEN_SCROLL, false)
+        set(hideTopBarWhenScroll) = prefs.edit().putBoolean(HIDE_TOP_BAR_WHEN_SCROLL, hideTopBarWhenScroll).apply()
 }
 
 

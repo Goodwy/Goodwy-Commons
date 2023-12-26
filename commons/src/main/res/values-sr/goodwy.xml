@@ -9,6 +9,7 @@
     <string name="interval">Интервал</string>
     <string name="symbols_first">Прво знакови (нпр. !@#$)</string>
     <string name="use_custom_notifications">Користите прилагођена обавештења</string>
+    <string name="hide_top_bar_when_scrolling">Сакриј горњу траку приликом померања</string>
 
     <!-- Support project -->
     <string name="action_support_project">Подржите пројекат</string>

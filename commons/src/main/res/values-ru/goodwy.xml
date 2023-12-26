@@ -25,6 +25,7 @@
     <string name="interval">Интервал</string>
     <string name="symbols_first">Сначала символы (например !@#$)</string>
     <string name="use_custom_notifications">Использовать пользовательские уведомления</string>
+    <string name="hide_top_bar_when_scrolling">Скрыть верхнюю панель при прокрутке</string>
 
     <!-- Support project -->
     <string name="action_support_project">Поддержка проекта</string>

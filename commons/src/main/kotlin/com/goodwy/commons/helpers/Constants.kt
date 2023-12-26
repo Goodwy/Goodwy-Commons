@@ -247,6 +247,7 @@ const val IS_USING_ACCENT_COLOR = "is_using_accent_color"
 const val AUTO_BACKUP_TIME = "auto_backup_time"
 const val AUTO_BACKUP_INTERVAL = "auto_backup_interval"
 const val NEXT_AUTO_BACKUP_TIME = "next_auto_backup_time"
+const val HIDE_TOP_BAR_WHEN_SCROLL = "hide_top_bar_when_scroll"
 
 // contact grid view constants
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10
