@@ -24,6 +24,7 @@
     <string name="time">Час</string>
     <string name="interval">Інтервал</string>
     <string name="symbols_first">Спочатку символи (наприклад !@#$)</string>
+    <string name="use_custom_notifications">Використовувати користувацькі повідомлення</string>
 
     <!-- Support project -->
     <string name="action_support_project">Підтримка проекту</string>

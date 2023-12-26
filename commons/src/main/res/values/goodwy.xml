@@ -25,6 +25,7 @@
     <string name="time">Time</string>
     <string name="interval">Interval</string>
     <string name="symbols_first">Symbols first (e.g. !@#$)</string>
+    <string name="use_custom_notifications">Use custom notifications</string>
 
     <!-- Support project -->
     <string name="action_support_project">Project support</string>
