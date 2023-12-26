@@ -3,11 +3,9 @@
     <item
         android:left="-3dp"
         android:right="-3dp"
-        android:top="8dp"
-        android:bottom="8dp">
+        android:top="-3dp">
         <shape android:shape="rectangle">
             <solid android:color="@color/activated_item_foreground" />
         </shape>
     </item>
 </layer-list>
-
