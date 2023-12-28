@@ -47,7 +47,7 @@
     <dimen name="breadcrumbs_layout_height">36dp</dimen> <!--48dp -->
     <dimen name="simple_list_item_height">56dp</dimen>
 
-    <dimen name="dragselect_hotspot_height">0dp</dimen>
+    <dimen name="dragselect_hotspot_height">56dp</dimen>
     <dimen name="selection_check_size">26dp</dimen>
     <dimen name="widget_colorpicker_size">46dp</dimen> <!--50dp -->
     <dimen name="line_color_picker_height">80dp</dimen> <!--80dp высота строки-->
