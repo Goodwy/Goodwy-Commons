@@ -10,6 +10,9 @@
     <string name="symbols_first">Прво знакови (нпр. !@#$)</string>
     <string name="use_custom_notifications">Користите прилагођена обавештења</string>
     <string name="hide_top_bar_when_scrolling">Сакриј горњу траку приликом померања</string>
+    <string name="unread_indicator_position">Непрочитана позиција индикатора</string>
+    <string name="start">Почетак</string>
+    <string name="end">Крај</string>
 
     <!-- Support project -->
     <string name="action_support_project">Подржите пројекат</string>
