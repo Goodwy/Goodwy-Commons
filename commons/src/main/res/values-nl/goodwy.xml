@@ -6,6 +6,12 @@
     <string name="next_g">Volgende: %s</string>
     <string name="time">Tijd</string>
     <string name="interval">Interval</string>
+    <string name="symbols_first">Symbolen eerst (bijv. !@#$)</string>
+    <string name="use_custom_notifications">Gebruik aangepaste meldingen</string>
+    <string name="hide_top_bar_when_scrolling">Verberg de bovenste app-balk tijdens het scrollen</string>
+    <string name="unread_indicator_position">Positie ongelezen indicator</string>
+    <string name="start">Start</string>
+    <string name="end">Einde</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projectondersteuning</string>
