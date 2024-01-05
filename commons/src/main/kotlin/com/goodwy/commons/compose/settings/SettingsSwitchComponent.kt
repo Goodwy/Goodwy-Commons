@@ -52,7 +52,7 @@ fun SettingsSwitchComponent(
                 interactionSource = interactionSource,
                 indication = indication
             )
-            .padding(horizontal = 20.dp, vertical = 2.dp),
+            .padding(horizontal = 16.dp, vertical = 2.dp),
     ) {
         Column(
             modifier = Modifier.weight(1f),

@@ -353,11 +353,10 @@ private fun BlockedNumber(
             }
         },
         trailingContent = {
-            BlockedNumberTrailingContent(onDelete = {
-                onDelete(setOf(blockedNumber.id))
-            }, onCopy = {
-                onCopy(blockedNumber)
-            })
+            BlockedNumberTrailingContent(
+                onDelete = {onDelete(setOf(blockedNumber.id))},
+                onCopy = {onCopy(blockedNumber)}
+            )
         },
         colors = blockedNumberListItemColors(
             isSelected = isSelected
@@ -428,7 +427,9 @@ private fun BlockedNumberTrailingContent(modifier: Modifier = Modifier, onDelete
             )
         })
     }
-    IconButton(onClick = {
+    IconButton(
+        modifier = Modifier.offset(x = 12.dp),
+        onClick = {
         isMenuVisible = true
     }) {
         Icon(Icons.Rounded.MoreVert, contentDescription = stringResource(id = R.string.more_options), tint = iconsColor)
@@ -580,7 +581,7 @@ private fun NonActionModeToolbar(
                 ).toImmutableList()
             }
             var isMenuVisible by remember { mutableStateOf(false) }
-            ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = isMenuVisible, onMenuToggle = { isMenuVisible = it }, iconsColor = iconColor)
+            ActionMenu(items = actionMenus, numIcons = 2, isMenuVisible = isMenuVisible, onMenuToggle = { isMenuVisible = it }, iconsColor = iconColor ?: scrolledColor)
         }
     )
 }
