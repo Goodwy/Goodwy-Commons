@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.dimensionResource
@@ -37,6 +38,7 @@ fun SettingsSwitchComponent(
         checkedIconColor = Color.Black
     ),
     checkedIcon: Boolean = false,
+    scaleSwitch: Float = 1F,
 ) {
     val interactionSource = rememberMutableInteractionSource()
     val indication = LocalIndication.current
@@ -87,6 +89,7 @@ fun SettingsSwitchComponent(
         }
         CompositionLocalProvider(LocalRippleTheme provides NoRippleTheme) {
             Switch(
+                modifier = Modifier.scale(scaleSwitch),
                 checked = initialValue,
                 onCheckedChange = { onChange?.invoke(it) },
                 enabled = isPreferenceEnabled,

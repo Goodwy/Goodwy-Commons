@@ -149,12 +149,14 @@ internal fun ManageBlockedNumbersScreen(
                     initialValue = isBlockUnknownSelected,
                     onChange = onBlockUnknownSelectedChange,
                     modifier = startingPadding.then(Modifier.topAppBarPaddings()),
+                    scaleSwitch = 0.8F,
                 )
                 SettingsSwitchComponent(
                     label = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
                     initialValue = isHiddenSelected,
                     onChange = onHiddenSelectedChange,
                     modifier = startingPadding.then(Modifier.topAppBarPaddings()),
+                    scaleSwitch = 0.8F,
                 )
                 SettingsHorizontalDivider(modifier = Modifier.topAppBarPaddings())
             }
