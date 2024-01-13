@@ -16,14 +16,15 @@
         android:layout_marginTop="@dimen/medium_margin"
         android:layout_marginBottom="@dimen/medium_margin"
         android:focusableInTouchMode="true"
-        android:background="@drawable/search_bg">
+        android:background="@drawable/search_bg"
+        android:backgroundTint="@color/activated_item_foreground">
 
         <ImageView
             android:id="@+id/top_toolbar_search_icon"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
-            android:paddingStart="@dimen/activity_margin"
+            android:paddingStart="@dimen/normal_margin"
             android:src="@drawable/ic_search_vector"
             android:contentDescription="@string/search" />
 
@@ -34,6 +35,7 @@
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/top_toolbar_search_clear"
             android:layout_toEndOf="@+id/top_toolbar_search_icon"
+            android:layout_marginEnd="@dimen/smaller_margin"
             android:background="@null"
             android:ellipsize="end"
             android:gravity="start|center_vertical"
