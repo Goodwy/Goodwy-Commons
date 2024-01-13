@@ -8,12 +8,12 @@ import android.view.LayoutInflater
 import com.google.android.material.appbar.AppBarLayout
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
-import com.goodwy.commons.databinding.MenuSearchBinding
+import com.goodwy.commons.databinding.MenuSearchTopBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.LOWER_ALPHA
 import com.goodwy.commons.helpers.MEDIUM_ALPHA
 
-class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
+class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
     var isSearchOpen = false
     var useArrowIcon = false
     var onSearchOpenListener: (() -> Unit)? = null
@@ -21,7 +21,7 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
     var onSearchTextChangedListener: ((text: String) -> Unit)? = null
     var onNavigateBackClickListener: (() -> Unit)? = null
 
-    val binding = MenuSearchBinding.inflate(LayoutInflater.from(context), this, true)
+    val binding = MenuSearchTopBinding.inflate(LayoutInflater.from(context), this, true)
 
     fun getToolbar() = binding.topToolbar
 
@@ -103,40 +103,24 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         val backgroundColor = context.getProperBackgroundColor()
         val contrastColor = backgroundColor.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
+        val bottomNavigationBackgroundColor = context.getBottomNavigationBackgroundColor()
 
         setBackgroundColor(backgroundColor)
         binding.topAppBarLayout.setBackgroundColor(backgroundColor)
-        binding.topToolbarSearchIcon.applyColorFilter(contrastColor)
+        val searchIconColor = if (context.baseConfig.topAppBarColorIcon) primaryColor else contrastColor
+        binding.topToolbarSearchIcon.applyColorFilter(searchIconColor)
         binding.topToolbarHolder.background?.applyColorFilter(primaryColor.adjustAlpha(LOWER_ALPHA))
         //binding.topToolbarSearch.setTextColor(contrastColor)
         //binding.topToolbarSearch.setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
         binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
-        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, backgroundColor)
+        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, bottomNavigationBackgroundColor)
 
-        binding.topToolbarSearchHolder.setBackgroundResource(R.drawable.search_bg)
-        binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(context.getBottomNavigationBackgroundColor())
-        binding.topToolbarSearchClear.applyColorFilter(contrastColor)
-
-        if (context.baseConfig.topAppBarColorTitle) binding.topToolbar.setTitleTextColor(ColorStateList.valueOf(primaryColor))
-    }
-
-    fun updateTitle(title: String) {
-        binding.topToolbar.title = title
-    }
-
-    fun searchBeVisibleIf(visible: Boolean = true) {
-        binding.topToolbarSearchHolder.beVisibleIf(visible)
+        binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)
+        binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(bottomNavigationBackgroundColor)
     }
 
     fun requestFocusAndShowKeyboard() {
         binding.topToolbarSearch.requestFocus()
         (context as? Activity)?.showKeyboard(binding.topToolbarSearch)
-    }
-
-    fun clearSearch() {
-        binding.topToolbarSearchClear.beVisibleIf(binding.topToolbarSearch.text!!.isNotEmpty())
-        binding.topToolbarSearchClear.setOnClickListener {
-            binding.topToolbarSearch.setText("")
-        }
     }
 }

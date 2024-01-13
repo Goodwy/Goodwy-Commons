@@ -320,7 +320,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         val titleColor = if (baseConfig.topAppBarColorTitle) colorPrimary else contrastColor
 
         //if (!useTopSearchMenu) {
-            updateStatusbarColor(colorBackground)
+            updateStatusbarColor(getProperBackgroundColor()) // colorBackground
             toolbar.setBackgroundColor(colorBackground)
             toolbar.setTitleTextColor(titleColor)
             toolbar.navigationIcon?.applyColorFilter(itemColor)

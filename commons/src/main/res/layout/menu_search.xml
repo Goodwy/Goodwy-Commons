@@ -20,7 +20,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/small_margin"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
+            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle"
+            tools:layout_height="56dp" />
 
         <RelativeLayout
             android:id="@+id/top_toolbar_search_holder"

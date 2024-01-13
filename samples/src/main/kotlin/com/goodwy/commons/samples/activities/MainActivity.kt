@@ -36,7 +36,7 @@ class MainActivity : BaseSimpleActivity() {
         setupOptionsMenu()
         updateMaterialActivityViews(binding.mainCoordinator, null, useTransparentNavigation = true, useTopSearchMenu = true)
         //setupMaterialScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
-        binding.mainToolbar.updateTitle(getString(com.goodwy.commons.R.string.simple_commons))
+        //binding.mainToolbar.updateTitle(getString(com.goodwy.commons.R.string.simple_commons))
 
         binding.mainColorCustomization.setOnClickListener {
             startCustomizationActivity(
