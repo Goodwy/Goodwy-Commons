@@ -213,53 +213,61 @@ class PurchaseHelper constructor(
     }
 
     fun getPriceDonation(product: String): String {
-        val iapSku = iapSkuDetails.firstOrNull { it.productId == product }
-        return if (iapSku != null) iapSku.oneTimePurchaseOfferDetails!!.formattedPrice
-        else activity.getString(R.string.no_connection)
+        return if (iapSkuDetails.isNotEmpty()) {
+            val iapSku = iapSkuDetails.firstOrNull { it.productId == product }
+            if (iapSku != null) iapSku.oneTimePurchaseOfferDetails!!.formattedPrice
+            else activity.getString(R.string.no_connection)
+        } else activity.getString(R.string.no_connection)
     }
 
     fun getDonation(product: String) {
-        val iapSku = iapSkuDetails.firstOrNull {  it.productId == product  }
-        if (iapSku != null) {
-            val productDetailsParamsList = ProductDetailsParams
-                .newBuilder().setProductDetails(iapSku).build()
-            billingClient.launchBillingFlow(
-                activity, BillingFlowParams.newBuilder()
-                    .setProductDetailsParamsList(listOf(productDetailsParamsList))
-                    .build()
-            )
-        } else activity.toast("Product not found")
-    }
-
-    fun getPriceSubscription(product: String, planId: String? = null): String {
-        val subSku = subSkuDetails.firstOrNull { it.productId == product }
-        val noConnect= activity.getString(R.string.no_connection)
-        return if (subSku != null) {
-            val plan =
-                if (planId != null) subSku.subscriptionOfferDetails!!.firstOrNull { it.basePlanId == planId }
-                else subSku.subscriptionOfferDetails!![0]
-            if (plan != null) {
-                plan.pricingPhases
-                    .pricingPhaseList[0].formattedPrice
-            } else noConnect
-        } else noConnect
-    }
-
-    fun getSubscription(product: String, planId: String? = null) {
-        val subSku = subSkuDetails.firstOrNull { it.productId == product }
-        if (subSku != null) {
-            val plan = if (planId != null) subSku.subscriptionOfferDetails!!.firstOrNull { it.basePlanId == planId }
-                                else subSku.subscriptionOfferDetails!![0]
-            if (plan != null) {
-                val productDetailsParamsList = ProductDetailsParams.newBuilder()
-                    .setOfferToken(plan.offerToken)
-                    .setProductDetails(subSku).build()
+        if (iapSkuDetails.isNotEmpty()) {
+            val iapSku = iapSkuDetails.firstOrNull { it.productId == product }
+            if (iapSku != null) {
+                val productDetailsParamsList = ProductDetailsParams
+                    .newBuilder().setProductDetails(iapSku).build()
                 billingClient.launchBillingFlow(
                     activity, BillingFlowParams.newBuilder()
                         .setProductDetailsParamsList(listOf(productDetailsParamsList))
                         .build()
                 )
-            } else activity.toast("Plan not found")
+            } else activity.toast("Product not found")
+        } else activity.toast("Product not found")
+    }
+
+    fun getPriceSubscription(product: String, planId: String? = null): String {
+        return if (subSkuDetails.isNotEmpty()) {
+            val subSku = subSkuDetails.firstOrNull { it.productId == product }
+            if (subSku != null) {
+                val plan =
+                    if (planId != null) subSku.subscriptionOfferDetails!!.firstOrNull { it.basePlanId == planId }
+                    else subSku.subscriptionOfferDetails!![0]
+                if (plan != null) {
+                    plan.pricingPhases
+                        .pricingPhaseList[0].formattedPrice
+                } else activity.getString(R.string.no_connection)
+            } else activity.getString(R.string.no_connection)
+        } else activity.getString(R.string.no_connection)
+    }
+
+    fun getSubscription(product: String, planId: String? = null) {
+        if (subSkuDetails.isNotEmpty()) {
+            val subSku = subSkuDetails.firstOrNull { it.productId == product }
+            if (subSku != null) {
+                val plan =
+                    if (planId != null) subSku.subscriptionOfferDetails!!.firstOrNull { it.basePlanId == planId }
+                    else subSku.subscriptionOfferDetails!![0]
+                if (plan != null) {
+                    val productDetailsParamsList = ProductDetailsParams.newBuilder()
+                        .setOfferToken(plan.offerToken)
+                        .setProductDetails(subSku).build()
+                    billingClient.launchBillingFlow(
+                        activity, BillingFlowParams.newBuilder()
+                            .setProductDetailsParamsList(listOf(productDetailsParamsList))
+                            .build()
+                    )
+                } else activity.toast("Plan not found")
+            } else activity.toast("Subscription not found")
         } else activity.toast("Subscription not found")
     }
 
@@ -273,7 +281,7 @@ class PurchaseHelper constructor(
 }
 
 sealed class Tipping {
-    object FailedToLoad : Tipping()
-    object Succeeded : Tipping()
-    object NoTips : Tipping()
+    data object FailedToLoad : Tipping()
+    data object Succeeded : Tipping()
+    data object NoTips : Tipping()
 }
