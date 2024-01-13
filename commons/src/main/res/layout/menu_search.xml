@@ -10,7 +10,8 @@
         android:id="@+id/top_toolbar_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:focusableInTouchMode="true">
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="@dimen/small_margin">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/top_toolbar"
@@ -74,6 +75,5 @@
                 tools:visibility="visible" />
 
         </RelativeLayout>
-
     </RelativeLayout>
 </com.google.android.material.appbar.AppBarLayout>
