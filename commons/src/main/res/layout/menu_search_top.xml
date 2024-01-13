@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/top_toolbar"
+            android:layout_toStartOf="@+id/top_toolbar_search_clear"
             android:layout_toEndOf="@+id/top_toolbar_search_icon"
             android:background="@null"
             android:ellipsize="end"
@@ -43,6 +43,18 @@
             android:paddingStart="@dimen/activity_margin"
             android:singleLine="true"
             android:textSize="@dimen/big_text_size" />
+
+        <ImageView
+            android:id="@+id/top_toolbar_search_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/top_toolbar"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:alpha="0.4"
+            android:src="@drawable/ic_clear_round"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/top_toolbar"

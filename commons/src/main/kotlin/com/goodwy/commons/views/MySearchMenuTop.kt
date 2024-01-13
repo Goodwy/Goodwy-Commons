@@ -117,10 +117,18 @@ class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout(cont
 
         binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)
         binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(bottomNavigationBackgroundColor)
+        binding.topToolbarSearchClear.applyColorFilter(contrastColor)
     }
 
     fun requestFocusAndShowKeyboard() {
         binding.topToolbarSearch.requestFocus()
         (context as? Activity)?.showKeyboard(binding.topToolbarSearch)
+    }
+
+    fun clearSearch() {
+        binding.topToolbarSearchClear.beVisibleIf(binding.topToolbarSearch.text!!.isNotEmpty())
+        binding.topToolbarSearchClear.setOnClickListener {
+            binding.topToolbarSearch.setText("")
+        }
     }
 }
