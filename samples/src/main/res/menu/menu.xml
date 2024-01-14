@@ -12,11 +12,6 @@
         android:title="@string/redo"
         app:showAsAction="always" />
     <item
-        android:id="@+id/open_search"
-        android:icon="@drawable/ic_search_vector"
-        android:title="@string/search"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/sort_checklist"
         android:icon="@drawable/ic_sort_vector"
         android:title="@string/sort_by"

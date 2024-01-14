@@ -26,7 +26,7 @@
         <RelativeLayout
             android:id="@+id/top_toolbar_search_holder"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="@dimen/search_menu_height"
             android:layout_below="@+id/top_toolbar"
             android:layout_marginStart="@dimen/activity_margin"
             android:layout_marginEnd="@dimen/activity_margin"

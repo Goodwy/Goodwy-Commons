@@ -96,4 +96,8 @@
     <dimen name="settings_value_width_long">168dp</dimen>
 
     <dimen name="activity_padding_left_right">0dp</dimen>
+
+    <!--Search toolbar-->
+    <dimen name="search_menu_height">36dp</dimen>
+    <dimen name="search_menu_top_height">44dp</dimen>
 </resources>

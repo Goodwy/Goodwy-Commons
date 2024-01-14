@@ -109,7 +109,7 @@ class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout(cont
         binding.topAppBarLayout.setBackgroundColor(backgroundColor)
         val searchIconColor = if (context.baseConfig.topAppBarColorIcon) primaryColor else contrastColor
         binding.topToolbarSearchIcon.applyColorFilter(searchIconColor)
-        binding.topToolbarHolder.background?.applyColorFilter(primaryColor.adjustAlpha(LOWER_ALPHA))
+        //binding.topToolbarHolder.background?.applyColorFilter(primaryColor.adjustAlpha(LOWER_ALPHA))
         //binding.topToolbarSearch.setTextColor(contrastColor)
         //binding.topToolbarSearch.setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
         binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
