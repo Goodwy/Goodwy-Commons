@@ -314,17 +314,18 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateTopBarColors(toolbar: Toolbar, colorBackground: Int, colorPrimary: Int = getProperPrimaryColor()) {
+    fun updateTopBarColors(toolbar: Toolbar, colorBackground: Int, colorPrimary: Int = getProperPrimaryColor(), useColorForStatusBar: Boolean = true) {
         val contrastColor = colorBackground.getContrastColor()
         val itemColor = if (baseConfig.topAppBarColorIcon) colorPrimary else contrastColor
         val titleColor = if (baseConfig.topAppBarColorTitle) colorPrimary else contrastColor
 
         //if (!useTopSearchMenu) {
-            updateStatusbarColor(getProperBackgroundColor()) // colorBackground
-            toolbar.setBackgroundColor(colorBackground)
-            toolbar.setTitleTextColor(titleColor)
-            toolbar.navigationIcon?.applyColorFilter(itemColor)
-            toolbar.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, itemColor)
+        val statusBarColor = if (useColorForStatusBar) colorBackground else getProperBackgroundColor()
+        updateStatusbarColor(statusBarColor) // colorBackground
+        toolbar.setBackgroundColor(colorBackground)
+        toolbar.setTitleTextColor(titleColor)
+        toolbar.navigationIcon?.applyColorFilter(itemColor)
+        toolbar.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, itemColor)
         //}
         val overflowIconRes = getOverflowIcon(baseConfig.overflowIcon)
         toolbar.overflowIcon = resources.getColoredDrawableWithColor(this, overflowIconRes, itemColor)
