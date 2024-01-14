@@ -12,7 +12,7 @@
     <RelativeLayout
         android:id="@+id/top_toolbar_holder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginTop="@dimen/medium_margin"
         android:layout_marginBottom="@dimen/medium_margin"
         android:focusableInTouchMode="true"
