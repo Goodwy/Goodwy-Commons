@@ -3,6 +3,7 @@ package com.goodwy.commons.views
 import android.app.Activity
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import com.google.android.material.appbar.AppBarLayout
@@ -113,7 +114,7 @@ class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout(cont
         //binding.topToolbarSearch.setTextColor(contrastColor)
         //binding.topToolbarSearch.setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
         binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
-        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, bottomNavigationBackgroundColor)
+        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, Color.TRANSPARENT)
 
         binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)
         binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(bottomNavigationBackgroundColor)
