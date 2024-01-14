@@ -5,16 +5,16 @@
     android:id="@+id/top_app_bar_layout"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:layout_marginStart="@dimen/activity_margin"
-    android:layout_marginEnd="@dimen/activity_margin"
     tools:layout_height="56dp">
 
     <RelativeLayout
         android:id="@+id/top_toolbar_holder"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/search_menu_top_height"
-        android:layout_marginTop="@dimen/medium_margin"
-        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/ten_dpi"
+        android:layout_marginBottom="@dimen/ten_dpi"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
         android:focusableInTouchMode="true"
         android:background="@drawable/search_bg"
         android:backgroundTint="@color/activated_item_foreground">
