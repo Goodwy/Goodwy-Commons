@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusableInTouchMode="true"
-        android:layout_marginBottom="@dimen/small_margin">
+        android:layout_marginBottom="@dimen/smaller_margin">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/top_toolbar"
