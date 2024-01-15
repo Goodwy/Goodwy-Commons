@@ -99,8 +99,8 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         binding.topToolbarSearchIcon.contentDescription = resources.getString(accessibilityString)
     }
 
-    fun updateColors() {
-        val backgroundColor = context.getProperBackgroundColor()
+    fun updateColors(background: Int = -1) {
+        val backgroundColor = if (background == -1) context.getProperBackgroundColor() else background
         val contrastColor = backgroundColor.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
 

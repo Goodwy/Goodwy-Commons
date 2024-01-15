@@ -50,6 +50,7 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.interfaces.CopyMoveListener
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.models.FileDirItem
+import com.goodwy.commons.views.MySearchMenu
 import com.google.android.material.appbar.AppBarLayout
 import java.io.File
 import java.io.OutputStream
@@ -72,6 +73,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private var nestedView: View? = null
     private var scrollingView: ScrollingView? = null
     private var toolbar: Toolbar? = null
+    private var mySearchMenu: MySearchMenu? = null
     private var useTransparentNavigation = false
     private var useTopSearchMenu = false
     private val GENERIC_PERM_HANDLER = 100
@@ -277,15 +279,33 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun scrollingChanged(newScrollY: Int, oldScrollY: Int) {
+    fun setupSearchMenuScrollListener(scrollingView: ScrollingView?, searchMenu: MySearchMenu) {
+        this.scrollingView = scrollingView
+        this.mySearchMenu = searchMenu
+        if (scrollingView is RecyclerView) {
+            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+                val newScrollY = scrollingView.computeVerticalScrollOffset()
+                scrollingChanged(newScrollY, currentScrollY, true)
+                currentScrollY = newScrollY
+            }
+        } else if (scrollingView is NestedScrollView) {
+            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+                scrollingChanged(scrollY, oldScrollY, true)
+            }
+        }
+    }
+
+    private fun scrollingChanged(newScrollY: Int, oldScrollY: Int, isMySearchMenu: Boolean = false) {
         if (newScrollY > 0 && oldScrollY == 0) {
             val colorFrom = window.statusBarColor
             val colorTo = getColoredMaterialStatusBarColor()
-            animateTopBarColors(colorFrom, colorTo)
+            if (isMySearchMenu) animateMySearchMenuColors(colorFrom, colorTo)
+            else  animateTopBarColors(colorFrom, colorTo)
         } else if (newScrollY == 0 && oldScrollY > 0) {
             val colorFrom = window.statusBarColor
             val colorTo = getRequiredStatusBarColor()
-            animateTopBarColors(colorFrom, colorTo)
+            if (isMySearchMenu) animateMySearchMenuColors(colorFrom, colorTo)
+            else animateTopBarColors(colorFrom, colorTo)
         }
     }
 
@@ -300,6 +320,23 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val color = animator.animatedValue as Int
             if (toolbar != null) {
                 updateTopBarColors(toolbar!!, color)
+            }
+        }
+
+        materialScrollColorAnimation!!.start()
+    }
+
+    fun animateMySearchMenuColors(colorFrom: Int, colorTo: Int) {
+        if (mySearchMenu == null) {
+            return
+        }
+
+        materialScrollColorAnimation?.end()
+        materialScrollColorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
+        materialScrollColorAnimation!!.addUpdateListener { animator ->
+            val color = animator.animatedValue as Int
+            if (mySearchMenu != null) {
+                mySearchMenu!!.updateColors(color)
             }
         }
 
@@ -357,7 +394,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun setupToolbar(
         toolbar: Toolbar,
         toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
-        statusBarColor: Int = getProperBackgroundColor(),
+        statusBarColor: Int = getRequiredStatusBarColor(),
         searchMenuItem: MenuItem? = null,
         appBarLayout: AppBarLayout? = null,
         navigationClick: Boolean = true

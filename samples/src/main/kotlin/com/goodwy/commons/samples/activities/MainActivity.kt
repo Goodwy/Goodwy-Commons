@@ -35,7 +35,7 @@ class MainActivity : BaseSimpleActivity() {
 
         setupOptionsMenu()
         updateMaterialActivityViews(binding.mainCoordinator, null, useTransparentNavigation = true, useTopSearchMenu = true)
-        //setupMaterialScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
+        setupSearchMenuScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
         //binding.mainToolbar.updateTitle(getString(com.goodwy.commons.R.string.simple_commons))
 
         binding.mainColorCustomization.setOnClickListener {
@@ -104,12 +104,7 @@ class MainActivity : BaseSimpleActivity() {
             title = com.goodwy.commons.R.string.please_select_destination,
             items = arrayOf(
                 SimpleListItem(1, com.goodwy.commons.R.string.record_video, imageRes = com.goodwy.commons.R.drawable.ic_camera_vector),
-                SimpleListItem(
-                    2,
-                    com.goodwy.commons.R.string.record_audio,
-                    imageRes = com.goodwy.commons.R.drawable.ic_microphone_vector,
-                    selected = true
-                ),
+                SimpleListItem(2, com.goodwy.commons.R.string.record_audio, imageRes = com.goodwy.commons.R.drawable.ic_microphone_vector, selected = true),
                 SimpleListItem(4, com.goodwy.commons.R.string.choose_contact, imageRes = com.goodwy.commons.R.drawable.ic_add_person_vector)
             )
         ) {
@@ -122,7 +117,7 @@ class MainActivity : BaseSimpleActivity() {
         //setupToolbar(binding.mainToolbar)
 
         updateStatusbarColor(getProperBackgroundColor())
-        binding.mainToolbar.updateColors()
+        binding.mainToolbar.updateColors(getRequiredStatusBarColor())
 
 //        CallConfirmationDialog(this, callee = "Goodwy Common"){
 //
