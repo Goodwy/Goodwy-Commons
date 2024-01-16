@@ -99,10 +99,11 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         binding.topToolbarSearchIcon.contentDescription = resources.getString(accessibilityString)
     }
 
-    fun updateColors(background: Int = -1) {
+    fun updateColors(background: Int = -1, scrollOffset: Int = 0) {
         val backgroundColor = if (background == -1) context.getProperBackgroundColor() else background
         val contrastColor = backgroundColor.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
+        val searchHolderColor = if (scrollOffset == 0) context.getBottomNavigationBackgroundColor() else context.getBottomNavigationBackgroundColor().darkenColor(4)
 
         setBackgroundColor(backgroundColor)
         binding.topAppBarLayout.setBackgroundColor(backgroundColor)
@@ -114,7 +115,7 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, backgroundColor)
 
         binding.topToolbarSearchHolder.setBackgroundResource(R.drawable.search_bg)
-        binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(context.getBottomNavigationBackgroundColor())
+        binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(searchHolderColor)
         binding.topToolbarSearchClear.applyColorFilter(contrastColor)
 
         if (context.baseConfig.topAppBarColorTitle) binding.topToolbar.setTitleTextColor(ColorStateList.valueOf(primaryColor))

@@ -117,7 +117,7 @@ class MainActivity : BaseSimpleActivity() {
         //setupToolbar(binding.mainToolbar)
 
         updateStatusbarColor(getProperBackgroundColor())
-        binding.mainToolbar.updateColors(getRequiredStatusBarColor())
+        binding.mainToolbar.updateColors(getRequiredStatusBarColor(), scrollingView?.computeVerticalScrollOffset() ?: 0)
 
 //        CallConfirmationDialog(this, callee = "Goodwy Common"){
 //

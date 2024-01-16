@@ -71,7 +71,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private var mainCoordinatorLayout: CoordinatorLayout? = null
     private var nestedView: View? = null
-    private var scrollingView: ScrollingView? = null
+    var scrollingView: ScrollingView? = null
     private var toolbar: Toolbar? = null
     private var mySearchMenu: MySearchMenu? = null
     private var useTransparentNavigation = false
@@ -336,7 +336,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         materialScrollColorAnimation!!.addUpdateListener { animator ->
             val color = animator.animatedValue as Int
             if (mySearchMenu != null) {
-                mySearchMenu!!.updateColors(color)
+                mySearchMenu!!.updateColors(color, scrollingView?.computeVerticalScrollOffset() ?: 0)
             }
         }
 
