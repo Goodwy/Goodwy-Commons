@@ -72,7 +72,7 @@ class StringsAdapter(
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val item = strings[position]
-        holder.bindView(item, true, true) { itemView, layoutPosition ->
+        holder.bindView(item, true, true) { itemView, _ ->
             setupView(ListItemBinding.bind(itemView), item, holder)
         }
         bindViewHolder(holder)
@@ -95,7 +95,7 @@ class StringsAdapter(
             dragHandle.beVisibleIf(isChangingOrder)
 
             if (isChangingOrder) {
-                dragHandle.setOnTouchListener { v, event ->
+                dragHandle.setOnTouchListener { _, event ->
                     if (event.action == MotionEvent.ACTION_DOWN) {
                         startReorderDragListener.requestDrag(holder)
                     }

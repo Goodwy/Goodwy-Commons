@@ -20,7 +20,7 @@
         android:backgroundTint="@color/activated_item_foreground">
 
         <ImageView
-            android:id="@+id/top_toolbar_search_icon"
+            android:id="@+id/topToolbarSearchIcon"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
@@ -34,7 +34,7 @@
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/top_toolbar_search_clear"
-            android:layout_toEndOf="@+id/top_toolbar_search_icon"
+            android:layout_toEndOf="@+id/topToolbarSearchIcon"
             android:layout_marginEnd="@dimen/smaller_margin"
             android:background="@null"
             android:ellipsize="end"
@@ -42,7 +42,7 @@
             android:hint="@string/search"
             android:lines="1"
             android:maxLines="1"
-            android:paddingStart="@dimen/activity_margin"
+            android:paddingStart="@dimen/normal_margin"
             android:singleLine="true"
             android:textSize="@dimen/big_text_size" />
 

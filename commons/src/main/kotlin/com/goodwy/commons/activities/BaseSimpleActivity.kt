@@ -352,12 +352,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateTopBarColors(toolbar: Toolbar, colorBackground: Int, colorPrimary: Int = getProperPrimaryColor(), useColorForStatusBar: Boolean = true) {
-        val contrastColor = colorBackground.getContrastColor()
+        val getProperBackgroundColor = getProperBackgroundColor()
+        val contrastColor = if (colorBackground == Color.TRANSPARENT) getProperBackgroundColor.getContrastColor() else colorBackground.getContrastColor()
         val itemColor = if (baseConfig.topAppBarColorIcon) colorPrimary else contrastColor
         val titleColor = if (baseConfig.topAppBarColorTitle) colorPrimary else contrastColor
 
         //if (!useTopSearchMenu) {
-        val statusBarColor = if (useColorForStatusBar) colorBackground else getProperBackgroundColor()
+        val statusBarColor = if (useColorForStatusBar) colorBackground else getProperBackgroundColor
         updateStatusbarColor(statusBarColor) // colorBackground
         toolbar.setBackgroundColor(colorBackground)
         toolbar.setTitleTextColor(titleColor)
