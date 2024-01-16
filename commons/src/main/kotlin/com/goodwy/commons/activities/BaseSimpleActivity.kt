@@ -188,7 +188,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateStatusbarColor(color: Int) {
         window.statusBarColor = color // TODO Status Bar Color
+        updateStatusbarContents(color)
+    }
 
+    fun updateStatusbarContents(color: Int) {
         if (color.getContrastColor() == DARK_GREY) {
             window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
         } else {

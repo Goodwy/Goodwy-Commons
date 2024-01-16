@@ -35,7 +35,7 @@ class MainActivity : BaseSimpleActivity() {
 
         setupOptionsMenu()
         updateMaterialActivityViews(binding.mainCoordinator, null, useTransparentNavigation = true, useTopSearchMenu = true)
-        //setupSearchMenuScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
+        setupSearchMenuScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
         //binding.mainToolbar.updateTitle(getString(com.goodwy.commons.R.string.simple_commons))
 
         binding.mainColorCustomization.setOnClickListener {
@@ -117,7 +117,7 @@ class MainActivity : BaseSimpleActivity() {
         //setupToolbar(binding.mainToolbar)
 
         updateStatusbarColor(getProperBackgroundColor())
-        binding.mainToolbar.updateColors()
+        binding.mainToolbar.updateColors(getRequiredStatusBarColor(), scrollingView?.computeVerticalScrollOffset() ?: 0)
 
 //        CallConfirmationDialog(this, callee = "Goodwy Common"){
 //
