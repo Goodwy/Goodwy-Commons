@@ -698,8 +698,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun startAboutActivity(appNameId: Int, licenseMask: Long, versionName: String,
                            faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean, licensingKey: String,
-                           productIdX1: String, productIdX2: String, productIdX3: String,
-                           subscriptionIdX1: String, subscriptionIdX2: String, subscriptionIdX3: String,
+                           productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
+                           subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
                            playStoreInstalled: Boolean = true,
                            ruStoreInstalled: Boolean = false,) {
         hideKeyboard()
@@ -713,12 +713,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(SHOW_FAQ_BEFORE_MAIL, showFAQBeforeMail)
             //Goodwy
             putExtra(GOOGLE_PLAY_LICENSING_KEY, licensingKey)
-            putExtra(PRODUCT_ID_X1, productIdX1)
-            putExtra(PRODUCT_ID_X2, productIdX2)
-            putExtra(PRODUCT_ID_X3, productIdX3)
-            putExtra(SUBSCRIPTION_ID_X1, subscriptionIdX1)
-            putExtra(SUBSCRIPTION_ID_X2, subscriptionIdX2)
-            putExtra(SUBSCRIPTION_ID_X3, subscriptionIdX3)
+            putExtra(PRODUCT_ID_LIST, productIdList)
+            putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
+            putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)
+            putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(RU_STORE, ruStoreInstalled)
             startActivity(this)
@@ -726,8 +724,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun startPurchaseActivity(appNameId: Int, licensingKey: String,
-                              productIdX1: String, productIdX2: String, productIdX3: String,
-                              subscriptionIdX1: String, subscriptionIdX2: String, subscriptionIdX3: String,
+                              productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
+                              subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
                               showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
                               playStoreInstalled: Boolean = true,
                               ruStoreInstalled: Boolean = false,
@@ -737,12 +735,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             putExtra(APP_NAME, getString(appNameId))
             putExtra(GOOGLE_PLAY_LICENSING_KEY, licensingKey)
-            putExtra(PRODUCT_ID_X1, productIdX1)
-            putExtra(PRODUCT_ID_X2, productIdX2)
-            putExtra(PRODUCT_ID_X3, productIdX3)
-            putExtra(SUBSCRIPTION_ID_X1, subscriptionIdX1)
-            putExtra(SUBSCRIPTION_ID_X2, subscriptionIdX2)
-            putExtra(SUBSCRIPTION_ID_X3, subscriptionIdX3)
+            putExtra(PRODUCT_ID_LIST, productIdList)
+            putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
+            putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)
+            putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(SHOW_COLLECTION, showCollection)
@@ -752,8 +748,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun startCustomizationActivity(showAccentColor : Boolean = true, isCollection : Boolean = false, licensingKey: String = "",
-                                   productIdX1: String = "", productIdX2: String = "", productIdX3: String = "",
-                                   subscriptionIdX1: String = "", subscriptionIdX2: String = "", subscriptionIdX3: String = "",
+                                   productIdList: ArrayList<String> = arrayListOf("", "", ""), productIdListRu: ArrayList<String> = arrayListOf("", "", ""),
+                                   subscriptionIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionIdListRu: ArrayList<String> = arrayListOf("", "", ""),
                                    showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
                                    playStoreInstalled: Boolean = true,
                                    ruStoreInstalled: Boolean = false) {
@@ -773,12 +769,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(SHOW_ACCENT_COLOR, showAccentColor)
             putExtra(IS_COLLECTION, isCollection)
             putExtra(GOOGLE_PLAY_LICENSING_KEY, licensingKey)
-            putExtra(PRODUCT_ID_X1, productIdX1)
-            putExtra(PRODUCT_ID_X2, productIdX2)
-            putExtra(PRODUCT_ID_X3, productIdX3)
-            putExtra(SUBSCRIPTION_ID_X1, subscriptionIdX1)
-            putExtra(SUBSCRIPTION_ID_X2, subscriptionIdX2)
-            putExtra(SUBSCRIPTION_ID_X3, subscriptionIdX3)
+            putExtra(PRODUCT_ID_LIST, productIdList)
+            putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
+            putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)
+            putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(RU_STORE, ruStoreInstalled)

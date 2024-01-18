@@ -55,12 +55,10 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun isProVersion() = intent.getBooleanExtra(IS_COLLECTION, false) || isPro()
     private fun getLicensingKey() = intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: ""
-    private fun getProductIdX1() = intent.getStringExtra(PRODUCT_ID_X1) ?: ""
-    private fun getProductIdX2() = intent.getStringExtra(PRODUCT_ID_X2) ?: ""
-    private fun getProductIdX3() = intent.getStringExtra(PRODUCT_ID_X3) ?: ""
-    private fun getSubscriptionIdX1() = intent.getStringExtra(SUBSCRIPTION_ID_X1) ?: ""
-    private fun getSubscriptionIdX2() = intent.getStringExtra(SUBSCRIPTION_ID_X2) ?: ""
-    private fun getSubscriptionIdX3() = intent.getStringExtra(SUBSCRIPTION_ID_X3) ?: ""
+    private fun getProductIdList() = intent.getStringArrayListExtra(PRODUCT_ID_LIST) ?: arrayListOf("", "", "")
+    private fun getProductIdListRu() = intent.getStringArrayListExtra(PRODUCT_ID_LIST_RU) ?: arrayListOf("", "", "")
+    private fun getSubscriptionIdList() = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST) ?: arrayListOf("", "", "")
+    private fun getSubscriptionIdListRu() = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST_RU) ?: arrayListOf("", "", "")
 
     private fun playStoreInstalled() = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
     private fun ruStoreInstalled() = intent.getBooleanExtra(RU_STORE, false)
@@ -863,8 +861,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         startPurchaseActivity(
             R.string.app_name_g,
             getLicensingKey(),
-            getProductIdX1(), getProductIdX2(), getProductIdX3(),
-            getSubscriptionIdX1(), getSubscriptionIdX2(), getSubscriptionIdX3(),
+            getProductIdList(), getProductIdListRu(),
+            getSubscriptionIdList(), getSubscriptionIdListRu(),
             playStoreInstalled = playStoreInstalled(),
             ruStoreInstalled = ruStoreInstalled())
     }
