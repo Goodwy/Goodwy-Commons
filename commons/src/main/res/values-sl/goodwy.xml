@@ -2,16 +2,16 @@
     <string name="message">Sporočilo</string>
     <string name="settings_icon">Ikona »Nastavitve«</string>
     <string name="total_g">Skupaj: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
+    <string name="last_g">Zadnji: %s</string>
+    <string name="next_g">Naslednji: %s</string>
+    <string name="time">Čas</string>
     <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="symbols_first">Najprej simboli (npr. !@#$)</string>
+    <string name="use_custom_notifications">Uporaba obvestil po meri</string>
+    <string name="hide_top_bar_when_scrolling">Skrij zgornjo vrstico aplikacij med drsenjem</string>
+    <string name="unread_indicator_position">Neprebran položaj indikatorja</string>
+    <string name="start">Začni</string>
+    <string name="end">Konec</string>
 
     <!-- Support project -->
     <string name="action_support_project">Podpora projektu</string>

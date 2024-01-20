@@ -2,16 +2,16 @@
     <string name="message">Mesaj</string>
     <string name="settings_icon">Parametrlər ikonu</string>
     <string name="total_g">Cəmi: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">Sonuncu: %s</string>
+    <string name="next_g">Növbəti: %s</string>
+    <string name="time">Vaxt</string>
+    <string name="interval">İnterval</string>
+    <string name="symbols_first">Əvvəlcə simvollar (məsələn, !@#$)</string>
+    <string name="use_custom_notifications">Fərdi bildirişlərdən istifadə edin</string>
+    <string name="hide_top_bar_when_scrolling">Sürüşdürərkən yuxarı proqram panelini gizlədin</string>
+    <string name="unread_indicator_position">Oxunmamış göstərici mövqeyi</string>
+    <string name="start">Başla</string>
+    <string name="end">Son</string>
 
     <!-- Support project -->
     <string name="action_support_project">Layihə dəstəyi</string>

@@ -2,16 +2,16 @@
     <string name="message">Budskab</string>
     <string name="settings_icon">Ikonet Indstillinger</string>
     <string name="total_g">I alt: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
+    <string name="last_g">Sidste: %s</string>
+    <string name="next_g">Næste: %s</string>
+    <string name="time">Tid</string>
     <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
+    <string name="symbols_first">Symboler først (f.eks. !@#$)</string>
+    <string name="use_custom_notifications">Brug tilpassede meddelelser</string>
+    <string name="hide_top_bar_when_scrolling">Skjul den øverste app-bjælke, når du ruller</string>
+    <string name="unread_indicator_position">Ulæst indikatorposition</string>
     <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="end">Afslut</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projektstøtte</string>

@@ -1,17 +1,17 @@
 <resources>
     <string name="message">Pesan</string>
-    <string name="settings_icon">ikon pengaturan</string>
+    <string name="settings_icon">Ikon pengaturan</string>
     <string name="total_g">Jumlah: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">Terakhir: %s</string>
+    <string name="next_g">Berikutnya: %s</string>
+    <string name="time">Waktu</string>
+    <string name="interval">Selang</string>
+    <string name="symbols_first">Simbol terlebih dahulu (misalnya !@#$)</string>
+    <string name="use_custom_notifications">Gunakan notifikasi khusus</string>
+    <string name="hide_top_bar_when_scrolling">Menyembunyikan bilah aplikasi bagian atas saat menggulir</string>
+    <string name="unread_indicator_position">Posisi indikator belum dibaca</string>
+    <string name="start">Mulai</string>
+    <string name="end">Akhir</string>
 
     <!-- Support project -->
     <string name="action_support_project">Dukungan proyek</string>

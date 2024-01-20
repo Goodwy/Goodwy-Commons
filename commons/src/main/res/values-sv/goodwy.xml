@@ -2,16 +2,16 @@
     <string name="message">Meddelande</string>
     <string name="settings_icon">Ikonen Inställningar</string>
     <string name="total_g">Totalt: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
+    <string name="last_g">Sista: %s</string>
+    <string name="next_g">Nästa: %s</string>
+    <string name="time">Tid</string>
+    <string name="interval">Intervall</string>
+    <string name="symbols_first">Symboler först (t.ex. !@#$)</string>
+    <string name="use_custom_notifications">Använd anpassade aviseringar</string>
+    <string name="hide_top_bar_when_scrolling">Dölj det övre appfältet när du bläddrar</string>
+    <string name="unread_indicator_position">Position för oläst indikator</string>
     <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="end">Slut</string>
 
     <!-- Support project -->
     <string name="action_support_project">Stöd till projekt</string>

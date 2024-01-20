@@ -20,16 +20,16 @@
     <string name="message">消息</string>
     <string name="settings_icon">“设置”图标</string>
     <string name="total_g">總計： %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">姓氏：%s</string>
+    <string name="next_g">下一個：%s</string>
+    <string name="time">時間</string>
+    <string name="interval">間隔</string>
+    <string name="symbols_first">符號優先（例如！@#$）</string>
+    <string name="use_custom_notifications">使用自訂通知</string>
+    <string name="hide_top_bar_when_scrolling">捲動時隱藏頂部應用程式列</string>
+    <string name="unread_indicator_position">未讀取指示器位置</string>
+    <string name="start">開始</string>
+    <string name="end">結束</string>
 
     <!-- Support project -->
     <string name="action_support_project">项目支持</string>

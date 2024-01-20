@@ -2,16 +2,16 @@
     <string name="message">Thông điệp</string>
     <string name="settings_icon">Biểu tượng Thiết đặt</string>
     <string name="total_g">Tổng cộng: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">Cuối cùng: %s</string>
+    <string name="next_g">Tiếp theo: %s</string>
+    <string name="time">Thời gian</string>
+    <string name="interval">Khoảng thời gian</string>
+    <string name="symbols_first">Biểu tượng đầu tiên (ví dụ !@#$)</string>
+    <string name="use_custom_notifications">Sử dụng thông báo tùy chỉnh</string>
+    <string name="hide_top_bar_when_scrolling">Ẩn thanh ứng dụng trên cùng khi cuộn</string>
+    <string name="unread_indicator_position">Vị trí chỉ báo chưa đọc</string>
+    <string name="start">Bắt đầu</string>
+    <string name="end">Kết thúc</string>
 
     <!-- Support project -->
     <string name="action_support_project">Hỗ trợ dự án</string>

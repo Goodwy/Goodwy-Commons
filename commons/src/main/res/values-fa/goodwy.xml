@@ -2,21 +2,21 @@
     <string name="message">پیام</string>
     <string name="settings_icon">نماد تنظیمات</string>
     <string name="total_g">مجموع: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">آخرین: %s</string>
+    <string name="next_g">بعدی: %s</string>
+    <string name="time">زمان</string>
+    <string name="interval">فاصله</string>
+    <string name="symbols_first">ابتدا نمادها (به عنوان مثال !@#$)</string>
+    <string name="use_custom_notifications">از اعلان‌های سفارشی استفاده کنید</string>
+    <string name="hide_top_bar_when_scrolling">پنهان کردن نوار بالای برنامه هنگام پیمایش</string>
+    <string name="unread_indicator_position">موقعیت نشانگر خوانده نشده</string>
+    <string name="start">شروع</string>
+    <string name="end">پایان</string>
 
     <!-- Support project -->
     <string name="action_support_project">پشتیبانی پروژه</string>
-    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
-    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="pref_pay_summary">برنامه پولی را برای پشتیبانی از پیشرفت‌ها و ویژگی‌های اضافی دریافت کنید</string>
+    <string name="support_project_summary">یکی از برنامه های پولی ما را برای پشتیبانی از توسعه آینده و باز کردن قفل ویژگی های اضافی دریافت کنید</string>
     <string name="learn_more">بیشتر بدانید</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
@@ -111,8 +111,8 @@
     <string name="lines_count">شمارش خطوط</string>
     <string name="show_button_blocked_numbers">نشان دادن دکمه برای مخفی نکردن تماسهای مسدود شده</string>
     <string name="flash_for_alerts">فلش برای هشدار</string>
-    <string name="clean_theme_g">Clean</string>
-    <string name="concept_theme_g">Concept</string>
+    <string name="clean_theme_g">تمیز</string>
+    <string name="concept_theme_g">مفهوم</string>
     <string name="default_folder_to_open_g">پوشه برای باز کردن در شروع برنامه</string>
     <string name="last_used_g">اخرین استفاده</string>
     <string name="home_folder_g">پوشهی خانه</string>
@@ -132,7 +132,7 @@
     <string name="hide_blocked_numbers">مخفی کردن مسدود شده</string>
     <string name="paste_g">درج</string>
     <string name="recents">اخیر</string>
-    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
+    <string name="unblock_confirmation">آیا مطمئن هستید که می خواهید \"%s\" را رفع انسداد کنید؟</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

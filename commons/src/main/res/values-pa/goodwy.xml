@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name_g">Goodwy Commons</string>
-    <string name="recorder_g">Recorder</string>
-    <string name="player_g">Player</string>
+    <string name="recorder_g">ਰਿਕਾਰਡਰ</string>
+    <string name="player_g">ਖਿਡਾਰੀ</string>
     <string name="general">ਜਨਰਲ</string>
     <string name="default_tab">ਡਿਫਾਲਟ ਟੈਬ</string>
     <string name="color">ਰੰਗ</string>
@@ -20,16 +20,16 @@
     <string name="message">ਸੁਨੇਹਾ</string>
     <string name="settings_icon">ਸੈਟਿੰਗ ਆਈਕਨ</string>
     <string name="total_g">ਕੁੱਲ: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">ਆਖਰੀ: %s</string>
+    <string name="next_g">ਅੱਗੇ: %s</string>
+    <string name="time">ਸਮਾਂ</string>
+    <string name="interval">ਅੰਤਰਾਲ</string>
+    <string name="symbols_first">ਪਹਿਲਾਂ ਚਿੰਨ੍ਹ (ਉਦਾਹਰਨ ਲਈ !@#$)</string>
+    <string name="use_custom_notifications">ਕਸਟਮ ਸੂਚਨਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+    <string name="hide_top_bar_when_scrolling">ਸਕ੍ਰੌਲ ਕਰਨ ਵੇਲੇ ਸਿਖਰ ਐਪ ਬਾਰ ਨੂੰ ਲੁਕਾਓ</string>
+    <string name="unread_indicator_position"> ਨਾ ਪੜ੍ਹੇ ਸੂਚਕ ਸਥਿਤੀ</string>
+    <string name="start">ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="end">ਅੰਤ</string>
 
     <!-- Support project -->
     <string name="action_support_project">ਪ੍ਰੋਜੈਕਟ ਸਹਾਇਤਾ</string>

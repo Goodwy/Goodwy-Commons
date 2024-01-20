@@ -20,16 +20,16 @@
     <string name="message">സന്ദേശം</string>
     <string name="settings_icon">ക്രമീകരണ ഐക്കൺ</string>
     <string name="total_g">ആകെ: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">അവസാനം: %s</string>
+    <string name="next_g">അടുത്തത്: %s</string>
+    <string name="time">സമയം</string>
+    <string name="interval">ഇടവേള</string>
+    <string name="symbols_first">ചിഹ്നങ്ങൾ ആദ്യം (ഉദാ. !@#$)</string>
+    <string name="use_custom_notifications">ഇഷ്‌ടാനുസൃത അറിയിപ്പുകൾ ഉപയോഗിക്കുക</string>
+    <string name="hide_top_bar_when_scrolling">സ്ക്രോൾ ചെയ്യുമ്പോൾ മുകളിലെ ആപ്പ് ബാർ മറയ്ക്കുക</string>
+    <string name="unread_indicator_position">വായിക്കാത്ത സൂചക സ്ഥാനം</string>
+    <string name="start">ആരംഭിക്കുക</string>
+    <string name="end">അവസാനം</string>
 
     <!-- Support project -->
     <string name="action_support_project">പ്രോജക്റ്റ് പിന്തുണ</string>

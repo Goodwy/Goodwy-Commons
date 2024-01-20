@@ -2,16 +2,16 @@
     <string name="message">Zpráva</string>
     <string name="settings_icon">Ikona Nastavení</string>
     <string name="total_g">Celkem: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
+    <string name="last_g">Poslední: %s</string>
+    <string name="next_g">Další: %s</string>
+    <string name="time">Čas</string>
     <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
+    <string name="symbols_first">Symboly jako první (např. !@#$)</string>
+    <string name="use_custom_notifications">Použít vlastní oznámení</string>
+    <string name="hide_top_bar_when_scrolling">Skrýt horní lištu aplikace při posouvání</string>
+    <string name="unread_indicator_position">Pozice nepřečteného indikátoru</string>
     <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="end">Konec</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projektová podpora</string>

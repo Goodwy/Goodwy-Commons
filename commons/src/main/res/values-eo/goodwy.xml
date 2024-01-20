@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name_g">Goodwy Commons</string>
-    <string name="recorder_g">Recorder</string>
-    <string name="player_g">Player</string>
-    <string name="general">General</string>
-    <string name="default_tab">Default tab</string>
-    <string name="color">color</string>
+    <string name="recorder_g">Registrilo</string>
+    <string name="player_g">Ludanto</string>
+    <string name="general">Ĝenerala</string>
+    <string name="default_tab">Defaŭlta langeto</string>
+    <string name="color">Koloro</string>
     <string name="black">Nigra</string>
     <string name="black_locked">Nigra (Ŝlosita)</string>
-    <string name="incoming_call">Incoming Call</string>
-    <string name="outgoing_call">Outgoing Call</string>
-    <string name="missed_call">Missed Call</string>
-    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="unblock_number">Unblock number</string>
-    <string name="unblock_numbers">Unblock numbers</string>
+    <string name="incoming_call">Alvena Voko</string>
+    <string name="outgoing_call">Elira Voko</string>
+    <string name="missed_call">Maltrafita Voko</string>
+    <string name="unblock_confirmation">Ĉu vi certas, ke vi volas malŝlosi \"%s\"?</string>
+    <string name="unblock_number">Malbloki numeron</string>
+    <string name="unblock_numbers">Malbloki nombrojn</string>
     <string name="show_blocked_numbers">Montro blokita</string>
     <string name="hide_blocked_numbers">Kaŝi blokita</string>
     <string name="paste_g">Enmetu</string>
@@ -20,16 +20,16 @@
     <string name="message">Mesaĝo</string>
     <string name="settings_icon">Ikono de agordoj</string>
     <string name="total_g">Sumo: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">Lasta: %s</string>
+    <string name="next_g">Sekva: %s</string>
+    <string name="time">Tempo</string>
+    <string name="interval">Intervalo</string>
+    <string name="symbols_first">Simboloj unue (ekz. !@#$)</string>
+    <string name="use_custom_notifications">Uzu kutimajn sciigojn</string>
+    <string name="hide_top_bar_when_scrolling">Kaŝu la supran aplikan breton dum rulumado</string>
+    <string name="unread_indicator_position">Nelegita indikilo pozicio</string>
+    <string name="start">Komenco</string>
+    <string name="end">Fino</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projekta subteno</string>

@@ -2,16 +2,16 @@
     <string name="message">Mezua</string>
     <string name="settings_icon">Ezarpenen ikonoa</string>
     <string name="total_g">Guztira: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">Azkena: %s</string>
+    <string name="next_g">Hurrengoa: %s</string>
+    <string name="time">Denbora</string>
+    <string name="interval">Tartea</string>
+    <string name="symbols_first">Ikurrak lehenik (adibidez, !@#$)</string>
+    <string name="use_custom_notifications">Erabili jakinarazpen pertsonalizatuak</string>
+    <string name="hide_top_bar_when_scrolling">Ezkutatu aplikazioaren goiko barra mugitzean</string>
+    <string name="unread_indicator_position">Irakurri gabeko adierazlearen posizioa</string>
+    <string name="start">Hasi</string>
+    <string name="end">Amaiera</string>
 
     <!-- Support project -->
     <string name="action_support_project">Proiektuaren laguntza</string>
@@ -218,21 +218,21 @@
         ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
+    <string name="copy_code">Kopiatu kodea</string>
     <string name="action_on_message_click">Ekintza mezuan klik egitean</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="invert_color">Alderantzikatu kolorea</string>
+    <string name="speech_bubble">Hizketa-burbuila</string>
 
     <!-- Gallery -->
-    <string name="library">Library</string>
-    <string name="open_in_maps">Open in Maps</string>
+    <string name="library">Liburutegia</string>
+    <string name="open_in_maps">Ireki Maps-en</string>
 
     <!-- Dialer -->
     <string name="message_call_later">Geroago deituko dizut?</string>
     <string name="message_on_my_way">Bidean nago.</string>
     <string name="message_cant_talk_right_now">Barkatu, orain ezin dut hitz egin.</string>
-    <string name="remind_me">Remind Me</string>
-    <string name="mute">Mute</string>
+    <string name="remind_me">Gogoratu</string>
+    <string name="mute">Ikusi</string>
 
     <!-- Relation types -->
     <string name="relation_g">Harremana</string>

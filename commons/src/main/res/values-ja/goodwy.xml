@@ -2,16 +2,16 @@
     <string name="message">メッセージ</string>
     <string name="settings_icon">設定アイコン</string>
     <string name="total_g">合計: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">最後：%s</string>
+    <string name="next_g">次： %s</string>
+    <string name="time">時間</string>
+    <string name="interval">インターバル</string>
+    <string name="symbols_first">記号が先（例：!</string>
+    <string name="use_custom_notifications">カスタム通知を使用</string>
+    <string name="hide_top_bar_when_scrolling">スクロール時に一番上のアプリバーを隠す</string>
+    <string name="unread_indicator_position">未読インジケータの位置</string>
+    <string name="start">開始</string>
+    <string name="end">終了</string>
 
     <!-- Support project -->
     <string name="action_support_project">プロジェクト支援</string>

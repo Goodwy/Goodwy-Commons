@@ -49,7 +49,11 @@ class MainActivity : BaseSimpleActivity() {
             launchAbout()
         }
         binding.mainPurchase.setOnClickListener {
-            startPurchaseActivity(R.string.app_name_g, "", arrayListOf("", "", ""), arrayListOf("", "", ""), arrayListOf("", "", ""), arrayListOf("", "", ""),
+            startPurchaseActivity(R.string.app_name_g, "",
+                productIdList = arrayListOf("", "", ""),
+                productIdListRu = arrayListOf("", "", ""),
+                subscriptionIdList = arrayListOf("", "", ""),
+                subscriptionIdListRu = arrayListOf("", "", ""),
                 showLifebuoy = false,
                 playStoreInstalled = isPlayStoreInstalled(),
                 ruStoreInstalled = isRuStoreInstalled(),

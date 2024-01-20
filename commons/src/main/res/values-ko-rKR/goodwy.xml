@@ -2,16 +2,16 @@
     <string name="message">메시지</string>
     <string name="settings_icon">설정 아이콘</string>
     <string name="total_g">합계: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">마지막: %s</string>
+    <string name="next_g">다음: %s</string>
+    <string name="time">시간</string>
+    <string name="interval">간격</string>
+    <string name="symbols_first">기호 우선(예: !@#$)</string>
+    <string name="use_custom_notifications">사용자 지정 알림 사용</string>
+    <string name="hide_top_bar_when_scrolling">스크롤할 때 앱 상단 표시줄 숨기기</string>
+    <string name="unread_indicator_position">읽지 않은 표시기 위치</string>
+    <string name="start">시작</string>
+    <string name="end">끝</string>
 
     <!-- Support project -->
     <string name="action_support_project">프로젝트 지원</string>

@@ -2,16 +2,16 @@
     <string name="message">Pranešimas</string>
     <string name="settings_icon">Nustatymų piktograma</string>
     <string name="total_g">Iš viso: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">Paskutinis: %s</string>
+    <string name="next_g">Kitas: %s</string>
+    <string name="time">Tiksmas</string>
+    <string name="interval">Intervalas</string>
+    <string name="symbols_first">Pirmieji simboliai (pvz., !@#$)</string>
+    <string name="use_custom_notifications">Naudoti pasirinktinius pranešimus</string>
+    <string name="hide_top_bar_when_scrolling">Slėpti viršutinę programėlės juostą, kai slinkstama</string>
+    <string name="unread_indicator_position">Neperskaityto_indikatoriaus padėtis</string>
+    <string name="start">Pradėti</string>
+    <string name="end">Pabaiga</string>
 
     <!-- Support project -->
     <string name="action_support_project">Projekto palaikymas</string>

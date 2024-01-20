@@ -1,35 +1,35 @@
 <resources>
     <string name="app_name_g">Goodwy Commons</string>
-    <string name="recorder_g">Recorder</string>
-    <string name="player_g">Player</string>
-    <string name="general">General</string>
-    <string name="default_tab">Default tab</string>
-    <string name="color">color</string>
+    <string name="recorder_g">Opptaker</string>.
+    <string name="player_g">Spiller</string>
+    <string name="general">Generelt</string>
+    <string name="default_tab">Standard fane</string>
+    <string name="color">farge</string>
     <string name="black">Svart</string>
     <string name="black_locked">Svart (låst)</string>
-    <string name="incoming_call">Incoming Call</string>
-    <string name="outgoing_call">Outgoing Call</string>
-    <string name="missed_call">Missed Call</string>
-    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
+    <string name="incoming_call">Inkommende anrop</string>.
+    <string name="outgoing_call">Utgående anrop</string>
+    <string name="missed_call">Misset anrop</string>
+    <string name="unblock_confirmation">Er du sikker på at du vil oppheve blokkeringen av \"%s\"?</string>
     <string name="unblock_number">Fjern blokkering av nummer</string>
     <string name="unblock_numbers">Oppheve blokkeringen av numre</string>
     <string name="show_blocked_numbers">Vis blokkert</string>
     <string name="hide_blocked_numbers">Skjul blokkert</string>
     <string name="paste_g">Sette inn</string>
-    <string name="recents">Recents</string>
+    <string name="recents">Nylig</string>
     <string name="message">Budskap</string>
     <string name="settings_icon">Innstillinger-ikonet</string>
     <string name="total_g">Totalt: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
+    <string name="last_g">Siste: %s</string>.
+    <string name="next_g">Neste: %s</string>
+    <string name="time">Tid</string>
+    <string name="interval">Intervall</string>
+    <string name="symbols_first">Symboler først (f.eks. !@#$)</string>
+    <string name="use_custom_notifications">Bruk tilpassede varsler</string>
+    <string name="hide_top_bar_when_scrolling">Dekke den øverste app-linjen når du blar</string>.
+    <string name="unread_indicator_position">Posisjon for ulest indikator</string>
     <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="end">Slutt</string>
 
     <!-- Support project -->
     <string name="action_support_project">Prosjektstøtte</string>
@@ -73,10 +73,10 @@
     </string>
 
     <!--Billing-->
-    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
-    <string name="no_purchase_found">No purchase found.</string>
-    <string name="restore_purchase">Restore purchase</string>
-    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="restored_previous_purchase_please_restart">Gjenopprettet tidligere kjøp. Start appen på nytt for å få tilgang til alle funksjoner.</string>
+    <string name="no_purchase_found">Ingen kjøp funnet.</string>
+    <string name="restore_purchase">Gjenopprett kjøp</string>.
+    <string name="restoring_purchase">Gjenoppretter kjøp…</string>
 
     <string name="no_connection">Ingen forbindelse</string>
     <string name="per_month">%s/måned</string>

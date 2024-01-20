@@ -2,16 +2,16 @@
     <string name="message">Mensaje</string>
     <string name="settings_icon">Icono Configuración</string>
     <string name="total_g">Total: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">Último: %s</string>
+    <string name="next_g">Siguiente: %s</string>
+    <string name="time">Hora</string>
+    <string name="interval">Intervalo</string>
+    <string name="symbols_first">Símbolos primero (por ejemplo !@#$)</string>
+    <string name="use_custom_notifications">Utilizar notificaciones personalizadas</string>
+    <string name="hide_top_bar_when_scrolling">Ocultar la barra superior de la aplicación al desplazarse</string>
+    <string name="unread_indicator_position">Posición del indicador de no leído</string>
+    <string name="start">Inicio</string>
+    <string name="end">Fin</string>
 
     <!-- Support project -->
     <string name="action_support_project">Apoyo al proyecto</string>

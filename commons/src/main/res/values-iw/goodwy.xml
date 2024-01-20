@@ -2,21 +2,21 @@
     <string name="message">הודעה</string>
     <string name="settings_icon">סמל הגדרות</string>
     <string name="total_g">סה\"כ: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">אחרון: %s</string>
+    <string name="next_g">הבא: %s</string>
+    <string name="time">זמן</string>
+    <string name="interval">מרווח</string>
+    <string name="symbols_first">סמלים תחילה (למשל !@#$)</string>
+    <string name="use_custom_notifications">השתמש בהודעות מותאמות אישית</string>
+    <string name="hide_top_bar_when_scrolling">הסתר את סרגל האפליקציות העליון בעת גלילה</string>
+    <string name="unread_indicator_position">מיקום מחוון שלא נקרא</string>
+    <string name="start">התחל</string>
+    <string name="end">סיום</string>
 
     <!-- Support project -->
     <string name="action_support_project">תמיכה בפרויקטים</string>
-    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
-    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="pref_pay_summary">קבל את האפליקציה בתשלום כדי לתמוך בפיתוחים עתידיים ובתכונות נוספות</string>
+    <string name="support_project_summary">קבל את אחת מהאפליקציות בתשלום שלנו כדי לתמוך בפיתוח עתידי ולפתוח תכונות נוספות</string>
     <string name="learn_more">למד עוד</string>
     <string name="playbooks">PlayBooks</string>
     <string name="playbooks_summary">Audiobook player</string>
@@ -48,17 +48,17 @@
     <string name="unlock">לבטל נעילה</string>
     <string name="donate_text_g">
         <![CDATA[
-            For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
-            If you like our apps which are offline, non-intrusive and have no ads, please consider supporting us in some way. We would be very grateful.<br><br>
-            Thank you!
+            למי שלא משתמש בגוגל פליי, אפשר לבטל את הנעילה של כל הפונקציות של האפליקציה. <br>
+             אם אתה אוהב את האפליקציות שלנו שהן במצב לא מקוון, לא פולשניות ואין בהן פרסומות, אנא שקול לתמוך בנו בדרך כלשהי. נהיה אסירי תודה.<br><br>
+             תודה!
         ]]>
     </string>
 
     <!--Billing-->
-    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
-    <string name="no_purchase_found">No purchase found.</string>
-    <string name="restore_purchase">Restore purchase</string>
-    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="restored_previous_purchase_please_restart">רכישה קודמת שוחזרה. אנא הפעל מחדש את האפליקציה כדי לעשות שימוש בכל התכונות.</string>
+    <string name="no_purchase_found">לא נמצאה רכישה.</string>
+    <string name="restore_purchase">שחזר רכישה</string>
+    <string name="restoring_purchase">משחזר רכישה...</string>
 
     <string name="no_connection">אין קשר</string>
     <string name="per_month">sחודש/%</string>
@@ -90,7 +90,7 @@
     <string name="transparent_bar">Transparent bars</string>
     <string name="material_design_3">Material Design 3</string>
     <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
-    <string name="bottom_navigation_bar">Bottom navigation bar</string>
+    <string name="bottom_navigation_bar">סרגל הניווט התחתון</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
     <string name="tab_navigation">ניווט בכרטיסיות</string>
     <string name="top">מעל</string>
@@ -111,8 +111,8 @@
     <string name="lines_count">ספירת שורות</string>
     <string name="show_button_blocked_numbers">הצג את הלחצן כדי לא להסתיר שיחות חסומות</string>
     <string name="flash_for_alerts">מבזק להתראות</string>
-    <string name="clean_theme_g">Clean</string>
-    <string name="concept_theme_g">Concept</string>
+    <string name="clean_theme_g">לְנַקוֹת</string>
+    <string name="concept_theme_g">מוּשָׂג</string>
     <string name="default_folder_to_open_g">תיקייה בעת פתיחת האפליקציה</string>
     <string name="last_used_g">שימוש אחרון</string>
     <string name="home_folder_g">תיקיית בית</string>
@@ -194,27 +194,27 @@
     <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our app to view and edit contacts.<br><br>
-            Thanks
+            היי,<br><br>
+             אם אתה אוהב את האפליקציה הזו, אנו ממליצים שתתקין את האפליקציה שלנו כדי להציג ולערוך אנשי קשר.<br><br>
+             תודה
         ]]></string>
     <string name="recommendation_dialog_dialer_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our call app.<br><br>
-            Thanks
+            היי,<br><br>
+             אם אתה אוהב את האפליקציה הזו, אנו ממליצים שתתקין את אפליקציית השיחות שלנו.<br><br>
+             תודה
         ]]></string>
     <string name="recommendation_dialog_messages_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our messaging app.<br><br>
-            Thanks
+            היי,<br><br>
+             אם אתה אוהב את האפליקציה הזו, אנו ממליצים שתתקין את אפליקציית ההודעות שלנו.<br><br>
+             תודה
         ]]></string>
     <string name="recommendation_dialog_gallery_g">
         <![CDATA[
-            Hey,<br><br>
-            if you like this app, we recommend that you install our photo viewing and editing app.<br><br>
-            Thanks
+            היי,<br><br>
+             אם אתה אוהב את האפליקציה הזו, אנו ממליצים שתתקין את אפליקציית הצפייה והעריכה של תמונות שלנו.<br><br>
+             תודה
         ]]></string>
 
     <!-- SMS -->
@@ -296,12 +296,12 @@
     <string name="relation_sister_in_law_g">Sister-in-law</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Error</string>
-    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
-    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
-    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
-    <string name="billing_product_deleted">Purchase canceled</string>
-    <string name="billing_subscriptions">Subscriptions</string>
-    <string name="billing_change_to_google_play">Change to Google Play</string>
-    <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_general_error">שגיאה</string>
+    <string name="billing_purchase_confirm_in_progress">מאשר את הרכישה…</string>
+    <string name="billing_purchase_delete_in_progress">מוחק את הרכישה…</string>
+    <string name="billing_product_confirmed">מוצר אושר/מבוסס</string>
+    <string name="billing_product_deleted">הרכישה בוטלה</string>
+    <string name="billing_subscriptions">מינויים</string>
+    <string name="billing_change_to_google_play">שנה ל-Google Play</string>
+    <string name="billing_change_to_ru_store">שנה ל-RuStore</string>
 </resources>

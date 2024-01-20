@@ -2,16 +2,16 @@
     <string name="message">Missatge</string>
     <string name="settings_icon">Icona Configuració</string>
     <string name="total_g">Total: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
+    <string name="last_g">Últim: %s</string>
+    <string name="next_g">Següent: %s</string>
+    <string name="time">Hora</string>
     <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="symbols_first">Primer els símbols (p. ex. !@#$)</string>
+    <string name="use_custom_notifications">Utilitzeu notificacions personalitzades</string>
+    <string name="hide_top_bar_when_scrolling">Amaga la barra d\'aplicacions superior en desplaçar-se</string>
+    <string name="unread_indicator_position">Posició de l\'indicador no llegit</string>
+    <string name="start">Inici</string>
+    <string name="end">Fi</string>
 
     <!-- Support project -->
     <string name="action_support_project">Suport al projecte</string>

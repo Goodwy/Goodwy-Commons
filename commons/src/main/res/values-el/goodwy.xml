@@ -2,16 +2,16 @@
     <string name="message">Μήνυμα</string>
     <string name="settings_icon">Εικονίδιο ρυθμίσεων</string>
     <string name="total_g">Σύνολο: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="last_g">Τελευταίο: %s</string>
+    <string name="next_g">Επόμενο: %s</string>
+    <string name="time">Χρόνος</string>
+    <string name="interval">Διάστημα</string>
+    <string name="symbols_first">Σύμβολα πρώτα (π.χ. !@#$)</string>
+    <string name="use_custom_notifications">Χρησιμοποιήστε προσαρμοσμένες ειδοποιήσεις</string>
+    <string name="hide_top_bar_when_scrolling">Αποκρύψτε την επάνω μπάρα της εφαρμογής κατά την κύλιση</string>
+    <string name="unread_indicator_position">Θέση ένδειξης μη αναγνωσμένων μηνυμάτων</string>
+    <string name="start">Έναρξη</string>
+    <string name="end">Τέλος</string>
 
     <!-- Support project -->
     <string name="action_support_project">Υποστήριξη έργου</string>

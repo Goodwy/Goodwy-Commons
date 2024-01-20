@@ -2,16 +2,16 @@
     <string name="message">संदेश</string>
     <string name="settings_icon">सेटिंग्स आइकन</string>
     <string name="total_g">कुल: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name='last_g'>अंतिम: %s</string>
+    <string name='next_g'>अगला: %s</string>
+    <string name='time'>समय</string>
+    <string name='interval'>अंतराल</string>
+    <string name='symbols_first'>पहले प्रतीक (उदा. !@#$)</string>
+    <string name='use_custom_notifications'>कस्टम नोटिफिकेशन का उपयोग करें</string>
+    <string name='hide_top_bar_when_scrolling'>स्क्रॉल करते समय शीर्ष ऐप बार छुपाएं</string>
+    <string name='unread_indicator_position'>अपठित सूचक स्थिति</string>
+    <string name='start'>प्रारंभ करें</string>
+    <string name='end'>समाप्त</string>
 
     <!-- Support project -->
     <string name="action_support_project">परियोजना का समर्थन</string>

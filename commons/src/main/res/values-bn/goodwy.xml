@@ -1,35 +1,35 @@
 <resources>
     <string name="app_name_g">Goodwy Commons</string>
-    <string name="recorder_g">Recorder</string>
-    <string name="player_g">Player</string>
-    <string name="general">General</string>
-    <string name="default_tab">Default tab</string>
-    <string name="color">color</string>
-    <string name="black">Black</string>
-    <string name="black_locked">Black (Locked)</string>
-    <string name="incoming_call">Incoming Call</string>
-    <string name="outgoing_call">Outgoing Call</string>
-    <string name="missed_call">Missed Call</string>
-    <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
-    <string name="unblock_number">Unblock number</string>
-    <string name="unblock_numbers">Unblock numbers</string>
-    <string name="show_blocked_numbers">Show blocked numbers</string>
-    <string name="hide_blocked_numbers">Hide blocked numbers</string>
-    <string name="paste_g">Paste</string>
-    <string name="recents">Recents</string>
-    <string name="message">Message</string>
-    <string name="settings_icon">Settings icon</string>
-    <string name="total_g">Total: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
-    <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="recorder_g">রেকর্ডার</string>
+    <string name="player_g"> প্লেয়ার</string>
+    <string name="general">সাধারণ</string>
+    <string name="default_tab">ডিফল্ট ট্যাব</string>
+    <string name="color">রঙ</string>
+    <string name="black">কালো</string>
+    <string name="black_locked">কালো (লক করা)</string>
+    <string name="incoming_call">আগত কল</string>
+    <string name="outgoing_call">আউটগোয়িং কল</string>
+    <string name="missed_call">মিসড কল</string>
+    <string name="unblock_confirmation">আপনি কি \"%s\" আনব্লক করার বিষয়ে নিশ্চিত?</string>
+    <string name="unblock_number"> আনব্লক নম্বর</string>
+    <string name="unblock_numbers"> নম্বর আনব্লক করুন</string>
+    <string name="show_blocked_numbers">অবরুদ্ধ নম্বর দেখান</string>
+    <string name="hide_blocked_numbers">অবরুদ্ধ নম্বর লুকান</string>
+    <string name="paste_g">পেস্ট করুন</string>
+    <string name="recents"> সাম্প্রতিক</string>
+    <string name="message">বার্তা</string>
+    <string name="settings_icon">সেটিংস আইকন</string>
+    <string name="total_g">মোট: %s</string>
+    <string name="last_g">শেষ: %s</string>
+    <string name="next_g">পরবর্তী: %s</string>
+    <string name="time"> সময়</string>
+    <string name="interval">ব্যবধান</string>
+    <string name="symbols_first">প্রথমে প্রতীক (যেমন !@#$)</string>
+    <string name="use_custom_notifications">কাস্টম বিজ্ঞপ্তি ব্যবহার করুন</string>
+    <string name="hide_top_bar_when_scrolling">স্ক্রোল করার সময় শীর্ষ অ্যাপ বার লুকান</string>
+    <string name="unread_indicator_position">অপঠিত সূচক অবস্থান</string>
+    <string name="start">শুরু</string>
+    <string name="end">শেষ</string>
 
     <!-- Support project -->
     <string name="action_support_project">Project support</string>
@@ -91,51 +91,51 @@
     <string name="system_theme_description">This theme does not allow you to adjust colors manually. Colors change dynamically depending on your system settings.</string>
 
     <!-- Settings -->
-    <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
-    <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
-    <string name="round_play_icon">Round play/pause icon</string>
-    <string name="round_play_icon_summary">The play/pause icon is colored in the primary color</string>
-    <string name="use_icon_tabs">Use tab icons</string>
-    <string name="use_icon_tabs_summary">Icons instead of text on tabs</string>
-    <string name="show_dividers">Show dividers</string>
-    <string name="colored_contacts">Contacts colored icons</string>
-    <string name="contact_color_list">Contact color list</string>
-    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
-    <string name="kids_mode">Kids mode</string>
-    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
-    <string name="restart_required">Application restart required</string>
-    <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
-    <string name="bottom_navigation_bar">Bottom navigation bar</string>
-    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
-    <string name="tab_navigation">Tab navigation</string>
-    <string name="top">Top</string>
-    <string name="bottom">Bottom</string>
-    <string name="relative_date">Relative date</string>
-    <string name="color_sim_card_icons">Color SIM card icons</string>
-    <string name="tabs">Tabs</string>
-    <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
-    <string name="call_screen_background">Call screen background</string>
-    <string name="contact_photo">Contact photo</string>
-    <string name="blurry_contact_photo">Blurry contact photo</string>
-    <string name="blurry_wallpaper">Blurry wallpaper</string>
-    <string name="text_cursor_color">Text cursor color</string>
-    <string name="top_app_bar_colored">Colored top app bar</string>
-    <string name="top_app_bar_color_icon">Colored icons of the app top bar</string>
-    <string name="top_app_bar_color_title">Colored app top bar title</string>
-    <string name="overflow_icon">Overflow icon</string>
-    <string name="lines_count">Lines count</string>
-    <string name="show_button_blocked_numbers">Show the button not to hide blocked calls</string>
-    <string name="flash_for_alerts">LED Flash for alerts</string>
-    <string name="clean_theme_g">Clean</string>
-    <string name="concept_theme_g">Concept</string>
-    <string name="default_folder_to_open_g">অ্যাপ শুরুতে খুলতে ফোল্ডার</string>
-    <string name="last_used_g">সর্বশেষ ব্যবহৃত</string>
-    <string name="home_folder_g">হোম ফোল্ডার</string>
-    <string name="primary_sim_card">Primary SIM card</string>
-    <string name="button_primary">Primary button</string>
-    <string name="button_secondary">Secondary button</string>
+    <string name="show_contact_thumbnails_g">যোগাযোগের থাম্বনেইল দেখান</string>
+    <string name="save_recordings_in_summary">Android 10+ থেকে শুরু করে, অ্যাপটির আপনার ফাইলগুলিতে অ্যাক্সেস নেই</string>
+    <string name="round_play_icon"> রাউন্ড প্লে/পজ আইকন</string>
+    <string name="round_play_icon_summary"> প্লে/পজ আইকনটি প্রাথমিক রঙে রঙিন হয়</string>
+    <string name="use_icon_tabs">ট্যাব আইকন ব্যবহার করুন</string>
+    <string name="use_icon_tabs_summary">ট্যাবে পাঠ্যের পরিবর্তে আইকন</string>
+    <string name="show_dividers">ডিভাইডার দেখান</string>
+    <string name="colored_contacts"> পরিচিতির রঙিন আইকন</string>
+    <string name="contact_color_list">যোগাযোগ রঙের তালিকা</string>
+    <string name="transparent_navigation_bar">স্বচ্ছ নীচের নেভিগেশন বার</string>
+    <string name="kids_mode">বাচ্চাদের মোড</string>৷
+    <string name="kids_mode_summary"> সরলীকৃত ইন্টারফেস, রঙ নির্বাচন করুন</string>
+    <string name="restart_required">অ্যাপ্লিকেশন রিস্টার্ট প্রয়োজন</string>
+    <string name="transparent_bar">স্বচ্ছ বার</string>
+    <string name="material_design_3">মেটেরিয়াল ডিজাইন ৩</string>
+    <string name="material_design_3_summary">অ্যাপ্লিকেশনের কিছু উপাদানের চেহারা পরিবর্তন করে</string>
+    <string name="bottom_navigation_bar">নীচের নেভিগেশন বার</string>
+    <string name="bottom_navigation_bar_summary">ট্যাব বারটি নীচে চলে যাবে</string>
+    <string name="tab_navigation">ট্যাব নেভিগেশন</string>
+    <string name="top">শীর্ষ</string>
+    <string name="bottom"> নিচে</string>
+    <string name="relative_date"> আপেক্ষিক তারিখ</string>
+    <string name="color_sim_card_icons">রঙের সিম কার্ড আইকন</string>
+    <string name="tabs">ট্যাব</string>
+    <string name="open_search_when_open_contacts">আপনি পরিচিতি ট্যাব খুললে একটি অনুসন্ধান খুলুন</string>
+    <string name="call_screen_background">কল স্ক্রীন ব্যাকগ্রাউন্ড</string>
+    <string name="contact_photo">যোগাযোগের ছবি</string>
+    <string name="blurry_contact_photo">অস্পষ্ট যোগাযোগের ছবি</string>৷
+    <string name="blurry_wallpaper">অস্পষ্ট ওয়ালপেপার</string>৷
+    <string name="text_cursor_color">পাঠ্য কার্সারের রঙ</string>
+    <string name="top_app_bar_colored">রঙিন শীর্ষ অ্যাপ বার</string>
+    <string name="top_app_bar_color_icon">অ্যাপ টপ বারের রঙিন আইকন</string>
+    <string name="top_app_bar_color_title">রঙিন অ্যাপ টপ বার শিরোনাম</string>
+    <string name="overflow_icon">ওভারফ্লো আইকন</string>
+    <string name="lines_count">লাইন গণনা</string>
+    <string name="show_button_blocked_numbers">অবরুদ্ধ কল লুকাতে না করার বোতামটি দেখান</string>
+    <string name="flash_for_alerts">সতর্কতার জন্য LED ফ্ল্যাশ</string>
+    <string name="clean_theme_g">পরিষ্কার করুন</string>
+    <string name="concept_theme_g">ধারণা</string>
+    <string name="default_folder_to_open_g">অ্যাপ শুরুতে খুলতে অংশ</string>
+    <string name="last_used_g">সর্বশেষ গ্রহণ</string>
+    <string name="home_folder_g">হোম অংশ</string>
+    <string name="primary_sim_card">প্রাথমিক সিম কার্ড</string>
+    <string name="button_primary">প্রাথমিক বোতাম</string>
+    <string name="button_secondary">সেকেন্ডারি বোতাম</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -166,28 +166,28 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Add number</string>
-    <string name="add_email">Add email</string>
-    <string name="add_address">Add address</string>
-    <string name="add_im">Add IM</string>
-    <string name="add_event">Add event</string>
-    <string name="add_notes">Add notes</string>
-    <string name="add_website">Add website</string>
-    <string name="add_group">Add a group</string>
-    <string name="add_related_person">Add related person</string>
+    <string name="add_number"> নম্বর যোগ করুন</string>
+    <string name="add_email">ইমেল যোগ করুন</string>
+    <string name="add_address">ঠিকানা যোগ করুন</string>
+    <string name="add_im">IM যোগ করুন</string>
+    <string name="add_event">ইভেন্ট যোগ করুন</string>
+    <string name="add_notes">টীকা যোগ করুন</string>
+    <string name="add_website">ওয়েবসাইট যোগ করুন</string>
+    <string name="add_group">একটি গোষ্ঠী যোগ করুন</string>
+    <string name="add_related_person">সম্পর্কিত ব্যক্তি যোগ করুন</string>
 
-    <string name="video_call">Video call</string>
-    <string name="screen_slide_animation">Screen slide animation</string>
-    <string name="screen_slide_animation_zoomout">Zoom-out</string>
-    <string name="screen_slide_animation_depth">Depth</string>
-    <string name="show_phone_numbers_g">Show phone numbers</string>
+    <string name="video_call">ভিডিও কল</string>
+    <string name="screen_slide_animation">স্ক্রিন স্লাইড অ্যানিমেশন</string>
+    <string name="screen_slide_animation_zoomout">জুম-আউট</string>
+    <string name="screen_slide_animation_depth">গভীরতা</string>
+    <string name="show_phone_numbers_g">ফোন নম্বর দেখান</string>
 
     <!-- Apps -->
-    <string name="get">Get</string>
-    <string name="open">Open</string>
-    <string name="collection">Collection</string>
-    <string name="collection_summary">Build a collection to unlock the app</string>
-    <string name="limited_supply">Limited supply</string>
+    <string name="get">পান</string>
+    <string name="open">খুলুন</string>৷
+    <string name="collection">সংগ্রহ</string>
+    <string name="collection_summary">অ্যাপটি আনলক করতে একটি সংগ্রহ তৈরি করুন</string>
+    <string name="limited_supply"> সীমিত সরবরাহ</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
@@ -221,21 +221,21 @@
         ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Copy code</string>
-    <string name="action_on_message_click">Action on message click</string>
-    <string name="invert_color">Invert color</string>
-    <string name="speech_bubble">Speech bubble</string>
+    <string name="copy_code">কোড কপি করুন</string>
+    <string name="action_on_message_click">বার্তা ক্লিকে অ্যাকশন</string>
+    <string name="invert_color"> উল্টানো রঙ</string>
+    <string name="speech_bubble">কথার বুদবুদ</string>
 
     <!-- Gallery -->
-    <string name="library">Library</string>
-    <string name="open_in_maps">Open in Maps</string>
+    <string name="library">লাইব্রেরি</string>
+    <string name="open_in_maps">মানচিত্রে খুলুন</string>৷
 
     <!-- Dialer -->
-    <string name="message_call_later">Can I call you later?</string>
-    <string name="message_on_my_way">I\'m on my way.</string>
-    <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
-    <string name="remind_me">Remind Me</string>
-    <string name="mute">Mute</string>
+    <string name="message_call_later">আমি কি আপনাকে পরে কল করতে পারি?</string>
+    <string name="message_on_my_way">আমি আমার পথে আছি।</string>
+    <string name="message_cant_talk_right_now">দুঃখিত, আমি এখন কথা বলতে পারছি না।</string>
+    <string name="remind_me">আমাকে মনে করিয়ে দিন</string>
+    <string name="mute">নিঃশব্দ</string>৷
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>

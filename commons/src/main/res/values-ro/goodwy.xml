@@ -18,17 +18,17 @@
     <string name="recents">Recente</string>
     <string name="message">Mesaj</string>
     <string name="settings_icon">Pictograma Setări</string>
-    <string name="total_g">Total: %s</string>
-    <string name="last_g">Last: %s</string>
-    <string name="next_g">Next: %s</string>
-    <string name="time">Time</string>
-    <string name="interval">Interval</string>
-    <string name="symbols_first">Symbols first (e.g. !@#$)</string>
-    <string name="use_custom_notifications">Use custom notifications</string>
-    <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
-    <string name="unread_indicator_position">Unread indicator position</string>
+    <string name="total_g">Total: %s</string>.
+    <string name="last_g">Ultimul: %s</string>
+    <string name="next_g">Urmatorul: %s</string>
+    <string name="time">Ora</string>.
+    <string name="interval">Interval</string>.
+    <string name="symbols_first">Simbolurile mai întâi (de ex. !@#$)</string>
+    <string name="use_custom_notifications">Utilizează notificări personalizate</string>
+    <string name="hide_top_bar_when_scrolling">Ascundeți bara de sus a aplicației atunci când derulați</string>
+    <string name="unread_indicator_position">Poziția indicatorului de necitit</string>
     <string name="start">Start</string>
-    <string name="end">End</string>
+    <string name="end">Sfârșitul</string>
 
     <!-- Support project -->
     <string name="action_support_project">Suport de proiect</string>
