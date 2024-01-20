@@ -4,12 +4,12 @@
     <string name="total_g">Cyfanswm: %s</string>
     <string name="last_g">Olaf: %s</string>
     <string name="next_g">Nesaf: %s</string>
-    <string name="time">Amser</ string>
-    <string name="interval">Cyfwng</ string>
+    <string name="time">Amser</string>
+    <string name="interval">Cyfwng</string>
     <string name="symbols_first">Symbolau yn gyntaf (e.e. !@#$)</string>
-    <string name="use_custom_notifications">Defnyddio hysbysiadau personol</ string>
-    <string name="hide_top_bar_when_scrolling">Cuddio\'r bar ap uchaf wrth sgrolio</ string>
-    <string name="unread_indicator_position"> Lleoliad y dangosydd heb ei ddarllen</ string>
+    <string name="use_custom_notifications">Defnyddio hysbysiadau personol</string>
+    <string name="hide_top_bar_when_scrolling">Cuddio\'r bar ap uchaf wrth sgrolio</string>
+    <string name="unread_indicator_position"> Lleoliad y dangosydd heb ei ddarllen</string>
     <string name="start">Dechrau</string>
     <string name="end">Diwedd</string>
 
