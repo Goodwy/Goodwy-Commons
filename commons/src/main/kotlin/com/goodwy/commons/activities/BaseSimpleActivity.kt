@@ -73,7 +73,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private var nestedView: View? = null
     var scrollingView: ScrollingView? = null
     private var toolbar: Toolbar? = null
-    private var mySearchMenu: MySearchMenu? = null
+    var mySearchMenu: MySearchMenu? = null
     private var useTransparentNavigation = false
     private var useTopSearchMenu = false
     private val GENERIC_PERM_HANDLER = 100
