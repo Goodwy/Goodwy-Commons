@@ -58,8 +58,8 @@ app-build-kotlinJVMTarget = "17"
 #versioning
 app-version-appId = "com.goodwy.dialer"
 app-version-groupId = "com.goodwy.commons"
-app-version-versionCode = "420"
-app-version-versionName = "4.2.0"
+app-version-versionCode = "500"
+app-version-versionName = "5.0.0"
 [libraries]
 #Android X
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
