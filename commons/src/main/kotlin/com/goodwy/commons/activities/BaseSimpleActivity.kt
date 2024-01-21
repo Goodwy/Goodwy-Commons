@@ -347,7 +347,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun getRequiredStatusBarColor(): Int {
-        return if ((scrollingView is RecyclerView || scrollingView is NestedScrollView) && scrollingView?.computeVerticalScrollOffset() == 0) {
+        val scrollingViewOffset = scrollingView?.computeVerticalScrollOffset() ?: 0
+        return if ((scrollingView is RecyclerView || scrollingView is NestedScrollView) && scrollingViewOffset == 0) {
             getProperBackgroundColor()
         } else {
             getColoredMaterialStatusBarColor()
