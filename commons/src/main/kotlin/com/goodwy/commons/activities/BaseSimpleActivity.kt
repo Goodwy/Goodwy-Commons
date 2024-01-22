@@ -237,7 +237,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         handleNavigationAndScrolling()
 
         val backgroundColor = getProperBackgroundColor()
-        updateStatusbarColor(backgroundColor)
         updateActionbarColor(backgroundColor)
     }
 
