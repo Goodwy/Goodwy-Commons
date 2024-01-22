@@ -460,7 +460,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
             val recentsIcon = BitmapFactory.decodeResource(resources, appIconIDs[currentAppIconColorIndex])
             val title = getAppLauncherName()
-            val color = baseConfig.primaryColor
+            val color = getProperBackgroundColor() //baseConfig.primaryColor
 
             val description = ActivityManager.TaskDescription(title, recentsIcon, color)
             setTaskDescription(description)

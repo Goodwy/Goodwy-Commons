@@ -90,13 +90,12 @@
     <dimen name="purchase_name_right_margin">12dp</dimen>
     <dimen name="zero">0dp</dimen>
 
-    <dimen name="top_toolbar_search_height">50dp</dimen>
-
     <dimen name="settings_value_width">108dp</dimen>
     <dimen name="settings_value_width_long">168dp</dimen>
 
     <dimen name="activity_padding_left_right">0dp</dimen>
 
     <!--Search toolbar-->
+    <dimen name="top_toolbar_search_height">50dp</dimen>
     <dimen name="search_menu_height">36dp</dimen>
 </resources>

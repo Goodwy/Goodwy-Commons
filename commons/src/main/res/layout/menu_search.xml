@@ -74,7 +74,6 @@
                 android:src="@drawable/ic_clear_round"
                 android:visibility="gone"
                 tools:visibility="visible" />
-
         </RelativeLayout>
     </RelativeLayout>
 </com.google.android.material.appbar.AppBarLayout>
