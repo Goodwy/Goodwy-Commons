@@ -1,8 +1,8 @@
 package com.goodwy.commons.helpers.rustore
 
 import android.app.Activity
+import android.util.Log
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.helpers.rustore.model.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.BufferOverflow
@@ -78,6 +78,9 @@ class RuStoreHelper constructor(
 
                     purchases.forEach { purchase ->
                         val purchaseId = purchase.purchaseId
+                        if (purchase.developerPayload?.isNotEmpty() == true) {
+                            Log.w("RuStoreBillingClient", "DeveloperPayloadInfo: ${purchase.developerPayload}")
+                        }
                         if (purchaseId != null) {
                             when (purchase.purchaseState) {
                                 PurchaseState.CREATED, PurchaseState.INVOICE_CREATED -> {
@@ -118,7 +121,7 @@ class RuStoreHelper constructor(
     }
 
     fun purchaseProduct(product: Product) {
-        billingClientRuStore.purchases.purchaseProduct(product.productId)
+        billingClientRuStore.purchases.purchaseProduct(productId = product.productId)
             .addOnSuccessListener { paymentResult ->
                 handlePaymentResult(paymentResult)
             }
