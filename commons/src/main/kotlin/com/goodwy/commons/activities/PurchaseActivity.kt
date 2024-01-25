@@ -514,9 +514,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             SimpleListItem(2, R.string.right_contacts, imageRes = R.drawable.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
             SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.drawable.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
             SimpleListItem(4, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
-            SimpleListItem(5, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
-            //SimpleListItem(6, R.string.right_voice_recorder, R.drawable.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage),
-            SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage)
+            SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage),
+            SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage)
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
@@ -532,8 +531,13 @@ class PurchaseActivity : BaseSimpleActivity() {
                 if (it.selected) {
                     launchApp(it.packageName)
                 } else {
-                    val url = "https://play.google.com/store/apps/details?id=${it.packageName}"
-                    launchViewIntent(url)
+                    if (isRuStoreInstalled() && it.id != 56) {
+                        val urlRS = "https://apps.rustore.ru/app/${it.packageName}"
+                        launchViewIntent(urlRS)
+                    } else {
+                        val urlGP = "https://play.google.com/store/apps/details?id=${it.packageName}"
+                        launchViewIntent(urlGP)
+                    }
                 }
             }
         }
