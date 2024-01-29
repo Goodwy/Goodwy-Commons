@@ -100,7 +100,7 @@ glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = 
 material = { module = "com.google.android.material:material", version.ref = "material" }
 #Helpers
 patternLockView = { module = "com.github.aritraroy:patternLockView", version.ref = "patternLockView" }
-reprint = { module = "com.github.tibbi:reprint", version.ref = "reprint" }
+reprint = { module = "com.github.goodwy:reprint", version.ref = "reprint" }
 recyclerView-FastScroller = { module = "com.github.goodwy:RecyclerView-FastScroller", version.ref = "recyclerviewFastscroller" }
 rtl-viewpager = { module = "com.github.duolingo:rtl-viewpager", version.ref = "rtlViewpager" }
 ez-vcard = { module = "com.googlecode.ez-vcard:ez-vcard", version.ref = "ezVcard" }
