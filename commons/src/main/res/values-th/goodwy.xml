@@ -80,6 +80,7 @@
 
     <string name="no_connection">ไม่มีการเชื่อมต่อ</string>
     <string name="per_month">%s/เดือน</string>
+    <string name="per_year">%s/ปี</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>

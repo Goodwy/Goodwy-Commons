@@ -79,6 +79,7 @@
 
     <string name="no_connection">Немає підключення</string>
     <string name="per_month">%s/місяць</string>
+    <string name="per_year">%s/рік</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Вибір тем та кольорів інтерфейсу</string>

@@ -62,6 +62,7 @@
 
     <string name="no_connection">Keine Verbindung</string>
     <string name="per_month">%s/Monat</string>
+    <string name="per_year">%s/Jahr</string>
 
     <string name="show_contact_thumbnails_g">Vorschaubilder der Kontakte zeigen</string>
     <string name="use_icon_tabs_summary">Symbole statt Text auf Registerkarten</string>

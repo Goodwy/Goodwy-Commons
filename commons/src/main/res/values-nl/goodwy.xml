@@ -62,6 +62,7 @@
 
     <string name="no_connection">Geen verbinding</string>
     <string name="per_month">%s/maand</string>
+    <string name="per_year">%s/jaar</string>
 
     <string name="show_contact_thumbnails_g">Miniaturen van contacten weergeven</string>
     <string name="use_icon_tabs_summary">Pictogrammen in plaats van tekst op tabbladen</string>

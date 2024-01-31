@@ -62,6 +62,7 @@
 
     <string name="no_connection">بدون اتصال</string>
     <string name="per_month">%s/ماه</string>
+    <string name="per_year">%s/سال</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">آیکون ها به جای متن بر روی زبانه ها</string>

@@ -62,6 +62,7 @@
 
     <string name="no_connection">Nėra ryšio</string>
     <string name="per_month">%s per mėnesį</string>
+    <string name="per_year">%s per metus</string>
 
     <string name="show_contact_thumbnails_g">Rodyti adresatų miniatiūras</string>
     <string name="use_icon_tabs_summary">Piktogramos vietoj teksto skirtukuose</string>

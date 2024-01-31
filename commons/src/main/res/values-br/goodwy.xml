@@ -79,6 +79,7 @@
 
     <string name="no_connection">No connection</string>
     <string name="per_month">%s/month</string>
+    <string name="per_year">%s/year</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>

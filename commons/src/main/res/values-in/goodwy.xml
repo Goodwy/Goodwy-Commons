@@ -62,6 +62,7 @@
 
     <string name="no_connection">Tidak ada koneksi</string>
     <string name="per_month">%s/bulan</string>
+    <string name="per_year">%s/tahun</string>
 
     <string name="show_contact_thumbnails_g">Tampilkan foto kontak</string>
     <string name="use_icon_tabs_summary">Ikon alih-alih teks pada tab</string>

@@ -62,6 +62,7 @@
 
     <string name="no_connection">Καμία σύνδεση</string>
     <string name="per_month">%s/μήνα</string>
+    <string name="per_year">%s/έτος</string>
 
     <string name="show_contact_thumbnails_g">Εμφάνιση μικρογραφιών επαφής</string>
     <string name="use_icon_tabs_summary">Εικονίδια αντί για κείμενο σε καρτέλες</string>

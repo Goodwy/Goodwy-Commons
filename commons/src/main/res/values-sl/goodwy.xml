@@ -62,6 +62,7 @@
 
     <string name="no_connection">Brez povezave</string>
     <string name="per_month">%s/mesec</string>
+    <string name="per_year">%s/leto</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Ikone namesto besedila na zavihku</string>

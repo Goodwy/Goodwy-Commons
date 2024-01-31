@@ -58,10 +58,11 @@
     <string name="restored_previous_purchase_please_restart">पिछली खरीदारी बहाल की गई. कृपया सभी सुविधाओं का उपयोग करने के लिए ऐप को पुनः आरंभ करें।</string>
     <string name="no_purchase_found">कोई खरीदारी नहीं मिली.</string>
     <string name="restore_purchase">पुनःस्थापन क्रय</string>
-    <string name="restoring_purchase">खरीदारी बहाल की जा रही है...</string>
+    <string name="restoring_purchase">खरीदारी बहाल की जा रही है…</string>
 
     <string name="no_connection">कोई कनेक्शन नहीं</string>
-    <string name="per_month">%s/month</string>
+    <string name="per_month">%s/माह</string>
+    <string name="per_year">%s/सालों</string>
 
     <string name="show_contact_thumbnails_g">संपर्क थंबनेल दिखाएँ</string>
     <string name="use_icon_tabs_summary">टैब पर पाठ के बजाय प्रतीक</string>

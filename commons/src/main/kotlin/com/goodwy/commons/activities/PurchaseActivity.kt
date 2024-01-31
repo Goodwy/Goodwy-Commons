@@ -499,6 +499,11 @@ class PurchaseActivity : BaseSimpleActivity() {
             text = "..."
             isEnabled = false
         }
+        binding.appOneSubYearButton.apply {
+            setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
+            text = "..."
+            isEnabled = false
+        }
         binding.appTwoButton.apply {
             setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
             text = "..."
@@ -509,12 +514,22 @@ class PurchaseActivity : BaseSimpleActivity() {
             text = "..."
             isEnabled = false
         }
+        binding.appTwoSubYearButton.apply {
+            setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
+            text = "..."
+            isEnabled = false
+        }
         binding.appThreeButton.apply {
             setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
             text = "..."
             isEnabled = false
         }
         binding.appThreeSubButton.apply {
+            setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
+            text = "..."
+            isEnabled = false
+        }
+        binding.appThreeSubYearButton.apply {
             setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
             text = "..."
             isEnabled = false

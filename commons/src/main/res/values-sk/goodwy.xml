@@ -62,6 +62,7 @@
 
     <string name="no_connection">Žiadne pripojenie</string>
     <string name="per_month">%s/mesiac</string>
+    <string name="per_year">%s/rok</string>
 
     <string name="show_contact_thumbnails_g">Zobraziť obrázky kontaktov</string>
     <string name="use_icon_tabs_summary">Ikony namiesto textu na kartách</string>

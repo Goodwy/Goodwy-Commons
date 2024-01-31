@@ -79,6 +79,7 @@
 
     <string name="no_connection">Nici o conexiune</string>
     <string name="per_month">%s/lună</string>
+    <string name="per_year">%s/an</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>

@@ -62,6 +62,7 @@
 
     <string name="no_connection">Không có kết nối</string>
     <string name="per_month">%s/tháng</string>
+    <string name="per_year">%s/năm</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Biểu tượng thay vì văn bản trên tab</string>

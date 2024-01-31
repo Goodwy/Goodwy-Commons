@@ -62,6 +62,7 @@
 
     <string name="no_connection">Pas de connexion</string>
     <string name="per_month">%s/mois</string>
+    <string name="per_year">%s/année</string>
 
     <string name="show_contact_thumbnails_g">Afficher les vignettes des contacts</string>
     <string name="use_icon_tabs_summary">Icônes au lieu de texte sur les onglets</string>

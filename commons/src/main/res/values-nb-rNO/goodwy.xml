@@ -80,6 +80,7 @@
 
     <string name="no_connection">Ingen forbindelse</string>
     <string name="per_month">%s/måned</string>
+    <string name="per_year">%s/år</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>

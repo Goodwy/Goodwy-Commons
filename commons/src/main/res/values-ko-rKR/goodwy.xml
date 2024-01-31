@@ -62,6 +62,7 @@
 
     <string name="no_connection">연결 없음</string>
     <string name="per_month">%s/월</string>
+    <string name="per_year">%s/년</string>
 
     <string name="show_contact_thumbnails_g">연락처 썸네일 보기</string>
     <string name="use_icon_tabs_summary">탭의 텍스트 대신 아이콘</string>

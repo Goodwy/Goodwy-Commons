@@ -63,6 +63,7 @@
 
     <string name="no_connection">Без конекције</string>
     <string name="per_month">%s/месечно</string>
+    <string name="per_year">%s/године</string>
 
     <string name="show_contact_thumbnails_g">Прикажи сличице контаката</string>
     <string name="use_icon_tabs_summary">Иконице уместо текста на картицама</string>

@@ -62,6 +62,7 @@
 
     <string name="no_connection">无连接</string>
     <string name="per_month">%s/月</string>
+    <string name="per_year">%s/年</string>
 
     <string name="show_contact_thumbnails_g">显示联系人缩图</string>
     <string name="use_icon_tabs_summary">图标而不是选项卡上的文本</string>

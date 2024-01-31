@@ -62,6 +62,7 @@
 
     <string name="no_connection">Nincs kapcsolat</string>
     <string name="per_month">%s/hó</string>
+    <string name="per_year">%s/év</string>
 
     <string name="show_contact_thumbnails_g">Névjegyek bélyegképének megjelenítése</string>
     <string name="use_icon_tabs_summary">Ikonok szöveg helyett a lapokban</string>

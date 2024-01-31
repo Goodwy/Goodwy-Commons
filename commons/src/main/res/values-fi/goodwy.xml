@@ -62,6 +62,7 @@
 
     <string name="no_connection">Ei yhteyttä</string>
     <string name="per_month">%s/kuukausi</string>
+    <string name="per_year">%s/vuosi</string>
 
     <string name="show_contact_thumbnails_g">Näytä yhteystietojen kuvakkeet</string>
     <string name="use_icon_tabs_summary">Kuvakkeet välilehtien tekstin sijaan</string>

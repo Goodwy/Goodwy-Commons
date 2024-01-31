@@ -80,6 +80,7 @@
 
     <string name="no_connection">Няма връзка</string>
     <string name="per_month">%s/месец</string>
+    <string name="per_year">%s/година</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>

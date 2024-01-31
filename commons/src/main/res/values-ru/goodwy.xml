@@ -79,6 +79,7 @@
 
     <string name="no_connection">Нет связи</string>
     <string name="per_month">%s/месяц</string>
+    <string name="per_year">%s/год</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Выбор тем и цветов интерфейса</string>

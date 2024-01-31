@@ -79,6 +79,7 @@
 
     <string name="no_connection">Ühendust pole</string>
     <string name="per_month">%s/kuus</string>
+    <string name="per_year">%s/aasta</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>

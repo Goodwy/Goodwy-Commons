@@ -79,6 +79,7 @@
 
     <string name="no_connection">Няма сувязі</string>
     <string name="per_month">%s/месяц</string>
+    <string name="per_year">%s/год</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Выбар тэм і кветак інтэрфейсу</string>

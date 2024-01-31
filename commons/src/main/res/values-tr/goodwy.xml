@@ -62,6 +62,7 @@
 
     <string name="no_connection">Bağlantı yok</string>
     <string name="per_month">%s/ay</string>
+    <string name="per_year">%s/yıl</string>
 
     <string name="show_contact_thumbnails_g">Kişi küçük resimlerini göster</string>
     <string name="use_icon_tabs_summary">Sekmelerdeki metin yerine simgeler</string>

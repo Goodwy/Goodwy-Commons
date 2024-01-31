@@ -80,6 +80,7 @@
 
     <string name="no_connection">ਕੋਈ ਕਨੈਕਸ਼ਨ ਨਹੀਂ</string>
     <string name="per_month">%s/ਮਹੀਨਾ</string>
+    <string name="per_year">%s/ਸਾਲ</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">ਥੀਮਾਂ ਅਤੇ ਇੰਟਰਫੇਸ ਰੰਗਾਂ ਦੀ ਚੋਣ ਕਰੋ</string>

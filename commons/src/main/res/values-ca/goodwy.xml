@@ -62,6 +62,7 @@
 
     <string name="no_connection">Sense connexió</string>
     <string name="per_month">%s/mes</string>
+    <string name="per_year">%s/any</string>
 
     <string name="show_contact_thumbnails_g">Mostra les miniatures dels contactes</string>
     <string name="use_icon_tabs_summary">Icones en lloc de text a les pestanyes</string>

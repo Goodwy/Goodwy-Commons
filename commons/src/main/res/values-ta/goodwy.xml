@@ -62,6 +62,7 @@
 
     <string name="no_connection">இணைப்பு இல்லை</string>
     <string name="per_month">%s/மாதம்</string>
+    <string name="per_year">%s/ஆண்டு</string>
 
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">தாவல்களில் உரைக்கு பதிலாக சின்னங்கள்</string>

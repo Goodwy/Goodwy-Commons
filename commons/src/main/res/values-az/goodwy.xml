@@ -62,6 +62,7 @@
 
     <string name="no_connection">Əlaqə yoxdur</string>
     <string name="per_month">%s/ay</string>
+    <string name="per_year">%s/il</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Kontakt görüntülərini göstər</string>

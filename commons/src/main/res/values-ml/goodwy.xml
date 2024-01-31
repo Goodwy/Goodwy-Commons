@@ -76,10 +76,11 @@
     <string name="restored_previous_purchase_please_restart">മുമ്പത്തെ വാങ്ങൽ പുനഃസ്ഥാപിച്ചു. എല്ലാ ഫീച്ചറുകളും ഉപയോഗിക്കുന്നതിന് ദയവായി ആപ്പ് പുനരാരംഭിക്കുക.</string>
     <string name="no_purchase_found">വാങ്ങലൊന്നും കണ്ടെത്തിയില്ല.</string>
     <string name="restore_purchase">വാങ്ങൽ പുനഃസ്ഥാപിക്കുക</string>
-    <string name="restoring_purchase">വാങ്ങൽ പുനഃസ്ഥാപിക്കുന്നു...</string>
+    <string name="restoring_purchase">വാങ്ങൽ പുനഃസ്ഥാപിക്കുന്നു…</string>
 
     <string name="no_connection">ബന്ധമില്ല</string>
     <string name="per_month">%s/മാസം</string>
+    <string name="per_year">%s/വർഷം</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">തീമുകളും ഇന്റർഫേസ് നിറങ്ങളും തിരഞ്ഞെടുക്കുക</string>

@@ -80,6 +80,7 @@
 
     <string name="no_connection">Neniu konekto</string>
     <string name="per_month">%s/monato</string>
+    <string name="per_year">%s/jaro</string>
 
     <!-- Theme -->
     <string name="customization_theme_summary">Select of themes and interface colors</string>

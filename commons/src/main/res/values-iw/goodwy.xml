@@ -58,10 +58,11 @@
     <string name="restored_previous_purchase_please_restart">רכישה קודמת שוחזרה. אנא הפעל מחדש את האפליקציה כדי לעשות שימוש בכל התכונות.</string>
     <string name="no_purchase_found">לא נמצאה רכישה.</string>
     <string name="restore_purchase">שחזר רכישה</string>
-    <string name="restoring_purchase">משחזר רכישה...</string>
+    <string name="restoring_purchase">משחזר רכישה…</string>
 
     <string name="no_connection">אין קשר</string>
-    <string name="per_month">sחודש/%</string>
+    <string name="per_month">מסז\'אק/%s</string>
+    <string name="per_year">שנה/%s</string>
 
     <string name="show_contact_thumbnails_g">הצג תמונות ממוזערות של אנשי קשר</string>
     <string name="use_icon_tabs_summary">סמלים במקום טקסט בכרטיסיות</string>
