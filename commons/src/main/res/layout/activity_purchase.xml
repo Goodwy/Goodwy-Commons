@@ -9,8 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/purchase_app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -55,15 +54,14 @@
             <RelativeLayout
                 android:id="@+id/pay_app"
                 android:layout_width="match_parent"
-                android:layout_height="132dp"
+                android:layout_height="162dp"
                 android:layout_centerHorizontal="true">
 
                 <RelativeLayout
                     android:id="@+id/app_one"
                     android:layout_width="104dp"
-                    android:layout_height="118dp"
+                    android:layout_height="148dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="@dimen/small_margin"
                     android:layout_marginEnd="@dimen/bigger_margin"
                     android:layout_toStartOf="@+id/app_two"
                     android:background="@drawable/button_white_bg"
@@ -76,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/app_one_button"
                         android:layout_alignParentTop="true"
-                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:maxLines="2"
@@ -108,9 +106,9 @@
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
-                        android:layout_alignParentBottom="true"
+                        android:layout_above="@+id/app_one_sub_year_button"
                         android:layout_marginTop="@dimen/smaller_margin"
-                        android:alpha="0.6"
+                        android:alpha="0.7"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
                         android:lines="1"
@@ -122,12 +120,30 @@
                         android:textSize="9sp"
                         tools:ignore="SmallSp" />
 
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_one_sub_year_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="0.8"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/app_two"
                     android:layout_width="104dp"
-                    android:layout_height="118dp"
+                    android:layout_height="148dp"
                     android:layout_centerInParent="true"
                     android:background="@drawable/button_white_bg"
                     android:elevation="4dp"
@@ -139,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/app_two_button"
                         android:layout_alignParentTop="true"
-                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:maxLines="2"
@@ -154,7 +170,7 @@
                         android:layout_height="25dp"
                         android:layout_above="@+id/app_two_sub_button"
                         android:layout_marginTop="@dimen/medium_margin"
-                        android:alpha="0.8"
+                        android:alpha="0.7"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
                         android:lines="1"
@@ -171,7 +187,7 @@
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
-                        android:layout_alignParentBottom="true"
+                        android:layout_above="@+id/app_two_sub_year_button"
                         android:layout_marginTop="@dimen/smaller_margin"
                         android:alpha="0.8"
                         android:background="@drawable/button_gray_bg_8dp"
@@ -185,16 +201,33 @@
                         android:textSize="9sp"
                         tools:ignore="SmallSp" />
 
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_two_sub_year_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="0.9"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/app_three"
                     android:layout_width="104dp"
-                    android:layout_height="118dp"
+                    android:layout_height="148dp"
                     android:layout_centerVertical="true"
                     android:elevation="4dp"
                     android:layout_marginStart="@dimen/bigger_margin"
-                    android:layout_marginEnd="@dimen/small_margin"
                     android:layout_toEndOf="@+id/app_two"
                     android:background="@drawable/button_white_bg"
                     android:padding="9dp">
@@ -206,7 +239,6 @@
                         android:layout_above="@+id/app_three_button"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
                         android:gravity="center"
                         android:ellipsize="end"
                         android:maxLines="2"
@@ -221,7 +253,7 @@
                         android:layout_height="25dp"
                         android:layout_above="@+id/app_three_sub_button"
                         android:layout_marginTop="@dimen/medium_margin"
-                        android:alpha="1.0"
+                        android:alpha="0.8"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
                         android:lines="1"
@@ -238,6 +270,25 @@
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
+                        android:layout_above="@+id/app_three_sub_year_button"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="0.9"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_three_sub_year_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="@dimen/smaller_margin"
                         android:alpha="1.0"
@@ -251,7 +302,6 @@
                         android:textColor="@color/white"
                         android:textSize="9sp"
                         tools:ignore="SmallSp" />
-
                 </RelativeLayout>
             </RelativeLayout>
 
@@ -647,5 +697,4 @@
 
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -700,6 +700,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                            faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean, licensingKey: String,
                            productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
                            subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
+                           subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
                            playStoreInstalled: Boolean = true,
                            ruStoreInstalled: Boolean = false,) {
         hideKeyboard()
@@ -717,6 +718,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
             putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)
             putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
+            putExtra(SUBSCRIPTION_YEAR_ID_LIST, subscriptionYearIdList)
+            putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, subscriptionYearIdListRu)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(RU_STORE, ruStoreInstalled)
             startActivity(this)
@@ -726,6 +729,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun startPurchaseActivity(appNameId: Int, licensingKey: String,
                               productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
                               subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
+                              subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
                               showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
                               playStoreInstalled: Boolean = true,
                               ruStoreInstalled: Boolean = false,
@@ -739,6 +743,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
             putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)
             putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
+            putExtra(SUBSCRIPTION_YEAR_ID_LIST, subscriptionYearIdList)
+            putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, subscriptionYearIdListRu)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(SHOW_COLLECTION, showCollection)
@@ -750,6 +756,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun startCustomizationActivity(showAccentColor : Boolean = true, isCollection : Boolean = false, licensingKey: String = "",
                                    productIdList: ArrayList<String> = arrayListOf("", "", ""), productIdListRu: ArrayList<String> = arrayListOf("", "", ""),
                                    subscriptionIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionIdListRu: ArrayList<String> = arrayListOf("", "", ""),
+                                   subscriptionYearIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionYearIdListRu: ArrayList<String> = arrayListOf("", "", ""),
                                    showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
                                    playStoreInstalled: Boolean = true,
                                    ruStoreInstalled: Boolean = false) {
@@ -773,6 +780,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
             putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)
             putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
+            putExtra(SUBSCRIPTION_YEAR_ID_LIST, subscriptionYearIdList)
+            putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, subscriptionYearIdListRu)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(RU_STORE, ruStoreInstalled)

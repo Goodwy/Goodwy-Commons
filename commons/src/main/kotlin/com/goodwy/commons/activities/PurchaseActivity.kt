@@ -41,6 +41,8 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var productIdListRu: ArrayList<String> = ArrayList()
     private var subscriptionIdList: ArrayList<String> = ArrayList()
     private var subscriptionIdListRu: ArrayList<String> = ArrayList()
+    private var subscriptionYearIdList: ArrayList<String> = ArrayList()
+    private var subscriptionYearIdListRu: ArrayList<String> = ArrayList()
     private var showLifebuoy = true
     private var playStoreInstalled = true
     private var ruStoreInstalled = false
@@ -68,6 +70,8 @@ class PurchaseActivity : BaseSimpleActivity() {
         productIdListRu = intent.getStringArrayListExtra(PRODUCT_ID_LIST_RU) ?: arrayListOf("", "", "")
         subscriptionIdList = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST) ?: arrayListOf("", "", "")
         subscriptionIdListRu = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST_RU) ?: arrayListOf("", "", "")
+        subscriptionYearIdList = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST) ?: arrayListOf("", "", "")
+        subscriptionYearIdListRu = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST_RU) ?: arrayListOf("", "", "")
         primaryColor = getProperPrimaryColor()
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
         playStoreInstalled = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
@@ -102,7 +106,9 @@ class PurchaseActivity : BaseSimpleActivity() {
         if ((playStoreInstalled && !ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && baseConfig.useGooglePlay)) {
             //PlayStore
             purchaseHelper.initBillingClient()
-            purchaseHelper.retrieveDonation(productIdList, subscriptionIdList)
+            val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
+            subscriptionIdListAll.addAll(subscriptionYearIdList)
+            purchaseHelper.retrieveDonation(productIdList, subscriptionIdListAll)
 
             purchaseHelper.iapSkuDetailsInitialized.observe(this) {
                 if (it) setupButtonIapPurchased()
@@ -240,7 +246,9 @@ class PurchaseActivity : BaseSimpleActivity() {
                     setupButtonReset()
                     if (ruStoreInstalled && !baseConfig.useGooglePlay) updateProducts()
                     else {
-                        purchaseHelper.retrieveDonation(productIdList, subscriptionIdList)
+                        val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
+                        subscriptionIdListAll.addAll(subscriptionYearIdList)
+                        purchaseHelper.retrieveDonation(productIdList, subscriptionIdListAll)
                     }
                     true
                 }
@@ -405,6 +413,51 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
             background.setTint(primaryColor)
         }
+
+        binding.appOneSubYearButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[0])
+            if (price != getString(R.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(R.string.per_year), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionYearIdList[0])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appTwoSubYearButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[1])
+            if (price != getString(R.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(R.string.per_year), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionYearIdList[1])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appThreeSubYearButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[2])
+            if (price != getString(R.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(R.string.per_year), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionYearIdList[2])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
     }
 
     private fun setupButtonSupChecked() {
@@ -420,6 +473,18 @@ class PurchaseActivity : BaseSimpleActivity() {
         if (purchaseHelper.isSubPurchased(subscriptionIdList[2])) {
             binding.appThreeSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appThreeSubButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[0])) {
+            binding.appOneSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appOneSubYearButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[1])) {
+            binding.appTwoSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appTwoSubYearButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[2])) {
+            binding.appThreeSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appThreeSubYearButton.isEnabled = false
         }
     }
 
@@ -531,7 +596,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 if (it.selected) {
                     launchApp(it.packageName)
                 } else {
-                    if (isRuStoreInstalled() && it.id != 56) {
+                    if (isRuStoreInstalled() && it.id != 6) {
                         val urlRS = "https://apps.rustore.ru/app/${it.packageName}"
                         launchViewIntent(urlRS)
                     } else {
@@ -662,6 +727,64 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
             background.setTint(primaryColor)
         }
+
+
+        binding.appOneSubYearButton.apply {
+            val product = state.products.firstOrNull {  it.productId == subscriptionYearIdListRu[0]  }
+            val price = product?.priceLabel ?: getString(R.string.no_connection)
+            if (price != getString(R.string.no_connection)) {
+                isEnabled = true
+                val resultPrice = price.replace(".00","",true)
+                val textPrice = String.format(getString(R.string.per_year), resultPrice)
+                text = textPrice
+                setOnClickListener {
+                    if (product != null) {
+                        ruStoreHelper.purchaseProduct(product)
+                    }
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appTwoSubYearButton.apply {
+            val product = state.products.firstOrNull {  it.productId == subscriptionYearIdListRu[1]  }
+            val price = product?.priceLabel ?: getString(R.string.no_connection)
+            if (price != getString(R.string.no_connection)) {
+                isEnabled = true
+                val resultPrice = price.replace(".00","",true)
+                val textPrice = String.format(getString(R.string.per_year), resultPrice)
+                text = textPrice
+                setOnClickListener {
+                    if (product != null) {
+                        ruStoreHelper.purchaseProduct(product)
+                    }
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appThreeSubYearButton.apply {
+            val product = state.products.firstOrNull {  it.productId == subscriptionYearIdListRu[2]  }
+            val price = product?.priceLabel ?: getString(R.string.no_connection)
+            if (price != getString(R.string.no_connection)) {
+                isEnabled = true
+                val resultPrice = price.replace(".00","",true)
+                val textPrice = String.format(getString(R.string.per_year), resultPrice)
+                text = textPrice
+                setOnClickListener {
+                    if (product != null) {
+                        ruStoreHelper.purchaseProduct(product)
+                    }
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
     }
 
     private fun setupButtonCheckedRuStore(state: List<ru.rustore.sdk.billingclient.model.purchase.Purchase>) {
@@ -690,11 +813,24 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.appThreeSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appThreeSubButton.isEnabled = false
         }
+        if (state.firstOrNull {  it.productId == subscriptionYearIdListRu[0]  } != null) {
+            binding.appOneSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appOneSubYearButton.isEnabled = false
+        }
+        if (state.firstOrNull {  it.productId == subscriptionYearIdListRu[1]  } != null) {
+            binding.appTwoSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appTwoSubYearButton.isEnabled = false
+        }
+        if (state.firstOrNull {  it.productId == subscriptionYearIdListRu[2]  } != null) {
+            binding.appThreeSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appThreeSubYearButton.isEnabled = false
+        }
     }
 
     private fun updateProducts() {
         val productList: ArrayList<String> = productIdListRu
         productList.addAll(subscriptionIdListRu)
+        productList.addAll(subscriptionYearIdListRu)
         ruStoreHelper.getProducts(productList)
     }
 

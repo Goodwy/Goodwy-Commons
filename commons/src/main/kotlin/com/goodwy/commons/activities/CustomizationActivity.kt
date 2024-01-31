@@ -59,6 +59,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getProductIdListRu() = intent.getStringArrayListExtra(PRODUCT_ID_LIST_RU) ?: arrayListOf("", "", "")
     private fun getSubscriptionIdList() = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST) ?: arrayListOf("", "", "")
     private fun getSubscriptionIdListRu() = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST_RU) ?: arrayListOf("", "", "")
+    private fun getSubscriptionYearIdList() = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST) ?: arrayListOf("", "", "")
+    private fun getSubscriptionYearIdListRu() = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST_RU) ?: arrayListOf("", "", "")
 
     private fun playStoreInstalled() = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
     private fun ruStoreInstalled() = intent.getBooleanExtra(RU_STORE, false)
@@ -863,6 +865,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             getLicensingKey(),
             getProductIdList(), getProductIdListRu(),
             getSubscriptionIdList(), getSubscriptionIdListRu(),
+            getSubscriptionYearIdList(), getSubscriptionYearIdListRu(),
             playStoreInstalled = playStoreInstalled(),
             ruStoreInstalled = ruStoreInstalled())
     }

@@ -247,6 +247,8 @@ const val PRODUCT_ID_LIST = "product_id_list"
 const val PRODUCT_ID_LIST_RU = "product_id_list_ru"
 const val SUBSCRIPTION_ID_LIST = "subscription_id_list"
 const val SUBSCRIPTION_ID_LIST_RU = "subscription_id_list_ru"
+const val SUBSCRIPTION_YEAR_ID_LIST = "subscription_year_id_list"
+const val SUBSCRIPTION_YEAR_ID_LIST_RU = "subscription_year_id_list_ru"
 
 // contact grid view constants
 const val CONTACTS_GRID_MAX_COLUMNS_COUNT = 10

@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/big_margin"
         android:layout_marginBottom="@dimen/activity_margin"
-        android:background="@drawable/button_white_bg"
+        android:background="@drawable/squircle_bg"
         android:elevation="8dp"
         android:padding="10dp"
         android:src="@drawable/ic_plus_support"

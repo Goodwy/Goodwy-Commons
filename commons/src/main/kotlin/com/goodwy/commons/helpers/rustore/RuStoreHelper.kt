@@ -49,7 +49,10 @@ class RuStoreHelper constructor(
         "product_x3",
         "subscription_x1",
         "subscription_x2",
-        "subscription_x3"
+        "subscription_x3",
+        "subscription_year_x1",
+        "subscription_year_x2",
+        "subscription_year_x3"
     )
 
     private val _stateBilling = MutableStateFlow(BillingState())
