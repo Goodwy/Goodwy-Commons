@@ -8,6 +8,6 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         Reprint.initialize(this)
-        RuStoreModule.install(this, "685530047")
+        RuStoreModule.install(this, "309929407")
     }
 }
