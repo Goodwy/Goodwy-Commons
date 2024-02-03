@@ -464,11 +464,12 @@
     <style name="SettingsHolderStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
         <item name="android:background">@drawable/ripple_all_corners_11dp</item>
         <item name="android:paddingStart">@dimen/smaller_margin</item>
-        <item name="android:paddingTop">@dimen/normal_margin</item>
+        <item name="android:paddingTop">@dimen/small_margin</item>
         <item name="android:paddingEnd">@dimen/smaller_margin</item>
-        <item name="android:paddingBottom">@dimen/normal_margin</item>
+        <item name="android:paddingBottom">@dimen/small_margin</item>
     </style>
 
     <style name="SettingsHolderSwitchStyle">
@@ -477,9 +478,9 @@
         <item name="android:minHeight">48dp</item>
         <item name="android:background">@drawable/ripple_all_corners_11dp</item>
         <item name="android:paddingStart">@dimen/smaller_margin</item>
-        <item name="android:paddingTop">@dimen/medium_margin</item>
+        <item name="android:paddingTop">@dimen/smaller_margin</item>
         <item name="android:paddingEnd">@dimen/smaller_margin</item>
-        <item name="android:paddingBottom">@dimen/medium_margin</item>
+        <item name="android:paddingBottom">@dimen/smaller_margin</item>
     </style>
 
     <style name="SettingsSwitchStyle">

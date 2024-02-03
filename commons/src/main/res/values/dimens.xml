@@ -96,6 +96,5 @@
     <dimen name="activity_padding_left_right">0dp</dimen>
 
     <!--Search toolbar-->
-    <dimen name="top_toolbar_search_height">50dp</dimen>
     <dimen name="search_menu_height">36dp</dimen>
 </resources>

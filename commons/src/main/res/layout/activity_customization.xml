@@ -103,10 +103,7 @@
 
                 <RelativeLayout
                     android:id="@+id/customizationThemeHolder"
-                    style="@style/SettingsHolderStyle"
-                    android:paddingTop="@dimen/medium_margin"
-                    android:paddingBottom="@dimen/medium_margin"
-                    android:background="@drawable/ripple_all_corners_11dp">
+                    style="@style/SettingsHolderStyle">
 
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_theme_label"
@@ -171,6 +168,7 @@
                         android:layout_width="@dimen/color_sample_size"
                         android:layout_height="@dimen/color_sample_size"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/settings_margin"
                         android:clickable="false"/>
                 </RelativeLayout>
@@ -243,6 +241,7 @@
                         android:layout_width="@dimen/color_sample_size"
                         android:layout_height="@dimen/color_sample_size"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/settings_margin"
                         android:clickable="false"/>
                 </RelativeLayout>
@@ -263,6 +262,7 @@
                         android:layout_width="@dimen/color_sample_size"
                         android:layout_height="@dimen/color_sample_size"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/settings_margin"
                         android:clickable="false"/>
                 </RelativeLayout>
@@ -283,6 +283,7 @@
                         android:layout_width="@dimen/color_sample_size"
                         android:layout_height="@dimen/color_sample_size"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/settings_margin"
                         android:clickable="false"/>
                 </RelativeLayout>
@@ -312,6 +313,7 @@
                         android:layout_width="@dimen/color_sample_size"
                         android:layout_height="@dimen/color_sample_size"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/settings_margin"
                         android:clickable="false"
                         android:visibility="gone"/>
@@ -333,6 +335,7 @@
                         android:layout_width="@dimen/color_sample_size"
                         android:layout_height="@dimen/color_sample_size"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/settings_margin"
                         android:clickable="false"/>
                 </RelativeLayout>
