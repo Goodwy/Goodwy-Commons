@@ -109,7 +109,6 @@
                         android:id="@+id/customization_theme_label"
                         style="@style/SettingsTextLabelStyle"
                         android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
                         android:layout_toStartOf="@+id/customization_theme"
                         android:layout_marginEnd="8dp"
                         android:text="@string/theme"/>
@@ -128,7 +127,6 @@
                         style="@style/SettingsTextValueStyle"
                         android:maxWidth="@dimen/settings_value_width_long"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/settings_margin"
                         tools:text="@string/auto_light_dark_theme"/>
                 </RelativeLayout>
@@ -160,7 +158,6 @@
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_primary_color_label"
                         style="@style/SettingsTextLabelStyle"
-                        android:layout_centerVertical="true"
                         android:text="@string/primary_color"/>
 
                     <ImageView
@@ -233,7 +230,6 @@
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_accent_color_label"
                         style="@style/SettingsTextLabelStyle"
-                        android:layout_centerVertical="true"
                         android:text="@string/accent_color"/>
 
                     <ImageView
@@ -254,7 +250,6 @@
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_background_color_label"
                         style="@style/SettingsTextLabelStyle"
-                        android:layout_centerVertical="true"
                         android:text="@string/background_color"/>
 
                     <ImageView
@@ -275,7 +270,6 @@
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_text_color_label"
                         style="@style/SettingsTextLabelStyle"
-                        android:layout_centerVertical="true"
                         android:text="@string/text_color"/>
 
                     <ImageView
@@ -296,14 +290,12 @@
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_text_cursor_color_label"
                         style="@style/SettingsTextLabelStyle"
-                        android:layout_centerVertical="true"
                         android:text="@string/text_cursor_color"/>
 
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_text_cursor_color_default"
                         style="@style/SettingsTextValueStyle"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/settings_margin"
                         android:text="@string/default_color"
                         android:visibility="gone"/>
@@ -327,7 +319,6 @@
                     <com.goodwy.commons.views.MyTextView
                         android:id="@+id/customization_app_icon_color_label"
                         style="@style/SettingsTextLabelStyle"
-                        android:layout_centerVertical="true"
                         android:text="@string/app_icon_color"/>
 
                     <ImageView
