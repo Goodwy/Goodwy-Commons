@@ -22,4 +22,5 @@
             android:fillColor="@color/red_missed"
             android:strokeAlpha="0.8"
             android:fillAlpha="0.8"/>
-    </group></vector>
+    </group>
+</vector>

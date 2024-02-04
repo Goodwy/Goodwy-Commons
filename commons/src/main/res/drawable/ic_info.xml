@@ -13,7 +13,7 @@
 
     </group>
     <group
-        android:translateX="4.3"
+        android:translateX="4.2"
         android:translateY="4">
         <path
             android:fillColor="#FFFFFFFF"
