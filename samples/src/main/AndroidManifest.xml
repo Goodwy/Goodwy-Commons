@@ -27,7 +27,7 @@
 
         <activity
             android:name=".activities.MainActivity"
-            android:configChanges="orientation"
+            android:configChanges="orientation|uiMode"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -36,14 +36,14 @@
         </activity>
 
         <activity android:name="com.goodwy.commons.activities.AboutActivity"
-            android:configChanges="orientation" />
+            android:configChanges="orientation|uiMode" />
 
         <activity android:name="com.goodwy.commons.activities.CustomizationActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"/>
 
         <activity android:name="com.goodwy.commons.activities.PurchaseActivity"
             android:exported="true"
-            android:configChanges="orientation|keyboardHidden|screenSize">
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

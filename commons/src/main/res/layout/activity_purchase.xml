@@ -47,9 +47,7 @@
             android:id="@+id/purchase_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/normal_margin"
-            android:paddingStart="@dimen/about_margin"
-            android:paddingEnd="@dimen/about_margin">
+            android:paddingBottom="@dimen/normal_margin">
 
             <RelativeLayout
                 android:id="@+id/pay_app"
@@ -310,7 +308,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pay_app"
-                android:layout_marginTop="@dimen/small_margin">
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
                     android:id="@+id/theme_logo"
@@ -359,7 +358,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/theme_holder"
-                android:layout_marginTop="@dimen/normal_margin">
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
                     android:id="@+id/color_logo"
@@ -408,7 +408,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/color_holder"
-                android:layout_marginTop="@dimen/normal_margin">
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
                     android:id="@+id/plus_logo"
@@ -458,7 +459,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/plus_holder"
-                android:layout_marginTop="@dimen/normal_margin">
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
                     android:id="@+id/lifebuoy_logo"
@@ -525,7 +527,8 @@
                 android:layout_below="@+id/lifebuoy_holder"
                 android:layout_marginTop="@dimen/normal_margin"
                 android:background="@drawable/ripple_all_corners_16dp"
-                android:visibility="gone">
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
                     android:id="@+id/collection_logo"

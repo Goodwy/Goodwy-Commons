@@ -62,6 +62,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
+    var useChangeAutoTheme = true
     var showTransparentTop = false      // TODO Theme bar top color
     var isMaterialActivity = false      // by material activity we mean translucent navigation bar and opaque status and action bars
     var updateNavigationBarColor = true
@@ -160,6 +161,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         handleNavigationAndScrolling()
+        changeAutoTheme()
+    }
+
+    fun changeAutoTheme() {
+        baseConfig.apply {
+            if (isUsingAutoTheme && useChangeAutoTheme) {
+                val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
+                isUsingSharedTheme = false
+                textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
+                backgroundColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
+                finish()
+                startActivity(intent)
+                return
+            }
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
