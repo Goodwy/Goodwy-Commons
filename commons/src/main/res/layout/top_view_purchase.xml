@@ -17,8 +17,7 @@
         android:elevation="8dp"
         android:padding="10dp"
         android:src="@drawable/ic_plus_support"
-        android:tint="@color/color_primary"
-        tools:ignore="UseAppTint" />
+        tools:tint="@color/color_primary"/>
 
     <com.goodwy.commons.views.MyTextView
         android:id="@+id/purchase_apps"
