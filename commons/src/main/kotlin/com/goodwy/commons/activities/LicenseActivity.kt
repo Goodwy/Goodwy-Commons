@@ -1,5 +1,6 @@
 package com.goodwy.commons.activities
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -8,6 +9,8 @@ import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.goodwy.commons.compose.screens.LicenseScreen
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.isUsingSystemDarkTheme
 import com.goodwy.commons.extensions.launchViewIntent
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.License
@@ -66,4 +69,23 @@ class LicenseActivity : ComponentActivity() {
         License(LICENSE_PDF_VIEWER, R.string.pdf_viewer_title, R.string.pdf_viewer_text, R.string.pdf_viewer_url),
         License(LICENSE_ZIP4J, R.string.zip4j_title, R.string.zip4j_text, R.string.zip4j_url)
     )
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        changeAutoTheme()
+    }
+
+    fun changeAutoTheme() {
+        baseConfig.apply {
+            if (isUsingAutoTheme) {
+                val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
+                isUsingSharedTheme = false
+                textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
+                backgroundColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
+                finish()
+                startActivity(intent)
+                return
+            }
+        }
+    }
 }

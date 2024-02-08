@@ -3,6 +3,7 @@ package com.goodwy.commons.activities
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.*
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -307,6 +308,25 @@ class AboutActivity : ComponentActivity() {
             putExtra(RU_STORE, intent.getBooleanExtra(RU_STORE, false))
             putExtra(SHOW_COLLECTION, resources.getBoolean(R.bool.show_collection))
             startActivity(this)
+        }
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        changeAutoTheme()
+    }
+
+    fun changeAutoTheme() {
+        baseConfig.apply {
+            if (isUsingAutoTheme) {
+                val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
+                isUsingSharedTheme = false
+                textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
+                backgroundColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
+                finish()
+                startActivity(intent)
+                return
+            }
         }
     }
 }
