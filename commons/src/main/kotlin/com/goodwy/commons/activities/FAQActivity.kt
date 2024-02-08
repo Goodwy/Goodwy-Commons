@@ -2,17 +2,21 @@ package com.goodwy.commons.activities
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.text.Html
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.goodwy.commons.compose.screens.FAQScreen
+import com.goodwy.commons.compose.screens.stringFromHTML
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.copyToClipboard
 import com.goodwy.commons.extensions.isUsingSystemDarkTheme
 import com.goodwy.commons.helpers.APP_FAQ
 import com.goodwy.commons.models.FAQItem
@@ -32,6 +36,9 @@ class FAQActivity : ComponentActivity() {
                     faqItems = faqItems.toImmutableList(),
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
                     isTopAppBarColorTitle = isTopAppBarColorTitle,
+                    onCopy = { faqText ->
+                        copyToClipboard(faqText)
+                    },
                 )
             }
         }

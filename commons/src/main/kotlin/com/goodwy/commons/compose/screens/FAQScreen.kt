@@ -6,6 +6,7 @@ import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -28,6 +29,7 @@ import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.extensions.removeUnderlines
+import com.goodwy.commons.models.BlockedNumber
 import com.goodwy.commons.models.FAQItem
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -38,6 +40,7 @@ internal fun FAQScreen(
     faqItems: ImmutableList<FAQItem>,
     isTopAppBarColorIcon: Boolean,
     isTopAppBarColorTitle: Boolean,
+    onCopy: (String) -> Unit,
 ) {
     SettingsLazyScaffold(
         title = stringResource(id = R.string.frequently_asked_questions),
@@ -47,16 +50,24 @@ internal fun FAQScreen(
         isTopAppBarColorTitle = isTopAppBarColorTitle,
     ) {
         itemsIndexed(faqItems) { index, faqItem ->
+            val context = LocalContext.current
+            val title = if (faqItem.title is Int) stringResource(faqItem.title) else faqItem.title as String
+            val text = if (faqItem.value != null && faqItem.text is Int) {
+                val value = if (faqItem.value is Int) context.resources.getString(faqItem.value) else faqItem.value as String
+                stringFromHTML(stringResource(id = faqItem.text, value))
+            } else if (faqItem.text is Int) {
+                stringFromHTML(stringResource(id = faqItem.text))
+            } else faqItem.text
             Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)
                 .background(color = MaterialTheme.colorScheme.surfaceVariant, shape = RoundedCornerShape(12.dp))
+                .clickable {onCopy("$title\n\n$text")}
             ) {
                 ListItem(
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 8.dp),
                     colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                     headlineContent = {
-                        val text = if (faqItem.title is Int) stringResource(faqItem.title) else faqItem.title as String
                         Text(
-                            text = text,
+                            text = title,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(bottom = 6.dp),
@@ -65,33 +76,15 @@ internal fun FAQScreen(
                         )
                     },
                     supportingContent = {
-//                        if (faqItem.text is Int) {
-//                            val text = stringFromHTML(stringResource(id = faqItem.text))
-//                            LinkifyText(
-//                                text = { text },
-//                                modifier = Modifier.fillMaxWidth(),
-//                                fontSize = 14.sp
-//                            )
-//                        } else {
-//                            Text(
-//                                text = faqItem.text as String,
-//                                modifier = Modifier.fillMaxWidth(),
-//                                fontSize = 14.sp
-//                            )
-//                        }
-                        val context = LocalContext.current
                         if (faqItem.value != null && faqItem.text is Int) {
-                            val value = if (faqItem.value is Int) context.resources.getString(faqItem.value) else faqItem.value as String
-                            val text = stringFromHTML(stringResource(id = faqItem.text, value))
                             LinkifyText(
-                                text = { text },
+                                text = { text as Spanned },
                                 modifier = Modifier.fillMaxWidth(),
                                 fontSize = 14.sp
                             )
                         } else if (faqItem.text is Int) {
-                            val text = stringFromHTML(stringResource(id = faqItem.text))
                             LinkifyText(
-                                text = { text },
+                                text = { text as Spanned },
                                 modifier = Modifier.fillMaxWidth(),
                                 fontSize = 14.sp
                             )
@@ -104,14 +97,6 @@ internal fun FAQScreen(
                         }
                     },
                 )
-//                Spacer(modifier = Modifier.padding(bottom = 8.dp))
-//                if (index != faqItems.lastIndex) {
-//                    SettingsHorizontalDivider(
-//                        modifier = Modifier
-//                            .fillMaxWidth()
-//                            .padding(bottom = 4.dp)
-//                    )
-//                }
             }
         }
     }
@@ -168,6 +153,7 @@ private fun FAQScreenPreview() {
             ).toImmutableList(),
             isTopAppBarColorIcon = true,
             isTopAppBarColorTitle = true,
+            onCopy = {},
         )
     }
 }
