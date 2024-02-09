@@ -53,19 +53,24 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, private val calle
                             alertDialog.dismiss()
                         }
                     }
+
+                    val simPrimaryColor = if (activity.baseConfig.currentSIMCardIndex == 0) activity.baseConfig.simIconsColors[1] else activity.baseConfig.simIconsColors[2]
+                    val textColor = simPrimaryColor.getContrastColor()
                     view.cancelButton.apply {
                         val drawable = resources.getColoredDrawableWithColor(activity, R.drawable.button_gray_bg, 0xFFEB5545.toInt())
                         background = drawable
                         setPadding(2,2,2,2)
+                        setTextColor(textColor)
                         setOnClickListener {
                             alertDialog.dismiss()
                         }
                     }
+
                     view.callButton.apply {
-                        val simPrimaryColor = if (activity.baseConfig.currentSIMCardIndex == 0) activity.baseConfig.simIconsColors[1] else activity.baseConfig.simIconsColors[2]
                         val drawable = resources.getColoredDrawableWithColor(activity, R.drawable.button_gray_bg, simPrimaryColor)
                         background = drawable
                         setPadding(2,2,2,2)
+                        setTextColor(textColor)
                         setOnClickListener {
                             callback.invoke()
                             alertDialog.dismiss()
