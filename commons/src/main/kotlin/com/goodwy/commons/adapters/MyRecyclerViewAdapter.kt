@@ -31,7 +31,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected var actMode: ActionMode? = null
 
     private var actBarTextView: TextView? = null
-    private var lastLongPressedItem = -1
+    var lastLongPressedItem = -1
 
     abstract fun getActionMenuId(): Int
 
