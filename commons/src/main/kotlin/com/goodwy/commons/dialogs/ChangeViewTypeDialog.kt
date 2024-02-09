@@ -28,7 +28,7 @@ class ChangeViewTypeDialog(val activity: BaseSimpleActivity, val path: String = 
             .setPositiveButton(R.string.ok) { _, _ -> dialogConfirmed() }
             .setNegativeButton(R.string.cancel, null)
             .apply {
-                activity.setupDialogStuff(view.root, this)
+                activity.setupDialogStuff(view.root, this, R.string.change_view_type)
             }
     }
 
