@@ -296,7 +296,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             items.add(RadioItem(key, value.label))
         }
 
-        RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
+        RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId, R.string.theme) {
             if (it == THEME_SHARED && !isSharedThemeInstalled()) {
                 PurchaseThankYouDialog(this)
                 return@RadioGroupDialog
