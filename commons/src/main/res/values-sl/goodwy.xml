@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Primarna kartica SIM</string>
     <string name="button_primary">Primarni gumb</string>
     <string name="button_secondary">Sekundarni gumb</string>
+    <string name="skip_archive_confirmation">Vedno preskoči potrditev arhiviranja</string>
 
     <string name="accent_color">Barva naglasa</string>
     <string name="use_accent_color">Uporaba barve poudarkov</string>

@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Cartão SIM principal</string>
     <string name="button_primary">Botão primário</string>
     <string name="button_secondary">Botão secundário</string>
+    <string name="skip_archive_confirmation">Sempre ignore a confirmação de arquivamento</string>
 
     <string name="accent_color">Cor do sotaque</string>
     <string name="use_accent_color">Use uma cor de destaque</string>

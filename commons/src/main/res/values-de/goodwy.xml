@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Primäre SIM-Karte</string>
     <string name="button_primary">Primäre Taste</string>
     <string name="button_secondary">Sekundäre Taste</string>
+    <string name="skip_archive_confirmation">Archivbestätigungsdialog nicht anzeigen</string>
 
     <string name="accent_color">Akzentfarbe</string>
     <string name="use_accent_color">Akzentfarbe verwenden</string>

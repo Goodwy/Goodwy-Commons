@@ -136,6 +136,7 @@
     <string name="primary_sim_card">Esmane SIM-kaart</string>
     <string name="button_primary">Nupp Esmane</string>
     <string name="button_secondary">Sekundaarne nupp</string>
+    <string name="skip_archive_confirmation">Ärge kunagi küsige arhiveerimisel topeltkinnitust</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

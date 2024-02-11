@@ -136,6 +136,7 @@
     <string name="primary_sim_card">Cartela SIM principală</string>
     <string name="button_primary">Butonul principal</string>
     <string name="button_secondary">Buton secundar</string>
+    <string name="skip_archive_confirmation">Sariți întotdeauna dialogul de confirmare a arhivării</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

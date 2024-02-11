@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Kartu SIM utama</string>
     <string name="button_primary">Tombol utama</string>
     <string name="button_secondary">Tombol sekunder</string>
+    <string name="skip_archive_confirmation">Selalu lewati dialog konfirmasi pengarsipan</string>
 
     <string name="accent_color">Aksen warna</string>
     <string name="use_accent_color">Gunakan warna aksen</string>

@@ -121,6 +121,7 @@
     <string name="primary_sim_card">Tarxeta SIM principal</string>
     <string name="button_primary">Botón principal</string>
     <string name="button_secondary">Botón secundario</string>
+    <string name="skip_archive_confirmation">Omita sempre o diálogo de confirmación de arquivo</string>
 
     <string name="accent_color">Cor de acento</string>
     <string name="use_accent_color">Use unha cor de acento</string>

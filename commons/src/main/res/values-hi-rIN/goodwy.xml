@@ -120,6 +120,7 @@
     <string name="primary_sim_card">प्राथमिक सिम कार्ड</string>
     <string name="button_primary">प्राथमिक बटन</string>
     <string name="button_secondary">द्वितीयक बटन</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
 
     <string name="accent_color">एक्सेंट रंग</string>
     <string name="use_accent_color">एक्सेंट रंग का उपयोग करें</string>

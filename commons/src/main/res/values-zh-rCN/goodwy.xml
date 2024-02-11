@@ -120,6 +120,7 @@
     <string name="primary_sim_card">主SIM卡</string>
     <string name="button_primary">主按钮</string>
     <string name="button_secondary">辅助按钮</string>
+    <string name="skip_archive_confirmation">忽略存档确认对话框</string>
 
     <string name="accent_color">重音顏色</string>
     <string name="use_accent_color">使用主题色</string>

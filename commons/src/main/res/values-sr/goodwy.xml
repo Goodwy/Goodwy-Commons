@@ -121,6 +121,7 @@
     <string name="primary_sim_card">Примарна СИМ картица</string>
     <string name="button_primary">Примарно дугме</string>
     <string name="button_secondary">Секундарни тастер</string>
+    <string name="skip_archive_confirmation">Увек прескочи дијалог за потврду архивирања</string>
 
     <string name="accent_color">Наглашена боја</string>
     <string name="use_accent_color">Користите акцентну боју</string>

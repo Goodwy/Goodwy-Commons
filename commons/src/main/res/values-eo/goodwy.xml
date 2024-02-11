@@ -137,6 +137,7 @@
     <string name="primary_sim_card">Primara SIM-karto</string>
     <string name="button_primary">Primara butono</string>
     <string name="button_secondary">Malĉefa butono</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

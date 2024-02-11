@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Podstawowa karta SIM</string>
     <string name="button_primary">Przycisk główny</string>
     <string name="button_secondary">Przycisk pomocniczy</string>
+    <string name="skip_archive_confirmation">Nie pokazuj okna potwierdzenia archiwizacji</string>
 
     <string name="accent_color">Kolor wiodący</string>
     <string name="use_accent_color">Użyj koloru wiodącego</string>

@@ -121,6 +121,7 @@
     <string name="primary_sim_card">Əsas SİM kart</string>
     <string name="button_primary">Əsas düymə</string>
     <string name="button_secondary">İkinci dərəcəli düymə</string>
+    <string name="skip_archive_confirmation">Arxiv təsdiq dialoqunu göstərmə</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="use_accent_color">Vurğu rəngindən istifadə edin</string>

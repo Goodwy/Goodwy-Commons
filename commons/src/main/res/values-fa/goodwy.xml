@@ -120,6 +120,7 @@
     <string name="primary_sim_card">سیم کارت اصلی</string>
     <string name="button_primary">دکمه اصلی</string>
     <string name="button_secondary">دکمه ثانویه</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
 
     <string name="accent_color">رنگ لهجه</string>
     <string name="use_accent_color">استفاده از رنگ لهجه</string>

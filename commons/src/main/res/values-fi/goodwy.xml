@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Ensisijainen SIM-kortti</string>
     <string name="button_primary">Ensisijainen-painike</string>
     <string name="button_secondary">Toissijainen painike</string>
+    <string name="skip_archive_confirmation">Älä koskaan kysy vahvistusta arkistoinnin yhteydessä</string>
 
     <string name="accent_color">Korostusväri</string>
     <string name="use_accent_color">Käytä korostusväriä</string>

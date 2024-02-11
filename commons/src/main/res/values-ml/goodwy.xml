@@ -137,6 +137,7 @@
     <string name="primary_sim_card">പ്രാഥമിക സിം കാർഡ്</string>
     <string name="button_primary">പ്രാഥമിക ബട്ടൺ</string>
     <string name="button_secondary">സെക്കൻഡറി ബട്ടൺ</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

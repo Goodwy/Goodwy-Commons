@@ -137,6 +137,7 @@
     <string name="primary_sim_card">Primært SIM-kort</string>
     <string name="button_primary">Primær-knapp</string>
     <string name="button_secondary">Sekundær-knapp</string>
+    <string name="skip_archive_confirmation">Hopp alltid over dialogboksen for bekreftelse av arkivering</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

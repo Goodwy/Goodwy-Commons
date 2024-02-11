@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Κύρια κάρτα SIM</string>
     <string name="button_primary">Πρωτεύον κουμπί</string>
     <string name="button_secondary">Δευτερεύον κουμπί</string>
+    <string name="skip_archive_confirmation">Να παραλείπετε πάντα το παράθυρο διαλόγου επιβεβαίωσης αρχειοθέτησης</string>
 
     <string name="accent_color">Χρώμα έμφασης</string>
     <string name="use_accent_color">Χρήση χρώματος έμφασης</string>

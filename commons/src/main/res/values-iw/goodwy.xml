@@ -120,6 +120,7 @@
     <string name="primary_sim_card">כרטיס SIM ראשי</string>
     <string name="button_primary">לחצן ראשי</string>
     <string name="button_secondary">לחצן משני</string>
+    <string name="skip_archive_confirmation">דלג תמיד על אישור אחסון בארכיון</string>
 
     <string name="accent_color">צבע הדגשה</string>
     <string name="use_accent_color">שימוש בצבע הדגשה</string>

@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Elsődleges SIM-kártya</string>
     <string name="button_primary">Elsődleges gomb</string>
     <string name="button_secondary">Másodlagos gomb</string>
+    <string name="skip_archive_confirmation">Mindig hagyja ki az archiválás megerősítését</string>
 
     <string name="accent_color">Ékezet színe</string>
     <string name="use_accent_color">Kiemelő szín használata</string>

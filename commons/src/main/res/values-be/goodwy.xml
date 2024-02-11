@@ -136,6 +136,7 @@
     <string name="primary_sim_card">Асноўная SIM-карта</string>
     <string name="button_primary">Асноўная кнопка</string>
     <string name="button_secondary">Дадатковая кнопка</string>
+    <string name="skip_archive_confirmation">Заўсёды прапускаць дыялогавае акно пацверджання архівацыі</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>

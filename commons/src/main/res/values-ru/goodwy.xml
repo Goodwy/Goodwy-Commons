@@ -136,6 +136,7 @@
     <string name="primary_sim_card">Основная SIM-карта</string>
     <string name="button_primary">Основная кнопка</string>
     <string name="button_secondary">Дополнительная кнопка</string>
+    <string name="skip_archive_confirmation">Пропускать диалог подтверждения архивации</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>

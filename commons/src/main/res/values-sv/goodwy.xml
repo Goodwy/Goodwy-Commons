@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Primärt SIM-kort</string>
     <string name="button_primary">Primär knapp</string>
     <string name="button_secondary">Sekundär knapp</string>
+    <string name="skip_archive_confirmation">Hoppa alltid över dialogrutan för bekräftelse av arkivering</string>
 
     <string name="accent_color">Färg på accent</string>
     <string name="use_accent_color">Använd accentfärg</string>

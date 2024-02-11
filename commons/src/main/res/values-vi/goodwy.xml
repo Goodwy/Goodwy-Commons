@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Thẻ SIM chính</string>
     <string name="button_primary">Nút chính</string>
     <string name="button_secondary">Nút phụ</string>
+    <string name="skip_archive_confirmation">Luôn bỏ qua hộp thoại xác nhận lưu trữ</string>
 
     <string name="accent_color">Màu nhấn</string>
     <string name="use_accent_color">Sử dụng màu nhấn</string>

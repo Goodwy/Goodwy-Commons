@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Scheda SIM principale</string>
     <string name="button_primary">Pulsante principale</string>
     <string name="button_secondary">Pulsante secondario</string>
+    <string name="skip_archive_confirmation">Non chiedere mai la conferma dell\'archiviazione</string>
 
     <string name="accent_color">Colore accento</string>
     <string name="use_accent_color">Usa colore principale</string>

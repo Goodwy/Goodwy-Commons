@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Primaire simkaart</string>
     <string name="button_primary">Primaire knop</string>
     <string name="button_secondary">Secundaire knop</string>
+    <string name="skip_archive_confirmation">Vraag bij het archiveren niet om bevestiging</string>
 
     <string name="accent_color">Accentkleur</string>
     <string name="use_accent_color">Accentkleur gebruiken</string>

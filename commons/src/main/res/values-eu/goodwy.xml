@@ -120,6 +120,7 @@
     <string name="primary_sim_card">SIM txartela nagusia</string>
     <string name="button_primary">Botoi nagusia</string>
     <string name="button_secondary">Bigarren mailako botoia</string>
+    <string name="skip_archive_confirmation">Saltatu beti artxibatzeko berrespen elkarrizketa-koadroa.</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="use_accent_color">Erabili azentu kolore bat</string>

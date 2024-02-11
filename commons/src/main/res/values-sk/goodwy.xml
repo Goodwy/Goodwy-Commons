@@ -120,6 +120,7 @@
     <string name="primary_sim_card">Primárna SIM karta</string>
     <string name="button_primary">Primárne tlačidlo</string>
     <string name="button_secondary">Sekundárne tlačidlo</string>
+    <string name="skip_archive_confirmation">Pokračujte v preskočení potvrdenia archivácie</string>
 
     <string name="accent_color">Farba zvýraznenia</string>
     <string name="use_accent_color">Používanie farby motívu</string>
