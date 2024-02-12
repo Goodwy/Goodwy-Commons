@@ -138,6 +138,7 @@
     <string name="button_primary">Primary button</string>
     <string name="button_secondary">Secondary button</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">Swipe gestures</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

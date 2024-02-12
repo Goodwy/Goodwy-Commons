@@ -764,6 +764,10 @@ open class BaseConfig(val context: Context) {
     var hideTopBarWhenScroll: Boolean
         get() = prefs.getBoolean(HIDE_TOP_BAR_WHEN_SCROLL, false)
         set(hideTopBarWhenScroll) = prefs.edit().putBoolean(HIDE_TOP_BAR_WHEN_SCROLL, hideTopBarWhenScroll).apply()
+
+    var skipArchiveConfirmation: Boolean
+        get() = prefs.getBoolean(SKIP_ARCHIVE_CONFIRMATION, false)
+        set(skipArchiveConfirmation) = prefs.edit().putBoolean(SKIP_ARCHIVE_CONFIRMATION, skipArchiveConfirmation).apply()
 }
 
 
