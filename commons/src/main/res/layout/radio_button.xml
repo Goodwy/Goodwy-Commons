@@ -3,4 +3,6 @@
     android:id="@+id/dialog_radio_button"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="@dimen/normal_margin" />
+    android:paddingHorizontal="@dimen/normal_margin"
+    android:textDirection="locale"
+    android:textAlignment="viewStart" />
