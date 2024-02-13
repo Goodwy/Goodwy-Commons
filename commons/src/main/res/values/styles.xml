@@ -493,6 +493,7 @@
         <item name="android:textSize">@dimen/bigger_text_size</item>
         <item name="android:minHeight">16dp</item>
         <item name="android:layout_centerVertical">true</item>
+        <item name="android:textAlignment">viewStart</item>
     </style>
 
     <style name="SettingsCheckboxStyle">
@@ -510,6 +511,7 @@
         <item name="android:paddingEnd">@dimen/settings_margin</item>
         <item name="android:textSize">@dimen/bigger_text_size</item>
         <item name="android:layout_centerVertical">true</item>
+        <item name="android:textAlignment">viewStart</item>
     </style>
 
     <style name="SettingsTextSummaryStyle">
@@ -529,6 +531,7 @@
         <item name="android:textSize">@dimen/bigger_text_size</item>
         <item name="android:gravity">end</item>
         <item name="android:alpha">0.6</item>
+        <item name="android:textAlignment">viewEnd</item>
     </style>
 
     <style name="SettingsChevronStyle">
