@@ -121,6 +121,9 @@
     <string name="button_primary">主ボタン</string>
     <string name="button_secondary">セカンダリボタン</string>
     <string name="skip_archive_confirmation">アーカイブ時に確認ダイアログを表示しない</string>
+    <string name="swipe_gestures">スワイプジェスチャー</string>
+    <string name="swipe_left_action">左にスワイプ操作</string>
+    <string name="swipe_right_action">右にスワイプ操作</string>
 
     <string name="accent_color">アクセントカラー</string>
     <string name="use_accent_color">アクセントカラーを使用</string>

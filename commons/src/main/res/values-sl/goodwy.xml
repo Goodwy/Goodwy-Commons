@@ -121,6 +121,9 @@
     <string name="button_primary">Primarni gumb</string>
     <string name="button_secondary">Sekundarni gumb</string>
     <string name="skip_archive_confirmation">Vedno preskoči potrditev arhiviranja</string>
+    <string name="swipe_gestures">Vlečenje potez</string>
+    <string name="swipe_left_action">Podrsnite levo dejanje</string>
+    <string name="swipe_right_action">Povlecite dejanje v desno</string>
 
     <string name="accent_color">Barva naglasa</string>
     <string name="use_accent_color">Uporaba barve poudarkov</string>

@@ -121,6 +121,9 @@
     <string name="button_primary">Primárne tlačidlo</string>
     <string name="button_secondary">Sekundárne tlačidlo</string>
     <string name="skip_archive_confirmation">Pokračujte v preskočení potvrdenia archivácie</string>
+    <string name="swipe_gestures">Gestá potiahnutia prstom</string>
+    <string name="swipe_left_action">Akcia potiahnutia doľava</string>
+    <string name="swipe_right_action">Akcia potiahnutia prstom doprava</string>
 
     <string name="accent_color">Farba zvýraznenia</string>
     <string name="use_accent_color">Používanie farby motívu</string>

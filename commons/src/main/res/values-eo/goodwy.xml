@@ -138,6 +138,9 @@
     <string name="button_primary">Primara butono</string>
     <string name="button_secondary">Malĉefa butono</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">Svingaj gestoj</string>
+    <string name="swipe_left_action">Swipe maldekstren ago</string>
+    <string name="swipe_right_action">Glvu dekstren</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

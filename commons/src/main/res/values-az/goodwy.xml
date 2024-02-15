@@ -122,6 +122,9 @@
     <string name="button_primary">Əsas düymə</string>
     <string name="button_secondary">İkinci dərəcəli düymə</string>
     <string name="skip_archive_confirmation">Arxiv təsdiq dialoqunu göstərmə</string>
+    <string name="swipe_gestures">Çaldırmaq jestləri</string>
+    <string name="swipe_left_action">Sola sürüşdürün</string>
+    <string name="swipe_right_action">Sağa sürüşdürün</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="use_accent_color">Vurğu rəngindən istifadə edin</string>

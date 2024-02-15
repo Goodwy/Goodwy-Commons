@@ -121,6 +121,9 @@
     <string name="button_primary">Botão principal</string>
     <string name="button_secondary">Botão secundário</string>
     <string name="skip_archive_confirmation">Sempre ignore a confirmação para arquivamento</string>
+    <string name="swipe_gestures">Gestos de deslize</string>
+    <string name="swipe_left_action">Ação de deslizar para a esquerda</string>
+    <string name="swipe_right_action">Ação de deslizar para a direita</string>
 
     <string name="accent_color">Cor do sotaque</string>
     <string name="use_accent_color">Utilizar uma cor de destaque</string>

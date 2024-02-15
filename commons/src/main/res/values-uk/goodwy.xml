@@ -137,6 +137,9 @@
     <string name="button_primary">Основна кнопка</string>
     <string name="button_secondary">Додаткова кнопка</string>
     <string name="skip_archive_confirmation">Завжди пропускати діалог підтвердження архівації</string>
+    <string name="swipe_gestures">Жести свайпами</string>
+    <string name="swipe_left_action">Проведіть пальцем вліво</string>
+    <string name="swipe_right_action">Проведіть пальцем вправо</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купити Goodwy Thank You</string>

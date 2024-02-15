@@ -137,6 +137,9 @@
     <string name="button_primary">Butonul principal</string>
     <string name="button_secondary">Buton secundar</string>
     <string name="skip_archive_confirmation">Sariți întotdeauna dialogul de confirmare a arhivării</string>
+    <string name="swipe_gestures">Gesturi de glisare</string>
+    <string name="swipe_left_action">Acțiunea Glisare spre stânga</string>
+    <string name="swipe_right_action">Glisați acțiunea spre dreapta</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -137,7 +137,10 @@
     <string name="primary_sim_card">Основна SIM карта</string>
     <string name="button_primary">Основен бутон</string>
     <string name="button_secondary">Вторичен бутон</string>
-    <string name="skip_archive_confirmation">Винаги пропускай диалога за потвърждение на архивирането.</string>
+    <string name="skip_archive_confirmation">Винаги пропускай диалога за потвърждение на архивирането</string>
+    <string name="swipe_gestures">Жестове с плъзгане</string>
+    <string name="swipe_left_action">Действие с плъзгане наляво</string>
+    <string name="swipe_right_action">Действие с плъзгане надясно</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

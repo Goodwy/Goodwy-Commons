@@ -121,6 +121,9 @@
     <string name="button_primary">Primær knap</string>
     <string name="button_secondary">Sekundær knap</string>
     <string name="skip_archive_confirmation">Spørg ikke om bekræftelse før arkivering</string>
+    <string name="swipe_gestures">Strygebevægelser</string>
+    <string name="swipe_left_action">Stryg til venstre handling</string>
+    <string name="swipe_right_action">Stryg til højre handling</string>
 
     <string name="accent_color">Fremhævningsfarve</string>
     <string name="use_accent_color">Brug accentfarve</string>

@@ -138,6 +138,9 @@
     <string name="button_primary">প্রাথমিক বোতাম</string>
     <string name="button_secondary">সেকেন্ডারি বোতাম</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">Swipe gestures</string>
+    <string name="swipe_left_action">Swipe left action</string>
+    <string name="swipe_right_action">Swipe right action</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

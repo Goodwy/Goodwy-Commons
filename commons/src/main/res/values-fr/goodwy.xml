@@ -121,6 +121,9 @@
     <string name="button_primary">Bouton principal</string>
     <string name="button_secondary">Bouton secondaire</string>
     <string name="skip_archive_confirmation">Toujours ignorer la fenêtre de confirmation d\'archivage</string>
+    <string name="swipe_gestures">Gestes de balayage</string>
+    <string name="swipe_left_action">Action de balayage vers la gauche</string>
+    <string name="swipe_right_action">Action de balayage vers la droite</string>
 
     <string name="accent_color">Couleur d\'accentuation</string>
     <string name="use_accent_color">Utiliser la couleur d’accentuation</string>

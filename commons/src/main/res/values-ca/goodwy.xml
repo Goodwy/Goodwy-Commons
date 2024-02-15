@@ -120,7 +120,10 @@
     <string name="primary_sim_card">Targeta SIM principal</string>
     <string name="button_primary">Botó principal</string>
     <string name="button_secondary">Botó secundari</string>
-    <string name="skip_archive_confirmation">Omet sempre el diàleg de confirmació de l\'arxivament.</string>
+    <string name="skip_archive_confirmation">Omet sempre el diàleg de confirmació de l\'arxivament</string>
+    <string name="swipe_gestures">Fer lliscar els gestos</string>
+    <string name="swipe_left_action">Feu lliscar el dit cap a l\'esquerra</string>
+    <string name="swipe_right_action">Feu lliscar el dit cap a la dreta</string>
 
     <string name="accent_color">Color d\'èmfasi</string>
     <string name="use_accent_color">Utilitzeu el color d\'accent</string>

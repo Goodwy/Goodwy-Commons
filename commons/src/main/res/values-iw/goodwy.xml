@@ -121,6 +121,9 @@
     <string name="button_primary">לחצן ראשי</string>
     <string name="button_secondary">לחצן משני</string>
     <string name="skip_archive_confirmation">דלג תמיד על אישור אחסון בארכיון</string>
+    <string name="swipe_gestures">מחוות החלקה מהירה</string>
+    <string name="swipe_left_action">החלקה מהירה ימינה</string>
+    <string name="swipe_right_action">החליקו ימינה בפעולה</string>
 
     <string name="accent_color">צבע הדגשה</string>
     <string name="use_accent_color">שימוש בצבע הדגשה</string>

@@ -121,6 +121,9 @@
     <string name="button_primary">기본 버튼</string>
     <string name="button_secondary">보조 버튼</string>
     <string name="skip_archive_confirmation">보관 확인 창 비활성화</string>
+    <string name="swipe_gestures">살짝 밀기 제스처</string>
+    <string name="swipe_left_action">왼쪽으로 스와이프 동작</string>
+    <string name="swipe_right_action">오른쪽으로 스와이프 동작</string>
 
     <string name="accent_color">악센트 색상</string>
     <string name="use_accent_color">강조 색상 사용</string>

@@ -138,6 +138,9 @@
     <string name="button_primary">ਪ੍ਰਾਇਮਰੀ ਬਟਨ</string>
     <string name="button_secondary">ਸੈਕੰਡਰੀ ਬਟਨ</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">ਸਵਾਈਪ ਸੰਕੇਤ</string>
+    <string name="swipe_left_action">ਖੱਬੇ ਪਾਸੇ ਸਵਾਈਪ ਕਾਰਵਾਈ</string>
+    <string name="swipe_right_action">ਸੱਜੀ ਕਾਰਵਾਈ ਨੂੰ ਸਵਾਈਪ ਕਰੋ</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -121,6 +121,9 @@
     <string name="button_primary">Πρωτεύον κουμπί</string>
     <string name="button_secondary">Δευτερεύον κουμπί</string>
     <string name="skip_archive_confirmation">Να παραλείπετε πάντα το παράθυρο διαλόγου επιβεβαίωσης αρχειοθέτησης</string>
+    <string name="swipe_gestures">Κινήσεις ολίσθησης</string>
+    <string name="swipe_left_action">Ενέργεια σάρωσης προς τα αριστερά</string>
+    <string name="swipe_right_action">Ενέργεια σάρωσης προς τα δεξιά</string>
 
     <string name="accent_color">Χρώμα έμφασης</string>
     <string name="use_accent_color">Χρήση χρώματος έμφασης</string>

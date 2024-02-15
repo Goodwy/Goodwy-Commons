@@ -121,6 +121,9 @@
     <string name="button_primary">主按鈕</string>
     <string name="button_secondary">輔助按鈕</string>
     <string name="skip_archive_confirmation">無需確認即可存檔</string>
+    <string name="swipe_gestures">滑動手勢</string>
+    <string name="swipe_left_action">向左滑動操作</string>
+    <string name="swipe_right_action">向右滑動操作</string>
 
     <string name="accent_color">重音顏色</string>
     <string name="use_accent_color">使用主題色</string>

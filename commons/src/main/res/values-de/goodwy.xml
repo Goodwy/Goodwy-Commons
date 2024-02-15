@@ -121,6 +121,9 @@
     <string name="button_primary">Primäre Taste</string>
     <string name="button_secondary">Sekundäre Taste</string>
     <string name="skip_archive_confirmation">Archivbestätigungsdialog nicht anzeigen</string>
+    <string name="swipe_gestures">Wischgesten</string>
+    <string name="swipe_left_action">Aktion \"Nach links wischen\"</string>
+    <string name="swipe_right_action">Aktion \"Nach rechts wischen\"</string>
 
     <string name="accent_color">Akzentfarbe</string>
     <string name="use_accent_color">Akzentfarbe verwenden</string>

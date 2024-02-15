@@ -120,7 +120,10 @@
     <string name="primary_sim_card">முதன்மை சிம் கார்டு</string>
     <string name="button_primary">முதன்மை பொத்தான்</string>
     <string name="button_secondary">இரண்டாம் நிலை பொத்தான்</string>
-    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="skip_archive_confirmation">காப்பக உறுதிப்படுத்தல் உரையாடலை எப்போதும் தவிர்க்கவும்</string>
+    <string name="swipe_gestures">ஸ்வைப் சைகைகள்</string>
+    <string name="swipe_left_action">இடதுபுற செயலை ஸ்வைப் செய்யவும்</string>
+    <string name="swipe_right_action">வலதுபுற செயலை ஸ்வைப் செய்யவும்</string>
 
     <string name="accent_color">உச்சரிப்பு நிறம்</string>
     <string name="use_accent_color">உச்சரிப்பு நிறத்தைப் பயன்படுத்தவும்</string>

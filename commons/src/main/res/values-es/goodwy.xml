@@ -121,6 +121,9 @@
     <string name="button_primary">Botón principal</string>
     <string name="button_secondary">Botón secundario</string>
     <string name="skip_archive_confirmation">Omitir siempre el diálogo de confirmación de archivado</string>
+    <string name="swipe_gestures">Gestos de deslizamiento</string>
+    <string name="swipe_left_action">Acción de deslizar el dedo hacia la izquierda</string>
+    <string name="swipe_right_action">Acción de deslizar el dedo hacia la derecha</string>
 
     <string name="accent_color">Color de acento</string>
     <string name="use_accent_color">Usar color de acento</string>

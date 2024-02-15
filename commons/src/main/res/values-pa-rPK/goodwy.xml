@@ -137,7 +137,10 @@
     <string name="primary_sim_card">بنیادی سم کارڈ</string>
     <string name="button_primary">بنیادی بٹن</string>
     <string name="button_secondary">ثانوی بٹن</string>
-    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="skip_archive_confirmation">ہمیشہ محفوظ شدہ دستاویزات کی تصدیق کے ڈائیلاگ کو چھوڑ دیں۔</string>
+    <string name="swipe_gestures">سوائپ اشاروں</string>
+    <string name="swipe_left_action">بائیں سوائپ ایکشن</string>
+    <string name="swipe_right_action">دائیں سوائپ ایکشن</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

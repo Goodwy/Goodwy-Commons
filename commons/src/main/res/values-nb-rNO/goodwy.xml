@@ -138,6 +138,9 @@
     <string name="button_primary">Primær-knapp</string>
     <string name="button_secondary">Sekundær-knapp</string>
     <string name="skip_archive_confirmation">Hopp alltid over dialogboksen for bekreftelse av arkivering</string>
+    <string name="swipe_gestures">Sveip bevegelser</string>
+    <string name="swipe_left_action">Sveip til venstre handling</string>
+    <string name="swipe_right_action">Sveip til høyre handling</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -121,6 +121,9 @@
     <string name="button_primary">Primarni gumb</string>
     <string name="button_secondary">Sekundarni gumb</string>
     <string name="skip_archive_confirmation">Uvijek preskoči dijaloški okvir za potvrdu arhiviranja</string>
+    <string name="swipe_gestures">Geste prelaska prstom</string>
+    <string name="swipe_left_action">Akcija prelaska prstom ulijevo</string>
+    <string name="swipe_right_action">Akcija prelaska prstom udesno</string>
 
     <string name="accent_color">Boja isticanja</string>
     <string name="use_accent_color">Koristi boju isticanja</string>

@@ -121,6 +121,9 @@
     <string name="button_primary">Birincil düğme</string>
     <string name="button_secondary">İkincil düğme</string>
     <string name="skip_archive_confirmation">Arşivleme onay penceresini her zaman atlayın</string>
+    <string name="swipe_gestures">Kaydırma hareketleri</string>
+    <string name="swipe_left_action">Sola kaydırma eylemi</string>
+    <string name="swipe_right_action">Sağa kaydırma eylemi</string>
 
     <string name="accent_color">Vurgu rengi</string>
     <string name="use_accent_color">Vurgu Rengi Kullan</string>

@@ -121,6 +121,9 @@
     <string name="button_primary">Primär knapp</string>
     <string name="button_secondary">Sekundär knapp</string>
     <string name="skip_archive_confirmation">Hoppa alltid över dialogrutan för bekräftelse av arkivering</string>
+    <string name="swipe_gestures">Svep gester</string>
+    <string name="swipe_left_action">Svep åt vänster åtgärd</string>
+    <string name="swipe_right_action">Svep åt höger åtgärd</string>
 
     <string name="accent_color">Färg på accent</string>
     <string name="use_accent_color">Använd accentfärg</string>

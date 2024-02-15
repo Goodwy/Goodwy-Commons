@@ -121,6 +121,9 @@
     <string name="button_primary">دکمه اصلی</string>
     <string name="button_secondary">دکمه ثانویه</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">حرکات تند وشدید زدن</string>
+    <string name="swipe_left_action">ضربه تند وشدید زدن به چپ</string>
+    <string name="swipe_right_action">ضربه تند وشدید زدن به راست</string>
 
     <string name="accent_color">رنگ لهجه</string>
     <string name="use_accent_color">استفاده از رنگ لهجه</string>

@@ -121,6 +121,9 @@
     <string name="button_primary">Pirminis mygtukas</string>
     <string name="button_secondary">Antrinis mygtukas</string>
     <string name="skip_archive_confirmation">Visada praleiskite archyvavimo patvirtinimo dialogo langą</string>
+    <string name="swipe_gestures">Perbraukimo gestai</string>
+    <string name="swipe_left_action">Perbraukite kairėn veiksmą</string>
+    <string name="swipe_right_action">Perbraukite veiksmą dešinėn</string>
 
     <string name="accent_color">Paryškinta spalva</string>
     <string name="use_accent_color">Naudokite paryškinimo spalvą</string>

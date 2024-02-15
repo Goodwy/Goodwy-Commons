@@ -121,6 +121,9 @@
     <string name="button_primary">Primární tlačítko</string>
     <string name="button_secondary">Sekundární tlačítko</string>
     <string name="skip_archive_confirmation">Potvrzení archivace vždy přeskočte</string>
+    <string name="swipe_gestures">Gesta přejetí prstem</string>
+    <string name="swipe_left_action">Akce přejetí prstem doleva</string>
+    <string name="swipe_right_action">Akce přejetí prstem doprava</string>
 
     <string name="accent_color">Zvýrazňující barva</string>
     <string name="use_accent_color">Použití barvy zvýraznění</string>
