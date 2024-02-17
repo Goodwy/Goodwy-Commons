@@ -239,6 +239,7 @@ const val AUTO_BACKUP_INTERVAL = "auto_backup_interval"
 const val NEXT_AUTO_BACKUP_TIME = "next_auto_backup_time"
 const val HIDE_TOP_BAR_WHEN_SCROLL = "hide_top_bar_when_scroll"
 const val SKIP_ARCHIVE_CONFIRMATION = "skip_archive_confirmation"
+const val USE_SWIPE_TO_ACTION = "use_swipe_to_action"
 
 const val GOOGLE_PLAY_LICENSING_KEY = "licensing_key"
 const val IS_PRO_VERSION = "is_pro_version"

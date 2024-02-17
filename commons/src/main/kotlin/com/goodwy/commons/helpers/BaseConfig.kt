@@ -768,6 +768,10 @@ open class BaseConfig(val context: Context) {
     var skipArchiveConfirmation: Boolean
         get() = prefs.getBoolean(SKIP_ARCHIVE_CONFIRMATION, false)
         set(skipArchiveConfirmation) = prefs.edit().putBoolean(SKIP_ARCHIVE_CONFIRMATION, skipArchiveConfirmation).apply()
+
+    var useSwipeToAction: Boolean
+        get() = prefs.getBoolean(USE_SWIPE_TO_ACTION, true)
+        set(swipeToAction) = prefs.edit().putBoolean(USE_SWIPE_TO_ACTION, swipeToAction).apply()
 }
 
 
