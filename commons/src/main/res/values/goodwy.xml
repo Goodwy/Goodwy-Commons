@@ -144,6 +144,7 @@
     <string name="use_swipe_gestures">Use swipe to action</string>
     <string name="use_swipe_gestures_summary">This will disable gesture swiping of tabs</string>
     <string name="volume_g">Volume</string>
+    <string name="vibrate_g">Vibrate</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
