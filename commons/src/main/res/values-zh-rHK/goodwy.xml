@@ -141,6 +141,10 @@
     <string name="swipe_gestures">滑动手势</string>
     <string name="swipe_left_action">向左滑动操作</string>
     <string name="swipe_right_action">向右滑动操作</string>
+    <string name="use_swipe_gestures">使用滑動操作</string>
+    <string name="use_swipe_gestures_summary">這將停用選項卡的手勢滑動</string>
+    <string name="volume_g">音量</string>
+    <string name="vibrate_g">振動</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -140,6 +140,10 @@
     <string name="swipe_gestures">Жесты смахивания</string>
     <string name="swipe_left_action">Действие смахивания влево</string>
     <string name="swipe_right_action">Действие смахивания вправо</string>
+    <string name="use_swipe_gestures">Использовать смахивания для выполнения действий</string>.
+    <string name="use_swipe_gestures_summary">Это отключит пролистывание вкладок жестами</string>.
+    <string name="volume_g">Громкость</string>
+    <string name="vibrate_g">Вибрация</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>

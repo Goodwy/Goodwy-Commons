@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Kaydırma hareketleri</string>
     <string name="swipe_left_action">Sola kaydırma eylemi</string>
     <string name="swipe_right_action">Sağa kaydırma eylemi</string>
+    <string name="use_swipe_gestures">Eylem için kaydırmayı kullan</string>
+    <string name="use_swipe_gestures_summary">Bu, sekmelerin hareketle kaydırılmasını devre dışı bırakır</string>
+    <string name="volume_g">Hacim</string>
+    <string name="vibrate_g">Titreşim</string>
 
     <string name="accent_color">Vurgu rengi</string>
     <string name="use_accent_color">Vurgu Rengi Kullan</string>

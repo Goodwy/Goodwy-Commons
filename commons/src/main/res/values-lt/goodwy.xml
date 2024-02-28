@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Perbraukimo gestai</string>
     <string name="swipe_left_action">Perbraukite kairėn veiksmą</string>
     <string name="swipe_right_action">Perbraukite veiksmą dešinėn</string>
+    <string name="use_swipe_gestures">Panaudokite perbraukimą veiksmui atlikti</string>
+    <string name="use_swipe_gestures_summary">Atjungiamas skirtukų perbraukimas gestais</string>
+    <string name="volume_g">Garsumas</string>
+    <string name="vibrate_g">Vibruoti</string>
 
     <string name="accent_color">Paryškinta spalva</string>
     <string name="use_accent_color">Naudokite paryškinimo spalvą</string>

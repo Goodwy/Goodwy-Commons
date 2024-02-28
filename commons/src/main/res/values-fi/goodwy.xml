@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Pyyhkäisyeleet</string>
     <string name="swipe_left_action">Pyyhkäise vasemmalle -toiminto</string>
     <string name="swipe_right_action">Pyyhkäise oikealle -toiminto</string>
+    <string name="use_swipe_gestures">Käytä pyyhkäisyliikkeitä toimintaan</string>
+    <string name="use_swipe_gestures_summary">Tämä poistaa käytöstä välilehtien pyyhkäisyn eleillä</string>
+    <string name="volume_g">Volume</string>
+    <string name="vibrate_g">Värinä</string>
 
     <string name="accent_color">Korostusväri</string>
     <string name="use_accent_color">Käytä korostusväriä</string>

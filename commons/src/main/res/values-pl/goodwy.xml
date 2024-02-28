@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Gesty przesuwania</string>
     <string name="swipe_left_action">Akcja Przesuń w lewo</string>
     <string name="swipe_right_action">Akcja przesunięcia w prawo</string>
+    <string name="use_swipe_gestures">Użyj przesunięcia do akcji</string>
+    <string name="use_swipe_gestures_summary">Wyłączy przesuwanie zakładek gestami</string>
+    <string name="volume_g">Głośność</string>
+    <string name="vibrate_g">Wibracja</string>
 
     <string name="accent_color">Kolor wiodący</string>
     <string name="use_accent_color">Użyj koloru wiodącego</string>

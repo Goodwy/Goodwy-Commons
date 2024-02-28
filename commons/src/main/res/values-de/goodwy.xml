@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Wischgesten</string>
     <string name="swipe_left_action">Aktion \"Nach links wischen\"</string>
     <string name="swipe_right_action">Aktion \"Nach rechts wischen\"</string>
+    <string name="use_swipe_gestures">Wischen zur Aktion verwenden</string>
+    <string name="use_swipe_gestures_summary">Dies deaktiviert das Wischen von Tabs durch Gesten</string>
+    <string name="volume_g">Lautstärke</string>
+    <string name="vibrate_g">Vibrieren</string>
 
     <string name="accent_color">Akzentfarbe</string>
     <string name="use_accent_color">Akzentfarbe verwenden</string>

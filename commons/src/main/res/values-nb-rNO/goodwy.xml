@@ -141,6 +141,10 @@
     <string name="swipe_gestures">Sveip bevegelser</string>
     <string name="swipe_left_action">Sveip til venstre handling</string>
     <string name="swipe_right_action">Sveip til høyre handling</string>
+    <string name="use_swipe_gestures">Bruk sveip til handling</string>.
+    <string name="use_swipe_gestures_summary">Dette vil deaktivere sveipebevegelser for faner</string>.
+    <string name="volume_g">Volum</string>
+    <string name="vibrate_g">Vibrere</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

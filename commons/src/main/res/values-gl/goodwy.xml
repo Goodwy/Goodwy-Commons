@@ -125,6 +125,10 @@
     <string name="swipe_gestures">Xestos de pasar o dedo</string>
     <string name="swipe_left_action">Acción de pasar o dedo cara á esquerda</string>
     <string name="swipe_right_action">Acción de pasar o dedo cara á dereita</string>
+    <string name="use_swipe_gestures">Usa o dedo para a acción</string>
+    <string name="use_swipe_gestures_summary">Isto desactivará o desprazamento dos xestos das pestanas</string>
+    <string name="volume_g">Volum</string>
+    <string name="vibrate_g">Vibrar</string>
 
     <string name="accent_color">Cor de acento</string>
     <string name="use_accent_color">Use unha cor de acento</string>

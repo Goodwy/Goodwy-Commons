@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Gestos de deslizamiento</string>
     <string name="swipe_left_action">Acción de deslizar el dedo hacia la izquierda</string>
     <string name="swipe_right_action">Acción de deslizar el dedo hacia la derecha</string>
+    <string name="use_swipe_gestures">Usar deslizamiento para acción</string>
+    <string name="use_swipe_gestures_summary">Esto desactivará el deslizamiento gestual de las pestañas</string>
+    <string name="volume_g">Volumen</string>
+    <string name="vibrate_g">Vibrar</string>
 
     <string name="accent_color">Color de acento</string>
     <string name="use_accent_color">Usar color de acento</string>

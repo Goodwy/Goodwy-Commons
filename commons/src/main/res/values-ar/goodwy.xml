@@ -125,6 +125,10 @@
     <string name="swipe_gestures">إيماءات التمرير</string>
     <string name="swipe_left_action">اسحب الإجراء لليسار</string>
     <string name="swipe_right_action">اسحب الإجراء لليمين</string>
+    <string name="use_swipe_gestures">استخدام التمرير السريع للعمل</string>
+    <string name="use_swipe_gestures_summary">سيؤدي ذلك إلى تعطيل تمرير علامات التبويب بالإيماءات</string>
+    <string name="volume_g">الحجم</string>
+    <string name="vibrate_g">الاهتزاز</string>
 
     <string name="accent_color">لون التمييز</string>
     <string name="use_accent_color">استخدام لون التمييز</string>

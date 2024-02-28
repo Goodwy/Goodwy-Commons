@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Strygebevægelser</string>
     <string name="swipe_left_action">Stryg til venstre handling</string>
     <string name="swipe_right_action">Stryg til højre handling</string>
+    <string name="use_swipe_gestures">Brug swipe til handling</string>
+    <string name="use_swipe_gestures_summary">Dette deaktiverer gestus-swiping af faner</string>
+    <string name="volume_g">Volumen</string>
+    <string name="vibrate_g">Vibrere</string>
 
     <string name="accent_color">Fremhævningsfarve</string>
     <string name="use_accent_color">Brug accentfarve</string>

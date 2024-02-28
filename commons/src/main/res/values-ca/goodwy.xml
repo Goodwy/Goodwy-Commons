@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Fer lliscar els gestos</string>
     <string name="swipe_left_action">Feu lliscar el dit cap a l\'esquerra</string>
     <string name="swipe_right_action">Feu lliscar el dit cap a la dreta</string>
+    <string name="use_swipe_gestures">Utilitza el lliscament per a l\'acció</string>
+    <string name="use_swipe_gestures_summary">Això desactivarà el lliscament gestual de les pestanyes</string>
+    <string name="volume_g">Volum</string>
+    <string name="vibrate_g">Vibrar</string>
 
     <string name="accent_color">Color d\'èmfasi</string>
     <string name="use_accent_color">Utilitzeu el color d\'accent</string>

@@ -124,6 +124,10 @@
     <string name="swipe_gestures">ஸ்வைப் சைகைகள்</string>
     <string name="swipe_left_action">இடதுபுற செயலை ஸ்வைப் செய்யவும்</string>
     <string name="swipe_right_action">வலதுபுற செயலை ஸ்வைப் செய்யவும்</string>
+    <string name="use_swipe_gestures">செயலுக்கு ஸ்வைப் பயன்படுத்தவும்</string>
+    <string name="use_swipe_gestures_summary">இது தாவல்களின் சைகை ஸ்வைப் செய்வதை முடக்கும்</string>
+    <string name="volume_g">தொகுதி</string>
+    <string name="vibrate_g">அதிர்வு</string>
 
     <string name="accent_color">உச்சரிப்பு நிறம்</string>
     <string name="use_accent_color">உச்சரிப்பு நிறத்தைப் பயன்படுத்தவும்</string>

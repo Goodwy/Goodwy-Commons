@@ -141,6 +141,10 @@
     <string name="swipe_gestures">സ്വൈപ്പ് ആംഗ്യങ്ങൾ</string>
     <string name="swipe_left_action">ഇടത്തേക്ക് സ്വൈപ്പുചെയ്യുക</string>
     <string name="swipe_right_action">വലത് പ്രവർത്തനം സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="use_swipe_gestures">പ്രവർത്തനത്തിലേക്ക് സ്വൈപ്പ് ഉപയോഗിക്കുക</string>
+    <string name="use_swipe_gestures_summary">ഇത് ടാബുകളുടെ ജെസ്റ്റർ സ്വൈപ്പിംഗ് പ്രവർത്തനരഹിതമാക്കും</string>
+    <string name="volume_g">വോളിയം</string>
+    <string name="vibrate_g">വൈബ്രേറ്റ്</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

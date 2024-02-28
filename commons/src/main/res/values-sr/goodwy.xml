@@ -125,6 +125,10 @@
     <string name="swipe_gestures">Покрети превлачења</string>
     <string name="swipe_left_action">Радња превлачења налево</string>
     <string name="swipe_right_action">Радња превлачења надесно</string>
+    <string name="use_swipe_gestures">Користите превлачење до радње</string>
+    <string name="use_swipe_gestures_summary">Ово ће онемогућити превлачење картица покретима</string>
+    <string name="volume_g">Јачина звука</string>
+    <string name="vibrate_g">Вибрација</string>
 
     <string name="accent_color">Наглашена боја</string>
     <string name="use_accent_color">Користите акцентну боју</string>

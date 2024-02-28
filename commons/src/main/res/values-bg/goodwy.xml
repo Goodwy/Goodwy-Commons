@@ -141,6 +141,10 @@
     <string name="swipe_gestures">Жестове с плъзгане</string>
     <string name="swipe_left_action">Действие с плъзгане наляво</string>
     <string name="swipe_right_action">Действие с плъзгане надясно</string>
+    <string name="use_swipe_gestures">Използвайте плъзгания, за да извършвате действия</string>
+    <string name="use_swipe_gestures_summary">Това ще деактивира плъзгането с жестове на разделите</string>
+    <string name="volume_g">Обем</string>
+    <string name="vibrate_g">Вибрация</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -124,6 +124,10 @@
     <string name="swipe_gestures">살짝 밀기 제스처</string>
     <string name="swipe_left_action">왼쪽으로 스와이프 동작</string>
     <string name="swipe_right_action">오른쪽으로 스와이프 동작</string>
+    <string name="use_swipe_gestures">스와이프를 동작으로 사용</string>
+    <string name="use_swipe_gestures_summary">탭의 제스처 스와이프를 비활성화합니다</string>
+    <string name="volume_g">볼륨</string>
+    <string name="vibrate_g">진동</string>
 
     <string name="accent_color">악센트 색상</string>
     <string name="use_accent_color">강조 색상 사용</string>

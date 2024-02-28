@@ -282,19 +282,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupEmail() {
-        /*val label = getString(R.string.lifebuoy_summary)
-        val email = getString(R.string.my_email)
-
-        val appVersion = String.format(getString(R.string.app_version, intent.getStringExtra(APP_VERSION_NAME)))
-        val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
-        val newline = "%0D%0A"
-        val separator = "------------------------------"
-        val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline"
-        val href = "$label<br><a href=\"mailto:$email?subject=$appName&body=$body\">$email</a>"
-        lifebuoy_summary.text = Html.fromHtml(href)
-        lifebuoy_summary.movementMethod = LinkMovementMethod.getInstance()*/
-
-        binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
+        binding.lifebuoyHolder.beVisibleIf(showLifebuoy && playStoreInstalled)
         val lifebuoyButtonDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
         binding.lifebuoyButton.setImageDrawable(lifebuoyButtonDrawable)
         binding.lifebuoyButton.setOnClickListener {

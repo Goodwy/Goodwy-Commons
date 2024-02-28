@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Gesti di scorrimento rapido</string>
     <string name="swipe_left_action">Azione Scorri verso sinistra</string>
     <string name="swipe_right_action">Azione di scorrimento verso destra</string>
+    <string name="use_swipe_gestures">Utilizzare lo swipe to action</string>
+    <string name="use_swipe_gestures_summary">Questo disabilita lo swipe gestuale delle schede</string>.
+    <string name="volume_g">Volume</string>
+    <string name="vibrate_g">Vibrare</string>
 
     <string name="accent_color">Colore accento</string>
     <string name="use_accent_color">Usa colore principale</string>

@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Irrastatu keinuak</string>
     <string name="swipe_left_action">Irrastatu ezkerreko ekintza</string>
     <string name="swipe_right_action">Irrastatu eskuinera ekintza</string>
+    <string name="use_swipe_gestures">Erabili hatza ekintza</string>
+    <string name="use_swipe_gestures_summary">Honek fitxen keinuen irristatzea desgaituko du</string>
+    <string name="volume_g">Bolumena</string>
+    <string name="vibrate_g">Bibratu</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="use_accent_color">Erabili azentu kolore bat</string>

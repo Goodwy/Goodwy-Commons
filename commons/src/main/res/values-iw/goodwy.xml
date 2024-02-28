@@ -124,6 +124,10 @@
     <string name="swipe_gestures">מחוות החלקה מהירה</string>
     <string name="swipe_left_action">החלקה מהירה ימינה</string>
     <string name="swipe_right_action">החליקו ימינה בפעולה</string>
+    <string name="use_swipe_gestures">השתמש בהחלקה לפעולה</string>
+    <string name="use_swipe_gestures_summary">פעולה זו תשבית את החלקת תנועות של כרטיסיות</string>
+    <string name="volume_g">נפח</string>
+    <string name="vibrate_g">רטט</string>
 
     <string name="accent_color">צבע הדגשה</string>
     <string name="use_accent_color">שימוש בצבע הדגשה</string>

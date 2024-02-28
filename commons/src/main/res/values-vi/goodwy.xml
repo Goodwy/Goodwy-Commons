@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Cử chỉ vuốt</string>
     <string name="swipe_left_action">Hành động vuốt sang trái</string>
     <string name="swipe_right_action">Hành động vuốt sang phải</string>
+    <string name="use_swipe_gestures">Sử dụng thao tác vuốt để thực hiện</string>
+    <string name="use_swipe_gestures_summary">Điều này sẽ vô hiệu hóa thao tác vuốt tab bằng cử chỉ</string>
+    <string name="volume_g">Khối lượng</string>
+    <string name="vibrate_g">Rung</string>
 
     <string name="accent_color">Màu nhấn</string>
     <string name="use_accent_color">Sử dụng màu nhấn</string>

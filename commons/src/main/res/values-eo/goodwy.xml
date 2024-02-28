@@ -141,6 +141,10 @@
     <string name="swipe_gestures">Svingaj gestoj</string>
     <string name="swipe_left_action">Swipe maldekstren ago</string>
     <string name="swipe_right_action">Glvu dekstren</string>
+    <string name="use_swipe_gestures">Uzu gliti por agi</string>
+    <string name="use_swipe_gestures_summary">Ĉi tio malŝaltos gestan svingadon de langetoj</string>
+    <string name="volume_g">Volumo</string>
+    <string name="vibrate_g">Vibru</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

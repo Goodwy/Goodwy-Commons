@@ -140,6 +140,10 @@
     <string name="swipe_gestures">Gesturi de glisare</string>
     <string name="swipe_left_action">Acțiunea Glisare spre stânga</string>
     <string name="swipe_right_action">Glisați acțiunea spre dreapta</string>
+    <string name="use_swipe_gestures">Utilizează glisarea pentru acțiune</string>
+    <string name="use_swipe_gestures_summary">Aceasta va dezactiva glisarea prin gesturi a filelor</string>
+    <string name="volume_g">Volumea</string>.
+    <string name="vibrate_g">Vibrează</string>.
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

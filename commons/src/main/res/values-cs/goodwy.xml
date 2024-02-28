@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Gesta přejetí prstem</string>
     <string name="swipe_left_action">Akce přejetí prstem doleva</string>
     <string name="swipe_right_action">Akce přejetí prstem doprava</string>
+    <string name="use_swipe_gestures">Použít přejetí prstem k akci</string>
+    <string name="use_swipe_gestures_summary">Zakáže přejetí gestem po kartách</string>
+    <string name="volume_g">Hlasitost</string>
+    <string name="vibrate_g">Vibrovat</string>
 
     <string name="accent_color">Zvýrazňující barva</string>
     <string name="use_accent_color">Použití barvy zvýraznění</string>

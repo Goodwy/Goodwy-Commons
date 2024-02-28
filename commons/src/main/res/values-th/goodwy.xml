@@ -141,6 +141,10 @@
     <string name="swipe_gestures">ท่าทางการปัด</string>
     <string name="swipe_left_action">ปัดการกระทําไปทางซ้าย</string>
     <string name="swipe_right_action">ปัดไปทางขวา</string>
+    <string name="use_swipe_gestures">ใช้การปัดเพื่อดำเนินการ</string>
+    <string name="use_swipe_gestures_summary">การดำเนินการนี้จะปิดใช้งานการปัดแท็บด้วยท่าทาง</string>
+    <string name="volume_g">ระดับเสียง</string>
+    <string name="vibrate_g">สั่น</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

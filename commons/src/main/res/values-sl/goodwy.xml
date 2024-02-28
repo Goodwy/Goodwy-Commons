@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Vlečenje potez</string>
     <string name="swipe_left_action">Podrsnite levo dejanje</string>
     <string name="swipe_right_action">Povlecite dejanje v desno</string>
+    <string name="use_swipe_gestures">Uporaba podrsavanja za akcijo</string>
+    <string name="use_swipe_gestures_summary">Ta onemogoči poteg z gesto za zavihke</string>
+    <string name="volume_g">Glasnost</string>
+    <string name="vibrate_g">Vibriranje</string>
 
     <string name="accent_color">Barva naglasa</string>
     <string name="use_accent_color">Uporaba barve poudarkov</string>

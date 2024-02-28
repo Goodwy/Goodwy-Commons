@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Gestos de deslize</string>
     <string name="swipe_left_action">Ação de deslizar para a esquerda</string>
     <string name="swipe_right_action">Ação de deslizar para a direita</string>
+    <string name="use_swipe_gestures">Utilizar deslizar para ação</string>
+    <string name="use_swipe_gestures_summary">Isto irá desativar o deslizar por gestos dos separadores</string>
+    <string name="volume_g">Volume</string>
+    <string name="vibrate_g">Vibrar</string>
 
     <string name="accent_color">Cor do sotaque</string>
     <string name="use_accent_color">Utilizar uma cor de destaque</string>

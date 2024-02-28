@@ -137,10 +137,14 @@
     <string name="primary_sim_card">প্রাথমিক সিম কার্ড</string>
     <string name="button_primary">প্রাথমিক বোতাম</string>
     <string name="button_secondary">সেকেন্ডারি বোতাম</string>
-    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
-    <string name="swipe_gestures">Swipe gestures</string>
-    <string name="swipe_left_action">Swipe left action</string>
-    <string name="swipe_right_action">Swipe right action</string>
+    <string name="skip_archive_confirmation">সর্বদা সংরক্ষণাগার নিশ্চিতকরণ ডায়ালগ এড়িয়ে যান</string>
+    <string name="swipe_gestures"> সোয়াইপ অঙ্গভঙ্গি</string>
+    <string name="swipe_left_action">বাম দিকে সোয়াইপ অ্যাকশন</string>
+    <string name="swipe_right_action">ডান দিকে সোয়াইপ করুন</string>
+    <string name="use_swipe_gestures">সোয়াইপ টু অ্যাকশন ব্যবহার করুন</string>
+    <string name="use_swipe_gestures_summary">এটি ট্যাবগুলির অঙ্গভঙ্গি সোয়াইপিং অক্ষম করবে</string>
+    <string name="volume_g">ভলিউম</string>
+    <string name="vibrate_g">কম্পন</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -124,6 +124,10 @@
     <string name="swipe_gestures">Pöccintő kézmozdulatok</string>
     <string name="swipe_left_action">Pöccintés balra művelet</string>
     <string name="swipe_right_action">Pöccintés jobbra művelet</string>
+    <string name="use_swipe_gestures">Használja a swipe to action funkciót</string>
+    <string name="use_swipe_gestures_summary">Ez letiltja a lapok gesztusokkal történő áthúzását</string>
+    <string name="volume_g">Hangerő</string>
+    <string name="vibrate_g">Vibrate</string>
 
     <string name="accent_color">Ékezet színe</string>
     <string name="use_accent_color">Kiemelő szín használata</string>
