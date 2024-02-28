@@ -124,10 +124,10 @@
     <string name="swipe_gestures">Ystumiau swipe</string>
     <string name="swipe_left_action">Swipe gweithredu chwith</string>
     <string name="swipe_right_action">Swipe gweithredu cywir</string>
-    <string name="use_swipe_gestures">Defnyddio sweip i weithredu</ string>
-    <string name="use_swipe_gestures_summary">Bydd hyn yn analluogi swipio tabiau ystumiau</ string>
+    <string name="use_swipe_gestures">Defnyddio sweip i weithredu</string>
+    <string name="use_swipe_gestures_summary">Bydd hyn yn analluogi swipio tabiau ystumiau</string>
     <string name="volume_g">Cyfrol</string>
-    <string name="vibrate_g"> Dirgrynu</string>
+    <string name="vibrate_g">Dirgrynu</string>
 
     <string name="accent_color">Lliw acen</string>
     <string name="use_accent_color">Defnyddiwch Lliw acen</string>
