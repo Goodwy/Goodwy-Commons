@@ -128,6 +128,7 @@
     <string name="use_swipe_gestures_summary">Tämä poistaa käytöstä välilehtien pyyhkäisyn eleillä</string>
     <string name="volume_g">Volume</string>
     <string name="vibrate_g">Värinä</string>
+    <string name="use_contact_colors">Käytä kontaktivärejä</string>
 
     <string name="accent_color">Korostusväri</string>
     <string name="use_accent_color">Käytä korostusväriä</string>

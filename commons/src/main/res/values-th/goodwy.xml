@@ -145,6 +145,7 @@
     <string name="use_swipe_gestures_summary">การดำเนินการนี้จะปิดใช้งานการปัดแท็บด้วยท่าทาง</string>
     <string name="volume_g">ระดับเสียง</string>
     <string name="vibrate_g">สั่น</string>
+    <string name="use_contact_colors">ใช้สีสัมผัส</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

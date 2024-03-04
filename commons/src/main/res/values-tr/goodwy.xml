@@ -128,6 +128,7 @@
     <string name="use_swipe_gestures_summary">Bu, sekmelerin hareketle kaydırılmasını devre dışı bırakır</string>
     <string name="volume_g">Hacim</string>
     <string name="vibrate_g">Titreşim</string>
+    <string name="use_contact_colors">Temas renklerini kullanma</string>
 
     <string name="accent_color">Vurgu rengi</string>
     <string name="use_accent_color">Vurgu Rengi Kullan</string>

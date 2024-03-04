@@ -18,11 +18,11 @@
     <string name="recents">Recente</string>
     <string name="message">Mesaj</string>
     <string name="settings_icon">Pictograma Setări</string>
-    <string name="total_g">Total: %s</string>.
+    <string name="total_g">Total: %s</string>
     <string name="last_g">Ultimul: %s</string>
     <string name="next_g">Urmatorul: %s</string>
-    <string name="time">Ora</string>.
-    <string name="interval">Interval</string>.
+    <string name="time">Ora</string>
+    <string name="interval">Interval</string>
     <string name="symbols_first">Simbolurile mai întâi (de ex. !@#$)</string>
     <string name="use_custom_notifications">Utilizează notificări personalizate</string>
     <string name="hide_top_bar_when_scrolling">Ascundeți bara de sus a aplicației atunci când derulați</string>
@@ -142,8 +142,9 @@
     <string name="swipe_right_action">Glisați acțiunea spre dreapta</string>
     <string name="use_swipe_gestures">Utilizează glisarea pentru acțiune</string>
     <string name="use_swipe_gestures_summary">Aceasta va dezactiva glisarea prin gesturi a filelor</string>
-    <string name="volume_g">Volumea</string>.
-    <string name="vibrate_g">Vibrează</string>.
+    <string name="volume_g">Volumea</string>
+    <string name="vibrate_g">Vibrează</string>
+    <string name="use_contact_colors">Utilizarea culorilor de contact</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -184,7 +185,7 @@
     <string name="add_group">Adaugă un grup</string>
     <string name="add_related_person">Adaugă o persoană legată</string>
 
-    <string name="video_call">Apel video</string>.
+    <string name="video_call">Apel video</string>
     <string name="screen_slide_animation">Animație slide pe ecran</string>
     <string name="screen_slide_animation_zoomout">Zoom-out</string>
     <string name="screen_slide_animation_depth">Adâncime</string>

@@ -128,6 +128,7 @@
     <string name="use_swipe_gestures_summary">Zakáže přejetí gestem po kartách</string>
     <string name="volume_g">Hlasitost</string>
     <string name="vibrate_g">Vibrovat</string>
+    <string name="use_contact_colors">Použití kontaktních barev</string>
 
     <string name="accent_color">Zvýrazňující barva</string>
     <string name="use_accent_color">Použití barvy zvýraznění</string>

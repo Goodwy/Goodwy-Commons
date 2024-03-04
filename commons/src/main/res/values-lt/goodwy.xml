@@ -128,6 +128,7 @@
     <string name="use_swipe_gestures_summary">Atjungiamas skirtukų perbraukimas gestais</string>
     <string name="volume_g">Garsumas</string>
     <string name="vibrate_g">Vibruoti</string>
+    <string name="use_contact_colors">Naudokite kontaktines spalvas</string>
 
     <string name="accent_color">Paryškinta spalva</string>
     <string name="use_accent_color">Naudokite paryškinimo spalvą</string>

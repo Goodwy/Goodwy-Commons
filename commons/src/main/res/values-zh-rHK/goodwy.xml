@@ -145,6 +145,7 @@
     <string name="use_swipe_gestures_summary">這將停用選項卡的手勢滑動</string>
     <string name="volume_g">音量</string>
     <string name="vibrate_g">振動</string>
+    <string name="use_contact_colors">使用触点颜色</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

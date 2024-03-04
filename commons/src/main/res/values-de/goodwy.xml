@@ -128,6 +128,7 @@
     <string name="use_swipe_gestures_summary">Dies deaktiviert das Wischen von Tabs durch Gesten</string>
     <string name="volume_g">Lautstärke</string>
     <string name="vibrate_g">Vibrieren</string>
+    <string name="use_contact_colors">Kontaktfarben verwenden</string>
 
     <string name="accent_color">Akzentfarbe</string>
     <string name="use_accent_color">Akzentfarbe verwenden</string>

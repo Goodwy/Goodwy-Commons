@@ -128,6 +128,7 @@
     <string name="use_swipe_gestures_summary">Bydd hyn yn analluogi swipio tabiau ystumiau</string>
     <string name="volume_g">Cyfrol</string>
     <string name="vibrate_g">Dirgrynu</string>
+    <string name="use_contact_colors">Defnyddio lliwiau cyswllt</string>
 
     <string name="accent_color">Lliw acen</string>
     <string name="use_accent_color">Defnyddiwch Lliw acen</string>

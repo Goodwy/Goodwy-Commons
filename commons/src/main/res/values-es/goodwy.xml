@@ -128,6 +128,7 @@
     <string name="use_swipe_gestures_summary">Esto desactivará el deslizamiento gestual de las pestañas</string>
     <string name="volume_g">Volumen</string>
     <string name="vibrate_g">Vibrar</string>
+    <string name="use_contact_colors">Usar colores de contacto</string>
 
     <string name="accent_color">Color de acento</string>
     <string name="use_accent_color">Usar color de acento</string>

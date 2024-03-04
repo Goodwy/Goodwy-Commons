@@ -129,6 +129,7 @@
     <string name="use_swipe_gestures_summary">Isto desactivará o desprazamento dos xestos das pestanas</string>
     <string name="volume_g">Volum</string>
     <string name="vibrate_g">Vibrar</string>
+    <string name="use_contact_colors">Use cores de contacto</string>
 
     <string name="accent_color">Cor de acento</string>
     <string name="use_accent_color">Use unha cor de acento</string>

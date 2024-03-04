@@ -128,6 +128,7 @@
     <string name="use_swipe_gestures_summary">Ceci désactivera le balayage gestuel des onglets</string>
     <string name="volume_g">Volume</string>
     <string name="vibrate_g">Vibrer</string>
+    <string name="use_contact_colors">Utiliser des couleurs de contact</string>
 
     <string name="accent_color">Couleur d\'accentuation</string>
     <string name="use_accent_color">Utiliser la couleur d’accentuation</string>

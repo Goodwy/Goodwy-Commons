@@ -145,6 +145,7 @@
     <string name="use_swipe_gestures_summary">Това ще деактивира плъзгането с жестове на разделите</string>
     <string name="volume_g">Обем</string>
     <string name="vibrate_g">Вибрация</string>
+    <string name="use_contact_colors">Използване на цветове за контакти</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

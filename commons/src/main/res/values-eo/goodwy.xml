@@ -145,6 +145,7 @@
     <string name="use_swipe_gestures_summary">Ĉi tio malŝaltos gestan svingadon de langetoj</string>
     <string name="volume_g">Volumo</string>
     <string name="vibrate_g">Vibru</string>
+    <string name="use_contact_colors">Uzu kontaktokolorojn</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

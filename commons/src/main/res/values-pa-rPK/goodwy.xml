@@ -145,6 +145,7 @@
     <string name="use_swipe_gestures_summary">یہ ٹیبز کے اشاروں سے سوائپنگ کو غیر فعال کر دے گا</string>
     <string name="volume_g">والیوم</string>
     <string name="vibrate_g">کمپن</string>
+    <string name="use_contact_colors">رابطے کے رنگ استعمال کریں۔</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

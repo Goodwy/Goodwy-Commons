@@ -144,6 +144,7 @@
     <string name="use_swipe_gestures_summary">See keelab žestide pühkimise vahekaartidel</string>
     <string name="volume_g">Köide</string>
     <string name="vibrate_g">Vibrate</string>
+    <string name="use_contact_colors">Kontakti värvide kasutamine</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

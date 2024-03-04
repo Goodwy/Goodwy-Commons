@@ -144,6 +144,7 @@
     <string name="use_swipe_gestures_summary">Це відключить гортання вкладок жестами</string>.
     <string name="volume_g">Громкість</string>
     <string name="vibrate_g">Вібрація</string>
+    <string name="use_contact_colors">Використовувати кольори контактів</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купити Goodwy Thank You</string>

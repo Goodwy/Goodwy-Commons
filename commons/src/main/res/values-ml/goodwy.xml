@@ -145,6 +145,7 @@
     <string name="use_swipe_gestures_summary">ഇത് ടാബുകളുടെ ജെസ്റ്റർ സ്വൈപ്പിംഗ് പ്രവർത്തനരഹിതമാക്കും</string>
     <string name="volume_g">വോളിയം</string>
     <string name="vibrate_g">വൈബ്രേറ്റ്</string>
+    <string name="use_contact_colors">കോൺടാക്റ്റ് നിറങ്ങൾ ഉപയോഗിക്കുക</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

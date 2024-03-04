@@ -129,6 +129,7 @@
     <string name="use_swipe_gestures_summary">Bu, tabların jestlə sürüşdürülməsini deaktiv edəcək</string>
     <string name="volume_g">Həcm</string>
     <string name="vibrate_g">Vibrat</string>
+    <string name="use_contact_colors">Kontakt rənglərindən istifadə edin</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="use_accent_color">Vurğu rəngindən istifadə edin</string>

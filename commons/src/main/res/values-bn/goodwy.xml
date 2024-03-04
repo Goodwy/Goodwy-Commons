@@ -145,6 +145,7 @@
     <string name="use_swipe_gestures_summary">এটি ট্যাবগুলির অঙ্গভঙ্গি সোয়াইপিং অক্ষম করবে</string>
     <string name="volume_g">ভলিউম</string>
     <string name="vibrate_g">কম্পন</string>
+    <string name="use_contact_colors">যোগাযোগের রং ব্যবহার করুন</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -145,6 +145,7 @@
     <string name="use_swipe_gestures_summary">Dette vil deaktivere sveipebevegelser for faner</string>.
     <string name="volume_g">Volum</string>
     <string name="vibrate_g">Vibrere</string>
+    <string name="use_contact_colors">Bruke kontaktfarger</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
