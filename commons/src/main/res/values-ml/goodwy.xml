@@ -197,6 +197,7 @@
     <string name="open">തുറക്കുക</string>
     <string name="collection">ശേഖരം</string>
     <string name="collection_summary">ആപ്പ് അൺലോക്ക് ചെയ്യാൻ ഒരു ശേഖരം നിർമ്മിക്കുക</string>
+    <string name="support_project_to_unlock">അൺലോക്ക് ചെയ്യുന്നതിന് പ്രോജക്‌റ്റിനെ പിന്തുണയ്ക്കുക</string>
     <string name="limited_supply">പരിമിതമായ വിതരണം</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>

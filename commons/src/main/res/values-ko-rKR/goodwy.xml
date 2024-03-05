@@ -194,6 +194,7 @@
     <string name="open">열기</string>
     <string name="collection">컬렉션</string>
     <string name="collection_summary">앱 잠금을 해제하는 컬렉션 빌드Build a collection to unlock the app</string>
+    <string name="support_project_to_unlock">잠금 해제를 위한 프로젝트 지원</string>
     <string name="limited_supply">제한된 공급</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>

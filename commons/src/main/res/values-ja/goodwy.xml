@@ -195,6 +195,7 @@
     <string name="open">開く</string>
     <string name="collection">コレクション</string>
     <string name="collection_summary">コレクションを構築してアプリのロックを解除する</string>
+    <string name="support_project_to_unlock">プロジェクトを支援してロックを解除する</string>
     <string name="limited_supply">限られた供給</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>

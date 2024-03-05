@@ -194,6 +194,7 @@
     <string name="open">Avaa</string>
     <string name="collection">Kokoelma</string>
     <string name="collection_summary">Luo kokoelma sovelluksen lukituksen avaamiseksi</string>
+    <string name="support_project_to_unlock">Tue projektin avaamista</string>
     <string name="limited_supply">Rajoitettu tarjonta</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>

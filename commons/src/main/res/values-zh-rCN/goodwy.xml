@@ -189,6 +189,7 @@
     <string name="open">开放式</string>
     <string name="collection">集合</string>
     <string name="collection_summary">构建集合以解锁应用</string>
+    <string name="support_project_to_unlock">支持项目解锁</string>
     <string name="limited_supply">供应有限</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>

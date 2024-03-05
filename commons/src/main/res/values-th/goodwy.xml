@@ -197,6 +197,7 @@
     <string name="open">เปิด</string>
     <string name="collection">คอลเลคชัน</string>
     <string name="collection_summary">สร้างคอลเลกชันเพื่อปลดล็อกแอป</string>
+    <string name="support_project_to_unlock">สนับสนุนโครงการเพื่อปลดล็อก</string>
     <string name="limited_supply">อุปทานจํากัด</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>

@@ -191,6 +191,7 @@
     <string name="open">Otwórz</string>
     <string name="collection">Kolekcja</string>
     <string name="collection_summary">Tworzenie kolekcji w celu odblokowania aplikacji</string>
+    <string name="support_project_to_unlock">Wesprzyj projekt, aby odblokować</string>
     <string name="limited_supply">Ograniczona podaż</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>

@@ -194,6 +194,7 @@
     <string name="open">Açık</string>
     <string name="collection">Koleksiyon</string>
     <string name="collection_summary">Uygulamanın kilidini açmak için bir koleksiyon oluşturun</string>
+    <string name="support_project_to_unlock">Kilidi açmak için projeyi destekleyin</string>
     <string name="limited_supply">Sınırlı tedarik</string>
     <string name="playbook">PlayBook</string>
     <string name="right_contacts">Right Contacts</string>
