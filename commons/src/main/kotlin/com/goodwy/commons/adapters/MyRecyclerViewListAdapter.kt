@@ -313,6 +313,7 @@ abstract class MyRecyclerViewListAdapter<T>(
 
     fun updateBackgroundColor(backgroundColor: Int) {
         this.backgroundColor = backgroundColor
+        onRefresh.invoke()
     }
 
     protected fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {

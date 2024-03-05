@@ -295,6 +295,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     fun updateBackgroundColor(backgroundColor: Int) {
         this.backgroundColor = backgroundColor
+        notifyDataSetChanged()
     }
 
     protected fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
