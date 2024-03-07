@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
 import android.os.Bundle
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.updateLayoutParams
@@ -17,6 +18,7 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.MyTheme
 import com.goodwy.commons.models.RadioItem
 import com.goodwy.commons.models.SharedTheme
+import com.google.android.material.snackbar.Snackbar
 import com.mikhaellopez.rxanimation.RxAnimation
 import com.mikhaellopez.rxanimation.shake
 
@@ -282,7 +284,14 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         binding.customizationThemeHolder.setOnClickListener {
-            if (isProVersion()) themePickerClicked() else shakePurchase()
+            if (isProVersion()) themePickerClicked() else {
+                shakePurchase()
+                RxAnimation.from(binding.themeHolder)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
         }
 
 //        if (binding.customizationTheme.value == getMaterialYouString()) {
@@ -579,11 +588,61 @@ class CustomizationActivity : BaseSimpleActivity() {
         //binding.applyToAll.setTextColor(primaryColor.getContrastColor())
         updateTextCursor(baseConfig.textCursorColor)
 
-        binding.customizationTextColorHolder.setOnClickListener { if (isProVersion()) pickTextColor() else shakePurchase() }
-        binding.customizationTextCursorColorHolder.setOnClickListener { if (isProVersion()) pickTextCursorColor() else shakePurchase() }
-        binding.customizationBackgroundColorHolder.setOnClickListener { if (isProVersion()) pickBackgroundColor() else shakePurchase() }
-        binding.customizationPrimaryColorHolder.setOnClickListener { if (isProVersion()) pickPrimaryColor() else shakePurchase() }
-        binding.customizationAccentColorHolder.setOnClickListener { if (isProVersion()) pickAccentColor() else shakePurchase() }
+        binding.customizationTextColorHolder.setOnClickListener {
+            if (isProVersion()) pickTextColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
+        binding.customizationTextCursorColorHolder.setOnClickListener {
+            if (isProVersion()) pickTextCursorColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
+        binding.customizationBackgroundColorHolder.setOnClickListener {
+            if (isProVersion()) pickBackgroundColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
+        binding.customizationPrimaryColorHolder.setOnClickListener {
+            if (isProVersion()) pickPrimaryColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
+        binding.customizationAccentColorHolder.setOnClickListener {
+            if (isProVersion()) pickAccentColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
 
         handleAccentColorLayout()
         //binding.applyToAllHolder.setOnClickListener { applyToAll() }
@@ -923,6 +982,24 @@ class CustomizationActivity : BaseSimpleActivity() {
                 updateAutoThemeFields()
             }
         }
+    }
+
+    private fun showSnackbar(view: View) {
+        view.performHapticFeedback()
+
+        val snackbar = Snackbar.make(view, R.string.support_project_to_unlock, Snackbar.LENGTH_SHORT)
+            .setAction(R.string.support) {
+                launchPurchase()
+            }
+
+        val bgDrawable = ResourcesCompat.getDrawable(view.resources, R.drawable.button_background_16dp, null)
+        snackbar.view.background = bgDrawable
+        val properBackgroundColor = getProperBackgroundColor()
+        val backgroundColor = if (properBackgroundColor == Color.BLACK) getBottomNavigationBackgroundColor().lightenColor(6) else getBottomNavigationBackgroundColor().darkenColor(6)
+        snackbar.setBackgroundTint(backgroundColor)
+        snackbar.setTextColor(getProperTextColor())
+        snackbar.setActionTextColor(getProperPrimaryColor())
+        snackbar.show()
     }
 }
 
