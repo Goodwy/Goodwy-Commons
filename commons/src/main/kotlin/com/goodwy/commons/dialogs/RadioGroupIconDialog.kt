@@ -28,9 +28,14 @@ class RadioGroupIconDialog(
                         setOnClickListener { itemSelected(i) }
                     }
                     dialogRadioButtonIcon.apply {
+                        val drawable = items[i].drawable
                         val icon = items[i].icon
-                        if (icon != null) setImageResource(icon)
-                        setColorFilter(activity.getProperTextColor())
+                        if (drawable != null) {
+                            setImageDrawable(drawable)
+                        } else if (icon != null) {
+                            setImageResource(icon)
+                            setColorFilter(activity.getProperTextColor())
+                        }
                     }
 
                     if (items[i].id == checkedItemId) {
