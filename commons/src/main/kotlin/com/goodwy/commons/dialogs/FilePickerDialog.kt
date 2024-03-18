@@ -39,6 +39,7 @@ class FilePickerDialog(
     val forceShowRoot: Boolean = false,
     val showFavoritesButton: Boolean = false,
     val titleText: Int = R.string.select_folder,
+    val useAccentColor: Boolean = false,
     private val enforceStorageRestrictions: Boolean = true,
     val callback: (pickedPath: String) -> Unit
 ) : Breadcrumbs.BreadcrumbsListener {
@@ -170,7 +171,7 @@ class FilePickerDialog(
         }
 
         val sortedItems = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.lowercase() }))
-        val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepickerList) {
+        val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepickerList, useAccentColor) {
             if ((it as FileDirItem).isDirectory) {
                 activity.handleLockedFolderOpening(it.path) { success ->
                     if (success) {
