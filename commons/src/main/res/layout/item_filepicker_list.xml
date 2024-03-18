@@ -16,6 +16,7 @@
         android:layout_width="@dimen/file_picker_icon_size"
         android:layout_height="@dimen/file_picker_icon_size"
         android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/small_margin"
         android:padding="@dimen/medium_margin"
         android:src="@drawable/ic_folder_vector" />
 
