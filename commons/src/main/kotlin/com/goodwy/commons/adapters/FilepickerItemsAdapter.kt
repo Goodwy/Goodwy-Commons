@@ -22,7 +22,7 @@ import com.goodwy.commons.views.MyRecyclerView
 import java.util.Locale
 
 class FilepickerItemsAdapter(
-    activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
+    activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView, val useAccentColor: Boolean = false,
     itemClick: (Any) -> Unit
 ) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), RecyclerViewFastScroller.OnPopupTextUpdate {
 
@@ -141,7 +141,8 @@ class FilepickerItemsAdapter(
     }
 
     private fun initDrawables() {
-        folderDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_folder_vector, textColor)
+        val folderColor = if (useAccentColor) accentColor else properPrimaryColor
+        folderDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_folder_color, folderColor)
         folderDrawable.alpha = 180
         fileDrawable = resources.getDrawable(R.drawable.ic_file_generic)
         fileDrawables = getFilePlaceholderDrawables(activity)
