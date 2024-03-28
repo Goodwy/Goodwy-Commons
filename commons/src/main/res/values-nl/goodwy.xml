@@ -125,7 +125,7 @@
     <string name="swipe_left_action">Veeg naar links actie</string>
     <string name="swipe_right_action">Veeg naar rechts actie</string>
     <string name="use_swipe_gestures">Gebruik vegen om actie te ondernemen</string>
-    <string name="use_swipe_gestures_summary">This will disable gesture swipen of tabs</string>
+    <string name="use_swipe_gestures_summary">Hiermee wordt het vegen van tabbladen met gebaren uitgeschakeld</string>
     <string name="volume_g">Volume</string>
     <string name="vibrate_g">Trillen</string>
     <string name="use_contact_colors">Contactkleuren gebruiken</string>
