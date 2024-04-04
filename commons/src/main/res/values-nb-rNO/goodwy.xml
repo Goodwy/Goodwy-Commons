@@ -1,13 +1,12 @@
 <resources>
-    <string name="app_name_g">Goodwy Commons</string>
-    <string name="recorder_g">Opptaker</string>.
+    <string name="recorder_g">Opptaker</string>
     <string name="player_g">Spiller</string>
     <string name="general">Generelt</string>
     <string name="default_tab">Standard fane</string>
     <string name="color">farge</string>
     <string name="black">Svart</string>
     <string name="black_locked">Svart (låst)</string>
-    <string name="incoming_call">Inkommende anrop</string>.
+    <string name="incoming_call">Inkommende anrop</string>
     <string name="outgoing_call">Utgående anrop</string>
     <string name="missed_call">Misset anrop</string>
     <string name="unblock_confirmation">Er du sikker på at du vil oppheve blokkeringen av \"%s\"?</string>
@@ -20,13 +19,13 @@
     <string name="message">Budskap</string>
     <string name="settings_icon">Innstillinger-ikonet</string>
     <string name="total_g">Totalt: %s</string>
-    <string name="last_g">Siste: %s</string>.
+    <string name="last_g">Siste: %s</string>
     <string name="next_g">Neste: %s</string>
     <string name="time">Tid</string>
     <string name="interval">Intervall</string>
     <string name="symbols_first">Symboler først (f.eks. !@#$)</string>
     <string name="use_custom_notifications">Bruk tilpassede varsler</string>
-    <string name="hide_top_bar_when_scrolling">Dekke den øverste app-linjen når du blar</string>.
+    <string name="hide_top_bar_when_scrolling">Dekke den øverste app-linjen når du blar</string>
     <string name="unread_indicator_position">Posisjon for ulest indikator</string>
     <string name="start">Start</string>
     <string name="end">Slutt</string>
@@ -75,7 +74,7 @@
     <!--Billing-->
     <string name="restored_previous_purchase_please_restart">Gjenopprettet tidligere kjøp. Start appen på nytt for å få tilgang til alle funksjoner.</string>
     <string name="no_purchase_found">Ingen kjøp funnet.</string>
-    <string name="restore_purchase">Gjenopprett kjøp</string>.
+    <string name="restore_purchase">Gjenopprett kjøp</string>
     <string name="restoring_purchase">Gjenoppretter kjøp…</string>
 
     <string name="no_connection">Ingen forbindelse</string>
@@ -115,8 +114,8 @@
     <string name="bottom">Under</string>
     <string name="relative_date">Relativ dato</string>
     <string name="color_sim_card_icons">SIM-kortikoner i farger</string>
-    <string name="tabs">Faner</string>>.
-    <string name="open_search_when_open_contacts">Åpne Søk når du åpner kategorien Kontakter</string>>.
+    <string name="tabs">Faner</string>>
+    <string name="open_search_when_open_contacts">Åpne Søk når du åpner kategorien Kontakter</string>>
     <string name="call_screen_background">Bakgrunnen for innkallingsskjermbildet</string>
     <string name="contact_photo">Foto av kontakten</string>
     <string name="blurry_contact_photo">Uklart kontaktbilde</string>
@@ -141,8 +140,8 @@
     <string name="swipe_gestures">Sveip bevegelser</string>
     <string name="swipe_left_action">Sveip til venstre handling</string>
     <string name="swipe_right_action">Sveip til høyre handling</string>
-    <string name="use_swipe_gestures">Bruk sveip til handling</string>.
-    <string name="use_swipe_gestures_summary">Dette vil deaktivere sveipebevegelser for faner</string>.
+    <string name="use_swipe_gestures">Bruk sveip til handling</string>
+    <string name="use_swipe_gestures_summary">Dette vil deaktivere sveipebevegelser for faner</string>
     <string name="volume_g">Volum</string>
     <string name="vibrate_g">Vibrere</string>
     <string name="use_contact_colors">Bruke kontaktfarger</string>
@@ -232,7 +231,7 @@
         ]]></string>
 
     <!-- SMS -->
-    <string name="copy_code">Kopieringskode</string>>.
+    <string name="copy_code">Kopieringskode</string>>
     <string name="action_on_message_click">Handling ved klikk på melding</string>
     <string name="invert_color">Inverter farge</string>
     <string name="speech_bubble">Snakkeboble</string>
