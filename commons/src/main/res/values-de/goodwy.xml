@@ -158,11 +158,10 @@
         Du kannst die Pro Version auf Google Play für einen kleinen Betrag kaufen. Dies ist eine Einmalzahlung. Auch nach einem Gerätewechsel kannst du weiter die Pro Version nutzen ohne erneute dafür bezahlen zu müssen.
         Sollte Dir die Pro Version nicht gefallen, kannst Du sie einfach innerhalb einiger Stunden deinstallieren und wirst Dein Geld automatisch zurück erhalten.
         Möchtest du zu einem späteren Zeitpunkt dein Geld erstattet bekommen, dann kontaktiere uns einfach unter goodwy.dev@gmail.com und du wirst sie bekommen.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
-    <string name="faq_101_title_commons_g">How to create a private contact?</string>
-    <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
+    <string name="faq_100_title_commons_g">Was ist ein privater Kontakt?</string>
+    <string name="faq_100_text_commons_g">Ein privater Kontakt wird innerhalb einer Anwendung erstellt. Dieser Kontakt wird für andere Anwendungen nicht sichtbar sein. Wenn Sie die App deinstallieren, werden alle privaten Kontakte zusammen mit der App gelöscht. Sichern Sie daher Ihre Kontakte, bevor Sie die App deinstallieren.</string>
+    <string name="faq_101_title_commons_g">Wie erstellt man einen privaten Kontakt?</string>
+    <string name="faq_101_text_commons_g">Wenn Sie einen Kontakt erstellen, müssen Sie die Quelle des Kontakts auswählen: %s</string>
     <string name="contributors_label_g">
         <![CDATA[
             This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,

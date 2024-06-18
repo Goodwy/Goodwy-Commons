@@ -141,7 +141,7 @@
     <string name="show_blocked_numbers">Visa blockerade</string>
     <string name="hide_blocked_numbers">Dölj blockerad</string>
     <string name="paste_g">Infoga</string>
-    <string name="recents">Ny</string>
+    <string name="recents">Senaste</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->

@@ -13,7 +13,7 @@ import ru.rustore.sdk.billingclient.model.purchase.PaymentResult
 import ru.rustore.sdk.billingclient.model.purchase.PurchaseState
 import ru.rustore.sdk.billingclient.utils.pub.checkPurchasesAvailability
 
-class RuStoreHelper constructor(
+class RuStoreHelper(
     val activity: Activity,
     ) {
 
@@ -21,7 +21,7 @@ class RuStoreHelper constructor(
 
     //Start Purchases
     private val _stateStart = MutableStateFlow(StartPurchasesState())
-    val stateStart = _stateStart.asStateFlow()
+//    val stateStart = _stateStart.asStateFlow()
 
     private val _eventStart = MutableSharedFlow<StartPurchasesEvent>(
         extraBufferCapacity = 1,

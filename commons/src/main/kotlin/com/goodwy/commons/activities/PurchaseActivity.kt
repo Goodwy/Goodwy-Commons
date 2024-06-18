@@ -197,7 +197,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                             //update of purchased
                             setupButtonCheckedRuStore(state.purchases)
                             //update pro version
-                            baseConfig.isProRuStore = state.purchases.firstOrNull() != null
+                            baseConfig.isProRuStore = state.purchases.isNotEmpty()
                         }
                         binding.purchaseToolbar.menu.findItem(R.id.openSubscriptions).isVisible = ruStoreIsConnected
                     }
@@ -562,6 +562,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         //val appVoiceRecorderPackage = "com.goodwy.voicerecorder"
         val appAudiobookLitePackage = "com.goodwy.audiobooklite"
         val appFilesPackage = "com.goodwy.filemanager"
+        val appKeyboardPackage = "com.goodwy.keyboard"
 
         val appDialerInstalled = isPackageInstalled(appDialerPackage)// || isPackageInstalled("com.goodwy.dialer.debug")
         val appContactsInstalled = isPackageInstalled(appContactsPackage)// || isPackageInstalled("com.goodwy.contacts.debug")
@@ -570,8 +571,9 @@ class PurchaseActivity : BaseSimpleActivity() {
         //val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
         val appAudiobookLiteInstalled = isPackageInstalled(appAudiobookLitePackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
         val appFilesInstalled = isPackageInstalled(appFilesPackage)// || isPackageInstalled("com.goodwy.filemanager.debug")
+        val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
 
-        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled && appAudiobookLiteInstalled && appFilesInstalled
+        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled && appAudiobookLiteInstalled && appFilesInstalled && appKeyboardInstalled
 
         if (!appAllInstalled) binding.collectionLogo.applyColorFilter(primaryColor)
         binding.collectionChevron.applyColorFilter(getProperTextColor())
@@ -583,7 +585,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.drawable.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
             SimpleListItem(4, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
             SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage),
-            SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage)
+            SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
+            SimpleListItem(7, R.string.right_keyboard, imageRes = R.drawable.ic_inkwell, selected = appKeyboardInstalled, packageName = appKeyboardPackage)
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
@@ -599,7 +602,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 if (it.selected) {
                     launchApp(it.packageName)
                 } else {
-                    if (isRuStoreInstalled() && it.id != 6) {
+                    if (isRuStoreInstalled()) {
                         val urlRS = "https://apps.rustore.ru/app/${it.packageName}"
                         launchViewIntent(urlRS)
                     } else {

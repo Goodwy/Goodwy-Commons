@@ -7,8 +7,6 @@ import com.android.billingclient.api.BillingFlowParams.ProductDetailsParams
 import com.android.billingclient.api.QueryProductDetailsParams.Product
 import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.getSharedThemeSync
 import kotlinx.coroutines.*
 import java.util.*
 
@@ -134,9 +132,6 @@ class PurchaseHelper constructor(
                             //activity.baseConfig.isPro = sku != null
                             iapPurchased.add(sku)
                             isIapPurchasedList.postValue(iapPurchased)
-                            if (sku.split("_").toTypedArray()[1].toInt() >= 10) {
-                                return@breaking
-                            }
                         }
                     }
                 }
