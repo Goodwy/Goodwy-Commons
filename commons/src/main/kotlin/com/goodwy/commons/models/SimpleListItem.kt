@@ -1,9 +1,11 @@
 package com.goodwy.commons.models
 
 import android.os.Parcelable
+import androidx.compose.runtime.Immutable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
+@Immutable
 data class SimpleListItem(val id: Int, val textRes: Int? = null, val text: String? = null, val imageRes: Int? = null, val selected: Boolean = false, val packageName: String = "") : Parcelable {
 
     companion object {

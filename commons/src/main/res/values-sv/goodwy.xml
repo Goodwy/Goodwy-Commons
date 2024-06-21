@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Lära sig mer</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Teman</string>
     <string name="themes_summary">Noggrant utvalda applikationsteman, automatisk temaväxlare och systemtemastöd för Android 12+</string>
     <string name="color_title">Färger</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">Primärt SIM-kort</string>
     <string name="button_primary">Primär knapp</string>
     <string name="button_secondary">Sekundär knapp</string>
+    <string name="skip_archive_confirmation">Hoppa alltid över dialogrutan för bekräftelse av arkivering</string>
+    <string name="swipe_gestures">Svep gester</string>
+    <string name="swipe_left_action">Svep åt vänster åtgärd</string>
+    <string name="swipe_right_action">Svep åt höger åtgärd</string>
+    <string name="use_swipe_gestures">Använd svep till åtgärd</string>
+    <string name="use_swipe_gestures_summary">Detta inaktiverar gestsvepning av flikar</string>
+    <string name="volume_g">Volym</string>
+    <string name="vibrate_g">Vibrera</string>
+    <string name="use_contact_colors">Använd kontaktfärger</string>
 
     <string name="accent_color">Färg på accent</string>
     <string name="use_accent_color">Använd accentfärg</string>
@@ -132,7 +135,7 @@
     <string name="show_blocked_numbers">Visa blockerade</string>
     <string name="hide_blocked_numbers">Dölj blockerad</string>
     <string name="paste_g">Infoga</string>
-    <string name="recents">Ny</string>
+    <string name="recents">Senaste</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
@@ -185,14 +188,8 @@
     <string name="open">Öppna</string>
     <string name="collection">Samling</string>
     <string name="collection_summary">Skapa en samling för att låsa upp appen</string>
+    <string name="support_project_to_unlock">Stöd projektet för att låsa upp</string>
     <string name="limited_supply">Begränsat utbud</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

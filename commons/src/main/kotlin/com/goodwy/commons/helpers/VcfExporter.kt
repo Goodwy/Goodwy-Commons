@@ -20,7 +20,7 @@ import ezvcard.VCardVersion
 import ezvcard.parameter.ImageType
 import ezvcard.property.*
 import java.io.OutputStream
-import java.util.*
+import java.util.Calendar
 
 class VcfExporter {
 

@@ -6,7 +6,34 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.PreviewParameter
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 import com.goodwy.commons.R
+import com.goodwy.commons.compose.alert_dialog.AlertDialogState
+import com.goodwy.commons.compose.alert_dialog.DialogSurface
+import com.goodwy.commons.compose.alert_dialog.dialogTextColor
+import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.components.RadioGroupDialogComponent
+import com.goodwy.commons.compose.extensions.BooleanPreviewParameterProvider
+import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.databinding.DialogRadioGroupBinding
 import com.goodwy.commons.extensions.getAlertDialogBuilder
 import com.goodwy.commons.extensions.onGlobalLayout
@@ -69,5 +96,106 @@ class RadioGroupDialog(
             callback(items[checkedId].value)
             dialog?.dismiss()
         }
+    }
+}
+
+
+@Composable
+fun RadioGroupAlertDialog(
+    alertDialogState: AlertDialogState,
+    items: ImmutableList<RadioItem>,
+    modifier: Modifier = Modifier,
+    selectedItemId: Int = -1,
+    titleId: Int = 0,
+    showOKButton: Boolean = false,
+    cancelCallback: (() -> Unit)? = null,
+    callback: (newValue: Any) -> Unit
+) {
+    val groupTitles by remember {
+        derivedStateOf { items.map { it.title } }
+    }
+    val (selected, setSelected) = remember { mutableStateOf(items.firstOrNull { it.id == selectedItemId }?.title) }
+    val shouldShowOkButton = selectedItemId != -1 && showOKButton
+    AlertDialog(
+        onDismissRequest = {
+            cancelCallback?.invoke()
+            alertDialogState.hide()
+        },
+    ) {
+        DialogSurface {
+            Box {
+                Column(
+                    modifier = modifier
+                        .padding(bottom = if (shouldShowOkButton) 64.dp else 18.dp)
+                        .verticalScroll(rememberScrollState())
+                ) {
+                    if (titleId != 0) {
+                        Text(
+                            text = stringResource(id = titleId),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 24.dp, bottom = SimpleTheme.dimens.padding.medium)
+                                .padding(horizontal = 24.dp),
+                            color = dialogTextColor,
+                            fontSize = 21.sp
+                        )
+                    }
+                    RadioGroupDialogComponent(
+                        items = groupTitles,
+                        selected = selected,
+                        setSelected = { selectedTitle ->
+                            setSelected(selectedTitle)
+                            callback(getSelectedValue(items, selectedTitle))
+                            alertDialogState.hide()
+                        },
+                        modifier = Modifier.padding(
+                            vertical = SimpleTheme.dimens.padding.extraLarge,
+                        )
+                    )
+                }
+                if (shouldShowOkButton) {
+                    TextButton(
+                        onClick = {
+                            callback(getSelectedValue(items, selected))
+                            alertDialogState.hide()
+                        },
+                        modifier = Modifier
+                            .align(Alignment.BottomEnd)
+                            .padding(
+                                top = SimpleTheme.dimens.padding.extraLarge,
+                                bottom = SimpleTheme.dimens.padding.extraLarge,
+                                end = SimpleTheme.dimens.padding.extraLarge
+                            )
+                    ) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+private fun getSelectedValue(
+    items: ImmutableList<RadioItem>,
+    selected: String?
+) = items.first { it.title == selected }.value
+
+@Composable
+@MyDevices
+private fun RadioGroupDialogAlertDialogPreview(@PreviewParameter(BooleanPreviewParameterProvider::class) showOKButton: Boolean) {
+    AppThemeSurface {
+        RadioGroupAlertDialog(
+            alertDialogState = rememberAlertDialogState(),
+            items = listOf(
+                RadioItem(1, "Test"),
+                RadioItem(2, "Test 2"),
+                RadioItem(3, "Test 3"),
+            ).toImmutableList(),
+            selectedItemId = 1,
+            titleId = R.string.title,
+            showOKButton = showOKButton,
+            cancelCallback = {}
+        ) {}
     }
 }

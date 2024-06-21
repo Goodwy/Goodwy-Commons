@@ -197,9 +197,8 @@ class PurchaseActivity : BaseSimpleActivity() {
                             //update of purchased
                             setupButtonCheckedRuStore(state.purchases)
                             //update pro version
-                            baseConfig.isProRuStore = state.purchases.firstOrNull() != null
+                            baseConfig.isProRuStore = state.purchases.isNotEmpty()
                         }
-                        binding.purchaseToolbar.menu.findItem(R.id.openSubscriptions).isVisible = ruStoreIsConnected
                     }
             }
         }
@@ -219,7 +218,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         setupToolbar(binding.purchaseToolbar, NavigationIcon.Arrow)
         val backgroundColor = getProperBackgroundColor()
         binding.collapsingToolbar.setBackgroundColor(backgroundColor)
-        updateTopBarColors(binding.purchaseToolbar, backgroundColor)
+        updateTopBarColors(binding.purchaseToolbar, backgroundColor, useOverflowIcon = false)
 
         setupChangeStoreMenu()
         setupEmail()
@@ -253,7 +252,8 @@ class PurchaseActivity : BaseSimpleActivity() {
                     true
                 }
                 R.id.openSubscriptions -> {
-                    launchViewIntent("rustore://profile/subscriptions")
+                    val url = if (ruStoreIsConnected) "rustore://profile/subscriptions" else "https://play.google.com/store/account/subscriptions"
+                    launchViewIntent(url)
                     true
                 }
                 else -> false
@@ -266,7 +266,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             isVisible = playStoreInstalled && ruStoreInstalled
             title = if (baseConfig.useGooglePlay) getString(R.string.billing_change_to_ru_store) else getString(R.string.billing_change_to_google_play)
             icon = if (baseConfig.useGooglePlay) AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_google_play_vector)
-                    else AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_rustore)
+            else AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_rustore)
             icon?.setTint(getProperTextColor())
             setOnMenuItemClickListener {
                 if (baseConfig.useGooglePlay) {
@@ -282,19 +282,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupEmail() {
-        /*val label = getString(R.string.lifebuoy_summary)
-        val email = getString(R.string.my_email)
-
-        val appVersion = String.format(getString(R.string.app_version, intent.getStringExtra(APP_VERSION_NAME)))
-        val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
-        val newline = "%0D%0A"
-        val separator = "------------------------------"
-        val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline"
-        val href = "$label<br><a href=\"mailto:$email?subject=$appName&body=$body\">$email</a>"
-        lifebuoy_summary.text = Html.fromHtml(href)
-        lifebuoy_summary.movementMethod = LinkMovementMethod.getInstance()*/
-
-        binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
+        binding.lifebuoyHolder.beVisibleIf(showLifebuoy && playStoreInstalled)
         val lifebuoyButtonDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
         binding.lifebuoyButton.setImageDrawable(lifebuoyButtonDrawable)
         binding.lifebuoyButton.setOnClickListener {
@@ -574,6 +562,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         //val appVoiceRecorderPackage = "com.goodwy.voicerecorder"
         val appAudiobookLitePackage = "com.goodwy.audiobooklite"
         val appFilesPackage = "com.goodwy.filemanager"
+        val appKeyboardPackage = "com.goodwy.keyboard"
 
         val appDialerInstalled = isPackageInstalled(appDialerPackage)// || isPackageInstalled("com.goodwy.dialer.debug")
         val appContactsInstalled = isPackageInstalled(appContactsPackage)// || isPackageInstalled("com.goodwy.contacts.debug")
@@ -582,8 +571,9 @@ class PurchaseActivity : BaseSimpleActivity() {
         //val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
         val appAudiobookLiteInstalled = isPackageInstalled(appAudiobookLitePackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
         val appFilesInstalled = isPackageInstalled(appFilesPackage)// || isPackageInstalled("com.goodwy.filemanager.debug")
+        val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
 
-        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled && appAudiobookLiteInstalled && appFilesInstalled
+        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled && appAudiobookLiteInstalled && appFilesInstalled && appKeyboardInstalled
 
         if (!appAllInstalled) binding.collectionLogo.applyColorFilter(primaryColor)
         binding.collectionChevron.applyColorFilter(getProperTextColor())
@@ -595,7 +585,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.drawable.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
             SimpleListItem(4, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
             SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage),
-            SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage)
+            SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
+            SimpleListItem(7, R.string.right_keyboard, imageRes = R.drawable.ic_inkwell, selected = appKeyboardInstalled, packageName = appKeyboardPackage)
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
@@ -611,7 +602,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 if (it.selected) {
                     launchApp(it.packageName)
                 } else {
-                    if (isRuStoreInstalled() && it.id != 6) {
+                    if (isRuStoreInstalled()) {
                         val urlRS = "https://apps.rustore.ru/app/${it.packageName}"
                         launchViewIntent(urlRS)
                     } else {

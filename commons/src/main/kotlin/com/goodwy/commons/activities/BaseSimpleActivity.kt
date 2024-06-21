@@ -35,6 +35,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.core.animation.doOnEnd
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
 import androidx.core.view.ScrollingView
@@ -44,7 +45,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.R
 import com.goodwy.commons.asynctasks.CopyMoveTask
 import com.goodwy.commons.dialogs.*
-import com.goodwy.commons.dialogs.WritePermissionDialog.Mode
+import com.goodwy.commons.dialogs.WritePermissionDialog.WritePermissionDialogMode
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.interfaces.CopyMoveListener
@@ -215,6 +216,19 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    fun animateStatusBarColor(colorTo: Int, colorFrom: Int = window.statusBarColor, duration: Long = 300L) {
+        with(ObjectAnimator.ofInt(colorFrom, colorTo)) {
+            setEvaluator(ArgbEvaluator())
+            setDuration(duration)
+            addUpdateListener {
+                window.statusBarColor = it.animatedValue.toInt()
+            }
+
+            doOnEnd { updateStatusbarColor(window.statusBarColor) }
+            start()
+        }
+    }
+
     //TODO actionbar color
     fun updateActionbarColor(color: Int = getProperBackgroundColor()) { //getProperStatusBarColor()
         //supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
@@ -224,19 +238,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         setTaskDescription(ActivityManager.TaskDescription(null, null, color))
     }
 
-    fun updateNavigationBarColor(color: Int) { //baseConfig.navigationBarColor
-        window.navigationBarColor = color
-        updateNavigationBarButtons(color)
-    }
-
-    fun updateNavigationBarButtons(color: Int) {
-        if (isOreoPlus()) {
-            if (color.getContrastColor() == DARK_GREY) {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-            } else {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-            }
-        }
+    fun updateNavigationBarColor(color: Int) {
+        window.updateNavigationBarColors(color)
     }
 
     // use translucent navigation bar, set the background color to action and status bars
@@ -370,7 +373,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateTopBarColors(toolbar: Toolbar, colorBackground: Int, colorPrimary: Int = getProperPrimaryColor(), useColorForStatusBar: Boolean = true) {
+    fun updateTopBarColors(
+        toolbar: Toolbar,
+        colorBackground: Int,
+        colorPrimary: Int = getProperPrimaryColor(),
+        useColorForStatusBar: Boolean = true,
+        useOverflowIcon: Boolean = true
+    ) {
         val getProperBackgroundColor = getProperBackgroundColor()
         val contrastColor = if (colorBackground == Color.TRANSPARENT) getProperBackgroundColor.getContrastColor() else colorBackground.getContrastColor()
         val itemColor = if (baseConfig.topAppBarColorIcon) colorPrimary else contrastColor
@@ -384,7 +393,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         toolbar.navigationIcon?.applyColorFilter(itemColor)
         toolbar.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, itemColor)
         //}
-        val overflowIconRes = getOverflowIcon(baseConfig.overflowIcon)
+        val overflowIconRes = if (useOverflowIcon) getOverflowIcon(baseConfig.overflowIcon) else getOverflowIcon(OVERFLOW_ICON_VERTICAL)
         toolbar.overflowIcon = resources.getColoredDrawableWithColor(this, overflowIconRes, itemColor)
 
         val menu = toolbar.menu
@@ -417,7 +426,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         statusBarColor: Int = getRequiredStatusBarColor(),
         searchMenuItem: MenuItem? = null,
         appBarLayout: AppBarLayout? = null,
-        navigationClick: Boolean = true
+        navigationClick: Boolean = true,
     ) {
         val contrastColor = statusBarColor.getContrastColor()
         if (toolbarNavigationIcon != NavigationIcon.None) {
@@ -742,7 +751,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startPurchaseActivity(appNameId: Int, licensingKey: String,
+    fun startPurchaseActivity(appNameId: Int, licensingKey: String = "",
                               productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
                               subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
                               subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
@@ -908,7 +917,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         funAfterSAFPermission = callback
-        WritePermissionDialog(this, Mode.Otg) {
+        WritePermissionDialog(this, WritePermissionDialogMode.Otg) {
             Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                 try {
                     startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
@@ -1007,7 +1016,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun copyMoveFilesTo(
         fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
-        copyHidden: Boolean, callback: (destinationPath: String) -> Unit
+        copyHidden: Boolean, callback: (destinationPath: String) -> Unit,
     ) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
@@ -1128,7 +1137,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         destinationPath: String,
         isCopyOperation: Boolean,
         copyPhotoVideoOnly: Boolean,
-        copyHidden: Boolean
+        copyHidden: Boolean,
     ) {
         val availableSpace = destinationPath.getAvailableStorageB()
         val sumToCopy = files.sumByLong { it.getProperSize(applicationContext, copyHidden) }
@@ -1152,7 +1161,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun checkConflicts(
         files: ArrayList<FileDirItem>, destinationPath: String, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
-        callback: (resolutions: LinkedHashMap<String, Int>) -> Unit
+        callback: (resolutions: LinkedHashMap<String, Int>) -> Unit,
     ) {
         if (index == files.size) {
             callback(conflictResolutions)

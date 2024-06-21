@@ -6,6 +6,12 @@ import androidx.compose.runtime.saveable.SaverScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import com.goodwy.commons.compose.alert_dialog.AlertDialogState.Companion.SAVER
 
+/**
+ * Use this function to control the state whenever you want its visibility to be retained
+ * even after configuration and process death
+ * @param isShownInitially Boolean
+ * @return AlertDialogState
+ */
 @Composable
 fun rememberAlertDialogState(
     isShownInitially: Boolean = false
@@ -30,6 +36,9 @@ class AlertDialogState(isShownInitially: Boolean = false) {
         private set
 
     fun show() {
+        if (isShown) {
+            isShown = false
+        }
         isShown = true
     }
 

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Environment
 import android.text.format.DateFormat
+import androidx.core.content.ContextCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.getInternalStoragePath
 import com.goodwy.commons.extensions.getSDCardPath
@@ -85,19 +86,19 @@ open class BaseConfig(val context: Context) {
     private fun getDefaultInternalPath() = if (prefs.contains(INTERNAL_STORAGE_PATH)) "" else context.getInternalStoragePath()
 
     var textColor: Int
-        get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
+        get() = prefs.getInt(TEXT_COLOR, ContextCompat.getColor(context, R.color.default_text_color))
         set(textColor) = prefs.edit().putInt(TEXT_COLOR, textColor).apply()
 
     var backgroundColor: Int
-        get() = prefs.getInt(BACKGROUND_COLOR, context.resources.getColor(R.color.default_background_color))
+        get() = prefs.getInt(BACKGROUND_COLOR, ContextCompat.getColor(context, R.color.default_background_color))
         set(backgroundColor) = prefs.edit().putInt(BACKGROUND_COLOR, backgroundColor).apply()
 
     var primaryColor: Int
-        get() = prefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.default_primary_color))
+        get() = prefs.getInt(PRIMARY_COLOR, ContextCompat.getColor(context, R.color.default_primary_color))
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
     var accentColor: Int
-        get() = prefs.getInt(ACCENT_COLOR, context.resources.getColor(R.color.default_accent_color))
+        get() = prefs.getInt(ACCENT_COLOR, ContextCompat.getColor(context, R.color.default_accent_color))
         set(accentColor) = prefs.edit().putInt(ACCENT_COLOR, accentColor).apply()
 
     var lastHandledShortcutColor: Int
@@ -105,14 +106,14 @@ open class BaseConfig(val context: Context) {
         set(lastHandledShortcutColor) = prefs.edit().putInt(LAST_HANDLED_SHORTCUT_COLOR, lastHandledShortcutColor).apply()
 
     var appIconColor: Int
-        get() = prefs.getInt(APP_ICON_COLOR, context.resources.getColor(R.color.default_app_icon_color)) // TODO APP ICON DEFAULT CUR
+        get() = prefs.getInt(APP_ICON_COLOR, ContextCompat.getColor(context, R.color.default_app_icon_color)) // TODO APP ICON DEFAULT CUR
         set(appIconColor) {
-            isUsingModifiedAppIcon = appIconColor != context.resources.getColor(R.color.color_primary)
+            isUsingModifiedAppIcon = appIconColor != ContextCompat.getColor(context, R.color.color_primary)
             prefs.edit().putInt(APP_ICON_COLOR, appIconColor).apply()
         }
 
     var lastIconColor: Int
-        get() = prefs.getInt(LAST_ICON_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(LAST_ICON_COLOR, ContextCompat.getColor(context, R.color.color_primary))
         set(lastIconColor) = prefs.edit().putInt(LAST_ICON_COLOR, lastIconColor).apply()
 
     var customTextColor: Int
@@ -136,11 +137,11 @@ open class BaseConfig(val context: Context) {
         set(customAppIconColor) = prefs.edit().putInt(CUSTOM_APP_ICON_COLOR, customAppIconColor).apply()
 
     var widgetBgColor: Int
-        get() = prefs.getInt(WIDGET_BG_COLOR, context.resources.getColor(R.color.default_widget_bg_color))
+        get() = prefs.getInt(WIDGET_BG_COLOR, ContextCompat.getColor(context, R.color.default_widget_bg_color))
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
 
     var widgetTextColor: Int
-        get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getColor(R.color.default_widget_text_color))
+        get() = prefs.getInt(WIDGET_TEXT_COLOR, ContextCompat.getColor(context, R.color.default_widget_text_color))
         set(widgetTextColor) = prefs.edit().putInt(WIDGET_TEXT_COLOR, widgetTextColor).apply()
 
     // hidden folder visibility protection
@@ -218,9 +219,13 @@ open class BaseConfig(val context: Context) {
             prefs.edit().putBoolean(USE_ENGLISH, useEnglish).commit()
         }
 
+    val useEnglishFlow = ::useEnglish.asFlowNonNull()
+
     var wasUseEnglishToggled: Boolean
         get() = prefs.getBoolean(WAS_USE_ENGLISH_TOGGLED, false)
         set(wasUseEnglishToggled) = prefs.edit().putBoolean(WAS_USE_ENGLISH_TOGGLED, wasUseEnglishToggled).apply()
+
+    val wasUseEnglishToggledFlow = ::wasUseEnglishToggled.asFlowNonNull()
 
     var useIconTabs: Boolean
         get() = prefs.getBoolean(USE_ICON_TABS, false)
@@ -292,17 +297,17 @@ open class BaseConfig(val context: Context) {
         if (path.isEmpty()) {
             sorting = value
         } else {
-            prefs.edit().putInt(SORT_FOLDER_PREFIX + path.toLowerCase(), value).apply()
+            prefs.edit().putInt(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault()), value).apply()
         }
     }
 
-    fun getFolderSorting(path: String) = prefs.getInt(SORT_FOLDER_PREFIX + path.toLowerCase(), sorting)
+    fun getFolderSorting(path: String) = prefs.getInt(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault()), sorting)
 
     fun removeCustomSorting(path: String) {
-        prefs.edit().remove(SORT_FOLDER_PREFIX + path.toLowerCase()).apply()
+        prefs.edit().remove(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault())).apply()
     }
 
-    fun hasCustomSorting(path: String) = prefs.contains(SORT_FOLDER_PREFIX + path.toLowerCase())
+    fun hasCustomSorting(path: String) = prefs.contains(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault()))
 
     var hadThankYouInstalled: Boolean
         get() = prefs.getBoolean(HAD_THANK_YOU_INSTALLED, false)
@@ -509,15 +514,17 @@ open class BaseConfig(val context: Context) {
     var colorPickerRecentColors: LinkedList<Int>
         get(): LinkedList<Int> {
             val defaultList = arrayListOf(
-                context.resources.getColor(R.color.md_red_700),
-                context.resources.getColor(R.color.md_blue_700),
-                context.resources.getColor(R.color.md_green_700),
-                context.resources.getColor(R.color.md_yellow_700),
-                context.resources.getColor(R.color.md_orange_700)
+                ContextCompat.getColor(context, R.color.md_red_700),
+                ContextCompat.getColor(context, R.color.md_blue_700),
+                ContextCompat.getColor(context, R.color.md_green_700),
+                ContextCompat.getColor(context, R.color.md_yellow_700),
+                ContextCompat.getColor(context, R.color.md_orange_700)
             )
             return LinkedList(prefs.getString(COLOR_PICKER_RECENT_COLORS, null)?.lines()?.map { it.toInt() } ?: defaultList)
         }
         set(recentColors) = prefs.edit().putString(COLOR_PICKER_RECENT_COLORS, recentColors.joinToString(separator = "\n")).apply()
+
+    val colorPickerRecentColorsFlow = ::colorPickerRecentColors.asFlowNonNull()
 
     var ignoredContactSources: HashSet<String>
         get() = prefs.getStringSet(IGNORED_CONTACT_SOURCES, hashSetOf(".")) as HashSet
@@ -530,6 +537,10 @@ open class BaseConfig(val context: Context) {
     var showPhoneNumbers: Boolean
         get() = prefs.getBoolean(SHOW_PHONE_NUMBERS, false)
         set(showPhoneNumbers) = prefs.edit().putBoolean(SHOW_PHONE_NUMBERS, showPhoneNumbers).apply()
+
+    var formatPhoneNumbers: Boolean
+        get() = prefs.getBoolean(FORMAT_PHONE_NUMBERS, true)
+        set(formatPhoneNumbers) = prefs.edit().putBoolean(FORMAT_PHONE_NUMBERS, formatPhoneNumbers).apply()
 
     var showOnlyContactsWithNumbers: Boolean
         get() = prefs.getBoolean(SHOW_ONLY_CONTACTS_WITH_NUMBERS, false)
@@ -624,9 +635,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getLong(PASSWORD_COUNTDOWN_START_MS, 0L)
         set(passwordCountdownStartMs) = prefs.edit().putLong(PASSWORD_COUNTDOWN_START_MS, passwordCountdownStartMs).apply()
 
-    protected fun <T> KProperty0<T>.asFlow(): Flow<T?> = prefs.run { sharedPreferencesCallback { this@asFlow.get() } }
+    protected fun <T> KProperty0<T>.asFlow(emitOnCollect: Boolean = false): Flow<T?> =
+        prefs.run { sharedPreferencesCallback(sendOnCollect = emitOnCollect) { this@asFlow.get() } }
 
-    protected fun <T> KProperty0<T>.asFlowNonNull(): Flow<T> = asFlow().filterNotNull()
+    protected fun <T> KProperty0<T>.asFlowNonNull(emitOnCollect: Boolean = false): Flow<T> = asFlow(emitOnCollect).filterNotNull()
 
     //Goodwy
     var settingsIcon: Int
@@ -685,11 +697,11 @@ open class BaseConfig(val context: Context) {
     var simIconsColors: LinkedList<Int>
         get(): LinkedList<Int> {
             val defaultList = arrayListOf(
-                context.resources.getColor(R.color.md_red_500),
-                context.resources.getColor(R.color.ic_dialer),
-                context.resources.getColor(R.color.color_primary),
-                context.resources.getColor(R.color.md_yellow_500),
-                context.resources.getColor(R.color.md_orange_500)
+                ContextCompat.getColor(context, R.color.md_red_500),
+                ContextCompat.getColor(context, R.color.ic_dialer),
+                ContextCompat.getColor(context, R.color.color_primary),
+                ContextCompat.getColor(context, R.color.md_yellow_500),
+                ContextCompat.getColor(context, R.color.md_orange_500)
             )
             return LinkedList(prefs.getString(SIM_ICON_COLORS, null)?.lines()?.map { it.toInt() } ?: defaultList)
         }
@@ -764,6 +776,14 @@ open class BaseConfig(val context: Context) {
     var hideTopBarWhenScroll: Boolean
         get() = prefs.getBoolean(HIDE_TOP_BAR_WHEN_SCROLL, false)
         set(hideTopBarWhenScroll) = prefs.edit().putBoolean(HIDE_TOP_BAR_WHEN_SCROLL, hideTopBarWhenScroll).apply()
+
+    var skipArchiveConfirmation: Boolean
+        get() = prefs.getBoolean(SKIP_ARCHIVE_CONFIRMATION, false)
+        set(skipArchiveConfirmation) = prefs.edit().putBoolean(SKIP_ARCHIVE_CONFIRMATION, skipArchiveConfirmation).apply()
+
+    var useSwipeToAction: Boolean
+        get() = prefs.getBoolean(USE_SWIPE_TO_ACTION, true)
+        set(swipeToAction) = prefs.edit().putBoolean(USE_SWIPE_TO_ACTION, swipeToAction).apply()
 }
 
 

@@ -35,12 +35,6 @@
     <string name="pref_pay_summary">Придбайте програму для підтримки майбутніх розробок та отримання додаткових функцій</string>
     <string name="support_project_summary">Придбайте одну з наших платних програм для підтримки майбутніх розробок та розблокування додаткових функцій</string>
     <string name="learn_more">Докладніше</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Плеєр для аудіокниг</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Диктофон</string>
-    <string name="files">Files</string>
-    <string name="files_summary">Файловий менеджер</string>
     <string name="themes">Теми</string>
     <string name="themes_summary">Ретельно підібрані теми програми, автоматична зміна тем та підтримка системних тем для Андройд 12+</string>
     <string name="color_title">Кольору</string>
@@ -136,6 +130,15 @@
     <string name="primary_sim_card">Основна SIM-карта</string>
     <string name="button_primary">Основна кнопка</string>
     <string name="button_secondary">Додаткова кнопка</string>
+    <string name="skip_archive_confirmation">Завжди пропускати діалог підтвердження архівації</string>
+    <string name="swipe_gestures">Жести свайпами</string>
+    <string name="swipe_left_action">Проведіть пальцем вліво</string>
+    <string name="swipe_right_action">Проведіть пальцем вправо</string>
+    <string name="use_swipe_gestures">Використовуйте свайп до дії</string>.
+    <string name="use_swipe_gestures_summary">Це відключить гортання вкладок жестами</string>.
+    <string name="volume_g">Громкість</string>
+    <string name="vibrate_g">Вібрація</string>
+    <string name="use_contact_colors">Використовувати кольори контактів</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купити Goodwy Thank You</string>
@@ -187,14 +190,8 @@
     <string name="open">Відкрити</string>
     <string name="collection">Колекція</string>
     <string name="collection_summary">Зберіть колекцію для розблокування програми</string>
+    <string name="support_project_to_unlock">Підтримайте проєкт, щоб розблокувати</string>
     <string name="limited_supply">Обмежена кількість</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Привіт,<br><br>

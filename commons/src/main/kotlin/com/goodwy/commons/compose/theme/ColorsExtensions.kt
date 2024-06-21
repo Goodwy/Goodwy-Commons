@@ -1,6 +1,5 @@
 package com.goodwy.commons.compose.theme
 
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.graphics.Color
@@ -12,10 +11,10 @@ val disabledTextColor @Composable get() = if (isInDarkThemeOrSurfaceIsNotLitWell
 @get:ReadOnlyComposable
 val textSubTitleColor
     @Composable get() = if (isInDarkThemeOrSurfaceIsNotLitWell()) {
-        Color.White.copy(0.5f)
+        Color.White.copy(0.6f)
     } else {
         Color.Black.copy(
-            0.5f,
+            0.6f,
         )
     }
 
@@ -31,11 +30,12 @@ val iconsColor
 @Composable
 @ReadOnlyComposable
 fun preferenceValueColor(isEnabled: Boolean) =
-    if (isEnabled) textSubTitleColor else disabledTextColor
+    if (isEnabled) SimpleTheme.colorScheme.onSurface.copy(alpha = 0.6f) else disabledTextColor
+//    if (isEnabled) textSubTitleColor else disabledTextColor
 
 @Composable
 @ReadOnlyComposable
-fun preferenceLabelColor(isEnabled: Boolean) = if (isEnabled) MaterialTheme.colorScheme.onSurface else disabledTextColor
+fun preferenceLabelColor(isEnabled: Boolean) = if (isEnabled) SimpleTheme.colorScheme.onSurface else disabledTextColor
 
 fun Color.isLitWell(threshold: Float = LUMINANCE_THRESHOLD) = luminance() > threshold
 

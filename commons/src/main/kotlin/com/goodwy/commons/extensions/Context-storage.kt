@@ -44,7 +44,7 @@ fun Context.getSDCardPath(): String {
 
     val fullSDpattern = Pattern.compile(SD_OTG_PATTERN)
     var sdCardPath = directories.firstOrNull { fullSDpattern.matcher(it).matches() }
-        ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
+        ?: directories.firstOrNull { !physicalPaths.contains(it.lowercase(Locale.getDefault())) } ?: ""
 
     // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
     if (sdCardPath.trimEnd('/').isEmpty()) {
@@ -838,6 +838,7 @@ fun Context.getFileInputStreamSync(path: String): InputStream? {
             val uri = getAndroidSAFUri(path)
             applicationContext.contentResolver.openInputStream(uri)
         }
+
         isAccessibleWithSAFSdk30(path) -> {
             try {
                 FileInputStream(File(path))
@@ -846,10 +847,12 @@ fun Context.getFileInputStreamSync(path: String): InputStream? {
                 applicationContext.contentResolver.openInputStream(uri)
             }
         }
+
         isPathOnOTG(path) -> {
             val fileDocument = getSomeDocumentFile(path)
             applicationContext.contentResolver.openInputStream(fileDocument?.uri!!)
         }
+
         else -> FileInputStream(File(path))
     }
 }
@@ -1039,6 +1042,7 @@ fun Context.getFileOutputStreamSync(path: String, mimeType: String, parentDocume
             }
             applicationContext.contentResolver.openOutputStream(uri, "wt")
         }
+
         needsStupidWritePermissions(path) -> {
             var documentFile = parentDocumentFile
             if (documentFile == null) {
@@ -1072,6 +1076,7 @@ fun Context.getFileOutputStreamSync(path: String, mimeType: String, parentDocume
                 null
             }
         }
+
         isAccessibleWithSAFSdk30(path) -> {
             try {
                 val uri = createDocumentUriUsingFirstParentTreeUri(path)
@@ -1083,6 +1088,7 @@ fun Context.getFileOutputStreamSync(path: String, mimeType: String, parentDocume
                 null
             } ?: createCasualFileOutputStream(targetFile)
         }
+
         else -> return createCasualFileOutputStream(targetFile)
     }
 }

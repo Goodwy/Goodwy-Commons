@@ -10,8 +10,9 @@ import com.goodwy.commons.extensions.getByteArray
 import com.goodwy.commons.extensions.getEmptyContact
 import com.goodwy.commons.models.SimpleContact
 import com.goodwy.commons.models.contacts.Contact
-import com.goodwy.commons.models.contacts.*
+import com.goodwy.commons.models.contacts.Group
 import com.goodwy.commons.models.contacts.LocalContact
+import com.goodwy.commons.models.contacts.Organization
 
 class LocalContactsHelper(val context: Context) {
     fun getAllContacts(favoritesOnly: Boolean = false): ArrayList<Contact> {
@@ -160,8 +161,9 @@ class LocalContactsHelper(val context: Context) {
     fun getPrivateSimpleContactsSync(favoritesOnly: Boolean, withPhoneNumbersOnly: Boolean) = getAllContacts(favoritesOnly).mapNotNull {
         convertContactToSimpleContact(it, withPhoneNumbersOnly)
     }
-    companion object{
-        fun convertContactToSimpleContact(contact: Contact?, withPhoneNumbersOnly: Boolean): SimpleContact?{
+
+    companion object {
+        fun convertContactToSimpleContact(contact: Contact?, withPhoneNumbersOnly: Boolean): SimpleContact? {
             return if (contact == null || (withPhoneNumbersOnly && contact.phoneNumbers.isEmpty())) {
                 null
             } else {

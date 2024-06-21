@@ -7,7 +7,6 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Handler
 import android.os.Looper
-import android.provider.ContactsContract
 import android.provider.ContactsContract.*
 import android.provider.MediaStore
 import android.text.TextUtils
@@ -70,7 +69,8 @@ class ContactsHelper(val context: Context) {
             }
 
             if (context.baseConfig.mergeDuplicateContacts && ignoredContactSources.isEmpty() && !getAll) {
-                tempContacts.filter { displayContactSources.contains(it.source) }.groupBy { it.getNameToDisplay().lowercase() }.values.forEach { it ->
+                tempContacts.filter { displayContactSources.contains(it.source) }.groupBy { it.getNameToDisplay()
+                    .lowercase(Locale.getDefault()) }.values.forEach { it ->
                     if (it.size == 1) {
                         resultContacts.add(it.first())
                     } else {
@@ -882,11 +882,11 @@ class ContactsHelper(val context: Context) {
     }
 
     private fun getLookupKeyFromUri(lookupUri: Uri): String? {
-        val projection = arrayOf(ContactsContract.Contacts.LOOKUP_KEY)
+        val projection = arrayOf(Contacts.LOOKUP_KEY)
         val cursor = context.contentResolver.query(lookupUri, projection, null, null, null)
         cursor?.use {
             if (cursor.moveToFirst()) {
-                return cursor.getStringValue(ContactsContract.Contacts.LOOKUP_KEY)
+                return cursor.getStringValue(Contacts.LOOKUP_KEY)
             }
         }
         return null
@@ -998,19 +998,16 @@ class ContactsHelper(val context: Context) {
         }
 
         val accounts = AccountManager.get(context).accounts
-
-        if (context.hasPermission(PERMISSION_READ_SYNC_SETTINGS)) {
-            accounts.forEach {
-                if (ContentResolver.getIsSyncable(it, AUTHORITY) == 1) {
-                    var publicName = it.name
-                    if (it.type == TELEGRAM_PACKAGE) {
-                        publicName = context.getString(R.string.telegram)
-                    } else if (it.type == VIBER_PACKAGE) {
-                        publicName = context.getString(R.string.viber)
-                    }
-                    val contactSource = ContactSource(it.name, it.type, publicName)
-                    sources.add(contactSource)
+        accounts.forEach {
+            if (ContentResolver.getIsSyncable(it, AUTHORITY) == 1) {
+                var publicName = it.name
+                if (it.type == TELEGRAM_PACKAGE) {
+                    publicName = context.getString(R.string.telegram)
+                } else if (it.type == VIBER_PACKAGE) {
+                    publicName = context.getString(R.string.viber)
                 }
+                val contactSource = ContactSource(it.name, it.type, publicName)
+                sources.add(contactSource)
             }
         }
 

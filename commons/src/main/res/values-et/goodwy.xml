@@ -35,12 +35,6 @@
     <string name="pref_pay_summary">Ostke rakendus tulevaste arengute toetamiseks ja rohkemate funktsioonide saamiseks</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Lisateave</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Teemad</string>
     <string name="themes_summary">"Hoolikalt valitud rakenduste teemad, automaatne teemamuutja ja süsteemi teema tugi Android 12-le "</string>
     <string name="color_title">Värvid</string>
@@ -136,6 +130,15 @@
     <string name="primary_sim_card">Esmane SIM-kaart</string>
     <string name="button_primary">Nupp Esmane</string>
     <string name="button_secondary">Sekundaarne nupp</string>
+    <string name="skip_archive_confirmation">Ärge kunagi küsige arhiveerimisel topeltkinnitust</string>
+    <string name="swipe_gestures">Nipsamisliigutused</string>
+    <string name="swipe_left_action">Toimingu \"Nipsake vasakule\"</string>
+    <string name="swipe_right_action">Toimingu Paremale pühkimine</string>
+    <string name="use_swipe_gestures">Kasutage pühkimist, et tegutseda</string>
+    <string name="use_swipe_gestures_summary">See keelab žestide pühkimise vahekaartidel</string>
+    <string name="volume_g">Köide</string>
+    <string name="vibrate_g">Vibrate</string>
+    <string name="use_contact_colors">Kontakti värvide kasutamine</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -187,14 +190,8 @@
     <string name="open">Ava</string>
     <string name="collection">Kogu</string>
     <string name="collection_summary">Rakenduse avamiseks kollektsiooni koostamine</string>
+    <string name="support_project_to_unlock">Toetage projekti avamiseks</string>
     <string name="limited_supply">Piiratud pakkumine</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

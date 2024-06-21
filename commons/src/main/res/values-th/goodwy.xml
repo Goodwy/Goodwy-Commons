@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name_g">Goodwy Commons</string>
     <string name="recorder_g">เครื่องบันทึก</string>
     <string name="player_g">ผู้เล่น</string>
     <string name="general">ทั่วไป</string>
@@ -36,12 +35,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">ศึกษาเพิ่มเติม</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">ธีม</string>
     <string name="themes_summary">ธีมแอปพลิเคชันที่เลือกอย่างระมัดระวังตัวเปลี่ยนธีมอัตโนมัติและการสนับสนุนธีมระบบสําหรับ Android 12+</string>
     <string name="color_title">ธง</string>
@@ -137,6 +130,15 @@
     <string name="primary_sim_card">ซิมการ์ดหลัก</string>
     <string name="button_primary">ปุ่มหลัก</string>
     <string name="button_secondary">ปุ่มรอง</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">ท่าทางการปัด</string>
+    <string name="swipe_left_action">ปัดการกระทําไปทางซ้าย</string>
+    <string name="swipe_right_action">ปัดไปทางขวา</string>
+    <string name="use_swipe_gestures">ใช้การปัดเพื่อดำเนินการ</string>
+    <string name="use_swipe_gestures_summary">การดำเนินการนี้จะปิดใช้งานการปัดแท็บด้วยท่าทาง</string>
+    <string name="volume_g">ระดับเสียง</string>
+    <string name="vibrate_g">สั่น</string>
+    <string name="use_contact_colors">ใช้สีสัมผัส</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -188,14 +190,8 @@
     <string name="open">เปิด</string>
     <string name="collection">คอลเลคชัน</string>
     <string name="collection_summary">สร้างคอลเลกชันเพื่อปลดล็อกแอป</string>
+    <string name="support_project_to_unlock">สนับสนุนโครงการเพื่อปลดล็อก</string>
     <string name="limited_supply">อุปทานจํากัด</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

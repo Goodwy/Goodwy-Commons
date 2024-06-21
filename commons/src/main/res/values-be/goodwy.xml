@@ -35,12 +35,6 @@
     <string name="pref_pay_summary">Набудзьце прыкладанне для падтрымкі будучых распрацовак і атрымання дадатковых функцый</string>
     <string name="support_project_summary">Набудзьце адно з нашых платных прыкладанняў для падтрымкі будучых распрацовак і разблакіроўкі дадатковых функцый</string>
     <string name="learn_more">Больш падрабязна</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Плэер для аўдыёкніг</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Дыктафон</string>
-    <string name="files">Files</string>
-    <string name="files_summary">Файлавы менеджэр</string>
     <string name="themes">Тэмы</string>
     <string name="themes_summary">Старанна падабраныя тэмы прыкладання, аўтаматычнае змяненне тэм і падтрымка сістэмных тэм для Андроід 12+</string>
     <string name="color_title">Колеры</string>
@@ -136,6 +130,15 @@
     <string name="primary_sim_card">Асноўная SIM-карта</string>
     <string name="button_primary">Асноўная кнопка</string>
     <string name="button_secondary">Дадатковая кнопка</string>
+    <string name="skip_archive_confirmation">Заўсёды прапускаць дыялогавае акно пацверджання архівацыі</string>
+    <string name="swipe_gestures">Жэсты правядзення пальцам</string>
+    <string name="swipe_left_action">Правядзіце пальцам улева</string>
+    <string name="swipe_right_action">Правядзенне пальцам управа</string>
+    <string name="use_swipe_gestures">Выкарыстоўвайце правядзенне пальцам да дзеяння</string>
+    <string name="use_swipe_gestures_summary">Гэта адключыць перагортванне ўкладак жэстам</string>
+    <string name="volume_g">Гучнасць</string>
+    <string name="vibrate_g">Вібрацыя</string>
+    <string name="use_contact_colors">Выкарыстоўвайце кантактныя колеры</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
@@ -187,14 +190,8 @@
     <string name="open">Адкрыць</string>
     <string name="collection">Калекцыя</string>
     <string name="collection_summary">Збярыце калекцыю для разблакіроўкі прыкладання</string>
+    <string name="support_project_to_unlock">Падтрымайце праект для разблакіроўкі</string>
     <string name="limited_supply">Абмежаваную прапанову</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Прывітанне,<br><br>

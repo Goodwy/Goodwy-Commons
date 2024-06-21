@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name_g">Goodwy Commons</string>
     <string name="recorder_g">Registrilo</string>
     <string name="player_g">Ludanto</string>
     <string name="general">Ĝenerala</string>
@@ -36,12 +35,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Lernu pli</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Temoj</string>
     <string name="themes_summary">Zorge elektitaj aplikaj temoj, aŭtomata temoŝanĝilo kaj sistema temosubteno por Android 12+</string>
     <string name="color_title">Koloroj</string>
@@ -137,6 +130,15 @@
     <string name="primary_sim_card">Primara SIM-karto</string>
     <string name="button_primary">Primara butono</string>
     <string name="button_secondary">Malĉefa butono</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">Svingaj gestoj</string>
+    <string name="swipe_left_action">Swipe maldekstren ago</string>
+    <string name="swipe_right_action">Glvu dekstren</string>
+    <string name="use_swipe_gestures">Uzu gliti por agi</string>
+    <string name="use_swipe_gestures_summary">Ĉi tio malŝaltos gestan svingadon de langetoj</string>
+    <string name="volume_g">Volumo</string>
+    <string name="vibrate_g">Vibru</string>
+    <string name="use_contact_colors">Uzu kontaktokolorojn</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -188,14 +190,8 @@
     <string name="open">Malfermu</string>
     <string name="collection">Kolekto</string>
     <string name="collection_summary">Konstruu kolekton por malŝlosi la apon</string>
+    <string name="support_project_to_unlock">Subtenu la projekton por malŝlosi</string>
     <string name="limited_supply">Limigita provizo</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

@@ -4,6 +4,8 @@ import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.enableEdgeToEdgeSimple
@@ -22,7 +24,7 @@ class LicenseActivity : ComponentActivity() {
         enableEdgeToEdgeSimple()
         setContent {
             val licenseMask = remember { intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN }
-            val thirdPartyLicenses = remember { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() }
+            val thirdPartyLicenses by remember { derivedStateOf { initLicenses().filter { licenseMask and it.id != 0L }.toImmutableList() } }
             AppThemeSurface {
                 LicenseScreen(
                     goBack = ::finish,
@@ -54,7 +56,6 @@ class LicenseActivity : ComponentActivity() {
         License(LICENSE_LEAK_CANARY, R.string.leak_canary_title, R.string.leakcanary_text, R.string.leakcanary_url),
         License(LICENSE_NUMBER_PICKER, R.string.number_picker_title, R.string.number_picker_text, R.string.number_picker_url),
         License(LICENSE_EXOPLAYER, R.string.exoplayer_title, R.string.exoplayer_text, R.string.exoplayer_url),
-        License(LICENSE_PANORAMA_VIEW, R.string.panorama_view_title, R.string.panorama_view_text, R.string.panorama_view_url),
         License(LICENSE_SANSELAN, R.string.sanselan_title, R.string.sanselan_text, R.string.sanselan_url),
         License(LICENSE_FILTERS, R.string.filters_title, R.string.filters_text, R.string.filters_url),
         License(LICENSE_GESTURE_VIEWS, R.string.gesture_views_title, R.string.gesture_views_text, R.string.gesture_views_url),

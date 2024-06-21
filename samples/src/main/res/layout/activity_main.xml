@@ -66,66 +66,25 @@
                 android:elevation="4dp"
                 android:text="@string/action_support_project" />
 
-            <com.goodwy.commons.views.MySwitchCompat
-                android:id="@+id/switch_on"
-                style="@style/SettingsSwitchStyle"
-                android:layout_below="@+id/main_purchase"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:checked="true"
-                android:text="Switch on (Accent color)"
-                app:switchPadding="@dimen/activity_margin" />
-
-            <com.goodwy.commons.views.MySwitchCompat
-                android:id="@+id/switch_off"
-                style="@style/SettingsSwitchStyle"
-                android:layout_below="@+id/switch_on"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:text="Switch off"
-                app:switchPadding="@dimen/activity_margin" />
-
-            <Button
-                android:id="@+id/bottom_sheet_chooser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/switch_off"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:elevation="4dp"
-                android:text="Bottom sheet chooser" />
-
-            <Button
-                android:id="@+id/security"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/bottom_sheet_chooser"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:elevation="4dp"
-                android:text="@string/security" />
-
-            <Button
-                android:id="@+id/overflowIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/security"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:elevation="4dp"
-                android:text="@string/overflow_icon" />
-
             <Button
                 android:id="@+id/manage_blocked_numbers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/overflowIcon"
+                android:layout_below="@+id/main_purchase"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
                 android:elevation="4dp"
                 android:text="Manage blocked numbers" />
+
+            <Button
+                android:id="@+id/test_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/manage_blocked_numbers"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                android:text="Test button" />
 
         </RelativeLayout>
 

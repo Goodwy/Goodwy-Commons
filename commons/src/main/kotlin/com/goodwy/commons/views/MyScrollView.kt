@@ -23,6 +23,7 @@ class MyScrollView : ScrollView {
                     isScrollable
                 }
             }
+
             else -> super.onTouchEvent(ev)
         }
     }

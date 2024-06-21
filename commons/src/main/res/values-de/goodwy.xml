@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Weitere Informationen</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Themen</string>
     <string name="themes_summary">Sorgfältig ausgewählte Anwendungsthemen, automatischer Theme-Wechsler und System-Theme-Unterstützung für Android 12+</string>
     <string name="color_title">Farben</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">Primäre SIM-Karte</string>
     <string name="button_primary">Primäre Taste</string>
     <string name="button_secondary">Sekundäre Taste</string>
+    <string name="skip_archive_confirmation">Archivbestätigungsdialog nicht anzeigen</string>
+    <string name="swipe_gestures">Wischgesten</string>
+    <string name="swipe_left_action">Aktion \"Nach links wischen\"</string>
+    <string name="swipe_right_action">Aktion \"Nach rechts wischen\"</string>
+    <string name="use_swipe_gestures">Wischen zur Aktion verwenden</string>
+    <string name="use_swipe_gestures_summary">Dies deaktiviert das Wischen von Tabs durch Gesten</string>
+    <string name="volume_g">Lautstärke</string>
+    <string name="vibrate_g">Vibrieren</string>
+    <string name="use_contact_colors">Kontaktfarben verwenden</string>
 
     <string name="accent_color">Akzentfarbe</string>
     <string name="use_accent_color">Akzentfarbe verwenden</string>
@@ -149,11 +152,10 @@
         Du kannst die Pro Version auf Google Play für einen kleinen Betrag kaufen. Dies ist eine Einmalzahlung. Auch nach einem Gerätewechsel kannst du weiter die Pro Version nutzen ohne erneute dafür bezahlen zu müssen.
         Sollte Dir die Pro Version nicht gefallen, kannst Du sie einfach innerhalb einiger Stunden deinstallieren und wirst Dein Geld automatisch zurück erhalten.
         Möchtest du zu einem späteren Zeitpunkt dein Geld erstattet bekommen, dann kontaktiere uns einfach unter goodwy.dev@gmail.com und du wirst sie bekommen.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
-    <string name="faq_101_title_commons_g">How to create a private contact?</string>
-    <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
+    <string name="faq_100_title_commons_g">Was ist ein privater Kontakt?</string>
+    <string name="faq_100_text_commons_g">Ein privater Kontakt wird innerhalb einer Anwendung erstellt. Dieser Kontakt wird für andere Anwendungen nicht sichtbar sein. Wenn Sie die App deinstallieren, werden alle privaten Kontakte zusammen mit der App gelöscht. Sichern Sie daher Ihre Kontakte, bevor Sie die App deinstallieren.</string>
+    <string name="faq_101_title_commons_g">Wie erstellt man einen privaten Kontakt?</string>
+    <string name="faq_101_text_commons_g">Wenn Sie einen Kontakt erstellen, müssen Sie die Quelle des Kontakts auswählen: %s</string>
     <string name="contributors_label_g">
         <![CDATA[
             This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
@@ -186,14 +188,8 @@
     <string name="open">Öffnen</string>
     <string name="collection">Sammlung</string>
     <string name="collection_summary">Erstellen Sie eine Sammlung, um die App zu entsperren</string>
+    <string name="support_project_to_unlock">Unterstützen Sie das Projekt beim Freischalten</string>
     <string name="limited_supply">Begrenztes Angebot</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

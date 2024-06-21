@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">詳細情報</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">テーマ</string>
     <string name="themes_summary">厳選されたアプリケーションテーマ、自動テーマチェンジャー、Android 12+のシステムテーマのサポート</string>
     <string name="color_title">色</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">メインのSIMカード</string>
     <string name="button_primary">主ボタン</string>
     <string name="button_secondary">セカンダリボタン</string>
+    <string name="skip_archive_confirmation">アーカイブ時に確認ダイアログを表示しない</string>
+    <string name="swipe_gestures">スワイプジェスチャー</string>
+    <string name="swipe_left_action">左にスワイプ操作</string>
+    <string name="swipe_right_action">右にスワイプ操作</string>
+    <string name="use_swipe_gestures">スワイプ操作を使用する</string>
+    <string name="use_swipe_gestures_summary">タブのジェスチャースワイプを無効にします</string>
+    <string name="volume_g">音量</string>
+    <string name="vibrate_g">振動します</string>
+    <string name="use_contact_colors">接触色を使用</string>
 
     <string name="accent_color">アクセントカラー</string>
     <string name="use_accent_color">アクセントカラーを使用</string>
@@ -186,14 +189,8 @@
     <string name="open">開く</string>
     <string name="collection">コレクション</string>
     <string name="collection_summary">コレクションを構築してアプリのロックを解除する</string>
+    <string name="support_project_to_unlock">プロジェクトを支援してロックを解除する</string>
     <string name="limited_supply">限られた供給</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

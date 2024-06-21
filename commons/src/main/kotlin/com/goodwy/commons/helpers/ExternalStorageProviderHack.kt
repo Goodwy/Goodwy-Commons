@@ -45,6 +45,7 @@ object ExternalStorageProviderHack {
                     when (cursor.getStringValue(DocumentsContract.Document.COLUMN_DOCUMENT_ID)) {
                         getAndroidDataDocumentId(rootDocId) ->
                             hasDataRow = true
+
                         getAndroidObbDocumentId(rootDocId) ->
                             hasObbRow = true
                     }

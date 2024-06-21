@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.theme.SimpleTheme
 
 @Composable
 fun SettingsGroup(
@@ -34,11 +35,11 @@ fun SettingsGroupTitle(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp),
+            .padding(horizontal = SimpleTheme.dimens.padding.extraLarge),
         contentAlignment = Alignment.CenterStart
     ) {
-        val primary = MaterialTheme.colorScheme.primary
-        val titleStyle = MaterialTheme.typography.headlineMedium.copy(color = primary)
+        val primary = SimpleTheme.colorScheme.primary
+        val titleStyle = SimpleTheme.typography.headlineMedium.copy(color = primary)
         ProvideTextStyle(value = titleStyle) { title() }
     }
 }

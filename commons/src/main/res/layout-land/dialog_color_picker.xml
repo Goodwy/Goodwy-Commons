@@ -11,40 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/color_picker_title_holder"
+        <com.goodwy.commons.views.MyTextView
+            android:id="@+id/color_picker_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:layout_centerHorizontal="true">
-
-            <com.goodwy.commons.views.MyTextView
-                android:id="@+id/color_picker_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="68dp"
-                android:layout_marginEnd="68dp"
-                android:gravity="center"
-                android:maxLines="2"
-                android:text="@string/color_title"
-                android:textSize="@dimen/actionbar_text_size" />
-
-            <ImageView
-                android:id="@+id/color_picker_cancel"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="@dimen/medium_margin"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_cancel" />
-        </RelativeLayout>
+            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="68dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/color_title"
+            android:textSize="@dimen/actionbar_text_size" />
 
         <RelativeLayout
             android:id="@+id/color_picker_top_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/color_picker_title_holder"
+            android:layout_below="@id/color_picker_title"
             android:layout_centerHorizontal="true"
             android:gravity="center_horizontal">
 

@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Download de betaalde app om toekomstige ontwikkelingen en extra functies te ondersteunen</string>
     <string name="support_project_summary">Koop een van onze betaalde apps om toekomstige ontwikkeling te ondersteunen en extra functies te ontgrendelen</string>
     <string name="learn_more">Meer informatie</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Thema \'s</string>
     <string name="themes_summary">Zorgvuldig geselecteerde toepassingsthema\'s, automatische themawisselaar en systeemthema-ondersteuning voor Android 12+</string>
     <string name="color_title">Kleuren</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">Primaire simkaart</string>
     <string name="button_primary">Primaire knop</string>
     <string name="button_secondary">Secundaire knop</string>
+    <string name="skip_archive_confirmation">Vraag bij het archiveren niet om bevestiging</string>
+    <string name="swipe_gestures">Veeg gebaren</string>
+    <string name="swipe_left_action">Veeg naar links actie</string>
+    <string name="swipe_right_action">Veeg naar rechts actie</string>
+    <string name="use_swipe_gestures">Gebruik vegen om actie te ondernemen</string>
+    <string name="use_swipe_gestures_summary">Hiermee wordt het vegen van tabbladen met gebaren uitgeschakeld</string>
+    <string name="volume_g">Volume</string>
+    <string name="vibrate_g">Trillen</string>
+    <string name="use_contact_colors">Contactkleuren gebruiken</string>
 
     <string name="accent_color">Accentkleur</string>
     <string name="use_accent_color">Accentkleur gebruiken</string>
@@ -185,14 +188,8 @@
     <string name="open">Open</string>
     <string name="collection">Collectie</string>
     <string name="collection_summary">Een verzameling samenstellen om de app te ontgrendelen</string>
+    <string name="support_project_to_unlock">Steun het project om te ontgrendelen</string>
     <string name="limited_supply">Beperkt aanbod</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

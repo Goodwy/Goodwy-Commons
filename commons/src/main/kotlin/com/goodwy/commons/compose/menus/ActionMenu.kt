@@ -1,6 +1,7 @@
 package com.goodwy.commons.compose.menus
 
 import androidx.annotation.StringRes
+import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
@@ -24,11 +25,14 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodwy.commons.R
+import com.goodwy.commons.compose.alert_dialog.dialogBorder
+import com.goodwy.commons.compose.alert_dialog.dialogContainerColor
 import com.goodwy.commons.compose.components.SimpleDropDownMenuItem
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.extensions.rememberMutableInteractionSource
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.Shapes
+import com.goodwy.commons.compose.theme.SimpleTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
@@ -95,7 +99,7 @@ fun ActionMenu(
                             Text(
                                 text = name,
                                 fontSize = 14.sp,
-                                modifier = Modifier.padding(8.dp),
+                                modifier = Modifier.padding(SimpleTheme.dimens.padding.medium),
                             )
                         }
                     },
@@ -124,7 +128,7 @@ fun ActionMenu(
                     Text(
                         text = stringResource(id = R.string.more_options),
                         fontSize = 14.sp,
-                        modifier = Modifier.padding(8.dp),
+                        modifier = Modifier.padding(SimpleTheme.dimens.padding.medium),
                     )
                 }
             },
@@ -139,6 +143,9 @@ fun ActionMenu(
             }
         }
         DropdownMenu(
+            modifier = Modifier
+                .background(dialogContainerColor)
+                .dialogBorder,
             expanded = isMenuVisible,
             onDismissRequest = { onMenuToggle(false) },
         ) {

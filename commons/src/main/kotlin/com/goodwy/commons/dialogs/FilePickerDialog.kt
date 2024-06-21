@@ -39,6 +39,7 @@ class FilePickerDialog(
     val forceShowRoot: Boolean = false,
     val showFavoritesButton: Boolean = false,
     val titleText: Int = R.string.select_folder,
+    val useAccentColor: Boolean = false,
     private val enforceStorageRestrictions: Boolean = true,
     val callback: (pickedPath: String) -> Unit
 ) : Breadcrumbs.BreadcrumbsListener {
@@ -170,7 +171,7 @@ class FilePickerDialog(
         }
 
         val sortedItems = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.lowercase() }))
-        val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepickerList) {
+        val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepickerList, useAccentColor) {
             if ((it as FileDirItem).isDirectory) {
                 activity.handleLockedFolderOpening(it.path) { success ->
                     if (success) {
@@ -208,10 +209,12 @@ class FilePickerDialog(
                 val document = activity.getSomeAndroidSAFDocument(currPath) ?: return
                 sendSuccessForDocumentFile(document)
             }
+
             activity.isPathOnOTG(currPath) -> {
                 val fileDocument = activity.getSomeDocumentFile(currPath) ?: return
                 sendSuccessForDocumentFile(fileDocument)
             }
+
             activity.isAccessibleWithSAFSdk30(currPath) -> {
                 if (enforceStorageRestrictions) {
                     activity.handleSAFDialogSdk30(currPath) {
@@ -225,6 +228,7 @@ class FilePickerDialog(
                 }
 
             }
+
             activity.isRestrictedWithSAFSdk30(currPath) -> {
                 if (enforceStorageRestrictions) {
                     if (activity.isInDownloadDir(currPath)) {
@@ -236,6 +240,7 @@ class FilePickerDialog(
                     sendSuccessForDirectFile()
                 }
             }
+
             else -> {
                 sendSuccessForDirectFile()
             }
@@ -275,6 +280,7 @@ class FilePickerDialog(
                     }
                 }
             }
+
             activity.isPathOnOTG(path) -> activity.getOTGItems(path, showHidden, false, callback)
             else -> {
                 val lastModifieds = activity.getFolderLastModifieds(path)

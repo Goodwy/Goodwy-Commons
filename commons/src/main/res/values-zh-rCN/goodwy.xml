@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">了解更多信息</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">主题</string>
     <string name="themes_summary">精心挑选的应用程序主题，自动主题更换器和Android 12+的系统主题支持</string>
     <string name="color_title">颜色</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">主SIM卡</string>
     <string name="button_primary">主按钮</string>
     <string name="button_secondary">辅助按钮</string>
+    <string name="skip_archive_confirmation">忽略存档确认对话框</string>
+    <string name="swipe_gestures">滑动手势</string>
+    <string name="swipe_left_action">向左滑动操作</string>
+    <string name="swipe_right_action">向右滑动操作</string>
+    <string name="use_swipe_gestures">使用 "轻扫行动 "功能</string>
+    <string name="use_swipe_gestures_summary">这将禁用手势滑动标签页</string>
+    <string name="volume_g">卷数</string>
+    <string name="vibrate_g">振动</string>
+    <string name="use_contact_colors">使用触点颜色</string>
 
     <string name="accent_color">重音顏色</string>
     <string name="use_accent_color">使用主题色</string>
@@ -180,14 +183,8 @@
     <string name="open">开放式</string>
     <string name="collection">集合</string>
     <string name="collection_summary">构建集合以解锁应用</string>
+    <string name="support_project_to_unlock">支持项目解锁</string>
     <string name="limited_supply">供应有限</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

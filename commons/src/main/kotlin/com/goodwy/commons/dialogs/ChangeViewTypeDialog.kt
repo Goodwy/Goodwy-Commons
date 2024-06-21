@@ -1,8 +1,28 @@
 package com.goodwy.commons.dialogs
 
-import android.view.View
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.compose.alert_dialog.AlertDialogState
+import com.goodwy.commons.compose.alert_dialog.DialogSurface
+import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.components.RadioGroupDialogComponent
+import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.databinding.DialogChangeViewTypeBinding
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.getAlertDialogBuilder
@@ -10,7 +30,7 @@ import com.goodwy.commons.extensions.setupDialogStuff
 import com.goodwy.commons.helpers.VIEW_TYPE_GRID
 import com.goodwy.commons.helpers.VIEW_TYPE_LIST
 
-class ChangeViewTypeDialog(val activity: BaseSimpleActivity, val path: String = "", val callback: () -> Unit) {
+class ChangeViewTypeDialog(val activity: BaseSimpleActivity, val callback: () -> Unit) {
     private var view: DialogChangeViewTypeBinding
     private var config = activity.baseConfig
 
@@ -40,5 +60,83 @@ class ChangeViewTypeDialog(val activity: BaseSimpleActivity, val path: String = 
         }
         config.viewType = viewType
         callback()
+    }
+}
+
+@Immutable
+data class ViewType(val title: String, val type: Int)
+
+@Composable
+fun ChangeViewTypeAlertDialog(
+    alertDialogState: AlertDialogState,
+    selectedViewType: Int,
+    modifier: Modifier = Modifier,
+    onTypeChosen: (type: Int) -> Unit
+) {
+    val context = LocalContext.current
+    val items = remember {
+        listOf(
+            ViewType(title = context.getString(R.string.grid), type = VIEW_TYPE_GRID),
+            ViewType(title = context.getString(R.string.list), type = VIEW_TYPE_LIST)
+        ).toImmutableList()
+    }
+
+    val groupTitles by remember {
+        derivedStateOf { items.map { it.title } }
+    }
+    val (selected, setSelected) = remember { mutableStateOf(items.firstOrNull { it.type == selectedViewType }?.title) }
+    AlertDialog(onDismissRequest = alertDialogState::hide) {
+        DialogSurface {
+            Column(
+                modifier = modifier
+                    .padding(bottom = 18.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                RadioGroupDialogComponent(
+                    items = groupTitles,
+                    selected = selected,
+                    setSelected = { selectedTitle ->
+                        setSelected(selectedTitle)
+                    },
+                    modifier = Modifier.padding(
+                        vertical = SimpleTheme.dimens.padding.extraLarge,
+                    ),
+                    verticalPadding = SimpleTheme.dimens.padding.extraLarge,
+                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.End,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(end = SimpleTheme.dimens.padding.extraLarge)
+                ) {
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                    }) {
+                        Text(text = stringResource(id = R.string.cancel))
+                    }
+
+                    TextButton(onClick = {
+                        alertDialogState.hide()
+                        onTypeChosen(getSelectedValue(items, selected))
+                    }) {
+                        Text(text = stringResource(id = R.string.ok))
+                    }
+                }
+            }
+        }
+    }
+}
+
+private fun getSelectedValue(
+    items: ImmutableList<ViewType>,
+    selected: String?
+) = items.first { it.title == selected }.type
+
+@MyDevices
+@Composable
+private fun ChangeViewTypeAlertDialogPreview() {
+    AppThemeSurface {
+        ChangeViewTypeAlertDialog(alertDialogState = rememberAlertDialogState(), selectedViewType = VIEW_TYPE_GRID) {}
     }
 }

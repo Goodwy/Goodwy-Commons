@@ -22,7 +22,7 @@ class MyAppCompatSpinner : AppCompatSpinner {
             return
 
         val cnt = adapter.count
-        val items = kotlin.arrayOfNulls<Any>(cnt)
+        val items = arrayOfNulls<Any>(cnt)
         for (i in 0 until cnt)
             items[i] = adapter.getItem(i)
 

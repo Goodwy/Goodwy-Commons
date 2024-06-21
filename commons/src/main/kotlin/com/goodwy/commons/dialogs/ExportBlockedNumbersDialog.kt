@@ -59,6 +59,7 @@ class ExportBlockedNumbersDialog(
                                     alertDialog.dismiss()
                                 }
                             }
+
                             else -> activity.toast(R.string.invalid_name)
                         }
                     }

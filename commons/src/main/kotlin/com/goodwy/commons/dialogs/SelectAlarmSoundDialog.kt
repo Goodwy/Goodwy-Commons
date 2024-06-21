@@ -25,7 +25,7 @@ class SelectAlarmSoundDialog(
 ) {
     private val ADD_NEW_SOUND_ID = -2
 
-    private val view = DialogSelectAlarmSoundBinding.inflate(activity.layoutInflater,  null, false)
+    private val view = DialogSelectAlarmSoundBinding.inflate(activity.layoutInflater, null, false)
     private var systemAlarmSounds = ArrayList<AlarmSound>()
     private var yourAlarmSounds = ArrayList<AlarmSound>()
     private var mediaPlayer: MediaPlayer? = null
@@ -119,6 +119,7 @@ class SelectAlarmSoundDialog(
                 }
                 dialog?.dismiss()
             }
+
             else -> try {
                 mediaPlayer?.reset()
                 if (mediaPlayer == null) {

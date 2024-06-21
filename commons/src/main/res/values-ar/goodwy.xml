@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">التعرف على المزيد</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">المواضيع</string>
     <string name="themes_summary">سمات التطبيق المختارة بعناية ، ومغير السمات التلقائي ودعم سمة النظام لنظام Android 12+</string>
     <string name="color_title">الوان</string>
@@ -121,6 +115,15 @@
     <string name="primary_sim_card">بطاقة SIM الأساسية</string>
     <string name="button_primary">الزر الأساسي</string>
     <string name="button_secondary">الزر الثانوي</string>
+    <string name="skip_archive_confirmation">قم دائمًا بتخطي مربع حوار تأكيد الأرشفة</string>
+    <string name="swipe_gestures">إيماءات التمرير</string>
+    <string name="swipe_left_action">اسحب الإجراء لليسار</string>
+    <string name="swipe_right_action">اسحب الإجراء لليمين</string>
+    <string name="use_swipe_gestures">استخدام التمرير السريع للعمل</string>
+    <string name="use_swipe_gestures_summary">سيؤدي ذلك إلى تعطيل تمرير علامات التبويب بالإيماءات</string>
+    <string name="volume_g">الحجم</string>
+    <string name="vibrate_g">الاهتزاز</string>
+    <string name="use_contact_colors">استخدام ألوان التلامس</string>
 
     <string name="accent_color">لون التمييز</string>
     <string name="use_accent_color">استخدام لون التمييز</string>
@@ -183,14 +186,8 @@
     <string name="open">فتح</string>
     <string name="collection">المجموعة</string>
     <string name="collection_summary">إنشاء مجموعة لإلغاء قفل التطبيق</string>
+    <string name="support_project_to_unlock">دعم المشروع لفتح</string>
     <string name="limited_supply">العرض المحدود</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

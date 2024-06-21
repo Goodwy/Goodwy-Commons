@@ -5,7 +5,6 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.contacts.*
-import java.util.ArrayList
 
 class Converters {
     private val gson = Gson()

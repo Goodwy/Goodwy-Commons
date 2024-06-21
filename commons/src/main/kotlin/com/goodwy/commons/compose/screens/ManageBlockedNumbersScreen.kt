@@ -13,7 +13,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.ContentCopy
@@ -50,7 +49,7 @@ import com.goodwy.commons.compose.menus.ActionMenu
 import com.goodwy.commons.compose.menus.OverflowMode
 import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.settings.SettingsSwitchComponent
-import com.goodwy.commons.compose.settings.scaffold.*
+import com.goodwy.commons.compose.lists.*
 import com.goodwy.commons.compose.system_ui_controller.rememberSystemUiController
 import com.goodwy.commons.compose.theme.*
 import com.goodwy.commons.compose.theme.model.Theme
@@ -67,6 +66,7 @@ private const val RESET_IMMEDIATELY = 1L
 private const val RESET_IDLE = -1L
 private const val BETWEEN_CLICKS_TIME = 200 //time between a click which is slightly lower than the reset time
 private const val ON_LONG_CLICK_LABEL = "select"
+
 @Composable
 internal fun ManageBlockedNumbersScreen(
     goBack: () -> Unit,
@@ -87,7 +87,6 @@ internal fun ManageBlockedNumbersScreen(
     onEdit: (BlockedNumber) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
 ) {
-    val startingPadding = remember { Modifier.padding(horizontal = 4.dp) }
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
     val hapticFeedback = LocalHapticFeedback.current
     val isInActionMode by remember { derivedStateOf { selectedIds.value.isNotEmpty() } }
@@ -98,14 +97,16 @@ internal fun ManageBlockedNumbersScreen(
         clearSelection()
     }
 
-    SettingsLazyScaffold(
+    SimpleScaffold(
         darkStatusBarIcons = !isInActionMode,
-        customTopBar = { scrolledColor: Color,
-                         navigationInteractionSource: MutableInteractionSource,
-                         scrollBehavior: TopAppBarScrollBehavior,
-                         statusBarColor: Int,
-                         colorTransitionFraction: Float,
-                         contrastColor: Color ->
+        customTopBar = {
+                scrolledColor: Color,
+                navigationInteractionSource: MutableInteractionSource,
+                scrollBehavior: TopAppBarScrollBehavior,
+                statusBarColor: Int,
+                colorTransitionFraction: Float,
+                contrastColor: Color
+            ->
 
             Column {
                 Crossfade(targetState = isInActionMode, label = "toolbar-anim", animationSpec = tween(easing = FastOutLinearInEasing)) { actionMode ->
@@ -145,17 +146,17 @@ internal fun ManageBlockedNumbersScreen(
                 }
 
                 SettingsSwitchComponent(
-                    label = if (isDialer) stringResource(id = R.string.block_not_stored_calls) else stringResource(id = R.string.block_not_stored_messages),
+                    label = if (isDialer) stringResource(id = R.string.block_unknown_calls) else stringResource(id = R.string.block_unknown_messages),
                     initialValue = isBlockUnknownSelected,
                     onChange = onBlockUnknownSelectedChange,
-                    modifier = startingPadding.then(Modifier.topAppBarPaddings()),
+                    modifier = Modifier.topAppBarPaddings(),
                     scaleSwitch = 0.8F,
                 )
                 SettingsSwitchComponent(
                     label = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
                     initialValue = isHiddenSelected,
                     onChange = onHiddenSelectedChange,
-                    modifier = startingPadding.then(Modifier.topAppBarPaddings()),
+                    modifier = Modifier.topAppBarPaddings(),
                     scaleSwitch = 0.8F,
                 )
                 SettingsHorizontalDivider(modifier = Modifier.topAppBarPaddings())
@@ -199,7 +200,7 @@ internal fun ManageBlockedNumbersScreen(
                     ids = blockedNumbers?.map { blockedNumber -> blockedNumber.id }.orEmpty()
                 )
             },
-            verticalArrangement = Arrangement.spacedBy(2.dp),
+            verticalArrangement = Arrangement.spacedBy(SimpleTheme.dimens.padding.extraSmall),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {
             when {
@@ -287,7 +288,7 @@ private fun updateSelectedIndices(
     blockedNumbers: ImmutableList<BlockedNumber>,
     bNumber1: BlockedNumber,
     bNumber2: BlockedNumber,
-    selectedIds: MutableState<Set<Long>>
+    selectedIds: MutableState<Set<Long>>,
 ) {
     val indices = listOf(blockedNumbers.indexOf(bNumber1), blockedNumbers.indexOf(bNumber2))
     selectedIds.value += blockedNumbers
@@ -299,7 +300,7 @@ private fun longPressSelectableValue(
     lastClickedValue: Pair<Long, BlockedNumber?>,
     blockedNumber: BlockedNumber,
     triggerReset: Long,
-    select: (BlockedNumber, BlockedNumber) -> Unit
+    select: (BlockedNumber, BlockedNumber) -> Unit,
 ): Pair<Pair<Long, BlockedNumber?>, Long> {
     var lastClickedValueTemp = lastClickedValue
     var triggerResetTemp = triggerReset
@@ -322,14 +323,14 @@ private fun BlockedNumber(
     blockedNumber: BlockedNumber,
     onDelete: (Set<Long>) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
-    isSelected: Boolean
+    isSelected: Boolean,
 ) {
     val hasContactName = blockedNumber.contactName != null
     val contactNameContent = remember {
         movableContentOf {
             Text(
                 text = blockedNumber.contactName.toString(),
-                modifier = modifier.padding(horizontal = 8.dp, vertical = 2.dp)
+                modifier = modifier.padding(horizontal = SimpleTheme.dimens.padding.medium, vertical = SimpleTheme.dimens.padding.extraSmall)
             )
         }
     }
@@ -366,16 +367,16 @@ private fun BlockedNumber(
 
 @Composable
 private fun blockedNumberListItemColors(
-    isSelected: Boolean
+    isSelected: Boolean,
 ) = ListItemDefaults.colors(
     containerColor = if (isSelected) {
         if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
-            Color(MaterialTheme.colorScheme.primaryContainer.toArgb().darkenColor()).copy(alpha = 0.8f)
+            Color(SimpleTheme.colorScheme.primaryContainer.toArgb().darkenColor()).copy(alpha = 0.8f)
         } else {
-            MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
+            SimpleTheme.colorScheme.primary.copy(alpha = 0.3f)
         }
     } else {
-        MaterialTheme.colorScheme.surface
+        SimpleTheme.colorScheme.surface
     },
     trailingIconColor = iconsColor
 )
@@ -385,7 +386,7 @@ private fun blockedNumberListItemColors(
 private fun BlockedNumberHeadlineContent(modifier: Modifier = Modifier, blockedNumber: BlockedNumber, hasContactName: Boolean) {
     Text(
         text = blockedNumber.number,
-        modifier = modifier.padding(horizontal = 8.dp),
+        modifier = modifier.padding(horizontal = SimpleTheme.dimens.padding.medium),
         color = if (hasContactName) LocalContentColor.current.copy(alpha = 0.7f) else LocalContentColor.current
     )
 }
@@ -477,7 +478,7 @@ private fun ActionModeToolbar(
 
         },
         navigationIcon = {
-            SettingsNavigationIcon(navigationIconInteractionSource = navigationIconInteractionSource, goBack = onBackClick, iconColor = textColor)
+            SimpleNavigationIcon(navigationIconInteractionSource = navigationIconInteractionSource, goBack = onBackClick, iconColor = textColor)
         },
         actions = {
             BlockedNumberActionMenu(selectedIdsCount = selectedIdsCount, onDelete = onDelete, onCopy = onCopy, iconColor = textColor)
@@ -494,7 +495,7 @@ private fun ActionModeToolbar(
 @ReadOnlyComposable
 private fun actionModeBgColor(): Color =
     if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
-        MaterialTheme.colorScheme.primaryContainer
+        SimpleTheme.colorScheme.primaryContainer
     } else {
         actionModeColor
     }
@@ -505,7 +506,7 @@ private fun BlockedNumberActionMenu(
     selectedIdsCount: Int,
     onDelete: () -> Unit,
     onCopy: () -> Unit,
-    iconColor: Color? = null
+    iconColor: Color? = null,
 ) {
     val actionMenus = remember(selectedIdsCount) {
         val delete =
@@ -549,15 +550,15 @@ private fun NonActionModeToolbar(
     isTopAppBarColorTitle: Boolean,
     onAdd: () -> Unit,
     onImportBlockedNumbers: () -> Unit,
-    onExportBlockedNumbers: () -> Unit
+    onExportBlockedNumbers: () -> Unit,
 ) {
     val iconColor = if (isTopAppBarColorIcon) MaterialTheme.colorScheme.primary else null
     val titleColor = if (isTopAppBarColorTitle) MaterialTheme.colorScheme.primary else null
-    SettingsScaffoldTopBar(
+    SimpleScaffoldTopBar(
         title = { scrolledTextColor ->
             Text(
                 text = stringResource(id = R.string.manage_blocked_numbers),
-                modifier = Modifier.padding(start = 16.dp),
+                modifier = Modifier.padding(start = SimpleTheme.dimens.padding.medium),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 color = scrolledTextColor
@@ -575,7 +576,7 @@ private fun NonActionModeToolbar(
         actions = {
             val actionMenus = remember {
                 listOf(
-                    ActionItem(R.string.add_a_blocked_number, icon = Icons.Rounded.Add, doAction = onAdd),
+                    ActionItem(R.string.add_a_blocked_number, icon = Icons.Rounded.Add, doAction = onAdd, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                     ActionItem(R.string.import_blocked_numbers, doAction = onImportBlockedNumbers, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                     ActionItem(R.string.export_blocked_numbers, doAction = onExportBlockedNumbers, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                 ).toImmutableList()
@@ -587,16 +588,16 @@ private fun NonActionModeToolbar(
 }
 
 private fun LazyListScope.emptyBlockedNumbers(
-    addABlockedNumber: () -> Unit
+    addABlockedNumber: () -> Unit,
 ) {
     item {
         Text(
             text = stringResource(id = R.string.not_blocking_anyone),
-            style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurface),
+            style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center, color = SimpleTheme.colorScheme.onSurface),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp, bottom = 4.dp)
-                .padding(horizontal = 16.dp)
+                .padding(top = SimpleTheme.dimens.padding.extraLarge, bottom = SimpleTheme.dimens.padding.small)
+                .padding(horizontal = SimpleTheme.dimens.padding.extraLarge)
         )
     }
     item {
@@ -606,7 +607,7 @@ private fun LazyListScope.emptyBlockedNumbers(
         ) {
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(Shapes.large)
                     .clickable(onClick = addABlockedNumber)
             ) {
                 Text(
@@ -614,10 +615,10 @@ private fun LazyListScope.emptyBlockedNumbers(
                     style = TextStyle(
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
-                        color = MaterialTheme.colorScheme.primary,
+                        color = SimpleTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
-                    modifier = Modifier.padding(16.dp)
+                    modifier = Modifier.padding(SimpleTheme.dimens.padding.medium)
                 )
             }
         }
@@ -625,7 +626,7 @@ private fun LazyListScope.emptyBlockedNumbers(
 }
 
 private fun LazyListScope.noPermissionToBlock(
-    setAsDefault: () -> Unit
+    setAsDefault: () -> Unit,
 ) {
     item {
         Text(
@@ -633,8 +634,8 @@ private fun LazyListScope.noPermissionToBlock(
             style = TextStyle(fontStyle = FontStyle.Italic, textAlign = TextAlign.Center),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp)
-                .padding(horizontal = 16.dp)
+                .padding(top = SimpleTheme.dimens.padding.extraLarge)
+                .padding(horizontal = SimpleTheme.dimens.padding.extraLarge)
         )
     }
     item {
@@ -644,7 +645,7 @@ private fun LazyListScope.noPermissionToBlock(
         ) {
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(Shapes.large)
                     .clickable(onClick = setAsDefault)
             ) {
                 Text(
@@ -652,10 +653,10 @@ private fun LazyListScope.noPermissionToBlock(
                     style = TextStyle(
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
-                        color = MaterialTheme.colorScheme.primary,
+                        color = SimpleTheme.colorScheme.primary,
                         fontSize = 18.sp
                     ),
-                    modifier = Modifier.padding(16.dp)
+                    modifier = Modifier.padding(SimpleTheme.dimens.padding.extraLarge)
                 )
             }
         }

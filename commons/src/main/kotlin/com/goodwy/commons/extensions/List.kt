@@ -1,7 +1,5 @@
 package com.goodwy.commons.extensions
 
-import java.util.*
-
 fun List<String>.getMimeType(): String {
     val mimeGroups = HashSet<String>(size)
     val subtypes = HashSet<String>(size)

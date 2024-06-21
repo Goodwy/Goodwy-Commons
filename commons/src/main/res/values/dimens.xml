@@ -56,6 +56,7 @@
     <dimen name="grid_color_picker_margin">0dp</dimen> <!--высота выбранного цвета или расстояние между строками-->
     <dimen name="line_color_picker_app_icon_size">64dp</dimen>
 
+    <dimen name="too_tiny_text_size">6sp</dimen>
     <dimen name="tiny_text_size">8sp</dimen>
     <dimen name="small_text_size">10sp</dimen>
     <dimen name="smaller_text_size">12sp</dimen>

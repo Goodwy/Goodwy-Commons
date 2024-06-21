@@ -5,19 +5,21 @@ import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ripple.LocalRippleTheme
-import androidx.compose.material3.*
+import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CheckboxColors
+import androidx.compose.material3.CheckboxDefaults
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
-import com.goodwy.commons.R
+import androidx.compose.ui.unit.sp
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.extensions.NoRippleTheme
 import com.goodwy.commons.compose.extensions.rememberMutableInteractionSource
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.compose.theme.preferenceLabelColor
 import com.goodwy.commons.compose.theme.preferenceValueColor
 
@@ -30,8 +32,8 @@ fun SettingsCheckBoxComponent(
     isPreferenceEnabled: Boolean = true,
     onChange: ((Boolean) -> Unit)? = null,
     checkboxColors: CheckboxColors = CheckboxDefaults.colors(
-        checkedColor = MaterialTheme.colorScheme.primary,
-        checkmarkColor = MaterialTheme.colorScheme.surface,
+        checkedColor = SimpleTheme.colorScheme.primary,
+        checkmarkColor = SimpleTheme.colorScheme.surface,
     )
 ) {
     val interactionSource = rememberMutableInteractionSource()
@@ -55,29 +57,21 @@ fun SettingsCheckBoxComponent(
             Text(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(end = 16.dp),
+                    .padding(end = SimpleTheme.dimens.padding.extraLarge),
                 text = label,
                 color = preferenceLabelColor(isEnabled = isPreferenceEnabled),
-                fontSize = with(LocalDensity.current) {
-                    dimensionResource(id = R.dimen.bigger_text_size).toSp()
-                },
-                lineHeight = with(LocalDensity.current) {
-                    dimensionResource(id = R.dimen.big_text_size).toSp()
-                },
+                fontSize = 16.sp,
+                lineHeight = 18.sp,
             )
             AnimatedVisibility(visible = !value.isNullOrBlank()) {
                 Text(
                     text = value.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(end = 16.dp),
+                        .padding(end = SimpleTheme.dimens.padding.extraLarge),
                     color = preferenceValueColor(isEnabled = isPreferenceEnabled),
-                    fontSize = with(LocalDensity.current) {
-                        dimensionResource(id = R.dimen.normal_text_size).toSp()
-                    },
-                    lineHeight = with(LocalDensity.current) {
-                        dimensionResource(id = R.dimen.bigger_text_size).toSp()
-                    },
+                    fontSize = 14.sp,
+                    lineHeight = 16.sp,
                 )
             }
         }

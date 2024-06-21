@@ -209,7 +209,8 @@
                 android:id="@+id/colors_holder"
                 style="@style/SettingsSectionHolder"
                 android:layout_below="@+id/primary_colors_holder"
-                android:paddingTop='@dimen/smaller_margin'>
+                android:paddingTop='@dimen/smaller_margin'
+                android:layout_marginBottom="32dp">
 
                 <RelativeLayout
                     android:id="@+id/customizationUseAccentColorHolder"

@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Aprèn més</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Temes</string>
     <string name="themes_summary">Temes d\'aplicació acuradament seleccionats, canvi automàtic de temes i compatibilitat amb temes del sistema per a Android 12+</string>
     <string name="color_title">Colors</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">Targeta SIM principal</string>
     <string name="button_primary">Botó principal</string>
     <string name="button_secondary">Botó secundari</string>
+    <string name="skip_archive_confirmation">Omet sempre el diàleg de confirmació de l\'arxivament</string>
+    <string name="swipe_gestures">Fer lliscar els gestos</string>
+    <string name="swipe_left_action">Feu lliscar el dit cap a l\'esquerra</string>
+    <string name="swipe_right_action">Feu lliscar el dit cap a la dreta</string>
+    <string name="use_swipe_gestures">Utilitza el lliscament per a l\'acció</string>
+    <string name="use_swipe_gestures_summary">Això desactivarà el lliscament gestual de les pestanyes</string>
+    <string name="volume_g">Volum</string>
+    <string name="vibrate_g">Vibrar</string>
+    <string name="use_contact_colors">Utilitzar colors de contacte</string>
 
     <string name="accent_color">Color d\'èmfasi</string>
     <string name="use_accent_color">Utilitzeu el color d\'accent</string>
@@ -186,14 +189,8 @@
     <string name="open">Obre</string>
     <string name="collection">Col·lecció</string>
     <string name="collection_summary">Crear una col·lecció per desbloquejar l\'aplicació</string>
+    <string name="support_project_to_unlock">Doneu suport al projecte per desbloquejar</string>
     <string name="limited_supply">Oferta limitada</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

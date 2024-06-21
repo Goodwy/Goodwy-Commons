@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">برنامه پولی را برای پشتیبانی از پیشرفت‌ها و ویژگی‌های اضافی دریافت کنید</string>
     <string name="support_project_summary">یکی از برنامه های پولی ما را برای پشتیبانی از توسعه آینده و باز کردن قفل ویژگی های اضافی دریافت کنید</string>
     <string name="learn_more">بیشتر بدانید</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">تم</string>
     <string name="themes_summary">"با دقت انتخاب تم های نرم افزار ، تغییر خودکار تم و پشتیبانی از تم سیستم برای آندروید 12+ "</string>
     <string name="color_title">رنگ</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">سیم کارت اصلی</string>
     <string name="button_primary">دکمه اصلی</string>
     <string name="button_secondary">دکمه ثانویه</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">حرکات تند وشدید زدن</string>
+    <string name="swipe_left_action">ضربه تند وشدید زدن به چپ</string>
+    <string name="swipe_right_action">ضربه تند وشدید زدن به راست</string>
+    <string name="use_swipe_gestures">از Swipe to action استفاده کنید</string>
+    <string name="use_swipe_gestures_summary">این کار کشیدن اشاره‌ای برگه‌ها را غیرفعال می‌کند</string>
+    <string name="volume_g">جلد</string>
+    <string name="vibrate_g">لرزش</string>
+    <string name="use_contact_colors">استفاده از رنگهای اشنا</string>
 
     <string name="accent_color">رنگ لهجه</string>
     <string name="use_accent_color">استفاده از رنگ لهجه</string>
@@ -185,14 +188,8 @@
     <string name="open">باز کردن</string>
     <string name="collection">مجموعه</string>
     <string name="collection_summary">ساخت یک مجموعه برای باز کردن برنامه</string>
+    <string name="support_project_to_unlock">پشتیبانی از پروژه برای باز کردن قفل</string>
     <string name="limited_supply">عرضه محدود</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

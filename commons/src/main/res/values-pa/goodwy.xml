@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name_g">Goodwy Commons</string>
     <string name="recorder_g">ਰਿਕਾਰਡਰ</string>
     <string name="player_g">ਖਿਡਾਰੀ</string>
     <string name="general">ਜਨਰਲ</string>
@@ -36,12 +35,6 @@
     <string name="pref_pay_summary">ਭਵਿੱਖ ਦੇ ਵਿਕਾਸ ਅਤੇ ਵਾਧੂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦਾ ਸਮਰਥਨ ਕਰਨ ਲਈ ਅਦਾਇਗੀ ਐਪ ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="support_project_summary">ਭਵਿੱਖ ਦੇ ਵਿਕਾਸ ਦਾ ਸਮਰਥਨ ਕਰਨ ਅਤੇ ਵਾਧੂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਅਨਲੌਕ ਕਰਨ ਲਈ ਸਾਡੀਆਂ ਭੁਗਤਾਨਸ਼ੁਦਾ ਐਪਾਂ ਵਿੱਚੋਂ ਇੱਕ ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="learn_more">ਹੋਰ ਜਾਣੋ</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">ਥੀਮ</string>
     <string name="themes_summary">Android 12+ ਲਈ ਧਿਆਨ ਨਾਲ ਚੁਣੇ ਗਏ ਐਪਲੀਕੇਸ਼ਨ ਥੀਮ, ਆਟੋਮੈਟਿਕ ਥੀਮ ਚੇਂਜਰ ਅਤੇ ਸਿਸਟਮ ਥੀਮ ਸਮਰਥਨ</string>
     <string name="color_title">ਰੰਗ</string>
@@ -137,6 +130,15 @@
     <string name="primary_sim_card">ਪ੍ਰਾਇਮਰੀ ਸਿਮ ਕਾਰਡ</string>
     <string name="button_primary">ਪ੍ਰਾਇਮਰੀ ਬਟਨ</string>
     <string name="button_secondary">ਸੈਕੰਡਰੀ ਬਟਨ</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">ਸਵਾਈਪ ਸੰਕੇਤ</string>
+    <string name="swipe_left_action">ਖੱਬੇ ਪਾਸੇ ਸਵਾਈਪ ਕਾਰਵਾਈ</string>
+    <string name="swipe_right_action">ਸੱਜੀ ਕਾਰਵਾਈ ਨੂੰ ਸਵਾਈਪ ਕਰੋ</string>
+    <string name="use_swipe_gestures">ਐਕਸ਼ਨ ਲਈ ਸਵਾਈਪ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+    <string name="use_swipe_gestures_summary">ਇਹ ਟੈਬਾਂ ਦੇ ਸੰਕੇਤ ਸਵਾਈਪਿੰਗ ਨੂੰ ਅਸਮਰੱਥ ਬਣਾ ਦੇਵੇਗਾ</string>
+    <string name="volume_g">ਵਾਲੀਅਮ</string>
+    <string name="vibrate_g">ਵਾਈਬ੍ਰੇਟ</string>
+    <string name="use_contact_colors">ਸੰਪਰਕ ਰੰਗਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -188,14 +190,8 @@
     <string name="open">ਖੋਲੋ</string>
     <string name="collection">ਸੰਗ੍ਰਹਿ</string>
     <string name="collection_summary">ਐਪ ਨੂੰ ਅਨਲੌਕ ਕਰਨ ਲਈ ਇੱਕ ਸੰਗ੍ਰਹਿ ਬਣਾਓ</string>
+    <string name="support_project_to_unlock">ਅਨਲੌਕ ਕਰਨ ਲਈ ਪ੍ਰੋਜੈਕਟ ਦਾ ਸਮਰਥਨ ਕਰੋ</string>
     <string name="limited_supply">ਸੀਮਤ ਸਪਲਾਈ</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

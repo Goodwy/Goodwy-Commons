@@ -12,11 +12,13 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop
         baseConfig.primaryColor.getContrastColor() == DARK_GREY -> R.style.AppTheme_BlackAndWhite_DarkTextColor
         else -> R.style.AppTheme_BlackAndWhite
     }
+
     isWhiteTheme() -> when {
         showTransparentTop -> R.style.AppTheme_White_NoActionBar
         baseConfig.primaryColor.getContrastColor() == Color.WHITE -> R.style.AppTheme_White_LightTextColor
         else -> R.style.AppTheme_White
     }
+
     showTransparentTop -> {
         when (color) {
             -12846 -> R.style.AppTheme_Red_100_core
@@ -352,6 +354,7 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop
             else -> R.style.AppTheme_Blue_600_core //TODO DEFAULT THEME
         }
     }
+
     else -> {
         when (color) {
             -12846 -> R.style.AppTheme_Red_100

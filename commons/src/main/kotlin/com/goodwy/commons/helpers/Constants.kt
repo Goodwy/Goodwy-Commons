@@ -178,6 +178,7 @@ const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
 const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
 const val SHOW_CONTACT_THUMBNAILS = "show_contact_thumbnails"
 const val SHOW_PHONE_NUMBERS = "show_phone_numbers"
+const val FORMAT_PHONE_NUMBERS = "format_phone_numbers"
 const val SHOW_ONLY_CONTACTS_WITH_NUMBERS = "show_only_contacts_with_numbers"
 const val IGNORED_CONTACT_SOURCES = "ignored_contact_sources_2"
 const val LAST_USED_CONTACT_SOURCE = "last_used_contact_source"
@@ -238,6 +239,8 @@ const val AUTO_BACKUP_TIME = "auto_backup_time"
 const val AUTO_BACKUP_INTERVAL = "auto_backup_interval"
 const val NEXT_AUTO_BACKUP_TIME = "next_auto_backup_time"
 const val HIDE_TOP_BAR_WHEN_SCROLL = "hide_top_bar_when_scroll"
+const val SKIP_ARCHIVE_CONFIRMATION = "skip_archive_confirmation"
+const val USE_SWIPE_TO_ACTION = "use_swipe_to_action"
 
 const val GOOGLE_PLAY_LICENSING_KEY = "licensing_key"
 const val IS_PRO_VERSION = "is_pro_version"
@@ -634,7 +637,7 @@ fun getConflictResolution(resolutions: LinkedHashMap<String, Int>, path: String)
     }
 }
 
-val proPackages = arrayListOf("draw", "gallery", "filemanager", "contacts", "notes", "calendar")
+val proPackages = arrayListOf<String>()
 
 fun mydebug(message: String) = Log.e("DEBUG", message)
 

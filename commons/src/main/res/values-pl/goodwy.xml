@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Dowiedz się więcej</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Tematy</string>
     <string name="themes_summary">Starannie dobrane motywy aplikacji, automatyczny zmieniacz motywów i obsługa motywów systemowych dla Androida 12+</string>
     <string name="color_title">Kolory</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">Podstawowa karta SIM</string>
     <string name="button_primary">Przycisk główny</string>
     <string name="button_secondary">Przycisk pomocniczy</string>
+    <string name="skip_archive_confirmation">Nie pokazuj okna potwierdzenia archiwizacji</string>
+    <string name="swipe_gestures">Gesty przesuwania</string>
+    <string name="swipe_left_action">Akcja Przesuń w lewo</string>
+    <string name="swipe_right_action">Akcja przesunięcia w prawo</string>
+    <string name="use_swipe_gestures">Użyj przesunięcia do akcji</string>
+    <string name="use_swipe_gestures_summary">Wyłączy przesuwanie zakładek gestami</string>
+    <string name="volume_g">Głośność</string>
+    <string name="vibrate_g">Wibracja</string>
+    <string name="use_contact_colors">Używanie kolorów styków</string>
 
     <string name="accent_color">Kolor wiodący</string>
     <string name="use_accent_color">Użyj koloru wiodącego</string>
@@ -182,14 +185,8 @@
     <string name="open">Otwórz</string>
     <string name="collection">Kolekcja</string>
     <string name="collection_summary">Tworzenie kolekcji w celu odblokowania aplikacji</string>
+    <string name="support_project_to_unlock">Wesprzyj projekt, aby odblokować</string>
     <string name="limited_supply">Ograniczona podaż</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

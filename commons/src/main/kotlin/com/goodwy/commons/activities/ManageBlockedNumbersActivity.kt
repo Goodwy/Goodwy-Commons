@@ -82,18 +82,17 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
 
                 addBlockedNumberDialogState.DialogMember {
                     AddOrEditBlockedNumberAlertDialog(
-                        blockedNumber = clickedBlockedNumber,
                         alertDialogState = addBlockedNumberDialogState,
-                        deleteBlockedNumber = {
-                            deleteBlockedNumber(it)
-                            updateBlockedNumbers()
-                        },
-                        addBlockedNumber = {
-                            addBlockedNumber(it)
-                            clickedBlockedNumber = null
+                        blockedNumber = clickedBlockedNumber,
+                        deleteBlockedNumber = { blockedNumber ->
+                            deleteBlockedNumber(blockedNumber)
                             updateBlockedNumbers()
                         }
-                    )
+                    ) { blockedNumber ->
+                        addBlockedNumber(blockedNumber)
+                        clickedBlockedNumber = null
+                        updateBlockedNumbers()
+                    }
                 }
 
                 ManageBlockedNumbersScreen(

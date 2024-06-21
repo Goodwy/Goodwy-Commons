@@ -17,8 +17,9 @@ import androidx.compose.ui.unit.dp
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.extensions.rememberMutableInteractionSource
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 
-private val dropDownPaddings = Modifier.padding(horizontal = 14.dp, vertical = 16.dp)
+private val dropDownPaddings = Modifier.padding(horizontal = 14.dp, vertical = 12.dp)
 
 @Composable
 fun SimpleDropDownMenuItem(
@@ -27,7 +28,13 @@ fun SimpleDropDownMenuItem(
     indication: Indication? = LocalIndication.current,
     @StringRes text: Int,
     onClick: () -> Unit
-) = SimpleDropDownMenuItem(modifier = modifier, text = stringResource(id = text), onClick = onClick, interactionSource = interactionSource, indication = indication)
+) = SimpleDropDownMenuItem(
+    modifier = modifier,
+    text = stringResource(id = text),
+    onClick = onClick,
+    interactionSource = interactionSource,
+    indication = indication
+)
 
 @Composable
 fun SimpleDropDownMenuItem(
@@ -37,16 +44,20 @@ fun SimpleDropDownMenuItem(
     indication: Indication? = LocalIndication.current,
     onClick: () -> Unit
 ) =
-    Box(modifier = modifier
-        .fillMaxWidth()
-        .clickable(interactionSource = interactionSource, indication = indication, onClick = onClick)
-        .then(dropDownPaddings)) {
-        Text(
-            text = text,
-            modifier = Modifier
-                .fillMaxWidth()
-        )
-    }
+    SimpleDropDownMenuItem(
+        modifier = modifier,
+        interactionSource = interactionSource,
+        indication = indication,
+        onClick = onClick,
+        text = {
+            Text(
+                text = text,
+                modifier = Modifier
+                    .fillMaxWidth(),
+                color = SimpleTheme.colorScheme.onSurface
+            )
+        }
+    )
 
 @Composable
 fun SimpleDropDownMenuItem(
@@ -56,10 +67,12 @@ fun SimpleDropDownMenuItem(
     text: @Composable BoxScope.() -> Unit,
     onClick: () -> Unit
 ) =
-    Box(modifier = modifier
-        .fillMaxWidth()
-        .clickable(interactionSource = interactionSource, indication = indication, onClick = onClick)
-        .then(dropDownPaddings)) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable(interactionSource = interactionSource, indication = indication, onClick = onClick)
+            .then(dropDownPaddings)
+    ) {
         text()
     }
 

@@ -3,19 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <item
-        android:id="@+id/restorePurchases"
-        android:title="@string/restore_purchase"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/openSubscriptions"
-        android:title="@string/billing_subscriptions"
-        android:visible="false"
-        app:showAsAction="never"
-        tools:visible="true" />
-    <item
         android:id="@+id/changeStore"
         android:title="@string/billing_change_to_google_play"
         android:visible="false"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         tools:visible="true" />
+    <item
+        android:id="@+id/restorePurchases"
+        android:icon="@drawable/ic_restore_purchase"
+        android:title="@string/restore_purchase"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/openSubscriptions"
+        android:title="@string/billing_subscriptions"
+        app:showAsAction="never"/>
 </menu>

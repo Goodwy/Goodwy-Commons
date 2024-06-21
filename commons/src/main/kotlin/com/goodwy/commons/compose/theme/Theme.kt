@@ -7,7 +7,7 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.runtime.*
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import com.goodwy.commons.compose.extensions.config
@@ -22,6 +22,7 @@ internal fun Theme(
 ) {
     val view = LocalView.current
     val context = LocalContext.current
+    val configuration = LocalConfiguration.current
     val baseConfig = remember { context.config }
     val isSystemInDarkTheme = isSystemInDarkTheme()
 
@@ -43,20 +44,6 @@ internal fun Theme(
                 primaryContainer = theme.primaryContainer
             )
 
-//            theme is Theme.White -> darkColorScheme(
-//                primary = Color(theme.accentColor),
-//                surface = theme.backgroundColor,
-//                tertiary = theme.primaryColor,
-//                onSurface = theme.textColor,
-//            )
-//
-//            theme is Theme.BlackAndWhite -> darkColorScheme(
-//                primary = Color(theme.accentColor),
-//                surface = theme.backgroundColor,
-//                tertiary = theme.primaryColor,
-//                onSurface = theme.textColor
-//            )
-
             else -> darkColorScheme
         }
     } else {
@@ -67,13 +54,16 @@ internal fun Theme(
         updateRecentsAppIcon(baseConfig, context)
     }
 
+    val dimensions = CommonDimensions
+
     MaterialTheme(
         colorScheme = colorScheme,
         shapes = Shapes,
         content = {
             CompositionLocalProvider(
                 LocalRippleTheme provides DynamicThemeRipple,
-                LocalTheme provides theme
+                LocalTheme provides theme,
+                LocalDimensions provides dimensions
             ) {
                 content()
             }

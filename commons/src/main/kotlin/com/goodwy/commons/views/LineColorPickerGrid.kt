@@ -43,7 +43,7 @@ class LineColorPickerGrid @JvmOverloads constructor(
                 updateItemMargin(lastColorIndex, false)
             }
         }
-        orientation = LinearLayout.HORIZONTAL
+        orientation = HORIZONTAL
 
         setOnTouchListener { view, motionEvent ->
             when (motionEvent.action) {
@@ -102,11 +102,11 @@ class LineColorPickerGrid @JvmOverloads constructor(
 
     private fun updateItemMargin(index: Int, addMargin: Boolean) {
         getChildAt(index)?.apply {
-            (layoutParams as LinearLayout.LayoutParams).apply {
-               // topMargin = if (addMargin) 0 else unselectedMargin
-               // bottomMargin = if (addMargin) 0 else unselectedMargin
-               // if (addMargin) setPadding(unselectedMargin,unselectedMargin,unselectedMargin,unselectedMargin) else setPadding(0,0,0,0)
-            }
+//            (layoutParams as LayoutParams).apply {
+//                topMargin = if (addMargin) 0 else unselectedMargin
+//                bottomMargin = if (addMargin) 0 else unselectedMargin
+//                if (addMargin) setPadding(unselectedMargin,unselectedMargin,unselectedMargin,unselectedMargin) else setPadding(0,0,0,0)
+//            }
             requestLayout()
         }
     }

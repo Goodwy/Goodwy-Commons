@@ -54,6 +54,11 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             return
         }
 
+        if (!newNameRaw.isAValidFilename()) {
+            activity?.toast(R.string.invalid_name)
+            return
+        }
+
         val validPaths = paths.filter { activity?.getDoesFilePathExist(it) == true }
         val firstPath = validPaths.firstOrNull()
         val sdFilePath = validPaths.firstOrNull { activity?.isPathOnSD(it) == true } ?: firstPath

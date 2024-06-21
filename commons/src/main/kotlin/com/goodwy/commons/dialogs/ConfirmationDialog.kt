@@ -12,8 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.DialogProperties
 import com.goodwy.commons.R
-import com.goodwy.commons.compose.alert_dialog.AlertDialogState
-import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.alert_dialog.*
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.databinding.DialogMessageBinding
@@ -67,12 +66,12 @@ class ConfirmationDialog(
 
 @Composable
 fun ConfirmationAlertDialog(
-    modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState,
+    modifier: Modifier = Modifier,
     message: String = "",
-    messageId: Int = R.string.proceed_with_deletion,
-    positive: Int = R.string.yes,
-    negative: Int = R.string.no,
+    messageId: Int? = R.string.proceed_with_deletion,
+    positive: Int? = R.string.yes,
+    negative: Int? = R.string.no,
     cancelOnTouchOutside: Boolean = true,
     dialogTitle: String = "",
     callback: () -> Unit
@@ -90,19 +89,23 @@ fun ConfirmationAlertDialog(
         shape = dialogShape,
         tonalElevation = dialogElevation,
         dismissButton = {
-            TextButton(onClick = {
-                alertDialogState.hide()
-                callback()
-            }) {
-                Text(text = stringResource(id = negative))
+            if (negative != null) {
+                TextButton(onClick = {
+                    alertDialogState.hide()
+                    callback()
+                }) {
+                    Text(text = stringResource(id = negative))
+                }
             }
         },
         confirmButton = {
-            TextButton(onClick = {
-                alertDialogState.hide()
-                callback()
-            }) {
-                Text(text = stringResource(id = positive))
+            if (positive != null) {
+                TextButton(onClick = {
+                    alertDialogState.hide()
+                    callback()
+                }) {
+                    Text(text = stringResource(id = positive))
+                }
             }
         },
         title = {
@@ -118,7 +121,7 @@ fun ConfirmationAlertDialog(
         text = {
             Text(
                 modifier = Modifier.fillMaxWidth(),
-                text = message.ifEmpty { stringResource(id = messageId) },
+                text = message.ifEmpty { messageId?.let { stringResource(id = it) }.orEmpty() },
                 fontSize = 16.sp,
                 color = dialogTextColor,
             )
@@ -130,7 +133,8 @@ fun ConfirmationAlertDialog(
 @MyDevices
 private fun ConfirmationAlertDialogPreview() {
     AppThemeSurface {
-        ConfirmationAlertDialog(alertDialogState = rememberAlertDialogState(),
-            callback = {})
+        ConfirmationAlertDialog(
+            alertDialogState = rememberAlertDialogState()
+        ) {}
     }
 }

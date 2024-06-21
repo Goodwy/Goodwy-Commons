@@ -2,83 +2,108 @@ package com.goodwy.commons.samples.activities
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.activities.ManageBlockedNumbersActivity
-import com.goodwy.commons.dialogs.BottomSheetChooserDialog
-import com.goodwy.commons.dialogs.SecurityDialog
-import com.goodwy.commons.dialogs.OverflowIconDialog
+import com.goodwy.commons.compose.alert_dialog.AlertDialogState
+import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.extensions.*
+import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.dialogs.ConfirmationDialog
+import com.goodwy.commons.dialogs.DonateAlertDialog
+import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.models.SimpleListItem
 import com.goodwy.commons.helpers.LICENSE_AUTOFITTEXTVIEW
-import com.goodwy.commons.helpers.SHOW_ALL_TABS
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
-import com.goodwy.commons.samples.databinding.ActivityMainBinding
+import com.goodwy.commons.samples.screens.MainScreen
 
 class MainActivity : BaseSimpleActivity() {
-    override fun getAppLauncherName() = getString(R.string.smtco_app_name)
-
-    override fun getAppIconIDs(): ArrayList<Int> {
-        val ids = ArrayList<Int>()
-        ids.add(R.mipmap.ic_launcher)
-        return ids
-    }
-
-    private val binding by viewBinding(ActivityMainBinding::inflate)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
+        enableEdgeToEdgeSimple()
+        setContent {
+            AppThemeSurface {
+                val showMoreApps = onEventValue { !resources.getBoolean(com.goodwy.commons.R.bool.hide_google_relations) }
 
-        setupOptionsMenu()
-        updateMaterialActivityViews(binding.mainCoordinator, null, useTransparentNavigation = true, useTopSearchMenu = true)
-        setupSearchMenuScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
-        //binding.mainToolbar.updateTitle(getString(com.goodwy.commons.R.string.simple_commons))
-
-        binding.mainColorCustomization.setOnClickListener {
-            startCustomizationActivity(
-                isCollection = false,
-                playStoreInstalled = isPlayStoreInstalled(),
-                ruStoreInstalled = isRuStoreInstalled(),
+                MainScreen(
+                    openColorCustomization = ::startCustomizationActivity,
+                    manageBlockedNumbers = {
+                        startActivity(Intent(this@MainActivity, ManageBlockedNumbersActivity::class.java))
+                    },
+                    showComposeDialogs = {
+                        startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
+                    },
+                    openTestButton = {
+                        ConfirmationDialog(
+                            this@MainActivity,
+                            FAKE_VERSION_APP_LABEL,
+                            positive = com.goodwy.commons.R.string.ok,
+                            negative = 0
+                        ) {
+                            launchViewIntent(DEVELOPER_PLAY_STORE_URL)
+                        }
+                    },
+                    showMoreApps = showMoreApps,
+                    openAbout = ::launchAbout,
+                    moreAppsFromUs = ::launchMoreAppsFromUsIntent,
+                    startPurchaseActivity = ::launchPurchase,
                 )
-        }
-        binding.mainAbout.setOnClickListener {
-            launchAbout()
-        }
-        binding.mainPurchase.setOnClickListener {
-            startPurchaseActivity(R.string.app_name_g, "",
-                productIdList = arrayListOf("", "", ""),
-                productIdListRu = arrayListOf("", "", ""),
-                subscriptionIdList = arrayListOf("", "", ""),
-                subscriptionIdListRu = arrayListOf("", "", ""),
-                subscriptionYearIdList = arrayListOf("", "", ""),
-                subscriptionYearIdListRu = arrayListOf("", "", ""),
-                showLifebuoy = false,
-                playStoreInstalled = isPlayStoreInstalled(),
-                ruStoreInstalled = isRuStoreInstalled(),
-                showCollection = true)
-        }
-        binding.bottomSheetChooser.setOnClickListener {
-            launchBottomSheetDemo()
-        }
-        binding.security.setOnClickListener {
-            SecurityDialog(this, "", SHOW_ALL_TABS) { _, _, _ ->
+                AppLaunched()
             }
         }
-        binding.overflowIcon.setOnClickListener {
-            OverflowIconDialog(this) {
-                binding.mainToolbar.updateColors()
+    }
+
+    @Composable
+    private fun AppLaunched(
+        donateAlertDialogState: AlertDialogState = getDonateAlertDialogState(),
+        rateStarsAlertDialogState: AlertDialogState = getRateStarsAlertDialogState(),
+    ) {
+        LaunchedEffect(Unit) {
+            appLaunchedCompose(
+                appId = BuildConfig.APPLICATION_ID,
+                showDonateDialog = donateAlertDialogState::show,
+                showRateUsDialog = rateStarsAlertDialogState::show,
+                showUpgradeDialog = {}
+            )
+        }
+    }
+
+    @Composable
+    private fun getDonateAlertDialogState() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                DonateAlertDialog(alertDialogState = this)
             }
         }
-        binding.manageBlockedNumbers.setOnClickListener {
-            startActivity(Intent(this, ManageBlockedNumbersActivity::class.java))
+
+    @Composable
+    private fun getRateStarsAlertDialogState() = rememberAlertDialogState().apply {
+        DialogMember {
+            RateStarsAlertDialog(alertDialogState = this, onRating = ::rateStarsRedirectAndThankYou)
         }
-        binding.composeDialogs.setOnClickListener {
-            startActivity(Intent(this, TestDialogActivity::class.java))
-        }
+    }
+
+    private fun launchPurchase() {
+        startPurchaseActivity(
+            R.string.app_name_g,
+            "",
+            productIdList = arrayListOf("", "", ""),
+            productIdListRu = arrayListOf("", "", ""),
+            subscriptionIdList = arrayListOf("", "", ""),
+            subscriptionIdListRu = arrayListOf("", "", ""),
+            subscriptionYearIdList = arrayListOf("", "", ""),
+            subscriptionYearIdListRu = arrayListOf("", "", ""),
+            showLifebuoy = false,
+            playStoreInstalled = isPlayStoreInstalled(),
+            ruStoreInstalled = isRuStoreInstalled(),
+            showCollection = true
+        )
     }
 
     private fun launchAbout() {
@@ -95,7 +120,8 @@ class MainActivity : BaseSimpleActivity() {
             faqItems.add(FAQItem(com.goodwy.commons.R.string.faq_6_title_commons, com.goodwy.commons.R.string.faq_6_text_commons))
         }
 
-        startAboutActivity(R.string.app_name_g,
+        startAboutActivity(
+            R.string.app_name_g,
             licenses,
             BuildConfig.VERSION_NAME,
             faqItems,
@@ -108,36 +134,9 @@ class MainActivity : BaseSimpleActivity() {
             ruStoreInstalled = isRuStoreInstalled())
     }
 
-    private fun setupOptionsMenu() {
-        binding.mainToolbar.getToolbar().inflateMenu(R.menu.menu)
-    }
+    override fun getAppLauncherName() = getString(R.string.commons_app_name)
 
-    private fun launchBottomSheetDemo() {
-        BottomSheetChooserDialog.createChooser(
-            fragmentManager = supportFragmentManager,
-            title = com.goodwy.commons.R.string.please_select_destination,
-            items = arrayOf(
-                SimpleListItem(1, com.goodwy.commons.R.string.record_video, imageRes = com.goodwy.commons.R.drawable.ic_camera_vector),
-                SimpleListItem(2, com.goodwy.commons.R.string.record_audio, imageRes = com.goodwy.commons.R.drawable.ic_microphone_vector, selected = true),
-                SimpleListItem(4, com.goodwy.commons.R.string.choose_contact, imageRes = com.goodwy.commons.R.drawable.ic_add_person_vector)
-            )
-        ) {
-            toast("Clicked ${it.id}")
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        //setupToolbar(binding.mainToolbar)
-
-        updateStatusbarColor(getProperBackgroundColor())
-        binding.mainToolbar.updateColors(getRequiredStatusBarColor(), scrollingView?.computeVerticalScrollOffset() ?: 0)
-
-//        CallConfirmationDialog(this, callee = "Goodwy Common"){
-//
-//        }
-
-        updateTextColors(binding.mainCoordinator)
-        binding.switchOn.setColors(getProperTextColor(), getProperAccentColor(), getProperBackgroundColor())
-    }
+    override fun getAppIconIDs() = arrayListOf(
+        R.mipmap.ic_launcher,
+    )
 }

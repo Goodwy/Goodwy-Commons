@@ -33,19 +33,18 @@ import androidx.biometric.auth.AuthPromptHost
 import androidx.biometric.auth.Class2BiometricAuthPrompt
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.databinding.DialogTitleBinding
 import com.goodwy.commons.dialogs.*
-import com.goodwy.commons.dialogs.WritePermissionDialog.Mode
+import com.goodwy.commons.dialogs.WritePermissionDialog.WritePermissionDialogMode
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.*
 import com.goodwy.commons.views.MyTextView
 import java.io.*
-import java.util.*
+import java.util.TreeSet
 
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
@@ -115,7 +114,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
     return if ((!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, Mode.SdCard) {
+                WritePermissionDialog(this, WritePermissionDialogMode.SdCard) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra(EXTRA_SHOW_ADVANCED, true)
                         try {
@@ -150,7 +149,7 @@ fun BaseSimpleActivity.isShowingSAFDialogSdk30(path: String): Boolean {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 val level = getFirstParentLevel(path)
-                WritePermissionDialog(this, Mode.OpenDocumentTreeSDK30(path.getFirstParentPath(this, level))) {
+                WritePermissionDialog(this, WritePermissionDialogMode.OpenDocumentTreeSDK30(path.getFirstParentPath(this, level))) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra(EXTRA_SHOW_ADVANCED, true)
                         putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentTreeUriUsingRootTree(path))
@@ -185,7 +184,7 @@ fun BaseSimpleActivity.isShowingSAFCreateDocumentDialogSdk30(path: String): Bool
     return if (!hasProperStoredDocumentUriSdk30(path)) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, Mode.CreateDocumentSDK30) {
+                WritePermissionDialog(this, WritePermissionDialogMode.CreateDocumentSDK30) {
                     Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                         type = DocumentsContract.Document.MIME_TYPE_DIR
                         putExtra(EXTRA_SHOW_ADVANCED, true)
@@ -266,7 +265,7 @@ fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
 fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
     runOnUiThread {
         if (!isDestroyed && !isFinishing) {
-            WritePermissionDialog(this, Mode.Otg) {
+            WritePermissionDialog(this, WritePermissionDialogMode.Otg) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                     try {
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
@@ -309,7 +308,7 @@ fun Activity.launchUpgradeToProIntent() {
 }
 
 fun Activity.launchMoreAppsFromUsIntent() {
-    launchViewIntent("https://play.google.com/store/apps/dev?id=8268163890866913014")
+    launchViewIntent(getString(R.string.thank_you_url))
 }
 
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
@@ -507,7 +506,7 @@ fun Activity.openPathIntent(
             setDataAndType(newUri, mimeType)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-            if (applicationId == "com.goodwy.gallery.pro" || applicationId == "com.goodwy.gallery.pro.debug") {
+            if (applicationId == "com.goodwy.gallery" || applicationId == "com.goodwy.gallery.debug") {
                 putExtra(IS_FROM_GALLERY, true)
             }
 
@@ -1218,40 +1217,42 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                 callback.invoke(applicationContext.contentResolver.openOutputStream(uri, "wt"))
             }
         }
+
         needsStupidWritePermissions(fileDirItem.path) -> {
-        handleSAFDialog(fileDirItem.path) {
-            if (!it) {
-                return@handleSAFDialog
-            }
+            handleSAFDialog(fileDirItem.path) {
+                if (!it) {
+                    return@handleSAFDialog
+                }
 
-            var document = getDocumentFile(fileDirItem.path)
-            if (document == null && allowCreatingNewFile) {
-                document = getDocumentFile(fileDirItem.getParentPath())
-            }
+                var document = getDocumentFile(fileDirItem.path)
+                if (document == null && allowCreatingNewFile) {
+                    document = getDocumentFile(fileDirItem.getParentPath())
+                }
 
-            if (document == null) {
-                showFileCreateError(fileDirItem.path)
-                callback(null)
-                return@handleSAFDialog
-            }
+                if (document == null) {
+                    showFileCreateError(fileDirItem.path)
+                    callback(null)
+                    return@handleSAFDialog
+                }
 
-            if (!getDoesFilePathExist(fileDirItem.path)) {
-                document = getDocumentFile(fileDirItem.path) ?: document.createFile("", fileDirItem.name)
-            }
+                if (!getDoesFilePathExist(fileDirItem.path)) {
+                    document = getDocumentFile(fileDirItem.path) ?: document.createFile("", fileDirItem.name)
+                }
 
-            if (document?.exists() == true) {
-                try {
-                    callback(applicationContext.contentResolver.openOutputStream(document.uri, "wt"))
-                } catch (e: FileNotFoundException) {
-                    showErrorToast(e)
+                if (document?.exists() == true) {
+                    try {
+                        callback(applicationContext.contentResolver.openOutputStream(document.uri, "wt"))
+                    } catch (e: FileNotFoundException) {
+                        showErrorToast(e)
+                        callback(null)
+                    }
+                } else {
+                    showFileCreateError(fileDirItem.path)
                     callback(null)
                 }
-            } else {
-                showFileCreateError(fileDirItem.path)
-                callback(null)
             }
         }
-        }
+
         isAccessibleWithSAFSdk30(fileDirItem.path) -> {
             handleSAFDialogSdk30(fileDirItem.path) {
                 if (!it) {
@@ -1271,6 +1272,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                 )
             }
         }
+
         isRestrictedWithSAFSdk30(fileDirItem.path) -> {
             callback.invoke(
                 try {
@@ -1281,6 +1283,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                 } ?: createCasualFileOutputStream(this, targetFile)
             )
         }
+
         else -> {
             callback.invoke(createCasualFileOutputStream(this, targetFile))
         }
@@ -1549,6 +1552,7 @@ fun Activity.showPickSecondsDialog(
                     callback(it)
                 }
             }
+
             -3 -> {
                 TimePickerDialog(
                     this, getTimePickerDialogTheme(),
@@ -1556,6 +1560,7 @@ fun Activity.showPickSecondsDialog(
                     curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat
                 ).show()
             }
+
             else -> {
                 callback(it as Int)
             }

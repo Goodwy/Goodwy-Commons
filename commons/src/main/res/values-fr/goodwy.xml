@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Pour en savoir plus</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Thèmes</string>
     <string name="themes_summary">Thèmes d’application soigneusement sélectionnés, changeur de thème automatique et prise en charge des thèmes système pour Android 12+</string>
     <string name="color_title">Couleurs</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">Carte SIM principale</string>
     <string name="button_primary">Bouton principal</string>
     <string name="button_secondary">Bouton secondaire</string>
+    <string name="skip_archive_confirmation">Toujours ignorer la fenêtre de confirmation d\'archivage</string>
+    <string name="swipe_gestures">Gestes de balayage</string>
+    <string name="swipe_left_action">Action de balayage vers la gauche</string>
+    <string name="swipe_right_action">Action de balayage vers la droite</string>
+    <string name="use_swipe_gestures">Utiliser le swipe to action</string>
+    <string name="use_swipe_gestures_summary">Ceci désactivera le balayage gestuel des onglets</string>
+    <string name="volume_g">Volume</string>
+    <string name="vibrate_g">Vibrer</string>
+    <string name="use_contact_colors">Utiliser des couleurs de contact</string>
 
     <string name="accent_color">Couleur d\'accentuation</string>
     <string name="use_accent_color">Utiliser la couleur d’accentuation</string>
@@ -185,14 +188,8 @@
     <string name="open">Ouverture</string>
     <string name="collection">Collection</string>
     <string name="collection_summary">Créer une collection pour déverrouiller l’application</string>
+    <string name="support_project_to_unlock">Soutenez le projet pour débloquer</string>
     <string name="limited_supply">Offre limitée</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

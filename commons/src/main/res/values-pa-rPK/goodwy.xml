@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name_g">Goodwy Commons</string>
     <string name="recorder_g">ریکارڈر</string>
     <string name="player_g"> پلیئر</string>
     <string name="general"> جنرل</string>
@@ -36,12 +35,6 @@
     <string name="pref_pay_summary">مستقبل کی پیشرفت اور اضافی خصوصیات کو سپورٹ کرنے کے لیے بامعاوضہ ایپ حاصل کریں۔</string>
     <string name="support_project_summary">مستقبل کی ترقی اور اضافی خصوصیات کو غیر مقفل کرنے کے لیے ہماری بامعاوضہ ایپس میں سے ایک حاصل کریں۔</string>
     <string name="learn_more">اورجانیے</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">تھیمز</string>
     <string name="themes_summary">Android 12+ کے لیے احتیاط سے منتخب کردہ ایپلیکیشن تھیمز، خودکار تھیم چینجر اور سسٹم تھیم سپورٹ</string>
     <string name="color_title">رنگ</string>
@@ -137,6 +130,15 @@
     <string name="primary_sim_card">بنیادی سم کارڈ</string>
     <string name="button_primary">بنیادی بٹن</string>
     <string name="button_secondary">ثانوی بٹن</string>
+    <string name="skip_archive_confirmation">ہمیشہ محفوظ شدہ دستاویزات کی تصدیق کے ڈائیلاگ کو چھوڑ دیں۔</string>
+    <string name="swipe_gestures">سوائپ اشاروں</string>
+    <string name="swipe_left_action">بائیں سوائپ ایکشن</string>
+    <string name="swipe_right_action">دائیں سوائپ ایکشن</string>
+    <string name="use_swipe_gestures">کارروائی کے لیے سوائپ کا استعمال کریں</string>
+    <string name="use_swipe_gestures_summary">یہ ٹیبز کے اشاروں سے سوائپنگ کو غیر فعال کر دے گا</string>
+    <string name="volume_g">والیوم</string>
+    <string name="vibrate_g">کمپن</string>
+    <string name="use_contact_colors">رابطے کے رنگ استعمال کریں۔</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -188,14 +190,8 @@
     <string name="open">کھولیں</string>
     <string name="collection">مجموعہ</string>
     <string name="collection_summary">ایپ کو غیر مقفل کرنے کے لیے ایک مجموعہ بنائیں</string>
+    <string name="support_project_to_unlock">انلاک کرنے کے لیے پروجیکٹ کی حمایت کریں۔</string>
     <string name="limited_supply">محدود فراہمی</string>
-    <string name="playbook">پلے بک</string>
-    <string name="right_contacts">دائیں رابطے</string>
-    <string name="right_dialer">دائیں ڈائلر</string>
-    <string name="right_sms_messenger">دائیں پیغامات</string>
-    <string name="right_voice_recorder">رائٹ وائس میمو</string>
-    <string name="right_gallery">دائیں گیلری</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

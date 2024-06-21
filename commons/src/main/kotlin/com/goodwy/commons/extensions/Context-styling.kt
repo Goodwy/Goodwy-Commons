@@ -70,6 +70,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
             is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
             is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
             is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyMaterialSwitch -> it.setColors(textColor, accentColor, backgroundColor)
             is MyEditText -> it.setColors(textColor, accentColor, textCursorColor)
             is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, textCursorColor)
             is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
@@ -101,6 +102,7 @@ fun Context.getTimePickerDialogTheme() = when {
     } else {
         R.style.MyDateTimePickerMaterialTheme
     }
+
     baseConfig.backgroundColor.getContrastColor() == Color.WHITE -> R.style.MyDialogTheme_Dark
     else -> R.style.MyDialogTheme
 }
@@ -176,6 +178,7 @@ fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enabl
             baseConfig.lastIconColor = color
         }
     } catch (e: Exception) {
+        showErrorToast(e)
     }
 }
 

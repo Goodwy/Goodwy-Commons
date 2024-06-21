@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">भविष्य के विकास और अतिरिक्त सुविधाओं का समर्थन करने के लिए सशुल्क ऐप प्राप्त करें</string>
     <string name="support_project_summary">भविष्य के विकास में सहायता करने और अतिरिक्त सुविधाओं को अनलॉक करने के लिए हमारा एक सशुल्क ऐप प्राप्त करें</string>
     <string name="learn_more">और जानो</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">विषयों</string>
     <string name="themes_summary">"एंड्रॉइड 12+ के लिए सावधानीपूर्वक चयनित एप्लिकेशन थीम, स्वचालित थीम चेंजर और सिस्टम थीम समर्थन "</string>
     <string name="color_title">रंग</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">प्राथमिक सिम कार्ड</string>
     <string name="button_primary">प्राथमिक बटन</string>
     <string name="button_secondary">द्वितीयक बटन</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">स्वाइप जेस्चर</string>
+    <string name="swipe_left_action">बाईं क्रिया स्वाइप करें</string>
+    <string name="swipe_right_action">दाईं ओर स्वाइप करें कार्रवाई</string>
+    <string name = "use_swipe_gestures"> कार्रवाई के लिए स्वाइप का उपयोग करें</string>
+    <string name='use_swipe_gestures_summary'>यह टैब की जेस्चर स्वाइपिंग को अक्षम कर देगा</string>
+    <string name='volume_g'>वॉल्यूम</string>
+    <string name='vibrate_g'>कंपन करें</string>
+    <string name="use_contact_colors">संपर्क रंगों का उपयोग करें</string>
 
     <string name="accent_color">एक्सेंट रंग</string>
     <string name="use_accent_color">एक्सेंट रंग का उपयोग करें</string>
@@ -185,14 +188,8 @@
     <string name="open">खुला</string>
     <string name="collection">संग्रह</string>
     <string name="collection_summary">ऐप अनलॉक करने के लिए एक संग्रह बनाएं</string>
+    <string name="support_project_to_unlock">अनलॉक करने के लिए प्रोजेक्ट का समर्थन करें</string>
     <string name="limited_supply">सीमित आपूर्ति</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             अरे,<br><br>

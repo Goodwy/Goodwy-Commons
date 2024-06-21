@@ -18,11 +18,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.dp
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.BooleanPreviewParameterProvider
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 
 @Composable
 fun SettingsListItem(
@@ -50,8 +50,8 @@ fun SettingsListItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(48.dp)
-                .padding(8.dp)
+                .size(SimpleTheme.dimens.icon.medium)
+                .padding(SimpleTheme.dimens.padding.small)
             when {
                 icon != null && isImage && tint != null -> Image(
                     modifier = imageSize,
@@ -106,8 +106,8 @@ fun SettingsListItem(
         },
         leadingContent = {
             val imageSize = Modifier
-                .size(48.dp)
-                .padding(8.dp)
+                .size(SimpleTheme.dimens.icon.medium)
+                .padding(SimpleTheme.dimens.padding.medium)
             when {
                 icon != null && isImage && tint != null -> Image(
                     modifier = imageSize,
@@ -153,7 +153,7 @@ private fun SettingsListItem(@PreviewParameter(BooleanPreviewParameterProvider::
     AppThemeSurface {
         SettingsListItem(
             click = {},
-            text = "Simple Mobile Tools",
+            text = "Goodwy",
             icon = if (isImage) R.drawable.ic_telegram_vector else R.drawable.ic_dollar_vector,
             isImage = isImage
         )

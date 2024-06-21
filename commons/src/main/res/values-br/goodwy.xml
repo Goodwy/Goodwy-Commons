@@ -35,12 +35,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Learn more</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Themes</string>
     <string name="themes_summary">Carefully selected application themes, automatic theme changer and system theme support for Android 12+</string>
     <string name="color_title">Colors</string>
@@ -136,6 +130,15 @@
     <string name="primary_sim_card">Primary SIM card</string>
     <string name="button_primary">Primary button</string>
     <string name="button_secondary">Secondary button</string>
+    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="swipe_gestures">Swipe gestures</string>
+    <string name="swipe_left_action">Swipe left action</string>
+    <string name="swipe_right_action">Swipe right action</string>
+    <string name="use_swipe_gestures">Use swipe to action</string>
+    <string name="use_swipe_gestures_summary">This will disable gesture swiping of tabs</string>
+    <string name="volume_g">Volume</string>
+    <string name="vibrate_g">Vibrate</string>
+    <string name="use_contact_colors">Use contact colors</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -187,14 +190,8 @@
     <string name="open">Open</string>
     <string name="collection">Collection</string>
     <string name="collection_summary">Build a collection to unlock the app</string>
+    <string name="support_project_to_unlock">Support the project to unlock</string>
     <string name="limited_supply">Limited supply</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

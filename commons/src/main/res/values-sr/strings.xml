@@ -112,6 +112,7 @@
     </plurals>
     <plurals name="row_counts">
         <item quantity="one">%d ред</item>
+        <item quantity="few">%d реда</item>
         <item quantity="other">%d 5 редова</item>
     </plurals>
     <!-- Blocked numbers -->
@@ -126,9 +127,9 @@
     <string name="must_make_default_dialer">Морате да подесите ову апликацију као подразумевану апликацију за бирање бројева да бисте користили блокиране бројеве.</string>
     <string name="set_as_default">Подеси као одразумевану</string>
     <string name="block_confirmation">Да ли сте сигурни да желите да блокирате \"%s\"\?</string>
-    <string name="block_not_stored_calls">Блокирај позиве од несачуваних контаката</string>
+    <string name="block_unknown_calls">Блокирајте позиве из несачуваних контаката</string>
     <string name="block_hidden_calls">Блокирајте позиве од скривених бројева</string>
-    <string name="block_not_stored_messages">Блокирај поруке од несачуваних контаката</string>
+    <string name="block_unknown_messages">Блокирајте поруке од несачуваних контаката</string>
     <string name="block_hidden_messages">Блокирајте поруке од скривених бројева</string>
     <string name="add_blocked_number_helper_text">Унесите број или образац (нпр. *12345*, +1*8888) за блокирање свих позива и порука са бројева који одговарају шаблону.</string>
     <string name="must_make_default_caller_id_app">Не могу се блокирати непознати бројеви без дозволе за ID позиваоца.</string>
@@ -875,13 +876,37 @@
     <string name="more_info">Више информација</string>
     <string name="upgrade">Надоградња</string>
     <string name="upgrade_calendar">Морате да преселите локално складиштене догађаје ручно преко извоза у .ics датотеку, а затим да увезете. Можете наћи дугмад за увоз и извоз у главном екрану.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
+    <string name="upgraded_from_free_gallery">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Када будете задовољни са овим и можда преместите своја подешавања и омиљено, можете да деинсталирате стари бесплатни да бисте избегли да га случајно покренете јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
+    <string name="upgraded_from_free">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Када будете задовољни са овим и можда преместите своје податке, можете деинсталирати стари бесплатни да бисте избегли његово случајно покретање јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
+    <string name="upgraded_from_free_calendar">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Ако желите да мигрирате своје локално ускладиштене догађаје, морате то да урадите ручно тако што ћете их извести у .ics фајл у бесплатној верзији апликације и увести овде кроз горњи мени.
+\n
+\nКада будете задовољни својим подешавањем у Про верзији, можете деинсталирати стари бесплатни јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
+    <string name="upgraded_from_free_contacts">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Ако сте имали било какве контакте сачуване под „%s“, морате да их мигрирате ручно тако што ћете извести у .vcf фајл из бесплатне верзије апликације и увести овде кроз горњи мени.
+\n
+\nКада будете задовољни својим подешавањем у Про верзији, можете деинсталирати стари бесплатни јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
+    <string name="upgraded_from_free_notes">Здраво,
+\n
+\nизгледа да сте управо надоградили са бесплатне верзије. Ако желите да мигрирате своје белешке, морате то да урадите ручно тако што ћете их извести у фајл у бесплатној верзији апликације и увести овде кроз горњи мени.
+\n
+\nКада будете задовољни својим подешавањем у Про верзији, можете деинсталирати стари бесплатни јер вам више неће требати, а такође ће спречити да се овај дијалог прикаже.
+\n
+\nХвала!</string>
     <!-- About -->
     <string name="about">О апликацији</string>
     <string name="website">Веб сајт</string>
@@ -919,7 +944,6 @@
     <string name="donate_new">Здраво,&lt;бр&gt;&lt;бр&gt;надам се да уживате у апликацији. Не садржи огласе, а ни ми не прикупљамо ваше податке, подржите његов развој куповином &lt;а хреф=хттпс://плаи.гоогле.цом/сторе/аппс/детаилс\?ид=цом.симплемобилетоолс.тханкиоу&gt;Једноставно хвала Ви&lt;/а&gt;. Такође ћете имати откључане све функције апликације, укључујући прилагођавање боја.&lt;бр&gt;&lt;бр&gt;Хвала!</string>
     <string name="donate_short">Подржите нас тако што ћете купити &lt;а href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, такође ће откључати све функције апликације, укључујући прилагођавање боја.</string>
     <string name="purchase">Купите</string>
-    <string name="get_simple_phone">Набавите једноставан телефон</string>
     <string name="update_thank_you">Молимо вас ажурирајте Simple Thank You на најскорију верзију</string>
     <string name="before_asking_question_read_faq">Пре постављања питања проверите подешавања апликације и прочитајте најчешће постављана питања. Можда су решења већ ту.</string>
     <string name="before_rate_read_faq">Пре него што нас оцените, проверите подешавања апликације и прво прочитајте Често постављана питања. Ако имате било каквих проблема, можда је решење ту.</string>
@@ -953,24 +977,6 @@
             Хвала
         ]]>
     </string>
-    <string name="simple_app_launcher">Једноставан покретач апликација</string>
-    <string name="simple_calculator">Једноставан калкулатор</string>
-    <string name="simple_calendar">Једноставан календар</string>
-    <string name="simple_camera">Једноставна камера</string>
-    <string name="simple_clock">Једноставан сат</string>
-    <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Једноставан бројчаник</string>
-    <string name="simple_draw">Једноставан цртеж</string>
-    <string name="simple_file_manager">Једноставан менаџер фолдера</string>
-    <string name="simple_flashlight">Једноставна лампа</string>
-    <string name="simple_gallery">Једноставна галерија</string>
-    <string name="simple_keyboard">Једноставна тастатура</string>
-    <string name="simple_launcher">Једноставан покретач</string>
-    <string name="simple_music_player">Једноставан музички плејер</string>
-    <string name="simple_notes">Једноставне белешке</string>
-    <string name="simple_sms_messenger">Једноставан СМС Мессенгер</string>
-    <string name="simple_thank_you">Једноставно хвала</string>
-    <string name="simple_voice_recorder">Једноставан диктафон</string>
     <string name="app_launcher_short">Покретач апликација</string>
     <string name="calculator_short">Калкулатор</string>
     <string name="calendar_short">Календар</string>
@@ -1023,52 +1029,6 @@
     <string name="translation">Превод</string>
     <string name="development">Развој</string>
     <string name="other_help">Друга помоћ</string>
-    <string name="contributors_label">Ова листа садржи све који су приметно помогли било којој апликацији у оквиру пакета Simple Mobile Tools, не само овој. Преводе обављају волонтери, јавите нам ако и ви желите да помогнете. Водич за превођење налази се на &lt;а хреф=хттпс://гитхуб.цом/СимплеМобилеТоолс/Генерал-Дисцуссион#хов-цан-и-суггест-ан-едит-то-а-филе&gt;овом веб-сајту&lt;/а&gt;, или само нас контактирајте на &lt;а хреф=маилто:хелло@симплемобилетоолс.цом&gt;хелло@симплемобилетоолс.цом&lt;/а&gt; ако имате питања. Хвала свим сарадницима и осталим присталицама!</string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_bulgarian">Bulgarian</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_english">English</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
-    <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
-    <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Преузмите Про верзију одмах!</string>
     <string name="why_upgrade_basic_version">Основно</string>
@@ -1134,7 +1094,6 @@
     <string name="leak_canary_title">Leak Canary (детектор за цурење меморије)</string>
     <string name="number_picker_title">Number Picker (прилагодљиви изабирач бројева)</string>
     <string name="exoplayer_title">ExoPlayer (видео плејер)</string>
-    <string name="panorama_view_title">VR Panorama View (постављање панорама)</string>
     <string name="sanselan_title">Apache Sanselan (исчитавање мета података слика)</string>
     <string name="filters_title">Android Photo Filters (филтери за слике)</string>
     <string name="gesture_views_title">Gesture Views (зумирање слика)</string>
@@ -1148,22 +1107,7 @@
     <string name="m3u_parser_title">М3У Парсер (руковање датотекама листе песама м3у)</string>
     <string name="android_lame_title">АндроидЛаме (мп3 кодер)</string>
     <string name="zip4j_title">Zip4j (ЗИП компресија и декомпресија)</string>
-    <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
-    <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
-    </plurals>
-    <!-- Google Play listing -->
     <string name="deprecated_app">ЗАСТАРЕЛО: Ова верзија апликације се више не одржава, набавите Про верзију на хттпс://плаи.гоогле.цом/сторе/аппс/детаилс\?ид=цом.симплемобилетоолс.ккк.про</string>
     <string name="pro_app_refund">Не заборавите да ако деинсталирате било коју плаћену апликацију у року од 2 сата, новац ће вам аутоматски бити враћен. Ако желите повраћај новца било када касније, само нас контактирајте на hello@simplemobiletools.com и добићете га. То олакшава испробавање :)</string>
-    <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Група једноставних Андроид апликација отвореног кода са прилагодљивим виџетима, без огласа и непотребних дозвола.</string>
 </resources>

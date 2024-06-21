@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Ulteriori informazioni</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Temi</string>
     <string name="themes_summary">Temi applicativi accuratamente selezionati, cambio automatico del tema e supporto del tema di sistema per Android 12+</string>
     <string name="color_title">Colori</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">Scheda SIM principale</string>
     <string name="button_primary">Pulsante principale</string>
     <string name="button_secondary">Pulsante secondario</string>
+    <string name="skip_archive_confirmation">Non chiedere mai la conferma dell\'archiviazione</string>
+    <string name="swipe_gestures">Gesti di scorrimento rapido</string>
+    <string name="swipe_left_action">Azione Scorri verso sinistra</string>
+    <string name="swipe_right_action">Azione di scorrimento verso destra</string>
+    <string name="use_swipe_gestures">Utilizzare lo swipe to action</string>
+    <string name="use_swipe_gestures_summary">Questo disabilita lo swipe gestuale delle schede</string>.
+    <string name="volume_g">Volume</string>
+    <string name="vibrate_g">Vibrare</string>
+    <string name="use_contact_colors">Usa i colori dei contatti</string>
 
     <string name="accent_color">Colore accento</string>
     <string name="use_accent_color">Usa colore principale</string>
@@ -185,14 +188,8 @@
     <string name="open">Aprire</string>
     <string name="collection">Collezione</string>
     <string name="collection_summary">Creare una raccolta per sbloccare l\'app</string>
+    <string name="support_project_to_unlock">Sostieni il progetto per sbloccare</string>
     <string name="limited_supply">Offerta limitata</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

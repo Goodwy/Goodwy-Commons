@@ -132,9 +132,6 @@ class PurchaseHelper constructor(
                             //activity.baseConfig.isPro = sku != null
                             iapPurchased.add(sku)
                             isIapPurchasedList.postValue(iapPurchased)
-                            if (sku.split("_").toTypedArray()[1].toInt() >= 10) {
-                                return@breaking
-                            }
                         }
                     }
                 }
@@ -214,9 +211,13 @@ class PurchaseHelper constructor(
 
     fun getPriceDonation(product: String): String {
         return if (iapSkuDetails.isNotEmpty()) {
-            val iapSku = iapSkuDetails.firstOrNull { it.productId == product }
-            if (iapSku != null) iapSku.oneTimePurchaseOfferDetails!!.formattedPrice
-            else activity.getString(R.string.no_connection)
+            try {
+                val iapSku = iapSkuDetails.firstOrNull { it.productId == product }
+                if (iapSku != null) iapSku.oneTimePurchaseOfferDetails!!.formattedPrice
+                else activity.getString(R.string.no_connection)
+            } catch (e: Exception) {
+                activity.getString(R.string.no_connection)
+            }
         } else activity.getString(R.string.no_connection)
     }
 
@@ -237,16 +238,20 @@ class PurchaseHelper constructor(
 
     fun getPriceSubscription(product: String, planId: String? = null): String {
         return if (subSkuDetails.isNotEmpty()) {
-            val subSku = subSkuDetails.firstOrNull { it.productId == product }
-            if (subSku != null) {
-                val plan =
-                    if (planId != null) subSku.subscriptionOfferDetails!!.firstOrNull { it.basePlanId == planId }
-                    else subSku.subscriptionOfferDetails!![0]
-                if (plan != null) {
-                    plan.pricingPhases
-                        .pricingPhaseList[0].formattedPrice
+            try {
+                val subSku = subSkuDetails.firstOrNull { it.productId == product }
+                if (subSku != null) {
+                    val plan =
+                        if (planId != null) subSku.subscriptionOfferDetails!!.firstOrNull { it.basePlanId == planId }
+                        else subSku.subscriptionOfferDetails!![0]
+                    if (plan != null) {
+                        plan.pricingPhases
+                            .pricingPhaseList[0].formattedPrice
+                    } else activity.getString(R.string.no_connection)
                 } else activity.getString(R.string.no_connection)
-            } else activity.getString(R.string.no_connection)
+            } catch (e: Exception) {
+                activity.getString(R.string.no_connection)
+            }
         } else activity.getString(R.string.no_connection)
     }
 

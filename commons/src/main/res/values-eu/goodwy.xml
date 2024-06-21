@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Gehiago ikasi</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Gaiak</string>
     <string name="themes_summary">Arretaz hautatutako aplikazio-gaiak, gai-aldaketa automatikoa eta sistema-gaien euskarria Android 12+erako</string>
     <string name="color_title">Koloreak</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">SIM txartela nagusia</string>
     <string name="button_primary">Botoi nagusia</string>
     <string name="button_secondary">Bigarren mailako botoia</string>
+    <string name="skip_archive_confirmation">Saltatu beti artxibatzeko berrespen elkarrizketa-koadroa</string>
+    <string name="swipe_gestures">Irrastatu keinuak</string>
+    <string name="swipe_left_action">Irrastatu ezkerreko ekintza</string>
+    <string name="swipe_right_action">Irrastatu eskuinera ekintza</string>
+    <string name="use_swipe_gestures">Erabili hatza ekintza</string>
+    <string name="use_swipe_gestures_summary">Honek fitxen keinuen irristatzea desgaituko du</string>
+    <string name="volume_g">Bolumena</string>
+    <string name="vibrate_g">Bibratu</string>
+    <string name="use_contact_colors">Erabili kontaktu koloreak</string>
 
     <string name="accent_color">Vurğu rəng</string>
     <string name="use_accent_color">Erabili azentu kolore bat</string>
@@ -185,14 +188,8 @@
     <string name="open">Open</string>
     <string name="collection">Bilduma</string>
     <string name="collection_summary">Sortu bilduma bat aplikazioa desblokeatzeko</string>
+    <string name="support_project_to_unlock">Lagundu proiektua desblokeatzeko</string>
     <string name="limited_supply">Eskaintza mugatua</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

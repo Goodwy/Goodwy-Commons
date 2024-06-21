@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -14,9 +13,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.lists.SimpleLazyListScaffold
 import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
-import com.goodwy.commons.compose.settings.scaffold.SettingsLazyScaffold
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.License
 import kotlinx.collections.immutable.ImmutableList
@@ -28,7 +28,7 @@ internal fun LicenseScreen(
     thirdPartyLicenses: ImmutableList<License>,
     onLicenseClick: (urlId: Int) -> Unit,
 ) {
-    SettingsLazyScaffold(
+    SimpleLazyListScaffold(
         title = stringResource(id = R.string.third_party_licences),
         goBack = goBack
     ) {
@@ -36,7 +36,7 @@ internal fun LicenseScreen(
             Column {
                 LicenseItem(license, onLicenseClick)
                 if (index != thirdPartyLicenses.lastIndex) {
-                    SettingsHorizontalDivider(modifier = Modifier.padding(bottom = 4.dp))
+                    SettingsHorizontalDivider(modifier = Modifier.padding(bottom = SimpleTheme.dimens.padding.small))
                 }
             }
         }
@@ -59,9 +59,9 @@ private fun LicenseItem(
     }, supportingContent = {
         Text(
             text = stringResource(id = license.textId),
-            modifier = Modifier.padding(top = 2.dp),
+            modifier = Modifier.padding(top = SimpleTheme.dimens.padding.extraSmall),
         )
-    }, colors = ListItemDefaults.colors(headlineColor = MaterialTheme.colorScheme.primary, supportingColor = MaterialTheme.colorScheme.onSurface))
+    }, colors = ListItemDefaults.colors(headlineColor = SimpleTheme.colorScheme.primary, supportingColor = SimpleTheme.colorScheme.onSurface))
 }
 
 @Composable
@@ -91,7 +91,6 @@ private fun LicenseScreenPreview() {
                 License(LICENSE_LEAK_CANARY, R.string.leak_canary_title, R.string.leakcanary_text, R.string.leakcanary_url),
                 License(LICENSE_NUMBER_PICKER, R.string.number_picker_title, R.string.number_picker_text, R.string.number_picker_url),
                 License(LICENSE_EXOPLAYER, R.string.exoplayer_title, R.string.exoplayer_text, R.string.exoplayer_url),
-                License(LICENSE_PANORAMA_VIEW, R.string.panorama_view_title, R.string.panorama_view_text, R.string.panorama_view_url),
                 License(LICENSE_SANSELAN, R.string.sanselan_title, R.string.sanselan_text, R.string.sanselan_url),
                 License(LICENSE_FILTERS, R.string.filters_title, R.string.filters_text, R.string.filters_url),
                 License(LICENSE_GESTURE_VIEWS, R.string.gesture_views_title, R.string.gesture_views_text, R.string.gesture_views_url),

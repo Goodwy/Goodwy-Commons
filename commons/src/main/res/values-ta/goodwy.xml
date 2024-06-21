@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">மேலும் அறிக</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">தீம்கள்</string>
     <string name="themes_summary">கவனமாக தேர்ந்தெடுக்கப்பட்ட பயன்பாட்டு தீம்கள், தானியங்கி தீம் சேஞ்சர் மற்றும் ஆண்ட்ராய்டு 12+க்கான சிஸ்டம் தீம் ஆதரவு</string>
     <string name="color_title">வண்ணங்கள்</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">முதன்மை சிம் கார்டு</string>
     <string name="button_primary">முதன்மை பொத்தான்</string>
     <string name="button_secondary">இரண்டாம் நிலை பொத்தான்</string>
+    <string name="skip_archive_confirmation">காப்பக உறுதிப்படுத்தல் உரையாடலை எப்போதும் தவிர்க்கவும்</string>
+    <string name="swipe_gestures">ஸ்வைப் சைகைகள்</string>
+    <string name="swipe_left_action">இடதுபுற செயலை ஸ்வைப் செய்யவும்</string>
+    <string name="swipe_right_action">வலதுபுற செயலை ஸ்வைப் செய்யவும்</string>
+    <string name="use_swipe_gestures">செயலுக்கு ஸ்வைப் பயன்படுத்தவும்</string>
+    <string name="use_swipe_gestures_summary">இது தாவல்களின் சைகை ஸ்வைப் செய்வதை முடக்கும்</string>
+    <string name="volume_g">தொகுதி</string>
+    <string name="vibrate_g">அதிர்வு</string>
+    <string name="use_contact_colors">தொடர்பு வண்ணங்களைப் பயன்படுத்தவும்</string>
 
     <string name="accent_color">உச்சரிப்பு நிறம்</string>
     <string name="use_accent_color">உச்சரிப்பு நிறத்தைப் பயன்படுத்தவும்</string>
@@ -185,14 +188,8 @@
     <string name="open">திற</string>
     <string name="collection">சேகரிப்பு</string>
     <string name="collection_summary">பயன்பாட்டைத் திறக்க ஒரு தொகுப்பை உருவாக்கவும்</string>
+    <string name="support_project_to_unlock">திறக்க திட்டத்தை ஆதரிக்கவும்</string>
     <string name="limited_supply">வரையறுக்கப்பட்ட வழங்கல்</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

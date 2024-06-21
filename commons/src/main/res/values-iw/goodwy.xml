@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">קבל את האפליקציה בתשלום כדי לתמוך בפיתוחים עתידיים ובתכונות נוספות</string>
     <string name="support_project_summary">קבל את אחת מהאפליקציות בתשלום שלנו כדי לתמוך בפיתוח עתידי ולפתוח תכונות נוספות</string>
     <string name="learn_more">למד עוד</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">ערכות נושא</string>
     <string name="themes_summary">ערכות נושא של יישומים שנבחרו בקפידה, מחליף ערכות נושא אוטומטי ותמיכה בערכת נושא של המערכת עבור Android 12+</string>
     <string name="color_title">צבעים</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">כרטיס SIM ראשי</string>
     <string name="button_primary">לחצן ראשי</string>
     <string name="button_secondary">לחצן משני</string>
+    <string name="skip_archive_confirmation">דלג תמיד על אישור אחסון בארכיון</string>
+    <string name="swipe_gestures">מחוות החלקה מהירה</string>
+    <string name="swipe_left_action">החלקה מהירה ימינה</string>
+    <string name="swipe_right_action">החליקו ימינה בפעולה</string>
+    <string name="use_swipe_gestures">השתמש בהחלקה לפעולה</string>
+    <string name="use_swipe_gestures_summary">פעולה זו תשבית את החלקת תנועות של כרטיסיות</string>
+    <string name="volume_g">נפח</string>
+    <string name="vibrate_g">רטט</string>
+    <string name="use_contact_colors">שימוש בצבעי אנשי קשר</string>
 
     <string name="accent_color">צבע הדגשה</string>
     <string name="use_accent_color">שימוש בצבע הדגשה</string>
@@ -185,14 +188,8 @@
     <string name="open">פתח</string>
     <string name="collection">אוסף</string>
     <string name="collection_summary">בניית אוסף כדי לבטל את נעילת האפליקציה</string>
+    <string name="support_project_to_unlock">תמכו בפרויקט כדי לבטל את הנעילה</string>
     <string name="limited_supply">היצע מוגבל</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             היי,<br><br>

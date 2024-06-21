@@ -161,7 +161,7 @@ open class MyRecyclerView : RecyclerView {
                         }
                     }
 
-                    if (itemPosition != RecyclerView.NO_POSITION && lastDraggedIndex != itemPosition) {
+                    if (itemPosition != NO_POSITION && lastDraggedIndex != itemPosition) {
                         lastDraggedIndex = itemPosition
                         if (minReached == -1) {
                             minReached = lastDraggedIndex
@@ -222,13 +222,13 @@ open class MyRecyclerView : RecyclerView {
     }
 
     private fun getItemPosition(e: MotionEvent): Int {
-        val v = findChildViewUnder(e.x, e.y) ?: return RecyclerView.NO_POSITION
+        val v = findChildViewUnder(e.x, e.y) ?: return NO_POSITION
 
-        if (v.tag == null || v.tag !is RecyclerView.ViewHolder) {
+        if (v.tag == null || v.tag !is ViewHolder) {
             throw IllegalStateException("Make sure your adapter makes a call to super.onBindViewHolder(), and doesn't override itemView tags.")
         }
 
-        val holder = v.tag as RecyclerView.ViewHolder
+        val holder = v.tag as ViewHolder
         return holder.adapterPosition
     }
 

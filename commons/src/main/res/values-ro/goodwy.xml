@@ -18,11 +18,11 @@
     <string name="recents">Recente</string>
     <string name="message">Mesaj</string>
     <string name="settings_icon">Pictograma Setări</string>
-    <string name="total_g">Total: %s</string>.
+    <string name="total_g">Total: %s</string>
     <string name="last_g">Ultimul: %s</string>
     <string name="next_g">Urmatorul: %s</string>
-    <string name="time">Ora</string>.
-    <string name="interval">Interval</string>.
+    <string name="time">Ora</string>
+    <string name="interval">Interval</string>
     <string name="symbols_first">Simbolurile mai întâi (de ex. !@#$)</string>
     <string name="use_custom_notifications">Utilizează notificări personalizate</string>
     <string name="hide_top_bar_when_scrolling">Ascundeți bara de sus a aplicației atunci când derulați</string>
@@ -35,12 +35,6 @@
     <string name="pref_pay_summary">Achiziționați aplicația pentru a sprijini evoluțiile viitoare și pentru a obține mai multe funcții</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Află mai multe</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Teme</string>
     <string name="themes_summary">Teme de aplicații atent selectate, schimbător automat de teme și suport pentru teme de sistem pentru Android 12+</string>
     <string name="color_title">Culori</string>
@@ -136,6 +130,15 @@
     <string name="primary_sim_card">Cartela SIM principală</string>
     <string name="button_primary">Butonul principal</string>
     <string name="button_secondary">Buton secundar</string>
+    <string name="skip_archive_confirmation">Sariți întotdeauna dialogul de confirmare a arhivării</string>
+    <string name="swipe_gestures">Gesturi de glisare</string>
+    <string name="swipe_left_action">Acțiunea Glisare spre stânga</string>
+    <string name="swipe_right_action">Glisați acțiunea spre dreapta</string>
+    <string name="use_swipe_gestures">Utilizează glisarea pentru acțiune</string>
+    <string name="use_swipe_gestures_summary">Aceasta va dezactiva glisarea prin gesturi a filelor</string>
+    <string name="volume_g">Volumea</string>
+    <string name="vibrate_g">Vibrează</string>
+    <string name="use_contact_colors">Utilizarea culorilor de contact</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -176,7 +179,7 @@
     <string name="add_group">Adaugă un grup</string>
     <string name="add_related_person">Adaugă o persoană legată</string>
 
-    <string name="video_call">Apel video</string>.
+    <string name="video_call">Apel video</string>
     <string name="screen_slide_animation">Animație slide pe ecran</string>
     <string name="screen_slide_animation_zoomout">Zoom-out</string>
     <string name="screen_slide_animation_depth">Adâncime</string>
@@ -187,14 +190,8 @@
     <string name="open">Deschideți</string>
     <string name="collection">Colecție</string>
     <string name="collection_summary">Construiți o colecție pentru a debloca aplicația</string>
+    <string name="support_project_to_unlock">Sprijiniți proiectul de deblocare</string>
     <string name="limited_supply">Ofertă limitată</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

@@ -19,18 +19,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.DialogProperties
 import com.goodwy.commons.R
-import com.goodwy.commons.compose.alert_dialog.AlertDialogState
-import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.alert_dialog.*
+import com.goodwy.commons.compose.components.LinkifyTextComponent
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.extensions.getActivity
 import com.goodwy.commons.compose.extensions.rememberMutableInteractionSource
-import com.goodwy.commons.compose.screens.LinkifyText
-import com.goodwy.commons.compose.screens.stringFromHTML
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.databinding.DialogDonateBinding
 import com.goodwy.commons.extensions.*
 
@@ -95,7 +93,7 @@ fun DonateAlertDialog(
                     Icons.Filled.Favorite,
                     contentDescription = null,
                     modifier = Modifier
-                        .size(56.dp)
+                        .size(SimpleTheme.dimens.icon.large)
                         .clickable(
                             indication = null,
                             interactionSource = rememberMutableInteractionSource(),
@@ -110,13 +108,13 @@ fun DonateAlertDialog(
         },
         text = {
             val source = stringResource(id = R.string.donate_short)
-            LinkifyText(
+            LinkifyTextComponent(
                 fontSize = 16.sp,
                 removeUnderlines = false,
                 textAlignment = TextView.TEXT_ALIGNMENT_CENTER,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                stringFromHTML(source)
+                source.fromHtml()
             }
         }
     )

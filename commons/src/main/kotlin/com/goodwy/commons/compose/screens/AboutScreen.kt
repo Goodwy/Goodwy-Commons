@@ -26,14 +26,15 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.lists.SimpleColumnScaffold
 import com.goodwy.commons.compose.settings.SettingsGroup
 import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.settings.SettingsListItem
 import com.goodwy.commons.compose.settings.SettingsTitleTextComponent
-import com.goodwy.commons.compose.settings.scaffold.SettingsScaffold
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 
-private val startingTitlePadding = Modifier.padding(start = 58.dp)
+private val startingTitlePadding = Modifier.padding(start = 56.dp)
 
 @Composable
 internal fun AboutScreen(
@@ -45,7 +46,7 @@ internal fun AboutScreen(
     isTopAppBarColorIcon: Boolean,
     isTopAppBarColorTitle: Boolean,
 ) {
-    SettingsScaffold(
+    SimpleColumnScaffold(
         title = stringResource(id = R.string.about),
         goBack = goBack,
         isTopAppBarColorIcon = isTopAppBarColorIcon,
@@ -148,7 +149,7 @@ internal fun OtherSection(
 internal fun AboutSection(
     setupFAQ: Boolean,
     onFAQClick: () -> Unit,
-    onEmailClick: () -> Unit
+    onEmailClick: () -> Unit,
 ) {
     SettingsGroup(title = {
         SettingsTitleTextComponent(text = stringResource(id = R.string.support), modifier = startingTitlePadding)
@@ -171,7 +172,6 @@ internal fun AboutSection(
 
 @Composable
 internal fun SocialSection(
-    onFacebookClick: () -> Unit,
     onGithubClick: () -> Unit,
     onRedditClick: () -> Unit,
     onTelegramClick: () -> Unit
@@ -180,15 +180,10 @@ internal fun SocialSection(
         SettingsTitleTextComponent(text = stringResource(id = R.string.social), modifier = startingTitlePadding)
     }) {
         SocialText(
-            click = onFacebookClick,
-            text = stringResource(id = R.string.facebook),
-            icon = R.drawable.ic_facebook_vector,
-        )
-        SocialText(
             click = onGithubClick,
             text = stringResource(id = R.string.github),
             icon = R.drawable.ic_github_vector,
-            tint = MaterialTheme.colorScheme.onSurface
+            tint = SimpleTheme.colorScheme.onSurface
         )
         SocialText(
             click = onRedditClick,
@@ -209,7 +204,7 @@ internal fun SocialText(
     text: String,
     icon: Int,
     tint: Color? = null,
-    click: () -> Unit
+    click: () -> Unit,
 ) {
     SettingsListItem(
         click = click,
@@ -225,7 +220,7 @@ internal fun SocialText(
 @Composable
 internal fun TwoLinerTextItem(text: String, icon: Int, click: () -> Unit) {
     SettingsListItem(
-        tint = MaterialTheme.colorScheme.onSurface,
+        tint = SimpleTheme.colorScheme.onSurface,
         click = click,
         text = text,
         icon = icon,
@@ -266,7 +261,6 @@ private fun AboutScreenPreview() {
             },
 //            socialSection = {
 ////                SocialSection(
-////                    onFacebookClick = {},
 ////                    onGithubClick = {},
 ////                    onRedditClick = {},
 ////                    onTelegramClick = {}

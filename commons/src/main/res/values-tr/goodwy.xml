@@ -18,12 +18,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Daha fazla bilgi edinin</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Temalar</string>
     <string name="themes_summary">"Özenle seçilmiş uygulama temaları, otomatik tema değiştirici ve Android 12+ için sistem teması desteği "</string>
     <string name="color_title">Renk</string>
@@ -120,6 +114,15 @@
     <string name="primary_sim_card">Birincil SIM kart</string>
     <string name="button_primary">Birincil düğme</string>
     <string name="button_secondary">İkincil düğme</string>
+    <string name="skip_archive_confirmation">Arşivleme onay penceresini her zaman atlayın</string>
+    <string name="swipe_gestures">Kaydırma hareketleri</string>
+    <string name="swipe_left_action">Sola kaydırma eylemi</string>
+    <string name="swipe_right_action">Sağa kaydırma eylemi</string>
+    <string name="use_swipe_gestures">Eylem için kaydırmayı kullan</string>
+    <string name="use_swipe_gestures_summary">Bu, sekmelerin hareketle kaydırılmasını devre dışı bırakır</string>
+    <string name="volume_g">Hacim</string>
+    <string name="vibrate_g">Titreşim</string>
+    <string name="use_contact_colors">Temas renklerini kullanma</string>
 
     <string name="accent_color">Vurgu rengi</string>
     <string name="use_accent_color">Vurgu Rengi Kullan</string>
@@ -185,14 +188,8 @@
     <string name="open">Açık</string>
     <string name="collection">Koleksiyon</string>
     <string name="collection_summary">Uygulamanın kilidini açmak için bir koleksiyon oluşturun</string>
+    <string name="support_project_to_unlock">Kilidi açmak için projeyi destekleyin</string>
     <string name="limited_supply">Sınırlı tedarik</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

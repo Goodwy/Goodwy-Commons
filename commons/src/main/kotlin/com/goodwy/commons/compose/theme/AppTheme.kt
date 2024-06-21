@@ -8,13 +8,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
+import com.goodwy.commons.compose.extensions.FakeVersionCheck
 import com.goodwy.commons.compose.extensions.TransparentSystemBars
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
 
 @Composable
-fun AppThemeSurface(
-    modifier: Modifier = Modifier,
+fun AppTheme(
     content: @Composable () -> Unit,
 ) {
     val view = LocalView.current
@@ -36,8 +36,26 @@ fun AppThemeSurface(
     }
     TransparentSystemBars()
     Theme(theme = currentTheme) {
+        content()
+        if (!view.isInEditMode) {
+            OnContentDisplayed()
+        }
+    }
+}
+
+@Composable
+fun AppThemeSurface(
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit,
+) {
+    AppTheme {
         Surface(modifier = modifier.fillMaxSize()) {
             content()
         }
     }
+}
+
+@Composable
+private fun OnContentDisplayed() {
+    FakeVersionCheck()
 }

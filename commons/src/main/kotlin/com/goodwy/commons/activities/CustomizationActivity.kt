@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
 import android.os.Bundle
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.updateLayoutParams
@@ -17,6 +18,7 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.MyTheme
 import com.goodwy.commons.models.RadioItem
 import com.goodwy.commons.models.SharedTheme
+import com.google.android.material.snackbar.Snackbar
 import com.mikhaellopez.rxanimation.RxAnimation
 import com.mikhaellopez.rxanimation.shake
 
@@ -211,60 +213,44 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(
                 THEME_LIGHT,
                 MyTheme(
-                    getString(R.string.light_theme),
-                    R.color.theme_light_text_color,
-                    R.color.theme_light_background_color,
-                    R.color.color_primary,
-                    R.color.color_primary
+                    label = getString(R.string.light_theme),
+                    textColorId = R.color.theme_light_text_color,
+                    backgroundColorId = R.color.theme_light_background_color,
+                    primaryColorId = R.color.color_primary,
+                    appIconColorId = R.color.color_primary
                 )
             )
             put(
                 THEME_GRAY,
                 MyTheme(
-                    getString(R.string.gray_theme),
-                    R.color.theme_gray_text_color,
-                    R.color.theme_gray_background_color,
-                    R.color.color_primary,
-                    R.color.color_primary
+                    label = getString(R.string.gray_theme),
+                    textColorId = R.color.theme_gray_text_color,
+                    backgroundColorId = R.color.theme_gray_background_color,
+                    primaryColorId = R.color.color_primary,
+                    appIconColorId = R.color.color_primary
                 )
             )
             put(
                 THEME_DARK,
                 MyTheme(
-                    getString(R.string.dark_theme),
-                    R.color.theme_dark_text_color,
-                    R.color.theme_dark_background_color,
-                    R.color.color_primary,
-                    R.color.color_primary
+                    label = getString(R.string.dark_theme),
+                    textColorId = R.color.theme_dark_text_color,
+                    backgroundColorId = R.color.theme_dark_background_color,
+                    primaryColorId = R.color.color_primary,
+                    appIconColorId = R.color.color_primary
                 )
             )
             put(
                 THEME_BLACK,
                 MyTheme(
-                    getString(R.string.black),
-                    R.color.theme_black_text_color,
-                    R.color.theme_black_background_color,
-                    R.color.color_primary,
-                    R.color.color_primary
+                    label = getString(R.string.black),
+                    textColorId = R.color.theme_black_text_color,
+                    backgroundColorId = R.color.theme_black_background_color,
+                    primaryColorId = R.color.color_primary,
+                    appIconColorId = R.color.color_primary
                 )
             )
-            // TODO HIDE
-            /*put(
-                THEME_DARK_RED,
-                MyTheme(
-                    getString(R.string.dark_red),
-                    R.color.theme_dark_text_color,
-                    R.color.theme_dark_background_color,
-                    R.color.theme_dark_red_primary_color,
-                    R.color.md_red_700
-                )
-            )
-            put(THEME_WHITE, MyTheme(R.string.white, R.color.dark_grey, android.R.color.white, android.R.color.white, R.color.color_primary))
-            put(
-                THEME_BLACK_WHITE,
-                MyTheme(getString(R.string.black_white), android.R.color.white, android.R.color.black, android.R.color.black, R.color.md_grey_black)
-            )
-            put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0, 0))*/
+//            put(THEME_CUSTOM, MyTheme(getString(R.string.custom), 0, 0, 0, 0))
 
             if (storedSharedTheme != null) {
                 put(THEME_SHARED, MyTheme(getString(R.string.shared), 0, 0, 0, 0))
@@ -282,7 +268,14 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         binding.customizationThemeHolder.setOnClickListener {
-            if (isProVersion()) themePickerClicked() else shakePurchase()
+            if (isProVersion()) themePickerClicked() else {
+                shakePurchase()
+                RxAnimation.from(binding.themeHolder)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
         }
 
 //        if (binding.customizationTheme.value == getMaterialYouString()) {
@@ -579,11 +572,61 @@ class CustomizationActivity : BaseSimpleActivity() {
         //binding.applyToAll.setTextColor(primaryColor.getContrastColor())
         updateTextCursor(baseConfig.textCursorColor)
 
-        binding.customizationTextColorHolder.setOnClickListener { if (isProVersion()) pickTextColor() else shakePurchase() }
-        binding.customizationTextCursorColorHolder.setOnClickListener { if (isProVersion()) pickTextCursorColor() else shakePurchase() }
-        binding.customizationBackgroundColorHolder.setOnClickListener { if (isProVersion()) pickBackgroundColor() else shakePurchase() }
-        binding.customizationPrimaryColorHolder.setOnClickListener { if (isProVersion()) pickPrimaryColor() else shakePurchase() }
-        binding.customizationAccentColorHolder.setOnClickListener { if (isProVersion()) pickAccentColor() else shakePurchase() }
+        binding.customizationTextColorHolder.setOnClickListener {
+            if (isProVersion()) pickTextColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
+        binding.customizationTextCursorColorHolder.setOnClickListener {
+            if (isProVersion()) pickTextCursorColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
+        binding.customizationBackgroundColorHolder.setOnClickListener {
+            if (isProVersion()) pickBackgroundColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
+        binding.customizationPrimaryColorHolder.setOnClickListener {
+            if (isProVersion()) pickPrimaryColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
+        binding.customizationAccentColorHolder.setOnClickListener {
+            if (isProVersion()) pickAccentColor()
+            else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
+            }
+        }
 
         handleAccentColorLayout()
         //binding.applyToAllHolder.setOnClickListener { applyToAll() }
@@ -923,6 +966,24 @@ class CustomizationActivity : BaseSimpleActivity() {
                 updateAutoThemeFields()
             }
         }
+    }
+
+    private fun showSnackbar(view: View) {
+        view.performHapticFeedback()
+
+        val snackbar = Snackbar.make(view, R.string.support_project_to_unlock, Snackbar.LENGTH_SHORT)
+            .setAction(R.string.support) {
+                launchPurchase()
+            }
+
+        val bgDrawable = ResourcesCompat.getDrawable(view.resources, R.drawable.button_background_16dp, null)
+        snackbar.view.background = bgDrawable
+        val properBackgroundColor = getProperBackgroundColor()
+        val backgroundColor = if (properBackgroundColor == Color.BLACK) getBottomNavigationBackgroundColor().lightenColor(6) else getBottomNavigationBackgroundColor().darkenColor(6)
+        snackbar.setBackgroundTint(backgroundColor)
+        snackbar.setTextColor(getProperTextColor())
+        snackbar.setActionTextColor(getProperPrimaryColor())
+        snackbar.show()
     }
 }
 

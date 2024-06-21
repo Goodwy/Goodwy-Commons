@@ -30,8 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
-import com.goodwy.commons.compose.alert_dialog.AlertDialogState
-import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.alert_dialog.*
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.databinding.DialogCallConfirmationBinding
@@ -83,16 +82,15 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, private val calle
 
 @Composable
 fun CallConfirmationAlertDialog(
-    modifier: Modifier = Modifier,
     alertDialogState: AlertDialogState,
     callee: String,
+    modifier: Modifier = Modifier,
     color: Int,
     callback: () -> Unit
 ) {
     androidx.compose.material3.AlertDialog(
         containerColor = dialogContainerColor,
-        modifier = modifier
-            .dialogBorder,
+        modifier = modifier,
         onDismissRequest = {
             alertDialogState.hide()
             callback()
@@ -179,6 +177,8 @@ private fun CallConfirmationAlertDialogPreview() {
     AppThemeSurface {
         CallConfirmationAlertDialog(
             alertDialogState = rememberAlertDialogState(),
-            callee = "Simple Mobile Tools", color = 0xFF15B76C.toInt(), callback = {})
+            callee = "Goodwy",
+            color = 0xFF15B76C.toInt()
+        ) {}
     }
 }

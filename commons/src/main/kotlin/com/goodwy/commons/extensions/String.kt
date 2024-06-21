@@ -11,9 +11,7 @@ import android.os.Build
 import android.os.StatFs
 import android.provider.MediaStore
 import android.telephony.PhoneNumberUtils
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.TextUtils
+import android.text.*
 import android.text.style.ForegroundColorSpan
 import android.widget.TextView
 import com.bumptech.glide.signature.ObjectKey
@@ -26,8 +24,9 @@ import java.text.DateFormat
 import java.text.Normalizer
 import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
 import java.util.regex.Pattern
+
 
 fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
 
@@ -76,11 +75,12 @@ fun String.getFirstParentPath(context: Context, level: Int): String {
 }
 
 fun String.isAValidFilename(): Boolean {
-    val ILLEGAL_CHARACTERS = charArrayOf('/', '\n', '\r', '\t', '\u0000', '`', '?', '*', '\\', '<', '>', '|', '\"', ':')
-    ILLEGAL_CHARACTERS.forEach {
-        if (contains(it))
-            return false
-    }
+    charArrayOf('/', '\n', '\r', '\t', '\u0000', '`', '?', '*', '\\', '<', '>', '|', '\"', ':')
+        .forEach {
+            if (contains(it))
+                return false
+        }
+
     return true
 }
 
@@ -116,7 +116,7 @@ fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio") ||
 
 fun String.canModifyEXIF() = extensionsSupportingEXIF.any { endsWith(it, true) }
 
-fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) {
+fun String.getCompressionFormat() = when (getFilenameExtension().lowercase(Locale.getDefault())) {
     "png" -> Bitmap.CompressFormat.PNG
     "webp" -> Bitmap.CompressFormat.WEBP
     else -> Bitmap.CompressFormat.JPEG
@@ -279,9 +279,18 @@ fun String.trimToComparableNumber(): String {
 }
 
 // get the contact names first letter at showing the placeholder without image
-fun String.getNameLetter() = normalizeString().toCharArray().getOrNull(0)?.toString()?.toUpperCase(Locale.getDefault()) ?: "A"
+fun String.getNameLetter() = normalizeString().toCharArray().getOrNull(0)?.toString()?.uppercase(Locale.getDefault()) ?: "A"
 
 fun String.normalizePhoneNumber() = PhoneNumberUtils.normalizeNumber(this)
+
+fun String.formatPhoneNumber(minimumLength: Int = 4): String {
+    val country = Locale.getDefault().country
+    return if (this.length >= minimumLength) {
+        PhoneNumberUtils.formatNumber(this, country).toString()
+    } else {
+        this
+    }
+}
 
 fun String.highlightTextFromNumbers(textToHighlight: String, primaryColor: Int): SpannableString {
     val spannableString = SpannableString(this)
@@ -944,7 +953,14 @@ fun String.getMimeType(): String {
         put("zip", "application/zip")
     }
 
-    return typesMap[getFilenameExtension().toLowerCase()] ?: ""
+    return typesMap[getFilenameExtension().lowercase(Locale.getDefault())] ?: ""
 }
 
 fun String.isBlockedNumberPattern() = contains("*")
+
+fun String?.fromHtml(): Spanned =
+    when {
+        this == null -> SpannableString("")
+        Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> Html.fromHtml(this, Html.FROM_HTML_MODE_LEGACY)
+        else -> Html.fromHtml(this)
+    }

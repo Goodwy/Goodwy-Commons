@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name_g">Goodwy Commons</string>
     <string name="recorder_g">Recorder</string>
     <string name="player_g">Player</string>
     <string name="general">General</string>
@@ -36,12 +35,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">了解更多信息</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">主题</string>
     <string name="themes_summary">精心挑选的应用程序主题，自动主题更换器和Android 12+的系统主题支持</string>
     <string name="color_title">颜色</string>
@@ -137,6 +130,15 @@
     <string name="primary_sim_card">主SIM卡</string>
     <string name="button_primary">主按鈕</string>
     <string name="button_secondary">輔助按鈕</string>
+    <string name="skip_archive_confirmation">忽略存档确认对话框</string>
+    <string name="swipe_gestures">滑动手势</string>
+    <string name="swipe_left_action">向左滑动操作</string>
+    <string name="swipe_right_action">向右滑动操作</string>
+    <string name="use_swipe_gestures">使用滑動操作</string>
+    <string name="use_swipe_gestures_summary">這將停用選項卡的手勢滑動</string>
+    <string name="volume_g">音量</string>
+    <string name="vibrate_g">振動</string>
+    <string name="use_contact_colors">使用触点颜色</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -188,14 +190,8 @@
     <string name="open">打開</string>
     <string name="collection">收藏</string>
     <string name="collection_summary">構建集合以解鎖應用</string>
+    <string name="support_project_to_unlock">支持项目解锁</string>
     <string name="limited_supply">供應有限</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

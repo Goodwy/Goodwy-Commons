@@ -9,20 +9,27 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.calculateEndPadding
 import androidx.compose.foundation.layout.calculateStartPadding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LifecycleEventEffect
+import androidx.lifecycle.compose.LifecycleResumeEffect
+import androidx.lifecycle.compose.LifecycleStartEffect
+import com.goodwy.commons.R
 import com.goodwy.commons.compose.system_ui_controller.rememberSystemUiController
+import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.compose.theme.isLitWell
 import com.goodwy.commons.extensions.darkenColor
+import com.goodwy.commons.extensions.launchViewIntent
 
 fun Context.getActivity(): Activity {
     return when (this) {
@@ -41,8 +48,8 @@ fun rememberMutableInteractionSource() = remember { MutableInteractionSource() }
 fun AdjustNavigationBarColors() {
     val systemUiController = rememberSystemUiController()
     val isSystemInDarkTheme = isSystemInDarkTheme()
-    val isSurfaceLitWell = MaterialTheme.colorScheme.surface.isLitWell()
-    val navigationBarColor = Color(MaterialTheme.colorScheme.surface.toArgb().darkenColor()).copy(alpha = 0.5f)
+    val isSurfaceLitWell = SimpleTheme.colorScheme.surface.isLitWell()
+    val navigationBarColor = Color(SimpleTheme.colorScheme.surface.toArgb().darkenColor()).copy(alpha = 0.5f)
     DisposableEffect(systemUiController, isSystemInDarkTheme, navigationBarColor) {
         systemUiController.setNavigationBarColor(color = navigationBarColor, darkIcons = !isSystemInDarkTheme)
         systemUiController.navigationBarDarkContentEnabled = isSurfaceLitWell
@@ -59,6 +66,33 @@ fun <T : Any> onEventValue(event: Lifecycle.Event = Lifecycle.Event.ON_START, va
     }
     return rememberedValue
 }
+
+@Composable
+fun <T : Any> onStartEventValue(vararg keys: Any?, onStopOrDispose: (LifecycleOwner.() -> Unit)? = null, value: () -> T): T {
+    val rememberLatestUpdateState by rememberUpdatedState(newValue = value)
+    var rememberedValue by remember { mutableStateOf(value()) }
+    LifecycleStartEffect(keys = keys, effects = {
+        rememberedValue = rememberLatestUpdateState()
+        onStopOrDispose {
+            onStopOrDispose?.invoke(this)
+        }
+    })
+    return rememberedValue
+}
+
+@Composable
+fun <T : Any> onResumeEventValue(vararg keys: Any?, onPauseOrDispose: (LifecycleOwner.() -> Unit)? = null, value: () -> T): T {
+    val rememberLatestUpdateState by rememberUpdatedState(newValue = value)
+    var rememberedValue by remember { mutableStateOf(value()) }
+    LifecycleResumeEffect(keys = keys, effects = {
+        rememberedValue = rememberLatestUpdateState()
+        onPauseOrDispose {
+            onPauseOrDispose?.invoke(this)
+        }
+    })
+    return rememberedValue
+}
+
 
 @Composable
 operator fun PaddingValues.plus(otherPaddingValues: PaddingValues): PaddingValues {
@@ -134,5 +168,14 @@ internal fun TransparentSystemBars(darkIcons: Boolean = !isSystemInDarkTheme()) 
             darkIcons = darkIcons,
             isNavigationBarContrastEnforced = true
         )
+    }
+}
+
+@Composable
+fun composeDonateIntent(): () -> Unit {
+    val localContext = LocalContext.current
+    val localView = LocalView.current
+    return {
+        if (localView.isInEditMode) Unit else localContext.getActivity().launchViewIntent(R.string.thank_you_url)
     }
 }

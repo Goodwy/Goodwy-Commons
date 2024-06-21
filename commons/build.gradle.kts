@@ -7,7 +7,12 @@ plugins {
     `maven-publish`
 }
 
+group = "com.goodwy"
+version = "5.1.0"
+
 android {
+    namespace = "com.goodwy.commons"
+
     compileSdk = libs.versions.app.build.compileSDKVersion.get().toInt()
 
     defaultConfig {
@@ -51,6 +56,7 @@ android {
             "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
             "-opt-in=androidx.compose.material.ExperimentalMaterialApi",
             "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
+            "-opt-in=com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi",
             "-Xcontext-receivers"
         )
     }
@@ -58,14 +64,10 @@ android {
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
     }
-    namespace = libs.versions.app.version.groupId.get()
 }
 
 publishing.publications {
     create<MavenPublication>("release") {
-        groupId = libs.versions.app.version.groupId.get()
-        artifactId = name
-        version = libs.versions.app.version.versionName.get()
         afterEvaluate {
             from(components["release"])
         }
@@ -98,6 +100,7 @@ dependencies {
     api(libs.material)
     api(libs.gson)
 
+    implementation(libs.glide.compose)
     api(libs.glide)
     ksp(libs.glide.compiler)
 

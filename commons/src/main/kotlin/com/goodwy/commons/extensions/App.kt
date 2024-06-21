@@ -2,7 +2,7 @@ package com.goodwy.commons.extensions
 
 import android.app.Application
 import com.goodwy.commons.helpers.isNougatPlus
-import java.util.*
+import java.util.Locale
 
 fun Application.checkUseEnglish() {
     if (baseConfig.useEnglish && !isNougatPlus()) {

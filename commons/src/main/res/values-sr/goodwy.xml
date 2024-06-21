@@ -19,12 +19,6 @@
     <string name="pref_pay_summary">Набавите апликацију која се плаћа да бисте подржали будући развој и додатне функције</string>
     <string name="support_project_summary">Набавите једну од наших апликација које се плаћају да бисте подржали будући развој и откључали додатне функције</string>
     <string name="learn_more">Сазнајте више</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Плејер аудио књига</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Снимач гласа</string>
-    <string name="files">Датотеке</string>
-    <string name="files_summary">Управљач датотекама</string>
     <string name="themes">Теме</string>
     <string name="themes_summary">Пажљиво одабране теме апликације, аутоматски мењач тема и подршка за системску тему за Android 12+</string>
     <string name="color_title">Боје</string>
@@ -121,6 +115,15 @@
     <string name="primary_sim_card">Примарна СИМ картица</string>
     <string name="button_primary">Примарно дугме</string>
     <string name="button_secondary">Секундарни тастер</string>
+    <string name="skip_archive_confirmation">Увек прескочи дијалог за потврду архивирања</string>
+    <string name="swipe_gestures">Покрети превлачења</string>
+    <string name="swipe_left_action">Радња превлачења налево</string>
+    <string name="swipe_right_action">Радња превлачења надесно</string>
+    <string name="use_swipe_gestures">Користите превлачење до радње</string>
+    <string name="use_swipe_gestures_summary">Ово ће онемогућити превлачење картица покретима</string>
+    <string name="volume_g">Јачина звука</string>
+    <string name="vibrate_g">Вибрација</string>
+    <string name="use_contact_colors">Користите контактне боје</string>
 
     <string name="accent_color">Наглашена боја</string>
     <string name="use_accent_color">Користите акцентну боју</string>
@@ -185,14 +188,8 @@
     <string name="open">Отвори</string>
     <string name="collection">Колекција</string>
     <string name="collection_summary">Направите колекцију да бисте откључали апликацију</string>
+    <string name="support_project_to_unlock">Подржите пројекат за откључавање</string>
     <string name="limited_supply">Ограничено снабдевање</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Хеј,<br><br>

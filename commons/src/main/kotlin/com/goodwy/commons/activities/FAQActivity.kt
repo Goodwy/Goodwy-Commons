@@ -7,13 +7,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.goodwy.commons.compose.screens.FAQScreen
-import com.goodwy.commons.compose.screens.stringFromHTML
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.copyToClipboard
@@ -49,7 +47,7 @@ class FAQActivity : ComponentActivity() {
         changeAutoTheme()
     }
 
-    fun changeAutoTheme() {
+    private fun changeAutoTheme() {
         baseConfig.apply {
             if (isUsingAutoTheme) {
                 val isUsingSystemDarkTheme = isUsingSystemDarkTheme()

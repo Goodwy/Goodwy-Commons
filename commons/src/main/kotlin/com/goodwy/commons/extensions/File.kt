@@ -4,7 +4,6 @@ import android.content.Context
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.FileDirItem
 import java.io.File
-import java.util.*
 
 fun File.isMediaFile() = absolutePath.isMediaFile()
 fun File.isGif() = absolutePath.endsWith(".gif", true)

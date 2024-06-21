@@ -35,12 +35,6 @@
     <string name="pref_pay_summary">Приобретите приложение для поддержки будущих разработок и получения дополнительных функций</string>
     <string name="support_project_summary">Приобретите одно из наших платных приложений для поддержки будущих разработок и разблокировки дополнительных функций</string>
     <string name="learn_more">Подробнее</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Плеер для аудиокниг</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Диктофон</string>
-    <string name="files">Files</string>
-    <string name="files_summary">Файловый менеджер</string>
     <string name="themes">Темы</string>
     <string name="themes_summary">Тщательно подобранные темы приложения, автоматическое изменение тем и поддержка системных тем для Андройд 12+</string>
     <string name="color_title">Цвета</string>
@@ -62,6 +56,10 @@
     <string name="tip_excellent">Отличная поддержка</string>
     <string name="tip_incredible">Потрясающая поддержка</string>
     <string name="tip_jar">Поддержать</string>
+    <string name="any_support_unlock_all">Выберите доступный Вам уровень поддержки проекта (единовременный, ежемесячный или ежегодный). Любая поддержка разблокирует все функции приложения</string>
+    <string name="one_time_purchase">Разовая поддержка</string>
+    <string name="monthly">Ежемесячная поддержка</string>
+    <string name="yearly">Ежегодная поддержка</string>
     <string name="unlock">Разблокировать</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -136,6 +134,15 @@
     <string name="primary_sim_card">Основная SIM-карта</string>
     <string name="button_primary">Основная кнопка</string>
     <string name="button_secondary">Дополнительная кнопка</string>
+    <string name="skip_archive_confirmation">Пропускать диалог подтверждения архивации</string>
+    <string name="swipe_gestures">Жесты смахивания</string>
+    <string name="swipe_left_action">Действие смахивания влево</string>
+    <string name="swipe_right_action">Действие смахивания вправо</string>
+    <string name="use_swipe_gestures">Использовать смахивания для выполнения действий</string>.
+    <string name="use_swipe_gestures_summary">Это отключит пролистывание вкладок жестами</string>.
+    <string name="volume_g">Громкость</string>
+    <string name="vibrate_g">Вибрация</string>
+    <string name="use_contact_colors">Использовать цвета контактов</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>
@@ -187,14 +194,8 @@
     <string name="open">Открыть</string>
     <string name="collection">Коллекция</string>
     <string name="collection_summary">Соберите коллекцию для разблокировки приложения</string>
+    <string name="support_project_to_unlock">Поддержите проект для разблокировки</string>
     <string name="limited_supply">Ограниченное предложение</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Привет,<br><br>

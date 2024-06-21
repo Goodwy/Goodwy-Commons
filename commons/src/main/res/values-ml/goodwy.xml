@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name_g">Goodwy Commons</string>
     <string name="recorder_g">Recorder</string>
     <string name="player_g">Player</string>
     <string name="general">ജനറൽ</string>
@@ -36,12 +35,6 @@
     <string name="pref_pay_summary">ഭാവിയിലെ സംഭവവികാസങ്ങളും അധിക ഫീച്ചറുകളും പിന്തുണയ്ക്കാൻ പണമടച്ചുള്ള ആപ്പ് നേടൂ</string>
     <string name="support_project_summary">ഭാവിയിൽ വികസനം പിന്തുണയ്ക്കുന്നതിനും അധിക ഫീച്ചറുകൾ അൺലോക്ക് ചെയ്യുന്നതിനും ഞങ്ങളുടെ പണമടച്ചുള്ള ആപ്പുകളിൽ ഒന്ന് സ്വന്തമാക്കൂ</string>
     <string name="learn_more">കൂടുതലറിയുക</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">ഓഡിയോബുക്ക് പ്ലേയർ</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">വോയ്‌സ് റെക്കോർഡർ</string>
-    <string name="files">ഫയലുകൾ</string>
-    <string name="files_summary">ഫയൽ മാനേജർ</string>
     <string name="themes">തീമുകൾ</string>
     <string name="themes_summary">ശ്രദ്ധാപൂർവ്വം തിരഞ്ഞെടുത്ത ആപ്ലിക്കേഷൻ തീമുകൾ, ഓട്ടോമാറ്റിക് തീം ചേഞ്ചർ, ആൻഡ്രോയിഡ് 12+ നുള്ള സിസ്റ്റം തീം പിന്തുണ</string>
     <string name="color_title">നിറങ്ങൾ</string>
@@ -137,6 +130,15 @@
     <string name="primary_sim_card">പ്രാഥമിക സിം കാർഡ്</string>
     <string name="button_primary">പ്രാഥമിക ബട്ടൺ</string>
     <string name="button_secondary">സെക്കൻഡറി ബട്ടൺ</string>
+    <string name="skip_archive_confirmation">ആർക്കൈവ് സ്ഥിരീകരണ ഡയലോഗ് എപ്പോഴും ഒഴിവാക്കുക</string>
+    <string name="swipe_gestures">സ്വൈപ്പ് ആംഗ്യങ്ങൾ</string>
+    <string name="swipe_left_action">ഇടത്തേക്ക് സ്വൈപ്പുചെയ്യുക</string>
+    <string name="swipe_right_action">വലത് പ്രവർത്തനം സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="use_swipe_gestures">പ്രവർത്തനത്തിലേക്ക് സ്വൈപ്പ് ഉപയോഗിക്കുക</string>
+    <string name="use_swipe_gestures_summary">ഇത് ടാബുകളുടെ ജെസ്റ്റർ സ്വൈപ്പിംഗ് പ്രവർത്തനരഹിതമാക്കും</string>
+    <string name="volume_g">വോളിയം</string>
+    <string name="vibrate_g">വൈബ്രേറ്റ്</string>
+    <string name="use_contact_colors">കോൺടാക്റ്റ് നിറങ്ങൾ ഉപയോഗിക്കുക</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -188,14 +190,8 @@
     <string name="open">തുറക്കുക</string>
     <string name="collection">ശേഖരം</string>
     <string name="collection_summary">ആപ്പ് അൺലോക്ക് ചെയ്യാൻ ഒരു ശേഖരം നിർമ്മിക്കുക</string>
+    <string name="support_project_to_unlock">അൺലോക്ക് ചെയ്യുന്നതിന് പ്രോജക്‌റ്റിനെ പിന്തുണയ്ക്കുക</string>
     <string name="limited_supply">പരിമിതമായ വിതരണം</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

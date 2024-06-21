@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name_g">Goodwy Commons</string>
     <string name="recorder_g">রেকর্ডার</string>
     <string name="player_g"> প্লেয়ার</string>
     <string name="general">সাধারণ</string>
@@ -36,12 +35,6 @@
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
     <string name="learn_more">Learn more</string>
-    <string name="playbooks">PlayBooks</string>
-    <string name="playbooks_summary">Audiobook player</string>
-    <string name="voicerecorder">VoiceMemos</string>
-    <string name="voicerecorder_summary">Voice recorder</string>
-    <string name="files">Files</string>
-    <string name="files_summary">File manager</string>
     <string name="themes">Themes</string>
     <string name="themes_summary">Carefully selected application themes, automatic theme changer and system theme support for Android 12+</string>
     <string name="color_title">Colors</string>
@@ -137,6 +130,15 @@
     <string name="primary_sim_card">প্রাথমিক সিম কার্ড</string>
     <string name="button_primary">প্রাথমিক বোতাম</string>
     <string name="button_secondary">সেকেন্ডারি বোতাম</string>
+    <string name="skip_archive_confirmation">সর্বদা সংরক্ষণাগার নিশ্চিতকরণ ডায়ালগ এড়িয়ে যান</string>
+    <string name="swipe_gestures"> সোয়াইপ অঙ্গভঙ্গি</string>
+    <string name="swipe_left_action">বাম দিকে সোয়াইপ অ্যাকশন</string>
+    <string name="swipe_right_action">ডান দিকে সোয়াইপ করুন</string>
+    <string name="use_swipe_gestures">সোয়াইপ টু অ্যাকশন ব্যবহার করুন</string>
+    <string name="use_swipe_gestures_summary">এটি ট্যাবগুলির অঙ্গভঙ্গি সোয়াইপিং অক্ষম করবে</string>
+    <string name="volume_g">ভলিউম</string>
+    <string name="vibrate_g">কম্পন</string>
+    <string name="use_contact_colors">যোগাযোগের রং ব্যবহার করুন</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
@@ -188,14 +190,8 @@
     <string name="open">খুলুন</string>৷
     <string name="collection">সংগ্রহ</string>
     <string name="collection_summary">অ্যাপটি আনলক করতে একটি সংগ্রহ তৈরি করুন</string>
+    <string name="support_project_to_unlock">আনলক করতে প্রকল্প সমর্থন করুন</string>
     <string name="limited_supply"> সীমিত সরবরাহ</string>
-    <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
-    <string name="right_dialer">Right Dialer</string>
-    <string name="right_sms_messenger">Right Messages</string>
-    <string name="right_voice_recorder">Right Voice Memos</string>
-    <string name="right_gallery">Right Gallery</string>
-    <string name="right_files">Right Files</string>
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>

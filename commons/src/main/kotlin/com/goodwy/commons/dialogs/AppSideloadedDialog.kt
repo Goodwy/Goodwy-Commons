@@ -16,17 +16,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.goodwy.commons.R
-import com.goodwy.commons.compose.alert_dialog.AlertDialogState
-import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
+import com.goodwy.commons.compose.alert_dialog.*
+import com.goodwy.commons.compose.components.LinkifyTextComponent
 import com.goodwy.commons.compose.extensions.MyDevices
-import com.goodwy.commons.compose.screens.LinkifyText
-import com.goodwy.commons.compose.screens.stringFromHTML
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.databinding.DialogTextviewBinding
-import com.goodwy.commons.extensions.getAlertDialogBuilder
-import com.goodwy.commons.extensions.getStringsPackageName
-import com.goodwy.commons.extensions.launchViewIntent
-import com.goodwy.commons.extensions.setupDialogStuff
+import com.goodwy.commons.extensions.*
 
 class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
     private var dialog: AlertDialog? = null
@@ -65,8 +60,8 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
 
 @Composable
 fun AppSideLoadedAlertDialog(
+    alertDialogState: AlertDialogState,
     modifier: Modifier = Modifier,
-    alertDialogState: AlertDialogState = rememberAlertDialogState(),
     onDownloadClick: (url: String) -> Unit,
     onCancelClick: () -> Unit
 ) {
@@ -96,8 +91,8 @@ fun AppSideLoadedAlertDialog(
         shape = dialogShape,
         text = {
             val source = stringResource(id = R.string.sideloaded_app, url)
-            LinkifyText(fontSize = 16.sp, removeUnderlines = false) {
-                stringFromHTML(source)
+            LinkifyTextComponent(fontSize = 16.sp, removeUnderlines = false) {
+                source.fromHtml()
             }
         },
         title = {
@@ -117,6 +112,6 @@ fun AppSideLoadedAlertDialog(
 @MyDevices
 private fun AppSideLoadedAlertDialogPreview() {
     AppThemeSurface {
-        AppSideLoadedAlertDialog(alertDialogState = rememberAlertDialogState(), onDownloadClick = {}, onCancelClick = {})
+        AppSideLoadedAlertDialog(alertDialogState = rememberAlertDialogState(), onDownloadClick = {}) {}
     }
 }
