@@ -33,6 +33,7 @@ abstract class MyRecyclerViewListAdapter<T>(
     protected var backgroundColor = activity.getProperBackgroundColor()
     protected var properPrimaryColor = activity.getProperPrimaryColor()
     protected var contrastColor = properPrimaryColor.getContrastColor()
+    protected var contactThumbnailsSize = activity.baseConfig.contactThumbnailsSize
     protected var actModeCallback: MyActionModeCallback
     protected var selectedKeys = LinkedHashSet<Int>()
     protected var positionOffset = 0
@@ -323,6 +324,7 @@ abstract class MyRecyclerViewListAdapter<T>(
         properPrimaryColor = activity.getProperPrimaryColor()
         contrastColor = properPrimaryColor.getContrastColor()
         accentColor = activity.getProperAccentColor()
+        contactThumbnailsSize = activity.baseConfig.contactThumbnailsSize
         onRefresh.invoke()
     }
 
