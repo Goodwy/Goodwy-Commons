@@ -493,15 +493,6 @@ fun Context.isThankYouInstalled(): Boolean {
 }
 
 fun Context.isOrWasThankYouInstalled(): Boolean {
-    /*return when {
-        resources.getBoolean(R.bool.pretend_thank_you_installed) -> true
-       // baseConfig.hadThankYouInstalled -> true
-        isThankYouInstalled() -> {
-           // baseConfig.hadThankYouInstalled = true
-            true
-        }
-        else -> false
-    }*/
     return when {
         resources.getBoolean(R.bool.pretend_thank_you_installed) -> true
         isPackageInstalled("com.goodwy.audiobook") -> true

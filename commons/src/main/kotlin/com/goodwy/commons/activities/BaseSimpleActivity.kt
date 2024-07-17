@@ -216,7 +216,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun animateStatusBarColor(colorTo: Int, colorFrom: Int = window.statusBarColor, duration: Long = 300L) {
+    fun animateStatusBarColor(colorTo: Int, colorFrom: Int = getProperBackgroundColor(), duration: Long = 300L) {
         with(ObjectAnimator.ofInt(colorFrom, colorTo)) {
             setEvaluator(ArgbEvaluator())
             setDuration(duration)
@@ -224,7 +224,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 window.statusBarColor = it.animatedValue.toInt()
             }
 
-            doOnEnd { updateStatusbarColor(window.statusBarColor) }
+            doOnEnd { updateStatusbarColor(getProperBackgroundColor()) }
             start()
         }
     }
