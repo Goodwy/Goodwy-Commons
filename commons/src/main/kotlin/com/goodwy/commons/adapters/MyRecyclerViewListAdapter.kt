@@ -324,6 +324,7 @@ abstract class MyRecyclerViewListAdapter<T>(
         properPrimaryColor = activity.getProperPrimaryColor()
         contrastColor = properPrimaryColor.getContrastColor()
         accentColor = activity.getProperAccentColor()
+        contactThumbnailsSize = activity.baseConfig.contactThumbnailsSize
         onRefresh.invoke()
     }
 
