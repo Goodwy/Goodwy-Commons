@@ -338,8 +338,8 @@ abstract class MyRecyclerViewListAdapter<T>(
     private fun contactThumbnailsSize(): Float {
         return when (activity.baseConfig.contactThumbnailsSize) {
             CONTACT_THUMBNAILS_SIZE_SMALL -> 0.9F
-            CONTACT_THUMBNAILS_SIZE_LARGE -> 1.1F
-            CONTACT_THUMBNAILS_SIZE_EXTRA_LARGE -> 1.2F
+            CONTACT_THUMBNAILS_SIZE_LARGE -> 1.15F
+            CONTACT_THUMBNAILS_SIZE_EXTRA_LARGE -> 1.3F
             else -> 1.0F
         }
     }
