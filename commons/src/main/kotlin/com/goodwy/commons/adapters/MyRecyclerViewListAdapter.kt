@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.*
+import com.goodwy.commons.helpers.CONTACT_THUMBNAILS_SIZE_EXTRA_LARGE
+import com.goodwy.commons.helpers.CONTACT_THUMBNAILS_SIZE_LARGE
+import com.goodwy.commons.helpers.CONTACT_THUMBNAILS_SIZE_SMALL
 import com.goodwy.commons.interfaces.MyActionModeCallback
 import com.goodwy.commons.models.RecyclerSelectionPayload
 import com.goodwy.commons.views.MyRecyclerView
@@ -33,7 +36,7 @@ abstract class MyRecyclerViewListAdapter<T>(
     protected var backgroundColor = activity.getProperBackgroundColor()
     protected var properPrimaryColor = activity.getProperPrimaryColor()
     protected var contrastColor = properPrimaryColor.getContrastColor()
-    protected var contactThumbnailsSize = activity.baseConfig.contactThumbnailsSize
+    protected var contactThumbnailsSize = contactThumbnailsSize()
     protected var actModeCallback: MyActionModeCallback
     protected var selectedKeys = LinkedHashSet<Int>()
     protected var positionOffset = 0
@@ -324,13 +327,21 @@ abstract class MyRecyclerViewListAdapter<T>(
         properPrimaryColor = activity.getProperPrimaryColor()
         contrastColor = properPrimaryColor.getContrastColor()
         accentColor = activity.getProperAccentColor()
-        contactThumbnailsSize = activity.baseConfig.contactThumbnailsSize
         onRefresh.invoke()
     }
 
     fun updateBackgroundColor(backgroundColor: Int) {
         this.backgroundColor = backgroundColor
         onRefresh.invoke()
+    }
+
+    private fun contactThumbnailsSize(): Float {
+        return when (activity.baseConfig.contactThumbnailsSize) {
+            CONTACT_THUMBNAILS_SIZE_SMALL -> 0.9F
+            CONTACT_THUMBNAILS_SIZE_LARGE -> 1.1F
+            CONTACT_THUMBNAILS_SIZE_EXTRA_LARGE -> 1.2F
+            else -> 1.0F
+        }
     }
 
     protected fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
