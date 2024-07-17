@@ -68,8 +68,6 @@ abstract class MyRecyclerViewListAdapter<T>(
 
     init {
         actModeCallback = object : MyActionModeCallback() {
-            private var savedStatusBarColor = activity.getProperStatusBarColor()
-
             override fun onActionItemClicked(mode: ActionMode, item: MenuItem): Boolean {
                 actionItemPressed(item.itemId)
                 return true
@@ -85,6 +83,7 @@ abstract class MyRecyclerViewListAdapter<T>(
                 actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
                 actBarTextView!!.layoutParams = ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT)
                 actMode!!.customView = actBarTextView
+                actBarTextView!!.setPadding(0, 10, 0, 10)
                 actBarTextView!!.setOnClickListener {
                     if (getSelectableItemCount() == selectedKeys.size) {
                         finishActMode()

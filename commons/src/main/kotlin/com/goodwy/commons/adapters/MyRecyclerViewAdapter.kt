@@ -59,8 +59,6 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     init {
         actModeCallback = object : MyActionModeCallback() {
-            private var savedStatusBarColor = activity.getProperStatusBarColor()
-
             override fun onActionItemClicked(mode: ActionMode, item: MenuItem): Boolean {
                 actionItemPressed(item.itemId)
                 return true
