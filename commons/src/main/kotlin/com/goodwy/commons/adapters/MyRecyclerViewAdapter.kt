@@ -88,7 +88,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 val bgColor = if (baseConfig.isUsingSystemTheme) {
                     resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
                 } else {
-                    resources.getColor(R.color.dark_grey, activity.theme)
+                    resources.getColor(R.color.activated_item_foreground, activity.theme)
                 }
 
                 savedStatusBarColor = activity.window.statusBarColor
