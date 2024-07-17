@@ -6,7 +6,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.setMargins
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ListAdapter
@@ -82,9 +81,7 @@ abstract class MyRecyclerViewListAdapter<T>(
                 isSelectable = true
                 actMode = actionMode
                 actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
-                val lp = ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT)
-                lp.setMargins(20)
-                actBarTextView!!.layoutParams = lp
+                actBarTextView!!.layoutParams = ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT)
                 actMode!!.customView = actBarTextView
                 actBarTextView!!.setOnClickListener {
                     if (getSelectableItemCount() == selectedKeys.size) {
