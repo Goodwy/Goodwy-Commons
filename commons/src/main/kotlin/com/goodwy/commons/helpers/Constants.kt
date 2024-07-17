@@ -241,6 +241,7 @@ const val NEXT_AUTO_BACKUP_TIME = "next_auto_backup_time"
 const val HIDE_TOP_BAR_WHEN_SCROLL = "hide_top_bar_when_scroll"
 const val SKIP_ARCHIVE_CONFIRMATION = "skip_archive_confirmation"
 const val USE_SWIPE_TO_ACTION = "use_swipe_to_action"
+const val CONTACT_THUMBNAILS_SIZE = "contact_thumbnails_size"
 
 const val GOOGLE_PLAY_LICENSING_KEY = "licensing_key"
 const val IS_PRO_VERSION = "is_pro_version"
@@ -734,6 +735,12 @@ const val PHOTO_ADDED = 1
 const val PHOTO_REMOVED = 2
 const val PHOTO_CHANGED = 3
 const val PHOTO_UNCHANGED = 4
+
+// contact photo sizes
+const val CONTACT_THUMBNAILS_SIZE_SMALL = 0
+const val CONTACT_THUMBNAILS_SIZE_MEDIUM = 1
+const val CONTACT_THUMBNAILS_SIZE_LARGE = 2
+const val CONTACT_THUMBNAILS_SIZE_EXTRA_LARGE = 3
 
 const val ON_CLICK_CALL_CONTACT = 1
 const val ON_CLICK_VIEW_CONTACT = 2

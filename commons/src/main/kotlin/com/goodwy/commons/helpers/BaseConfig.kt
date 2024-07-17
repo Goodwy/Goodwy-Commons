@@ -784,6 +784,10 @@ open class BaseConfig(val context: Context) {
     var useSwipeToAction: Boolean
         get() = prefs.getBoolean(USE_SWIPE_TO_ACTION, true)
         set(swipeToAction) = prefs.edit().putBoolean(USE_SWIPE_TO_ACTION, swipeToAction).apply()
+
+    var contactThumbnailsSize: Int
+        get() = prefs.getInt(CONTACT_THUMBNAILS_SIZE, CONTACT_THUMBNAILS_SIZE_MEDIUM) //context.resources.getDimension(R.dimen.normal_icon_size).toInt()
+        set(contactThumbnailsSize) = prefs.edit().putInt(CONTACT_THUMBNAILS_SIZE, contactThumbnailsSize).apply()
 }
 
 
