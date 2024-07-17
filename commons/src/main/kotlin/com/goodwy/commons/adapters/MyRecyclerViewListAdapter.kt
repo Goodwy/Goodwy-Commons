@@ -81,9 +81,7 @@ abstract class MyRecyclerViewListAdapter<T>(
                 isSelectable = true
                 actMode = actionMode
                 actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
-                val styledAttributes = activity.theme.obtainStyledAttributes(intArrayOf(android.R.attr.actionBarSize))
-                val actionBarHeight = styledAttributes.getDimension(0, 0f).toInt()
-                actBarTextView!!.layoutParams = ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, actionBarHeight - 20)
+                actBarTextView!!.layoutParams = ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT)
                 actMode!!.customView = actBarTextView
                 actBarTextView!!.setOnClickListener {
                     if (getSelectableItemCount() == selectedKeys.size) {
