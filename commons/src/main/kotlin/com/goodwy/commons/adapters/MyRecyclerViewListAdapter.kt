@@ -1,5 +1,6 @@
 package com.goodwy.commons.adapters
 
+import android.graphics.Color
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
@@ -96,15 +97,8 @@ abstract class MyRecyclerViewListAdapter<T>(
                 val bgColor = if (baseConfig.isUsingSystemTheme) {
                     ResourcesCompat.getColor(resources, R.color.you_contextual_status_bar_color, activity.theme)
                 } else {
-                    resources.getColor(R.color.activated_item_foreground, activity.theme)
+                    Color.BLACK
                 }
-
-                savedStatusBarColor = activity.window.statusBarColor
-                activity.animateStatusBarColor(
-                    colorTo = bgColor,
-                    colorFrom = savedStatusBarColor,
-                    duration = 300L
-                )
 
                 actBarTextView!!.setTextColor(bgColor.getContrastColor())
                 activity.updateMenuItemColors(menu, baseColor = bgColor, forceWhiteIcons = true)
@@ -132,12 +126,6 @@ abstract class MyRecyclerViewListAdapter<T>(
                         toggleItemSelection(false, position, false)
                     }
                 }
-
-                activity.animateStatusBarColor(
-                    colorTo = savedStatusBarColor,
-                    colorFrom = activity.window.statusBarColor,
-                    duration = 400L
-                )
 
                 updateTitle()
                 selectedKeys.clear()

@@ -216,19 +216,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun animateStatusBarColor(colorTo: Int, colorFrom: Int = window.statusBarColor, duration: Long = 300L) {
-        with(ObjectAnimator.ofInt(colorFrom, colorTo)) {
-            setEvaluator(ArgbEvaluator())
-            setDuration(duration)
-            addUpdateListener {
-                window.statusBarColor = it.animatedValue.toInt()
-            }
-
-            doOnEnd { updateStatusbarColor(window.statusBarColor) }
-            start()
-        }
-    }
-
     //TODO actionbar color
     fun updateActionbarColor(color: Int = getProperBackgroundColor()) { //getProperStatusBarColor()
         //supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
