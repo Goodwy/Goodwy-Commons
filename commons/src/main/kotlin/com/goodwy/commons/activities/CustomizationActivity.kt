@@ -174,7 +174,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             binding.primaryColorsHolder,
             binding.colorsHolder
         ).forEach {
-            it.background.applyColorFilter(color)
+            it.setCardBackgroundColor(color)
         }
     }
 
