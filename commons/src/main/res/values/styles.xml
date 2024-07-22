@@ -433,7 +433,7 @@
         <item name="android:textSize">@dimen/normal_text_size</item>
         <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:layout_marginTop">@dimen/normal_margin</item>
+        <item name="android:layout_marginTop">@dimen/activity_margin</item>
         <item name="android:layout_marginStart">36dp</item>
         <item name="android:layout_marginEnd">36dp</item>
         <item name="android:layout_marginBottom">@dimen/small_margin</item>
