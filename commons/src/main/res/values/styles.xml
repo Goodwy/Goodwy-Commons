@@ -434,7 +434,8 @@
         <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:layout_marginTop">@dimen/normal_margin</item>
-        <item name="android:layout_marginStart">28dp</item>
+        <item name="android:layout_marginStart">36dp</item>
+        <item name="android:layout_marginEnd">36dp</item>
         <item name="android:layout_marginBottom">@dimen/small_margin</item>
     </style>
 
@@ -456,8 +457,8 @@
     <style name="SettingsSectionHolder">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">36dp</item>
-        <item name="android:layout_marginEnd">36dp</item>
+        <item name="android:layout_marginStart">@dimen/activity_margin</item>
+        <item name="android:layout_marginEnd">@dimen/activity_margin</item>
     </style>
 
     <style name="SettingsHolderStyle">
