@@ -465,6 +465,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">48dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
         <item name="android:paddingStart">@dimen/normal_margin</item>
         <item name="android:paddingTop">@dimen/small_margin</item>
         <item name="android:paddingEnd">@dimen/normal_margin</item>
@@ -475,6 +476,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">48dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
         <item name="android:paddingStart">@dimen/normal_margin</item>
         <item name="android:paddingTop">@dimen/smaller_margin</item>
         <item name="android:paddingEnd">@dimen/normal_margin</item>
