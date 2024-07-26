@@ -709,7 +709,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun startAboutActivity(appNameId: Int, licenseMask: Long, versionName: String,
-                           faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean, licensingKey: String,
+                           faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean,
                            productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
                            subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
                            subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
@@ -725,7 +725,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(APP_FAQ, faqItems)
             putExtra(SHOW_FAQ_BEFORE_MAIL, showFAQBeforeMail)
             //Goodwy
-            putExtra(GOOGLE_PLAY_LICENSING_KEY, licensingKey)
             putExtra(PRODUCT_ID_LIST, productIdList)
             putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
             putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)
@@ -738,7 +737,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startPurchaseActivity(appNameId: Int, licensingKey: String = "",
+    fun startPurchaseActivity(appNameId: Int,
                               productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
                               subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
                               subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
@@ -750,7 +749,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             putExtra(APP_NAME, getString(appNameId))
-            putExtra(GOOGLE_PLAY_LICENSING_KEY, licensingKey)
             putExtra(PRODUCT_ID_LIST, productIdList)
             putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
             putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)
@@ -765,7 +763,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startCustomizationActivity(showAccentColor : Boolean = true, isCollection : Boolean = false, licensingKey: String = "",
+    fun startCustomizationActivity(showAccentColor : Boolean = true, isCollection : Boolean = false,
                                    productIdList: ArrayList<String> = arrayListOf("", "", ""), productIdListRu: ArrayList<String> = arrayListOf("", "", ""),
                                    subscriptionIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionIdListRu: ArrayList<String> = arrayListOf("", "", ""),
                                    subscriptionYearIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionYearIdListRu: ArrayList<String> = arrayListOf("", "", ""),
@@ -787,7 +785,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             putExtra(SHOW_ACCENT_COLOR, showAccentColor)
             putExtra(IS_COLLECTION, isCollection)
-            putExtra(GOOGLE_PLAY_LICENSING_KEY, licensingKey)
             putExtra(PRODUCT_ID_LIST, productIdList)
             putExtra(PRODUCT_ID_LIST_RU, productIdListRu)
             putExtra(SUBSCRIPTION_ID_LIST, subscriptionIdList)

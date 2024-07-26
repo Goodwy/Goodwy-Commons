@@ -36,7 +36,6 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private var appName = ""
     private var primaryColor = 0
-    private var licensingKey = ""
     private var productIdList: ArrayList<String> = ArrayList()
     private var productIdListRu: ArrayList<String> = ArrayList()
     private var subscriptionIdList: ArrayList<String> = ArrayList()
@@ -65,7 +64,6 @@ class PurchaseActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appName = intent.getStringExtra(APP_NAME) ?: ""
-        licensingKey = intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: ""
         productIdList = intent.getStringArrayListExtra(PRODUCT_ID_LIST) ?: arrayListOf("", "", "")
         productIdListRu = intent.getStringArrayListExtra(PRODUCT_ID_LIST_RU) ?: arrayListOf("", "", "")
         subscriptionIdList = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST) ?: arrayListOf("", "", "")

@@ -56,7 +56,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getShowAccentColor() = intent.getBooleanExtra(SHOW_ACCENT_COLOR, true)
 
     private fun isProVersion() = intent.getBooleanExtra(IS_COLLECTION, false) || isPro()
-    private fun getLicensingKey() = intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: ""
     private fun getProductIdList() = intent.getStringArrayListExtra(PRODUCT_ID_LIST) ?: arrayListOf("", "", "")
     private fun getProductIdListRu() = intent.getStringArrayListExtra(PRODUCT_ID_LIST_RU) ?: arrayListOf("", "", "")
     private fun getSubscriptionIdList() = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST) ?: arrayListOf("", "", "")
@@ -905,7 +904,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun launchPurchase() {
         startPurchaseActivity(
             R.string.app_name_g,
-            getLicensingKey(),
             getProductIdList(), getProductIdListRu(),
             getSubscriptionIdList(), getSubscriptionIdListRu(),
             getSubscriptionYearIdList(), getSubscriptionYearIdListRu(),

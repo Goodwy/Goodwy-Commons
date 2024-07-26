@@ -291,7 +291,6 @@ class AboutActivity : ComponentActivity() {
             putExtra(APP_ICON_IDS, intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList<String>())
             putExtra(APP_LAUNCHER_NAME, intent.getStringExtra(APP_LAUNCHER_NAME) ?: "")
             putExtra(APP_NAME, intent.getStringExtra(APP_NAME) ?: "")
-            putExtra(GOOGLE_PLAY_LICENSING_KEY, intent.getStringExtra(GOOGLE_PLAY_LICENSING_KEY) ?: "")
             putExtra(PRODUCT_ID_LIST, intent.getStringArrayListExtra(PRODUCT_ID_LIST) ?: arrayListOf("", "", ""))
             putExtra(PRODUCT_ID_LIST_RU, intent.getStringArrayListExtra(PRODUCT_ID_LIST_RU) ?: arrayListOf("", "", ""))
             putExtra(SUBSCRIPTION_ID_LIST, intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST) ?: arrayListOf("", "", ""))
