@@ -538,7 +538,7 @@ fun Activity.launchViewContactIntent(uri: Uri) {
     }
 }
 
-fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountHandle? = null, key: String) {
+fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountHandle? = null, key: String = "") {
     handlePermission(PERMISSION_CALL_PHONE) {
         val action = if (it) Intent.ACTION_CALL else Intent.ACTION_DIAL
         Intent(action).apply {
