@@ -47,6 +47,7 @@ const val MD5 = "MD5"
 const val SHORT_ANIMATION_DURATION = 150L
 const val DARK_GREY = 0xFF333333.toInt()
 const val CURRENT_PHONE_NUMBER = "number"
+const val IS_RIGHT_APP = "is_right_app"
 
 const val ZERO_ALPHA = 0f
 const val LOWER_ALPHA = 0.25f

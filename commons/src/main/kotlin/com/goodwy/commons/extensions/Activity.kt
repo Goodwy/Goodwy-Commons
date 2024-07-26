@@ -538,7 +538,7 @@ fun Activity.launchViewContactIntent(uri: Uri) {
     }
 }
 
-fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountHandle? = null) {
+fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountHandle? = null, key: String) {
     handlePermission(PERMISSION_CALL_PHONE) {
         val action = if (it) Intent.ACTION_CALL else Intent.ACTION_DIAL
         Intent(action).apply {
@@ -547,6 +547,7 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
             if (handle != null) {
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
             }
+            putExtra(IS_RIGHT_APP, key)
 
             if (isDefaultDialer()) {
                 val packageName = if (baseConfig.appId.contains(".debug", true)) "com.goodwy.dialer.debug" else "com.goodwy.dialer"
