@@ -92,7 +92,6 @@ class MainActivity : BaseSimpleActivity() {
     private fun launchPurchase() {
         startPurchaseActivity(
             R.string.app_name_g,
-            "",
             productIdList = arrayListOf("", "", ""),
             productIdListRu = arrayListOf("", "", ""),
             subscriptionIdList = arrayListOf("", "", ""),
@@ -126,7 +125,6 @@ class MainActivity : BaseSimpleActivity() {
             BuildConfig.VERSION_NAME,
             faqItems,
             true,
-            "",
             arrayListOf("", "", ""), arrayListOf("", "", ""),
             arrayListOf("", "", ""), arrayListOf("", "", ""),
             arrayListOf("", "", ""), arrayListOf("", "", ""),
