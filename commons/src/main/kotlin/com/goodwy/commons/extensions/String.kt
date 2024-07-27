@@ -336,7 +336,7 @@ fun String.getDateTimeFromDateString(showYearsSince: Boolean, viewToUpdate: Text
     return date
 }
 
-fun String.getDateTimeFromDateString(showYearsSince: Boolean): String {
+fun String.getDateFormattedFromDateString(showYearsSince: Boolean): String {
     val dateFormats = getDateFormats()
     var date = DateTime()
     var formattedString = ""
