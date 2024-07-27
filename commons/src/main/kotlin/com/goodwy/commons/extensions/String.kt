@@ -336,6 +336,35 @@ fun String.getDateTimeFromDateString(showYearsSince: Boolean, viewToUpdate: Text
     return date
 }
 
+fun String.getDateTimeFromDateString(showYearsSince: Boolean): String {
+    val dateFormats = getDateFormats()
+    var date = DateTime()
+    var formattedString = ""
+    for (format in dateFormats) {
+        try {
+            date = DateTime.parse(this, DateTimeFormat.forPattern(format))
+
+            val formatter = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault())
+            var localPattern = (formatter as SimpleDateFormat).toLocalizedPattern()
+
+            val hasYear = format.contains("y")
+            if (!hasYear) {
+                localPattern = localPattern.replace("y", "").replace(",", "").trim()
+                date = date.withYear(DateTime().year)
+            }
+
+            formattedString = date.toString(localPattern)
+            if (showYearsSince && hasYear) {
+                formattedString += " (${Years.yearsBetween(date, DateTime.now()).years})"
+            }
+
+            break
+        } catch (ignored: Exception) {
+        }
+    }
+    return formattedString
+}
+
 @SuppressLint("SimpleDateFormat")
 fun getDateFormatFromDateString(context: Context, dateTime: String, dateFormat: String, field: String = context.baseConfig.dateFormat): String? {
     val input = SimpleDateFormat(dateFormat)
