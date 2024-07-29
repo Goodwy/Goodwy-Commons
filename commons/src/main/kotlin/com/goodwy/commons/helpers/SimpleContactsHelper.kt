@@ -290,7 +290,8 @@ class SimpleContactsHelper(val context: Context) {
     }
 
     fun getContactLetterIcon(name: String): Bitmap {
-        val letter = name.getNameLetter()
+        val emoji = name.take(2)
+        val letter = if (emoji.isEmoji()) emoji else name.getNameLetter()
         val size = context.resources.getDimension(R.dimen.normal_icon_size).toInt()
         val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
