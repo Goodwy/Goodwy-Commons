@@ -1,6 +1,7 @@
 package com.goodwy.commons.extensions
 
 import android.Manifest
+import android.accessibilityservice.AccessibilityServiceInfo
 import android.annotation.TargetApi
 import android.app.Activity
 import android.app.NotificationManager
@@ -30,6 +31,7 @@ import android.telephony.PhoneNumberUtils
 import android.text.TextUtils
 import android.view.View
 import android.view.WindowManager
+import android.view.accessibility.AccessibilityManager
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -1361,4 +1363,16 @@ fun Context.isCollection(): Boolean {
         && isPackageInstalled("com.goodwy.gallery")
         && isPackageInstalled("com.goodwy.audiobooklite")
         && isPackageInstalled("com.goodwy.filemanager")
+        && isPackageInstalled("com.goodwy.keyboard")
+}
+
+fun Context.isTalkBackOn(): Boolean {
+    val am = getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
+    if (am.isEnabled) {
+        val serviceInfoList =
+            am.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_SPOKEN)
+        if (serviceInfoList.isNotEmpty())
+            return true
+    }
+    return false
 }
