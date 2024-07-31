@@ -88,9 +88,11 @@ fun Activity.appLaunched(appId: String) {
         }
     }*/
 
-    if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
-            RateStarsDialog(this)
+    if (!isTalkBackOn()) {
+        if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
+            if (!resources.getBoolean(R.bool.hide_google_relations)) {
+                RateStarsDialog(this)
+            }
         }
     }
 }
