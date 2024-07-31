@@ -42,7 +42,8 @@
                 android:paddingStart="@dimen/medium_margin"
                 android:alpha="0.4"
                 android:src="@drawable/ic_search_top_padding"
-                android:contentDescription="@string/search" />
+                android:contentDescription="@null"
+                tools:ignore="RtlSymmetry" />
 
             <com.goodwy.commons.views.MyEditText
                 android:id="@+id/top_toolbar_search"
@@ -73,6 +74,7 @@
                 android:alpha="0.4"
                 android:src="@drawable/ic_clear_round"
                 android:visibility="gone"
+                android:contentDescription="@string/delete"
                 tools:visibility="visible" />
         </RelativeLayout>
     </RelativeLayout>
