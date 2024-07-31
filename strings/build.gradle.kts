@@ -1,9 +1,6 @@
 plugins {
     alias(libs.plugins.library)
     alias(libs.plugins.kotlinAndroid)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.kotlinSerialization)
-    alias(libs.plugins.parcelize)
     `maven-publish`
 }
 
