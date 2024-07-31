@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="settings_margin">16dp</dimen>
+
+    <dimen name="settings_value_width">208dp</dimen>
+    <dimen name="settings_value_width_long">268dp</dimen>
+
+    <dimen name="activity_padding_left_right">72dp</dimen>
+</resources>

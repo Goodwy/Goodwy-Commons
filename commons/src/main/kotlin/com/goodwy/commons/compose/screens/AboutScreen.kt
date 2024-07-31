@@ -33,6 +33,7 @@ import com.goodwy.commons.compose.settings.SettingsListItem
 import com.goodwy.commons.compose.settings.SettingsTitleTextComponent
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
+import com.goodwy.commons.strings.R as stringsR
 
 private val startingTitlePadding = Modifier.padding(start = 56.dp)
 
@@ -345,7 +346,7 @@ internal fun AboutNewSection(
                 },
             )
             Spacer(modifier = Modifier.size(8.dp))
-            HtmlText(stringResource(R.string.about_summary), textColor = textColor)
+            HtmlText(stringResource(stringsR.string.about_summary), textColor = textColor)
 //            Text(modifier = Modifier.padding(horizontal = 4.dp),
 //                text = stringResource(R.string.plus_summary),
 //                fontSize = 14.sp,
@@ -504,7 +505,7 @@ internal fun AboutNewSection(
                     Text(modifier = Modifier
                         .padding(start = 16.dp, end = 8.dp)
                         .weight(1f),
-                        text = stringResource(R.string.tip_jar).toUpperCase(LocaleList.current),
+                        text = stringResource(stringsR.string.tip_jar).toUpperCase(LocaleList.current),
                         fontSize = 14.sp,
                         lineHeight = 18.sp,
                         color = textColor,)
@@ -513,10 +514,10 @@ internal fun AboutNewSection(
                         .width(42.dp)) {
                         Icon(modifier = Modifier
                             .alpha(0.2f)
-                            .size(42.dp), imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.tip_jar), tint = textColor)
+                            .size(42.dp), imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = textColor)
                         Icon(modifier = Modifier
                             .size(42.dp)
-                            .padding(8.dp), imageVector = Icons.Rounded.Savings, contentDescription = stringResource(id = R.string.tip_jar), tint = textColor)
+                            .padding(8.dp), imageVector = Icons.Rounded.Savings, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = textColor)
                     }
                 }
             }

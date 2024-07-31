@@ -11,8 +11,8 @@ android {
         applicationId = "com.goodwy.commons.samples"
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         targetSdk = libs.versions.app.build.targetSDK.get().toInt()
-        versionCode = 510
-        versionName = "5.1.0"
+        versionCode = 520
+        versionName = "5.2.0"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -72,6 +72,7 @@ android {
 
 dependencies {
     implementation(projects.commons)
+    implementation(projects.strings)
     implementation(libs.material)
     implementation(libs.androidx.swiperefreshlayout)
 

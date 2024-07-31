@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.*
-import android.graphics.Color
 import android.os.Bundle
 import android.text.Html
 import android.widget.Toast
@@ -13,7 +12,6 @@ import androidx.core.net.toUri
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import com.goodwy.commons.R
-import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.databinding.ActivityPurchaseBinding
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
 import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
@@ -26,6 +24,7 @@ import com.goodwy.commons.helpers.rustore.model.BillingEvent
 import com.goodwy.commons.helpers.rustore.model.BillingState
 import com.goodwy.commons.helpers.rustore.model.StartPurchasesEvent
 import com.goodwy.commons.models.SimpleListItem
+import com.goodwy.commons.strings.R as stringsR
 import kotlinx.coroutines.*
 import ru.rustore.sdk.billingclient.RuStoreBillingClient
 import ru.rustore.sdk.billingclient.utils.resolveForBilling
@@ -262,7 +261,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun setupChangeStoreMenu() {
         binding.purchaseToolbar.menu.findItem(R.id.changeStore).apply {
             isVisible = playStoreInstalled && ruStoreInstalled
-            title = if (baseConfig.useGooglePlay) getString(R.string.billing_change_to_ru_store) else getString(R.string.billing_change_to_google_play)
+            title = if (baseConfig.useGooglePlay) getString(stringsR.string.billing_change_to_ru_store) else getString(stringsR.string.billing_change_to_google_play)
             icon = if (baseConfig.useGooglePlay) AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_google_play_vector)
             else AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_rustore)
             icon?.setTint(getProperTextColor())
@@ -309,7 +308,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun setupButtonIapPurchased() {
         binding.appOneButton.apply {
             val price = purchaseHelper.getPriceDonation(productIdList[0])
-            isEnabled = price != getString(R.string.no_connection)
+            isEnabled = price != getString(stringsR.string.no_connection)
             text = price
             setOnClickListener {
                 purchaseHelper.getDonation(productIdList[0])
@@ -319,7 +318,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appTwoButton.apply {
             val price = purchaseHelper.getPriceDonation(productIdList[1])
-            isEnabled = price != getString(R.string.no_connection)
+            isEnabled = price != getString(stringsR.string.no_connection)
             text = price
             setOnClickListener {
                 purchaseHelper.getDonation(productIdList[1])
@@ -329,7 +328,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appThreeButton.apply {
             val price = purchaseHelper.getPriceDonation(productIdList[2])
-            isEnabled = price != getString(R.string.no_connection)
+            isEnabled = price != getString(stringsR.string.no_connection)
             text = price
             setOnClickListener {
                 purchaseHelper.getDonation(productIdList[2])
@@ -357,9 +356,9 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun setupButtonSupPurchased() {
         binding.appOneSubButton.apply {
             val price = purchaseHelper.getPriceSubscription(subscriptionIdList[0])
-            if (price != getString(R.string.no_connection)) {
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
-                val textPrice = String.format(getString(R.string.per_month), price)
+                val textPrice = String.format(getString(stringsR.string.per_month), price)
                 text = textPrice
                 setOnClickListener {
                     purchaseHelper.getSubscription(subscriptionIdList[0])
@@ -372,9 +371,9 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appTwoSubButton.apply {
             val price = purchaseHelper.getPriceSubscription(subscriptionIdList[1])
-            if (price != getString(R.string.no_connection)) {
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
-                val textPrice = String.format(getString(R.string.per_month), price)
+                val textPrice = String.format(getString(stringsR.string.per_month), price)
                 text = textPrice
                 setOnClickListener {
                     purchaseHelper.getSubscription(subscriptionIdList[1])
@@ -387,9 +386,9 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appThreeSubButton.apply {
             val price = purchaseHelper.getPriceSubscription(subscriptionIdList[2])
-            if (price != getString(R.string.no_connection)) {
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
-                val textPrice = String.format(getString(R.string.per_month), price)
+                val textPrice = String.format(getString(stringsR.string.per_month), price)
                 text = textPrice
                 setOnClickListener {
                     purchaseHelper.getSubscription(subscriptionIdList[2])
@@ -402,9 +401,9 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appOneSubYearButton.apply {
             val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[0])
-            if (price != getString(R.string.no_connection)) {
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
-                val textPrice = String.format(getString(R.string.per_year), price)
+                val textPrice = String.format(getString(stringsR.string.per_year), price)
                 text = textPrice
                 setOnClickListener {
                     purchaseHelper.getSubscription(subscriptionYearIdList[0])
@@ -417,9 +416,9 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appTwoSubYearButton.apply {
             val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[1])
-            if (price != getString(R.string.no_connection)) {
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
-                val textPrice = String.format(getString(R.string.per_year), price)
+                val textPrice = String.format(getString(stringsR.string.per_year), price)
                 text = textPrice
                 setOnClickListener {
                     purchaseHelper.getSubscription(subscriptionYearIdList[1])
@@ -432,9 +431,9 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appThreeSubYearButton.apply {
             val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[2])
-            if (price != getString(R.string.no_connection)) {
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
-                val textPrice = String.format(getString(R.string.per_year), price)
+                val textPrice = String.format(getString(stringsR.string.per_year), price)
                 text = textPrice
                 setOnClickListener {
                     purchaseHelper.getSubscription(subscriptionYearIdList[2])
@@ -536,7 +535,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupNoPlayStoreInstalled() {
-        binding.proDonateText.text = Html.fromHtml(getString(R.string.donate_text_g))
+        binding.proDonateText.text = Html.fromHtml(getString(stringsR.string.donate_text_g))
         binding.proDonateButton.apply {
             setOnClickListener {
                 launchViewIntent("https://sites.google.com/view/goodwy/support-project")
@@ -588,12 +587,12 @@ class PurchaseActivity : BaseSimpleActivity() {
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
-        binding.collectionTitle.text = getString(R.string.collection) + "  $percentage"
+        binding.collectionTitle.text = getString(stringsR.string.collection) + "  $percentage"
 
         binding.collectionHolder.setOnClickListener {
             BottomSheetChooserDialog.createChooser(
                 fragmentManager = supportFragmentManager,
-                title = R.string.collection,
+                title = stringsR.string.collection,
                 items = items,
                 collection = true
             ) {
@@ -635,8 +634,8 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun setupButtonRuStore(state: BillingState) {
         binding.appOneButton.apply {
             val product = state.products.firstOrNull {  it.productId == productIdListRu[0]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            isEnabled = price != getString(R.string.no_connection)
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            isEnabled = price != getString(stringsR.string.no_connection)
             val resultPrice = price.replace(".00","",true)
             text = resultPrice
             setOnClickListener {
@@ -649,8 +648,8 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appTwoButton.apply {
             val product = state.products.firstOrNull {  it.productId == productIdListRu[1]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            isEnabled = price != getString(R.string.no_connection)
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            isEnabled = price != getString(stringsR.string.no_connection)
             val resultPrice = price.replace(".00","",true)
             text = resultPrice
             setOnClickListener {
@@ -663,8 +662,8 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appThreeButton.apply {
             val product = state.products.firstOrNull {  it.productId == productIdListRu[2]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            isEnabled = price != getString(R.string.no_connection)
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            isEnabled = price != getString(stringsR.string.no_connection)
             val resultPrice = price.replace(".00","",true)
             text = resultPrice
             setOnClickListener {
@@ -677,11 +676,11 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appOneSubButton.apply {
             val product = state.products.firstOrNull {  it.productId == subscriptionIdListRu[0]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            if (price != getString(R.string.no_connection)) {
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val resultPrice = price.replace(".00","",true)
-                val textPrice = String.format(getString(R.string.per_month), resultPrice)
+                val textPrice = String.format(getString(stringsR.string.per_month), resultPrice)
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
@@ -696,11 +695,11 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appTwoSubButton.apply {
             val product = state.products.firstOrNull {  it.productId == subscriptionIdListRu[1]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            if (price != getString(R.string.no_connection)) {
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val resultPrice = price.replace(".00","",true)
-                val textPrice = String.format(getString(R.string.per_month), resultPrice)
+                val textPrice = String.format(getString(stringsR.string.per_month), resultPrice)
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
@@ -715,11 +714,11 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appThreeSubButton.apply {
             val product = state.products.firstOrNull {  it.productId == subscriptionIdListRu[2]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            if (price != getString(R.string.no_connection)) {
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val resultPrice = price.replace(".00","",true)
-                val textPrice = String.format(getString(R.string.per_month), resultPrice)
+                val textPrice = String.format(getString(stringsR.string.per_month), resultPrice)
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
@@ -735,11 +734,11 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appOneSubYearButton.apply {
             val product = state.products.firstOrNull {  it.productId == subscriptionYearIdListRu[0]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            if (price != getString(R.string.no_connection)) {
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val resultPrice = price.replace(".00","",true)
-                val textPrice = String.format(getString(R.string.per_year), resultPrice)
+                val textPrice = String.format(getString(stringsR.string.per_year), resultPrice)
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
@@ -754,11 +753,11 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appTwoSubYearButton.apply {
             val product = state.products.firstOrNull {  it.productId == subscriptionYearIdListRu[1]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            if (price != getString(R.string.no_connection)) {
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val resultPrice = price.replace(".00","",true)
-                val textPrice = String.format(getString(R.string.per_year), resultPrice)
+                val textPrice = String.format(getString(stringsR.string.per_year), resultPrice)
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
@@ -773,11 +772,11 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         binding.appThreeSubYearButton.apply {
             val product = state.products.firstOrNull {  it.productId == subscriptionYearIdListRu[2]  }
-            val price = product?.priceLabel ?: getString(R.string.no_connection)
-            if (price != getString(R.string.no_connection)) {
+            val price = product?.priceLabel ?: getString(stringsR.string.no_connection)
+            if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val resultPrice = price.replace(".00","",true)
-                val textPrice = String.format(getString(R.string.per_year), resultPrice)
+                val textPrice = String.format(getString(stringsR.string.per_year), resultPrice)
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
@@ -853,8 +852,8 @@ class PurchaseActivity : BaseSimpleActivity() {
                         if (error == "Application signature not correct") {
                             ConfirmationAdvancedDialog(
                                 activity = this,
-                                messageId = R.string.billing_error_application_signature_not_correct,
-                                positive = R.string.get,
+                                messageId = stringsR.string.billing_error_application_signature_not_correct,
+                                positive = stringsR.string.get,
                                 negative = R.string.cancel
                             ) { success ->
                                 if (success) {

@@ -81,12 +81,6 @@ fun Activity.appLaunched(appId: String) {
 //    }
 
     baseConfig.appRunCount++
-    //TODO HIDE
-    /*if (baseConfig.appRunCount % 30 == 0 && !isAProApp()) {
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
-            showDonateOrUpgradeDialog()
-        }
-    }*/
 
     if (!isTalkBackOn()) {
         if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {

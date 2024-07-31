@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.goodwy"
-version = "5.1.0"
+version = "5.2.0"
 
 android {
     namespace = "com.goodwy.commons"
@@ -108,6 +108,7 @@ dependencies {
     ksp(libs.androidx.room.compiler)
 
     //Goodwy
+    implementation(projects.strings)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)
     implementation(libs.rx.java)

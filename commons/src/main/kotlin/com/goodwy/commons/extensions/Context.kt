@@ -48,6 +48,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.AlarmSound
 import com.goodwy.commons.models.BlockedNumber
+import com.goodwy.commons.strings.R as stringsR
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader
@@ -1287,16 +1288,16 @@ fun Context.getTextFromClipboard(): CharSequence? {
 
 fun Context.getScreenSlideAnimationText() = getString(
     when (baseConfig.screenSlideAnimation) {
-        1 -> R.string.screen_slide_animation_zoomout
-        2 -> R.string.screen_slide_animation_depth
+        1 -> stringsR.string.screen_slide_animation_zoomout
+        2 -> stringsR.string.screen_slide_animation_depth
         else -> R.string.no
     }
 )
 
 fun Context.getNavigationBarStyleText() = getString(
     when (baseConfig.bottomNavigationBar) {
-        true -> R.string.bottom
-        else -> R.string.top
+        true -> stringsR.string.bottom
+        else -> stringsR.string.top
     }
 )
 

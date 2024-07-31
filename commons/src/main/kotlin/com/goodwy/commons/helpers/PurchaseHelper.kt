@@ -6,11 +6,11 @@ import com.android.billingclient.api.*
 import com.android.billingclient.api.BillingFlowParams.ProductDetailsParams
 import com.android.billingclient.api.QueryProductDetailsParams.Product
 import com.goodwy.commons.extensions.toast
-import com.goodwy.commons.R
+import com.goodwy.commons.strings.R as stringsR
 import kotlinx.coroutines.*
 import java.util.*
 
-class PurchaseHelper constructor(
+class PurchaseHelper (
     val activity: Activity,
     ) {
     private lateinit var billingClient: BillingClient
@@ -214,11 +214,11 @@ class PurchaseHelper constructor(
             try {
                 val iapSku = iapSkuDetails.firstOrNull { it.productId == product }
                 if (iapSku != null) iapSku.oneTimePurchaseOfferDetails!!.formattedPrice
-                else activity.getString(R.string.no_connection)
+                else activity.getString(stringsR.string.no_connection)
             } catch (e: Exception) {
-                activity.getString(R.string.no_connection)
+                activity.getString(stringsR.string.no_connection)
             }
-        } else activity.getString(R.string.no_connection)
+        } else activity.getString(stringsR.string.no_connection)
     }
 
     fun getDonation(product: String) {
@@ -247,12 +247,12 @@ class PurchaseHelper constructor(
                     if (plan != null) {
                         plan.pricingPhases
                             .pricingPhaseList[0].formattedPrice
-                    } else activity.getString(R.string.no_connection)
-                } else activity.getString(R.string.no_connection)
+                    } else activity.getString(stringsR.string.no_connection)
+                } else activity.getString(stringsR.string.no_connection)
             } catch (e: Exception) {
-                activity.getString(R.string.no_connection)
+                activity.getString(stringsR.string.no_connection)
             }
-        } else activity.getString(R.string.no_connection)
+        } else activity.getString(stringsR.string.no_connection)
     }
 
     fun getSubscription(product: String, planId: String? = null) {

@@ -2,8 +2,8 @@ package com.goodwy.commons.helpers.rustore
 
 import android.app.Activity
 import android.util.Log
-import com.goodwy.commons.R
 import com.goodwy.commons.helpers.rustore.model.*
+import com.goodwy.commons.strings.R as stringsR
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.*
@@ -154,14 +154,14 @@ class RuStoreHelper(
     private fun confirmPurchase(purchaseId: String) {
         _stateBilling.value = _stateBilling.value.copy(
             isLoading = true,
-            snackbarResId = R.string.billing_purchase_confirm_in_progress
+            snackbarResId = stringsR.string.billing_purchase_confirm_in_progress
         )
         billingClientRuStore.purchases.confirmPurchase(purchaseId, null)
             .addOnSuccessListener { response ->
                 _eventBilling.tryEmit(
                     BillingEvent.ShowDialog(
                         InfoDialogState(
-                            titleRes = R.string.billing_product_confirmed,
+                            titleRes = stringsR.string.billing_product_confirmed,
                             message = response.toString(),
                         )
                     )
@@ -179,13 +179,13 @@ class RuStoreHelper(
     private fun deletePurchase(purchaseId: String) {
         _stateBilling.value = _stateBilling.value.copy(
             isLoading = true,
-            snackbarResId = R.string.billing_purchase_delete_in_progress
+            snackbarResId = stringsR.string.billing_purchase_delete_in_progress
         )
         billingClientRuStore.purchases.deletePurchase(purchaseId)
             .addOnSuccessListener { response ->
                 _eventBilling.tryEmit(
                     BillingEvent.ShowDialog(InfoDialogState(
-                        titleRes = R.string.billing_product_deleted,
+                        titleRes = stringsR.string.billing_product_deleted,
                         message = response.toString()
                     ))
                 )

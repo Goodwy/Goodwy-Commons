@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Goodwy-Commons"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-include(":commons", ":samples")
+include(":commons", ":samples", ":strings")

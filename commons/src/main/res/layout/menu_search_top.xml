@@ -26,7 +26,7 @@
             android:layout_centerVertical="true"
             android:paddingStart="@dimen/normal_margin"
             android:src="@drawable/ic_search_vector"
-            android:contentDescription="@string/search" />
+            android:contentDescription="@null" />
 
         <com.goodwy.commons.views.MyEditText
             android:id="@+id/top_toolbar_search"
@@ -64,6 +64,7 @@
             android:background="?selectableItemBackgroundBorderless"
             android:alpha="0.4"
             android:src="@drawable/ic_clear_round"
+            android:contentDescription="@string/delete"
             android:visibility="gone"
             tools:visibility="visible" />
 

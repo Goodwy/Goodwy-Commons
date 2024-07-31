@@ -10,6 +10,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.databinding.ItemSimpleListBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
+import com.goodwy.commons.strings.R as stringsR
 
 open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (SimpleListItem) -> Unit) :
     ListAdapter<SimpleListItem, SimpleListItemAdapter.SimpleItemViewHolder>(SimpleListItemDiffCallback()) {
@@ -59,7 +60,7 @@ fun setupSimpleListItem(view: ItemSimpleListBinding, item: SimpleListItem, colle
             }
 
             bottomSheetButton.beVisible()
-            val textButton = if (item.selected) R.string.open else R.string.get
+            val textButton = if (item.selected) stringsR.string.open else stringsR.string.get
             bottomSheetButton.setText(textButton)
             val drawable = root.resources.getColoredDrawableWithColor(root.context, R.drawable.button_gray_bg, root.context.getProperPrimaryColor())
             bottomSheetButton.background = drawable

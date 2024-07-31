@@ -8,6 +8,7 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.OVERFLOW_ICON_HORIZONTAL
 import com.goodwy.commons.helpers.OVERFLOW_ICON_HORIZONTAL_ROUND
 import com.goodwy.commons.helpers.OVERFLOW_ICON_VERTICAL
+import com.goodwy.commons.strings.R as stringsR
 
 class OverflowIconDialog(val activity: Activity, val callback: (newValue: Any) -> Unit) {
 
@@ -37,7 +38,7 @@ class OverflowIconDialog(val activity: Activity, val callback: (newValue: Any) -
             .setPositiveButton(R.string.ok, null)
 
         builder.apply {
-            activity.setupDialogStuff(view.root, this, R.string.overflow_icon, cancelOnTouchOutside = true) { alertDialog ->
+            activity.setupDialogStuff(view.root, this, stringsR.string.overflow_icon, cancelOnTouchOutside = true) { alertDialog ->
                 dialog = alertDialog
             }
         }

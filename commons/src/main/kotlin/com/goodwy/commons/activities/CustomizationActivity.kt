@@ -6,10 +6,7 @@ import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.updateLayoutParams
-import com.behaviorule.arturdumchev.library.pixels
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.ActivityCustomizationBinding
 import com.goodwy.commons.dialogs.*
@@ -18,6 +15,7 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.MyTheme
 import com.goodwy.commons.models.RadioItem
 import com.goodwy.commons.models.SharedTheme
+import com.goodwy.commons.strings.R as stringsR
 import com.google.android.material.snackbar.Snackbar
 import com.mikhaellopez.rxanimation.RxAnimation
 import com.mikhaellopez.rxanimation.shake
@@ -115,7 +113,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                         //)
                     }
                 } catch (e: Exception) {
-                    toast(R.string.update_thank_you_g)
+                    toast(stringsR.string.update_thank_you_g)
                     finish()
                 }
             }
@@ -222,7 +220,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(
                 THEME_GRAY,
                 MyTheme(
-                    label = getString(R.string.gray_theme),
+                    label = getString(stringsR.string.gray_theme),
                     textColorId = R.color.theme_gray_text_color,
                     backgroundColorId = R.color.theme_gray_background_color,
                     primaryColorId = R.color.color_primary,
@@ -242,7 +240,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(
                 THEME_BLACK,
                 MyTheme(
-                    label = getString(R.string.black),
+                    label = getString(stringsR.string.black),
                     textColorId = R.color.theme_black_text_color,
                     backgroundColorId = R.color.theme_black_background_color,
                     primaryColorId = R.color.color_primary,
@@ -679,7 +677,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun handleAccentColorLayout() {
         binding.customizationAccentColorHolder.beVisibleIf(getShowAccentColor()) //(curSelectedThemeId == THEME_WHITE || isCurrentWhiteTheme() || curSelectedThemeId == THEME_BLACK_WHITE || isCurrentBlackAndWhiteTheme())
-        binding.customizationAccentColorLabel.text = getString(R.string.accent_color)
+        binding.customizationAccentColorLabel.text = getString(stringsR.string.accent_color)
         /*binding.customizationAccentColorLabel.text = getString(if (curSelectedThemeId == THEME_WHITE || isCurrentWhiteTheme()) {
             R.string.accent_color_white
         } else {
@@ -705,7 +703,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun pickTextCursorColor() {
         val textCursorColor = if (baseConfig.textCursorColor == -2) baseConfig.primaryColor else baseConfig.textCursorColor
-        ColorPickerDialog(this, textCursorColor, addDefaultColorButton = true, colorDefault = -2, title = resources.getString(R.string.text_cursor_color)) { wasPositivePressed, color ->
+        ColorPickerDialog(this, textCursorColor, addDefaultColorButton = true, colorDefault = -2, title = resources.getString(stringsR.string.text_cursor_color)) { wasPositivePressed, color ->
             if (wasPositivePressed) {
                 updateTextCursor(color)
                 val newColor = if (color == -2) getCurrentPrimaryColor() else color
@@ -780,7 +778,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAccentColor() {
-        ColorPickerDialog(this, curAccentColor, addDefaultColorButton = true, colorDefault = resources.getColor(R.color.default_accent_color), title = resources.getString(R.string.accent_color)) { wasPositivePressed, color ->
+        ColorPickerDialog(this, curAccentColor, addDefaultColorButton = true, colorDefault = resources.getColor(R.color.default_accent_color), title = resources.getString(stringsR.string.accent_color)) { wasPositivePressed, color ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curAccentColor, color)) {
                     curAccentColor = color
@@ -903,7 +901,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun launchPurchase() {
         startPurchaseActivity(
-            R.string.app_name_g,
+            stringsR.string.app_name_g,
             getProductIdList(), getProductIdListRu(),
             getSubscriptionIdList(), getSubscriptionIdListRu(),
             getSubscriptionYearIdList(), getSubscriptionYearIdListRu(),
@@ -969,7 +967,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun showSnackbar(view: View) {
         view.performHapticFeedback()
 
-        val snackbar = Snackbar.make(view, R.string.support_project_to_unlock, Snackbar.LENGTH_SHORT)
+        val snackbar = Snackbar.make(view, stringsR.string.support_project_to_unlock, Snackbar.LENGTH_SHORT)
             .setAction(R.string.support) {
                 launchPurchase()
             }

@@ -44,6 +44,7 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.databinding.DialogColorPickerBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.isQPlus
+import com.goodwy.commons.strings.R as stringsR
 import java.util.LinkedList
 
 private const val RECENT_COLORS_NUMBER = 5
@@ -75,7 +76,7 @@ class ColorPickerDialog(
     val addDefaultColorButton: Boolean = false,
     colorDefault: Int = -1,
     val currentColorCallback: ((color: Int) -> Unit)? = null,
-    val title: String = activity.resources.getString(R.string.color_title),
+    val title: String = activity.resources.getString(stringsR.string.color_title),
     val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
 ) {
     private val baseConfig = activity.baseConfig
@@ -153,7 +154,7 @@ fun ColorPickerAlertDialog(
     alertDialogState: AlertDialogState,
     @ColorInt color: Int,
     modifier: Modifier = Modifier,
-    title: String = stringResource(id = R.string.color_title),
+    title: String = stringResource(id = stringsR.string.color_title),
     removeDimmedBackground: Boolean = false,
     addDefaultColorButton: Boolean = false,
     onActiveColorChange: (color: Int) -> Unit,

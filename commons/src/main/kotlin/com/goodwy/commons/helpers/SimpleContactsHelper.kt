@@ -184,7 +184,6 @@ class SimpleContactsHelper(val context: Context) {
             val contactId = cursor.getIntValue(Data.CONTACT_ID)
             val type = cursor.getIntValue(Phone.TYPE)
             val label = cursor.getStringValue(Phone.LABEL) ?: ""
-            val favorite = cursor.getIntValue(Data.STARRED) != 0 // not work
             val isPrimary = cursor.getIntValue(Phone.IS_PRIMARY) != 0
 
             if (contacts.firstOrNull { it.rawId == rawId } == null) {
@@ -193,7 +192,6 @@ class SimpleContactsHelper(val context: Context) {
             }
 
             val phoneNumber = PhoneNumber(normalizedNumber, type, label, normalizedNumber, isPrimary)
-            //val phoneNumbersInfo = PhoneNumber(normalizedNumber, type, label, normalizedNumber, favorite)
             contacts.firstOrNull { it.rawId == rawId }?.phoneNumbers?.add(phoneNumber)
         }
         return contacts
@@ -299,19 +297,6 @@ class SimpleContactsHelper(val context: Context) {
         view.layout(0, 0, size, size)
         val letterBackgroundColors = context.getLetterBackgroundColors()
 
-//        val circlePaint = Paint().apply {
-//            color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
-//            isAntiAlias = true
-//        }
-//
-//        val gradient = Paint().apply {
-//            color = Color.BLACK
-//            //strokeWidth = 1F
-//            style = Paint.Style.FILL_AND_STROKE
-//            shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
-//            isAntiAlias = true
-//        }
-//        val backgroundPaint = if (context.baseConfig.useColoredContacts) circlePaint else gradient
         val backgroundPaint = if (context.baseConfig.useColoredContacts) {
             Paint().apply {
                 color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
@@ -352,18 +337,6 @@ class SimpleContactsHelper(val context: Context) {
         val paint = Paint()
         val letterBackgroundColors = context.getLetterBackgroundColors()
 
-//        val circlePaint = Paint().apply {
-//            color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
-//            isAntiAlias = true
-//        }
-//        val gradient = Paint().apply {
-//            color = Color.BLACK
-//            //strokeWidth = 1F
-//            style = Paint.Style.FILL_AND_STROKE
-//            shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
-//            isAntiAlias = true
-//        }
-//        val backgroundPaint = if (context.baseConfig.useColoredContacts) circlePaint else gradient
         val backgroundPaint = if (context.baseConfig.useColoredContacts) {
             Paint().apply {
                 color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()

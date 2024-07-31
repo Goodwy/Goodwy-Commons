@@ -1,5 +1,6 @@
 package com.goodwy.commons.dialogs
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.WindowManager
 import android.widget.FrameLayout
@@ -34,12 +35,13 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.databinding.DialogGridColorPickerBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.interfaces.LineColorPickerListener
+import com.goodwy.commons.strings.R as stringsR
 
 class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val colorBackground: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.line_00,
                             val primaryColors50: Int = R.array.line_10, val primaryColors100: Int = R.array.line_20, val primaryColors200: Int = R.array.line_30,
                             val primaryColors300: Int = R.array.line_40, val primaryColors400: Int = R.array.line_50, val primaryColors500: Int = R.array.line_60,
                             val primaryColors600: Int = R.array.line_70, val primaryColors700: Int = R.array.line_80, val primaryColors800: Int = R.array.line_90,
-                            val appIconIDs: ArrayList<Int>? = null, val toolbar: MaterialToolbar? = null, val title: String = activity.resources.getString(R.string.color_title), val removeDimmedBackground: Boolean = false,
+                            val appIconIDs: ArrayList<Int>? = null, val toolbar: MaterialToolbar? = null, val title: String = activity.resources.getString(stringsR.string.color_title), val removeDimmedBackground: Boolean = false,
                             showUseDefaultButton: Boolean = false, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
 
     private val PRIMARY_COLORS_COUNT = 12
@@ -560,6 +562,7 @@ private fun Context.getColorsForIndex(index: Int) = when (index) {
 
 private fun Context.getColors(id: Int) = resources.getIntArray(id).toCollection(ArrayList())
 
+@SuppressLint("ResourceAsColor")
 @Composable
 @MyDevices
 private fun LineColorPickerAlertDialogPreview() {
