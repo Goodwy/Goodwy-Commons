@@ -35,7 +35,7 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.databinding.DialogGridColorPickerBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.interfaces.LineColorPickerListener
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 
 class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val colorBackground: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.line_00,
                             val primaryColors50: Int = R.array.line_10, val primaryColors100: Int = R.array.line_20, val primaryColors200: Int = R.array.line_30,

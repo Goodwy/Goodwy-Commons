@@ -8,7 +8,7 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.OVERFLOW_ICON_HORIZONTAL
 import com.goodwy.commons.helpers.OVERFLOW_ICON_HORIZONTAL_ROUND
 import com.goodwy.commons.helpers.OVERFLOW_ICON_VERTICAL
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 
 class OverflowIconDialog(val activity: Activity, val callback: (newValue: Any) -> Unit) {
 

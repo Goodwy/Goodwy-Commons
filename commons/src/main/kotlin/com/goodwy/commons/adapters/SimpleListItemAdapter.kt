@@ -10,7 +10,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.databinding.ItemSimpleListBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.SimpleListItem
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 
 open class SimpleListItemAdapter(val activity: Activity, val onItemClicked: (SimpleListItem) -> Unit) :
     ListAdapter<SimpleListItem, SimpleListItemAdapter.SimpleItemViewHolder>(SimpleListItemDiffCallback()) {

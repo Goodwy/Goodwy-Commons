@@ -48,7 +48,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.AlarmSound
 import com.goodwy.commons.models.BlockedNumber
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader

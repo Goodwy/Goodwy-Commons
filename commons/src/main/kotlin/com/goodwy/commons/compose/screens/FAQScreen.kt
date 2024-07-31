@@ -24,7 +24,7 @@ import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.extensions.fromHtml
 import com.goodwy.commons.models.FAQItem
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 

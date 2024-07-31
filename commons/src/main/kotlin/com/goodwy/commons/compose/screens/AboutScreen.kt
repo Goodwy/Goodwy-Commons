@@ -33,7 +33,7 @@ import com.goodwy.commons.compose.settings.SettingsListItem
 import com.goodwy.commons.compose.settings.SettingsTitleTextComponent
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 
 private val startingTitlePadding = Modifier.padding(start = 56.dp)
 

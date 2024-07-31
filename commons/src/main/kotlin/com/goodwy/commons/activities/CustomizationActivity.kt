@@ -15,7 +15,7 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.MyTheme
 import com.goodwy.commons.models.RadioItem
 import com.goodwy.commons.models.SharedTheme
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 import com.google.android.material.snackbar.Snackbar
 import com.mikhaellopez.rxanimation.RxAnimation
 import com.mikhaellopez.rxanimation.shake

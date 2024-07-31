@@ -6,7 +6,7 @@ import com.android.billingclient.api.*
 import com.android.billingclient.api.BillingFlowParams.ProductDetailsParams
 import com.android.billingclient.api.QueryProductDetailsParams.Product
 import com.goodwy.commons.extensions.toast
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 import kotlinx.coroutines.*
 import java.util.*
 

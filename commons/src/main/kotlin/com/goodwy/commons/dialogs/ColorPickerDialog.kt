@@ -44,7 +44,7 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.databinding.DialogColorPickerBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.isQPlus
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 import java.util.LinkedList
 
 private const val RECENT_COLORS_NUMBER = 5

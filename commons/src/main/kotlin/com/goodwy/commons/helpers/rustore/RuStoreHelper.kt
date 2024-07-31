@@ -3,7 +3,7 @@ package com.goodwy.commons.helpers.rustore
 import android.app.Activity
 import android.util.Log
 import com.goodwy.commons.helpers.rustore.model.*
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.*

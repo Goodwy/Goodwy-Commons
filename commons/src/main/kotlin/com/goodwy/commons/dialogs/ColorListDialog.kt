@@ -9,7 +9,7 @@ import com.goodwy.commons.helpers.LBC_ANDROID
 import com.goodwy.commons.helpers.LBC_ARC
 import com.goodwy.commons.helpers.LBC_IOS
 import com.goodwy.commons.helpers.LBC_ORIGINAL
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 
 class ColorListDialog(val activity: Activity, val callback: (newValue: Any) -> Unit) {
 

@@ -24,7 +24,7 @@ import com.goodwy.commons.helpers.rustore.model.BillingEvent
 import com.goodwy.commons.helpers.rustore.model.BillingState
 import com.goodwy.commons.helpers.rustore.model.StartPurchasesEvent
 import com.goodwy.commons.models.SimpleListItem
-import com.goodwy.commons.strings.R as stringsR
+import com.goodwy.strings.R as stringsR
 import kotlinx.coroutines.*
 import ru.rustore.sdk.billingclient.RuStoreBillingClient
 import ru.rustore.sdk.billingclient.utils.resolveForBilling
