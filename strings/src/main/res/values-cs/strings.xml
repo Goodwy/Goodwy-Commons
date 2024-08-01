@@ -39,6 +39,10 @@
     <string name="tip_excellent">Vynikající podpora</string>
     <string name="tip_incredible">Úžasná podpora</string>
     <string name="tip_jar">Podpora</string>
+    <string name="any_support_unlock_all">Vyberte si úroveň projektové podpory, která je vám k dispozici (jednorázová, měsíční nebo roční). Jakákoli podpora odemkne všechny funkce aplikace</string>
+    <string name="one_time_purchase">Jednorázová podpora</string>
+    <string name="monthly">Měsíční podpora</string>
+    <string name="yearly">Roční podpora</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Opravdu chcete odblokovat \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Velikost miniatur kontaktů</string>
     <string name="purchase_simple_thank_you_g">Zakoupit Jednoduché děkuji</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aktualizujte prosím Jednoduché děkuji na nejnovější verzi</string>

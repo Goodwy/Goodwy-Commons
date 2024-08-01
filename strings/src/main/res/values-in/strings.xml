@@ -39,6 +39,10 @@
     <string name="tip_excellent">Dukungan yang sangat baik</string>
     <string name="tip_incredible">Dukungan yang luar biasa</string>
     <string name="tip_jar">Mendukung</string>
+    <string name="any_support_unlock_all">Pilih tingkat dukungan proyek yang tersedia untuk Anda (satu kali, bulanan, atau tahunan). Dukungan apa pun akan membuka kunci semua fungsi aplikasi</string>
+    <string name="one_time_purchase">Dukungan satu kali</string>
+    <string name="monthly">Dukungan bulanan</string>
+    <string name="yearly">Dukungan tahunan</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Ukuran thumbnail kontak</string>
     <string name="purchase_simple_thank_you_g">Beli Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nHak cipta © Goodwy %2$d</string>
     <string name="update_thank_you_g">Silakan perbarui Goodwy Thank You ke versi terbaru</string>

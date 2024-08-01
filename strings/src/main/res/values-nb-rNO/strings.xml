@@ -56,6 +56,10 @@
     <string name="tip_excellent">Utmerket støtte</string>
     <string name="tip_incredible">Fantastisk støtte</string>
     <string name="tip_jar">Støtte</string>
+    <string name="any_support_unlock_all">Velg nivået på prosjektstøtte som er tilgjengelig for deg (engangs, månedlig eller årlig). All støtte låser opp alle funksjonene i appen</string>
+    <string name="one_time_purchase">Engangsstøtte</string>
+    <string name="monthly">Månedlig støtte</string>
+    <string name="yearly">Årlig støtte</string>
     <string name="unlock">Lås opp</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">Bruke kontaktfarger</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Størrelse på kontaktminiatyrer</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

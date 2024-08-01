@@ -56,6 +56,10 @@
     <string name="tip_excellent">การสนับสนุนที่ยอดเยี่ยม</string>
     <string name="tip_incredible">การสนับสนุนที่ยอดเยี่ยม</string>
     <string name="tip_jar">สนับสนุน</string>
+    <string name="any_support_unlock_all">เลือกระดับการสนับสนุนโครงการที่มีให้คุณ (ครั้งเดียว รายเดือน หรือรายปี) การสนับสนุนใด ๆ จะปลดล็อกคุณสมบัติทั้งหมดของแอพ</string>
+    <string name="one_time_purchase">การสนับสนุนครั้งเดียว</string>
+    <string name="monthly">การสนับสนุนรายเดือน</string>
+    <string name="yearly">การสนับสนุนประจําปี</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">ใช้สีสัมผัส</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">ขนาดภาพขนาดย่อของผู้ติดต่อ</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

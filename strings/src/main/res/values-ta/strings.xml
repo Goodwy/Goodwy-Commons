@@ -39,6 +39,10 @@
     <string name="tip_excellent">சிறந்த ஆதரவு</string>
     <string name="tip_incredible">அற்புதமான ஆதரவு</string>
     <string name="tip_jar">ஆதரவு</string>
+    <string name="any_support_unlock_all">உங்களுக்கு கிடைக்கக்கூடிய திட்ட ஆதரவின் அளவைத் தேர்ந்தெடுக்கவும் (ஒரு முறை, மாதாந்திர அல்லது வருடாந்திரம்). எந்தவொரு ஆதரவும் பயன்பாட்டின் அனைத்து செயல்பாடுகளையும் திறக்கும்</string>
+    <string name="one_time_purchase">ஒரு முறை ஆதரவு</string>
+    <string name="monthly">மாதாந்திர ஆதரவு</string>
+    <string name="yearly">ஆண்டு ஆதரவு</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">\"%s\" ஐ நிச்சயமாக நீக்க விரும்புகிறீர்களா?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">தொடர்பு சிறுபடங்களின் அளவு</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

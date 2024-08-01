@@ -39,6 +39,10 @@
     <string name="tip_excellent">Laguntza bikaina</string>
     <string name="tip_incredible">Laguntza harrigarria</string>
     <string name="tip_jar">Laguntza</string>
+    <string name="any_support_unlock_all">Hautatu eskuragarri duzun proiektuaren laguntza-maila (aldi bakarrekoa, hilerokoa edo urtekoa). Edozein laguntzak aplikazioaren funtzio guztiak desblokeatuko ditu</string>
+    <string name="one_time_purchase">Behin-behineko laguntza</string>
+    <string name="monthly">Hileroko laguntza</string>
+    <string name="yearly">Urteko laguntza</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Ziur \"% s\" desblokeatu nahi duzula?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Harremanetarako irudi txikien tamaina</string>
     <string name="purchase_simple_thank_you_g">Erosi Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Eguneratu Goodwy Thank You azken bertsiora</string>

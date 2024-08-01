@@ -55,8 +55,12 @@
     <string name="tip_kind">Kind tip of</string>
     <string name="tip_excellent">Excellent tip of</string>
     <string name="tip_incredible">Incredible tip of</string>
-    <string name="tip_jar">Tip Jar</string>
-    <string name="unlock">Unlock</string>
+    <string name="tip_jar">টিপ বয়াম</string>
+    <string name="any_support_unlock_all">আপনার জন্য উপলব্ধ প্রকল্প সমর্থনের স্তর চয়ন করুন (একবার, মাসিক বা বার্ষিক)। যেকোনো সমর্থন অ্যাপ্লিকেশনের সমস্ত বৈশিষ্ট্য আনলক করে। আপনি যেকোনো সময় আপনার সদস্যতা বাতিল করতে পারেন।</string>
+    <string name="one_time_purchase">এককালীন সমর্থন</string>
+    <string name="monthly">মাসিক সহায়তা</string>
+    <string name="yearly">বার্ষিক সহায়তা</string>
+    <string name="unlock">আনলক করুন</string>
     <string name="donate_text_g">
         <![CDATA[
             For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">যোগাযোগের রং ব্যবহার করুন</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">যোগাযোগ থাম্বনেল আকার</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

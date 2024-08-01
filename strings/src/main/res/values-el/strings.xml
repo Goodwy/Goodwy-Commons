@@ -39,6 +39,10 @@
     <string name="tip_excellent">Εξαιρετική υποστήριξη</string>
     <string name="tip_incredible">Καταπληκτική υποστήριξη</string>
     <string name="tip_jar">Υποστηρίζω</string>
+    <string name="any_support_unlock_all">Επιλέξτε το επίπεδο υποστήριξης έργου που έχετε στη διάθεσή σας (εφάπαξ, μηνιαίο ή ετήσιο). Οποιαδήποτε υποστήριξη ξεκλειδώνει όλες τις δυνατότητες της εφαρμογής</string>
+    <string name="one_time_purchase">Εφάπαξ υποστήριξη</string>
+    <string name="monthly">Μηνιαία υποστήριξη</string>
+    <string name="yearly">Ετήσια υποστήριξη</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Είστε βέβαιοι ότι θέλετε να ξεμπλοκάρετε το \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Μέγεθος μικρογραφιών επαφών</string>
     <string name="purchase_simple_thank_you_g">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστούμε στην τελευταία έκδοση</string>

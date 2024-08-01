@@ -39,6 +39,10 @@
     <string name="tip_excellent">우수한 지원</string>
     <string name="tip_incredible">굉장한 지원</string>
     <string name="tip_jar">지원</string>
+    <string name="any_support_unlock_all">사용할 수 있는 프로젝트 지원 수준(일회성, 월간 또는 연간)을 선택합니다. 모든 지원을 통해 앱의 모든 기능을 사용할 수 있습니다</string>
+    <string name="one_time_purchase">일회성 지원</string>
+    <string name="monthly">월간 지원</string>
+    <string name="yearly">연간 지원</string>
     <string name="unlock">잠금 해제</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">\"%s\" 차단을 해제하시겠습니까?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">연락처 썸네일 크기</string>
     <string name="purchase_simple_thank_you_g">심플 Thank You 구매하기</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Goodwy Thank You 를 최신 버전으로 업데이트 해 주세요.</string>

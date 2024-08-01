@@ -39,6 +39,10 @@
     <string name="tip_excellent">پشتیبانی عالی</string>
     <string name="tip_incredible">پشتیبانی عالی</string>
     <string name="tip_jar">پشتیبانی</string>
+    <string name="any_support_unlock_all">سطح پشتیبانی پروژه موجود برای شما (یک باره، ماهانه یا سالانه) را انتخاب کنید. هر گونه پشتیبانی تمام ویژگی های برنامه را باز می کند</string>
+    <string name="one_time_purchase">پشتیبانی یکبار مصرف</string>
+    <string name="monthly">پشتیبانی ماهانه</string>
+    <string name="yearly">پشتیبانی سالانه</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">آیا مطمئن هستید که می خواهید \"%s\" را رفع انسداد کنید؟</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">اندازه تصاویر کوچک مخاطب</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

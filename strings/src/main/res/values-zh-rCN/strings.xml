@@ -39,6 +39,10 @@
     <string name="tip_excellent">出色的支持</string>
     <string name="tip_incredible">真棒支持</string>
     <string name="tip_jar">支持</string>
+    <string name="any_support_unlock_all">选择可供您使用的项目支持级别（一次性、每月或每年）。任何支持都可以解锁应用程序的所有功能</string>
+    <string name="one_time_purchase">一次性支持</string>
+    <string name="monthly">月度支持</string>
+    <string name="yearly">年度支持</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">你確定要疏通 \"%s\" 嗎？</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">联系人缩略图大小</string>
     <string name="purchase_simple_thank_you_g">購買Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">请更新 Goodwy Thank You 到最新版本</string>

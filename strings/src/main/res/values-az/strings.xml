@@ -39,6 +39,10 @@
     <string name="tip_excellent">Əla dəstək</string>
     <string name="tip_incredible">İnanılmaz dəstək</string>
     <string name="tip_jar">Dəstək</string>
+    <string name="any_support_unlock_all">Sizin üçün mövcud olan layihə dəstəyi səviyyəsini seçin (birdəfəlik, aylıq və ya illik). İstənilən dəstək proqramın bütün funksiyalarını açacaq</string>
+    <string name="one_time_purchase">Birdəfəlik dəstək</string>
+    <string name="monthly">Aylıq dəstək</string>
+    <string name="yearly">İllik dəstək</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -140,6 +144,7 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Əlaqə miniatürlərinin ölçüsü</string>
     <string name="purchase_simple_thank_you_g">Sadə Təşəkkür\'ü Alın</string>
     <string name="copyright_g">v %1$s\nMüəllif Hüquqları © Goodwy %2$d</string>
     <string name="update_thank_you_g">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>

@@ -56,6 +56,10 @@
     <string name="tip_excellent">ਸ਼ਾਨਦਾਰ ਸਮਰਥਨ</string>
     <string name="tip_incredible">ਹੈਰਾਨੀਜਨਕ ਸਮਰਥਨ</string>
     <string name="tip_jar">ਸਪੋਰਟ</string>
+    <string name="any_support_unlock_all">ਤੁਹਾਡੇ ਲਈ ਉਪਲਬਧ ਪ੍ਰੋਜੈਕਟ ਸਹਾਇਤਾ ਦਾ ਪੱਧਰ ਚੁਣੋ (ਇੱਕ ਵਾਰ, ਮਹੀਨਾਵਾਰ ਜਾਂ ਸਾਲਾਨਾ)। ਕੋਈ ਵੀ ਸਹਾਇਤਾ ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਸਾਰੇ ਫੰਕਸ਼ਨਾਂ ਨੂੰ ਅਨਲੌਕ ਕਰ ਦੇਵੇਗੀ</string>
+    <string name="one_time_purchase">ਇੱਕ-ਵਾਰ ਸਹਾਇਤਾ</string>
+    <string name="monthly">ਮਹੀਨਾਵਾਰ ਸਹਾਇਤਾ</string>
+    <string name="yearly">ਸਾਲਾਨਾ ਸਹਾਇਤਾ</string>
     <string name="unlock">ਅਨਲੌਕ ਕਰੋ</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">ਸੰਪਰਕ ਰੰਗਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">ਸੰਪਰਕ ਥੰਬਨੇਲ ਦਾ ਆਕਾਰ</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

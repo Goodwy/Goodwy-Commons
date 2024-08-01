@@ -56,6 +56,10 @@
     <string name="tip_excellent">Выдатная падтрымка</string>
     <string name="tip_incredible">Узрушаючая падтрымка</string>
     <string name="tip_jar">Падтрымаць</string>
+    <string name="any_support_unlock_all">Абярыце даступны Вам узровень падтрымкі праекта (аднаразовы, штомесячны або штогадовы). Любая падтрымка разблакуе ўсе функцыі прыкладання</string>
+    <string name="one_time_purchase">Разавая падтрымка</string>
+    <string name="monthly">Штомесячная падтрымка</string>
+    <string name="yearly">Штогадовая падтрымка</string>
     <string name="unlock">Разблакаваць</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">Выкарыстоўвайце кантактныя колеры</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Памер мініяцюр кантактаў</string>
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАўтарскія правы © Goodwy %2$d</string>
     <string name="update_thank_you_g">Абнавіце \"Goodwy Thank You\" да апошняй версіі.</string>

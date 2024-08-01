@@ -56,6 +56,10 @@
     <string name="tip_excellent">Отлична поддръжка</string>
     <string name="tip_incredible">Страхотна поддръжка</string>
     <string name="tip_jar">Поддръжка</string>
+    <string name="any_support_unlock_all">Изберете нивото на поддръжка на проекта (еднократно, месечно или годишно). Всяка поддръжка отключва всички функции на приложението</string>
+    <string name="one_time_purchase">Еднократна поддръжка</string>
+    <string name="monthly">Месечна поддръжка</string>
+    <string name="yearly">Годишна подкрепа</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">Използване на цветове за контакти</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Размер на миниатюрите на контактите</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

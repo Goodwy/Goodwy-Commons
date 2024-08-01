@@ -39,6 +39,10 @@
     <string name="tip_excellent">Cefnogaeth ardderchog</string>
     <string name="tip_incredible">Cefnogaeth anhygoel</string>
     <string name="tip_jar">Cefnogi</string>
+    <string name="any_support_unlock_all">Dewiswch lefel y cymorth prosiect sydd ar gael i chi (un-amser, misol neu flynyddol). Mae unrhyw gefnogaeth ddatgloi holl nodweddion yr app</string>
+    <string name="one_time_purchase">Cefnogaeth un-amser</string>
+    <string name="monthly">Cefnogaeth Fisol</string>
+    <string name="yearly">Cefnogaeth Flynyddol</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Maint mân-luniau cyswllt</string>
     <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
     <string name="copyright_g">f %1$s\nHawlfraint © Goodwy %2$d</string>
     <string name="update_thank_you_g">Diweddara Goodwy Thank You i\'r fersiwn diweddaraf</string>

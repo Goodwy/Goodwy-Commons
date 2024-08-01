@@ -39,6 +39,10 @@
     <string name="tip_excellent">دعم ممتاز</string>
     <string name="tip_incredible">دعم رائع</string>
     <string name="tip_jar">دعم</string>
+    <string name="any_support_unlock_all">اختر مستوى دعم المشروع المتاح لك (لمرة واحدة أو شهريا أو سنويا). أي دعم يفتح جميع ميزات التطبيق</string>
+    <string name="one_time_purchase">دعم لمرة واحدة</string>
+    <string name="monthly">الدعم الشهري</string>
+    <string name="yearly">الدعم السنوي</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -140,6 +144,7 @@
     <string name="unblock_confirmation">هل تريد بالتأكيد إلغاء حظر \"%s\"؟</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">حجم الصور المصغرة لجهات الاتصال</string>
     <string name="purchase_simple_thank_you_g">شراء تطبيق (Goodwy Thank You)</string>
     <string name="copyright_g">v %1$s\nحقوق النشر © Goodwy %2$d</string>
     <string name="update_thank_you_g">يرجى تحديث تطبيق (Goodwy Thank You) إلى أحدث إصدار</string>

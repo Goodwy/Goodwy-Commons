@@ -39,6 +39,10 @@
     <string name="tip_excellent">Odlična podpora</string>
     <string name="tip_incredible">Odlična podpora</string>
     <string name="tip_jar">Podpora</string>
+    <string name="any_support_unlock_all">Izberite raven podpore za projekt, ki vam je na voljo (enkratna, mesečna ali letna). Vsaka podpora odklene vse funkcije aplikacije</string>
+    <string name="one_time_purchase">Enkratna podpora</string>
+    <string name="monthly">Mesečna podpora</string>
+    <string name="yearly">Letna podpora</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Velikost sličic stikov</string>
     <string name="purchase_simple_thank_you_g">Kupite aplikacijo Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Prosimo nadgradite Goodwy Thank You na zadnjo verzijo</string>

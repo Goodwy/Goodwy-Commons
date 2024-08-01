@@ -39,6 +39,10 @@
     <string name="tip_excellent">Uitstekende ondersteuning</string>
     <string name="tip_incredible">Geweldige ondersteuning</string>
     <string name="tip_jar">Steunen</string>
+    <string name="any_support_unlock_all">Kies het niveau van projectondersteuning dat voor u beschikbaar is (eenmalig, maandelijks of jaarlijks). Elke ondersteuning ontgrendelt alle functies van de app</string>
+    <string name="one_time_purchase">Eenmalige ondersteuning</string>
+    <string name="monthly">Maandelijkse ondersteuning</string>
+    <string name="yearly">Jaarlijkse ondersteuning</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Weet u zeker dat u \"%s\" wilt deblokkeren?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Grootte van contactminiaturen</string>
     <string name="purchase_simple_thank_you_g">Goodwy Bedankje kopen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Er is een nieuwe versie van Goodwy Bedankje</string>

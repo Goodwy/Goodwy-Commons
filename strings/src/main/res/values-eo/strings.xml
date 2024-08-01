@@ -56,6 +56,10 @@
     <string name="tip_excellent">Bonega subteno</string>
     <string name="tip_incredible">Mirinda subteno</string>
     <string name="tip_jar">Subteno</string>
+    <string name="any_support_unlock_all">Elektu la nivelon de projekta subteno disponebla por vi (unufoja, monata aŭ ĉiujara). Ajna subteno malŝlosos ĉiujn funkciojn de la aplikaĵo</string>
+    <string name="one_time_purchase">Unufoja subteno</string>
+    <string name="monthly">Monata subteno</string>
+    <string name="yearly">Jara subteno</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">Uzu kontaktokolorojn</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Kontakto bildetoj grandeco</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

@@ -39,6 +39,10 @@
     <string name="tip_excellent">תמיכה מעולה</string>
     <string name="tip_incredible">תמיכה מדהימה</string>
     <string name="tip_jar">תמיכה</string>
+    <string name="any_support_unlock_all">בחר את רמת התמיכה בפרוייקט הזמינה עבורך (חד-פעמית, חודשית או שנתית). כל תמיכה מבטלת את כל התכונות של האפליקציה</string>
+    <string name="one_time_purchase">תמיכה חד-פעמית</string>
+    <string name="monthly">תמיכה חודשית</string>
+    <string name="yearly">תמיכה שנתית</string>
     <string name="unlock">לבטל נעילה</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">לבטל את חסימת \"% s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">גודל תמונות ממוזערות של אנשי קשר</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

@@ -56,6 +56,10 @@
     <string name="tip_excellent">Suport excelent</string>
     <string name="tip_incredible">Suport minunat</string>
     <string name="tip_jar">Sprijini</string>
+    <string name="any_support_unlock_all">Alegeți nivelul de asistență pentru proiect disponibil (o singură dată, lunar sau anual). Orice suport deblochează toate caracteristicile aplicației</string>
+    <string name="one_time_purchase">Asistență unică</string>
+    <string name="monthly">Asistență lunară</string>
+    <string name="yearly">Asistență anuală</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">Utilizarea culorilor de contact</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Dimensiunea miniaturilor contactelor</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

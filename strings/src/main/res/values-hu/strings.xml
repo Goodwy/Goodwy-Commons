@@ -39,6 +39,10 @@
     <string name="tip_excellent">Kiváló támogatás</string>
     <string name="tip_incredible">Fantasztikus támogatás</string>
     <string name="tip_jar">Támogat</string>
+    <string name="any_support_unlock_all">Válassza ki az Ön számára elérhető projekttámogatás szintjét (egyszeri, havi vagy éves). Bármely támogatás feloldja az alkalmazás összes funkcióját</string>
+    <string name="one_time_purchase">Egyszeri támogatás</string>
+    <string name="monthly">Havi támogatás</string>
+    <string name="yearly">Éves támogatás</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Névjegyek miniatűrjeinek mérete</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank You megvásárlása</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Kérjük frissítse a Goodwy Thank You alkalmazást a legújabb verzióra</string>

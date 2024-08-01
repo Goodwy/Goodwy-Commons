@@ -39,6 +39,10 @@
     <string name="tip_excellent">उत्कृष्ट समर्थन</string>
     <string name="tip_incredible">बहुत बढ़िया समर्थन</string>
     <string name="tip_jar">जीविका</string>
+    <string name="any_support_unlock_all">आपके लिए उपलब्ध परियोजना सहायता का स्तर चुनें (एक बार, मासिक या वार्षिक)। कोई भी समर्थन ऐप की सभी विशेषताओं को अनलॉक करता है</string>
+    <string name="one_time_purchase">एक बार का समर्थन</string>
+    <string name="monthly">मासिक समर्थन</string>
+    <string name="yearly">वार्षिक समर्थन</string>
     <string name="unlock">अनलॉक</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">क्या आप वाकई \"%s\" को अनब्लॉक करना चाहते हैं?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">संपर्क थंबनेल आकार</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">सं %1$s\nकॉपीराइट © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

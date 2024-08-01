@@ -40,6 +40,10 @@
     <string name="tip_excellent">Excelente apoio</string>
     <string name="tip_incredible">Apoio incrible</string>
     <string name="tip_jar">Apoiar</string>
+    <string name="any_support_unlock_all">Seleccione o nivel de apoio ao proxecto dispoñible para vostede (unha vez, mensual ou anual). Calquera soporte desbloqueará todas as funcións da aplicación</string>
+    <string name="one_time_purchase">Apoio único</string>
+    <string name="monthly">Apoio mensual</string>
+    <string name="yearly">Apoio anual</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -140,6 +144,7 @@
     <string name="unblock_confirmation">Seguro que queres desbloquear \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Tamaño das miniaturas de contacto</string>
     <string name="purchase_simple_thank_you_g">Comprar Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Actualiza Goodwy Thank You á última versión</string>

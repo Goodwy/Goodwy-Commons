@@ -56,6 +56,10 @@
     <string name="tip_excellent">മികച്ച പിന്തുണ</string>
     <string name="tip_incredible">അത്ഭുതകരമായ പിന്തുണ</string>
     <string name="tip_jar">പിന്തുണ</string>
+    <string name="any_support_unlock_all">നിങ്ങൾക്ക് ലഭ്യമായ പ്രോജക്റ്റ് പിന്തുണയുടെ നില തിരഞ്ഞെടുക്കുക (ഒറ്റത്തവണ, പ്രതിമാസ അല്ലെങ്കിൽ വാർഷികം). ഏത് പിന്തുണയും ആപ്ലിക്കേഷൻ്റെ എല്ലാ പ്രവർത്തനങ്ങളെയും അൺലോക്ക് ചെയ്യും</string>
+    <string name="one_time_purchase">ഒറ്റത്തവണ പിന്തുണ</string>
+    <string name="monthly">പ്രതിമാസ പിന്തുണ</string>
+    <string name="yearly">വാർഷിക പിന്തുണ</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">കോൺടാക്റ്റ് നിറങ്ങൾ ഉപയോഗിക്കുക</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">കോൺടാക്റ്റ് ലഘുചിത്രങ്ങളുടെ വലുപ്പം</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

@@ -39,6 +39,10 @@
     <string name="tip_excellent">Hỗ trợ tuyệt vời</string>
     <string name="tip_incredible">Hỗ trợ hoàn hảo</string>
     <string name="tip_jar">Hỗ trợ</string>
+    <string name="any_support_unlock_all">Chọn mức hỗ trợ dự án có sẵn cho bạn (một lần, hàng tháng hoặc hàng năm). Mọi hỗ trợ đều mở khóa tất cả các tính năng của ứng dụng</string>
+    <string name="one_time_purchase">Hỗ trợ một lần</string>
+    <string name="monthly">Hỗ trợ hàng tháng</string>
+    <string name="yearly">Hỗ trợ hàng năm</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Kích thước hình thu nhỏ liên hệ</string>
     <string name="purchase_simple_thank_you_g">Cảm ơn vì đã mua hàng Goodwy</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Vui lòng cập nhật Goodwy Thank You lên phiên bản mới nhất</string>

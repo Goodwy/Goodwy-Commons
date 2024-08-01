@@ -56,6 +56,10 @@
     <string name="tip_excellent">Відмінна підтримка</string>
     <string name="tip_incredible">Чудова підтримка</string>
     <string name="tip_jar">Підтримати</string>
+    <string name="any_support_unlock_all">Виберіть доступний вам рівень підтримки проекту (разовий, щомісячний або щорічний). Будь-яка підтримка відкриває всі функції програми</string>
+    <string name="one_time_purchase">Разова підтримка</string>
+    <string name="monthly">Щомісячна підтримка</string>
+    <string name="yearly">Щорічна підтримка</string>
     <string name="unlock">Розблокувати</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">Використовувати кольори контактів</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Розмір мініатюр контактів</string>
     <string name="purchase_simple_thank_you_g">Купити Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАвторські права © Goodwy %2$d</string>
     <string name="update_thank_you_g">Оновіть \"Goodwy Thank You\" до останньої версії.</string>

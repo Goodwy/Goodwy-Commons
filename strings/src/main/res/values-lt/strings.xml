@@ -39,6 +39,10 @@
     <string name="tip_excellent">Puikus palaikymas</string>
     <string name="tip_incredible">Nuostabus palaikymas</string>
     <string name="tip_jar">Parama</string>
+    <string name="any_support_unlock_all">Pasirinkite jums prieinamo projekto palaikymo lygį (vienkartinį, mėnesinį ar metinį). Bet koks palaikymas atrakina visas programos funkcijas</string>
+    <string name="one_time_purchase">Vienkartinis palaikymas</string>
+    <string name="monthly">Mėnesinis palaikymas</string>
+    <string name="yearly">Metinė parama</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Ar tikrai norite atblokuoti \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Kontaktinių miniatiūrų dydis</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nVisos teisės saugomos © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

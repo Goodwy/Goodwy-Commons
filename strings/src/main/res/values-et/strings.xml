@@ -56,6 +56,10 @@
     <string name="tip_excellent">Suurepärane tugi</string>
     <string name="tip_incredible">Hämmastav toetus</string>
     <string name="tip_jar">Otsapurk</string>
+    <string name="any_support_unlock_all">Valige teile saadaoleva projektitoe tase (ühekordne, igakuine või aastane). Igasugune tugi avab kõik rakenduse funktsioonid</string>
+    <string name="one_time_purchase">Ühekordne tugi</string>
+    <string name="monthly">Igakuine tugi</string>
+    <string name="yearly">Iga-aastane toetus</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">Kontakti värvide kasutamine</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Kontakti pisipiltide suurus</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

@@ -56,6 +56,10 @@
     <string name="tip_excellent">بہترین سپورٹ</string>
     <string name="tip_incredible">حیرت انگیز سپورٹ</string>
     <string name="tip_jar">حمایت</string>
+    <string name="any_support_unlock_all">آپ کے لیے دستیاب پروجیکٹ سپورٹ کی سطح کا انتخاب کریں (ایک بار، ماہانہ یا سالانہ)۔ کوئی بھی سپورٹ ایپلی کیشن کے تمام افعال کو غیر مقفل کر دے گی۔</string>
+    <string name="one_time_purchase">ایک بار کی حمایت</string>
+    <string name="monthly">ماہانہ تعاون</string>
+    <string name="yearly">سالانہ تعاون</string>
     <string name="unlock">غیر مقفل کریں</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -141,6 +145,7 @@
     <string name="use_contact_colors">رابطے کے رنگ استعمال کریں۔</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">تھمب نیلز کا سائز رابطہ کریں۔</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

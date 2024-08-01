@@ -39,6 +39,10 @@
     <string name="tip_excellent">Izvrsna podrška</string>
     <string name="tip_incredible">Sjajna podrška</string>
     <string name="tip_jar">Podrška</string>
+    <string name="any_support_unlock_all">Odaberite razinu projektne podrške koja vam je dostupna (jednokratna, mjesečna ili godišnja). Svaka podrška otključava sve značajke aplikacije</string>
+    <string name="one_time_purchase">Jednokratna podrška</string>
+    <string name="monthly">Mjesečna podrška</string>
+    <string name="yearly">Godišnja potpora</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Jeste li sigurni da želite deblokirati \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Veličina minijatura kontakata</string>
     <string name="purchase_simple_thank_you_g">Kupite Jednostavno Hvala</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Molim ažurirajte Jednostavno hvala na najnoviju verziju</string>

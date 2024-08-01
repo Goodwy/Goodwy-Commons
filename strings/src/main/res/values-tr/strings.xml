@@ -39,6 +39,10 @@
     <string name="tip_excellent">Mükemmel destek</string>
     <string name="tip_incredible">Harika destek</string>
     <string name="tip_jar">Destek</string>
+    <string name="any_support_unlock_all">Kullanabileceğiniz proje desteği düzeyini seçin (bir kerelik, aylık veya yıllık). Herhangi bir destek, uygulamanın tüm özelliklerinin kilidini açar</string>
+    <string name="one_time_purchase">Tek seferlik destek</string>
+    <string name="monthly">Aylık Destek</string>
+    <string name="yearly">Yıllık Destek</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">\"%s\" engellemesini kaldırmak istediğinizden emin misiniz?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Kişi küçük resimlerinin boyutu</string>
     <string name="purchase_simple_thank_you_g">Goodwy Teşekkürler\'i Satın Al</string>
     <string name="copyright_g">v %1$s\nTelif hakkı © Goodwy %2$d</string>
     <string name="update_thank_you_g">Lütfen Goodwy Teşekkürler\'i son sürüme güncelleyin</string>

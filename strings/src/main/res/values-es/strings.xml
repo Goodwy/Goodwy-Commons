@@ -39,6 +39,10 @@
     <string name="tip_excellent">Excelente soporte</string>
     <string name="tip_incredible">Soporte impresionante</string>
     <string name="tip_jar">Apoyo</string>
+    <string name="any_support_unlock_all">Elija el nivel de soporte del proyecto disponible para usted (único, mensual o anual). Cualquier soporte desbloquea todas las funciones de la aplicación</string>
+    <string name="one_time_purchase">Soporte único</string>
+    <string name="monthly">Soporte Mensual</string>
+    <string name="yearly">Soporte Anual</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">¿Estás seguro de que quieres desbloquear \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Tamaño de las miniaturas de contacto</string>
     <string name="purchase_simple_thank_you_g">Comprar Simple Gracias</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Por favor, actualice Simple Gracias a la última versión</string>

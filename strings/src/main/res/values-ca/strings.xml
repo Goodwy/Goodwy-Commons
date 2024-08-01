@@ -39,6 +39,10 @@
     <string name="tip_excellent">Excel·lent suport</string>
     <string name="tip_incredible">Suport impressionant</string>
     <string name="tip_jar">Recolzar</string>
+    <string name="any_support_unlock_all">Trieu el nivell de suport al projecte disponible (únic, mensual o anual). Qualsevol suport desbloqueja totes les funcions de l\'aplicació</string>
+    <string name="one_time_purchase">Suport únic</string>
+    <string name="monthly">Suport mensual</string>
+    <string name="yearly">Suport anual</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -137,9 +141,9 @@
     <string name="paste_g">Inserir</string>
     <string name="recents">Recents</string>
     <string name="unblock_confirmation">Jeste li sigurni da želite deblokirati \'%s\'?</string>
-    <string name="pro">Jeste li sigurni da želite deblokirati \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Mida de les miniatures de contacte</string>
     <string name="purchase_simple_thank_you_g">Compra Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Si us plau, actualitzeu Goodwy Thank You a la darrera versió</string>

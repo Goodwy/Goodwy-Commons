@@ -39,6 +39,10 @@
     <string name="tip_excellent">Erinomainen tuki</string>
     <string name="tip_incredible">Mahtava tuki</string>
     <string name="tip_jar">Tuki</string>
+    <string name="any_support_unlock_all">Valitse käytettävissäsi olevan projektituen taso (kertaluonteinen, kuukausittainen tai vuosittainen). Mikä tahansa tuki avaa kaikki sovelluksen ominaisuudet</string>
+    <string name="one_time_purchase">Ühekordne tugi</string>
+    <string name="monthly">Kuukausittainen tuki</string>
+    <string name="yearly">Vuosittainen tuki</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Haluatko varmasti poistaa eston \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Yhteystietojen pikkukuvien koko</string>
     <string name="purchase_simple_thank_you_g">Osta Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Päivitä Goodwy Thank You viimeisimpään versioon</string>

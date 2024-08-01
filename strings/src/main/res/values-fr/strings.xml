@@ -39,6 +39,10 @@
     <string name="tip_excellent">Excellent support</string>
     <string name="tip_incredible">Un soutien impressionnant</string>
     <string name="tip_jar">Soutien</string>
+    <string name="any_support_unlock_all">Choisissez le niveau d’accompagnement de projet qui vous est offert (ponctuel, mensuel ou annuel). Tout support débloque toutes les fonctionnalités de l’application</string>
+    <string name="one_time_purchase">Assistance unique</string>
+    <string name="monthly">Assistance mensuelle</string>
+    <string name="yearly">Soutien annuel</string>
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -139,6 +143,7 @@
     <string name="unblock_confirmation">Êtes-vous sûr de vouloir débloquer \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Taille des vignettes de contact</string>
     <string name="purchase_simple_thank_you_g">Acheter Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Veuillez mettre à jour Goodwy Thank You</string>

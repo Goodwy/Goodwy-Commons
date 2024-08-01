@@ -40,6 +40,10 @@
     <string name="tip_excellent">Одлична напојница</string>
     <string name="tip_incredible">Невероватна напојница</string>
     <string name="tip_jar">Напојнице</string>
+    <string name="any_support_unlock_all">Изаберите ниво подршке за пројекат који вам је доступан (једнократно, месечно или годишње). Свака подршка ће откључати све функције апликације</string>
+    <string name="one_time_purchase">Једнократна подршка</string>
+    <string name="monthly">Месечна подршка</string>
+    <string name="yearly">Годишња подршка</string>
     <string name="unlock">Откључај</string>
     <string name="donate_text_g">
         <![CDATA[
@@ -140,6 +144,7 @@
     <string name="unblock_confirmation">Да ли сте сигурни да желите да одблокирате \"%s\"?</string>
 
     <!-- Other -->
+    <string name="contact_thumbnails_size">Величина сличица контаката</string>
     <string name="purchase_simple_thank_you_g">Купите Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАуторско право © Goodwy %2$d</string>
     <string name="update_thank_you_g">Молимо ажурирајте Goodwy Thank You на најновију верзију</string>
