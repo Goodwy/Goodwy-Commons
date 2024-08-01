@@ -85,7 +85,7 @@
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
-                        android:layout_above="@+id/app_one_sub_button"
+                        android:layout_above="@+id/app_two_button"
                         android:layout_marginTop="@dimen/medium_margin"
                         android:alpha="0.6"
                         android:background="@drawable/button_gray_bg_8dp"
@@ -100,11 +100,11 @@
                         tools:ignore="SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/app_one_sub_button"
+                        android:id="@+id/app_two_button"
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
-                        android:layout_above="@+id/app_one_sub_year_button"
+                        android:layout_above="@+id/app_three_button"
                         android:layout_marginTop="@dimen/smaller_margin"
                         android:alpha="0.7"
                         android:background="@drawable/button_gray_bg_8dp"
@@ -119,7 +119,7 @@
                         tools:ignore="SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/app_one_sub_year_button"
+                        android:id="@+id/app_three_button"
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
@@ -151,7 +151,7 @@
                         android:id="@+id/app_two_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_above="@+id/app_two_button"
+                        android:layout_above="@+id/app_one_sub_button"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
                         android:ellipsize="end"
@@ -162,7 +162,7 @@
                         android:textSize="12sp" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/app_two_button"
+                        android:id="@+id/app_one_sub_button"
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
@@ -185,7 +185,7 @@
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
-                        android:layout_above="@+id/app_two_sub_year_button"
+                        android:layout_above="@+id/app_three_sub_button"
                         android:layout_marginTop="@dimen/smaller_margin"
                         android:alpha="0.8"
                         android:background="@drawable/button_gray_bg_8dp"
@@ -200,7 +200,7 @@
                         tools:ignore="SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/app_two_sub_year_button"
+                        android:id="@+id/app_three_sub_button"
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
@@ -234,7 +234,7 @@
                         android:id="@+id/app_three_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_above="@+id/app_three_button"
+                        android:layout_above="@+id/app_one_sub_year_button"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
@@ -245,11 +245,11 @@
                         android:textSize="12sp" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/app_three_button"
+                        android:id="@+id/app_one_sub_year_button"
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
-                        android:layout_above="@+id/app_three_sub_button"
+                        android:layout_above="@+id/app_two_sub_year_button"
                         android:layout_marginTop="@dimen/medium_margin"
                         android:alpha="0.8"
                         android:background="@drawable/button_gray_bg_8dp"
@@ -264,7 +264,7 @@
                         tools:ignore="SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/app_three_sub_button"
+                        android:id="@+id/app_two_sub_year_button"
                         style="@style/AppTheme.Button.Chip"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
