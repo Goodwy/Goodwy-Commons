@@ -76,7 +76,7 @@
                         android:ellipsize="end"
                         android:gravity="center"
                         android:maxLines="2"
-                        android:text="@string/tip_kind"
+                        android:text="@string/one_time_purchase"
                         android:textColor="@color/theme_light_text_color"
                         android:textSize="12sp" />
 
@@ -157,7 +157,7 @@
                         android:ellipsize="end"
                         android:gravity="center"
                         android:maxLines="2"
-                        android:text="@string/tip_excellent"
+                        android:text="@string/monthly"
                         android:textColor="@color/theme_light_text_color"
                         android:textSize="12sp" />
 
@@ -240,7 +240,7 @@
                         android:gravity="center"
                         android:ellipsize="end"
                         android:maxLines="2"
-                        android:text="@string/tip_incredible"
+                        android:text="@string/yearly"
                         android:textColor="@color/theme_light_text_color"
                         android:textSize="12sp" />
 
