@@ -600,7 +600,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     launchApp(it.packageName)
                 } else {
                     if (isRuStoreInstalled()) {
-                        val urlRS = "https://apps.rustore.ru/app/${it.packageName}"
+                        val urlRS = "https://www.rustore.ru/catalog/app/${it.packageName}"
                         launchViewIntent(urlRS)
                     } else {
                         val urlGP = "https://play.google.com/store/apps/details?id=${it.packageName}"
