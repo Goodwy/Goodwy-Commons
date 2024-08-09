@@ -43,6 +43,6 @@ class MyAppCompatSpinner : AppCompatSpinner {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
-        background.applyColorFilter(textColor)
+        background?.applyColorFilter(textColor)
     }
 }
