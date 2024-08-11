@@ -300,7 +300,7 @@ fun String.normalizePhoneNumber(): String = PhoneNumberUtils.normalizeNumber(thi
 fun String.formatPhoneNumber(minimumLength: Int = 4): String {
     val country = Locale.getDefault().country
     return if (this.length >= minimumLength) {
-        PhoneNumberUtils.formatNumber(this, country).toString()?.toString() ?: this
+        PhoneNumberUtils.formatNumber(this, country)?.toString() ?: this
     } else {
         this
     }
