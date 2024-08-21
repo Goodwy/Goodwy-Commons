@@ -291,7 +291,7 @@ class SimpleContactsHelper(val context: Context) {
     fun getContactLetterIcon(name: String): Bitmap {
         val emoji = name.take(2)
         val letter = if (emoji.isEmoji()) emoji else name.getNameLetter()
-        val size = context.resources.getDimension(R.dimen.normal_icon_size).toInt()
+        val size = context.resources.getDimension(R.dimen.contact_photo_big_size).toInt()
         val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         val view = TextView(context)
@@ -308,7 +308,7 @@ class SimpleContactsHelper(val context: Context) {
                 color = Color.BLACK
                 //strokeWidth = 1F
                 style = Paint.Style.FILL_AND_STROKE
-                shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
+                shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.contact_photo_big_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
                 isAntiAlias = true
             }
         }
@@ -332,7 +332,7 @@ class SimpleContactsHelper(val context: Context) {
     }
 
     fun getContactIconBg(name: String): Bitmap {
-        val size = context.resources.getDimension(R.dimen.normal_icon_size).toInt()
+        val size = context.resources.getDimension(R.dimen.contact_photo_big_size).toInt()
         val output = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(output)
         val paint = Paint()
@@ -348,7 +348,7 @@ class SimpleContactsHelper(val context: Context) {
                 color = Color.BLACK
                 //strokeWidth = 1F
                 style = Paint.Style.FILL_AND_STROKE
-                shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.normal_icon_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
+                shader = LinearGradient(0f, 0f, 0f, context.resources.getDimension(R.dimen.contact_photo_big_size), 0xFFa4a8b5.toInt(), 0xFF878b94.toInt(), Shader.TileMode.MIRROR)
                 isAntiAlias = true
             }
         }

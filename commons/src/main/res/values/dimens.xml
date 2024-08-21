@@ -74,6 +74,8 @@
     <dimen name="divider_height">2px</dimen>
 
     <dimen name="contact_grid_item_max_size">100dp</dimen>
+    <dimen name="contact_photo_size">88dp</dimen>
+    <dimen name="contact_photo_big_size">132dp</dimen>
 
     <dimen name="ten_dpi">10dp</dimen>
     <dimen name="holder_corners">10dp</dimen>
