@@ -275,13 +275,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         this.scrollingView = scrollingView
         this.toolbar = toolbar
         if (scrollingView is RecyclerView) {
-            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            scrollingView.setOnScrollChangeListener { _, _, _, _, _ ->
                 val newScrollY = scrollingView.computeVerticalScrollOffset()
-                scrollingChanged(newScrollY, currentScrollY)
+                if (newScrollY == 0 || currentScrollY == 0) scrollingChanged(newScrollY, currentScrollY)
                 currentScrollY = newScrollY
             }
         } else if (scrollingView is NestedScrollView) {
-            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            scrollingView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
                 scrollingChanged(scrollY, oldScrollY)
             }
         }
@@ -291,13 +291,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         this.scrollingView = scrollingView
         this.mySearchMenu = searchMenu
         if (scrollingView is RecyclerView) {
-            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            scrollingView.setOnScrollChangeListener { _, _, _, _, _ ->
                 val newScrollY = scrollingView.computeVerticalScrollOffset()
-                scrollingChanged(newScrollY, currentScrollY, true)
+                if (newScrollY == 0 || currentScrollY == 0) scrollingChanged(newScrollY, currentScrollY, true)
                 currentScrollY = newScrollY
             }
         } else if (scrollingView is NestedScrollView) {
-            scrollingView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            scrollingView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
                 scrollingChanged(scrollY, oldScrollY, true)
             }
         }
