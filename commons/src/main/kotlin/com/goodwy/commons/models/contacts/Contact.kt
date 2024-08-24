@@ -112,9 +112,13 @@ data class Contact(
 
         return if (sortingSymbolsFirst) {
             //TODO Contacts sorting: symbols at the top
-            if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isDigit() == true) {
+            if (firstValue.firstOrNull()?.isLetter() == true && firstValue.firstOrNull()?.isDigit() == false
+                && secondValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isDigit() == true
+            ) {
                 -1
-            } else if (firstValue.firstOrNull()?.isDigit() == true && secondValue.firstOrNull()?.isLetter() == true) {
+            } else if (firstValue.firstOrNull()?.isLetter() == false && firstValue.firstOrNull()?.isDigit() == true
+                && secondValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isDigit() == false
+            ) {
                 1
             } else {
                 if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
