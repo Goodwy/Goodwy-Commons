@@ -112,30 +112,20 @@ data class Contact(
 
         return if (sortingSymbolsFirst) {
             //TODO Contacts sorting: symbols at the top
-            if (firstValue.firstOrNull()?.isLetter() == true && firstValue.firstOrNull()?.isDigit() == false
-                && secondValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isDigit() == true
-            ) {
+            if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isDigit() == true) {
                 -1
-            } else if (firstValue.firstOrNull()?.isLetter() == false && firstValue.firstOrNull()?.isDigit() == true
-                && secondValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isDigit() == false
-            ) {
+            } else if (firstValue.firstOrNull()?.isDigit() == true && secondValue.firstOrNull()?.isLetter() == true) {
                 1
             } else {
-                if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
-                    -1
-                } else if (firstValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isLetter() == true) {
+                if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
                     1
+                } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
+                    -1
                 } else {
-                    if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
-                        1
-                    } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
-                        -1
+                    if (firstValue.equals(secondValue, ignoreCase = true)) {
+                        getNameToDisplay().compareTo(other.getNameToDisplay(), true)
                     } else {
-                        if (firstValue.equals(secondValue, ignoreCase = true)) {
-                            getNameToDisplay().compareTo(other.getNameToDisplay(), true)
-                        } else {
-                            firstValue.compareTo(secondValue, true)
-                        }
+                        firstValue.compareTo(secondValue, true)
                     }
                 }
             }
