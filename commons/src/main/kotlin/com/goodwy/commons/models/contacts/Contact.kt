@@ -117,15 +117,19 @@ data class Contact(
             } else if (firstValue.firstOrNull()?.isDigit() == true && secondValue.firstOrNull()?.isLetter() == true) {
                 1
             } else {
-                if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
-                    1
-                } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
-                    -1
+                if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == true) {
+                    firstValue.compareTo(secondValue, true)
                 } else {
-                    if (firstValue.equals(secondValue, ignoreCase = true)) {
-                        getNameToDisplay().compareTo(other.getNameToDisplay(), true)
+                    if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
+                        1
+                    } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
+                        -1
                     } else {
-                        firstValue.compareTo(secondValue, true)
+                        if (firstValue.equals(secondValue, ignoreCase = true)) {
+                            getNameToDisplay().compareTo(other.getNameToDisplay(), true)
+                        } else {
+                            firstValue.compareTo(secondValue, true)
+                        }
                     }
                 }
             }
