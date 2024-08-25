@@ -100,4 +100,7 @@
 
     <!--Search toolbar-->
     <dimen name="search_menu_height">36dp</dimen>
+
+    <!--Swipe-->
+    <dimen name="swipe_width">180dp</dimen>
 </resources>
