@@ -24,6 +24,7 @@ import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 import android.graphics.Bitmap
 import androidx.core.content.res.ResourcesCompat
+import kotlin.math.abs
 
 class SimpleContactsHelper(val context: Context) {
     fun getAvailableContacts(favoritesOnly: Boolean, callback: (ArrayList<SimpleContact>) -> Unit) {
@@ -300,7 +301,7 @@ class SimpleContactsHelper(val context: Context) {
 
         val backgroundPaint = if (context.baseConfig.useColoredContacts) {
             Paint().apply {
-                color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
+                color = letterBackgroundColors[abs(name.hashCode()) % letterBackgroundColors.size].toInt()
                 isAntiAlias = true
             }
         } else {
@@ -340,7 +341,7 @@ class SimpleContactsHelper(val context: Context) {
 
         val backgroundPaint = if (context.baseConfig.useColoredContacts) {
             Paint().apply {
-                color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
+                color = letterBackgroundColors[abs(name.hashCode()) % letterBackgroundColors.size].toInt()
                 isAntiAlias = true
             }
         } else {
@@ -363,7 +364,7 @@ class SimpleContactsHelper(val context: Context) {
     fun getColoredGroupIcon(title: String): Drawable? {
         val icon = ResourcesCompat.getDrawable(context.resources, R.drawable.ic_group_circle_bg, null)
         val letterBackgroundColors = context.getLetterBackgroundColors()
-        val bgColor = letterBackgroundColors[Math.abs(title.hashCode()) % letterBackgroundColors.size].toInt()
+        val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()
         if (context.baseConfig.useColoredContacts) (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
         return icon
     }
