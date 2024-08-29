@@ -27,16 +27,16 @@ data class Address(var value: String, var type: Int, var label: String, var coun
     }
 
     override fun hashCode(): Int {
-        var result = value.hashCode()
+        var result = (value ?: "").hashCode()
         result = 31 * result + type
-        result = 31 * result + label.hashCode()
-        result = 31 * result + country.hashCode()
-        result = 31 * result + region.hashCode()
-        result = 31 * result + city.hashCode()
-        result = 31 * result + postcode.hashCode()
-        result = 31 * result + pobox.hashCode()
-        result = 31 * result + street.hashCode()
-        result = 31 * result + neighborhood.hashCode()
+        result = 31 * result + (label ?: "").hashCode()
+        result = 31 * result + (country ?: "").hashCode()
+        result = 31 * result + (region ?: "").hashCode()
+        result = 31 * result + (city ?: "").hashCode()
+        result = 31 * result + (postcode ?: "").hashCode()
+        result = 31 * result + (pobox ?: "").hashCode()
+        result = 31 * result + (street ?: "").hashCode()
+        result = 31 * result + (neighborhood ?: "").hashCode()
         return result
     }
 }
