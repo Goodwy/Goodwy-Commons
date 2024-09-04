@@ -282,7 +282,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         } else if (scrollingView is NestedScrollView) {
             scrollingView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
-                scrollingChanged(scrollY, oldScrollY)
+                if (scrollY == 0 || oldScrollY == 0) scrollingChanged(scrollY, oldScrollY)
             }
         }
     }
@@ -298,7 +298,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         } else if (scrollingView is NestedScrollView) {
             scrollingView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
-                scrollingChanged(scrollY, oldScrollY, true)
+                if (scrollY == 0 || oldScrollY == 0) scrollingChanged(scrollY, oldScrollY, true)
             }
         }
     }
