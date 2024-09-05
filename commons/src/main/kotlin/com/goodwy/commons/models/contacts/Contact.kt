@@ -7,6 +7,8 @@ import com.goodwy.commons.extensions.normalizePhoneNumber
 import com.goodwy.commons.extensions.normalizeString
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.PhoneNumber
+import ezvcard.property.FormattedName
+import ezvcard.property.Telephone
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import java.util.Locale
@@ -289,5 +291,25 @@ data class Contact(
     fun getPrimaryNumber(): String? {
         val primaryNumber = phoneNumbers.firstOrNull { it.isPrimary }
         return primaryNumber?.normalizedNumber ?: phoneNumbers.firstOrNull()?.normalizedNumber
+    }
+
+    fun getContactToText(): String {
+        val name = arrayOf(prefix, firstName, middleName, surname, suffix)
+            .filter { it.isNotEmpty() }
+            .joinToString(separator = " ")
+        val formattedName = FormattedName(name)
+
+        val nickname = nickname
+
+        val phoneNumbersList = arrayListOf<Telephone>()
+        phoneNumbers.forEach {
+            val phoneNumber = Telephone(it.value)
+            phoneNumber.parameters.addType(it.label)
+            phoneNumbersList.add(phoneNumber)
+        }
+
+        return "$formattedName\n" +
+            "$nickname\n" +
+            "$phoneNumbersList"
     }
 }
