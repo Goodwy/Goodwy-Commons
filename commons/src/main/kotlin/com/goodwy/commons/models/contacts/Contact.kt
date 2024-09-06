@@ -339,6 +339,6 @@ data class Contact(
             contactToText = contactToText + context.getEmailTypeText(it.type, it.label) + " " + it.value
         }
 
-        return contactToText.replace("\n", "")
+        return contactToText.trim().replace("\n+".toRegex(), replacement = "\n")
     }
 }
