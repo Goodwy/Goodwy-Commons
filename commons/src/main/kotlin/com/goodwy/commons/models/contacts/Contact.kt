@@ -3,14 +3,11 @@ package com.goodwy.commons.models.contacts
 import android.content.Context
 import android.graphics.Bitmap
 import android.provider.ContactsContract
-import android.provider.ContactsContract.CommonDataKinds
 import android.telephony.PhoneNumberUtils
-import com.goodwy.commons.extensions.normalizePhoneNumber
-import com.goodwy.commons.extensions.normalizeString
+import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.PhoneNumber
 import ezvcard.property.FormattedName
-import ezvcard.property.Telephone
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import java.util.Locale
@@ -304,20 +301,20 @@ data class Contact(
 
         if (nickname.isNotEmpty()) contactToText = contactToText + nickname + "\n"
 
-        phoneNumbers.forEach {
-            contactToText = contactToText + it.label + " " + it.value + "\n"
+        if (phoneNumbers.isNotEmpty()) phoneNumbers.forEach {
+            contactToText = contactToText + context.getPhoneNumberTypeText(it.type, it.label) + " " + it.value + "\n"
         }
 
-        emails.forEach {
-            contactToText = contactToText + it.label + " " + it.value + "\n"
+        if (emails.isNotEmpty()) emails.forEach {
+            contactToText = contactToText + context.getEmailTypeText(it.type, it.label) + " " + it.value + "\n"
         }
 
-        addresses.forEach {
-            contactToText = contactToText + it.label + " " + it.value + "\n"
+        if (addresses.isNotEmpty()) addresses.forEach {
+            contactToText = contactToText + it.value + "\n"
         }
 
-        events.forEach {
-            contactToText = contactToText + getEventTextId(context, it.type) + " " + it.value + "\n"
+        if (events.isNotEmpty()) events.forEach {
+            contactToText = contactToText + context.getString(getEventTextId(it.type)) + " " + it.value + "\n"
         }
 
         if (notes.isNotEmpty()) contactToText = contactToText + notes + "\n"
@@ -330,24 +327,18 @@ data class Contact(
             contactToText = contactToText + organization.jobPosition + "\n"
         }
 
-        websites.forEach {
+        if (websites.isNotEmpty()) websites.forEach {
             contactToText = contactToText + it + "\n"
         }
 
-        relations.forEach {
-            contactToText = contactToText + it.label + " " + it.name + "\n"
+        if (relations.isNotEmpty()) relations.forEach {
+            contactToText = contactToText + context.getRelationTypeText(it.type, it.label) + " " + it.name + "\n"
         }
 
-        IMs.forEach {
-            contactToText = contactToText + it.label + " " + it.value + "\n"
+        if (IMs.isNotEmpty()) IMs.forEach {
+            contactToText = contactToText + context.getEmailTypeText(it.type, it.label) + " " + it.value + "\n"
         }
 
         return contactToText
-    }
-
-    private fun getEventTextId(context: Context, type: Int) = when (type) {
-        CommonDataKinds.Event.TYPE_ANNIVERSARY -> context.getString(com.goodwy.commons.R.string.anniversary)
-        CommonDataKinds.Event.TYPE_BIRTHDAY -> context.getString(com.goodwy.commons.R.string.birthday)
-        else -> context.getString(com.goodwy.commons.R.string.other)
     }
 }
