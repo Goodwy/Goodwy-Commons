@@ -1,5 +1,6 @@
 package com.goodwy.commons.models.contacts
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.provider.ContactsContract
 import android.provider.ContactsContract.CommonDataKinds
@@ -294,7 +295,7 @@ data class Contact(
         return primaryNumber?.normalizedNumber ?: phoneNumbers.firstOrNull()?.normalizedNumber
     }
 
-    fun getContactToText(): String {
+    fun getContactToText(context: Context): String {
         val name = arrayOf(prefix, firstName, middleName, surname, suffix)
             .filter { it.isNotEmpty() }
             .joinToString(separator = " ")
@@ -316,7 +317,7 @@ data class Contact(
         }
 
         events.forEach {
-            contactToText = contactToText + getEventTextId(it.type) + " " + it.value + "\n"
+            contactToText = contactToText + getEventTextId(context, it.type) + " " + it.value + "\n"
         }
 
         if (notes.isNotEmpty()) contactToText = contactToText + notes + "\n"
@@ -344,9 +345,9 @@ data class Contact(
         return contactToText
     }
 
-    private fun getEventTextId(type: Int) = when (type) {
-        CommonDataKinds.Event.TYPE_ANNIVERSARY -> com.goodwy.commons.R.string.anniversary
-        CommonDataKinds.Event.TYPE_BIRTHDAY -> com.goodwy.commons.R.string.birthday
-        else -> com.goodwy.commons.R.string.other
+    private fun getEventTextId(context: Context, type: Int) = when (type) {
+        CommonDataKinds.Event.TYPE_ANNIVERSARY -> context.getString(com.goodwy.commons.R.string.anniversary)
+        CommonDataKinds.Event.TYPE_BIRTHDAY -> context.getString(com.goodwy.commons.R.string.birthday)
+        else -> context.getString(com.goodwy.commons.R.string.other)
     }
 }
