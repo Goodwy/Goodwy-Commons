@@ -336,9 +336,9 @@ data class Contact(
         }
 
         if (IMs.isNotEmpty()) IMs.forEach {
-            contactToText = contactToText + context.getEmailTypeText(it.type, it.label) + " " + it.value + "\n"
+            contactToText = contactToText + context.getEmailTypeText(it.type, it.label) + " " + it.value
         }
 
-        return contactToText
+        return contactToText.replace("\n", "")
     }
 }
