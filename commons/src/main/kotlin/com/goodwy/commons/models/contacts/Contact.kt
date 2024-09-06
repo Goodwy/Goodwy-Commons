@@ -2,6 +2,7 @@ package com.goodwy.commons.models.contacts
 
 import android.graphics.Bitmap
 import android.provider.ContactsContract
+import android.provider.ContactsContract.CommonDataKinds
 import android.telephony.PhoneNumberUtils
 import com.goodwy.commons.extensions.normalizePhoneNumber
 import com.goodwy.commons.extensions.normalizeString
@@ -297,19 +298,55 @@ data class Contact(
         val name = arrayOf(prefix, firstName, middleName, surname, suffix)
             .filter { it.isNotEmpty() }
             .joinToString(separator = " ")
-        val formattedName = FormattedName(name)
+        val formattedName = FormattedName(name).value
+        var contactToText = if (formattedName.isNotEmpty()) formattedName + "\n" else ""
 
-        val nickname = nickname
+        if (nickname.isNotEmpty()) contactToText = contactToText + nickname + "\n"
 
-        val phoneNumbersList = arrayListOf<Telephone>()
         phoneNumbers.forEach {
-            val phoneNumber = Telephone(it.value)
-            phoneNumber.parameters.addType(it.label)
-            phoneNumbersList.add(phoneNumber)
+            contactToText = contactToText + it.label + " " + it.value + "\n"
         }
 
-        return "$formattedName\n" +
-            "$nickname\n" +
-            "$phoneNumbersList"
+        emails.forEach {
+            contactToText = contactToText + it.label + " " + it.value + "\n"
+        }
+
+        addresses.forEach {
+            contactToText = contactToText + it.label + " " + it.value + "\n"
+        }
+
+        events.forEach {
+            contactToText = contactToText + getEventTextId(it.type) + " " + it.value + "\n"
+        }
+
+        if (notes.isNotEmpty()) contactToText = contactToText + notes + "\n"
+
+        if (organization.company.isNotEmpty() && organization.jobPosition.isNotEmpty()) {
+            contactToText = contactToText + organization.company + "" + organization.jobPosition + "\n"
+        } else if (organization.company.isNotEmpty()) {
+            contactToText = contactToText + organization.company + "\n"
+        } else if (organization.jobPosition.isNotEmpty()) {
+            contactToText = contactToText + organization.jobPosition + "\n"
+        }
+
+        websites.forEach {
+            contactToText = contactToText + it + "\n"
+        }
+
+        relations.forEach {
+            contactToText = contactToText + it.label + " " + it.name + "\n"
+        }
+
+        IMs.forEach {
+            contactToText = contactToText + it.label + " " + it.value + "\n"
+        }
+
+        return contactToText
+    }
+
+    private fun getEventTextId(type: Int) = when (type) {
+        CommonDataKinds.Event.TYPE_ANNIVERSARY -> com.goodwy.commons.R.string.anniversary
+        CommonDataKinds.Event.TYPE_BIRTHDAY -> com.goodwy.commons.R.string.birthday
+        else -> com.goodwy.commons.R.string.other
     }
 }
