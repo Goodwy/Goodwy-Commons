@@ -1,5 +1,6 @@
 package com.goodwy.commons.adapters
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.view.*
 import android.widget.ImageView
@@ -64,6 +65,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 return true
             }
 
+            @SuppressLint("UseCompatLoadingForDrawables")
             override fun onCreateActionMode(actionMode: ActionMode, menu: Menu?): Boolean {
                 if (getActionMenuId() == 0) {
                     return true
@@ -97,6 +99,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 //if (baseConfig.isUsingSystemTheme) {
                     actBarTextView?.onGlobalLayout {
                         val backArrow = activity.findViewById<ImageView>(androidx.appcompat.R.id.action_mode_close_button)
+                        backArrow?.setImageDrawable(resources.getDrawable(R.drawable.ic_chevron_left_vector))
                         backArrow?.applyColorFilter(bgColor.getContrastColor())
                     }
                 //}
