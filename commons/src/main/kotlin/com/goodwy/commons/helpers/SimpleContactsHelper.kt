@@ -179,6 +179,7 @@ class SimpleContactsHelper(val context: Context) {
         val selection = if (favoritesOnly) "${Data.STARRED} = 1" else null
 
         context.queryCursor(uri, projection, selection) { cursor ->
+            val number = cursor.getStringValue(Phone.NUMBER) ?: return@queryCursor
             val normalizedNumber = cursor.getStringValue(Phone.NORMALIZED_NUMBER)
                 ?: cursor.getStringValue(Phone.NUMBER)?.normalizePhoneNumber() ?: return@queryCursor
 
@@ -193,7 +194,7 @@ class SimpleContactsHelper(val context: Context) {
                 contacts.add(contact)
             }
 
-            val phoneNumber = PhoneNumber(normalizedNumber, type, label, normalizedNumber, isPrimary)
+            val phoneNumber = PhoneNumber(number, type, label, normalizedNumber, isPrimary)
             contacts.firstOrNull { it.rawId == rawId }?.phoneNumbers?.add(phoneNumber)
         }
         return contacts
