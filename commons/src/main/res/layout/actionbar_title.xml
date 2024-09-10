@@ -3,7 +3,6 @@
     android:id="@+id/actionbar_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackgroundBorderless"
     android:gravity="center_vertical|start"
     android:paddingStart="@dimen/medium_margin"
     android:paddingEnd="@dimen/medium_margin"
