@@ -114,6 +114,7 @@
     <string name="color_sim_card_icons">Каляровыя абразкі SIM-карт</string>
     <string name="tabs">Укладкі</string>
     <string name="open_search_when_open_contacts">Адкрыць пошук пры адкрыцці ўкладкі кантакты</string>
+    <string name="end_search_when_tab_changed">Завяраць пошук пры змене ўкладкі</string>
     <string name="call_screen_background">Фон экрана выкліку</string>
     <string name="contact_photo">Фота кантакту</string>
     <string name="blurry_contact_photo">Размытае фота кантакту</string>
