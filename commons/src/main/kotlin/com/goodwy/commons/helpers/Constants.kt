@@ -243,6 +243,7 @@ const val HIDE_TOP_BAR_WHEN_SCROLL = "hide_top_bar_when_scroll"
 const val SKIP_ARCHIVE_CONFIRMATION = "skip_archive_confirmation"
 const val USE_SWIPE_TO_ACTION = "use_swipe_to_action"
 const val CONTACT_THUMBNAILS_SIZE = "contact_thumbnails_size"
+const val CHANGE_COLOUR_TOP_BAR = "change_colour_top_bar"
 
 const val IS_RIGHT_APP = "is_right_app"
 const val IS_PRO_VERSION = "is_pro_version"

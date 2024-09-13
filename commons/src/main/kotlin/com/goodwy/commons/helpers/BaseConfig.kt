@@ -793,6 +793,10 @@ open class BaseConfig(val context: Context) {
     var contactThumbnailsSize: Int
         get() = prefs.getInt(CONTACT_THUMBNAILS_SIZE, CONTACT_THUMBNAILS_SIZE_MEDIUM) //context.resources.getDimension(R.dimen.normal_icon_size).toInt()
         set(contactThumbnailsSize) = prefs.edit().putInt(CONTACT_THUMBNAILS_SIZE, contactThumbnailsSize).apply()
+
+    var changeColourTopBar: Boolean
+        get() = prefs.getBoolean(CHANGE_COLOUR_TOP_BAR, true)
+        set(changeColourTopBar) = prefs.edit().putBoolean(CHANGE_COLOUR_TOP_BAR, changeColourTopBar).apply()
 }
 
 
