@@ -41,6 +41,9 @@ import com.goodwy.commons.databinding.DialogTitleBinding
 import com.goodwy.commons.dialogs.*
 import com.goodwy.commons.dialogs.WritePermissionDialog.WritePermissionDialogMode
 import com.goodwy.commons.helpers.*
+import com.goodwy.commons.helpers.MyContentProvider.COL_LAST_UPDATED_TS
+import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_CONFIG_UPDATED
+import com.goodwy.commons.helpers.MyContentProvider.MY_CONTENT_URI
 import com.goodwy.commons.models.*
 import com.goodwy.commons.views.MyTextView
 import java.io.*
@@ -88,14 +91,6 @@ fun Activity.appLaunched(appId: String) {
                 RateStarsDialog(this)
             }
         }
-    }
-}
-
-fun Activity.showDonateOrUpgradeDialog() {
-    if (getCanAppBeUpgraded()) {
-        UpgradeToProDialog(this)
-    } else if (!isOrWasThankYouInstalled()) {
-        DonateDialog(this)
     }
 }
 
@@ -1397,12 +1392,15 @@ fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean
     }
 }
 
-fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
-    try {
-        val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
-        applicationContext.contentResolver.update(MyContentProvider.MY_CONTENT_URI, contentValues, null, null)
-    } catch (e: Exception) {
-        showErrorToast(e)
+fun Activity.updateGlobalConfig(contentValues: ContentValues) {
+    ensureBackgroundThread {
+        try {
+            contentValues.put(COL_LAST_UPDATED_TS, System.currentTimeMillis() / 1000)
+            applicationContext.contentResolver.update(MY_CONTENT_URI, contentValues, null, null)
+            sendBroadcast(Intent(GLOBAL_CONFIG_UPDATED))
+        } catch (e: Exception) {
+            showErrorToast(e)
+        }
     }
 }
 
@@ -1479,8 +1477,7 @@ fun Activity.setupDialogStuff(
             getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
 
             val bgDrawable = when {
-                isBlackAndWhiteTheme() -> ResourcesCompat.getDrawable(resources, R.drawable.black_dialog_background, theme)
-                baseConfig.isUsingSystemTheme -> ResourcesCompat.getDrawable(resources, R.drawable.dialog_you_background, theme)
+                isDynamicTheme() -> ResourcesCompat.getDrawable(resources, R.drawable.dialog_you_background, theme)
                 isBlackTheme() -> resources.getColoredDrawableWithColor(this@setupDialogStuff, R.drawable.dialog_bg, getBottomNavigationBackgroundColor())
                 else -> resources.getColoredDrawableWithColor(this@setupDialogStuff, R.drawable.dialog_bg, baseConfig.backgroundColor) //TODO Dialog background
             }
@@ -1491,7 +1488,7 @@ fun Activity.setupDialogStuff(
     }
 }
 
-fun Activity.getAlertDialogBuilder() = if (baseConfig.isUsingSystemTheme) {
+fun Activity.getAlertDialogBuilder() = if (isDynamicTheme()) {
     MaterialAlertDialogBuilder(this)
 } else {
     AlertDialog.Builder(this)
@@ -1639,5 +1636,15 @@ fun Activity.onApplyWindowInsets(callback: (WindowInsetsCompat) -> Unit) {
         callback(WindowInsetsCompat.toWindowInsetsCompat(insets))
         view.onApplyWindowInsets(insets)
         insets
+    }
+}
+
+fun Activity.overrideActivityTransition(enterAnim: Int, exitAnim: Int, exiting: Boolean = false) {
+    if (isUpsideDownCakePlus()) {
+        val overrideType = if (exiting) Activity.OVERRIDE_TRANSITION_CLOSE else Activity.OVERRIDE_TRANSITION_OPEN
+        overrideActivityTransition(overrideType, enterAnim, exitAnim)
+    } else {
+        @Suppress("DEPRECATION")
+        overridePendingTransition(enterAnim, exitAnim)
     }
 }

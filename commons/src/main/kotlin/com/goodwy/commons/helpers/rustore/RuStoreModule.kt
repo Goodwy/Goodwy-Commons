@@ -2,10 +2,10 @@ package com.goodwy.commons.helpers.rustore
 
 import android.app.Application
 import android.graphics.Color
-import com.goodwy.commons.R
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.getContrastColor
-import com.goodwy.commons.extensions.isUsingSystemDarkTheme
+import com.goodwy.commons.extensions.isDynamicTheme
+import com.goodwy.commons.extensions.isSystemInDarkMode
 import ru.rustore.sdk.billingclient.RuStoreBillingClient
 import ru.rustore.sdk.billingclient.RuStoreBillingClientFactory
 import ru.rustore.sdk.billingclient.presentation.BillingClientTheme
@@ -27,7 +27,7 @@ object RuStoreModule {
     class BillingClientThemeProviderImpl(private val app: Application): BillingClientThemeProvider {
         override fun provide(): BillingClientTheme {
             return when {
-                app.baseConfig.isUsingSystemTheme -> if (app.isUsingSystemDarkTheme()) {
+                app.isDynamicTheme() -> if (app.isSystemInDarkMode()) {
                     BillingClientTheme.Dark
                 } else {
                     BillingClientTheme.Light

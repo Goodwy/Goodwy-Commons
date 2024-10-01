@@ -2,18 +2,23 @@ package com.goodwy.commons.views
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.ColorStateList
 import android.os.Handler
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.widget.TextView
 import androidx.biometric.auth.AuthPromptHost
 import androidx.core.os.postDelayed
+import androidx.core.widget.TextViewCompat
 import com.andrognito.patternlockview.PatternLockView
 import com.andrognito.patternlockview.listener.PatternLockViewListener
 import com.andrognito.patternlockview.utils.PatternLockUtils
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.TabPatternBinding
-import com.goodwy.commons.extensions.*
+import com.goodwy.commons.extensions.getProperPrimaryColor
+import com.goodwy.commons.extensions.getProperTextColor
+import com.goodwy.commons.extensions.performHapticFeedback
+import com.goodwy.commons.extensions.updateTextColors
 import com.goodwy.commons.helpers.PROTECTION_PATTERN
 import com.goodwy.commons.interfaces.BaseSecurityTab
 import com.goodwy.commons.interfaces.HashListener
@@ -59,14 +64,14 @@ class PatternTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(contex
             override fun onProgress(progressPattern: MutableList<PatternLockView.Dot>?) {}
         })
 
-        binding.patternLockIcon.applyColorFilter(textColor)
+        TextViewCompat.setCompoundDrawableTintList(binding.patternLockTitle, ColorStateList.valueOf(textColor))
         maybeShowCountdown()
     }
 
     override fun initTab(
         requiredHash: String,
         listener: HashListener,
-        scrollView: MyScrollView,
+        scrollView: MyScrollView?,
         biometricPromptHost: AuthPromptHost,
         showBiometricAuthentication: Boolean
     ) {

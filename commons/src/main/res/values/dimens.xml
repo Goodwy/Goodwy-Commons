@@ -11,7 +11,7 @@
     <dimen name="big_margin">24dp</dimen>
     <dimen name="section_margin">32dp</dimen>
     <dimen name="label_start_margin">72dp</dimen>
-    <dimen name="settings_label_start_margin">22dp</dimen>
+    <dimen name="settings_label_start_margin">20dp</dimen>
     <dimen name="min_radio_checkbox_height">44dp</dimen>
     <dimen name="settings_margin">8dp</dimen>
     <dimen name="about_margin">20dp</dimen>
@@ -76,6 +76,9 @@
     <dimen name="contact_grid_item_max_size">100dp</dimen>
     <dimen name="contact_photo_size">88dp</dimen>
     <dimen name="contact_photo_big_size">132dp</dimen>
+
+    <dimen name="app_lock_view_max_size">350dp</dimen>
+    <dimen name="app_lock_view_min_size">250dp</dimen>
 
     <dimen name="ten_dpi">10dp</dimen>
     <dimen name="holder_corners">10dp</dimen>

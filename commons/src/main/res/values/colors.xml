@@ -67,13 +67,6 @@
     <color name="default_widget_bg_color">#AA000000</color>
     <color name="default_widget_text_color">@color/color_primary</color>
 
-    <!-- SwitchCompat -->
-    <color name="thumb_deactivated">#FFECECEC</color>
-    <color name="track_deactivated">#FFB2B2B2</color>
-
-    <!-- Radiobutton -->
-    <color name="radiobutton_disabled">#FF757575</color>
-
     <!-- Primary colors -->
     <color name="md_amber">#FFC107</color>
     <color name="md_blue">#2196F3</color>

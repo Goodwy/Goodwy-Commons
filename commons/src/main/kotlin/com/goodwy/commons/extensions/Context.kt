@@ -4,6 +4,7 @@ import android.Manifest
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.annotation.TargetApi
 import android.app.Activity
+import android.app.Application
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.role.RoleManager
@@ -20,7 +21,6 @@ import android.net.Uri
 import android.os.*
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
-import android.provider.ContactsContract.CommonDataKinds
 import android.provider.ContactsContract.CommonDataKinds.*
 import android.provider.DocumentsContract
 import android.provider.MediaStore.*
@@ -60,12 +60,14 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
 val Context.isRTLLayout: Boolean get() = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL
 
 val Context.areSystemAnimationsEnabled: Boolean get() = Settings.Global.getFloat(contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 0f) > 0f
+
+val Context.appLockManager
+    get() = AppLockManager.getInstance(applicationContext as Application)
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     toast(getString(id), length)
@@ -112,6 +114,14 @@ fun Context.isFingerPrintSensorAvailable() = Reprint.isHardwarePresent()
 fun Context.isBiometricIdAvailable(): Boolean = when (BiometricManager.from(this).canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_WEAK)) {
     BiometricManager.BIOMETRIC_SUCCESS, BiometricManager.BIOMETRIC_STATUS_UNKNOWN -> true
     else -> false
+}
+
+fun Context.isBiometricAuthSupported(): Boolean {
+    return if (isRPlus()) {
+        isBiometricIdAvailable()
+    } else {
+        isFingerPrintSensorAvailable()
+    }
 }
 
 fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
@@ -487,15 +497,6 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
 // TODO thank you = SharedTheme
 fun Context.isSharedThemeInstalled() = isPackageInstalled("com.goodwy.sharedtheme")
 
-fun Context.isThankYouInstalled(): Boolean {
-    return when {
-        isPackageInstalled("com.goodwy.audiobook") -> true
-        isPackageInstalled("com.goodwy.voicerecorder") -> true
-        isPackageInstalled("com.goodwy.files") -> true
-        else -> false
-    }
-}
-
 fun Context.isOrWasThankYouInstalled(): Boolean {
     return when {
         resources.getBoolean(R.bool.pretend_thank_you_installed) -> true
@@ -505,8 +506,6 @@ fun Context.isOrWasThankYouInstalled(): Boolean {
         else -> false
     }
 }
-
-fun Context.isAProApp() = packageName.startsWith("com.goodwy.") && packageName.removeSuffix(".debug").endsWith(".pro")
 
 fun Context.getCustomizeColorsString(): String {
     val textId = if (isOrWasThankYouInstalled()) {

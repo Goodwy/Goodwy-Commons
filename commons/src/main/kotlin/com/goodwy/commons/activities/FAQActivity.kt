@@ -2,8 +2,6 @@ package com.goodwy.commons.activities
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.text.Html
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -13,14 +11,12 @@ import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.goodwy.commons.compose.screens.FAQScreen
 import com.goodwy.commons.compose.theme.AppThemeSurface
-import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.copyToClipboard
-import com.goodwy.commons.extensions.isUsingSystemDarkTheme
+import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.APP_FAQ
 import com.goodwy.commons.models.FAQItem
 import kotlinx.collections.immutable.toImmutableList
 
-class FAQActivity : ComponentActivity() {
+class FAQActivity : BaseComposeActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdgeSimple()
@@ -48,15 +44,14 @@ class FAQActivity : ComponentActivity() {
     }
 
     private fun changeAutoTheme() {
-        baseConfig.apply {
-            if (isUsingAutoTheme) {
-                val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
-                isUsingSharedTheme = false
-                textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
-                backgroundColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
-                finish()
-                startActivity(intent)
-                return
+        syncGlobalConfig {
+            baseConfig.apply {
+                if (isAutoTheme()) {
+                    val isUsingSystemDarkTheme = isSystemInDarkMode()
+                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color)
+                    backgroundColor =
+                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color)
+                }
             }
         }
     }

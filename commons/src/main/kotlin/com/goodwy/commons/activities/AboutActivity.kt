@@ -1,5 +1,6 @@
 package com.goodwy.commons.activities
 
+import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.*
@@ -9,7 +10,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -29,7 +29,7 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.FAQItem
 
-class AboutActivity : ComponentActivity() {
+class AboutActivity : BaseComposeActivity() {
     private val appName get() = intent.getStringExtra(APP_NAME) ?: ""
 
     private var firstVersionClickTS = 0L
@@ -78,19 +78,19 @@ class AboutActivity : ComponentActivity() {
     @Composable
     private fun rememberFAQ() = remember { !(intent.getSerializableExtra(APP_FAQ) as? ArrayList<FAQItem>).isNullOrEmpty() }
 
-    @Composable
-    private fun showWebsiteAndFullVersion(
-        resources: Resources,
-        showExternalLinks: Boolean,
-    ): Pair<Boolean, String> {
-        val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
-        var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
-        if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
-            version += " ${getString(R.string.pro)}"
-        }
-        val fullVersion = remember { String.format(getString(R.string.version_placeholder, version)) }
-        return Pair(showWebsite, fullVersion)
-    }
+//    @Composable
+//    private fun showWebsiteAndFullVersion(
+//        resources: Resources,
+//        showExternalLinks: Boolean,
+//    ): Pair<Boolean, String> {
+//        val showWebsite = remember { resources.getBoolean(R.bool.show_donate_in_about) && !showExternalLinks }
+//        var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+//        if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
+//            version += " ${getString(R.string.pro)}"
+//        }
+//        val fullVersion = remember { String.format(getString(R.string.version_placeholder, version)) }
+//        return Pair(showWebsite, fullVersion)
+//    }
 
     @Composable
     private fun getRateStarsAlertDialogState() =
@@ -161,6 +161,7 @@ class AboutActivity : ComponentActivity() {
         }
     }
 
+    @SuppressLint("StringFormatMatches")
     private fun launchEmailIntent() {
         val appVersion = String.format(getString(R.string.app_version, intent.getStringExtra(APP_VERSION_NAME)))
         val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
@@ -310,17 +311,19 @@ class AboutActivity : ComponentActivity() {
         changeAutoTheme()
     }
 
-    fun changeAutoTheme() {
-        baseConfig.apply {
-            if (isUsingAutoTheme) {
-                val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
-                isUsingSharedTheme = false
-                textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
-                backgroundColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
-                finish()
-                startActivity(intent)
-                return
+    private fun changeAutoTheme() {
+        syncGlobalConfig {
+            baseConfig.apply {
+                if (isAutoTheme()) {
+                    val isUsingSystemDarkTheme = isSystemInDarkMode()
+                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color)
+                    backgroundColor =
+                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color)
+                    finish()
+                    startActivity(intent)
+                }
             }
         }
+        return
     }
 }

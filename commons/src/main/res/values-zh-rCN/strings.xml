@@ -336,7 +336,7 @@
     <string name="save_before_closing">您尚未保存更改，是否保存？</string>
     <string name="apply_to_all_apps">应用颜色设置到所有 Fossify 应用</string>
     <string name="app_icon_color_warning">注意：某些启动器无法正确处理自定义的应用图标。如图标消失，请尝试通过 Google Play 商店或者挂件启动对应的应用。启动后请还原为默认的绿色图标色 #106D1F。在某些情形下你可能要重新安装应用。</string>
-    <string name="share_colors_success">颜色已成功更新。已添加名为“共享”的新主题，以后您可以使用它来更改所有应用的颜色。</string>
+    <string name="global_theme_success">颜色已成功更新。已添加名为“共享”的新主题，以后您可以使用它来更改所有应用的颜色。</string>
     <string name="shared_theme_note">请注意：即便你使用的是专业版的应用，你仍要需要通过 Fossify Thank You 应用来同步颜色。</string>
     <string name="purchase_thank_you">请购买 &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt; 解锁此功能，支持我们的开发工作。非常感谢！</string>
     <string name="light_theme">浅色主题</string>
@@ -376,7 +376,7 @@
     <string name="shortcut">快捷方式</string>
     <string name="create_shortcut">创建快捷方式</string>
     <string name="create_shortcut_pro">创建快捷方式 (专业版)</string>
-    <string name="add_number_to_contact">添加号码至联系人</string>
+    <string name="add_number_to_contact">将号码添加到联系人</string>
     <string name="view_contact_details">查看联系人详情</string>
     <string name="call_from_sim_1">来自 SIM 1 的通话</string>
     <string name="call_from_sim_2">来自 SIM 2 的通话</string>
@@ -610,7 +610,7 @@
     <string name="widgets">挂件</string>
     <string name="use_same_snooze">始终使用相同的延迟时间</string>
     <string name="snooze_time">延迟时间</string>
-    <string name="vibrate_on_button_press">按下按钮时震动</string>
+    <string name="vibrate_on_button_press">按下按钮时振动</string>
     <string name="move_items_into_recycle_bin">移动项目到回收站而不是直接删除</string>
     <string name="recycle_bin_cleaning_interval">回收站清理间隔</string>
     <string name="empty_recycle_bin">清空回收站</string>
@@ -1050,4 +1050,6 @@
     <string name="platforms">平台</string>
     <string name="donate_to_fossify">向 Fossify 捐赠</string>
     <string name="cryptocurrency">加密货币</string>
+    <string name="translation_belarusian">白俄罗斯语</string>
+    <string name="translation_central_kurdish">中库尔德语</string>
 </resources>

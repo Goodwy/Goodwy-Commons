@@ -7,7 +7,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -27,7 +26,6 @@ import com.goodwy.commons.compose.alert_dialog.DialogSurface
 import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.compose.components.RadioGroupDialogComponent
 import com.goodwy.commons.compose.extensions.MyDevices
-import com.goodwy.commons.compose.extensions.NoRippleTheme
 import com.goodwy.commons.compose.extensions.rememberMutableInteractionSource
 import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.theme.AppThemeSurface
@@ -134,9 +132,7 @@ fun ChangeDateTimeFormatAlertDialog(
 
     var is24HoursSelected by remember { mutableStateOf(is24HourChecked) }
 
-    AlertDialog(
-        onDismissRequest = alertDialogState::hide,
-    ) {
+    BasicAlertDialog(onDismissRequest = alertDialogState::hide) {
         DialogSurface {
             Box {
                 Column(
@@ -242,7 +238,7 @@ internal fun DialogCheckBoxWithRadioAlignmentComponent(
                 textAlign = TextAlign.End
             )
         }
-        CompositionLocalProvider(LocalRippleTheme provides NoRippleTheme) {
+        CompositionLocalProvider(LocalRippleConfiguration provides null) {
             Checkbox(
                 checked = initialValue,
                 onCheckedChange = { onChange?.invoke(it) },

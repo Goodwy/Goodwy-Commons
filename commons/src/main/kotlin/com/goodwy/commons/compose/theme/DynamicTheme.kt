@@ -5,7 +5,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.theme.model.Theme
-import com.goodwy.commons.extensions.getProperTextColor
 import com.goodwy.commons.extensions.*
 
 fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou): Theme {
@@ -15,7 +14,7 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
     val accentColor = baseConfig.accentColor
 
 
-//    val backgroundColorTheme = if (baseConfig.isUsingSystemTheme) {
+//    val backgroundColorTheme = if (context.isDynamicTheme() || context.isAutoTheme()) {
 //        if (isSystemInDarkTheme) theme_black_background_color else theme_light_background_color
 //    } else {
 //        Color(baseConfig.backgroundColor)
@@ -27,7 +26,7 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
     val statusBarColor = context.getColoredMaterialStatusBarColor()
 
     val theme = when {
-        baseConfig.isUsingSystemTheme -> materialYouTheme
+        context.isDynamicTheme() -> materialYouTheme
 //        context.isBlackAndWhiteTheme() -> Theme.BlackAndWhite(
 //            accentColor = accentColor,
 //            primaryColorInt = primaryColorInt,
@@ -412,7 +411,7 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
                 else -> color_primary
             }
             val primaryContainer =
-                if ((baseConfig.isUsingSystemTheme && isSystemInDarkTheme) || context.isBlackTheme() || context.isDarkTheme()) customPrimaryColor.toArgb().darkenColor(45)
+                if ((context.isDynamicTheme() && isSystemInDarkTheme) || context.isBlackTheme() || context.isDarkTheme()) customPrimaryColor.toArgb().darkenColor(45)
                 else if (context.isLightTheme() || context.isGrayTheme()) customPrimaryColor.toArgb().lightenColor(30)
                 else statusBarColor.lightenColor(6)
             Theme.Custom(

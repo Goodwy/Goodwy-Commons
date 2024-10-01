@@ -4,9 +4,9 @@ import android.content.Context
 import android.os.Handler
 import android.os.Looper
 import android.util.AttributeSet
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.annotation.ColorInt
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.os.postDelayed
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.baseConfig
@@ -15,7 +15,7 @@ import com.goodwy.commons.extensions.getProperTextColor
 import com.goodwy.commons.helpers.DEFAULT_PASSWORD_COUNTDOWN
 import com.goodwy.commons.helpers.MAX_PASSWORD_RETRY_COUNT
 
-abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), SecurityTab {
+abstract class BaseSecurityTab(context: Context, attrs: AttributeSet) : ConstraintLayout(context, attrs), SecurityTab {
 
     abstract val protectionType: Int
     abstract val defaultTextRes: Int

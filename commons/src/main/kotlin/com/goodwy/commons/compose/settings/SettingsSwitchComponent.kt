@@ -19,7 +19,6 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
-import com.goodwy.commons.compose.extensions.NoRippleTheme
 import com.goodwy.commons.compose.extensions.rememberMutableInteractionSource
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.preferenceLabelColor
@@ -32,12 +31,12 @@ fun SettingsSwitchComponent(
     value: String? = null,
     initialValue: Boolean = false,
     isPreferenceEnabled: Boolean = true,
+    showCheckmark: Boolean = false,
     onChange: ((Boolean) -> Unit)? = null,
     switchColors: SwitchColors = SwitchDefaults.colors(
         checkedThumbColor = Color.White,
         checkedIconColor = Color.Black
     ),
-    checkedIcon: Boolean = false,
     scaleSwitch: Float = 1F,
 ) {
     val interactionSource = rememberMutableInteractionSource()
@@ -87,7 +86,7 @@ fun SettingsSwitchComponent(
                 )
             }
         }
-        CompositionLocalProvider(LocalRippleTheme provides NoRippleTheme) {
+        CompositionLocalProvider(LocalRippleConfiguration provides null) {
             Switch(
                 modifier = Modifier.scale(scaleSwitch),
                 checked = initialValue,
@@ -96,7 +95,7 @@ fun SettingsSwitchComponent(
                 colors = switchColors,
                 interactionSource = interactionSource,
                 thumbContent = {
-                    if (checkedIcon && initialValue) {
+                    if (showCheckmark && initialValue) {
                         Icon(
                             modifier = Modifier.padding(4.dp),
                             imageVector = Icons.Rounded.Check,

@@ -19,11 +19,7 @@ class BiometricIdTab(context: Context, attrs: AttributeSet) : ConstraintLayout(c
         super.onFinishInflate()
         binding = TabBiometricIdBinding.bind(this)
         context.updateTextColors(binding.biometricLockHolder)
-        val textColor = if (context.isWhiteTheme()) {
-            DARK_GREY
-        } else {
-            context.getProperPrimaryColor().getContrastColor()
-        }
+        val textColor = context.getProperPrimaryColor().getContrastColor()
 
         binding.openBiometricDialog.setTextColor(textColor)
         binding.openBiometricDialog.setOnClickListener {
@@ -34,7 +30,7 @@ class BiometricIdTab(context: Context, attrs: AttributeSet) : ConstraintLayout(c
     override fun initTab(
         requiredHash: String,
         listener: HashListener,
-        scrollView: MyScrollView,
+        scrollView: MyScrollView?,
         biometricPromptHost: AuthPromptHost,
         showBiometricAuthentication: Boolean
     ) {

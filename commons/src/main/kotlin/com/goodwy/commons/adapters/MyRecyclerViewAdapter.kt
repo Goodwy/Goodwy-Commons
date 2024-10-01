@@ -86,7 +86,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 }
 
                 activity.menuInflater.inflate(getActionMenuId(), menu)
-                val bgColor = if (baseConfig.isUsingSystemTheme) {
+                val bgColor = if (activity.isDynamicTheme()) {
                     resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
                 } else {
                     Color.BLACK
@@ -96,7 +96,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 activity.updateMenuItemColors(menu, baseColor = bgColor, forceWhiteIcons = true)
                 onActionModeCreated()
 
-                //if (baseConfig.isUsingSystemTheme) {
+                //if (activity.isDynamicTheme()) {
                     actBarTextView?.onGlobalLayout {
                         val backArrow = activity.findViewById<ImageView>(androidx.appcompat.R.id.action_mode_close_button)
                         backArrow?.setImageDrawable(resources.getDrawable(R.drawable.ic_chevron_left_vector))

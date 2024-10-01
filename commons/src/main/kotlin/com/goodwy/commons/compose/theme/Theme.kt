@@ -1,18 +1,16 @@
 package com.goodwy.commons.compose.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.ripple.LocalRippleTheme
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
+import com.goodwy.commons.extensions.getContrastColor
 import com.goodwy.commons.helpers.isSPlus
 
 @Composable
@@ -36,8 +34,18 @@ internal fun Theme(
                 }
             }
 
+            theme is Theme.Custom && theme.backgroundColor.isLitWell() -> lightColorScheme(
+                primary = theme.primaryColor,
+                onPrimary = Color(theme.primaryColorInt.getContrastColor()),
+                surface = theme.backgroundColor,
+                onSurface = theme.textColor,
+                surfaceVariant = theme.surfaceVariant,
+                primaryContainer = theme.primaryContainer
+            )
+
             theme is Theme.Custom || theme is Theme.Dark -> darkColorScheme(
                 primary = theme.primaryColor,
+                onPrimary = Color(theme.primaryColorInt.getContrastColor()),
                 surface = theme.backgroundColor,
                 onSurface = theme.textColor,
                 surfaceVariant = theme.surfaceVariant,
@@ -61,7 +69,7 @@ internal fun Theme(
         shapes = Shapes,
         content = {
             CompositionLocalProvider(
-                LocalRippleTheme provides DynamicThemeRipple,
+                LocalRippleConfiguration provides dynamicRippleConfiguration(),
                 LocalTheme provides theme,
                 LocalDimensions provides dimensions
             ) {

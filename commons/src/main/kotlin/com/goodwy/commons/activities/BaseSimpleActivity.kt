@@ -119,27 +119,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         super.onResume()
         if (useDynamicTheme) {
             setTheme(getThemeId(showTransparentTop = showTransparentTop))
-
-            val backgroundColor = if (baseConfig.isUsingSystemTheme) {
-                resources.getColor(R.color.you_background_color, theme)
-            } else {
-                baseConfig.backgroundColor
-            }
-
-            updateBackgroundColor(backgroundColor)
+            updateBackgroundColor(getProperBackgroundColor())
         }
 
         // if enabled, then when disabling the top bar in the light theme can not see the status bar icons, you need to put a shadow?
         if (showTransparentTop) {
             window.statusBarColor = Color.TRANSPARENT
         } else if (!isMaterialActivity) {
-                val color = if (baseConfig.isUsingSystemTheme) {
-                    resources.getColor(R.color.you_status_bar_color)
-                } else {
-                    getProperBackgroundColor() //getProperStatusBarColor()
-                }
-
-                updateActionbarColor(color)
+            updateActionbarColor(getProperBackgroundColor())
         }
         //updateRecentsAppIcon()
 
@@ -150,6 +137,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
 
             updateNavigationBarColor(navBarColor)
+            maybeLaunchAppUnlockActivity(requestCode = REQUEST_APP_UNLOCK)
         }
     }
 
@@ -165,16 +153,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         changeAutoTheme()
     }
 
-    fun changeAutoTheme() {
-        baseConfig.apply {
-            if (isUsingAutoTheme && useChangeAutoTheme) {
-                val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
-                isUsingSharedTheme = false
-                textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
-                backgroundColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
-                finish()
-                startActivity(intent)
-                return
+    private fun changeAutoTheme() {
+        syncGlobalConfig {
+            baseConfig.apply {
+                if (isAutoTheme() && useChangeAutoTheme) {
+                    val isUsingSystemDarkTheme = isSystemInDarkMode()
+                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color)
+                    backgroundColor =
+                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color)
+                }
             }
         }
     }
@@ -204,16 +191,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateStatusbarColor(color: Int) {
-        window.statusBarColor = color // TODO Status Bar Color
-        updateStatusbarContents(color)
-    }
-
-    fun updateStatusbarContents(color: Int) {
-        if (color.getContrastColor() == DARK_GREY) {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-        } else {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-        }
+        window.updateStatusBarColors(color)
     }
 
     //TODO actionbar color
@@ -795,14 +773,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(RU_STORE, ruStoreInstalled)
             startActivity(this)
-        }
-    }
-
-    fun handleCustomizeColorsClick() {
-        if (isOrWasThankYouInstalled()) {
-            startCustomizationActivity()
-        } else {
-            FeatureLockedDialog(this) {}
         }
     }
 

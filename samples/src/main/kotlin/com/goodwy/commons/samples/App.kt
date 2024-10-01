@@ -1,10 +1,10 @@
 package com.goodwy.commons.samples
 
-import android.app.Application
 import com.github.ajalt.reprint.core.Reprint
+import com.goodwy.commons.RightApp
 import com.goodwy.commons.helpers.rustore.RuStoreModule
 
-class App : Application() {
+class App : RightApp() {
     override fun onCreate() {
         super.onCreate()
         Reprint.initialize(this)

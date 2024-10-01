@@ -1,10 +1,12 @@
 package com.goodwy.commons.views
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.widget.TextView
 import android.widget.Toast
 import androidx.biometric.auth.AuthPromptHost
+import androidx.core.widget.TextViewCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.TabPinBinding
 import com.goodwy.commons.extensions.*
@@ -49,7 +51,8 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
         binding.pinC.applyColorFilter(textColor)
         binding.pinOk.setOnClickListener { confirmPIN() }
         binding.pinOk.applyColorFilter(textColor)
-        binding.pinLockIcon.applyColorFilter(textColor)
+
+        TextViewCompat.setCompoundDrawableTintList(binding.pinLockTitle, ColorStateList.valueOf(textColor))
         maybeShowCountdown()
 
         arrayOf(
@@ -58,7 +61,7 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
             binding.pin7, binding.pin8, binding.pin9,
             binding.pin0//, binding.pinC, binding.pinOk
         ).forEach {
-            if (context.baseConfig.isUsingSystemTheme) {
+            if (context.isDynamicTheme()) {
                 it.background.applyColorFilter(context.getProperBackgroundColor())
             } else if (context.isBlackTheme()) {
                 it.background.applyColorFilter(context.getProperBackgroundColor())
@@ -71,7 +74,7 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
     override fun initTab(
         requiredHash: String,
         listener: HashListener,
-        scrollView: MyScrollView,
+        scrollView: MyScrollView?,
         biometricPromptHost: AuthPromptHost,
         showBiometricAuthentication: Boolean
     ) {

@@ -1,7 +1,7 @@
 <resources>
     <string name="recorder_g">Запись</string>
     <string name="player_g">Плеер</string>
-    <string name="general">Общее</string>
+    <string name="general">Общие</string>
     <string name="default_tab">Вкладка по умолчанию</string>
     <string name="color">Цвет</string>
     <string name="black">Черный</string>

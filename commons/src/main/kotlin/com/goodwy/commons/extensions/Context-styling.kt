@@ -10,51 +10,62 @@ import android.view.ViewGroup
 import androidx.loader.content.CursorLoader
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
-import com.goodwy.commons.models.SharedTheme
+import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_SYSTEM
+import com.goodwy.commons.models.GlobalConfig
+import com.goodwy.commons.models.isGlobalThemingEnabled
 import com.goodwy.commons.views.*
 
-// handle system default theme (Material You) specially as the color is taken from the system, not hardcoded by us
-fun Context.getProperTextColor() = if (baseConfig.isUsingSystemTheme) {
-    resources.getColor(R.color.you_neutral_text_color, theme)
-} else {
-    baseConfig.textColor
+fun Context.isDynamicTheme() = isSPlus() && baseConfig.isSystemThemeEnabled
+
+fun Context.isSystemInDarkMode() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0 //isUsingSystemDarkTheme()
+
+fun Context.isAutoTheme() = !isSPlus() && baseConfig.isSystemThemeEnabled
+
+fun Context.isLightTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_light_background_color, theme)
+
+fun Context.isGrayTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_gray_background_color, theme)
+
+fun Context.isDarkTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_dark_background_color, theme)
+
+fun Context.isBlackTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_black_background_color, theme)
+
+fun Context.getProperTextColor() = when {
+    isDynamicTheme() -> resources.getColor(R.color.you_neutral_text_color, theme)
+    else -> baseConfig.textColor
 }
 
-fun Context.getProperBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
-    resources.getColor(R.color.you_background_color, theme)
-} else {
-    baseConfig.backgroundColor
+fun Context.getProperBackgroundColor() = when {
+    isDynamicTheme() -> resources.getColor(R.color.you_background_color, theme)
+    else -> baseConfig.backgroundColor
 }
 
 fun Context.getProperPrimaryColor() = when {
-    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color, theme)
-    //isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
+    isDynamicTheme() -> resources.getColor(R.color.you_primary_color, theme)
     else -> baseConfig.primaryColor
 }
 
 fun Context.getProperAccentColor() = when {
-        !baseConfig.isUsingAccentColor -> getProperPrimaryColor()
-        baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_dark_color, theme)
+    !baseConfig.isUsingAccentColor -> getProperPrimaryColor()
+    isDynamicTheme() -> resources.getColor(R.color.you_primary_dark_color, theme)
     else -> baseConfig.accentColor
 }
 
 fun Context.getProperStatusBarColor() = when {
-    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_status_bar_color, theme)
+    isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme)
     else -> getProperBackgroundColor()
 }
 
-// get the color of the statusbar with material activity, if the layout is scrolled down a bit
+// get the color of the status bar with material activity, if the layout is scrolled down a bit
 fun Context.getColoredMaterialStatusBarColor(): Int {
-    return if (baseConfig.isUsingSystemTheme) {
-        resources.getColor(R.color.you_status_bar_color, theme).lightenColor(2)
-    } else {
-        getBottomNavigationBackgroundColor().lightenColor(2)
+    return when {
+        isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme).lightenColor(2)
+        else -> getBottomNavigationBackgroundColor().lightenColor(2)
     }
 }
 
 fun Context.updateTextColors(viewGroup: ViewGroup) {
     val textColor = when {
-        baseConfig.isUsingSystemTheme -> getProperTextColor()
+        isDynamicTheme() -> getProperTextColor()
         else -> baseConfig.textColor
     }
 
@@ -67,7 +78,6 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
         when (it) {
             is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
             is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
-            is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
             is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
             is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
             is MyMaterialSwitch -> it.setColors(textColor, accentColor, backgroundColor)
@@ -82,22 +92,8 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
     }
 }
 
-fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && baseConfig.primaryColor == Color.BLACK && baseConfig.backgroundColor == Color.BLACK
-
-fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.primaryColor == Color.WHITE && baseConfig.backgroundColor == Color.WHITE
-
-fun Context.isUsingSystemDarkTheme() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0
-
-fun Context.isLightTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_light_background_color, theme) //&& baseConfig.textColor == resources.getColor(R.color.theme_light_text_color)
-
-fun Context.isGrayTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_gray_background_color, theme) //&& baseConfig.textColor == resources.getColor(R.color.theme_gray_text_color)
-
-fun Context.isDarkTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_dark_background_color, theme) //&& baseConfig.textColor == resources.getColor(R.color.theme_dark_text_color)
-
-fun Context.isBlackTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_black_background_color, theme) //&& baseConfig.textColor == resources.getColor(R.color.theme_black_text_color)
-
 fun Context.getTimePickerDialogTheme() = when {
-    baseConfig.isUsingSystemTheme -> if (isUsingSystemDarkTheme()) {
+    isDynamicTheme() -> if (isSystemInDarkMode()) {
         R.style.MyTimePickerMaterialTheme_Dark
     } else {
         R.style.MyDateTimePickerMaterialTheme
@@ -108,45 +104,79 @@ fun Context.getTimePickerDialogTheme() = when {
 }
 
 fun Context.getDatePickerDialogTheme() = when {
-    baseConfig.isUsingSystemTheme -> R.style.MyDateTimePickerMaterialTheme
+    isDynamicTheme() -> R.style.MyDateTimePickerMaterialTheme
     baseConfig.backgroundColor == Color.BLACK -> R.style.MyDialogTheme_Black
     baseConfig.backgroundColor.getContrastColor() == Color.WHITE -> R.style.MyDialogTheme_Dark
     else -> R.style.MyDialogTheme
 }
 
 fun Context.getPopupMenuTheme(): Int {
-    return if (isSPlus() && baseConfig.isUsingSystemTheme) {
+    return if (isDynamicTheme()) {
         R.style.AppTheme_YouPopupMenuStyle
-    } else if (isWhiteTheme() || isLightTheme() || isGrayTheme()) {
+    } else if (isLightTheme() || isGrayTheme()) {
         R.style.AppTheme_PopupMenuLightStyle
     } else {
         R.style.AppTheme_PopupMenuDarkStyle
     }
 }
 
-fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
+fun Context.syncGlobalConfig(callback: (() -> Unit)? = null) {
+    if (isPro()) {
+        withGlobalConfig {
+            if (it != null) {
+                baseConfig.apply {
+                    showCheckmarksOnSwitches = it.showCheckmarksOnSwitches
+                    if (it.isGlobalThemingEnabled()) {
+                        isGlobalThemeEnabled = true
+                        isSystemThemeEnabled = it.themeType == GLOBAL_THEME_SYSTEM
+                        textColor = it.textColor
+                        backgroundColor = it.backgroundColor
+                        primaryColor = it.primaryColor
+                        accentColor = it.accentColor
+
+                        if (baseConfig.appIconColor != it.appIconColor) {
+                            baseConfig.appIconColor = it.appIconColor
+                            checkAppIconColor()
+                        }
+                    }
+                }
+            }
+
+            callback?.invoke()
+        }
+    } else {
+        baseConfig.isGlobalThemeEnabled = false
+        baseConfig.showCheckmarksOnSwitches = false
+        callback?.invoke()
+    }
+}
+
+fun Context.withGlobalConfig(callback: (globalConfig: GlobalConfig?) -> Unit) {
     if (!isSharedThemeInstalled()) {
         callback(null)
     } else {
         val cursorLoader = getMyContentProviderCursorLoader()
         ensureBackgroundThread {
-            callback(getSharedThemeSync(cursorLoader))
+            callback(getGlobalConfig(cursorLoader))
         }
     }
 }
 
-fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
+fun Context.getGlobalConfig(cursorLoader: CursorLoader): GlobalConfig? {
     val cursor = cursorLoader.loadInBackground()
     cursor?.use {
         if (cursor.moveToFirst()) {
             try {
-                val textColor = cursor.getIntValue(MyContentProvider.COL_TEXT_COLOR)
-                val backgroundColor = cursor.getIntValue(MyContentProvider.COL_BACKGROUND_COLOR)
-                val primaryColor = cursor.getIntValue(MyContentProvider.COL_PRIMARY_COLOR)
-                val accentColor = cursor.getIntValue(MyContentProvider.COL_ACCENT_COLOR)
-                val appIconColor = cursor.getIntValue(MyContentProvider.COL_APP_ICON_COLOR)
-                val lastUpdatedTS = cursor.getIntValue(MyContentProvider.COL_LAST_UPDATED_TS)
-                return SharedTheme(textColor, backgroundColor, primaryColor, appIconColor, lastUpdatedTS, accentColor)
+                return GlobalConfig(
+                    themeType = cursor.getIntValue(MyContentProvider.COL_THEME_TYPE),
+                    textColor = cursor.getIntValue(MyContentProvider.COL_TEXT_COLOR),
+                    backgroundColor = cursor.getIntValue(MyContentProvider.COL_BACKGROUND_COLOR),
+                    primaryColor = cursor.getIntValue(MyContentProvider.COL_PRIMARY_COLOR),
+                    accentColor = cursor.getIntValue(MyContentProvider.COL_ACCENT_COLOR),
+                    appIconColor = cursor.getIntValue(MyContentProvider.COL_APP_ICON_COLOR),
+                    showCheckmarksOnSwitches = cursor.getIntValue(MyContentProvider.COL_SHOW_CHECKMARKS_ON_SWITCHES) != 0,
+                    lastUpdatedTS = cursor.getIntValue(MyContentProvider.COL_LAST_UPDATED_TS)
+                )
             } catch (e: Exception) {
             }
         }
@@ -188,7 +218,7 @@ fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_color
 fun Context.getBottomNavigationBackgroundColor(): Int {
     val baseColor = baseConfig.backgroundColor
     val bottomColor = when {
-        baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_status_bar_color, theme)
+        isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme)
         baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
         baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
         else -> baseConfig.backgroundColor.lightenColor(4)
@@ -197,7 +227,7 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
 }
 
 fun Context.getProperTextCursorColor() = when {
-    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color, theme)
+    isDynamicTheme() -> resources.getColor(R.color.you_primary_color, theme)
     //isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.textCursorColor
 }
