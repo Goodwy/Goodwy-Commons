@@ -6,10 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Button
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarScrollBehavior
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,6 +24,10 @@ import com.goodwy.commons.compose.menus.ActionItem
 import com.goodwy.commons.compose.menus.ActionMenu
 import com.goodwy.commons.compose.menus.OverflowMode
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.LocalTheme
+import com.goodwy.commons.compose.theme.SimpleTheme
+import com.goodwy.commons.compose.theme.actionModeColor
+import com.goodwy.commons.compose.theme.model.Theme
 
 @Composable
 fun MainScreen(
@@ -38,9 +39,12 @@ fun MainScreen(
     openAbout: () -> Unit,
     moreAppsFromUs: () -> Unit,
     startPurchaseActivity: () -> Unit,
+    isTopAppBarColorIcon: Boolean = false,
 ) {
     SimpleScaffold(
         customTopBar = { scrolledColor: Color, _: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color ->
+
+            val iconColor = if (isTopAppBarColorIcon) MaterialTheme.colorScheme.primary else null
             TopAppBar(
                 title = {},
                 actions = {
@@ -57,7 +61,7 @@ fun MainScreen(
                         numIcons = 2,
                         isMenuVisible = isMenuVisible,
                         onMenuToggle = { isMenuVisible = it },
-                        iconsColor = scrolledColor
+                        iconsColor = iconColor ?: scrolledColor
                     )
                 },
                 scrollBehavior = scrollBehavior,
@@ -81,11 +85,6 @@ fun MainScreen(
                 onClick = startPurchaseActivity
             ) {
                 Text("Purchase")
-            }
-            Button(
-                onClick = openAbout
-            ) {
-                Text("About")
             }
             Button(
                 onClick = manageBlockedNumbers
@@ -116,17 +115,26 @@ private fun buildActionMenuItems(
         R.string.about,
         icon = Icons.Outlined.Info,
         doAction = openAbout,
-        overflowMode = OverflowMode.NEVER_OVERFLOW
+        overflowMode = OverflowMode.NEVER_OVERFLOW,
     )
     if (showMoreApps) {
         list += ActionItem(
             R.string.more_apps_from_us,
             doAction = moreAppsFromUs,
-            overflowMode = OverflowMode.ALWAYS_OVERFLOW
+            overflowMode = OverflowMode.ALWAYS_OVERFLOW,
         )
     }
     return list.toImmutableList()
 }
+
+@Composable
+@ReadOnlyComposable
+private fun actionModeBgColor(): Color =
+    if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
+        SimpleTheme.colorScheme.primaryContainer
+    } else {
+        actionModeColor
+    }
 
 @Composable
 @MyDevices

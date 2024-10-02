@@ -742,12 +742,6 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(IS_USING_ACCENT_COLOR, context.resources.getBoolean(R.bool.using_accent_color))
         set(isUsingAccentColor) = prefs.edit().putBoolean(IS_USING_ACCENT_COLOR, isUsingAccentColor).apply()
 
-    var topAppBarColored: Boolean
-        get() = prefs.getBoolean(TOP_APP_BAR_COLORED, false)
-        set(topAppBarColored) = prefs.edit().putBoolean(TOP_APP_BAR_COLORED, topAppBarColored).apply()
-
-    val isTopAppBarColored: Flow<Boolean> = ::topAppBarColored.asFlowNonNull()
-
     var topAppBarColorIcon: Boolean
         get() = prefs.getBoolean(TOP_APP_BAR_COLOR_ICON, false)
         set(topAppBarColorIcon) = prefs.edit().putBoolean(TOP_APP_BAR_COLOR_ICON, topAppBarColorIcon).apply()

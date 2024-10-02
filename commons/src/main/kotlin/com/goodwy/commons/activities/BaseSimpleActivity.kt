@@ -343,12 +343,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         colorBackground: Int,
         colorPrimary: Int = getProperPrimaryColor(),
         useColorForStatusBar: Boolean = true,
-        useOverflowIcon: Boolean = true
+        useOverflowIcon: Boolean = true,
+        topAppBarColorIcon: Boolean = baseConfig.topAppBarColorIcon,
+        topAppBarColorTitle: Boolean = baseConfig.topAppBarColorTitle
     ) {
         val getProperBackgroundColor = getProperBackgroundColor()
         val contrastColor = if (colorBackground == Color.TRANSPARENT) getProperBackgroundColor.getContrastColor() else colorBackground.getContrastColor()
-        val itemColor = if (baseConfig.topAppBarColorIcon) colorPrimary else contrastColor
-        val titleColor = if (baseConfig.topAppBarColorTitle) colorPrimary else contrastColor
+        val itemColor = if (topAppBarColorIcon) colorPrimary else contrastColor
+        val titleColor = if (topAppBarColorTitle) colorPrimary else contrastColor
 
         //if (!useTopSearchMenu) {
         val statusBarColor = if (useColorForStatusBar) colorBackground else getProperBackgroundColor
@@ -741,13 +743,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startCustomizationActivity(showAccentColor : Boolean = true, isCollection : Boolean = false,
+    fun startCustomizationActivity(showAccentColor : Boolean = false, isCollection : Boolean = false,
                                    productIdList: ArrayList<String> = arrayListOf("", "", ""), productIdListRu: ArrayList<String> = arrayListOf("", "", ""),
                                    subscriptionIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionIdListRu: ArrayList<String> = arrayListOf("", "", ""),
                                    subscriptionYearIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionYearIdListRu: ArrayList<String> = arrayListOf("", "", ""),
-                                   showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
-                                   playStoreInstalled: Boolean = true,
-                                   ruStoreInstalled: Boolean = false) {
+                                   playStoreInstalled: Boolean = true, ruStoreInstalled: Boolean = false,
+                                   showAppIconColor : Boolean = false
+    ) {
         if (!packageName.contains("ywdoog".reversed(), true)) {
             if (baseConfig.appRunCount > 100) {
                 val label = "You are using a fake version of the app. For your own safety download the original one from play.google.com. Thanks"
@@ -769,9 +771,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST, subscriptionYearIdList)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, subscriptionYearIdListRu)
-            putExtra(SHOW_LIFEBUOY, showLifebuoy)
             putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(RU_STORE, ruStoreInstalled)
+            putExtra(SHOW_APP_ICON_COLOR, showAppIconColor)
             startActivity(this)
         }
     }

@@ -5,17 +5,19 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.activities.CustomizationActivity
 import com.goodwy.commons.activities.ManageBlockedNumbersActivity
 import com.goodwy.commons.compose.alert_dialog.AlertDialogState
 import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.ConfirmationDialog
-import com.goodwy.commons.dialogs.DonateAlertDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.LICENSE_AUTOFITTEXTVIEW
+import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
@@ -28,6 +30,7 @@ class MainActivity : BaseSimpleActivity() {
         appLaunched(BuildConfig.APPLICATION_ID)
         enableEdgeToEdgeSimple()
         setContent {
+            val isTopAppBarColorIcon by config.isTopAppBarColorIcon.collectAsStateWithLifecycle(initialValue = config.topAppBarColorIcon)
             AppThemeSurface {
                 val showMoreApps = onEventValue { !resources.getBoolean(com.goodwy.commons.R.bool.hide_google_relations) }
 
@@ -53,6 +56,7 @@ class MainActivity : BaseSimpleActivity() {
                     openAbout = ::launchAbout,
                     moreAppsFromUs = ::launchMoreAppsFromUsIntent,
                     startPurchaseActivity = ::launchPurchase,
+                    isTopAppBarColorIcon = isTopAppBarColorIcon,
                 )
                 AppLaunched()
             }
@@ -61,7 +65,6 @@ class MainActivity : BaseSimpleActivity() {
 
     @Composable
     private fun AppLaunched(
-        donateAlertDialogState: AlertDialogState = getDonateAlertDialogState(),
         rateStarsAlertDialogState: AlertDialogState = getRateStarsAlertDialogState(),
     ) {
         LaunchedEffect(Unit) {
@@ -73,18 +76,26 @@ class MainActivity : BaseSimpleActivity() {
     }
 
     @Composable
-    private fun getDonateAlertDialogState() =
-        rememberAlertDialogState().apply {
-            DialogMember {
-                DonateAlertDialog(alertDialogState = this)
-            }
-        }
-
-    @Composable
     private fun getRateStarsAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
             RateStarsAlertDialog(alertDialogState = this, onRating = ::rateStarsRedirectAndThankYou)
         }
+    }
+
+    private fun startCustomizationActivity() {
+        startCustomizationActivity(
+            showAccentColor = true,
+            isCollection = false,
+            productIdList = arrayListOf("", "", ""),
+            productIdListRu = arrayListOf("", "", ""),
+            subscriptionIdList = arrayListOf("", "", ""),
+            subscriptionIdListRu = arrayListOf("", "", ""),
+            subscriptionYearIdList = arrayListOf("", "", ""),
+            subscriptionYearIdListRu = arrayListOf("", "", ""),
+            playStoreInstalled = isPlayStoreInstalled(),
+            ruStoreInstalled = isRuStoreInstalled(),
+            showAppIconColor = true
+        )
     }
 
     private fun launchPurchase() {

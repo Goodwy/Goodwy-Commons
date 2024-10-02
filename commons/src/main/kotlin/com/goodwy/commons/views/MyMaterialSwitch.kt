@@ -39,8 +39,9 @@ class MyMaterialSwitch : MaterialSwitch {
 
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
         val onPrimary = accentColor.getContrastColor()
-        val trackColor = textColor.adjustAlpha(0.4f)
-        val onBackground = backgroundColor.getContrastColor().adjustAlpha(0.4f)
+        val onBackground = backgroundColor.getContrastColor()
+        val thumbColor = onBackground.adjustAlpha(0.6f)
+        val trackColor = onBackground.adjustAlpha(0.2f)
 
         setTextColor(textColor)
         trackTintList = ColorStateList(
@@ -48,7 +49,7 @@ class MyMaterialSwitch : MaterialSwitch {
                 intArrayOf(-android.R.attr.state_checked),
                 intArrayOf(android.R.attr.state_checked)
             ),
-            intArrayOf(onBackground, accentColor)
+            intArrayOf(trackColor, accentColor)
         )
 
         thumbTintList = ColorStateList(
@@ -56,7 +57,7 @@ class MyMaterialSwitch : MaterialSwitch {
                 intArrayOf(-android.R.attr.state_checked),
                 intArrayOf(android.R.attr.state_checked)
             ),
-            intArrayOf(onPrimary, onPrimary)
+            intArrayOf(thumbColor, onPrimary)
         )
 
         thumbIconTintList = ColorStateList(
@@ -64,7 +65,7 @@ class MyMaterialSwitch : MaterialSwitch {
                 intArrayOf(-android.R.attr.state_checked),
                 intArrayOf(android.R.attr.state_checked)
             ),
-            intArrayOf(trackColor, accentColor)
+            intArrayOf(thumbColor, accentColor)
         )
 
         trackDecorationTintList = ColorStateList(
@@ -72,7 +73,7 @@ class MyMaterialSwitch : MaterialSwitch {
                 intArrayOf(-android.R.attr.state_checked),
                 intArrayOf(android.R.attr.state_checked)
             ),
-            intArrayOf(onBackground, accentColor)
+            intArrayOf(thumbColor, accentColor)
         )
     }
 }

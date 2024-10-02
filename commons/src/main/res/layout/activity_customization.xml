@@ -177,18 +177,6 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/settingsTopAppBarColoredHolder"
-                        style="@style/SettingsHolderSwitchStyle"
-                        android:visibility="gone">
-
-                        <com.goodwy.commons.views.MyMaterialSwitch
-                            android:id="@+id/settingsTopAppBarColored"
-                            style="@style/SettingsSwitchStyle"
-                            android:text="@string/top_app_bar_colored"
-                            app:switchPadding="@dimen/bigger_margin" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
                         android:id="@+id/settingsTopAppBarColorIconHolder"
                         style="@style/SettingsHolderSwitchStyle">
 
@@ -230,11 +218,35 @@
                         android:id="@+id/customizationUseAccentColorHolder"
                         style="@style/SettingsHolderSwitchStyle">
 
+                        <com.goodwy.commons.views.MyTextView
+                            android:id="@+id/customizationUseAccentColorLabel"
+                            style="@style/SettingsTextLabelStyle"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/customizationUseAccentColorFaq"
+                            android:text="@string/use_accent_color" />
+
+                        <ImageView
+                            android:id="@+id/customizationUseAccentColorFaq"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:padding="4dp"
+                            android:layout_marginLeft="@dimen/small_margin"
+                            android:layout_marginRight="@dimen/small_margin"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:layout_toStartOf="@+id/customizationUseAccentColor"
+                            android:src="@drawable/ic_question_round"
+                            android:contentDescription="@string/use_accent_color_summary" />
+
                         <com.goodwy.commons.views.MyMaterialSwitch
                             android:id="@+id/customizationUseAccentColor"
                             style="@style/SettingsSwitchStyle"
-                            android:text="@string/use_accent_color"
-                            app:switchPadding="@dimen/bigger_margin"/>
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            app:switchPadding="@dimen/bigger_margin" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -298,7 +310,7 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/customization_text_cursor_color_holder"
+                        android:id="@+id/customizationTextCursorColorHolder"
                         android:layout_below="@+id/customization_text_color_holder"
                         style="@style/SettingsHolderStyle">
 
@@ -327,8 +339,8 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/customization_app_icon_color_holder"
-                        android:layout_below="@+id/customization_text_cursor_color_holder"
+                        android:id="@+id/customizationAppIconColorHolder"
+                        android:layout_below="@+id/customizationTextCursorColorHolder"
                         style="@style/SettingsHolderStyle">
 
                         <com.goodwy.commons.views.MyTextView
