@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.goodwy"
-version = "5.2.0"
+version = "5.5.0"
 
 android {
     namespace = "com.goodwy.strings"

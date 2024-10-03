@@ -42,7 +42,6 @@ import com.goodwy.commons.dialogs.*
 import com.goodwy.commons.dialogs.WritePermissionDialog.WritePermissionDialogMode
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.helpers.MyContentProvider.COL_LAST_UPDATED_TS
-import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_CONFIG_UPDATED
 import com.goodwy.commons.helpers.MyContentProvider.MY_CONTENT_URI
 import com.goodwy.commons.models.*
 import com.goodwy.commons.views.MyTextView
@@ -1397,7 +1396,6 @@ fun Activity.updateGlobalConfig(contentValues: ContentValues) {
         try {
             contentValues.put(COL_LAST_UPDATED_TS, System.currentTimeMillis() / 1000)
             applicationContext.contentResolver.update(MY_CONTENT_URI, contentValues, null, null)
-            sendBroadcast(Intent(GLOBAL_CONFIG_UPDATED))
         } catch (e: Exception) {
             showErrorToast(e)
         }

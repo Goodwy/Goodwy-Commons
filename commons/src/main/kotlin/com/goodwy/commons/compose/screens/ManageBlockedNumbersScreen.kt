@@ -26,10 +26,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.semantics.onLongClick
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
@@ -79,6 +81,7 @@ internal fun ManageBlockedNumbersScreen(
     isDialer: Boolean,
     hasGivenPermissionToBlock: Boolean,
     isBlockUnknownSelected: Boolean,
+    showCheckmarksOnSwitches: Boolean,
     onBlockUnknownSelectedChange: (Boolean) -> Unit,
     isHiddenSelected: Boolean,
     onHiddenSelectedChange: (Boolean) -> Unit,
@@ -151,6 +154,8 @@ internal fun ManageBlockedNumbersScreen(
                     onChange = onBlockUnknownSelectedChange,
                     modifier = Modifier.topAppBarPaddings(),
                     scaleSwitch = 0.8F,
+                    showCheckmark = showCheckmarksOnSwitches,
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_no_accounts)
                 )
                 SettingsSwitchComponent(
                     label = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
@@ -158,6 +163,8 @@ internal fun ManageBlockedNumbersScreen(
                     onChange = onHiddenSelectedChange,
                     modifier = Modifier.topAppBarPaddings(),
                     scaleSwitch = 0.8F,
+                    showCheckmark = showCheckmarksOnSwitches,
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_question)
                 )
                 SettingsHorizontalDivider(modifier = Modifier.topAppBarPaddings())
             }
@@ -678,6 +685,7 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
             isDialer = isDialer,
             hasGivenPermissionToBlock = !isDialer,
             isBlockUnknownSelected = false,
+            showCheckmarksOnSwitches = false,
             onBlockUnknownSelectedChange = {},
             isHiddenSelected = false,
             onHiddenSelectedChange = {},

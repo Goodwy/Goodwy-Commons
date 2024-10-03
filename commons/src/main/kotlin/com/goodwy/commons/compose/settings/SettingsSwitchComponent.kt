@@ -14,10 +14,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import com.goodwy.commons.R
+import com.goodwy.commons.compose.extensions.BooleanPreviewParameterProvider
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.extensions.rememberMutableInteractionSource
 import com.goodwy.commons.compose.theme.AppThemeSurface
@@ -31,7 +34,8 @@ fun SettingsSwitchComponent(
     value: String? = null,
     initialValue: Boolean = false,
     isPreferenceEnabled: Boolean = true,
-    showCheckmark: Boolean = false,
+    showCheckmark: Boolean,
+    checkmark: ImageVector = Icons.Rounded.Check,
     onChange: ((Boolean) -> Unit)? = null,
     switchColors: SwitchColors = SwitchDefaults.colors(
         checkedThumbColor = Color.White,
@@ -98,7 +102,7 @@ fun SettingsSwitchComponent(
                     if (showCheckmark && initialValue) {
                         Icon(
                             modifier = Modifier.padding(4.dp),
-                            imageVector = Icons.Rounded.Check,
+                            imageVector = checkmark,
                             contentDescription = label,
                         )
                     }
@@ -110,11 +114,13 @@ fun SettingsSwitchComponent(
 
 @MyDevices
 @Composable
-private fun SettingsSwitchComponentPreview() {
+private fun SettingsSwitchComponentPreview(@PreviewParameter(BooleanPreviewParameterProvider::class) isChecked: Boolean) {
     AppThemeSurface {
         SettingsSwitchComponent(
             label = "Some label",
             value = "Some value",
+            initialValue = isChecked,
+            showCheckmark = false
         )
     }
 }

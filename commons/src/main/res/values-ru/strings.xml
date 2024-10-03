@@ -1132,4 +1132,6 @@
     <string name="cryptocurrency">Криптовалюта</string>
     <string name="translation_belarusian">Белорусский</string>
     <string name="translation_central_kurdish">Центральнокурдский</string>
+    <string name="all_fossify_apps">Все приложения Fossify</string>
+    <string name="theme_and_colors">Тема и цвета</string>
 </resources>
