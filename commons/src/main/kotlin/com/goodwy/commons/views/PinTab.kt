@@ -20,6 +20,8 @@ import java.util.Locale
 
 class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, attrs) {
     private var pin = ""
+    private var autoConfirm = true
+    private var correctPassword = false
 
     private lateinit var binding: TabPinBinding
 
@@ -84,7 +86,7 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
     }
 
     private fun addNumber(number: String) {
-        if (!isLockedOut()) {
+        if (!isLockedOut() && !correctPassword) {
             if (pin.length < 10) {
                 pin += number
                 updatePinCode()
@@ -116,6 +118,7 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
                 }
 
                 computedHash.isEmpty() -> {
+                    autoConfirm = false
                     computedHash = newHash
                     resetPin()
                     binding.pinLockTitle.setText(R.string.repeat_pin)
@@ -147,6 +150,16 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
     private fun updatePinCode() {
         binding.pinLockCurrentPin.text = "*".repeat(pin.length)
         updateButton()
+
+        if (autoConfirm && !isLockedOut() && computedHash.isNotEmpty()) {
+            val newHash = getHashedPin()
+            if (computedHash == newHash) {
+                correctPassword = true
+                val getProperPrimaryColor = context.getProperPrimaryColor()
+                binding.pinLockCurrentPin.setColors(getProperPrimaryColor, getProperPrimaryColor, getProperPrimaryColor)
+                onCorrectPassword()
+            }
+        }
     }
 
     private fun updateButton() {

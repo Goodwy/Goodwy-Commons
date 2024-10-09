@@ -45,6 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/activity_margin"
+        android:paddingHorizontal="@dimen/medium_margin"
         app:constraint_referenced_ids="pin_1,pin_2,pin_3,pin_4,pin_5,pin_6,pin_7,pin_8,pin_9,pin_ok,pin_0,pin_c"
         app:flow_horizontalGap="@dimen/medium_margin"
         app:flow_horizontalStyle="spread_inside"
@@ -157,9 +158,10 @@
         android:background="@drawable/ripple_all_corners_16dp"
         android:layout_margin="@dimen/tiny_margin"
         android:contentDescription="@string/ok"
-        android:padding="@dimen/normal_margin"
+        android:padding="@dimen/bigger_margin"
         android:src="@drawable/ic_check"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        tools:visibility="visible" />
 
     <com.goodwy.commons.views.MyTextView
         android:id="@+id/pin_0"
@@ -179,7 +181,9 @@
         android:background="@drawable/ripple_all_corners_16dp"
         android:layout_margin="@dimen/tiny_margin"
         android:contentDescription="@string/delete"
-        android:padding="@dimen/normal_margin"
+        android:padding="@dimen/bigger_margin"
         android:src="@drawable/ic_backspace"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
 </com.goodwy.commons.views.PinTab>

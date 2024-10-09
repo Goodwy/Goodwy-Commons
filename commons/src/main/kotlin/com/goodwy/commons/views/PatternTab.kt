@@ -79,6 +79,7 @@ class PatternTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(contex
         this.scrollView = scrollView
         computedHash = requiredHash
         hashListener = listener
+        if (computedHash != "") binding.patternLockTitle.setText(com.goodwy.strings.R.string.enter_pattern)
     }
 
     override fun onLockedOutChange(lockedOut: Boolean) {

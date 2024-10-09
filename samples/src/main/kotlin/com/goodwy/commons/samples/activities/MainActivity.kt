@@ -16,6 +16,7 @@ import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.ConfirmationDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
+import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.FAQItem
@@ -42,16 +43,7 @@ class MainActivity : BaseSimpleActivity() {
                     showComposeDialogs = {
                         startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
                     },
-                    openTestButton = {
-                        ConfirmationDialog(
-                            this@MainActivity,
-                            FAKE_VERSION_APP_LABEL,
-                            positive = com.goodwy.commons.R.string.ok,
-                            negative = 0
-                        ) {
-                            launchViewIntent(DEVELOPER_PLAY_STORE_URL)
-                        }
-                    },
+                    openTestButton = ::securityDialog,
                     showMoreApps = showMoreApps,
                     openAbout = ::launchAbout,
                     moreAppsFromUs = ::launchMoreAppsFromUsIntent,
@@ -139,6 +131,18 @@ class MainActivity : BaseSimpleActivity() {
             arrayListOf("", "", ""), arrayListOf("", "", ""),
             playStoreInstalled = isPlayStoreInstalled(),
             ruStoreInstalled = isRuStoreInstalled())
+    }
+
+    private fun securityDialog() {
+        val tabToShow = if (config.isAppPasswordProtectionOn) config.appProtectionType else SHOW_ALL_TABS
+        SecurityDialog(this@MainActivity, config.appPasswordHash, tabToShow) { hash, type, success ->
+            if (success) {
+                val hasPasswordProtection = config.isAppPasswordProtectionOn
+                config.isAppPasswordProtectionOn = !hasPasswordProtection
+                config.appPasswordHash = if (hasPasswordProtection) "" else hash
+                config.appProtectionType = type
+            }
+        }
     }
 
     override fun getAppLauncherName() = getString(R.string.commons_app_name)

@@ -7,13 +7,13 @@
     <RelativeLayout
         android:id="@+id/dialog_holder"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/smaller_margin">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/dialog_tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/smaller_margin">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"

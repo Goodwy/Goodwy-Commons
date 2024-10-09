@@ -120,6 +120,7 @@
     <string name="end_search_when_changing_tab">Завершение поиска при смене вкладки</string>
     <string name="change_top_bar_colour_when_scrolling">Изменение цвета верхней панели при прокрутке</string>
     <string name="global_theme_success_g">Цвета обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
+    <string name="enter_pattern">Введите ключ</string>
     <string name="call_screen_background">Фон экрана вызова</string>
     <string name="contact_photo">Фото контакта</string>
     <string name="blurry_contact_photo">Размытое фото контакта</string>
