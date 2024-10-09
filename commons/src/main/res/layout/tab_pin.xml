@@ -153,9 +153,10 @@
         android:id="@+id/pin_ok"
         style="@style/PinNumberStyle"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:background="@drawable/ripple_all_corners_16dp"
         android:layout_margin="@dimen/tiny_margin"
+        android:contentDescription="@string/ok"
         android:padding="@dimen/normal_margin"
         android:src="@drawable/ic_check"
         android:visibility="invisible" />
@@ -174,9 +175,10 @@
         android:id="@+id/pin_c"
         style="@style/PinNumberStyle"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:background="@drawable/ripple_all_corners_16dp"
         android:layout_margin="@dimen/tiny_margin"
+        android:contentDescription="@string/delete"
         android:padding="@dimen/normal_margin"
         android:src="@drawable/ic_backspace"
         android:visibility="invisible"/>
