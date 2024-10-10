@@ -87,6 +87,9 @@
     <string name="accent_color">Колер акцэнту</string>
     <string name="use_accent_color">Выкарыстоўваць колер акцэнту</string>
     <string name="system_theme_description">Гэтая тэма не дазваляе наладжваць колеры ўручную. Колеры мяняюцца дынамічна ў залежнасці ад налад сістэмы.</string>
+    <string name="use_accent_color_summary">Дадатковы колер, які выкарыстоўваецца ў некаторых элементах інтэрфейсу.</string>
+    <string name="app_icon_color_warning_g">Увага: некаторыя лаўнчары могуць некарэктна адлюстроўваць карыстацкі значок прыкладання. Калі значок знікае, паспрабуйце запусціць прыкладанне праз Google Play або праз яго віджэт (калі магчыма).
+ Пасля запуску аднавіце стандартны колер значка. У крайніх выпадках можа запатрабавацца пераўсталёўка прыкладання.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Паказваць фота кантакту</string>
@@ -115,6 +118,8 @@
     <string name="tabs">Укладкі</string>
     <string name="open_search_when_open_contacts">Адкрыць пошук пры адкрыцці ўкладкі кантакты</string>
     <string name="end_search_when_changing_tab">Завяршэнне пошуку пры змене ўкладкі</string>
+    <string name="global_theme_success_g">Колеры абноўлены. Дададзена новая тэма з назвай \"Агульная"\", у далейшым выкарыстоўвайце яе для абнаўлення кветак усіх прыкладанняў.</string>
+    <string name="enter_pattern">Увядзіце ключ</string>
     <string name="change_top_bar_colour_when_scrolling">Змена колеру верхняй панэлі пры пракрутцы</string>
     <string name="call_screen_background">Фон экрана выкліку</string>
     <string name="contact_photo">Фота кантакту</string>

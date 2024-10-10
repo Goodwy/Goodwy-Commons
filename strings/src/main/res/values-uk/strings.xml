@@ -87,6 +87,9 @@
     <string name="accent_color">Колір акценту</string>
     <string name="use_accent_color">Використовувати колір акценту</string>
     <string name="system_theme_description">Ця тема не дає змоги налаштовувати кольори вручну. Кольори змінюються динамічно залежно від налаштувань системи.</string>
+    <string name="use_accent_color_summary">Додатковий колір, який використовується в деяких елементах інтерфейсу.</string>
+    <string name="app_icon_color_warning_g">Увага: деякі лаунчери можуть некоректно відображати користувацький значок додатка. Якщо значок зникає, спробуйте запустити додаток через Google Play або через його віджет (якщо можливо).
+        Після запуску відновіть стандартний колір значка. У крайніх випадках може знадобитися перевстановлення програми.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Показувати світлину контакту</string>
@@ -116,6 +119,8 @@
     <string name="open_search_when_open_contacts">Відкрити пошук при відкритті вкладки контакти</string>
     <string name="end_search_when_changing_tab">Завершення пошуку під час зміни вкладки</string>
     <string name="change_top_bar_colour_when_scrolling">Зміна кольору верхньої панелі під час прокручування</string>
+    <string name="global_theme_success_g">Кольори оновлено. Додано нову тему з назвою \"Загальна\", надалі використовуйте її для оновлення кольорів усіх застосунків.</string>
+    <string name="enter_pattern">Введіть ключ</string>
     <string name="call_screen_background">Фон екрана виклику</string>
     <string name="contact_photo">Фото контакту</string>
     <string name="blurry_contact_photo">Розмите фото контакту</string>
