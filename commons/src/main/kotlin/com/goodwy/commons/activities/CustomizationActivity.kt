@@ -622,8 +622,6 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
 
-        handleAccentColorLayout()
-        binding.applyToAllHolder.setOnClickListener { applyToAll() }
         binding.customizationAppIconColorHolder.setOnClickListener {
             if (isProVersion()) {
                 if (baseConfig.wasAppIconCustomizationWarningShown) {
@@ -643,6 +641,9 @@ class CustomizationActivity : BaseSimpleActivity() {
                 showSnackbar(binding.root)
             }
         }
+
+        handleAccentColorLayout()
+        binding.applyToAllHolder.setOnClickListener { applyToAll() }
     }
 
     private fun hasColorChanged(old: Int, new: Int) = Math.abs(old - new) > 1

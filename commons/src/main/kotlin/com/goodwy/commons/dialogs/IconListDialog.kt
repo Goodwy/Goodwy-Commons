@@ -15,6 +15,7 @@ class IconListDialog(
     val defaultItemId: Int? = null,
     val titleId: Int = 0,
     val descriptionId: Int? = null,
+    val size: Int? = null,
     val callback: (wasPositivePressed: Boolean, newValue: Int) -> Unit
 ) {
 
@@ -43,6 +44,9 @@ class IconListDialog(
                 8 -> {
                     arrayOf(icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8).forEachIndexed { index, imageView ->
                         imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
+                        if (size != null) {
+                            imageView.setHeightAndWidth(size)
+                        }
                     }
                 }
             }

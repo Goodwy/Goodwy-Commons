@@ -1,5 +1,6 @@
 package com.goodwy.commons.extensions
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.HapticFeedbackConstants
 import android.view.View
@@ -52,10 +53,18 @@ fun View.fadeOut(duration: Long = SHORT_ANIMATION_DURATION) {
     animate().alpha(0f).setDuration(duration).withEndAction { beGone() }.start()
 }
 
+@SuppressLint("UseCompatLoadingForDrawables")
 fun View.setupViewBackground(context: Context) {
     background = if (context.isDynamicTheme()) {
         resources.getDrawable(R.drawable.selector_clickable_you)
     } else {
         resources.getDrawable(R.drawable.selector_clickable)
     }
+}
+
+fun View.setHeightAndWidth(size: Int) {
+    val lp = layoutParams
+    lp.height = size
+    lp.width = size
+    layoutParams = lp
 }
