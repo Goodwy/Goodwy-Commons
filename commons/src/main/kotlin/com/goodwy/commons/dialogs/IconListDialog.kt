@@ -31,6 +31,9 @@ class IconListDialog(
                     }
                     arrayOf(icon1, icon2, icon3).forEachIndexed { index, imageView ->
                         imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
+                        if (size != null) {
+                            imageView.setHeightAndWidth(size)
+                        }
                     }
                 }
                 4 -> {
@@ -39,6 +42,9 @@ class IconListDialog(
                     }
                     arrayOf(icon1, icon2, icon3, icon4).forEachIndexed { index, imageView ->
                         imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
+                        if (size != null) {
+                            imageView.setHeightAndWidth(size)
+                        }
                     }
                 }
                 8 -> {
