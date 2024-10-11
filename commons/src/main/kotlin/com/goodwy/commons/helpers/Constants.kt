@@ -463,26 +463,25 @@ enum class NavigationIcon(@StringRes val accessibilityResId: Int) {
 }
 
 val appIconColorStrings = arrayListOf(
-    ".Red",
-    ".Pink",
-    ".Purple",
-    ".Deep_purple",
-    ".Indigo",
-    ".Blue",
-    ".Light_blue",
-    ".Cyan",
-    ".Teal",
-    ".Green",
-    ".Light_green",
-    ".Lime",
-    ".Yellow",
-    ".Amber",
-    ".Orange",
-    ".Deep_orange",
-    ".Brown",
-    ".Blue_grey",
-    ".Grey_black"
+    ".Original",
+    ".One",
+    ".Two",
+    ".Three",
+    ".Four",
+    ".Five",
+    ".Six",
+    ".Seven"
 )
+
+// app icon color
+const val APP_ICON_ORIGINAL = 0
+const val APP_ICON_ONE = 1
+const val APP_ICON_TWO = 2
+const val APP_ICON_THREE = 3
+const val APP_ICON_FOUR = 4
+const val APP_ICON_FIVE = 5
+const val APP_ICON_SIX = 6
+const val APP_ICON_SEVEN = 7
 
 // letter background colors
 const val LBC_ORIGINAL = 1 //letterBackgroundColors

@@ -47,9 +47,6 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getConfirmationAlertDialogState(), text = "Confirmation normal")
                     ShowButton(getConfirmationAdvancedAlertDialogState(), text = "Confirmation advanced")
                     ShowButton(getPermissionRequiredAlertDialogState(), text = "Permission required")
-                    ShowButton(getDonateAlertDialogState(), text = "Donate")
-                    ShowButton(getFeatureLockedAlertDialogState(), text = "Feature Locked")
-                    ShowButton(getPurchaseThankYouAlertDialogState(), text = "Purchase thank you")
                     ShowButton(getGridColorPickerAlertDialogState(), text = "Grid color picker")
                     ShowButton(getLineColorPickerAlertDialogState(), text = "Line color picker")
                     ShowButton(getOpenDeviceSettingsAlertDialogState(), text = "Open device settings")
@@ -58,7 +55,6 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getChangeDateTimeFormatAlertDialogState(), text = "Change date time")
                     ShowButton(getRateStarsAlertDialogState(), text = "Rate us")
                     ShowButton(getRadioGroupDialogAlertDialogState(), text = "Radio group")
-                    ShowButton(getUpgradeToProAlertDialogState(), text = "Upgrade to pro")
                     ShowButton(getWhatsNewAlertDialogState(), text = "What's new")
                     ShowButton(getChangeViewTypeAlertDialogState(), text = "Change view type")
                     ShowButton(getWritePermissionAlertDialogState(), text = "Write permission")
@@ -182,15 +178,6 @@ class TestDialogActivity : ComponentActivity() {
     }
 
     @Composable
-    private fun getUpgradeToProAlertDialogState() = rememberAlertDialogState().apply {
-        DialogMember {
-            UpgradeToProAlertDialog(alertDialogState = this, onMoreInfoClick = {
-                launchViewIntent("https://play.google.com/store/apps/dev?id=8268163890866913014")
-            }, onUpgradeClick = ::launchUpgradeToProIntent)
-        }
-    }
-
-    @Composable
     private fun getRadioGroupDialogAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
             RadioGroupAlertDialog(
@@ -275,35 +262,12 @@ class TestDialogActivity : ComponentActivity() {
     }
 
     @Composable
-    private fun getPurchaseThankYouAlertDialogState() = rememberAlertDialogState().apply {
-        DialogMember {
-            PurchaseThankYouAlertDialog(alertDialogState = this)
-        }
-    }
-
-    @Composable
     private fun getCallConfirmationAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
             CallConfirmationAlertDialog(alertDialogState = this, callee = "Goodwy",
                 color = baseConfig.customAccentColor) {}
         }
     }
-
-    @Composable
-    private fun getFeatureLockedAlertDialogState() = rememberAlertDialogState().apply {
-        DialogMember {
-            FeatureLockedAlertDialog(alertDialogState = this, cancelCallback = {})
-        }
-    }
-
-    @Composable
-    private fun getDonateAlertDialogState() =
-        rememberAlertDialogState().apply {
-            DialogMember {
-                DonateAlertDialog(alertDialogState = this)
-            }
-        }
-
 
     @Composable
     private fun getConfirmationAlertDialogState() = rememberAlertDialogState().apply {

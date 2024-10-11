@@ -34,7 +34,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/medium_margin"
                 android:background="?attr/selectableItemBackground"
-                android:paddingEnd="@dimen/normal_margin">
+                android:paddingEnd="@dimen/normal_margin"
+                tools:ignore="RtlSymmetry">
 
                 <ImageView
                     android:id="@+id/purchase_logo"
@@ -173,7 +174,8 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="@dimen/settings_margin"
-                            android:clickable="false"/>
+                            android:clickable="false"
+                            android:contentDescription="@null" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -266,7 +268,8 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="@dimen/settings_margin"
-                            android:clickable="false"/>
+                            android:clickable="false"
+                            android:contentDescription="@null" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -286,7 +289,8 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="@dimen/settings_margin"
-                            android:clickable="false"/>
+                            android:clickable="false"
+                            android:contentDescription="@null" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -306,7 +310,8 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="@dimen/settings_margin"
-                            android:clickable="false"/>
+                            android:clickable="false"
+                            android:contentDescription="@null" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -335,6 +340,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="@dimen/settings_margin"
                             android:clickable="false"
+                            android:contentDescription="@null"
                             android:visibility="gone"/>
                     </RelativeLayout>
 
@@ -344,18 +350,45 @@
                         style="@style/SettingsHolderStyle">
 
                         <com.goodwy.commons.views.MyTextView
-                            android:id="@+id/customization_app_icon_color_label"
+                            android:id="@+id/customizationAppIconColorLabel"
                             style="@style/SettingsTextLabelStyle"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/customizationAppIconColorBeta"
                             android:text="@string/app_icon_color"/>
 
+                        <TextView
+                            android:id="@+id/customizationAppIconColorBeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin"
+                            android:layout_marginEnd="@dimen/normal_margin"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/customizationAppIconColor"
+                            android:background="@drawable/button_rounded_5dp"
+                            android:backgroundTint="@color/red_missed"
+                            android:clickable="false"
+                            android:paddingTop="@dimen/tiny_margin"
+                            android:paddingBottom="@dimen/tiny_margin"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:text="@string/beta"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:includeFontPadding="false"/>
+
                         <ImageView
-                            android:id="@+id/customization_app_icon_color"
-                            android:layout_width="@dimen/color_sample_size"
-                            android:layout_height="@dimen/color_sample_size"
+                            android:id="@+id/customizationAppIconColor"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="@dimen/settings_margin"
-                            android:clickable="false"/>
+                            android:clickable="false"
+                            android:contentDescription="@string/app_icon_color"
+                            tools:src="@drawable/ic_launcher" />
                     </RelativeLayout>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>

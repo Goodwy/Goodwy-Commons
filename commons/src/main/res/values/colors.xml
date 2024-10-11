@@ -62,7 +62,6 @@
     <color name="default_text_color">@color/theme_dark_text_color</color>
     <color name="default_background_color">@color/theme_black_background_color</color>
     <color name="default_primary_color">@color/color_primary</color>
-    <color name="default_app_icon_color">@color/color_primary</color>
     <color name="default_accent_color">@color/color_accent</color>
     <color name="default_widget_bg_color">#AA000000</color>
     <color name="default_widget_text_color">@color/color_primary</color>

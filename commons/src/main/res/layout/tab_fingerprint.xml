@@ -16,11 +16,12 @@
 
     <ImageView
         android:id="@+id/fingerprint_image"
-        android:layout_width="@dimen/fingerprint_icon_size"
-        android:layout_height="@dimen/fingerprint_icon_size"
+        android:layout_width="@dimen/fingerprint_size"
+        android:layout_height="@dimen/fingerprint_size"
         android:layout_below="@+id/fingerprint_lock_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/big_margin"
+        android:contentDescription="@string/fingerprint"
         android:src="@drawable/ic_fingerprint_vector"/>
 
     <com.goodwy.commons.views.MyTextView

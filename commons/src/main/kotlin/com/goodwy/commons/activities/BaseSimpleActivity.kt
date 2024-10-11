@@ -16,6 +16,7 @@ import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -37,6 +38,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.animation.doOnEnd
 import androidx.core.app.ActivityCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.util.Pair
 import androidx.core.view.ScrollingView
 import androidx.core.view.WindowInsetsCompat
@@ -128,7 +130,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else if (!isMaterialActivity) {
             updateActionbarColor(getProperBackgroundColor())
         }
-        //updateRecentsAppIcon()
+        updateRecentsAppIcon()
 
         if (updateNavigationBarColor) {
             var navBarColor = getProperBackgroundColor()
@@ -452,7 +454,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
             val recentsIcon = BitmapFactory.decodeResource(resources, appIconIDs[currentAppIconColorIndex])
             val title = getAppLauncherName()
-            val color = getProperBackgroundColor() //baseConfig.primaryColor
+            val color = getProperBackgroundColor()
 
             val description = ActivityManager.TaskDescription(title, recentsIcon, color)
             setTaskDescription(description)
@@ -1325,5 +1327,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_CALL_SCREENING)
             startActivityForResult(intent, REQUEST_CODE_SET_DEFAULT_CALLER_ID)
         }
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    fun getAppIcon(currentAppIconColorIndex: Int = getCurrentAppIconColorIndex()): Drawable {
+        val appIconIDs = getAppIconIDs()
+        if (appIconIDs.size - 1 < currentAppIconColorIndex) {
+            return resources.getDrawable(R.drawable.ic_launcher)
+        }
+        return resources.getDrawable(appIconIDs[currentAppIconColorIndex])
     }
 }

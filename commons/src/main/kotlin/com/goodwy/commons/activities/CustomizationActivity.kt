@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.res.ResourcesCompat
 import com.goodwy.commons.R
+import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.databinding.ActivityCustomizationBinding
 import com.goodwy.commons.dialogs.*
 import com.goodwy.commons.extensions.*
@@ -191,7 +192,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     textColorId = R.color.theme_light_text_color,
                     backgroundColorId = R.color.theme_light_background_color,
                     primaryColorId = R.color.color_primary,
-                    appIconColorId = R.color.color_primary
+                    appIconColorId = curAppIconColor
                 )
             )
             put(
@@ -201,7 +202,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     textColorId = R.color.theme_gray_text_color,
                     backgroundColorId = R.color.theme_gray_background_color,
                     primaryColorId = R.color.color_primary,
-                    appIconColorId = R.color.color_primary
+                    appIconColorId = curAppIconColor
                 )
             )
             put(
@@ -211,7 +212,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     textColorId = R.color.theme_dark_text_color,
                     backgroundColorId = R.color.theme_dark_background_color,
                     primaryColorId = R.color.color_primary,
-                    appIconColorId = R.color.color_primary
+                    appIconColorId = curAppIconColor
                 )
             )
             put(
@@ -221,7 +222,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     textColorId = R.color.theme_black_text_color,
                     backgroundColorId = R.color.theme_black_background_color,
                     primaryColorId = R.color.color_primary,
-                    appIconColorId = R.color.color_primary
+                    appIconColorId = curAppIconColor
                 )
             )
 //            put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0, 0))
@@ -314,7 +315,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (curSelectedThemeId != THEME_SYSTEM) {
                 curPrimaryColor = getColor(theme.primaryColorId)
                 curAccentColor = getColor(R.color.color_accent) // (R.color.color_primary) TODO accent color when choosing a theme R.color.color_primary
-                curAppIconColor = getColor(theme.appIconColorId)
+                curAppIconColor = theme.appIconColorId
             } else {
                 curPrimaryColor = getColor(R.color.you_primary_color)
             }
@@ -327,6 +328,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
         binding.settingsTopAppBarColorIcon.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         binding.settingsTopAppBarColorTitle.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
+        binding.customizationUseAccentColorLabel.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
+        binding.customizationUseAccentColorFaq.imageTintList = ColorStateList.valueOf(getCurrentTextColor())
         binding.customizationUseAccentColor.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
 
@@ -358,7 +361,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             textColorId = textColor,
             backgroundColorId = backgroundColor,
             primaryColorId = R.color.color_primary,
-            appIconColorId = R.color.color_primary
+            appIconColorId = curAppIconColor
         )
     }
 
@@ -369,7 +372,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             textColorId = R.color.theme_dark_text_color,
             backgroundColorId = R.color.theme_dark_background_color,
             primaryColorId = R.color.color_primary,
-            appIconColorId = R.color.color_primary
+            appIconColorId = curAppIconColor
         )
     }
 
@@ -384,7 +387,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 if (curTextColor == getColor(value.textColorId) &&
                     curBackgroundColor == getColor(value.backgroundColorId) &&
                     curPrimaryColor == getColor(value.primaryColorId) &&
-                    curAppIconColor == getColor(value.appIconColorId)
+                    curAppIconColor == value.appIconColorId
                 ) {
                     themeId = key
                 }
@@ -409,6 +412,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationThemeHolder.apply {
             alpha = if (!isProVersion()) 0.3f else 1f
         }
+
         arrayOf(binding.customizationPrimaryColorHolder, binding.customizationTextCursorColorHolder).forEach {
             if (!isProVersion()) {
                 it.isEnabled = true
@@ -423,6 +427,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 }
             }
         }
+
         binding.customizationAccentColorHolder.apply {
             if (!isProVersion()) {
                 this.isEnabled = true
@@ -437,6 +442,15 @@ class CustomizationActivity : BaseSimpleActivity() {
                 }
             }
         }
+
+        binding.customizationAppIconColorHolder.apply {
+            if (!isProVersion()) {
+                this.alpha = 0.3f
+            } else {
+                this.alpha = 1f
+            }
+        }
+
         arrayOf(binding.customizationTextColorHolder, binding.customizationBackgroundColorHolder).forEach {
             if (!isProVersion()) {
                 it.isEnabled = true
@@ -547,8 +561,9 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationPrimaryColor.setFillWithStroke(primaryColor, backgroundColor)
         binding.customizationAccentColor.setFillWithStroke(accentColor, backgroundColor)
         binding.customizationBackgroundColor.setFillWithStroke(backgroundColor, backgroundColor)
-        binding.customizationAppIconColor.setFillWithStroke(curAppIconColor, backgroundColor)
-        //binding.applyToAll.setTextColor(primaryColor.getContrastColor())
+//        binding.customizationAppIconColor.setFillWithStroke(curAppIconColor, backgroundColor)
+        binding.customizationAppIconColor.setImageDrawable(getAppIcon())
+//        binding.applyToAll.setTextColor(primaryColor.getContrastColor())
         updateTextCursor(baseConfig.textCursorColor)
 
         binding.customizationTextColorHolder.setOnClickListener {
@@ -610,13 +625,22 @@ class CustomizationActivity : BaseSimpleActivity() {
         handleAccentColorLayout()
         binding.applyToAllHolder.setOnClickListener { applyToAll() }
         binding.customizationAppIconColorHolder.setOnClickListener {
-            if (baseConfig.wasAppIconCustomizationWarningShown) {
-                pickAppIconColor()
-            } else {
-                ConfirmationDialog(this, "", com.goodwy.strings.R.string.app_icon_color_warning_g, R.string.ok, 0) {
-                    baseConfig.wasAppIconCustomizationWarningShown = true
+            if (isProVersion()) {
+                if (baseConfig.wasAppIconCustomizationWarningShown) {
                     pickAppIconColor()
+                } else {
+                    ConfirmationDialog(this, "", com.goodwy.strings.R.string.app_icon_color_warning_g, R.string.ok, 0) {
+                        baseConfig.wasAppIconCustomizationWarningShown = true
+                        pickAppIconColor()
+                    }
                 }
+            } else {
+                shakePurchase()
+                RxAnimation.from(it)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
             }
         }
     }
@@ -760,12 +784,20 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAppIconColor() {
-        LineColorPickerDialog(this, curAppIconColor, false, R.array.md_app_icon_colors, getAppIconIDs()) { wasPositivePressed, color ->
+        IconListDialog(
+            activity = this@CustomizationActivity,
+            items = getAppIconIDs(),
+            checkedItemId = curAppIconColor + 1,
+            defaultItemId = APP_ICON_ORIGINAL + 1,
+            titleId = R.string.app_icon_color,
+            descriptionId = com.goodwy.strings.R.string.app_icon_color_warning_g
+        ) { wasPositivePressed, newValue ->
             if (wasPositivePressed) {
-                if (hasColorChanged(curAppIconColor, color)) {
-                    curAppIconColor = color
+                if (curAppIconColor != newValue - 1) {
+                    curAppIconColor = newValue - 1
                     colorChanged()
                     updateColorTheme(getCurrentThemeId())
+                    binding.customizationAppIconColor.setImageDrawable(getAppIcon(curAppIconColor))
                 }
             }
         }

@@ -6,10 +6,11 @@
 
     <ImageView
         android:id="@+id/call_confirm_phone"
-        android:layout_width="@dimen/fingerprint_icon_size"
-        android:layout_height="@dimen/fingerprint_icon_size"
+        android:layout_width="@dimen/fingerprint_size"
+        android:layout_height="@dimen/fingerprint_size"
         android:layout_centerHorizontal="true"
         android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@null"
         android:padding="@dimen/activity_margin"
         android:layout_marginTop="42dp"
         android:src="@drawable/ic_phone_vector" />

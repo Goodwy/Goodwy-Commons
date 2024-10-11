@@ -106,9 +106,9 @@ open class BaseConfig(val context: Context) {
         set(lastHandledShortcutColor) = prefs.edit().putInt(LAST_HANDLED_SHORTCUT_COLOR, lastHandledShortcutColor).apply()
 
     var appIconColor: Int
-        get() = prefs.getInt(APP_ICON_COLOR, ContextCompat.getColor(context, R.color.default_app_icon_color)) // TODO APP ICON DEFAULT CUR
+        get() = prefs.getInt(APP_ICON_COLOR, APP_ICON_ORIGINAL) // TODO APP ICON DEFAULT CUR
         set(appIconColor) {
-            isUsingModifiedAppIcon = appIconColor != ContextCompat.getColor(context, R.color.color_primary)
+            isUsingModifiedAppIcon = appIconColor != APP_ICON_ORIGINAL
             prefs.edit().putInt(APP_ICON_COLOR, appIconColor).apply()
         }
 
