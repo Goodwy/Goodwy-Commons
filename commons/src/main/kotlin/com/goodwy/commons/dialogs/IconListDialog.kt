@@ -93,7 +93,7 @@ class IconListDialog(
             .setPositiveButton(R.string.dismiss, null)
 
         builder.apply {
-            if (defaultItemId != null) setNegativeButton(R.string.set_as_default) { _, _ -> itemSelected(defaultItemId) }
+            if (defaultItemId != null) setNeutralButton(R.string.set_as_default) { _, _ -> itemSelected(defaultItemId) }
             activity.setupDialogStuff(view.root, this, titleId, cancelOnTouchOutside = true) { alertDialog ->
                 dialog = alertDialog
             }
