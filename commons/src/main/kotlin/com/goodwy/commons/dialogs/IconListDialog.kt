@@ -26,7 +26,9 @@ class IconListDialog(
         val view = DialogIconListBinding.inflate(activity.layoutInflater, null, false).apply {
             when (items.size) {
                 3 -> {
-                    arrayOf(icon4Holder, icon5Holder, icon6Holder, icon7Holder, icon8Holder).forEach {
+                    arrayOf(icon4Holder, icon5Holder, icon6Holder, icon7Holder, icon8Holder,
+                        icon9Holder, icon10Holder, icon11Holder, icon12Holder
+                    ).forEach {
                         it.beGone()
                     }
                     arrayOf(icon1, icon2, icon3).forEachIndexed { index, imageView ->
@@ -37,7 +39,9 @@ class IconListDialog(
                     }
                 }
                 4 -> {
-                    arrayOf(icon5Holder, icon6Holder, icon7Holder, icon8Holder).forEach {
+                    arrayOf(icon5Holder, icon6Holder, icon7Holder, icon8Holder,
+                        icon9Holder, icon10Holder, icon11Holder, icon12Holder
+                    ).forEach {
                         it.beGone()
                     }
                     arrayOf(icon1, icon2, icon3, icon4).forEachIndexed { index, imageView ->
@@ -47,8 +51,10 @@ class IconListDialog(
                         }
                     }
                 }
-                8 -> {
-                    arrayOf(icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8).forEachIndexed { index, imageView ->
+                12 -> {
+                    arrayOf(icon1, icon2, icon3, icon4, icon5, icon6,
+                        icon7, icon8, icon9, icon10, icon11, icon12
+                    ).forEachIndexed { index, imageView ->
                         imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
                         if (size != null) {
                             imageView.setHeightAndWidth(size)
@@ -57,8 +63,8 @@ class IconListDialog(
                 }
             }
 
-            arrayOf(icon1Check, icon2Check, icon3Check, icon4Check,
-                icon5Check, icon6Check, icon7Check, icon8Check
+            arrayOf(icon1Check, icon2Check, icon3Check, icon4Check, icon5Check, icon6Check,
+                icon7Check, icon8Check, icon9Check, icon10Check, icon11Check, icon12Check
             ).forEach {
                 it.applyColorFilter(activity.getProperPrimaryColor())
             }
@@ -72,6 +78,10 @@ class IconListDialog(
                 6 -> icon6Check.beVisible()
                 7 -> icon7Check.beVisible()
                 8 -> icon8Check.beVisible()
+                9 -> icon9Check.beVisible()
+                10 -> icon10Check.beVisible()
+                11 -> icon11Check.beVisible()
+                12 -> icon12Check.beVisible()
             }
 
             icon1.setOnClickListener { itemSelected(1) }
@@ -82,6 +92,10 @@ class IconListDialog(
             icon6.setOnClickListener { itemSelected(6) }
             icon7.setOnClickListener { itemSelected(7) }
             icon8.setOnClickListener { itemSelected(8) }
+            icon9.setOnClickListener { itemSelected(9) }
+            icon10.setOnClickListener { itemSelected(10) }
+            icon11.setOnClickListener { itemSelected(11) }
+            icon12.setOnClickListener { itemSelected(12) }
 
             if (descriptionId != null) {
                 description.beVisible()

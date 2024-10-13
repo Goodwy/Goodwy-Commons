@@ -171,5 +171,61 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity-alias>
+
+        <activity-alias
+            android:name=".activities.SplashActivity.Eight"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_eight"
+            android:roundIcon="@mipmap/ic_launcher_eight"
+            android:targetActivity=".activities.SplashActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".activities.SplashActivity.Nine"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_nine"
+            android:roundIcon="@mipmap/ic_launcher_nine"
+            android:targetActivity=".activities.SplashActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".activities.SplashActivity.Ten"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_ten"
+            android:roundIcon="@mipmap/ic_launcher_ten"
+            android:targetActivity=".activities.SplashActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".activities.SplashActivity.Eleven"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_eleven"
+            android:roundIcon="@mipmap/ic_launcher_eleven"
+            android:targetActivity=".activities.SplashActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
     </application>
 </manifest>

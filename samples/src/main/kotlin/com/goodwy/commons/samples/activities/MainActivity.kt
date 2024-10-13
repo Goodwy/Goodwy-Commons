@@ -155,6 +155,10 @@ class MainActivity : BaseSimpleActivity() {
         R.mipmap.ic_launcher_four,
         R.mipmap.ic_launcher_five,
         R.mipmap.ic_launcher_six,
-        R.mipmap.ic_launcher_seven
+        R.mipmap.ic_launcher_seven,
+        R.mipmap.ic_launcher_eight,
+        R.mipmap.ic_launcher_nine,
+        R.mipmap.ic_launcher_ten,
+        R.mipmap.ic_launcher_eleven
     )
 }

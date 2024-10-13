@@ -242,6 +242,121 @@
                 android:visibility="invisible"
                 tools:tint="@color/primary" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/icon9Holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:layout_below="@+id/icon5Holder"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon9"
+                android:layout_width="@dimen/fingerprint_size"
+                android:layout_height="@dimen/fingerprint_size"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                tools:src="@drawable/ic_color_list" />
+
+            <ImageView
+                android:id="@+id/icon9Check"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_oval"
+                android:visibility="invisible"
+                tools:tint="@color/primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/icon10Holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:layout_below="@+id/icon5Holder"
+            android:layout_toEndOf="@+id/icon9Holder"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon10"
+                android:layout_width="@dimen/fingerprint_size"
+                android:layout_height="@dimen/fingerprint_size"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                tools:src="@drawable/ic_color_list_android" />
+
+            <ImageView
+                android:id="@+id/icon10Check"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_oval"
+                android:visibility="invisible"
+                tools:tint="@color/primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/icon11Holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:layout_below="@+id/icon5Holder"
+            android:layout_toEndOf="@+id/icon10Holder"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon11"
+                android:layout_width="@dimen/fingerprint_size"
+                android:layout_height="@dimen/fingerprint_size"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                tools:src="@drawable/ic_color_list_ios" />
+
+            <ImageView
+                android:id="@+id/icon11Check"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_oval"
+                android:visibility="invisible"
+                tools:tint="@color/primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/icon12Holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/larger_margin"
+            android:layout_below="@+id/icon5Holder"
+            android:layout_toEndOf="@+id/icon11Holder"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon12"
+                android:layout_width="@dimen/fingerprint_size"
+                android:layout_height="@dimen/fingerprint_size"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                tools:src="@drawable/ic_color_list_arc" />
+
+            <ImageView
+                android:id="@+id/icon12Check"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_oval"
+                android:visibility="invisible"
+                tools:tint="@color/primary" />
+        </LinearLayout>
     </RelativeLayout>
 
     <com.goodwy.commons.views.MyTextView

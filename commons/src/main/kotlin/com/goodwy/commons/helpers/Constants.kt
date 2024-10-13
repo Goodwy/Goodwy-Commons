@@ -470,7 +470,11 @@ val appIconColorStrings = arrayListOf(
     ".Four",
     ".Five",
     ".Six",
-    ".Seven"
+    ".Seven",
+    ".Eight",
+    ".Nine",
+    ".Ten",
+    ".Eleven"
 )
 
 // app icon color
@@ -482,6 +486,10 @@ const val APP_ICON_FOUR = 4
 const val APP_ICON_FIVE = 5
 const val APP_ICON_SIX = 6
 const val APP_ICON_SEVEN = 7
+const val APP_ICON_EIGHT = 8
+const val APP_ICON_NINE = 9
+const val APP_ICON_TEN = 10
+const val APP_ICON_ELEVEN = 11
 
 // letter background colors
 const val LBC_ORIGINAL = 1 //letterBackgroundColors
