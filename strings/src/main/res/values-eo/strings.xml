@@ -89,6 +89,8 @@
     <string name="system_theme_description">Ĉi tiu temo ne permesas al vi mane personecigi kolorojn. Koloroj ŝanĝiĝas dinamike depende de sistemaj agordoj.</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">Kroma koloro uzata en iuj interfacaj elementoj.</string>
+    <string name="app_icon_color_warning_g">Averto: Iuj lanĉiloj eble ne montras ĝuste la kutiman aplikaĵikon. Se la ikono malaperas, provu lanĉi la aplikaĵon per Google Play aŭ ĝia fenestraĵo (se eble). Post lanĉo, restarigu la defaŭltan ikonkoloron. En ekstremaj kazoj, vi eble bezonos reinstali la aplikaĵon.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>
@@ -114,6 +116,10 @@
     <string name="color_sim_card_icons">Koloraj SIM-karto-ikonoj</string>
     <string name="tabs">Lapetoj</string>
     <string name="open_search_when_open_contacts">Malfermu serĉon kiam vi malfermas la langeton de kontaktoj</string>
+    <string name="end_search_when_changing_tab">Fini serĉon dum ŝanĝado de langetoj</string>
+    <string name="change_top_bar_colour_when_scrolling">Ŝanĝu koloron de la supra trinkejo dum rulumado</string>
+    <string name="global_theme_success_g">La nuna temo estis sukcese aplikita al ĉiuj Ĝustaj Aplikoj. Ajna estontaj ŝanĝoj al ĉi tiu temo estos sinkronigita aŭtomate</string>
+    <string name="enter_pattern">Enigu ŝablonoŝlosilon</string>
     <string name="call_screen_background">Alvoka ekranfono</string>
     <string name="contact_photo">Kontakta foto</string>
     <string name="blurry_contact_photo">Malklara kontaktfoto</string>

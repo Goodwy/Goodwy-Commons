@@ -62,6 +62,8 @@
     <string name="per_month">%s/miesiąc</string>
     <string name="per_year">%s/rok</string>
 
+    <string name="use_accent_color_summary">Dodatkowy kolor używany w niektórych elementach interfejsu.</string>
+    <string name="app_icon_color_warning_g">Uwaga: Niektóre programy uruchamiające mogą nie wyświetlać poprawnie ikony aplikacji niestandardowej. Jeśli ikona zniknie, spróbuj uruchomić aplikację za pośrednictwem Google Play lub jej widżetu (jeśli to możliwe).         Po uruchomieniu przywróć domyślny kolor ikony. W skrajnych przypadkach może być konieczna ponowna instalacja aplikacji.</string>
     <string name="show_contact_thumbnails_g">Pokazuj miniaturki kontaktów</string>
     <string name="use_icon_tabs_summary">Ikony zamiast tekstu na kartach</string>
     <string name="use_icon_tabs">Używanie ikon kart</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Kolorowe ikony kart SIM</string>
     <string name="tabs">Zakładki</string>
     <string name="open_search_when_open_contacts">Otwórz wyszukiwanie po otwarciu karty Kontakty</string>
+    <string name="end_search_when_changing_tab">Kończenie wyszukiwania podczas zmieniania kart</string>
+    <string name="change_top_bar_colour_when_scrolling">Zmień kolor górnego paska podczas przewijania</string>
+    <string name="global_theme_success_g">Bieżący motyw został pomyślnie zastosowany do wszystkich odpowiednich aplikacji. Wszelkie przyszłe zmiany w tym motywie zostaną zsynchronizowane automatycznie</string>
+    <string name="enter_pattern">Wprowadź wzorzec</string>
     <string name="call_screen_background">Tło ekranu połączeń</string>
     <string name="contact_photo">Zdjęcie kontaktu</string>
     <string name="blurry_contact_photo">rozmazane zdjęcie kontaktu</string>

@@ -62,6 +62,8 @@
     <string name="per_month">מסז\'אק/%s</string>
     <string name="per_year">שנה/%s</string>
 
+    <string name="use_accent_color_summary">צבע נוסף המשמש ברכיבי ממשק משתמש מסוימים.</string>
+    <string name="app_icon_color_warning_g">הערה: ייתכן שמשגרים מסוימים לא יציגו כראוי את סמל היישום המותאם אישית. אם הסמל נעלם, נסה להפעיל את האפליקציה דרך Google Play או דרך הווידג\'ט שלה (אם ניתן).         לאחר ההפעלה, שחזר את צבע הסמל המוגדר כברירת מחדל. במקרים קיצוניים, ייתכן שיהיה עליך להתקין מחדש את האפליקציה.</string>
     <string name="show_contact_thumbnails_g">הצג תמונות ממוזערות של אנשי קשר</string>
     <string name="use_icon_tabs_summary">סמלים במקום טקסט בכרטיסיות</string>
     <string name="use_icon_tabs">שימוש בסמלים של כרטיסיות</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">סמלים צבעוניים של כרטיס SIM</string>
     <string name="tabs">כרטיסיות</string>
     <string name="open_search_when_open_contacts">פתח את החיפוש בעת פתיחת הכרטיסיה אנשי קשר</string>
+    <string name="end_search_when_changing_tab">סיום חיפוש בעת החלפת כרטיסיות</string>
+    <string name="change_top_bar_colour_when_scrolling">שינוי צבע הסרגל העליון בעת גלילה</string>
+    <string name="global_theme_success_g">ערכת הנושא הנוכחית הוחלה בהצלחה על כל היישומים הנכונים. כל שינוי עתידי בערכת נושא זו יסונכרן באופן אוטומטי</string>
+    <string name="enter_pattern">הזן את דוגמת המילוי</string>
     <string name="call_screen_background">רקע מסך השיחה</string>
     <string name="contact_photo">תמונת איש קשר</string>
     <string name="blurry_contact_photo">תמונת איש קשר מטושטשת</string>

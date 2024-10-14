@@ -235,6 +235,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun setupOptionsMenu() {
         binding.purchaseToolbar.menu.apply {
             findItem(R.id.restorePurchases).isVisible = playStoreInstalled || ruStoreInstalled
+            findItem(R.id.openSubscriptions).isVisible = playStoreInstalled || ruStoreInstalled
         }
         binding.purchaseToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {

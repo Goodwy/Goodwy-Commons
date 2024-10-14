@@ -90,6 +90,8 @@
     <string name="system_theme_description">This theme does not allow you to adjust colors manually. Colors change dynamically depending on your system settings.</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">Papildu krāsa, kas tiek izmantota dažos lietotāja saskarnes elementos.</string>
+    <string name="app_icon_color_warning_g">Piezīmes: Daži palaidēji, iespējams, nepareizi parāda pielāgotās lietotnes ikonu. Ja ikona pazūd, mēģiniet palaist lietotni, izmantojot Google Play vai tās logrīku (ja iespējams).         Pēc palaišanas atjaunojiet noklusējuma ikonas krāsu. Ārkārtējos gadījumos, iespējams, būs atkārtoti jāinstalē lietotne.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>
@@ -115,6 +117,10 @@
     <string name="color_sim_card_icons">Color SIM card icons</string>
     <string name="tabs">Tabs</string>
     <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
+    <string name="end_search_when_changing_tab">Meklēšanas beigšana, mainot cilnes</string>
+    <string name="change_top_bar_colour_when_scrolling">Augšējās joslas krāsas mainīšana ritināšanas laikā</string>
+    <string name="global_theme_success_g">Pašreizējais dizains ir veiksmīgi lietots visām pareizajām lietotnēm. Visas turpmākās izmaiņas šajā dizainā tiks sinhronizētas automātiski</string>
+    <string name="enter_pattern">Ievadiet modeli</string>
     <string name="call_screen_background">Call screen background</string>
     <string name="contact_photo">Contact photo</string>
     <string name="blurry_contact_photo">Blurry contact photo</string>

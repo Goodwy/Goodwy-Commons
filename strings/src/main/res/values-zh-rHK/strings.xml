@@ -89,6 +89,8 @@
     <string name="system_theme_description">此主題不允許您手動調整顏色。顏色會根據系統設置動態變化。</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">某些 UI 元素中使用的附加顏色。</string>
+    <string name="app_icon_color_warning_g">注意：某些啟動器可能無法正確顯示自定義應用程式圖示。如果圖示消失，請嘗試通過Google Play或其小部件（如果可能）啟動應用程式。        啟動后，恢復預設圖示顏色。在極端情況下，您可能需要重新安裝該應用程式。</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>
@@ -114,6 +116,10 @@
     <string name="color_sim_card_icons">Color SIM card icons</string>
     <string name="tabs">Tabs</string>
     <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
+    <string name="end_search_when_changing_tab">更改選項卡時結束搜索</string>
+    <string name="change_top_bar_colour_when_scrolling">滾動時更改頂部列的顏色</string>
+    <string name="global_theme_success_g">當前主題已成功應用於所有 Right Apps。將來對此主題所做的任何更改都將自動同步</string>
+    <string name="enter_pattern">進入模式</string>
     <string name="call_screen_background">Call screen background</string>
     <string name="contact_photo">Contact photo</string>
     <string name="blurry_contact_photo">Blurry contact photo</string>

@@ -62,6 +62,8 @@
     <string name="per_month">%s/μήνα</string>
     <string name="per_year">%s/έτος</string>
 
+    <string name="use_accent_color_summary">Ένα πρόσθετο χρώμα που χρησιμοποιείται σε ορισμένα στοιχεία περιβάλλοντος εργασίας χρήστη.</string>
+    <string name="app_icon_color_warning_g">Σημείωση: Ορισμένοι εκκινητές ενδέχεται να μην εμφανίζουν σωστά το εικονίδιο προσαρμοσμένης εφαρμογής. Εάν το εικονίδιο εξαφανιστεί, δοκιμάστε να εκκινήσετε την εφαρμογή μέσω του Google Play ή μέσω του γραφικού στοιχείου της (εάν είναι δυνατόν).         Μετά την εκκίνηση, επαναφέρετε το προεπιλεγμένο χρώμα εικονιδίου. Σε ακραίες περιπτώσεις, ίσως χρειαστεί να εγκαταστήσετε ξανά την εφαρμογή.</string>
     <string name="show_contact_thumbnails_g">Εμφάνιση μικρογραφιών επαφής</string>
     <string name="use_icon_tabs_summary">Εικονίδια αντί για κείμενο σε καρτέλες</string>
     <string name="use_icon_tabs">Χρήση εικονιδίων στηλοθέτη</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Έγχρωμα εικονίδια κάρτας SIM</string>
     <string name="tabs">Tabs</string>
     <string name="open_search_when_open_contacts">Άνοιγμα της Αναζήτησης όταν ανοίγετε την καρτέλα Επαφές</string>
+    <string name="end_search_when_changing_tab">Τερματισμός αναζήτησης κατά την αλλαγή καρτελών</string>
+    <string name="change_top_bar_colour_when_scrolling">Αλλαγή χρώματος επάνω γραμμής κατά την κύλιση</string>
+    <string name="global_theme_success_g">Το τρέχον θέμα εφαρμόστηκε με επιτυχία σε όλες τις εφαρμογές Right. Τυχόν μελλοντικές αλλαγές σε αυτό το θέμα θα συγχρονιστούν αυτόματα</string>
+    <string name="enter_pattern">Εισαγάγετε το μοτίβο</string>
     <string name="call_screen_background">Φόντο οθόνης κλήσης</string>
     <string name="contact_photo">Εικόνα επαφής</string>
     <string name="blurry_contact_photo">Θολή φωτογραφία επαφής</string>

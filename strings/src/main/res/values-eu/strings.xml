@@ -62,6 +62,8 @@
     <string name="per_month">%s/hilean</string>
     <string name="per_year">%s/year</string>
 
+    <string name="use_accent_color_summary">Additional colour used in some interface elements.</string>
+    <string name="app_icon_color_warning_g">Caution: Certain launchers may not handle app icon customization correctly. If the icon disappears, attempt launching the app through Google Play or a widget, if accessible.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Fitxetako testuaren ordez ikonoak</string>
     <string name="use_icon_tabs">Erabili fitxa ikonoak</string>
@@ -98,6 +100,9 @@
     <string name="color_sim_card_icons">Color SIM card icons</string>
     <string name="tabs">Fitxak</string>
     <string name="open_search_when_open_contacts">Ireki bilaketa kontaktuak fitxa irekitzean</string>
+    <string name="end_search_when_changing_tab">End search when changing tab</string>
+    <string name="change_top_bar_colour_when_scrolling">Change top bar colour when scrolling</string>
+    <string name="global_theme_success_g">The current theme has been successfully applied to all Right apps. Any future changes to this theme will be synced automatically.</string>
     <string name="call_screen_background">Deien pantailaren atzeko planoa</string>
     <string name="contact_photo">Harremanetarako argazkia</string>
     <string name="blurry_contact_photo">Kontaktuaren argazki lausoa</string>

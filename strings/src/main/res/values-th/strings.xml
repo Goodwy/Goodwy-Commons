@@ -89,6 +89,8 @@
     <string name="system_theme_description">ชุดรูปแบบนี้ไม่อนุญาตให้คุณปรับสีด้วยตนเอง สีจะเปลี่ยนแบบไดนามิกขึ้นอยู่กับการตั้งค่าระบบ</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">สีเพิ่มเติมที่ใช้ในองค์ประกอบ UI บางรายการ</string>
+    <string name="app_icon_color_warning_g">หมายเหตุ: ตัวเรียกใช้งานบางตัวอาจแสดงไอคอนแอปแบบกําหนดเองไม่ถูกต้อง หากไอคอนหายไป ให้ลองเปิดแอปผ่าน Google Play หรือผ่านวิดเจ็ต (ถ้าเป็นไปได้)         หลังจากเปิดใช้งาน ให้คืนค่าสีไอคอนเริ่มต้น ในกรณีที่รุนแรง คุณอาจต้องติดตั้งแอปใหม่</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>
@@ -114,6 +116,10 @@
     <string name="color_sim_card_icons">ไอคอนสีของซิมการ์ด</string>
     <string name="tabs">แท็บ</string>
     <string name="open_search_when_open_contacts">เปิดการค้นหาเมื่อคุณเปิดแท็บที่ติดต่อ</string>
+    <string name="end_search_when_changing_tab">สิ้นสุดการค้นหาเมื่อเปลี่ยนแท็บ</string>
+    <string name="change_top_bar_colour_when_scrolling">เปลี่ยนสีแถบด้านบนเมื่อเลื่อน</string>
+    <string name="global_theme_success_g">ธีมปัจจุบันถูกนําไปใช้กับแอพที่ถูกต้องทั้งหมดเรียบร้อยแล้ว การเปลี่ยนแปลงในอนาคตของธีมนี้จะถูกซิงค์โดยอัตโนมัติ</string>
+    <string name="enter_pattern">ป้อนรูปแบบ</string>
     <string name="call_screen_background">พื้นหลังหน้าจอการโทร</string>
     <string name="contact_photo">รูปภาพติดต่อ</string>
     <string name="blurry_contact_photo">เบลอรูปภาพติดต่อ</string>

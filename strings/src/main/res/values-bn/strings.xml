@@ -89,6 +89,8 @@
     <string name="system_theme_description">This theme does not allow you to adjust colors manually. Colors change dynamically depending on your system settings.</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">Additional colour used in some interface elements.</string>
+    <string name="app_icon_color_warning_g">Caution: Certain launchers may not handle app icon customization correctly. If the icon disappears, attempt launching the app through Google Play or a widget, if accessible.</string>
     <string name="show_contact_thumbnails_g">যোগাযোগের থাম্বনেইল দেখান</string>
     <string name="save_recordings_in_summary">Android 10+ থেকে শুরু করে, অ্যাপটির আপনার ফাইলগুলিতে অ্যাক্সেস নেই</string>
     <string name="round_play_icon"> রাউন্ড প্লে/পজ আইকন</string>
@@ -114,6 +116,9 @@
     <string name="color_sim_card_icons">রঙের সিম কার্ড আইকন</string>
     <string name="tabs">ট্যাব</string>
     <string name="open_search_when_open_contacts">আপনি পরিচিতি ট্যাব খুললে একটি অনুসন্ধান খুলুন</string>
+    <string name="end_search_when_changing_tab">End search when changing tab</string>
+    <string name="change_top_bar_colour_when_scrolling">Change top bar colour when scrolling</string>
+    <string name="global_theme_success_g">The current theme has been successfully applied to all Right apps. Any future changes to this theme will be synced automatically.</string>
     <string name="call_screen_background">কল স্ক্রীন ব্যাকগ্রাউন্ড</string>
     <string name="contact_photo">যোগাযোগের ছবি</string>
     <string name="blurry_contact_photo">অস্পষ্ট যোগাযোগের ছবি</string>৷

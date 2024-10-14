@@ -62,6 +62,8 @@
     <string name="per_month">%s/mjesec</string>
     <string name="per_year">%s/godina</string>
 
+    <string name="use_accent_color_summary">Dodatna boja koja se koristi u nekim elementima korisničkog sučelja.</string>
+    <string name="app_icon_color_warning_g">Napomena: Neki pokretači možda neće ispravno prikazati ikonu prilagođene aplikacije. Ako ikona nestane, pokušajte pokrenuti aplikaciju putem Google Playa ili putem njezinog widgeta (ako je moguće).         Nakon pokretanja vratite zadanu boju ikone. U ekstremnim slučajevima možda ćete morati ponovno instalirati aplikaciju.</string>
     <string name="show_contact_thumbnails_g">Prikaži sličice kontakata</string>
     <string name="use_icon_tabs_summary">Ikone umjesto teksta na karticama</string>
     <string name="use_icon_tabs">Korištenje ikona kartica</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Ikone SIM kartice u boji</string>
     <string name="tabs">Kartice</string>
     <string name="open_search_when_open_contacts">Otvaranje pretraživanja prilikom otvaranja kartice Kontakti</string>
+    <string name="end_search_when_changing_tab">Završetak pretraživanja prilikom promjene kartica</string>
+    <string name="change_top_bar_colour_when_scrolling">Promjena boje gornje trake prilikom pomicanja</string>
+    <string name="global_theme_success_g">Trenutna tema uspješno je primijenjena na sve prave aplikacije. Sve buduće promjene ove teme automatski će se sinkronizirati</string>
+    <string name="enter_pattern">Unesite uzorak</string>
     <string name="call_screen_background">Pozadina zaslona poziva</string>
     <string name="contact_photo">Fotografija kontakta</string>
     <string name="blurry_contact_photo">Mutna fotografija kontakta</string>

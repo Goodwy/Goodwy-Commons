@@ -63,6 +63,8 @@
     <string name="per_month">%s/mes</string>
     <string name="per_year">%s/ano</string>
 
+    <string name="use_accent_color_summary">Unha cor adicional usada nalgúns elementos da interface.</string>
+    <string name="app_icon_color_warning_g">Aviso: é posible que algúns iniciadores non mostren correctamente a icona da aplicación personalizada. Se a icona desaparece, tenta iniciar a aplicación a través de Google Play ou o seu widget (se é posible). Despois do lanzamento, restablece a cor predeterminada da icona. En casos extremos, pode ter que reinstalar a aplicación.</string>
     <string name="show_contact_thumbnails_g">Mostrar miniatura do contacto</string>
     <string name="use_icon_tabs_summary">Iconas no canto de texto nas pestanas</string>
     <string name="use_icon_tabs">Usa iconas de pestanas</string>
@@ -99,6 +101,10 @@
     <string name="color_sim_card_icons">Iconas de cores da tarxeta SIM</string>
     <string name="tabs">Pestanas</string>
     <string name="open_search_when_open_contacts">Abre a busca ao abrir a pestana de contactos</string>
+    <string name="end_search_when_changing_tab">Finalizando unha busca ao cambiar de pestana</string>
+    <string name="change_top_bar_colour_when_scrolling">Cambia a cor da barra superior ao desprazarse</string>
+    <string name="global_theme_success_g">O tema actual aplicouse correctamente a todas as aplicacións correctas. Calquera cambio futuro a este tema sincronizarase automaticamente</string>
+    <string name="enter_pattern">Introduza a clave de patrón</string>
     <string name="call_screen_background">Fondo da pantalla de chamada</string>
     <string name="contact_photo">Foto de contacto</string>
     <string name="blurry_contact_photo">Foto de contacto borrosa</string>

@@ -90,6 +90,8 @@
     <string name="system_theme_description">This theme does not allow you to adjust colors manually. Colors change dynamically depending on your system settings.</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">Warna tambahan yang digunakan dalam beberapa elemen antara muka.</string>
+    <string name="app_icon_color_warning_g">Nota: Sesetengah pelancar mungkin tidak memaparkan ikon apl tersuai dengan betul. Jika ikon hilang, cuba lancarkan apl melalui Google Play atau melalui widgetnya (jika boleh).         Selepas melancarkan, pulihkan warna ikon lalai. Dalam kes yang melampau, anda mungkin perlu memasang semula apl.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>
@@ -115,6 +117,10 @@
     <string name="color_sim_card_icons">Color SIM card icons</string>
     <string name="tabs">Tabs</string>
     <string name="open_search_when_open_contacts">Open a search when you open the contacts tab</string>
+    <string name="end_search_when_changing_tab">Tamatkan carian apabila menukar tab</string>
+    <string name="change_top_bar_colour_when_scrolling">Tukar warna bar atas semasa menatal</string>
+    <string name="global_theme_success_g">Tema semasa telah berjaya digunakan pada semua Aplikasi Betul. Sebarang perubahan masa hadapan pada tema ini akan disegerakkan secara automatik</string>
+    <string name="enter_pattern">Masukkan corak</string>
     <string name="call_screen_background">Call screen background</string>
     <string name="contact_photo">Contact photo</string>
     <string name="blurry_contact_photo">Blurry contact photo</string>

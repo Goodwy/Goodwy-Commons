@@ -62,6 +62,8 @@
     <string name="per_month">%s/mesiac</string>
     <string name="per_year">%s/rok</string>
 
+    <string name="use_accent_color_summary">Ďalšia farba použitá v niektorých prvkoch používateľského rozhrania.</string>
+    <string name="app_icon_color_warning_g">Poznámka: Niektoré spúšťače nemusia zobrazovať ikonu vlastnej aplikácie správne. Ak ikona zmizne, skúste spustiť aplikáciu cez Google Play alebo prostredníctvom jej miniaplikácie (ak je to možné).         Po spustení obnovte predvolenú farbu ikony. V extrémnych prípadoch môže byť potrebné aplikáciu preinštalovať.</string>
     <string name="show_contact_thumbnails_g">Zobraziť obrázky kontaktov</string>
     <string name="use_icon_tabs_summary">Ikony namiesto textu na kartách</string>
     <string name="use_icon_tabs">Použitie ikon kariet</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Farebné ikony SIM karty</string>
     <string name="tabs">Karty</string>
     <string name="open_search_when_open_contacts">Po otvorení karty Kontakty otvorte vyhľadávanie</string>
+    <string name="end_search_when_changing_tab">Ukončenie vyhľadávania pri zmene kariet</string>
+    <string name="change_top_bar_colour_when_scrolling">Zmena farby hornej lišty pri posúvaní</string>
+    <string name="global_theme_success_g">Aktuálna téma bola úspešne použitá na všetky správne aplikácie. Všetky budúce zmeny tejto témy sa synchronizujú automaticky</string>
+    <string name="enter_pattern">Zadajte vzor</string>
     <string name="call_screen_background">Pozadie obrazovky hovoru</string>
     <string name="contact_photo">Obrázok kontaktu</string>
     <string name="blurry_contact_photo">Rozmazaná fotografia kontaktu</string>

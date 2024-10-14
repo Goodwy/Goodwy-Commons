@@ -89,6 +89,8 @@
     <string name="system_theme_description">Această temă nu vă permite să reglați manual culorile. Culorile se schimbă dinamic în funcție de setările sistemului.</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">O culoare suplimentară folosită în unele elemente ale interfeței de utilizare.</string>
+    <string name="app_icon_color_warning_g">Notă: este posibil ca unele lansatoare să nu afișeze corect pictograma aplicației personalizate. Dacă pictograma dispare, încearcă să lansezi aplicația prin Google Play sau prin widget-ul său (dacă este posibil).         După lansare, restabiliți culoarea implicită a pictogramei. În cazuri extreme, poate fi necesar să reinstalați aplicația.</string>
     <string name="show_contact_thumbnails_g">Afișați miniaturi la contact</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>
@@ -114,6 +116,10 @@
     <string name="color_sim_card_icons">Pictograme color ale cartelei SIM</string>
     <string name="tabs">Tabs</string>
     <string name="open_search_when_open_contacts">Deschideți Căutarea atunci când deschideți fila Persoane de contact</string>
+    <string name="end_search_when_changing_tab">Încheierea unei căutări la schimbarea filelor</string>
+    <string name="change_top_bar_colour_when_scrolling">Schimbați culoarea barei superioare la derulare</string>
+    <string name="global_theme_success_g">Tema curentă a fost aplicată cu succes tuturor aplicațiilor potrivite. Orice modificări viitoare ale acestei teme vor fi sincronizate automat</string>
+    <string name="enter_pattern">Introduceți modelul</string>
     <string name="call_screen_background">Fundalul ecranului de apeluri</string>
     <string name="contact_photo">Imaginea contactului</string>
     <string name="blurry_contact_photo">fotografie neclară a contactului</string>

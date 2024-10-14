@@ -62,6 +62,8 @@
     <string name="per_month">%s/மாதம்</string>
     <string name="per_year">%s/ஆண்டு</string>
 
+    <string name="use_accent_color_summary">சில இடைமுக உறுப்புகளில் கூடுதல் வண்ணம் பயன்படுத்தப்படுகிறது.</string>
+    <string name="app_icon_color_warning_g">எச்சரிக்கை: சில துவக்கிகள் தனிப்பயன் பயன்பாட்டு ஐகானைச் சரியாகக் காட்டாமல் இருக்கலாம். ஐகான் மறைந்துவிட்டால், Google Play அல்லது அதன் விட்ஜெட் (முடிந்தால்) மூலம் பயன்பாட்டைத் தொடங்க முயற்சிக்கவும். துவக்கிய பிறகு, இயல்புநிலை ஐகான் நிறத்தை மீட்டமைக்கவும். தீவிர நிகழ்வுகளில், நீங்கள் பயன்பாட்டை மீண்டும் நிறுவ வேண்டியிருக்கும்.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">தாவல்களில் உரைக்கு பதிலாக சின்னங்கள்</string>
     <string name="use_icon_tabs">தாவல் ஐகான்களைப் பயன்படுத்தவும்</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">வண்ண சிம் கார்டு ஐகான்கள்</string>
     <string name="tabs">தாவல்கள்</string>
     <string name="open_search_when_open_contacts">தொடர்புகள் தாவலைத் திறக்கும்போது தேடலைத் திறக்கவும்</string>
+    <string name="end_search_when_changing_tab">தாவல்களை மாற்றும் போது தேடலை முடிக்கவும்</string>
+    <string name="change_top_bar_colour_when_scrolling">ஸ்க்ரோலிங் செய்யும் போது மேல் பட்டையின் நிறத்தை மாற்றவும்</string>
+    <string name="global_theme_success_g">தற்போதைய தீம் அனைத்து சரியான பயன்பாடுகளுக்கும் வெற்றிகரமாகப் பயன்படுத்தப்பட்டது. இந்தத் தீமில் எதிர்காலத்தில் ஏற்படும் மாற்றங்கள் தானாகவே ஒத்திசைக்கப்படும்</string>
+    <string name="enter_pattern">பேட்டர்ன் விசையை உள்ளிடவும்</string>
     <string name="call_screen_background">அழைப்பு திரை பின்னணி</string>
     <string name="contact_photo">தொடர்பு புகைப்படம்</string>
     <string name="blurry_contact_photo">மங்கலான தொடர்பு புகைப்படம்</string>

@@ -62,6 +62,8 @@
     <string name="per_month">%s/月</string>
     <string name="per_year">%s/年</string>
 
+    <string name="use_accent_color_summary">一部の UI 要素で使用される追加の色。</string>
+    <string name="app_icon_color_warning_g">注: 一部のランチャーでは、カスタムアプリのアイコンが正しく表示されない場合があります。アイコンが消えた場合は、Google Play またはそのウィジェット(可能な場合)からアプリを起動してみてください。        起動後、デフォルトのアイコンの色に戻します。極端な場合、アプリの再インストールが必要になることがあります。</string>
     <string name="show_contact_thumbnails_g">連絡先のサムネイルを表示</string>
     <string name="use_icon_tabs_summary">タブ上のテキストではなくアイコン</string>
     <string name="use_icon_tabs">タブ アイコンを使用する</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">カラーSIMカードアイコン</string>
     <string name="tabs">タブ</string>
     <string name="open_search_when_open_contacts">[連絡先] タブを開くと検索を開く</string>
+    <string name="end_search_when_changing_tab">タブの変更時に検索を終了する</string>
+    <string name="change_top_bar_colour_when_scrolling">スクロール時のトップバーの色の変更</string>
+    <string name="global_theme_success_g">現在のテーマは、すべてのRight Appsに正常に適用されています。このテーマに対する今後の変更は、自動的に同期されます</string>
+    <string name="enter_pattern">パターンを入力してください</string>
     <string name="call_screen_background">通話画面の背景</string>
     <string name="contact_photo">連絡先写真</string>
     <string name="blurry_contact_photo">ボケた連絡先写真</string>

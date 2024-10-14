@@ -62,6 +62,8 @@
     <string name="per_month">%s/mês</string>
     <string name="per_year">%s/ano</string>
 
+    <string name="use_accent_color_summary">Uma cor opcional utilizada em alguns elementos da interface.</string>
+    <string name="app_icon_color_warning_g">Nota: Alguns lançadores podem não apresentar corretamente o ícone da aplicação personalizada. Se o ícone desaparecer, tente iniciar a aplicação através do Google Play ou do respetivo widget (se possível).</string>
     <string name="show_contact_thumbnails_g">Mostrar miniatura do contacto</string>
     <string name="use_icon_tabs_summary">Ícones em vez de texto em guias</string>
     <string name="use_icon_tabs">Use ícones de guia</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Ícones de cartões SIM a cores</string>
     <string name="tabs">Tabs</string>
     <string name="open_search_when_open_contacts">Abrir uma pesquisa ao abrir o separador de contactos</string>
+    <string name="end_search_when_changing_tab">Terminar uma pesquisa ao mudar de separador</string>
+    <string name="change_top_bar_colour_when_scrolling">Alterar a cor da barra superior quando se desloca</string>
+    <string name="global_theme_success_g">O tema atual foi aplicado com êxito a todas as aplicações Right. Quaisquer alterações futuras a este tema serão sincronizadas automaticamente.</string>
+    <string name="enter_pattern">Introduzir a chave gráfica</string>
     <string name="call_screen_background">Antecedentes do ecrã de chamada</string>
     <string name="contact_photo">Foto do contacto</string>
     <string name="blurry_contact_photo">Fotografia de contacto desfocada</string>

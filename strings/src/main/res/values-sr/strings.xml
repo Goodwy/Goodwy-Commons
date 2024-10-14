@@ -63,6 +63,8 @@
     <string name="per_month">%s/месечно</string>
     <string name="per_year">%s/године</string>
 
+    <string name="use_accent_color_summary">Додатна боја која се користи у неким елементима интерфејса.</string>
+    <string name="app_icon_color_warning_g">Упозорење: Неки покретачи можда неће правилно приказати прилагођену икону апликације. Ако икона нестане, покушајте да покренете апликацију преко Гоогле Плаи-а или његовог виџета (ако је могуће). Након покретања, вратите подразумевану боју иконе. У екстремним случајевима, можда ћете морати поново да инсталирате апликацију.</string>
     <string name="show_contact_thumbnails_g">Прикажи сличице контаката</string>
     <string name="use_icon_tabs_summary">Иконице уместо текста на картицама</string>
     <string name="use_icon_tabs">Користи иконице картица</string>
@@ -99,6 +101,10 @@
     <string name="color_sim_card_icons">Обоји иконице SIM картица</string>
     <string name="tabs">Картице</string>
     <string name="open_search_when_open_contacts">Отвори претрагу при отварању картице контаката</string>
+    <string name="end_search_when_changing_tab">Завршетак претраге приликом промене картица</string>
+    <string name="change_top_bar_colour_when_scrolling">Промените боју горње траке приликом померања</string>
+    <string name="global_theme_success_g">Тренутна тема је успешно примењена на све Ригхт Аппс. Све будуће промене ове теме биће аутоматски синхронизоване</string>
+    <string name="enter_pattern">Унесите кључ шаблона</string>
     <string name="call_screen_background">Позадина екрана позива</string>
     <string name="contact_photo">Фотографија контакта</string>
     <string name="blurry_contact_photo">Замагљена фотографија контакта</string>

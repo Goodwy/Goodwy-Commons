@@ -62,6 +62,8 @@
     <string name="per_month">%s/माह</string>
     <string name="per_year">%s/सालों</string>
 
+    <string name="use_accent_color_summary">कुछ UI तत्वों में उपयोग किया जाने वाला एक अतिरिक्त रंग।</string>
+    <string name="app_icon_color_warning_g">नोट: हो सकता है कि कुछ लॉन्चर कस्टम ऐप आइकन को सही तरीके से प्रदर्शित न करें। यदि आइकन गायब हो जाता है, तो Google Play या उसके विजेट (यदि संभव हो) के माध्यम से ऐप लॉन्च करने का प्रयास करें।         लॉन्च करने के बाद, डिफ़ॉल्ट आइकन रंग को पुनर्स्थापित करें। चरम मामलों में, आपको ऐप को फिर से इंस्टॉल करने की आवश्यकता हो सकती है।</string>
     <string name="show_contact_thumbnails_g">संपर्क थंबनेल दिखाएँ</string>
     <string name="use_icon_tabs_summary">टैब पर पाठ के बजाय प्रतीक</string>
     <string name="use_icon_tabs">टैब आइकन का उपयोग करें</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">रंग सिम कार्ड आइकन</string>
     <string name="tabs">टैब</string>
     <string name="open_search_when_open_contacts">संपर्क टैब खोलने पर खोजें</string>
+    <string name="end_search_when_changing_tab">टैब परिवर्तित करते समय खोज समाप्त करें</string>
+    <string name="change_top_bar_colour_when_scrolling">स्क्रॉल करते समय शीर्ष पट्टी का रंग परिवर्तित करना</string>
+    <string name="global_theme_success_g">वर्तमान विषय सफलतापूर्वक सभी सही Apps के लिए लागू किया गया है. इस विषय में भविष्य में कोई भी परिवर्तन स्वचालित रूप से समन्वयित किया जाएगा</string>
+    <string name="enter_pattern">पैटर्न दर्ज करें</string>
     <string name="call_screen_background">कॉल स्क्रीन बैकग्राउंड</string>
     <string name="contact_photo">संपर्क फोटो</string>
     <string name="blurry_contact_photo">धुँधली संपर्क फ़ोटो</string>

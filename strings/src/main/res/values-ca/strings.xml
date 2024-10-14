@@ -62,6 +62,8 @@
     <string name="per_month">%s/mes</string>
     <string name="per_year">%s/any</string>
 
+    <string name="use_accent_color_summary">Un color addicional utilitzat en alguns elements de la interfície d\'usuari.</string>
+    <string name="app_icon_color_warning_g">Nota: és possible que alguns llançadors no mostrin correctament la icona de l\'aplicació personalitzada. Si la icona desapareix, proveu d\'iniciar l\'aplicació a través de Google Play o del seu widget (si és possible).         Després de llançar-lo, restaureu el color predeterminat de la icona. En casos extrems, és possible que hàgiu de tornar a instal·lar l\'aplicació.</string>
     <string name="show_contact_thumbnails_g">Mostra les miniatures dels contactes</string>
     <string name="use_icon_tabs_summary">Icones en lloc de text a les pestanyes</string>
     <string name="use_icon_tabs">Utilitza icones de pestanyes</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Icones de targetes SIM de color</string>
     <string name="tabs">Pestanyes</string>
     <string name="open_search_when_open_contacts">Obriu la cerca quan obriu la pestanya Contactes</string>
+    <string name="end_search_when_changing_tab">Finalitzar una cerca en canviar de pestanya</string>
+    <string name="change_top_bar_colour_when_scrolling">Canviar el color de la barra superior en desplaçar-se</string>
+    <string name="global_theme_success_g">El tema actual s\'ha aplicat correctament a totes les aplicacions correctes. Qualsevol canvi futur en aquest tema se sincronitzarà automàticament</string>
+    <string name="enter_pattern">Introduïu el patró</string>
     <string name="call_screen_background">Fond de pantalla de trucada</string>
     <string name="contact_photo">Foto de contacte</string>
     <string name="blurry_contact_photo">Foto de contacte borrosa</string>

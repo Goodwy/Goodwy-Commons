@@ -89,6 +89,8 @@
     <string name="system_theme_description">ਇਹ ਥੀਮ ਤੁਹਾਨੂੰ ਰੰਗਾਂ ਨੂੰ ਹੱਥੀਂ ਅਨੁਕੂਲਿਤ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੰਦਾ ਹੈ। ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਦੇ ਆਧਾਰ \'ਤੇ ਰੰਗ ਗਤੀਸ਼ੀਲ ਤੌਰ \'ਤੇ ਬਦਲਦੇ ਹਨ।</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">ਕੁਝ ਇੰਟਰਫੇਸ ਤੱਤਾਂ ਵਿੱਚ ਵਰਤਿਆ ਗਿਆ ਇੱਕ ਵਾਧੂ ਰੰਗ।</string>
+    <string name="app_icon_color_warning_g">ਚੇਤਾਵਨੀ: ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਕੁਝ ਲਾਂਚਰ ਕਸਟਮ ਐਪ ਆਈਕਨ ਨੂੰ ਸਹੀ ਤਰ੍ਹਾਂ ਪ੍ਰਦਰਸ਼ਿਤ ਨਾ ਕਰ ਸਕਣ। ਜੇਕਰ ਆਈਕਨ ਅਲੋਪ ਹੋ ਜਾਂਦਾ ਹੈ, ਤਾਂ Google Play ਜਾਂ ਇਸਦੇ ਵਿਜੇਟ (ਜੇ ਸੰਭਵ ਹੋਵੇ) ਰਾਹੀਂ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਲਾਂਚ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਲਾਂਚ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਡਿਫੌਲਟ ਆਈਕਨ ਰੰਗ ਨੂੰ ਰੀਸਟੋਰ ਕਰੋ। ਗੰਭੀਰ ਮਾਮਲਿਆਂ ਵਿੱਚ, ਤੁਹਾਨੂੰ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਮੁੜ ਸਥਾਪਿਤ ਕਰਨ ਦੀ ਲੋੜ ਹੋ ਸਕਦੀ ਹੈ।</string>
     <string name="show_contact_thumbnails_g">ਸੰਪਰਕ ਥੰਬਨੇਲ ਦਿਖਾਓ</string>
     <string name="save_recordings_in_summary">Android 10+ ਤੋਂ ਸ਼ੁਰੂ ਕਰਕੇ, ਐਪ ਕੋਲ ਤੁਹਾਡੀਆਂ ਫ਼ਾਈਲਾਂ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੈ</string>
     <string name="round_play_icon">ਰਾਊਂਡ ਪਲੇ/ਪੌਜ਼ ਆਈਕਨ</string>
@@ -114,6 +116,10 @@
     <string name="color_sim_card_icons">ਰੰਗ ਸਿਮ ਕਾਰਡ ਆਈਕਨ</string>
     <string name="tabs">ਟੈਬਾਂ</string>
     <string name="open_search_when_open_contacts">ਜਦੋਂ ਤੁਸੀਂ ਸੰਪਰਕ ਟੈਬ ਖੋਲ੍ਹਦੇ ਹੋ ਤਾਂ ਇੱਕ ਖੋਜ ਖੋਲ੍ਹੋ</string>
+    <string name="end_search_when_changing_tab">ਟੈਬਾਂ ਬਦਲਦੇ ਸਮੇਂ ਖੋਜ ਨੂੰ ਖਤਮ ਕਰਨਾ</string>
+    <string name="change_top_bar_colour_when_scrolling">ਸਕ੍ਰੌਲ ਕਰਨ ਵੇਲੇ ਸਿਖਰ ਪੱਟੀ ਦਾ ਰੰਗ ਬਦਲੋ</string>
+    <string name="global_theme_success_g">ਮੌਜੂਦਾ ਥੀਮ ਨੂੰ ਸਾਰੀਆਂ ਸੱਜੀਆਂ ਐਪਾਂ \'ਤੇ ਸਫਲਤਾਪੂਰਵਕ ਲਾਗੂ ਕੀਤਾ ਗਿਆ ਹੈ। ਇਸ ਥੀਮ ਵਿੱਚ ਕੋਈ ਵੀ ਭਵਿੱਖੀ ਤਬਦੀਲੀਆਂ ਆਪਣੇ ਆਪ ਸਮਕਾਲੀ ਹੋ ਜਾਣਗੀਆਂ</string>
+    <string name="enter_pattern">ਪੈਟਰਨ ਕੁੰਜੀ ਦਰਜ ਕਰੋ</string>
     <string name="call_screen_background">ਕਾਲ ਸਕ੍ਰੀਨ ਬੈਕਗਰਾਊਂਡ</string>
     <string name="contact_photo">ਸੰਪਰਕ ਫੋਟੋ</string>
     <string name="blurry_contact_photo">ਧੁੰਦਲੀ ਸੰਪਰਕ ਫੋਟੋ</string>

@@ -62,6 +62,8 @@
     <string name="per_month">%s/mis</string>
     <string name="per_year">%s/blwyddyn</string>
 
+    <string name="use_accent_color_summary">Lliw ychwanegol a ddefnyddir mewn rhai elfennau UI.</string>
+    <string name="app_icon_color_warning_g">Nodyn: Efallai na fydd rhai lanswyr yn arddangos yr eicon app arferiad yn gywir. Os yw\'r eicon yn diflannu, ceisiwch lansio\'r ap trwy Google Play neu drwy ei teclyn (os yn bosibl).         Ar ôl ei lansio, adfer y lliw eicon diofyn. Mewn achosion eithafol, efallai y bydd angen i chi ailosod yr app.</string>
     <string name="show_contact_thumbnails_g">Dangos mân luniau cysylltiadau</string>
     <string name="use_icon_tabs_summary">Eiconau yn lle testun ar dabiau</string>
     <string name="use_icon_tabs">Defnyddio eiconau tabiau</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Eiconau cerdyn SIM lliw</string>
     <string name="tabs">Tabs</string>
     <string name="open_search_when_open_contacts">Agor Chwilio pan fyddwch yn agor y tab Cysylltiadau</string>
+    <string name="end_search_when_changing_tab">Diweddu chwiliad wrth newid tabiau</string>
+    <string name="change_top_bar_colour_when_scrolling">Newid lliw bar uchaf wrth sgrolio</string>
+    <string name="global_theme_success_g">Mae\'r thema gyfredol wedi\'i chymhwyso\'n llwyddiannus i bob Ap Cywir. Bydd unrhyw newidiadau i\'r thema hon yn y dyfodol yn cael eu cysoni\'n awtomatig</string>
+    <string name="enter_pattern">Rhowch y patrwm</string>
     <string name="call_screen_background">Cefndir sgrin galwadau</string>
     <string name="contact_photo">Llun cyswllt</string>
     <string name="blurry_contact_photo">Llun cyswllt aneglur</string>

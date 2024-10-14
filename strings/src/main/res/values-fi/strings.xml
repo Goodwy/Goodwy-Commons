@@ -62,6 +62,8 @@
     <string name="per_month">%s/kuukausi</string>
     <string name="per_year">%s/vuosi</string>
 
+    <string name="use_accent_color_summary">Lisäväri, jota käytetään joissakin käyttöliittymäelementeissä.</string>
+    <string name="app_icon_color_warning_g">Huomautus: Jotkin käynnistysohjelmat eivät ehkä näytä mukautetun sovelluksen kuvaketta oikein. Jos kuvake katoaa, yritä käynnistää sovellus Google Playn tai sen widgetin kautta (jos mahdollista).         Kun olet käynnistänyt, palauta kuvakkeen oletusväri. Äärimmäisissä tapauksissa sinun on ehkä asennettava sovellus uudelleen.</string>
     <string name="show_contact_thumbnails_g">Näytä yhteystietojen kuvakkeet</string>
     <string name="use_icon_tabs_summary">Kuvakkeet välilehtien tekstin sijaan</string>
     <string name="use_icon_tabs">Välilehtikuvakkeiden käyttö</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Värilliset SIM-kortin kuvakkeet</string>
     <string name="tabs">Välilehdet</string>
     <string name="open_search_when_open_contacts">Avaa haku, kun avaat Yhteystiedot-välilehden</string>
+    <string name="end_search_when_changing_tab">Haun lopettaminen välilehtiä vaihdettaessa</string>
+    <string name="change_top_bar_colour_when_scrolling">Yläpalkin värin muuttaminen vieritettäessä</string>
+    <string name="global_theme_success_g">Nykyistä teemaa on sovellettu onnistuneesti kaikkiin oikeisiin sovelluksiin. Kaikki tulevat muutokset tähän teemaan synkronoidaan automaattisesti</string>
+    <string name="enter_pattern">Syötä kuvio</string>
     <string name="call_screen_background">Puhelunäytön tausta</string>
     <string name="contact_photo">Kontaktin kuva</string>
     <string name="blurry_contact_photo">Hämärtynyt yhteystietokuva</string>

@@ -62,6 +62,8 @@
     <string name="per_month">%s/måned</string>
     <string name="per_year">%s/år</string>
 
+    <string name="use_accent_color_summary">En ekstra farve, der bruges i nogle elementer i brugergrænsefladen.</string>
+    <string name="app_icon_color_warning_g">Bemærk: Nogle startprogrammer viser muligvis ikke det brugerdefinerede app-ikon korrekt. Hvis ikonet forsvinder, kan du prøve at starte appen via Google Play eller via dens widget (hvis det er muligt).         Efter lanceringen skal du gendanne standardikonfarven. I ekstreme tilfælde skal du muligvis geninstallere appen.</string>
     <string name="show_contact_thumbnails_g">Vis kontakt miniature-billede</string>
     <string name="use_icon_tabs_summary">Ikoner i stedet for tekst under faner</string>
     <string name="use_icon_tabs">Bruge faneikoner</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Farve SIM-kort ikoner</string>
     <string name="tabs"> Tabs</string>
     <string name="open_search_when_open_contacts">Åbn Søg, når du åbner fanen Kontakter</string>
+    <string name="end_search_when_changing_tab">Afslut en søgning, når du skifter fane</string>
+    <string name="change_top_bar_colour_when_scrolling">Skift farve på øverste bjælke, når du ruller</string>
+    <string name="global_theme_success_g">Det aktuelle tema er blevet anvendt på alle Right Apps. Eventuelle fremtidige ændringer af dette tema synkroniseres automatisk</string>
+    <string name="enter_pattern">Gå ind i mønsteret</string>
     <string name="call_screen_background">Baggrund for opkaldsskærm</string>
     <string name="contact_photo">Kontaktbillede</string>
     <string name="blurry_contact_photo">blurry kontaktbillede</string>

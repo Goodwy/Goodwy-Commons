@@ -89,6 +89,8 @@
     <string name="system_theme_description">یہ تھیم آپ کو رنگوں کو دستی طور پر اپنی مرضی کے مطابق کرنے کی اجازت نہیں دیتا ہے۔ نظام کی ترتیبات کے لحاظ سے رنگ متحرک طور پر تبدیل ہوتے ہیں۔</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">کجھ انٹرفیس عناصر چ استعمال ہون آلا اک وادھو رنگ۔</string>
+    <string name="app_icon_color_warning_g">انتباہ: کجھ لانچر کسٹم ایپ آئکن نو صحیح طریقے نال نئیں وکھاندے۔ اگر آئکن غائب ہو جاندا اے، تے گوگل پلے یا اس دے ویجیٹ دے ذریعے ایپلی کیشن نو لانچ کرن دی کوشش کرو (جے ممکن ہووے)۔ لانچ دے بعد، ڈیفالٹ آئکن رنگ بحال کرو۔ انتہائی معاملات وچ، تہانوں ایپلی کیشن نو دوبارہ انسٹال کرن دی لوڑ پے سکدی اے۔</string>
     <string name="show_contact_thumbnails_g">رابطے کے تھمب نیلز دکھائیں</string>
     <string name="save_recordings_in_summary">Android 10+ سے شروع کرتے ہوئے، ایپ کو آپ کی فائلوں تک رسائی حاصل نہیں ہے</string>
     <string name="round_play_icon"> راؤنڈ پلے/پوز آئیکن</string>
@@ -114,6 +116,10 @@
     <string name="color_sim_card_icons">رنگین سم کارڈ آئیکنز</string>
     <string name="tabs">ٹیبز</string>
     <string name="open_search_when_open_contacts">جب آپ رابطے کا ٹیب کھولیں تو تلاش کھولیں</string>
+    <string name="end_search_when_changing_tab">ٹیبز تبدیل کردے ویلے سرچ ختم کرنا</string>
+    <string name="change_top_bar_colour_when_scrolling">طومار کردے ویلے اوپری بار دا رنگ بدلو</string>
+    <string name="global_theme_success_g">موجودہ تھیم تمام رائٹ ایپس تے کامیابی نال لاگو کر دتا گیا اے۔ اس تھیم چ مستقبل چ کوئی وی تبدیلی خودبخود مطابقت پذیر ہو جائے گی</string>
+    <string name="enter_pattern">پیٹرن کلید درج کرو</string>
     <string name="call_screen_background">کال اسکرین کا پس منظر</string>
     <string name="contact_photo">رابطہ تصویر</string>
     <string name="blurry_contact_photo">دھندلی رابطے کی تصویر</string>

@@ -62,6 +62,8 @@
     <string name="per_month">%s/mesec</string>
     <string name="per_year">%s/leto</string>
 
+    <string name="use_accent_color_summary">Dodatna barva, ki se uporablja v nekaterih elementih uporabniškega vmesnika.</string>
+    <string name="app_icon_color_warning_g">Opomba: nekateri zaganjalniki morda ne bodo pravilno prikazali ikone aplikacije po meri. Če ikona izgine, poskusite zagnati aplikacijo prek Googla Play ali njegovega pripomočka (če je mogoče).         Po zagonu obnovite privzeto barvo ikone. V skrajnih primerih boste morda morali znova namestiti aplikacijo.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Ikone namesto besedila na zavihku</string>
     <string name="use_icon_tabs">Uporaba ikon zavihkov</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Ikone barvne kartice SIM</string>
     <string name="tabs">Zavihki</string>
     <string name="open_search_when_open_contacts">Odpri iskanje, ko odprete zavihek Stiki</string>
+    <string name="end_search_when_changing_tab">Končanje iskanja pri spreminjanju zavihkov</string>
+    <string name="change_top_bar_colour_when_scrolling">Spreminjanje barve zgornje vrstice med drsenjem</string>
+    <string name="global_theme_success_g">Trenutna tema je bila uspešno uporabljena za vse prave aplikacije. Vse prihodnje spremembe te teme bodo samodejno sinhronizirane</string>
+    <string name="enter_pattern">Vnos vzorca</string>
     <string name="call_screen_background">Tlaka zaslona za klice</string>
     <string name="contact_photo">Slika stikov</string>
     <string name="blurry_contact_photo">Zaostrena kontaktna fotografija</string>

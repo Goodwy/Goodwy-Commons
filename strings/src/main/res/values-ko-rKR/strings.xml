@@ -62,6 +62,8 @@
     <string name="per_month">%s/월</string>
     <string name="per_year">%s/년</string>
 
+    <string name="use_accent_color_summary">일부 UI 요소에 사용되는 추가 색입니다.</string>
+    <string name="app_icon_color_warning_g">참고: 일부 런처는 사용자 설정 앱 아이콘을 올바르게 표시하지 않을 수 있습니다. 아이콘이 사라지면 Google Play 또는 위젯(가능한 경우)을 통해 앱을 실행해 보세요.         실행 후 기본 아이콘 색상을 복원합니다. 극단적인 경우 앱을 다시 설치해야 할 수 있습니다.</string>
     <string name="show_contact_thumbnails_g">연락처 썸네일 보기</string>
     <string name="use_icon_tabs_summary">탭의 텍스트 대신 아이콘</string>
     <string name="use_icon_tabs">탭 아이콘 사용</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">컬러 SIM 카드 아이콘</string>
     <string name="tabs">탭</string>
     <string name="open_search_when_open_contacts">연락처 탭을 열 때 검색 열기</string>
+    <string name="end_search_when_changing_tab">탭 변경 시 검색 종료</string>
+    <string name="change_top_bar_colour_when_scrolling">스크롤할 때 상단 표시줄 색상 변경</string>
+    <string name="global_theme_success_g">현재 테마가 모든 Right Apps에 성공적으로 적용되었습니다. 이 테마에 대한 향후 변경 사항은 자동으로 동기화됩니다</string>
+    <string name="enter_pattern">패턴 입력</string>
     <string name="call_screen_background">통화 화면 배경</string>
     <string name="contact_photo">연락처 사진</string>
     <string name="blurry_contact_photo">흐릿한 연락처 사진</string>

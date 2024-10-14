@@ -62,6 +62,8 @@
     <string name="per_month">%s/mese</string>
     <string name="per_year">%s/anno</string>
 
+    <string name="use_accent_color_summary">Colore aggiuntivo utilizzato in alcuni elementi dell\'interfaccia utente.</string>
+    <string name="app_icon_color_warning_g">Nota: alcuni launcher potrebbero non visualizzare correttamente l\'icona dell\'app personalizzata. Se l\'icona scompare, prova ad avviare l\'app tramite Google Play o tramite il suo widget (se possibile).         Dopo l\'avvio, ripristina il colore predefinito dell\'icona. In casi estremi, potrebbe essere necessario reinstallare l\'app.</string>
     <string name="show_contact_thumbnails_g">Mostra le anteprime dei contatti</string>
     <string name="use_icon_tabs_summary">Icone anziché testo nelle schede</string>
     <string name="use_icon_tabs">Usa le icone delle schede</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Icone della scheda SIM a colori</string>
     <string name="tabs">Schede</string>
     <string name="open_search_when_open_contacts">Apri Cerca quando apri la scheda Contatti</string>.
+    <string name="end_search_when_changing_tab">Terminare una ricerca quando si cambia scheda</string>
+    <string name="change_top_bar_colour_when_scrolling">Cambia il colore della barra superiore durante lo scorrimento</string>
+    <string name="global_theme_success_g">Il tema corrente è stato applicato con successo a tutte le app giuste. Eventuali modifiche future a questo tema verranno sincronizzate automaticamente</string>
+    <string name="enter_pattern">Inserisci il modello</string>
     <string name="call_screen_background">Sfondo della schermata di chiamata</string>
     <string name="contact_photo">Immagine del contatto</string>
     <string name="blurry_contact_photo">Foto sfocata del contatto</string>

@@ -63,6 +63,8 @@
     <string name="per_year">%s/il</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">Bəzi interfeys elementlərində istifadə olunan əlavə rəng.</string>
+    <string name="app_icon_color_warning_g">Xəbərdarlıq: Bəzi işəsalanlar fərdi proqram ikonasını düzgün göstərməyə bilər. İşarə yox olarsa, tətbiqi Google Play və ya onun vidceti (mümkünsə) vasitəsilə işə salmağa çalışın. Başladıqdan sonra standart simvol rəngini bərpa edin. Həddindən artıq hallarda, proqramı yenidən quraşdırmalı ola bilərsiniz.</string>
     <string name="show_contact_thumbnails_g">Kontakt görüntülərini göstər</string>
     <string name="use_icon_tabs_summary">Nişanlardakı mətn əvəzinə nişanlar</string>
     <string name="use_icon_tabs">Nişanlar nişanlarından istifadə edin</string>
@@ -99,6 +101,10 @@
     <string name="color_sim_card_icons">Rəngli SİM kart nişanları</string>
     <string name="tabs">Nişanlar</string>
     <string name="open_search_when_open_contacts">Kontaktlar sekmesini açarkən axtarışı açın</string>
+    <string name="end_search_when_changing_tab">Nişanları dəyişdirərkən axtarışın dayandırılması</string>
+    <string name="change_top_bar_colour_when_scrolling">Üst çubuğun rəngini dəyişdirin və sürüşdürün</string>
+    <string name="global_theme_success_g">Cari mövzu bütün Doğru Tətbiqlərə uğurla tətbiq edildi. Bu mövzuya gələcək dəyişikliklər avtomatik olaraq sinxronlaşdırılacaq</string>
+    <string name="enter_pattern">Nümunə düyməsini daxil edin</string>
     <string name="call_screen_background">Zəng ekranı fonu</string>
     <string name="contact_photo">Əlaqə şəkli</string>
     <string name="blurry_contact_photo">Bulanıq kontakt şəkli</string>

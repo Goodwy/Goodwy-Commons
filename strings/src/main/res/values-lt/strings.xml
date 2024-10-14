@@ -62,6 +62,8 @@
     <string name="per_month">%s per mėnesį</string>
     <string name="per_year">%s per metus</string>
 
+    <string name="use_accent_color_summary">Papildoma spalva, naudojama kai kuriuose vartotojo sąsajos elementuose.</string>
+    <string name="app_icon_color_warning_g">Pastaba: kai kurios paleidimo priemonės gali netinkamai rodyti tinkintos programos piktogramą. Jei piktograma dingsta, pabandykite paleisti programą naudodami \"Google Play\" arba jos valdiklį (jei įmanoma).         Paleidę atkurkite numatytąją piktogramos spalvą. Kraštutiniais atvejais gali tekti iš naujo įdiegti programą.</string>
     <string name="show_contact_thumbnails_g">Rodyti adresatų miniatiūras</string>
     <string name="use_icon_tabs_summary">Piktogramos vietoj teksto skirtukuose</string>
     <string name="use_icon_tabs">Skirtukų piktogramų naudojimas</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Spalvotos SIM kortelės piktogramos</string>
     <string name="tabs">Skirtukai</string>
     <string name="open_search_when_open_contacts">Atidarykite iešką, kai atidarote skirtuką Kontaktai</string>
+    <string name="end_search_when_changing_tab">Paieškos užbaigimas keičiant skirtukus</string>
+    <string name="change_top_bar_colour_when_scrolling">Pakeiskite viršutinės juostos spalvą slinkdami</string>
+    <string name="global_theme_success_g">Dabartinė tema sėkmingai pritaikyta visoms tinkamoms programoms. Visi būsimi šios temos pakeitimai bus sinchronizuojami automatiškai</string>
+    <string name="enter_pattern">Įveskite šabloną</string>
     <string name="call_screen_background">Skambučių ekrano fonas</string>
     <string name="contact_photo">Kontaktų nuotrauka</string>
     <string name="blurry_contact_photo">Neaiški kontaktų nuotrauka</string>

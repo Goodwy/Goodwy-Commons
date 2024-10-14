@@ -62,6 +62,8 @@
     <string name="per_month">%s/tháng</string>
     <string name="per_year">%s/năm</string>
 
+    <string name="use_accent_color_summary">Một màu bổ sung được sử dụng trong một số yếu tố giao diện người dùng.</string>
+    <string name="app_icon_color_warning_g">Lưu ý: Một số trình khởi chạy có thể không hiển thị chính xác biểu tượng ứng dụng tùy chỉnh. Nếu biểu tượng biến mất, hãy thử khởi chạy ứng dụng thông qua Google Play hoặc thông qua tiện ích của ứng dụng (nếu có thể).         Sau khi khởi chạy, khôi phục màu biểu tượng mặc định. Trong trường hợp cực đoan, bạn có thể cần phải cài đặt lại ứng dụng.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Biểu tượng thay vì văn bản trên tab</string>
     <string name="use_icon_tabs">Dùng biểu tượng tab</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Biểu tượng thẻ SIM màu</string>
     <string name="tabs">Tab</string>
     <string name="open_search_when_open_contacts">Mở Tìm kiếm khi bạn mở tab Danh bạ</string>
+    <string name="end_search_when_changing_tab">Kết thúc tìm kiếm khi thay đổi tab</string>
+    <string name="change_top_bar_colour_when_scrolling">Thay đổi màu thanh trên cùng khi cuộn</string>
+    <string name="global_theme_success_g">Chủ đề hiện tại đã được áp dụng thành công cho tất cả các Ứng dụng phù hợp. Mọi thay đổi trong tương lai đối với chủ đề này sẽ được đồng bộ hóa tự động</string>
+    <string name="enter_pattern">Nhập mẫu</string>
     <string name="call_screen_background">Nền màn hình cuộc gọi</string>
     <string name="contact_photo">Ảnh liên hệ</string>
     <string name="blurry_contact_photo">Ảnh liên hệ mờ</string>

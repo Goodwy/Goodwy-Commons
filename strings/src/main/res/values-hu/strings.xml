@@ -62,6 +62,8 @@
     <string name="per_month">%s/hó</string>
     <string name="per_year">%s/év</string>
 
+    <string name="use_accent_color_summary">A felhasználói felület egyes elemeiben használt további szín.</string>
+    <string name="app_icon_color_warning_g">Megjegyzés: Előfordulhat, hogy egyes indítók nem megfelelően jelenítik meg az egyéni alkalmazás ikonját. Ha az ikon eltűnik, próbáld meg elindítani az alkalmazást a Google Playen vagy a modulján keresztül (ha lehetséges).         Az indítás után állítsa vissza az alapértelmezett ikonszínt. Szélsőséges esetekben előfordulhat, hogy újra kell telepítenie az alkalmazást.</string>
     <string name="show_contact_thumbnails_g">Névjegyek bélyegképének megjelenítése</string>
     <string name="use_icon_tabs_summary">Ikonok szöveg helyett a lapokban</string>
     <string name="use_icon_tabs">Lapikonok használata</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">Színes SIM-kártya ikonok</string>
     <string name="tabs">Lapok</string>
     <string name="open_search_when_open_contacts">A Keresés megnyitása a Névjegyek lap megnyitásakor</string>
+    <string name="end_search_when_changing_tab">Keresés befejezése lapok váltásakor</string>
+    <string name="change_top_bar_colour_when_scrolling">A felső sáv színének módosítása görgetéskor</string>
+    <string name="global_theme_success_g">Az aktuális témát sikeresen alkalmazta az összes Jobb alkalmazásra. A téma jövőbeli módosításai automatikusan szinkronizálódnak</string>
+    <string name="enter_pattern">Írja be a mintát</string>
     <string name="call_screen_background">Hívás képernyő háttere</string>
     <string name="contact_photo">Kapcsolat képe</string>
     <string name="blurry_contact_photo">Elmosódott kontaktkép</string>

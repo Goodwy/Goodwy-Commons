@@ -62,6 +62,8 @@
     <string name="per_month">%s/月</string>
     <string name="per_year">%s/年</string>
 
+    <string name="use_accent_color_summary">某些 UI 元素中使用的附加顏色。</string>
+    <string name="app_icon_color_warning_g">注意：某些啟動器可能無法正確顯示自定義應用程式圖示。如果圖示消失，請嘗試通過Google Play或其小部件（如果可能）啟動應用程式。        啟動后，恢復預設圖示顏色。在極端情況下，您可能需要重新安裝該應用程式。</string>
     <string name="show_contact_thumbnails_g">顯示聯絡人縮圖</string>
     <string name="use_icon_tabs_summary">圖示而不是選項卡上的文本</string>
     <string name="use_icon_tabs">使用選項卡圖示</string>
@@ -98,6 +100,10 @@
     <string name="color_sim_card_icons">彩色SIM卡圖示</string>
     <string name="tabs">製表符</string>
     <string name="open_search_when_open_contacts">打開聯繫人標籤時打開搜索</string>
+    <string name="end_search_when_changing_tab">更改選項卡時結束搜索</string>
+    <string name="change_top_bar_colour_when_scrolling">滾動時更改頂部列的顏色</string>
+    <string name="global_theme_success_g">當前主題已成功應用於所有 Right Apps。將來對此主題所做的任何更改都將自動同步</string>
+    <string name="enter_pattern">進入模式</string>
     <string name="call_screen_background">​​通話界面背景</string>
     <string name="contact_photo">聯繫照片</string>
     <string name="blurry_contact_photo">模糊聯繫人照片</string>

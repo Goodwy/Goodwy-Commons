@@ -63,6 +63,8 @@
     <string name="per_year">سنة/%s</string>
 
     <!-- Settings -->
+    <string name="use_accent_color_summary">لون إضافي يستخدم في بعض عناصر واجهة المستخدم.</string>
+    <string name="app_icon_color_warning_g">ملاحظة: قد لا تعرض بعض المشغلات رمز التطبيق المخصص بشكل صحيح. إذا اختفى الرمز ، فحاول تشغيل التطبيق من خلال Google Play أو من خلال عنصر واجهة المستخدم الخاص به (إن أمكن).         بعد الإطلاق ، قم باستعادة لون الرمز الافتراضي. في الحالات القصوى ، قد تحتاج إلى إعادة تثبيت التطبيق.</string>
     <string name="show_contact_thumbnails_g">عرض صور مصغرة لجهات الإتصال</string>
     <string name="use_icon_tabs_summary">الرموز بدلا من النص على علامات التبويب</string>
     <string name="use_icon_tabs">استخدام رموز علامات التبويب</string>
@@ -99,6 +101,10 @@
     <string name="color_sim_card_icons">أيقونات بطاقة SIM الملونة</string>
     <string name="tabs">علامات التبويب</string>
     <string name="open_search_when_open_contacts">افتح البحث عند فتح علامة التبويب جهات الاتصال</string>
+    <string name="end_search_when_changing_tab">إنهاء البحث عند تغيير علامات التبويب</string>
+    <string name="change_top_bar_colour_when_scrolling">تغيير لون الشريط العلوي عند التمرير</string>
+    <string name="global_theme_success_g">تم تطبيق السمة الحالية بنجاح على جميع التطبيقات الصحيحة. ستتم مزامنة أي تغييرات مستقبلية على هذا المظهر تلقائيا</string>
+    <string name="enter_pattern">أدخل النمط</string>
     <string name="call_screen_background">خلفية شاشة الاتصال</string>
     <string name="contact_photo">صورة جهة الاتصال</string>
     <string name="blurry_contact_photo">صورة غير واضحة لجهة الاتصال</string>
