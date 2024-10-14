@@ -317,7 +317,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curAccentColor = getColor(R.color.color_accent) // (R.color.color_primary) TODO accent color when choosing a theme R.color.color_primary
                 curAppIconColor = theme.appIconColorId
             } else {
-                curPrimaryColor = getColor(R.color.you_primary_color)
+                curPrimaryColor = getCurrentPrimaryColor()
             }
 
             setTheme(getThemeId(getCurrentPrimaryColor()))
@@ -334,7 +334,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
 
         val holdersColor = when {
-            curSelectedThemeId == THEME_SYSTEM -> resources.getColor(R.color.you_status_bar_color)
+            curSelectedThemeId == THEME_SYSTEM -> getCurrentStatusBarColor()
             curBackgroundColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background)
             curBackgroundColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background)
             else -> curBackgroundColor.lightenColor(4)
