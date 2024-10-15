@@ -20,7 +20,7 @@ import com.goodwy.commons.views.*
 
 fun Context.isDynamicTheme() = isSPlus() && baseConfig.isSystemThemeEnabled
 
-fun Context.isSystemInDarkMode() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0 //isUsingSystemDarkTheme()
+fun Context.isSystemInDarkMode() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0
 
 fun Context.isAutoTheme() = !isSPlus() && baseConfig.isSystemThemeEnabled
 

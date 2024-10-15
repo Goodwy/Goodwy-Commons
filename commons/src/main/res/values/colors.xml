@@ -50,17 +50,11 @@
 
     <!-- My Customization -->
     <color name="primary">#FF5589F1</color> <!-- -11171343-->
-    <color name="button_one">#FF518BCD</color>
-    <color name="button_two">#FF677AB7</color>
-    <color name="button_three">#FF6465AB</color>
     <color name="dialog_background_color">#03FFFFFF</color>
 
-    <!-- App Icon -->
-    <color name="icon_black">#FF121112</color>
-
     <!-- Default values -->
-    <color name="default_text_color">@color/theme_dark_text_color</color>
-    <color name="default_background_color">@color/theme_black_background_color</color>
+    <color name="default_text_color">@color/theme_light_text_color</color>
+    <color name="default_background_color">@color/theme_light_background_color</color>
     <color name="default_primary_color">@color/color_primary</color>
     <color name="default_accent_color">@color/color_accent</color>
     <color name="default_widget_bg_color">#AA000000</color>
