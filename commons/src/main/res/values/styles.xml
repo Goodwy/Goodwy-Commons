@@ -10,7 +10,6 @@
         <item name="buttonStyle">@style/MyTransparentButton</item>
         <item name="android:buttonStyle">@style/MyTransparentButton</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item> <!--Popup Menu Color-->
-        <item name="android:textColor">@color/default_text_color</item>
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
@@ -352,6 +351,7 @@
 
     <style name="TopPopupMenu.Overflow.Dark" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
         <item name="android:popupBackground">@drawable/top_popup_menu_bg_dark</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="OverflowMenuIconStyle">

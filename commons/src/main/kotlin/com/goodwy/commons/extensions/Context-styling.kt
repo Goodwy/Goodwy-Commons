@@ -72,7 +72,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
         else -> baseConfig.textColor
     }
 
-    val backgroundColor = baseConfig.backgroundColor
+    val backgroundColor = getProperBackgroundColor()
     val accentColor = getProperPrimaryColor()
     val textCursorColor = getProperTextCursorColor()
 
