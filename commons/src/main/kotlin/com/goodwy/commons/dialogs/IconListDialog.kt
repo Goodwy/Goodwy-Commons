@@ -16,6 +16,7 @@ class IconListDialog(
     val titleId: Int = 0,
     val descriptionId: Int? = null,
     val size: Int? = null,
+    val color: Int? = null,
     val callback: (wasPositivePressed: Boolean, newValue: Int) -> Unit
 ) {
 
@@ -33,9 +34,6 @@ class IconListDialog(
                     }
                     arrayOf(icon1, icon2, icon3).forEachIndexed { index, imageView ->
                         imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
-                        if (size != null) {
-                            imageView.setHeightAndWidth(size)
-                        }
                     }
                 }
                 4 -> {
@@ -46,9 +44,6 @@ class IconListDialog(
                     }
                     arrayOf(icon1, icon2, icon3, icon4).forEachIndexed { index, imageView ->
                         imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
-                        if (size != null) {
-                            imageView.setHeightAndWidth(size)
-                        }
                     }
                 }
                 12 -> {
@@ -56,10 +51,25 @@ class IconListDialog(
                         icon7, icon8, icon9, icon10, icon11, icon12
                     ).forEachIndexed { index, imageView ->
                         imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
-                        if (size != null) {
-                            imageView.setHeightAndWidth(size)
-                        }
                     }
+                }
+            }
+
+            if (size != null) {
+                arrayOf(
+                    icon1, icon2, icon3, icon4, icon5, icon6,
+                    icon7, icon8, icon9, icon10, icon11, icon12
+                ).forEach { imageView ->
+                    imageView.setHeightAndWidth(size)
+                }
+            }
+
+            if (color != null) {
+                arrayOf(
+                    icon1, icon2, icon3, icon4, icon5, icon6,
+                    icon7, icon8, icon9, icon10, icon11, icon12
+                ).forEach { imageView ->
+                    imageView.applyColorFilter(color)
                 }
             }
 
