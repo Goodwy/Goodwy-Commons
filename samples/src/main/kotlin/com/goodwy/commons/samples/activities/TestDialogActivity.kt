@@ -224,7 +224,7 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getLineColorPickerAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            LineColorPickerAlertDialog(
+            GridColorPickerAlertDialog(
                 alertDialogState = this,
                 color = baseConfig.customPrimaryColor,
                 isPrimaryColorPicker = true,

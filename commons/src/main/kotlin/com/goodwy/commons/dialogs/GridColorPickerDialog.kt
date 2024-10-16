@@ -567,7 +567,7 @@ private fun Context.getColors(id: Int) = resources.getIntArray(id).toCollection(
 @MyDevices
 private fun LineColorPickerAlertDialogPreview() {
     AppThemeSurface {
-        LineColorPickerAlertDialog(alertDialogState = rememberAlertDialogState(),
+        GridColorPickerAlertDialog(alertDialogState = rememberAlertDialogState(),
             color = R.color.color_primary,
             isPrimaryColorPicker = true,
             onActiveColorChange = {}
