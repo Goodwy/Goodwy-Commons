@@ -366,7 +366,7 @@
         android:layout_below="@+id/iconHolder"
         android:layout_marginTop="@dimen/normal_margin"
         android:alpha="0.6"
-        android:paddingHorizontal="@dimen/bigger_margin"
+        android:paddingHorizontal="@dimen/big_margin"
         android:textSize="@dimen/smaller_text_size"
         android:visibility="gone"
         tools:text="@string/app_icon_color_warning_g"
