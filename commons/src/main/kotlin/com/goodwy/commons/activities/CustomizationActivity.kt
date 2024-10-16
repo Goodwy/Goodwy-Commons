@@ -54,7 +54,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var lastSavePromptTS = 0L
     private var hasUnsavedChanges = false
     private val predefinedThemes = LinkedHashMap<Int, MyTheme>()
-    private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
     private var curPrimaryGridColorPicker: GridColorPickerDialog? = null
     private var globalConfig: GlobalConfig? = null
 
@@ -120,12 +119,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             updateActionbarColor(getCurrentBackgroundColor()) //TODO actionbar color
         }
 
-       /* curPrimaryLineColorPicker?.getSpecificColor()?.apply {
-            updateActionbarColor(this)
-            setTheme(getThemeId(this))
-        }*/
         curPrimaryGridColorPicker?.getSpecificColor()?.apply {
-           // updateActionbarColor(this)
             setTheme(getThemeId(this))
         }
 
