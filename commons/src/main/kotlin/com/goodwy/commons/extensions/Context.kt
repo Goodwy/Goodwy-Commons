@@ -1396,9 +1396,13 @@ fun Context.getNavigationBarStyleText() = getString(
     }
 )
 
-fun Context.startCallPendingIntent(recipient: String): PendingIntent {
-    return PendingIntent.getActivity(this, 0,
-        Intent(Intent.ACTION_CALL, Uri.fromParts("tel", recipient, null)), PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+fun Context.startCallPendingIntent(recipient: String, key: String = ""): PendingIntent {
+    return PendingIntent.getActivity(
+        this,
+        0,
+        Intent(Intent.ACTION_CALL, Uri.fromParts("tel", recipient, null))
+            .putExtra(IS_RIGHT_APP, key),
+        PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE)
 }
 
 fun Context.sendSMSPendingIntent(recipient: String): PendingIntent {
