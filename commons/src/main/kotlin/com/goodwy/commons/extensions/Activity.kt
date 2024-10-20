@@ -278,24 +278,6 @@ fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
     }
 }
 
-fun Activity.launchPurchaseThankYouIntent() {
-    hideKeyboard()
-    try {
-        launchViewIntent("market://details?id=com.goodwy.thankyou")
-    } catch (ignored: Exception) {
-        launchViewIntent(getString(R.string.thank_you_url))
-    }
-}
-
-fun Activity.launchUpgradeToProIntent() {
-    hideKeyboard()
-    try {
-        launchViewIntent("market://details?id=${baseConfig.appId.removeSuffix(".debug")}.pro")
-    } catch (ignored: Exception) {
-        launchViewIntent(getStoreUrl())
-    }
-}
-
 fun Activity.launchMoreAppsFromUsIntent() {
     launchViewIntent(getString(R.string.thank_you_url))
 }
