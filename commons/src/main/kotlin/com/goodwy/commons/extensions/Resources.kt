@@ -50,17 +50,6 @@ fun Resources.getNavBarHeight(): Int {
         0
 }
 
-fun getSettingsIcon(id: Int): Int {
-    return when (id) {
-        1 -> R.drawable.ic_settings_hexagon
-        2 -> R.drawable.ic_settings_cog_vector
-        3 -> R.drawable.ic_settings
-        4 -> R.drawable.ic_settings_gear
-        5 -> R.drawable.ic_settings_toggles
-        else -> R.drawable.ic_more_horiz
-    }
-}
-
 fun getOverflowIcon(id: Int): Int {
     return when (id) {
         OVERFLOW_ICON_VERTICAL -> R.drawable.ic_three_dots_vector

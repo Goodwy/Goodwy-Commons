@@ -149,12 +149,12 @@ fun SettingsListItem(
 
 @MyDevices
 @Composable
-private fun SettingsListItem(@PreviewParameter(BooleanPreviewParameterProvider::class) isImage: Boolean) {
+private fun PreviewSettingsListItem(@PreviewParameter(BooleanPreviewParameterProvider::class) isImage: Boolean) {
     AppThemeSurface {
         SettingsListItem(
             click = {},
             text = "Goodwy",
-            icon = if (isImage) R.drawable.ic_telegram_vector else R.drawable.ic_dollar_vector,
+            icon = R.drawable.ic_telegram_vector,
             isImage = isImage
         )
     }

@@ -252,21 +252,23 @@ internal fun ManageBlockedNumbersScreen(
                                         indication = null,
                                         enabled = !hasDraggingStarted,
                                         onLongClick = {
-                                            val indexOfLastValueInSelection = blockedNumbers.indexOfFirst { selectedIds.value.last() == it.id }
-                                            when {
-                                                indexOfLastValueInSelection == index -> {}
-                                                indexOfLastValueInSelection < index -> {
-                                                    hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
-                                                    selectedIds.value += blockedNumbers
-                                                        .subList(indexOfLastValueInSelection, index)
-                                                        .map { number -> number.id }
-                                                }
+                                            if (blockedNumbers.isNotEmpty()) {
+                                                val indexOfLastValueInSelection = blockedNumbers.indexOfFirst { selectedIds.value.last() == it.id }
+                                                when {
+                                                    indexOfLastValueInSelection == index -> {}
+                                                    indexOfLastValueInSelection < index -> {
+                                                        hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
+                                                        selectedIds.value += blockedNumbers
+                                                            .subList(indexOfLastValueInSelection, index)
+                                                            .map { number -> number.id }
+                                                    }
 
-                                                else -> {
-                                                    hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
-                                                    selectedIds.value += blockedNumbers
-                                                        .subList(index, indexOfLastValueInSelection)
-                                                        .map { number -> number.id }
+                                                    else -> {
+                                                        hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
+                                                        selectedIds.value += blockedNumbers
+                                                            .subList(index, indexOfLastValueInSelection)
+                                                            .map { number -> number.id }
+                                                    }
                                                 }
                                             }
                                         },

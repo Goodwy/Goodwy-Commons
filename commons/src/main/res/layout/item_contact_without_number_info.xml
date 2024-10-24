@@ -62,7 +62,7 @@
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="@dimen/activity_margin"
-                android:src="@drawable/ic_info" />
+                android:src="@drawable/ic_info_vector" />
         </FrameLayout>
 
         <ImageView
