@@ -13,13 +13,6 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
     val isSystemInDarkTheme = context.isDarkMode()
     val accentColor = baseConfig.accentColor
 
-
-//    val backgroundColorTheme = if (context.isDynamicTheme() || context.isAutoTheme()) {
-//        if (isSystemInDarkTheme) theme_black_background_color else theme_light_background_color
-//    } else {
-//        Color(baseConfig.backgroundColor)
-//    }
-
     val backgroundColor = context.getProperBackgroundColor() //backgroundColorTheme.toArgb()
     val appIconColor = baseConfig.appIconColor
     val textColor = context.getProperTextColor()
@@ -27,56 +20,6 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
 
     val theme = when {
         context.isDynamicTheme() -> materialYouTheme
-//        context.isBlackAndWhiteTheme() -> Theme.BlackAndWhite(
-//            accentColor = accentColor,
-//            primaryColorInt = primaryColorInt,
-//            backgroundColorInt = backgroundColor,
-//            appIconColorInt = appIconColor,
-//            textColorInt = textColor,
-//            surfaceVariantInt = statusBarColor
-//        )
-//
-//        context.isWhiteTheme() -> Theme.White(
-//            accentColor = accentColor,
-//            primaryColorInt = primaryColorInt,
-//            backgroundColorInt = backgroundColor,
-//            appIconColorInt = appIconColor,
-//            textColorInt = textColor,
-//            surfaceVariantInt = statusBarColor
-//        )
-
-//        context.isLightTheme() -> Theme.Light(
-//            accentColor = accentColor,
-//            primaryColorInt = primaryColorInt,
-//            backgroundColorInt = backgroundColor,
-//            appIconColorInt = appIconColor,
-//            textColorInt = textColor
-//        )
-//
-//        context.isGrayTheme() -> Theme.Gray(
-//            accentColor = accentColor,
-//            primaryColorInt = primaryColorInt,
-//            backgroundColorInt = backgroundColor,
-//            appIconColorInt = appIconColor,
-//            textColorInt = textColor
-//        )
-//
-//        context.isDarkTheme() -> Theme.Dark(
-//            accentColor = accentColor,
-//            primaryColorInt = primaryColorInt,
-//            backgroundColorInt = backgroundColor,
-//            appIconColorInt = appIconColor,
-//            textColorInt = textColor
-//        )
-//
-//        context.isBlackTheme() -> Theme.Black(
-//            accentColor = accentColor,
-//            primaryColorInt = primaryColorInt,
-//            backgroundColorInt = backgroundColor,
-//            appIconColorInt = appIconColor,
-//            textColorInt = textColor
-//        )
-
         else -> {
             val customPrimaryColor = when (primaryColorInt) {
                 -12846 -> md_red_100

@@ -2,9 +2,18 @@ package com.goodwy.commons.compose.theme
 
 import androidx.compose.ui.graphics.Color
 
+val color_white = Color.White
+val color_black = Color.Black
+
 val color_primary = Color(0xFF5589F1)
+val color_on_primary = color_white
 val color_primary_dark = Color(0xFF2960F5)
 val color_accent = color_primary
+
+val color_background_light = color_white
+val color_text_light = Color(0xFF424242)
+val color_background_dark = color_black
+val color_text_dark = Color(0xFFEEEEEE)
 
 val pressed_item_foreground = Color(0x08000000)
 val activated_item_foreground = Color(0x44888888)

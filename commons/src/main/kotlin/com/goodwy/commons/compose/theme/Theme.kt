@@ -52,7 +52,7 @@ internal fun Theme(
                 primaryContainer = theme.primaryContainer
             )
 
-            else -> darkColorScheme
+            else -> lightColorScheme
         }
     } else {
         previewColorScheme()
