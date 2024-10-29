@@ -17,14 +17,14 @@ object InsetUtil {
                 listener
             )*/
 
-            val top = if (statusBar) 0 else insets.systemWindowInsetTop
             listener.invoke(
-                top,
+                insets.systemWindowInsetTop,
                 insets.systemWindowInsetBottom,
                 insets.systemWindowInsetLeft,
                 insets.systemWindowInsetRight
             )
             //Remove system indents
+            val top = if (statusBar) insets.systemWindowInsetTop else 0
             ViewCompat.onApplyWindowInsets(view, insets.replaceSystemWindowInsets(0, top, 0, 0))
         }
     }
@@ -33,12 +33,11 @@ object InsetUtil {
         view: View,
         topInset: Int,
         bottomInset: Int,
-        listener: OnSystemInsetsChangedListener,
-        statusBar: Boolean = false
+        listener: OnSystemInsetsChangedListener
     ): Int {
         val hasKeyboard = view.isKeyboardAppeared(bottomInset)
         val desiredBottomInset = if (hasKeyboard) bottomInset else 0
-        listener(if (statusBar) topInset else 0, if (hasKeyboard) 0 else bottomInset, 0, 0)
+        listener(topInset, if (hasKeyboard) 0 else bottomInset, 0, 0)
         return desiredBottomInset
     }
 }
