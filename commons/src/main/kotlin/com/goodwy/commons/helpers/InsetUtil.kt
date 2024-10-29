@@ -17,14 +17,14 @@ object InsetUtil {
                 listener
             )*/
 
-            val top = if (statusBar) insets.systemWindowInsetTop else 0
+            val top = if (statusBar) 0 else insets.systemWindowInsetTop
             listener.invoke(
                 top,
                 insets.systemWindowInsetBottom,
                 insets.systemWindowInsetLeft,
                 insets.systemWindowInsetRight
             )
-            //Удаляем системные отступы
+            //Remove system indents
             ViewCompat.onApplyWindowInsets(view, insets.replaceSystemWindowInsets(0, top, 0, 0))
         }
     }
