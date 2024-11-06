@@ -451,13 +451,13 @@ val theme_gray_navigation_color = theme_gray_background_color //#c7c7c7
 val theme_dark_navigation_color = theme_dark_background_color //#313436
 val theme_black_navigation_color = theme_black_background_color //#1b1b1b
 
-val default_text_color = theme_dark_text_color
+val default_text_color = theme_light_text_color
 val default_background_color = theme_dark_background_color
 val default_primary_color = color_primary
 val default_app_icon_color = color_primary
 val default_accent_color = color_primary
-val default_widget_bg_color = Color(0xAA000000)
-val default_widget_text_color = color_primary
+val default_widget_bg_color = Color(0xFFFFFFFF)
+val default_widget_text_color = theme_light_text_color
 
 val ripple_light = Color(0x1f000000)
 val ripple_dark = Color(0x33ffffff)

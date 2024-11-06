@@ -57,8 +57,8 @@
     <color name="default_background_color">@color/theme_light_background_color</color>
     <color name="default_primary_color">@color/color_primary</color>
     <color name="default_accent_color">@color/color_accent</color>
-    <color name="default_widget_bg_color">#AA000000</color>
-    <color name="default_widget_text_color">@color/color_primary</color>
+    <color name="default_widget_bg_color">#FFFFFFFF</color>
+    <color name="default_widget_text_color">@color/theme_light_text_color</color>
 
     <!-- Primary colors -->
     <color name="md_amber">#FFC107</color>

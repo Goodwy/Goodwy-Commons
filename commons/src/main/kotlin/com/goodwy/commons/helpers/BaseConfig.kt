@@ -640,10 +640,6 @@ open class BaseConfig(val context: Context) {
     protected fun <T> KProperty0<T>.asFlowNonNull(emitOnCollect: Boolean = false): Flow<T> = asFlow(emitOnCollect).filterNotNull()
 
     //Goodwy
-    var settingsIcon: Int
-        get() = prefs.getInt(SETTINGS_ICON, 1)
-        set(settingsIcon) = prefs.edit().putInt(SETTINGS_ICON, settingsIcon).apply()
-
     var overflowIcon: Int
         get() = prefs.getInt(OVERFLOW_ICON, OVERFLOW_ICON_HORIZONTAL)
         set(overflowIcon) = prefs.edit().putInt(OVERFLOW_ICON, overflowIcon).apply()
