@@ -392,13 +392,13 @@ class SimpleContactsHelper(val context: Context) {
     fun deleteContactRawIDs(ids: ArrayList<Int>, callback: () -> Unit) {
         ensureBackgroundThread {
             val uri = Data.CONTENT_URI
-            if (uri != null) {
-            ids.chunked(30).forEach { chunk ->
-                val selection = "${Data.RAW_CONTACT_ID} IN (${getQuestionMarks(chunk.size)})"
-                val selectionArgs = chunk.map { it.toString() }.toTypedArray()
-                context.contentResolver.delete(uri, selection, selectionArgs)
-            }
+            if (uri != null && ids.isNotEmpty()) {
+                ids.chunked(30).forEach { chunk ->
+                    val selection = "${Data.RAW_CONTACT_ID} IN (${getQuestionMarks(chunk.size)})"
+                    val selectionArgs = chunk.map { it.toString() }.toTypedArray()
+                    context.contentResolver.delete(uri, selection, selectionArgs)
                 }
+            }
             callback()
         }
     }

@@ -74,7 +74,7 @@ class ColorPickerDialog(
     color: Int,
     val removeDimmedBackground: Boolean = false,
     val addDefaultColorButton: Boolean = false,
-    colorDefault: Int = -1,
+    colorDefault: Int = -3,
     val currentColorCallback: ((color: Int) -> Unit)? = null,
     val title: String = activity.resources.getString(stringsR.string.color_title),
     val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
@@ -131,7 +131,7 @@ class ColorPickerDialog(
     }
 
     private fun confirmDefaultColor(colorDefault: Int) {
-        val defaultColor = if (colorDefault == -1) baseConfig.primaryColor else colorDefault
+        val defaultColor = if (colorDefault == -3) baseConfig.primaryColor else colorDefault
         activity.addRecentColor(defaultColor)
         callback(true, defaultColor)
     }
