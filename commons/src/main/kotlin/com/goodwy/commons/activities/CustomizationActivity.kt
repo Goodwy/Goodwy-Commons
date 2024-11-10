@@ -617,22 +617,13 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         binding.customizationAppIconColorHolder.setOnClickListener {
-            if (isProVersion()) {
-                if (baseConfig.wasAppIconCustomizationWarningShown) {
-                    pickAppIconColor()
-                } else {
-                    ConfirmationDialog(this, "", com.goodwy.strings.R.string.app_icon_color_warning_g, R.string.ok, 0) {
-                        baseConfig.wasAppIconCustomizationWarningShown = true
-                        pickAppIconColor()
-                    }
-                }
+            if (baseConfig.wasAppIconCustomizationWarningShown || !isProVersion()) {
+                pickAppIconColor()
             } else {
-                shakePurchase()
-                RxAnimation.from(it)
-                    .shake(shakeTranslation = 2f)
-                    .subscribe()
-
-                showSnackbar(binding.root)
+                ConfirmationDialog(this, "", com.goodwy.strings.R.string.app_icon_color_warning_g, R.string.ok, 0) {
+                    baseConfig.wasAppIconCustomizationWarningShown = true
+                    pickAppIconColor()
+                }
             }
         }
 
@@ -787,13 +778,20 @@ class CustomizationActivity : BaseSimpleActivity() {
             titleId = R.string.app_icon_color,
             descriptionId = com.goodwy.strings.R.string.app_icon_color_warning_g
         ) { wasPositivePressed, newValue ->
-            if (wasPositivePressed) {
+            if (wasPositivePressed && isProVersion()) {
                 if (curAppIconColor != newValue - 1) {
                     curAppIconColor = newValue - 1
                     colorChanged()
                     updateColorTheme(getCurrentThemeId())
                     binding.customizationAppIconColor.setImageDrawable(getAppIcon(curAppIconColor))
                 }
+            } else {
+                shakePurchase()
+                RxAnimation.from(binding.customizationAppIconColorHolder)
+                    .shake(shakeTranslation = 2f)
+                    .subscribe()
+
+                showSnackbar(binding.root)
             }
         }
     }
