@@ -561,6 +561,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appAudiobookLitePackage = "com.goodwy.audiobooklite"
         val appFilesPackage = "com.goodwy.filemanager"
         val appKeyboardPackage = "com.goodwy.keyboard"
+        val appCalendarPackage = "com.goodwy.calendar"
 
         val appDialerInstalled = isPackageInstalled(appDialerPackage)// || isPackageInstalled("com.goodwy.dialer.debug")
         val appContactsInstalled = isPackageInstalled(appContactsPackage)// || isPackageInstalled("com.goodwy.contacts.debug")
@@ -570,8 +571,10 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appAudiobookLiteInstalled = isPackageInstalled(appAudiobookLitePackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
         val appFilesInstalled = isPackageInstalled(appFilesPackage)// || isPackageInstalled("com.goodwy.filemanager.debug")
         val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
+        val appCalendarInstalled = isPackageInstalled(appCalendarPackage)
 
-        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled && appAudiobookLiteInstalled && appFilesInstalled && appKeyboardInstalled
+        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
+            appAudiobookLiteInstalled && appFilesInstalled && appKeyboardInstalled && appCalendarInstalled
 
         if (!appAllInstalled) binding.collectionLogo.applyColorFilter(primaryColor)
         binding.collectionChevron.applyColorFilter(getProperTextColor())
@@ -584,7 +587,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             SimpleListItem(4, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
             SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage),
             SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
-            SimpleListItem(7, R.string.right_keyboard, imageRes = R.drawable.ic_inkwell, selected = appKeyboardInstalled, packageName = appKeyboardPackage)
+            SimpleListItem(7, R.string.right_keyboard, imageRes = R.drawable.ic_inkwell, selected = appKeyboardInstalled, packageName = appKeyboardPackage),
+            SimpleListItem(8, R.string.right_calendar, imageRes = R.drawable.ic_calendar_app, selected = appCalendarInstalled, packageName = appCalendarPackage)
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
