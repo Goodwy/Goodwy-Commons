@@ -317,4 +317,9 @@
     <string name="billing_change_to_google_play">Использовать Google Play</string>
     <string name="billing_change_to_ru_store">Использовать RuStore</string>
     <string name="billing_error_application_signature_not_correct">Для оплаты через RuStore необходимо установить версию приложения из RuStore</string>
+
+    <!-- Calendar -->
+    <string name="time_zone">Часовой пояс</string>
+    <string name="event_type">Тип события</string>
+    <string name="availability">Доступность</string>
 </resources>

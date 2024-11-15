@@ -318,4 +318,9 @@
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="billing_error_application_signature_not_correct">To pay via RuStore you need to install the app version from RuStore</string>
+
+    <!-- Calendar -->
+    <string name="time_zone">Time zone</string>
+    <string name="event_type">Event type</string>
+    <string name="availability">Availability</string>
 </resources>
