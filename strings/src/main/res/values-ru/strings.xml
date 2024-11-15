@@ -322,4 +322,5 @@
     <string name="time_zone">Часовой пояс</string>
     <string name="event_type">Тип события</string>
     <string name="availability">Доступность</string>
+    <string name="attendees">Участники</string>
 </resources>

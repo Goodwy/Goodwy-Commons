@@ -323,4 +323,5 @@
     <string name="time_zone">Time zone</string>
     <string name="event_type">Event type</string>
     <string name="availability">Availability</string>
+    <string name="attendees">Attendees</string>
 </resources>
