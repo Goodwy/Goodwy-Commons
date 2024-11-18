@@ -49,7 +49,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curTopAppBarColorIcon = false
     private var curTopAppBarColorTitle = false
     private var curIsUsingAccentColor = false
-    private var curTextCursorColor = -4
+    private var curTextCursorColor = 0
     private var originalAppIconColor = 0
     private var lastSavePromptTS = 0L
     private var hasUnsavedChanges = false
@@ -665,7 +665,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextColor() {
-        ColorPickerDialog(this, curTextColor, title = resources.getString(R.string.text_color)) { wasPositivePressed, color ->
+        ColorPickerDialog(this, curTextColor, title = resources.getString(R.string.text_color)) { wasPositivePressed, color, _ ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curTextColor, color)) {
                     setCurrentTextColor(color)
@@ -677,15 +677,22 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextCursorColor() {
-        val textCursorColor = if (baseConfig.textCursorColor == -4) baseConfig.primaryColor else baseConfig.textCursorColor
-        ColorPickerDialog(this, textCursorColor, addDefaultColorButton = true, colorDefault = -4, title = resources.getString(stringsR.string.text_cursor_color)) { wasPositivePressed, color ->
+        val textCursorColor = baseConfig.textCursorColor
+        ColorPickerDialog(this, textCursorColor, addDefaultColorButton = true, colorDefault = -3, title = resources.getString(stringsR.string.text_cursor_color)) { wasPositivePressed, color, wasDefaultPressed ->
             if (wasPositivePressed) {
-                updateTextCursor(color)
                 if (hasColorChanged(curTextCursorColor, color)) {
-                    val newColor = if (color == -4) getCurrentPrimaryColor() else color
                     curTextCursorColor = color
                     colorChanged()
-                    binding.customizationTextCursorColor.setFillWithStroke(newColor, getCurrentBackgroundColor())
+                    binding.customizationTextCursorColor.setFillWithStroke(color, getCurrentBackgroundColor())
+                    baseConfig.tabsChanged = true //without it the color of the cursor in the search menu does not change
+                }
+            }
+            if (wasDefaultPressed) {
+                val colorDefault = getCurrentPrimaryColor()
+                if (hasColorChanged(curTextCursorColor, colorDefault)) {
+                    curTextCursorColor = colorDefault
+                    colorChanged()
+                    binding.customizationTextCursorColor.setFillWithStroke(colorDefault, getCurrentBackgroundColor())
                     baseConfig.tabsChanged = true //without it the color of the cursor in the search menu does not change
                 }
             }
@@ -693,8 +700,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun updateTextCursor(color: Int) {
-        binding.customizationTextCursorColor.setFillWithStroke(baseConfig.textCursorColor, getCurrentBackgroundColor())
-        if (color == -4) {
+        binding.customizationTextCursorColor.setFillWithStroke(curTextCursorColor, getCurrentBackgroundColor())
+        if (color == getCurrentPrimaryColor() || curSelectedThemeId == THEME_SYSTEM) {
             binding.customizationTextCursorColor.beGone()
             binding.customizationTextCursorColorDefault.beVisible()
         } else {
@@ -704,7 +711,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickBackgroundColor() {
-        ColorPickerDialog(this, curBackgroundColor, title = resources.getString(R.string.background_color)) { wasPositivePressed, color ->
+        ColorPickerDialog(this, curBackgroundColor, title = resources.getString(R.string.background_color)) { wasPositivePressed, color, _ ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curBackgroundColor, color)) {
                     setCurrentBackgroundColor(color)
@@ -756,7 +763,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAccentColor() {
-        ColorPickerDialog(this, curAccentColor, addDefaultColorButton = true, colorDefault = resources.getColor(R.color.default_accent_color), title = resources.getString(stringsR.string.accent_color)) { wasPositivePressed, color ->
+        ColorPickerDialog(this, curAccentColor, addDefaultColorButton = true, colorDefault = resources.getColor(R.color.default_accent_color), title = resources.getString(stringsR.string.accent_color)) { wasPositivePressed, color, _ ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curAccentColor, color)) {
                     curAccentColor = color

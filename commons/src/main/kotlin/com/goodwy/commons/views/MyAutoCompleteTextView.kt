@@ -3,14 +3,12 @@ package com.goodwy.commons.views
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.widget.AutoCompleteTextView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.adjustAlpha
-import com.goodwy.commons.extensions.applyColorFilter
 import com.goodwy.commons.extensions.getColoredDrawableWithColor
 import com.goodwy.commons.extensions.isMiUi
 import com.goodwy.commons.helpers.MEDIUM_ALPHA

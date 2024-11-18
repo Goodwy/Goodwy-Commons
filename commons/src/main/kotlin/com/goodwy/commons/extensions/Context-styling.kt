@@ -231,6 +231,5 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
 
 fun Context.getProperTextCursorColor() = when {
     isDynamicTheme() -> resources.getColor(R.color.you_primary_color, theme)
-    //isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.textCursorColor
 }

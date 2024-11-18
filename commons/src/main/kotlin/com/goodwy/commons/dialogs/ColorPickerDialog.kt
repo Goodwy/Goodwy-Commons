@@ -77,7 +77,7 @@ class ColorPickerDialog(
     colorDefault: Int = -3,
     val currentColorCallback: ((color: Int) -> Unit)? = null,
     val title: String = activity.resources.getString(stringsR.string.color_title),
-    val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
+    val callback: (wasPositivePressed: Boolean, color: Int, wasDefaultPressed: Boolean) -> Unit
 ) {
     private val baseConfig = activity.baseConfig
     private val currentColorHsv = Hsv(FloatArray(3))
@@ -127,13 +127,13 @@ class ColorPickerDialog(
     }
 
     private fun dialogDismissed() {
-        callback(false, 0)
+        callback(false, 0, false)
     }
 
     private fun confirmDefaultColor(colorDefault: Int) {
-        val defaultColor = if (colorDefault == -3) baseConfig.primaryColor else colorDefault
+        val defaultColor = if (colorDefault == -3) activity.getProperPrimaryColor() else colorDefault
         activity.addRecentColor(defaultColor)
-        callback(true, defaultColor)
+        callback(false, defaultColor, true)
     }
 
     private fun confirmNewColor() {
@@ -145,7 +145,7 @@ class ColorPickerDialog(
         }
 
         activity.addRecentColor(newColor)
-        callback(true, newColor)
+        callback(true, newColor, false)
     }
 }
 
