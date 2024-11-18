@@ -314,4 +314,13 @@
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="billing_error_application_signature_not_correct">Да бисте платили преко RuStore-а, потребно је да инсталирате верзију апликације са RuStore-а</string>
+
+    <!-- Calendar -->
+    <стринг наме="дате">Датум</стринг>
+    <стринг наме="стартс">Покрени</стринг>
+    <стринг наме="ендс">Крај</стринг>
+    <стринг наме="тиме_зоне">Временска зона</стринг>
+    <стринг наме="евент_типе">Тип догађаја</стринг>
+    <стринг наме="аваилабилити">Доступност</стринг>
+    <стринг наме="аттендеес">Учесници</стринг>
 </resources>

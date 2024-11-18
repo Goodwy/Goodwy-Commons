@@ -317,4 +317,13 @@
     <string name="billing_change_to_google_play">Выкарыстоўваць Google Play</string>
     <string name="billing_change_to_ru_store">Выкарыстоўваць RuStore</string>
     <string name="billing_error_application_signature_not_correct">Для аплаты праз RuStore неабходна ўсталяваць версію прыкладання з RuStore</string>
+
+    <!-- Calendar -->
+    <string name="date">Дата</string>
+    <string name="starts">Пачатак</string>
+    <string name="ends">Канец</string>
+    <string name="time_zone">Часавы пояс</string>
+    <string name="event_type">Тып падзеі</string>
+    <string name="availability">Даступнасць</string>
+    <string name="attendees">Удзельнікі</string>
 </resources>

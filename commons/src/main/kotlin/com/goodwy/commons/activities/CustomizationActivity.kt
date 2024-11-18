@@ -677,8 +677,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextCursorColor() {
-        val textCursorColor = baseConfig.textCursorColor
-        ColorPickerDialog(this, textCursorColor, addDefaultColorButton = true, colorDefault = -3, title = resources.getString(stringsR.string.text_cursor_color)) { wasPositivePressed, color, wasDefaultPressed ->
+        ColorPickerDialog(this, curTextCursorColor, addDefaultColorButton = true, colorDefault = -3, title = resources.getString(stringsR.string.text_cursor_color)) { wasPositivePressed, color, wasDefaultPressed ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curTextCursorColor, color)) {
                     curTextCursorColor = color
