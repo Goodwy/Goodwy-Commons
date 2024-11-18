@@ -316,11 +316,11 @@
     <string name="billing_error_application_signature_not_correct">Да бисте платили преко RuStore-а, потребно је да инсталирате верзију апликације са RuStore-а</string>
 
     <!-- Calendar -->
-    <стринг наме="дате">Датум</стринг>
-    <стринг наме="стартс">Покрени</стринг>
-    <стринг наме="ендс">Крај</стринг>
-    <стринг наме="тиме_зоне">Временска зона</стринг>
-    <стринг наме="евент_типе">Тип догађаја</стринг>
-    <стринг наме="аваилабилити">Доступност</стринг>
-    <стринг наме="аттендеес">Учесници</стринг>
+    <string name="date">Датум</string>
+    <string name="starts">Покрени</string>
+    <string name="ends">Крај</string>
+    <string name="time_zone">Временска зона</string>
+    <string name="event_type">Тип догађаја</string>
+    <string name="availability">Доступност</string>
+    <string name="attendees">Учесници</string>
 </resources>
