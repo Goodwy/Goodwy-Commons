@@ -707,7 +707,7 @@ open class BaseConfig(val context: Context) {
         set(simIconsColors) = prefs.edit().putString(SIM_ICON_COLORS, simIconsColors.joinToString(separator = "\n")).apply()
 
     var textCursorColor: Int
-        get() = prefs.getInt(TEXT_CURSOR_COLOR, -2)
+        get() = prefs.getInt(TEXT_CURSOR_COLOR, -4)
         set(textCursorColor) = prefs.edit().putInt(TEXT_CURSOR_COLOR, textCursorColor).apply()
 
     var linesCount: Int

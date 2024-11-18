@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.widget.AutoCompleteTextView
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.goodwy.commons.R
@@ -16,7 +17,7 @@ import com.goodwy.commons.helpers.MEDIUM_ALPHA
 import com.goodwy.commons.helpers.isQPlus
 import java.lang.reflect.Field
 
-class MyAutoCompleteTextView : AutoCompleteTextView {
+class MyAutoCompleteTextView : AppCompatAutoCompleteTextView {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
@@ -24,6 +25,7 @@ class MyAutoCompleteTextView : AutoCompleteTextView {
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
+        // TODO HIDE
         //background?.mutate()?.applyColorFilter(accentColor)
 
         // requires android:textCursorDrawable="@null" in xml to color the cursor too

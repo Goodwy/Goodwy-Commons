@@ -49,7 +49,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curTopAppBarColorIcon = false
     private var curTopAppBarColorTitle = false
     private var curIsUsingAccentColor = false
-    private var curTextCursorColor = -2
+    private var curTextCursorColor = -4
     private var originalAppIconColor = 0
     private var lastSavePromptTS = 0L
     private var hasUnsavedChanges = false
@@ -558,7 +558,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 //        binding.customizationAppIconColor.setFillWithStroke(curAppIconColor, backgroundColor)
         binding.customizationAppIconColor.setImageDrawable(getAppIcon())
 //        binding.applyToAll.setTextColor(primaryColor.getContrastColor())
-        updateTextCursor(baseConfig.textCursorColor)
+        updateTextCursor(curTextCursorColor)
 
         binding.customizationTextColorHolder.setOnClickListener {
             if (isProVersion()) pickTextColor()
@@ -677,12 +677,12 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextCursorColor() {
-        val textCursorColor = if (baseConfig.textCursorColor == -2) baseConfig.primaryColor else baseConfig.textCursorColor
-        ColorPickerDialog(this, textCursorColor, addDefaultColorButton = true, colorDefault = -2, title = resources.getString(stringsR.string.text_cursor_color)) { wasPositivePressed, color ->
+        val textCursorColor = if (baseConfig.textCursorColor == -4) baseConfig.primaryColor else baseConfig.textCursorColor
+        ColorPickerDialog(this, textCursorColor, addDefaultColorButton = true, colorDefault = -4, title = resources.getString(stringsR.string.text_cursor_color)) { wasPositivePressed, color ->
             if (wasPositivePressed) {
+                updateTextCursor(color)
                 if (hasColorChanged(curTextCursorColor, color)) {
-                    updateTextCursor(color)
-                    val newColor = if (color == -2) getCurrentPrimaryColor() else color
+                    val newColor = if (color == -4) getCurrentPrimaryColor() else color
                     curTextCursorColor = color
                     colorChanged()
                     binding.customizationTextCursorColor.setFillWithStroke(newColor, getCurrentBackgroundColor())
@@ -694,7 +694,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun updateTextCursor(color: Int) {
         binding.customizationTextCursorColor.setFillWithStroke(baseConfig.textCursorColor, getCurrentBackgroundColor())
-        if (color == -2) {
+        if (color == -4) {
             binding.customizationTextCursorColor.beGone()
             binding.customizationTextCursorColorDefault.beVisible()
         } else {
