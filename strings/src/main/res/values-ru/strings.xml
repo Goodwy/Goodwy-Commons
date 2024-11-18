@@ -319,6 +319,9 @@
     <string name="billing_error_application_signature_not_correct">Для оплаты через RuStore необходимо установить версию приложения из RuStore</string>
 
     <!-- Calendar -->
+    <string name="date">Дата</string>
+    <string name="starts">Начало</string>
+    <string name="ends">Конец</string>
     <string name="time_zone">Часовой пояс</string>
     <string name="event_type">Тип события</string>
     <string name="availability">Доступность</string>
