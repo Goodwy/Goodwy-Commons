@@ -247,10 +247,12 @@ fun SimpleColumnScaffold(
 private fun SimpleColumnScaffoldPreview() {
     AppThemeSurface {
         SimpleColumnScaffold(title = "About", goBack = {}) {
-            ListItem(headlineContent = { Text(text = "Some text") },
+            ListItem(
+                headlineContent = { Text(text = "Some text") },
                 leadingContent = {
                     Icon(imageVector = Icons.Filled.AccessTime, contentDescription = null)
-                })
+                }
+            )
         }
     }
 }

@@ -8,17 +8,16 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodwy.commons.activities.BaseSimpleActivity
-import com.goodwy.commons.activities.CustomizationActivity
 import com.goodwy.commons.activities.ManageBlockedNumbersActivity
 import com.goodwy.commons.compose.alert_dialog.AlertDialogState
 import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
-import com.goodwy.commons.dialogs.ConfirmationDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.*
+import com.goodwy.commons.helpers.LICENSE_AUTOFITTEXTVIEW
+import com.goodwy.commons.helpers.SHOW_ALL_TABS
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
@@ -161,4 +160,6 @@ class MainActivity : BaseSimpleActivity() {
         R.mipmap.ic_launcher_ten,
         R.mipmap.ic_launcher_eleven
     )
+
+    override fun getRepositoryName() = null
 }

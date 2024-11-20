@@ -56,6 +56,8 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
+    override fun getRepositoryName() = null
+
     private val binding by viewBinding(ActivityPurchaseBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {

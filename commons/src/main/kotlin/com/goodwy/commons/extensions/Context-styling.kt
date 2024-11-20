@@ -4,16 +4,13 @@ import android.annotation.SuppressLint
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
-import android.content.pm.PackageManager.PERMISSION_GRANTED
 import android.content.res.Configuration
 import android.graphics.Color
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.loader.content.CursorLoader
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_SYSTEM
-import com.goodwy.commons.helpers.MyContentProvider.PERMISSION_WRITE_GLOBAL_SETTINGS
 import com.goodwy.commons.models.GlobalConfig
 import com.goodwy.commons.models.isGlobalThemingEnabled
 import com.goodwy.commons.views.*
@@ -67,11 +64,7 @@ fun Context.getColoredMaterialStatusBarColor(): Int {
 }
 
 fun Context.updateTextColors(viewGroup: ViewGroup) {
-    val textColor = when {
-        isDynamicTheme() -> getProperTextColor()
-        else -> baseConfig.textColor
-    }
-
+    val textColor = getProperTextColor()
     val backgroundColor = getProperBackgroundColor()
     val accentColor = getProperPrimaryColor()
     val textCursorColor = getProperTextCursorColor()
@@ -124,7 +117,7 @@ fun Context.getPopupMenuTheme(): Int {
 }
 
 fun Context.syncGlobalConfig(callback: (() -> Unit)? = null) {
-    if (isPro() && ContextCompat.checkSelfPermission(this, PERMISSION_WRITE_GLOBAL_SETTINGS) == PERMISSION_GRANTED) {
+    if (canAccessGlobalConfig()) {
         withGlobalConfig {
             if (it != null) {
                 baseConfig.apply {
@@ -155,7 +148,7 @@ fun Context.syncGlobalConfig(callback: (() -> Unit)? = null) {
 }
 
 fun Context.withGlobalConfig(callback: (globalConfig: GlobalConfig?) -> Unit) {
-    if (!isSharedThemeInstalled()) {
+    if (!isPro()) {
         callback(null)
     } else {
         val cursorLoader = getMyContentProviderCursorLoader()

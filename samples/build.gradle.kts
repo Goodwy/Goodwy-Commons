@@ -16,7 +16,6 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.goodwy.commons.samples"
-
     compileSdk = libs.versions.app.build.compileSDKVersion.get().toInt()
 
     signingConfigs {
@@ -50,6 +49,12 @@ android {
                 signingConfig = signingConfigs.getByName("release")
             }
         }
+    }
+
+    flavorDimensions.add("variants")
+    productFlavors {
+        register("foss")
+        register("prepaid")
     }
 
     compileOptions {

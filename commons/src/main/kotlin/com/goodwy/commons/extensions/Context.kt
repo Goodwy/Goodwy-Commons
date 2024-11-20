@@ -10,6 +10,7 @@ import android.app.PendingIntent
 import android.app.role.RoleManager
 import android.content.*
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.PERMISSION_GRANTED
 import android.content.pm.ShortcutManager
 import android.content.res.Configuration
 import android.database.Cursor
@@ -46,6 +47,7 @@ import androidx.loader.content.CursorLoader
 import com.github.ajalt.reprint.core.Reprint
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
+import com.goodwy.commons.helpers.MyContentProvider.PERMISSION_WRITE_GLOBAL_SETTINGS
 import com.goodwy.commons.models.AlarmSound
 import com.goodwy.commons.models.BlockedNumber
 import com.goodwy.commons.models.contacts.ContactRelation
@@ -494,8 +496,10 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
     }
     return mimeType
 }
-// TODO thank you = SharedTheme
-fun Context.isSharedThemeInstalled() = isPackageInstalled("com.goodwy.sharedtheme")
+
+fun Context.canAccessGlobalConfig(): Boolean {
+    return isPro() && ContextCompat.checkSelfPermission(this, PERMISSION_WRITE_GLOBAL_SETTINGS) == PERMISSION_GRANTED
+}
 
 fun Context.isOrWasThankYouInstalled(): Boolean {
     return when {

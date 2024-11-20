@@ -119,8 +119,6 @@ data class Contact(
                 1
             } else {
                 if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == true) {
-                    firstValue.compareTo(secondValue, true)
-                } else {
                     if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
                         1
                     } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
@@ -132,6 +130,8 @@ data class Contact(
                             firstValue.compareTo(secondValue, true)
                         }
                     }
+                } else {
+                    firstValue.compareTo(secondValue, true)
                 }
             }
         } else {

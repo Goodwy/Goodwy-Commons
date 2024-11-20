@@ -6,10 +6,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Check
-import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
@@ -51,6 +49,7 @@ fun SettingsSwitchComponent(
         modifier = modifier
             .fillMaxWidth()
             .clickable(
+                enabled = isPreferenceEnabled,
                 onClick = { onChange?.invoke(!initialValue) },
                 interactionSource = interactionSource,
                 indication = indication
@@ -115,12 +114,16 @@ fun SettingsSwitchComponent(
 @MyDevices
 @Composable
 private fun SettingsSwitchComponentPreview(@PreviewParameter(BooleanPreviewParameterProvider::class) isChecked: Boolean) {
+    var checked by remember { mutableStateOf(isChecked) }
     AppThemeSurface {
         SettingsSwitchComponent(
             label = "Some label",
             value = "Some value",
-            initialValue = isChecked,
-            showCheckmark = false
+            initialValue = checked,
+            showCheckmark = false,
+            onChange = {
+                checked = it
+            }
         )
     }
 }

@@ -45,7 +45,7 @@ class AboutActivity : BaseComposeActivity() {
                     goBack = ::finish,
                     aboutSection = {
                         AboutNewSection(
-                            appName = intent.getStringExtra(APP_NAME) ?: "",
+                            appName = appName,
                             appVersion = intent.getStringExtra(APP_VERSION_NAME) ?: "",
                             onRateUsClick = {
                                 onRateUsClick(
@@ -70,7 +70,10 @@ class AboutActivity : BaseComposeActivity() {
     private fun getRateStarsAlertDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
-                RateStarsAlertDialog(alertDialogState = this, onRating = ::rateStarsRedirectAndThankYou)
+                RateStarsAlertDialog(
+                    alertDialogState = this,
+                    onRating = ::rateStarsRedirectAndThankYou
+                )
             }
         }
 
@@ -97,7 +100,10 @@ class AboutActivity : BaseComposeActivity() {
     private fun launchFAQActivity() {
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         Intent(applicationContext, FAQActivity::class.java).apply {
-            putExtra(APP_ICON_IDS, intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList<String>())
+            putExtra(
+                APP_ICON_IDS,
+                intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList<String>()
+            )
             putExtra(APP_LAUNCHER_NAME, intent.getStringExtra(APP_LAUNCHER_NAME) ?: "")
             putExtra(APP_FAQ, faqItems)
             startActivity(this)

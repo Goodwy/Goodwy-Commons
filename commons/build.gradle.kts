@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.goodwy"
-version = "5.5.0"
+version = "6.0.0"
 
 android {
     namespace = "com.goodwy.commons"
@@ -45,7 +45,7 @@ android {
     }
 
     compileOptions {
-        val currentJavaVersionFromLibs = JavaVersion.valueOf(libs.versions.app.build.javaVersion.get().toString())
+        val currentJavaVersionFromLibs = JavaVersion.valueOf(libs.versions.app.build.javaVersion.get())
         sourceCompatibility = currentJavaVersionFromLibs
         targetCompatibility = currentJavaVersionFromLibs
     }

@@ -57,10 +57,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curPrimaryGridColorPicker: GridColorPickerDialog? = null
     private var globalConfig: GlobalConfig? = null
 
-    override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
-
-    override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
-
     private fun getShowAccentColor() = intent.getBooleanExtra(SHOW_ACCENT_COLOR, false)
     private fun getShowAppIconColor() = intent.getBooleanExtra(SHOW_APP_ICON_COLOR, false)
 
@@ -74,6 +70,12 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun playStoreInstalled() = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
     private fun ruStoreInstalled() = intent.getBooleanExtra(RU_STORE, false)
+
+    override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
+
+    override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
+
+    override fun getRepositoryName() = null
 
     private val binding by viewBinding(ActivityCustomizationBinding::inflate)
 
@@ -92,7 +94,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationAppIconColorHolder.beVisibleIf(getShowAppIconColor())
 
         initColorVariables()
-        if (isSharedThemeInstalled()) {
+        if (canAccessGlobalConfig()) {
             withGlobalConfig {
                 globalConfig = it
                 baseConfig.isGlobalThemeEnabled = it.isGlobalThemingEnabled()
@@ -888,7 +890,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getMaterialYouString() = getString(R.string.system_default)
 
     private fun showOrHideThankYouFeatures() {
-        val showThankYouFeatures = isPro()
+        val showThankYouFeatures = canAccessGlobalConfig()
         binding.applyToAllHolder.beVisibleIf(showThankYouFeatures)
         binding.applyToAll.isChecked = baseConfig.isGlobalThemeEnabled
         updateApplyToAllColors()

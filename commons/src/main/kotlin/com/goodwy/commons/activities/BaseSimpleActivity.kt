@@ -100,6 +100,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     abstract fun getAppLauncherName(): String
 
+    abstract fun getRepositoryName(): String?
+
     override fun onCreate(savedInstanceState: Bundle?) {
         if (useDynamicTheme) {
             setTheme(getThemeId(showTransparentTop = showTransparentTop))
@@ -690,20 +692,27 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startAboutActivity(appNameId: Int, licenseMask: Long, versionName: String,
-                           faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean,
-                           productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
-                           subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
-                           subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
-                           playStoreInstalled: Boolean = true,
-                           ruStoreInstalled: Boolean = false,) {
+    fun startAboutActivity(
+        appNameId: Int,
+        licenseMask: Long,
+        versionName: String,
+        faqItems: ArrayList<FAQItem>,
+        showFAQBeforeMail: Boolean,
+        productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
+        subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
+        subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
+        playStoreInstalled: Boolean = true,
+        ruStoreInstalled: Boolean = false
+    ) {
         hideKeyboard()
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             putExtra(APP_NAME, getString(appNameId))
+            putExtra(APP_REPOSITORY_NAME, getRepositoryName())
             putExtra(APP_LICENSES, licenseMask)
             putExtra(APP_VERSION_NAME, versionName)
+            putExtra(APP_PACKAGE_NAME, baseConfig.appId)
             putExtra(APP_FAQ, faqItems)
             putExtra(SHOW_FAQ_BEFORE_MAIL, showFAQBeforeMail)
             //Goodwy

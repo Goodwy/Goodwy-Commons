@@ -94,6 +94,7 @@ class ContactsHelper(val context: Context) {
             Contact.sorting = context.baseConfig.sorting
             Contact.startWithSurname = context.baseConfig.startNameWithSurname
             Contact.sortingSymbolsFirst = context.baseConfig.sortingSymbolsFirst
+            System.setProperty("java.util.Arrays.useLegacyMergeSort", "true") //https://stackoverflow.com/questions/11441666/java-error-comparison-method-violates-its-general-contract
             resultContacts.sort()
 
             Handler(Looper.getMainLooper()).post {
