@@ -163,6 +163,8 @@
         You can find the guide at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just shoot me a message at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you need help.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">This issue arises when your launcher does not fully support icon customization. Attempt launching the app through Google Play or a widget, if accessible.
+        After launching, restore the default app icon color. In extreme cases, reinstalling the app may be necessary.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
