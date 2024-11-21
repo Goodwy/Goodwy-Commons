@@ -69,7 +69,8 @@ private fun AboutScreenPreview() {
                     onMoreAppsClick = {},
                     onPrivacyPolicyClick = {},
                     onFAQClick = {},
-                    onTipJarClick = {}
+                    onTipJarClick = {},
+                    onGithubClick = {}
                 )
             },
             isTopAppBarColorIcon = true,
@@ -87,7 +88,9 @@ internal fun AboutNewSection(
     onMoreAppsClick: () -> Unit,
     onPrivacyPolicyClick: () -> Unit,
     onFAQClick: () -> Unit,
-    onTipJarClick: () -> Unit
+    onTipJarClick: () -> Unit,
+    showGithub: Boolean = true,
+    onGithubClick: () -> Unit
 ) {
     Box(
         modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.about_margin))
@@ -158,12 +161,10 @@ internal fun AboutNewSection(
                     Box (modifier = Modifier
                         .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                         .width(42.dp)) {
-                        Icon(modifier = Modifier
-                            .alpha(0.2f)
-                            .size(42.dp), imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.rate_us), tint = textColor)
-                        Icon(modifier = Modifier
-                            .size(42.dp)
-                            .padding(8.dp), imageVector = Icons.Rounded.Star, contentDescription = stringResource(id = R.string.rate_us), tint = textColor)
+                        Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
+                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.rate_us), tint = textColor)
+                        Icon(modifier = Modifier.size(42.dp).padding(8.dp),
+                            imageVector = Icons.Rounded.Star, contentDescription = stringResource(id = R.string.rate_us), tint = textColor)
                     }
                 }
             }
@@ -189,12 +190,10 @@ internal fun AboutNewSection(
                     Box (modifier = Modifier
                         .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                         .width(42.dp)) {
-                        Icon(modifier = Modifier
-                            .alpha(0.2f)
-                            .size(42.dp), imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
-                        Icon(modifier = Modifier
-                            .size(42.dp)
-                            .padding(start = 10.dp, end = 10.dp, top = 9.dp, bottom = 11.dp), imageVector = Icons.Rounded.Shop, contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
+                        Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
+                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
+                        Icon(modifier = Modifier.size(42.dp).padding(start = 10.dp, end = 10.dp, top = 9.dp, bottom = 11.dp),
+                            imageVector = Icons.Rounded.Shop, contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
                     }
                 }
             }
@@ -220,12 +219,10 @@ internal fun AboutNewSection(
                     Box (modifier = Modifier
                         .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                         .width(42.dp)) {
-                        Icon(modifier = Modifier
-                            .alpha(0.2f)
-                            .size(42.dp), imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.privacy_policy), tint = textColor)
-                        Icon(modifier = Modifier
-                            .size(42.dp)
-                            .padding(8.dp), imageVector = Icons.Rounded.Policy, contentDescription = stringResource(id = R.string.privacy_policy), tint = textColor)
+                        Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
+                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.privacy_policy), tint = textColor)
+                        Icon(modifier = Modifier.size(42.dp).padding(8.dp),
+                            imageVector = Icons.Rounded.Policy, contentDescription = stringResource(id = R.string.privacy_policy), tint = textColor)
                     }
                 }
             }
@@ -255,17 +252,13 @@ internal fun AboutNewSection(
                             .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                             .width(42.dp)) {
                             Icon(
-                                modifier = Modifier
-                                    .alpha(0.2f)
-                                    .size(42.dp),
+                                modifier = Modifier.alpha(0.2f).size(42.dp),
                                 imageVector = Icons.Rounded.Circle,
                                 contentDescription = stringResource(id = R.string.frequently_asked_questions),
                                 tint = textColor
                             )
                             Icon(
-                                modifier = Modifier
-                                    .size(42.dp)
-                                    .padding(8.dp),
+                                modifier = Modifier.size(42.dp).padding(8.dp),
                                 imageVector = Icons.Rounded.QuestionMark,
                                 contentDescription = stringResource(id = R.string.frequently_asked_questions),
                                 tint = textColor
@@ -296,12 +289,51 @@ internal fun AboutNewSection(
                     Box (modifier = Modifier
                         .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                         .width(42.dp)) {
-                        Icon(modifier = Modifier
-                            .alpha(0.2f)
-                            .size(42.dp), imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = textColor)
-                        Icon(modifier = Modifier
-                            .size(42.dp)
-                            .padding(8.dp), imageVector = Icons.Rounded.Savings, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = textColor)
+                        Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
+                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = textColor)
+                        Icon(modifier = Modifier.size(42.dp).padding(8.dp),
+                            imageVector = Icons.Rounded.Savings, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = textColor)
+                    }
+                }
+            }
+            if (showGithub) {
+                Spacer(modifier = Modifier.size(18.dp))
+                Card(
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clickable(onClick = onGithubClick),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(
+                            modifier = Modifier
+                                .padding(start = 16.dp, end = 8.dp)
+                                .weight(1f),
+                            text = stringResource(R.string.github).toUpperCase(LocaleList.current),
+                            fontSize = 14.sp,
+                            lineHeight = 18.sp,
+                            color = textColor,
+                        )
+                        Box(
+                            modifier = Modifier
+                                .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
+                                .width(42.dp)
+                        ) {
+                            Icon(
+                                modifier = Modifier.alpha(0.2f).size(42.dp),
+                                imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.privacy_policy), tint = textColor
+                            )
+                            Icon(
+                                modifier = Modifier.size(42.dp).padding(8.dp),
+                                painter = painterResource(id = R.drawable.ic_github_vector),
+                                contentDescription = stringResource(id = R.string.privacy_policy),
+                                tint = textColor
+                            )
+                        }
                     }
                 }
             }

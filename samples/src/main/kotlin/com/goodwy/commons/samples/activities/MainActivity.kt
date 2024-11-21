@@ -161,5 +161,5 @@ class MainActivity : BaseSimpleActivity() {
         R.mipmap.ic_launcher_eleven
     )
 
-    override fun getRepositoryName() = null
+    override fun getRepositoryName() = "Gallery"
 }

@@ -56,7 +56,9 @@ class AboutActivity : BaseComposeActivity() {
                             onMoreAppsClick = ::launchMoreAppsFromUsIntent,
                             onPrivacyPolicyClick = ::onPrivacyPolicyClick,
                             onFAQClick = ::launchFAQActivity,
-                            onTipJarClick = ::onTipJarClick
+                            onTipJarClick = ::onTipJarClick,
+                            showGithub = showGithub(),
+                            onGithubClick = ::onGithubClick
                         )
                     },
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
@@ -160,6 +162,16 @@ class AboutActivity : BaseComposeActivity() {
             startActivity(this)
         }
     }
+
+    private fun onGithubClick() {
+        val repositoryName = intent.getStringExtra(APP_REPOSITORY_NAME) ?: return
+        val url = "https://github.com/Goodwy/$repositoryName"
+        launchViewIntent(url)
+    }
+
+    @Composable
+    private fun showGithub() =
+        remember { !intent.getStringExtra(APP_REPOSITORY_NAME).isNullOrEmpty() }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
