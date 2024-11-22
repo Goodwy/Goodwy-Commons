@@ -49,7 +49,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var ruStoreIsConnected = false
 
     private val purchaseHelper = PurchaseHelper(this)
-    private val ruStoreHelper = RuStoreHelper(this)
+    private var ruStoreHelper: RuStoreHelper? = null
     private val ruStoreBillingClient: RuStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
@@ -153,17 +153,19 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
         } else if ((!playStoreInstalled && ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && !baseConfig.useGooglePlay)) {
             //RuStore
-            ruStoreHelper.checkPurchasesAvailability()
+            ruStoreHelper = RuStoreHelper(this)
+
+            ruStoreHelper!!.checkPurchasesAvailability()
 
 //            lifecycleScope.launch {
-//                ruStoreHelper.stateStart
+//                ruStoreHelper!!.stateStart
 //                    .flowWithLifecycle(lifecycle)
 //                    .collect { state ->
 //                        // update button
 //                    }
 //            }
             lifecycleScope.launch {
-                ruStoreHelper.eventStart
+                ruStoreHelper!!.eventStart
                     .flowWithLifecycle(lifecycle)
                     .collect { event ->
                         handleEventStart(event)
@@ -171,7 +173,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
 
             lifecycleScope.launch {
-                ruStoreHelper.stateBilling
+                ruStoreHelper!!.stateBilling
                     .flowWithLifecycle(lifecycle)
                     .collect { state ->
                         if (!state.isLoading) {
@@ -181,7 +183,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     }
             }
             lifecycleScope.launch {
-                ruStoreHelper.eventBilling
+                ruStoreHelper!!.eventBilling
                     .flowWithLifecycle(lifecycle)
                     .collect { event ->
                         handleEventBilling(event)
@@ -189,7 +191,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
 
             lifecycleScope.launch {
-                ruStoreHelper.statePurchased
+                ruStoreHelper!!.statePurchased
                     .flowWithLifecycle(lifecycle)
                     .collect { state ->
                         if (!state.isLoading && ruStoreIsConnected) {
@@ -647,7 +649,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             text = resultPrice
             setOnClickListener {
                 if (product != null) {
-                    ruStoreHelper.purchaseProduct(product)
+                    ruStoreHelper!!.purchaseProduct(product)
                 }
             }
             background.setTint(primaryColor)
@@ -661,7 +663,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             text = resultPrice
             setOnClickListener {
                 if (product != null) {
-                    ruStoreHelper.purchaseProduct(product)
+                    ruStoreHelper!!.purchaseProduct(product)
                 }
             }
             background.setTint(primaryColor)
@@ -675,7 +677,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             text = resultPrice
             setOnClickListener {
                 if (product != null) {
-                    ruStoreHelper.purchaseProduct(product)
+                    ruStoreHelper!!.purchaseProduct(product)
                 }
             }
             background.setTint(primaryColor)
@@ -691,7 +693,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper.purchaseProduct(product)
+                        ruStoreHelper!!.purchaseProduct(product)
                     }
                 }
             } else {
@@ -710,7 +712,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper.purchaseProduct(product)
+                        ruStoreHelper!!.purchaseProduct(product)
                     }
                 }
             } else {
@@ -729,7 +731,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper.purchaseProduct(product)
+                        ruStoreHelper!!.purchaseProduct(product)
                     }
                 }
             } else {
@@ -749,7 +751,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper.purchaseProduct(product)
+                        ruStoreHelper!!.purchaseProduct(product)
                     }
                 }
             } else {
@@ -768,7 +770,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper.purchaseProduct(product)
+                        ruStoreHelper!!.purchaseProduct(product)
                     }
                 }
             } else {
@@ -787,7 +789,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper.purchaseProduct(product)
+                        ruStoreHelper!!.purchaseProduct(product)
                     }
                 }
             } else {
@@ -841,7 +843,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         val productList: ArrayList<String> = productIdListRu
         productList.addAll(subscriptionIdListRu)
         productList.addAll(subscriptionYearIdListRu)
-        ruStoreHelper.getProducts(productList)
+        ruStoreHelper!!.getProducts(productList)
     }
 
     private fun handleEventStart(event: StartPurchasesEvent) {
