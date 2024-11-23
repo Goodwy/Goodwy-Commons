@@ -50,7 +50,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private val purchaseHelper = PurchaseHelper(this)
     private var ruStoreHelper: RuStoreHelper? = null
-    private val ruStoreBillingClient: RuStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
+    private var ruStoreBillingClient: RuStoreBillingClient? = null
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
@@ -77,8 +77,13 @@ class PurchaseActivity : BaseSimpleActivity() {
         ruStoreInstalled = intent.getBooleanExtra(RU_STORE, false)
         showCollection = intent.getBooleanExtra(SHOW_COLLECTION, false)
 
+
+        if (ruStoreInstalled) {
+            ruStoreHelper = RuStoreHelper(this)
+            ruStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
+        }
         if (savedInstanceState == null && ruStoreInstalled) {
-            ruStoreBillingClient.onNewIntent(intent)
+            ruStoreBillingClient!!.onNewIntent(intent)
         }
 
         // TODO TRANSPARENT Navigation Bar
@@ -153,8 +158,6 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
         } else if ((!playStoreInstalled && ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && !baseConfig.useGooglePlay)) {
             //RuStore
-            ruStoreHelper = RuStoreHelper(this)
-
             ruStoreHelper!!.checkPurchasesAvailability()
 
 //            lifecycleScope.launch {
@@ -208,7 +211,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         if (ruStoreInstalled) {
-            ruStoreBillingClient.onNewIntent(intent)
+            ruStoreBillingClient!!.onNewIntent(intent)
         }
     }
 
