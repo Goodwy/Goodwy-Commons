@@ -278,7 +278,7 @@
     <string name="relation_kin_alt_g">Relative</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Crush</string>
-    <string name="relation_date_g">Date</string>
+    <string name="relation_date_g">Fundur</string>
     <string name="relation_sweetheart_g">Sweetheart</string>
     <string name="relation_me_g">Me</string>
     <string name="relation_agent_g">Agent</string>
@@ -317,4 +317,11 @@
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="billing_error_application_signature_not_correct">To pay via RuStore you need to install the app version from RuStore</string>
+    <string name="date">Dagsetning</string>
+    <string name="starts">Byrjar</string>
+    <string name="ends">Endar</string>
+    <string name="time_zone">Tímabelti</string>
+    <string name="event_type">Tegund viðburðar</string>
+    <string name="availability">Framboð</string>
+    <string name="attendees">Þátttakendur</string>
 </resources>

@@ -278,7 +278,7 @@
     <string name="relation_kin_alt_g">Relative</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Crush</string>
-    <string name="relation_date_g">Date</string>
+    <string name="relation_date_g">Sapulces</string>
     <string name="relation_sweetheart_g">Sweetheart</string>
     <string name="relation_me_g">Me</string>
     <string name="relation_agent_g">Agent</string>
@@ -317,4 +317,11 @@
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="billing_error_application_signature_not_correct">To pay via RuStore you need to install the app version from RuStore</string>
+    <string name="date">Datums</string>
+    <string name="starts">Sākas</string>
+    <string name="ends">Beidzas</string>
+    <string name="time_zone">Laika josla</string>
+    <string name="event_type">Notikuma tips</string>
+    <string name="availability">Pieejamība</string>
+    <string name="attendees">Dalībnieki</string>
 </resources>

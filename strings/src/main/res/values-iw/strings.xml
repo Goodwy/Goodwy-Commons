@@ -275,7 +275,7 @@
     <string name="relation_kin_alt_g">Relative</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Crush</string>
-    <string name="relation_date_g">Date</string>
+    <string name="relation_date_g">פגישה</string>
     <string name="relation_sweetheart_g">Sweetheart</string>
     <string name="relation_me_g">Me</string>
     <string name="relation_agent_g">Agent</string>
@@ -313,4 +313,11 @@
     <string name="billing_subscriptions">מינויים</string>
     <string name="billing_change_to_google_play">שנה ל-Google Play</string>
     <string name="billing_change_to_ru_store">שנה ל-RuStore</string>
+    <string name="date">תמר</string>
+    <string name="starts">מתחיל</string>
+    <string name="ends">מסתיים</string>
+    <string name="time_zone">אזור זמן</string>
+    <string name="event_type">סוג אירוע</string>
+    <string name="availability">זמינות</string>
+    <string name="attendees">משתתפים</string>
 </resources>

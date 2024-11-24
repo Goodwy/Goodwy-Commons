@@ -277,7 +277,7 @@
     <string name="relation_kin_alt_g">Relative</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Crush</string>
-    <string name="relation_date_g">Date</string>
+    <string name="relation_date_g">Събрание</string>
     <string name="relation_sweetheart_g">Sweetheart</string>
     <string name="relation_me_g">Me</string>
     <string name="relation_agent_g">Agent</string>
@@ -316,4 +316,11 @@
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="billing_error_application_signature_not_correct">За да платите през RuStore е необходимо да инсталирате версията на приложението от RuStore</string>
+    <string name="date">Дата</string>
+    <string name="starts">Започва</string>
+    <string name="ends">Завършва</string>
+    <string name="time_zone">Часова зона</string>
+    <string name="event_type">Тип събитие</string>
+    <string name="availability">Наличност</string>
+    <string name="attendees">Участниците</string>
 </resources>

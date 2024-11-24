@@ -14,6 +14,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -33,6 +34,8 @@ import com.goodwy.commons.compose.settings.SettingsListItem
 import com.goodwy.commons.compose.settings.SettingsTitleTextComponent
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
+import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.isRuStoreInstalled
 import com.goodwy.strings.R as stringsR
 
 private val startingTitlePadding = Modifier.padding(start = 56.dp)
@@ -95,6 +98,7 @@ internal fun AboutNewSection(
     Box(
         modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.about_margin))
     ) {
+        val context = LocalContext.current
         val textColor = MaterialTheme.colorScheme.onSurface
         Column(Modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp, bottom = 26.dp)) {
             ListItem(
@@ -192,8 +196,18 @@ internal fun AboutNewSection(
                         .width(42.dp)) {
                         Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
                             imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
-                        Icon(modifier = Modifier.size(42.dp).padding(start = 10.dp, end = 10.dp, top = 9.dp, bottom = 11.dp),
-                            imageVector = Icons.Rounded.Shop, contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
+                        if (context.isRuStoreInstalled() && !context.baseConfig.useGooglePlay) {
+                            Icon(modifier = Modifier
+                                .size(42.dp)
+                                .padding(9.dp),
+                                painter = painterResource(id = R.drawable.ic_rustore),
+                                contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
+                        }
+                        else {
+                            Icon(modifier = Modifier.size(42.dp).padding(start = 10.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
+                                painter = painterResource(id = R.drawable.ic_google_play_vector),
+                                contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
+                        }
                     }
                 }
             }

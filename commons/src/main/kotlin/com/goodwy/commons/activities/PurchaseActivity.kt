@@ -611,7 +611,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 if (it.selected) {
                     launchApp(it.packageName)
                 } else {
-                    if (isRuStoreInstalled()) {
+                    if (ruStoreInstalled && !baseConfig.useGooglePlay) {
                         val urlRS = "https://www.rustore.ru/catalog/app/${it.packageName}"
                         launchViewIntent(urlRS)
                     } else {

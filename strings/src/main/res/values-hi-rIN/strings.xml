@@ -275,7 +275,7 @@
     <string name="relation_kin_alt_g">Relative</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Crush</string>
-    <string name="relation_date_g">Date</string>
+    <string name="relation_date_g">मीटिंग</string>
     <string name="relation_sweetheart_g">Sweetheart</string>
     <string name="relation_me_g">Me</string>
     <string name="relation_agent_g">Agent</string>
@@ -313,4 +313,11 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="date">खजूर</string>
+    <string name="starts">शुरू होता है</string>
+    <string name="ends">समाप्त होता</string>
+    <string name="time_zone">समय क्षेत्र</string>
+    <string name="event_type">इवेंट प्रकार</string>
+    <string name="availability">प्राप्‍यता</string>
+    <string name="attendees">सहभागियों</string>
 </resources>

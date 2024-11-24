@@ -275,7 +275,7 @@
     <string name="relation_kin_alt_g">Relative</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Crush</string>
-    <string name="relation_date_g">Date</string>
+    <string name="relation_date_g">회의</string>
     <string name="relation_sweetheart_g">Sweetheart</string>
     <string name="relation_me_g">Me</string>
     <string name="relation_agent_g">Agent</string>
@@ -313,4 +313,11 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="date">날짜</string>
+    <string name="starts">시작</string>
+    <string name="ends">끝납니다</string>
+    <string name="time_zone">시간대</string>
+    <string name="event_type">이벤트 유형</string>
+    <string name="availability">가용도</string>
+    <string name="attendees">참석자</string>
 </resources>

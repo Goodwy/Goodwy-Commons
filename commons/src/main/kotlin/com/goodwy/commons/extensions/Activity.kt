@@ -279,7 +279,12 @@ fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
 }
 
 fun Activity.launchMoreAppsFromUsIntent() {
-    launchViewIntent(getString(R.string.thank_you_url))
+    if (isRuStoreInstalled() && !baseConfig.useGooglePlay) {
+        val urlRS = "rustore://apps.rustore.ru/developer/d01f495d"
+        launchViewIntent(urlRS)
+    } else {
+        launchViewIntent(getString(R.string.thank_you_url))
+    }
 }
 
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
