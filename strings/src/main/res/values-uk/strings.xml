@@ -150,6 +150,7 @@
     <string name="volume_g">Громкість</string>
     <string name="vibrate_g">Вібрація</string>
     <string name="use_contact_colors">Використовувати кольори контактів</string>
+    <string name="typeface">Шрифт</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Розмір мініатюр контактів</string>

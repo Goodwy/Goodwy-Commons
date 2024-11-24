@@ -150,6 +150,7 @@
     <string name="volume_g">Гучнасць</string>
     <string name="vibrate_g">Вібрацыя</string>
     <string name="use_contact_colors">Выкарыстоўвайце кантактныя колеры</string>
+    <string name="typeface">Шрыфт</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Памер мініяцюр кантактаў</string>

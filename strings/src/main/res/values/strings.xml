@@ -152,6 +152,7 @@
     <string name="vibrate_g">Vibrate</string>
     <string name="use_contact_colors">Use contact colors</string>
     <string name="contact_thumbnails_size">Contact thumbnails size</string>
+    <string name="typeface">Typeface</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

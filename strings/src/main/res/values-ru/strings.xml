@@ -150,6 +150,7 @@
     <string name="volume_g">Громкость</string>
     <string name="vibrate_g">Вибрация</string>
     <string name="use_contact_colors">Использовать цвета контактов</string>
+    <string name="typeface">Шрифт</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Размер фото контакта</string>

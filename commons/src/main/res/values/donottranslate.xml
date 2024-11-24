@@ -241,4 +241,10 @@
 
     <!-- Goodwy -->
     <string name="ios_g">iOS</string>
+
+    <!-- Typeface -->
+    <string name="typeface_normal">Normal</string>
+    <string name="typeface_bold">Bold</string>
+    <string name="typeface_bold_italic">Bold Italic</string>
+    <string name="typeface_italic">Italic</string>
 </resources>
