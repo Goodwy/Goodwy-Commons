@@ -151,6 +151,7 @@
     <string name="vibrate_g">Вибрация</string>
     <string name="use_contact_colors">Использовать цвета контактов</string>
     <string name="typeface">Шрифт</string>
+    <string name="long_click_g">Долгое нажатие %s</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Размер фото контакта</string>
