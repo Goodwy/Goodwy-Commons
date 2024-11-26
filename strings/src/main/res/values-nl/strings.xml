@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Grootte van contactminiaturen</string>
+    <string name="long_click_g">Lange klik op %s</string>
     <string name="purchase_simple_thank_you_g">Goodwy Bedankje kopen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Er is een nieuwe versie van Goodwy Bedankje</string>
@@ -159,6 +160,7 @@
         Een handleiding is te vinden op https://github.com/Goodwy/Discussion , of stuur me een bericht via goodwy.dev@gmail.com voor hulp.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Dit probleem doet zich voor wanneer uw launcher het aanpassen van pictogrammen niet volledig ondersteunt. Probeer de app te starten via Google Play of een widget, indien toegankelijk.         Herstel na het starten de standaard app-pictogramkleur. In extreme gevallen kan het nodig zijn om de app opnieuw te installeren.</string>
     <string name="faq_8_text_commons_g">Omdat deze versie van de app niet meer zal worden bijgewerkt, zullen eventuele fouten nooit meer worden opgelost. Ook zullen er geen nieuwe functies meer worden toegevoegd. De Pro-versie is voor een bescheiden bedrag te vinden in de Google Play Store.
         Dit bedrag hoeft maar een keer te worden betaald, daarna nooit meer. Ook niet voor nieuwe apparaten. Als de Pro-versie toch niet bevalt, deïnstalleer de app dan binnen enkele uren en het bedrag zal worden teruggestort.
         Ook een latere restitutie is nog mogelijk. Neem hiervoor contact op via goodwy.dev@gmail.com en het geld zal alsnog worden teruggestort.</string>
@@ -320,4 +322,5 @@
     <string name="event_type">Type evenement</string>
     <string name="availability">Beschikbaarheid</string>
     <string name="attendees">Deelnemers</string>
+    <string name="typeface">Lettertype</string>
 </resources>

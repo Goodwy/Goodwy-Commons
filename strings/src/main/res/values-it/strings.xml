@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Dimensione delle miniature dei contatti</string>
+    <string name="long_click_g">Fare clic a lungo su %s</string>
     <string name="purchase_simple_thank_you_g">Acquista Goodwy Grazie</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aggiornare Semplice Ringraziamento all\'ultima versione</string>
@@ -159,6 +160,7 @@
         Si può trovare la guida su https://github.com/Goodwy/Discussion , o scrivimi un messaggio a goodwy.dev@gmail.com se ti serve aiuto.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Questo problema si verifica quando il programma di avvio non supporta completamente la personalizzazione delle icone. Prova ad avviare l\'app tramite Google Play o un widget, se accessibile.         Dopo l\'avvio, ripristina il colore predefinito dell\'icona dell\'app. In casi estremi, potrebbe essere necessario reinstallare l\'app.</string>
     <string name="faq_8_text_commons_g">Dato che la tua versione non verrà più aggiornata, gli errori che potresti trovare non verranno mai corretti. Non ci saranno inoltre nuove funzioni aggiuntive. Puoi acquistare la versione Pro su Google Play per una piccola cifra.
         Si paga una sola volta, ciò significa che quando la acquisti non dovrai mai più pagare. Neanche quando userai un nuovo dispositivo. Se non ti piacerà la versione Pro, ti basta disinstallarla entro alcune ore e otterrai automaticamente un rimborso.
         Se vuoi chiedere un rimborso in un momento successivo, contattaci su goodwy.dev@gmail.com e lo otterrai.</string>
@@ -320,4 +322,5 @@
     <string name="event_type">Tipo di evento</string>
     <string name="availability">Disponibilità</string>
     <string name="attendees">Partecipanti</string>
+    <string name="typeface">Carattere tipografico</string>
 </resources>

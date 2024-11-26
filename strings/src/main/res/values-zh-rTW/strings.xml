@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">聯繫人縮圖大小</string>
+    <string name="long_click_g">長按 %s</string>
     <string name="purchase_simple_thank_you_g">購買Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">請更新[Goodwy Thank You]至最新版本</string>
@@ -159,6 +160,7 @@
 	    你可以在 https://github.com/Goodwy/Discussion 找到教學，或者若你需要幫忙，只要發個訊息到 goodwy.dev@gmail.com。
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">當您的啟動器不完全支援圖示自定義時，會出現此問題。嘗試通過Google Play或小組件（如果可存取）啟動應用程式。        啟動后，恢復預設應用程式圖示顏色。在極端情況下，可能需要重新安裝應用程式。</string>
     <string name="faq_8_text_commons_g">由於你的程式版本不再更新，將永遠不會修復可能遇到的錯誤，也不會再添加新功能。你可以在Google Play上用一小筆錢購買專業版。
         這是一次性付款。也就是說，一旦你購買了將不必再次付費，即使之後有新裝置也不用。如果你不喜歡專業版，則可以在幾個小時內解除安裝，將自動拿回你的錢。
         之後如果何時想退款，只要你以 goodwy.dev@gmail.com 聯絡我們然後就能獲得退款了。</string>
@@ -320,4 +322,5 @@
     <string name="event_type">事件類型</string>
     <string name="availability">可用性</string>
     <string name="attendees">出席者</string>
+    <string name="typeface">字體</string>
 </resources>

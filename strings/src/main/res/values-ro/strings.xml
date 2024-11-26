@@ -152,6 +152,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Dimensiunea miniaturilor contactelor</string>
+    <string name="long_click_g">Faceți clic lung pe %s</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -161,6 +162,7 @@
         You can find the guide at https://github.com/Goodwy/Discussion , or just shoot me a message at goodwy.dev@gmail.com if you need help.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Această problemă apare atunci când lansatorul nu acceptă pe deplin personalizarea pictogramelor. Încercați să lansați aplicația prin Google Play sau printr-un widget, dacă este accesibil.         După lansare, restabiliți culoarea implicită a pictogramei aplicației. În cazuri extreme, poate fi necesară reinstalarea aplicației.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -322,4 +324,5 @@
     <string name="event_type">Tipul evenimentului</string>
     <string name="availability">Disponibilitate</string>
     <string name="attendees">Participanţi</string>
+    <string name="typeface">Caractere</string>
 </resources>

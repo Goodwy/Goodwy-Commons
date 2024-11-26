@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Maint mân-luniau cyswllt</string>
+    <string name="long_click_g">Cliciwch hir %s</string>
     <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
     <string name="copyright_g">f %1$s\nHawlfraint © Goodwy %2$d</string>
     <string name="update_thank_you_g">Diweddara Goodwy Thank You i\'r fersiwn diweddaraf</string>
@@ -159,6 +160,7 @@
         Mae canllaw yma <a href="https://github.com/Goodwy/Discussion">https://github.com/Goodwy/Discussion</a>, neu anfona ebost ata\'i (yn Saesneg) <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> os oes angen help.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Mae\'r mater hwn yn codi pan nad yw eich lansiwr yn cefnogi addasu eicon yn llawn. Ceisiwch lansio\'r ap trwy Google Play neu widget, os yw\'n hygyrch.         Ar ôl ei lansio, adfer y lliw eicon app diofyn. Mewn achosion eithafol, efallai y bydd angen ailosod yr app.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -320,4 +322,5 @@
     <string name="event_type">Math o ddigwyddiad</string>
     <string name="availability">Argaeledd</string>
     <string name="attendees">Mynychwyr</string>
+    <string name="typeface">Wynebfath</string>
 </resources>

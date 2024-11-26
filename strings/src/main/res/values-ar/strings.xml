@@ -151,6 +151,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">حجم الصور المصغرة لجهات الاتصال</string>
+    <string name="long_click_g">انقر لفترة طويلة %s</string>
     <string name="purchase_simple_thank_you_g">شراء تطبيق (Goodwy Thank You)</string>
     <string name="copyright_g">v %1$s\nحقوق النشر © Goodwy %2$d</string>
     <string name="update_thank_you_g">يرجى تحديث تطبيق (Goodwy Thank You) إلى أحدث إصدار</string>
@@ -159,6 +160,7 @@
         نعم طبعاً. يمكنك نشر الكلمة عن التطبيقات أو تقديم تعليقات وتقييمات جيدة. يمكنك أيضاً المساعدة من خلال ترجمة التطبيقات بلغة جديدة ، أو تحديث بعض الترجمات الموجودة فقط.يمكنك العثور على الدليل على https://github.com/Goodwy/Discussion ، أو فقط أرسل رسالة على <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> إذا كنت بحاجة إلى مساعدة.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">تنشأ هذه المشكلة عندما لا يدعم المشغل تخصيص الرمز بشكل كامل. حاول تشغيل التطبيق من خلال Google Play أو عنصر واجهة مستخدم ، إذا كان يمكن الوصول إليه.         بعد التشغيل ، قم باستعادة لون رمز التطبيق الافتراضي. في الحالات القصوى ، قد تكون إعادة تثبيت التطبيق ضرورية.</string>
     <string name="faq_8_text_commons_g">نظراً لأن إصدار التطبيق الخاص بك لم يعد محدثاً ، فلن يتم إصلاح الأخطاء التي إكتشافها. كما لن تتم إضافة وظائف جديدة . يمكنك شراء الإصدار الـ Pro على Google Play مقابل مبلغ صغير من المال. إنها دفعة لمرة واحدة،مما يعني أنه بمجرد شرائه ، لن تضطر إلى الدفع مرة أخرى. ليس حتى بعد الحصول على جهاز جديد. إذا كنت لا تحب إصدار Pro ، يمكنك إلغاء تثبيته في غضون ساعات قليلة وستحصل على أموالك تلقائياً.إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على goodwy.dev@gmail.com وستحصل عليه.</string>
     <string name="faq_100_title_commons_g">What is a private contact?</string>
     <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
@@ -318,4 +320,5 @@
     <string name="event_type">نوع الحدث</string>
     <string name="availability">توافر</string>
     <string name="attendees">الحضور</string>
+    <string name="typeface">محرف</string>
 </resources>

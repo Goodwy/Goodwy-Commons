@@ -151,6 +151,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Əlaqə miniatürlərinin ölçüsü</string>
+    <string name="long_click_g">Uzun klikləyin %s</string>
     <string name="purchase_simple_thank_you_g">Sadə Təşəkkür\'ü Alın</string>
     <string name="copyright_g">v %1$s\nMüəllif Hüquqları © Goodwy %2$d</string>
     <string name="update_thank_you_g">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>
@@ -160,6 +161,7 @@
         You can find the guide at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just shoot me a message at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you need help.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Başlatıcınız ikona fərdiləşdirməsini tam dəstəkləmədikdə bu problem yaranır. Əgər əlçatandırsa, proqramı Google Play və ya vidcet vasitəsilə işə salmağa çalışın.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -321,4 +323,5 @@
     <string name="event_type">Hadisə növü</string>
     <string name="availability">Mövcudluq</string>
     <string name="attendees">Iştirakçılar</string>
+    <string name="typeface">Yazı tipi</string>
 </resources>

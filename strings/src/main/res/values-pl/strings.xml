@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Rozmiar miniatur kontaktów</string>
+    <string name="long_click_g">Długie kliknięcie %s</string>
     <string name="purchase_simple_thank_you_g">Kup aplikację „Goodwy podziękowanie”</string>
     <string name="copyright_g">Wersja %1$s\n© Goodwy %2$d</string>
     <string name="update_thank_you_g">Zaktualizuj aplikację Goodwy podziękowanie do najnowszej wersji</string>
@@ -158,6 +159,7 @@
         Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion. Możesz też napisać do nas na adres hello@simplemobiletools.com, jeśli potrzebujesz pomocy.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Ten problem pojawia się, gdy program uruchamiający nie obsługuje w pełni dostosowywania ikon. Spróbuj uruchomić aplikację za pośrednictwem sklepu Google Play lub widżetu, jeśli jest dostępny.         Po uruchomieniu przywróć domyślny kolor ikony aplikacji. W skrajnych przypadkach może być konieczna ponowna instalacja aplikacji.</string>
     <string name="faq_8_text_commons_g">Ponieważ Twoja wersja aplikacji nie jest już aktualizowana, błędy, które być może zauważyłeś, nigdy nie zostaną naprawione. Nie zostaną również dodane żadne nowe funkcje. Możesz kupić wersję Pro w Google Play za niewielką sumę pieniędzy. Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin, a automatycznie otrzymasz swoje pieniądze z powrotem. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie, po prostu skontaktuj się z nami na hello@simplemobiletools.com, a otrzymasz go.</string>
     <string name="faq_100_title_commons_g">What is a private contact?</string>
     <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
@@ -317,4 +319,5 @@
     <string name="event_type">Typ zdarzenia</string>
     <string name="availability">Dostępność</string>
     <string name="attendees">Uczestników</string>
+    <string name="typeface">Krój pisma</string>
 </resources>

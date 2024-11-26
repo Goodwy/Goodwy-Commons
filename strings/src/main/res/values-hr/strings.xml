@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Veličina minijatura kontakata</string>
+    <string name="long_click_g">Dugi klik %s</string>
     <string name="purchase_simple_thank_you_g">Kupite Jednostavno Hvala</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Molim ažurirajte Jednostavno hvala na najnoviju verziju</string>
@@ -159,6 +160,7 @@
         Vodič možete pronaći na adresi https://github.com/Goodwy/Discussion , ili mi pošaljite poruku na goodwy.dev@gmail.com ako Vam treba pomoć.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Taj se problem pojavljuje kada pokretač ne podržava u potpunosti prilagodbu ikona. Pokušajte pokrenuti aplikaciju putem Google Playa ili widgeta, ako je dostupan.         Nakon pokretanja vratite zadanu boju ikone aplikacije. U ekstremnim slučajevima može biti potrebna ponovna instalacija aplikacije.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -320,4 +322,5 @@
     <string name="event_type">Vrsta događaja</string>
     <string name="availability">Raspoloživost</string>
     <string name="attendees">Sudionika</string>
+    <string name="typeface">Oblici pisma</string>
 </resources>

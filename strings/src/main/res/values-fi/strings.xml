@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Yhteystietojen pikkukuvien koko</string>
+    <string name="long_click_g">Pitkä klikkaus %s</string>
     <string name="purchase_simple_thank_you_g">Osta Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Päivitä Goodwy Thank You viimeisimpään versioon</string>
@@ -159,6 +160,7 @@
         Ohjeet löydät täältä https://github.com/Goodwy/Discussion , tai lähettämällä viestiä osoitteeseen goodwy.dev@gmail.com jos Sinulla on kysyttävää.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Tämä ongelma ilmenee, kun käynnistysohjelma ei täysin tue kuvakkeiden mukauttamista. Yritä käynnistää sovellus Google Playn tai widgetin kautta, jos se on käytettävissä.         Palauta käynnistämisen jälkeen sovelluksen oletuskuvakkeen väri. Äärimmäisissä tapauksissa sovellus voi olla tarpeen asentaa uudelleen.</string>
     <string name="faq_8_text_commons_g">Koska sovellusversiotasi ei enää päivitetä, et saa korjauksia mahdollisiin bugeihin etkä uusia ominaisuuksia. Voit ostaa Pro-version Google Playsta edullisesti.
         Kyseessä on kertamaksu, joka tarkoittaa sitä, että oston jälkeen sinun ei koskaan enää tarvitse maksaa siitä. Ei edes uuden laitteen hankinnan jälkeen. Jos et pidä Pro-versiosta, voit poistaa sen muutaman tunnin kuluessa ja saat automaattisesti rahasi takaisin.
         Jos haluat palauttaa myöhemmin. ota yhteyttä goodwy.dev@gmail.com ja maksusi palautetaan.</string>
@@ -320,4 +322,5 @@
     <string name="event_type">Tapahtuman tyyppi</string>
     <string name="availability">Saatavuus</string>
     <string name="attendees">Osallistujat</string>
+    <string name="typeface">Kirjasin</string>
 </resources>

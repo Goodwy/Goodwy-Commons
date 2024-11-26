@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">연락처 썸네일 크기</string>
+    <string name="long_click_g">%s을(를) 길게 클릭합니다.</string>
     <string name="purchase_simple_thank_you_g">심플 Thank You 구매하기</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Goodwy Thank You 를 최신 버전으로 업데이트 해 주세요.</string>
@@ -159,6 +160,7 @@
         번역 가이드는 https://github.com/Goodwy/Discussion에서 찾아볼 수 있습니다. 도움이 필요하시다면 goodwy.dev@gmail.com 으로 메시지를 보내주시기 바랍니다.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">이 문제는 런처가 아이콘 사용자 지정을 완전히 지원하지 않을 때 발생합니다. Google Play 또는 위젯(사용 가능한 경우)을 통해 앱을 실행해 보세요.         실행 후 기본 앱 아이콘 색상을 복원합니다. 극단적인 경우 앱을 다시 설치해야 할 수 있습니다.</string>
     <string name="faq_8_text_commons_g">앱 버전이 더 이상 업데이트되지 않으므로, 발견하신 버그는 수정되지 않습니다. 또한 새로운 기능이 추가되지 않습니다. 구글 플레이에서 적은 금액으로 프로 버전을 구매할 수 있습니다.
         일회성 결제이므로 한 번 구매하면 다시는 결제할 필요가 없습니다. 새 기기를 구입한 후에도 마찬가지입니다. Pro 버전이 마음에 들지 않으면 몇 시간 내에 제거하면 자동으로 돈을 돌려받을 수 있습니다.
         나중에 환불을 원하시면 goodwy.dev@gmail.com 으로 문의하시면 환불 받으실 수 있습니다.</string>
@@ -320,4 +322,5 @@
     <string name="event_type">이벤트 유형</string>
     <string name="availability">가용도</string>
     <string name="attendees">참석자</string>
+    <string name="typeface">서체</string>
 </resources>

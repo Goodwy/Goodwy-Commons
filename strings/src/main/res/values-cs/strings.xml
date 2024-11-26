@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Velikost miniatur kontaktů</string>
+    <string name="long_click_g">Dlouhé kliknutí %s</string>
     <string name="purchase_simple_thank_you_g">Zakoupit Jednoduché děkuji</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aktualizujte prosím Jednoduché děkuji na nejnovější verzi</string>
@@ -159,6 +160,7 @@
         Návod naleznete na <a href="https://github.com/Goodwy/Discussion">https://github.com/Goodwy/Discussion</a> , nebo mi napište na <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> pokud potřebujete pomoc.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">K tomuto problému dochází, když spouštěč plně nepodporuje přizpůsobení ikon. Zkuste aplikaci spustit prostřednictvím Google Play nebo widgetu, pokud je přístupný.         Po spuštění obnovte výchozí barvu ikony aplikace. V extrémních případech může být nutné aplikaci přeinstalovat.</string>
     <string name="faq_8_text_commons_g">Tato verze aplikace již nebude aktualizována. Chyby, které jste možná objevili, proto nebudou nikdy opraveny. Také již nepřibudou žádné nové funkce. Pro verzi získáte za malý poplatek v Obchodě Google Play.
         Jde o jednorázovou platbu, což znamená, že po zakoupení již nebudete muset nic platit znovu. Ani při koupi nového zařízení. Pokud se vám Pro verze nebude líbit, můžete ji do pár hodin odinstalovat a peníze vám budou automaticky vráceny.
         Pokud budete chtít aplikaci vrátit kdykoliv později, stačí nám napsat na goodwy.dev@gmail.com a peníze vám vrátíme.</string>
@@ -320,4 +322,5 @@
     <string name="event_type">Typ události</string>
     <string name="availability">Dostupnost</string>
     <string name="attendees">Účastníků</string>
+    <string name="typeface">Druh písma</string>
 </resources>

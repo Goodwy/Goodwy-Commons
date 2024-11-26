@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">連絡先のサムネイルのサイズ</string>
+    <string name="long_click_g">%s を長押し</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank Youを購入</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">\"Goodwy Thank You\" アプリを最新版に更新してください</string>
@@ -159,6 +160,7 @@
         こちらのWEBアドレスからガイドをご覧ください。https://github.com/Goodwy/Discussion もしくは、こちらのメールアドレスにお問い合わせください。goodwy.dev@gmail.com　
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">この問題は、ランチャーがアイコンのカスタマイズを完全にサポートしていない場合に発生します。Google Play またはウィジェット(アクセス可能な場合)からアプリの起動を試みます。        起動後、デフォルトのアプリアイコンの色に戻します。極端な場合、アプリの再インストールが必要になる場合があります。</string>
     <string name="faq_8_text_commons_g">アプリのバージョンが更新されないので、アプリのバグが発見されても修復されません。新しい機能も追加されません。Pro版はGoogle Playで少額で販売されています。
         1回のみのお支払いとなりますので、一度購入されるとその後はお支払いいただく必要がなくなります。機種の変更を行った場合も同じです。Pro版がお好みでなかったら、購入して数時間以内にアンインストールすれば自動的に返金されます。
         それよりもあとに払い戻しが必要な場合はこちらにご連絡ください。goodwy.dev@gmail.com</string>
@@ -321,4 +323,5 @@
     <string name="event_type">イベントの種類</string>
     <string name="availability">可用性</string>
     <string name="attendees">参加者</string>
+    <string name="typeface">書体</string>
 </resources>

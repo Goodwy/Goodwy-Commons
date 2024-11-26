@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Kích thước hình thu nhỏ liên hệ</string>
+    <string name="long_click_g">Nhấp chuột dài %s</string>
     <string name="purchase_simple_thank_you_g">Cảm ơn vì đã mua hàng Goodwy</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Vui lòng cập nhật Goodwy Thank You lên phiên bản mới nhất</string>
@@ -159,6 +160,7 @@
          Bạn có thể tìm thấy hướng dẫn tại https://github.com/Goodwy/Discussion hoặc chỉ cần gửi tin nhắn cho tôi tại goodwy.dev@gmail.com nếu bạn cần trợ giúp.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Sự cố này phát sinh khi trình khởi chạy của bạn không hỗ trợ đầy đủ tùy chỉnh biểu tượng. Thử khởi chạy ứng dụng thông qua Google Play hoặc tiện ích, nếu có thể truy cập.         Sau khi khởi chạy, khôi phục màu biểu tượng ứng dụng mặc định. Trong trường hợp cực đoan, việc cài đặt lại ứng dụng có thể là cần thiết.</string>
     <string name="faq_8_text_commons_g">Vì phiên bản ứng dụng của bạn không còn được cập nhật, các lỗi bạn có thể phát hiện sẽ không bao giờ được sửa. Cũng sẽ không có chức năng mới được thêm vào. Bạn có thể mua phiên bản Pro trên Google Play với một khoản tiền nhỏ.
          Đó là thanh toán một lần, có nghĩa là một khi bạn mua nó, bạn sẽ không bao giờ phải mua lại. Ngay cả sau khi nhận được một thiết bị mới. Nếu bạn không thích phiên bản Pro, bạn có thể gỡ cài đặt trong vòng vài giờ và bạn sẽ tự động lấy lại tiền.
          Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại goodwy.dev@gmail.com và bạn sẽ nhận được nó.</string>
@@ -320,4 +322,5 @@
     <string name="event_type">Loại sự kiện</string>
     <string name="availability">Sẵn sàng</string>
     <string name="attendees">Tham dự</string>
+    <string name="typeface">Kiểu chữ</string>
 </resources>

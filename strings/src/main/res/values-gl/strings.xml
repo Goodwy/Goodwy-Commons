@@ -151,6 +151,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Tamaño das miniaturas de contacto</string>
+    <string name="long_click_g">Fai clic longo %s</string>
     <string name="purchase_simple_thank_you_g">Comprar Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Actualiza Goodwy Thank You á última versión</string>
@@ -160,6 +161,7 @@
         Puede encontrar la guía en https://github.com/Goodwy/Discussion, ou simplemente envíame unha mensaxe a goodwy.dev@gmail.com se necesitas axuda.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Este problema xorde cando o teu iniciador non admite totalmente a personalización de iconas. Tenta lanzar a aplicación a través de Google Play ou un widget, se é accesible.</string>
     <string name="faq_8_text_commons_g">Como non se vai actualizar máis o teu aplicativo, os bugs que teñas non serán corrixidos. Tampouco se engadirán novas funcións. Podes comprar a versión Pro en Google Play por unha cantidade pequena de cartos. É un pagamento que se fai só unha vez, é dicir, non volves pagar por isto.
         Nin tan sequera ao cambiar de móbil. Se non che gusta a versión Pro, podes simplemente desinstalala e devolveráseche os cartos  automaticamente.Se queres que che devolvamos os cartos máis tarde, envíanos un correo electrónico a goodwy.dev@gmail.com e darémoscho.</string>
     <string name="faq_100_title_commons_g">What is a private contact?</string>
@@ -320,4 +322,5 @@
     <string name="event_type">Tipo de evento</string>
     <string name="availability">Dispoñibilidade</string>
     <string name="attendees">Asistentes</string>
+    <string name="typeface">Tipo de letra</string>
 </resources>

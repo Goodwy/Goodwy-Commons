@@ -150,6 +150,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Kontaktinių miniatiūrų dydis</string>
+    <string name="long_click_g">Ilgas paspaudimas %s</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nVisos teisės saugomos © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -158,6 +159,7 @@
         Taip, žinoma. Galite skleisti žodį apie programėles arba pateikti gerus atsiliepimus ir įvertinimus. Taip pat galite padėti verčiant programėles nauja kalba arba tiesiog atnaujinkite keletą esamų vertimų.Vadovą galite rasti adresu https://github.com/Goodwy/Discussion, arba tiesiog rašykite man žinutę goodwy.dev@gmail.com, jei jums reikia pagalbos.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Ši problema kyla, kai paleidimo priemonė visiškai nepalaiko piktogramų tinkinimo. Pabandykite paleisti programą naudodami \"Google Play\" arba valdiklį, jei jis pasiekiamas.         Paleidę atkurkite numatytąją programos piktogramos spalvą. Kraštutiniais atvejais gali tekti iš naujo įdiegti programą.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -319,4 +321,5 @@
     <string name="event_type">Įvykio tipas</string>
     <string name="availability">Prieinamumas</string>
     <string name="attendees">Dalyvių</string>
+    <string name="typeface">Šriftas</string>
 </resources>

@@ -152,6 +152,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">കോൺടാക്റ്റ് ലഘുചിത്രങ്ങളുടെ വലുപ്പം</string>
+    <string name="long_click_g">%s എന്നതിൽ ദീർഘ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -161,6 +162,7 @@
         You can find the guide at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just shoot me a message at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you need help.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">നിങ്ങളുടെ ലോഞ്ചർ ഐക്കൺ ഇഷ്‌ടാനുസൃതമാക്കലിനെ പൂർണ്ണമായി പിന്തുണയ്‌ക്കാത്തപ്പോൾ ഈ പ്രശ്‌നം ഉണ്ടാകുന്നു. ആക്‌സസ് ചെയ്യാൻ കഴിയുമെങ്കിൽ, Google Play അല്ലെങ്കിൽ ഒരു വിജറ്റ് വഴി ആപ്പ് സമാരംഭിക്കാൻ ശ്രമിക്കുക.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -322,4 +324,5 @@
     <string name="event_type">ഇവൻ്റ് തരം</string>
     <string name="availability">ലഭ്യത</string>
     <string name="attendees">പങ്കെടുക്കുന്നവർ</string>
+    <string name="typeface">ടൈപ്പ്ഫേസ്</string>
 </resources>
