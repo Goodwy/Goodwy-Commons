@@ -121,10 +121,10 @@ dependencies {
     ksp(libs.androidx.room.compiler)
 
     //Goodwy
-    implementation(projects.strings)
+    api(projects.strings)
+    api(libs.billing.client)
+    api(libs.rustore.client)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)
     implementation(libs.rx.java)
-    implementation(libs.billing.client)
-    implementation(libs.rustore.client)
 }
