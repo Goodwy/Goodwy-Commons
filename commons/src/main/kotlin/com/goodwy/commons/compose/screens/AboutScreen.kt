@@ -19,7 +19,6 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.intl.LocaleList
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,17 +27,10 @@ import androidx.core.text.HtmlCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.lists.SimpleColumnScaffold
-import com.goodwy.commons.compose.settings.SettingsGroup
-import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
-import com.goodwy.commons.compose.settings.SettingsListItem
-import com.goodwy.commons.compose.settings.SettingsTitleTextComponent
 import com.goodwy.commons.compose.theme.AppThemeSurface
-import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.isRuStoreInstalled
 import com.goodwy.strings.R as stringsR
-
-private val startingTitlePadding = Modifier.padding(start = 56.dp)
 
 @Composable
 internal fun AboutScreen(
@@ -357,7 +349,7 @@ internal fun AboutNewSection(
 }
 
 @Composable
-fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Color.Unspecified,) {
+fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Color.Unspecified) {
     AndroidView(
         modifier = modifier.padding(horizontal = 4.dp),
         factory = { context -> TextView(context).apply {

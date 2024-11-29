@@ -1,6 +1,6 @@
 package com.goodwy.commons.helpers.rustore
 
-import android.app.Activity
+import android.content.Context
 import android.util.Log
 import com.goodwy.commons.helpers.rustore.model.*
 import com.goodwy.strings.R as stringsR
@@ -13,9 +13,7 @@ import ru.rustore.sdk.billingclient.model.purchase.PaymentResult
 import ru.rustore.sdk.billingclient.model.purchase.PurchaseState
 import ru.rustore.sdk.billingclient.utils.pub.checkPurchasesAvailability
 
-class RuStoreHelper(
-    val activity: Activity,
-    ) {
+class RuStoreHelper {
 
     private val billingClientRuStore: RuStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
 
@@ -29,9 +27,9 @@ class RuStoreHelper(
     )
     val eventStart = _eventStart.asSharedFlow()
 
-    fun checkPurchasesAvailability() {
+    fun checkPurchasesAvailability(context: Context) {
         _stateStart.value = _stateStart.value.copy(isLoading = true)
-        RuStoreBillingClient.checkPurchasesAvailability(activity)
+        RuStoreBillingClient.checkPurchasesAvailability(context)
             .addOnSuccessListener { result ->
                 _stateStart.value = _stateStart.value.copy(isLoading = false)
                 _eventStart.tryEmit(StartPurchasesEvent.PurchasesAvailability(result))
@@ -99,13 +97,9 @@ class RuStoreHelper(
                         }
                     }
 
-//                    val nonBoughtProducts = products.filter { product ->
-//                        purchases.none { product.productId == it.productId }
-//                    }
-
                     withContext(Dispatchers.Main) {
                         _stateBilling.value = _stateBilling.value.copy(
-                            products = products, //nonBoughtProducts,
+                            products = products,
                             isLoading = false
                         )
 

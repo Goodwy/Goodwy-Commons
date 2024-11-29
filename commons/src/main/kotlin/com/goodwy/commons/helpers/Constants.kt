@@ -1,5 +1,6 @@
 package com.goodwy.commons.helpers
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
@@ -710,6 +711,7 @@ fun mydebug(message: String) = Log.e("DEBUG", message)
 
 fun getQuestionMarks(size: Int) = ("?," * size).trimEnd(',')
 
+@SuppressLint("UseCompatLoadingForDrawables")
 fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
     val fileDrawables = HashMap<String, Drawable>()
     hashMapOf<String, Int>().apply {

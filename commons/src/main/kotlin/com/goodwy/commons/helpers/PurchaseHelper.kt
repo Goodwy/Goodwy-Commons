@@ -19,8 +19,8 @@ class PurchaseHelper (
     val iapSkuDetailsInitialized = MutableLiveData(false)
     val subSkuDetailsInitialized = MutableLiveData(false)
 
-    private var iapList = ArrayList<String>() // = arrayListOf(BuildConfig.PRODUCT_ID_X1, BuildConfig.PRODUCT_ID_X2, BuildConfig.PRODUCT_ID_X3)
-    private var subList = ArrayList<String>() // = arrayListOf(BuildConfig.SUBSCRIPTION_ID_X1, BuildConfig.SUBSCRIPTION_ID_X2, BuildConfig.SUBSCRIPTION_ID_X3)
+    private var iapList = ArrayList<String>()
+    private var subList = ArrayList<String>()
     private var iapPurchased: ArrayList<String> = arrayListOf()
     private var subPurchased: ArrayList<String> = arrayListOf()
     val isIapPurchasedList = MutableLiveData<ArrayList<String>>()
@@ -84,12 +84,11 @@ class PurchaseHelper (
                     purchases.forEach {
                         it.products.forEach { sku ->
                             if (subsPurchased.contains(sku)) {
-                                //activity.baseConfig.isPro = true
                                 isSupPurchased.postValue(Tipping.Succeeded)
                                 subPurchased.add(sku)
                                 isSupPurchasedList.postValue(subPurchased)
                                 return@breaking
-                            } else {//activity.baseConfig.isPro = false
+                            } else {
                                 isSupPurchased.postValue(Tipping.NoTips)
                                 isSupPurchasedList.postValue(subPurchased)
                             }
@@ -147,66 +146,61 @@ class PurchaseHelper (
     }
 
     fun retrieveDonation(iaps: ArrayList<String>, subs: ArrayList<String>) {
-//        billingClient = BillingClient.newBuilder(activity)
-//            .setListener(purchasesUpdatedListener).enablePendingPurchases().build()
+        iapSkuDetails.clear()
+        subSkuDetails.clear()
 
-       // CoroutineScope(Dispatchers.IO).launch(Dispatchers.IO) {
-            iapSkuDetails.clear()
-            subSkuDetails.clear()
-
-            billingClient.startConnection(object : BillingClientStateListener {
-                override fun onBillingServiceDisconnected() {
-                    billingClient.endConnection()
-                }
-                override fun onBillingSetupFinished(billingResult: BillingResult) {
-                    iapList = iaps
-                    subList = subs
-                    if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                        CoroutineScope(Dispatchers.Main).launch {
-                            val job1 = async {
-                                iapList.forEach {
-                                    val productList = Product.newBuilder().setProductId(it)
-                                        .setProductType(BillingClient.ProductType.INAPP).build()
-                                    val params = QueryProductDetailsParams
-                                        .newBuilder().setProductList(listOf(productList))
-                                    billingClient.queryProductDetailsAsync(
-                                        params.build()
-                                    ) { _: BillingResult?, productDetailsList: List<ProductDetails> ->
-                                        iapSkuDetails.addAll(productDetailsList)
-                                        iapSkuDetailsInitialized.postValue(true)
-                                        billingClient.queryPurchaseHistoryAsync(
-                                            QueryPurchaseHistoryParams.newBuilder().setProductType(
-                                                BillingClient.ProductType.INAPP
-                                            ).build(), iapHistoryListener
-                                        )
-                                    }
+        billingClient.startConnection(object : BillingClientStateListener {
+            override fun onBillingServiceDisconnected() {
+                billingClient.endConnection()
+            }
+            override fun onBillingSetupFinished(billingResult: BillingResult) {
+                iapList = iaps
+                subList = subs
+                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                    CoroutineScope(Dispatchers.Main).launch {
+                        val job1 = async {
+                            iapList.forEach {
+                                val productList = Product.newBuilder().setProductId(it)
+                                    .setProductType(BillingClient.ProductType.INAPP).build()
+                                val params = QueryProductDetailsParams
+                                    .newBuilder().setProductList(listOf(productList))
+                                billingClient.queryProductDetailsAsync(
+                                    params.build()
+                                ) { _: BillingResult?, productDetailsList: List<ProductDetails> ->
+                                    iapSkuDetails.addAll(productDetailsList)
+                                    iapSkuDetailsInitialized.postValue(true)
+                                    billingClient.queryPurchaseHistoryAsync(
+                                        QueryPurchaseHistoryParams.newBuilder().setProductType(
+                                            BillingClient.ProductType.INAPP
+                                        ).build(), iapHistoryListener
+                                    )
                                 }
                             }
-                            val job2 = async {
-                                subList.forEach {
-                                    val productList = Product.newBuilder().setProductId(it)
-                                        .setProductType(BillingClient.ProductType.SUBS).build()
-                                    val params = QueryProductDetailsParams
-                                        .newBuilder().setProductList(listOf(productList))
-                                    billingClient.queryProductDetailsAsync(
-                                        params.build()
-                                    ) { _: BillingResult?, productDetailsList: List<ProductDetails> ->
-                                        subSkuDetails.addAll(productDetailsList)
-                                        subSkuDetailsInitialized.postValue(true)
-                                        billingClient.queryPurchaseHistoryAsync(
-                                            QueryPurchaseHistoryParams.newBuilder().setProductType(
-                                                BillingClient.ProductType.SUBS
-                                            ).build(), subHistoryListener
-                                        )
-                                    }
-                                }
-                            }
-                            joinAll(job1, job2)
                         }
+                        val job2 = async {
+                            subList.forEach {
+                                val productList = Product.newBuilder().setProductId(it)
+                                    .setProductType(BillingClient.ProductType.SUBS).build()
+                                val params = QueryProductDetailsParams
+                                    .newBuilder().setProductList(listOf(productList))
+                                billingClient.queryProductDetailsAsync(
+                                    params.build()
+                                ) { _: BillingResult?, productDetailsList: List<ProductDetails> ->
+                                    subSkuDetails.addAll(productDetailsList)
+                                    subSkuDetailsInitialized.postValue(true)
+                                    billingClient.queryPurchaseHistoryAsync(
+                                        QueryPurchaseHistoryParams.newBuilder().setProductType(
+                                            BillingClient.ProductType.SUBS
+                                        ).build(), subHistoryListener
+                                    )
+                                }
+                            }
+                        }
+                        joinAll(job1, job2)
                     }
                 }
-            })
-       // }
+            }
+        })
     }
 
     fun getPriceDonation(product: String): String {

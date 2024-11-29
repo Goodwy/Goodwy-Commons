@@ -79,7 +79,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
 
         if (ruStoreInstalled) {
-            ruStoreHelper = RuStoreHelper(this)
+            ruStoreHelper = RuStoreHelper()
             ruStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
         }
         if (savedInstanceState == null && ruStoreInstalled) {
@@ -158,7 +158,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             }
         } else if ((!playStoreInstalled && ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && !baseConfig.useGooglePlay)) {
             //RuStore
-            ruStoreHelper!!.checkPurchasesAvailability()
+            ruStoreHelper!!.checkPurchasesAvailability(this)
 
 //            lifecycleScope.launch {
 //                ruStoreHelper!!.stateStart
@@ -227,7 +227,6 @@ class PurchaseActivity : BaseSimpleActivity() {
         setupChangeStoreMenu()
         setupEmail()
         if (showCollection) setupCollection()
-        //setupParticipants()
         if (playStoreInstalled || ruStoreInstalled) {
             setupIcon()
         } else {
@@ -542,6 +541,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         binding.lifebuoyLogo.setImageDrawable(lifebuoyDrawable)
     }
 
+    @Suppress("DEPRECATION")
     private fun setupNoPlayStoreInstalled() {
         binding.proDonateText.text = Html.fromHtml(getString(stringsR.string.donate_text_g))
         binding.proDonateButton.apply {
@@ -564,19 +564,17 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appContactsPackage = "com.goodwy.contacts"
         val appSmsMessengerPackage = "com.goodwy.smsmessenger"
         val appGalleryPackage = "com.goodwy.gallery"
-        //val appVoiceRecorderPackage = "com.goodwy.voicerecorder"
         val appAudiobookLitePackage = "com.goodwy.audiobooklite"
         val appFilesPackage = "com.goodwy.filemanager"
         val appKeyboardPackage = "com.goodwy.keyboard"
         val appCalendarPackage = "com.goodwy.calendar"
 
-        val appDialerInstalled = isPackageInstalled(appDialerPackage)// || isPackageInstalled("com.goodwy.dialer.debug")
-        val appContactsInstalled = isPackageInstalled(appContactsPackage)// || isPackageInstalled("com.goodwy.contacts.debug")
-        val appSmsMessengerInstalled = isPackageInstalled(appSmsMessengerPackage)// || isPackageInstalled("com.goodwy.smsmessenger.debug")
-        val appGalleryInstalled = isPackageInstalled(appGalleryPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
-        //val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
-        val appAudiobookLiteInstalled = isPackageInstalled(appAudiobookLitePackage)// || isPackageInstalled("com.goodwy.voicerecorder.debug")
-        val appFilesInstalled = isPackageInstalled(appFilesPackage)// || isPackageInstalled("com.goodwy.filemanager.debug")
+        val appDialerInstalled = isPackageInstalled(appDialerPackage)
+        val appContactsInstalled = isPackageInstalled(appContactsPackage)
+        val appSmsMessengerInstalled = isPackageInstalled(appSmsMessengerPackage)
+        val appGalleryInstalled = isPackageInstalled(appGalleryPackage)
+        val appAudiobookLiteInstalled = isPackageInstalled(appAudiobookLitePackage)
+        val appFilesInstalled = isPackageInstalled(appFilesPackage)
         val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
         val appCalendarInstalled = isPackageInstalled(appCalendarPackage)
 
@@ -900,9 +898,5 @@ class PurchaseActivity : BaseSimpleActivity() {
                 showErrorToast(event.error.message.orEmpty(), Toast.LENGTH_LONG)
             }
         }
-    }
-
-    companion object {
-        private const val TAG: String = "PurchaseActivity"
     }
 }
