@@ -90,8 +90,8 @@ data class Contact(
     }
 
     private fun compareUsingStrings(firstString: String, secondString: String, other: Contact): Int {
-        var firstValue = firstString
-        var secondValue = secondString
+        var firstValue = firstString.lowercase(Locale.getDefault())
+        var secondValue = secondString.lowercase(Locale.getDefault())
 
         if (firstValue.isEmpty() && firstName.isEmpty() && middleName.isEmpty() && surname.isEmpty()) {
             val fullCompany = getFullCompany()

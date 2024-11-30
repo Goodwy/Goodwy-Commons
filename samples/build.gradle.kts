@@ -112,7 +112,6 @@ detekt {
 
 dependencies {
     implementation(projects.commons)
-    implementation(projects.strings)
     implementation(libs.material)
     implementation(libs.androidx.swiperefreshlayout)
 

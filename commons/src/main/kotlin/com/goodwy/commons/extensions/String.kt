@@ -311,7 +311,7 @@ fun String.highlightTextFromNumbers(textToHighlight: String, primaryColor: Int):
     val digits = PhoneNumberUtils.convertKeypadLettersToDigits(this)
     if (digits.contains(textToHighlight)) {
         val startIndex = digits.indexOf(textToHighlight, 0, true)
-        val endIndex = Math.min(startIndex + textToHighlight.length, length)
+        val endIndex = (startIndex + textToHighlight.length).coerceAtMost(length)
         try {
             spannableString.setSpan(ForegroundColorSpan(primaryColor), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
         } catch (ignored: IndexOutOfBoundsException) {
