@@ -10,6 +10,7 @@ import com.goodwy.commons.models.PhoneNumber
 import ezvcard.property.FormattedName
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
+import java.text.Collator
 import java.util.Locale
 
 @Serializable
@@ -51,6 +52,7 @@ data class Contact(
         var sorting = 0
         var startWithSurname = false
         var sortingSymbolsFirst = true
+        var collator: Collator? = null
     }
 
     override fun compareTo(other: Contact): Int {
@@ -125,9 +127,9 @@ data class Contact(
                         -1
                     } else {
                         if (firstValue.equals(secondValue, ignoreCase = true)) {
-                            getNameToDisplay().compareTo(other.getNameToDisplay(), true)
+                            collator?.compare(getNameToDisplay(), other.getNameToDisplay()) ?: getNameToDisplay().compareTo(other.getNameToDisplay(), true)
                         } else {
-                            firstValue.compareTo(secondValue, true)
+                            collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
                         }
                     }
                 } else {
@@ -146,9 +148,9 @@ data class Contact(
                     -1
                 } else {
                     if (firstValue.equals(secondValue, ignoreCase = true)) {
-                        getNameToDisplay().compareTo(other.getNameToDisplay(), true)
+                        collator?.compare(getNameToDisplay(), other.getNameToDisplay()) ?: getNameToDisplay().compareTo(other.getNameToDisplay(), true)
                     } else {
-                        firstValue.compareTo(secondValue, true)
+                        collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
                     }
                 }
             }

@@ -19,6 +19,7 @@ import com.goodwy.commons.overloads.times
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.OutputStream
+import java.text.Collator
 import java.util.Locale
 
 class ContactsHelper(val context: Context) {
@@ -94,6 +95,7 @@ class ContactsHelper(val context: Context) {
             Contact.sorting = context.baseConfig.sorting
             Contact.startWithSurname = context.baseConfig.startNameWithSurname
             Contact.sortingSymbolsFirst = context.baseConfig.sortingSymbolsFirst
+            Contact.collator = Collator.getInstance(context.sysLocale())
             System.setProperty("java.util.Arrays.useLegacyMergeSort", "true") //https://stackoverflow.com/questions/11441666/java-error-comparison-method-violates-its-general-contract
             resultContacts.sort()
 
@@ -1871,6 +1873,7 @@ class ContactsHelper(val context: Context) {
             Contact.sorting = context.baseConfig.sorting
             Contact.startWithSurname = context.baseConfig.startNameWithSurname
             Contact.sortingSymbolsFirst = context.baseConfig.sortingSymbolsFirst
+            Contact.collator = Collator.getInstance(context.sysLocale())
 
             callback(resultContacts)
         }

@@ -1480,3 +1480,17 @@ fun Context.isTalkBackOn(): Boolean {
     }
     return false
 }
+
+fun Context.sysLocale(): Locale? {
+    val config = this.resources.configuration
+    return if (isNougatPlus()) {
+        getSystemLocale(config)
+    } else {
+        getSystemLocaleLegacy(config)
+    }
+}
+
+private fun getSystemLocaleLegacy(config: Configuration) = config.locale
+
+@TargetApi(Build.VERSION_CODES.N)
+private fun getSystemLocale(config: Configuration) = config.locales.get(0)
