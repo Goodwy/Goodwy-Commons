@@ -5,6 +5,9 @@ import com.goodwy.commons.extensions.normalizePhoneNumber
 import com.goodwy.commons.extensions.normalizeString
 import com.goodwy.commons.helpers.SORT_BY_FULL_NAME
 import com.goodwy.commons.helpers.SORT_DESCENDING
+import com.goodwy.commons.models.contacts.Contact
+import com.goodwy.commons.models.contacts.Contact.Companion
+import java.text.Collator
 
 data class SimpleContact(
         val rawId: Int,
@@ -18,6 +21,7 @@ data class SimpleContact(
 
     companion object {
         var sorting = -1
+        var collator: Collator? = null
     }
 
     override fun compareTo(other: SimpleContact): Int {
@@ -58,7 +62,7 @@ data class SimpleContact(
             } else if (firstString.isNotEmpty() && secondString.isEmpty()) {
                 -1
             } else {
-                firstString.compareTo(secondString, true)
+                Contact.collator?.compare(firstString, secondString) ?: firstString.compareTo(secondString, true)
             }
         }
     }

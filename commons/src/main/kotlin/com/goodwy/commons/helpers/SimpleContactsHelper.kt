@@ -24,11 +24,13 @@ import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 import android.graphics.Bitmap
 import androidx.core.content.res.ResourcesCompat
+import java.text.Collator
 import kotlin.math.abs
 
 class SimpleContactsHelper(val context: Context) {
     fun getAvailableContacts(favoritesOnly: Boolean, callback: (ArrayList<SimpleContact>) -> Unit) {
         ensureBackgroundThread {
+            SimpleContact.collator = Collator.getInstance(context.sysLocale())
             val names = getContactNames(favoritesOnly)
             var allContacts = getContactPhoneNumbers(favoritesOnly)
             allContacts.forEach {
