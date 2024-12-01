@@ -131,6 +131,7 @@
     <string name="use_swipe_gestures_summary">Honek fitxen keinuen irristatzea desgaituko du</string>
     <string name="volume_g">Bolumena</string>
     <string name="vibrate_g">Bibratu</string>
+    <string name="ripple_g">Uhina</string>
     <string name="use_contact_colors">Erabili kontaktu koloreak</string>
 
     <string name="accent_color">Vurğu rəng</string>

@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">פעולה זו תשבית את החלקת תנועות של כרטיסיות</string>
     <string name="volume_g">נפח</string>
     <string name="vibrate_g">רטט</string>
+    <string name="ripple_g">ריפל</string>
     <string name="use_contact_colors">שימוש בצבעי אנשי קשר</string>
 
     <string name="accent_color">צבע הדגשה</string>

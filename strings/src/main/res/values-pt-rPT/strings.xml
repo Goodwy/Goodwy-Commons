@@ -149,6 +149,7 @@
     <string name="use_swipe_gestures_summary">This will disable gesture swiping of tabs</string>
     <string name="volume_g">Volume</string>
     <string name="vibrate_g">Vibrate</string>
+    <string name="ripple_g">Ondulação</string>
     <string name="use_contact_colors">Use contact colors</string>
 
     <!-- Other -->

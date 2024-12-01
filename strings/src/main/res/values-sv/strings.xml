@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">Detta inaktiverar gestsvepning av flikar</string>
     <string name="volume_g">Volym</string>
     <string name="vibrate_g">Vibrera</string>
+    <string name="ripple_g">Krusa</string>
     <string name="use_contact_colors">Använd kontaktfärger</string>
 
     <string name="accent_color">Färg på accent</string>

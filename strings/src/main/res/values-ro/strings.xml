@@ -148,6 +148,7 @@
     <string name="use_swipe_gestures_summary">Aceasta va dezactiva glisarea prin gesturi a filelor</string>
     <string name="volume_g">Volumea</string>
     <string name="vibrate_g">Vibrează</string>
+    <string name="ripple_g">Unda</string>
     <string name="use_contact_colors">Utilizarea culorilor de contact</string>
 
     <!-- Other -->

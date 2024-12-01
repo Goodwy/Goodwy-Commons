@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">Ez letiltja a lapok gesztusokkal történő áthúzását</string>
     <string name="volume_g">Hangerő</string>
     <string name="vibrate_g">Vibrate</string>
+    <string name="ripple_g">Fodrozódik</string>
     <string name="use_contact_colors">Kontaktszínek használata</string>
 
     <string name="accent_color">Ékezet színe</string>

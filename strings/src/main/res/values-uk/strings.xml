@@ -149,6 +149,7 @@
     <string name="use_swipe_gestures_summary">Це відключить гортання вкладок жестами</string>.
     <string name="volume_g">Громкість</string>
     <string name="vibrate_g">Вібрація</string>
+    <string name="ripple_g">Пульсація</string>
     <string name="use_contact_colors">Використовувати кольори контактів</string>
     <string name="typeface">Шрифт</string>
     <string name="long_click_g">Довге натискання %s</string>

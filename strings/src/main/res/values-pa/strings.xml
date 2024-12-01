@@ -148,6 +148,7 @@
     <string name="use_swipe_gestures_summary">ਇਹ ਟੈਬਾਂ ਦੇ ਸੰਕੇਤ ਸਵਾਈਪਿੰਗ ਨੂੰ ਅਸਮਰੱਥ ਬਣਾ ਦੇਵੇਗਾ</string>
     <string name="volume_g">ਵਾਲੀਅਮ</string>
     <string name="vibrate_g">ਵਾਈਬ੍ਰੇਟ</string>
+    <string name="ripple_g">ਤਰੰਗ</string>
     <string name="use_contact_colors">ਸੰਪਰਕ ਰੰਗਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
 
     <!-- Other -->

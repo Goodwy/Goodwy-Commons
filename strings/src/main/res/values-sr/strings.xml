@@ -133,6 +133,7 @@
     <string name="use_swipe_gestures_summary">Ово ће онемогућити превлачење картица покретима</string>
     <string name="volume_g">Јачина звука</string>
     <string name="vibrate_g">Вибрација</string>
+    <string name="ripple_g">Риппле</string>
     <string name="use_contact_colors">Користите контактне боје</string>
     <string name="typeface">Фонт</string>
     <string name="long_click_g">Дуги притисак %s</string>

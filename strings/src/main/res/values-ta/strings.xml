@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">இது தாவல்களின் சைகை ஸ்வைப் செய்வதை முடக்கும்</string>
     <string name="volume_g">தொகுதி</string>
     <string name="vibrate_g">அதிர்வு</string>
+    <string name="ripple_g">சிற்றலை</string>
     <string name="use_contact_colors">தொடர்பு வண்ணங்களைப் பயன்படுத்தவும்</string>
 
     <string name="accent_color">உச்சரிப்பு நிறம்</string>

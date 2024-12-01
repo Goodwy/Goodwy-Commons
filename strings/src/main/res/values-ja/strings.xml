@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">タブのジェスチャースワイプを無効にします</string>
     <string name="volume_g">音量</string>
     <string name="vibrate_g">振動します</string>
+    <string name="ripple_g">波紋</string>
     <string name="use_contact_colors">接触色を使用</string>
 
     <string name="accent_color">アクセントカラー</string>

@@ -148,6 +148,7 @@
     <string name="use_swipe_gestures_summary">See keelab žestide pühkimise vahekaartidel</string>
     <string name="volume_g">Köide</string>
     <string name="vibrate_g">Vibrate</string>
+    <string name="ripple_g">Sulin</string>
     <string name="use_contact_colors">Kontakti värvide kasutamine</string>
 
     <!-- Other -->

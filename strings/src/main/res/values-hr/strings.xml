@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">Ovo će onemogućiti klizanje kartica pokretima</string>
     <string name="volume_g">Glasnoća</string>
     <string name="vibrate_g">Vibracija</string>
+    <string name="ripple_g">Mreškanje</string>
     <string name="use_contact_colors">Korištenje boja kontakata</string>
 
     <string name="accent_color">Boja isticanja</string>

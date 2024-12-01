@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">این کار کشیدن اشاره‌ای برگه‌ها را غیرفعال می‌کند</string>
     <string name="volume_g">جلد</string>
     <string name="vibrate_g">لرزش</string>
+    <string name="ripple_g">موج دار شدن</string>
     <string name="use_contact_colors">استفاده از رنگهای اشنا</string>
 
     <string name="accent_color">رنگ لهجه</string>

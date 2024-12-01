@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">Ini akan menonaktifkan gerakan menggeser tab</string>
     <string name="volume_g">Volume</string>
     <string name="vibrate_g">Getar</string>
+    <string name="ripple_g">Riak</string>
     <string name="use_contact_colors">Gunakan warna kontak</string>
 
     <string name="accent_color">Aksen warna</string>

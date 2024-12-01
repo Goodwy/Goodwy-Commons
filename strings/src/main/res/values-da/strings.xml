@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">Dette deaktiverer gestus-swiping af faner</string>
     <string name="volume_g">Volumen</string>
     <string name="vibrate_g">Vibrere</string>
+    <string name="ripple_g">Krusning</string>
     <string name="use_contact_colors">Brug kontaktfarver</string>
 
     <string name="accent_color">Fremhævningsfarve</string>

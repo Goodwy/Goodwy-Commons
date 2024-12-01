@@ -132,6 +132,7 @@
     <string name="use_swipe_gestures_summary">Isso desativará o deslizamento por gestos das guias</string>
     <string name="volume_g">Volume</string>
     <string name="vibrate_g">Vibrar</string>
+    <string name="ripple_g">Ondulação</string>
     <string name="use_contact_colors">Use cores de contato</string>
 
     <string name="accent_color">Cor do sotaque</string>

@@ -149,6 +149,7 @@
     <string name="use_swipe_gestures_summary">Гэта адключыць перагортванне ўкладак жэстам</string>
     <string name="volume_g">Гучнасць</string>
     <string name="vibrate_g">Вібрацыя</string>
+    <string name="ripple_g">Пульсацыя</string>
     <string name="use_contact_colors">Выкарыстоўвайце кантактныя колеры</string>
     <string name="typeface">Шрыфт</string>
     <string name="long_click_g">Доўгі націск %s</string>

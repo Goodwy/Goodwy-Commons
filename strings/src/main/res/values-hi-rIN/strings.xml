@@ -132,6 +132,7 @@
     <string name='use_swipe_gestures_summary'>यह टैब की जेस्चर स्वाइपिंग को अक्षम कर देगा</string>
     <string name='volume_g'>वॉल्यूम</string>
     <string name='vibrate_g'>कंपन करें</string>
+    <string name="ripple_g">लहराना</string>
     <string name="use_contact_colors">संपर्क रंगों का उपयोग करें</string>
 
     <string name="accent_color">एक्सेंट रंग</string>

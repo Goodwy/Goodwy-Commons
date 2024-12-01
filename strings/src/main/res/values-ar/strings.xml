@@ -133,6 +133,7 @@
     <string name="use_swipe_gestures_summary">سيؤدي ذلك إلى تعطيل تمرير علامات التبويب بالإيماءات</string>
     <string name="volume_g">الحجم</string>
     <string name="vibrate_g">الاهتزاز</string>
+    <string name="ripple_g">موج</string>
     <string name="use_contact_colors">استخدام ألوان التلامس</string>
 
     <string name="accent_color">لون التمييز</string>
