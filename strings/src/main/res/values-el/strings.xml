@@ -240,6 +240,7 @@
     <string name="open_in_maps">Ανοιγμα σε χάρτες</string>
 
     <!-- Dialer -->
+    <string name="all_g">Όλοι</string>
     <string name="message_call_later">Μπορώ να σας καλέσω αργότερα;</string>
     <string name="message_on_my_way">Είμαι στο δρόμο μου.</string>
     <string name="message_cant_talk_right_now">Συγγνώμη, δεν μπορώ να μιλήσω αυτή τη στιγμή.</string>

@@ -240,6 +240,7 @@
     <string name="open_in_maps">Agor mewn Mapiau</string>
 
     <!-- Dialer -->
+    <string name="all_g">Holl</string>
     <string name="message_call_later">Alla i dy alw di\'n hwyrach?</string>
     <string name="message_on_my_way">Dwi ar fy ffordd.</string>
     <string name="message_cant_talk_right_now">Sori, fedra i ddim siarad ar hyn o bryd.</string>

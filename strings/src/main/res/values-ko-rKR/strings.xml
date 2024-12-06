@@ -240,6 +240,7 @@
     <string name="open_in_maps">지도에서 열기</string>
 
     <!-- Dialer -->
+    <string name="all_g">모두</string>
     <string name="message_call_later">나중에 전화해도 될까요?</string>
     <string name="message_on_my_way">지금 가요.</string>
     <string name="message_cant_talk_right_now">죄송합니다, 지금은 말할 수 없습니다.</string>

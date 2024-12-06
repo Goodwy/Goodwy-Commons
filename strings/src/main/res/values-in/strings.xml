@@ -240,6 +240,7 @@
     <string name="open_in_maps">Buka di Peta</string>
 
     <!-- Dialer -->
+    <string name="all_g">Semua</string>
     <string name="message_call_later">Bisakah saya menelepon Anda nanti?</string>
     <string name="message_on_my_way">Saya sedang dalam perjalanan.</string>
     <string name="message_cant_talk_right_now">Maaf, saya tidak bisa bicara sekarang.</string>

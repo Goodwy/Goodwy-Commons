@@ -242,6 +242,7 @@
     <!-- Gallery -->
     <string name="library">Медіатека</string>
     <string name="open_in_maps">Відкрити у Картах</string>
+    <string name="all_g">Усі</string>
 
     <!-- Dialer -->
     <string name="message_call_later">Перетелефоную пізніше.</string>

@@ -240,6 +240,7 @@
     <string name="open_in_maps">Otevřít v mapách</string>
 
     <!-- Dialer -->
+    <string name="all_g">Všichni</string>
     <string name="message_call_later">Mohu vám zavolat později?</string>
     <string name="message_on_my_way">Jsem na cestě.</string>
     <string name="message_cant_talk_right_now">Omlouvám se, ale teď nemůžu mluvit.</string>

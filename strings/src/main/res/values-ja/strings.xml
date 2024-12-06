@@ -241,6 +241,7 @@
     <string name="open_in_maps">地図で開く</string>
 
     <!-- Dialer -->
+    <string name="all_g">すべての</string>
     <string name="message_call_later">後で電話してもいいですか?</string>
     <string name="message_on_my_way">そちらに向かっています。</string>
     <string name="message_cant_talk_right_now">申し訳ありませんが、今は話せません。</string>

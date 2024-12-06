@@ -240,6 +240,7 @@
     <string name="open_in_maps">Mở trong Bản đồ</string>
 
     <!-- Dialer -->
+    <string name="all_g">Tất cả</string>
     <string name="message_call_later">Tôi có thể gọi cho bạn sau không?</string>
     <string name="message_on_my_way">Tôi đang trên đường.</string>
     <string name="message_cant_talk_right_now">Xin lỗi, tôi không thể nói chuyện ngay bây giờ.</string>

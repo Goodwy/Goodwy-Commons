@@ -240,6 +240,7 @@
     <string name="open_in_maps">Obre a Maps</string>
 
     <!-- Dialer -->
+    <string name="all_g">Tot</string>
     <string name="message_call_later">Puc trucar-te més tard?</string>
     <string name="message_on_my_way">Estic de camí.</string>
     <string name="message_cant_talk_right_now">Ho sento, ara mateix no puc parlar.</string>

@@ -242,6 +242,7 @@
     <string name="open_in_maps">ਨਕਸ਼ੇ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
 
     <!-- Dialer -->
+    <string name="all_g">ਸਾਰੇ</string>
     <string name="message_call_later">ਕੀ ਮੈਂ ਤੁਹਾਨੂੰ ਬਾਅਦ ਵਿੱਚ ਕਾਲ ਕਰ ਸਕਦਾ ਹਾਂ?</string>
     <string name="message_on_my_way">ਮੈਂ ਰਸਤੇ ਵਿੱਚ ਹੀ ਹਾਂ.</string>
     <string name="message_cant_talk_right_now">ਮਾਫ਼ ਕਰਨਾ, ਮੈਂ ਇਸ ਵੇਲੇ ਗੱਲ ਨਹੀਂ ਕਰ ਸਕਦਾ।</string>

@@ -238,6 +238,7 @@
     <string name="open_in_maps">فتح في الخرائط</string>
 
     <!-- Dialer -->
+    <string name="all_g">كل</string>
     <string name="message_call_later">هل يمكنني الاتصال بك لاحقا؟</string>
     <string name="message_on_my_way">أنا في طريقي.</string>
     <string name="message_cant_talk_right_now">آسف ، لا أستطيع التحدث الآن.</string>

@@ -242,6 +242,7 @@
     <string name="open_in_maps">Åpne i Maps</string>
 
     <!-- Dialer -->
+    <string name="all_g">Alt</string>
     <string name="message_call_later">Kan jeg ringe deg senere?</string>
     <string name="message_on_my_way">Jeg er på vei.</string>
     <string name="message_cant_talk_right_now">Beklager, jeg kan ikke snakke akkurat nå.</string>

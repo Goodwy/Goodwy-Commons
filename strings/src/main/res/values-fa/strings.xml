@@ -240,6 +240,7 @@
     <string name="open_in_maps">باز کردن در Maps</string>
 
     <!-- Dialer -->
+    <string name="all_g">همه</string>
     <string name="message_call_later">ميتونم بعدا بهت زنگ بزنم؟</string>
     <string name="message_on_my_way">من در راهم .</string>
     <string name="message_cant_talk_right_now">ببخشيد، الان نميتونم حرف بزنم.</string>

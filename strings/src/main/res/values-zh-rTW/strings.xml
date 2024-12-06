@@ -240,6 +240,7 @@
     <string name="open_in_maps">在地圖中打開</string>
 
     <!-- Dialer -->
+    <string name="all_g">都</string>
     <string name="message_call_later">我可以晚点给你打电话吗？</string>
     <string name="message_on_my_way">我在路上。</string>
     <string name="message_cant_talk_right_now">對不起，我現在不能說話。</string>

@@ -242,6 +242,7 @@
     <string name="open_in_maps">เปิดในแผนที่</string>
 
     <!-- Dialer -->
+    <string name="all_g">ทั้งหมด</string>
     <string name="message_call_later">ฉันสามารถโทรหาคุณในภายหลังได้หรือไม่?</string>
     <string name="message_on_my_way">ฉันกําลังเดินทางไป</string>
     <string name="message_cant_talk_right_now">ขออภัยฉันไม่สามารถพูดคุยได้ในขณะนี้</string>

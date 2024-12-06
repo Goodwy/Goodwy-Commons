@@ -240,6 +240,7 @@
     <string name="open_in_maps">Openen in kaarten</string>
 
     <!-- Dialer -->
+    <string name="all_g">Alle</string>
     <string name="message_call_later">Kan ik je later bellen?</string>
     <string name="message_on_my_way">Ik ben op weg.</string>
     <string name="message_cant_talk_right_now">Sorry, ik kan nu niet praten.</string>

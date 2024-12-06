@@ -242,6 +242,7 @@
     <string name="open_in_maps">Open in Maps</string>
 
     <!-- Dialer -->
+    <string name="all_g">Allur</string>
     <string name="message_call_later">Can I call you later?</string>
     <string name="message_on_my_way">I\'m on my way.</string>
     <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>

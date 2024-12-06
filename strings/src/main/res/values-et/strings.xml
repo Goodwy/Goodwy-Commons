@@ -242,6 +242,7 @@
     <string name="open_in_maps">Avatud kaartidel</string>
 
     <!-- Dialer -->
+    <string name="all_g">Kõik</string>
     <string name="message_call_later">Kas ma saan teile hiljem helistada?</string>
     <string name="message_on_my_way">Ma olen teel.</string>
     <string name="message_cant_talk_right_now">Vabandust, ma ei saa praegu rääkida.</string>

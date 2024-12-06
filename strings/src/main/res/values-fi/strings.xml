@@ -240,6 +240,7 @@
     <string name="open_in_maps">Avaa kartoissa</string>
 
     <!-- Dialer -->
+    <string name="all_g">Kaikki</string>
     <string name="message_call_later">Voinko soittaa sinulle myöhemmin?</string>
     <string name="message_on_my_way">Olen matkalla.</string>
     <string name="message_cant_talk_right_now">Anteeksi, en voi puhua juuri nyt.</string>

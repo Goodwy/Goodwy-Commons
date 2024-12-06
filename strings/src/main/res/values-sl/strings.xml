@@ -240,6 +240,7 @@
     <string name="open_in_maps">Odprto v zemljevidih</string>
 
     <!-- Dialer -->
+    <string name="all_g">Ves</string>
     <string name="message_call_later">Te lahko pokličem kasneje?</string>
     <string name="message_on_my_way">Na poti sem.</string>
     <string name="message_cant_talk_right_now">Oprosti, zdaj ne morem govoriti.</string>

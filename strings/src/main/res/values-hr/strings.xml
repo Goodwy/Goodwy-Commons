@@ -240,6 +240,7 @@
     <string name="open_in_maps">Otvori u Kartama</string>
 
     <!-- Dialer -->
+    <string name="all_g">Sve</string>
     <string name="message_call_later">Mogu li vas nazvati kasnije?</string>
     <string name="message_on_my_way">Dolazim.</string>
     <string name="message_cant_talk_right_now">Žao mi je, ne mogu sada pričati.</string>

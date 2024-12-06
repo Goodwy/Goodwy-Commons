@@ -239,6 +239,7 @@
     <!-- Gallery -->
     <string name="library">Библиотека</string>
     <string name="open_in_maps">Отвори у Мапама</string>
+    <string name="all_g">Све</string>
 
     <!-- Dialer -->
     <string name="message_call_later">Могу ли те назвати касније?</string>

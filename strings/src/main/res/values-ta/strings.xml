@@ -240,6 +240,7 @@
     <string name="open_in_maps">வரைபடத்தில் திற</string>
 
     <!-- Dialer -->
+    <string name="all_g">அனைத்து</string>
     <string name="message_call_later">நான் உங்களை பிறகு அழைக்கலாமா?</string>
     <string name="message_on_my_way">நான் போகிறேன்.</string>
     <string name="message_cant_talk_right_now">மன்னிக்கவும், என்னால் இப்போது பேச முடியாது.</string>

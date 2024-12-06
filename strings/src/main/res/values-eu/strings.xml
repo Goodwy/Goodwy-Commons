@@ -237,6 +237,7 @@
     <string name="open_in_maps">Ireki Maps-en</string>
 
     <!-- Dialer -->
+    <string name="all_g">Denak</string>
     <string name="message_call_later">Geroago deituko dizut?</string>
     <string name="message_on_my_way">Bidean nago.</string>
     <string name="message_cant_talk_right_now">Barkatu, orain ezin dut hitz egin.</string>

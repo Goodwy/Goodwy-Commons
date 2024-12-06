@@ -239,6 +239,7 @@
     <string name="open_in_maps">Atidaryti žemėlapiuose</string>
 
     <!-- Dialer -->
+    <string name="all_g">Visas</string>
     <string name="message_call_later">Ar galiu jums paskambinti vėliau?</string>
     <string name="message_on_my_way">Aš einu savo keliu.</string>
     <string name="message_cant_talk_right_now">Atsiprašau, dabar negaliu kalbėti.</string>

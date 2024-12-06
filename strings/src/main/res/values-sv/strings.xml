@@ -240,6 +240,7 @@
     <string name="open_in_maps">Öppen i kartor</string>
 
     <!-- Dialer -->
+    <string name="all_g">Alla</string>
     <string name="message_call_later">Kan jag ringa dig senare?</string>
     <string name="message_on_my_way">Jag är på väg.</string>
     <string name="message_cant_talk_right_now">Tyvärr, jag kan inte prata just nu.</string>

@@ -242,6 +242,7 @@
     <string name="open_in_maps">Deschis în hărți</string>
 
     <!-- Dialer -->
+    <string name="all_g">Tot</string>
     <string name="message_call_later">Pot să vă sun mai târziu?</string>
     <string name="message_on_my_way">Sunt pe drumul meu.</string>
     <string name="message_cant_talk_right_now">Îmi pare rău, eu nu pot vorbi chiar acum.</string>

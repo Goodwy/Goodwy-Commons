@@ -240,6 +240,7 @@
     <string name="open_in_maps">Abrir en Maps</string>
 
     <!-- Dialer -->
+    <string name="all_g">Todos</string>
     <string name="message_call_later">Podo chamalo máis tarde?</string>
     <string name="message_on_my_way">Estou de camiño.</string>
     <string name="message_cant_talk_right_now">Sentímolo, agora non podo falar.</string>

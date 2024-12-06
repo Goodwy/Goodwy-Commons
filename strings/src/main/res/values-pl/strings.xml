@@ -237,6 +237,7 @@
     <string name="open_in_maps">Otwórz w Mapach</string>
 
     <!-- Dialer -->
+    <string name="all_g">Cały</string>
     <string name="message_call_later">Czy mogę zadzwonić do ciebie później?</string>
     <string name="message_on_my_way">Jestem w drodze.</string>
     <string name="message_cant_talk_right_now">Przepraszam, nie mogę teraz mówić.</string>

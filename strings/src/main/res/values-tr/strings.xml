@@ -240,6 +240,7 @@
     <string name="open_in_maps">Haritalarda Aç</string>
 
     <!-- Dialer -->
+    <string name="all_g">Tüm</string>
     <string name="message_call_later">Sizi daha sonra arayabilir miyim?</string>
     <string name="message_on_my_way">Yoluma devam ediyorum.</string>
     <string name="message_cant_talk_right_now">Üzgünüm, şu anda konuşamıyorum.</string>

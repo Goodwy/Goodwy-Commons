@@ -242,6 +242,7 @@
     <string name="open_in_maps">മാപ്പിൽ തുറക്കുക</string>
 
     <!-- Dialer -->
+    <string name="all_g">എല്ലാം</string>
     <string name="message_call_later">ഞാൻ നിങ്ങളെ പിന്നീട് വിളിക്കാമോ?</string>
     <string name="message_on_my_way">ഞാൻ യാത്രയിലാണ്.</string>
     <string name="message_cant_talk_right_now">ക്ഷമിക്കണം, എനിക്ക് ഇപ്പോൾ സംസാരിക്കാൻ കഴിയില്ല.</string>

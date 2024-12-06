@@ -241,6 +241,7 @@
     <string name="open_in_maps">Xəritədə açın</string>
 
     <!-- Dialer -->
+    <string name="all_g">Hamısı</string>
     <string name="message_call_later">Mən sizə sonra zəng edə bilərəmmi?</string>
     <string name="message_on_my_way">Mən yoldayam.</string>
     <string name="message_cant_talk_right_now">Bağışlayın, mən indi danışa bilmirəm.</string>

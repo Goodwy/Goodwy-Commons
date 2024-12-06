@@ -240,6 +240,7 @@
     <string name="open_in_maps">פתח במפות</string>
 
     <!-- Dialer -->
+    <string name="all_g">כל</string>
     <string name="message_call_later">אני יכול להתקשר אליך מאוחר יותר?</string>
     <string name="message_on_my_way">אני בדרך.</string>
     <string name="message_cant_talk_right_now">סליחה, אני לא יכול לדבר כרגע.</string>

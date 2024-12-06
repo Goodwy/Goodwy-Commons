@@ -242,6 +242,7 @@
     <string name="open_in_maps">Malfermu en Mapoj</string>
 
     <!-- Dialer -->
+    <string name="all_g">Ĉiuj</string>
     <string name="message_call_later">Ĉu mi povas voki vin poste?</string>
     <string name="message_on_my_way">Mi estas survoje.</string>
     <string name="message_cant_talk_right_now">Pardonu, mi ne povas paroli nun.</string>

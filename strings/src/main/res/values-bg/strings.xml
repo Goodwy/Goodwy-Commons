@@ -242,6 +242,7 @@
     <string name="open_in_maps">Отваряне в карти</string>
 
     <!-- Dialer -->
+    <string name="all_g">Цял</string>
     <string name="message_call_later">Може ли да ти се обадя по-късно?</string>
     <string name="message_on_my_way">На път съм.</string>
     <string name="message_cant_talk_right_now">Съжалявам, не мога да говоря в момента.</string>
