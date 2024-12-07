@@ -120,25 +120,25 @@ data class Contact(
             } else if (firstValue.firstOrNull()?.isDigit() == true && secondValue.firstOrNull()?.isLetter() == true) {
                 1
             } else {
-                if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
+                if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == true) {
                     -1
                 } else if (firstValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isLetter() == true) {
                     1
                 } else {
                     if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == true) {
+                        collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
+                    } else {
                         if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
                             1
                         } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
                             -1
                         } else {
                             if (firstValue.equals(secondValue, ignoreCase = true)) {
-                                getNameToDisplay().compareTo(other.getNameToDisplay(), true)
+                                collator?.compare(getNameToDisplay(), other.getNameToDisplay()) ?: getNameToDisplay().compareTo(other.getNameToDisplay(), true)
                             } else {
-                                firstValue.compareTo(secondValue, true)
+                                collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
                             }
                         }
-                    } else {
-                        firstValue.compareTo(secondValue, true)
                     }
                 }
             }
