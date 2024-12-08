@@ -144,6 +144,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(WIDGET_TEXT_COLOR, ContextCompat.getColor(context, R.color.default_widget_text_color))
         set(widgetTextColor) = prefs.edit().putInt(WIDGET_TEXT_COLOR, widgetTextColor).apply()
 
+    var widgetLabelColor: Int
+        get() = prefs.getInt(WIDGET_LABEL_COLOR, ContextCompat.getColor(context, R.color.default_widget_label_color))
+        set(widgetLabelColor) = prefs.edit().putInt(WIDGET_LABEL_COLOR, widgetLabelColor).apply()
+
     // hidden folder visibility protection
     var isHiddenPasswordProtectionOn: Boolean
         get() = prefs.getBoolean(PASSWORD_PROTECTION, false)
