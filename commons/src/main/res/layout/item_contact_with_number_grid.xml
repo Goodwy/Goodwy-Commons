@@ -13,7 +13,7 @@
     android:paddingBottom="@dimen/small_margin">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/item_contact_holder"
+        android:id="@+id/item_contact_grid_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
