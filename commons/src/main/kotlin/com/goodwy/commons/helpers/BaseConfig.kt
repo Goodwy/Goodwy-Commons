@@ -767,7 +767,7 @@ open class BaseConfig(val context: Context) {
         set(nextAutoBackupTime) = prefs.edit().putLong(NEXT_AUTO_BACKUP_TIME, nextAutoBackupTime).apply()
 
     var sortingSymbolsFirst: Boolean
-        get() = prefs.getBoolean(SORT_SYMBOLS_FIRST, true)
+        get() = prefs.getBoolean(SORT_SYMBOLS_FIRST, false)
         set(sortingSymbolsFirst) = prefs.edit().putBoolean(SORT_SYMBOLS_FIRST, sortingSymbolsFirst).apply()
 
     var hideTopBarWhenScroll: Boolean

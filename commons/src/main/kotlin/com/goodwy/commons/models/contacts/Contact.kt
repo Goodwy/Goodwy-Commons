@@ -51,7 +51,7 @@ data class Contact(
     companion object {
         var sorting = 0
         var startWithSurname = false
-        var sortingSymbolsFirst = true
+        var sortingSymbolsFirst = false
         var collator: Collator? = null
     }
 
