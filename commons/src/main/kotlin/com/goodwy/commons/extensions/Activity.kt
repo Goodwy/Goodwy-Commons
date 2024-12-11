@@ -3,6 +3,7 @@ package com.goodwy.commons.extensions
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
+import android.app.SearchManager
 import android.app.TimePickerDialog
 import android.content.*
 import android.content.Intent.EXTRA_STREAM
@@ -300,6 +301,19 @@ fun Activity.launchViewIntent(url: String) {
             } catch (e: Exception) {
                 showErrorToast(e)
             }
+        }
+    }
+}
+
+fun Activity.launchInternetSearch(query: String) {
+    Intent(Intent.ACTION_WEB_SEARCH).apply {
+        putExtra(SearchManager.QUERY, query)
+        try {
+            startActivity(this)
+        } catch (e: ActivityNotFoundException) {
+            toast(R.string.no_browser_found)
+        } catch (e: Exception) {
+            showErrorToast(e)
         }
     }
 }

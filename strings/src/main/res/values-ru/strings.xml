@@ -251,6 +251,7 @@
     <string name="message_cant_talk_right_now">Сейчас не могу говорить.</string>
     <string name="remind_me">Напомнить</string>
     <string name="mute">Откл. звук</string>
+    <string name="search_the_web">Поиск в интернете</string>
 
     <!-- Relation types -->
     <string name="relation_g">Отношения</string>

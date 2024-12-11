@@ -250,6 +250,7 @@
     <string name="message_cant_talk_right_now">Цяпер не магу казаць.</string>
     <string name="remind_me">Нагадаць</string>
     <string name="mute">Выкл. гук</string>
+    <string name="search_the_web">Пошук у інтэрнэце</string>
 
     <!-- Relation types -->
     <string name="relation_g">Адносіны</string>
