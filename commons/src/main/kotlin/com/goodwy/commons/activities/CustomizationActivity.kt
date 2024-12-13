@@ -667,7 +667,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextColor() {
-        ColorPickerDialog(this, curTextColor, title = resources.getString(R.string.text_color)) { wasPositivePressed, color, _ ->
+        ColorPickerDialog(this, curTextColor,
+            title = resources.getString(R.string.text_color)
+        ) { wasPositivePressed, color, _ ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curTextColor, color)) {
                     setCurrentTextColor(color)
@@ -716,7 +718,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickBackgroundColor() {
-        ColorPickerDialog(this, curBackgroundColor, title = resources.getString(R.string.background_color)) { wasPositivePressed, color, _ ->
+        ColorPickerDialog(this, curBackgroundColor,
+            title = resources.getString(R.string.background_color)
+        ) { wasPositivePressed, color, _ ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curBackgroundColor, color)) {
                     setCurrentBackgroundColor(color)
@@ -743,7 +747,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             true,
             showUseDefaultButton = true,
             toolbar = binding.customizationToolbar,
-            title = resources.getString(R.string.primary_color)) { wasPositivePressed, color ->
+            title = resources.getString(R.string.primary_color)
+        ) { wasPositivePressed, color ->
             curPrimaryGridColorPicker = null
             if (wasPositivePressed) {
                 if (hasColorChanged(curPrimaryColor, color)) {
