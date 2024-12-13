@@ -248,6 +248,7 @@
     <string name="mute">Ztlumit</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Vyhledávání na internetu</string>
     <string name="relation_g">Vztah</string>
     <string name="relations_g">Související osoby</string>
     <string name="relation_hint_g">Související osoba</string>

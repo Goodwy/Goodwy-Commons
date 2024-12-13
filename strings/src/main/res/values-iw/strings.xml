@@ -248,6 +248,7 @@
     <string name="mute">השתק</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">חיפוש באינטרנט</string>
     <string name="relation_g">קשר</string>
     <string name="relations_g">אנשים קשורים</string>
     <string name="relation_hint_g">אדם קשור</string>

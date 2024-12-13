@@ -247,6 +247,7 @@
     <string name="mute">Nutildyti</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Paieška internete</string>
     <string name="relation_g">Ryšys</string>
     <string name="relations_g">Susiję asmenys</string>
     <string name="relation_hint_g">Susijęs asmuo</string>

@@ -250,6 +250,7 @@
     <string name="mute">Stum</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Søk på Internett</string>
     <string name="relation_g">Relationship</string>
     <string name="relations_g">Pårørende</string>
     <string name="relation_hint_g">Tilknyttet person</string>

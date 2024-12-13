@@ -250,6 +250,7 @@
     <string name="mute">ਚੁੱਪ</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">ਇੰਟਰਨੈੱਟ ਖੋਜ</string>
     <string name="relation_g">ਸਬੰਧ</string>
     <string name="relations_g">ਸਬੰਧਤ ਵਿਅਕਤੀ</string>
     <string name="relation_hint_g">ਸੰਬੰਧਿਤ ਵਿਅਕਤੀ</string>

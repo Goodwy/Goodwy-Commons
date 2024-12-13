@@ -248,6 +248,7 @@
     <string name="mute">Stom</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Zoeken op internet</string>
     <string name="relation_g">Relatie</string>
     <string name="relations_g">Verwante personen</string>
     <string name="relation_hint_g">Verwante persoon</string>

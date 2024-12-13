@@ -248,6 +248,7 @@
     <string name="mute">Mut</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Cercar a Internet</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Persones relacionades</string>
     <string name="relation_hint_g">Persona relacionada</string>

@@ -248,6 +248,7 @@
     <string name="mute">Stlmiť</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Vyhľadávanie na internete</string>
     <string name="relation_g">Vzťah</string>
     <string name="relations_g">Súvisiace osoby</string>
     <string name="relation_hint_g">Spriaznená osoba</string>

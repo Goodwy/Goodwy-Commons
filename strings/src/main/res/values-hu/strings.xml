@@ -245,6 +245,7 @@
     <string name="mute">Néma</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Keresés az interneten</string>
     <string name="relation_g">Kapcsolat</string>
     <string name="relations_g">Kapcsolódó személyek</string>
     <string name="relation_hint_g">Kapcsolódó személy</string>

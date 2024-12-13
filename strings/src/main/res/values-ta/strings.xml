@@ -248,6 +248,7 @@
     <string name="mute">முடக்கு</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">இணைய தேடல்</string>
     <string name="relation_g">உறவு</string>
     <string name="relations_g">தொடர்புடைய நபர்கள்</string>
     <string name="relation_hint_g">தொடர்புடைய நபர்</string>

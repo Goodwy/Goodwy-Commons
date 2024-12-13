@@ -248,6 +248,7 @@
     <string name="mute">मूक</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">इंटरनेट पर खोजें</string>
     <string name="relation_g">रिश्ता</string>
     <string name="relations_g">संबंधित व्यक्ति</string>
     <string name="relation_hint_g">संबंधित व्यक्ति</string>

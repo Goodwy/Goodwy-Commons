@@ -248,6 +248,7 @@
     <string name="mute">Σίγαση</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Αναζήτηση στο Internet</string>
     <string name="relation_g">Σχέση</string>
     <string name="relations_g">Σχετικά πρόσωπα</string>
     <string name="relation_hint_g">Σχετικό πρόσωπο</string>

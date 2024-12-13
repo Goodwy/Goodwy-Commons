@@ -251,6 +251,7 @@
     <string name="mute">Mute</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Pesquisa na Internet</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

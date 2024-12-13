@@ -250,6 +250,7 @@
     <string name="mute">ใบ้</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">ค้นหาอินเทอร์เน็ต</string>
     <string name="relation_g">ความสัมพันธ์</string>
     <string name="relations_g">บุคคลที่เกี่ยวข้อง</string>
     <string name="relation_hint_g">บุคคลที่เกี่ยวข้อง</string>

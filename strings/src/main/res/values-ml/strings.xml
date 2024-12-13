@@ -250,6 +250,7 @@
     <string name="mute">നിശബ്ദമാക്കുക</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">ഇൻ്റർനെറ്റ് തിരയൽ</string>
     <string name="relation_g">ബന്ധം</string>
     <string name="relations_g">ബന്ധപ്പെട്ട വ്യക്തികൾ</string>
     <string name="relation_hint_g">ബന്ധപ്പെട്ട വ്യക്തി</string>

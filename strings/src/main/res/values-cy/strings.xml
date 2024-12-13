@@ -248,6 +248,7 @@
     <string name="mute">Mwnt</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Chwilio\'r Rhyngrwyd</string>
     <string name="relation_g">Perthynas</string>
     <string name ="relations_g">Personau Cysylltiedig</string>
     <string name ="relation_hint_g">Person Cysylltiedig</string>

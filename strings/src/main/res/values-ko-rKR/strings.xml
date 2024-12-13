@@ -248,6 +248,7 @@
     <string name="mute">음소거</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">인터넷 검색</string>
     <string name="relation_g">관계</string>
     <string name="relations_g">관련자</string>
     <string name="relation_hint_g">관련자</string>

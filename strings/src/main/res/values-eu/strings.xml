@@ -245,6 +245,7 @@
     <string name="mute">Ikusi</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">Interneteko bilaketa</string>
     <string name="relation_g">Harremana</string>
     <string name="relations_g">Lotutako pertsonak</string>
     <string name="relation_hint_g">Lotutako pertsona</string>

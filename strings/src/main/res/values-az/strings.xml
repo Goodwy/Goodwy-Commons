@@ -249,6 +249,7 @@
     <string name="mute">Səssiz</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">İnternet axtarışı</string>
     <string name="relation_g">Əlaqə</string>
     <string name="relations_g">Əlaqədar şəxslər</string>
     <string name="relation_hint_g">Əlaqədar şəxs</string>

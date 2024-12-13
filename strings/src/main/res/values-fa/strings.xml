@@ -248,6 +248,7 @@
     <string name="mute">قطع</string>
 
     <!-- Relation types -->
+    <string name="search_the_web">جستجو در اینترنت</string>
     <string name="relation_g">ارتباط</string>
     <string name="relations_g">شخص ذي صلة</string>
     <string name="relation_hint_g">شخص مرتبط</string>
