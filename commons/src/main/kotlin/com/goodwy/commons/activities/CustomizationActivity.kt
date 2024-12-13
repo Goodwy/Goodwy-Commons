@@ -681,11 +681,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextCursorColor() {
-        ColorPickerDialog(this, curTextCursorColor,
-            addDefaultColorButton = true,
-            colorDefault = -3,
-            title = resources.getString(stringsR.string.text_cursor_color)
-        ) { wasPositivePressed, color, wasDefaultPressed ->
+        ColorPickerDialog(this, curTextCursorColor, addDefaultColorButton = true, colorDefault = -3, title = resources.getString(stringsR.string.text_cursor_color)) { wasPositivePressed, color, wasDefaultPressed ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curTextCursorColor, color)) {
                     curTextCursorColor = color
@@ -773,12 +769,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAccentColor() {
-        ColorPickerDialog(this, curAccentColor,
-            addDefaultColorButton = true,
-            colorDefault = resources.getColor(R.color.default_accent_color),
-            title = resources.getString(stringsR.string.accent_color)
-        ) { wasPositivePressed, color, wasDefaultPressed ->
-            if (wasPositivePressed || wasDefaultPressed) {
+        ColorPickerDialog(this, curAccentColor, addDefaultColorButton = true, colorDefault = resources.getColor(R.color.default_accent_color), title = resources.getString(stringsR.string.accent_color)) { wasPositivePressed, color, _ ->
+            if (wasPositivePressed) {
                 if (hasColorChanged(curAccentColor, color)) {
                     curAccentColor = color
                     colorChanged()
