@@ -228,8 +228,26 @@
 
     <style name="MyDialogTheme" parent="Theme.Material3.Light.Dialog">
         <item name="colorAccent">@color/color_primary</item>
-        <item name="android:windowBackground">@color/md_grey_600</item>
+        <item name="android:windowBackground">@color/theme_gray_background_color</item>
+        <item name="android:textColor">@color/theme_gray_text_color</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
+    </style>
+
+    <style name="MyDialogTheme.Light" parent="Theme.Material3.Dark.Dialog">
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:windowBackground">@color/theme_light_background_color</item>
         <item name="android:textColor">@color/theme_light_text_color</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
+    </style>
+
+    <style name="MyDialogTheme.Gray" parent="Theme.Material3.Dark.Dialog">
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:windowBackground">@color/theme_gray_background_color</item>
+        <item name="android:textColor">@color/theme_gray_text_color</item>
         <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
         <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
         <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
@@ -247,7 +265,7 @@
     <style name="MyDialogTheme.Black" parent="Theme.Material3.Dark.Dialog">
         <item name="colorAccent">@color/color_primary</item>
         <item name="android:windowBackground">@color/theme_black_background_color</item>
-        <item name="android:textColor">@color/theme_dark_text_color</item>
+        <item name="android:textColor">@color/theme_black_text_color</item>
         <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
         <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
         <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>

@@ -94,14 +94,18 @@ fun Context.getTimePickerDialogTheme() = when {
     } else {
         R.style.MyDateTimePickerMaterialTheme
     }
-
+    isBlackTheme() -> R.style.MyDialogTheme_Black
+    isLightTheme() -> R.style.MyDialogTheme_Light
+    isGrayTheme() -> R.style.MyDialogTheme_Gray
     baseConfig.backgroundColor.getContrastColor() == Color.WHITE -> R.style.MyDialogTheme_Dark
     else -> R.style.MyDialogTheme
 }
 
 fun Context.getDatePickerDialogTheme() = when {
     isDynamicTheme() -> R.style.MyDateTimePickerMaterialTheme
-    baseConfig.backgroundColor == Color.BLACK -> R.style.MyDialogTheme_Black
+    isBlackTheme() -> R.style.MyDialogTheme_Black
+    isLightTheme() -> R.style.MyDialogTheme_Light
+    isGrayTheme() -> R.style.MyDialogTheme_Gray
     baseConfig.backgroundColor.getContrastColor() == Color.WHITE -> R.style.MyDialogTheme_Dark
     else -> R.style.MyDialogTheme
 }
