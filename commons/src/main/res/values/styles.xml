@@ -235,7 +235,7 @@
         <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
     </style>
 
-    <style name="MyDialogTheme.Light" parent="Theme.Material3.Dark.Dialog">
+    <style name="MyDialogTheme.Light" parent="Theme.Material3.Light.Dialog">
         <item name="colorAccent">@color/color_primary</item>
         <item name="android:windowBackground">@color/theme_light_background_color</item>
         <item name="android:textColor">@color/theme_light_text_color</item>
@@ -244,7 +244,7 @@
         <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
     </style>
 
-    <style name="MyDialogTheme.Gray" parent="Theme.Material3.Dark.Dialog">
+    <style name="MyDialogTheme.Gray" parent="Theme.Material3.Light.Dialog">
         <item name="colorAccent">@color/color_primary</item>
         <item name="android:windowBackground">@color/theme_gray_background_color</item>
         <item name="android:textColor">@color/theme_gray_text_color</item>

@@ -1,5 +1,6 @@
 package com.goodwy.commons.samples.activities
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -42,7 +43,7 @@ class MainActivity : BaseSimpleActivity() {
                     showComposeDialogs = {
                         startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
                     },
-                    openTestButton = ::securityDialog,
+                    openTestButton = ::setupStartDate,
                     showMoreApps = showMoreApps,
                     openAbout = ::launchAbout,
                     moreAppsFromUs = ::launchMoreAppsFromUsIntent,
@@ -141,6 +142,18 @@ class MainActivity : BaseSimpleActivity() {
                 config.appProtectionType = type
             }
         }
+    }
+
+    private fun setupStartDate() {
+        hideKeyboard()
+        val datePicker = DatePickerDialog(
+            this, getDatePickerDialogTheme(), startDateSetListener, 2024, 12, 30
+        )
+
+        datePicker.show()
+    }
+
+    private val startDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
     }
 
     override fun getAppLauncherName() = getString(R.string.commons_app_name)
