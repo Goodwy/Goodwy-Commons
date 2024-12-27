@@ -96,7 +96,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.purchaseNestedScrollview,
             binding.topDetails.root
         ).forEach {
-            it.beInvisibleIf(!playStoreInstalled && !ruStoreInstalled)
+//            it.beInvisibleIf(!playStoreInstalled && !ruStoreInstalled)
+            it.beInvisibleIf(!ruStoreInstalled)
         }
 
         arrayOf(
@@ -104,7 +105,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.proDonateText,
             binding.proDonateButton
         ).forEach {
-            it.beGoneIf(playStoreInstalled || ruStoreInstalled)
+//            it.beGoneIf(playStoreInstalled || ruStoreInstalled)
+            it.beGoneIf(ruStoreInstalled)
         }
 
         if ((playStoreInstalled && !ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && baseConfig.useGooglePlay)) {
@@ -227,7 +229,12 @@ class PurchaseActivity : BaseSimpleActivity() {
         setupChangeStoreMenu()
         setupEmail()
         if (showCollection) setupCollection()
-        if (playStoreInstalled || ruStoreInstalled) {
+//        if (playStoreInstalled || ruStoreInstalled) {
+//            setupIcon()
+//        } else {
+//            setupNoPlayStoreInstalled()
+//        }
+        if (ruStoreInstalled) {
             setupIcon()
         } else {
             setupNoPlayStoreInstalled()
@@ -267,7 +274,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private fun setupChangeStoreMenu() {
         binding.purchaseToolbar.menu.findItem(R.id.changeStore).apply {
-            isVisible = playStoreInstalled && ruStoreInstalled
+            isVisible = false //playStoreInstalled && ruStoreInstalled
             title = if (baseConfig.useGooglePlay) getString(stringsR.string.billing_change_to_ru_store) else getString(stringsR.string.billing_change_to_google_play)
             icon = if (baseConfig.useGooglePlay) AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_google_play_vector)
             else AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_rustore)
@@ -543,17 +550,18 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     @Suppress("DEPRECATION")
     private fun setupNoPlayStoreInstalled() {
-        binding.proDonateText.text = Html.fromHtml(getString(stringsR.string.donate_text_g))
+        binding.proDonateText.text = if (playStoreInstalled) Html.fromHtml(getString(stringsR.string.donate_text_no_gp_g)) else Html.fromHtml(getString(stringsR.string.donate_text_g))
         binding.proDonateButton.apply {
             setOnClickListener {
                 launchViewIntent("https://sites.google.com/view/goodwy/support-project")
             }
             background.setTint(primaryColor)
         }
-        binding.proSwitch.isChecked = baseConfig.isPro
+        binding.proSwitch.isChecked = if (playStoreInstalled) baseConfig.isProNoGP else baseConfig.isPro
         binding.proSwitchHolder.setOnClickListener {
             binding.proSwitch.toggle()
-            baseConfig.isPro = binding.proSwitch.isChecked
+            if (playStoreInstalled) baseConfig.isProNoGP = binding.proSwitch.isChecked
+            else baseConfig.isPro = binding.proSwitch.isChecked
         }
     }
 

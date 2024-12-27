@@ -65,7 +65,17 @@
     <string name="donate_text_g">
         <![CDATA[
             For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
-            If you like our apps which are offline, non-intrusive and have no ads, please consider supporting us in some way. We would be very grateful.<br><br>
+            If you like our apps which are offline, non-intrusive and have no ads,
+            please consider supporting us in some way. We would be very grateful.<br><br>
+            Thank you!
+        ]]>
+    </string>
+    <string name="donate_text_no_gp_g">
+        <![CDATA[
+            Due to issues we are temporarily unable to make payments through Google Play,
+            so for this period we are giving all users the option to manually unlock all features of the app. <br>
+            If you like our apps which are offline, non-intrusive and have no ads,
+            please consider supporting us in some way. We would be very grateful.<br><br>
             Thank you!
         ]]>
     </string>

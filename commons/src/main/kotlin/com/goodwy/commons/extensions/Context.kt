@@ -1458,7 +1458,7 @@ fun Context.isRuStoreInstalled(): Boolean {
     return isPackageInstalled("ru.vk.store")
 }
 
-fun Context.isPro() = baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore
+fun Context.isPro() = baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore || baseConfig.isProNoGP
 
 fun Context.isCollection(): Boolean {
     return isPackageInstalled("com.goodwy.dialer")
@@ -1468,6 +1468,7 @@ fun Context.isCollection(): Boolean {
         && isPackageInstalled("com.goodwy.audiobooklite")
         && isPackageInstalled("com.goodwy.filemanager")
         && isPackageInstalled("com.goodwy.keyboard")
+        && isPackageInstalled("com.goodwy.calendar")
 }
 
 fun Context.isTalkBackOn(): Boolean {
