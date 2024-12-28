@@ -46,9 +46,19 @@
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
-            For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
-            If you like our apps which are offline, non-intrusive and have no ads, please consider supporting us in some way. We would be very grateful.<br><br>
-            Thank you!
+            Za tiste, ki ne uporabljajo storitve Google Play, je mogoče odkleniti vse funkcije aplikacije. <br>
+            Če so vam všeč naše aplikacije, ki so brez povezave, niso vsiljive in nimajo oglasov, vas prosimo, da nas podprete na kakršen koli način.
+            Zelo vam bomo hvaležni.<br><br>
+            Hvala!
+        ]]>
+    </string>
+    <string name="donate_text_no_gp_g">
+        <![CDATA[
+            Zaradi težav začasno ne moremo izvajati plačil prek storitve Google Play,
+            zato v tem obdobju vsem uporabnikom omogočamo ročno odklepanje vseh funkcij aplikacije. <br>
+            Če so vam všeč naše aplikacije, ki so brez povezave, niso vsiljive in nimajo oglasov, vas prosimo, da nas podprete na kakršen koli način.
+            Zelo vam bomo hvaležni.<br><br>
+            Hvala!
         ]]>
     </string>
 

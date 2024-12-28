@@ -68,6 +68,14 @@
             Takk skal dere ha!
         ]]>
     </string>
+    <string name="donate_text_no_gp_g">
+        <![CDATA[
+            Door problemen kunnen we tijdelijk geen betalingen doen via Google Play,
+            Dus voor deze periode geven we alle gebruikers de optie om alle functies van de app handmatig te ontgrendelen. <br>
+            Hvis du liker appene våre, som er frakoblede, ikke-påtrengende og uten reklame, kan du vurdere å støtte oss på en eller annen måte. Vi ville være svært takknemlige.<br><br>
+            Takk skal dere ha!
+        ]]>
+    </string>
 
     <!--Billing-->
     <string name="restored_previous_purchase_please_restart">Gjenopprettet tidligere kjøp. Start appen på nytt for å få tilgang til alle funksjoner.</string>
