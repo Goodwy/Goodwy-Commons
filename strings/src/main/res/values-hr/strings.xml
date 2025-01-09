@@ -8,6 +8,7 @@
     <string name="interval">Interval</string>
     <string name="symbols_first">Prvo simboli (npr. !@#$)</string>
     <string name="use_custom_notifications">Koristite prilagođena obavještenja</string>
+    <string name="turn_on_screen">Uključivanje zaslona</string>
     <string name="hide_top_bar_when_scrolling">Sakrij gornju traku aplikacije prilikom pomicanja</string>
     <string name="unread_indicator_position">Nepročitana pozicija indikatora</string>
     <string name="start">Pokreni</string>

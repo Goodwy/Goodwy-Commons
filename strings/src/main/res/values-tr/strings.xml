@@ -8,6 +8,7 @@
     <string name="interval">Aralık</string>
     <string name="symbols_first">Semboller önce (örneğin !@#$)</string>
     <string name="use_custom_notifications">Özel bildirimleri kullan</string>
+    <string name="turn_on_screen">Ekranı aç</string>
     <string name="hide_top_bar_when_scrolling">Kaydırma sırasında üst uygulama çubuğunu gizle</string>
     <string name="unread_indicator_position">Okunmamış gösterge konumu</string>
     <string name="start">Başlangıç</string>

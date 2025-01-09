@@ -8,6 +8,7 @@
     <string name="interval">Interval</string>
     <string name="symbols_first">Symboly jako první (např. !@#$)</string>
     <string name="use_custom_notifications">Použít vlastní oznámení</string>
+    <string name="turn_on_screen">Zapnutí obrazovky</string>
     <string name="hide_top_bar_when_scrolling">Skrýt horní lištu aplikace při posouvání</string>
     <string name="unread_indicator_position">Pozice nepřečteného indikátoru</string>
     <string name="start">Start</string>

@@ -8,6 +8,7 @@
     <string name="interval">Khoảng thời gian</string>
     <string name="symbols_first">Biểu tượng đầu tiên (ví dụ !@#$)</string>
     <string name="use_custom_notifications">Sử dụng thông báo tùy chỉnh</string>
+    <string name="turn_on_screen">Bật màn hình</string>
     <string name="hide_top_bar_when_scrolling">Ẩn thanh ứng dụng trên cùng khi cuộn</string>
     <string name="unread_indicator_position">Vị trí chỉ báo chưa đọc</string>
     <string name="start">Bắt đầu</string>

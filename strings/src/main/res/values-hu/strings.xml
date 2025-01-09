@@ -8,6 +8,7 @@
     <string name="interval">Intervallum</string>
     <string name="symbols_first">Először a szimbólumok (pl. !@#$)</string>
     <string name="use_custom_notifications">Egyéni értesítések használata</string>
+    <string name="turn_on_screen">A képernyő bekapcsolása</string>
     <string name="hide_top_bar_when_scrolling">A felső alkalmazássáv elrejtése görgetés közben</string>
     <string name="unread_indicator_position">Olvasatlan jelző pozíció</string>
     <string name="start">Indítás</string>

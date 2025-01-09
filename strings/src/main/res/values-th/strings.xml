@@ -25,6 +25,7 @@
     <string name="interval">ช่วงเวลา</string>
     <string name="symbols_first">สัญลักษณ์มาก่อน (เช่น !@#$)</string>
     <string name="use_custom_notifications">ใช้การแจ้งเตือนแบบกำหนดเอง</string>
+    <string name="turn_on_screen">เปิดหน้าจอ</string>
     <string name="hide_top_bar_when_scrolling">ซ่อนแถบแอปด้านบนเมื่อเลื่อน</string>
     <string name="unread_indicator_position">ตำแหน่งตัวบ่งชี้ที่ยังไม่ได้อ่าน</string>
     <string name="start">เริ่ม</string>

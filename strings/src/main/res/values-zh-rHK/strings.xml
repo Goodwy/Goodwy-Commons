@@ -25,6 +25,7 @@
     <string name="interval">間隔</string>
     <string name="symbols_first">符號優先（例如！@#$）</string>
     <string name="use_custom_notifications">使用自訂通知</string>
+    <string name="turn_on_screen">打開螢幕</string>
     <string name="hide_top_bar_when_scrolling">捲動時隱藏頂部應用程式列</string>
     <string name="unread_indicator_position">未讀取指示器位置</string>
     <string name="start">開始</string>

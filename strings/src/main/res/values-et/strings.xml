@@ -25,6 +25,7 @@
     <string name="interval">Intervall</string>
     <string name="symbols_first">Sümbolid kõigepealt (nt !@#$)</string>
     <string name="use_custom_notifications">Kasutage kohandatud teateid</string>
+    <string name="turn_on_screen">Lülitage ekraan sisse</string>
     <string name="hide_top_bar_when_scrolling">Kata rakenduse ülemine riba kerimisel</string>
     <string name="unread_indicator_position">Unread indicator position</string>
     <string name="start">Start</string>

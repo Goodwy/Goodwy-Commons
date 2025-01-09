@@ -8,6 +8,7 @@
     <string name="interval">Intervalo</string>
     <string name="symbols_first">Símbolos primero (por ejemplo !@#$)</string>
     <string name="use_custom_notifications">Utilizar notificaciones personalizadas</string>
+    <string name="turn_on_screen">Encender la pantalla</string>
     <string name="hide_top_bar_when_scrolling">Ocultar la barra superior de la aplicación al desplazarse</string>
     <string name="unread_indicator_position">Posición del indicador de no leído</string>
     <string name="start">Inicio</string>

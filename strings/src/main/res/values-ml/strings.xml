@@ -25,6 +25,7 @@
     <string name="interval">ഇടവേള</string>
     <string name="symbols_first">ചിഹ്നങ്ങൾ ആദ്യം (ഉദാ. !@#$)</string>
     <string name="use_custom_notifications">ഇഷ്‌ടാനുസൃത അറിയിപ്പുകൾ ഉപയോഗിക്കുക</string>
+    <string name="turn_on_screen">സ്ക്രീൻ ഓണാക്കുക</string>
     <string name="hide_top_bar_when_scrolling">സ്ക്രോൾ ചെയ്യുമ്പോൾ മുകളിലെ ആപ്പ് ബാർ മറയ്ക്കുക</string>
     <string name="unread_indicator_position">വായിക്കാത്ത സൂചക സ്ഥാനം</string>
     <string name="start">ആരംഭിക്കുക</string>

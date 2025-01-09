@@ -26,6 +26,7 @@
     <string name="interval">Interval</string>
     <string name="symbols_first">Symbols first (e.g. !@#$)</string>
     <string name="use_custom_notifications">Use custom notifications</string>
+    <string name="turn_on_screen">Ekrāna ieslēgšana</string>
     <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
     <string name="unread_indicator_position">Unread indicator position</string>
     <string name="start">Start</string>

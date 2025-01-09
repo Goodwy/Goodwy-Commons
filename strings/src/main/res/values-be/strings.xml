@@ -25,6 +25,7 @@
     <string name="interval">Інтэрвал</string>
     <string name="symbols_first">Спачатку знакі (напрыклад !@#$)</string>
     <string name="use_custom_notifications">Выкарыстоўваць карыстацкія апавяшчэння</string>
+    <string name="turn_on_screen">Уключаць экран</string>
     <string name="hide_top_bar_when_scrolling">Схаваць верхнюю панэль пры пракрутцы</string>
     <string name="unread_indicator_position">Палажэнне індыкатара непрачытанага</string>
     <string name="start">Пачатак</string>

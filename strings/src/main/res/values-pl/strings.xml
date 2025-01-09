@@ -8,6 +8,7 @@
     <string name="interval">Interval</string>
     <string name="symbols_first">Symbole jako pierwsze (np. !@#$)</string>
     <string name="use_custom_notifications">Używaj niestandardowych powiadomień</string>
+    <string name="turn_on_screen">Włączanie ekranu</string>
     <string name="hide_top_bar_when_scrolling">Ukryj górny pasek aplikacji podczas przewijania</string>
     <string name="unread_indicator_position">Położenie wskaźnika nieprzeczytanych</string>
     <string name="start">Start</string>

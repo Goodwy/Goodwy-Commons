@@ -25,6 +25,7 @@
     <string name="interval">ਅੰਤਰਾਲ</string>
     <string name="symbols_first">ਪਹਿਲਾਂ ਚਿੰਨ੍ਹ (ਉਦਾਹਰਨ ਲਈ !@#$)</string>
     <string name="use_custom_notifications">ਕਸਟਮ ਸੂਚਨਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+    <string name="turn_on_screen">ਸਕ੍ਰੀਨ ਚਾਲੂ ਕਰੋ</string>
     <string name="hide_top_bar_when_scrolling">ਸਕ੍ਰੌਲ ਕਰਨ ਵੇਲੇ ਸਿਖਰ ਐਪ ਬਾਰ ਨੂੰ ਲੁਕਾਓ</string>
     <string name="unread_indicator_position"> ਨਾ ਪੜ੍ਹੇ ਸੂਚਕ ਸਥਿਤੀ</string>
     <string name="start">ਸ਼ੁਰੂ ਕਰੋ</string>

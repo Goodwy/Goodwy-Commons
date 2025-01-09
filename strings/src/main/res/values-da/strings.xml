@@ -8,6 +8,7 @@
     <string name="interval">Interval</string>
     <string name="symbols_first">Symboler først (f.eks. !@#$)</string>
     <string name="use_custom_notifications">Brug tilpassede meddelelser</string>
+    <string name="turn_on_screen">Tænd skærmen</string>
     <string name="hide_top_bar_when_scrolling">Skjul den øverste app-bjælke, når du ruller</string>
     <string name="unread_indicator_position">Ulæst indikatorposition</string>
     <string name="start">Start</string>

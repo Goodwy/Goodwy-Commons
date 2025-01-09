@@ -25,6 +25,7 @@
     <string name="interval">Interval</string>
     <string name="symbols_first">Simbolurile mai întâi (de ex. !@#$)</string>
     <string name="use_custom_notifications">Utilizează notificări personalizate</string>
+    <string name="turn_on_screen">Activarea ecranului</string>
     <string name="hide_top_bar_when_scrolling">Ascundeți bara de sus a aplicației atunci când derulați</string>
     <string name="unread_indicator_position">Poziția indicatorului de necitit</string>
     <string name="start">Start</string>

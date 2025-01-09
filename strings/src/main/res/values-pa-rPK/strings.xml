@@ -25,6 +25,7 @@
     <string name="interval"> وقفہ</string>
     <string name="symbols_first">علامات پہلے (جیسے !@#$)</string>
     <string name="use_custom_notifications">حسب ضرورت اطلاعات استعمال کریں</string>
+    <string name="turn_on_screen">سکرین آن کرو</string>
     <string name="hide_top_bar_when_scrolling">اسکرول کرتے وقت ٹاپ ایپ بار کو چھپائیں</string>
     <string name="unread_indicator_position"> بغیر پڑھے ہوئے اشارے کی پوزیشن</string>
     <string name="start">شروع کریں</string>

@@ -8,6 +8,7 @@
     <string name="interval">Tartea</string>
     <string name="symbols_first">Ikurrak lehenik (adibidez, !@#$)</string>
     <string name="use_custom_notifications">Erabili jakinarazpen pertsonalizatuak</string>
+    <string name="turn_on_screen">Piztu pantaila</string>
     <string name="hide_top_bar_when_scrolling">Ezkutatu aplikazioaren goiko barra mugitzean</string>
     <string name="unread_indicator_position">Irakurri gabeko adierazlearen posizioa</string>
     <string name="start">Hasi</string>

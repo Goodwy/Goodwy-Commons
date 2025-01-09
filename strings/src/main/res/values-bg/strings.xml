@@ -25,6 +25,7 @@
     <string name="interval">Интервал</string>
     <string name="symbols_first">Първо символите (напр. !@#$)</string>
     <string name="use_custom_notifications">Използване на персонализирани известия</string>
+    <string name="turn_on_screen">Включете екрана</string>
     <string name="hide_top_bar_when_scrolling">Скриване на горната лента при превъртане</string>
     <string name="unread_indicator_position">Позиция на индикатора за непрочетено съдържание</string>
     <string name="start">Начало</string>

@@ -8,6 +8,7 @@
     <string name="interval">间隔</string>
     <string name="symbols_first">符号优先（例如！@#$）</string>
     <string name="use_custom_notifications">使用自定义通知</string>
+    <string name="turn_on_screen">打开屏幕</string>
     <string name="hide_top_bar_when_scrolling">滚动时隐藏顶部应用栏</string>
     <string name="unread_indicator_position">未读指示器位置</string>
     <string name="start">开始</string>
