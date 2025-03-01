@@ -74,6 +74,7 @@
 
     <string name="use_accent_color_summary">Eine zusätzliche Farbe, die in einigen UI-Elementen verwendet wird.</string>
     <string name="app_icon_color_warning_g">Hinweis: Bei einigen Launchern wird das Symbol für die benutzerdefinierte App möglicherweise nicht korrekt angezeigt. Wenn das Symbol verschwindet, versuchen Sie, die App über Google Play oder über das Widget (falls möglich) zu starten.         Stellen Sie nach dem Start die Standardsymbolfarbe wieder her. In extremen Fällen kann es sein, dass Sie die App neu installieren müssen.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Achtung: Wenn Sie das App-Symbol ändern, werden die App-Verknüpfungen entfernt.</string>
     <string name="show_contact_thumbnails_g">Vorschaubilder der Kontakte zeigen</string>
     <string name="use_icon_tabs_summary">Symbole statt Text auf Registerkarten</string>
     <string name="use_icon_tabs">Verwenden von Registerkartensymbolen</string>

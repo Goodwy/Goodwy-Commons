@@ -92,6 +92,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">کجھ انٹرفیس عناصر چ استعمال ہون آلا اک وادھو رنگ۔</string>
     <string name="app_icon_color_warning_g">انتباہ: کجھ لانچر کسٹم ایپ آئکن نو صحیح طریقے نال نئیں وکھاندے۔ اگر آئکن غائب ہو جاندا اے، تے گوگل پلے یا اس دے ویجیٹ دے ذریعے ایپلی کیشن نو لانچ کرن دی کوشش کرو (جے ممکن ہووے)۔ لانچ دے بعد، ڈیفالٹ آئکن رنگ بحال کرو۔ انتہائی معاملات وچ، تہانوں ایپلی کیشن نو دوبارہ انسٹال کرن دی لوڑ پے سکدی اے۔</string>
+    <string name="app_icon_color_shortcuts_warning_g">احتیاط: ایپ دے آئکن نو تبدیل کرن نال ایپ دے شارٹ کٹ ہٹ جان گے۔</string>
     <string name="show_contact_thumbnails_g">رابطے کے تھمب نیلز دکھائیں</string>
     <string name="save_recordings_in_summary">Android 10+ سے شروع کرتے ہوئے، ایپ کو آپ کی فائلوں تک رسائی حاصل نہیں ہے</string>
     <string name="round_play_icon"> راؤنڈ پلے/پوز آئیکن</string>

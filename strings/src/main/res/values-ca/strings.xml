@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Un color addicional utilitzat en alguns elements de la interfície d\'usuari.</string>
     <string name="app_icon_color_warning_g">Nota: és possible que alguns llançadors no mostrin correctament la icona de l\'aplicació personalitzada. Si la icona desapareix, proveu d\'iniciar l\'aplicació a través de Google Play o del seu widget (si és possible).         Després de llançar-lo, restaureu el color predeterminat de la icona. En casos extrems, és possible que hàgiu de tornar a instal·lar l\'aplicació.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Precaució: si canvieu la icona de l\'aplicació, se suprimiran les dreceres de l\'aplicació.</string>
     <string name="show_contact_thumbnails_g">Mostra les miniatures dels contactes</string>
     <string name="use_icon_tabs_summary">Icones en lloc de text a les pestanyes</string>
     <string name="use_icon_tabs">Utilitza icones de pestanyes</string>

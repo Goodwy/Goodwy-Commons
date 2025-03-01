@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">צבע נוסף המשמש ברכיבי ממשק משתמש מסוימים.</string>
     <string name="app_icon_color_warning_g">הערה: ייתכן שמשגרים מסוימים לא יציגו כראוי את סמל היישום המותאם אישית. אם הסמל נעלם, נסה להפעיל את האפליקציה דרך Google Play או דרך הווידג\'ט שלה (אם ניתן).         לאחר ההפעלה, שחזר את צבע הסמל המוגדר כברירת מחדל. במקרים קיצוניים, ייתכן שיהיה עליך להתקין מחדש את האפליקציה.</string>
+    <string name="app_icon_color_shortcuts_warning_g">התראה: שינוי סמל האפליקציה יסיר את קיצורי הדרך של האפליקציה.</string>
     <string name="show_contact_thumbnails_g">הצג תמונות ממוזערות של אנשי קשר</string>
     <string name="use_icon_tabs_summary">סמלים במקום טקסט בכרטיסיות</string>
     <string name="use_icon_tabs">שימוש בסמלים של כרטיסיות</string>

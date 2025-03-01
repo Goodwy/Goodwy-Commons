@@ -103,6 +103,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">Uma cor opcional utilizada em alguns elementos da interface.</string>
     <string name="app_icon_color_warning_g">Nota: Alguns lançadores podem não apresentar corretamente o ícone da aplicação personalizada. Se o ícone desaparecer, tente iniciar a aplicação através do Google Play ou do respetivo widget (se possível).</string>
+    <string name="app_icon_color_shortcuts_warning_g">Atenção: A alteração do ícone da aplicação irá remover os atalhos da aplicação.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>

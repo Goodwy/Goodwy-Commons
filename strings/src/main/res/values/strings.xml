@@ -102,6 +102,7 @@
     <string name="use_accent_color_summary">Additional colour used in some interface elements.</string>
     <string name="app_icon_color_warning_g">Caution: Certain launchers may not handle app icon customization correctly. If the icon disappears, attempt launching the app through Google Play or a widget, if accessible.
         After launching, restore the default app icon color. In extreme cases, reinstalling the app may be necessary.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Caution: Changing app icon will remove the app shortcuts.</string>
 
     <!-- Settings -->
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>

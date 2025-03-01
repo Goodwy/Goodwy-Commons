@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">En ekstra farve, der bruges i nogle elementer i brugergrænsefladen.</string>
     <string name="app_icon_color_warning_g">Bemærk: Nogle startprogrammer viser muligvis ikke det brugerdefinerede app-ikon korrekt. Hvis ikonet forsvinder, kan du prøve at starte appen via Google Play eller via dens widget (hvis det er muligt).         Efter lanceringen skal du gendanne standardikonfarven. I ekstreme tilfælde skal du muligvis geninstallere appen.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Forsigtig: Hvis du ændrer appikonet, fjernes appgenvejene.</string>
     <string name="show_contact_thumbnails_g">Vis kontakt miniature-billede</string>
     <string name="use_icon_tabs_summary">Ikoner i stedet for tekst under faner</string>
     <string name="use_icon_tabs">Bruge faneikoner</string>

@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Lliw ychwanegol a ddefnyddir mewn rhai elfennau UI.</string>
     <string name="app_icon_color_warning_g">Nodyn: Efallai na fydd rhai lanswyr yn arddangos yr eicon app arferiad yn gywir. Os yw\'r eicon yn diflannu, ceisiwch lansio\'r ap trwy Google Play neu drwy ei teclyn (os yn bosibl).         Ar ôl ei lansio, adfer y lliw eicon diofyn. Mewn achosion eithafol, efallai y bydd angen i chi ailosod yr app.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Rhybudd: Bydd newid eicon app yn cael gwared ar lwybrau byr yr ap.</string>
     <string name="show_contact_thumbnails_g">Dangos mân luniau cysylltiadau</string>
     <string name="use_icon_tabs_summary">Eiconau yn lle testun ar dabiau</string>
     <string name="use_icon_tabs">Defnyddio eiconau tabiau</string>

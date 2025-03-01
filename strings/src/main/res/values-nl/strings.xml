@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Een extra kleur die in sommige UI-elementen wordt gebruikt.</string>
     <string name="app_icon_color_warning_g">Opmerking: Sommige launchers geven het pictogram van de aangepaste app mogelijk niet correct weer. Als het pictogram verdwijnt, probeer dan de app te starten via Google Play of via de widget (indien mogelijk).         Herstel na het starten de standaardkleur van het pictogram. In extreme gevallen moet u de app mogelijk opnieuw installeren.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Let op: als u het app-pictogram wijzigt, worden de app-snelkoppelingen verwijderd.</string>
     <string name="show_contact_thumbnails_g">Miniaturen van contacten weergeven</string>
     <string name="use_icon_tabs_summary">Pictogrammen in plaats van tekst op tabbladen</string>
     <string name="use_icon_tabs">Tabbladpictogrammen gebruiken</string>

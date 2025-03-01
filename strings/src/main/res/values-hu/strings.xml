@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">A felhasználói felület egyes elemeiben használt további szín.</string>
     <string name="app_icon_color_warning_g">Megjegyzés: Előfordulhat, hogy egyes indítók nem megfelelően jelenítik meg az egyéni alkalmazás ikonját. Ha az ikon eltűnik, próbáld meg elindítani az alkalmazást a Google Playen vagy a modulján keresztül (ha lehetséges).         Az indítás után állítsa vissza az alapértelmezett ikonszínt. Szélsőséges esetekben előfordulhat, hogy újra kell telepítenie az alkalmazást.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Figyelem: Az alkalmazás ikonjának módosítása eltávolítja az alkalmazás parancsikonjait.</string>
     <string name="show_contact_thumbnails_g">Névjegyek bélyegképének megjelenítése</string>
     <string name="use_icon_tabs_summary">Ikonok szöveg helyett a lapokban</string>
     <string name="use_icon_tabs">Lapikonok használata</string>

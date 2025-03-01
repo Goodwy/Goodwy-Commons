@@ -66,6 +66,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">لون إضافي يستخدم في بعض عناصر واجهة المستخدم.</string>
     <string name="app_icon_color_warning_g">ملاحظة: قد لا تعرض بعض المشغلات رمز التطبيق المخصص بشكل صحيح. إذا اختفى الرمز ، فحاول تشغيل التطبيق من خلال Google Play أو من خلال عنصر واجهة المستخدم الخاص به (إن أمكن).         بعد الإطلاق ، قم باستعادة لون الرمز الافتراضي. في الحالات القصوى ، قد تحتاج إلى إعادة تثبيت التطبيق.</string>
+    <string name="app_icon_color_shortcuts_warning_g">تنبيه: سيؤدي تغيير رمز التطبيق إلى إزالة اختصارات التطبيق.</string>
     <string name="show_contact_thumbnails_g">عرض صور مصغرة لجهات الإتصال</string>
     <string name="use_icon_tabs_summary">الرموز بدلا من النص على علامات التبويب</string>
     <string name="use_icon_tabs">استخدام رموز علامات التبويب</string>

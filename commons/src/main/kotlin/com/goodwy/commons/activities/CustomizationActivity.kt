@@ -622,7 +622,9 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (baseConfig.wasAppIconCustomizationWarningShown || !isProVersion()) {
                 pickAppIconColor()
             } else {
-                ConfirmationDialog(this, "", com.goodwy.strings.R.string.app_icon_color_warning_g, R.string.ok, 0) {
+                val message = resources.getString(com.goodwy.strings.R.string.app_icon_color_shortcuts_warning_g) + "\n\n" +
+                    resources.getString(com.goodwy.strings.R.string.app_icon_color_warning_g)
+                ConfirmationDialog(this, message, com.goodwy.strings.R.string.app_icon_color_warning_g, R.string.ok, 0) {
                     baseConfig.wasAppIconCustomizationWarningShown = true
                     pickAppIconColor()
                 }
@@ -797,7 +799,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             checkedItemId = curAppIconColor + 1,
             defaultItemId = APP_ICON_ORIGINAL + 1,
             titleId = R.string.app_icon_color,
-            descriptionId = com.goodwy.strings.R.string.app_icon_color_warning_g
+            descriptionId = resources.getString(com.goodwy.strings.R.string.app_icon_color_shortcuts_warning_g) + "\n\n"
+                + resources.getString(com.goodwy.strings.R.string.app_icon_color_warning_g)
         ) { wasPositivePressed, newValue ->
             if (wasPositivePressed && isProVersion()) {
                 if (curAppIconColor != newValue - 1) {

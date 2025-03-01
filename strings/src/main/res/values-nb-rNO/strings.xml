@@ -100,6 +100,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">En ekstra farge som brukes i enkelte elementer i brukergrensesnittet.</string>
     <string name="app_icon_color_warning_g">Merk: Noen startprogrammer viser kanskje ikke det egendefinerte appikonet riktig. Hvis ikonet forsvinner, kan du prøve å starte appen via Google Play eller gjennom widgeten (hvis mulig).         Etter lansering, gjenopprett standard ikonfarge. I ekstreme tilfeller må du kanskje installere appen på nytt.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Forsiktig: Hvis du endrer appikonet, fjernes appsnarveiene.</string>
     <string name="show_contact_thumbnails_g">Vis kontaktminiatyrbilder</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Rund avspilling/pause-ikon</string>

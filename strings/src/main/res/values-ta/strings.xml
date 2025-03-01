@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">சில இடைமுக உறுப்புகளில் கூடுதல் வண்ணம் பயன்படுத்தப்படுகிறது.</string>
     <string name="app_icon_color_warning_g">எச்சரிக்கை: சில துவக்கிகள் தனிப்பயன் பயன்பாட்டு ஐகானைச் சரியாகக் காட்டாமல் இருக்கலாம். ஐகான் மறைந்துவிட்டால், Google Play அல்லது அதன் விட்ஜெட் (முடிந்தால்) மூலம் பயன்பாட்டைத் தொடங்க முயற்சிக்கவும். துவக்கிய பிறகு, இயல்புநிலை ஐகான் நிறத்தை மீட்டமைக்கவும். தீவிர நிகழ்வுகளில், நீங்கள் பயன்பாட்டை மீண்டும் நிறுவ வேண்டியிருக்கும்.</string>
+    <string name="app_icon_color_shortcuts_warning_g">எச்சரிக்கை: பயன்பாட்டு ஐகானை மாற்றுவது பயன்பாட்டு குறுக்குவழிகளை அகற்றும்.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">தாவல்களில் உரைக்கு பதிலாக சின்னங்கள்</string>
     <string name="use_icon_tabs">தாவல் ஐகான்களைப் பயன்படுத்தவும்</string>

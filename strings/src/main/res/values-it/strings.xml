@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Colore aggiuntivo utilizzato in alcuni elementi dell\'interfaccia utente.</string>
     <string name="app_icon_color_warning_g">Nota: alcuni launcher potrebbero non visualizzare correttamente l\'icona dell\'app personalizzata. Se l\'icona scompare, prova ad avviare l\'app tramite Google Play o tramite il suo widget (se possibile).         Dopo l\'avvio, ripristina il colore predefinito dell\'icona. In casi estremi, potrebbe essere necessario reinstallare l\'app.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Attenzione: la modifica dell\'icona dell\'app rimuoverà le scorciatoie dell\'app.</string>
     <string name="show_contact_thumbnails_g">Mostra le anteprime dei contatti</string>
     <string name="use_icon_tabs_summary">Icone anziché testo nelle schede</string>
     <string name="use_icon_tabs">Usa le icone delle schede</string>

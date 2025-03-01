@@ -75,6 +75,7 @@
 
     <string name="use_accent_color_summary">Uma cor opcional usada em alguns elementos da interface.</string>
     <string name="app_icon_color_warning_g">Observação: alguns lançadores podem não exibir corretamente o ícone do aplicativo personalizado. Se o ícone desaparecer, tente iniciar o aplicativo por meio do Google Play ou de seu widget (se possível).</string>
+    <string name="app_icon_color_shortcuts_warning_g">Cuidado: A alteração do ícone do aplicativo removerá os atalhos do aplicativo.</string>
     <string name="show_contact_thumbnails_g">Mostrar miniatura do contato</string>
     <string name="use_icon_tabs_summary">Ícones em vez de texto em guias</string>
     <string name="use_icon_tabs">Use ícones de guia</string>

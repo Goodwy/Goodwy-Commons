@@ -75,6 +75,7 @@
 
     <string name="use_accent_color_summary">Ďalšia farba použitá v niektorých prvkoch používateľského rozhrania.</string>
     <string name="app_icon_color_warning_g">Poznámka: Niektoré spúšťače nemusia zobrazovať ikonu vlastnej aplikácie správne. Ak ikona zmizne, skúste spustiť aplikáciu cez Google Play alebo prostredníctvom jej miniaplikácie (ak je to možné).         Po spustení obnovte predvolenú farbu ikony. V extrémnych prípadoch môže byť potrebné aplikáciu preinštalovať.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Upozornenie: Zmenou ikony aplikácie sa odstránia skratky aplikácií.</string>
     <string name="show_contact_thumbnails_g">Zobraziť obrázky kontaktov</string>
     <string name="use_icon_tabs_summary">Ikony namiesto textu na kartách</string>
     <string name="use_icon_tabs">Použitie ikon kariet</string>

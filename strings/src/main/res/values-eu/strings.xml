@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Additional colour used in some interface elements.</string>
     <string name="app_icon_color_warning_g">Caution: Certain launchers may not handle app icon customization correctly. If the icon disappears, attempt launching the app through Google Play or a widget, if accessible.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Kontuz: aplikazioaren ikonoa aldatuz gero, aplikazioaren lasterbideak kenduko dira.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Fitxetako testuaren ordez ikonoak</string>
     <string name="use_icon_tabs">Erabili fitxa ikonoak</string>

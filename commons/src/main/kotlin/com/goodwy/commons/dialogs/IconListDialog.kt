@@ -14,7 +14,7 @@ class IconListDialog(
     val checkedItemId: Int = -1,
     val defaultItemId: Int? = null,
     val titleId: Int = 0,
-    val descriptionId: Int? = null,
+    val descriptionId: String? = null,
     val size: Int? = null,
     val color: Int? = null,
     val callback: (wasPositivePressed: Boolean, newValue: Int) -> Unit
@@ -109,7 +109,7 @@ class IconListDialog(
 
             if (descriptionId != null) {
                 description.beVisible()
-                description.setText(descriptionId)
+                description.text = descriptionId
             }
         }
 

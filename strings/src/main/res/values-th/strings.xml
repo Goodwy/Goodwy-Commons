@@ -92,6 +92,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">สีเพิ่มเติมที่ใช้ในองค์ประกอบ UI บางรายการ</string>
     <string name="app_icon_color_warning_g">หมายเหตุ: ตัวเรียกใช้งานบางตัวอาจแสดงไอคอนแอปแบบกําหนดเองไม่ถูกต้อง หากไอคอนหายไป ให้ลองเปิดแอปผ่าน Google Play หรือผ่านวิดเจ็ต (ถ้าเป็นไปได้)         หลังจากเปิดใช้งาน ให้คืนค่าสีไอคอนเริ่มต้น ในกรณีที่รุนแรง คุณอาจต้องติดตั้งแอปใหม่</string>
+    <string name="app_icon_color_shortcuts_warning_g">ข้อควรระวัง: การเปลี่ยนไอคอนแอปจะเป็นการลบทางลัดของแอป</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>

@@ -66,6 +66,7 @@
 
     <string name="use_accent_color_summary">Unha cor adicional usada nalgúns elementos da interface.</string>
     <string name="app_icon_color_warning_g">Aviso: é posible que algúns iniciadores non mostren correctamente a icona da aplicación personalizada. Se a icona desaparece, tenta iniciar a aplicación a través de Google Play ou o seu widget (se é posible). Despois do lanzamento, restablece a cor predeterminada da icona. En casos extremos, pode ter que reinstalar a aplicación.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Precaución: ao cambiar a icona da aplicación, eliminaranse os atallos da aplicación.</string>
     <string name="show_contact_thumbnails_g">Mostrar miniatura do contacto</string>
     <string name="use_icon_tabs_summary">Iconas no canto de texto nas pestanas</string>
     <string name="use_icon_tabs">Usa iconas de pestanas</string>

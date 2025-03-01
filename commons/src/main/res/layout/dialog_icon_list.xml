@@ -79,7 +79,7 @@
             android:layout_toEndOf="@+id/icon2Holder"
             android:orientation="vertical">
 
-            <ImageView
+            <com.goodwy.commons.views.MySquareImageView
                 android:id="@+id/icon3"
                 android:layout_width="@dimen/fingerprint_size"
                 android:layout_height="@dimen/fingerprint_size"

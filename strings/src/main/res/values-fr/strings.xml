@@ -75,6 +75,7 @@
 
     <string name="use_accent_color_summary">Couleur supplémentaire utilisée dans certains éléments de l’interface utilisateur.</string>
     <string name="app_icon_color_warning_g">Remarque : Certains lanceurs peuvent ne pas afficher correctement l’icône de l’application personnalisée. Si l’icône disparaît, essayez de lancer l’application via Google Play ou via son widget (si possible).         Après le lancement, restaurez la couleur par défaut de l’icône. Dans les cas extrêmes, vous devrez peut-être réinstaller l’application.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Attention : La modification de l’icône de l’application supprimera les raccourcis de l’application.</string>
     <string name="show_contact_thumbnails_g">Afficher les vignettes des contacts</string>
     <string name="use_icon_tabs_summary">Icônes au lieu de texte sur les onglets</string>
     <string name="use_icon_tabs">Utiliser des icônes d’onglet</string>

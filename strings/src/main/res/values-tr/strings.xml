@@ -75,6 +75,7 @@
 
     <string name="use_accent_color_summary">Bazı UI öğelerinde kullanılan ek bir renk.</string>
     <string name="app_icon_color_warning_g">Not: Bazı başlatıcılar özel uygulama simgesini doğru şekilde görüntülemeyebilir. Simge kaybolursa, uygulamayı Google Play veya widget\'ı (mümkünse) aracılığıyla başlatmayı deneyin.         Başlattıktan sonra, varsayılan simge rengini geri yükleyin. Aşırı durumlarda, uygulamayı yeniden yüklemeniz gerekebilir.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Dikkat: Uygulama simgesini değiştirmek, uygulama kısayollarını kaldıracaktır.</string>
     <string name="show_contact_thumbnails_g">Kişi küçük resimlerini göster</string>
     <string name="use_icon_tabs_summary">Sekmelerdeki metin yerine simgeler</string>
     <string name="use_icon_tabs">Sekme simgelerini kullanma</string>

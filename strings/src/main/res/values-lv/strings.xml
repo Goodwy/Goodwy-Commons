@@ -93,6 +93,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">Papildu krāsa, kas tiek izmantota dažos lietotāja saskarnes elementos.</string>
     <string name="app_icon_color_warning_g">Piezīmes: Daži palaidēji, iespējams, nepareizi parāda pielāgotās lietotnes ikonu. Ja ikona pazūd, mēģiniet palaist lietotni, izmantojot Google Play vai tās logrīku (ja iespējams).         Pēc palaišanas atjaunojiet noklusējuma ikonas krāsu. Ārkārtējos gadījumos, iespējams, būs atkārtoti jāinstalē lietotne.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Uzmanību: mainot lietotnes ikonu, tiks noņemti lietotņu saīsnes.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>

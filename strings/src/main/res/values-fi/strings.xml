@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Lisäväri, jota käytetään joissakin käyttöliittymäelementeissä.</string>
     <string name="app_icon_color_warning_g">Huomautus: Jotkin käynnistysohjelmat eivät ehkä näytä mukautetun sovelluksen kuvaketta oikein. Jos kuvake katoaa, yritä käynnistää sovellus Google Playn tai sen widgetin kautta (jos mahdollista).         Kun olet käynnistänyt, palauta kuvakkeen oletusväri. Äärimmäisissä tapauksissa sinun on ehkä asennettava sovellus uudelleen.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Varoitus: Sovelluskuvakkeen vaihtaminen poistaa sovelluksen pikakuvakkeet.</string>
     <string name="show_contact_thumbnails_g">Näytä yhteystietojen kuvakkeet</string>
     <string name="use_icon_tabs_summary">Kuvakkeet välilehtien tekstin sijaan</string>
     <string name="use_icon_tabs">Välilehtikuvakkeiden käyttö</string>

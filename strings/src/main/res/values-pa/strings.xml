@@ -92,6 +92,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">ਕੁਝ ਇੰਟਰਫੇਸ ਤੱਤਾਂ ਵਿੱਚ ਵਰਤਿਆ ਗਿਆ ਇੱਕ ਵਾਧੂ ਰੰਗ।</string>
     <string name="app_icon_color_warning_g">ਚੇਤਾਵਨੀ: ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਕੁਝ ਲਾਂਚਰ ਕਸਟਮ ਐਪ ਆਈਕਨ ਨੂੰ ਸਹੀ ਤਰ੍ਹਾਂ ਪ੍ਰਦਰਸ਼ਿਤ ਨਾ ਕਰ ਸਕਣ। ਜੇਕਰ ਆਈਕਨ ਅਲੋਪ ਹੋ ਜਾਂਦਾ ਹੈ, ਤਾਂ Google Play ਜਾਂ ਇਸਦੇ ਵਿਜੇਟ (ਜੇ ਸੰਭਵ ਹੋਵੇ) ਰਾਹੀਂ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਲਾਂਚ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਲਾਂਚ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਡਿਫੌਲਟ ਆਈਕਨ ਰੰਗ ਨੂੰ ਰੀਸਟੋਰ ਕਰੋ। ਗੰਭੀਰ ਮਾਮਲਿਆਂ ਵਿੱਚ, ਤੁਹਾਨੂੰ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਮੁੜ ਸਥਾਪਿਤ ਕਰਨ ਦੀ ਲੋੜ ਹੋ ਸਕਦੀ ਹੈ।</string>
+    <string name="app_icon_color_shortcuts_warning_g">ਸਾਵਧਾਨ: ਐਪ ਆਈਕਨ ਬਦਲਣ ਨਾਲ ਐਪ ਸ਼ਾਰਟਕੱਟ ਹਟ ਜਾਣਗੇ।</string>
     <string name="show_contact_thumbnails_g">ਸੰਪਰਕ ਥੰਬਨੇਲ ਦਿਖਾਓ</string>
     <string name="save_recordings_in_summary">Android 10+ ਤੋਂ ਸ਼ੁਰੂ ਕਰਕੇ, ਐਪ ਕੋਲ ਤੁਹਾਡੀਆਂ ਫ਼ਾਈਲਾਂ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੈ</string>
     <string name="round_play_icon">ਰਾਊਂਡ ਪਲੇ/ਪੌਜ਼ ਆਈਕਨ</string>

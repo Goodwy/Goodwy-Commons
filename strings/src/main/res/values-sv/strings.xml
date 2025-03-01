@@ -75,6 +75,7 @@
 
     <string name="use_accent_color_summary">En ytterligare färg som används i vissa gränssnittselement.</string>
     <string name="app_icon_color_warning_g">Notera: Vissa startprogram kanske inte visar den anpassade appikonen korrekt. Om ikonen försvinner, försök att starta appen via Google Play eller via dess widget (om möjligt).         Efter start, återställ standardikonfärgen. I extrema fall kan du behöva installera om appen.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Försiktighet: Om du ändrar appikonen tas appgenvägarna bort.</string>
     <string name="show_contact_thumbnails_g">Visa kontaktminiatyrer</string>
     <string name="use_icon_tabs_summary">Ikoner i stället för text på flikar</string>
     <string name="use_icon_tabs">Använda tabbikoner</string>

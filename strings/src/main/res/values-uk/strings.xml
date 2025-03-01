@@ -101,6 +101,7 @@
         Після запуску відновіть стандартний колір значка. У крайніх випадках може знадобитися перевстановлення програми.</string>
 
     <!-- Settings -->
+    <string name="app_icon_color_shortcuts_warning_g">Увага: зміна піктограми програми призведе до видалення ярликів програм.</string>
     <string name="show_contact_thumbnails_g">Показувати світлину контакту</string>
     <string name="save_recordings_in_summary">Починаючи з Android 10+, програма не має доступу до ваших файлів</string>
     <string name="round_play_icon">Круглі значок відтворення/паузи</string>

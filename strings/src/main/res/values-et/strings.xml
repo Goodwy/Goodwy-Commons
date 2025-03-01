@@ -92,6 +92,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">Täiendav värv, mida kasutatakse mõnes kasutajaliidese elemendis.</string>
     <string name="app_icon_color_warning_g">Märge: Mõned käivitajad ei pruugi kohandatud rakenduse ikooni õigesti kuvada. Kui ikoon kaob, proovige rakendus käivitada Google Play või selle vidina kaudu (kui võimalik).         Pärast käivitamist taastage ikooni vaikevärv. Äärmuslikel juhtudel peate võib-olla rakenduse uuesti installima.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Ettevaatust: Rakenduse ikooni muutmine eemaldab rakenduse otseteed.</string>
     <string name="show_contact_thumbnails_g">Näita kontaktide pisipilte</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>

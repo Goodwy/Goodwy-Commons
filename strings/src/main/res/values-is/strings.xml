@@ -93,6 +93,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">Viðbótarlitur sem notaður er í sumum viðmótseiningum.</string>
     <string name="app_icon_color_warning_g">Athugaðu: Sumir ræsiforrit sýna hugsanlega ekki sérsniðna forritstáknið rétt. Ef táknið hverfur skaltu prófa að ræsa forritið í gegnum Google Play eða í gegnum búnaðinn (ef mögulegt er).         Eftir ræsingu skaltu endurheimta sjálfgefna táknlitinn. Í sérstökum tilfellum gætirðu þurft að setja forritið upp aftur.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Varúð: Ef þú breytir forritstákninu fjarlægir þú flýtileiðir forritsins.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>

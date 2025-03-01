@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Un color adicional que se usa en algunos elementos de la interfaz de usuario.</string>
     <string name="app_icon_color_warning_g">Nota: Es posible que algunos iniciadores no muestren correctamente el icono de la aplicación personalizada. Si el icono desaparece, intente iniciar la aplicación a través de Google Play o a través de su widget (si es posible).         Después de iniciar, restaure el color del icono predeterminado. En casos extremos, es posible que deba reinstalar la aplicación.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Precaución: Al cambiar el icono de la aplicación, se eliminarán los accesos directos de la aplicación.</string>
     <string name="show_contact_thumbnails_g">Mostrar minaturas de contactos</string>
     <string name="use_icon_tabs_summary">Iconos en lugar de texto en las pestañas</string>
     <string name="use_icon_tabs">Usar iconos de pestaña</string>

@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Một màu bổ sung được sử dụng trong một số yếu tố giao diện người dùng.</string>
     <string name="app_icon_color_warning_g">Lưu ý: Một số trình khởi chạy có thể không hiển thị chính xác biểu tượng ứng dụng tùy chỉnh. Nếu biểu tượng biến mất, hãy thử khởi chạy ứng dụng thông qua Google Play hoặc thông qua tiện ích của ứng dụng (nếu có thể).         Sau khi khởi chạy, khôi phục màu biểu tượng mặc định. Trong trường hợp cực đoan, bạn có thể cần phải cài đặt lại ứng dụng.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Phạt cảnh cáo: Thay đổi biểu tượng ứng dụng sẽ xóa các phím tắt của ứng dụng.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Biểu tượng thay vì văn bản trên tab</string>
     <string name="use_icon_tabs">Dùng biểu tượng tab</string>

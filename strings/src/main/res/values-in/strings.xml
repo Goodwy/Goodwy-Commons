@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Warna tambahan yang digunakan di beberapa elemen antarmuka.</string>
     <string name="app_icon_color_warning_g">Peringatan: Beberapa peluncur mungkin tidak menampilkan ikon aplikasi khusus dengan benar. Jika ikonnya hilang, coba luncurkan aplikasi melalui Google Play atau widgetnya (jika memungkinkan). Setelah peluncuran, kembalikan warna ikon default. Dalam kasus ekstrim, Anda mungkin perlu menginstal ulang aplikasi.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Perhatian: Mengubah ikon aplikasi akan menghapus pintasan aplikasi.</string>
     <string name="show_contact_thumbnails_g">Tampilkan foto kontak</string>
     <string name="use_icon_tabs_summary">Ikon alih-alih teks pada tab</string>
     <string name="use_icon_tabs">Gunakan ikon tab</string>

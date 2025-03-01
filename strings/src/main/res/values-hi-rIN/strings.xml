@@ -72,6 +72,7 @@
 
     <string name="use_accent_color_summary">कुछ UI तत्वों में उपयोग किया जाने वाला एक अतिरिक्त रंग।</string>
     <string name="app_icon_color_warning_g">नोट: हो सकता है कि कुछ लॉन्चर कस्टम ऐप आइकन को सही तरीके से प्रदर्शित न करें। यदि आइकन गायब हो जाता है, तो Google Play या उसके विजेट (यदि संभव हो) के माध्यम से ऐप लॉन्च करने का प्रयास करें।         लॉन्च करने के बाद, डिफ़ॉल्ट आइकन रंग को पुनर्स्थापित करें। चरम मामलों में, आपको ऐप को फिर से इंस्टॉल करने की आवश्यकता हो सकती है।</string>
+    <string name="app_icon_color_shortcuts_warning_g">सावधानी: ऐप आइकन बदलने से ऐप शॉर्टकट निकल जाएंगे।</string>
     <string name="show_contact_thumbnails_g">संपर्क थंबनेल दिखाएँ</string>
     <string name="use_icon_tabs_summary">टैब पर पाठ के बजाय प्रतीक</string>
     <string name="use_icon_tabs">टैब आइकन का उपयोग करें</string>

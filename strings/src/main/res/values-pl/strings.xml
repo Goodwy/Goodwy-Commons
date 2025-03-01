@@ -77,6 +77,7 @@ Będziemy bardzo wdzięczni.
 
     <string name="use_accent_color_summary">Dodatkowy kolor używany w niektórych elementach interfejsu.</string>
     <string name="app_icon_color_warning_g">Uwaga: Niektóre programy uruchamiające mogą nie wyświetlać poprawnie ikony aplikacji niestandardowej. Jeśli ikona zniknie, spróbuj uruchomić aplikację za pośrednictwem Google Play lub jej widżetu (jeśli to możliwe).         Po uruchomieniu przywróć domyślny kolor ikony. W skrajnych przypadkach może być konieczna ponowna instalacja aplikacji.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Uwaga: Zmiana ikony aplikacji spowoduje usunięcie skrótów do aplikacji.</string>
     <string name="show_contact_thumbnails_g">Pokazuj miniaturki kontaktów</string>
     <string name="use_icon_tabs_summary">Ikony zamiast tekstu na kartach</string>
     <string name="use_icon_tabs">Używanie ikon kart</string>

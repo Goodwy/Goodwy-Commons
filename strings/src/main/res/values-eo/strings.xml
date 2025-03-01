@@ -92,6 +92,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">Kroma koloro uzata en iuj interfacaj elementoj.</string>
     <string name="app_icon_color_warning_g">Averto: Iuj lanĉiloj eble ne montras ĝuste la kutiman aplikaĵikon. Se la ikono malaperas, provu lanĉi la aplikaĵon per Google Play aŭ ĝia fenestraĵo (se eble). Post lanĉo, restarigu la defaŭltan ikonkoloron. En ekstremaj kazoj, vi eble bezonos reinstali la aplikaĵon.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Atentu: Ŝanĝi app-ikonon forigos la aplikajn ŝparvojojn.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>

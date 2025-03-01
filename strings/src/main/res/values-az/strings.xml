@@ -66,6 +66,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">Bəzi interfeys elementlərində istifadə olunan əlavə rəng.</string>
     <string name="app_icon_color_warning_g">Xəbərdarlıq: Bəzi işəsalanlar fərdi proqram ikonasını düzgün göstərməyə bilər. İşarə yox olarsa, tətbiqi Google Play və ya onun vidceti (mümkünsə) vasitəsilə işə salmağa çalışın. Başladıqdan sonra standart simvol rəngini bərpa edin. Həddindən artıq hallarda, proqramı yenidən quraşdırmalı ola bilərsiniz.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Diqqət: Tətbiq ikonasının dəyişdirilməsi proqram qısayollarını siləcək.</string>
     <string name="show_contact_thumbnails_g">Kontakt görüntülərini göstər</string>
     <string name="use_icon_tabs_summary">Nişanlardakı mətn əvəzinə nişanlar</string>
     <string name="use_icon_tabs">Nişanlar nişanlarından istifadə edin</string>

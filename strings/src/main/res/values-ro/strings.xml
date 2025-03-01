@@ -92,6 +92,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">O culoare suplimentară folosită în unele elemente ale interfeței de utilizare.</string>
     <string name="app_icon_color_warning_g">Notă: este posibil ca unele lansatoare să nu afișeze corect pictograma aplicației personalizate. Dacă pictograma dispare, încearcă să lansezi aplicația prin Google Play sau prin widget-ul său (dacă este posibil).         După lansare, restabiliți culoarea implicită a pictogramei. În cazuri extreme, poate fi necesar să reinstalați aplicația.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Atenție: Schimbarea pictogramei aplicației va elimina comenzile rapide ale aplicației.</string>
     <string name="show_contact_thumbnails_g">Afișați miniaturi la contact</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>

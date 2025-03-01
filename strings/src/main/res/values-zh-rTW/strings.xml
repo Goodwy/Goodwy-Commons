@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">某些 UI 元素中使用的附加顏色。</string>
     <string name="app_icon_color_warning_g">注意：某些啟動器可能無法正確顯示自定義應用程式圖示。如果圖示消失，請嘗試通過Google Play或其小部件（如果可能）啟動應用程式。        啟動后，恢復預設圖示顏色。在極端情況下，您可能需要重新安裝該應用程式。</string>
+    <string name="app_icon_color_shortcuts_warning_g">注意：更改應用程式圖示將刪除應用程式快捷方式。</string>
     <string name="show_contact_thumbnails_g">顯示聯絡人縮圖</string>
     <string name="use_icon_tabs_summary">圖示而不是選項卡上的文本</string>
     <string name="use_icon_tabs">使用選項卡圖示</string>

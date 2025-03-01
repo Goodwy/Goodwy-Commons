@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">一部の UI 要素で使用される追加の色。</string>
     <string name="app_icon_color_warning_g">注: 一部のランチャーでは、カスタムアプリのアイコンが正しく表示されない場合があります。アイコンが消えた場合は、Google Play またはそのウィジェット(可能な場合)からアプリを起動してみてください。        起動後、デフォルトのアイコンの色に戻します。極端な場合、アプリの再インストールが必要になることがあります。</string>
+    <string name="app_icon_color_shortcuts_warning_g">注意:アプリのアイコンを変更すると、アプリのショートカットが削除されます。</string>
     <string name="show_contact_thumbnails_g">連絡先のサムネイルを表示</string>
     <string name="use_icon_tabs_summary">タブ上のテキストではなくアイコン</string>
     <string name="use_icon_tabs">タブ アイコンを使用する</string>

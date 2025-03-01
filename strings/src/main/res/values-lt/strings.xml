@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Papildoma spalva, naudojama kai kuriuose vartotojo sąsajos elementuose.</string>
     <string name="app_icon_color_warning_g">Pastaba: kai kurios paleidimo priemonės gali netinkamai rodyti tinkintos programos piktogramą. Jei piktograma dingsta, pabandykite paleisti programą naudodami \"Google Play\" arba jos valdiklį (jei įmanoma).         Paleidę atkurkite numatytąją piktogramos spalvą. Kraštutiniais atvejais gali tekti iš naujo įdiegti programą.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Atsargiai: pakeitus programos piktogramą bus pašalinti programos spartieji klavišai.</string>
     <string name="show_contact_thumbnails_g">Rodyti adresatų miniatiūras</string>
     <string name="use_icon_tabs_summary">Piktogramos vietoj teksto skirtukuose</string>
     <string name="use_icon_tabs">Skirtukų piktogramų naudojimas</string>

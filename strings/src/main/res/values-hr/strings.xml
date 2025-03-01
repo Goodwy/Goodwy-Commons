@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">Dodatna boja koja se koristi u nekim elementima korisničkog sučelja.</string>
     <string name="app_icon_color_warning_g">Napomena: Neki pokretači možda neće ispravno prikazati ikonu prilagođene aplikacije. Ako ikona nestane, pokušajte pokrenuti aplikaciju putem Google Playa ili putem njezinog widgeta (ako je moguće).         Nakon pokretanja vratite zadanu boju ikone. U ekstremnim slučajevima možda ćete morati ponovno instalirati aplikaciju.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Oprez: Promjena ikone aplikacije uklonit će prečace aplikacija.</string>
     <string name="show_contact_thumbnails_g">Prikaži sličice kontakata</string>
     <string name="use_icon_tabs_summary">Ikone umjesto teksta na karticama</string>
     <string name="use_icon_tabs">Korištenje ikona kartica</string>

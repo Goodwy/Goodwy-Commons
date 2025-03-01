@@ -65,6 +65,7 @@
 
     <string name="use_accent_color_summary">یک رنگ اضافی که در برخی از عناصر رابط کاربری استفاده می شود.</string>
     <string name="app_icon_color_warning_g">توجه: برخی از راه اندازها ممکن است نماد برنامه سفارشی را به درستی نمایش ندهند. اگر نماد ناپدید شد، برنامه را از طریق Google Play یا از طریق ویجت آن (در صورت امکان) اجرا کنید.         پس از راه اندازی، رنگ نماد پیش فرض را بازیابی کنید. در موارد شدید، ممکن است لازم باشد برنامه را دوباره نصب کنید.</string>
+    <string name="app_icon_color_shortcuts_warning_g">احتیاط: با تغییر نماد برنامه، میانبرهای برنامه حذف می شود.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">آیکون ها به جای متن بر روی زبانه ها</string>
     <string name="use_icon_tabs">استفاده از آیکون های زبانه</string>

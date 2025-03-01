@@ -75,6 +75,7 @@
 
     <string name="use_accent_color_summary">Dodatna barva, ki se uporablja v nekaterih elementih uporabniškega vmesnika.</string>
     <string name="app_icon_color_warning_g">Opomba: nekateri zaganjalniki morda ne bodo pravilno prikazali ikone aplikacije po meri. Če ikona izgine, poskusite zagnati aplikacijo prek Googla Play ali njegovega pripomočka (če je mogoče).         Po zagonu obnovite privzeto barvo ikone. V skrajnih primerih boste morda morali znova namestiti aplikacijo.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Pozor: Če spremenite ikono aplikacije, odstranite bližnjice do aplikacij.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="use_icon_tabs_summary">Ikone namesto besedila na zavihku</string>
     <string name="use_icon_tabs">Uporaba ikon zavihkov</string>
