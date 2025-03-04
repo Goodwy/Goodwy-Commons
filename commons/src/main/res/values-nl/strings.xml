@@ -3,7 +3,7 @@
     <string name="cancel">Annuleren</string>
     <string name="close">Sluiten</string>
     <string name="back">Terug</string>
-    <string name="nothing">Niets</string>
+    <string name="nothing">Niets weergeven</string>
     <string name="save_as">Opslaan als</string>
     <string name="file_saved">Bestand opgeslagen</string>
     <string name="invalid_file_format">Ongeldig bestandsformaat</string>
