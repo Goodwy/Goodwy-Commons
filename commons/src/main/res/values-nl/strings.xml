@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--TODO Edit-->
     <string name="cancel">Annuleren</string>
     <string name="close">Sluiten</string>
     <string name="back">Terug</string>

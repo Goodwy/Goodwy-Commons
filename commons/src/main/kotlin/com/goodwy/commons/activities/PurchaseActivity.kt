@@ -263,7 +263,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     true
                 }
                 R.id.openSubscriptions -> {
-                    val url = if (ruStoreIsConnected) "rustore://profile/subscriptions" else "https://play.google.com/store/account/subscriptions"
+                    val url = if (ruStoreInstalled && !baseConfig.useGooglePlay) "rustore://profile/subscriptions" else "https://play.google.com/store/account/subscriptions"
                     launchViewIntent(url)
                     true
                 }
