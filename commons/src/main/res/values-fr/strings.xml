@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--TODO Edit-->
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
     <string name="close">Fermer</string>
@@ -97,12 +98,10 @@
     <string name="select_photo">Sélectionner une image</string>
     <plurals name="column_counts">
         <item quantity="one">%d colonne</item>
-        <item quantity="many">%d colonnes</item>
         <item quantity="other">%d colonnes</item>
     </plurals>
     <plurals name="row_counts">
         <item quantity="one">%d ligne</item>
-        <item quantity="many">%d lignes</item>
         <item quantity="other">%d lignes</item>
     </plurals>
     <string name="manage_blocked_numbers">Gérer les numéros bloqués</string>
@@ -269,26 +268,22 @@
     <string name="access_storage_prompt">Veuillez accorder à notre application l\'accès à tous vos fichiers. Elle pourrait ne pas fonctionner correctement sans cela.</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
-        <item quantity="many">%d éléments</item>
         <item quantity="other">%d éléments</item>
     </plurals>
     <plurals name="delete_items">
         <item quantity="one">%d élément</item>
-        <item quantity="many">%d éléments</item>
         <item quantity="other">%d éléments</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Suppression %d élément</item>
-        <item quantity="many">Suppression de %d éléments</item>
         <item quantity="other">Suppression de %d éléments</item>
     </plurals>
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
-        <item quantity="many">%d contacts</item>
         <item quantity="other">%d contacts</item>
     </plurals>
     <string name="select_storage">Sélectionner un espace de stockage</string>
-    <string name="storage">Espace de stockage</string>
+    <string name="storage">Stockage</string>
     <string name="internal">Interne</string>
     <string name="internal_storage">Espace de stockage interne</string>
     <string name="sd_card">Carte SD</string>
@@ -429,7 +424,6 @@
     <string name="maybe">Peut-être</string>
     <plurals name="delete_warning">
         <item quantity="one">ATTENTION : vous supprimez %d dossier</item>
-        <item quantity="many">ATTENTION  : vous supprimez %d dossiers</item>
         <item quantity="other">ATTENTION : vous supprimez %d dossiers</item>
     </plurals>
     <string name="pin">Code PIN</string>
@@ -478,142 +472,114 @@
     <string name="week_number_short">sem</string>
     <plurals name="seconds">
         <item quantity="one">%d seconde</item>
-        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minute</item>
-        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d heure</item>
-        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d jour</item>
-        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d semaine</item>
-        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d mois</item>
-        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d an</item>
-        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <plurals name="in_seconds">
         <item quantity="one">%d seconde</item>
-        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minute</item>
-        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d heure</item>
-        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d jour</item>
-        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d semaine</item>
-        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d mois</item>
-        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d an</item>
-        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <plurals name="seconds_before">
         <item quantity="one">%d seconde avant</item>
-        <item quantity="many">%d secondes avant</item>
         <item quantity="other">%d secondes avant</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minute avant</item>
-        <item quantity="many">%d minutes avant</item>
         <item quantity="other">%d minutes avant</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d heure avant</item>
-        <item quantity="many">%d heures avant</item>
         <item quantity="other">%d heures avant</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d jour avant</item>
-        <item quantity="many">%d jours avant</item>
         <item quantity="other">%d jours avant</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d semaine avant</item>
-        <item quantity="many">%d semaines avant</item>
         <item quantity="other">%d semaines avant</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d mois avant</item>
-        <item quantity="many">%d mois avant</item>
         <item quantity="other">%d mois avant</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d an avant</item>
-        <item quantity="many">%d ans avant</item>
         <item quantity="other">%d ans avant</item>
     </plurals>
     <plurals name="by_seconds">
         <item quantity="one">%d seconde</item>
-        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minute</item>
-        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d heure</item>
-        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d jour</item>
-        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d semaine</item>
-        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d mois</item>
-        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d an</item>
-        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <string name="alarm_goes_off_in">Temps restant jusqu\'au déclenchement de l\'alarme :
@@ -724,7 +690,6 @@
     <string name="skip_the_recycle_bin">Ne pas utiliser la corbeille, supprimer directement les fichiers</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Déplacement d\'%d élément vers la corbeille</item>
-        <item quantity="many">Déplacement de %d éléments vers la corbeille</item>
         <item quantity="other">Déplacement de %d éléments vers la corbeille</item>
     </plurals>
     <string name="importing">Importation en cours…</string>
@@ -1071,7 +1036,6 @@
 \nÀ bientôt :)</string>
     <plurals name="trial_expires_days">
         <item quantity="one">Votre période d\'essai expire dans %d jour.</item>
-        <item quantity="many">Votre période d\'essai expire dans %d jours.</item>
         <item quantity="other">Votre période d\'essai expire dans %d jours.</item>
     </plurals>
     <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue à jour. Veuillez vous procurer la version \"Pro\" à l\'adresse web suivante : https://play.google.com/store/apps/details\?id=org.fossify..xxx.pro</string>
