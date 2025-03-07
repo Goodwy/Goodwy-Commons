@@ -260,6 +260,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Suche im Internet</string>
+    <string name="show_number_blocking_button">Schaltfläche für die Nummernsperre anzeigen</string>
     <string name="relation_g">Beziehung</string>
     <string name="relations_g">Verwandte Personen</string>
     <string name="relation_hint_g">Verwandte Person</string>

@@ -246,6 +246,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">搜索 Internet</string>
+    <string name="show_number_blocking_button">显示数字块按钮</string>
     <string name="relation_g">关系</string>
     <string name="relations_g">相关人员</string>
     <string name="relation_hint_g">相关人员</string>

@@ -260,6 +260,7 @@ Będziemy bardzo wdzięczni.
 
     <!-- Relation types -->
     <string name="search_the_web">Szukaj w Internecie</string>
+    <string name="show_number_blocking_button">Pokaż przycisk blokady numeru</string>
     <string name="relation_g">Relacja</string>
     <string name="relations_g">Powiązane osoby</string>
     <string name="relation_hint_g">Osoba powiązana</string>

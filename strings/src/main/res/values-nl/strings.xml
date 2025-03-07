@@ -251,6 +251,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Zoeken op internet</string>
+    <string name="show_number_blocking_button">Toon nummervergrendelingsknop</string>
     <string name="relation_g">Relatie</string>
     <string name="relations_g">Verwante personen</string>
     <string name="relation_hint_g">Verwante persoon</string>

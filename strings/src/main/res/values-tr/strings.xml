@@ -261,6 +261,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">İnternet\'te arama yapın</string>
+    <string name="show_number_blocking_button">Numara kilit düğmesini göster</string>
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
     <string name="relation_hint_g">İlgili Kişi</string>

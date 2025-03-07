@@ -261,6 +261,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Rechercher sur Internet</string>
+    <string name="show_number_blocking_button">Afficher le bouton de verrouillage du numéro</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Personnes apparentées</string>
     <string name="relation_hint_g">Personne apparentée</string>

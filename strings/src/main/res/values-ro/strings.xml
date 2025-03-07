@@ -253,6 +253,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Căutați pe internet</string>
+    <string name="show_number_blocking_button">Afișați butonul de blocare a numărului</string>
     <string name="relation_g">Relație</string>
     <string name="relations_g">Persoane înrudite</string>
     <string name="relation_hint_g">Persoană înrudită</string>

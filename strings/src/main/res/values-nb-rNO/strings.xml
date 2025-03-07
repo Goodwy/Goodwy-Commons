@@ -261,6 +261,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Søk på Internett</string>
+    <string name="show_number_blocking_button">Vis nummerlåsknapp</string>
     <string name="relation_g">Relationship</string>
     <string name="relations_g">Pårørende</string>
     <string name="relation_hint_g">Tilknyttet person</string>

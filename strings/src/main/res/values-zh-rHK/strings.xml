@@ -253,6 +253,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">搜索 Internet</string>
+    <string name="show_number_blocking_button">顯示數字區塊按鈕</string>
     <string name="relation_g">關係</string>
     <string name="relations_g">相關人員</string>
     <string name="relation_hint_g">相關人員</string>

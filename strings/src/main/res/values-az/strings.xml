@@ -252,6 +252,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">İnternet axtarışı</string>
+    <string name="show_number_blocking_button">Nömrə bloku düyməsini göstərin</string>
     <string name="relation_g">Əlaqə</string>
     <string name="relations_g">Əlaqədar şəxslər</string>
     <string name="relation_hint_g">Əlaqədar şəxs</string>

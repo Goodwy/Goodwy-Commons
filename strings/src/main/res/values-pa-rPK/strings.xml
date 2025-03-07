@@ -253,6 +253,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">انٹرنیٹ سرچ</string>
+    <string name="show_number_blocking_button">نمبر بلاک دا بٹن وکھاؤ</string>
     <string name="relation_g"> تعلق</string>
     <string name="relations_g">متعلقہ افراد</string>
     <string name="relation_hint_g">متعلقہ شخص</string>

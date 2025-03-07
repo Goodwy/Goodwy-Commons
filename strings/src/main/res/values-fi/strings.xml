@@ -251,6 +251,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Hae Internetistä</string>
+    <string name="show_number_blocking_button">Näytä numerolukituspainike</string>
     <string name="relation_g">Suhde</string>
     <string name="relations_g">Lähipiiriin kuuluvat henkilöt</string>
     <string name="relation_hint_g">Liittyvä henkilö</string>

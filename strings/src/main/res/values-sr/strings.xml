@@ -260,6 +260,7 @@
     <string name="search_the_web">Претражите веб</string>
 
     <!-- Relation types -->
+    <string name="show_number_blocking_button">Прикажи дугме за блокирање бројева</string>
     <string name="relation_g">Однос</string>
     <string name="relations_g">Повезане особе</string>
     <string name="relation_hint_g">Повезана особа</string>

@@ -253,6 +253,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Leita á netinu</string>
+    <string name="show_number_blocking_button">Sýna númeraláshnapp</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

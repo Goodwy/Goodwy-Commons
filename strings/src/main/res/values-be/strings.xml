@@ -263,6 +263,7 @@
     <string name="search_the_web">Пошук у інтэрнэце</string>
 
     <!-- Relation types -->
+    <string name="show_number_blocking_button">Паказваць кнопку блакіроўкі нумара</string>
     <string name="relation_g">Адносіны</string>
     <string name="relations_g">Змяненні, асобы</string>
     <string name="relation_hint_g">Звязаны твар</string>

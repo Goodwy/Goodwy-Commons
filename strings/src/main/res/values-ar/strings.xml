@@ -249,6 +249,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">ابحث في الإنترنت</string>
+    <string name="show_number_blocking_button">إظهار زر قفل الأرقام</string>
     <string name="relation_g">العلاقة</string>
     <string name="relations_g">الأشخاص ذوو الصلة</string>
     <string name="relation_hint_g">الشخص ذو الصلة</string>

@@ -264,6 +264,7 @@
     <string name="remind_me">Напомнить</string>
     <string name="mute">Откл. звук</string>
     <string name="search_the_web">Поиск в интернете</string>
+    <string name="show_number_blocking_button">Показывать кнопку блокировки номера</string>
 
     <!-- Relation types -->
     <string name="relation_g">Отношения</string>

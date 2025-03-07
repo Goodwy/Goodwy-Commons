@@ -253,6 +253,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Internetist otsimine</string>
+    <string name="show_number_blocking_button">Näita numbriluku nuppu</string>
     <string name="relation_g">Seos</string>
     <string name="relations_g">Seotud isikud</string>
     <string name="relation_hint_g">Seotud isik</string>

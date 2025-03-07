@@ -251,6 +251,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Tìm kiếm trên Internet</string>
+    <string name="show_number_blocking_button">Hiển thị nút khóa số</string>
     <string name="relation_g">Perthynas</string>
     <string name="relations_g">Personau Cysylltiedig</string>
     <string name="relation_hint_g">Person Cysylltiedig</string>

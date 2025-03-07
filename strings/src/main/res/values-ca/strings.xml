@@ -251,6 +251,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Cercar a Internet</string>
+    <string name="show_number_blocking_button">Mostra el botó de bloqueig de números</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Persones relacionades</string>
     <string name="relation_hint_g">Persona relacionada</string>

@@ -251,6 +251,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Pencarian internet</string>
+    <string name="show_number_blocking_button">Tampilkan tombol blok nomor</string>
     <string name="relation_g">Hubungan</string>
     <string name="relations_g">Orang Terkait</string>
     <string name="relation_hint_g">Orang Terkait</string>

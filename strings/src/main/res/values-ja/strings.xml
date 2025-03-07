@@ -252,6 +252,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">インターネットを検索する</string>
+    <string name="show_number_blocking_button">番号ロックボタンを表示</string>
     <string name="relation_g">関係</string>
     <string name="relations_g">関係者</string>
     <string name="relation_hint_g">関係者</string>

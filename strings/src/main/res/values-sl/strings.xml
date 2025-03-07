@@ -261,6 +261,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Iskanje po internetu</string>
+    <string name="show_number_blocking_button">Pokaži gumb za zaklepanje številk</string>
     <string name="relation_g">Ime relacije</string>
     <string name="relations_g">Povezane osebe</string>
     <string name="relation_hint_g">Povezana oseba</string>

@@ -254,6 +254,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Meklēšana internetā</string>
+    <string name="show_number_blocking_button">Rādīt numuru bloķēšanas pogu</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

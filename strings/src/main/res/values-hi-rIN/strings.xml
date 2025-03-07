@@ -258,6 +258,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">इंटरनेट पर खोजें</string>
+    <string name="show_number_blocking_button">नंबर लॉक बटन दिखाएं</string>
     <string name="relation_g">रिश्ता</string>
     <string name="relations_g">संबंधित व्यक्ति</string>
     <string name="relation_hint_g">संबंधित व्यक्ति</string>

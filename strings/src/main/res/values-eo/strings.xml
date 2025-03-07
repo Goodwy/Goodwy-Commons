@@ -253,6 +253,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Interreta serĉo</string>
+    <string name="show_number_blocking_button">Montru butonon de numero-bloko</string>
     <string name="relation_g">Rilato</string>
     <string name="relations_g">Rilataj Personoj</string>
     <string name="relation_hint_g">Rilata Persono</string>

@@ -250,6 +250,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Paieška internete</string>
+    <string name="show_number_blocking_button">Rodyti skaičių užrakto mygtuką</string>
     <string name="relation_g">Ryšys</string>
     <string name="relations_g">Susiję asmenys</string>
     <string name="relation_hint_g">Susijęs asmuo</string>

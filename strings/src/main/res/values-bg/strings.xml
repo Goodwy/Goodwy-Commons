@@ -262,6 +262,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Търсене в интернет</string>
+    <string name="show_number_blocking_button">Покажи бутона за заключване на номера</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Свързани лица</string>
     <string name="relation_hint_g">Свързано лице</string>
