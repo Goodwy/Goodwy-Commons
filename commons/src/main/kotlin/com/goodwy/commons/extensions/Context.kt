@@ -2,6 +2,7 @@ package com.goodwy.commons.extensions
 
 import android.Manifest
 import android.accessibilityservice.AccessibilityServiceInfo
+import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
 import android.app.Application
@@ -247,6 +248,7 @@ fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this,
 
 fun Context.hasAllPermissions(permIds: Collection<Int>) = permIds.all(this::hasPermission)
 
+@SuppressLint("InlinedApi")
 fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_READ_STORAGE -> Manifest.permission.READ_EXTERNAL_STORAGE
     PERMISSION_WRITE_STORAGE -> Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -1019,10 +1021,6 @@ fun Context.isUsingGestureNavigation(): Boolean {
         false
     }
 }
-
-// TODO COLOR CIRCLE
-fun Context.getCornerRadius() = resources.getDimension(R.dimen.bottom_sheet_corner_radius) //R.dimen.rounded_corner_radius_small
-fun Context.getCornerRadiusBig() = resources.getDimension(R.dimen.rounded_corner_radius_big)
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
 fun Context.isDefaultDialer(): Boolean {
