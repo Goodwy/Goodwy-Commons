@@ -8,6 +8,7 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.view.ViewGroup
 import androidx.loader.content.CursorLoader
+import com.google.android.material.color.MaterialColors
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_SYSTEM
@@ -224,6 +225,16 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
         else -> baseConfig.backgroundColor.lightenColor(4)
     }
     return bottomColor
+}
+
+fun Context.getDialogBackgroundColor(): Int {
+    return when {
+        isDynamicTheme() -> MaterialColors.getColor(
+            this, com.google.android.material.R.attr.colorSurfaceContainerHigh, Color.TRANSPARENT
+        )
+
+        else -> baseConfig.backgroundColor
+    }
 }
 
 fun Context.getProperTextCursorColor() = when {

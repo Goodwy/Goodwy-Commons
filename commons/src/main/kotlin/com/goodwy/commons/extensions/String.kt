@@ -308,7 +308,7 @@ fun String.formatPhoneNumber(minimumLength: Int = 4): String {
 
 fun String.highlightTextFromNumbers(textToHighlight: String, primaryColor: Int): SpannableString {
     val spannableString = SpannableString(this)
-    val digits = PhoneNumberUtils.convertKeypadLettersToDigits(this)
+    val digits = KeypadHelper.convertKeypadLettersToDigits(this)
     if (digits.contains(textToHighlight)) {
         val startIndex = digits.indexOf(textToHighlight, 0, true)
         val endIndex = (startIndex + textToHighlight.length).coerceAtMost(length)

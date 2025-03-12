@@ -39,7 +39,7 @@
     <string name="notifications">Уведомления</string>
     <string name="email">Электронная почта</string>
     <string name="previous">Предыдущая</string>
-    <string name="playpause">Воспроизведение/Пауза</string>
+    <string name="playpause">Воспроизведение/пауза</string>
     <string name="next">Следующая</string>
     <string name="number">Номер</string>
     <string name="no_contacts_found">Контакты не найдены</string>
@@ -270,7 +270,7 @@
     <string name="confirm_storage_access_text">Чтобы предоставить доступ для записи, выберите корневую папку SD-карты на следующем шаге</string>
     <string name="confirm_storage_access_text_sd">Если SD-карта не видна, попробуйте это</string>
     <string name="confirm_storage_access_android_text">Разрешите приложению доступ к выбранному хранилищу на следующем экране, нажав \"Использовать эту папку\" в нижней части.</string>
-    <string name="confirm_storage_access_android_text_specific">Разрешите доступ к \"&lt;b&gt;%s&lt;/b&gt;\" на следующем экране, нажав \"&lt;b&gt;Использовать эту папку&lt;/b&gt;\" внизу.</string>
+    <string name="confirm_storage_access_android_text_specific">Разрешите доступ к \"<b>%s</b>\" на следующем экране, нажав \"<b>Использовать эту папку</b>\" внизу.</string>
     <string name="confirm_create_doc_for_new_folder_text">Нажмите \"&lt;b&gt;Сохранить&lt;/b&gt;\" внизу на следующем экране, чтобы создать новую папку.</string>
     <string name="confirm_selection">Подтвердить выделение</string>
     <string name="loading">Загрузка…</string>
@@ -826,7 +826,7 @@
     <string name="it_is_free">Это бесплатно до %s. При загрузке до указанного времени вы получаете её бесплатно навсегда.</string>
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
-    <string name="upgrade_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в главном меню.</string>
+    <string name="upgrade_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ICS-файла. Кнопки экспорта/импорта находятся в главном меню.</string>
     <string name="upgraded_from_free_gallery">Привет,
 \n
 \nпохоже, что вы обновились с бесплатной версии. Если вы будете довольны работой этого приложения и, возможно, перенесёте в него свои настройки и избранное, то можете удалить старую бесплатную версию, чтобы избежать её случайного запуска, поскольку она вам больше не понадобится. Это также предотвратит появление этого уведомления.
@@ -1129,7 +1129,7 @@
     <string name="purchase_simple_thank_you">Купить Fossify Thank You</string>
     <string name="usb">USB</string>
     <string name="donate_please"><![CDATA[
-            Привет,<br><br>
+            Привет,<br><br> 
             надеемся, вам нравится приложение. Оно не содержит рекламы, пожалуйста, поддержите его развитие, купив <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a>. После покупки это сообщение больше не будет показываться.<br><br>
             Спасибо!
         ]]></string>
@@ -1151,4 +1151,6 @@
     <string name="theme_and_colors">Тема и цвета</string>
     <string name="known_issues">Известные проблемы</string>
     <string name="translation_kabyle">Кабильский</string>
+    <string name="number_of_items">Количество элементов</string>
+    <string name="reorder_items_by_dragging">Порядок элементов меняется перетаскиванием</string>
 </resources>

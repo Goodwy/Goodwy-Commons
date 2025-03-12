@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--TODO Edit-->
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
     <string name="close">Fermer</string>
@@ -98,10 +97,12 @@
     <string name="select_photo">Sélectionner une image</string>
     <plurals name="column_counts">
         <item quantity="one">%d colonne</item>
+        <item quantity="many">%d colonnes</item>
         <item quantity="other">%d colonnes</item>
     </plurals>
     <plurals name="row_counts">
         <item quantity="one">%d ligne</item>
+        <item quantity="many">%d lignes</item>
         <item quantity="other">%d lignes</item>
     </plurals>
     <string name="manage_blocked_numbers">Gérer les numéros bloqués</string>
@@ -114,7 +115,7 @@
     <string name="import_blocked_numbers">Importer des numéros bloqués</string>
     <string name="must_make_default_dialer">Vous devez définir cette application comme application de numérotation par défaut afin de pouvoir utiliser les numéros bloqués.</string>
     <string name="set_as_default">Définir par défaut</string>
-    <string name="block_confirmation">Voulez-vous vraiment bloquer "%s" \?</string>
+    <string name="block_confirmation">Voulez-vous vraiment bloquer \"%s\" ?</string>
     <string name="block_unknown_calls">Bloquer les appels des contacts non enregistrés</string>
     <string name="block_hidden_calls">Bloquer les appels des numéros masqués</string>
     <string name="block_unknown_messages">Bloquer les messages des contacts non enregistrés</string>
@@ -261,29 +262,33 @@
     <string name="confirm_storage_access_text">Veuillez sélectionner le dossier racine de la carte SD sur le prochain écran, pour accorder les droits en écriture</string>
     <string name="confirm_storage_access_text_sd">Si vous n\'apercevez pas la carte SD, essayez ceci</string>
     <string name="confirm_storage_access_android_text">Veuillez autoriser l\'application à accéder au stockage sélectionné sur l\'écran suivant en appuyant sur \"Utiliser ce dossier\" en bas de l\'écran.</string>
-    <string name="confirm_storage_access_android_text_specific">Veuillez autoriser l\'accès à \"<b>%s</b>\" sur l\'écran suivant en appuyant sur \"<b>Utiliser ce dossier</b>\" en bas de l\'écran.</string>
+    <string name="confirm_storage_access_android_text_specific">Veuillez autoriser l\'accès à \'<b>%s</b>\' sur l\'écran suivant en appuyant sur \'<b>Utiliser ce dossier</b>\' en bas de l\'écran.</string>
     <string name="confirm_create_doc_for_new_folder_text">Veuillez appuyer sur \"<b>Enregistrer</b>\" en bas de l\'écran suivant pour créer le nouveau dossier.</string>
     <string name="confirm_selection">Confirmer la sélection</string>
     <string name="loading">Chargement…</string>
     <string name="access_storage_prompt">Veuillez accorder à notre application l\'accès à tous vos fichiers. Elle pourrait ne pas fonctionner correctement sans cela.</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
+        <item quantity="many">%d éléments</item>
         <item quantity="other">%d éléments</item>
     </plurals>
     <plurals name="delete_items">
         <item quantity="one">%d élément</item>
+        <item quantity="many">%d éléments</item>
         <item quantity="other">%d éléments</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Suppression %d élément</item>
+        <item quantity="many">Suppression de %d éléments</item>
         <item quantity="other">Suppression de %d éléments</item>
     </plurals>
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
+        <item quantity="many">%d contacts</item>
         <item quantity="other">%d contacts</item>
     </plurals>
     <string name="select_storage">Sélectionner un espace de stockage</string>
-    <string name="storage">Stockage</string>
+    <string name="storage">Espace de stockage</string>
     <string name="internal">Interne</string>
     <string name="internal_storage">Espace de stockage interne</string>
     <string name="sd_card">Carte SD</string>
@@ -332,7 +337,9 @@
     <string name="save_before_closing">Certaines modifications ne sont pas enregistrées. Voulez-vous les enregistrer avant de quitter \?</string>
     <string name="app_icon_color_warning">Attention : Certains lanceurs peuvent ne pas manipuler correctement la personnalisation de l\'icône d\'application. Si l\'icône disparaît, essayez de lancer l\'application via Google Play ou un widget, si accessible. Après le lancement, restaurer la couleur d\'icône verte par défaut #106D1F. Dans les cas extrêmes, réinstaller l\'application peut être nécessaire.</string>
     <string name="global_theme_success">Actualisation des couleurs réussie. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser dorénavant ce thème pour actualiser les couleurs de toutes les applications.</string>
-    <string name="purchase_thank_you">Veuillez acheter &lt;a href=https ://play.google.com/store/apps/details ?id=org.fossify.thankyou&gt;Fossify Merci&lt;/a&gt; pour déverrouiller cette fonction et soutenir le développement. Merci !</string>
+    <string name="purchase_thank_you"><![CDATA[
+            Veuillez acheter <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Merci Fossify</a> pour déverrouiller cette fonction et soutenir le développement. Merci !
+        ]]></string>
     <string name="light_theme">Clair</string>
     <string name="dark_theme">Sombre</string>
     <string name="auto_theme">Automatique</string>
@@ -424,6 +431,7 @@
     <string name="maybe">Peut-être</string>
     <plurals name="delete_warning">
         <item quantity="one">ATTENTION : vous supprimez %d dossier</item>
+        <item quantity="many">ATTENTION  : vous supprimez %d dossiers</item>
         <item quantity="other">ATTENTION : vous supprimez %d dossiers</item>
     </plurals>
     <string name="pin">Code PIN</string>
@@ -472,114 +480,142 @@
     <string name="week_number_short">sem</string>
     <plurals name="seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <plurals name="in_seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <plurals name="seconds_before">
         <item quantity="one">%d seconde avant</item>
+        <item quantity="many">%d secondes avant</item>
         <item quantity="other">%d secondes avant</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minute avant</item>
+        <item quantity="many">%d minutes avant</item>
         <item quantity="other">%d minutes avant</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d heure avant</item>
+        <item quantity="many">%d heures avant</item>
         <item quantity="other">%d heures avant</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d jour avant</item>
+        <item quantity="many">%d jours avant</item>
         <item quantity="other">%d jours avant</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d semaine avant</item>
+        <item quantity="many">%d semaines avant</item>
         <item quantity="other">%d semaines avant</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d mois avant</item>
+        <item quantity="many">%d mois avant</item>
         <item quantity="other">%d mois avant</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d an avant</item>
+        <item quantity="many">%d ans avant</item>
         <item quantity="other">%d ans avant</item>
     </plurals>
     <plurals name="by_seconds">
         <item quantity="one">%d seconde</item>
+        <item quantity="many">%d secondes</item>
         <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
         <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d semaine</item>
+        <item quantity="many">%d semaines</item>
         <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d mois</item>
+        <item quantity="many">%d mois</item>
         <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d an</item>
+        <item quantity="many">%d ans</item>
         <item quantity="other">%d ans</item>
     </plurals>
     <string name="alarm_goes_off_in">Temps restant jusqu\'au déclenchement de l\'alarme :
@@ -690,6 +726,7 @@
     <string name="skip_the_recycle_bin">Ne pas utiliser la corbeille, supprimer directement les fichiers</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Déplacement d\'%d élément vers la corbeille</item>
+        <item quantity="many">Déplacement de %d éléments vers la corbeille</item>
         <item quantity="other">Déplacement de %d éléments vers la corbeille</item>
     </plurals>
     <string name="importing">Importation en cours…</string>
@@ -846,7 +883,11 @@
     <string name="additional_info">Informations supplémentaires</string>
     <string name="app_version">Version de l\'application : %s</string>
     <string name="device_os">Système d\'exploitation de l\'appareil : %s</string>
-    <string name="donate_please">Bonjour, &lt;br&gt;&lt;br&gt;j\'espère que vous appréciez l\'application. Elle ne contient pas d\'annonces, alors veuillez soutenir son développement en achetant l\'appli &lt;a href=https ://play.google.com/store/apps/details ?id=org.fossify.thankyou&gt;Fossify Merci&lt;/a&gt;, elle empêchera également ce dialogue de se montrer à nouveau. Merci !</string>
+    <string name="donate_please"><![CDATA[
+            Bonjour, <br><br>
+j\'espère que vous appréciez l\'application. Elle ne contient pas d\'annonces, vous pouvez soutenir son développement en achetant l\'appli <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Merci Fossify</a>, cela empêchera également ce dialogue de se montrer à nouveau.<br><br>
+            Merci !
+        ]]></string>
     <string name="purchase">Acheter</string>
     <string name="update_thank_you">Veuillez mettre à jour Fossify Merci</string>
     <string name="before_asking_question_read_faq">Avant de poser une question, veuillez tout d\'abord vérifier les paramètres de l\'application et lire la foire aux questions. Il est possible que la solution s\'y trouve.</string>
@@ -868,7 +909,15 @@
     <string name="thank_you">Merci</string>
     <string name="widget_locked_pro">Le widget est verrouillé.
 \nVeuillez passer à la version \"Pro\" pour le déverrouiller.</string>
-    <string name="new_app">Bonjour,&lt;br&gt;&lt;br&gt; Nous vous informons que de nouvelles applications ont été publiées récemment :&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Vous pouvez les télécharger en appuyant sur leurs titres ou icônes.&lt;br&gt;&lt;br&gt; Merci</string>
+    <string name="new_app"><![CDATA[
+            Bonjour,<br><br>
+            Nous vous informons que de nouvelles applications ont été publiées récemment :<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
+            Vous pouvez les télécharger en appuyant sur leurs titres ou icônes.<br><br>
+            Merci
+        ]]></string>
     <string name="app_launcher_short">Lanceur d\'applications</string>
     <string name="calculator_short">Calculatrice</string>
     <string name="calendar_short">Agenda</string>
@@ -885,7 +934,9 @@
     <string name="sms_messenger_short">Messagerie SMS</string>
     <string name="thank_you_short">Merci</string>
     <string name="voice_recorder_short">Enregistreur vocal</string>
-    <string name="sideloaded_app">La version de votre application semble corrompue. Merci de télécharger la version originale en suivant &lt;a href=%s&gt;ce lien&lt;/a&gt;.</string>
+    <string name="sideloaded_app"><![CDATA[
+            La version de votre application semble corrompue. Merci de télécharger la version originale <a href="%s"> en suivant ce lien</a>.
+        ]]></string>
     <string name="frequently_asked_questions">Foire aux questions</string>
     <string name="before_asking_question">Avant de poser une question, veuillez tout d\'abord consulter la</string>
     <string name="faq_1_title_commons">Comment se fait-il que je ne vois pas ce widget d\'applications dans la liste des widgets \?</string>
@@ -1036,12 +1087,17 @@
 \nÀ bientôt :)</string>
     <plurals name="trial_expires_days">
         <item quantity="one">Votre période d\'essai expire dans %d jour.</item>
+        <item quantity="many">Votre période d\'essai expire dans %d jours.</item>
         <item quantity="other">Votre période d\'essai expire dans %d jours.</item>
     </plurals>
     <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue à jour. Veuillez vous procurer la version \"Pro\" à l\'adresse web suivante : https://play.google.com/store/apps/details\?id=org.fossify..xxx.pro</string>
     <string name="pro_app_refund">N\'oubliez pas que si vous désinstallez une application payante dans les deux heures qui suivent son achat, le remboursement sera automatique. À tout moment, si vous souhaitez un remboursement, contactez-nous à l\'adresse électronique suivante : hello@fossify.org et vous l\'obtiendrez dans les plus brefs délais. Cela facilite l\'essai de nos applications :)</string>
     <string name="developer_description">Une suite d\'applications Android simples, à code source ouvert, comprenant des widgets personnalisables, sans publicités ni permissions inutiles.</string>
-    <string name="contributors_label">Cette liste contient toutes les personnes qui ont sensiblement aidé n\'importe quelle application de la suite Fossify, pas seulement celle-ci. Les traductions sont assurées par des bénévoles, faites-nous savoir si vous souhaitez également aider. Le guide de traduction se trouve sur &lt;a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site Web&lt;/a&gt;, ou contactez-nous simplement à &lt;a href=mailto:hello@fossify.org&gt;hello@fossify.org&lt;/a&gt; si vous avez des questions. Merci à tous les contributeurs et autres supporters !</string>
+    <string name="contributors_label"><![CDATA[
+            TCette liste contient toutes les personnes qui ont sensiblement aidé n\'importe quelle application de la suite Fossify, pas seulement celle-ci. Les traductions sont assurées par des bénévoles,
+            faites-nous savoir si vous souhaitez également aider. Le guide de traduction se trouve sur <a href="https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file">ce site web</a>, ou contactez-nous simplement à <a href="mailto:hello@fossify.org">hello@fossify.org</a> si vous avez des questions..
+            Merci à tous les contributeurs et tous ceux qui nous soutiennent !
+        ]]></string>
     <string name="notes">Notes</string>
     <string name="transparent">Transparent</string>
     <string name="notification">Notification</string>
@@ -1076,7 +1132,10 @@
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="faq_2_text_commons">Oui bien sûr. Vous pouvez faire connaître les applications ou donner de bons commentaires et notes. Vous pouvez également nous aider en traduisant les applications dans une nouvelle langue ou simplement en mettant à jour certaines traductions existantes. Le guide de traduction se trouve sur &lt;a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site Web&lt;/a&gt;, ou contactez-nous simplement à &lt;a href=mailto:hello@fossify.org&gt;hello@fossify.org&lt;/a&gt; si vous avez des questions.</string>
+    <string name="faq_2_text_commons"><![CDATA[
+            Oui bien sûr. Vous pouvez nous aider en partageant les applications ou en laissant des notes et commentaires positifs. Vous pouvez également nous aider en traduisant les applications dans une nouvelle langue, ou simplement en mettant à jour certaines traductions existantes.
+            Le guide de traduction se trouve sur <a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file>ce site Web</a>, ou contactez-nous simplement à <a href=mailto:hello@fossify.org>hello@fossify.org</a> si vous avez des questions.
+        ]]></string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_basque">Basque</string>
     <string name="translation_tamil">Tamil</string>
@@ -1086,4 +1145,15 @@
     <string name="cryptocurrency">Crypto-monnaie</string>
     <string name="little_to_no_fee">Peu ou pas de frais</string>
     <string name="known_issues">Problèmes connus</string>
+    <string name="theme_and_colors">Thème et couleurs</string>
+    <string name="all_fossify_apps">Toutes les applications Fossify</string>
+    <string name="translation_belarusian">Biélorusse</string>
+    <string name="fee_up_to_pct">Jusqu\'à %1$d%% de frais</string>
+    <string name="translation_central_kurdish">Kurdes du centre</string>
+    <string name="translation_chuvash">Tchouvache</string>
+    <string name="translation_kabyle">Kabyle</string>
+    <string name="translation_esperanto">Espéranto</string>
+    <string name="translation_gujarati">Gujarati</string>
+    <string name="number_of_items">Nombre d\'éléments</string>
+    <string name="reorder_items_by_dragging">Réorganiser les éléments en les faisant glisser</string>
 </resources>

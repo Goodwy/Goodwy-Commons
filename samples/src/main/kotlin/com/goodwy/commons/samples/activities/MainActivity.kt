@@ -14,6 +14,7 @@ import com.goodwy.commons.compose.alert_dialog.AlertDialogState
 import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.dialogs.FilePickerDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
@@ -151,6 +152,9 @@ class MainActivity : BaseSimpleActivity() {
         )
 
         datePicker.show()
+        
+//        FilePickerDialog(this) {
+//        }
     }
 
     private val startDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->

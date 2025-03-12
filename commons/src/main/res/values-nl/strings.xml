@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--TODO Edit-->
     <string name="cancel">Annuleren</string>
     <string name="close">Sluiten</string>
     <string name="back">Terug</string>
-    <string name="nothing">Niets weergeven</string>
+    <string name="nothing">Niets</string>
     <string name="save_as">Opslaan als</string>
     <string name="file_saved">Bestand opgeslagen</string>
     <string name="invalid_file_format">Ongeldig bestandsformaat</string>
@@ -254,7 +253,7 @@
     <string name="confirm_storage_access_text">Op het volgende scherm schrijfrecht verlenen op de hoofdmap van de SD-kaart</string>
     <string name="confirm_storage_access_text_sd">Probeer het volgende als de SD-kaart niet wordt getoond</string>
     <string name="confirm_storage_access_android_text">Geef de app toegang tot de gekozen map door in het volgende scherm op \'Deze map gebruiken\' te klikken.</string>
-    <string name="confirm_storage_access_android_text_specific">Geef toegang tot \'&lt;b&gt;%s&lt;/b&gt;\' door onderaan in het volgende scherm op \'&lt;b&gt;Deze map gebruiken&lt;/b&gt;\' te drukken.</string>
+    <string name="confirm_storage_access_android_text_specific">Geef toegang tot \'<b>%s</b>\' door onderaan in het volgende scherm op \'<b>Deze map gebruiken</b>\' te drukken.</string>
     <string name="confirm_create_doc_for_new_folder_text">Druk in het volgende scherm onderaan op \'&lt;b&gt;Opslaan&lt;/b&gt;\' om de nieuwe map aan te maken.</string>
     <string name="confirm_selection">Keuze bevestigen</string>
     <string name="loading">Laden…</string>
@@ -566,7 +565,7 @@
     <string name="alarm_goes_off_in">Het alarm zal afgaan over\n%s</string>
     <string name="reminder_triggers_in">De herinnering zal worden getoond over\n%s</string>
     <string name="time_remaining">Resterende tijd:\n%s</string>
-    <string name="alarm_warning">Eerst controleren of het alarm goed werkt. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
+    <string name="alarm_warning">Controleer eerst of het alarm goed werkt. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
     <string name="reminder_warning">Kijk eerst of de herinneringen betrouwbaar werken. Controleer de systeeminstellingen voor batterijoptimalisatie en meldingen om zeker van te zijn dat de app op de achtergrond niet wordt afgesloten of dat de meldingen worden geblokkeerd.</string>
     <string name="notifications_disabled">Meldingen van deze app zijn uitgeschakeld. Ga naar de systeeminstellingen voor deze app om ze in te schakelen.</string>
     <string name="snooze">Sluimeren</string>
@@ -626,7 +625,7 @@
     <string name="scrolling">Scrollen</string>
     <string name="file_operations">Bestandsbewerkingen</string>
     <string name="recycle_bin">Prullenbak</string>
-    <string name="saving_label">Slaat op</string>
+    <string name="saving_label">Opslaan</string>
     <string name="startup">Opstarten</string>
     <string name="text">Tekst</string>
     <string name="migrating">Migreren</string>
@@ -775,7 +774,11 @@
     <string name="additional_info">Extra informatie</string>
     <string name="app_version">Versie: %s</string>
     <string name="device_os">Besturingssysteem: %s</string>
-    <string name="donate_please">Hallo,&lt;br&gt;&lt;br&gt;Hopelijk vind je dit een fijne app. Het bevat geen advertenties, maar je kunt de verdere ontwikkeling wel ondersteunen door de app &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Bedankje&lt;/a&gt; aan te schaffen. Het voorkomt ook dat dit venster nog eens verschijnt.&lt;br&gt;&lt;br&gt; Dankjewel!</string>
+    <string name="donate_please"><![CDATA[
+            Hallo,<br><br>
+            Hopelijk vind je dit een fijne app. Het bevat geen advertenties, maar je kunt de verdere ontwikkeling wel ondersteunen door de app <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Bedankje</a> aan te schaffen. Het voorkomt ook dat dit venster nog eens verschijnt.<br><br>
+             Dankjewel!
+        ]]></string>
     <string name="purchase">Kopen</string>
     <string name="before_asking_question_read_faq">Controleer bij problemen eerst de instellingen van de app en neem de Veelgestelde vragen door. Misschien staat de oplossing daar.</string>
     <string name="before_rate_read_faq">Controleer eerst de app-instellingen en lees de veelgestelde vragen voordat u ons beoordeelt. Als er problemen zijn, staat de oplossing misschien daar.</string>
@@ -822,7 +825,9 @@
     <string name="sms_messenger_short">Berichten</string>
     <string name="thank_you_short">Bedankt!</string>
     <string name="voice_recorder_short">Geluidsrecorder</string>
-    <string name="sideloaded_app">Het lijkt erop dat deze versie van de app corrupt is. Download de originele versie &lt;a href=%s&gt;hier&lt;/a&gt;.</string>
+    <string name="sideloaded_app"><![CDATA[
+            Het lijkt erop dat deze versie van de app corrupt is. Download de originele versie <a href="%s">hier</a>
+        ]]></string>
     <string name="frequently_asked_questions">Veelgestelde vragen</string>
     <string name="before_asking_question">Lees vóór het insturen van een vraag eerst de</string>
     <string name="faq_1_title_commons">Waarom zie ik de widget van deze app niet in de lijst met widgets?</string>
@@ -974,7 +979,9 @@
     <string name="exif">EXIF</string>
     <string name="apply_to_all_apps">Kleuren toepassen op alle Fossify apps</string>
     <string name="shared_theme_note">Ook bij gebruik van de Pro-versie van deze app komt Fossify Bedankje nog van pas, omdat het de synchronisatie van het gemeenschappelijke thema verzorgt.</string>
-    <string name="purchase_thank_you">Overweeg om &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Bedankje&lt;/a&gt; aan te schaffen om deze functie te kunnen gebruiken en om verdere ontwikkeling te ondersteunen. Alvast bedankt!</string>
+    <string name="purchase_thank_you"><![CDATA[
+            Overweeg om <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Bedankje</a> aan te schaffen om deze functie te kunnen gebruiken en om verdere ontwikkeling te ondersteunen. Alvast bedankt!
+        ]]></string>
     <string name="system_default">Systeeminstelling</string>
     <string name="show_line_numbers">Regelnummers tonen</string>
     <string name="hide_line_numbers">Regelnummers verbergen</string>
@@ -1012,7 +1019,10 @@
     <string name="website">Website</string>
     <string name="camera_short">Camera</string>
     <string name="why_upgrade_pro_version">Pro</string>
-    <string name="contributors_label">Deze lijst bevat de namen van iedereen die aan een app binnen de Fossify suite heeft bijgedragen. Vertalingen worden gedaan door vrijwilligers, dus laat het ons weten als je ook wilt helpen. Lees de instructies &lt;a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;op deze website&lt;/a&gt;, of stuur bij vragen een bericht naar &lt;a href=mailto:hello@fossify.org&gt;hello@fossify.org&lt;/a&gt;. Bedankt voor alle bijdragen en andere ondersteuning!</string>
+    <string name="contributors_label"><![CDATA[
+            Deze lijst bevat de namen van iedereen die aan een app binnen de Fossify suite heeft bijgedragen. Vertalingen worden gedaan door vrijwilligers,
+            dus laat het ons weten als je ook wilt helpen. Lees de instructies <a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file>op deze website</a>, of stuur bij vragen een bericht naar <a href=mailto:hello@fossify.org>hello@fossify.org</a>. Bedankt voor alle bijdragen en andere ondersteuning!
+        ]]></string>
     <string name="features_locked">Deze functie is vergrendeld. Overweeg het aanschaffen van &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Bedankje&lt;/a&gt; om alle functies in deze app te kunnen gebruiken.&lt;br&gt;&lt;br&gt;Dit is een eenmalige aanschaf met een niet-goed-geld-teruggarantie.</string>
     <string name="launcher_short">Launcher</string>
     <string name="faq_6_text_commons">Dit probleem doet zich voor wanneer je launcher het aanpassen van pictogrammen niet volledig ondersteunt. Probeer de app te starten via Google Play of een widget, indien mogelijk. Herstel na het starten de standaard groene icoonkleur #106D1F. In extreme gevallen kan het nodig zijn om de app opnieuw te installeren.</string>
@@ -1035,4 +1045,8 @@
     <string name="all_fossify_apps">Alle Fossify apps</string>
     <string name="theme_and_colors">Thema en kleuren</string>
     <string name="known_issues">Bekende problemen</string>
+    <string name="during_day_at">Overdag om %1$02d.%2$02du</string>
+    <string name="translation_kabyle">Kabylisch</string>
+    <string name="number_of_items">Aantal items</string>
+    <string name="reorder_items_by_dragging">Items herschikken door te slepen</string>
 </resources>

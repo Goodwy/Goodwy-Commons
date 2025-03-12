@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--TODO Edit-->
     <string name="ok">אישור</string>
     <string name="cancel">ביטול</string>
-    <string name="close">סגור</string>
-    <string name="back">חזור</string>
     <string name="nothing">שום דבר</string>
     <string name="later">מאוחר</string>
     <string name="save_as">שמירה בשם</string>
     <string name="file_saved">קובץ נשמר</string>
     <string name="invalid_file_format">פורמט קובץ שגוי</string>
     <string name="out_of_memory_error">שגיאת זיכרון</string>
-    <string name="an_error_occurred">שגיאה: %s</string>
-    <string name="error">שגיאה: %s</string>
+    <string name="an_error_occurred">שגיאה התרחשה: %s</string>
     <string name="open_with">פתיחה באמצעות</string>
     <string name="edit_with">עריכה באמצעות</string>
     <string name="edit">לערוך</string>
     <string name="no_app_found">לא נמצאה אפליקציה מתאימה</string>
-    <string name="no_browser_found">לא נמצא דפדפן</string>
-    <string name="no_email_client_found">לא נמצא לקוח דוא"ל</string>
     <string name="set_as">קבע כ</string>
-    <string name="copy_to_clipboard">העתקה לקליפבורד</string>
+    <string name="copy_to_clipboard">העתקה ללוח</string>
     <string name="copy_number_to_clipboard">העתק את המספר ללוח</string>
-    <string name="value_copied_to_clipboard">הועתק לקליפבורד</string>
-    <string name="value_copied_to_clipboard_show">הועתק לקליפבורד:\n%s</string>
+    <string name="value_copied_to_clipboard">הערך הועתק ללוח</string>
+    <string name="value_copied_to_clipboard_show">הערך הועתק ללוח:\n%s</string>
     <string name="dial_number">חייג מספר</string>
     <string name="unknown">לא ידוע</string>
     <string name="always">תמיד</string>
@@ -31,14 +25,8 @@
     <string name="details">פרטים</string>
     <string name="notes">הערות</string>
     <string name="deleting_folder">מוחק תיקייה \'%s\'</string>
-    <string name="none">אף אחד</string>
     <string name="label">תווית</string>
-    <string name="transparent">שָׁקוּף</string>
-    <string name="transparent_color">צבע שקוף</string>
-    <string name="select_a_different_color">בחר צבע אחר</string>
     <string name="download">הורדה</string>
-    <string name="notification">הוֹדָעָה</string>
-    <string name="notifications">התראות</string>
     <string name="email">אימייל</string>
     <string name="previous">הקודם</string>
     <string name="playpause">הפעל / הפסק</string>
@@ -47,147 +35,39 @@
     <string name="no_contacts_found">לא נמצאו אנשי קשר</string>
     <string name="request_the_required_permissions">נדרשים הרשאות</string>
     <string name="no_access_to_contacts">לא ניתן לגשת לאנשי הקשר</string>
-    <string name="no_phone_call_permission">לאפליקציה אין הרשאה ליזום שיחות טלפון, אנא הענק זאת בהגדרות המכשיר</string>
     <string name="insert_text_here">הוספת טקסט</string>
-    <string name="call_person">תתקשר %s</string>
-    <string name="confirm_calling_person">אשר את ההתקשרות %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value">Value</string>
-    <string name="value_cannot_be_empty">הערך לא יכול להיות ריק</string>
     <string name="create_new_contact">צור איש קשר חדש</string>
     <string name="add_to_existing_contact">הוסף לאיש קשר קיים</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
     <string name="take_photo">לצלם</string>
     <string name="choose_photo">בחר תמונה</string>
-    <string name="choose_video">בחר סרטון</string>
-    <string name="choose_contact">בחר איש קשר</string>
-    <string name="choose_file">בחר קובץ</string>
-    <string name="record_audio">הקלט אודיו</string>
-    <string name="record_video">להקליט סרטון</string>
     <string name="updating">מעדכן…</string>
     <string name="phone_storage">אחסון טלפון</string>
     <string name="phone_storage_hidden">אחסון טלפון (לא נראה באפליקציות אחרות)</string>
-    <string name="audio">שֶׁמַע</string>
-    <string name="scanning">סורק…</string>
-    <!-- Events -->
     <string name="birthday">יום הולדת</string>
     <string name="anniversary">יום השנה</string>
-    <!-- Emails -->
-    <string name="home">בית</string>
-    <string name="work">עֲבוֹדָה</string>
-    <!-- Phone numbers -->
-    <string name="mobile">נייד</string>
-    <string name="main_number">רָאשִׁי</string>
-    <string name="work_fax">פקס עבודה</string>
-    <string name="home_fax">פקס ביתי</string>
-    <string name="pager">ביפר</string>
-    <string name="no_phone_number_found">לא נמצא מספר טלפון</string>
-    <!-- View types -->
-    <string name="change_view_type">שנה סוג תצוגה</string>
-    <string name="grid">רֶשֶׁת</string>
-    <string name="grid_pro">Grid (Pro)</string>
-    <string name="uneven_grid">רשת לא אחידה</string>
-    <string name="list">רשימה</string>
-    <string name="increase_column_count">הגדל את ספירת העמודות</string>
-    <string name="reduce_column_count">הפחת את ספירת העמודות</string>
-    <string name="column_count">ספירת עמודות</string>
-    <string name="row_count">ספירת שורות</string>
-    <string name="portrait_column_count">ספירת עמודות לאורך</string>
-    <string name="landscape_column_count">ספירת עמודות נוף</string>
-    <string name="change_cover_image">שנה תמונת שער</string>
-    <string name="select_photo">בחר תמונה</string>
-    <plurals name="column_counts">
-        <item quantity="one">עמודה %d</item>
-        <item quantity="other">%d עמודות</item>
-    </plurals>
-    <plurals name="row_counts">
-        <item quantity="one">%d שורה</item>
-        <item quantity="other">%d שורות</item>
-    </plurals>
-    <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ניהול מספרים חסומים</string>
     <string name="not_blocking_anyone">אין חסימות</string>
     <string name="add_a_blocked_number">הוספת מספר חסום</string>
     <string name="block_number">חסום מספר</string>
     <string name="block_numbers">חסום מספרים</string>
     <string name="blocked_numbers">מספרים חסומים</string>
-    <string name="export_blocked_numbers">ייצא מספרים חסומים</string>
-    <string name="import_blocked_numbers">ייבא מספרים חסומים</string>
     <string name="must_make_default_dialer">נדרש לבחור את האפליקצייה כברירת מחדל בכדי לחסום מספרים.</string>
     <string name="set_as_default">קבע כברירת מחדל</string>
     <string name="block_confirmation">האם לחסום את \"%s\"?</string>
-    <string name="block_hidden_calls">חסום שיחות ממספרים נסתרים</string>
-    <string name="block_hidden_messages">חסום הודעות ממספרים נסתרים</string>
-    <string name="add_blocked_number_helper_text">הזן מספר או דפוס (למשל *12345*, +1*8888) כדי לחסום את כל השיחות וההודעות ממספרים התואמים לדפוס.</string>
-    <string name="must_make_default_caller_id_app">לא ניתן לחסום מספרים לא ידועים ללא הרשאת זיהוי מתקשר.</string>
-    <string name="block_contact">חסום איש קשר</string>
-    <string name="block_contact_success">איש הקשר נחסם</string>
-    <string name="block_contact_fail">לא ניתן היה לחסום איש קשר</string>
-    <string name="unblock_contact">בטל את חסימת איש הקשר</string>
-    <string name="unblock_contact_success">איש הקשר בוטל</string>
-    <string name="unblock_contact_fail">לא ניתן לבטל את חסימת איש הקשר</string>
-    <!-- Favorites -->
     <string name="favorites">מועדפים</string>
     <string name="add_favorites">הוספה למועדפים</string>
     <string name="add_to_favorites">הוסף למועדפים</string>
     <string name="remove_from_favorites">הסרה ממועדפים</string>
-    <!-- Search -->
     <string name="search">חיפוש</string>
-    <string name="search_in_placeholder">חפש ב-%s</string>
     <string name="type_2_characters">הקלד/י לפחות 2 תווים כדי להתחיל חיפוש</string>
-    <string name="show_search">הצג סרגל חיפוש</string>
-    <string name="search_contacts">חפש אנשי קשר</string>
-    <string name="search_favorites">חפש מועדפים</string>
-    <string name="search_apps">חיפוש אפליקציות</string>
-    <string name="search_events">חיפוש אירועים</string>
-    <string name="search_groups">חיפוש קבוצות</string>
-    <string name="search_history">היסטוריית חיפושים</string>
-    <string name="search_calls">חיפוש שיחות</string>
-    <string name="search_files">חפש קבצים</string>
-    <string name="search_folders">חפש תיקיות</string>
-    <string name="search_files_and_folders">חפש קבצים ותיקיות</string>
-    <string name="search_playlists">חפש רשימות השמעה</string>
-    <string name="search_artists">חפש אמנים</string>
-    <string name="search_albums">חפש באלבומים</string>
-    <string name="search_tracks">חיפוש רצועות</string>
-    <string name="search_text">חיפוש טקסט</string>
-    <string name="search_conversations">חפש שיחות</string>
-    <string name="search_recordings">חפש הקלטות</string>
-    <!-- Filters -->
     <string name="filter">סינון</string>
     <string name="filter_pro">סינון (Pro)</string>
     <string name="no_items_found">לא נמצאו פריטים.</string>
     <string name="change_filter">שינוי סינון</string>
-    <!-- Permissions -->
     <string name="no_storage_permissions">נדרשים הרשאות אחסון</string>
     <string name="no_contacts_permission">נדרשים הרשאות אנשי קשר</string>
     <string name="no_camera_permissions">נדרשים הרשאות מצלמה</string>
     <string name="no_audio_permissions">נדרשים הרשאות אודיו</string>
-    <string name="no_permission">אין רשות</string>
-    <string name="allow_notifications_reminders">עליך לאפשר לאפליקציה להציג התראות, אחרת היא לא יכולה להציג תזכורות.</string>
-    <string name="allow_full_screen_notifications_reminders">עליך לאפשר לאפליקציה להציג התראות במסך מלא, אחרת אתה עלול לפספס כמה תזכורות.</string>
-    <string name="allow_notifications_files">עליך לאפשר לאפליקציה להציג התראות, אחרת היא לא יכולה להציג את סרגל ההתקדמות.</string>
-    <string name="allow_notifications_music_player">עליך לאפשר לאפליקציה להציג התראות, אחרת היא לא יכולה לנגן שירים.</string>
-    <string name="allow_notifications_voice_recorder">עליך לאפשר לאפליקציה להציג התראות, אחרת היא לא יכולה להקליט אודיו.</string>
-    <string name="allow_notifications_incoming_calls">עליך לאפשר לאפליקציה להציג התראות, אחרת היא לא יכולה להציג שיחות נכנסות.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">עליך לאפשר לאפליקציה להציג התראות במסך מלא, אחרת אתה עלול לפספס כמה שיחות נכנסות.</string>
-    <string name="allow_notifications_incoming_messages">עליך לאפשר לאפליקציה להציג התראות, אחרת היא לא יכולה להציג הודעות נכנסות.</string>
-    <string name="allow_alarm_scheduled_messages">עליך לאפשר לאפליקציה לגשת להתראות פנימיות, אחרת היא לא יכולה לשלוח הודעות מתוזמנות.</string>
-    <string name="allow_alarm_sleep_timer">עליך לאפשר לאפליקציה לגשת להתראות פנימיות, אחרת היא לא יכולה לכבות את האפליקציה לאחר טיימר שינה.</string>
-    <string name="allow_location_permission">עליך לאפשר לאפליקציה לגשת למיקום שלך, אחרת היא לא תדע זאת.</string>
-    <string name="grant_permission">הענקת הרשאה</string>
-    <string name="permission_required">נדרשת הרשאה</string>
-    <!-- Renaming -->
     <string name="rename_file">שנה שם קובץ</string>
     <string name="rename_folder">שנה שם תיקייה</string>
     <string name="rename_file_error">לא ניתן לשנות את שם הקובץ</string>
@@ -202,17 +82,8 @@
     <string name="filename_invalid_characters_placeholder">שם קובץ \'%s\' מכיל תווים לא חוקיים</string>
     <string name="extension_cannot_be_empty">תוסף לא יכול להיות ריק</string>
     <string name="source_file_doesnt_exist">קובץ מקור %s לא קיים</string>
-    <string name="prepend_filenames">הכנס שמות קבצים מראש</string>
-    <string name="append_filenames">הוסף שמות קבצים</string>
-    <string name="simple_renaming">שינוי שם פשוט</string>
     <string name="pattern_renaming">דפוס</string>
     <string name="string_to_add">מחרוזת להוספה</string>
-    <string name="rename_date_time_pattern">%Y - שנה\n%M - חודש\n%D - יום\n%h - שעה\n%m - דקה\n%s - שניה\n%i - המספר עולה מ-1</string>
-    <string name="filename_without_txt">שם הקובץ (ללא .txt)</string>
-    <string name="filename_without_json">שם קובץ (ללא .json)</string>
-    <string name="filename_without_zip">שם קובץ (ללא .zip)</string>
-    <string name="cannot_hide_files">החל מ-Android 11 אינך יכול להסתיר יותר קבצים ותיקיות כאלה</string>
-    <!-- Copy / Move -->
     <string name="copy">העתק</string>
     <string name="move">העבר</string>
     <string name="copy_move">העתק / העבר</string>
@@ -227,12 +98,10 @@
     <string name="source_and_destination_same">מקור ויעד לא יכולים להיות זהים</string>
     <string name="copy_failed">לא ניתן להעתיק את הקבצים</string>
     <string name="copying">מעתיק...</string>
-    <string name="copying_success">קבצים הועתקו בהצלחה</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success">הקבצים הועתקו בהצלחה</string>
     <string name="copy_move_failed">אירעה שגיאה</string>
     <string name="moving">מעביר...</string>
-    <string name="moving_success">קובץ הועבר בהצלחה</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success">הקבצים הועברו בהצלחה</string>
     <string name="moving_success_partial">חלק מהקבצים לא הועברו</string>
     <string name="copying_success_partial">חלק מהקבצים לא הועתקו</string>
     <string name="no_files_selected">לא נבחרו קבצים</string>
@@ -240,9 +109,6 @@
     <string name="could_not_create_folder">לא ניתן ליצור תיקייה %s</string>
     <string name="could_not_create_file">לא ניתן ליצור קובת %s</string>
     <string name="no_new_items">לא נמצאו פריטים חדשים</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-    <!-- Create new -->
     <string name="create_new">צור חדש</string>
     <string name="folder">תיקיה</string>
     <string name="file">קובץ</string>
@@ -251,7 +117,6 @@
     <string name="invalid_name">השם מכיל תווים לא חוקיים</string>
     <string name="empty_name">נא להכניס שם</string>
     <string name="unknown_error_occurred">שגיאה לא ידועה אירעה</string>
-    <!-- File operation conflicts -->
     <string name="file_already_exists">הקובץ \"%s\" כבר קיים</string>
     <string name="file_already_exists_overwrite">הקובץ \"%s\" כבר קיים. לדרוס?</string>
     <string name="folder_already_exists">התיקייה \"%s\" כבר קיימת</string>
@@ -259,85 +124,26 @@
     <string name="keep_both">שמור את שניהם</string>
     <string name="overwrite">דרוס</string>
     <string name="skip">דלג</string>
-    <string name="append">Append with \'_1\'</string>
     <string name="apply_to_all">החל על הכל</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
-    <!-- File picker -->
     <string name="select_folder">בחר/י תיקייה</string>
     <string name="select_file">בחר/י קובץ</string>
     <string name="confirm_storage_access_title">אישור גישה לאחסון חיצוני</string>
-    <string name="confirm_folder_access_title">אשר את הגישה לתיקייה</string>
     <string name="confirm_storage_access_text">נא לבחור את תיקיית האב של כרטיס ה SD במסך הבא, כדי להעניק הרשאות גישה</string>
     <string name="confirm_storage_access_text_sd">אם לא מופיע כרטיס ה SD, ניתן לנסות</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">אישור בחירה</string>
-    <string name="loading">טוען…</string>
-    <string name="access_storage_prompt">אנא הענק לאפליקציה שלנו גישה לכל הקבצים שלך, ייתכן שהיא לא תעבוד טוב בלעדיה.</string>
-    <plurals name="items">
-        <item quantity="one">פריט %d</item>
-        <item quantity="other">%d פריטים</item>
-    </plurals>
-    <!-- Are you sure you want to delete 5 items? -->
-    <plurals name="delete_items">
-        <item quantity="one">פריט %d</item>
-        <item quantity="other">%d פריטים</item>
-    </plurals>
-    <plurals name="deleting_items">
-        <item quantity="one">מוחק פריט %d</item>
-        <item quantity="other">מוחק %d פריטים</item>
-    </plurals>
-    <!-- Are you sure you want to delete 5 contacts? -->
-    <plurals name="delete_contacts">
-        <item quantity="one">%d איש קשר</item>
-        <item quantity="other">%d אנשי קשר</item>
-    </plurals>
-    <!-- Storages -->
     <string name="select_storage">בחירת אחסון</string>
-    <string name="storage">אִחסוּן</string>
     <string name="internal">פנימי</string>
-    <string name="internal_storage">אחסון פנימי</string>
     <string name="sd_card">כרטיס SD</string>
-    <string name="root">Root</string>
-    <string name="wrong_root_selected">נבחרה תיקייה שגויה, אנא בחר את התיקיה הראשית של כרטיס ה-SD שלך</string>
-    <string name="sd_card_usb_same">נתיב כרטיס SD והתקן USB אינם יכולים להיות זהים</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-    <!-- File properties -->
     <string name="properties">מאפיינים</string>
     <string name="path">נתיב</string>
     <string name="items_selected">פריטים נבחרים</string>
-    <string name="direct_children_count">ילדים ישירים נחשבים</string>
-    <string name="files_count">סה"כ ספירת הקבצים</string>
     <string name="resolution">רזולוצייה</string>
-    <string name="duration">מֶשֶׁך</string>
     <string name="artist">אומן</string>
     <string name="album">אלבום</string>
-    <string name="genre">ז\'ָאנר</string>
-    <string name="focal_length">אורך מוקד</string>
-    <string name="exposure_time">זמן חשיפה</string>
-    <string name="iso_speed">מהירות ISO</string>
-    <string name="f_number">מספר F</string>
     <string name="camera">מצלמה</string>
-    <string name="exif">EXIF</string>
     <string name="song_title">כותר שיר</string>
-    <string name="gps_coordinates">קואורדינטות GPS</string>
-    <string name="altitude">גוֹבַה</string>
-    <string name="remove_exif">הסר את ה-EXIF</string>
-    <string name="remove_exif_confirmation">האם אתה בטוח שברצונך להסיר ערכי EXIF כמו קואורדינטות GPS, דגם מצלמה וכו\'?</string>
-    <string name="exif_removed">ערכי EXIF הוסרו בהצלחה</string>
-    <!-- Color customization -->
-    <string name="background_color">צבע רקע</string>
     <string name="text_color">צבע טקסט</string>
     <string name="primary_color">צבע עיקרי</string>
-    <string name="accent_color_white">צבע מבטא של נושא לבן</string>
-    <string name="accent_color_black_and_white">צבע מבטא של שחור &amp; נושא לבן</string>
     <string name="foreground_color">צבע חזית</string>
     <string name="app_icon_color">צבע אייקון תוכנה</string>
     <string name="bottom_navigation_bar_color">צבע סרגל ניווט</string>
@@ -351,34 +157,14 @@
     <string name="discard">השלך</string>
     <string name="undo_changes">בטל שינויים</string>
     <string name="undo_changes_confirmation">האם לבטל שינויים?</string>
-    <string name="cannot_be_undone">לא ניתן לבטל פעולה זו.</string>
     <string name="save_before_closing">ישנם שינויים לא שומרים. לשמור לפני יציאה?</string>
-    <string name="apply_to_all_apps">קבע צבעים עבור על אפליקציות Simple Apps</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="global_theme_success">The current theme has been successfully applied to all Fossify apps. Any future changes to this theme will be synced automatically.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
-        ]]>
-    </string>
-    <!-- Themes -->
     <string name="light_theme">בהיר</string>
     <string name="dark_theme">כהה</string>
-    <string name="auto_theme">אוטומטי</string>
-    <string name="auto_light_dark_theme">אור/חושך אוטומטי</string>
-    <string name="solarized">סולארי</string>
     <string name="dark_red">אדום כהה</string>
-    <string name="white">לבן</string>
     <string name="black_white">שחור ולבן</string>
     <string name="custom">מותאם אישית</string>
     <string name="shared">משותף</string>
-    <string name="system_default">ברירת מחדל של המערכת</string>
-    <!-- What's new -->
     <string name="whats_new">מה חדש</string>
-    <string name="whats_new_disclaimer">* רק העדכונים הגדולים יותר מופיעים כאן, תמיד יש גם כמה שיפורים קטנים יותר</string>
-    <!-- Actionbar items -->
     <string name="delete">מחק</string>
     <string name="remove">הסר</string>
     <string name="rename">שנה שם</string>
@@ -386,303 +172,94 @@
     <string name="share_via">שתף דרך</string>
     <string name="resize">שנה גודל</string>
     <string name="select_all">בחר הכל</string>
-    <string name="select_text">בחר טקסט</string>
     <string name="hide">הסתר</string>
     <string name="unhide">בטל הסתרה</string>
     <string name="hide_folder">הסתר תיקייה</string>
     <string name="unhide_folder">בטל הסתרת תיקייה</string>
     <string name="temporarily_show_hidden">הצג הכל באופן זמני</string>
     <string name="stop_showing_hidden">הפסק הצגה של מדיה</string>
-    <string name="allow_access_more_media">אפשר גישה למדיה נוספת</string>
     <string name="maximum_share_reached">לא ניתן לשתף כמות זו בבת אחת</string>
     <string name="empty_and_disable_recycle_bin">רוקן והשבת את סל המחזור</string>
     <string name="undo">שחזר</string>
     <string name="redo">בצע מחדש</string>
     <string name="print">הדפס</string>
     <string name="print_pro">הדפס (Pro)</string>
-    <string name="shortcut">קיצור</string>
     <string name="create_shortcut">צור קיצור דרך</string>
     <string name="create_shortcut_pro">צור קיצור דרך (Pro)</string>
     <string name="add_number_to_contact">הוסף מספר לאנשי קשר</string>
-    <string name="view_contact_details">צפה בפרטי התקשרות</string>
-    <string name="call_from_sim_1">התקשר מ-SIM 1</string>
-    <string name="call_from_sim_2">התקשר מ-SIM 2</string>
-    <string name="toggle_filename">החלף את נראות שם הקובץ</string>
-    <string name="move_to_top">עברו לראש</string>
-    <string name="move_to_bottom">עברו לתחתית</string>
-    <string name="pin_item">פריט סיכה</string>
-    <string name="unpin_item">בטל הצמדה של פריט</string>
-    <string name="send_sms">שלח מסרון</string>
-    <string name="send_email">שלח אימייל</string>
-    <string name="call">שִׂיחָה</string>
-    <string name="contact_details">פרטי יצירת קשר</string>
-    <string name="add_contact">הוסף איש קשר</string>
-    <string name="wallpapers">טפטים</string>
-    <string name="show_line_numbers">הצג מספרי שורות</string>
-    <string name="hide_line_numbers">הסתר מספרי שורות</string>
     <string name="sleep_timer">טיימר שינה</string>
-    <string name="unblock">Unblock</string>
-    <!-- Sorting -->
     <string name="sort_by">מיין לפי</string>
     <string name="name">שם</string>
     <string name="size">גודל</string>
     <string name="last_modified">עודן לאחרונה</string>
-    <string name="date_created">תאריך יצירה</string>
-    <string name="date_taken">תאריך שנלקח</string>
-    <string name="date_added">תאריך הוספה</string>
     <string name="title">כותרת</string>
     <string name="filename">שם קובץ</string>
     <string name="extension">תוסף</string>
     <string name="random">אקראי</string>
     <string name="sort_randomly">מיין בצורה אקראית</string>
-    <string name="ascending">עולה</string>
-    <string name="descending">יורד</string>
     <string name="use_for_this_folder">השתמש בתיקייה זו בלבד</string>
-    <string name="sort_numeric_parts">מיין חלקים מספריים לפי ערך בפועל</string>
     <string name="first_name">שם</string>
     <string name="middle_name">שם אמצעי</string>
     <string name="surname">שם משפחה</string>
     <string name="full_name">שם מלא</string>
-    <string name="use_custom_sorting">השתמש במיון מותאם אישית</string>
-    <string name="change_order">שנה סדר</string>
-    <string name="more_options">אפשרויות נוספות</string>
-    <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">להמשיך במחיקה?</string>
     <string name="deletion_confirmation">האם למחוק את %s?</string>
-    <string name="deletion_confirmation_short">למחוק את %s?</string>
-    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">האם להעביר את %s לסל המחזור?</string>
-    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">האם למחוק פריט זה?</string>
     <string name="are_you_sure_recycle_bin">האם להעביר פריט זה לסל המחזור?</string>
-    <string name="do_not_ask_again">אל תשאל שוב בהפעלה זו</string>
-    <string name="do_not_show_again">אל תציג שוב</string>
     <string name="yes">כן</string>
     <string name="no">לא</string>
     <string name="maybe">אולי</string>
-    <plurals name="delete_warning">
-        <item quantity="one">אזהרה: אתה מוחק תיקייה %d</item>
-        <item quantity="other">אזהרה: אתה מוחק %d תיקיות</item>
-    </plurals>
-    <!-- Password protection -->
-    <string name="pin">PIN</string>
     <string name="enter_pin">הכנס PIN</string>
     <string name="please_enter_pin">נא להכניס PIN</string>
     <string name="wrong_pin">שגיאה ב PIN</string>
-    <string name="pin_must_be_4_digits_long">PIN חייב להיות באורך של 4 ספרות לפחות</string>
-    <string name="too_many_incorrect_attempts">יותר מדי ניסיונות ביטול נעילה שגויים.\נסה שוב בעוד %d שניות.</string>
     <string name="repeat_pin">חזור על PIN</string>
     <string name="pattern">דפוס</string>
     <string name="insert_pattern">הכנס דפוס</string>
     <string name="wrong_pattern">דפוס שגוי</string>
     <string name="repeat_pattern">חזור על דפוס</string>
-    <string name="biometrics">ביומטריה</string>
     <string name="fingerprint">טביעת אצבע</string>
     <string name="add_fingerprint">הוספת טביעת אצבע</string>
-    <string name="place_finger">נא להניח את טביעת האצבע על החיישן</string>
-    <string name="open_biometric_dialog">פתח תיבת דו-שיח לאימות מזהה ביומטרי</string>
-    <string name="authenticate">לְאַמֵת</string>
+    <string name="place_finger">אנא הנח את האצבע שלך על חיישן טביעות האצבע</string>
     <string name="authentication_failed">זיהוי נכשל</string>
     <string name="authentication_blocked">זיהוי חסוי. נא לנסות שוב מאוחר יותר</string>
     <string name="no_fingerprints_registered">אין טביעות אצבע רשומות. נא להוסיף בהגדרות המכשיר</string>
     <string name="go_to_settings">עבור להגדרות</string>
     <string name="protection_setup_successfully">סיסמה הוגדרה בהצלחה. נא להתקין שוב את האפליקציה במיקרה של איבוד הסיסמה.</string>
-    <string name="fingerprint_setup_successfully">הגדרת ההגנה בהצלחה. אנא התקן מחדש את האפליקציה במקרה של בעיות באיפוס שלה.</string>
     <string name="lock_folder">נעל תיקייה</string>
     <string name="lock_folder_pro">נעל תיקייה (Pro)</string>
     <string name="unlock_folder">בטל נעילת תיקייה</string>
-    <string name="lock_folder_notice">הגנה זו פועלת באפליקציה זו בלבד, היא לא אמורה להחליף הצפנת תיקייה אמיתית כלל מערכתית.</string>
-    <string name="enter_password">הזן סיסמה</string>
-    <string name="password">סיסמה</string>
-    <string name="add_password">הוסף סיסמה</string>
-    <string name="empty_password_new">אנא הזן סיסמה</string>
-    <string name="empty_password">אנא הזן את הסיסמה</string>
-    <string name="invalid_password">סיסמה שגויה</string>
-    <!-- Times -->
     <string name="yesterday">אתמול</string>
     <string name="today">היום</string>
     <string name="tomorrow">אתמול</string>
-    <string name="every_day">Every day</string>
     <string name="hide_year">הסתר שנה</string>
     <string name="seconds_raw">שניות</string>
     <string name="minutes_raw">דקות</string>
     <string name="hours_raw">שעות</string>
     <string name="days_raw">ימים</string>
-    <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
-    <string name="week_number_short">wk.</string>
-    <plurals name="seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
-    </plurals>
-    <plurals name="minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
-    </plurals>
-    <plurals name="hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
-    </plurals>
-    <plurals name="days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
-    </plurals>
-    <plurals name="weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
-    </plurals>
-    <plurals name="months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
-    </plurals>
-    <plurals name="years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
-    </plurals>
-    <!-- For example: I will be there in 5 minutes -->
-    <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
-    </plurals>
-    <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
-    </plurals>
-    <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
-    </plurals>
-    <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
-    </plurals>
-    <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
-    </plurals>
-    <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
-    </plurals>
-    <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
-    </plurals>
-    <!-- For example: Event reminder: 3 minutes before -->
-    <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
-    </plurals>
-    <plurals name="minutes_before">
-        <item quantity="one">%d minute before</item>
-        <item quantity="other">%d minutes before</item>
-    </plurals>
-    <plurals name="hours_before">
-        <item quantity="one">%d hour before</item>
-        <item quantity="other">%d hours before</item>
-    </plurals>
-    <plurals name="days_before">
-        <item quantity="one">%d day before</item>
-        <item quantity="other">%d days before</item>
-    </plurals>
-    <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
-    </plurals>
-    <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
-    </plurals>
-    <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
-    </plurals>
-    <!-- For example: Postpone reminder by 3 minutes -->
-    <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
-    </plurals>
-    <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
-    </plurals>
-    <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
-    </plurals>
-    <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
-    </plurals>
-    <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
-    </plurals>
-    <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
-    </plurals>
-    <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
-    </plurals>
-    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. Check your device battery and notification settings, if there is nothing blocking the reminders, or killing the app in the background.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
-    <!-- Alarms -->
-    <string name="alarm">אזעקה</string>
-    <string name="snooze">נודניק</string>
-    <string name="dismiss">סגור</string>
-    <string name="no_reminder">אין תזכורת</string>
     <string name="at_start">בהתחלה</string>
     <string name="system_sounds">צלילי מערכת</string>
     <string name="your_sounds">הצלילים שלך</string>
     <string name="add_new_sound">הוספת צליל</string>
-    <string name="no_sound">ללא צליל</string>
-    <string name="during_day_at_hh_mm">במהלך היום בשעה hh:mm</string>
-    <string name="during_day_at">במהלך היום ב-%02d:%02d</string>
-    <!-- Settings -->
     <string name="settings">הגדרות</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
-    <string name="general_settings">כללי</string>
-    <string name="color_customization">התאמה אישית של צבע</string>
-    <string name="improved_color_customization">התאמה אישית משופרת של צבע</string>
     <string name="customize_colors">התאם צבעים</string>
     <string name="customize_colors_locked">התאם צבעים (Locked)</string>
-    <string name="feature_locked">Locked</string>
     <string name="customize_widget_colors">התאם צבעי יישומון</string>
-    <string name="customize_notifications">התאם אישית התראות</string>
-    <string name="notification_sound">צליל התראה</string>
     <string name="use_english_language">השתמש בשפה האנגלית</string>
-    <string name="language">שפה</string>
     <string name="show_hidden_items">הצג פריטים מוסתרים</string>
     <string name="font_size">גודל פונט</string>
     <string name="small">קטן</string>
     <string name="medium">בינוני</string>
     <string name="large">גדול</string>
     <string name="extra_large">ענק</string>
-    <string name="password_protect_hidden_items">נראות פריט מוסתר להגנת סיסמה</string>
-    <string name="password_protect_whole_app">הגנת הסיסמה על כל האפליקציה</string>
-    <string name="password_protect_file_deletion">מחיקה והעברה של קבצים להגנת סיסמה</string>
-    <string name="keep_last_modified">שמור את הערך הישן ששונה לאחרונה בפעולות הקובץ</string>
-    <string name="show_info_bubble">הצג בועת מידע בגלילה של פריטים על ידי גרירת פס גלילה</string>
-    <string name="prevent_phone_from_sleeping">מנע מהטלפון לישון בזמן שהאפליקציה נמצאת בחזית</string>
     <string name="skip_delete_confirmation">תמיד לדלג על אישור מחיקה</string>
     <string name="enable_pull_to_refresh">הפעל סנכרון על ידי משיכה מלמעלה</string>
     <string name="use_24_hour_time_format">השתמש בפורמט של 24 שעות</string>
     <string name="change_date_and_time_format">שנה פורמט תאריך ושעה</string>
-    <string name="sunday_first">יום ראשון בשבוע</string>
-    <string name="start_week_on">מתחילים את השבוע ב</string>
+    <string name="sunday_first">השבוע מתחיל ביום ראשון</string>
     <string name="widgets">יישומונים</string>
-    <string name="use_same_snooze">השתמש תמיד באותו זמן נודניק</string>
-    <string name="snooze_time">זמן נודניק</string>
-    <string name="vibrate_on_button_press">רטט בעת לחיצה</string>
-    <string name="move_items_into_recycle_bin">העבר לסל המחזור במקום מחיקה</string>
+    <string name="vibrate_on_button_press">רטט בעת לחיצה על כפתורים</string>
+    <string name="move_items_into_recycle_bin">העבר פריטים לסל המחזור במקום מחיקתם</string>
     <string name="recycle_bin_cleaning_interval">זמן ריקון של סל המחזור</string>
     <string name="empty_recycle_bin">רוקן את סל המחזור</string>
     <string name="force_portrait_mode">אלץ מצב אנכי</string>
@@ -691,25 +268,15 @@
     <string name="settings_exported_successfully">הגדרות הוצאו בהצלחה</string>
     <string name="settings_imported_successfully">הגדרות יובאו בהצלחה</string>
     <string name="start_name_with_surname">התחל שם בשם משפחה</string>
-    <string name="clear_cache">נקה מטמון</string>
-    <string name="show_call_confirmation_dialog">הצג תיבת דו-שיח לאישור שיחה לפני תחילת שיחה</string>
-    <!-- Setting sections -->
     <string name="visibility">נראות</string>
     <string name="security">אבטחה</string>
     <string name="scrolling">גלילה</string>
     <string name="file_operations">פעולות קובץ</string>
     <string name="recycle_bin">סל מחזור</string>
     <string name="saving_label">שומר</string>
-    <string name="startup">סטארט - אפ</string>
     <string name="text">טקסט</string>
-    <string name="migrating">העברה</string>
-    <string name="quality">איכות</string>
-    <string name="main_screen">מסך ראשי</string>
     <string name="thumbnails">תמונות ממוזערות</string>
-    <string name="list_view">תצוגת רשימה</string>
-    <!-- Excluding -->
     <string name="exclude">אל תכלול</string>
-    <string name="exclude_folder">אל תכלול תיקייה</string>
     <string name="excluded_folders">תיקיות שלא נכללו</string>
     <string name="excluded">(לא נכלל)</string>
     <string name="manage_excluded_folders">נהל תיקיות שלא נכללו</string>
@@ -717,17 +284,12 @@
     <string name="remove_all_description">להסיר את כל התיקיות מרשימת החרגות\? פעולה זו לא תמחק את התיקיות.</string>
     <string name="temporarily_show_excluded">הצג לא נכלל באופן זמני</string>
     <string name="stop_showing_excluded">הפסק את הצגת החרגות</string>
-    <!-- Default tab to open -->
-    <string name="manage_shown_tabs">נהל את הכרטיסיות המוצגות</string>
-    <string name="default_tab_to_open">טאב בפתיחת האפליקצייה</string>
+    <string name="default_tab_to_open">לשונית פתיחה בהפעלת האפליקציה</string>
     <string name="contacts_tab">אנשי קשר</string>
     <string name="favorites_tab">מועדפים</string>
     <string name="call_history_tab">היסטוריית שיחות</string>
     <string name="groups_tab">קבוצות</string>
     <string name="last_used_tab">בשימוש לאחרונה</string>
-    <string name="files_tab">קבצים</string>
-    <string name="recent_files_tab">קבצים אחרונים</string>
-    <!-- Recycle Bin -->
     <string name="restore_this_file">שחזר קובץ זה</string>
     <string name="restore_selected_files">שחזר קבצים נבחרים</string>
     <string name="restore_all_files">שחזר את כל הקבצים</string>
@@ -738,15 +300,8 @@
     <string name="moving_recycle_bin_items_disabled">העברה של פריטי סל המחזור מבוטלת. נא להשתמש בשחזור</string>
     <string name="show_the_recycle_bin">הצג את סל המחזור</string>
     <string name="hide_the_recycle_bin">הסתר את סל המחזור</string>
-    <string name="open_the_recycle_bin">פתח את סל המיחזור</string>
-    <string name="skip_the_recycle_bin">דלג על סל המיחזור, מחק קבצים ישירות</string>
-    <plurals name="moving_items_into_bin">
-        <item quantity="one">מעביר פריט %d לסל המיחזור</item>
-        <item quantity="other">מעביר %d פריטים לסל המיחזור</item>
-    </plurals>
-    <!-- Import / Export -->
-    <string name="importing">מייבא…</string>
-    <string name="exporting">מייצא…</string>
+    <string name="importing">מייבא...</string>
+    <string name="exporting">מייצא...</string>
     <string name="importing_successful">ייבוא הצליח</string>
     <string name="exporting_successful">ייצוא הצליח</string>
     <string name="importing_failed">ייבוא נכשל</string>
@@ -754,18 +309,7 @@
     <string name="importing_some_entries_failed">ייבוא חלק מהרשומות נכשל</string>
     <string name="exporting_some_entries_failed">ייצוא חלק מהרשומות נכשל</string>
     <string name="no_entries_for_importing">לא נמצאו רשומות לייבוא</string>
-    <string name="no_new_entries_for_importing">לא נמצאו ערכים חדשים לייבוא</string>
     <string name="no_entries_for_exporting">לא נמצאו רשומות לייצוא</string>
-    <string name="backups">גיבויים</string>
-    <string name="enable_automatic_backups">הפעל גיבויים אוטומטיים</string>
-    <string name="manage_automatic_backups">נהל גיבויים אוטומטיים</string>
-    <string name="date_time_pattern_info">תוכל להשתמש בתבניות הבאות כדי לתת שם לקובץ שלך באופן אוטומטי:\n\n%Y - שנה\n%M - חודש\n%D - יום\n%h - שעה\n%m - דקה\n%s - שנייה</string>
-    <!-- OTG devices -->
-    <string name="usb">USB</string>
-    <string name="usb_detected">נראה שיש לך התקן USB מחובר למכשיר שלך. כדי לוודא שהקבצים שלו יופיעו כראוי, עליך להעניק הרשאות נוספות.</string>
-    <string name="confirm_usb_storage_access_text">אנא בחר בתיקייה העליונה של התקן ה-USB במסך הבא, כדי להעניק גישה</string>
-    <string name="wrong_root_selected_usb">נבחרה תיקייה שגויה, אנא בחר את התיקיה הראשית של התקן ה-USB שלך</string>
-    <!-- Dates -->
     <string name="january">ינואר</string>
     <string name="february">פברואר</string>
     <string name="march">מרץ</string>
@@ -778,20 +322,6 @@
     <string name="october">אוקטובר</string>
     <string name="november">נובמבר</string>
     <string name="december">דצמבר</string>
-    <!-- Short months -->
-    <string name="january_short">Jan</string>
-    <string name="february_short">Feb</string>
-    <string name="march_short">Mar</string>
-    <string name="april_short">Apr</string>
-    <string name="may_short">May</string>
-    <string name="june_short">June</string>
-    <string name="july_short">July</string>
-    <string name="august_short">Aug</string>
-    <string name="september_short">Sept</string>
-    <string name="october_short">Oct</string>
-    <string name="november_short">Nov</string>
-    <string name="december_short">Dec</string>
-    <!-- in January -->
     <string name="in_january">בינואר</string>
     <string name="in_february">בפברואר</string>
     <string name="in_march">במרץ</string>
@@ -825,82 +355,12 @@
     <string name="friday_short">ו\'</string>
     <string name="saturday_short">ז\'</string>
     <string name="sunday_short">א\'</string>
-    <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
-    <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
     <string name="more_info">מידע נוסף</string>
     <string name="upgrade">עדכון</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
-    <string name="upgraded_from_free_gallery">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your settings and favorites over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro_gallery">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your settings and favorites over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free">Hello,\n\nseems like you just upgraded from the free version. Once you are happy with this one and maybe migrated your data over, you can uninstall the old free one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_to_pro">Hello,\n\nseems like you already have the Pro app version too. Once you are happy with it and maybe migrated your data over, you can uninstall this one to avoid launching it accidentally as you will not need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_calendar">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your locally stored events over, you have to do it manually by exporting them into an .ics file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_contacts">Hello,\n\nseems like you just upgraded from the free version. If you had any contacts stored under \"%s\", you have to migrate them manually by exporting in a .vcf file from the free app version and importing here through the top menu.\n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <string name="upgraded_from_free_notes">Hello,\n\nseems like you just upgraded from the free version. If you want to migrate your notes over, you have to do it manually by exporting them into a file in the free app version and importing here through the top menu. \n\nOnce you are satisfied with your setup in the Pro version, you can uninstall the old free one as you won\'t need it anymore.\n\nThanks!</string>
-    <!-- About -->
     <string name="about">אודות</string>
-    <string name="website">Website</string>
-    <string name="website_label">For the source codes visit</string>
-    <string name="email_label">Send your feedback or suggestions to</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
-    <string name="more_apps">עוד אפליקציות</string>
-    <string name="more_apps_from_us">עוד אפליקציות מאיתנו</string>
-    <string name="invite_friends">Invite friends</string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
-    <string name="rate_us">דרג אותנו</string>
     <string name="rate">דרג</string>
     <string name="donate">תרום</string>
-    <string name="follow_us">Follow us</string>
-    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">תמיכה</string>
-    <string name="help_us">עזור לנו</string>
-    <string name="social">Social</string>
-    <string name="other">אַחֵר</string>
-    <string name="privacy_policy">מדיניות הפרטיות</string>
-    <string name="version_placeholder">גרסה %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">מידע נוסף</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            Thank you!
-        ]]>
-    </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features including color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
-    <string name="donate_short">Support us by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; please, it will also unlock all app features including color customization.</string>
-    <string name="purchase">לִרְכּוֹשׁ</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
-    <string name="read_it">Read it</string>
-    <string name="read_faq">Read FAQ</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
-    <string name="rate_our_app">דרג את האפליקציה שלנו בבקשה :)</string>
-    <string name="thank_you">תודה</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
-    <!-- New app (do not translate anything on the 4th line) -->
-    <string name="new_app">
-        <![CDATA[
-            Hey,<br><br>
-            just letting you know that some new apps have been released recently:<br><br>
-            <a href="%1$s">%2$s</a><br><br>
-            <a href="%3$s">%4$s</a><br><br>
-            <a href="%5$s">%6$s</a><br><br>
-            You can download them by pressing their titles or icons.<br><br>
-            Thanks
-        ]]>
-    </string>
-    <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">מחשבון</string>
     <string name="calendar_short">יומן</string>
     <string name="camera_short">מצלמה</string>
@@ -911,203 +371,122 @@
     <string name="file_manager_short">סייר קבצים</string>
     <string name="flashlight_short">פנס</string>
     <string name="gallery_short">גלריה</string>
-    <string name="keyboard_short">Keyboard</string>
-    <string name="launcher_short">Launcher</string>
     <string name="music_player_short">נגן מוזיקה</string>
     <string name="notes_short">פתקים</string>
     <string name="sms_messenger_short">הודעות SMS</string>
-    <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">רשמקול</string>
-    <string name="sideloaded_app">
-        <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
-        ]]>
-    </string>
-    <!-- FAQ -->
-    <string name="frequently_asked_questions">שאלות נפוצות</string>
-    <string name="before_asking_question">לפני שאתה שואל שאלה, אנא קרא תחילה את</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-    <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
-    <string name="contributors_label">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_bulgarian">Bulgarian</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_english">English</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
-    <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
-    <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
-    <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Get the Pro version now!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
-    <string name="why_upgrade_pro_version">Pro</string>
-    <string name="why_upgrade_no_ads">No ads</string>
-    <string name="why_upgrade_no_internet_access">No internet access</string>
-    <string name="why_upgrade_footer">100% Money Back Guarantee</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
-    <string name="why_upgrade_many_other_improvements">Many other improvements</string>
-    <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_advanced_photo_video_editor">Advanced photo &amp; video editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
-    <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
-    <string name="why_upgrade_new_widgets">New widgets</string>
-    <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
-    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
-    <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
-    <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
-    <string name="why_upgrade_file_compression">File compression support</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
-    <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
-    <string name="why_upgrade_file_importing">File importing support</string>
-    <string name="why_upgrade_zooming">Zooming</string>
-    <!-- License -->
-    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">Third party licences</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
-    <string name="pdf_view_pager_title">PDFViewPager (PDF viewer)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
-    <string name="zip4j_title">Zip4j (ZIP compression and decompression)</string>
-    <!-- Trial -->
-    <string name="trial_expired">Trial expired</string>
-    <string name="start_free_trial">Start free trial</string>
-    <string name="trial_expires_soon">Your trial expires soon.</string>
-    <string name="unlock_for_one_final_day">Unlock the app for one final day</string>
-    <string name="welcome_to_app_name">Welcome to %s!</string>
-    <string name="trial_start_description">Thank you for using our app. You can use this unlocked version for &lt;font color=\'#FFFFFF\'>%d days&lt;/font>. Once the trial ends, please consider upgrading to the Pro version. It has a huge amount of new features, modern design, no ads and many other improvements.
-        \n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nHope you\'ll like it :)</string>
-    <string name="trial_end_description">Please upgrade to the Pro version to enjoy the app to the fullest.\n\nYou just have to pay for it once in a lifetime and if you won\'t be satisfied, you can uninstall it and get a refund.\n\nSee you there :)</string>
-    <plurals name="trial_expires_days">
-        <item quantity="one">Your trial expires in %d day.</item>
-        <item quantity="other">Your trial expires in %d days.</item>
+    <string name="select_a_different_color">בחר צבע אחר</string>
+    <string name="back">חזור</string>
+    <string name="error">שגיאה: %s</string>
+    <string name="no_browser_found">לא נמצא דפדפן</string>
+    <string name="no_phone_call_permission">האפליקציה אינה רשאית לבצע שיחות, בבקשה הענק לה גישה דרך הגדרות המכשיר</string>
+    <string name="notifications">התראות</string>
+    <string name="notification">התראה</string>
+    <string name="transparent_color">צבע שקוף</string>
+    <string name="no_new_entries_for_importing">לא נמצאו רשומות חדשות לייבוא</string>
+    <string name="no_email_client_found">לא נמצאה תוכנת מייל</string>
+    <string name="transparent">שקוף</string>
+    <string name="deletion_confirmation_short">מחק%s?</string>
+    <string name="ascending">בסדר עולה</string>
+    <string name="unblock">בטל חסימה</string>
+    <string name="auto_theme">אוטומטי</string>
+    <string name="copying_success_one">הקובץ הועתק בהצלחה</string>
+    <string name="moving_success_one">הקובץ הועבר בהצלחה</string>
+    <string name="storage">אחסון</string>
+    <string name="internal_storage">אחסון פנימי</string>
+    <string name="background_color">צבע הרקע</string>
+    <string name="date_added">תאריך הוספה</string>
+    <string name="date_created">תאריך יצירה</string>
+    <string name="descending">בסדר יורד</string>
+    <string name="more_options">אפשרויות נוספות</string>
+    <string name="change_order">שנה סדר</string>
+    <string name="use_custom_sorting">השתמש במיון מותאם אישית</string>
+    <string name="shortcut">קיצור</string>
+    <string name="white">לבן</string>
+    <string name="system_default">ברירת המחדל של המערכת</string>
+    <string name="select_text">בחר טקסט</string>
+    <string name="pin_must_be_4_digits_long">קוד סודי (PIN) חייב להיות באורך של 4 ספרות לפחות</string>
+    <string name="do_not_show_again">אל תציג שוב</string>
+    <string name="empty_password">נא להזין את הסיסמה</string>
+    <plurals name="months">
+        <item quantity="one">חודש</item>
+        <item quantity="two">%d חודשים</item>
+        <item quantity="other">%d חודשים</item>
     </plurals>
-    <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
-    <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="enter_password">הזן סיסמה</string>
+    <string name="every_day">בכל יום</string>
+    <string name="add_password">הוסף סיסמה</string>
+    <string name="biometrics">ביומטריה</string>
+    <string name="too_many_incorrect_attempts">יותר מדי ניסיונות ביטול נעילה שגויים.\nנסה שוב בעוד %d שניות.</string>
+    <string name="password">סיסמה</string>
+    <string name="empty_password_new">נא להזין סיסמה</string>
+    <string name="invalid_password">הסיסמה שגויה</string>
+    <string name="seconds_letter">שנ\'</string>
+    <string name="minutes_letter">דק\'</string>
+    <string name="general_settings">כללי</string>
+    <string name="color_customization">התאמה אישית של הצבעים</string>
+    <string name="notification_sound">צליל התראה</string>
+    <string name="customize_notifications">התאם אישית התראות</string>
+    <string name="feature_locked">נעול</string>
+    <string name="language">שפה</string>
+    <string name="theme_and_colors">ערכות נושא וצבעים</string>
+    <plurals name="minutes">
+        <item quantity="one">דקה</item>
+        <item quantity="two">%d דקות</item>
+        <item quantity="other">%d דקות</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">שעה</item>
+        <item quantity="two">%d שעות</item>
+        <item quantity="other">%d שעות</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">יום</item>
+        <item quantity="two">%d ימים</item>
+        <item quantity="other">%d ימים</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">שנה</item>
+        <item quantity="two">%d שנים</item>
+        <item quantity="other">%d שנים</item>
+    </plurals>
+    <plurals name="delete_warning">
+        <item quantity="one">אזהרה: אתה מוחק את תיקיית%d</item>
+        <item quantity="two">אזהרה: אתה מוחק את תיקיות%d</item>
+        <item quantity="other">אזהרה: אתה מוחק את תיקיות%d</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">שנייה</item>
+        <item quantity="two">%d שניות</item>
+        <item quantity="other">%d שניות</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">שבוע</item>
+        <item quantity="two">%d שבועות</item>
+        <item quantity="other">%d שבועות</item>
+    </plurals>
+    <string name="hours_letter">שע\'</string>
+    <string name="start_week_on">השבוע מתחיל ביום</string>
+    <string name="snooze">נודניק</string>
+    <string name="snooze_time">מרווח זמן הנודניק</string>
+    <string name="use_same_snooze">השתמש תמיד באותו מרווח זמן לנודניק</string>
+    <string name="rate_us">דרג אותנו</string>
+    <string name="manage_shown_tabs">נהל את הכרטיסיות המוצגות</string>
+    <string name="list_view">תצוגת רשימה</string>
+    <string name="password_protect_whole_app">הגן באמצעות סיסמה על כל האפליקציה</string>
+    <string name="password_protect_hidden_items">הגן באמצעות סיסמה על האפשרות לראות פריטים מוסתרים</string>
+    <string name="prevent_phone_from_sleeping">מנע מהטלפון לישון בזמן שהאפליקציה פעילה (בקדמת המסך)</string>
+    <string name="password_protect_file_deletion">הגן באמצעות סיסמה על מחיקת והעברת קבצים</string>
+    <string name="clear_cache">נקה מטמון</string>
+    <string name="exclude_folder">אל תכלול תיקיה</string>
+    <string name="files_tab">קבצים</string>
+    <string name="recent_files_tab">קבצים אחרונים</string>
+    <string name="open_the_recycle_bin">פתח את סל המחזור</string>
+    <string name="skip_the_recycle_bin">דלג על סל המחזור, ומחק קבצים ישירות (לצמיתות)</string>
+    <string name="backups">גיבויים</string>
+    <string name="enable_automatic_backups">אפשר גיבויים אוטומטיים</string>
+    <string name="manage_automatic_backups">נהל גיבויים אוטומטיים</string>
+    <string name="privacy_policy">מדיניות פרטיות</string>
+    <string name="email_label">שלח משוב או הצעות לשיפור אל</string>
+    <string name="website_label">לצפייה בקודי המקור</string>
 </resources>

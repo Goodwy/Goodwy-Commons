@@ -1,26 +1,30 @@
 package com.goodwy.commons.views
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
+import androidx.core.view.updatePadding
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.ItemBreadcrumbBinding
-import com.goodwy.commons.databinding.ItemBreadcrumbFirstBinding
 import com.goodwy.commons.extensions.*
+import com.goodwy.commons.helpers.MEDIUM_ALPHA
 import com.goodwy.commons.models.FileDirItem
 
 class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(context, attrs) {
-    private val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    private val inflater =
+        context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     private val itemsLayout: LinearLayout
     private var textColor = context.getProperTextColor()
+    private var accentColor = context.getProperPrimaryColor()
     private var fontSize = resources.getDimension(R.dimen.bigger_text_size)
     private var lastPath = ""
     private var isLayoutDirty = true
@@ -33,8 +37,8 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         get() = ColorStateList(
             arrayOf(intArrayOf(android.R.attr.state_activated), intArrayOf()),
             intArrayOf(
-                textColor,
-                textColor.adjustAlpha(0.6f)
+                accentColor.adjustAlpha(0.8f),
+                textColor.adjustAlpha(0.8f)
             )
         )
 
@@ -146,91 +150,81 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         val tempPath = context.humanizePath(fullPath)
 
         itemsLayout.removeAllViews()
-        val dirs = tempPath.split("/").dropLastWhile(String::isEmpty)
-        for (i in dirs.indices) {
-            val dir = dirs[i]
-            if (i > 0) {
-                currPath += dir + "/"
+        tempPath.split("/")
+            .dropLastWhile(String::isEmpty)
+            .forEachIndexed { i, dir ->
+                if (i > 0) {
+                    currPath += "$dir/"
+                }
+                if (dir.isEmpty()) {
+                    return@forEachIndexed
+                }
+                currPath = "${currPath.trimEnd('/')}/"
+                val item = FileDirItem(currPath, dir, true, 0, 0, 0)
+                addBreadcrumb(
+                    item = item,
+                    index = i,
+                    isLast = item.path.trimEnd('/') == lastPath.trimEnd('/')
+                )
+                scrollToSelectedItem()
             }
-
-            if (dir.isEmpty()) {
-                continue
-            }
-
-            currPath = "${currPath.trimEnd('/')}/"
-            val item = FileDirItem(currPath, dir, true, 0, 0, 0)
-            addBreadcrumb(item, i, i > 0)
-            scrollToSelectedItem()
-        }
     }
 
-    private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
-        if (itemsLayout.childCount == 0) {
-//            val firstItemBgColor = if (isShownInDialog && context.isDynamicTheme()) {
-//                resources.getColor(R.color.you_dialog_background_color, context.theme)
-//            } else if (context.isBlackTheme()) {
-//                context.getBottomNavigationBackgroundColor()
-//            } else {
-//                context.getProperBackgroundColor()
-//            }
+    @SuppressLint("SetTextI18n")
+    private fun addBreadcrumb(item: FileDirItem, index: Int, isLast: Boolean) {
+        ItemBreadcrumbBinding.inflate(inflater, itemsLayout, false).apply {
+            breadcrumbText.isActivated = isLast && index != 0
 
-            ItemBreadcrumbFirstBinding.inflate(inflater, itemsLayout, false).apply {
-                resources.apply {
-                    breadcrumbText.background = ContextCompat.getDrawable(context, R.drawable.button_background_12dp)
-                    breadcrumbText.background.applyColorFilter(context.getProperBackgroundColor())
-                    breadcrumbText.foreground = ContextCompat.getDrawable(context, R.drawable.button_background_stroke)
-                    breadcrumbText.foreground.applyColorFilter(textColor.adjustAlpha(0.6f))
-                    root.elevation = 1f
-                    //background = ColorDrawable(firstItemBgColor)
-                    val medium = getDimension(R.dimen.medium_margin).toInt()
-                    val smaller = getDimension(R.dimen.smaller_margin).toInt()
-                    breadcrumbText.setPadding(medium, smaller, medium, medium)
-                    setPadding(rootStartPadding, 0, 0, 0)
-                }
+            breadcrumbText.setTextColor(textColorStateList)
+            breadcrumbText.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+            val isRTL = context.isRTLLayout
 
-                isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
+            itemsLayout.addView(root)
+            if (index > 0) {
+                val textToAdd = item.name
+                breadcrumbText.text = if (isRTL) "$textToAdd ‹ " else " › $textToAdd"
+//                breadcrumbText.setDrawablesRelativeWithIntrinsicBounds(
+//                    start = AppCompatResources.getDrawable(
+//                        context, R.drawable.ic_chevron_right_vector
+//                    )
+//                )
+
+//                TextViewCompat.setCompoundDrawableTintList(breadcrumbText, textColorStateList)
+            } else {
                 breadcrumbText.text = item.name
-                breadcrumbText.setTextColor(textColorStateList)
-                breadcrumbText.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+                breadcrumbText.elevation = context.resources.getDimension(R.dimen.one_dp)
+                setupStickyBreadcrumbBackground(breadcrumbText)
+                val medium = resources.getDimension(R.dimen.medium_margin).toInt()
+                val smaller = resources.getDimension(R.dimen.smaller_margin).toInt()
+                breadcrumbText.updatePadding(medium, smaller, medium, medium)
+                if (isRTL) setPadding(0, 0, rootStartPadding, 0)
+                else setPadding(rootStartPadding, 0, 0, 0)
+            }
 
-                itemsLayout.addView(this.root)
-
-                breadcrumbText.setOnClickListener {
-                    if (itemsLayout.getChildAt(index) != null) {
+            breadcrumbText.setOnClickListener { v ->
+                if (itemsLayout.getChildAt(index) != null && itemsLayout.getChildAt(index) == v) {
+                    if (index != 0 && isLast) {
+                        scrollToSelectedItem()
+                    } else {
                         listener?.breadcrumbClicked(index)
                     }
                 }
-
-                root.tag = item
             }
-        } else {
-            ItemBreadcrumbBinding.inflate(inflater, itemsLayout, false).apply {
-                var textToAdd = item.name
-                if (addPrefix) {
-                    textToAdd = "› $textToAdd"
-                }
 
-                isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
-
-                breadcrumbText.text = textToAdd
-                breadcrumbText.setTextColor(textColorStateList)
-                breadcrumbText.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
-
-                itemsLayout.addView(root)
-
-                breadcrumbText.setOnClickListener { v ->
-                    if (itemsLayout.getChildAt(index) != null && itemsLayout.getChildAt(index) == v) {
-                        if ((v.tag as? FileDirItem)?.path?.trimEnd('/') == lastPath.trimEnd('/')) {
-                            scrollToSelectedItem()
-                        } else {
-                            listener?.breadcrumbClicked(index)
-                        }
-                    }
-                }
-
-                root.tag = item
-            }
+            root.tag = item
         }
+    }
+
+    private fun setupStickyBreadcrumbBackground(view: MyTextView) {
+        val drawable = view.background.mutate() as RippleDrawable
+        (drawable.getDrawable(0) as GradientDrawable)
+            .apply {
+                setColor(context.getDialogBackgroundColor())
+                setStroke(
+                    context.resources.getDimensionPixelSize(R.dimen.one_dp),
+                    context.getProperPrimaryColor().adjustAlpha(MEDIUM_ALPHA)
+                )
+            }
     }
 
     fun updateColor(color: Int) {
