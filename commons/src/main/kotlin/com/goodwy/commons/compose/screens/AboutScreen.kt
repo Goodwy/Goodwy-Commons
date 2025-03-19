@@ -65,7 +65,10 @@ private fun AboutScreenPreview() {
                     onPrivacyPolicyClick = {},
                     onFAQClick = {},
                     onTipJarClick = {},
-                    onGithubClick = {}
+                    onGithubClick = {},
+                    showGithub = true,
+                    playStoreInstalled = true,
+                    ruStoreInstalled = true,
                 )
             },
             isTopAppBarColorIcon = true,
@@ -84,8 +87,10 @@ internal fun AboutNewSection(
     onPrivacyPolicyClick: () -> Unit,
     onFAQClick: () -> Unit,
     onTipJarClick: () -> Unit,
+    onGithubClick: () -> Unit,
     showGithub: Boolean = true,
-    onGithubClick: () -> Unit
+    playStoreInstalled: Boolean,
+    ruStoreInstalled: Boolean,
 ) {
     Box(
         modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.about_margin))
@@ -136,35 +141,37 @@ internal fun AboutNewSection(
             Spacer(modifier = Modifier.size(8.dp))
             HtmlText(stringResource(stringsR.string.about_summary), textColor = textColor)
             Spacer(modifier = Modifier.size(24.dp))
-            Card(
-                shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-                elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
-            ) {
-                Row (
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .clickable(onClick = onRateUsClick),
-                    verticalAlignment = Alignment.CenterVertically,
+            if (playStoreInstalled || ruStoreInstalled) {
+                Card(
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
                 ) {
-                    Text(modifier = Modifier
-                        .padding(start = 16.dp, end = 8.dp)
-                        .weight(1f),
-                        text = stringResource(R.string.rate_us).toUpperCase(LocaleList.current),
-                        fontSize = 14.sp,
-                        lineHeight = 18.sp,
-                        color = textColor,)
-                    Box (modifier = Modifier
-                        .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
-                        .width(42.dp)) {
-                        Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
-                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.rate_us), tint = textColor)
-                        Icon(modifier = Modifier.size(42.dp).padding(8.dp),
-                            imageVector = Icons.Rounded.Star, contentDescription = stringResource(id = R.string.rate_us), tint = textColor)
+                    Row (
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clickable(onClick = onRateUsClick),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(modifier = Modifier
+                            .padding(start = 16.dp, end = 8.dp)
+                            .weight(1f),
+                            text = stringResource(R.string.rate).toUpperCase(LocaleList.current),
+                            fontSize = 14.sp,
+                            lineHeight = 18.sp,
+                            color = textColor,)
+                        Box (modifier = Modifier
+                            .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
+                            .width(42.dp)) {
+                            Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
+                                imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.rate), tint = textColor)
+                            Icon(modifier = Modifier.size(42.dp).padding(8.dp),
+                                imageVector = Icons.Rounded.Star, contentDescription = stringResource(id = R.string.rate), tint = textColor)
+                        }
                     }
                 }
+                Spacer(modifier = Modifier.size(18.dp))
             }
-            Spacer(modifier = Modifier.size(18.dp))
             Card(
                 shape = RoundedCornerShape(16.dp),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),

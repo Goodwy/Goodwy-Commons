@@ -116,7 +116,7 @@
     <string name="top_app_bar_color_title">Gekleurde titel van de bovenste balk van de app</string>
     <string name="overflow_icon">Overloop icoon</string>
     <string name="lines_count">Aantal lijnen</string>
-    <string name="show_button_blocked_numbers">Toon de knop om geblokkeerde oproepen niet te verbergen</string>
+    <string name="show_button_blocked_numbers">Knop geblokkeerde nummers weergeven</string>
     <string name="flash_for_alerts">Flikkeren bij waarschuwingen</string>
     <string name="clean_theme_g">Clean</string>
     <string name="concept_theme_g">Concept</string>
@@ -251,7 +251,7 @@
 
     <!-- Relation types -->
     <string name="search_the_web">Zoeken op internet</string>
-    <string name="show_number_blocking_button">Toon nummervergrendelingsknop</string>
+    <string name="show_number_blocking_button">Knop voor nummerblokkering weergeven</string>
     <string name="relation_g">Relatie</string>
     <string name="relations_g">Verwante personen</string>
     <string name="relation_hint_g">Verwante persoon</string>
