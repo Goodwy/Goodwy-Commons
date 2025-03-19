@@ -59,8 +59,6 @@ class AboutActivity : BaseComposeActivity() {
                             onTipJarClick = ::onTipJarClick,
                             onGithubClick = ::onGithubClick,
                             showGithub = showGithub(),
-                            playStoreInstalled = playStoreInstalled(),
-                            ruStoreInstalled = ruStoreInstalled(),
                         )
                     },
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
@@ -179,14 +177,6 @@ class AboutActivity : BaseComposeActivity() {
     @Composable
     private fun showGithub() =
         remember { !intent.getStringExtra(APP_REPOSITORY_NAME).isNullOrEmpty() }
-
-    @Composable
-    private fun playStoreInstalled() =
-        remember { intent.getStringExtra(PLAY_STORE_INSTALLED).isNullOrEmpty() }
-
-    @Composable
-    private fun ruStoreInstalled() =
-        remember { intent.getStringExtra(RU_STORE).isNullOrEmpty() }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)

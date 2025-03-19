@@ -29,6 +29,7 @@ import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.lists.SimpleColumnScaffold
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.isPlayStoreInstalled
 import com.goodwy.commons.extensions.isRuStoreInstalled
 import com.goodwy.strings.R as stringsR
 
@@ -67,8 +68,6 @@ private fun AboutScreenPreview() {
                     onTipJarClick = {},
                     onGithubClick = {},
                     showGithub = true,
-                    playStoreInstalled = true,
-                    ruStoreInstalled = true,
                 )
             },
             isTopAppBarColorIcon = true,
@@ -89,14 +88,14 @@ internal fun AboutNewSection(
     onTipJarClick: () -> Unit,
     onGithubClick: () -> Unit,
     showGithub: Boolean = true,
-    playStoreInstalled: Boolean,
-    ruStoreInstalled: Boolean,
 ) {
     Box(
         modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.about_margin))
     ) {
         val context = LocalContext.current
         val textColor = MaterialTheme.colorScheme.onSurface
+        val playStoreInstalled = context.isPlayStoreInstalled()
+        val ruStoreInstalled = context.isRuStoreInstalled()
         Column(Modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp, bottom = 26.dp)) {
             ListItem(
                 modifier = Modifier
@@ -195,7 +194,7 @@ internal fun AboutNewSection(
                         .width(42.dp)) {
                         Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
                             imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
-                        if (context.isRuStoreInstalled() && !context.baseConfig.useGooglePlay) {
+                        if (ruStoreInstalled && !context.baseConfig.useGooglePlay) {
                             Icon(modifier = Modifier
                                 .size(42.dp)
                                 .padding(9.dp),
