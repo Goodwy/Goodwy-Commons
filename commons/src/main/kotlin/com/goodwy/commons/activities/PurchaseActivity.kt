@@ -246,9 +246,10 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupOptionsMenu() {
+        val visible = if (resources.getBoolean(R.bool.is_pro_app)) false else playStoreInstalled || ruStoreInstalled
         binding.purchaseToolbar.menu.apply {
-            findItem(R.id.restorePurchases).isVisible = playStoreInstalled || ruStoreInstalled
-            findItem(R.id.openSubscriptions).isVisible = playStoreInstalled || ruStoreInstalled
+            findItem(R.id.restorePurchases).isVisible = visible
+            findItem(R.id.openSubscriptions).isVisible = visible
         }
         binding.purchaseToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
