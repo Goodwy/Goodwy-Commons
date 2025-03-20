@@ -550,18 +550,27 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     @Suppress("DEPRECATION")
     private fun setupNoPlayStoreInstalled() {
-        binding.proDonateText.text = if (playStoreInstalled) Html.fromHtml(getString(stringsR.string.donate_text_no_gp_g)) else Html.fromHtml(getString(stringsR.string.donate_text_g))
+        val isProApp = resources.getBoolean(R.bool.is_pro_app)
+        binding.proDonateText.text =
+            if (isProApp) Html.fromHtml(getString(stringsR.string.about_summary))
+            else if (playStoreInstalled) Html.fromHtml(getString(stringsR.string.donate_text_no_gp_g))
+            else Html.fromHtml(getString(stringsR.string.donate_text_g))
         binding.proDonateButton.apply {
             setOnClickListener {
                 launchViewIntent("https://sites.google.com/view/goodwy/support-project")
             }
             background.setTint(primaryColor)
         }
-        binding.proSwitch.isChecked = if (playStoreInstalled) baseConfig.isProNoGP else baseConfig.isPro
-        binding.proSwitchHolder.setOnClickListener {
-            binding.proSwitch.toggle()
-            if (playStoreInstalled) baseConfig.isProNoGP = binding.proSwitch.isChecked
-            else baseConfig.isPro = binding.proSwitch.isChecked
+        if (isProApp) {
+            binding.proUnlockText.beGone()
+            binding.proSwitchHolder.beGone()
+        } else {
+            binding.proSwitch.isChecked = if (playStoreInstalled) baseConfig.isProNoGP else baseConfig.isPro
+            binding.proSwitchHolder.setOnClickListener {
+                binding.proSwitch.toggle()
+                if (playStoreInstalled) baseConfig.isProNoGP = binding.proSwitch.isChecked
+                else baseConfig.isPro = binding.proSwitch.isChecked
+            }
         }
     }
 
