@@ -246,7 +246,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupOptionsMenu() {
-        val visible = if (resources.getBoolean(R.bool.is_pro_app)) false else playStoreInstalled || ruStoreInstalled
+        val visible = /*playStoreInstalled || */ruStoreInstalled
         binding.purchaseToolbar.menu.apply {
             findItem(R.id.restorePurchases).isVisible = visible
             findItem(R.id.openSubscriptions).isVisible = visible
@@ -553,7 +553,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun setupNoPlayStoreInstalled() {
         val isProApp = resources.getBoolean(R.bool.is_pro_app)
         binding.proDonateText.text =
-            if (isProApp) Html.fromHtml(getString(stringsR.string.about_summary))
+            if (isProApp) Html.fromHtml(getString(stringsR.string.plus_summary))
             else if (playStoreInstalled) Html.fromHtml(getString(stringsR.string.donate_text_no_gp_g))
             else Html.fromHtml(getString(stringsR.string.donate_text_g))
         binding.proDonateButton.apply {
