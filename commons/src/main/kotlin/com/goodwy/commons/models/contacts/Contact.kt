@@ -190,7 +190,8 @@ data class Contact(
 
     fun getFirstLetter(): String {
         val bubbleText = getBubbleText()
-        val character = if (bubbleText.isNotEmpty()) bubbleText.substring(0, 1) else ""
+        val emoji = bubbleText.take(2)
+        val character = if (emoji.isEmoji()) emoji else if (bubbleText.isNotEmpty()) bubbleText.substring(0, 1) else ""
         return character.uppercase(Locale.getDefault()).normalizeString()
     }
 
