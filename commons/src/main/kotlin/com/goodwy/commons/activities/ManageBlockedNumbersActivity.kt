@@ -1,6 +1,5 @@
 package com.goodwy.commons.activities
 
-import android.app.Activity
 import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -8,6 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
@@ -22,7 +22,6 @@ import com.goodwy.commons.compose.screens.ManageBlockedNumbersScreen
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.AddOrEditBlockedNumberAlertDialog
 import com.goodwy.commons.dialogs.ExportBlockedNumbersDialog
-import com.goodwy.commons.dialogs.FilePickerDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.BlockedNumber
@@ -39,13 +38,30 @@ import kotlinx.coroutines.withContext
 
 class ManageBlockedNumbersActivity : BaseSimpleActivity() {
 
-    private val config by lazy {
-        baseConfig
+    private val config by lazy { baseConfig }
+
+    private val blockedNumberMimeTypes = buildList {
+        add("text/plain")
+        if (!isQPlus()) {
+            add("application/octet-stream")
+        }
+    }.toTypedArray()
+
+    private val openDocument = registerForActivityResult(
+        ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        if (uri != null) {
+            tryImportBlockedNumbersFromFile(uri)
+        }
     }
 
-    private companion object {
-        private const val PICK_IMPORT_SOURCE_INTENT = 11
-        private const val PICK_EXPORT_FILE_INTENT = 21
+    private val createDocument = registerForActivityResult(
+        ActivityResultContracts.CreateDocument("text/plain")
+    ) { uri ->
+        if (uri != null) {
+            val outputStream = contentResolver.openOutputStream(uri)
+            exportBlockedNumbersTo(outputStream)
+        }
     }
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
@@ -151,31 +167,12 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
     }
 
     private fun tryImportBlockedNumbers() {
-        if (isQPlus()) {
-            Intent(Intent.ACTION_GET_CONTENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "text/plain"
-
-                try {
-                    startActivityForResult(this, PICK_IMPORT_SOURCE_INTENT)
-                } catch (e: ActivityNotFoundException) {
-                    toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
-                } catch (e: Exception) {
-                    showErrorToast(e)
-                }
-            }
-        } else {
-            handlePermission(PERMISSION_READ_STORAGE) { isAllowed ->
-                if (isAllowed) {
-                    pickFileToImportBlockedNumbers()
-                }
-            }
-        }
-    }
-
-    private fun pickFileToImportBlockedNumbers() {
-        FilePickerDialog(this) {
-            importBlockedNumbers(it)
+        try {
+            openDocument.launch(blockedNumberMimeTypes)
+        } catch (_: ActivityNotFoundException) {
+            toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
+        } catch (e: Exception) {
+            showErrorToast(e)
         }
     }
 
@@ -239,20 +236,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                 updateBlockedNumbers()
             }
 
-            requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null -> {
-                tryImportBlockedNumbersFromFile(resultData.data!!)
-            }
-
-            requestCode == PICK_EXPORT_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null -> {
-                val outputStream = contentResolver.openOutputStream(resultData.data!!)
-                exportBlockedNumbersTo(outputStream)
-            }
-
-            requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != Activity.RESULT_OK -> {
+            requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != RESULT_OK -> {
                 toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
                 baseConfig.blockUnknownNumbers = false
                 baseConfig.blockHiddenNumbers = false
-
             }
         }
     }
@@ -276,31 +263,17 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
     }
 
     private fun tryExportBlockedNumbers() {
-        if (isQPlus()) {
-            ExportBlockedNumbersDialog(this, baseConfig.lastBlockedNumbersExportPath, true) { file ->
-                Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
-                    type = "text/plain"
-                    putExtra(Intent.EXTRA_TITLE, file.name)
-                    addCategory(Intent.CATEGORY_OPENABLE)
-
-                    try {
-                        startActivityForResult(this, PICK_EXPORT_FILE_INTENT)
-                    } catch (e: ActivityNotFoundException) {
-                        toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
-                    } catch (e: Exception) {
-                        showErrorToast(e)
-                    }
-                }
-            }
-        } else {
-            handlePermission(PERMISSION_WRITE_STORAGE) { isAllowed ->
-                if (isAllowed) {
-                    ExportBlockedNumbersDialog(this, baseConfig.lastBlockedNumbersExportPath, false) { file ->
-                        getFileOutputStream(file.toFileDirItem(this), true) { out ->
-                            exportBlockedNumbersTo(out)
-                        }
-                    }
-                }
+        ExportBlockedNumbersDialog(
+            activity = this,
+            path = baseConfig.lastBlockedNumbersExportPath,
+            hidePath = true
+        ) { file ->
+            try {
+                createDocument.launch(file.name)
+            } catch (_: ActivityNotFoundException) {
+                toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
+            } catch (e: Exception) {
+                showErrorToast(e)
             }
         }
     }

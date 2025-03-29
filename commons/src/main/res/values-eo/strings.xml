@@ -89,7 +89,7 @@
     <string name="calendar_short">Kalendaro</string>
     <string name="camera_short">Kamerao</string>
     <string name="clock_short">Horloĝo</string>
-    <string name="contacts_short">Kontaktadministrilo</string>
+    <string name="contacts_short">Kontaktoj</string>
     <string name="gallery_short">Galerio</string>
     <string name="music_player_short">Muzikludilo</string>
     <string name="notes_short">Notoj</string>
@@ -625,9 +625,9 @@
     </plurals>
     <string name="minutes_raw">minutoj</string>
     <string name="days_raw">tagoj</string>
-    <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
+    <string name="seconds_letter">%ds</string>
+    <string name="minutes_letter">%dm</string>
+    <string name="hours_letter">%dh</string>
     <plurals name="seconds">
         <item quantity="one">%d sekundo</item>
         <item quantity="other">%d sekundoj</item>
@@ -730,7 +730,7 @@
     <string name="hide_the_recycle_bin">Kaŝi rubujon</string>
     <string name="snooze_time">Longo de daŭrigo</string>
     <string name="start_week_on">Komenco de la semajno</string>
-    <string name="thumbnails">Miniaturoj</string>
+    <string name="thumbnails">Bildetoj</string>
     <string name="export_settings">Eksporti agordojn</string>
     <string name="last_used_tab">Laste uzata</string>
     <string name="move_items_into_recycle_bin">Movi elementojn al la rubujo anstataŭ forigi</string>
@@ -978,7 +978,7 @@
     <string name="translation">Tradukado</string>
     <string name="contributors_label"><![CDATA[
             Tiu ĉi listo enhavas ĉiujn kiuj rimarkeble helpis iun ajn aplikaĵon de Fossify, ne nur tiu ĉi. La tradukado estas traktita pro volontuloj.
-            Sciigu nin se vi ankaŭ ŝatus helpi nin. La traduka gvido troviĝas <a href="https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file">ĉi tie</a>, aŭ vi povas kontakti nin je <a href="mailto:hello@fossify.org">hello@fossify.org</a> se via havas demandojn.
+            Sciigu nin se vi ankaŭ ŝatus helpi nin. La traduka gvido troviĝas <a href="https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file">ĉi tie</a>, aŭ vi povas kontakti nin je <a href="mailto:hello@fossify.org">hello@fossify.org</a> se vi havas demandojn.
             Dankon al ĉiuj kontribuantoj kaj aliaj subtenantoj!
         ]]></string>
     <string name="m3u_parser_title">M3U Parser (traktado de dosieroj de m3u-ludlistoj)</string>
