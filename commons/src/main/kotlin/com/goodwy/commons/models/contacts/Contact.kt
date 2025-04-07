@@ -9,10 +9,11 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.PhoneNumber
 import ezvcard.property.FormattedName
 import kotlinx.serialization.Contextual
-import java.io.Serializable
+import kotlinx.serialization.Serializable
 import java.text.Collator
 import java.util.Locale
 
+@Serializable
 data class Contact(
     var id: Int,
     var prefix: String= "",
@@ -40,7 +41,7 @@ data class Contact(
     var IMs: ArrayList<IM> = ArrayList(),
     var mimetype: String = "",
     var ringtone: String? = ""
-) : Comparable<Contact>, Serializable {
+) : Comparable<Contact> {
     val rawId = id
     val name = getNameToDisplay()
     var birthdays = events.filter { it.type == ContactsContract.CommonDataKinds.Event.TYPE_BIRTHDAY }.map { it.value }.toMutableList() as ArrayList<String>
