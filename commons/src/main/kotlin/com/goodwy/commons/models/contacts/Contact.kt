@@ -270,6 +270,34 @@ data class Contact(
         prefix.isEmpty() && firstName.isEmpty() && middleName.isEmpty() && surname.isEmpty() && suffix.isEmpty() && organization.isNotEmpty()
 
     fun doesContainPhoneNumber(text: String, convertLetters: Boolean = false, search: Boolean = false): Boolean {
+        val withoutReplace = doesContainPhoneNumberCheck(text, convertLetters, search)
+        if (withoutReplace || search) return withoutReplace
+        else {
+            // If the number in the contacts is written without + or 8 instead of +7
+            // https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers
+            val withoutPlus = doesContainPhoneNumberCheck(text.replace("+", ""), convertLetters, search)
+            return if (withoutPlus) true
+            else {
+                when {
+                    text.startsWith("+7") -> doesContainPhoneNumberCheck(text.replace("+7", "8"), convertLetters, search) //Russia
+                    text.startsWith("+31") -> doesContainPhoneNumberCheck(text.replace("+31", "0"), convertLetters, search) //Netherlands
+                    text.startsWith("+33") -> doesContainPhoneNumberCheck(text.replace("+33", "0"), convertLetters, search) //France
+                    text.startsWith("+34") -> doesContainPhoneNumberCheck(text.replace("+34", ""), convertLetters, search) //Spain
+                    text.startsWith("+39") -> doesContainPhoneNumberCheck(text.replace("+39", "0"), convertLetters, search) //Italy
+                    text.startsWith("+44") -> doesContainPhoneNumberCheck(text.replace("+44", "0"), convertLetters, search) //United Kingdom
+                    text.startsWith("+49") -> doesContainPhoneNumberCheck(text.replace("+49", "0"), convertLetters, search) //Germany
+                    text.startsWith("+91") -> doesContainPhoneNumberCheck(text.replace("+91", "0"), convertLetters, search) //India
+                    text.startsWith("+351") -> doesContainPhoneNumberCheck(text.replace("+351", ""), convertLetters, search) //Portugal
+                    text.startsWith("+374") -> doesContainPhoneNumberCheck(text.replace("+374", "0"), convertLetters, search) //Armenia
+                    text.startsWith("+375") -> doesContainPhoneNumberCheck(text.replace("+375", "0"), convertLetters, search) //Belarus
+                    text.startsWith("+380") -> doesContainPhoneNumberCheck(text.replace("+380", "0"), convertLetters, search) //Ukraine
+                    else -> false
+                }
+            }
+        }
+    }
+
+    fun doesContainPhoneNumberCheck(text: String, convertLetters: Boolean = false, search: Boolean = false): Boolean {
         return if (text.isNotEmpty()) {
             val normalizedText = if (convertLetters) text.normalizePhoneNumber() else text
             phoneNumbers.any {
