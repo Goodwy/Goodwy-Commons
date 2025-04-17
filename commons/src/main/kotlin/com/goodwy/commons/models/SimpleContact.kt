@@ -16,7 +16,8 @@ data class SimpleContact(
         var photoUri: String,
         var phoneNumbers: ArrayList<PhoneNumber>,
         var birthdays: ArrayList<String>,
-        var anniversaries: ArrayList<String>
+        var anniversaries: ArrayList<String>,
+        var isABusinessContact: Boolean = false
     ) : Comparable<SimpleContact> {
 
     companion object {
