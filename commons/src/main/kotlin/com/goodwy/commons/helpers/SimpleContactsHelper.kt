@@ -45,6 +45,8 @@ class SimpleContactsHelper(val context: Context) {
                 if (photoUri != null) {
                     it.photoUri = photoUri
                 }
+
+                it.isABusinessContact = contact?.isABusinessContact ?: false
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
@@ -145,7 +147,7 @@ class SimpleContactsHelper(val context: Context) {
                     }
 
                     val fullName = TextUtils.join(" ", names)
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList())
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), false)
                     contacts.add(contact)
                 }
             }
