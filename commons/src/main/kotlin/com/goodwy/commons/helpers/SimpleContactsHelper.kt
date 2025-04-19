@@ -445,4 +445,40 @@ class SimpleContactsHelper(val context: Context) {
             }
         }
     }
+
+    fun isABusinessContact(number: String): Boolean {
+        if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
+            return false
+        }
+
+        val uri = Uri.withAppendedPath(PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number))
+        val projection = arrayOf(
+            Organization.TITLE,
+            Data.MIMETYPE
+        )
+
+        val selection = "(${Data.MIMETYPE} = ? OR ${Data.MIMETYPE} = ?)"
+
+        val selectionArgs = arrayOf(
+            StructuredName.CONTENT_ITEM_TYPE,
+            Organization.CONTENT_ITEM_TYPE
+        )
+
+        try {
+            val cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
+            cursor.use {
+                if (cursor?.moveToFirst() == true) {
+                    val mimetype = cursor.getStringValue(Data.MIMETYPE)
+                    val isPerson = mimetype == StructuredName.CONTENT_ITEM_TYPE
+                    if (isPerson) return false
+
+                    val isOrganization = mimetype == Organization.CONTENT_ITEM_TYPE
+                    if (isOrganization) return true
+                }
+            }
+        } catch (ignored: Exception) {
+        }
+
+        return false
+    }
 }
