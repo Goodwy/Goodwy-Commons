@@ -281,6 +281,7 @@ data class Contact(
                 when {
                     text.startsWith("+7") -> doesContainPhoneNumberCheck(text.replace("+7", "8"), convertLetters, search) //Russia
                     text.startsWith("+31") -> doesContainPhoneNumberCheck(text.replace("+31", "0"), convertLetters, search) //Netherlands
+                    text.startsWith("+32") -> doesContainPhoneNumberCheck(text.replace("+32", "0"), convertLetters, search) //Belgium
                     text.startsWith("+33") -> doesContainPhoneNumberCheck(text.replace("+33", "0"), convertLetters, search) //France
                     text.startsWith("+34") -> doesContainPhoneNumberCheck(text.replace("+34", ""), convertLetters, search) //Spain
                     text.startsWith("+39") -> doesContainPhoneNumberCheck(text.replace("+39", "0"), convertLetters, search) //Italy
