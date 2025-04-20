@@ -34,8 +34,8 @@ data class SimpleContact(
         result = 31 * result + phoneNumbers.hashCode()
         result = 31 * result + birthdays.hashCode()
         result = 31 * result + anniversaries.hashCode()
-        result = 31 * result + company.hashCode()
-        result = 31 * result + jobPosition.hashCode()
+        result = 31 * result + (company ?: "").hashCode()
+        result = 31 * result + (jobPosition ?: "").hashCode()
         return result
     }
 

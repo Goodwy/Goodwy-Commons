@@ -46,16 +46,6 @@ class SimpleContactsHelper(val context: Context) {
                 if (photoUri != null) {
                     it.photoUri = photoUri
                 }
-
-                val company = contact?.company
-                if (company != null) {
-                    it.company = company
-                }
-
-                val jobPosition = contact?.jobPosition
-                if (jobPosition != null) {
-                    it.jobPosition = jobPosition
-                }
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
@@ -100,6 +90,15 @@ class SimpleContactsHelper(val context: Context) {
             for (i in 0 until size) {
                 val key = anniversaries.keyAt(i)
                 allContacts.firstOrNull { it.rawId == key }?.anniversaries = anniversaries.valueAt(i)
+            }
+
+            val organizations = getContactOrganization()
+            size = organizations.size()
+            for (i in 0 until size) {
+                val key = organizations.keyAt(i)
+                val contact = allContacts.firstOrNull { it.rawId == key }
+                contact?.company = organizations.valueAt(i).company
+                contact?.jobPosition = organizations.valueAt(i).jobPosition
             }
 
             allContacts.sort()
@@ -148,8 +147,6 @@ class SimpleContactsHelper(val context: Context) {
                 val middleName = cursor.getStringValue(StructuredName.MIDDLE_NAME) ?: ""
                 val familyName = cursor.getStringValue(StructuredName.FAMILY_NAME) ?: ""
                 val suffix = cursor.getStringValue(StructuredName.SUFFIX) ?: ""
-                val company = cursor.getStringValue(Organization.COMPANY) ?: ""
-                val jobTitle = cursor.getStringValue(Organization.TITLE) ?: ""
                 if (firstName.isNotEmpty() || middleName.isNotEmpty() || familyName.isNotEmpty()) {
                     val names = if (startNameWithSurname) {
                         arrayOf(prefix, familyName, middleName, firstName, suffix).filter { it.isNotEmpty() }
@@ -158,7 +155,7 @@ class SimpleContactsHelper(val context: Context) {
                     }
 
                     val fullName = TextUtils.join(" ", names)
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company, jobTitle)
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList())
                     contacts.add(contact)
                 }
             }
@@ -239,6 +236,33 @@ class SimpleContactsHelper(val context: Context) {
         }
 
         return eventDates
+    }
+
+    private fun getContactOrganization(): SparseArray<com.goodwy.commons.models.contacts.Organization> {
+        val organizations = SparseArray<com.goodwy.commons.models.contacts.Organization>()
+        val uri = Data.CONTENT_URI
+        val projection = arrayOf(
+            Data.RAW_CONTACT_ID,
+            Organization.COMPANY,
+            Organization.TITLE,
+        )
+
+        val selection = "(${Data.MIMETYPE} = ? OR ${Data.MIMETYPE} = ?)"
+        val selectionArgs = arrayOf(Organization.CONTENT_ITEM_TYPE)
+
+        context.queryCursor(uri, projection, selection, selectionArgs) { cursor ->
+            val id = cursor.getIntValue(Data.RAW_CONTACT_ID)
+            val company = cursor.getStringValue(Organization.COMPANY) ?: ""
+            val title = cursor.getStringValue(Organization.TITLE) ?: ""
+            if (company.isEmpty() && title.isEmpty()) {
+                return@queryCursor
+            }
+
+            val organization = com.goodwy.commons.models.contacts.Organization(company, title)
+            organizations.put(id, organization)
+        }
+
+        return organizations
     }
 
     fun getNameFromPhoneNumber(number: String): String {
