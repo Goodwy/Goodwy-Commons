@@ -10,7 +10,6 @@ import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 import com.goodwy.commons.models.contacts.*
 import androidx.core.net.toUri
-import com.goodwy.commons.extensions.getIntValueOrNull
 import com.goodwy.commons.extensions.getStringValueOrNull
 
 // used for sharing privately stored contacts in Simple Contacts with Simple Dialer, Simple SMS Messenger and Simple Calendar Pro
@@ -49,6 +48,7 @@ class MyContactsContentProvider {
                             val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
                             val companyJson = cursor.getStringValueOrNull(COL_COMPANY) ?: ""
+                            val jobPositionJson = cursor.getStringValueOrNull(COL_JOB_POSITION) ?: ""
 
                             val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
                             val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
@@ -57,7 +57,7 @@ class MyContactsContentProvider {
                             val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
                             val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
 
-                            val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries, companyJson)
+                            val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries, companyJson, jobPositionJson)
                             contacts.add(contact)
                         } while (cursor.moveToNext())
                     }

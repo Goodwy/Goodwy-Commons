@@ -30,11 +30,11 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.goodwy.smsmessenger"
+        applicationId = "com.goodwy.commons.samples"
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         targetSdk = libs.versions.app.build.targetSDK.get().toInt()
-        versionCode = 610
-        versionName = "6.1.0"
+        versionCode = 620
+        versionName = "6.2.0"
         vectorDrawables.useSupportLibrary = true
     }
 

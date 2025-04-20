@@ -48,6 +48,7 @@ class SimpleContactsHelper(val context: Context) {
                 }
 
                 it.company = contact?.company ?: ""
+                it.jobPosition = contact?.jobPosition ?: ""
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
