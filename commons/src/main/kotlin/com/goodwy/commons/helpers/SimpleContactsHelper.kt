@@ -26,6 +26,7 @@ import android.graphics.Bitmap
 import androidx.core.content.res.ResourcesCompat
 import java.text.Collator
 import kotlin.math.abs
+import androidx.core.graphics.drawable.toDrawable
 
 class SimpleContactsHelper(val context: Context) {
     fun getAvailableContacts(favoritesOnly: Boolean, callback: (ArrayList<SimpleContact>) -> Unit) {
@@ -46,7 +47,7 @@ class SimpleContactsHelper(val context: Context) {
                     it.photoUri = photoUri
                 }
 
-                it.isCompany = contact?.isCompany ?: false
+                it.company = contact?.company ?: ""
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
@@ -139,6 +140,7 @@ class SimpleContactsHelper(val context: Context) {
                 val middleName = cursor.getStringValue(StructuredName.MIDDLE_NAME) ?: ""
                 val familyName = cursor.getStringValue(StructuredName.FAMILY_NAME) ?: ""
                 val suffix = cursor.getStringValue(StructuredName.SUFFIX) ?: ""
+                val company = cursor.getStringValue(Organization.COMPANY) ?: ""
                 if (firstName.isNotEmpty() || middleName.isNotEmpty() || familyName.isNotEmpty()) {
                     val names = if (startNameWithSurname) {
                         arrayOf(prefix, familyName, middleName, firstName, suffix).filter { it.isNotEmpty() }
@@ -147,7 +149,7 @@ class SimpleContactsHelper(val context: Context) {
                     }
 
                     val fullName = TextUtils.join(" ", names)
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), false)
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company)
                     contacts.add(contact)
                 }
             }
@@ -158,7 +160,7 @@ class SimpleContactsHelper(val context: Context) {
                 val jobTitle = cursor.getStringValue(Organization.TITLE) ?: ""
                 if (company.isNotEmpty() || jobTitle.isNotEmpty()) {
                     val fullName = "$company $jobTitle".trim()
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), true)
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company)
                     contacts.add(contact)
                 }
             }
@@ -410,7 +412,7 @@ class SimpleContactsHelper(val context: Context) {
 
     fun getShortcutImage(path: String, placeholderName: String, callback: (image: Bitmap) -> Unit) {
         ensureBackgroundThread {
-            val placeholder = BitmapDrawable(context.resources, getContactLetterIcon(placeholderName))
+            val placeholder = getContactLetterIcon(placeholderName).toDrawable(context.resources)
             try {
                 val options = RequestOptions()
                     .format(DecodeFormat.PREFER_ARGB_8888)

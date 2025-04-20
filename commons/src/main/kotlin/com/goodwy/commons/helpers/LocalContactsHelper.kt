@@ -170,8 +170,8 @@ class LocalContactsHelper(val context: Context) {
             } else {
                 val birthdays = contact.events.filter { it.type == Event.TYPE_BIRTHDAY }.map { it.value }.toMutableList() as ArrayList<String>
                 val anniversaries = contact.events.filter { it.type == Event.TYPE_ANNIVERSARY }.map { it.value }.toMutableList() as ArrayList<String>
-                val isCompany = contact.isABusinessContact()
-                SimpleContact(contact.id, contact.id, contact.getNameToDisplay(), contact.photoUri, contact.phoneNumbers, birthdays, anniversaries, isCompany)
+                val company = contact.organization.company
+                SimpleContact(contact.id, contact.id, contact.getNameToDisplay(), contact.photoUri, contact.phoneNumbers, birthdays, anniversaries, company)
             }
         }
     }

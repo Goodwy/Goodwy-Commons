@@ -29,7 +29,6 @@ class MyContactsContentProvider {
         const val COL_ANNIVERSARIES = "anniversaries"
         const val COL_COMPANY = "company"
         const val COL_JOB_POSITION = "job_position"
-        const val COL_IS_COMPANY = "is_company"
 
         fun getSimpleContacts(context: Context, cursor: Cursor?): ArrayList<SimpleContact> {
             val contacts = ArrayList<SimpleContact>()
@@ -49,7 +48,7 @@ class MyContactsContentProvider {
                             val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
                             val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
-                            val isCompanyJson = cursor.getIntValueOrNull(COL_IS_COMPANY) ?: 0
+                            val companyJson = cursor.getStringValueOrNull(COL_COMPANY) ?: ""
 
                             val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
                             val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
@@ -57,9 +56,8 @@ class MyContactsContentProvider {
                             val stringsToken = object : TypeToken<ArrayList<String>>() {}.type
                             val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
                             val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
-                            val isCompany = isCompanyJson > 0
 
-                            val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries, isCompany)
+                            val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries, companyJson)
                             contacts.add(contact)
                         } while (cursor.moveToNext())
                     }
