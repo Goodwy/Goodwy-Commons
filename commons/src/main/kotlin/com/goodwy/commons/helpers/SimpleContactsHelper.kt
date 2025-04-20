@@ -47,8 +47,15 @@ class SimpleContactsHelper(val context: Context) {
                     it.photoUri = photoUri
                 }
 
-                it.company = contact?.company ?: ""
-                it.jobPosition = contact?.jobPosition ?: ""
+                val company = contact?.company
+                if (company != null) {
+                    it.company = company
+                }
+
+                val jobPosition = contact?.jobPosition
+                if (jobPosition != null) {
+                    it.jobPosition = jobPosition
+                }
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
@@ -142,6 +149,7 @@ class SimpleContactsHelper(val context: Context) {
                 val familyName = cursor.getStringValue(StructuredName.FAMILY_NAME) ?: ""
                 val suffix = cursor.getStringValue(StructuredName.SUFFIX) ?: ""
                 val company = cursor.getStringValue(Organization.COMPANY) ?: ""
+                val jobTitle = cursor.getStringValue(Organization.TITLE) ?: ""
                 if (firstName.isNotEmpty() || middleName.isNotEmpty() || familyName.isNotEmpty()) {
                     val names = if (startNameWithSurname) {
                         arrayOf(prefix, familyName, middleName, firstName, suffix).filter { it.isNotEmpty() }
@@ -150,7 +158,7 @@ class SimpleContactsHelper(val context: Context) {
                     }
 
                     val fullName = TextUtils.join(" ", names)
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company)
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company, jobTitle)
                     contacts.add(contact)
                 }
             }
@@ -161,7 +169,7 @@ class SimpleContactsHelper(val context: Context) {
                 val jobTitle = cursor.getStringValue(Organization.TITLE) ?: ""
                 if (company.isNotEmpty() || jobTitle.isNotEmpty()) {
                     val fullName = "$company $jobTitle".trim()
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company)
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company, jobTitle)
                     contacts.add(contact)
                 }
             }
