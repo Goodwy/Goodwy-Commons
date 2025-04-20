@@ -10,7 +10,7 @@ import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 import com.goodwy.commons.models.contacts.*
 import androidx.core.net.toUri
-import com.goodwy.commons.extensions.toast
+import com.goodwy.commons.extensions.getStringValueOrNull
 
 // used for sharing privately stored contacts in Simple Contacts with Simple Dialer, Simple SMS Messenger and Simple Calendar Pro
 class MyContactsContentProvider {
@@ -47,7 +47,7 @@ class MyContactsContentProvider {
                             val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
                             val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
-                            val companyJson = cursor.getStringValue(COL_COMPANY)
+                            val companyJson = cursor.getStringValueOrNull(COL_COMPANY) ?: ""
 
                             val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
                             val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
@@ -63,7 +63,6 @@ class MyContactsContentProvider {
                     }
                 }
             } catch (ignored: Exception) {
-                context.toast(ignored.toString())
             }
             return contacts
         }
@@ -87,8 +86,8 @@ class MyContactsContentProvider {
                             val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
                             val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
-                            val companyJson = cursor.getStringValue(COL_COMPANY)
-                            val jobPositionJson = cursor.getStringValue(COL_JOB_POSITION)
+                            val companyJson = cursor.getStringValueOrNull(COL_COMPANY) ?: ""
+                            val jobPositionJson = cursor.getStringValueOrNull(COL_JOB_POSITION) ?: ""
 
                             val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
                             val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
