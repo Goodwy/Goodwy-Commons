@@ -13,6 +13,7 @@ import com.goodwy.commons.models.contacts.Contact
 import com.goodwy.commons.models.contacts.Group
 import com.goodwy.commons.models.contacts.LocalContact
 import com.goodwy.commons.models.contacts.Organization
+import androidx.core.net.toUri
 
 class LocalContactsHelper(val context: Context) {
     fun getAllContacts(favoritesOnly: Boolean = false): ArrayList<Contact> {
@@ -74,7 +75,7 @@ class LocalContactsHelper(val context: Context) {
             return ByteArray(0)
         }
 
-        val photoUri = Uri.parse(uri)
+        val photoUri = uri.toUri()
         val bitmap = MediaStore.Images.Media.getBitmap(context.contentResolver, photoUri)
 
         val fullSizePhotoData = bitmap.getByteArray()
@@ -169,7 +170,8 @@ class LocalContactsHelper(val context: Context) {
             } else {
                 val birthdays = contact.events.filter { it.type == Event.TYPE_BIRTHDAY }.map { it.value }.toMutableList() as ArrayList<String>
                 val anniversaries = contact.events.filter { it.type == Event.TYPE_ANNIVERSARY }.map { it.value }.toMutableList() as ArrayList<String>
-                SimpleContact(contact.id, contact.id, contact.getNameToDisplay(), contact.photoUri, contact.phoneNumbers, birthdays, anniversaries)
+                val isABusinessContact = contact.isABusinessContact()
+                SimpleContact(contact.id, contact.id, contact.getNameToDisplay(), contact.photoUri, contact.phoneNumbers, birthdays, anniversaries, isABusinessContact)
             }
         }
     }

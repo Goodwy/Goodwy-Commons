@@ -10,6 +10,7 @@ import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 import com.goodwy.commons.models.contacts.*
 import androidx.core.net.toUri
+import com.goodwy.commons.extensions.toast
 
 // used for sharing privately stored contacts in Simple Contacts with Simple Dialer, Simple SMS Messenger and Simple Calendar Pro
 class MyContactsContentProvider {
@@ -62,6 +63,7 @@ class MyContactsContentProvider {
                     }
                 }
             } catch (ignored: Exception) {
+                context.toast(ignored.toString())
             }
             return contacts
         }
