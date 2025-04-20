@@ -19,6 +19,7 @@ import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.LICENSE_AUTOFITTEXTVIEW
+import com.goodwy.commons.helpers.MyContactsContentProvider
 import com.goodwy.commons.helpers.SHOW_ALL_TABS
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
@@ -108,29 +109,33 @@ class MainActivity : BaseSimpleActivity() {
     }
 
     private fun launchAbout() {
-        val licenses = LICENSE_AUTOFITTEXTVIEW
 
-        val faqItems = arrayListOf(
-            FAQItem(com.goodwy.commons.R.string.faq_1_title_commons, com.goodwy.commons.R.string.faq_1_text_commons),
-            FAQItem(com.goodwy.commons.R.string.faq_4_title_commons, com.goodwy.commons.R.string.faq_4_text_commons)
-        )
-
-        if (!resources.getBoolean(com.goodwy.commons.R.bool.hide_google_relations)) {
-            faqItems.add(FAQItem(com.goodwy.commons.R.string.faq_2_title_commons, com.goodwy.commons.R.string.faq_2_text_commons))
-            faqItems.add(FAQItem(com.goodwy.commons.R.string.faq_6_title_commons, com.goodwy.commons.R.string.faq_6_text_commons))
-        }
-
-        startAboutActivity(
-            R.string.app_name_g,
-            licenses,
-            BuildConfig.VERSION_NAME,
-            faqItems,
-            true,
-            arrayListOf("", "", ""), arrayListOf("", "", ""),
-            arrayListOf("", "", ""), arrayListOf("", "", ""),
-            arrayListOf("", "", ""), arrayListOf("", "", ""),
-            playStoreInstalled = isPlayStoreInstalled(),
-            ruStoreInstalled = isRuStoreInstalled())
+        val privateCursor = getMyContactsCursor(false, true)
+        val privateContacts = MyContactsContentProvider.getSimpleContacts(this, privateCursor)
+        copyToClipboard(privateContacts.toString())
+//        val licenses = LICENSE_AUTOFITTEXTVIEW
+//
+//        val faqItems = arrayListOf(
+//            FAQItem(com.goodwy.commons.R.string.faq_1_title_commons, com.goodwy.commons.R.string.faq_1_text_commons),
+//            FAQItem(com.goodwy.commons.R.string.faq_4_title_commons, com.goodwy.commons.R.string.faq_4_text_commons)
+//        )
+//
+//        if (!resources.getBoolean(com.goodwy.commons.R.bool.hide_google_relations)) {
+//            faqItems.add(FAQItem(com.goodwy.commons.R.string.faq_2_title_commons, com.goodwy.commons.R.string.faq_2_text_commons))
+//            faqItems.add(FAQItem(com.goodwy.commons.R.string.faq_6_title_commons, com.goodwy.commons.R.string.faq_6_text_commons))
+//        }
+//
+//        startAboutActivity(
+//            R.string.app_name_g,
+//            licenses,
+//            BuildConfig.VERSION_NAME,
+//            faqItems,
+//            true,
+//            arrayListOf("", "", ""), arrayListOf("", "", ""),
+//            arrayListOf("", "", ""), arrayListOf("", "", ""),
+//            arrayListOf("", "", ""), arrayListOf("", "", ""),
+//            playStoreInstalled = isPlayStoreInstalled(),
+//            ruStoreInstalled = isRuStoreInstalled())
     }
 
     private fun securityDialog() {

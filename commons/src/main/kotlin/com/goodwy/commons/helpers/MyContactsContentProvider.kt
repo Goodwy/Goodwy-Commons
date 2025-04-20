@@ -10,6 +10,7 @@ import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 import com.goodwy.commons.models.contacts.*
 import androidx.core.net.toUri
+import com.goodwy.commons.extensions.getIntValueOrNull
 import com.goodwy.commons.extensions.getStringValueOrNull
 
 // used for sharing privately stored contacts in Simple Contacts with Simple Dialer, Simple SMS Messenger and Simple Calendar Pro
@@ -28,6 +29,7 @@ class MyContactsContentProvider {
         const val COL_ANNIVERSARIES = "anniversaries"
         const val COL_COMPANY = "company"
         const val COL_JOB_POSITION = "job_position"
+        const val COL_IS_COMPANY = "is_company"
 
         fun getSimpleContacts(context: Context, cursor: Cursor?): ArrayList<SimpleContact> {
             val contacts = ArrayList<SimpleContact>()
@@ -47,7 +49,7 @@ class MyContactsContentProvider {
                             val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
                             val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
-                            val companyJson = cursor.getStringValueOrNull(COL_COMPANY) ?: ""
+                            val isCompanyJson = cursor.getIntValueOrNull(COL_IS_COMPANY) ?: 0
 
                             val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
                             val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
@@ -55,9 +57,9 @@ class MyContactsContentProvider {
                             val stringsToken = object : TypeToken<ArrayList<String>>() {}.type
                             val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
                             val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
-                            val isABusinessContact = name == companyJson
+                            val isCompany = isCompanyJson > 0
 
-                            val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries, isABusinessContact)
+                            val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries, isCompany)
                             contacts.add(contact)
                         } while (cursor.moveToNext())
                     }
@@ -84,7 +86,7 @@ class MyContactsContentProvider {
                             val name = cursor.getStringValue(COL_NAME)
                             val photoUri = cursor.getStringValue(COL_PHOTO_URI)
                             val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
-                            val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
+                            val birthdaysJson = cursor.getStringValueOrNull(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
                             val companyJson = cursor.getStringValueOrNull(COL_COMPANY) ?: ""
                             val jobPositionJson = cursor.getStringValueOrNull(COL_JOB_POSITION) ?: ""

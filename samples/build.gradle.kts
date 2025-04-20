@@ -30,7 +30,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.goodwy.commons.samples"
+        applicationId = "com.goodwy.smsmessenger"
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         targetSdk = libs.versions.app.build.targetSDK.get().toInt()
         versionCode = 610

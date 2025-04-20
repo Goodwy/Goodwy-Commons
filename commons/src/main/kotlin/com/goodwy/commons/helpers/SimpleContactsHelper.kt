@@ -46,7 +46,7 @@ class SimpleContactsHelper(val context: Context) {
                     it.photoUri = photoUri
                 }
 
-                it.isABusinessContact = contact?.isABusinessContact ?: false
+                it.isCompany = contact?.isCompany ?: false
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
