@@ -26,6 +26,19 @@ data class SimpleContact(
         var collator: Collator? = null
     }
 
+    override fun hashCode(): Int {
+        var result = rawId.hashCode()
+        result = 31 * result + contactId
+        result = 31 * result + (name ?: "").hashCode()
+        result = 31 * result + (photoUri ?: "").hashCode()
+        result = 31 * result + phoneNumbers.hashCode()
+        result = 31 * result + birthdays.hashCode()
+        result = 31 * result + anniversaries.hashCode()
+        result = 31 * result + (company ?: "").hashCode()
+        result = 31 * result + (jobPosition ?: "").hashCode()
+        return result
+    }
+
     override fun compareTo(other: SimpleContact): Int {
         if (sorting == -1) {
             return compareByFullName(other)
