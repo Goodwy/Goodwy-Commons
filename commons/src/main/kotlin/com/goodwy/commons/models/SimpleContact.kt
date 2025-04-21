@@ -6,7 +6,6 @@ import com.goodwy.commons.extensions.normalizeString
 import com.goodwy.commons.helpers.SORT_BY_FULL_NAME
 import com.goodwy.commons.helpers.SORT_DESCENDING
 import com.goodwy.commons.models.contacts.Contact
-import com.goodwy.commons.models.contacts.Contact.Companion
 import java.text.Collator
 
 data class SimpleContact(

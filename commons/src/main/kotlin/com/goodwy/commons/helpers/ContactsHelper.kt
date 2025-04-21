@@ -2,8 +2,8 @@ package com.goodwy.commons.helpers
 
 import android.accounts.Account
 import android.accounts.AccountManager
+import android.annotation.SuppressLint
 import android.content.*
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Handler
 import android.os.Looper
@@ -21,6 +21,9 @@ import kotlinx.serialization.json.Json
 import java.io.OutputStream
 import java.text.Collator
 import java.util.Locale
+import androidx.core.util.size
+import androidx.core.net.toUri
+import androidx.core.graphics.scale
 
 class ContactsHelper(val context: Context) {
     private val BATCH_SIZE = 50
@@ -55,7 +58,7 @@ class ContactsHelper(val context: Context) {
                 }
             }
 
-            val contactsSize = contacts.size()
+            val contactsSize = contacts.size
             val tempContacts = ArrayList<Contact>(contactsSize)
             val resultContacts = ArrayList<Contact>(contactsSize)
 
@@ -86,7 +89,7 @@ class ContactsHelper(val context: Context) {
 
             // groups are obtained with contactID, not rawID, so assign them to proper contacts like this
             val groups = getContactGroups(getStoredGroupsSync())
-            val size = groups.size()
+            val size = groups.size
             for (i in 0 until size) {
                 val key = groups.keyAt(i)
                 resultContacts.firstOrNull { it.contactId == key }?.groups = groups.valueAt(i)
@@ -133,6 +136,7 @@ class ContactsHelper(val context: Context) {
         }
     }
 
+    @SuppressLint("UseKtx")
     private fun getDeviceContacts(contacts: SparseArray<Contact>, ignoredContactSources: HashSet<String>?, gettingDuplicates: Boolean) {
         if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
             return
@@ -208,7 +212,7 @@ class ContactsHelper(val context: Context) {
         }
 
         val emails = getEmails()
-        var size = emails.size()
+        var size = emails.size
         for (i in 0 until size) {
             val key = emails.keyAt(i)
             contacts[key]?.emails = emails.valueAt(i)
@@ -227,7 +231,7 @@ class ContactsHelper(val context: Context) {
         }
 
         val phoneNumbers = getPhoneNumbers(null)
-        size = phoneNumbers.size()
+        size = phoneNumbers.size
         for (i in 0 until size) {
             val key = phoneNumbers.keyAt(i)
             if (contacts[key] != null) {
@@ -237,49 +241,49 @@ class ContactsHelper(val context: Context) {
         }
 
         val addresses = getAddresses()
-        size = addresses.size()
+        size = addresses.size
         for (i in 0 until size) {
             val key = addresses.keyAt(i)
             contacts[key]?.addresses = addresses.valueAt(i)
         }
 
         val IMs = getIMs()
-        size = IMs.size()
+        size = IMs.size
         for (i in 0 until size) {
             val key = IMs.keyAt(i)
             contacts[key]?.IMs = IMs.valueAt(i)
         }
 
         val events = getEvents()
-        size = events.size()
+        size = events.size
         for (i in 0 until size) {
             val key = events.keyAt(i)
             contacts[key]?.events = events.valueAt(i)
         }
 
         val notes = getNotes()
-        size = notes.size()
+        size = notes.size
         for (i in 0 until size) {
             val key = notes.keyAt(i)
             contacts[key]?.notes = notes.valueAt(i)
         }
 
         val nicknames = getNicknames()
-        size = nicknames.size()
+        size = nicknames.size
         for (i in 0 until size) {
             val key = nicknames.keyAt(i)
             contacts[key]?.nickname = nicknames.valueAt(i)
         }
 
         val websites = getWebsites()
-        size = websites.size()
+        size = websites.size
         for (i in 0 until size) {
             val key = websites.keyAt(i)
             contacts[key]?.websites = websites.valueAt(i)
         }
 
         val relations = getRelations()
-        size = relations.size()
+        size = relations.size
         for (i in 0 until size) {
             val key = relations.keyAt(i)
             contacts[key]?.relations = relations.valueAt(i)
@@ -1381,11 +1385,11 @@ class ContactsHelper(val context: Context) {
 
     private fun addPhoto(contact: Contact, operations: ArrayList<ContentProviderOperation>): ArrayList<ContentProviderOperation> {
         if (contact.photoUri.isNotEmpty()) {
-            val photoUri = Uri.parse(contact.photoUri)
+            val photoUri = contact.photoUri.toUri()
             val bitmap = MediaStore.Images.Media.getBitmap(context.contentResolver, photoUri)
 
             val thumbnailSize = context.getPhotoThumbnailSize()
-            val scaledPhoto = Bitmap.createScaledBitmap(bitmap, thumbnailSize, thumbnailSize, false)
+            val scaledPhoto = bitmap.scale(thumbnailSize, thumbnailSize, false)
             val scaledSizePhotoData = scaledPhoto.getByteArray()
             scaledPhoto.recycle()
 
@@ -1619,7 +1623,7 @@ class ContactsHelper(val context: Context) {
             // photo (inspired by https://gist.github.com/slightfoot/5985900)
             var fullSizePhotoData: ByteArray? = null
             if (contact.photoUri.isNotEmpty()) {
-                val photoUri = Uri.parse(contact.photoUri)
+                val photoUri = contact.photoUri.toUri()
                 fullSizePhotoData = context.contentResolver.openInputStream(photoUri)?.readBytes()
             }
 
@@ -1628,7 +1632,7 @@ class ContactsHelper(val context: Context) {
             // storing contacts on some devices seems to be messed up and they move on Phone instead, or disappear completely
             // try storing a lighter contact version with this oldschool version too just so it wont disappear, future edits work well
             if (getContactSourceType(contact.source).contains(".sim")) {
-                val simUri = Uri.parse("content://icc/adn")
+                val simUri = "content://icc/adn".toUri()
                 ContentValues().apply {
                     put("number", contact.phoneNumbers.firstOrNull()?.value ?: "")
                     put("tag", contact.getNameToDisplay())
@@ -1839,7 +1843,7 @@ class ContactsHelper(val context: Context) {
                 }
             }
 
-            val contactsSize = contacts.size()
+            val contactsSize = contacts.size
             val tempContacts = ArrayList<Contact>(contactsSize)
             val resultContacts = ArrayList<Contact>(contactsSize)
 
@@ -1864,7 +1868,7 @@ class ContactsHelper(val context: Context) {
 
             // groups are obtained with contactID, not rawID, so assign them to proper contacts like this
             val groups = getContactGroups(getStoredGroupsSync())
-            val size = groups.size()
+            val size = groups.size
             for (i in 0 until size) {
                 val key = groups.keyAt(i)
                 resultContacts.firstOrNull { it.contactId == key }?.groups = groups.valueAt(i)
@@ -1952,7 +1956,7 @@ class ContactsHelper(val context: Context) {
         }
 
         val phoneNumbers = getPhoneNumbers(null)
-        var size = phoneNumbers.size()
+        var size = phoneNumbers.size
         for (i in 0 until size) {
             val key = phoneNumbers.keyAt(i)
             if (contacts[key] != null) {
@@ -1962,7 +1966,7 @@ class ContactsHelper(val context: Context) {
         }
 
         val nicknames = getNicknames()
-        size = nicknames.size()
+        size = nicknames.size
         for (i in 0 until size) {
             val key = nicknames.keyAt(i)
             contacts[key]?.nickname = nicknames.valueAt(i)

@@ -3,7 +3,6 @@ package com.goodwy.commons.helpers
 import android.content.Context
 import android.database.Cursor
 import android.graphics.*
-import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
@@ -28,6 +27,8 @@ import androidx.core.content.res.ResourcesCompat
 import java.text.Collator
 import kotlin.math.abs
 import androidx.core.graphics.drawable.toDrawable
+import androidx.core.graphics.createBitmap
+import androidx.core.util.size
 
 class SimpleContactsHelper(val context: Context) {
     fun getAvailableContacts(favoritesOnly: Boolean, callback: (ArrayList<SimpleContact>) -> Unit) {
@@ -80,21 +81,21 @@ class SimpleContactsHelper(val context: Context) {
             }
 
             val birthdays = getContactEvents(true)
-            var size = birthdays.size()
+            var size = birthdays.size
             for (i in 0 until size) {
                 val key = birthdays.keyAt(i)
                 allContacts.firstOrNull { it.rawId == key }?.birthdays = birthdays.valueAt(i)
             }
 
             val anniversaries = getContactEvents(false)
-            size = anniversaries.size()
+            size = anniversaries.size
             for (i in 0 until size) {
                 val key = anniversaries.keyAt(i)
                 allContacts.firstOrNull { it.rawId == key }?.anniversaries = anniversaries.valueAt(i)
             }
 
             val organizations = getContactOrganization()
-            size = organizations.size()
+            size = organizations.size
             for (i in 0 until size) {
                 val key = organizations.keyAt(i)
                 val contact = allContacts.firstOrNull { it.rawId == key }
@@ -314,7 +315,7 @@ class SimpleContactsHelper(val context: Context) {
 
     fun loadContactImage(path: String, imageView: ImageView, placeholderName: String, placeholderImage: Drawable? = null, letter: Boolean = true) {
         val letterOrIcon = if (letter) getContactLetterIcon(placeholderName) else getContactIconBg(placeholderName)
-        val placeholder = placeholderImage ?: BitmapDrawable(context.resources, letterOrIcon)
+        val placeholder = placeholderImage ?: letterOrIcon.toDrawable(context.resources)
 
         val options = RequestOptions()
             .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
@@ -334,7 +335,7 @@ class SimpleContactsHelper(val context: Context) {
         val emoji = name.take(2)
         val letter = if (emoji.isEmoji()) emoji else name.getNameLetter()
         val size = context.resources.getDimension(R.dimen.contact_photo_big_size).toInt()
-        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+        val bitmap = createBitmap(size, size)
         val canvas = Canvas(bitmap)
         val view = TextView(context)
         view.layout(0, 0, size, size)
@@ -375,7 +376,7 @@ class SimpleContactsHelper(val context: Context) {
 
     fun getContactIconBg(name: String): Bitmap {
         val size = context.resources.getDimension(R.dimen.contact_photo_big_size).toInt()
-        val output = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+        val output = createBitmap(size, size)
         val canvas = Canvas(output)
         val paint = Paint()
         val letterBackgroundColors = context.getLetterBackgroundColors()
