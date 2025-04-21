@@ -22,6 +22,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
+import com.goodwy.commons.models.contacts.Organization as MyOrganization
 import android.graphics.Bitmap
 import androidx.core.content.res.ResourcesCompat
 import java.text.Collator
@@ -238,8 +239,8 @@ class SimpleContactsHelper(val context: Context) {
         return eventDates
     }
 
-    private fun getContactOrganization(): SparseArray<com.goodwy.commons.models.contacts.Organization> {
-        val organizations = SparseArray<com.goodwy.commons.models.contacts.Organization>()
+    private fun getContactOrganization(): SparseArray<MyOrganization> {
+        val organizations = SparseArray<MyOrganization>()
         val uri = Data.CONTENT_URI
         val projection = arrayOf(
             Data.RAW_CONTACT_ID,
@@ -258,7 +259,7 @@ class SimpleContactsHelper(val context: Context) {
                 return@queryCursor
             }
 
-            val organization = com.goodwy.commons.models.contacts.Organization(company, title)
+            val organization = MyOrganization(company, title)
             organizations.put(id, organization)
         }
 
