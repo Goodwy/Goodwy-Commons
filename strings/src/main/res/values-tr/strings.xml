@@ -1,27 +1,27 @@
 <resources>
-    <string name="message">İleti</string>
+    <string name="message">Mesasj</string>
     <string name="settings_icon">Ayarlar simgesi</string>
     <string name="total_g">Toplam: %s</string>
     <string name="last_g">Son: %s</string>
     <string name="next_g">Sonraki: s</string>
     <string name="time">Zaman</string>
     <string name="interval">Aralık</string>
-    <string name="symbols_first">Semboller önce (örneğin !@#$)</string>
+    <string name="symbols_first">Önce Semboller (örneğin !@#$)</string>
     <string name="use_custom_notifications">Özel bildirimleri kullan</string>
     <string name="turn_on_screen">Ekranı aç</string>
     <string name="hide_top_bar_when_scrolling">Kaydırma sırasında üst uygulama çubuğunu gizle</string>
     <string name="unread_indicator_position">Okunmamış gösterge konumu</string>
-    <string name="start">Başlangıç</string>
-    <string name="end">Bitiş</string>
+    <string name="start">Başlat</string>
+    <string name="end">Bitir</string>
 
     <!-- Support project -->
     <string name="action_support_project">Proje desteği</string>
-    <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
-    <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
+    <string name="pref_pay_summary">Ücretli uygulamayı alarak ilerideki geliştirmeleri destekle ve ileride gelecek özellikleri kullan</string>
+    <string name="support_project_summary">Ücretli uygulamalarımızdan birini satın alarak ileri gelişimleri destekle ve ekstra özellikleri aç</string>
     <string name="learn_more">Daha fazla bilgi edinin</string>
     <string name="themes">Temalar</string>
     <string name="themes_summary">"Özenle seçilmiş uygulama temaları, otomatik tema değiştirici ve Android 12+ için sistem teması desteği "</string>
-    <string name="color_title">Renk</string>
+    <string name="color_title">Renkler</string>
     <string name="color_summary">Ana renk, vurgu, arka plan, metin ve gezinme çubuğunun manuel olarak ayarlanması</string>
     <string name="plus_title">Bize destek olun</string>
     <string name="plus_summary">Yardımınızla daha fazla özellik uygulayabilir ve uygulamayı daha da iyi hale getirebiliriz</string>
@@ -35,7 +35,7 @@
     <string name="lifebuoy_title">Sizi destekleyeceğiz</string>
     <string name="lifebuoy_summary">Herhangi bir nedenle uygulamamızı karşılayamıyorsanız, ancak gerçekten tüm özellikleri kullanmak istiyorsanız, bize e-posta göndermeniz yeterlidir.</string>
     <string name="participants_title">Participants</string>
-    <string name="special_thanks_to">Special thanks to</string>
+    <string name="special_thanks_to">Özel teşekkürler</string>
     <string name="tip_kind">İyi destek</string>
     <string name="tip_excellent">Mükemmel destek</string>
     <string name="tip_incredible">Harika destek</string>
@@ -44,7 +44,7 @@
     <string name="one_time_purchase">Tek seferlik destek</string>
     <string name="monthly">Aylık Destek</string>
     <string name="yearly">Yıllık Destek</string>
-    <string name="unlock">Unlock</string>
+    <string name="unlock">Kilidi Aç</string>
     <string name="donate_text_g">
         <![CDATA[
             Google Play kullanmayanlar için uygulamanın tüm fonksiyonlarının kilidini açmak mümkün. <br>
@@ -64,16 +64,16 @@
     </string>
 
     <!--Billing-->
-    <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
-    <string name="no_purchase_found">No purchase found.</string>
-    <string name="restore_purchase">Restore purchase</string>
-    <string name="restoring_purchase">Restoring purchase…</string>
+    <string name="restored_previous_purchase_please_restart">Satın alım geri yüklendi. Tüm özellikleri kullanmak için lütfen yeniden başlatın.</string>
+    <string name="no_purchase_found">Satın alım bulunamadı.</string>
+    <string name="restore_purchase">Satın alımı geri yükle.</string>
+    <string name="restoring_purchase">Satın alım geri yükleniyor…</string>
 
     <string name="no_connection">Bağlantı yok</string>
     <string name="per_month">%s/ay</string>
     <string name="per_year">%s/yıl</string>
 
-    <string name="use_accent_color_summary">Bazı UI öğelerinde kullanılan ek bir renk.</string>
+    <string name="use_accent_color_summary">Bazı Kullanıcı Arayüzü öğelerinde kullanılan ek bir renk.</string>
     <string name="app_icon_color_warning_g">Not: Bazı başlatıcılar özel uygulama simgesini doğru şekilde görüntülemeyebilir. Simge kaybolursa, uygulamayı Google Play veya widget\'ı (mümkünse) aracılığıyla başlatmayı deneyin.         Başlattıktan sonra, varsayılan simge rengini geri yükleyin. Aşırı durumlarda, uygulamayı yeniden yüklemeniz gerekebilir.</string>
     <string name="app_icon_color_shortcuts_warning_g">Dikkat: Uygulama simgesini değiştirmek, uygulama kısayollarını kaldıracaktır.</string>
     <string name="show_contact_thumbnails_g">Kişi küçük resimlerini göster</string>
@@ -94,42 +94,42 @@
     <string name="black">Siyah</string>
     <string name="black_locked">Siyah (Kilitli)</string>
     <string name="show_dividers">Bölücüleri göster</string>
-    <string name="colored_contacts">Kişiler renkli simgeler</string>
+    <string name="colored_contacts">Renkli Kişiler Simgesi</string>
     <string name="contact_color_list">Kişi renk listesi</string>
-    <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
-    <string name="kids_mode">Kids mode</string>
-    <string name="kids_mode_summary">Simplified interface, choose coloring</string>
-    <string name="restart_required">Application restart required</string>
-    <string name="transparent_bar">Transparent bars</string>
+    <string name="transparent_navigation_bar">Saydam alt gezinti çubuğu</string>
+    <string name="kids_mode">Çocuk Modu</string>
+    <string name="kids_mode_summary">Kolaylaştırılmış arayüz, renklendirme seçin</string>
+    <string name="restart_required">Uygulamayı yeniden başlatmanız gerekli</string>
+    <string name="transparent_bar">Saydam çubuklar</string>
     <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
-    <string name="bottom_navigation_bar">Bottom navigation bar</string>
-    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="material_design_3_summary">Uygulamanın bazı elementlerindeki görünüşü değiştir</string>
+    <string name="bottom_navigation_bar">Alt Gezinti Çubuğu</string>
+    <string name="bottom_navigation_bar_summary">Bu çubuk aşağı doğru hareket edecektir</string>
     <string name="tab_navigation">Sekme gezintisi</string>
     <string name="top">Üstünde</string>
     <string name="bottom">Aşağıda</string>
-    <string name="relative_date">Göreli tarih</string>
+    <string name="relative_date">Göreceli tarih</string>
     <string name="color_sim_card_icons">Renkli SIM kart simgeleri</string>
     <string name="tabs">Sekmeler</string>
     <string name="open_search_when_open_contacts">Kişiler sekmesi açıkken aramayı aç</string>
     <string name="end_search_when_changing_tab">Sekmeleri değiştirirken aramayı sonlandırma</string>
     <string name="change_top_bar_colour_when_scrolling">Kaydırma sırasında üst çubuk rengini değiştirin</string>
     <string name="global_theme_success_g">Geçerli tema tüm Doğru Uygulamalara başarıyla uygulandı. Bu temada gelecekte yapılacak tüm değişiklikler otomatik olarak senkronize edilecektir</string>
-    <string name="enter_pattern">Deseni girin</string>
+    <string name="enter_pattern">Deseni giriniz</string>
     <string name="call_screen_background">Çağrı ekranı arka planı</string>
     <string name="contact_photo">İletişim resmi</string>
-    <string name="blurry_contact_photo">Bulanık kişi fotoğrafı</string>
-    <string name="blurry_wallpaper">Bulanık duvar kağıdı</string>
+    <string name="blurry_contact_photo">Blurlu kişi fotoğrafı</string>
+    <string name="blurry_wallpaper">Blurlu duvar kağıdı</string>
     <string name="text_cursor_color">Metin imleci rengi</string>
     <string name="top_app_bar_colored">Renkli üst uygulama çubuğu</string>
     <string name="top_app_bar_color_icon">Uygulama üst çubuğunun renkli simgeleri</string>
     <string name="top_app_bar_color_title">Renkli uygulama üst çubuk başlığı</string>
-    <string name="overflow_icon">Taşma simgesi</string>
+    <string name="overflow_icon">Üç nokta menüsü</string>
     <string name="lines_count">Satır sayısı</string>
     <string name="show_button_blocked_numbers">Engellenen aramaları gizlememek için düğmeyi göster</string>
-    <string name="flash_for_alerts">Uyarılar için Flash</string>
-    <string name="clean_theme_g">Clean</string>
-    <string name="concept_theme_g">Concept</string>
+    <string name="flash_for_alerts">Gelen çağırı sırasında ışık</string>
+    <string name="clean_theme_g">Temizle</string>
+    <string name="concept_theme_g">Konsept</string>
     <string name="default_folder_to_open_g">Uygulama başlatıldığında açılacak klasör</string>
     <string name="last_used_g">Son kullanılan</string>
     <string name="home_folder_g">Ana klasör</string>
@@ -142,10 +142,10 @@
     <string name="swipe_right_action">Sağa kaydırma eylemi</string>
     <string name="use_swipe_gestures">Eylem için kaydırmayı kullan</string>
     <string name="use_swipe_gestures_summary">Bu, sekmelerin hareketle kaydırılmasını devre dışı bırakır</string>
-    <string name="volume_g">Hacim</string>
+    <string name="volume_g">Ses</string>
     <string name="vibrate_g">Titreşim</string>
     <string name="ripple_g">Dalgalanma</string>
-    <string name="use_contact_colors">Temas renklerini kullanma</string>
+    <string name="use_contact_colors">Kişilerin renklerini kullan</string>
 
     <string name="accent_color">Vurgu rengi</string>
     <string name="use_accent_color">Vurgu Rengi Kullan</string>
@@ -157,8 +157,8 @@
     <string name="unblock_numbers">Numaraların engelini kaldırın</string>
     <string name="show_blocked_numbers">Engellenenleri göster</string>
     <string name="hide_blocked_numbers">Engellenenleri gizle</string>
-    <string name="paste_g">Sokmak</string>
-    <string name="recents">Gecmis</string>
+    <string name="paste_g">Yapıştır</string>
+    <string name="recents">Gecmiş</string>
     <string name="unblock_confirmation">\"%s\" engellemesini kaldırmak istediğinizden emin misiniz?</string>
 
     <!-- Other -->
@@ -177,23 +177,23 @@
     <string name="faq_8_text_commons_g">Uygulama sürümünüz artık güncellenmediğinden, tespit ettiğiniz hatalar asla düzeltilmeyecektir. Ayrıca yeni işlevler eklenmeyecektir. Pro sürümünü Google Play\'den az miktarda para karşılığında satın alabilirsiniz.
         Bir kerelik ödeme, yani bir kez satın aldığınızda, bir daha asla ödeme yapmanız gerekmeyeceği anlamına gelir. Yeni bir cihaz aldıktan sonra bile. Pro sürümünü beğenmediyseniz, birkaç saat içinde kaldırabilirsiniz ve paranızı otomatik olarak geri alırsınız.
         Daha sonra istediğiniz zaman geri ödeme almak isterseniz, goodwy.dev@gmail.com adresinden bizimle iletişime geçmeniz yeterlidir.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
-    <string name="faq_101_title_commons_g">How to create a private contact?</string>
-    <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
+    <string name="faq_100_title_commons_g">Özel Kişi-Kişiler nedir?</string>
+    <string name="faq_100_text_commons_g">Özel Kişi-Kişiler uygulama içinde oluşturulur. Bu Kişi-Kişiler diğer uygulamalara gözükmeyecektir.
+        Eğer uygulamayı silerseniz özel Kişi-Kişiler de uygulamayla birlikte silinecektir, bu yüzden uygulamayı silmeden önce lütfen kişilerinizi yedekleyiniz.</string>
+    <string name="faq_101_title_commons_g">Nasıl özel Kişi-Kişiler oluşturulur?</string>
+    <string name="faq_101_text_commons_g">Bir kişi oluşturduğunuzda o kişinin kaynağını belirlemeniz gerekir: %s</string>
     <string name="contributors_label_g">
         <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
+           Bu liste, sadece bu uygulamaya değil, Goodwy paketi içindeki herhangi bir uygulamaya belirgin bir şekilde yardımcı olan herkesi içerir. Çeviriler gönüllüler tarafından yapılmaktadır,
+            siz de yardım etmek isterseniz bize bildirin. Çeviri rehberi <a href="https://github.com/Goodwy/Discussion">this website</a> sitesindedir. Herhangi bir sorunuz olursa <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> adresinden ulaşabilirsiniz (ingilizce)
+            Tüm destekçi ve katılımcılara teşekkürler!
         ]]>
     </string>
-    <string name="deprecated_app_g">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
+    <string name="deprecated_app_g">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro (Eski link düzeltilmeli) </string>
     <string name="pro_app_refund_g">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, goodwy.dev@gmail.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
 
     <!-- Contacts -->
-    <string name="add_number">Sayı ekle</string>
+    <string name="add_number">Numara ekle</string>
     <string name="add_email">E-posta ekle</string>
     <string name="add_address">Adres ekle</string>
     <string name="add_im">Anlık İleti Ekle</string>
@@ -219,26 +219,26 @@
     <string name="recommendation_dialog_contacts_g">
         <![CDATA[
             Hey,<br><br>
-            if you like this app, we recommend that you install our app to view and edit contacts.<br><br>
-            Thanks
+            eğer bu uygulamayı sevdiysen kişileri düzenlemek ve görüntülemek için bizim uygulamamızı indirmeni tavsiye ederim.<br><br>
+            Teşekkürler
         ]]></string>
     <string name="recommendation_dialog_dialer_g">
         <![CDATA[
             Hey,<br><br>
-            if you like this app, we recommend that you install our call app.<br><br>
-            Thanks
+            eğer bu uygulamayı sevdiysen bizim çağırı uygulamamızı indirmeni tavsiye ederim.<br><br>
+            Teşekkürler
         ]]></string>
     <string name="recommendation_dialog_messages_g">
         <![CDATA[
             Hey,<br><br>
-            if you like this app, we recommend that you install our messaging app.<br><br>
-            Thanks
+            eğer bu uygulamayı sevdiysen bizim mesajlaşma uygulamamızı indirmeni tavsiye ederim.<br><br>
+            Teşekkürler
         ]]></string>
     <string name="recommendation_dialog_gallery_g">
         <![CDATA[
             Hey,<br><br>
-            if you like this app, we recommend that you install our photo viewing and editing app.<br><br>
-            Thanks
+            eğer bu uygulamayı sevdiysen bizim galeri uygulamamızı indirmeni tavsiye ederim..<br><br>
+            Teşekkürler
         ]]></string>
 
     <!-- SMS -->
@@ -254,83 +254,83 @@
     <!-- Dialer -->
     <string name="all_g">Tüm</string>
     <string name="message_call_later">Sizi daha sonra arayabilir miyim?</string>
-    <string name="message_on_my_way">Yoluma devam ediyorum.</string>
+    <string name="message_on_my_way">Yoldayım geliyorum.</string>
     <string name="message_cant_talk_right_now">Üzgünüm, şu anda konuşamıyorum.</string>
     <string name="remind_me">Bana Hatırlat</string>
-    <string name="mute">Dilsiz</string>
+    <string name="mute">Sustur</string>
 
     <!-- Relation types -->
     <string name="search_the_web">İnternet\'te arama yapın</string>
-    <string name="show_number_blocking_button">Numara kilit düğmesini göster</string>
+    <string name="show_number_blocking_button">Numara engelleme düğmesini göster</string>
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
     <string name="relation_hint_g">İlgili Kişi</string>
     <!-- Android ContactContract.Relation types -->
-    <string name="relation_assistant_g">Assistant</string>
-    <string name="relation_brother_g">Brother</string>
-    <string name="relation_child_g">Child</string>
-    <string name="relation_domestic_partner_g">Domestic Partner</string>
-    <string name="relation_father_g">Father</string>
-    <string name="relation_friend_g">Friend</string>
-    <string name="relation_manager_g">Manager</string>
-    <string name="relation_mother_g">Mother</string>
-    <string name="relation_parent_g">Parent</string>
+    <string name="relation_assistant_g">Asistan</string>
+    <string name="relation_brother_g">Erkek Kardeş</string>
+    <string name="relation_child_g">Çocuk</string>
+    <string name="relation_domestic_partner_g">Ev arkadaşı</string>
+    <string name="relation_father_g">Baba</string>
+    <string name="relation_friend_g">Arkadaş</string>
+    <string name="relation_manager_g">Menajer</string>
+    <string name="relation_mother_g">Anne</string>
+    <string name="relation_parent_g">Ebeveyn</string>
     <string name="relation_partner_g">Partner</string>
-    <string name="relation_referred_by_g">Referred by</string>
-    <string name="relation_relative_g">Relative</string>
-    <string name="relation_sister_g">Sister</string>
-    <string name="relation_spouse_g">Spouse</string>
+    <string name="relation_referred_by_g">Tarafından Yönlendirildi</string>
+    <string name="relation_relative_g">Akraba</string>
+    <string name="relation_sister_g">Kız Kardeş</string>
+    <string name="relation_spouse_g">Eş</string>
     <!-- vCard 4.0 relation types -->
     <string name="relation_contact_g">Contact</string>
-    <string name="relation_acquaintance_g">Acquaintance</string>
-    <string name="relation_met_g">Met</string>
-    <string name="relation_co_worker_g">Co-worker</string>
-    <string name="relation_colleague_g">Colleague</string>
-    <string name="relation_co_resident_g">Co-resident</string>
-    <string name="relation_neighbor_g">Neighbor</string>
-    <string name="relation_sibling_g">Sibling</string>
-    <string name="relation_kin_g">Kin</string>
-    <string name="relation_kin_alt_g">Relative</string>
+    <string name="relation_acquaintance_g">Tanıdık</string>
+    <string name="relation_met_g">Görüştüğüm biri</string>
+    <string name="relation_co_worker_g">İş arkadaşı</string>
+    <string name="relation_colleague_g">Meslektaş</string>
+    <string name="relation_co_resident_g">Ev Arkadaşı</string>
+    <string name="relation_neighbor_g">Komşu</string>
+    <string name="relation_sibling_g">Kardeş</string>
+    <string name="relation_kin_g">Akraba</string>
+    <string name="relation_kin_alt_g">Alt Akraba</string>
     <string name="relation_muse_g">Muse</string>
-    <string name="relation_crush_g">Crush</string>
-    <string name="relation_date_g">Toplantı</string>
-    <string name="relation_sweetheart_g">Sweetheart</string>
-    <string name="relation_me_g">Me</string>
-    <string name="relation_agent_g">Agent</string>
-    <string name="relation_emergency_g">Emergency Contact</string>
+    <string name="relation_crush_g">Aşk</string>
+    <string name="relation_date_g">Buluşma</string>
+    <string name="relation_sweetheart_g">Tatlım</string>
+    <string name="relation_me_g">Ben</string>
+    <string name="relation_agent_g">Ajan</string>
+    <string name="relation_emergency_g">Acil Durum Kişileri</string>
     <!-- Additional relation types -->
-    <string name="relation_superior_g">Boss</string>
-    <string name="relation_subordinate_g">Subordinate</string>
-    <string name="relation_husband_g">Husband</string>
-    <string name="relation_wife_g">Wife</string>
-    <string name="relation_son_g">Son</string>
-    <string name="relation_daughter_g">Daughter</string>
-    <string name="relation_grandparent_g">Grandparent</string>
-    <string name="relation_grandfather_g">Grandfather</string>
-    <string name="relation_grandmother_g">Grandmother</string>
-    <string name="relation_grandchild_g">Grandchild</string>
-    <string name="relation_grandson_g">Grandson</string>
-    <string name="relation_granddaughter_g">Granddaughter</string>
-    <string name="relation_uncle_g">Uncle</string>
-    <string name="relation_aunt_g">Aunt</string>
-    <string name="relation_nephew_g">Nephew</string>
-    <string name="relation_niece_g">Niece</string>
-    <string name="relation_father_in_law_g">Father-in-law</string>
-    <string name="relation_mother_in_law_g">Mother-in-law</string>
-    <string name="relation_son_in_law_g">Son-in-law</string>
-    <string name="relation_daughter_in_law_g">Daughter-in-law</string>
-    <string name="relation_brother_in_law_g">Brother-in-law</string>
-    <string name="relation_sister_in_law_g">Sister-in-law</string>
+    <string name="relation_superior_g">Patron</string>
+    <string name="relation_subordinate_g">Ast</string>
+    <string name="relation_husband_g">Koca</string>
+    <string name="relation_wife_g">Eş</string>
+    <string name="relation_son_g">Erkek Çocuk</string>
+    <string name="relation_daughter_g">Kız Çocuk</string>
+    <string name="relation_grandparent_g">Büyükbaba-Büyükanne</string>
+    <string name="relation_grandfather_g">Büyükbaba</string>
+    <string name="relation_grandmother_g">Büyükanne</string>
+    <string name="relation_grandchild_g">Torun</string>
+    <string name="relation_grandson_g">Erkek Torun</string>
+    <string name="relation_granddaughter_g">Kız Torun</string>
+    <string name="relation_uncle_g">Amca</string>
+    <string name="relation_aunt_g">Hala</string>
+    <string name="relation_nephew_g">Yeğen</string>
+    <string name="relation_niece_g">Yeğen</string>
+    <string name="relation_father_in_law_g">Kayın Baba</string>
+    <string name="relation_mother_in_law_g">Kayınvalide</string>
+    <string name="relation_son_in_law_g">Damat</string>
+    <string name="relation_daughter_in_law_g">Gelin</string>
+    <string name="relation_brother_in_law_g">Kayınbirader</string>
+    <string name="relation_sister_in_law_g">Baldız</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Error</string>
-    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
-    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
-    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
-    <string name="billing_product_deleted">Purchase canceled</string>
-    <string name="billing_subscriptions">Subscriptions</string>
-    <string name="billing_change_to_google_play">Change to Google Play</string>
-    <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_general_error">Hata</string>
+    <string name="billing_purchase_confirm_in_progress">Satın alım onaylanıyor…</string>
+    <string name="billing_purchase_delete_in_progress">Satın alım siliniyor…</string>
+    <string name="billing_product_confirmed">Ürün onaylandı/tasdik edildi</string>
+    <string name="billing_product_deleted">Satın alım iptal edildi</string>
+    <string name="billing_subscriptions">Abonelikler</string>
+    <string name="billing_change_to_google_play">Google Play ile değiştir</string>
+    <string name="billing_change_to_ru_store">RuStore ile değiştir</string>
     <string name="date">Tarih</string>
     <string name="starts">Başlar</string>
     <string name="ends">Biter</string>
@@ -338,5 +338,5 @@
     <string name="event_type">Olay türü</string>
     <string name="availability">Kullanılabilirlik</string>
     <string name="attendees">Katılımcı</string>
-    <string name="typeface">Yazı biçimi</string>
+    <string name="typeface">Yazı tipi</string>
 </resources>
