@@ -35,15 +35,16 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
             }
         }
 
-        post {
-            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
-                if (hasFocus) {
-                    openSearch()
-                }
-            }
-        }
+//        post {
+//            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
+//                if (hasFocus) {
+//                    openSearch()
+//                }
+//            }
+//        }
 
         binding.topToolbarSearch.onTextChangeListener { text ->
+            openSearch()
             onSearchTextChangedListener?.invoke(text)
         }
     }
