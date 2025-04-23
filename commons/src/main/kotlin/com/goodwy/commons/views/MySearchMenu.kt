@@ -46,7 +46,7 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         binding.topToolbarSearch.onTextChangeListener { text ->
             val size = text.length
             if (size == 1) openSearch()
-            if (size == 0) closeSearch()
+            if (size == 0) closeSearch(true)
             onSearchTextChangedListener?.invoke(text)
         }
     }
@@ -62,10 +62,10 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
         binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.back)
     }
 
-    fun closeSearch() {
+    fun closeSearch(zero: Boolean = false) {
         isSearchOpen = false
         onSearchClosedListener?.invoke()
-        binding.topToolbarSearch.setText("")
+        if (!zero) binding.topToolbarSearch.setText("")
         if (!useArrowIcon) {
             binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_search_vector)
             binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.search)
