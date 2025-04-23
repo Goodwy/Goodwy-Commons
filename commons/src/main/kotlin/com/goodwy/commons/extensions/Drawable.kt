@@ -5,14 +5,15 @@ import android.graphics.Canvas
 import android.graphics.PorterDuff
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import androidx.core.graphics.createBitmap
 
 fun Drawable.applyColorFilter(color: Int) = mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN)
 
 fun Drawable.convertToBitmap(): Bitmap {
     val bitmap = if (intrinsicWidth <= 0 || intrinsicHeight <= 0) {
-        Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
+        createBitmap(1, 1)
     } else {
-        Bitmap.createBitmap(intrinsicWidth, intrinsicHeight, Bitmap.Config.ARGB_8888)
+        createBitmap(intrinsicWidth, intrinsicHeight)
     }
 
     if (this is BitmapDrawable) {

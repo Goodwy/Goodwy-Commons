@@ -18,7 +18,7 @@ fun Bitmap.getByteArray(): ByteArray {
 fun Bitmap.cropCenter(
     newWidth:Int = min(width,height),
     newHeight:Int = min(width,height)
-):Bitmap?{
+):Bitmap? {
     // calculate x and y offset
     val xOffset = (width - newWidth)/2
     val yOffset = (height-newHeight)/2
