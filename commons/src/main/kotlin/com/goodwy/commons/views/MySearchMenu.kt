@@ -44,7 +44,9 @@ class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context
 //        }
 
         binding.topToolbarSearch.onTextChangeListener { text ->
-            openSearch()
+            val size = text.length
+            if (size == 1) openSearch()
+            if (size == 0) closeSearch()
             onSearchTextChangedListener?.invoke(text)
         }
     }
