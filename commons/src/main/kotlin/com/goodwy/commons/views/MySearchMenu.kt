@@ -10,8 +10,6 @@ import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.databinding.MenuSearchBinding
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.LOWER_ALPHA
-import com.goodwy.commons.helpers.MEDIUM_ALPHA
 
 class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
     var isSearchOpen = false
