@@ -121,9 +121,9 @@ data class Contact(
                 } else if (firstValue.firstOrNull()?.isDigit() == true && secondValue.firstOrNull()?.isLetter() == true) {
                     1
                 } else {
-                    if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
+                    if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false  && secondValue.firstOrNull()?.isDigit() == false) {
                         -1
-                    } else if (firstValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isLetter() == true) {
+                    } else if (firstValue.firstOrNull()?.isLetter() == false && firstValue.firstOrNull()?.isDigit() == false && secondValue.firstOrNull()?.isLetter() == true) {
                         1
                     } else {
                         if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
