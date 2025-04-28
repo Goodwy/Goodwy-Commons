@@ -121,8 +121,10 @@ data class Contact(
                 } else if (firstValue.firstOrNull()?.isDigit() == true && secondValue.firstOrNull()?.isLetter() == true) {
                     1
                 } else {
-                    if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == true) {
-                        collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
+                    if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
+                        -1
+                    } else if (firstValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isLetter() == true) {
+                        1
                     } else {
                         if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
                             1
@@ -279,6 +281,7 @@ data class Contact(
             return if (withoutPlus) true
             else {
                 when {
+                    // should try to use comparison via trimToComparableNumber()
                     text.startsWith("+7") -> doesContainPhoneNumberCheck(text.replace("+7", "8"), convertLetters, search) //Russia
                     text.startsWith("+31") -> doesContainPhoneNumberCheck(text.replace("+31", "0"), convertLetters, search) //Netherlands
                     text.startsWith("+32") -> doesContainPhoneNumberCheck(text.replace("+32", "0"), convertLetters, search) //Belgium
