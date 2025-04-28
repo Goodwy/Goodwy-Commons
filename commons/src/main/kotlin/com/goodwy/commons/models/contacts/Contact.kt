@@ -121,10 +121,8 @@ data class Contact(
                 } else if (firstValue.firstOrNull()?.isDigit() == true && secondValue.firstOrNull()?.isLetter() == true) {
                     1
                 } else {
-                    if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false  && secondValue.firstOrNull()?.isDigit() == false) {
-                        -1
-                    } else if (firstValue.firstOrNull()?.isLetter() == false && firstValue.firstOrNull()?.isDigit() == false && secondValue.firstOrNull()?.isLetter() == true) {
-                        1
+                    if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == true) {
+                        collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
                     } else {
                         if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
                             1
