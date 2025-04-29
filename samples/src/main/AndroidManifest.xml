@@ -11,8 +11,6 @@
         <package android:name="com.goodwy.contacts" />
         <package android:name="com.goodwy.smsmessenger.debug" />
         <package android:name="com.goodwy.smsmessenger" />
-        <package android:name="com.goodwy.voicerecorder.debug" />
-        <package android:name="com.goodwy.voicerecorder" />
     </queries>
 
     <application

@@ -142,7 +142,7 @@ class AboutActivity : BaseComposeActivity() {
             "com.goodwy.contacts" -> "https://www.goodwy.dev/about/privacy-policy-right-contacts"
             "com.goodwy.gallery" -> "https://www.goodwy.dev/about/privacy-policy-right-gallery"
             "com.goodwy.filemanager" -> "https://www.goodwy.dev/about/privacy-policy-right-files"
-            "com.goodwy.voicerecorder" -> "https://www.goodwy.dev/about/privacy-policy-right-voice-recorder"
+            "com.goodwy.voicerecorder", "com.goodwy.voicerecorderfree" -> "https://www.goodwy.dev/about/privacy-policy-right-voice-recorder"
             "com.goodwy.calendar" -> "https://www.goodwy.dev/about/privacy-policy-right-calendar"
             else -> "https://www.goodwy.dev/about/privacy-policy"
         }

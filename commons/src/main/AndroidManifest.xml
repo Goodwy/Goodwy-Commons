@@ -5,8 +5,6 @@
     <queries>
         <package android:name="com.goodwy.audiobook.debug" />
         <package android:name="com.goodwy.audiobook" />
-        <package android:name="com.goodwy.voicerecorder.debug" />
-        <package android:name="com.goodwy.voicerecorder" />
         <package android:name="com.goodwy.files.debug" />
         <package android:name="com.goodwy.files" />
         <package android:name="com.goodwy.dialer.debug" />
@@ -15,6 +13,10 @@
         <package android:name="com.goodwy.contacts" />
         <package android:name="com.goodwy.smsmessenger.debug" />
         <package android:name="com.goodwy.smsmessenger" />
+        <package android:name="com.goodwy.voicerecorder.debug" />
+        <package android:name="com.goodwy.voicerecorder" />
+        <package android:name="com.goodwy.voicerecorderfree.debug" />
+        <package android:name="com.goodwy.voicerecorderfree" />
     </queries>
 
     <uses-feature
