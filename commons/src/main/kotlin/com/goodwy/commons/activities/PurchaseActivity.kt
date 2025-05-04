@@ -96,8 +96,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.purchaseNestedScrollview,
             binding.topDetails.root
         ).forEach {
-//            it.beInvisibleIf(!playStoreInstalled && !ruStoreInstalled)
-            it.beInvisibleIf(!ruStoreInstalled)
+            it.beInvisibleIf(resources.getBoolean(R.bool.using_no_gp) || (!playStoreInstalled && !ruStoreInstalled))
+//            it.beInvisibleIf(!ruStoreInstalled)
         }
 
         arrayOf(
@@ -105,8 +105,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.proDonateText,
             binding.proDonateButton
         ).forEach {
-//            it.beGoneIf(playStoreInstalled || ruStoreInstalled)
-            it.beGoneIf(ruStoreInstalled)
+            it.beGoneIf((!resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) || ruStoreInstalled)
         }
 
         if ((playStoreInstalled && !ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && baseConfig.useGooglePlay)) {
@@ -229,16 +228,16 @@ class PurchaseActivity : BaseSimpleActivity() {
         setupChangeStoreMenu()
         setupEmail()
         if (showCollection) setupCollection()
-//        if (playStoreInstalled || ruStoreInstalled) {
-//            setupIcon()
-//        } else {
-//            setupNoPlayStoreInstalled()
-//        }
-        if (ruStoreInstalled) {
+        if ((!resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) || ruStoreInstalled) {
             setupIcon()
         } else {
             setupNoPlayStoreInstalled()
         }
+//        if (ruStoreInstalled) {
+//            setupIcon()
+//        } else {
+//            setupNoPlayStoreInstalled()
+//        }
 
         val isProApp = resources.getBoolean(R.bool.is_pro_app)
         binding.themeHolder.beVisibleIf(!isProApp)
@@ -246,7 +245,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupOptionsMenu() {
-        val visible = /*playStoreInstalled || */ruStoreInstalled
+        val visible = (!resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) || ruStoreInstalled
         binding.purchaseToolbar.menu.apply {
             findItem(R.id.restorePurchases).isVisible = visible
             findItem(R.id.openSubscriptions).isVisible = visible
@@ -275,7 +274,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private fun setupChangeStoreMenu() {
         binding.purchaseToolbar.menu.findItem(R.id.changeStore).apply {
-            isVisible = false //playStoreInstalled && ruStoreInstalled
+            isVisible = !resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled && ruStoreInstalled
             title = if (baseConfig.useGooglePlay) getString(stringsR.string.billing_change_to_ru_store) else getString(stringsR.string.billing_change_to_google_play)
             icon = if (baseConfig.useGooglePlay) AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_google_play_vector)
             else AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_rustore)
@@ -554,7 +553,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         val isProApp = resources.getBoolean(R.bool.is_pro_app)
         binding.proDonateText.text =
             if (isProApp) Html.fromHtml(getString(stringsR.string.plus_summary))
-            else if (playStoreInstalled) Html.fromHtml(getString(stringsR.string.donate_text_no_gp_g))
+            else if (resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) Html.fromHtml(getString(stringsR.string.donate_text_no_gp_g))
             else Html.fromHtml(getString(stringsR.string.donate_text_g))
         binding.proDonateButton.apply {
             setOnClickListener {
@@ -566,10 +565,10 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.proUnlockText.beGone()
             binding.proSwitchHolder.beGone()
         } else {
-            binding.proSwitch.isChecked = if (playStoreInstalled) baseConfig.isProNoGP else baseConfig.isPro
+            binding.proSwitch.isChecked = if (resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) baseConfig.isProNoGP else baseConfig.isPro
             binding.proSwitchHolder.setOnClickListener {
                 binding.proSwitch.toggle()
-                if (playStoreInstalled) baseConfig.isProNoGP = binding.proSwitch.isChecked
+                if (resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) baseConfig.isProNoGP = binding.proSwitch.isChecked
                 else baseConfig.isPro = binding.proSwitch.isChecked
             }
         }

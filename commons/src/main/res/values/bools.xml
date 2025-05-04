@@ -8,5 +8,7 @@
     <bool name="show_lifebuoy">false</bool>
     <bool name="show_collection">false</bool>
     <bool name="is_pro_app">false</bool>
+    <bool name="using_no_gp">false</bool>
     <bool name="using_accent_color">false</bool>
+    <bool name="new_dev">true</bool>
 </resources>

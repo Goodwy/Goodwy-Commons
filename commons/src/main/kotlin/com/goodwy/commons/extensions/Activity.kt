@@ -46,6 +46,7 @@ import com.goodwy.commons.models.*
 import com.goodwy.commons.views.MyTextView
 import java.io.*
 import java.util.TreeSet
+import androidx.core.net.toUri
 
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
@@ -292,7 +293,7 @@ fun Activity.launchMoreAppsFromUsIntent() {
         val urlRS = "rustore://apps.rustore.ru/developer/d01f495d"
         launchViewIntent(urlRS)
     } else {
-        launchViewIntent(getString(R.string.thank_you_url))
+        launchViewIntent(getString(googlePlayDevUrlRes()))
     }
 }
 
@@ -301,7 +302,7 @@ fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 fun Activity.launchViewIntent(url: String) {
     hideKeyboard()
     ensureBackgroundThread {
-        Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+        Intent(Intent.ACTION_VIEW, url.toUri()).apply {
             try {
                 startActivity(this)
             } catch (e: ActivityNotFoundException) {
@@ -569,7 +570,7 @@ fun Activity.showLocationOnMap(coordinates: String) {
     val uriBegin = "geo:${coordinates.replace(" ", "")}"
     val encodedQuery = Uri.encode(coordinates)
     val uriString = "$uriBegin?q=$encodedQuery&z=16"
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uriString))
+    val intent = Intent(Intent.ACTION_VIEW, uriString.toUri())
     launchActivityIntent(intent)
 }
 

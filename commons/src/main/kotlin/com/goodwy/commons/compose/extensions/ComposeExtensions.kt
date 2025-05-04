@@ -24,11 +24,11 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.LifecycleStartEffect
-import com.goodwy.commons.R
 import com.goodwy.commons.compose.system_ui_controller.rememberSystemUiController
 import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.compose.theme.isLitWell
 import com.goodwy.commons.extensions.darkenColor
+import com.goodwy.commons.extensions.googlePlayDevUrlRes
 import com.goodwy.commons.extensions.launchViewIntent
 
 fun Context.getActivity(): Activity {
@@ -176,6 +176,6 @@ fun composeDonateIntent(): () -> Unit {
     val localContext = LocalContext.current
     val localView = LocalView.current
     return {
-        if (localView.isInEditMode) Unit else localContext.getActivity().launchViewIntent(R.string.thank_you_url)
+        if (localView.isInEditMode) Unit else localContext.getActivity().launchViewIntent(localContext.googlePlayDevUrlRes())
     }
 }

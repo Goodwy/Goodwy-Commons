@@ -1007,3 +1007,8 @@ fun String?.fromHtml(): Spanned =
         Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> Html.fromHtml(this, Html.FROM_HTML_MODE_LEGACY)
         else -> Html.fromHtml(this)
     }
+
+//This converts the string to RTL and left-aligns it if there is at least one RTL-language character in the string, and returns to LTR otherwise.
+fun formatterUnicodeWrap(text: String): String {
+    return BidiFormatter.getInstance().unicodeWrap(text)
+}

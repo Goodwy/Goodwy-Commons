@@ -3,7 +3,6 @@ package com.goodwy.commons.extensions
 import android.Manifest
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.annotation.SuppressLint
-import android.annotation.TargetApi
 import android.app.Activity
 import android.app.Application
 import android.app.NotificationManager
@@ -62,6 +61,7 @@ import java.io.InputStreamReader
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import androidx.core.net.toUri
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -187,7 +187,7 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
     if (isDownloadsDocument(uri)) {
         val id = DocumentsContract.getDocumentId(uri)
         if (id.areDigitsOnly()) {
-            val newUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), id.toLong())
+            val newUri = ContentUris.withAppendedId("content://downloads/public_downloads".toUri(), id.toLong())
             val path = getDataColumn(newUri)
             if (path != null) {
                 return path
@@ -413,7 +413,7 @@ fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
         }
 
         else -> {
-            val uri = Uri.parse(path)
+            val uri = path.toUri()
             if (uri.scheme == "content") {
                 uri
             } else {
@@ -704,7 +704,7 @@ fun Context.getDefaultAlarmSound(type: Int) = AlarmSound(0, getDefaultAlarmTitle
 fun Context.grantReadUriPermission(uriString: String) {
     try {
         // ensure custom reminder sounds play well
-        grantUriPermission("com.android.systemui", Uri.parse(uriString), Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        grantUriPermission("com.android.systemui", uriString.toUri(), Intent.FLAG_GRANT_READ_URI_PERMISSION)
     } catch (ignored: Exception) {
     }
 }
@@ -813,7 +813,7 @@ fun Context.getVideoResolution(path: String): Point? {
 
     if (point == null && path.startsWith("content://", true)) {
         try {
-            val fd = contentResolver.openFileDescriptor(Uri.parse(path), "r")?.fileDescriptor
+            val fd = contentResolver.openFileDescriptor(path.toUri(), "r")?.fileDescriptor
             val retriever = MediaMetadataRetriever()
             retriever.setDataSource(fd)
             val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)!!.toInt()
@@ -1003,6 +1003,7 @@ val Context.navigationBarSize: Point
     }
 
 val Context.newNavigationBarHeight: Int
+    @SuppressLint("InternalInsetResource", "DiscouragedApi")
     get() {
         var navigationBarHeight = 0
         val resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android")
@@ -1013,6 +1014,7 @@ val Context.newNavigationBarHeight: Int
     }
 
 val Context.statusBarHeight: Int
+    @SuppressLint("InternalInsetResource", "DiscouragedApi")
     get() {
         var statusBarHeight = 0
         val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
@@ -1044,6 +1046,7 @@ val Context.realScreenSize: Point
         return size
     }
 
+@SuppressLint("DiscouragedApi")
 fun Context.isUsingGestureNavigation(): Boolean {
     return try {
         val resourceId = resources.getIdentifier("config_navBarInteractionMode", "integer", "android")
@@ -1086,7 +1089,7 @@ fun Context.getContactsHasMap(withComparableNumbers: Boolean = false, callback: 
     }
 }
 
-@TargetApi(Build.VERSION_CODES.N)
+@RequiresApi(Build.VERSION_CODES.N)
 fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) -> Unit) {
     getContactsHasMap(true) { contacts ->
         val blockedNumbers = ArrayList<BlockedNumber>()
@@ -1120,7 +1123,7 @@ fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) ->
     }
 }
 
-@TargetApi(Build.VERSION_CODES.N)
+@RequiresApi(Build.VERSION_CODES.N)
 fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
     val blockedNumbers = ArrayList<BlockedNumber>()
     if (!isNougatPlus() || !isDefaultDialer()) {
@@ -1146,7 +1149,7 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
     return blockedNumbers
 }
 
-@TargetApi(Build.VERSION_CODES.N)
+@RequiresApi(Build.VERSION_CODES.N)
 fun Context.addBlockedNumber(number: String): Boolean {
     ContentValues().apply {
         put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, number)
@@ -1163,7 +1166,7 @@ fun Context.addBlockedNumber(number: String): Boolean {
     return true
 }
 
-@TargetApi(Build.VERSION_CODES.N)
+@RequiresApi(Build.VERSION_CODES.N)
 fun Context.deleteBlockedNumber(number: String): Boolean {
     val selection = "${BlockedNumbers.COLUMN_ORIGINAL_NUMBER} = ?"
     val selectionArgs = arrayOf(number)
@@ -1177,6 +1180,7 @@ fun Context.deleteBlockedNumber(number: String): Boolean {
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.N)
 fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
     if (!isNougatPlus()) {
         return false
@@ -1191,6 +1195,7 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     } || isNumberBlockedByPattern(number, blockedNumbers)
 }
 
+@RequiresApi(Build.VERSION_CODES.N)
 fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
     for (blockedNumber in blockedNumbers) {
         val num = blockedNumber.number
@@ -1491,7 +1496,8 @@ fun Context.isRuStoreInstalled(): Boolean {
     return isPackageInstalled("ru.vk.store")
 }
 
-fun Context.isPro() = baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore || baseConfig.isProNoGP
+fun Context.isPro() = baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore ||
+    (resources.getBoolean(R.bool.using_no_gp) && baseConfig.isProNoGP)
 
 fun Context.isCollection(): Boolean {
     return isPackageInstalled("com.goodwy.dialer")
@@ -1502,6 +1508,7 @@ fun Context.isCollection(): Boolean {
         && isPackageInstalled("com.goodwy.filemanager")
         && isPackageInstalled("com.goodwy.keyboard")
         && isPackageInstalled("com.goodwy.calendar")
+        && isPackageInstalled("com.goodwy.voicerecorderfree")
 }
 
 fun Context.isTalkBackOn(): Boolean {
@@ -1526,5 +1533,13 @@ fun Context.sysLocale(): Locale? {
 
 private fun getSystemLocaleLegacy(config: Configuration) = config.locale
 
-@TargetApi(Build.VERSION_CODES.N)
+@RequiresApi(Build.VERSION_CODES.N)
 private fun getSystemLocale(config: Configuration) = config.locales.get(0)
+
+fun Context.googlePlayDevUrlRes(): Int {
+    return if (resources.getBoolean(R.bool.new_dev)) R.string.google_play_dev_url else R.string.google_play_dev_url_old
+}
+
+fun Context.googlePlayDevUrlString(): String {
+    return getString(googlePlayDevUrlRes())
+}

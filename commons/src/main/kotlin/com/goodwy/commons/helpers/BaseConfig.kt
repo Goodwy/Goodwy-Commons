@@ -17,6 +17,7 @@ import java.util.Locale
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlin.reflect.KProperty0
+import androidx.core.content.edit
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()
@@ -695,11 +696,11 @@ open class BaseConfig(val context: Context) {
 
     var isProRuStore: Boolean
         get() = prefs.getBoolean(IS_PRO_RUSTORE_VERSION, false)
-        set(isProSubs) = prefs.edit().putBoolean(IS_PRO_RUSTORE_VERSION, isProSubs).apply()
+        set(isProSubs) = prefs.edit() { putBoolean(IS_PRO_RUSTORE_VERSION, isProSubs) }
 
     var isProNoGP: Boolean
         get() = prefs.getBoolean(IS_PRO_NO_GP_VERSION, false)
-        set(isProNoGP) = prefs.edit().putBoolean(IS_PRO_NO_GP_VERSION, isProNoGP).apply()
+        set(isProNoGP) = prefs.edit() { putBoolean(IS_PRO_NO_GP_VERSION, isProNoGP) }
 
     var simIconsColors: LinkedList<Int>
         get(): LinkedList<Int> {

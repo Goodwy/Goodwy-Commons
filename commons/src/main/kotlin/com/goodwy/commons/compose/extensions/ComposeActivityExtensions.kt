@@ -6,6 +6,7 @@ import androidx.compose.ui.platform.LocalContext
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.dialogs.ConfirmationAlertDialog
+import com.goodwy.commons.extensions.googlePlayDevUrlString
 import com.goodwy.commons.extensions.launchViewIntent
 
 @Composable
@@ -19,7 +20,7 @@ fun FakeVersionCheck() {
                 positive = R.string.ok,
                 negative = null
             ) {
-                context.getActivity().launchViewIntent(DEVELOPER_PLAY_STORE_URL)
+                context.getActivity().launchViewIntent(context.googlePlayDevUrlString())
             }
         }
     }
