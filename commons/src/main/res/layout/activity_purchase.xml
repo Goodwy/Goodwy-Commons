@@ -49,11 +49,22 @@
             android:layout_height="wrap_content"
             android:paddingBottom="@dimen/normal_margin">
 
+            <com.goodwy.commons.views.MyTextView
+                android:id="@+id/purchase_apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/pref_pay_summary"
+                android:textSize="14sp" />
+
             <RelativeLayout
                 android:id="@+id/pay_app"
                 android:layout_width="match_parent"
                 android:layout_height="162dp"
-                android:layout_centerHorizontal="true">
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/purchase_apps">
 
                 <RelativeLayout
                     android:id="@+id/app_one"
