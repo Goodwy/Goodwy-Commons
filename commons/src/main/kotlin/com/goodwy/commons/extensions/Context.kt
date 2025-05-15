@@ -62,6 +62,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import androidx.core.net.toUri
+import org.joda.time.DateTimeConstants
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -1317,6 +1318,21 @@ fun Context.openFullScreenIntentSettings(appId: String) {
         intent.data = uri
         startActivity(intent)
     }
+}
+
+fun Context.getDayOfWeekString(dayOfWeek: Int): String {
+    val dayOfWeekResId = when (dayOfWeek) {
+        DateTimeConstants.MONDAY -> R.string.monday
+        DateTimeConstants.TUESDAY -> R.string.tuesday
+        DateTimeConstants.WEDNESDAY -> R.string.wednesday
+        DateTimeConstants.THURSDAY -> R.string.thursday
+        DateTimeConstants.FRIDAY -> R.string.friday
+        DateTimeConstants.SATURDAY -> R.string.saturday
+        DateTimeConstants.SUNDAY -> R.string.sunday
+        else -> throw IllegalArgumentException("Invalid day: $dayOfWeek")
+    }
+
+    return getString(dayOfWeekResId)
 }
 
 //Goodwy
