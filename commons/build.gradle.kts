@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.goodwy"
-version = "6.1.1"
+version = "6.3.0"
 
 android {
     namespace = "com.goodwy.commons"
