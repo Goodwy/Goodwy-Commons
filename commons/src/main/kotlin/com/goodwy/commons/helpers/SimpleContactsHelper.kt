@@ -39,7 +39,7 @@ class SimpleContactsHelper(val context: Context) {
             allContacts.forEach {
                 val contactId = it.rawId
                 val contact = names.firstOrNull { it.rawId == contactId }
-                val name = contact?.name ?: it.phoneNumbers.firstOrNull()?.normalizedNumber
+                val name = contact?.name
                 if (name != null) {
                     it.name = name
                 }
@@ -51,7 +51,7 @@ class SimpleContactsHelper(val context: Context) {
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
-                val startIndex = 0.coerceAtLeast(it.phoneNumbers.first().normalizedNumber.length - 9)
+                val startIndex = Math.max(0, it.phoneNumbers.first().normalizedNumber.length - 9)
                 it.phoneNumbers.first().normalizedNumber.substring(startIndex)
             }.distinctBy { it.rawId }.toMutableList() as ArrayList<SimpleContact>
 
