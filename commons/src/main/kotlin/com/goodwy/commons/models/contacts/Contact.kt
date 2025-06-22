@@ -211,7 +211,7 @@ data class Contact(
         val fullName = "$prefix $firstPart $lastPart$suffixComma".trim()
         val organization = getFullCompany()
         val email = emails.firstOrNull()?.value?.trim()
-        val phoneNumber = phoneNumbers.firstOrNull()?.normalizedNumber
+        val phoneNumber = phoneNumbers.firstOrNull()?.value
 
         return when {
             fullName.isNotBlank() -> fullName
