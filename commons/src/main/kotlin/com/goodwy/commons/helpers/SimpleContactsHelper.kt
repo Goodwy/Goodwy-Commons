@@ -39,7 +39,7 @@ class SimpleContactsHelper(val context: Context) {
             allContacts.forEach {
                 val contactId = it.rawId
                 val contact = names.firstOrNull { it.rawId == contactId }
-                val name = contact?.name ?: it.phoneNumbers.firstOrNull()?.normalizedNumber
+                val name = contact?.name
                 if (name != null) {
                     it.name = name
                 }
