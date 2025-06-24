@@ -10,5 +10,5 @@
     <bool name="is_pro_app">false</bool>
     <bool name="using_no_gp">true</bool>
     <bool name="using_accent_color">false</bool>
-    <bool name="new_dev">true</bool>
+    <bool name="new_dev">false</bool>
 </resources>

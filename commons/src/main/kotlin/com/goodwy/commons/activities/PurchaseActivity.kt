@@ -96,8 +96,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.purchaseNestedScrollview,
             binding.topDetails.root
         ).forEach {
-            it.beInvisibleIf(resources.getBoolean(R.bool.using_no_gp) || (!playStoreInstalled && !ruStoreInstalled))
-//            it.beInvisibleIf(!ruStoreInstalled)
+            it.beInvisibleIf((!playStoreInstalled && !ruStoreInstalled) ||
+                (resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled && !ruStoreInstalled))
         }
 
         arrayOf(
@@ -585,7 +585,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appFilesPackage = "com.goodwy.filemanager"
         val appKeyboardPackage = "com.goodwy.keyboard"
         val appCalendarPackage = "com.goodwy.calendar"
-        val appVoiceRecorderPackage = "com.goodwy.voicerecorderfree"
+//        val appVoiceRecorderPackage = "com.goodwy.voicerecorderfree"
 
         val appDialerInstalled = isPackageInstalled(appDialerPackage)
         val appContactsInstalled = isPackageInstalled(appContactsPackage)
@@ -595,10 +595,10 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appFilesInstalled = isPackageInstalled(appFilesPackage)
         val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
         val appCalendarInstalled = isPackageInstalled(appCalendarPackage)
-        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)
+//        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)
 
         val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
-            appAudiobookLiteInstalled && appFilesInstalled && appKeyboardInstalled && appCalendarInstalled && appVoiceRecorderInstalled
+            appAudiobookLiteInstalled && appFilesInstalled && appKeyboardInstalled && appCalendarInstalled //&& appVoiceRecorderInstalled
 
         if (!appAllInstalled) binding.collectionLogo.applyColorFilter(primaryColor)
         binding.collectionChevron.applyColorFilter(getProperTextColor())
@@ -613,7 +613,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
             SimpleListItem(7, R.string.right_keyboard, imageRes = R.drawable.ic_inkwell, selected = appKeyboardInstalled, packageName = appKeyboardPackage),
             SimpleListItem(8, R.string.right_calendar, imageRes = R.drawable.ic_calendar_app, selected = appCalendarInstalled, packageName = appCalendarPackage),
-            SimpleListItem(8, R.string.right_voice_recorder, imageRes = R.drawable.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage)
+            //SimpleListItem(9, R.string.right_voice_recorder, imageRes = R.drawable.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage)
         )
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
