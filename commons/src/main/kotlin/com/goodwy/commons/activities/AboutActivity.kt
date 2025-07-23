@@ -1,20 +1,12 @@
 package com.goodwy.commons.activities
 
-import android.annotation.SuppressLint
-import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.content.Intent.*
 import android.content.res.Configuration
-import android.content.res.Resources
-import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.core.net.toUri
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
@@ -128,7 +120,7 @@ class AboutActivity : BaseComposeActivity() {
         showRateStarsDialog: () -> Unit,
     ) {
         if (baseConfig.wasAppRated) {
-            redirectToRateUs()
+            launchAppRatingPage()
         } else {
             showRateStarsDialog()
         }

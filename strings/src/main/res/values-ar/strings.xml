@@ -15,6 +15,7 @@
     <string name="end">النهاية</string>
 
     <!-- Support project -->
+    <string name="rate_g">تقييم</string>
     <string name="action_support_project">دعم المشروع</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -143,7 +144,7 @@
     <string name="system_theme_description">لا يسمح لك هذا المظهر بضبط الألوان يدويا. تتغير الألوان ديناميكيا وفقا لإعدادات النظام.</string>
     <string name="incoming_call">مكالمة واردة</string>
     <string name="outgoing_call">مكالمة صادرة</string>
-    <string name="missed_call">مكالمة لم يتم تفويتها</string>
+    <string name="missed_call">مكالمة فائتة</string>
     <string name="unblock_number">إلغاء حظر الرقم</string>
     <string name="unblock_numbers">إلغاء حظر الأرقام</string>
     <string name="show_blocked_numbers">إظهار المحظور</string>
@@ -245,7 +246,7 @@
     <string name="message_on_my_way">أنا في طريقي.</string>
     <string name="message_cant_talk_right_now">آسف ، لا أستطيع التحدث الآن.</string>
     <string name="remind_me">ذكرني</string>
-    <string name="mute">أخرس</string>
+    <string name="mute">كتم</string>
 
     <!-- Relation types -->
     <string name="search_the_web">ابحث في الإنترنت</string>
@@ -327,4 +328,5 @@
     <string name="availability">توافر</string>
     <string name="attendees">الحضور</string>
     <string name="typeface">محرف</string>
+    <string name="more_apps_from_us_g">المزيد من تطبيقاتنا</string>
 </resources>

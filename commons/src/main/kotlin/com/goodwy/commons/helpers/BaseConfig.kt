@@ -442,10 +442,6 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(WAS_UPGRADED_FROM_FREE_SHOWN, false)
         set(wasUpgradedFromFreeShown) = prefs.edit { putBoolean(WAS_UPGRADED_FROM_FREE_SHOWN, wasUpgradedFromFreeShown) }
 
-    var wasRateUsPromptShown: Boolean
-        get() = prefs.getBoolean(WAS_RATE_US_PROMPT_SHOWN, false)
-        set(wasRateUsPromptShown) = prefs.edit { putBoolean(WAS_RATE_US_PROMPT_SHOWN, wasRateUsPromptShown) }
-
     var wasAppRated: Boolean
         get() = prefs.getBoolean(WAS_APP_RATED, false)
         set(wasAppRated) = prefs.edit { putBoolean(WAS_APP_RATED, wasAppRated) }

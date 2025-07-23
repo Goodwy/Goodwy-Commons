@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_margin"
         android:gravity="center_horizontal"
-        android:text="@string/rate_our_app"
+        android:text="@string/rate_g"
         android:textSize="@dimen/bigger_text_size" />
 
     <LinearLayout

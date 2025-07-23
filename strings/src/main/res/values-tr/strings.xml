@@ -15,6 +15,7 @@
     <string name="end">Bitir</string>
 
     <!-- Support project -->
+    <string name="rate_g">Oyla</string>
     <string name="action_support_project">Proje desteği</string>
     <string name="pref_pay_summary">Ücretli uygulamayı alarak ilerideki geliştirmeleri destekle ve ileride gelecek özellikleri kullan</string>
     <string name="support_project_summary">Ücretli uygulamalarımızdan birini satın alarak ileri gelişimleri destekle ve ekstra özellikleri aç</string>
@@ -339,4 +340,5 @@
     <string name="availability">Kullanılabilirlik</string>
     <string name="attendees">Katılımcı</string>
     <string name="typeface">Yazı tipi</string>
+    <string name="more_apps_from_us_g">Diğer uygulamalarımız</string>
 </resources>

@@ -53,7 +53,7 @@ class RateStarsDialog(val activity: Activity) {
             rateStar3.setOnClickListener { dialogCancelled(true) }
             rateStar4.setOnClickListener { dialogCancelled(true) }
             rateStar5.setOnClickListener {
-                activity.redirectToRateUs()
+                activity.launchAppRatingPage()
                 dialogCancelled(true)
             }
         }
@@ -96,7 +96,7 @@ fun RateStarsAlertDialog(
         DialogSurface {
             Column {
                 Text(
-                    text = stringResource(id = R.string.rate_our_app),
+                    text = stringResource(id = com.goodwy.strings.R.string.rate_g),
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = SimpleTheme.dimens.padding.extraLarge, bottom = SimpleTheme.dimens.padding.large),

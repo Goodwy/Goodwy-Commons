@@ -15,6 +15,7 @@
     <string name="end">Fi</string>
 
     <!-- Support project -->
+    <string name="rate_g">Valora</string>
     <string name="action_support_project">Suport al projecte</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -329,4 +330,5 @@
     <string name="availability">Disponibilitat</string>
     <string name="attendees">Assistents</string>
     <string name="typeface">Tipografia</string>
+    <string name="more_apps_from_us_g">Més aplicacions nostres</string>
 </resources>

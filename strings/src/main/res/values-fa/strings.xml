@@ -15,6 +15,7 @@
     <string name="end">پایان</string>
 
     <!-- Support project -->
+    <string name="rate_g">امتیاز</string>
     <string name="action_support_project">پشتیبانی پروژه</string>
     <string name="pref_pay_summary">برنامه پولی را برای پشتیبانی از پیشرفت‌ها و ویژگی‌های اضافی دریافت کنید</string>
     <string name="support_project_summary">یکی از برنامه های پولی ما را برای پشتیبانی از توسعه آینده و باز کردن قفل ویژگی های اضافی دریافت کنید</string>
@@ -329,4 +330,5 @@
     <string name="availability">دسترس بودن</string>
     <string name="attendees">شرکت کنندگان</string>
     <string name="typeface">تایپ فیس</string>
+    <string name="more_apps_from_us_g">برنامه‌های دیگر ما</string>
 </resources>

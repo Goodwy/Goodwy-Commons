@@ -32,6 +32,7 @@
     <string name="end">Fino</string>
 
     <!-- Support project -->
+    <string name="rate_g">Taksi</string>
     <string name="action_support_project">Projekta subteno</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -331,4 +332,5 @@
     <string name="availability">Havebleco</string>
     <string name="attendees">Ĉeestantoj</string>
     <string name="typeface">Tiparo</string>
+    <string name="more_apps_from_us_g">Pli da aplikaĵoj niaj</string>
 </resources>

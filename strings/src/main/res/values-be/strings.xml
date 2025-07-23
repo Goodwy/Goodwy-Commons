@@ -32,6 +32,7 @@
     <string name="end">Канец</string>
 
     <!-- Support project -->
+    <string name="rate_g">Стаўка</string>
     <string name="action_support_project">Падтрымка праекта</string>
     <string name="pref_pay_summary">Набудзьце прыкладанне для падтрымкі будучых распрацовак і атрымання дадатковых функцый</string>
     <string name="support_project_summary">Набудзьце адно з нашых платных прыкладанняў для падтрымкі будучых распрацовак і разблакіроўкі дадатковых функцый</string>
@@ -343,4 +344,5 @@
     <string name="event_type">Тып падзеі</string>
     <string name="availability">Даступнасць</string>
     <string name="attendees">Удзельнікі</string>
+    <string name="more_apps_from_us_g">Больш праграм ад нас</string>
 </resources>

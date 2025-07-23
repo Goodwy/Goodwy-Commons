@@ -32,6 +32,7 @@
     <string name="end">Краят</string>
 
     <!-- Support project -->
+    <string name="rate_g">Оценяване</string>
     <string name="action_support_project">Подкрепа по проекта</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -341,4 +342,5 @@
     <string name="availability">Наличност</string>
     <string name="attendees">Участниците</string>
     <string name="typeface">Шрифт</string>
+    <string name="more_apps_from_us_g">Други наши приложения</string>
 </resources>

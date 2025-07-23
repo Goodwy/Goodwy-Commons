@@ -15,6 +15,7 @@
     <string name="end">סיום</string>
 
     <!-- Support project -->
+    <string name="rate_g">דרג</string>
     <string name="action_support_project">תמיכה בפרויקטים</string>
     <string name="pref_pay_summary">קבל את האפליקציה בתשלום כדי לתמוך בפיתוחים עתידיים ובתכונות נוספות</string>
     <string name="support_project_summary">קבל את אחת מהאפליקציות בתשלום שלנו כדי לתמוך בפיתוח עתידי ולפתוח תכונות נוספות</string>
@@ -329,4 +330,5 @@
     <string name="availability">זמינות</string>
     <string name="attendees">משתתפים</string>
     <string name="typeface">צורת גופן</string>
+    <string name="more_apps_from_us_g">אפליקציות נוספות מאיתנו</string>
 </resources>

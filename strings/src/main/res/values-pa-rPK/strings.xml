@@ -32,6 +32,7 @@
     <string name="end">ختم</string>
 
     <!-- Support project -->
+    <string name="rate_g">آپݨے من دی گل کریو</string>
     <string name="action_support_project">منصوبے کی حمایت</string>
     <string name="pref_pay_summary">مستقبل کی پیشرفت اور اضافی خصوصیات کو سپورٹ کرنے کے لیے بامعاوضہ ایپ حاصل کریں۔</string>
     <string name="support_project_summary">مستقبل کی ترقی اور اضافی خصوصیات کو غیر مقفل کرنے کے لیے ہماری بامعاوضہ ایپس میں سے ایک حاصل کریں۔</string>
@@ -331,4 +332,5 @@
     <string name="availability">دستیابی</string>
     <string name="attendees">حاضرین</string>
     <string name="typeface">ٹائپ فیس</string>
+    <string name="more_apps_from_us_g">ساڈے ولوں ہور ایپلیکیشناں</string>
 </resources>

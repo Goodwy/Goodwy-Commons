@@ -16,6 +16,7 @@
     <string name="end">Крај</string>
 
     <!-- Support project -->
+    <string name="rate_g">Оцена</string>
     <string name="action_support_project">Подржите пројекат</string>
     <string name="pref_pay_summary">Набавите апликацију која се плаћа да бисте подржали будући развој и додатне функције</string>
     <string name="support_project_summary">Набавите једну од наших апликација које се плаћају да бисте подржали будући развој и откључали додатне функције</string>
@@ -340,4 +341,5 @@
     <string name="event_type">Тип догађаја</string>
     <string name="availability">Доступност</string>
     <string name="attendees">Учесници</string>
+    <string name="more_apps_from_us_g">Више апликација од нас</string>
 </resources>

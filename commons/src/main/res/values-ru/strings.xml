@@ -238,8 +238,7 @@
     <string name="could_not_create_folder">Невозможно создать папку \"%s\"</string>
     <string name="could_not_create_file">Невозможно создать файл \"%s\"</string>
     <string name="no_new_items">Ничего не найдено</string>
-    <string name="no_space">По выбранному пути недостаточно свободного места.
-\nТребуется %1$s, доступно %2$s.</string>
+    <string name="no_space">По выбранному пути недостаточно свободного места.\nТребуется %1$s, доступно %2$s</string>
     <string name="system_service_disabled">Системная служба для выбора файлов и папок недоступна</string>
     <string name="create_new">Создать</string>
     <string name="folder">Папка</string>
@@ -485,9 +484,9 @@
     <string name="minutes_raw">минут</string>
     <string name="hours_raw">часов</string>
     <string name="days_raw">дней</string>
-    <string name="seconds_letter">%dс</string>
-    <string name="minutes_letter">%dмин</string>
-    <string name="hours_letter">%dч</string>
+    <string name="seconds_letter">%d с</string>
+    <string name="minutes_letter">%d м</string>
+    <string name="hours_letter">%d ч</string>
     <string name="week_number_short">нед.</string>
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
@@ -763,7 +762,7 @@
 \n%s — секунда</string>
     <string name="usb_detected">К устройству подключён USB-накопитель. Чтобы убедиться, что его файлы отображаются правильно, необходимо предоставить дополнительные разрешения.</string>
     <string name="confirm_usb_storage_access_text">Выберите корневую папку USB-накопителя на следующем экране, чтобы предоставить к нему доступ</string>
-    <string name="wrong_root_selected_usb">Выбрана неправильная папка. Выберите корневую папку USB-накопителя.</string>
+    <string name="wrong_root_selected_usb">Выбрана неправильная папка. Выберите корневую папку USB-накопителя</string>
     <string name="january">Январь</string>
     <string name="february">Февраль</string>
     <string name="march">Март</string>
@@ -873,13 +872,9 @@
     <string name="website_label">Исходный код можно найти по адресу</string>
     <string name="email_label">Отправить отзывы или предложения</string>
     <string name="upgrade_to_pro">Обновить до Pro</string>
-    <string name="more_apps">Другие приложения</string>
-    <string name="more_apps_from_us">Другие наши приложения</string>
     <string name="invite_friends">Предложить другу</string>
     <string name="share_text">Попробуйте %1$s по ссылке %2$s</string>
     <string name="invite_via">Предложить с помощью</string>
-    <string name="rate_us">Оценить в Google Play</string>
-    <string name="rate">Оценить</string>
     <string name="donate">Пожертвовать</string>
     <string name="follow_us">Подписаться на нас</string>
     <string name="copyright">v%1$s
@@ -897,21 +892,10 @@
     <string name="device_os">ОС устройства: %s</string>
     <string name="purchase">Купить</string>
     <string name="before_asking_question_read_faq">Прежде чем задать вопрос, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Возможно, решение уже есть.</string>
-    <string name="before_rate_read_faq">Прежде чем поставить оценку, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Если у вас возникли какие-то проблемы, возможно, решение уже есть.</string>
     <string name="make_sure_latest">Также убедитесь, что используете последнюю версию приложения.</string>
     <string name="make_sure_upgrade">Также обратите внимание, что эта версия приложения больше не разрабатывается. Установите Pro-версию для получения множества улучшений.</string>
     <string name="read_it">Прочитать</string>
     <string name="read_faq">Прочитать FAQ</string>
-    <string name="rate_us_prompt">Привет,
-\n
-\nпохоже, вы уже давно используете данное приложение, и мы очень ценим это.
-\n
-\nНе могли бы вы оказать нам услугу и оценить его в Google Play? Это действительно очень нам поможет.
-\n
-\nНезависимо от вашего решения данное сообщение больше не появится.
-\n
-\nСпасибо!</string>
-    <string name="rate_our_app">Пожалуйста, оцените приложение :)</string>
     <string name="thank_you">Спасибо</string>
     <string name="widget_locked_pro">Виджет заблокирован.
 \nПерейдите на Pro-версию, чтобы разблокировать его.</string>
@@ -1153,4 +1137,10 @@
     <string name="translation_kabyle">Кабильский</string>
     <string name="number_of_items">Количество элементов</string>
     <string name="reorder_items_by_dragging">Порядок элементов меняется перетаскиванием</string>
+    <string name="days_letter">%d д</string>
+    <string name="confirm_storage_access_restricted_text">Из-за системных ограничений эта папка недоступна.</string>
+    <string name="confirm_storage_access_restricted_text_not_found">Системный файловый менеджер не найден.</string>
+    <string name="confirm_storage_access_restricted_text_open_system">Открыть в системном приложении</string>
+    <string name="evalex_title">EvalEx (вычисление математических выражений)</string>
+    <string name="requires_fossify_thank_you">Требуется Fossify Thank You</string>
 </resources>

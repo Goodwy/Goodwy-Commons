@@ -15,6 +15,7 @@
     <string name="end">Fin</string>
 
     <!-- Support project -->
+    <string name="rate_g">Évaluer</string>
     <string name="action_support_project">Appui au projet</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -339,4 +340,5 @@
     <string name="availability">Disponibilité</string>
     <string name="attendees">Participants</string>
     <string name="typeface">Fonte de caractères</string>
+    <string name="more_apps_from_us_g">Plus d\'applications simples</string>
 </resources>

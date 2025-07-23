@@ -83,10 +83,10 @@
     <string name="list">Danh sách</string>
     <string name="increase_column_count">Tăng số lượng cột</string>
     <string name="reduce_column_count">Giảm số lượng cột</string>
-    <string name="column_count">Số cột</string>
+    <string name="column_count">Số lượng cột</string>
     <string name="row_count">Số hàng</string>
-    <string name="portrait_column_count">Số cột màn hình dọc</string>
-    <string name="landscape_column_count">Số cột màn hình ngang</string>
+    <string name="portrait_column_count">Số lượng cột màn hình dọc</string>
+    <string name="landscape_column_count">Số lượng cột màn hình ngang</string>
     <string name="change_cover_image">Thay đổi ảnh bìa</string>
     <string name="select_photo">Chọn ảnh</string>
     <string name="manage_blocked_numbers">Quản lý số bị chặn</string>
@@ -136,7 +136,7 @@
     <string name="search_recordings">Tìm kiếm bản ghi</string>
     <string name="filter">Bộ lọc</string>
     <string name="filter_pro">Bộ lọc (Pro)</string>
-    <string name="no_items_found">Chưa có mục nào.</string>
+    <string name="no_items_found">Không có mục nào.</string>
     <string name="change_filter">Thay đổi bộ lọc</string>
     <string name="no_storage_permissions">Cần quyền lưu trữ</string>
     <string name="no_contacts_permission">Cần quyền truy cập danh bạ</string>
@@ -256,8 +256,8 @@
     <string name="properties">Chi tiết</string>
     <string name="path">Đường dẫn</string>
     <string name="items_selected">Các mục đã chọn</string>
-    <string name="direct_children_count">Đếm thư mục con trực tiếp</string>
-    <string name="files_count">Tổng số file</string>
+    <string name="direct_children_count">Số lượng thư mục con</string>
+    <string name="files_count">Số lượng file</string>
     <string name="resolution">Độ phân giải</string>
     <string name="duration">Thời lượng</string>
     <string name="artist">Nghệ sĩ</string>
@@ -296,7 +296,7 @@
     <string name="light_theme">Sáng</string>
     <string name="dark_theme">Tối</string>
     <string name="auto_light_dark_theme">Tự động</string>
-    <string name="dark_red">Đỏ sẫm</string>
+    <string name="dark_red">Tối Đỏ</string>
     <string name="black_white">Đen &amp; Trắng</string>
     <string name="custom">Tùy chỉnh</string>
     <string name="shared">Đã chia sẻ</string>
@@ -314,7 +314,7 @@
     <string name="unhide">Bỏ ẩn</string>
     <string name="hide_folder">Ẩn thư mục</string>
     <string name="unhide_folder">Bỏ ẩn thư mục</string>
-    <string name="temporarily_show_hidden">Hiển thị mục đã ẩn</string>
+    <string name="temporarily_show_hidden">Hiện những mục đã ẩn</string>
     <string name="stop_showing_hidden">Ẩn lại mục đã ẩn</string>
     <string name="allow_access_more_media">Cho phép truy cập nhiều hơn</string>
     <string name="maximum_share_reached">Bạn không thể chia sẻ nhiều nội dung cùng lúc</string>
@@ -324,12 +324,12 @@
     <string name="print">In</string>
     <string name="print_pro">In (Pro)</string>
     <string name="shortcut">Phím tắt</string>
-    <string name="create_shortcut">Tạo phím tắt</string>
-    <string name="create_shortcut_pro">Tạo phím tắt (Pro)</string>
+    <string name="create_shortcut">Tạo lối tắt</string>
+    <string name="create_shortcut_pro">Tạo lối tắt (Pro)</string>
     <string name="add_number_to_contact">Thêm số để liên hệ</string>
     <string name="call_from_sim_1">Gọi từ SIM 1</string>
     <string name="call_from_sim_2">Gọi từ SIM 2</string>
-    <string name="toggle_filename">Hiện tên file</string>
+    <string name="toggle_filename">Ẩn/hiện tên file</string>
     <string name="move_to_top">Di chuyển lên trên cùng</string>
     <string name="move_to_bottom">Di chuyển xuống dưới cùng</string>
     <string name="unpin_item">Bỏ ghim mục</string>
@@ -346,7 +346,7 @@
     <string name="date_created">Ngày tạo</string>
     <string name="date_taken">Ngày chụp</string>
     <string name="date_added">Ngày thêm</string>
-    <string name="title">Tựa đề</string>
+    <string name="title">Tên</string>
     <string name="filename">Tên file</string>
     <string name="extension">Định dạng</string>
     <string name="random">Ngẫu nhiên</string>
@@ -378,14 +378,14 @@
 \nThử lại sau %d giây.</string>
     <string name="repeat_pin">Lặp lại mã PIN</string>
     <string name="pattern">Mẫu hình</string>
-    <string name="insert_pattern">Chèn mẫu hình</string>
+    <string name="insert_pattern">Vẽ mẫu hình</string>
     <string name="wrong_pattern">Mẫu hình sai</string>
     <string name="repeat_pattern">Lặp lại mẫu hình</string>
-    <string name="biometrics">Sinh trắc học</string>
+    <string name="biometrics">Vân tay</string>
     <string name="fingerprint">Vân tay</string>
     <string name="add_fingerprint">Thêm dấu vân tay</string>
     <string name="place_finger">Vui lòng đặt ngón tay của bạn trên cảm biến vân tay</string>
-    <string name="open_biometric_dialog">Mở hộp thoại xác thực ID sinh trắc học</string>
+    <string name="open_biometric_dialog">Mở hộp thoại xác minh vân tay</string>
     <string name="authenticate">Xác thực</string>
     <string name="authentication_failed">Quá trình xác thực đã thất bại</string>
     <string name="authentication_blocked">Xác thực bị chặn, vui lòng thử lại sau giây lát</string>
@@ -428,7 +428,7 @@
     <string name="during_day_at_hh_mm">Trong ngày lúc hh:mm</string>
     <string name="during_day_at">Trong ngày lúc %1$02d:%2$02d</string>
     <string name="settings">Cài đặt</string>
-    <string name="color_customization">Màu ứng dụng</string>
+    <string name="color_customization">Cá nhân hóa</string>
     <string name="improved_color_customization">Cải thiện tùy chỉnh màu sắc</string>
     <string name="customize_colors">Màu ứng dụng</string>
     <string name="customize_colors_locked">Tùy chỉnh màu sắc (Locked)</string>
@@ -443,16 +443,16 @@
     <string name="medium">Trung bình</string>
     <string name="large">Lớn</string>
     <string name="extra_large">Khổng lồ</string>
-    <string name="password_protect_hidden_items">Mật khẩu bảo vệ mục ẩn</string>
-    <string name="password_protect_whole_app">Mật khẩu bảo vệ toàn bộ ứng dụng</string>
-    <string name="password_protect_file_deletion">Mật khẩu bảo vệ xóa tập tin và di chuyển</string>
-    <string name="keep_last_modified">Giữ giá trị sửa đổi cuối cùng cũ tại các thao tác tập tin</string>
+    <string name="password_protect_hidden_items">Những mục ẩn</string>
+    <string name="password_protect_whole_app">Toàn bộ ứng dụng</string>
+    <string name="password_protect_file_deletion">Xóa tập tin và di chuyển</string>
+    <string name="keep_last_modified">Giữ giá trị sửa đổi lần cuối tại các thao tác tập tin</string>
     <string name="show_info_bubble">Hiển thị bong bóng thông tin tại các mục cuộn bằng cách kéo thanh cuộn</string>
     <string name="prevent_phone_from_sleeping">Ngăn điện thoại ngủ trong khi ứng dụng  đang hoạt động trước nền</string>
     <string name="skip_delete_confirmation">Bỏ qua bước xác nhận xóa</string>
-    <string name="enable_pull_to_refresh">Vuốt từ trên xuống để làm mới</string>
+    <string name="enable_pull_to_refresh">Cuộn từ trên xuống để làm mới</string>
     <string name="use_24_hour_time_format">Dùng định dạng 24 giờ</string>
-    <string name="change_date_and_time_format">Định dạng ngày giờ</string>
+    <string name="change_date_and_time_format">Định dạng thời gian</string>
     <string name="sunday_first">Bắt đầu tuần vào Chủ Nhật</string>
     <string name="start_week_on">Bắt đầu tuần vào</string>
     <string name="use_same_snooze">Luôn luôn sử dụng cùng thời gian báo lại</string>
@@ -490,7 +490,7 @@
     <string name="remove_all_description">Xóa tất cả thư mục khỏi danh sách ngoại trừ? Điều này sẽ không xóa các thư mục.</string>
     <string name="temporarily_show_excluded">Hiển thị mục ngoại trừ</string>
     <string name="stop_showing_excluded">Ẩn lại mục bị ngoại trừ</string>
-    <string name="manage_shown_tabs">Quản lý tab</string>
+    <string name="manage_shown_tabs">Tab</string>
     <string name="default_tab_to_open">Tab mặc định</string>
     <string name="favorites_tab">Yêu thích</string>
     <string name="call_history_tab">Lịch sử gọi</string>
@@ -611,12 +611,9 @@
     <string name="website_label">Mã nguồn</string>
     <string name="email_label">Góp ý hoặc đề xuất</string>
     <string name="upgrade_to_pro">Nâng cấp Pro</string>
-    <string name="more_apps">Các ứng dụng khác</string>
     <string name="invite_friends">Mời bạn bè</string>
-    <string name="share_text">Xin chào, hãy kiểm tra %1$s tại %2$s</string>
+    <string name="share_text">Êy, hãy dùng thử %1$s trên %2$s</string>
     <string name="invite_via">Mời qua</string>
-    <string name="rate_us">Đánh giá</string>
-    <string name="rate">Đánh giá</string>
     <string name="follow_us">Theo dõi</string>
     <string name="additional_info">Thông tin bổ sung</string>
     <string name="app_version">Phiên bản ứng dụng: %s</string>
@@ -630,11 +627,9 @@
     </string>
     <string name="purchase">Mua hàng</string>
     <string name="before_asking_question_read_faq">Trước khi đặt câu hỏi, vui lòng kiểm tra cài đặt ứng dụng và đọc Câu hỏi thường gặp trước. Có thể giải pháp ở đó.</string>
-    <string name="before_rate_read_faq">Trước khi đánh giá, vui lòng kiểm tra cài đặt ứng dụng và đọc Câu hỏi thường gặp trước. Nếu bạn gặp vấn đề, có thể giải pháp ở đó.</string>
     <string name="make_sure_latest">Hãy đảm bảo rằng bạn đang sử dụng phiên bản ứng dụng mới nhất.</string>
     <string name="read_it">Hãy đọc</string>
     <string name="read_faq">Đọc Câu hỏi thường gặp(FAQ)</string>
-    <string name="rate_us_prompt">Xin chào,\n\ncó vẻ như bạn đang sử dụng ứng dụng này khá lâu và chúng tôi thực sự đánh giá cao nó.\n\nNếu có thể, vui lòng đánh giá chúng tôi trên Google Play. Điều đó thực sự sẽ giúp chúng tôi rất nhiều.\n\n Bất kể bạn quyết định như thế nào, bạn sẽ không thấy thông báo này nữa.\n\nCảm ơn!</string>
     <string name="new_app">
         <![CDATA[
             Này,<br><br>
@@ -692,7 +687,7 @@
     <string name="exoplayer_title">ExoPlayer (trình phát video)</string>
     <string name="sanselan_title">Apache Sanselan (đọc siêu dữ liệu hình ảnh)</string>
     <string name="filters_title">Bộ lọc ảnh Android (bộ lọc hình ảnh)</string>
-    <string name="gesture_views_title">Chế độ xem cử chỉ (hình ảnh có thể phóng to)</string>
+    <string name="gesture_views_title">Chế độ xem cử chỉ (thu phóng hình ảnh)</string>
     <string name="deprecated_app">THÔNG BÁO: Phiên bản của ứng dụng này không còn được duy trì, hãy tải phiên bản Pro tại https://play.google.com/store/apps/details?id=org.fossify..xxx.pro</string>
     <string name="pro_app_refund">Đừng quên rằng nếu bạn gỡ cài đặt bất kỳ ứng dụng phải trả tiền nào trong vòng 2 giờ, bạn sẽ tự động được hoàn lại tiền. Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại hello@fossify.org và bạn sẽ nhận được nó.Thật dễ dàng đúng không :)</string>
     <string name="developer_description">Một bộ sưu tập ứng dụng Android đơn giản, mã nguồn mở, với các tiện ích có thể tùy chỉnh, không quảng cáo và không yêu cầu quyền không cần thiết.</string>
@@ -729,11 +724,10 @@
     <plurals name="deleting_items">
         <item quantity="other">Đang xóa %d mục</item>
     </plurals>
-    <string name="faq_9_text_commons">Có nhiều cách để thực hiện. Cách đầu tiên là bắt đầu chế độ lựa chọn bằng cách nhấn giữ một mục, sau đó nhấn nhanh vào các mục khác để chọn chúng. Cách thứ hai tương tự như chọn các mục trên PC bằng chuột, chỉ cần bắt đầu chế độ lựa chọn bằng cách nhấn giữ một mục, sau đó vẫn giữ ngón tay của bạn vuốt qua các mục khác để chọn. Cách thứ ba là nhấn giữ một mục, sau đó nhấn giữ một mục khác và mọi thứ ở giữa sẽ được chọn. Nếu bạn muốn chọn tất cả các mục, chỉ cần nhấn giữ một mục, sau đó nhấn vào bộ đếm mục đã chọn ở góc trên cùng bên trái. Thao tác đó sẽ chọn hoặc bỏ chọn tất cả mọi thứ.</string>
+    <string name="faq_9_text_commons">Có nhiều cách thực hiện. Cách đầu tiên là nhấn giữ một mục, sau đó nhấn nhanh vào các mục khác để chọn chúng. Cách thứ hai tương tự như chọn các mục trên PC bằng chuột: nhấn giữ một mục, sau đó giữ ngón tay của bạn vuốt qua các mục khác để chọn. Cách thứ ba là nhấn giữ một mục, sau đó nhấn giữ một mục khác và mọi thứ ở giữa sẽ được chọn. Nếu bạn muốn chọn tất cả các mục, chỉ cần nhấn giữ một mục, sau đó nhấn vào bộ đếm mục đã chọn ở góc trên cùng bên trái. Thao tác đó sẽ chọn hoặc bỏ chọn tất cả mọi thứ.</string>
     <string name="theme_and_colors">Chủ đề và màu</string>
     <string name="widgets">Widget</string>
     <string name="list_view">Danh sách</string>
-    <string name="more_apps_from_us">Các app khác</string>
     <string name="copyright">v %1$s\nBản quyền © Fossify %2$d</string>
     <string name="root">Root</string>
     <string name="exif">EXIF</string>
@@ -809,7 +803,7 @@
     <string name="platforms">Nền tảng</string>
     <string name="file_manager_short">File Manager</string>
     <string name="donate_to_fossify">Ủng hộ Fossify</string>
-    <string name="contributors">Đóng góp</string>
+    <string name="contributors">Người đóng góp</string>
     <string name="translation">Biên dịch</string>
     <string name="purchase_simple_thank_you">Mua Fossify Thank You</string>
     <string name="known_issues">Vấn đề</string>
@@ -823,4 +817,9 @@
     <string name="about_footer">Tạo bằng ❤️ từ Slovakia</string>
     <string name="all_fossify_apps">Tất cả ứng dụng Fossify</string>
     <string name="translation_vietnamese">Tiếng Việt</string>
+    <string name="little_to_no_fee">Ít hoặc không mất phí</string>
+    <string name="fee_up_to_pct">Phí tối đa %1$d%%</string>
+    <string name="cryptocurrency">Tiền điện tử</string>
+    <string name="zip4j_title">Zip4j (nén &amp; giải nén ZIP)</string>
+    <string name="app_icon_color_warning">Cẩn thận: Một số trình launcher có thể không xử lý đúng tùy chỉnh biểu tượng ứng dụng. Nếu biểu tượng biến mất, hãy thử khởi chạy ứng dụng thông qua Google Play hoặc tiện ích. Sau khi khởi chạy, hãy khôi phục màu biểu tượng màu xanh lá cây mặc định #106D1F. Trong trường hợp crash, có thể cần phải cài đặt lại ứng dụng.</string>
 </resources>

@@ -345,7 +345,7 @@
     <string name="global_theme_success">Obecny motyw został zastosowany do wszystkich aplikacji Fossify. Wszelkie przyszłe zmiany tego motywu będą synchronizowane automatycznie.</string>
     <string name="shared_theme_note">Pamiętaj, że nawet jeśli używasz wersji Pro aplikacji, nadal potrzebujesz aplikacji „Fossify Thank You” z powodów technicznych. Zajmuje się ona synchronizacją kolorów.</string>
     <string name="purchase_thank_you"><![CDATA[
-            Aby odblokować tę funkcję (i przy okazji wesprzeć rozwój niniejszej aplikacji), kup aplikację <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a>. Dzięki!
+            Aby odblokować tę funkcję (i przy okazji wesprzeć rozwój niniejszej aplikacji), kup aplikację <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a>. Dziękujemy!
         ]]></string>
     <string name="light_theme">Jasny</string>
     <string name="dark_theme">Ciemny</string>
@@ -891,13 +891,9 @@
     <string name="website_label">Kod źródłowy można znaleźć na stronie</string>
     <string name="email_label">Wyślij swoje uwagi lub sugestie na:</string>
     <string name="upgrade_to_pro">Uaktualnij do Pro</string>
-    <string name="more_apps">Więcej aplikacji</string>
-    <string name="more_apps_from_us">Więcej naszych aplikacji</string>
     <string name="invite_friends">Zaproponuj aplikację znajomym</string>
     <string name="share_text">Hej! Sprawdź aplikację %1$s na %2$s</string>
     <string name="invite_via">Zaproś za pomocą:</string>
-    <string name="rate_us">Oceń aplikację</string>
-    <string name="rate">Oceń</string>
     <string name="donate">Przekaż datek</string>
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s
@@ -921,21 +917,10 @@
     <string name="purchase">Kup</string>
     <string name="update_thank_you">Zaktualizuj aplikację Fossify Thank You do najnowszej wersji</string>
     <string name="before_asking_question_read_faq">Zanim zadasz pytanie, najpierw sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Może znajduje się tam rozwiązanie.</string>
-    <string name="before_rate_read_faq">Zanim nas ocenisz, sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Jeśli masz jakieś problemy, może jest tam rozwiązanie.</string>
     <string name="make_sure_latest">Upewnij się też, że używasz najnowszej wersji aplikacji.</string>
     <string name="make_sure_upgrade">Pamiętaj również, że ta wersja aplikacji nie jest już rozwijana. Pobierz wersję Pro, aby uzyskać wiele ulepszeń.</string>
     <string name="read_it">Przeczytaj to</string>
     <string name="read_faq">Przeczytaj FAQ</string>
-    <string name="rate_us_prompt">Witaj!
-\n
-\nWygląda na to, że używasz tej aplikacji już od dłuższego czasu, i naprawdę to doceniamy.
-\n
-\nJeśli możemy poprosić Cię o przysługę, oceń nas w Google Play. To by nam naprawdę bardzo pomogło.
-\n
-\nBez względu na to, jak zdecydujesz, nie zobaczysz tego komunikatu ponownie.
-\n
-\nDzięki!</string>
-    <string name="rate_our_app">Oceń naszą aplikację :)</string>
     <string name="thank_you">Dziękujemy</string>
     <string name="widget_locked_pro">Widżet jest zablokowany.\nUaktualnij do wersji Pro, aby go odblokować.</string>
     <string name="features_locked">Ta funkcja jest zablokowana. Kup &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt;, aby odblokować pełną wersję aplikacji.&lt;br&gt;&lt;br&gt;Jest to płatność jednorazowa, a jeśli nie będziesz zadowolony(-a), możemy Ci zwrócić pieniądze.</string>
@@ -1146,9 +1131,9 @@
     <string name="album">Album</string>
     <string name="exif">EXIF</string>
     <string name="pin">PIN</string>
-    <string name="seconds_letter">%ds</string>
-    <string name="minutes_letter">%dm</string>
-    <string name="hours_letter">%dh</string>
+    <string name="seconds_letter">%d s</string>
+    <string name="minutes_letter">%d m</string>
+    <string name="hours_letter">%d h</string>
     <string name="usb">USB</string>
     <string name="march_short">mar</string>
     <string name="saturday_letter">S</string>
@@ -1171,4 +1156,12 @@
     <string name="translation_kabyle">kabylski</string>
     <string name="number_of_items">Liczba elementów</string>
     <string name="reorder_items_by_dragging">Przeorganizuj elementy przeciągając</string>
+    <string name="days_letter">%d d</string>
+    <string name="confirm_storage_access_restricted_text">Ze względu na ograniczenia systemowe ten folder jest niedostępny.</string>
+    <string name="confirm_storage_access_restricted_text_open_system">Otwórz w aplikacji systemowej</string>
+    <string name="confirm_storage_access_restricted_text_not_found">Nie znaleziono systemowej aplikacji menedżera plików</string>
+    <string name="more_fossify_apps">Więcej aplikacji Fossify</string>
+    <string name="rate_this_app">Oceń tę aplikację</string>
+    <string name="evalex_title">EvalEx (obliczanie wyrażeń matematycznych)</string>
+    <string name="requires_fossify_thank_you">Wymaga aplikacji „Fossify Thank You”</string>
 </resources>

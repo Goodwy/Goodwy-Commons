@@ -155,7 +155,7 @@ internal fun AboutNewSection(
                         Text(modifier = Modifier
                             .padding(start = 16.dp, end = 8.dp)
                             .weight(1f),
-                            text = stringResource(R.string.rate).toUpperCase(LocaleList.current),
+                            text = stringResource(stringsR.string.rate_g).toUpperCase(LocaleList.current),
                             fontSize = 14.sp,
                             lineHeight = 18.sp,
                             color = textColor,)
@@ -163,9 +163,9 @@ internal fun AboutNewSection(
                             .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                             .width(42.dp)) {
                             Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
-                                imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.rate), tint = textColor)
+                                imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.rate_g), tint = textColor)
                             Icon(modifier = Modifier.size(42.dp).padding(8.dp),
-                                imageVector = Icons.Rounded.Star, contentDescription = stringResource(id = R.string.rate), tint = textColor)
+                                imageVector = Icons.Rounded.Star, contentDescription = stringResource(id = stringsR.string.rate_g), tint = textColor)
                         }
                     }
                 }
@@ -185,7 +185,7 @@ internal fun AboutNewSection(
                     Text(modifier = Modifier
                         .padding(start = 16.dp, end = 8.dp)
                         .weight(1f),
-                        text = stringResource(R.string.more_apps_from_us).toUpperCase(LocaleList.current),
+                        text = stringResource(stringsR.string.more_apps_from_us_g).toUpperCase(LocaleList.current),
                         fontSize = 14.sp,
                         lineHeight = 18.sp,
                         color = textColor,)
@@ -193,18 +193,18 @@ internal fun AboutNewSection(
                         .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                         .width(42.dp)) {
                         Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
-                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
+                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.more_apps_from_us_g), tint = textColor)
                         if (ruStoreInstalled && !context.baseConfig.useGooglePlay) {
                             Icon(modifier = Modifier
                                 .size(42.dp)
                                 .padding(9.dp),
                                 painter = painterResource(id = R.drawable.ic_rustore),
-                                contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
+                                contentDescription = stringResource(id = stringsR.string.more_apps_from_us_g), tint = textColor)
                         }
                         else {
                             Icon(modifier = Modifier.size(42.dp).padding(start = 10.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
                                 painter = painterResource(id = R.drawable.ic_google_play_vector),
-                                contentDescription = stringResource(id = R.string.more_apps_from_us), tint = textColor)
+                                contentDescription = stringResource(id = stringsR.string.more_apps_from_us_g), tint = textColor)
                         }
                     }
                 }

@@ -209,11 +209,9 @@
     <string name="cannot_be_undone">此操作無法撤消。</string>
     <string name="save_before_closing">尚未儲存變更。離開前是否儲存?</string>
     <string name="global_theme_success">色彩更新成功。新增了一個名為 \'Shared\' 的新主題，以後請使用那個來更新全部應用程式顏色。</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
+    <string name="purchase_thank_you"><![CDATA[
             請購買 <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a> 來解鎖此功能及支持開發者。謝謝!
-        ]]>
-    </string>
+        ]]></string>
     <string name="light_theme">淺色主題</string>
     <string name="dark_theme">深色主題</string>
     <string name="dark_red">暗紅主題</string>
@@ -550,13 +548,7 @@
 \n一旦您對 Pro 版本的設定感到滿意，您可以卸載舊的免費版本，因為您將不再需要它，這也將阻止此對話框的再次出現。
 \n
 \n謝謝！</string>
-    <string name="upgraded_from_free_contacts">您好，
-\n
-\n看來您剛從免費版本升級過來。若您在「%s」之下儲存了任何聯絡人，您需要手動進行遷移，方法是從免費版本的應用程式匯出 .vcf 檔案，然後透過頂部選單在這裡匯入。
-\n
-\n一旦您對於 Pro 版本的設定感到滿意，您就可以卸載舊的免費版本，因為您將不再需要它，這也將阻止此對話框再次出現。
-\n
-\n謝謝！</string>
+    <string name="upgraded_from_free_contacts">您好， \n \n看來您剛從免費版本升級。若您在「%s」之下儲存了任何聯絡人，您必須手動遷移，方法是從免費版本的應用程式匯出 .vcf 檔案，然後透過頂部選單在此匯入。 \n \n一旦您對於 Pro 版本的設定感到滿意，您就可以解除安裝舊的免費版本，因為您將不再需要它，這也將避免此對話框再次出現。 \n \n謝謝！</string>
     <string name="upgraded_from_free_notes">您好，
 \n
 \n看起來您剛剛由免費版本升級過來。如果您想要將您的筆記遷移過來，您需要手動進行，首先在免費版本的應用程式中將它們匯出成一個檔案，然後透過上方選單匯入到這裡。
@@ -568,13 +560,9 @@
     <string name="website_label">觀看原始碼</string>
     <string name="email_label">傳送您的反饋或建議</string>
     <string name="upgrade_to_pro">升級至專業版</string>
-    <string name="more_apps">更多應用程式</string>
-    <string name="more_apps_from_us">更多我們的應用程式</string>
     <string name="invite_friends">邀請朋友</string>
     <string name="share_text">嘿，來試試看「%1$s」吧！ %2$s</string>
     <string name="invite_via">邀請</string>
-    <string name="rate_us">為我們評分</string>
-    <string name="rate">評分</string>
     <string name="donate">捐贈</string>
     <string name="follow_us">追蹤我們</string>
     <string name="additional_info">進階資訊</string>
@@ -589,12 +577,9 @@
     </string>
     <string name="purchase">購買</string>
     <string name="before_asking_question_read_faq">在您發問前，請先檢查程式設定及閱讀[常見問題]。或許解決方法就在那裡。</string>
-    <string name="before_rate_read_faq">在您給我們評價前，請先檢查程式設定及閱讀[常見問題]。如果您遇到任何困難，或許解決方法就在那裡。</string>
     <string name="make_sure_latest">並且確保您正使用最新的應用程式版本。</string>
     <string name="read_it">讀它</string>
     <string name="read_faq">閱讀FAQ</string>
-    <string name="rate_us_prompt">哈囉\n\n您似乎已經使用這應用程式一段時間了，我們相當感激。\n\n如果我們能請您幫個忙，請在Google Play上為我們評分。這對我們很有幫助。\n\n無論您的決定如何，都不會再看到這則訊息。\n\n感謝!</string>
-    <string name="rate_our_app">請給我們的應用程式評分 :)</string>
     <string name="thank_you">感謝</string>
     <string name="new_app">
         <![CDATA[
@@ -877,7 +862,11 @@
     <string name="faq_9_text_commons">有幾種方法可以做到。第一種是長按一個項目以啟動選取模式，然後點選其他項目來選取它們。第二種類似於在電腦上用滑鼠選擇項目，長按一個項目以啟動選取模式，然後手指不放開拖曳至其他項目上進行選取。第三種方法是先長按一個項目，然後再長按另一個項目，中間的所有內容都會被選取。如果您想選取所有項目，只需長按一個項目，然後點選左上角的已選取項目計數器，即可全選或取消全選。</string>
     <string name="translation">翻譯</string>
     <string name="development">開發</string>
-    <string name="contributors_label">此清單包含所有對 Fossify 套件中任何應用程式提供明顯幫助的人，不僅僅是這個應用程式。翻譯是由志工處理的，如果您也想幫忙，請告訴我們。翻譯指南位於 &lt;a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;這個網站&lt;/a&gt;，或者如果您有任何問題，可以直接透過 &lt;a href=mailto:hello@fossify.org&gt;hello@fossify.org&lt;/a&gt; 聯絡我們。感謝所有貢獻者和其他支持者！</string>
+    <string name="contributors_label"><![CDATA[
+            此清單包含所有對 Fossify 套件中任何應用程式提供明顯幫助的人，不僅僅是這個應用程式。翻譯是由志工處理的，如果您也想幫忙，請告訴我們。
+            翻譯指南位於 <a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file>這個網站</a>，或者如果您有任何問題，可以直接透過 <a href=mailto:hello@fossify.org>hello@fossify.org</a> 聯絡我們。
+            感謝所有貢獻者和其他支持者！
+        ]]></string>
     <string name="translation_belarusian">白俄羅斯文</string>
     <string name="translation_bulgarian">保加利亞文</string>
     <string name="translation_catalan">加泰隆尼亞語</string>
@@ -993,7 +982,10 @@
     <string name="unlock_for_one_final_day">解鎖應用程式到最後一天</string>
     <string name="welcome_to_app_name">歡迎使用 %s！</string>
     <string name="faq_6_text_commons">當您的啟動器不完全支援圖示自訂時，就會發生此問題。請嘗試透過 Google Play 或小工具（如果有的話）啟動應用程式。啟動後，請將應用程式圖示顏色還原為預設的綠色 #106D1F。在極少數情況下，可能會需要重新安裝應用程式。</string>
-    <string name="faq_2_text_commons">當然可以。您可以幫忙宣傳應用程式，或者提供良好的意見回饋和評分。您也可以幫忙將應用程式翻譯成新的語言，或者更新現有的翻譯。翻譯指南位於&lt;a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;這個網站&lt;/a&gt;，或者如果您有任何問題，可以直接透過 &lt;a href=mailto:hello@fossify.org&gt;hello@fossify.org&lt;/a&gt; 聯絡我們。</string>
+    <string name="faq_2_text_commons"><![CDATA[
+            當然可以。您可以幫忙宣傳應用程式，或者提供良好的意見回饋和評分。您也可以幫忙將應用程式翻譯成新的語言，或者更新現有的翻譯。.
+            翻譯指南位於<a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file>這個網站</a>，或者如果您有任何問題，可以直接透過 <a href=mailto:hello@fossify.org>hello@fossify.org</a> 聯絡我們。
+        ]]></string>
     <string name="faq_9_title_commons">如何一次選取多個項目？</string>
     <string name="faq_10_title_commons">我已購買應用程式，但無法在其他裝置上下載。</string>
     <string name="why_upgrade_pro_version">專業版</string>
@@ -1041,4 +1033,14 @@
     <string name="translation_dutch">荷蘭文</string>
     <string name="known_issues">已知問題</string>
     <string name="sms_mms_title">SMS MMS（簡訊和多媒體訊息處理）</string>
+    <string name="number_of_items">項目數量</string>
+    <string name="confirm_storage_access_restricted_text_open_system">在系統應用程式中開啟</string>
+    <string name="confirm_storage_access_restricted_text_not_found">找不到系統的檔案管理員應用程式。</string>
+    <string name="reorder_items_by_dragging">以拖曳方式重新排列項目</string>
+    <string name="days_letter">%d天</string>
+    <string name="translation_kabyle">卡拜爾語</string>
+    <string name="confirm_storage_access_restricted_text">由於系統限制，無法使用此資料夾。</string>
+    <string name="more_fossify_apps">更多 Fossify 應用程式</string>
+    <string name="rate_this_app">為此應用程式評分</string>
+    <string name="evalex_title">EvalEx（數學表達式評估）</string>
 </resources>

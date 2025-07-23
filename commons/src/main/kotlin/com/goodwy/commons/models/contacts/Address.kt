@@ -3,8 +3,17 @@ package com.goodwy.commons.models.contacts
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Address(var value: String, var type: Int, var label: String, var country: String, var region: String, var city: String,
-                   var postcode: String, var pobox: String, var street: String, var neighborhood: String
+data class Address(
+    var value: String,
+    var type: Int,
+    var label: String,
+    var country: String = "",
+    var region: String = "",
+    var city: String = "",
+    var postcode: String = "",
+    var pobox: String = "",
+    var street: String = "",
+    var neighborhood: String = "",
 ){
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

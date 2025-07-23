@@ -47,6 +47,8 @@ const val IS_PRIVATE = "is_private"
 const val SMT_PRIVATE = "smt_private"   // used at the contact source of local contacts hidden from other apps
 const val FIRST_GROUP_ID = 10000L
 const val MD5 = "MD5"
+const val SHA1 = "SHA-1"
+const val SHA256 = "SHA-256"
 const val SHORT_ANIMATION_DURATION = 150L
 const val DARK_GREY = 0xFF333333.toInt()
 const val CURRENT_PHONE_NUMBER = "number"
@@ -59,6 +61,9 @@ const val HIGHER_ALPHA = 0.75f
 // alpha values on a scale 0 - 255
 const val LOWER_ALPHA_INT = 30
 const val MEDIUM_ALPHA_INT = 90
+
+const val WCAG_AA_NORMAL = 4.5
+const val WCAG_AA_LARGE = 3.0
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
@@ -158,7 +163,6 @@ const val APP_SIDELOADING_STATUS = "app_sideloading_status"
 const val DATE_FORMAT = "date_format"
 const val WAS_OTG_HANDLED = "was_otg_handled_2"
 const val WAS_UPGRADED_FROM_FREE_SHOWN = "was_upgraded_from_free_shown"
-const val WAS_RATE_US_PROMPT_SHOWN = "was_rate_us_prompt_shown"
 const val WAS_APP_RATED = "was_app_rated"
 const val WAS_SORTING_BY_NUMERIC_VALUE_ADDED = "was_sorting_by_numeric_value_added"
 const val WAS_FOLDER_LOCKING_NOTICE_SHOWN = "was_folder_locking_notice_shown"
@@ -320,6 +324,7 @@ const val LICENSE_M3U_PARSER = 1073741824L
 const val LICENSE_ANDROID_LAME = 2147483648L
 const val LICENSE_PDF_VIEWER = 4294967296L
 const val LICENSE_ZIP4J = 8589934592L
+const val LICENSE_EVALEX = 17179869184L
 
 // global intents
 const val OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB = 1000

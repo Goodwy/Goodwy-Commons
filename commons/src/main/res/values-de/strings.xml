@@ -337,7 +337,7 @@
     <string name="global_theme_success">Das aktuelle Farbschema wurde erfolgreich auf alle Fossify-Apps angewendet. Alle zukünftigen Änderungen an diesem Farbschema werden automatisch synchronisiert.</string>
     <string name="shared_theme_note">Beachte, dass du aus technischen Gründen immer noch Fossify Thank You benötigst, auch wenn du die Pro-App-Version verwendest. Es kümmert sich um die Farbsynchronisation.</string>
     <string name="purchase_thank_you"><![CDATA[
-            Bitte kaufe <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a> um diese Funktion freizuschalten und die Entwicklung zu unterstützen. Danke!
+            Bitte kaufe <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a> um diese Funktion freizuschalten und die Entwicklung zu unterstützen. Vielen Dank!
         ]]></string>
     <string name="light_theme">Hell</string>
     <string name="dark_theme">Dunkel</string>
@@ -346,7 +346,7 @@
     <string name="dark_red">Dunkelrot</string>
     <string name="white">Weiß</string>
     <string name="black_white">Schwarz-Weiß</string>
-    <string name="custom">Benutzerdefiniert</string>
+    <string name="custom">Individuell</string>
     <string name="shared">Geteilt</string>
     <string name="system_default">Systemvorgabe</string>
     <string name="whats_new">Neue Funktionen</string>
@@ -812,13 +812,9 @@
     <string name="website_label">Weitere schlichte Apps und Quellcode siehe</string>
     <string name="email_label">Vorschläge und Feedback bitte senden an</string>
     <string name="upgrade_to_pro">Upgrade auf Pro</string>
-    <string name="more_apps">Weitere Apps</string>
-    <string name="more_apps_from_us">Weitere Apps von uns</string>
     <string name="invite_friends">Freunde einladen</string>
     <string name="share_text">Hey, wirf mal einen Blick auf %1$s: %2$s</string>
     <string name="invite_via">Einladen via</string>
-    <string name="rate_us">Bewerte uns im Play Store</string>
-    <string name="rate">Bewertung</string>
     <string name="donate">Spenden</string>
     <string name="follow_us">Folge uns</string>
     <string name="support">Unterstützung</string>
@@ -833,21 +829,10 @@
     <string name="device_os">Betriebssystem: %s</string>
     <string name="purchase">Kaufen</string>
     <string name="before_asking_question_read_faq">Bevor du eine Frage stellst, überprüfe bitte die App-Einstellungen und lies dir die häufig gestellten Fragen (FAQ) durch. Vielleicht findest du dort eine Lösung.</string>
-    <string name="before_rate_read_faq">Bevor du eine Bewertung abgibst, schaue bitte in die Einstellungen der App und lies dir die häufig gestellten Fragen (FAQ) durch. Vielleicht findest du dort eine Lösung.</string>
     <string name="make_sure_latest">Stelle bitte auch sicher, dass du die neuste Version der App benutzt.</string>
     <string name="make_sure_upgrade">Beachte bitte, dass diese App-Version nicht mehr weiterentwickelt wird. Hole dir die Pro-Version mit vielen Verbesserungen.</string>
     <string name="read_it">Bitte lesen</string>
     <string name="read_faq">Häufige gestellte Fragen</string>
-    <string name="rate_us_prompt">Hallo,
-\n
-\nes sieht so aus, als würdest du diese App schon einige Zeit benutzen. Wir schätzen das sehr.
-\n
-\nWenn wir dich um einen Gefallen bitten können, bewerte uns bitte auf Google Play. Das würde uns wirklich sehr helfen.
-\n
-\nEgal wie du dich entscheidest, wirst du diese Nachricht nicht noch einmal bekommen.
-\n
-\nDanke!</string>
-    <string name="rate_our_app">Bewerte bitte unsere App :)</string>
     <string name="thank_you">Dankeschön</string>
     <string name="widget_locked_pro">Das Widget ist gesperrt.
 \nBitte zur Pro-Version wechseln, um es freizuschalten.</string>
@@ -1107,4 +1092,12 @@
     <string name="translation_kabyle">Kabylisch</string>
     <string name="number_of_items">Anzahl der Elemente</string>
     <string name="reorder_items_by_dragging">Elemente durch Ziehen neu anordnen</string>
+    <string name="confirm_storage_access_restricted_text">Aufgrund von Systemeinschränkungen ist dieser Ordner nicht verfügbar.</string>
+    <string name="confirm_storage_access_restricted_text_open_system">In System-App öffnen</string>
+    <string name="confirm_storage_access_restricted_text_not_found">Ein System-Dateimanager konnte nicht gefunden werden.</string>
+    <string name="days_letter">%dd</string>
+    <string name="rate_this_app">Bewerte diese App</string>
+    <string name="more_fossify_apps">Mehr Fossify-Apps</string>
+    <string name="evalex_title">EvalEx (Auswertung mathematischer Ausdrücke)</string>
+    <string name="requires_fossify_thank_you">Erfordert Fossify Thank You</string>
 </resources>

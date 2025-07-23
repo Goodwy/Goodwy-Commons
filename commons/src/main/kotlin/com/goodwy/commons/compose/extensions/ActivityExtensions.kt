@@ -52,19 +52,11 @@ fun ComponentActivity.appLaunchedCompose(
     }
 
     baseConfig.appRunCount++
-//    if (baseConfig.appRunCount % 30 == 0 && !isPro()) {
-//        if (!resources.getBoolean(R.bool.hide_google_relations)) {
-//            if (getCanAppBeUpgraded()) {
-//                showUpgradeDialog()
-//            } else if (!isOrWasThankYouInstalled()) {
-//                showDonateDialog()
-//            }
-//        }
-//    }
-
-    if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
-            showRateUsDialog()
+    if (!isTalkBackOn()) {
+        if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
+            if (!resources.getBoolean(R.bool.hide_google_relations)) {
+                showRateUsDialog()
+            }
         }
     }
 }

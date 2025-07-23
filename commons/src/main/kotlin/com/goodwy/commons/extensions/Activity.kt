@@ -216,31 +216,29 @@ fun BaseSimpleActivity.isShowingSAFCreateDocumentDialogSdk30(path: String): Bool
     }
 }
 
-fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
+fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String, openInSystemAppAllowed: Boolean = false): Boolean {
     return if (isRestrictedSAFOnlyRoot(path) && (getAndroidTreeUri(path).isEmpty() || !hasProperStoredAndroidTreeUri(path))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                ConfirmationAdvancedDialog(this, "", R.string.confirm_storage_access_android_text, R.string.ok, R.string.cancel) { success ->
-                    if (success) {
-                        Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                            putExtra(EXTRA_SHOW_ADVANCED, true)
-                            putExtra(DocumentsContract.EXTRA_INITIAL_URI, createAndroidDataOrObbUri(path))
-                            try {
-                                startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB)
-                                checkedDocumentPath = path
-                                return@apply
-                            } catch (e: Exception) {
-                                type = "*/*"
-                            }
-
-                            try {
-                                startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB)
-                                checkedDocumentPath = path
-                            } catch (e: ActivityNotFoundException) {
-                                toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
-                            } catch (e: Exception) {
-                                toast(R.string.unknown_error_occurred)
-                            }
+                if (!openInSystemAppAllowed) {
+                    ConfirmationDialog(
+                        this,
+                        "",
+                        R.string.confirm_storage_access_restricted_text,
+                        positive = android.R.string.ok,
+                        negative = 0
+                    ) {}
+                } else {
+                    ConfirmationAdvancedDialog(
+                        this,
+                        "",
+                        R.string.confirm_storage_access_restricted_text,
+                        R.string.confirm_storage_access_restricted_text_open_system,
+                        R.string.cancel
+                    ) { success ->
+                        if (success) {
+                            val uri = createAndroidDataOrObbUri(path)
+                            launchSystemFileManager(uri)
                         }
                     }
                 }
@@ -248,6 +246,62 @@ fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
         }
         true
     } else {
+        false
+    }
+}
+
+/**
+ * Launch system file manager by testing different possible intents depending on the device
+ * Each intent is tested in a OR condition which allows to stop at the first successful one
+ */
+fun BaseSimpleActivity.launchSystemFileManager(uri: Uri) {
+    if (
+        startIntentForUriAction(
+            uri,
+            "android.intent.action.VIEW",
+            ComponentName("com.google.android.documentsui", "com.android.documentsui.files.FilesActivity")
+        ) ||
+        startIntentForUriAction(
+            uri,
+            "android.intent.action.VIEW",
+            ComponentName("com.android.documentsui", "com.android.documentsui.files.FilesActivity")
+        ) ||
+        startIntentForUriAction(
+            uri,
+            "android.intent.action.VIEW",
+            ComponentName("com.android.documentsui", "com.android.documentsui.FilesActivity")
+        ) ||
+        startIntentForUriAction(uri, "android.intent.action.VIEW", null) ||
+        startIntentForUriAction(uri, "android.provider.action.BROWSE", null) ||
+        startIntentForUriAction(uri, "android.provider.action.BROWSE_DOCUMENT_ROOT", null)
+    ) {
+        return
+    } else {
+        toast(R.string.confirm_storage_access_restricted_text_not_found)
+    }
+}
+
+/**
+ * Start the intent
+ * @param uri URI to pass to the intent
+ * @param action Action of the intent
+ * @param componentName Optional ComponentName
+ * @return true if the intent was successful
+ */
+fun BaseSimpleActivity.startIntentForUriAction(
+    uri: Uri,
+    action: String,
+    componentName: ComponentName?
+): Boolean {
+    val intent = Intent(action, uri)
+    if (componentName != null) {
+        intent.setComponent(componentName)
+    }
+    return try {
+        startActivity(intent)
+        true
+    } catch (e: java.lang.Exception) {
+        e.printStackTrace()
         false
     }
 }
@@ -327,7 +381,7 @@ fun Activity.launchInternetSearch(query: String) {
     }
 }
 
-fun Activity.redirectToRateUs() {
+fun Activity.launchAppRatingPage() {
     hideKeyboard()
     try {
         launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
@@ -454,8 +508,9 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
         Intent().apply {
             action = Intent.ACTION_EDIT
             setDataAndType(newUri, getUriMimeType(path, newUri))
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             if (!isRPlus() || (isRPlus() && (hasProperStoredDocumentUriSdk30(path) || Environment.isExternalStorageManager()))) {
-                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+                addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
             }
 
             val parent = path.getParentPath()

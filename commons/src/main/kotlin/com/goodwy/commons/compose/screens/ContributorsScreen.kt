@@ -89,7 +89,7 @@ internal fun ContributorsScreen(
             SettingsListItem(
                 icon = R.drawable.ic_heart_vector,
                 text = {
-                    val source = stringResource(id = R.string.contributors_label)
+                    val source = stringResource(id = com.goodwy.strings.R.string.contributors_label_g)
                     LinkifyTextComponent {
                         source.fromHtml()
                     }

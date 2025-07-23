@@ -4,7 +4,12 @@ import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.goodwy.commons.models.PhoneNumber
-import com.goodwy.commons.models.contacts.*
+import com.goodwy.commons.models.contacts.Address
+import com.goodwy.commons.models.contacts.ContactRelation
+import com.goodwy.commons.models.contacts.Email
+import com.goodwy.commons.models.contacts.Event
+import com.goodwy.commons.models.contacts.IM
+import com.goodwy.commons.models.contacts.PhoneNumberConverter
 
 class Converters {
     private val gson = Gson()
@@ -37,9 +42,11 @@ class Converters {
         val numbers = gson.fromJson<ArrayList<PhoneNumber>>(value, numberType)
         return if (numbers.any { it.value == null }) {
             val phoneNumbers = ArrayList<PhoneNumber>()
-            val numberConverters = gson.fromJson<ArrayList<PhoneNumberConverter>>(value, numberConverterType)
+            val numberConverters =
+                gson.fromJson<ArrayList<PhoneNumberConverter>>(value, numberConverterType)
             numberConverters.forEach { converter ->
-                val phoneNumber = PhoneNumber(converter.a, converter.b, converter.c, converter.d, converter.e)
+                val phoneNumber =
+                    PhoneNumber(converter.a, converter.b, converter.c, converter.d, converter.e)
                 phoneNumbers.add(phoneNumber)
             }
             phoneNumbers
@@ -58,7 +65,25 @@ class Converters {
     fun emailListToJson(list: ArrayList<Email>): String = gson.toJson(list)
 
     @TypeConverter
-    fun jsonToAddressList(value: String): ArrayList<Address> = gson.fromJson(value, addressType)
+    fun jsonToAddressList(value: String): ArrayList<Address> {
+        val addresses = gson.fromJson<ArrayList<Address>>(value, addressType)
+        // This is a workaround for https://github.com/FossifyOrg/Contacts/issues/281
+        return addresses.map {
+            @Suppress("USELESS_ELVIS")
+            it.copy(
+                value = it.value,
+                type = it.type,
+                label = it.label,
+                country = it.country ?: "",
+                region = it.region ?: "",
+                city = it.city ?: "",
+                postcode = it.postcode ?: "",
+                pobox = it.pobox ?: "",
+                street = it.street ?: "",
+                neighborhood = it.neighborhood ?: ""
+            )
+        }.toMutableList() as ArrayList<Address>
+    }
 
     @TypeConverter
     fun addressListToJson(list: ArrayList<Address>): String = gson.toJson(list)

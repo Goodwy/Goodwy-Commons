@@ -15,6 +15,7 @@
     <string name="end">结束</string>
 
     <!-- Support project -->
+    <string name="rate_g">评分</string>
     <string name="action_support_project">项目支持</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -324,4 +325,5 @@
     <string name="availability">可用性</string>
     <string name="attendees">与会者</string>
     <string name="typeface">字体</string>
+    <string name="more_apps_from_us_g">我们的其他应用</string>
 </resources>

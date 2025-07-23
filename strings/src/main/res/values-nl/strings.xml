@@ -15,6 +15,7 @@
     <string name="end">Einde</string>
 
     <!-- Support project -->
+    <string name="rate_g">Beoordelen</string>
     <string name="action_support_project">Projectondersteuning</string>
     <string name="pref_pay_summary">Download de betaalde app om toekomstige ontwikkelingen en extra functies te ondersteunen</string>
     <string name="support_project_summary">Koop een van onze betaalde apps om toekomstige ontwikkeling te ondersteunen en extra functies te ontgrendelen</string>
@@ -329,4 +330,5 @@
     <string name="availability">Beschikbaarheid</string>
     <string name="attendees">Deelnemers</string>
     <string name="typeface">Lettertype</string>
+    <string name="more_apps_from_us_g">Meer apps van ons</string>
 </resources>

@@ -15,6 +15,7 @@
     <string name='end'>समाप्त</string>
 
     <!-- Support project -->
+    <string name="rate_g">रेट</string>
     <string name="action_support_project">परियोजना का समर्थन</string>
     <string name="pref_pay_summary">भविष्य के विकास और अतिरिक्त सुविधाओं का समर्थन करने के लिए सशुल्क ऐप प्राप्त करें</string>
     <string name="support_project_summary">भविष्य के विकास में सहायता करने और अतिरिक्त सुविधाओं को अनलॉक करने के लिए हमारा एक सशुल्क ऐप प्राप्त करें</string>
@@ -336,4 +337,5 @@
     <string name="availability">प्राप्‍यता</string>
     <string name="attendees">सहभागियों</string>
     <string name="typeface">मुद्री-रूप</string>
+    <string name="more_apps_from_us_g">हमारी ओर से और भी ऐप्स</string>
 </resources>

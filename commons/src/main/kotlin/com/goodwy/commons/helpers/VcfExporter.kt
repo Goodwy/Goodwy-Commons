@@ -102,9 +102,9 @@ class VcfExporter {
 
                 contact.addresses.forEach {
                     val address = Address()
-                    if (it.country.isNotEmpty() || it.region.isNotEmpty() || it.city.isNotEmpty() || it.postcode.isNotEmpty() ||
-                        it.pobox.isNotEmpty() || it.street.isNotEmpty() || it.neighborhood.isNotEmpty()
-                    ) {
+                    if (listOf(it.country, it.region, it.city, it.postcode, it.pobox, it.street, it.neighborhood)
+                            .map{it.isEmpty()}
+                            .reduce{a, b -> a || b}) {
                         address.country = it.country
                         address.region = it.region
                         address.locality = it.city

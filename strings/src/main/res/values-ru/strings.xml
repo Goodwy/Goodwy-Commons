@@ -32,6 +32,7 @@
     <string name="end">Конец</string>
 
     <!-- Support project -->
+    <string name="rate_g">Оценить</string>
     <string name="action_support_project">Поддержка проекта</string>
     <string name="pref_pay_summary">Приобретите приложение для поддержки будущих разработок и получения дополнительных функций</string>
     <string name="support_project_summary">Приобретите одно из наших платных приложений для поддержки будущих разработок и разблокировки дополнительных функций</string>
@@ -346,4 +347,5 @@
     <string name="event_type">Тип события</string>
     <string name="availability">Доступность</string>
     <string name="attendees">Участники</string>
+    <string name="more_apps_from_us_g">Другие наши приложения</string>
 </resources>

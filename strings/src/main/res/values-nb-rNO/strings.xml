@@ -31,6 +31,12 @@
     <string name="start">Start</string>
     <string name="end">Slutt</string>
 
+    <!-- About -->
+    <!--    <string name="more_apps">Flere apper</string>-->
+    <string name="more_apps_from_us_g">Flere apper fra oss</string>
+    <!--    <string name="rate_us">Vurder oss</string>-->
+    <string name="rate_g">Vurder</string>
+
     <!-- Support project -->
     <string name="action_support_project">Prosjektstøtte</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>

@@ -173,8 +173,8 @@
     <string name="allow_notifications_incoming_calls">Du måste tillåta att appen visar aviseringar, annars kan den inte visa inkommande samtal.</string>
     <string name="allow_full_screen_notifications_incoming_calls">Du måste tillåta att appen visar helskärmsaviseringar, annars kan du missa några inkommande samtal.</string>
     <string name="allow_notifications_incoming_messages">Du måste tillåta att appen visar aviseringar, annars kan den inte visa inkommande meddelanden.</string>
-    <string name="allow_alarm_scheduled_messages">Du måste ge appen åtkomst till interna larm, annars kan den inte skicka schemalagda meddelanden.</string>
-    <string name="allow_alarm_sleep_timer">Du måste tillåta att appen kommer åt interna larm, annars kan den inte stänga av applikationen efter insomningstimern.</string>
+    <string name="allow_alarm_scheduled_messages">Du måste ge appen åtkomst till interna alarm, annars kan den inte skicka schemalagda meddelanden.</string>
+    <string name="allow_alarm_sleep_timer">Du måste ge appen åtkomst till interna alarm, annars kan den inte stänga av appen efter sovtimern.</string>
     <string name="allow_location_permission">Du måste tillåta att appen kommer åt din plats, annars känner den inte till det.</string>
     <string name="grant_permission">Bevilja behörighet</string>
     <string name="permission_required">Behörighet krävs</string>
@@ -297,7 +297,7 @@
     <string name="direct_children_count">Antal direkta döttrar</string>
     <string name="files_count">Antal filer</string>
     <string name="resolution">Upplösning</string>
-    <string name="duration">Varaktighet</string>
+    <string name="duration">Längd</string>
     <string name="focal_length">Brännvidd</string>
     <string name="exposure_time">Exponeringstid</string>
     <string name="iso_speed">ISO-grader</string>
@@ -330,11 +330,9 @@
     <string name="cannot_be_undone">Denna åtgärd kan inte ångras.</string>
     <string name="save_before_closing">Du har ändringar som inte är sparade. Spara innan du lämnar?</string>
     <string name="global_theme_success">Färgerna har uppdaterats. Ett nytt Tema som heter \'Delat\' har lagts till, använd det för att uppdatera alla apparnas färger i framtiden.</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
+    <string name="purchase_thank_you"><![CDATA[
             Köp <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a> för att låsa upp denna funktion och stödja utvecklingen. Tack!
-        ]]>
-    </string>
+        ]]></string>
     <string name="light_theme">Ljust</string>
     <string name="dark_theme">Mörkt</string>
     <string name="auto_theme">Automatiskt</string>
@@ -389,7 +387,7 @@
     <string name="wallpapers">Bakgrunder</string>
     <string name="show_line_numbers">Visa radnummer</string>
     <string name="hide_line_numbers">Dölj radnummer</string>
-    <string name="sleep_timer">Insomningstimer</string>
+    <string name="sleep_timer">Sovtimer</string>
     <string name="unblock">Avblockera</string>
     <string name="sort_by">Sortera efter</string>
     <string name="name">Namn</string>
@@ -805,13 +803,9 @@
     <string name="website_label">Du hittar källkoden på</string>
     <string name="email_label">Skicka dina synpunkter och förslag till</string>
     <string name="upgrade_to_pro">Uppgradera till Pro</string>
-    <string name="more_apps">Fler appar</string>
-    <string name="more_apps_from_us">Fler appar från oss</string>
     <string name="invite_friends">Bjud in vänner</string>
     <string name="share_text">Hej, läs om %1$s på %2$s</string>
     <string name="invite_via">Bjud in via</string>
-    <string name="rate_us">Betygsätt oss</string>
-    <string name="rate">Betygsätt</string>
     <string name="donate">Donera</string>
     <string name="follow_us">Följ oss</string>
     <string name="help_us">Hjälp oss</string>
@@ -832,21 +826,10 @@
     </string>
     <string name="purchase">Köp</string>
     <string name="before_asking_question_read_faq">Innan du frågar, vänligen kolla appens inställningar och läs FAQ:en först. Kanske finns lösningen där.</string>
-    <string name="before_rate_read_faq">Innan du betygsätter oss, vänligen kolla appens inställningar och läs FAQ:en innan. Om du har några problem, kanske finns lösningen där.</string>
     <string name="make_sure_latest">Dubbelkolla så du har den senaste versionen av appen.</string>
     <string name="make_sure_upgrade">Notera att denna appversionen inte utvecklas längre, skaffa Pro-versionen för förbättringar istället.</string>
     <string name="read_it">Läs</string>
     <string name="read_faq">Läs FAQ</string>
-    <string name="rate_us_prompt">Hejsan,
-\n
-\ndet ser ut som att du har använt den här appen ett bra tag redan, och vi uppskattar det verkligen.
-\n
-\nOm vi kan be dig om en tjänst, vänligen betygsätt oss på Google Play. Det skulle verkligen hjälpa oss mycket.
-\n
-\nOavsett hur du bestämmer dig kommer du inte att se det här meddelandet igen.
-\n
-\nTack!</string>
-    <string name="rate_our_app">Betygsätt vår app :)</string>
     <string name="thank_you">Tack</string>
     <string name="widget_locked_pro">Widgeten är låst.\nUppgradera till Pro-versionen för att låsa upp den.</string>
     <string name="new_app">
@@ -1069,4 +1052,33 @@
     <string name="reorder_items_by_dragging">Ordna om objekt genom att dra</string>
     <string name="number_of_items">Antal objekt</string>
     <string name="translation_kabyle">Kabyliska</string>
+    <string name="copyright">v %1$s\n\nUpphovsrätt © Fossify %2$d</string>
+    <string name="confirm_storage_access_restricted_text">På grund av systemrestriktioner så är inte denna mapp tillgänglig.</string>
+    <string name="confirm_storage_access_restricted_text_open_system">Öppna med systemapp</string>
+    <string name="seconds_letter">%ds</string>
+    <string name="minutes_letter">%dm</string>
+    <string name="december_short">Dec</string>
+    <string name="october_short">Okt</string>
+    <string name="genre">Genre</string>
+    <string name="exif">EXIF</string>
+    <string name="may_short">Maj</string>
+    <string name="june_short">Jun</string>
+    <string name="january_short">Jan</string>
+    <string name="february_short">Feb</string>
+    <string name="march_short">Mar</string>
+    <string name="september_short">Sep</string>
+    <string name="november_short">Nov</string>
+    <string name="version_placeholder">Version %s</string>
+    <string name="april_short">Apr</string>
+    <string name="album">Album</string>
+    <string name="days_letter">%dd</string>
+    <string name="july_short">Jul</string>
+    <string name="august_short">Aug</string>
+    <string name="more_fossify_apps">Fler Fossifyappar</string>
+    <string name="rate_this_app">Betygsätt denna app</string>
+    <string name="artist">Artist</string>
+    <string name="hours_letter">%dh</string>
+    <string name="support">Support</string>
+    <string name="confirm_storage_access_restricted_text_not_found">Det gick inte att hitta någon systemapp för filhantering.</string>
+    <string name="evalex_title">EvalEx (utvärdering av matematiska uttryck)</string>
 </resources>

@@ -153,4 +153,6 @@ fun File.getDigest(algorithm: String): String? {
 }
 
 fun File.md5() = this.getDigest(MD5)
+fun File.sha1() = this.getDigest(SHA1)
+fun File.sha256() = this.getDigest(SHA256)
 

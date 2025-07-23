@@ -80,7 +80,7 @@
     <string name="birthday">Рожден ден</string>
     <string name="anniversary">Годишнина</string>
     <string name="home">Домашен</string>
-    <string name="work">Слежебен</string>
+    <string name="work">Служебен</string>
     <string name="mobile">Мобилен</string>
     <string name="main_number">Основен</string>
     <string name="work_fax">Служебен факс</string>
@@ -360,7 +360,7 @@
     <string name="shortcut">Пряк път</string>
     <string name="create_shortcut">Създаване на пряк път</string>
     <string name="create_shortcut_pro">Създаване на пряк път (Про)</string>
-    <string name="add_number_to_contact">Добави номера към контакт</string>
+    <string name="add_number_to_contact">Добавяне на номера към контакт</string>
     <string name="view_contact_details">Преглед на контакта</string>
     <string name="call_from_sim_1">Обаждане от SIM 1</string>
     <string name="call_from_sim_2">Обаждане от SIM 2</string>
@@ -761,13 +761,9 @@
     <string name="website_label">За изходния код посетете</string>
     <string name="email_label">Изпращайте отзиви или предложения на</string>
     <string name="upgrade_to_pro">Обновяване до Про</string>
-    <string name="more_apps">Други приложения</string>
-    <string name="more_apps_from_us">Други наши приложения</string>
     <string name="invite_friends">Препоръчайте на приятел</string>
     <string name="share_text">Пробвайте „%1$s“ от %2$s</string>
     <string name="invite_via">Препоръка с помощта на</string>
-    <string name="rate_us">Оценете ни</string>
-    <string name="rate">Оценяване</string>
     <string name="donate">Дарения</string>
     <string name="follow_us">Последвайте ни</string>
     <string name="copyright">v %1$s\nАвторски права © Fossify %2$d</string>
@@ -783,21 +779,10 @@
     <string name="device_os">ОС на устройството: %s</string>
     <string name="purchase">Поръчване</string>
     <string name="before_asking_question_read_faq">Преди да зададете въпрос, проверете настройките на приложението и прочетете често задаваните въпроси. Може да намерите решението там.</string>
-    <string name="before_rate_read_faq">Преди да ни дадете оценката си, проверете настройките на приложението и прочетете често задаваните въпроси. Ако имате някакви проблеми, може решението да е там.</string>
     <string name="make_sure_latest">Също така се уверете, че използвате последното издание на приложението.</string>
     <string name="make_sure_upgrade">Също имайте предвид, че това издание на приложението вече не се разработва. Инсталирайте Про за още много подобрения.</string>
     <string name="read_it">Прочитане</string>
     <string name="read_faq">Прочетете често задаваните въпроси</string>
-    <string name="rate_us_prompt">Здравейте,
-\n
-\nИзглежда, че вече използвате приложението доста време и наистина го оценяваме.
-\n
-\nАко можем да ви помолим услуга, моля, оценете ни в Google Play. Това наистина би ни помогнало много.
-\n
-\nКаквото и да решите, няма да видите това съобщение отново.
-\n
-\nБлагодаря!</string>
-    <string name="rate_our_app">Оценете приложението :)</string>
     <string name="thank_you">Благодарим ви</string>
     <string name="widget_locked_pro">Приспособлението е заключено.\nНадстройте до Про , за да го отключите.</string>
     <string name="app_launcher_short">Начален екран</string>
@@ -961,7 +946,7 @@
     <string name="upgraded_from_free_calendar">Здравейте,\n\nизглежда, че току-що сте преминали от безплатната версия. Ако искате да прехвърлите местно пазените събития, трябва да го направите ръчно, като ги изнесете във файл от безплатната версия на приложението и ги внесете тук от горното меню.\n\nСлед като сте доволни от настройките си в Про, можете да махнете старата безплатна версия, тъй като тя вече няма да ви е необходима, а също ще предотврати показването на този прозорец.\n\nБлагодаря!</string>
     <string name="upgraded_from_free_notes">Здравейте,\n\nизглежда, че току-що сте преминали от безплатната версия. Ако искате да прехвърлите бележките, трябва да го направите ръчно, като ги изнесете във файл от безплатната версия на приложението и ги внесете тук от горното меню.\n\nСлед като сте доволни от настройките си в Про, можете да махнете старата безплатна версия, тъй като тя вече няма да ви е необходима, а така ще предотврати показването на този прозорец.\n\nБлагодаря!</string>
     <string name="known_issues">Известни дефекти</string>
-    <string name="donate_please"><![CDATA[Здравейте,<br><br>надяваме се, че се наслаждавате на приложението. То не съдържа реклами,подкрепете развитието му, като закупите приложението <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a>, което също така ще предотврати повторното показване на този диалог.<br><br>Благодарим ви!]]></string>
+    <string name="donate_please"><![CDATA[Здравейте,<br><br>надяваме се, че се наслаждавате на приложението. То не съдържа реклами, подкрепете развитието му, като купите приложението <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a>, което също така ще предотврати повторното показване на този диалог.<br><br>Благодарим ви!]]></string>
     <string name="features_locked">Това е платена възможност, поръчайте &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt;, за да отключите всички възможности на приложението.&lt;bг&gt;&lt;br&gt;Това е еднократно плащане и ако не останете доволни ще ви върнем парите.</string>
     <string name="translation_belarusian">Беларуски</string>
     <string name="contributors_label"><![CDATA[Този списък съдържа всички, които значително са помогнали за някое от приложенията в пакета на Fossify, а не само на това. Преводите се извършват от доброволци — уведомете ни, ако искате да помогнете и вие. Ръководството за превод се намира на <a href=https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file>тази страница</a>, или просто се свържете с нас на <a href=mailto:hello@fossify.org>hello@fossify.org</a>, ако имате въпроси. Благодарим на всички сътрудници и поддръжници!]]></string>
@@ -1038,4 +1023,12 @@
     <string name="format_phone_numbers">Форматиране на телефонните номера</string>
     <string name="number_of_items">Брой елементи</string>
     <string name="reorder_items_by_dragging">Подреждане на елементите с влачене</string>
+    <string name="days_letter">%dд</string>
+    <string name="confirm_storage_access_restricted_text_open_system">Отваряне в системното приложение</string>
+    <string name="confirm_storage_access_restricted_text_not_found">Не е намерено системно приложение за работа с файлове.</string>
+    <string name="confirm_storage_access_restricted_text">Поради системни ограничения папката е недостъпна.</string>
+    <string name="more_fossify_apps">Други приложения на Fossify</string>
+    <string name="rate_this_app">Оценете приложението</string>
+    <string name="evalex_title">EvalEx (изчсляване на математически изрази)</string>
+    <string name="requires_fossify_thank_you">Изисква Fossify Thank You</string>
 </resources>

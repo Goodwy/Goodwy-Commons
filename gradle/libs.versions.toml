@@ -1,15 +1,16 @@
 [versions]
 #jetbrains
-kotlin = "1.9.25"
-kotlin-immutable-collections = "0.3.6"
+kotlin = "2.1.21"
+kotlin-immutable-collections = "0.4.0"
 #KSP
 kotlinxSerializationJson = "1.6.3"
-ksp = "1.9.25-1.0.20"
+ksp = "2.1.21-2.0.1"
 #Detekt
-detekt = "1.23.3"
+detekt = "1.23.8"
+detektCompose = "0.4.22"
 #Androidx
 androidx-customView = "1.2.0-alpha02"
-androidx-customViewPooling = "1.0.0"
+androidx-customViewPooling = "1.1.0"
 androidx-lifecycle = "2.8.7"
 androidx-constraintlayout = "2.2.0"
 androidx-documentfile = "1.0.1"
@@ -31,13 +32,12 @@ rtlViewpager = "2.0.2"
 #Compose
 composeActivity = "1.9.3"
 compose = "1.7.6"
-composeCompiler = "1.5.15"
-composeMaterial3 = "1.3.1"
+composeMaterial3 = "1.3.2"
 #Glide
 glide = "4.16.0"
 glideCompose = "1.0.0-beta01"
 #Room
-room = "2.6.1"
+room = "2.7.1"
 #ezVcard
 ezVcard = "0.11.3"
 #gson
@@ -48,10 +48,10 @@ jodaTime = "2.12.5"
 behavioRule = "1.0.1"
 rxAnimation = "2.1.1"
 rxJava3 = "3.1.5"
-billing = "6.0.1"
+billing = "7.1.1"
 rustore = "6.0.0"
 #Gradle
-gradlePlugins-agp = "8.7.3"
+gradlePlugins-agp = "8.10.1"
 #build
 app-build-compileSDKVersion = "34"
 app-build-targetSDK = "34"
@@ -80,7 +80,6 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 #Compose
-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
 compose-material2 = { module = "androidx.compose.material:material", version.ref = "compose" }
@@ -92,6 +91,7 @@ compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "
 compose-uiTooling-debug = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-uiTooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-view-binding = { module = "androidx.compose.ui:ui-viewbinding", version.ref = "compose" }
+compose-detekt = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektCompose" }
 #Glide
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compose = { module = "com.github.bumptech.glide:compose", version.ref = "glideCompose" }
@@ -119,7 +119,6 @@ kotlin-immutable-collections = { module = "org.jetbrains.kotlinx:kotlinx-collect
 compose = [
     "compose-activity",
     "compose-animation",
-    "compose-compiler",
     "compose-foundation",
     "compose-material-icons",
     "compose-material3",
@@ -147,6 +146,7 @@ android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 library = { id = "com.android.library", version.ref = "gradlePlugins-agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }

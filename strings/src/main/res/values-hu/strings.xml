@@ -15,6 +15,7 @@
     <string name="end">Vége</string>
 
     <!-- Support project -->
+    <string name="rate_g">Értékelés</string>
     <string name="action_support_project">Projekt támogatás</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -326,4 +327,5 @@
     <string name="availability">Elérhetőség</string>
     <string name="attendees">Résztvevők</string>
     <string name="typeface">Betűkép</string>
+    <string name="more_apps_from_us_g">További alkalmazásaink</string>
 </resources>

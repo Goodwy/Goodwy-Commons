@@ -119,7 +119,7 @@ private fun buildActionMenuItems(
     )
     if (showMoreApps) {
         list += ActionItem(
-            R.string.more_apps_from_us,
+            com.goodwy.strings.R.string.more_apps_from_us_g,
             doAction = moreAppsFromUs,
             overflowMode = OverflowMode.ALWAYS_OVERFLOW,
         )
