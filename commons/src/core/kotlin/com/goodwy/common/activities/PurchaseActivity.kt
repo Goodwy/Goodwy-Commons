@@ -6,21 +6,16 @@ import android.content.Intent
 import android.content.Intent.*
 import android.os.Bundle
 import android.text.Html
-import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.net.toUri
-import androidx.lifecycle.flowWithLifecycle
-import androidx.lifecycle.lifecycleScope
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.ActivityPurchaseBinding
 import com.goodwy.commons.dialogs.BottomSheetChooserDialog
-import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
 import com.goodwy.commons.dialogs.ConfirmationDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.SimpleListItem
 import com.goodwy.strings.R as stringsR
-import kotlinx.coroutines.*
 
 class PurchaseActivity : BaseSimpleActivity() {
 
@@ -36,7 +31,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var playStoreInstalled = true
     private var showCollection = false
 
-    private val purchaseHelper = PurchaseHelper(this)
+    private val playStoreHelper = PlayStoreHelper(this)
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
@@ -86,19 +81,19 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         if (playStoreInstalled) {
             //PlayStore
-            purchaseHelper.initBillingClient()
+            playStoreHelper.initBillingClient()
             val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
             subscriptionIdListAll.addAll(subscriptionYearIdList)
-            purchaseHelper.retrieveDonation(productIdList, subscriptionIdListAll)
+            playStoreHelper.retrieveDonation(productIdList, subscriptionIdListAll)
 
-            purchaseHelper.iapSkuDetailsInitialized.observe(this) {
+            playStoreHelper.iapSkuDetailsInitialized.observe(this) {
                 if (it) setupButtonIapPurchased()
             }
-            purchaseHelper.subSkuDetailsInitialized.observe(this) {
+            playStoreHelper.subSkuDetailsInitialized.observe(this) {
                 if (it) setupButtonSupPurchased()
             }
 
-            purchaseHelper.isIapPurchased.observe(this) {
+            playStoreHelper.isIapPurchased.observe(this) {
                 when (it) {
                     is Tipping.Succeeded -> {
                         baseConfig.isPro = true
@@ -112,7 +107,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                     }
                 }
             }
-            purchaseHelper.isSupPurchased.observe(this) {
+            playStoreHelper.isSupPurchased.observe(this) {
                 when (it) {
                     is Tipping.Succeeded -> {
                         baseConfig.isProSubs = true
@@ -127,10 +122,10 @@ class PurchaseActivity : BaseSimpleActivity() {
                 }
             }
 
-            purchaseHelper.isIapPurchasedList.observe(this) {
+            playStoreHelper.isIapPurchasedList.observe(this) {
                 setupButtonIapChecked()
             }
-            purchaseHelper.isSupPurchasedList.observe(this) {
+            playStoreHelper.isSupPurchasedList.observe(this) {
                 setupButtonSupChecked()
             }
         }
@@ -175,7 +170,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
                     val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
                     subscriptionIdListAll.addAll(subscriptionYearIdList)
-                    purchaseHelper.retrieveDonation(productIdList, subscriptionIdListAll)
+                    playStoreHelper.retrieveDonation(productIdList, subscriptionIdListAll)
 
                     true
                 }
@@ -218,31 +213,31 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private fun setupButtonIapPurchased() {
         binding.appOneButton.apply {
-            val price = purchaseHelper.getPriceDonation(productIdList[0])
+            val price = playStoreHelper.getPriceDonation(productIdList[0])
             isEnabled = price != getString(stringsR.string.no_connection)
             text = price
             setOnClickListener {
-                purchaseHelper.getDonation(productIdList[0])
+                playStoreHelper.getDonation(productIdList[0])
             }
             background.setTint(primaryColor)
         }
 
         binding.appTwoButton.apply {
-            val price = purchaseHelper.getPriceDonation(productIdList[1])
+            val price = playStoreHelper.getPriceDonation(productIdList[1])
             isEnabled = price != getString(stringsR.string.no_connection)
             text = price
             setOnClickListener {
-                purchaseHelper.getDonation(productIdList[1])
+                playStoreHelper.getDonation(productIdList[1])
             }
             background.setTint(primaryColor)
         }
 
         binding.appThreeButton.apply {
-            val price = purchaseHelper.getPriceDonation(productIdList[2])
+            val price = playStoreHelper.getPriceDonation(productIdList[2])
             isEnabled = price != getString(stringsR.string.no_connection)
             text = price
             setOnClickListener {
-                purchaseHelper.getDonation(productIdList[2])
+                playStoreHelper.getDonation(productIdList[2])
             }
             background.setTint(primaryColor)
         }
@@ -250,15 +245,15 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private fun setupButtonIapChecked() {
         val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_mini)
-        if (purchaseHelper.isIapPurchased(productIdList[0])) {
+        if (playStoreHelper.isIapPurchased(productIdList[0])) {
             binding.appOneButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appOneButton.isEnabled = false
         }
-        if (purchaseHelper.isIapPurchased(productIdList[1])) {
+        if (playStoreHelper.isIapPurchased(productIdList[1])) {
             binding.appTwoButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appTwoButton.isEnabled = false
         }
-        if (purchaseHelper.isIapPurchased(productIdList[2])) {
+        if (playStoreHelper.isIapPurchased(productIdList[2])) {
             binding.appThreeButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appThreeButton.isEnabled = false
         }
@@ -266,13 +261,13 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private fun setupButtonSupPurchased() {
         binding.appOneSubButton.apply {
-            val price = purchaseHelper.getPriceSubscription(subscriptionIdList[0])
+            val price = playStoreHelper.getPriceSubscription(subscriptionIdList[0])
             if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val textPrice = String.format(getString(stringsR.string.per_month), price)
                 text = textPrice
                 setOnClickListener {
-                    purchaseHelper.getSubscription(subscriptionIdList[0])
+                    playStoreHelper.getSubscription(subscriptionIdList[0])
                 }
             } else {
                 text = price
@@ -281,13 +276,13 @@ class PurchaseActivity : BaseSimpleActivity() {
         }
 
         binding.appTwoSubButton.apply {
-            val price = purchaseHelper.getPriceSubscription(subscriptionIdList[1])
+            val price = playStoreHelper.getPriceSubscription(subscriptionIdList[1])
             if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val textPrice = String.format(getString(stringsR.string.per_month), price)
                 text = textPrice
                 setOnClickListener {
-                    purchaseHelper.getSubscription(subscriptionIdList[1])
+                    playStoreHelper.getSubscription(subscriptionIdList[1])
                 }
             } else {
                 text = price
@@ -296,13 +291,13 @@ class PurchaseActivity : BaseSimpleActivity() {
         }
 
         binding.appThreeSubButton.apply {
-            val price = purchaseHelper.getPriceSubscription(subscriptionIdList[2])
+            val price = playStoreHelper.getPriceSubscription(subscriptionIdList[2])
             if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val textPrice = String.format(getString(stringsR.string.per_month), price)
                 text = textPrice
                 setOnClickListener {
-                    purchaseHelper.getSubscription(subscriptionIdList[2])
+                    playStoreHelper.getSubscription(subscriptionIdList[2])
                 }
             } else {
                 text = price
@@ -311,13 +306,13 @@ class PurchaseActivity : BaseSimpleActivity() {
         }
 
         binding.appOneSubYearButton.apply {
-            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[0])
+            val price = playStoreHelper.getPriceSubscription(subscriptionYearIdList[0])
             if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val textPrice = String.format(getString(stringsR.string.per_year), price)
                 text = textPrice
                 setOnClickListener {
-                    purchaseHelper.getSubscription(subscriptionYearIdList[0])
+                    playStoreHelper.getSubscription(subscriptionYearIdList[0])
                 }
             } else {
                 text = price
@@ -326,13 +321,13 @@ class PurchaseActivity : BaseSimpleActivity() {
         }
 
         binding.appTwoSubYearButton.apply {
-            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[1])
+            val price = playStoreHelper.getPriceSubscription(subscriptionYearIdList[1])
             if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val textPrice = String.format(getString(stringsR.string.per_year), price)
                 text = textPrice
                 setOnClickListener {
-                    purchaseHelper.getSubscription(subscriptionYearIdList[1])
+                    playStoreHelper.getSubscription(subscriptionYearIdList[1])
                 }
             } else {
                 text = price
@@ -341,13 +336,13 @@ class PurchaseActivity : BaseSimpleActivity() {
         }
 
         binding.appThreeSubYearButton.apply {
-            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[2])
+            val price = playStoreHelper.getPriceSubscription(subscriptionYearIdList[2])
             if (price != getString(stringsR.string.no_connection)) {
                 isEnabled = true
                 val textPrice = String.format(getString(stringsR.string.per_year), price)
                 text = textPrice
                 setOnClickListener {
-                    purchaseHelper.getSubscription(subscriptionYearIdList[2])
+                    playStoreHelper.getSubscription(subscriptionYearIdList[2])
                 }
             } else {
                 text = price
@@ -358,27 +353,27 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private fun setupButtonSupChecked() {
         val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_mini)
-        if (purchaseHelper.isSubPurchased(subscriptionIdList[0])) {
+        if (playStoreHelper.isSubPurchased(subscriptionIdList[0])) {
             binding.appOneSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appOneSubButton.isEnabled = false
         }
-        if (purchaseHelper.isSubPurchased(subscriptionIdList[1])) {
+        if (playStoreHelper.isSubPurchased(subscriptionIdList[1])) {
             binding.appTwoSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appTwoSubButton.isEnabled = false
         }
-        if (purchaseHelper.isSubPurchased(subscriptionIdList[2])) {
+        if (playStoreHelper.isSubPurchased(subscriptionIdList[2])) {
             binding.appThreeSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appThreeSubButton.isEnabled = false
         }
-        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[0])) {
+        if (playStoreHelper.isSubPurchased(subscriptionYearIdList[0])) {
             binding.appOneSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appOneSubYearButton.isEnabled = false
         }
-        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[1])) {
+        if (playStoreHelper.isSubPurchased(subscriptionYearIdList[1])) {
             binding.appTwoSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appTwoSubYearButton.isEnabled = false
         }
-        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[2])) {
+        if (playStoreHelper.isSubPurchased(subscriptionYearIdList[2])) {
             binding.appThreeSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
             binding.appThreeSubYearButton.isEnabled = false
         }
