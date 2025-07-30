@@ -46,9 +46,9 @@ android {
         }
     }
 
-    publishing {
-        singleVariant("release") {}
-    }
+//    publishing {
+//        singleVariant("release") {}
+//    }
 
     buildFeatures {
         viewBinding = true
