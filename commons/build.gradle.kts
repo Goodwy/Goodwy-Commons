@@ -46,9 +46,9 @@ android {
         }
     }
 
-//    publishing {
-//        singleVariant("release") {}
-//    }
+    publishing {
+        singleVariant("release") {}
+    }
 
     buildFeatures {
         viewBinding = true
@@ -91,29 +91,26 @@ android {
     }
 }
 
-//publishing.publications {
-//    create<MavenPublication>("coreRelease") {
-//        artifactId = "core"
-//        version = "7"
-//        afterEvaluate {
-//            from(components["coreRelease"])
-//        }
-//    }
-//    create<MavenPublication>("fossRelease") {
-//        artifactId = "foss"
-//        version = "7"
-//        afterEvaluate {
-//            from(components["fossRelease"])
-//        }
-//    }
-//    create<MavenPublication>("rustoreRelease") {
-//        artifactId = "rustore"
-//        version = "7"
-//        afterEvaluate {
-//            from(components["rustoreRelease"])
-//        }
-//    }
-//}
+publishing.publications {
+    create<MavenPublication>("coreRelease") {
+        artifactId = "core"
+        afterEvaluate {
+            from(components["coreRelease"])
+        }
+    }
+    create<MavenPublication>("fossRelease") {
+        artifactId = "foss"
+        afterEvaluate {
+            from(components["fossRelease"])
+        }
+    }
+    create<MavenPublication>("rustoreRelease") {
+        artifactId = "rustore"
+        afterEvaluate {
+            from(components["rustoreRelease"])
+        }
+    }
+}
 
 detekt {
     baseline = file("detekt-baseline.xml")

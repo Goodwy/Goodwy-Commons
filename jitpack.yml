@@ -3,3 +3,7 @@ jdk:
 before_install:
     - apt-get update
     - apt-get install -y cmake
+
+
+build:
+    - ./gradlew assembleRelease
