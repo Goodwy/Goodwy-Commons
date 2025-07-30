@@ -5,4 +5,6 @@ before_install:
     - apt-get install -y cmake
 build:
     commands:
-    - ./gradlew assembleRelease
+    - ./gradlew assembleСoreRelease
+    - ./gradlew assembleFossRelease
+    - ./gradlew assembleRustoreRelease
