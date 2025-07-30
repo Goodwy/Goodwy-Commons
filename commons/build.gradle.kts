@@ -91,26 +91,26 @@ android {
     }
 }
 
-publishing.publications {
-    create<MavenPublication>("coreRelease") {
-        artifactId = "core"
-        afterEvaluate {
-            from(components["coreRelease"])
-        }
-    }
-    create<MavenPublication>("fossRelease") {
-        artifactId = "foss"
-        afterEvaluate {
-            from(components["fossRelease"])
-        }
-    }
-    create<MavenPublication>("rustoreRelease") {
-        artifactId = "rustore"
-        afterEvaluate {
-            from(components["rustoreRelease"])
-        }
-    }
-}
+//publishing.publications {
+//    create<MavenPublication>("coreRelease") {
+//        artifactId = "core"
+//        afterEvaluate {
+//            from(components["coreRelease"])
+//        }
+//    }
+//    create<MavenPublication>("fossRelease") {
+//        artifactId = "foss"
+//        afterEvaluate {
+//            from(components["fossRelease"])
+//        }
+//    }
+//    create<MavenPublication>("rustoreRelease") {
+//        artifactId = "rustore"
+//        afterEvaluate {
+//            from(components["rustoreRelease"])
+//        }
+//    }
+//}
 
 detekt {
     baseline = file("detekt-baseline.xml")
