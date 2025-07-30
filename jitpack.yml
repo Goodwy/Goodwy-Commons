@@ -1,8 +1,5 @@
 jdk:
     - openjdk17
-
 before_install:
-    - ./gradlew clean
-
-build:
-    - ./gradlew publish
+    - apt-get update
+    - apt-get install -y cmake
