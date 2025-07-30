@@ -8,9 +8,8 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
 
-    val isRuStoreBuild = gradle.startParameter.taskNames.any { taskName ->
-        taskName.contains("rustore", ignoreCase = true)
-    }
+    val isRuStoreBuild = gradle.startParameter.taskRequests
+        .any { it.args.any { arg -> arg.contains("rustore", ignoreCase = true) } }
 
     repositories {
         google()
