@@ -16,9 +16,7 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { setUrl("https://jitpack.io") }
 
-        if (isRuStoreBuild) {
-            maven { setUrl("https://artifactory-external.vkpartner.ru/artifactory/maven") }
-        }
+        maven { setUrl("https://artifactory-external.vkpartner.ru/artifactory/maven") }
     }
 }
 rootProject.name = "Goodwy-Commons"
