@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.goodwy"
-version = "6.3.1"
+version = "7.0.0"
 
 android {
     namespace = "com.goodwy.commons"
@@ -94,18 +94,21 @@ android {
 publishing.publications {
     create<MavenPublication>("coreRelease") {
         artifactId = "core"
+        version = "7"
         afterEvaluate {
             from(components["coreRelease"])
         }
     }
     create<MavenPublication>("fossRelease") {
         artifactId = "foss"
+        version = "7"
         afterEvaluate {
             from(components["fossRelease"])
         }
     }
     create<MavenPublication>("rustoreRelease") {
         artifactId = "rustore"
+        version = "7"
         afterEvaluate {
             from(components["rustoreRelease"])
         }
