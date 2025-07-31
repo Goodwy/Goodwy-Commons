@@ -47,7 +47,9 @@ android {
     }
 
     publishing {
-        singleVariant("release") {}
+        multipleVariants {
+            allVariants()
+        }
     }
 
     buildFeatures {
