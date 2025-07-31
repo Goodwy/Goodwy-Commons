@@ -9,7 +9,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.parcelize)
     alias(libs.plugins.detekt)
-    `maven-publish`
+  //  `maven-publish`
 }
 
 group = "com.goodwy"
