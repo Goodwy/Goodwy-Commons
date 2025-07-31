@@ -48,6 +48,7 @@ android {
 
     publishing {
         multipleVariants {
+            includeBuildTypeValues("release")
             allVariants()
         }
     }
