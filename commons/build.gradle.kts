@@ -9,7 +9,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.parcelize)
     alias(libs.plugins.detekt)
-  //  `maven-publish`
+    `maven-publish`
 }
 
 group = "com.goodwy"
@@ -47,10 +47,7 @@ android {
     }
 
     publishing {
-        multipleVariants {
-            includeBuildTypeValues("release")
-            allVariants()
-        }
+        singleVariant("release") {}
     }
 
     buildFeatures {
@@ -94,26 +91,29 @@ android {
     }
 }
 
-//publishing.publications {
-//    create<MavenPublication>("coreRelease") {
-//        artifactId = "core"
-//        afterEvaluate {
-//            from(components["coreRelease"])
-//        }
-//    }
-//    create<MavenPublication>("fossRelease") {
-//        artifactId = "foss"
-//        afterEvaluate {
-//            from(components["fossRelease"])
-//        }
-//    }
-//    create<MavenPublication>("rustoreRelease") {
-//        artifactId = "rustore"
-//        afterEvaluate {
-//            from(components["rustoreRelease"])
-//        }
-//    }
-//}
+publishing.publications {
+    create<MavenPublication>("coreRelease") {
+        artifactId = "core"
+        version = "7.0.0"
+        afterEvaluate {
+            from(components["coreRelease"])
+        }
+    }
+    create<MavenPublication>("fossRelease") {
+        artifactId = "foss"
+        version = "7.0.0"
+        afterEvaluate {
+            from(components["fossRelease"])
+        }
+    }
+    create<MavenPublication>("rustoreRelease") {
+        artifactId = "rustore"
+        version = "7.0.0"
+        afterEvaluate {
+            from(components["rustoreRelease"])
+        }
+    }
+}
 
 detekt {
     baseline = file("detekt-baseline.xml")

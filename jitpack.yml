@@ -1,6 +1,9 @@
 jdk:
     - openjdk17
-script:
-    - ./gradlew \
-        :commons:assembleCoreRelease \
-        :commons:assembleRustoreRelease
+before_install:
+    - apt-get update
+    - apt-get install -y cmake
+
+build:
+    commands:
+    - ./gradlew assembleRelease
