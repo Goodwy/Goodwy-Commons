@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.goodwy"
-version = "7.0.0"
+version = "6.3.1"
 
 android {
     namespace = "com.goodwy.commons"
@@ -26,13 +26,6 @@ android {
         ksp {
             arg("room.schemaLocation", "$projectDir/schemas")
         }
-    }
-
-    flavorDimensions.add("variants")
-    productFlavors {
-        register("core") //Google Play
-        register("foss")
-        register("rustore")
     }
 
     buildTypes {
@@ -92,25 +85,9 @@ android {
 }
 
 publishing.publications {
-    create<MavenPublication>("coreRelease") {
-        artifactId = "core"
-        version = "7.0.0"
+    create<MavenPublication>("release") {
         afterEvaluate {
-            from(components["coreRelease"])
-        }
-    }
-    create<MavenPublication>("fossRelease") {
-        artifactId = "foss"
-        version = "7.0.0"
-        afterEvaluate {
-            from(components["fossRelease"])
-        }
-    }
-    create<MavenPublication>("rustoreRelease") {
-        artifactId = "rustore"
-        version = "7.0.0"
-        afterEvaluate {
-            from(components["rustoreRelease"])
+            from(components["release"])
         }
     }
 }
@@ -158,8 +135,8 @@ dependencies {
 
     //Goodwy
     api(projects.strings)
-    "coreApi"(libs.billing.client)
-    "rustoreApi"(libs.rustore.client)
+    api(libs.billing.client)
+    api(libs.rustore.client)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)
     implementation(libs.rx.java)

@@ -48,7 +48,7 @@ jodaTime = "2.12.5"
 behavioRule = "1.0.1"
 rxAnimation = "2.1.1"
 rxJava3 = "3.1.5"
-billing = "7.1.1"
+billing = "6.0.1"
 rustore = "6.0.0"
 #Gradle
 gradlePlugins-agp = "8.10.1"

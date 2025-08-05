@@ -42,11 +42,13 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var subscriptionYearIdList: ArrayList<String> = ArrayList()
     private var subscriptionYearIdListRu: ArrayList<String> = ArrayList()
     private var showLifebuoy = true
+    private var playStoreInstalled = true
     private var ruStoreInstalled = false
     private var showCollection = false
 
     private var ruStoreIsConnected = false
 
+    private val purchaseHelper = PurchaseHelper(this)
     private var ruStoreHelper: RuStoreHelper? = null
     private var ruStoreBillingClient: RuStoreBillingClient? = null
 
@@ -71,6 +73,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         subscriptionYearIdListRu = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST_RU) ?: arrayListOf("", "", "")
         primaryColor = getProperPrimaryColor()
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
+        playStoreInstalled = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
         ruStoreInstalled = intent.getBooleanExtra(RU_STORE, false)
         showCollection = intent.getBooleanExtra(SHOW_COLLECTION, false)
 
@@ -93,7 +96,8 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.purchaseNestedScrollview,
             binding.topDetails.root
         ).forEach {
-            it.beInvisibleIf(!ruStoreInstalled)
+            it.beInvisibleIf((!playStoreInstalled && !ruStoreInstalled) ||
+                (resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled && !ruStoreInstalled))
         }
 
         arrayOf(
@@ -101,10 +105,59 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.proDonateText,
             binding.proDonateButton
         ).forEach {
-            it.beGoneIf(ruStoreInstalled)
+            it.beGoneIf((!resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) || ruStoreInstalled)
         }
 
-        if (ruStoreInstalled) {
+        if ((playStoreInstalled && !ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && baseConfig.useGooglePlay)) {
+            //PlayStore
+            purchaseHelper.initBillingClient()
+            val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
+            subscriptionIdListAll.addAll(subscriptionYearIdList)
+            purchaseHelper.retrieveDonation(productIdList, subscriptionIdListAll)
+
+            purchaseHelper.iapSkuDetailsInitialized.observe(this) {
+                if (it) setupButtonIapPurchased()
+            }
+            purchaseHelper.subSkuDetailsInitialized.observe(this) {
+                if (it) setupButtonSupPurchased()
+            }
+
+            purchaseHelper.isIapPurchased.observe(this) {
+                when (it) {
+                    is Tipping.Succeeded -> {
+                        baseConfig.isPro = true
+                    }
+                    is Tipping.NoTips -> {
+                        baseConfig.isPro = false
+                    }
+                    is Tipping.FailedToLoad -> {
+                    }
+                    else -> {
+                    }
+                }
+            }
+            purchaseHelper.isSupPurchased.observe(this) {
+                when (it) {
+                    is Tipping.Succeeded -> {
+                        baseConfig.isProSubs = true
+                    }
+                    is Tipping.NoTips -> {
+                        baseConfig.isProSubs = false
+                    }
+                    is Tipping.FailedToLoad -> {
+                    }
+                    else -> {
+                    }
+                }
+            }
+
+            purchaseHelper.isIapPurchasedList.observe(this) {
+                setupButtonIapChecked()
+            }
+            purchaseHelper.isSupPurchasedList.observe(this) {
+                setupButtonSupChecked()
+            }
+        } else if ((!playStoreInstalled && ruStoreInstalled) || (playStoreInstalled && ruStoreInstalled && !baseConfig.useGooglePlay)) {
             //RuStore
             ruStoreHelper!!.checkPurchasesAvailability(this)
 
@@ -172,13 +225,19 @@ class PurchaseActivity : BaseSimpleActivity() {
         binding.collapsingToolbar.setBackgroundColor(backgroundColor)
         updateTopBarColors(binding.purchaseToolbar, backgroundColor, useOverflowIcon = false)
 
+        setupChangeStoreMenu()
         setupEmail()
         if (showCollection) setupCollection()
-        if (ruStoreInstalled) {
+        if ((!resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) || ruStoreInstalled) {
             setupIcon()
         } else {
             setupNoPlayStoreInstalled()
         }
+//        if (ruStoreInstalled) {
+//            setupIcon()
+//        } else {
+//            setupNoPlayStoreInstalled()
+//        }
 
         val isProApp = resources.getBoolean(R.bool.is_pro_app)
         binding.themeHolder.beVisibleIf(!isProApp)
@@ -186,7 +245,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupOptionsMenu() {
-        val visible = ruStoreInstalled
+        val visible = (!resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) || ruStoreInstalled
         binding.purchaseToolbar.menu.apply {
             findItem(R.id.restorePurchases).isVisible = visible
             findItem(R.id.openSubscriptions).isVisible = visible
@@ -195,11 +254,16 @@ class PurchaseActivity : BaseSimpleActivity() {
             when (menuItem.itemId) {
                 R.id.restorePurchases -> {
                     setupButtonReset()
-                    updateProducts()
+                    if (ruStoreInstalled && !baseConfig.useGooglePlay) updateProducts()
+                    else {
+                        val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
+                        subscriptionIdListAll.addAll(subscriptionYearIdList)
+                        purchaseHelper.retrieveDonation(productIdList, subscriptionIdListAll)
+                    }
                     true
                 }
                 R.id.openSubscriptions -> {
-                    val url = "rustore://profile/subscriptions"
+                    val url = if (ruStoreInstalled && !baseConfig.useGooglePlay) "rustore://profile/subscriptions" else "https://play.google.com/store/account/subscriptions"
                     launchViewIntent(url)
                     true
                 }
@@ -208,8 +272,28 @@ class PurchaseActivity : BaseSimpleActivity() {
         }
     }
 
+    private fun setupChangeStoreMenu() {
+        binding.purchaseToolbar.menu.findItem(R.id.changeStore).apply {
+            isVisible = !resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled && ruStoreInstalled
+            title = if (baseConfig.useGooglePlay) getString(stringsR.string.billing_change_to_ru_store) else getString(stringsR.string.billing_change_to_google_play)
+            icon = if (baseConfig.useGooglePlay) AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_google_play_vector)
+            else AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_rustore)
+            icon?.setTint(getProperTextColor())
+            setOnMenuItemClickListener {
+                if (baseConfig.useGooglePlay) {
+                    baseConfig.useGooglePlay = false
+                    recreate()
+                } else {
+                    baseConfig.useGooglePlay = true
+                    recreate()
+                }
+                true
+            }
+        }
+    }
+
     private fun setupEmail() {
-        binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
+        binding.lifebuoyHolder.beVisibleIf(showLifebuoy && playStoreInstalled)
         val lifebuoyButtonDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
         binding.lifebuoyButton.setImageDrawable(lifebuoyButtonDrawable)
         binding.lifebuoyButton.setOnClickListener {
@@ -232,6 +316,174 @@ class PurchaseActivity : BaseSimpleActivity() {
                     showErrorToast(e)
                 }
             }
+        }
+    }
+
+    private fun setupButtonIapPurchased() {
+        binding.appOneButton.apply {
+            val price = purchaseHelper.getPriceDonation(productIdList[0])
+            isEnabled = price != getString(stringsR.string.no_connection)
+            text = price
+            setOnClickListener {
+                purchaseHelper.getDonation(productIdList[0])
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appTwoButton.apply {
+            val price = purchaseHelper.getPriceDonation(productIdList[1])
+            isEnabled = price != getString(stringsR.string.no_connection)
+            text = price
+            setOnClickListener {
+                purchaseHelper.getDonation(productIdList[1])
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appThreeButton.apply {
+            val price = purchaseHelper.getPriceDonation(productIdList[2])
+            isEnabled = price != getString(stringsR.string.no_connection)
+            text = price
+            setOnClickListener {
+                purchaseHelper.getDonation(productIdList[2])
+            }
+            background.setTint(primaryColor)
+        }
+    }
+
+    private fun setupButtonIapChecked() {
+        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_mini)
+        if (purchaseHelper.isIapPurchased(productIdList[0])) {
+            binding.appOneButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appOneButton.isEnabled = false
+        }
+        if (purchaseHelper.isIapPurchased(productIdList[1])) {
+            binding.appTwoButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appTwoButton.isEnabled = false
+        }
+        if (purchaseHelper.isIapPurchased(productIdList[2])) {
+            binding.appThreeButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appThreeButton.isEnabled = false
+        }
+    }
+
+    private fun setupButtonSupPurchased() {
+        binding.appOneSubButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionIdList[0])
+            if (price != getString(stringsR.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(stringsR.string.per_month), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionIdList[0])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appTwoSubButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionIdList[1])
+            if (price != getString(stringsR.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(stringsR.string.per_month), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionIdList[1])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appThreeSubButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionIdList[2])
+            if (price != getString(stringsR.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(stringsR.string.per_month), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionIdList[2])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appOneSubYearButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[0])
+            if (price != getString(stringsR.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(stringsR.string.per_year), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionYearIdList[0])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appTwoSubYearButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[1])
+            if (price != getString(stringsR.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(stringsR.string.per_year), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionYearIdList[1])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+
+        binding.appThreeSubYearButton.apply {
+            val price = purchaseHelper.getPriceSubscription(subscriptionYearIdList[2])
+            if (price != getString(stringsR.string.no_connection)) {
+                isEnabled = true
+                val textPrice = String.format(getString(stringsR.string.per_year), price)
+                text = textPrice
+                setOnClickListener {
+                    purchaseHelper.getSubscription(subscriptionYearIdList[2])
+                }
+            } else {
+                text = price
+            }
+            background.setTint(primaryColor)
+        }
+    }
+
+    private fun setupButtonSupChecked() {
+        val check = AppCompatResources.getDrawable(this@PurchaseActivity, R.drawable.ic_check_circle_mini)
+        if (purchaseHelper.isSubPurchased(subscriptionIdList[0])) {
+            binding.appOneSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appOneSubButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionIdList[1])) {
+            binding.appTwoSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appTwoSubButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionIdList[2])) {
+            binding.appThreeSubButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appThreeSubButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[0])) {
+            binding.appOneSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appOneSubYearButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[1])) {
+            binding.appTwoSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appTwoSubYearButton.isEnabled = false
+        }
+        if (purchaseHelper.isSubPurchased(subscriptionYearIdList[2])) {
+            binding.appThreeSubYearButton.setCompoundDrawablesWithIntrinsicBounds(null, null, null, check)
+            binding.appThreeSubYearButton.isEnabled = false
         }
     }
 
@@ -301,6 +553,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         val isProApp = resources.getBoolean(R.bool.is_pro_app)
         binding.proDonateText.text =
             if (isProApp) Html.fromHtml(getString(stringsR.string.plus_summary))
+            else if (resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) Html.fromHtml(getString(stringsR.string.donate_text_no_gp_g))
             else Html.fromHtml(getString(stringsR.string.donate_text_g))
         binding.proDonateButton.apply {
             setOnClickListener {
@@ -312,10 +565,11 @@ class PurchaseActivity : BaseSimpleActivity() {
             binding.proUnlockText.beGone()
             binding.proSwitchHolder.beGone()
         } else {
-            binding.proSwitch.isChecked = baseConfig.isPro
+            binding.proSwitch.isChecked = if (resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) baseConfig.isProNoGP else baseConfig.isPro
             binding.proSwitchHolder.setOnClickListener {
                 binding.proSwitch.toggle()
-                baseConfig.isPro = binding.proSwitch.isChecked
+                if (resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) baseConfig.isProNoGP = binding.proSwitch.isChecked
+                else baseConfig.isPro = binding.proSwitch.isChecked
             }
         }
     }
@@ -375,8 +629,13 @@ class PurchaseActivity : BaseSimpleActivity() {
                 if (it.selected) {
                     launchApp(it.packageName)
                 } else {
-                    val urlRS = "https://www.rustore.ru/catalog/app/${it.packageName}"
-                    launchViewIntent(urlRS)
+                    if (ruStoreInstalled && !baseConfig.useGooglePlay) {
+                        val urlRS = "https://www.rustore.ru/catalog/app/${it.packageName}"
+                        launchViewIntent(urlRS)
+                    } else {
+                        val urlGP = "https://play.google.com/store/apps/details?id=${it.packageName}"
+                        launchViewIntent(urlGP)
+                    }
                 }
             }
         }

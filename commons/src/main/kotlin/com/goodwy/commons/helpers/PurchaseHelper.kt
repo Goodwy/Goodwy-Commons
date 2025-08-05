@@ -10,7 +10,7 @@ import com.goodwy.strings.R as stringsR
 import kotlinx.coroutines.*
 import java.util.*
 
-class PlayStoreHelper (
+class PurchaseHelper (
     val activity: Activity,
     ) {
     private lateinit var billingClient: BillingClient

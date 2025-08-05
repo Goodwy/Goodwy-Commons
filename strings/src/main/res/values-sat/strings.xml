@@ -32,7 +32,6 @@
     <string name="end">End</string>
 
     <!-- Support project -->
-    <string name="rate_g">Ohodnotiť</string>
     <string name="action_support_project">Project support</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
