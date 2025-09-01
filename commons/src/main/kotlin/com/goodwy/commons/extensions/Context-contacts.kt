@@ -50,6 +50,8 @@ fun Context.sendAddressIntent(address: String) {
 fun Context.openWebsiteIntent(url: String) {
     val website = if (url.startsWith("http")) {
         url
+    } else if (url.contains("://")) {
+        url
     } else {
         "https://$url"
     }
