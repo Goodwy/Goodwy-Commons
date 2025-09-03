@@ -129,7 +129,7 @@ class AboutActivity : BaseComposeActivity() {
     private fun onPrivacyPolicyClick() {
         val appId = baseConfig.appId.removeSuffix(".debug")
         val url = when (appId) {
-            "com.goodwy.dialer" -> "https://www.goodwy.dev/about/privacy-policy-right-dialer"
+            "com.sorwi.aidialer" -> "https://www.goodwy.dev/about/privacy-policy-right-dialer"
             "com.goodwy.smsmessenger" -> "https://www.goodwy.dev/about/privacy-policy-right-messages"
             "com.goodwy.contacts" -> "https://www.goodwy.dev/about/privacy-policy-right-contacts"
             "com.goodwy.gallery" -> "https://www.goodwy.dev/about/privacy-policy-right-gallery"

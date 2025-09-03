@@ -577,7 +577,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     @SuppressLint("NewApi", "SetTextI18n", "UseCompatTextViewDrawableApis")
     private fun setupCollection() {
         binding.collectionHolder.beVisible()
-        val appDialerPackage = "com.goodwy.dialer"
+        val appDialerPackage = "com.sorwi.aidialer"
         val appContactsPackage = "com.goodwy.contacts"
         val appSmsMessengerPackage = "com.goodwy.smsmessenger"
         val appGalleryPackage = "com.goodwy.gallery"

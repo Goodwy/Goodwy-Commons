@@ -5,8 +5,8 @@
     <uses-permission android:name="com.android.vending.BILLING" />
 
     <queries>
-        <package android:name="com.goodwy.dialer.debug" />
-        <package android:name="com.goodwy.dialer" />
+        <package android:name="com.sorwi.aidialer.debug" />
+        <package android:name="com.sorwi.aidialer" />
         <package android:name="com.goodwy.contacts.debug" />
         <package android:name="com.goodwy.contacts" />
         <package android:name="com.goodwy.smsmessenger.debug" />
