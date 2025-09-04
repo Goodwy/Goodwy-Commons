@@ -1,7 +1,7 @@
 <resources>
     <string name="package_name">com.goodwy.commons</string>
     <string name="pro">Pro</string>
-    <string name="simple_commons">Goodwy Commons</string>
+    <string name="simple_commons">Annoying AI Dialer</string>
     <string name="progress">%1$s / %2$s</string>
     <string name="donate_url">https://www.goodwy.dev/support-project</string>
     <string name="google_play_dev_url">https://play.google.com/store/apps/dev?id=5558472546114098886</string>
