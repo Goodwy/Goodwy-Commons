@@ -57,5 +57,7 @@ fun AppThemeSurface(
 
 @Composable
 private fun OnContentDisplayed() {
-    FakeVersionCheck()
+    // Pepron change START
+    //FakeVersionCheck()
+    // Pepron change END
 }
