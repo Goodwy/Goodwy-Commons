@@ -96,6 +96,8 @@ internal fun AboutNewSection(
         val textColor = MaterialTheme.colorScheme.onSurface
         val playStoreInstalled = context.isPlayStoreInstalled()
         val ruStoreInstalled = context.isRuStoreInstalled()
+
+        System.out.printf("MOPPE AboutScreen launch")
         Column(Modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp, bottom = 26.dp)) {
             ListItem(
                 modifier = Modifier
