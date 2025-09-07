@@ -57,15 +57,17 @@ class MainActivity : BaseSimpleActivity() {
     }
 
     @Composable
-    private fun AppLaunched(
-        rateStarsAlertDialogState: AlertDialogState = getRateStarsAlertDialogState(),
-    ) {
+    private fun AppLaunched(rateStarsAlertDialogState: AlertDialogState = getRateStarsAlertDialogState()) {
+        /*
+        // Pepron change START
         LaunchedEffect(Unit) {
             appLaunchedCompose(
                 appId = BuildConfig.APPLICATION_ID,
                 showRateUsDialog = rateStarsAlertDialogState::show,
             )
         }
+        // Pepron change END
+        */
     }
 
     @Composable
