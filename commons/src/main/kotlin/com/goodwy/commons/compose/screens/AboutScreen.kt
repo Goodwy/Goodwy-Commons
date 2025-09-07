@@ -137,6 +137,7 @@ internal fun AboutNewSection(
                     )
                 },
             )
+/*
             Spacer(modifier = Modifier.size(8.dp))
             HtmlText(stringResource(stringsR.string.about_summary), textColor = textColor)
             Spacer(modifier = Modifier.size(24.dp))
@@ -171,7 +172,9 @@ internal fun AboutNewSection(
                 }
                 Spacer(modifier = Modifier.size(18.dp))
             }
+
             Card(
+
                 shape = RoundedCornerShape(16.dp),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
@@ -308,6 +311,7 @@ internal fun AboutNewSection(
                     }
                 }
             }
+
             if (showGithub) {
                 Spacer(modifier = Modifier.size(18.dp))
                 Card(
@@ -350,12 +354,14 @@ internal fun AboutNewSection(
                 }
             }
             Spacer(modifier = Modifier.size(32.dp))
+*/
         }
     }
 }
 
 @Composable
 fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Color.Unspecified) {
+/*
     AndroidView(
         modifier = modifier.padding(horizontal = 4.dp),
         factory = { context -> TextView(context).apply {
@@ -363,4 +369,5 @@ fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Col
         } },
         update = { it.text = HtmlCompat.fromHtml(html, HtmlCompat.FROM_HTML_MODE_COMPACT) }
     )
+*/
 }
