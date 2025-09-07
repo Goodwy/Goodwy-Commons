@@ -361,7 +361,7 @@ internal fun AboutNewSection(
 
 @Composable
 fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Color.Unspecified) {
-/*
+
     AndroidView(
         modifier = modifier.padding(horizontal = 4.dp),
         factory = { context -> TextView(context).apply {
@@ -369,5 +369,5 @@ fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Col
         } },
         update = { it.text = HtmlCompat.fromHtml(html, HtmlCompat.FROM_HTML_MODE_COMPACT) }
     )
-*/
+
 }
