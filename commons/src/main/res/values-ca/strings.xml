@@ -189,11 +189,11 @@
     <string name="filename_invalid_characters_placeholder">El nom de fitxer «%s» conté caràcters no vàlids</string>
     <string name="extension_cannot_be_empty">L\'extensió no pot estar buida</string>
     <string name="source_file_doesnt_exist">El fitxer d\'origen %s no existeix</string>
-    <string name="prepend_filenames">Preposa als noms de fitxer</string>
-    <string name="append_filenames">Afegeix els noms de fitxer</string>
+    <string name="prepend_filenames">Afegeix text abans dels noms de fitxers</string>
+    <string name="append_filenames">Afegeix text després dels noms de fitxers</string>
     <string name="simple_renaming">Canvi de nom senzill</string>
     <string name="pattern_renaming">Patró</string>
-    <string name="string_to_add">Cadena a afegir</string>
+    <string name="string_to_add">Text a afegir</string>
     <string name="rename_date_time_pattern">%Y - any
 \n%M - mes
 \n%D - dia
@@ -632,7 +632,6 @@
     <string name="color_customization">Personalització del color</string>
     <string name="improved_color_customization">Personalització del color millorada</string>
     <string name="customize_colors">Personalitza els colors</string>
-    <string name="customize_colors_locked">Personalitza els colors (bloquejat)</string>
     <string name="feature_locked">Bloquejat</string>
     <string name="customize_widget_colors">Personalitza els colors dels ginys</string>
     <string name="customize_notifications">Personalitza les notificacions</string>
@@ -1005,7 +1004,6 @@
     <string name="why_upgrade_background_color_customization">Personalització del color de fons</string>
     <string name="why_upgrade_file_importing">Implementació de la importació de fitxers</string>
     <string name="why_upgrade_zooming">Zoom</string>
-    <string name="notice">Aquesta aplicació fa servir les biblioteques següents de tercers que ens faciliten la feina. Gràcies.</string>
     <string name="third_party_licences">Llicències de tercers</string>
     <string name="kotlin_title">Kotlin (llenguatge de programació)</string>
     <string name="subsampling_title">Subsampling Scale Image View (visualització d\'imatges amb zoom)</string>
@@ -1140,4 +1138,6 @@
     <string name="rate_this_app">Valoreu aquesta aplicació</string>
     <string name="evalex_title">EvalEx (avaluació d\'expressions matemàtiques)</string>
     <string name="requires_fossify_thank_you">Cal Fossify Thank You</string>
+    <string name="enables_more_customization">Habilita més personalització</string>
+    <string name="translation_latvian">Letó</string>
 </resources>

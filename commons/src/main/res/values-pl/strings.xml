@@ -193,11 +193,11 @@
     <string name="filename_invalid_characters_placeholder">Nazwa pliku „%s” zawiera niedozwolone znaki</string>
     <string name="extension_cannot_be_empty">Rozszerzenie nie może być puste</string>
     <string name="source_file_doesnt_exist">Plik źródłowy %s nie istnieje</string>
-    <string name="prepend_filenames">Poprzedź nazwy plików</string>
-    <string name="append_filenames">Dołącz do nazw plików</string>
+    <string name="prepend_filenames">Dodaj tekst przed nazwami plików</string>
+    <string name="append_filenames">Dodaj tekst po nazwach plików</string>
     <string name="simple_renaming">Prosta zmiana nazwy</string>
     <string name="pattern_renaming">Wzorzec</string>
-    <string name="string_to_add">Ciąg do dodania</string>
+    <string name="string_to_add">Tekst do dodania</string>
     <string name="rename_date_time_pattern">%Y — rok\n%M — miesiąc\n%D — dzień\n%h — godzina\n%m — minuta\n%s — sekunda\n%i — numer rosnący od 1</string>
     <string name="filename_without_txt">Nazwa pliku (bez .txt)</string>
     <string name="filename_without_json">Nazwa pliku (bez .json)</string>
@@ -676,7 +676,6 @@
     <string name="color_customization">Dostosowywanie kolorów</string>
     <string name="improved_color_customization">Ulepszone dostosowywanie kolorów</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
-    <string name="customize_colors_locked">Dostosuj kolory aplikacji (Zablokowane)</string>
     <string name="feature_locked">Zablokowane</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
     <string name="customize_notifications">Dostosuj powiadomienia</string>
@@ -1066,7 +1065,6 @@
     <string name="why_upgrade_background_color_customization">Dostosowywanie koloru tła</string>
     <string name="why_upgrade_file_importing">Obsługa importowania plików</string>
     <string name="why_upgrade_zooming">Powiększanie</string>
-    <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm, aby ułatwić mi życie. Dziękuję.</string>
     <string name="third_party_licences">Licencje innych firm</string>
     <string name="kotlin_title">Kotlin (język programowania)</string>
     <string name="subsampling_title">Subsampling Scale Image View (przybliżanie obrazów)</string>
@@ -1164,4 +1162,6 @@
     <string name="rate_this_app">Oceń tę aplikację</string>
     <string name="evalex_title">EvalEx (obliczanie wyrażeń matematycznych)</string>
     <string name="requires_fossify_thank_you">Wymaga aplikacji „Fossify Thank You”</string>
+    <string name="enables_more_customization">Umożliwia większą personalizację</string>
+    <string name="translation_latvian">łotewski</string>
 </resources>

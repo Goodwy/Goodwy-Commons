@@ -273,7 +273,7 @@
     <string name="move">Movi</string>
     <string name="merge">Kunfandi</string>
     <string name="could_not_create_folder">Ne povis krei la dosierujon \"%s\"</string>
-    <string name="append_filenames">Aldoni sufikson al dosiernomoj</string>
+    <string name="append_filenames">Aldoni tekston post dosiernomoj</string>
     <string name="filename_invalid_characters">Dosiernomo enhavas nevalidajn karakterojn</string>
     <string name="moving_success_one">Dosiero sukcese movita</string>
     <string name="filename_cannot_be_empty">Dosiernomo ne devas esti malplena</string>
@@ -304,9 +304,9 @@
     <string name="filename_invalid_characters_placeholder">La dosiernomo \"%s\" enhavas nevalidajn karakterojn</string>
     <string name="extension_cannot_be_empty">Dosiersufikso ne devas esti malplena</string>
     <string name="source_file_doesnt_exist">La fonta dosiero \"%s\" ne ekzistas</string>
-    <string name="prepend_filenames">Aldoni prefikson al dosiernomoj</string>
+    <string name="prepend_filenames">Aldoni tekston antaŭ dosiernomoj</string>
     <string name="pattern_renaming">Ŝablono</string>
-    <string name="string_to_add">Ĉeno por aldoni</string>
+    <string name="string_to_add">Teksto por aldoni</string>
     <string name="rename_date_time_pattern">%Y - jaro\n%M - monato\n%D - tago\n%h - horo\n%m - minuto\n%s - sekundo\n%i - nombro pliiĝanta el 1</string>
     <string name="filename_without_txt">Dosiernomo (sen .txt)</string>
     <string name="filename_without_json">Dosiernomo (sen .json)</string>
@@ -715,7 +715,6 @@
     <string name="settings">Agordoj</string>
     <string name="general_settings">Ĝenerala</string>
     <string name="color_customization">Tajlorado de koloroj</string>
-    <string name="customize_colors_locked">Tajlori kolorojn (ŝlosita)</string>
     <string name="customize_widget_colors">Tajlori fenestraĵajn kolorojn</string>
     <string name="customize_notifications">Tajlori sciigojn</string>
     <string name="use_english_language">Uzi la anglan lingvon</string>
@@ -1037,7 +1036,6 @@
     <string name="gif_drawable_title">Gif Drawable (ŝargado de GIF-dosieroj)</string>
     <string name="gson_title">Gson (malkomponilo de JSON)</string>
     <string name="why_upgrade_note_locking">Ŝlosado de notoj</string>
-    <string name="notice">Tiu ĉi aplikaĵo uzas la sekvajn bibliotekojn de eksteraj liverantoj por plifaciligi mian vivon. Dankon.</string>
     <string name="why_upgrade_contact_filtering">Filtrado de kontaktoj</string>
     <string name="number_of_items">Nombro de elementoj</string>
     <string name="reorder_items_by_dragging">Reordigi elementojn per treni</string>
@@ -1047,4 +1045,7 @@
     <string name="confirm_storage_access_restricted_text_not_found">Neniu sistema dosieradministrilo-aplikaĵo estis trovita.</string>
     <string name="more_fossify_apps">Pli da aplikaĵoj de Fossify</string>
     <string name="rate_this_app">Taksi tiun ĉi aplikaĵon</string>
+    <string name="requires_fossify_thank_you">Postulas Fossify Dankon</string>
+    <string name="evalex_title">EvalEx (taksado de matematika esprimo)</string>
+    <string name="enables_more_customization">Ebligas pli da tajlorado</string>
 </resources>

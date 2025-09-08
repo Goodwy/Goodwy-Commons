@@ -185,8 +185,8 @@
     <string name="filename_invalid_characters_placeholder">Името на файла „%s“ съдържа непозволени знаци</string>
     <string name="extension_cannot_be_empty">Разширението не може да бъде празно</string>
     <string name="source_file_doesnt_exist">Изходният файл „%s“ не съществува</string>
-    <string name="prepend_filenames">Представка на файлови имена</string>
-    <string name="append_filenames">Прибавяне на файлови имена</string>
+    <string name="prepend_filenames">Добавяне на низ преди името на файла</string>
+    <string name="append_filenames">Добавяне на низ след името на файла</string>
     <string name="simple_renaming">Обикновено преименуване</string>
     <string name="pattern_renaming">Шаблон</string>
     <string name="string_to_add">Низ, който да бъде добавен</string>
@@ -584,7 +584,6 @@
     <string name="general_settings">Общи</string>
     <string name="color_customization">Настройка на цветовете</string>
     <string name="customize_colors">Настройка на цветовете</string>
-    <string name="customize_colors_locked">Настройка на цветовете (заключено)</string>
     <string name="feature_locked">Заключено</string>
     <string name="customize_widget_colors">Настройка на цветовете на приспособлението</string>
     <string name="customize_notifications">Настройка на известията</string>
@@ -897,7 +896,6 @@
     <string name="why_upgrade_recents_tab">Раздел със последно използваните файлове</string>
     <string name="why_upgrade_file_importing">Възможност за внасяне на файлове</string>
     <string name="why_upgrade_zooming">Мащабиране</string>
-    <string name="notice">Приложението използва следните библиотеки от трети страни, за да улесни живота ми. Благодаря им.</string>
     <string name="third_party_licences">Лицензи на трети страни</string>
     <string name="welcome_to_app_name">Добре дошли при %s!</string>
     <string name="pro_app_refund">Не забравяйте, че ако премахнете някое платено приложение в рамките на 2 часа след плащането, сумата автоматично ще бъде възстановена. Ако желаете възстановяване на сумата след този период, просто се свържете с нас на hello@fossify.org и ще ви ги върнем. Така е по-лесно да изпробвате приложенията :)</string>
@@ -1031,4 +1029,6 @@
     <string name="rate_this_app">Оценете приложението</string>
     <string name="evalex_title">EvalEx (изчсляване на математически изрази)</string>
     <string name="requires_fossify_thank_you">Изисква Fossify Thank You</string>
+    <string name="enables_more_customization">Възможност за повече приспособяване</string>
+    <string name="translation_latvian">Латвийски</string>
 </resources>

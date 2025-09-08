@@ -10,7 +10,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.adapters.MyArrayAdapter
 import com.goodwy.commons.extensions.applyColorFilter
 
-class MyAppCompatSpinner : AppCompatSpinner {
+open class MyAppCompatSpinner : AppCompatSpinner {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)

@@ -187,8 +187,8 @@
     <string name="filename_invalid_characters_placeholder">Dateiname ‚%s‘ enthält ungültige Zeichen</string>
     <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
     <string name="source_file_doesnt_exist">Quelldatei „%s“ existiert nicht</string>
-    <string name="prepend_filenames">Text dem Dateinamen voranstellen</string>
-    <string name="append_filenames">Text dem Dateinamen anhängen</string>
+    <string name="prepend_filenames">Text vor Dateinamen hinzufügen</string>
+    <string name="append_filenames">Text nach Dateinamen hinzufügen</string>
     <string name="simple_renaming">Einfaches Umbenennen</string>
     <string name="pattern_renaming">Muster</string>
     <string name="string_to_add">Anzufügender Text</string>
@@ -613,7 +613,6 @@
     <string name="color_customization">Farbanpassung</string>
     <string name="improved_color_customization">Verbesserte Farbanpassung</string>
     <string name="customize_colors">Farben anpassen</string>
-    <string name="customize_colors_locked">Farben anpassen (Gesperrt)</string>
     <string name="feature_locked">Gesperrt</string>
     <string name="customize_widget_colors">Widget-Farben anpassen</string>
     <string name="customize_notifications">Benachrichtigungen anpassen</string>
@@ -965,7 +964,6 @@
     <string name="why_upgrade_background_color_customization">Anpassung der Hintergrundfarbe</string>
     <string name="why_upgrade_file_importing">Unterstützung für den Dateiimport</string>
     <string name="why_upgrade_zooming">Zoomen</string>
-    <string name="notice">Diese App verwendet die folgenden Bibliotheken von Drittanbietern, um mir das Leben zu erleichtern. Vielen Dank dafür.</string>
     <string name="third_party_licences">Drittanbieterlizenzen</string>
     <string name="kotlin_title">Kotlin (Programmiersprache)</string>
     <string name="subsampling_title">Subsampling Scale Image View (Zoombare Bilder)</string>
@@ -1100,4 +1098,6 @@
     <string name="more_fossify_apps">Mehr Fossify-Apps</string>
     <string name="evalex_title">EvalEx (Auswertung mathematischer Ausdrücke)</string>
     <string name="requires_fossify_thank_you">Erfordert Fossify Thank You</string>
+    <string name="enables_more_customization">Ermöglicht mehr Personalisierung</string>
+    <string name="translation_latvian">Lettisch</string>
 </resources>

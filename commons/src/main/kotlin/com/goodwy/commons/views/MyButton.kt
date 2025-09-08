@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.widget.Button
 import androidx.appcompat.widget.AppCompatButton
 
-class MyButton : AppCompatButton {
+open class MyButton : AppCompatButton {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)

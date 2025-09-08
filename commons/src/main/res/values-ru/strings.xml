@@ -195,11 +195,11 @@
     <string name="filename_invalid_characters_placeholder">Имя файла \"%s\" содержит недопустимые символы</string>
     <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
     <string name="source_file_doesnt_exist">Исходный файл \"%s\" не существует</string>
-    <string name="prepend_filenames">Перед именем файла</string>
-    <string name="append_filenames">После имени файла</string>
+    <string name="prepend_filenames">Добавить текст перед именем файла</string>
+    <string name="append_filenames">Добавить текст после имени файла</string>
     <string name="simple_renaming">Простое переименование</string>
     <string name="pattern_renaming">Шаблон</string>
-    <string name="string_to_add">Строка для добавления</string>
+    <string name="string_to_add">Текст для добавления</string>
     <string name="rename_date_time_pattern">%Y — год
 \n%M — месяц
 \n%D — день
@@ -402,7 +402,7 @@
     <string name="hide_line_numbers">Не показывать номера строк</string>
     <string name="sleep_timer">Таймер сна</string>
     <string name="unblock">Разблокировать</string>
-    <string name="sort_by">Сортировать по…</string>
+    <string name="sort_by">Сортировка</string>
     <string name="name">Имя</string>
     <string name="size">Размер</string>
     <string name="last_modified">Дата изменения</string>
@@ -650,7 +650,6 @@
     <string name="color_customization">Настройка цвета</string>
     <string name="improved_color_customization">Улучшенная настройка цвета</string>
     <string name="customize_colors">Настройка интерфейса</string>
-    <string name="customize_colors_locked">Настройка интерфейса (заблокировано)</string>
     <string name="feature_locked">Заблокировано</string>
     <string name="customize_widget_colors">Настройка цветов виджета</string>
     <string name="customize_notifications">Настройка уведомлений</string>
@@ -701,7 +700,7 @@
     <string name="migrating">Перенос</string>
     <string name="quality">Качество</string>
     <string name="main_screen">Главный экран</string>
-    <string name="thumbnails">Эскизы</string>
+    <string name="thumbnails">Миниатюры</string>
     <string name="list_view">Вид списка</string>
     <string name="exclude">Исключить</string>
     <string name="exclude_folder">Исключить папку</string>
@@ -1044,8 +1043,7 @@
     <string name="why_upgrade_background_color_customization">Настройка цвета фона</string>
     <string name="why_upgrade_file_importing">Поддержка импорта файлов</string>
     <string name="why_upgrade_zooming">Масштабирование</string>
-    <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, облегчающие наш труд. Спасибо им.</string>
-    <string name="third_party_licences">Лицензии третьих лиц</string>
+    <string name="third_party_licences">Лицензии третьих сторон</string>
     <string name="kotlin_title">Kotlin (язык программирования)</string>
     <string name="subsampling_title">Subsampling Scale Image View (возможность масштабирования изображений)</string>
     <string name="glide_title">Glide (загрузка и кэширование изображений)</string>
@@ -1143,4 +1141,6 @@
     <string name="confirm_storage_access_restricted_text_open_system">Открыть в системном приложении</string>
     <string name="evalex_title">EvalEx (вычисление математических выражений)</string>
     <string name="requires_fossify_thank_you">Требуется Fossify Thank You</string>
+    <string name="enables_more_customization">Дополнительные настройки</string>
+    <string name="translation_latvian">Латышский</string>
 </resources>

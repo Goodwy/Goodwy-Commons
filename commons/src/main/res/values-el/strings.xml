@@ -606,7 +606,6 @@
     <string name="color_customization">Προσαρμογή χρώματος</string>
     <string name="improved_color_customization">Βελτιωμένη προσαρμογή χρώματος</string>
     <string name="customize_colors">Προσαρμογή χρωμάτων</string>
-    <string name="customize_colors_locked">Προσαρμογή χρωμάτων (Κλειδωμένο)</string>
     <string name="feature_locked">Κλειδωμένο</string>
     <string name="customize_widget_colors">Προσαρμογή χρωμάτων widget</string>
     <string name="customize_notifications">Προσαρμογή ειδοποιήσεων</string>
@@ -927,7 +926,6 @@
     <string name="why_upgrade_background_color_customization">Προσαρμογή χρώματος φόντου</string>
     <string name="why_upgrade_file_importing">Υποστήριξη εισαγωγής αρχείων</string>
     <string name="why_upgrade_zooming">Μεγέθυνση</string>
-    <string name="notice">Αυτή η εφαρμογή χρησιμοποιεί τις ακόλουθες βιβλιοθήκες τρίτων για να διευκολύνει τη ζωή μου. Ευχαριστώ.</string>
     <string name="third_party_licences">Άδειες τρίτων</string>
     <string name="kotlin_title">Kotlin (γλώσσα προγραμματισμού)</string>
     <string name="trial_expired">Η Δοκιμή έληξε</string>

@@ -10,7 +10,7 @@ import com.goodwy.commons.extensions.adjustAlpha
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.getContrastColor
 
-class MyMaterialSwitch : MaterialSwitch {
+open class MyMaterialSwitch : MaterialSwitch {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)

@@ -213,11 +213,11 @@
     <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">Extension cannot be empty</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames</string>
+    <string name="prepend_filenames">Add text before filenames</string>
+    <string name="append_filenames">Add text after filenames</string>
     <string name="simple_renaming">Simple renaming</string>
     <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
+    <string name="string_to_add">Text to add</string>
     <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
     <string name="filename_without_txt">Filename (without .txt)</string>
     <string name="filename_without_json">Filename (without .json)</string>
@@ -691,11 +691,11 @@
     <string name="settings">Settings</string>
     <string name="purchase_simple_thank_you">Purchase Fossify Thank You</string>
     <string name="requires_fossify_thank_you">Requires Fossify Thank You</string>
+    <string name="enables_more_customization">Enables more customization</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Color customization</string>
     <string name="improved_color_customization">Improved color customization</string>
     <string name="customize_colors">Customize colors</string>
-    <string name="customize_colors_locked">Customize colors (Locked)</string>
     <string name="theme_and_colors">Theme and colors</string>
     <string name="feature_locked">Locked</string>
     <string name="customize_widget_colors">Customize widget colors</string>
@@ -1068,6 +1068,7 @@
     <string name="translation_japanese">Japanese</string>
     <string name="translation_kabyle">Kabyle</string>
     <string name="translation_korean">Korean</string>
+    <string name="translation_latvian">Latvian</string>
     <string name="translation_lithuanian">Lithuanian</string>
     <string name="translation_nepali">Nepali</string>
     <string name="translation_norwegian">Norwegian</string>
@@ -1138,8 +1139,7 @@
     <string name="why_upgrade_zooming">Zooming</string>
 
     <!-- License -->
-    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">Third party licences</string>
+    <string name="third_party_licences">Third-party licences</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
     <string name="glide_title">Glide (image loading and caching)</string>

@@ -99,6 +99,8 @@ fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg", true)
 
 fun String.isSvg() = endsWith(".svg", true)
 
+fun String.isAvif() = endsWith(".avif", true)
+
 fun String.isPortrait() = getFilenameFromPath().contains("portrait", true) && File(this).parentFile?.name?.startsWith("img_", true) == true
 
 // fast extension checks, not guaranteed to be accurate
@@ -614,6 +616,7 @@ fun String.getMimeType(): String {
         put("library-ms", "application/windows-library+xml")
         put("lit", "application/x-ms-reader")
         put("loadtest", "application/xml")
+        put("log", "text/plain")
         put("lpk", "application/octet-stream")
         put("lsf", "video/x-la-asf")
         put("lst", "text/plain")

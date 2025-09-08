@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatSeekBar
 import com.goodwy.commons.extensions.applyColorFilter
 
-class MySeekBar : AppCompatSeekBar {
+open class MySeekBar : AppCompatSeekBar {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)

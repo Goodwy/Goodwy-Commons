@@ -14,7 +14,7 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.LOWER_ALPHA
 import com.goodwy.commons.helpers.MEDIUM_ALPHA
 
-class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
+open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
     var isSearchOpen = false
     var useArrowIcon = false
     var onSearchOpenListener: (() -> Unit)? = null

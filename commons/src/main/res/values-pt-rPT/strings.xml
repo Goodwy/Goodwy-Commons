@@ -40,7 +40,6 @@
     <string name="translation_bulgarian">Búlgaro</string>
     <string name="translation_catalan">Catalão</string>
     <string name="why_upgrade_private_contact_sharing">Compartilhamento entre contatos opcional dentro de nossos apps</string>
-    <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
     <string name="yes">Sim</string>
     <string name="contacts_tab">Contatos</string>
     <string name="in_december">em Dezembro</string>
@@ -520,7 +519,6 @@
     <string name="during_day_at">Durante o dia às %1$02d:%2$02d</string>
     <string name="general_settings">Geral</string>
     <string name="customize_colors">Personalizar cores</string>
-    <string name="customize_colors_locked">Personalizar cores (Locked)</string>
     <string name="feature_locked">Trancado</string>
     <string name="customize_notifications">Personalizar notificações</string>
     <string name="customize_widget_colors">Personalizar cores de widget</string>

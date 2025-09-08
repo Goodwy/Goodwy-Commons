@@ -413,7 +413,6 @@
     <string name="general_settings">Generelt</string>
     <string name="color_customization">Fargetilpasning</string>
     <string name="customize_colors">Tilpass farger</string>
-    <string name="customize_colors_locked">Tilpass farger (låst)</string>
     <string name="customize_widget_colors">Tilpass modulfarger</string>
     <string name="customize_notifications">Tilpass varsler</string>
     <string name="notification_sound">Varslingslyd</string>
@@ -582,4 +581,8 @@
     <string name="search_favorites">Søk i favoritter</string>
     <string name="search_groups">Søk i grupper</string>
     <string name="format_phone_numbers">Formatere telefonnumre</string>
+    <string name="storage">Lagring</string>
+    <string name="internal_storage">Intern lagring</string>
+    <string name="files_tab">Filer</string>
+    <string name="recent_files_tab">Nylige filer</string>
 </resources>

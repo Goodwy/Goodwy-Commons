@@ -504,7 +504,6 @@
     <string name="general_settings">通用</string>
     <string name="color_customization">颜色定制</string>
     <string name="customize_colors">自定义颜色</string>
-    <string name="customize_colors_locked">自定义颜色 (锁定)</string>
     <string name="feature_locked">已锁定</string>
     <string name="customize_widget_colors">自定义小部件颜色</string>
     <string name="customize_notifications">自定义通知</string>
@@ -776,7 +775,6 @@
     <string name="why_upgrade_background_color_customization">自定义背景色</string>
     <string name="why_upgrade_file_importing">支持文件导入</string>
     <string name="why_upgrade_zooming">缩放</string>
-    <string name="notice">此应用使用了以下三方库。致谢。</string>
     <string name="third_party_licences">第三方许可证</string>
     <string name="kotlin_title">Kotlin (编程语言)</string>
     <string name="subsampling_title">子采样比例图像视图 (可缩放的图像视图)</string>

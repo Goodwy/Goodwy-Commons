@@ -14,7 +14,6 @@
     <string name="purchase_simple_thank_you">Ceannaigh Fossify Go raibh maith agat</string>
     <string name="improved_color_customization">Saincheapadh datha feabhsaithe</string>
     <string name="customize_colors">Saincheap dathanna</string>
-    <string name="customize_colors_locked">Saincheap dathanna (faoi ghlas)</string>
     <string name="feature_locked">Faoi Ghlas</string>
     <string name="customize_widget_colors">Saincheap dathanna giuirléidí</string>
     <string name="customize_notifications">Saincheap fógraí</string>
@@ -732,11 +731,11 @@
     <string name="filename_invalid_characters_placeholder">Tá carachtair neamhbhailí in ainm comhaid \'%s\'</string>
     <string name="extension_cannot_be_empty">Ní féidir leis an síneadh a bheith folamh</string>
     <string name="source_file_doesnt_exist">Níl comhad foinseach %s ann</string>
-    <string name="prepend_filenames">Prepend comhadainmneacha</string>
-    <string name="append_filenames">Iarcheangail comhadainmneacha</string>
+    <string name="prepend_filenames">Cuir téacs roimh ainmneacha comhad</string>
+    <string name="append_filenames">Cuir téacs i ndiaidh ainmneacha comhad</string>
     <string name="simple_renaming">Athainmniú simplí</string>
     <string name="pattern_renaming">Patrún</string>
-    <string name="string_to_add">Teaghrán le cur leis</string>
+    <string name="string_to_add">Téacs le cur leis</string>
     <string name="filename_without_txt">Ainm comhaid (gan .txt)</string>
     <string name="filename_without_json">Ainm comhaid (gan .json)</string>
     <string name="filename_without_zip">Ainm comhaid (gan .zip)</string>
@@ -1040,8 +1039,8 @@
         <item quantity="other">%d míreanna á scriosadh</item>
     </plurals>
     <string name="purchase_thank_you"><![CDATA[
- Ceannaigh <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Go raibh maith agat le Fossify</a> chun an fheidhm seo a dhíghlasáil agus tacú leis an bhforbairt. Go raibh maith agat!
- ]]></string>
+            Ceannaigh <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Go raibh maith agat</a> le do thoil chun an ghné seo a dhíghlasáil agus tacú le forbairt. Go raibh maith agat!
+        ]]></string>
     <string name="faq_9_text_commons">Tá bealaí éagsúla ann chun é sin a dhéanamh. Tá an chéad cheann ag tosú ar an modh roghnúcháin trí mhír amháin a bhrú le fada, ansin cliceáil gearr ar dhaoine eile chun iad a roghnú. Tá an dara bealach cosúil le míreanna a roghnú ar ríomhairí pearsanta le luch, ach tús a chur leis an modh roghnúcháin trí mhír amháin a bhrú le fada, ansin le do mhéar fós síos tarraing é thar mhíreanna eile le roghnú. Is é an tríú bealach chun míreanna iolracha a roghnú ná mír amháin a bhrú le fada, ansin brú fada ar cheann eile agus roghnaítear gach rud idir eatarthu. Más mian leat gach mír a roghnú, brúigh mír amháin le fada, ansin cliceáil ar an gcuntar míre roghnaithe ag an gcúinne ag barr na láimhe clé. Roghnóidh sé sin gach rud nó díroghnaigh é.</string>
     <string name="faq_10_title_commons">Cheannaigh mé an aip, ach ní féidir liom é a íoslódáil ar ghléas eile.</string>
     <string name="faq_10_text_commons">Bain triail as do thaisce app Google Play a ghlanadh agus do ghléas a atosú. Tá sé roinnt glitch Google Play, nach bhfuil baint i ndáiríre leis an app féin.</string>
@@ -1104,7 +1103,6 @@
     <string name="why_upgrade_background_color_customization">Saincheapadh datha cúlra</string>
     <string name="why_upgrade_file_importing">Tacaíocht iompórtála comhad</string>
     <string name="why_upgrade_zooming">Zúmáil</string>
-    <string name="notice">Úsáideann an aip seo na leabharlanna tríú páirtí seo a leanas chun mo shaol a dhéanamh níos éasca. Go raibh maith agat.</string>
     <string name="third_party_licences">Ceadúnais tríú páirtí</string>
     <string name="kotlin_title">Kotlin (teanga ríomhchlárúcháin)</string>
     <string name="subsampling_title">Amharc Íomhá Scála Foshamplála (amharc íomhá zúmáilte)</string>
@@ -1158,4 +1156,8 @@
     <string name="confirm_storage_access_restricted_text_open_system">Oscail san aip córais</string>
     <string name="more_fossify_apps">Tuilleadh aipeanna Fossify</string>
     <string name="rate_this_app">Rátáil an aip seo</string>
+    <string name="requires_fossify_thank_you">Éilíonn Fossify Go raibh maith agat</string>
+    <string name="evalex_title">EvalEx (meastóireacht ar shloinnt mhatamaitice)</string>
+    <string name="enables_more_customization">Cumasaíonn sé níos mó saincheaptha</string>
+    <string name="translation_latvian">Laitvis</string>
 </resources>

@@ -554,7 +554,6 @@
     <string name="color_customization">Persoaliza a cor</string>
     <string name="improved_color_customization">Persoalización mellorada das cores</string>
     <string name="customize_colors">Cambiar cores</string>
-    <string name="customize_colors_locked">Persoalizalas cores (bloqueado)</string>
     <string name="feature_locked">Pechado</string>
     <string name="customize_widget_colors">Persoalizalas cores do widget</string>
     <string name="customize_notifications">Persoalizalas notificacións</string>
@@ -743,7 +742,7 @@
 \nCando esteas satisfeito coa configuración da túa versión Pro, podes desinstalala antiga gratuíta porque xa non a necesitarás, tamén evitarás ver esta mensaxe.
 \n
 \nGrazas!</string>
-    <string name="about">Acerca de</string>
+    <string name="about">Sobre</string>
     <string name="website_label">Máis aplicativos sinxelos e código fonte en</string>
     <string name="email_label">Envía os teus comentarios ou suxerencias a</string>
     <string name="upgrade_to_pro">Actualiza a Pro</string>
@@ -899,7 +898,6 @@
     <string name="why_upgrade_background_color_customization">Personalización da cor de fondo</string>
     <string name="why_upgrade_file_importing">Importando o ficheiro de soporte</string>
     <string name="why_upgrade_zooming">Zoom</string>
-    <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros que fan a miña vida máis fácil. Grazas.</string>
     <string name="third_party_licences">Licenzas de terceiros</string>
     <string name="kotlin_title">Kotlin (linguaxe de programación)</string>
     <string name="subsampling_title">Vista da imaxe a escala (vistas da imaxe con zoom)</string>
@@ -951,4 +949,8 @@
     <string name="pro_app_refund">Non esquezas que se desinstalas calquera app de pago antes de 2 horas, devolveránseche os cartos automáticamente. Se queres unha devolución máis tarde, contáctanos en hello@fossify.org e terala. Isto fai que sexa fácil probala :)</string>
     <string name="developer_description">Un grupo de aplicacións Android sinxelas e de código aberto con widgets persoalizables, sen anuncios e permisos innecesarios.</string>
     <string name="audio">Audio</string>
+    <string name="faq_2_text_commons"><![CDATA[
+            Claro que si. Podes falarlle á xente sobre as aplicacións ou valoralas positivamente. Tamén podes colaborar traducíndoas ao teu idioma ou actualizando e mantendo as xa existentes.
+            Aquí tes a guía para traducir <a href="https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file">nesta web</a>, ou contacta con nós en <a href="mailto:hello@fossify.org">hello@fossify.org</a> se queres facer algunha pregunta.
+        ]]></string>
 </resources>

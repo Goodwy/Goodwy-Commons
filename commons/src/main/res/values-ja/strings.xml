@@ -524,7 +524,6 @@
     <string name="color_customization">カラーカスタマイズ</string>
     <string name="improved_color_customization">カラーカスタマイズの改善</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
-    <string name="customize_colors_locked">表示色のカスタマイズ (Locked)</string>
     <string name="customize_widget_colors">ウィジェットの色をカスタマイズ</string>
     <string name="customize_notifications">通知をカスタマイズ</string>
     <string name="use_english_language">英語で表示する</string>
@@ -822,7 +821,6 @@
     <string name="why_upgrade_background_color_customization">背景色のカスタマイズ</string>
     <string name="why_upgrade_file_importing">ファイル入力対応</string>
     <string name="why_upgrade_zooming">拡大縮小</string>
-    <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。ありがとうございます。</string>
     <string name="third_party_licences">サードパーティー ライセンス</string>
     <string name="kotlin_title">Kotlin (プログラミング言語)</string>
     <string name="subsampling_title">Subsampling Scale Image View (ズーム可能画像ビュー)</string>

@@ -17,7 +17,7 @@ import com.goodwy.commons.helpers.isQPlus
 import java.lang.reflect.Field
 
 
-class MyEditText : AppCompatEditText {
+open class MyEditText : AppCompatEditText {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)

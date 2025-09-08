@@ -15,7 +15,7 @@ import com.goodwy.commons.helpers.MEDIUM_ALPHA
 import com.goodwy.commons.helpers.isQPlus
 import java.lang.reflect.Field
 
-class MyAutoCompleteTextView : AppCompatAutoCompleteTextView {
+open class MyAutoCompleteTextView : AppCompatAutoCompleteTextView {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)

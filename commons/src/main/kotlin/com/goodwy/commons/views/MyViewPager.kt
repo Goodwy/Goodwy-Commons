@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import com.duolingo.open.rtlviewpager.RtlViewPager
 
-class MyViewPager : RtlViewPager {
+open class MyViewPager : RtlViewPager {
 
     private var isPagingEnabled = true
 

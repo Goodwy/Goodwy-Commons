@@ -507,7 +507,6 @@
     <string name="color_customization">Kustomisasi warna</string>
     <string name="improved_color_customization">Kustomisasi warna ditingkatkan</string>
     <string name="customize_colors">Sesuaikan warna</string>
-    <string name="customize_colors_locked">Sesuaikan warna (Locked)</string>
     <string name="feature_locked">Terkunci</string>
     <string name="customize_widget_colors">Sesuaikan warna widget</string>
     <string name="customize_notifications">Kustomisasi notifikasi</string>
@@ -813,7 +812,6 @@
     <string name="why_upgrade_background_color_customization">Kustomisasi warna latar belakang</string>
     <string name="why_upgrade_file_importing">Mendukung pengimporan file</string>
     <string name="why_upgrade_zooming">Memperbesar</string>
-    <string name="notice">Aplikasi ini menggunakan pustaka pihak ketiga berikut untuk mempermudah pekerjaan. Terima kasih.</string>
     <string name="third_party_licences">Lisensi pihak ketiga</string>
     <string name="kotlin_title">Kotlin (bahasa pemrograman)</string>
     <string name="subsampling_title">Tampilan Gambar Skala Subsampling (tampilan gambar yang dapat diperbesar)</string>

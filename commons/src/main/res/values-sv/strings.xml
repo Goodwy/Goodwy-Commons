@@ -44,8 +44,8 @@
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Inga kontakter hittades</string>
     <string name="request_the_required_permissions">Begär de behörigheter som krävs</string>
-    <string name="no_access_to_contacts">Appen kunde inte nå dina kontakter</string>
-    <string name="no_phone_call_permission">Appen har inte behörighet att ringa telefonsamtal, ge den behörighet i din apparats inställningar</string>
+    <string name="no_access_to_contacts">Appen kunde inte komma åt dina kontakter</string>
+    <string name="no_phone_call_permission">Appen har inte behörighet att ringa telefonsamtal, bevilja behörigheten i enhetens inställningar</string>
     <string name="insert_text_here">Skriv här</string>
     <string name="call_person">Ring %s</string>
     <string name="confirm_calling_person">Bekräfta att du vill ringa %s</string>
@@ -175,7 +175,7 @@
     <string name="allow_notifications_incoming_messages">Du måste tillåta att appen visar aviseringar, annars kan den inte visa inkommande meddelanden.</string>
     <string name="allow_alarm_scheduled_messages">Du måste ge appen åtkomst till interna alarm, annars kan den inte skicka schemalagda meddelanden.</string>
     <string name="allow_alarm_sleep_timer">Du måste ge appen åtkomst till interna alarm, annars kan den inte stänga av appen efter sovtimern.</string>
-    <string name="allow_location_permission">Du måste tillåta att appen kommer åt din plats, annars känner den inte till det.</string>
+    <string name="allow_location_permission">Du måste ge appen åtkomst till din plats, annars vet den inte var du befinner dig.</string>
     <string name="grant_permission">Bevilja behörighet</string>
     <string name="permission_required">Behörighet krävs</string>
     <string name="rename_file">Byt namn på fil</string>
@@ -192,11 +192,11 @@
     <string name="filename_invalid_characters_placeholder">Filnamnet \'%s\' innehåller ogiltiga tecken</string>
     <string name="extension_cannot_be_empty">Filnamnstillägget får inte vara tomt</string>
     <string name="source_file_doesnt_exist">Källfilen %s finns inte</string>
-    <string name="prepend_filenames">Lägg till före filnamnen</string>
-    <string name="append_filenames">Lägg till efter filnamnen</string>
+    <string name="prepend_filenames">Lägg till text före filnamnen</string>
+    <string name="append_filenames">Lägg till text efter filnamnen</string>
     <string name="simple_renaming">Enkel namnändring</string>
     <string name="pattern_renaming">Mönster</string>
-    <string name="rename_date_time_pattern">%Y - år\n%M - månad\n%D - dag\n%h - timme\n%m - minut\n%s - sekund\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - år\n%M - månad\n%D - dag\n%h - timme\n%m - minut\n%s - sekund\n%i - tal som ökar från 1</string>
     <string name="filename_without_txt">Filnamn (utan .txt)</string>
     <string name="filename_without_json">Filnamn (utan .json)</string>
     <string name="filename_without_zip">Filnamn (utan .zip)</string>
@@ -248,8 +248,8 @@
     <string name="skip">Hoppa över</string>
     <string name="append">Lägg till \'_1\'</string>
     <string name="apply_to_all">Använd på alla konflikter</string>
-    <string name="system_folder_restriction">Systemet tillåter inte handlingen i den här mappen, vänligen välj en annan</string>
-    <string name="system_folder_copy_restriction">Systemet tillåter inte kopiering till denna mapp, välj någon annan</string>
+    <string name="system_folder_restriction">Systemet tillåter inte åtgärden i den här mappen, välj en annan</string>
+    <string name="system_folder_copy_restriction">Systemet tillåter inte kopiering till den här mappen, välj en annan</string>
     <string name="rename_in_sd_card_system_restriction">Systemet tillåter inte namnändring i denna mapp</string>
     <string name="rename_internal_system_restriction">Kan inte ändra namn på mappar direkt på det interna lagringsutrymmet, endast undermappar</string>
     <string name="cannot_rename_folder">Går ej att ändra namn på denna mapp</string>
@@ -264,7 +264,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Vänligen tryck på \'<b>Spara</b>\' längst ned på nästa skärm för att skapa den nya mappen.</string>
     <string name="confirm_selection">Bekräfta val</string>
     <string name="loading">Läser in…</string>
-    <string name="access_storage_prompt">Vänligen ge oss tillgänglighet till dina filer, den kanske inte fungerar väl utan det.</string>
+    <string name="access_storage_prompt">Ge appen åtkomst till alla dina filer, annars kanske den inte fungerar som den ska.</string>
     <plurals name="items">
         <item quantity="one">%d objekt</item>
         <item quantity="other">%d objekt</item>
@@ -290,7 +290,7 @@
     <string name="wrong_root_selected">Du har valt fel mapp, välj rotmappen på ditt SD-kort</string>
     <string name="sd_card_usb_same">SD-kortets och USB-enhetens sökvägar kan inte vara samma</string>
     <string name="app_on_sd_card">Du verkar ha appen installerad på ett SD-kort, vilket gör appwidgetarna otillgängliga. Du kommer inte ens se dem på listan över tillgängliga widgets. Det är en systembegränsning, så om du vill använda widgetarna måste du flytta tillbaka appen till internminnet.</string>
-    <string name="wrong_folder_selected">Fel mapp vald, vänligen välj sökväg \'%s\'</string>
+    <string name="wrong_folder_selected">Fel mapp har valts, välj sökvägen \'%s\'</string>
     <string name="properties">Egenskaper</string>
     <string name="path">Sökväg</string>
     <string name="items_selected">Valda objekt</string>
@@ -331,7 +331,7 @@
     <string name="save_before_closing">Du har ändringar som inte är sparade. Spara innan du lämnar?</string>
     <string name="global_theme_success">Färgerna har uppdaterats. Ett nytt Tema som heter \'Delat\' har lagts till, använd det för att uppdatera alla apparnas färger i framtiden.</string>
     <string name="purchase_thank_you"><![CDATA[
-            Köp <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a> för att låsa upp denna funktion och stödja utvecklingen. Tack!
+            Köp <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a> för att låsa upp den här funktionen och stödja utvecklingen. Tack!
         ]]></string>
     <string name="light_theme">Ljust</string>
     <string name="dark_theme">Mörkt</string>
@@ -588,7 +588,7 @@
     <string name="time_remaining">Återstående tid:\n%s</string>
     <string name="alarm_warning">Kontrollera att alarmet fungerar som det ska innan du förlitar dig på det. Det kanske inte fungerar som det ska på grund av batterisparrelaterade systembegränsningar.</string>
     <string name="reminder_warning">Kontrollera att påminnelserna fungerar som de ska innan du förlitar dig på dem. De kanske inte fungerar som de ska på grund av batterisparrelaterade systembegränsningar.</string>
-    <string name="notifications_disabled">Aviseringar för denna applikation är inaktiverade. Gå till dina enhetsinställningar för att aktivera dem.</string>
+    <string name="notifications_disabled">Aviseringar är inaktiverade för den här appen. Du kan aktivera dem i enhetens inställningar.</string>
     <string name="snooze">Snooza</string>
     <string name="dismiss">Stäng av</string>
     <string name="no_reminder">Ingen påminnelse</string>
@@ -604,7 +604,6 @@
     <string name="color_customization">Färganpassning</string>
     <string name="improved_color_customization">Förbättrad färganpassning</string>
     <string name="customize_colors">Anpassa färger</string>
-    <string name="customize_colors_locked">Anpassa färger (låst)</string>
     <string name="feature_locked">Låst</string>
     <string name="customize_widget_colors">Anpassa widgetarnas färger</string>
     <string name="customize_notifications">Anpassa aviseringar</string>
@@ -861,7 +860,9 @@
     <string name="sms_messenger_short">Meddelanden</string>
     <string name="thank_you_short">Tack</string>
     <string name="voice_recorder_short">Röstinspelare</string>
-    <string name="sideloaded_app">Det verkar som om din appversion är korrupt. Ladda ner originalversionen &lt;a href=%s&gt;här&lt;/a&gt;.</string>
+    <string name="sideloaded_app"><![CDATA[
+            Det verkar som om din appversion är skadad. Ladda ner originalversionen <a href="%s">här</a>.
+        ]]></string>
     <string name="frequently_asked_questions">Frågor och svar</string>
     <string name="before_asking_question">Innan du ställer en fråga, läs först</string>
     <string name="faq_1_title_commons">Hur kommer det sig att jag inte ser den här appwidgeten på listan över widgets\?</string>
@@ -959,7 +960,6 @@
     <string name="why_upgrade_background_color_customization">Anpassning av bakgrundsfärg</string>
     <string name="why_upgrade_file_importing">Stöd för filimport</string>
     <string name="why_upgrade_zooming">Zoomning</string>
-    <string name="notice">Denna app använder följande tredjepartsbibliotek för att göra mitt liv enklare. Tack.</string>
     <string name="third_party_licences">Tredjepartslicenser</string>
     <string name="kotlin_title">Kotlin (programmeringsspråk)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoombara bildvyer)</string>
@@ -1074,11 +1074,26 @@
     <string name="days_letter">%dd</string>
     <string name="july_short">Jul</string>
     <string name="august_short">Aug</string>
-    <string name="more_fossify_apps">Fler Fossifyappar</string>
+    <string name="more_fossify_apps">Fler Fossify-appar</string>
     <string name="rate_this_app">Betygsätt denna app</string>
     <string name="artist">Artist</string>
     <string name="hours_letter">%dh</string>
     <string name="support">Support</string>
     <string name="confirm_storage_access_restricted_text_not_found">Det gick inte att hitta någon systemapp för filhantering.</string>
     <string name="evalex_title">EvalEx (utvärdering av matematiska uttryck)</string>
+    <string name="requires_fossify_thank_you">Kräver Fossify Thank You</string>
+    <string name="string_to_add">Text som ska läggas till</string>
+    <string name="donate_short">Stöd oss genom att köpa &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt;, detta låser också upp alla appfunktioner inklusive färganpassning.</string>
+    <string name="shared_theme_note">Observera att även om du använder Pro-versionen av appen, behöver du fortfarande Fossify Thank You av tekniska skäl. Den tar hand om färgsynkroniseringen.</string>
+    <string name="features_locked">Den här funktionen är låst, köp &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt; för att låsa upp hela appen.&lt;br&gt;&lt;br&gt;Det är en engångsbetalning och om du inte är nöjd kan vi återbetala dig.</string>
+    <string name="donate_new">Hej,&lt;br&gt;&lt;br&gt;hoppas du gillar appen. Den innehåller ingen reklam och vi samlar inte heller in din data, stöd utvecklingen genom att köpa &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt;. Du får också tillgång till alla appfunktioner, inklusive färganpassning.&lt;br&gt;&lt;br&gt;Tack!</string>
+    <string name="app_icon_color_warning">Varning! Vissa startprogram hanterar kanske inte anpassning av appikoner korrekt. Om ikonen försvinner kan du, om det är möjligt, prova att starta appen via Google Play eller en widget. När du har startat appen återställer du ikonens gröna standardfärg #106D1F. I extrema fall kan det vara nödvändigt att installera om appen.</string>
+    <string name="faq_6_text_commons">Det här problemet uppstår när startprogrammet inte har fullt stöd för ikonanpassning. Prova att starta appen via Google Play eller en widget, om det är möjligt. När du har startat appen återställer du ikonens gröna standardfärg #106D1F. I extrema fall kan det vara nödvändigt att installera om appen.</string>
+    <string name="contributors_label"><![CDATA[
+            Den här listan innehåller alla som på ett märkbart sätt har bidragit till någon Fossify-app, inte bara den här. Översättningarna hanteras av volontärer,
+            kontakta oss om du också vill hjälpa till. Översättningsguiden finns på <a href="https://github.com/FossifyOrg/General-Discussion#how-can-i-suggest-an-edit-to-a-file">den här webbplatsen</a>, kontakta oss på <a href="mailto:hello@fossify.org">hello@fossify.org</a> om du har några frågor.
+            Tack till alla bidragsgivare och andra supportrar!
+        ]]></string>
+    <string name="enables_more_customization">Möjliggör mer anpassning</string>
+    <string name="translation_latvian">Lettiska</string>
 </resources>

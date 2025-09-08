@@ -191,11 +191,11 @@
     <string name="filename_invalid_characters_placeholder">文件名“%s“包含无效字符</string>
     <string name="extension_cannot_be_empty">扩展名不能为空</string>
     <string name="source_file_doesnt_exist">源文件 %s 不存在</string>
-    <string name="prepend_filenames">文件名前缀</string>
-    <string name="append_filenames">文件名后缀</string>
+    <string name="prepend_filenames">文件名前添加文本</string>
+    <string name="append_filenames">文件名后添加文本</string>
     <string name="simple_renaming">简单重命名</string>
     <string name="pattern_renaming">格式</string>
-    <string name="string_to_add">要添加的字符串</string>
+    <string name="string_to_add">要添加的文本</string>
     <string name="rename_date_time_pattern">%Y - 年
 \n%M - 月
 \n%D - 日
@@ -585,7 +585,6 @@
     <string name="color_customization">颜色自定义</string>
     <string name="improved_color_customization">改进的颜色自定义</string>
     <string name="customize_colors">自定义颜色</string>
-    <string name="customize_colors_locked">自定义颜色 (锁定)</string>
     <string name="feature_locked">已锁定</string>
     <string name="customize_widget_colors">自定义微件颜色</string>
     <string name="customize_notifications">自定义通知</string>
@@ -921,7 +920,6 @@
     <string name="why_upgrade_background_color_customization">自定义背景色</string>
     <string name="why_upgrade_file_importing">支持导入文件</string>
     <string name="why_upgrade_zooming">缩放</string>
-    <string name="notice">本应用使用了下列的第三方程序库。非常感谢他们的贡献。</string>
     <string name="third_party_licences">第三方许可</string>
     <string name="kotlin_title">Kotlin (编程语言)</string>
     <string name="subsampling_title">Subsampling Scale Image View (可缩放图像视图)</string>
@@ -988,9 +986,9 @@
     <string name="translation_tamil">泰米尔语</string>
     <string name="translation_turkish">土耳其语</string>
     <string name="translation_ukrainian">乌克兰语</string>
-    <string name="translation_chinese_tw">中文 (繁体)</string>
-    <string name="translation_chinese_hk">中文 (香港特别行政区)</string>
-    <string name="translation_chinese_cn">中文 (简体)</string>
+    <string name="translation_chinese_tw">中文（繁体）</string>
+    <string name="translation_chinese_hk">中文（香港特别行政区）</string>
+    <string name="translation_chinese_cn">中文（简体）</string>
     <string name="week_number_short">周</string>
     <string name="translation_danish">丹麦语</string>
     <string name="translation_vietnamese">越南语</string>
@@ -1063,4 +1061,6 @@
     <string name="rate_this_app">评价此应用</string>
     <string name="evalex_title">EvalEx (数学表达式计值）</string>
     <string name="requires_fossify_thank_you">需要 Fossify Thank You</string>
+    <string name="enables_more_customization">允许更多自定义</string>
+    <string name="translation_latvian">拉脱维亚语</string>
 </resources>

@@ -195,7 +195,7 @@ internal fun ManageBlockedNumbersScreen(
         LazyColumn(
             state = state,
             modifier = Modifier.ifFalse(blockedNumbers.isNullOrEmpty()) {
-                Modifier.listDragHandlerLongKey(
+                listDragHandlerLongKey(
                     isScrollingUp = state.isScrollingUp(),
                     lazyListState = state,
                     haptics = hapticFeedback,
@@ -238,7 +238,7 @@ internal fun ManageBlockedNumbersScreen(
                                     }
                                 }
                                 .ifTrue(!isInActionMode) {
-                                    Modifier.combinedClickable(onLongClick = {
+                                    combinedClickable(onLongClick = {
                                         val selectable = longPressSelectableValue(lastClickedValue, blockedNumber, triggerReset) { bNumber1, bNumber2 ->
                                             updateSelectedIndices(blockedNumbers, bNumber1, bNumber2, selectedIds)
                                         }
@@ -249,7 +249,7 @@ internal fun ManageBlockedNumbersScreen(
                                     })
                                 }
                                 .ifTrue(isInActionMode) {
-                                    Modifier.combinedClickable(
+                                    combinedClickable(
                                         interactionSource = rememberMutableInteractionSource(),
                                         indication = null,
                                         enabled = !hasDraggingStarted,
@@ -431,7 +431,7 @@ private fun BlockedNumberTrailingContent(modifier: Modifier = Modifier, onDelete
             dismissMenu()
         }, text = {
             Text(
-                text = stringResource(id = R.string.delete),
+                text = stringResource(id = R.string.unblock),
                 modifier = Modifier.fillMaxWidth(),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Normal
@@ -526,7 +526,7 @@ private fun BlockedNumberActionMenu(
     val actionMenus = remember(selectedIdsCount) {
         val delete =
             ActionItem(
-                nameRes = R.string.delete,
+                nameRes = R.string.unblock,
                 icon = Icons.Rounded.Delete,
                 doAction = onDelete,
                 overflowMode = OverflowMode.NEVER_OVERFLOW,
@@ -549,7 +549,14 @@ private fun BlockedNumberActionMenu(
         }
         list.toImmutableList()
     }
-    ActionMenu(items = actionMenus, numIcons = if (selectedIdsCount == 1) 2 else 1, isMenuVisible = true, onMenuToggle = { }, iconsColor = iconColor)
+    var isMenuVisible by remember { mutableStateOf(false) }
+    ActionMenu(
+        items = actionMenus,
+        numIcons = if (selectedIdsCount == 1) 2 else 1,
+        isMenuVisible = isMenuVisible,
+        onMenuToggle = { isMenuVisible = it },
+        iconsColor = iconColor
+    )
 }
 
 @Composable

@@ -11,7 +11,7 @@ import com.goodwy.commons.extensions.getContrastColor
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.ShapeAppearanceModel
 
-class MyFloatingActionButton : FloatingActionButton {
+open class MyFloatingActionButton : FloatingActionButton {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)

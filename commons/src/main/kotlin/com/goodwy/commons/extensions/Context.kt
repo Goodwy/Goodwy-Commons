@@ -8,7 +8,15 @@ import android.app.Application
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.role.RoleManager
-import android.content.*
+import android.content.ActivityNotFoundException
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.ContentResolver
+import android.content.ContentUris
+import android.content.ContentValues
+import android.content.Context
+import android.content.ContextWrapper
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.PackageManager.PERMISSION_GRANTED
 import android.content.pm.ShortcutManager
@@ -19,12 +27,20 @@ import android.graphics.Point
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
 import android.net.Uri
-import android.os.*
+import android.os.Build
+import android.os.Bundle
+import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.ContactsContract.CommonDataKinds.*
 import android.provider.DocumentsContract
-import android.provider.MediaStore.*
+import android.provider.MediaStore.Audio
+import android.provider.MediaStore.Files
+import android.provider.MediaStore.Images
+import android.provider.MediaStore.MediaColumns
+import android.provider.MediaStore.Video
 import android.provider.OpenableColumns
 import android.provider.Settings
 import android.telecom.TelecomManager
@@ -245,7 +261,7 @@ private fun isDownloadsDocument(uri: Uri) = uri.authority == "com.android.provid
 
 private fun isExternalStorageDocument(uri: Uri) = uri.authority == "com.android.externalstorage.documents"
 
-fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this, getPermissionString(permId)) == PackageManager.PERMISSION_GRANTED
+fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this, getPermissionString(permId)) == PERMISSION_GRANTED
 
 fun Context.hasAllPermissions(permIds: Collection<Int>) = permIds.all(this::hasPermission)
 
@@ -504,24 +520,21 @@ fun Context.canAccessGlobalConfig(): Boolean {
     return isPro() && ContextCompat.checkSelfPermission(this, PERMISSION_WRITE_GLOBAL_SETTINGS) == PERMISSION_GRANTED
 }
 
-fun Context.isOrWasThankYouInstalled(): Boolean {
+fun Context.isOrWasThankYouInstalled(allowPretend: Boolean = true): Boolean {
     return when {
-        resources.getBoolean(R.bool.pretend_thank_you_installed) -> true
-        isPackageInstalled("com.goodwy.audiobook") -> true
-        isPackageInstalled("com.goodwy.voicerecorder") -> true
-        isPackageInstalled("com.goodwy.files") -> true
+        isPackageInstalled("com.goodwy.audiobook")
+            || isPackageInstalled("com.goodwy.voicerecorder")
+            || isPackageInstalled("com.goodwy.files") -> {
+            if (!baseConfig.hadThankYouInstalled) {
+                baseConfig.hadThankYouInstalled = true
+            }
+            true
+        }
+
+        baseConfig.hadThankYouInstalled -> true
+        resources.getBoolean(R.bool.pretend_thank_you_installed) && allowPretend -> true
         else -> false
     }
-}
-
-fun Context.getCustomizeColorsString(): String {
-    val textId = if (isOrWasThankYouInstalled()) {
-        R.string.customize_colors
-    } else {
-        R.string.customize_colors_locked
-    }
-
-    return getString(textId)
 }
 
 fun PackageManager.isAppInstalled(packageName: String): Boolean =
@@ -734,21 +747,22 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
     return newAlarmSound
 }
 
-@RequiresApi(Build.VERSION_CODES.N)
 fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
-    if (!needsStupidWritePermissions(path)) {
+    return if (!needsStupidWritePermissions(path)) {
         saveExifRotation(ExifInterface(path), degrees)
-        return true
-    } else if (isNougatPlus()) {
+        true
+    } else {
         val documentFile = getSomeDocumentFile(path)
         if (documentFile != null) {
-            val parcelFileDescriptor = contentResolver.openFileDescriptor(documentFile.uri, "rw")
+            val parcelFileDescriptor =
+                contentResolver.openFileDescriptor(documentFile.uri, "rw")
             val fileDescriptor = parcelFileDescriptor!!.fileDescriptor
             saveExifRotation(ExifInterface(fileDescriptor), degrees)
-            return true
+            true
+        } else {
+            false
         }
     }
-    return false
 }
 
 fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
@@ -1333,6 +1347,12 @@ fun Context.getDayOfWeekString(dayOfWeek: Int): String {
     }
 
     return getString(dayOfWeekResId)
+}
+
+fun Context.findActivity(): Activity? = when (this) {
+    is Activity -> this
+    is ContextWrapper -> baseContext.findActivity()
+    else -> null
 }
 
 //Goodwy

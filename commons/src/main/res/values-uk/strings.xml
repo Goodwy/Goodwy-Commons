@@ -37,7 +37,7 @@
     <string name="download">Завантажити</string>
     <string name="notification">Повідомлення</string>
     <string name="notifications">Повідомлення</string>
-    <string name="email">E-mail</string>
+    <string name="email">Електронна пошта</string>
     <string name="previous">Попередній</string>
     <string name="playpause">Відтворення / Пауза</string>
     <string name="next">Наступний</string>
@@ -196,11 +196,11 @@
     <string name="filename_invalid_characters_placeholder">Ім\'я файлу \'%s\' містить недопустимі символи</string>
     <string name="extension_cannot_be_empty">Розширення не може бути порожнім</string>
     <string name="source_file_doesnt_exist">Вихідний файл %s не існує</string>
-    <string name="prepend_filenames">Префікс імен файлів</string>
-    <string name="append_filenames">Суфікс імен файлів</string>
+    <string name="prepend_filenames">Додати текст перед іменами файлів</string>
+    <string name="append_filenames">Додати текст після назв файлів</string>
     <string name="simple_renaming">Просте перейменування</string>
     <string name="pattern_renaming">Шаблон</string>
-    <string name="string_to_add">Рядок для додавання</string>
+    <string name="string_to_add">Текст для додавання</string>
     <string name="rename_date_time_pattern">%Y - рік\n%M - місяць\n%D - день\n%h - година\n%m - хвилина\n%s - секунда\n%i - номер від 1</string>
     <string name="filename_without_txt">Ім\'я файлу (без .txt)</string>
     <string name="filename_without_json">Ім\'я файлу (без .json)</string>
@@ -677,7 +677,6 @@
     <string name="color_customization">Налаштування кольору</string>
     <string name="improved_color_customization">Покращено налаштування кольору</string>
     <string name="customize_colors">Налаштувати кольори</string>
-    <string name="customize_colors_locked">Налаштувати кольори (Locked)</string>
     <string name="feature_locked">Заблоковано</string>
     <string name="customize_widget_colors">Налаштувати кольори віджета</string>
     <string name="customize_notifications">Налаштувати повідомлення</string>
@@ -1052,7 +1051,6 @@
     <string name="why_upgrade_background_color_customization">Налаштування кольору фону</string>
     <string name="why_upgrade_file_importing">Підтримка імпорту файлів</string>
     <string name="why_upgrade_zooming">Масштабування</string>
-    <string name="notice">Цей застосунок створено з використанням наступних бібліотек сторонніх розробників, що полегшує мою працю. Дякую.</string>
     <string name="third_party_licences">Ліцензії третіх сторін</string>
     <string name="kotlin_title">Kotlin (мова програмування)</string>
     <string name="subsampling_title">Subsampling Scale Image View (можливість масштабувати зображення)</string>
@@ -1167,4 +1165,6 @@
     <string name="rate_this_app">Оцініть цей застосунок</string>
     <string name="evalex_title">EvalEx (оцінка математичного виразу)</string>
     <string name="requires_fossify_thank_you">Потрібно Fossify Дякую</string>
+    <string name="enables_more_customization">Дозволяє більше налаштувань</string>
+    <string name="translation_latvian">Латиська</string>
 </resources>

@@ -7,7 +7,7 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatRadioButton
 import com.goodwy.commons.extensions.adjustAlpha
 
-class MyCompatRadioButton : AppCompatRadioButton {
+open class MyCompatRadioButton : AppCompatRadioButton {
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
