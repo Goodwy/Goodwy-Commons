@@ -970,21 +970,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun setupPurchaseThankYou() {
-        binding.settingsPurchaseThankYou.setTextColor(getProperTextColor())
-        binding.aboutAppVersion.setTextColor(getProperTextColor())
         binding.settingsPurchaseThankYouHolder.beGoneIf(isProVersion())
-        binding.settingsPurchaseThankYouHolder.setOnClickListener {
-            launchPurchase()
-        }
-        binding.moreButton.setOnClickListener {
-            launchPurchase()
-        }
-        val appDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_plus_support, getProperPrimaryColor())
-        binding.purchaseLogo.setImageDrawable(appDrawable)
-        val drawable = resources.getColoredDrawableWithColor(this, R.drawable.button_gray_bg, getProperPrimaryColor())
-        binding.moreButton.background = drawable
-        binding.moreButton.setTextColor(getProperBackgroundColor())
-        binding.moreButton.setPadding(2,2,2,2)
+        binding.settingsPurchaseThankYouHolder.onClick = { launchPurchase() }
     }
 
     private fun launchPurchase() {

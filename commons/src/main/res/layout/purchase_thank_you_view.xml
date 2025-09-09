@@ -1,23 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/purchase_thank_you_holder"
-    style="@style/SettingsHolderTextViewStyle"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingEnd="@dimen/normal_margin"
+    tools:ignore="RtlSymmetry">
 
-    <com.goodwy.commons.views.MyTextView
-        android:id="@+id/purchase_thank_you_label"
-        style="@style/SettingsTextLabelStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/purchase_simple_thank_you" />
+    <ImageView
+        android:id="@+id/purchase_logo"
+        android:layout_width="@dimen/app_logo"
+        android:layout_height="@dimen/app_logo"
+        android:layout_marginStart="@dimen/section_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:background="@drawable/button_white_bg"
+        android:elevation="8dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_plus_support"
+        android:tint="@color/color_primary"
+        android:contentDescription="@string/donate"
+        tools:ignore="UseAppTint"/>
 
-    <com.goodwy.commons.views.MyTextView
-        android:id="@+id/purchase_thank_you_value"
-        style="@style/SettingsTextValueStyle"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/purchase_thank_you_label"
-        android:text="@string/enables_more_customization" />
+        android:layout_marginStart="@dimen/section_margin"
+        android:layout_toEndOf="@+id/purchase_logo"
+        android:layout_centerVertical="true">
+
+        <com.goodwy.commons.views.MyTextView
+            android:id="@+id/purchase_thank_you_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_support_project"/>
+
+        <com.goodwy.commons.views.MyTextView
+            android:id="@+id/purchase_thank_you_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/purchase_thank_you_title"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:alpha="0.6"
+            android:text="@string/pref_pay_summary"
+            android:textSize="12sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/purchase_thank_you_more"
+            style="@style/AppTheme.Button.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/purchase_thank_you_label"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:alpha="0.4"
+            android:background="@drawable/button_gray_bg"
+            android:backgroundTint="@color/color_primary"
+            android:saveEnabled="false"
+            android:text="@string/learn_more"
+            android:textSize="10sp"
+            android:textAllCaps="true"
+            android:textColor="@color/default_text_color"
+            tools:ignore="SmallSp"/>
+    </RelativeLayout>
 
 </RelativeLayout>
