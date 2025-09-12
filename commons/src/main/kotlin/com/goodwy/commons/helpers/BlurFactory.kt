@@ -16,6 +16,8 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import kotlin.math.roundToInt
+import androidx.core.graphics.createBitmap
+import androidx.core.graphics.scale
 
 
 /**
@@ -104,7 +106,7 @@ object BlurFactory {
         var dest: Rect
 
         // assume all of the src bitmaps are the same height & width
-        wideBmp = Bitmap.createBitmap(outer.width, outer.height, outer.config)
+        wideBmp = createBitmap(outer.width, outer.height, outer.config)
         wideBmpCanvas = Canvas(wideBmp)
         src = Rect(0, 0, outer.width, outer.height)
         dest = Rect(src)
@@ -113,7 +115,7 @@ object BlurFactory {
 
         // Bitmap inner = Bitmap.createScaledBitmap(innerB, (int)(innerB.getWidth()*0.9), (int)(innerB.getHeight()*0.9), false);
         val scale = 6
-        val tempBmp = Bitmap.createScaledBitmap(inner, inner.width - inner.width / scale, inner.height - inner.height / scale, false)
+        val tempBmp = inner.scale(inner.width - inner.width / scale, inner.height - inner.height / scale, false)
         src = Rect(0, 0, tempBmp.width, tempBmp.height)
         dest = Rect(src)
         //dest.offset((inner.getHeight()/scale)/2, (inner.getHeight()/scale))/2;

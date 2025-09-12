@@ -94,7 +94,7 @@ fun Activity.appLaunched(appId: String) {
 
 fun Activity.isAppInstalledOnSDCard(): Boolean = try {
     val applicationInfo = packageManager.getPackageInfo(packageName, 0).applicationInfo
-    (applicationInfo.flags and ApplicationInfo.FLAG_EXTERNAL_STORAGE) == ApplicationInfo.FLAG_EXTERNAL_STORAGE
+    (applicationInfo?.flags?.and(ApplicationInfo.FLAG_EXTERNAL_STORAGE)) == ApplicationInfo.FLAG_EXTERNAL_STORAGE
 } catch (e: Exception) {
     false
 }

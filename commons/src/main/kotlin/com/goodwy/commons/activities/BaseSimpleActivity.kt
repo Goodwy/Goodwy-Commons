@@ -293,12 +293,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private fun scrollingChanged(newScrollY: Int, oldScrollY: Int, isMySearchMenu: Boolean = false) {
         if (newScrollY > 0 && oldScrollY == 0) {
-            val colorFrom = window.statusBarColor
+            val colorFrom = getProperBackgroundColor()
             val colorTo = getColoredMaterialStatusBarColor()
             if (isMySearchMenu) animateMySearchMenuColors(colorFrom, colorTo)
             else  animateTopBarColors(colorFrom, colorTo)
         } else if (newScrollY == 0 && oldScrollY > 0) {
-            val colorFrom = window.statusBarColor
+            val colorFrom = getProperBackgroundColor()
             val colorTo = getRequiredStatusBarColor()
             if (isMySearchMenu) animateMySearchMenuColors(colorFrom, colorTo)
             else animateTopBarColors(colorFrom, colorTo)

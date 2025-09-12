@@ -7,6 +7,10 @@ plugins {
 android {
     namespace = "com.goodwy.strings"
     compileSdk = libs.versions.app.build.compileSDKVersion.get().toInt()
+
+    publishing {
+        singleVariant("release") {}
+    }
 }
 
 publishing.publications {
