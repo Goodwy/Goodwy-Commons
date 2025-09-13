@@ -35,8 +35,8 @@
         ]]></string>
     <string name="lifebuoy_title">ما از شما حمایت خواهیم کرد</string>
     <string name="lifebuoy_summary">اگر به دلایلی شما می توانید برنامه ما استطاعت نیست، اما واقعا می خواهید به استفاده از تمام ویژگی ها، فقط به ما ایمیل</string>
-    <string name="participants_title">Participants</string>
-    <string name="special_thanks_to">Special thanks to</string>
+    <string name="participants_title">شرکت‌کنندگان</string>
+    <string name="special_thanks_to">تشکر ویژه از</string>
     <string name="tip_kind">پشتیبانی خوب</string>
     <string name="tip_excellent">پشتیبانی عالی</string>
     <string name="tip_incredible">پشتیبانی عالی</string>
@@ -48,9 +48,9 @@
     <string name="unlock">Unlock</string>
     <string name="donate_text_g">
         <![CDATA[
-            For those who do not use Google Play, it is possible to unlock all functions of the application. <br>
-            If you like our apps which are offline, non-intrusive and have no ads, please consider supporting us in some way. We would be very grateful.<br><br>
-            Thank you!
+            برای کسانی که از گوگل پلی استفاده نمی‌کنند، امکان باز کردن قفل همه عملکردهای برنامه وجود دارد. <br>
+اگر برنامه‌های ما را که آفلاین، بدون مزاحمت و بدون تبلیغات هستند دوست دارید، لطفاً به نوعی از ما حمایت کنید. ما بسیار سپاسگزار خواهیم بود. <br><br>
+متشکرم!
         ]]>
     </string>
 
@@ -67,7 +67,7 @@
     <string name="use_accent_color_summary">یک رنگ اضافی که در برخی از عناصر رابط کاربری استفاده می شود.</string>
     <string name="app_icon_color_warning_g">توجه: برخی از راه اندازها ممکن است نماد برنامه سفارشی را به درستی نمایش ندهند. اگر نماد ناپدید شد، برنامه را از طریق Google Play یا از طریق ویجت آن (در صورت امکان) اجرا کنید.         پس از راه اندازی، رنگ نماد پیش فرض را بازیابی کنید. در موارد شدید، ممکن است لازم باشد برنامه را دوباره نصب کنید.</string>
     <string name="app_icon_color_shortcuts_warning_g">احتیاط: با تغییر نماد برنامه، میانبرهای برنامه حذف می شود.</string>
-    <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
+    <string name="show_contact_thumbnails_g">نمایش تصاویر کوچک مخاطبین</string>
     <string name="use_icon_tabs_summary">آیکون ها به جای متن بر روی زبانه ها</string>
     <string name="use_icon_tabs">استفاده از آیکون های زبانه</string>
     <string name="round_play_icon_summary">نماد بازی/ مکث در رنگ اولیه رنگ آمیزی شده است</string>
@@ -90,12 +90,12 @@
     <string name="transparent_navigation_bar">Transparent bottom navigation bar</string>
     <string name="kids_mode">Kids mode</string>
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
-    <string name="restart_required">Application restart required</string>
+    <string name="restart_required">راه اندازی مجدد برنامه مورد نیاز است</string>
     <string name="transparent_bar">Transparent bars</string>
     <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
-    <string name="bottom_navigation_bar">Bottom navigation bar</string>
-    <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
+    <string name="material_design_3_summary">تغییر ظاهر برخی از عناصر برنامه</string>
+    <string name="bottom_navigation_bar">نوار ناوبری پایین</string>
+    <string name="bottom_navigation_bar_summary">نوار تب به پایین منتقل می‌شود</string>
     <string name="tab_navigation">ناوبری زبانه</string>
     <string name="top">بالا</string>
     <string name="bottom">زیر</string>
@@ -127,7 +127,7 @@
     <string name="primary_sim_card">سیم کارت اصلی</string>
     <string name="button_primary">دکمه اصلی</string>
     <string name="button_secondary">دکمه ثانویه</string>
-    <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
+    <string name="skip_archive_confirmation">همیشه از پنجره تأیید بایگانی صرف نظر کنید</string>
     <string name="swipe_gestures">حرکات تند وشدید زدن</string>
     <string name="swipe_left_action">ضربه تند وشدید زدن به چپ</string>
     <string name="swipe_right_action">ضربه تند وشدید زدن به راست</string>
@@ -257,20 +257,20 @@
     <string name="relations_g">شخص ذي صلة</string>
     <string name="relation_hint_g">شخص مرتبط</string>
     <!-- Android ContactContract.Relation types -->
-    <string name="relation_assistant_g">Assistant</string>
-    <string name="relation_brother_g">Brother</string>
-    <string name="relation_child_g">Child</string>
-    <string name="relation_domestic_partner_g">Domestic Partner</string>
-    <string name="relation_father_g">Father</string>
-    <string name="relation_friend_g">Friend</string>
-    <string name="relation_manager_g">Manager</string>
-    <string name="relation_mother_g">Mother</string>
-    <string name="relation_parent_g">Parent</string>
-    <string name="relation_partner_g">Partner</string>
-    <string name="relation_referred_by_g">Referred by</string>
-    <string name="relation_relative_g">Relative</string>
-    <string name="relation_sister_g">Sister</string>
-    <string name="relation_spouse_g">Spouse</string>
+    <string name="relation_assistant_g">دستیار</string>
+    <string name="relation_brother_g">برادر</string>
+    <string name="relation_child_g">فرزند</string>
+    <string name="relation_domestic_partner_g">شریک خانگی</string>
+    <string name="relation_father_g">پدر</string>
+    <string name="relation_friend_g">دوست</string>
+    <string name="relation_manager_g">مدیر</string>
+    <string name="relation_mother_g">مادر</string>
+    <string name="relation_parent_g">والد</string>
+    <string name="relation_partner_g">شریک</string>
+    <string name="relation_referred_by_g">معرفی شده توسط</string>
+    <string name="relation_relative_g">خویشاوند</string>
+    <string name="relation_sister_g">خواهر</string>
+    <string name="relation_spouse_g">همسر</string>
     <!-- vCard 4.0 relation types -->
     <string name="relation_contact_g">Contact</string>
     <string name="relation_acquaintance_g">Acquaintance</string>
@@ -315,13 +315,13 @@
 
     <!-- RuStore -->
     <string name="billing_general_error">Error</string>
-    <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
-    <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
-    <string name="billing_product_confirmed">Product confirmed/substantiated</string>
-    <string name="billing_product_deleted">Purchase canceled</string>
-    <string name="billing_subscriptions">Subscriptions</string>
-    <string name="billing_change_to_google_play">Change to Google Play</string>
-    <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_purchase_confirm_in_progress">تایید خرید…</string>
+    <string name="billing_purchase_delete_in_progress">حذف خرید…</string>
+    <string name="billing_product_confirmed">محصول تأیید/اثبات شد</string>
+    <string name="billing_product_deleted">خرید لغو شد</string>
+    <string name="billing_subscriptions">اشتراک‌ها</string>
+    <string name="billing_change_to_google_play">تغییر به Google Play</string>
+    <string name="billing_change_to_ru_store">تغییر به RuStore</string>
     <string name="date">تاریخ</string>
     <string name="starts">شروع</string>
     <string name="ends">پایان</string>
