@@ -807,7 +807,7 @@ open class BaseConfig(val context: Context) {
         set(changeColourTopBar) = prefs.edit { putBoolean(CHANGE_COLOUR_TOP_BAR, changeColourTopBar) }
 
     var useShamsi: Boolean //Persian Calendar
-        get() = prefs.getBoolean(USE_SHAMSI, true)
+        get() = prefs.getBoolean(USE_SHAMSI, false)
         set(useShamsi) = prefs.edit { putBoolean(USE_SHAMSI, useShamsi) }
 
     var usePersianDigits: Boolean
