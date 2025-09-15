@@ -173,6 +173,8 @@
     <string name="contact_thumbnails_size">Contact thumbnails size</string>
     <string name="typeface">Typeface</string>
     <string name="long_click_g">Long click %s</string>
+    <string name="use_persian_calendar">Use Persian calendar</string>
+    <string name="use_persian_digits">Use Persian digits</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

@@ -417,6 +417,8 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(DATE_FORMAT, getDefaultDateFormat())!!
         set(dateFormat) = prefs.edit { putString(DATE_FORMAT, dateFormat) }
 
+    val isDateFormat: Flow<String> = ::dateFormat.asFlowNonNull()
+
     private fun getDefaultDateFormat(): String {
         val format = DateFormat.getDateFormat(context)
         val pattern = (format as SimpleDateFormat).toLocalizedPattern()
@@ -803,6 +805,14 @@ open class BaseConfig(val context: Context) {
     var changeColourTopBar: Boolean
         get() = prefs.getBoolean(CHANGE_COLOUR_TOP_BAR, true)
         set(changeColourTopBar) = prefs.edit { putBoolean(CHANGE_COLOUR_TOP_BAR, changeColourTopBar) }
+
+    var useShamsi: Boolean //Persian Calendar
+        get() = prefs.getBoolean(USE_SHAMSI, true)
+        set(useShamsi) = prefs.edit { putBoolean(USE_SHAMSI, useShamsi) }
+
+    var usePersianDigits: Boolean
+        get() = prefs.getBoolean(USE_PERSIAN_DIGITS, false)
+        set(usePersianDigits) = prefs.edit { putBoolean(USE_PERSIAN_DIGITS, usePersianDigits) }
 }
 
 

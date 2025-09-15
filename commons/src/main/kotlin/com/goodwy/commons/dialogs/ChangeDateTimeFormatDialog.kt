@@ -33,27 +33,29 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.compose.theme.preferenceLabelColor
 import com.goodwy.commons.databinding.DialogChangeDateTimeFormatBinding
 import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.beVisible
+import com.goodwy.commons.extensions.beVisibleIf
+import com.goodwy.commons.extensions.formatDate
 import com.goodwy.commons.extensions.getAlertDialogBuilder
 import com.goodwy.commons.extensions.setupDialogStuff
 import com.goodwy.commons.helpers.*
 import java.util.Calendar
 import java.util.Locale
 
-class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Unit) {
+class ChangeDateTimeFormatDialog(val activity: Activity, val showShamsi: Boolean = false, val callback: () -> Unit) {
     private val view = DialogChangeDateTimeFormatBinding.inflate(activity.layoutInflater, null, false)
 
     init {
         view.apply {
-            changeDateTimeDialogRadioOne.text = formatDateSample(DATE_FORMAT_ONE)
-            changeDateTimeDialogRadioTwo.text = formatDateSample(DATE_FORMAT_TWO)
-            changeDateTimeDialogRadioThree.text = formatDateSample(DATE_FORMAT_THREE)
-            changeDateTimeDialogRadioFour.text = formatDateSample(DATE_FORMAT_FOUR)
-            changeDateTimeDialogRadioFive.text = formatDateSample(DATE_FORMAT_FIVE)
-            changeDateTimeDialogRadioSix.text = formatDateSample(DATE_FORMAT_SIX)
-            changeDateTimeDialogRadioSeven.text = formatDateSample(DATE_FORMAT_SEVEN)
-            changeDateTimeDialogRadioEight.text = formatDateSample(DATE_FORMAT_EIGHT)
-
             changeDateTimeDialog24Hour.isChecked = activity.baseConfig.use24HourFormat
+
+            changeDateTimeDialogUseShamsiHolder.beVisibleIf(showShamsi)
+            changeDateTimeDialogUseShamsi.isChecked = activity.baseConfig.useShamsi
+
+            usePersianDigitsVisible()
+            changeDateTimeDialogUsePersianDigits.isChecked = activity.baseConfig.usePersianDigits
+
+            updateDate()
 
             val formatButton = when (activity.baseConfig.dateFormat) {
                 DATE_FORMAT_ONE -> changeDateTimeDialogRadioOne
@@ -63,17 +65,50 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
                 DATE_FORMAT_FIVE -> changeDateTimeDialogRadioFive
                 DATE_FORMAT_SIX -> changeDateTimeDialogRadioSix
                 DATE_FORMAT_SEVEN -> changeDateTimeDialogRadioSeven
+                DATE_FORMAT_TEN -> changeDateTimeDialogRadioTen
                 else -> changeDateTimeDialogRadioEight
             }
             formatButton.isChecked = true
+
+            changeDateTimeDialog24Hour.setOnCheckedChangeListener { _, _ ->
+                updateDate()
+            }
+
+            changeDateTimeDialogUseShamsi.setOnCheckedChangeListener { _, _ ->
+                usePersianDigitsVisible()
+                updateDate()
+            }
+
+            changeDateTimeDialogUsePersianDigits.setOnCheckedChangeListener { _, _ ->
+                updateDate()
+            }
         }
+
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
             .setNegativeButton(R.string.cancel, null)
             .apply {
-                activity.setupDialogStuff(view.root, this)
+                activity.setupDialogStuff(view.root, this, R.string.change_date_and_time_format)
             }
+    }
+
+    private fun usePersianDigitsVisible() {
+        view.changeDateTimeDialogUsePersianDigits.beVisibleIf(view.changeDateTimeDialogUseShamsi.isChecked && showShamsi)
+    }
+
+    private fun updateDate() {
+        view.apply {
+            changeDateTimeDialogRadioOne.text = formatDateSample(DATE_FORMAT_ONE)
+            changeDateTimeDialogRadioTwo.text = formatDateSample(DATE_FORMAT_TWO)
+            changeDateTimeDialogRadioThree.text = formatDateSample(DATE_FORMAT_THREE)
+            changeDateTimeDialogRadioFour.text = formatDateSample(DATE_FORMAT_FOUR)
+            changeDateTimeDialogRadioFive.text = formatDateSample(DATE_FORMAT_FIVE)
+            changeDateTimeDialogRadioSix.text = formatDateSample(DATE_FORMAT_SIX)
+            changeDateTimeDialogRadioSeven.text = formatDateSample(DATE_FORMAT_SEVEN)
+            changeDateTimeDialogRadioEight.text = formatDateSample(DATE_FORMAT_EIGHT)
+            changeDateTimeDialogRadioTen.text = formatDateSample(DATE_FORMAT_TEN)
+        }
     }
 
     private fun dialogConfirmed() {
@@ -85,17 +120,25 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
             view.changeDateTimeDialogRadioFive.id -> DATE_FORMAT_FIVE
             view.changeDateTimeDialogRadioSix.id -> DATE_FORMAT_SIX
             view.changeDateTimeDialogRadioSeven.id -> DATE_FORMAT_SEVEN
+            view.changeDateTimeDialogRadioTen.id -> DATE_FORMAT_TEN
             else -> DATE_FORMAT_EIGHT
         }
 
         activity.baseConfig.use24HourFormat = view.changeDateTimeDialog24Hour.isChecked
+        activity.baseConfig.useShamsi = view.changeDateTimeDialogUseShamsi.isChecked
+        activity.baseConfig.usePersianDigits = view.changeDateTimeDialogUsePersianDigits.isChecked
         callback()
     }
 
     private fun formatDateSample(format: String): String {
-        val cal = Calendar.getInstance(Locale.ENGLISH)
-//        cal.timeInMillis = timeSample
-        return DateFormat.format(format, cal).toString()
+//        val cal = Calendar.getInstance(Locale.ENGLISH)
+//        return DateFormat.format(format, cal).toString()
+
+        val timeFormat = if (view.changeDateTimeDialog24Hour.isChecked) TIME_FORMAT_24 else TIME_FORMAT_12
+        val useShamsi = view.changeDateTimeDialogUseShamsi.isChecked
+        val usePersianDigits = view.changeDateTimeDialogUsePersianDigits.isChecked
+        val cal = Calendar.getInstance(Locale.ENGLISH).timeInMillis
+        return cal.formatDate(activity, format, timeFormat, useShamsi, usePersianDigits)
     }
 }
 

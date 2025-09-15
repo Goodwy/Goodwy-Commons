@@ -11,6 +11,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -28,6 +29,13 @@ import com.goodwy.commons.compose.theme.LocalTheme
 import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.compose.theme.actionModeColor
 import com.goodwy.commons.compose.theme.model.Theme
+import com.goodwy.commons.extensions.formatDate
+import saman.zamani.persiandate.PersianDate
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.Calendar
+import java.util.Locale
 
 @Composable
 fun MainScreen(
@@ -40,6 +48,8 @@ fun MainScreen(
     moreAppsFromUs: () -> Unit,
     startPurchaseActivity: () -> Unit,
     isTopAppBarColorIcon: Boolean = false,
+    openDateButton: () -> Unit,
+    isDateFormat: String = "d.M.y",
 ) {
     SimpleScaffold(
         customTopBar = { scrolledColor: Color, _: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color ->
@@ -101,6 +111,13 @@ fun MainScreen(
             ) {
                 Text("Test button")
             }
+            Button(
+                onClick = openDateButton
+            ) {
+                val cal = Calendar.getInstance(Locale.ENGLISH).timeInMillis
+                val formatDate = cal.formatDate(LocalContext.current)
+                Text(formatDate)
+            }
         }
     }
 }
@@ -149,6 +166,7 @@ private fun MainScreenPreview() {
             openAbout = {},
             moreAppsFromUs = {},
             startPurchaseActivity = {},
+            openDateButton = {},
         )
     }
 }

@@ -14,6 +14,7 @@ import com.goodwy.commons.compose.alert_dialog.AlertDialogState
 import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.dialogs.ChangeDateTimeFormatDialog
 import com.goodwy.commons.dialogs.FilePickerDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.dialogs.SecurityDialog
@@ -33,6 +34,7 @@ class MainActivity : BaseSimpleActivity() {
         enableEdgeToEdgeSimple()
         setContent {
             val isTopAppBarColorIcon by config.isTopAppBarColorIcon.collectAsStateWithLifecycle(initialValue = config.topAppBarColorIcon)
+            val isDateFormat by config.isDateFormat.collectAsStateWithLifecycle(initialValue = config.dateFormat)
             AppThemeSurface {
                 val showMoreApps = onEventValue { !resources.getBoolean(com.goodwy.commons.R.bool.hide_google_relations) }
 
@@ -50,6 +52,8 @@ class MainActivity : BaseSimpleActivity() {
                     moreAppsFromUs = ::launchMoreAppsFromUsIntent,
                     startPurchaseActivity = ::launchPurchase,
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
+                    openDateButton = ::setupDateButton,
+                    isDateFormat = isDateFormat,
                 )
                 AppLaunched()
             }
@@ -155,6 +159,11 @@ class MainActivity : BaseSimpleActivity() {
         
 //        FilePickerDialog(this) {
 //        }
+    }
+
+    private fun setupDateButton() {
+        hideKeyboard()
+        ChangeDateTimeFormatDialog(this, true) {}
     }
 
     private val startDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->

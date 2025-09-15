@@ -166,6 +166,8 @@
     <string name="use_contact_colors">Использовать цвета контактов</string>
     <string name="typeface">Шрифт</string>
     <string name="long_click_g">Долгое нажатие %s</string>
+    <string name="use_persian_calendar">Использовать Персидский календарь</string>
+    <string name="use_persian_digits">Использовать Персидские цифры</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Размер фото контакта</string>

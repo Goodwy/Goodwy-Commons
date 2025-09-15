@@ -137,6 +137,7 @@ dependencies {
     api(projects.strings)
     api(libs.billing.client)
     api(libs.rustore.client)
+    api(libs.persian.date)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)
     implementation(libs.rx.java)

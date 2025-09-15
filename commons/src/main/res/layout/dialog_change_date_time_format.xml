@@ -40,6 +40,14 @@
                 tools:text="dd/MM/yyyy" />
 
             <com.goodwy.commons.views.MyCompatRadioButton
+                android:id="@+id/change_date_time_dialog_radio_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                tools:text="dd-MM-yyyy" />
+
+            <com.goodwy.commons.views.MyCompatRadioButton
                 android:id="@+id/change_date_time_dialog_radio_three"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,20 +57,21 @@
                 tools:text="MM/dd/yyyy" />
 
             <com.goodwy.commons.views.MyCompatRadioButton
-                android:id="@+id/change_date_time_dialog_radio_eight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="@dimen/normal_margin"
-                android:paddingBottom="@dimen/normal_margin"
-                tools:text="dd-MM-yyyy" />
-
-            <com.goodwy.commons.views.MyCompatRadioButton
                 android:id="@+id/change_date_time_dialog_radio_seven"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/normal_margin"
                 android:paddingBottom="@dimen/normal_margin"
                 tools:text="MM-dd-yyyy" />
+
+            <com.goodwy.commons.views.MyCompatRadioButton
+                android:id="@+id/change_date_time_dialog_radio_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textAllCaps="true"
+                tools:text="yyyy.MM.dd" />
 
             <com.goodwy.commons.views.MyCompatRadioButton
                 android:id="@+id/change_date_time_dialog_radio_four"
@@ -99,9 +108,51 @@
             android:id="@+id/change_date_time_dialog_24_hour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
+            android:paddingTop="@dimen/smaller_margin"
+            android:paddingBottom="@dimen/smaller_margin"
             android:text="@string/use_24_hour_time_format" />
+
+        <LinearLayout
+            android:id="@+id/change_date_time_dialog_use_shamsi_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.goodwy.commons.views.MyAppCompatCheckbox
+                android:id="@+id/change_date_time_dialog_use_shamsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/smaller_margin"
+                android:paddingBottom="@dimen/smaller_margin"
+                android:text="@string/use_persian_calendar" />
+
+            <TextView
+                android:id="@+id/settingsShowRecentCallsOnDialpadBeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:background="@drawable/button_rounded_5dp"
+                android:backgroundTint="@color/red_missed"
+                android:clickable="false"
+                android:paddingTop="@dimen/tiny_margin"
+                android:paddingBottom="@dimen/tiny_margin"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/beta"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:includeFontPadding="false"/>
+        </LinearLayout>
+
+        <com.goodwy.commons.views.MyAppCompatCheckbox
+            android:id="@+id/change_date_time_dialog_use_persian_digits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/smaller_margin"
+            android:paddingBottom="@dimen/smaller_margin"
+            android:text="@string/use_persian_digits" />
 
     </LinearLayout>
 </ScrollView>

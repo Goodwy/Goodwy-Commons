@@ -137,6 +137,11 @@
     <string name="vibrate_g">لرزش</string>
     <string name="ripple_g">موج دار شدن</string>
     <string name="use_contact_colors">استفاده از رنگهای اشنا</string>
+    <string name="contact_thumbnails_size">اندازه تصاویر کوچک مخاطب</string>
+    <string name="typeface">تایپ فیس</string>
+    <string name="long_click_g">کلیک طولانی %s</string>
+    <string name="use_persian_calendar">استفاده از تقویم فارسی</string>
+    <string name="use_persian_digits">از اعداد فارسی استفاده کنید</string>
 
     <string name="accent_color">رنگ لهجه</string>
     <string name="use_accent_color">استفاده از رنگ لهجه</string>
@@ -153,8 +158,6 @@
     <string name="unblock_confirmation">آیا مطمئن هستید که می خواهید \"%s\" را رفع انسداد کنید؟</string>
 
     <!-- Other -->
-    <string name="contact_thumbnails_size">اندازه تصاویر کوچک مخاطب</string>
-    <string name="long_click_g">کلیک طولانی %s</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -329,6 +332,5 @@
     <string name="event_type">نوع رویداد</string>
     <string name="availability">دسترس بودن</string>
     <string name="attendees">شرکت کنندگان</string>
-    <string name="typeface">تایپ فیس</string>
     <string name="more_apps_from_us_g">برنامه‌های دیگر ما</string>
 </resources>

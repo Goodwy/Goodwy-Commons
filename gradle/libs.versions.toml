@@ -50,6 +50,7 @@ rxAnimation = "2.1.1"
 rxJava3 = "3.1.5"
 billing = "7.1.1"
 rustore = "6.0.0"
+persianDate = "1.7.1"
 #Gradle
 gradlePlugins-agp = "8.11.1"
 #build
@@ -82,7 +83,6 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 #Compose
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
-compose-material2 = { module = "androidx.compose.material:material", version.ref = "compose" }
 compose-material-icons = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
 compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
@@ -112,6 +112,7 @@ rx-animation = { module = "com.mikhaellopez:rxanimation", version.ref = "rxAnima
 rx-java = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxJava3" }
 billing-client = { module = "com.android.billingclient:billing", version.ref = "billing" }
 rustore-client = { module = "ru.rustore.sdk:billingclient", version.ref = "rustore" }
+persian-date = { module = "com.github.samanzamani:PersianDate", version.ref = "persianDate" }
 #Kotlin
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 kotlin-immutable-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlin-immutable-collections" }
