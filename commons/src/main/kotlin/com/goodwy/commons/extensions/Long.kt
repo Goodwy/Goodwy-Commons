@@ -3,12 +3,15 @@ package com.goodwy.commons.extensions
 import android.content.Context
 import android.text.format.DateFormat
 import android.text.format.DateUtils
+import com.goodwy.commons.helpers.*
 import saman.zamani.persiandate.PersianDate
 import java.text.DecimalFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.Calendar
 import java.util.Locale
+import kotlin.math.log10
+import kotlin.math.pow
+import kotlin.time.Duration.Companion.days
+import kotlin.time.Duration.Companion.minutes
 
 fun Long.formatSize(): String {
     if (this <= 0) {
@@ -16,8 +19,8 @@ fun Long.formatSize(): String {
     }
 
     val units = arrayOf("B", "kB", "MB", "GB", "TB", "PB", "EB")
-    val digitGroups = (Math.log10(toDouble()) / Math.log10(1024.0)).toInt()
-    return "${DecimalFormat("#,##0.#").format(this / Math.pow(1024.0, digitGroups.toDouble()))} ${units[digitGroups]}"
+    val digitGroups = (log10(toDouble()) / log10(1024.0)).toInt()
+    return "${DecimalFormat("#,##0.#").format(this / 1024.0.pow(digitGroups.toDouble()))} ${units[digitGroups]}"
 }
 
 //fun Long.formatDate(context: Context, dateFormat: String? = null, timeFormat: String? = null): String {
@@ -33,17 +36,36 @@ fun Long.formatDate(
     dateFormat: String? = null,
     timeFormat: String? = null,
     useShamsi: Boolean? = null,
-    usePersianDigits: Boolean? = null
+    usePersianDigits: Boolean? = null,
+    useRelativeDate: Boolean = false,
+    transitionResolution: Long = 2.days.inWholeMilliseconds
 ): String {
     val useDateFormat = dateFormat ?: context.baseConfig.dateFormat
     val useTimeFormat = timeFormat ?: context.getTimeFormat()
     val isUseShamsi = useShamsi ?: context.baseConfig.useShamsi
     val isUsePersianDigits = usePersianDigits ?: context.baseConfig.usePersianDigits
 
-    return if (isUseShamsi) {
-        formatWithShamsiAdvanced(useDateFormat, useTimeFormat, isUsePersianDigits)
+    val isUseRelativeDate = useRelativeDate && (System.currentTimeMillis() - this <= transitionResolution)
+    return if (isUseRelativeDate) {
+        var result = DateUtils.getRelativeDateTimeString(
+            context,
+            this,
+            1.minutes.inWholeMilliseconds,
+            transitionResolution,
+            0
+        ).toString()
+
+        if (isUseShamsi && isUsePersianDigits) {
+            result = convertToPersianDigits(result)
+        }
+
+        result
     } else {
-        formatWithGregorian(useDateFormat, useTimeFormat)
+        if (isUseShamsi) {
+            formatWithShamsiAdvanced(useDateFormat, useTimeFormat, isUsePersianDigits)
+        } else {
+            formatWithGregorian(useDateFormat, useTimeFormat)
+        }
     }
 }
 
@@ -62,63 +84,6 @@ private fun Long.formatWithShamsiAdvanced(dateFormat: String, timeFormat: String
     val timePart = formatTimePart(this, timeFormat, usePersianDigits)
 
     return "$shamsiDatePart, $timePart"
-}
-
-private fun formatTimePart(timestamp: Long, timeFormat: String, usePersianDigits: Boolean): String {
-    val cal = Calendar.getInstance(Locale.ENGLISH)
-    cal.timeInMillis = timestamp
-    val timeString = DateFormat.format(timeFormat, cal).toString()
-
-    return if (usePersianDigits) {
-        convertTimeToPersianDigits(timeString, timeFormat)
-    } else {
-        timeString
-    }
-}
-
-private fun convertTimeToPersianDigits(timeString: String, timeFormat: String): String {
-    var result = timeString
-
-    // Конвертируем цифры
-    result = convertToPersianDigits(result)
-
-    // Заменяем AM/PM на персидские эквиваленты
-    result = result.replace("AM", "ق.ظ")
-    result = result.replace("PM", "ب.ظ")
-    result = result.replace("am", "ق.ظ")
-    result = result.replace("pm", "ب.ظ")
-
-    return result
-}
-
-private fun formatShamsiWithPersianLocale(persianDate: PersianDate, pattern: String): String {
-    var result = pattern
-    result = result.replace("yyyy", convertToPersianDigits(persianDate.shYear.toString()))
-    result = result.replace("yy", convertToPersianDigits(persianDate.shYear.toString().takeLast(2)))
-    result = result.replace("MM", convertToPersianDigits(persianDate.shMonth.toString().padStart(2, '0')))
-    result = result.replace("M", convertToPersianDigits(persianDate.shMonth.toString()))
-    result = result.replace("dd", convertToPersianDigits(persianDate.shDay.toString().padStart(2, '0')))
-    result = result.replace("d", convertToPersianDigits(persianDate.shDay.toString()))
-
-    return result
-}
-
-private fun convertToPersianDigits(input: String): String {
-    return input.map { char ->
-        when (char) {
-            '0' -> '۰'
-            '1' -> '۱'
-            '2' -> '۲'
-            '3' -> '۳'
-            '4' -> '۴'
-            '5' -> '۵'
-            '6' -> '۶'
-            '7' -> '۷'
-            '8' -> '۸'
-            '9' -> '۹'
-            else -> char
-        }
-    }.joinToString("")
 }
 
 //fun Long.formatTime(context: Context): String {
@@ -268,36 +233,6 @@ private fun Long.formatDateOrTimeShamsi(
             return datePart
         }
     }
-}
-
-private fun formatShamsiDatePart(persianDate: PersianDate, pattern: String, usePersianDigits: Boolean): String {
-    return try {
-        val localDate = LocalDate.of(
-            persianDate.shYear,
-            persianDate.shMonth,
-            persianDate.shDay
-        )
-        val formatter = DateTimeFormatter.ofPattern(pattern)
-        var result = formatter.format(localDate)
-
-        if (usePersianDigits) {
-            result = convertToPersianDigits(result)
-        }
-        result
-    } catch (_: Exception) {
-        var result = formatShamsiWithPersianLocale(persianDate, pattern)
-
-        if (usePersianDigits) {
-            result = convertToPersianDigits(result)
-        }
-
-        result
-    }
-}
-
-private fun isThisYearShamsi(persianDate: PersianDate): Boolean {
-    val currentShamsi = PersianDate()
-    return persianDate.shYear == currentShamsi.shYear
 }
 
 fun Long.isThisYear(): Boolean {
