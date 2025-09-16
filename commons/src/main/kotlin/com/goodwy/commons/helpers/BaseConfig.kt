@@ -809,10 +809,6 @@ open class BaseConfig(val context: Context) {
     var useShamsi: Boolean //Persian Calendar
         get() = prefs.getBoolean(USE_SHAMSI, false)
         set(useShamsi) = prefs.edit { putBoolean(USE_SHAMSI, useShamsi) }
-
-    var usePersianDigits: Boolean
-        get() = prefs.getBoolean(USE_PERSIAN_DIGITS, false)
-        set(usePersianDigits) = prefs.edit { putBoolean(USE_PERSIAN_DIGITS, usePersianDigits) }
 }
 
 

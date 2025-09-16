@@ -146,13 +146,5 @@
                 android:includeFontPadding="false"/>
         </LinearLayout>
 
-        <com.goodwy.commons.views.MyAppCompatCheckbox
-            android:id="@+id/change_date_time_dialog_use_persian_digits"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/smaller_margin"
-            android:paddingBottom="@dimen/smaller_margin"
-            android:text="@string/use_persian_digits" />
-
     </LinearLayout>
 </ScrollView>

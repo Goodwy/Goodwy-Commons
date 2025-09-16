@@ -33,7 +33,6 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.compose.theme.preferenceLabelColor
 import com.goodwy.commons.databinding.DialogChangeDateTimeFormatBinding
 import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.beVisible
 import com.goodwy.commons.extensions.beVisibleIf
 import com.goodwy.commons.extensions.formatDate
 import com.goodwy.commons.extensions.getAlertDialogBuilder
@@ -51,9 +50,6 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val showShamsi: Boolean
 
             changeDateTimeDialogUseShamsiHolder.beVisibleIf(showShamsi)
             changeDateTimeDialogUseShamsi.isChecked = activity.baseConfig.useShamsi
-
-            usePersianDigitsVisible()
-            changeDateTimeDialogUsePersianDigits.isChecked = activity.baseConfig.usePersianDigits
 
             updateDate()
 
@@ -75,11 +71,6 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val showShamsi: Boolean
             }
 
             changeDateTimeDialogUseShamsi.setOnCheckedChangeListener { _, _ ->
-                usePersianDigitsVisible()
-                updateDate()
-            }
-
-            changeDateTimeDialogUsePersianDigits.setOnCheckedChangeListener { _, _ ->
                 updateDate()
             }
         }
@@ -91,10 +82,6 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val showShamsi: Boolean
             .apply {
                 activity.setupDialogStuff(view.root, this, R.string.change_date_and_time_format)
             }
-    }
-
-    private fun usePersianDigitsVisible() {
-        view.changeDateTimeDialogUsePersianDigits.beVisibleIf(view.changeDateTimeDialogUseShamsi.isChecked && showShamsi)
     }
 
     private fun updateDate() {
@@ -126,7 +113,6 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val showShamsi: Boolean
 
         activity.baseConfig.use24HourFormat = view.changeDateTimeDialog24Hour.isChecked
         activity.baseConfig.useShamsi = view.changeDateTimeDialogUseShamsi.isChecked
-        activity.baseConfig.usePersianDigits = view.changeDateTimeDialogUsePersianDigits.isChecked
         callback()
     }
 
@@ -136,9 +122,8 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val showShamsi: Boolean
 
         val timeFormat = if (view.changeDateTimeDialog24Hour.isChecked) TIME_FORMAT_24 else TIME_FORMAT_12
         val useShamsi = view.changeDateTimeDialogUseShamsi.isChecked
-        val usePersianDigits = view.changeDateTimeDialogUsePersianDigits.isChecked
         val cal = Calendar.getInstance(Locale.ENGLISH).timeInMillis
-        return cal.formatDate(activity, format, timeFormat, useShamsi, usePersianDigits)
+        return cal.formatDate(activity, format, timeFormat, useShamsi)
     }
 }
 
