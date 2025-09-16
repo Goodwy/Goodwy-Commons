@@ -115,7 +115,7 @@ fun MainScreen(
                 onClick = openDateButton
             ) {
                 val cal = Calendar.getInstance(Locale.ENGLISH).timeInMillis
-                val formatDate = cal.formatDate(LocalContext.current, useRelativeDate = true)
+                val formatDate = cal.formatDate(LocalContext.current)
                 Text(formatDate)
             }
         }

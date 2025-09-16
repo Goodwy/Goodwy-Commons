@@ -232,19 +232,7 @@ private fun Long.toGregorianDayCode(format: String): String {
 
 private fun Long.toShamsiDayCode(format: String): String {
     val persianDate = PersianDate(this)
+    val datePart = formatShamsiDatePart(persianDate, format)
 
-    var result = format
-
-    result = result.replace("yyyy", persianDate.shYear.toString())
-    result = result.replace("yy", persianDate.shYear.toString().takeLast(2))
-    result = result.replace("MM", persianDate.shMonth.toString().padStart(2, '0'))
-    result = result.replace("M", persianDate.shMonth.toString())
-    result = result.replace("dd", persianDate.shDay.toString().padStart(2, '0'))
-    result = result.replace("d", persianDate.shDay.toString())
-
-    result = result.replace("YYYY", persianDate.shYear.toString())
-    result = result.replace("YY", persianDate.shYear.toString().takeLast(2))
-    result = result.replace("DD", persianDate.shDay.toString().padStart(2, '0'))
-
-    return result
+    return datePart
 }
