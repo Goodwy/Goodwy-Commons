@@ -44,6 +44,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.get
 import androidx.core.view.size
 import androidx.core.widget.NestedScrollView
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.R
 import com.goodwy.commons.asynctasks.CopyMoveTask
@@ -56,6 +57,7 @@ import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.models.FileDirItem
 import com.goodwy.commons.views.MySearchMenu
 import com.google.android.material.appbar.AppBarLayout
+import kotlinx.coroutines.launch
 import java.io.File
 import java.io.OutputStream
 import java.util.regex.Pattern
@@ -120,6 +122,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 ) {
                     launchMoreAppsFromUsIntent()
                 }
+            }
+        }
+
+        if (baseConfig.needInit) {
+            lifecycleScope.launch {
+                val miuiCheckJob = launch {
+                    baseConfig.isMiui = isMiUi()
+                }
+                miuiCheckJob.join()
+                baseConfig.needInit = false
             }
         }
     }

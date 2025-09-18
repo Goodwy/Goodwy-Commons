@@ -78,7 +78,10 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import androidx.core.net.toUri
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import org.joda.time.DateTimeConstants
+import java.util.concurrent.TimeUnit
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -1497,20 +1500,25 @@ fun Context.getLetterBackgroundColors(): ArrayList<Long> {
     }
 }
 
-fun isMiUi(): Boolean {
+suspend fun isMiUi(): Boolean {
     return !TextUtils.isEmpty(getSystemProperty("ro.miui.ui.version.name"))
 }
 
-fun getSystemProperty(propName: String): String? {
+suspend fun getSystemProperty(propName: String): String? = withContext(Dispatchers.IO) {
     val line: String
     var input: BufferedReader? = null
     try {
-        val p = Runtime.getRuntime().exec("getprop $propName")
-        input = BufferedReader(InputStreamReader(p.inputStream), 1024)
+        val process = Runtime.getRuntime().exec("getprop $propName")
+        // Add a timeout to avoid freezes
+        if (!process.waitFor(3, TimeUnit.SECONDS)) {
+            process.destroy()
+            return@withContext null
+        }
+        input = BufferedReader(InputStreamReader(process.inputStream), 1024)
         line = input.readLine()
         input.close()
     } catch (ex: IOException) {
-        return null
+        return@withContext null
     } finally {
         if (input != null) {
             try {
@@ -1520,7 +1528,7 @@ fun getSystemProperty(propName: String): String? {
             }
         }
     }
-    return line
+    return@withContext line
 }
 
 fun Context.isPlayStoreInstalled(): Boolean {

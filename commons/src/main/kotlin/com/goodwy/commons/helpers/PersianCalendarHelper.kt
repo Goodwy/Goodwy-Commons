@@ -37,7 +37,7 @@ fun formatShamsiWithPersianLocale(persianDate: PersianDate, pattern: String): St
     var result = pattern
     result = result.replace("MMMM", persianDate.monthName)
     result = result.replace("mmmm", persianDate.monthName)
-    
+
     result = result.replace("yyyy", persianDate.shYear.toString())
     result = result.replace("yy", persianDate.shYear.toString().takeLast(2))
     result = result.replace("MM", persianDate.shMonth.toString().padStart(2, '0'))

@@ -809,6 +809,14 @@ open class BaseConfig(val context: Context) {
     var useShamsi: Boolean //Persian Calendar
         get() = prefs.getBoolean(USE_SHAMSI, false)
         set(useShamsi) = prefs.edit { putBoolean(USE_SHAMSI, useShamsi) }
+
+    var needInit: Boolean
+        get() = prefs.getBoolean(NEED_INIT, true)
+        set(needInit) = prefs.edit { putBoolean(NEED_INIT, needInit) }
+
+    var isMiui: Boolean
+        get() = prefs.getBoolean(IS_MIUI, false)
+        set(isMiui) = prefs.edit { putBoolean(IS_MIUI, isMiui) }
 }
 
 

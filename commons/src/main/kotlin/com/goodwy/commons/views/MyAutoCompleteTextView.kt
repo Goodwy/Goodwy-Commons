@@ -9,8 +9,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.adjustAlpha
+import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.getColoredDrawableWithColor
-import com.goodwy.commons.extensions.isMiUi
 import com.goodwy.commons.helpers.MEDIUM_ALPHA
 import com.goodwy.commons.helpers.isQPlus
 import java.lang.reflect.Field
@@ -33,7 +33,7 @@ open class MyAutoCompleteTextView : AppCompatAutoCompleteTextView {
         if (backgroundColor != -2) {
             if (isQPlus()) {
                 textCursorDrawable = resources.getColoredDrawableWithColor(context, R.drawable.cursor_text_vertical, backgroundColor)
-                if (!isMiUi()) {
+                if (!context.baseConfig.isMiui) {
                     setTextSelectHandle(resources.getColoredDrawableWithColor(R.drawable.ic_drop_vector, backgroundColor))
                     setTextSelectHandleLeft(resources.getColoredDrawableWithColor(R.drawable.ic_drop_left_vector, backgroundColor))
                     setTextSelectHandleRight(resources.getColoredDrawableWithColor(R.drawable.ic_drop_right_vector, backgroundColor))
@@ -43,7 +43,7 @@ open class MyAutoCompleteTextView : AppCompatAutoCompleteTextView {
                     val fEditor: Field = TextView::class.java.getDeclaredField("mEditor")
                     fEditor.isAccessible = true
                     val editor: Any = fEditor.get(this) as Any
-                    if (!isMiUi()) {
+                    if (!context.baseConfig.isMiui) {
                         val fSelectHandleLeft: Field = editor.javaClass.getDeclaredField("mSelectHandleLeft")
                         val fSelectHandleRight: Field = editor.javaClass.getDeclaredField("mSelectHandleRight")
                         val fSelectHandleCenter: Field = editor.javaClass.getDeclaredField("mSelectHandleCenter")
