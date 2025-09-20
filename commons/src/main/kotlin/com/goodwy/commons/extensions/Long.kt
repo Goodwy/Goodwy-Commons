@@ -218,19 +218,19 @@ fun Long.toDayCode(
 ): String {
     val isUseShamsi = useShamsi ?: context.baseConfig.useShamsi
     return if (isUseShamsi) {
-        toShamsiDayCode(format)
+        toDayCodeShamsi(format)
     } else {
-        toGregorianDayCode(format)
+        toDayCodeGregorian(format)
     }
 }
 
-private fun Long.toGregorianDayCode(format: String): String {
+fun Long.toDayCodeGregorian(format: String = "ddMMyy"): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this
     return DateFormat.format(format, cal).toString()
 }
 
-private fun Long.toShamsiDayCode(format: String): String {
+fun Long.toDayCodeShamsi(format: String = "ddMMyy"): String {
     val persianDate = PersianDate(this)
     val datePart = formatShamsiDatePart(persianDate, format)
 
