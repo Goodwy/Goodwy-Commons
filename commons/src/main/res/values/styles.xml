@@ -19,10 +19,10 @@
         <item name="windowActionModeOverlay">true</item>    <!-- replace casual top menu with contextual menu after long pressing an item -->
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
         <!-- so that when you re-open the splash screen was black -->
-        <item name="android:windowSplashScreenBackground" tools:targetApi="s">#000000</item>
-        <item name="android:windowBackground">#000000</item>
-        <item name="android:statusBarColor">#000000</item>
-        <item name="android:navigationBarColor">#000000</item>
+<!--        <item name="android:windowSplashScreenBackground" tools:targetApi="s">#000000</item>-->
+<!--        <item name="android:windowBackground">#000000</item>-->
+<!--        <item name="android:statusBarColor">#000000</item>-->
+<!--        <item name="android:navigationBarColor">#000000</item>-->
         <item name="android:radioButtonStyle">@style/MyRadioButtonStyle</item>
         <item name="radioButtonStyle">@style/MyRadioButtonStyle</item>
     </style>
@@ -169,10 +169,12 @@
 
     <!--<item name="android:windowBackground">@drawable/splash_screen</item>-->
     <style name="SplashTheme" parent="AppTheme.Base">
-        <item name="android:windowSplashScreenBackground" tools:targetApi="s">#000000</item>
-        <item name="android:windowBackground">#000000</item>
-        <item name="android:statusBarColor">#000000</item>
-        <item name="android:navigationBarColor">#000000</item>
+<!--        <item name="android:windowSplashScreenBackground" tools:targetApi="s">#000000</item>-->
+<!--        <item name="android:windowBackground">#000000</item>-->
+<!--        <item name="android:statusBarColor">#000000</item>-->
+<!--        <item name="android:navigationBarColor">#000000</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <style name="MyWidgetConfigTheme" parent="@style/AppTheme.Base">
