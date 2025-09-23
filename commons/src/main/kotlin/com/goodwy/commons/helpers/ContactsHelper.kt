@@ -24,8 +24,17 @@ import java.util.Locale
 import androidx.core.util.size
 import androidx.core.net.toUri
 import androidx.core.graphics.scale
+import java.util.LinkedHashSet
 
 class ContactsHelper(val context: Context) {
+    companion object {
+        private val contactSourcesCache = mutableMapOf<String, LinkedHashSet<ContactSource>>()
+
+        fun clearContactSourcesCache() {
+            contactSourcesCache.clear()
+        }
+    }
+
     private val BATCH_SIZE = 50
     private var displayContactSources = ArrayList<String>()
 
@@ -1014,40 +1023,69 @@ class ContactsHelper(val context: Context) {
             return sources
         }
 
+        // Method-level caching
+        val cacheKey = "contact_sources_${context.baseConfig.wasLocalAccountInitialized}"
+        val cachedSources = contactSourcesCache[cacheKey]
+        if (cachedSources != null) {
+            return LinkedHashSet(cachedSources)
+        }
+
         if (!context.baseConfig.wasLocalAccountInitialized) {
             initializeLocalPhoneAccount()
             context.baseConfig.wasLocalAccountInitialized = true
         }
 
+        val telegramName = context.getString(R.string.telegram)
+        val viberName = context.getString(R.string.viber)
+        val phoneStorageName = context.getString(R.string.phone_storage)
         val accounts = AccountManager.get(context).accounts
-        accounts.forEach {
-            if (ContentResolver.getIsSyncable(it, AUTHORITY) >= 0) {
-                var publicName = it.name
-                if (it.type == TELEGRAM_PACKAGE) {
-                    publicName = context.getString(R.string.telegram)
-                } else if (it.type == VIBER_PACKAGE) {
-                    publicName = context.getString(R.string.viber)
+        val seenAccountKeys = HashSet<String>()
+        val existingAccountKeys = HashSet<String>().apply {
+            for (account in accounts) {
+                add("${account.name}|${account.type}")
+            }
+        }
+        for (account in accounts) {
+            if (ContentResolver.getIsSyncable(account, AUTHORITY) >= 0) {
+                val accountKey = "${account.name}|${account.type}"
+                if (seenAccountKeys.add(accountKey)) {
+                    val publicName = when (account.type) {
+                        TELEGRAM_PACKAGE -> telegramName
+                        VIBER_PACKAGE -> viberName
+                        else -> account.name
+                    }
+                    sources.add(ContactSource(account.name, account.type, publicName))
                 }
-                val contactSource = ContactSource(it.name, it.type, publicName)
-                sources.add(contactSource)
             }
         }
 
         var hadEmptyAccount = false
-        val allAccounts = getContentResolverAccounts()
-        val contentResolverAccounts = allAccounts.filter {
-            if (it.name.isEmpty() && it.type.isEmpty() && allAccounts.none { it.name.lowercase(Locale.getDefault()) == "phone" }) {
-                hadEmptyAccount = true
+        val contentResolverAccounts = getContentResolverAccounts()
+        for (account in contentResolverAccounts) {
+            when {
+                account.name.isEmpty() && account.type.isEmpty() -> {
+                    if (!hadEmptyAccount) {
+                        val hasPhoneAccount = contentResolverAccounts.any {
+                            it.name.lowercase(Locale.getDefault()) == "phone"
+                        }
+                        hadEmptyAccount = !hasPhoneAccount
+                    }
+                }
+                account.name.isNotEmpty() && account.type.isNotEmpty() -> {
+                    val accountKey = "${account.name}|${account.type}"
+                    if (!existingAccountKeys.contains(accountKey)) {
+                        sources.add(account)
+                    }
+                }
             }
-
-            it.name.isNotEmpty() && it.type.isNotEmpty() && !accounts.contains(Account(it.name, it.type))
         }
-        sources.addAll(contentResolverAccounts)
 
         if (hadEmptyAccount) {
-            sources.add(ContactSource("", "", context.getString(R.string.phone_storage)))
+            sources.add(ContactSource("", "", phoneStorageName))
         }
 
+        // Cache the result
+        contactSourcesCache[cacheKey] = LinkedHashSet(sources)
         return sources
     }
 

@@ -24,6 +24,7 @@ import com.goodwy.commons.models.contacts.ContactSource
 import com.goodwy.commons.models.contacts.Organization
 import com.goodwy.commons.models.contacts.SocialAction
 import java.io.File
+import java.util.ArrayList
 
 val Context.contactsDB: ContactsDao get() = ContactsDatabase.getInstance(applicationContext).ContactsDao()
 
@@ -268,8 +269,18 @@ fun Context.getContactPublicUri(contact: Contact): Uri {
 fun Context.getVisibleContactSources(): ArrayList<String> {
     val sources = getAllContactSources()
     val ignoredContactSources = baseConfig.ignoredContactSources
-    return ArrayList(sources).filter { !ignoredContactSources.contains(it.getFullIdentifier()) }
-        .map { it.name }.toMutableList() as ArrayList<String>
+
+    // We allocate memory for the result in advance.
+    val result = ArrayList<String>(sources.size)
+
+    // Direct cycle instead of filter/map chain
+    for (source in sources) {
+        val fullIdentifier = source.getFullIdentifier()
+        if (!ignoredContactSources.contains(fullIdentifier)) {
+            result.add(source.name)
+        }
+    }
+    return result
 }
 
 fun Context.getAllContactSources(): ArrayList<ContactSource> {
