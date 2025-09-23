@@ -1,6 +1,5 @@
 package com.goodwy.commons.helpers
 
-import android.accounts.Account
 import android.accounts.AccountManager
 import android.annotation.SuppressLint
 import android.content.*
@@ -16,7 +15,6 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.contacts.*
 import com.goodwy.commons.overloads.times
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.OutputStream
 import java.text.Collator
@@ -29,10 +27,6 @@ import java.util.LinkedHashSet
 class ContactsHelper(val context: Context) {
     companion object {
         private val contactSourcesCache = mutableMapOf<String, LinkedHashSet<ContactSource>>()
-
-        fun clearContactSourcesCache() {
-            contactSourcesCache.clear()
-        }
     }
 
     private val BATCH_SIZE = 50
@@ -1087,6 +1081,10 @@ class ContactsHelper(val context: Context) {
         // Cache the result
         contactSourcesCache[cacheKey] = LinkedHashSet(sources)
         return sources
+    }
+
+    fun clearContactSourcesCache() {
+        contactSourcesCache.clear()
     }
 
     // make sure the local Phone contact source is initialized and available
