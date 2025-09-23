@@ -34,6 +34,7 @@ class ContactsHelper(val context: Context) {
         gettingDuplicates: Boolean = false,
         ignoredContactSources: HashSet<String> = HashSet(),
         showOnlyContactsWithNumbers: Boolean = context.baseConfig.showOnlyContactsWithNumbers,
+        backgroundThread: Boolean = false,
         callback: (ArrayList<Contact>) -> Unit
     ) {
         ensureBackgroundThread {
@@ -102,7 +103,8 @@ class ContactsHelper(val context: Context) {
             System.setProperty("java.util.Arrays.useLegacyMergeSort", "true") //https://stackoverflow.com/questions/11441666/java-error-comparison-method-violates-its-general-contract
             resultContacts.sort()
 
-            Handler(Looper.getMainLooper()).post {
+            if (backgroundThread) callback(resultContacts)
+            else Handler(Looper.getMainLooper()).post {
                 callback(resultContacts)
             }
         }
