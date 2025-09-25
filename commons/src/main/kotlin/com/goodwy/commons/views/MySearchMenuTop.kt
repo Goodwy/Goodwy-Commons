@@ -36,13 +36,13 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
             }
         }
 
-//        post {
-//            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
-//                if (hasFocus) {
-//                    openSearch()
-//                }
-//            }
-//        }
+        post {
+            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
+                if (hasFocus) {
+                    openSearch()
+                }
+            }
+        }
 
         binding.topToolbarSearch.onTextChangeListener { text ->
             val size = text.length
