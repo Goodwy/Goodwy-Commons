@@ -11,8 +11,6 @@ import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.databinding.MenuSearchTopBinding
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.LOWER_ALPHA
-import com.goodwy.commons.helpers.MEDIUM_ALPHA
 
 open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
     var isSearchOpen = false
@@ -38,15 +36,21 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
             }
         }
 
-        post {
-            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
-                if (hasFocus) {
-                    openSearch()
-                }
-            }
-        }
+//        post {
+//            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
+//                if (hasFocus) {
+//                    openSearch()
+//                }
+//            }
+//        }
 
         binding.topToolbarSearch.onTextChangeListener { text ->
+            val size = text.length
+            if (size == 1) post { openSearch() }
+            if (size == 0 && !useArrowIcon) {
+                binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_search_vector)
+                binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.search)
+            }
             onSearchTextChangedListener?.invoke(text)
         }
     }
@@ -119,6 +123,14 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
         binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)
         binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(bottomNavigationBackgroundColor)
         binding.topToolbarSearchClear.applyColorFilter(contrastColor)
+    }
+
+    fun updateTitle(title: String) {
+        binding.topToolbar.title = title
+    }
+
+    fun searchBeVisibleIf(visible: Boolean = true) {
+        binding.topToolbarHolder.beVisibleIf(visible)
     }
 
     fun requestFocusAndShowKeyboard() {
