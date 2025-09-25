@@ -45,9 +45,9 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         binding.topToolbarSearch.onTextChangeListener { text ->
             val size = text.length
-            if (size == 1) post { openSearch() }
+//            if (size == 1) post { openSearch() }
             if (size == 0 && !useArrowIcon) {
-                binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_search_vector)
+//                binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_search_vector)
                 binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.search)
             }
             onSearchTextChangedListener?.invoke(text)
