@@ -270,54 +270,63 @@ data class Contact(
         prefix.isEmpty() && firstName.isEmpty() && middleName.isEmpty() && surname.isEmpty() && suffix.isEmpty() && organization.isNotEmpty()
 
     fun doesContainPhoneNumber(text: String, convertLetters: Boolean = false, search: Boolean = false): Boolean {
-        val withoutReplace = doesContainPhoneNumberCheck(text, convertLetters, search)
-        if (withoutReplace || search) return withoutReplace
-        else {
-            // If the number in the contacts is written without + or 8 instead of +7
-            // https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers
-            val withoutPlus = doesContainPhoneNumberCheck(text.replace("+", ""), convertLetters, search)
-            return if (withoutPlus) true
-            else {
-                when {
-                    // should try to use comparison via trimToComparableNumber()
-                    text.startsWith("+7") -> doesContainPhoneNumberCheck(text.replace("+7", "8"), convertLetters, search) //Russia
-                    text.startsWith("+31") -> doesContainPhoneNumberCheck(text.replace("+31", "0"), convertLetters, search) //Netherlands
-                    text.startsWith("+32") -> doesContainPhoneNumberCheck(text.replace("+32", "0"), convertLetters, search) //Belgium
-                    text.startsWith("+33") -> doesContainPhoneNumberCheck(text.replace("+33", "0"), convertLetters, search) //France
-                    text.startsWith("+34") -> doesContainPhoneNumberCheck(text.replace("+34", ""), convertLetters, search) //Spain
-                    text.startsWith("+39") -> doesContainPhoneNumberCheck(text.replace("+39", "0"), convertLetters, search) //Italy
-                    text.startsWith("+44") -> doesContainPhoneNumberCheck(text.replace("+44", "0"), convertLetters, search) //United Kingdom
-                    text.startsWith("+49") -> doesContainPhoneNumberCheck(text.replace("+49", "0"), convertLetters, search) //Germany
-                    text.startsWith("+91") -> doesContainPhoneNumberCheck(text.replace("+91", "0"), convertLetters, search) //India
-                    text.startsWith("+351") -> doesContainPhoneNumberCheck(text.replace("+351", ""), convertLetters, search) //Portugal
-                    text.startsWith("+374") -> doesContainPhoneNumberCheck(text.replace("+374", "0"), convertLetters, search) //Armenia
-                    text.startsWith("+375") -> doesContainPhoneNumberCheck(text.replace("+375", "0"), convertLetters, search) //Belarus
-                    text.startsWith("+380") -> doesContainPhoneNumberCheck(text.replace("+380", "0"), convertLetters, search) //Ukraine
-                    else -> false
-                }
-            }
+        if (text.isEmpty()) return false
+
+        if (doesContainPhoneNumberCheck(text, convertLetters, search)) {
+            return true
+        }
+
+        if (search) return false // We do not make additional replacements for the search.
+
+        return checkWithCountrySpecificReplacements(text, convertLetters)
+    }
+
+    // If the number in the contacts is written without + or 8 instead of +7
+    // https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers
+    private fun checkWithCountrySpecificReplacements(text: String, convertLetters: Boolean): Boolean {
+        return when {
+            text.startsWith("+7") -> doesContainPhoneNumberCheck(text.replace("+7", "8"), convertLetters) //Russia
+            text.startsWith("+31") -> doesContainPhoneNumberCheck(text.replace("+31", "0"), convertLetters) //Netherlands
+            text.startsWith("+32") -> doesContainPhoneNumberCheck(text.replace("+32", "0"), convertLetters) //Belgium
+            text.startsWith("+33") -> doesContainPhoneNumberCheck(text.replace("+33", "0"), convertLetters) //France
+            text.startsWith("+34") -> doesContainPhoneNumberCheck(text.replace("+34", ""), convertLetters) //Spain
+            text.startsWith("+39") -> doesContainPhoneNumberCheck(text.replace("+39", "0"), convertLetters) //Italy
+            text.startsWith("+44") -> doesContainPhoneNumberCheck(text.replace("+44", "0"), convertLetters) //United Kingdom
+            text.startsWith("+49") -> doesContainPhoneNumberCheck(text.replace("+49", "0"), convertLetters) //Germany
+            text.startsWith("+91") -> doesContainPhoneNumberCheck(text.replace("+91", "0"), convertLetters) //India
+            text.startsWith("+351") -> doesContainPhoneNumberCheck(text.replace("+351", ""), convertLetters) //Portugal
+            text.startsWith("+374") -> doesContainPhoneNumberCheck(text.replace("+374", "0"), convertLetters) //Armenia
+            text.startsWith("+375") -> doesContainPhoneNumberCheck(text.replace("+375", "0"), convertLetters) //Belarus
+            text.startsWith("+380") -> doesContainPhoneNumberCheck(text.replace("+380", "0"), convertLetters) //Ukraine
+            else -> false
         }
     }
 
     fun doesContainPhoneNumberCheck(text: String, convertLetters: Boolean = false, search: Boolean = false): Boolean {
-        return if (text.isNotEmpty()) {
-            val normalizedText = if (convertLetters) text.normalizePhoneNumber() else text
-            phoneNumbers.any {
-                if (search) {
-                    PhoneNumberUtils.compare(it.normalizedNumber, normalizedText) ||
-                        it.value.contains(text) ||
-                        it.normalizedNumber.contains(normalizedText) ||
-                        it.value.normalizePhoneNumber().contains(normalizedText)
-                } else {
-                    // TODO does not work correctly if only some digits of the number match
-                    PhoneNumberUtils.compare(it.normalizedNumber, normalizedText) ||
-                        (it.value.contains(text) && text.length > 7) ||
-                        (it.normalizedNumber.contains(normalizedText) && normalizedText.length > 7) ||
-                        (it.value.normalizePhoneNumber().contains(normalizedText) && normalizedText.length > 7)
-                }
+        if (text.isEmpty() || phoneNumbers.isEmpty()) return false
+
+        val normalizedText = if (convertLetters) text.normalizePhoneNumber() else text
+
+        return if (search) {
+            phoneNumbers.any { phoneNumber ->
+                PhoneNumberUtils.compare(phoneNumber.normalizedNumber, normalizedText) ||
+                    phoneNumber.value.contains(text) ||
+                    phoneNumber.normalizedNumber.contains(normalizedText) ||
+                    phoneNumber.value.normalizePhoneNumber().contains(normalizedText)
             }
         } else {
-            false
+            phoneNumbers.any { phoneNumber ->
+                // TODO Does not work correctly if only some digits of the number match
+                // TODO Replaced contains with endsWith, may be helpful
+                PhoneNumberUtils.compare(phoneNumber.normalizedNumber, normalizedText)
+//                    (phoneNumber.value.contains(text) && text.length > 7) ||
+//                    (phoneNumber.normalizedNumber.contains(normalizedText) && normalizedText.length > 7) ||
+//                    (phoneNumber.value.normalizePhoneNumber().contains(normalizedText) && normalizedText.length > 7)
+                    || (phoneNumber.value.endsWith(text) && text.length > 7)
+                    || (phoneNumber.normalizedNumber.endsWith(normalizedText) && normalizedText.length > 7)
+                    // TODO I think the following line is unnecessary
+//                    || (phoneNumber.value.normalizePhoneNumber().endsWith(normalizedText) && normalizedText.length > 7)
+            }
         }
     }
 
