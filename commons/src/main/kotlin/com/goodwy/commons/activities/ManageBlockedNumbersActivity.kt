@@ -78,6 +78,11 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (intent.action == SET_DEFAULT_CALLER_ID) {
+            maybeSetDefaultCallerIdApp()
+        }
+
         enableEdgeToEdgeSimple()
         setContent {
             val context = LocalContext.current
@@ -245,6 +250,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                 baseConfig.blockUnknownNumbers = false
                 baseConfig.blockHiddenNumbers = false
             }
+
+            intent.action == SET_DEFAULT_CALLER_ID && resultCode == RESULT_OK -> {
+                baseConfig.blockUnknownNumbers = true
+            }
         }
     }
 
@@ -302,14 +311,6 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     }
                 }
             }
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        if (intent.action == SET_DEFAULT_CALLER_ID) {
-            maybeSetDefaultCallerIdApp()
-            intent.action = null
         }
     }
 }
