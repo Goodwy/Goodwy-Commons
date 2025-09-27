@@ -310,7 +310,5 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
         if (intent.action == SET_DEFAULT_CALLER_ID) {
             maybeSetDefaultCallerIdApp()
         }
-        moveTaskToBack(true)
-        finish()
     }
 }
