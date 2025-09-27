@@ -149,26 +149,6 @@ internal fun ManageBlockedNumbersScreen(
                         )
                     }
                 }
-
-                SettingsSwitchComponent(
-                    label = if (isDialer) stringResource(id = R.string.block_unknown_calls) else stringResource(id = R.string.block_unknown_messages),
-                    initialValue = isBlockUnknownSelected,
-                    onChange = onBlockUnknownSelectedChange,
-                    modifier = Modifier.topAppBarPaddings(),
-                    scaleSwitch = 0.8F,
-                    showCheckmark = showCheckmarksOnSwitches,
-                    checkmark = ImageVector.vectorResource(R.drawable.ic_no_accounts)
-                )
-                SettingsSwitchComponent(
-                    label = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
-                    initialValue = isHiddenSelected,
-                    onChange = onHiddenSelectedChange,
-                    modifier = Modifier.topAppBarPaddings(),
-                    scaleSwitch = 0.8F,
-                    showCheckmark = showCheckmarksOnSwitches,
-                    checkmark = ImageVector.vectorResource(R.drawable.ic_question)
-                )
-                SettingsHorizontalDivider(modifier = Modifier.topAppBarPaddings())
             }
         },
     ) { paddingValues ->
@@ -212,6 +192,27 @@ internal fun ManageBlockedNumbersScreen(
             verticalArrangement = Arrangement.spacedBy(SimpleTheme.dimens.padding.extraSmall),
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {
+            item {
+                SettingsSwitchComponent(
+                    label = if (isDialer) stringResource(id = R.string.block_unknown_calls) else stringResource(id = R.string.block_unknown_messages),
+                    initialValue = isBlockUnknownSelected,
+                    onChange = onBlockUnknownSelectedChange,
+                    modifier = Modifier.topAppBarPaddings(),
+                    scaleSwitch = 0.8F,
+                    showCheckmark = showCheckmarksOnSwitches,
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_no_accounts)
+                )
+                SettingsSwitchComponent(
+                    label = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
+                    initialValue = isHiddenSelected,
+                    onChange = onHiddenSelectedChange,
+                    modifier = Modifier.topAppBarPaddings(),
+                    scaleSwitch = 0.8F,
+                    showCheckmark = showCheckmarksOnSwitches,
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_question)
+                )
+                Spacer(modifier = Modifier.size(8.dp))
+            }
             when {
                 !hasGivenPermissionToBlock -> {
                     noPermissionToBlock(setAsDefault = setAsDefault)

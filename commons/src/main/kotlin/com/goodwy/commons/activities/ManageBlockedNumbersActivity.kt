@@ -22,6 +22,7 @@ import com.goodwy.commons.compose.screens.ManageBlockedNumbersScreen
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.AddOrEditBlockedNumberAlertDialog
 import com.goodwy.commons.dialogs.ExportBlockedNumbersDialog
+import com.goodwy.commons.dialogs.PermissionRequiredDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.BlockedNumber
@@ -37,6 +38,9 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class ManageBlockedNumbersActivity : BaseSimpleActivity() {
+    companion object {
+        const val SET_DEFAULT_CALLER_ID = "SET_DEFAULT_CALLER_ID"
+    }
 
     private val config by lazy { baseConfig }
 
@@ -299,5 +303,14 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                 }
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (intent.action == SET_DEFAULT_CALLER_ID) {
+            maybeSetDefaultCallerIdApp()
+        }
+        moveTaskToBack(true)
+        finish()
     }
 }
