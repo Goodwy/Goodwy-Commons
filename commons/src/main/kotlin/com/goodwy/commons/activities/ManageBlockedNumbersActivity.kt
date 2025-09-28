@@ -249,6 +249,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                 toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
                 baseConfig.blockUnknownNumbers = false
                 baseConfig.blockHiddenNumbers = false
+                intent.action = null
             }
 
             intent.action == SET_DEFAULT_CALLER_ID && resultCode == RESULT_OK -> {
