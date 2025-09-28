@@ -10,6 +10,7 @@
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
+    <string name="blocked_call">Blocked Call</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="unblock_numbers">Unblock numbers</string>

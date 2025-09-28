@@ -9,6 +9,7 @@
     <string name="incoming_call">Входящий</string>
     <string name="outgoing_call">Исходящий</string>
     <string name="missed_call">Пропущенный</string>
+    <string name="blocked_call">Заблокированный</string>
     <string name="unblock_confirmation">Разблокировать \"%s\"?</string>
     <string name="unblock_number">Разблокировать номер</string>
     <string name="unblock_numbers">Разблокировать номера</string>

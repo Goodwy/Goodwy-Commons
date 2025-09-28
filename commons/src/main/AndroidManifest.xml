@@ -40,7 +40,7 @@
         android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"
         tools:node="remove" />
 
-    <uses-permission android:name="org.fossify.android.permission.WRITE_GLOBAL_SETTINGS" />
+    <uses-permission android:name="com.goodwy.android.permission.WRITE_GLOBAL_SETTINGS" />
 
     <application android:supportsRtl="true">
         <activity

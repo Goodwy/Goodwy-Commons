@@ -389,7 +389,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         for (i in 0 until menu.size) {
             try {
                 menu[i].icon?.setTint(itemColor)
-            } catch (ignored: Exception) {
+            } catch (_: Exception) {
             }
         }
     }
@@ -501,7 +501,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         for (i in 0 until menu.size) {
             try {
                 menu[i].icon?.setTint(color)
-            } catch (ignored: Exception) {
+            } catch (_: Exception) {
             }
         }
 
@@ -528,14 +528,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, resultData)
         val partition = try {
             checkedDocumentPath.substring(9, 18)
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             ""
         }
 
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
         if (requestCode == CREATE_DOCUMENT_SDK_30) {
-            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            if (resultCode == RESULT_OK && resultData != null && resultData.data != null) {
 
                 val treeUri = resultData.data
                 val checkedUri = buildDocumentUriSdk30(checkedDocumentPath)
@@ -555,7 +555,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
 
         } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_SDK_30) {
-            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            if (resultCode == RESULT_OK && resultData != null && resultData.data != null) {
                 val treeUri = resultData.data
                 val checkedUri = createFirstParentTreeUri(checkedDocumentPath)
 
@@ -576,7 +576,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
 
         } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB) {
-            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            if (resultCode == RESULT_OK && resultData != null && resultData.data != null) {
                 if (isProperAndroidRoot(checkedDocumentPath, resultData.data!!)) {
                     if (resultData.dataString == baseConfig.OTGTreeUri || resultData.dataString == baseConfig.sdTreeUri) {
                         val pathToSelect = createAndroidDataOrObbPath(checkedDocumentPath)
@@ -609,7 +609,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 funAfterSAFPermission?.invoke(false)
             }
         } else if (requestCode == OPEN_DOCUMENT_TREE_SD) {
-            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            if (resultCode == RESULT_OK && resultData != null && resultData.data != null) {
                 val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
                     .matches() && resultData.dataString!!.contains(partition))
                 if (isProperSDRootFolder(resultData.data!!) && isProperPartition) {
@@ -635,7 +635,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 funAfterSAFPermission?.invoke(false)
             }
         } else if (requestCode == OPEN_DOCUMENT_TREE_OTG) {
-            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            if (resultCode == RESULT_OK && resultData != null && resultData.data != null) {
                 val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
                     .matches() && resultData.dataString!!.contains(partition))
                 if (isProperOTGRootFolder(resultData.data!!) && isProperPartition) {
@@ -666,20 +666,20 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             } else {
                 funAfterSAFPermission?.invoke(false)
             }
-        } else if (requestCode == SELECT_EXPORT_SETTINGS_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+        } else if (requestCode == SELECT_EXPORT_SETTINGS_FILE_INTENT && resultCode == RESULT_OK && resultData != null && resultData.data != null) {
             val outputStream = contentResolver.openOutputStream(resultData.data!!)
             exportSettingsTo(outputStream, configItemsToExport)
         } else if (requestCode == DELETE_FILE_SDK_30_HANDLER) {
-            funAfterSdk30Action?.invoke(resultCode == Activity.RESULT_OK)
+            funAfterSdk30Action?.invoke(resultCode == RESULT_OK)
         } else if (requestCode == RECOVERABLE_SECURITY_HANDLER) {
-            funRecoverableSecurity?.invoke(resultCode == Activity.RESULT_OK)
+            funRecoverableSecurity?.invoke(resultCode == RESULT_OK)
             funRecoverableSecurity = null
         } else if (requestCode == UPDATE_FILE_SDK_30_HANDLER) {
-            funAfterUpdate30File?.invoke(resultCode == Activity.RESULT_OK)
+            funAfterUpdate30File?.invoke(resultCode == RESULT_OK)
         } else if (requestCode == MANAGE_MEDIA_RC) {
             funAfterManageMediaPermission?.invoke()
         } else if (requestCode == TRASH_FILE_SDK_30_HANDLER) {
-            funAfterTrash30File?.invoke(resultCode == Activity.RESULT_OK)
+            funAfterTrash30File?.invoke(resultCode == RESULT_OK)
         }
     }
 
@@ -830,7 +830,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 data = Uri.fromParts("package", packageName, null)
                 startActivity(this)
             }
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             openDeviceSettings()
         }
     }
@@ -915,15 +915,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 try {
                     startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
                     return@apply
-                } catch (e: Exception) {
+                } catch (_: Exception) {
                     type = "*/*"
                 }
 
                 try {
                     startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
-                } catch (e: ActivityNotFoundException) {
+                } catch (_: ActivityNotFoundException) {
                     toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
-                } catch (e: Exception) {
+                } catch (_: Exception) {
                     toast(R.string.unknown_error_occurred)
                 }
             }
@@ -1134,7 +1134,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val newName = String.format("%s(%d).%s", file.nameWithoutExtension, fileIndex, file.extension)
             newFile = File(file.parent, newName)
             fileIndex++
-        } while (getDoesFilePathExist(newFile!!.absolutePath))
+        } while (getDoesFilePathExist(newFile.absolutePath))
         return newFile
     }
 
@@ -1364,7 +1364,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                 try {
                     startActivityForResult(this, SELECT_EXPORT_SETTINGS_FILE_INTENT)
-                } catch (e: ActivityNotFoundException) {
+                } catch (_: ActivityNotFoundException) {
                     toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
                 } catch (e: Exception) {
                     showErrorToast(e)
@@ -1394,7 +1394,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun getExportSettingsFilename(): String {
-        val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("org.fossify.")
+        val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.goodwy.")
         return "$appName-settings_${getCurrentFormattedDateTime()}"
     }
 
@@ -1410,7 +1410,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER).putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, packageName).apply {
                 try {
                     startActivityForResult(this, REQUEST_CODE_SET_DEFAULT_DIALER)
-                } catch (e: ActivityNotFoundException) {
+                } catch (_: ActivityNotFoundException) {
                     toast(R.string.no_app_found)
                 } catch (e: Exception) {
                     showErrorToast(e)
