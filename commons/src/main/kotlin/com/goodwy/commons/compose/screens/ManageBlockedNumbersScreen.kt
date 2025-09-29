@@ -47,14 +47,16 @@ import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.menus.ActionItem
 import com.goodwy.commons.compose.menus.ActionMenu
 import com.goodwy.commons.compose.menus.OverflowMode
-import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.settings.SettingsSwitchComponent
 import com.goodwy.commons.compose.lists.*
+import com.goodwy.commons.compose.settings.SettingsPreferenceComponent
 import com.goodwy.commons.compose.system_ui_controller.rememberSystemUiController
 import com.goodwy.commons.compose.theme.*
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.extensions.darkenColor
 import com.goodwy.commons.extensions.getContrastColor
+import com.goodwy.commons.helpers.BLOCKING_TYPE_BUSY
+import com.goodwy.commons.helpers.BLOCKING_TYPE_SILENCE
 import com.goodwy.commons.models.BlockedNumber
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -87,6 +89,8 @@ internal fun ManageBlockedNumbersScreen(
     onDelete: (Set<Long>) -> Unit,
     onEdit: (BlockedNumber) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
+    isBlockingType: Int,
+    onBlockingType: () -> Unit,
 ) {
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
     val hapticFeedback = LocalHapticFeedback.current
@@ -210,6 +214,17 @@ internal fun ManageBlockedNumbersScreen(
                     scaleSwitch = 0.8F,
                     showCheckmark = showCheckmarksOnSwitches,
                     checkmark = ImageVector.vectorResource(R.drawable.ic_question)
+                )
+                if (true) SettingsPreferenceComponent(
+                    label = stringResource(id = com.goodwy.strings.R.string.blocking_type),
+                    value = when (isBlockingType) {
+                        BLOCKING_TYPE_BUSY -> stringResource(id = com.goodwy.strings.R.string.blocking_type_busy)
+                        BLOCKING_TYPE_SILENCE -> stringResource(id = com.goodwy.strings.R.string.blocking_type_silence)
+                        else -> stringResource(id = com.goodwy.strings.R.string.blocking_type_silence)
+
+                    },
+                    isPreferenceEnabled = isBlockUnknownSelected || isHiddenSelected,
+                    doOnPreferenceClick = onBlockingType
                 )
                 Spacer(modifier = Modifier.size(8.dp))
             }
@@ -700,7 +715,10 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
                 BlockedNumber(id = 8, number = "5552221111", normalizedNumber = "5552221111", numberToCompare = "5552221111")
             ).toImmutableList(),
             onDelete = {},
-            onEdit = {}
-        ) {}
+            onEdit = {},
+            onCopy = {},
+            isBlockingType = 1,
+            onBlockingType = {}
+        ) //{}
     }
 }

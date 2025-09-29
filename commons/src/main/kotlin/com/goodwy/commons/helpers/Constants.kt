@@ -258,6 +258,7 @@ const val CHANGE_COLOUR_TOP_BAR = "change_colour_top_bar"
 const val USE_SHAMSI = "use_shamsi"
 const val NEED_INIT = "need_init"
 const val IS_MIUI = "is_miui"
+const val BLOCKING_TYPE = "blocking_type"
 
 const val IS_RIGHT_APP = "is_right_app"
 const val IS_PRO_VERSION = "is_pro_version"
@@ -836,6 +837,11 @@ const val THREEMA_PACKAGE = "ch.threema.app"
 const val SOCIAL_VOICE_CALL = 0
 const val SOCIAL_VIDEO_CALL = 1
 const val SOCIAL_MESSAGE = 2
+
+// Blocking type
+const val BLOCKING_TYPE_REJECT = 1
+const val BLOCKING_TYPE_BUSY = 2
+const val BLOCKING_TYPE_SILENCE = 3
 
 fun getEmptyLocalContact() = LocalContact(
     0,

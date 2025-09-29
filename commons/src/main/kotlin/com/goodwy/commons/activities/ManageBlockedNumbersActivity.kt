@@ -11,6 +11,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewModelScope
@@ -23,9 +24,11 @@ import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.AddOrEditBlockedNumberAlertDialog
 import com.goodwy.commons.dialogs.ExportBlockedNumbersDialog
 import com.goodwy.commons.dialogs.PermissionRequiredDialog
+import com.goodwy.commons.dialogs.RadioGroupAlertDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.BlockedNumber
+import com.goodwy.commons.models.RadioItem
 import java.io.FileOutputStream
 import java.io.OutputStream
 import kotlinx.collections.immutable.ImmutableList
@@ -97,6 +100,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             val showCheckmarksOnSwitches by config.showCheckmarksOnSwitchesFlow.collectAsStateWithLifecycle(initialValue = config.showCheckmarksOnSwitches)
             val isTopAppBarColorIcon by config.isTopAppBarColorIcon.collectAsStateWithLifecycle(initialValue = config.topAppBarColorIcon)
             val isTopAppBarColorTitle by config.isTopAppBarColorTitle.collectAsStateWithLifecycle(initialValue = config.topAppBarColorTitle)
+            val isBlockingType by config.isBlockingType.collectAsStateWithLifecycle(initialValue = config.blockingType)
             val isDialer = remember {
                 config.appId.startsWith("com.goodwy.dialer")
             }
@@ -120,6 +124,24 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                         addBlockedNumber(blockedNumber)
                         clickedBlockedNumber = null
                         updateBlockedNumbers()
+                    }
+                }
+
+                val blockingTypeDialogState = rememberAlertDialogState()
+
+                blockingTypeDialogState.DialogMember {
+                    RadioGroupAlertDialog(
+                        alertDialogState = blockingTypeDialogState,
+                        items = listOf(
+                            RadioItem(BLOCKING_TYPE_REJECT, stringResource(id = com.goodwy.strings.R.string.blocking_type_reject)),
+                            RadioItem(BLOCKING_TYPE_BUSY, stringResource(id = com.goodwy.strings.R.string.blocking_type_busy)),
+                            RadioItem(BLOCKING_TYPE_SILENCE, stringResource(id = com.goodwy.strings.R.string.blocking_type_silence)),
+                        ).toImmutableList(),
+                        selectedItemId = isBlockingType,
+                        titleId = com.goodwy.strings.R.string.blocking_type,
+                        cancelCallback = {}
+                    ) { item ->
+                        config.blockingType = item.toInt()
                     }
                 }
 
@@ -157,6 +179,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     },
                     onCopy = { blockedNumber ->
                         copyToClipboard(blockedNumber.number)
+                    },
+                    isBlockingType= isBlockingType,
+                    onBlockingType = {
+                        blockingTypeDialogState.show()
                     },
                 )
             }

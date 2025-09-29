@@ -486,7 +486,7 @@ open class BaseConfig(val context: Context) {
 
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, 1) //context.resources.getInteger(R.integer.default_font_size)
-        set(size) = prefs.edit { putInt(FONT_SIZE, size) }
+        set(fontSize) = prefs.edit { putInt(FONT_SIZE, fontSize) }
 
     // notify the users about new SMS Messenger and Voice Recorder released
     var wasMessengerRecorderShown: Boolean
@@ -817,6 +817,12 @@ open class BaseConfig(val context: Context) {
     var isMiui: Boolean
         get() = prefs.getBoolean(IS_MIUI, false)
         set(isMiui) = prefs.edit { putBoolean(IS_MIUI, isMiui) }
+
+    var blockingType: Int
+        get() = prefs.getInt(BLOCKING_TYPE, BLOCKING_TYPE_REJECT)
+        set(blockingType) = prefs.edit { putInt(BLOCKING_TYPE, blockingType) }
+
+    val isBlockingType: Flow<Int> = ::blockingType.asFlowNonNull()
 }
 
 

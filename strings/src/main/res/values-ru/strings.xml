@@ -269,6 +269,10 @@
     <string name="mute">Откл. звук</string>
     <string name="search_the_web">Поиск в интернете</string>
     <string name="show_number_blocking_button">Показывать кнопку блокировки номера</string>
+    <string name="blocking_type">Тип блокировки</string>
+    <string name="blocking_type_busy">Занято</string>
+    <string name="blocking_type_reject">Отклонить</string>
+    <string name="blocking_type_silence">Тихий звонок</string>
 
     <!-- Relation types -->
     <string name="relation_g">Отношения</string>
