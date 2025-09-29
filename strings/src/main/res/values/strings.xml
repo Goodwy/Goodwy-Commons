@@ -276,9 +276,12 @@
     <string name="search_the_web">Search the web</string>
     <string name="show_number_blocking_button">Show the number blocking button</string>
     <string name="blocking_type">Blocking type</string>
-    <string name="blocking_type_busy">Busy</string>
+    <string name="blocking_type_do_not_reject">Do not reject</string>
+    <string name="blocking_type_do_not_reject_summary">Sets whether the incoming call should be disconnected as if the user does not answer</string>
     <string name="blocking_type_reject">Reject</string>
+    <string name="blocking_type_reject_summary">Sets whether the incoming call should be disconnected as if the user had manually rejected it</string>
     <string name="blocking_type_silence">Silence call</string>
+    <string name="blocking_type_silence_summary">Sets whether ringing should be silenced for the incoming call</string>
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>

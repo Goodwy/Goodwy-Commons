@@ -840,7 +840,7 @@ const val SOCIAL_MESSAGE = 2
 
 // Blocking type
 const val BLOCKING_TYPE_REJECT = 1
-const val BLOCKING_TYPE_BUSY = 2
+const val BLOCKING_TYPE_DO_NOT_REJECT = 2
 const val BLOCKING_TYPE_SILENCE = 3
 
 fun getEmptyLocalContact() = LocalContact(

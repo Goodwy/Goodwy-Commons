@@ -71,13 +71,13 @@ fun SettingsPreferenceComponent(
                     text = sublabel.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(end = 16.dp),
+                        .padding(top = 2.dp, end = 16.dp),
                     color = preferenceLabelColor,
                     fontSize = with(LocalDensity.current) {
-                        dimensionResource(id = R.dimen.normal_text_size).toSp()
+                        dimensionResource(id = R.dimen.smaller_text_size).toSp()
                     },
                     lineHeight = with(LocalDensity.current) {
-                        dimensionResource(id = R.dimen.bigger_text_size).toSp()
+                        dimensionResource(id = R.dimen.normal_text_size).toSp()
                     },
                 )
             }

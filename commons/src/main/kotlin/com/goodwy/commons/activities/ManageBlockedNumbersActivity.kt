@@ -23,7 +23,6 @@ import com.goodwy.commons.compose.screens.ManageBlockedNumbersScreen
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.AddOrEditBlockedNumberAlertDialog
 import com.goodwy.commons.dialogs.ExportBlockedNumbersDialog
-import com.goodwy.commons.dialogs.PermissionRequiredDialog
 import com.goodwy.commons.dialogs.RadioGroupAlertDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
@@ -132,11 +131,18 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                 blockingTypeDialogState.DialogMember {
                     RadioGroupAlertDialog(
                         alertDialogState = blockingTypeDialogState,
-                        items = listOf(
-                            RadioItem(BLOCKING_TYPE_REJECT, stringResource(id = com.goodwy.strings.R.string.blocking_type_reject)),
-                            RadioItem(BLOCKING_TYPE_BUSY, stringResource(id = com.goodwy.strings.R.string.blocking_type_busy)),
-                            RadioItem(BLOCKING_TYPE_SILENCE, stringResource(id = com.goodwy.strings.R.string.blocking_type_silence)),
-                        ).toImmutableList(),
+                        items = if (isQPlus()) {
+                            listOf(
+                                RadioItem(BLOCKING_TYPE_REJECT, stringResource(id = com.goodwy.strings.R.string.blocking_type_reject)),
+                                RadioItem(BLOCKING_TYPE_DO_NOT_REJECT, stringResource(id = com.goodwy.strings.R.string.blocking_type_do_not_reject)),
+                                RadioItem(BLOCKING_TYPE_SILENCE, stringResource(id = com.goodwy.strings.R.string.blocking_type_silence)),
+                            ).toImmutableList()
+                        } else {
+                            listOf(
+                                RadioItem(BLOCKING_TYPE_REJECT, stringResource(id = com.goodwy.strings.R.string.blocking_type_reject)),
+                                RadioItem(BLOCKING_TYPE_DO_NOT_REJECT, stringResource(id = com.goodwy.strings.R.string.blocking_type_do_not_reject)),
+                            ).toImmutableList()
+                        },
                         selectedItemId = isBlockingType,
                         titleId = com.goodwy.strings.R.string.blocking_type,
                         cancelCallback = {}

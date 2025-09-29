@@ -270,9 +270,12 @@
     <string name="search_the_web">Поиск в интернете</string>
     <string name="show_number_blocking_button">Показывать кнопку блокировки номера</string>
     <string name="blocking_type">Тип блокировки</string>
-    <string name="blocking_type_busy">Занято</string>
+    <string name="blocking_type_do_not_reject">Не отклонять</string>
+    <string name="blocking_type_do_not_reject_summary">Отклонить входящий вызов, как если бы пользователь не ответил</string>
     <string name="blocking_type_reject">Отклонить</string>
+    <string name="blocking_type_reject_summary">Отклонить входящий вызов, как если бы пользователь отклонил его вручную</string>
     <string name="blocking_type_silence">Тихий звонок</string>
+    <string name="blocking_type_silence_summary">Отключить звук звонка для входящего вызова</string>
 
     <!-- Relation types -->
     <string name="relation_g">Отношения</string>

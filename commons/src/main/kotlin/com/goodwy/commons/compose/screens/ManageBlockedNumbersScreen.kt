@@ -55,7 +55,7 @@ import com.goodwy.commons.compose.theme.*
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.extensions.darkenColor
 import com.goodwy.commons.extensions.getContrastColor
-import com.goodwy.commons.helpers.BLOCKING_TYPE_BUSY
+import com.goodwy.commons.helpers.BLOCKING_TYPE_DO_NOT_REJECT
 import com.goodwy.commons.helpers.BLOCKING_TYPE_SILENCE
 import com.goodwy.commons.models.BlockedNumber
 import kotlinx.collections.immutable.ImmutableList
@@ -215,12 +215,18 @@ internal fun ManageBlockedNumbersScreen(
                     showCheckmark = showCheckmarksOnSwitches,
                     checkmark = ImageVector.vectorResource(R.drawable.ic_question)
                 )
-                if (true) SettingsPreferenceComponent(
+                if (isDialer) SettingsPreferenceComponent(
                     label = stringResource(id = com.goodwy.strings.R.string.blocking_type),
+                    sublabel = when (isBlockingType) {
+                        BLOCKING_TYPE_DO_NOT_REJECT -> stringResource(id = com.goodwy.strings.R.string.blocking_type_do_not_reject_summary)
+                        BLOCKING_TYPE_SILENCE -> stringResource(id = com.goodwy.strings.R.string.blocking_type_silence_summary)
+                        else -> stringResource(id = com.goodwy.strings.R.string.blocking_type_reject_summary)
+
+                    },
                     value = when (isBlockingType) {
-                        BLOCKING_TYPE_BUSY -> stringResource(id = com.goodwy.strings.R.string.blocking_type_busy)
+                        BLOCKING_TYPE_DO_NOT_REJECT -> stringResource(id = com.goodwy.strings.R.string.blocking_type_do_not_reject)
                         BLOCKING_TYPE_SILENCE -> stringResource(id = com.goodwy.strings.R.string.blocking_type_silence)
-                        else -> stringResource(id = com.goodwy.strings.R.string.blocking_type_silence)
+                        else -> stringResource(id = com.goodwy.strings.R.string.blocking_type_reject)
 
                     },
                     isPreferenceEnabled = isBlockUnknownSelected || isHiddenSelected,
