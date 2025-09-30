@@ -1,5 +1,6 @@
 package com.goodwy.commons.helpers
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.database.Cursor
 import android.graphics.*
@@ -341,9 +342,9 @@ class SimpleContactsHelper(val context: Context) {
         val canvas = Canvas(bitmap)
         val view = TextView(context)
         view.layout(0, 0, size, size)
-        val letterBackgroundColors = context.getLetterBackgroundColors()
 
         val backgroundPaint = if (context.baseConfig.useColoredContacts) {
+            val letterBackgroundColors = context.getLetterBackgroundColors()
             Paint().apply {
                 color = letterBackgroundColors[abs(name.hashCode()) % letterBackgroundColors.size].toInt()
                 isAntiAlias = true
@@ -381,9 +382,9 @@ class SimpleContactsHelper(val context: Context) {
         val output = createBitmap(size, size)
         val canvas = Canvas(output)
         val paint = Paint()
-        val letterBackgroundColors = context.getLetterBackgroundColors()
 
         val backgroundPaint = if (context.baseConfig.useColoredContacts) {
+            val letterBackgroundColors = context.getLetterBackgroundColors()
             Paint().apply {
                 color = letterBackgroundColors[abs(name.hashCode()) % letterBackgroundColors.size].toInt()
                 isAntiAlias = true
@@ -405,11 +406,15 @@ class SimpleContactsHelper(val context: Context) {
         return output
     }
 
-    fun getColoredGroupIcon(title: String): Drawable? {
-        val icon = ResourcesCompat.getDrawable(context.resources, R.drawable.ic_group_circle_bg, null)
-        val letterBackgroundColors = context.getLetterBackgroundColors()
-        val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()
-        if (context.baseConfig.useColoredContacts) (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+    @SuppressLint("UseCompatLoadingForDrawables")
+    fun getColoredGroupIcon(title: String): Drawable {
+//        val icon = ResourcesCompat.getDrawable(context.resources, R.drawable.ic_group_circle_bg, null)
+        val icon = context.resources.getDrawable(R.drawable.ic_group_circle_bg)
+        if (context.baseConfig.useColoredContacts) {
+            val letterBackgroundColors = context.getLetterBackgroundColors()
+            val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()
+            (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+        }
         return icon
     }
 
