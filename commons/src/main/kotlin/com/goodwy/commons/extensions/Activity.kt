@@ -1732,9 +1732,10 @@ fun Activity.maybeShowNumberPickerDialog(
 
             val items = phoneNumbers.mapIndexed { index, phoneNumber ->
                 val type = getPhoneNumberTypeText(phoneNumber.type, phoneNumber.label)
+                val favorite = if (phoneNumber.isPrimary) " ★" else ""
                 RadioItem(
                     id = index,
-                    title = "${phoneNumber.value} ($type)",
+                    title = "${phoneNumber.value} ($type) $favorite",
                     value = phoneNumber
                 )
             }
