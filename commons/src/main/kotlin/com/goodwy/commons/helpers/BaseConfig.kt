@@ -336,6 +336,8 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(USE_24_HOUR_FORMAT, DateFormat.is24HourFormat(context))
         set(use24HourFormat) = prefs.edit { putBoolean(USE_24_HOUR_FORMAT, use24HourFormat) }
 
+    val isUse24HourFormat: Flow<Boolean> = ::use24HourFormat.asFlowNonNull()
+
     var isSundayFirst: Boolean
         get() {
             val isSundayFirst = Calendar.getInstance(Locale.getDefault()).firstDayOfWeek == Calendar.SUNDAY
@@ -809,6 +811,8 @@ open class BaseConfig(val context: Context) {
     var useShamsi: Boolean //Persian Calendar
         get() = prefs.getBoolean(USE_SHAMSI, false)
         set(useShamsi) = prefs.edit { putBoolean(USE_SHAMSI, useShamsi) }
+
+    val isUseShamsi: Flow<Boolean> = ::useShamsi.asFlowNonNull()
 
     var needInit: Boolean
         get() = prefs.getBoolean(NEED_INIT, true)

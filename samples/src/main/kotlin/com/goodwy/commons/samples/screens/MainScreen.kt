@@ -30,6 +30,8 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.compose.theme.actionModeColor
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.extensions.formatDate
+import com.goodwy.commons.helpers.TIME_FORMAT_12
+import com.goodwy.commons.samples.dialogs.ThemeColorsDialog
 import saman.zamani.persiandate.PersianDate
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -50,6 +52,8 @@ fun MainScreen(
     isTopAppBarColorIcon: Boolean = false,
     openDateButton: () -> Unit,
     isDateFormat: String = "d.M.y",
+    isTimeFormat: String = TIME_FORMAT_12,
+    useShamsi: Boolean = false,
 ) {
     SimpleScaffold(
         customTopBar = { scrolledColor: Color, _: MutableInteractionSource, scrollBehavior: TopAppBarScrollBehavior, statusBarColor: Int, colorTransitionFraction: Float, contrastColor: Color ->
@@ -111,12 +115,30 @@ fun MainScreen(
             ) {
                 Text("Test button")
             }
+
+            var showDialog by remember { mutableStateOf(false) }
             Button(
                 onClick = openDateButton
             ) {
                 val cal = Calendar.getInstance(Locale.ENGLISH).timeInMillis
-                val formatDate = cal.formatDate(LocalContext.current)
+                val formatDate = cal.formatDate(
+                    context = LocalContext.current,
+                    dateFormat = isDateFormat,
+                    timeFormat = isTimeFormat,
+                    useShamsi = useShamsi,
+                )
                 Text(formatDate)
+            }
+            if (showDialog) {
+                ThemeColorsDialog(
+                    onDismiss = { showDialog = false }
+                )
+            }
+
+            Button(
+                onClick = { showDialog = true }
+            ) {
+                Text("Test system color")
             }
         }
     }

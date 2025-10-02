@@ -229,9 +229,10 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
 
 fun Context.getDialogBackgroundColor(): Int {
     return when {
-        isDynamicTheme() -> MaterialColors.getColor(
-            this, com.google.android.material.R.attr.colorSurfaceContainerHigh, Color.TRANSPARENT
-        )
+//        isDynamicTheme() -> MaterialColors.getColor(
+//            this, com.google.android.material.R.attr.colorSurfaceContainerHigh, Color.TRANSPARENT
+//        )
+        isDynamicTheme() -> resources.getColor(R.color.you_dialog_background_color, theme)
 
         else -> baseConfig.backgroundColor
     }

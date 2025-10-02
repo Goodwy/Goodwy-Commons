@@ -1,5 +1,9 @@
 package com.goodwy.commons.compose.theme
 
+import android.content.Context
+import androidx.annotation.ColorRes
+import androidx.annotation.DoNotInline
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -30,7 +34,11 @@ internal fun Theme(
                 if (isSystemInDarkTheme) {
                     dynamicDarkColorScheme(context)
                 } else {
-                    dynamicLightColorScheme(context)
+                    dynamicLightColorScheme(context).copy(
+                        background = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_10),
+                        surface = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_10),
+                        surfaceBright = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_10),
+                    )
                 }
             }
 
@@ -87,5 +95,13 @@ private fun previewColorScheme() = if (isSystemInDarkTheme()) {
     darkColorScheme
 } else {
     lightColorScheme
+}
+
+@RequiresApi(23)
+private object ColorResourceHelper {
+    @DoNotInline
+    fun getColor(context: Context, @ColorRes id: Int): Color {
+        return Color(context.resources.getColor(id, context.theme))
+    }
 }
 

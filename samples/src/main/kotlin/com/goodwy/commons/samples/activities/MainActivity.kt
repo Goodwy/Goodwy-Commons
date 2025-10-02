@@ -21,6 +21,8 @@ import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.goodwy.commons.helpers.SHOW_ALL_TABS
+import com.goodwy.commons.helpers.TIME_FORMAT_12
+import com.goodwy.commons.helpers.TIME_FORMAT_24
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
@@ -35,6 +37,9 @@ class MainActivity : BaseSimpleActivity() {
         setContent {
             val isTopAppBarColorIcon by config.isTopAppBarColorIcon.collectAsStateWithLifecycle(initialValue = config.topAppBarColorIcon)
             val isDateFormat by config.isDateFormat.collectAsStateWithLifecycle(initialValue = config.dateFormat)
+            val isUse24HourFormat by config.isUse24HourFormat.collectAsStateWithLifecycle(initialValue = config.use24HourFormat)
+            val isTimeFormat = if (isUse24HourFormat) TIME_FORMAT_24 else TIME_FORMAT_12
+            val useShamsi by config.isUseShamsi.collectAsStateWithLifecycle(initialValue = config.useShamsi)
             AppThemeSurface {
                 val showMoreApps = onEventValue { !resources.getBoolean(com.goodwy.commons.R.bool.hide_google_relations) }
 
@@ -54,6 +59,8 @@ class MainActivity : BaseSimpleActivity() {
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
                     openDateButton = ::setupDateButton,
                     isDateFormat = isDateFormat,
+                    isTimeFormat = isTimeFormat,
+                    useShamsi = useShamsi,
                 )
                 AppLaunched()
             }
@@ -156,9 +163,6 @@ class MainActivity : BaseSimpleActivity() {
         )
 
         datePicker.show()
-        
-//        FilePickerDialog(this) {
-//        }
     }
 
     private fun setupDateButton() {

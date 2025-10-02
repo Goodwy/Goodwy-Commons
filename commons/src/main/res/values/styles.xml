@@ -100,6 +100,7 @@
 
     <!-- Material Alert Dialog -->
     <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:backgroundTint">@color/you_dialog_background_color</item>
         <item name="colorPrimary">@color/you_dialog_background_color</item>
         <item name="colorSecondary">@color/you_dialog_background_color</item>
         <item name="colorSurface">@color/you_dialog_background_color</item>
