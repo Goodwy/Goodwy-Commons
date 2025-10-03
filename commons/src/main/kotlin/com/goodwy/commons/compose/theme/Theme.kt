@@ -14,6 +14,7 @@ import androidx.compose.ui.platform.LocalView
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
+import com.goodwy.commons.extensions.getBottomNavigationBackgroundColor
 import com.goodwy.commons.extensions.getContrastColor
 import com.goodwy.commons.helpers.isSPlus
 
@@ -24,7 +25,7 @@ internal fun Theme(
 ) {
     val view = LocalView.current
     val context = LocalContext.current
-    val configuration = LocalConfiguration.current
+//    val configuration = LocalConfiguration.current
     val baseConfig = remember { context.config }
     val isSystemInDarkTheme = isSystemInDarkTheme()
 
@@ -32,12 +33,14 @@ internal fun Theme(
         when {
             theme is Theme.SystemDefaultMaterialYou && isSPlus() -> {
                 if (isSystemInDarkTheme) {
-                    dynamicDarkColorScheme(context)
+                    dynamicDarkColorScheme(context).copy(
+                        background = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_1000),
+                        surface = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_900),
+                    )
                 } else {
                     dynamicLightColorScheme(context).copy(
-                        background = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_10),
+                        background = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_50),
                         surface = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_10),
-                        surfaceBright = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_10),
                     )
                 }
             }
@@ -45,7 +48,8 @@ internal fun Theme(
             theme is Theme.Custom && theme.backgroundColor.isLitWell() -> lightColorScheme(
                 primary = theme.primaryColor,
                 onPrimary = Color(theme.primaryColorInt.getContrastColor()),
-                surface = theme.backgroundColor,
+                background = theme.backgroundColor,
+                surface = Color(context.getBottomNavigationBackgroundColor()),
                 onSurface = theme.textColor,
                 surfaceVariant = theme.surfaceVariant,
                 primaryContainer = theme.primaryContainer
@@ -54,7 +58,8 @@ internal fun Theme(
             theme is Theme.Custom || theme is Theme.Dark -> darkColorScheme(
                 primary = theme.primaryColor,
                 onPrimary = Color(theme.primaryColorInt.getContrastColor()),
-                surface = theme.backgroundColor,
+                background = theme.backgroundColor,
+                surface = Color(context.getBottomNavigationBackgroundColor()),
                 onSurface = theme.textColor,
                 surfaceVariant = theme.surfaceVariant,
                 primaryContainer = theme.primaryContainer

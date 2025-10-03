@@ -1,6 +1,7 @@
 package com.goodwy.commons.compose.settings
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -8,6 +9,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.ChevronRight
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -29,6 +34,7 @@ fun SettingsPreferenceComponent(
     label: String,
     sublabel: String? = null,
     value: String? = null,
+    showChevron: Boolean = false,
     isPreferenceEnabled: Boolean = true,
     doOnPreferenceLongClick: (() -> Unit)? = null,
     doOnPreferenceClick: (() -> Unit)? = null,
@@ -38,12 +44,13 @@ fun SettingsPreferenceComponent(
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .background(color = MaterialTheme.colorScheme.surface)
             .combinedClickable(
                 enabled = isPreferenceEnabled,
                 onClick = { doOnPreferenceClick?.invoke() },
                 onLongClick = { doOnPreferenceLongClick?.invoke() },
             )
-            .padding(horizontal = 22.dp, vertical = 2.dp)
+            .padding(start = 22.dp, end = 16.dp, top = 2.dp, bottom = 2.dp)
             .then(modifier),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -85,7 +92,7 @@ fun SettingsPreferenceComponent(
         AnimatedVisibility(visible = !value.isNullOrBlank()) {
             Text(
                 text = value.toString(),
-//                modifier = Modifier
+                modifier = Modifier.padding(end = 6.dp),
 //                    .fillMaxWidth(),
                 color = preferenceValueColor,
                 fontSize = with(LocalDensity.current) {
@@ -96,6 +103,10 @@ fun SettingsPreferenceComponent(
                 },
             )
         }
+        if (showChevron) Icon(
+            imageVector = Icons.Rounded.ChevronRight,
+            contentDescription = label
+        )
     }
 }
 
@@ -107,6 +118,7 @@ private fun SettingsPreferencePreview() {
             label = stringResource(id = R.string.language),
             sublabel = stringResource(id = R.string.translation_english),
             value = stringResource(id = R.string.translation_english),
+            showChevron = true,
             isPreferenceEnabled = true,
         )
     }

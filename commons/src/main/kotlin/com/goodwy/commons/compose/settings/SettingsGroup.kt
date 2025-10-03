@@ -1,12 +1,14 @@
 package com.goodwy.commons.compose.settings
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.theme.SimpleTheme
@@ -18,12 +20,15 @@ fun SettingsGroup(
     content: @Composable ColumnScope.() -> Unit,
 ) {
     Column(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth().padding(top = 12.dp),
     ) {
         if (title != null) {
             SettingsGroupTitle(title = title)
         }
-        content()
+        Card(
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 4.dp),
+            shape = RoundedCornerShape(16.dp),
+        ) { content() }
     }
 }
 
@@ -34,12 +39,12 @@ fun SettingsGroupTitle(
 ) {
     Box(
         modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = SimpleTheme.dimens.padding.extraLarge),
+            .fillMaxWidth(),
+            //.padding(horizontal = SimpleTheme.dimens.padding.extraLarge),
         contentAlignment = Alignment.CenterStart
     ) {
         val primary = SimpleTheme.colorScheme.primary
-        val titleStyle = SimpleTheme.typography.headlineMedium.copy(color = primary)
+        val titleStyle = SimpleTheme.typography.titleSmall.copy(color = primary)
         ProvideTextStyle(value = titleStyle) { title() }
     }
 }
@@ -49,7 +54,7 @@ fun SettingsGroupTitle(
 private fun SettingsGroupPreview() {
     MaterialTheme {
         SettingsGroup(
-            title = { Text(text = "Title", modifier = Modifier.padding(start = 40.dp)) }
+            title = { Text(text = "Title".uppercase(), modifier = Modifier.padding(start = 36.dp)) }
         ) {
             ListItem(
                 leadingContent = {

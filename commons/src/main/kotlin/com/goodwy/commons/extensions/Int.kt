@@ -98,7 +98,7 @@ fun ClosedRange<Int>.random() = Random().nextInt(endInclusive - start) + start
 
 // taken from https://stackoverflow.com/a/40964456/1967672
 fun Int.darkenColor(factor: Int = 8): Int {
-    if (this == Color.WHITE || this == Color.BLACK) { // TODO Status Bar Color
+    if (this == Color.WHITE || this == Color.BLACK) {
         return this
     }
 
