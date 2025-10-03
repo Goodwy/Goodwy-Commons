@@ -58,18 +58,10 @@ fun Context.getProperStatusBarColor() = when {
 
 // get the color of the status bar with material activity, if the layout is scrolled down a bit
 fun Context.getColoredMaterialStatusBarColor(): Int {
-    val baseColor = baseConfig.backgroundColor
-    val bottomColor = when {
-        isDynamicTheme() -> {
-            if (isSystemInDarkMode()) resources.getColor(R.color.you_status_bar_color, theme).lightenColor(2)
-            else resources.getColor(R.color.you_background_color, theme).darkenColor(2)
-        }
-
-        baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme).lightenColor(2)
-        baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme).lightenColor(2)
-        else -> baseConfig.backgroundColor.lightenColor(6)
+    return when {
+        isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme).lightenColor(2)
+        else -> getBottomNavigationBackgroundColor().lightenColor(2)
     }
-    return bottomColor
 }
 
 fun Context.updateTextColors(viewGroup: ViewGroup) {
@@ -223,7 +215,6 @@ fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enabl
 
 fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_colors).toCollection(ArrayList())
 
-@SuppressLint("NewApi")
 fun Context.getBottomNavigationBackgroundColor(): Int {
     val baseColor = baseConfig.backgroundColor
     val bottomColor = when {
@@ -249,4 +240,15 @@ fun Context.getDialogBackgroundColor(): Int {
 fun Context.getProperTextCursorColor() = when {
     isDynamicTheme() -> resources.getColor(R.color.you_primary_color, theme)
     else -> baseConfig.textCursorColor
+}
+
+fun Context.getSurfaceColor(): Int {
+    val baseColor = baseConfig.backgroundColor
+    val bottomColor = when {
+        isDynamicTheme() -> resources.getColor(R.color.you_surface_color, theme)
+        baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
+        baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
+        else -> baseConfig.backgroundColor.lightenColor(4)
+    }
+    return bottomColor
 }

@@ -150,7 +150,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         setupUseAccentColor()
     }
 
-    private fun updateHoldersColor(color: Int = getBottomNavigationBackgroundColor()) {
+    private fun updateHoldersColor(color: Int = getSurfaceColor()) {
         arrayOf(
             binding.themeHolder,
             binding.primaryColorsHolder,
