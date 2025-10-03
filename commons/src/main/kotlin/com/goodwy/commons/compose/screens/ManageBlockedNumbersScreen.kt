@@ -29,6 +29,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.semantics.onLongClick
@@ -602,6 +603,9 @@ private fun NonActionModeToolbar(
         title = { scrolledTextColor ->
             Text(
                 text = stringResource(id = R.string.manage_blocked_numbers),
+                fontSize = with(LocalDensity.current) {
+                    dimensionResource(id = R.dimen.actionbar_text_size).toSp()
+                },
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 color = scrolledTextColor
@@ -619,7 +623,7 @@ private fun NonActionModeToolbar(
         actions = {
             val actionMenus = remember {
                 listOf(
-                    ActionItem(R.string.add_a_blocked_number, icon = Icons.Rounded.Add, doAction = onAdd, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
+                    ActionItem(R.string.add_a_blocked_number, icon = Icons.Rounded.Add, doAction = onAdd, overflowMode = OverflowMode.IF_NECESSARY),
                     ActionItem(R.string.import_blocked_numbers, doAction = onImportBlockedNumbers, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                     ActionItem(R.string.export_blocked_numbers, doAction = onExportBlockedNumbers, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                 ).toImmutableList()
