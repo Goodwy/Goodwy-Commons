@@ -311,7 +311,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             else  animateTopBarColors(colorFrom, colorTo)
         } else if (newScrollY == 0 && oldScrollY > 0) {
             val colorFrom = if (surfaceColor) getSurfaceColor() else getProperBackgroundColor()
-            val colorTo = getRequiredStatusBarColor()
+            val colorTo = getRequiredStatusBarColor(surfaceColor)
             if (isMySearchMenu) animateMySearchMenuColors(colorFrom, colorTo)
             else animateTopBarColors(colorFrom, colorTo)
         }
