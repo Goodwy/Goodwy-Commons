@@ -351,10 +351,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         materialScrollColorAnimation!!.start()
     }
 
-    fun getRequiredStatusBarColor(): Int {
+    fun getRequiredStatusBarColor(surfaceColor: Boolean = false): Int {
         val scrollingViewOffset = scrollingView?.computeVerticalScrollOffset() ?: 0
         return if ((scrollingView is RecyclerView || scrollingView is NestedScrollView) && scrollingViewOffset == 0) {
-            getProperBackgroundColor()
+            if (surfaceColor) getSurfaceColor() else getProperBackgroundColor()
         } else {
             getColoredMaterialStatusBarColor()
         }
@@ -394,14 +394,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateStatusBarOnPageChange() {
+    fun updateStatusBarOnPageChange(surfaceColor: Boolean = false) {
         if (scrollingView is RecyclerView || scrollingView is NestedScrollView) {
             val scrollY = scrollingView!!.computeVerticalScrollOffset()
             val colorFrom = window.statusBarColor
             val colorTo = if (scrollY > 0) {
                 getColoredMaterialStatusBarColor()
             } else {
-                getRequiredStatusBarColor()
+                if (surfaceColor) getSurfaceColor() else getRequiredStatusBarColor()
             }
             animateTopBarColors(colorFrom, colorTo)
             currentScrollY = scrollY
