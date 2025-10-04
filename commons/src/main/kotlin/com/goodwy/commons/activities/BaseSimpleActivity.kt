@@ -271,46 +271,46 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     // colorize the top toolbar and statusbar at scrolling down a bit
-    fun setupMaterialScrollListener(scrollingView: ScrollingView?, toolbar: Toolbar) {
+    fun setupMaterialScrollListener(scrollingView: ScrollingView?, toolbar: Toolbar, surfaceColor: Boolean = false) {
         this.scrollingView = scrollingView
         this.toolbar = toolbar
         if (scrollingView is RecyclerView) {
             scrollingView.setOnScrollChangeListener { _, _, _, _, _ ->
                 val newScrollY = scrollingView.computeVerticalScrollOffset()
-                if (newScrollY == 0 || currentScrollY == 0) scrollingChanged(newScrollY, currentScrollY)
+                if (newScrollY == 0 || currentScrollY == 0) scrollingChanged(newScrollY, currentScrollY, surfaceColor = surfaceColor)
                 currentScrollY = newScrollY
             }
         } else if (scrollingView is NestedScrollView) {
             scrollingView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
-                if (scrollY == 0 || oldScrollY == 0) scrollingChanged(scrollY, oldScrollY)
+                if (scrollY == 0 || oldScrollY == 0) scrollingChanged(scrollY, oldScrollY, surfaceColor = surfaceColor)
             }
         }
     }
 
-    fun setupSearchMenuScrollListener(scrollingView: ScrollingView?, searchMenu: MySearchMenu) {
+    fun setupSearchMenuScrollListener(scrollingView: ScrollingView?, searchMenu: MySearchMenu, surfaceColor: Boolean = false) {
         this.scrollingView = scrollingView
         this.mySearchMenu = searchMenu
         if (scrollingView is RecyclerView) {
             scrollingView.setOnScrollChangeListener { _, _, _, _, _ ->
                 val newScrollY = scrollingView.computeVerticalScrollOffset()
-                if (newScrollY == 0 || currentScrollY == 0) scrollingChanged(newScrollY, currentScrollY, true)
+                if (newScrollY == 0 || currentScrollY == 0) scrollingChanged(newScrollY, currentScrollY, true, surfaceColor)
                 currentScrollY = newScrollY
             }
         } else if (scrollingView is NestedScrollView) {
             scrollingView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
-                if (scrollY == 0 || oldScrollY == 0) scrollingChanged(scrollY, oldScrollY, true)
+                if (scrollY == 0 || oldScrollY == 0) scrollingChanged(scrollY, oldScrollY, true, surfaceColor)
             }
         }
     }
 
-    private fun scrollingChanged(newScrollY: Int, oldScrollY: Int, isMySearchMenu: Boolean = false) {
+    private fun scrollingChanged(newScrollY: Int, oldScrollY: Int, isMySearchMenu: Boolean = false, surfaceColor: Boolean) {
         if (newScrollY > 0 && oldScrollY == 0) {
-            val colorFrom = getProperBackgroundColor()
+            val colorFrom = if (surfaceColor) getSurfaceColor() else getProperBackgroundColor()
             val colorTo = getColoredMaterialStatusBarColor()
             if (isMySearchMenu) animateMySearchMenuColors(colorFrom, colorTo)
             else  animateTopBarColors(colorFrom, colorTo)
         } else if (newScrollY == 0 && oldScrollY > 0) {
-            val colorFrom = getProperBackgroundColor()
+            val colorFrom = if (surfaceColor) getSurfaceColor() else getProperBackgroundColor()
             val colorTo = getRequiredStatusBarColor()
             if (isMySearchMenu) animateMySearchMenuColors(colorFrom, colorTo)
             else animateTopBarColors(colorFrom, colorTo)
