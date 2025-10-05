@@ -36,6 +36,7 @@ abstract class MyRecyclerViewListAdapter<T>(
     protected var accentColor = activity.getProperAccentColor()
     protected var textColor = activity.getProperTextColor()
     protected var backgroundColor = activity.getProperBackgroundColor()
+    protected var surfaceColor = activity.getSurfaceColor()
     protected var properPrimaryColor = activity.getProperPrimaryColor()
     protected var contrastColor = properPrimaryColor.getContrastColor()
     protected var contactThumbnailsSize = contactThumbnailsSize()
@@ -321,6 +322,7 @@ abstract class MyRecyclerViewListAdapter<T>(
 
     fun updateBackgroundColor(backgroundColor: Int) {
         this.backgroundColor = backgroundColor
+        surfaceColor = activity.getSurfaceColor()
         onRefresh.invoke()
     }
 

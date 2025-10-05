@@ -27,6 +27,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected var accentColor = activity.getProperAccentColor()
     protected var textColor = activity.getProperTextColor()
     protected var backgroundColor = activity.getProperBackgroundColor()
+    protected var surfaceColor = activity.getSurfaceColor()
     protected var properPrimaryColor = activity.getProperPrimaryColor()
     protected var contrastColor = properPrimaryColor.getContrastColor()
     protected var contactThumbnailsSize = contactThumbnailsSize()
@@ -303,6 +304,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     fun updateBackgroundColor(backgroundColor: Int) {
         this.backgroundColor = backgroundColor
+        surfaceColor = activity.getSurfaceColor()
         notifyDataSetChanged()
     }
 
