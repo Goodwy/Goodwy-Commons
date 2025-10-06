@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import com.goodwy.commons.R
+import com.goodwy.commons.compose.alert_dialog.dialogContainerColor
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.lists.SimpleColumnScaffold
 import com.goodwy.commons.compose.theme.AppThemeSurface
@@ -100,6 +101,7 @@ internal fun AboutNewSection(
             ListItem(
                 modifier = Modifier
                     .fillMaxWidth(),
+                colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.background),
                 leadingContent = {
                     Box(
                         modifier = Modifier.width(72.dp).padding(bottom = 8.dp),
@@ -143,7 +145,7 @@ internal fun AboutNewSection(
             if (playStoreInstalled || ruStoreInstalled) {
                 Card(
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
                 ) {
                     Row (
@@ -173,7 +175,7 @@ internal fun AboutNewSection(
             }
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
             ) {
                 Row (
@@ -212,7 +214,7 @@ internal fun AboutNewSection(
             Spacer(modifier = Modifier.size(18.dp))
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
             ) {
                 Row (
@@ -242,7 +244,7 @@ internal fun AboutNewSection(
                 Spacer(modifier = Modifier.size(18.dp))
                 Card(
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
                 ) {
                     Row(
@@ -285,6 +287,7 @@ internal fun AboutNewSection(
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
             ) {
+                val colorFor = contentColorFor(MaterialTheme.colorScheme.primaryContainer)
                 Row (
                     modifier = Modifier
                         .fillMaxSize()
@@ -297,14 +300,14 @@ internal fun AboutNewSection(
                         text = stringResource(stringsR.string.tip_jar).toUpperCase(LocaleList.current),
                         fontSize = 14.sp,
                         lineHeight = 18.sp,
-                        color = textColor,)
+                        color = colorFor,)
                     Box (modifier = Modifier
                         .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                         .width(42.dp)) {
                         Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
-                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = textColor)
+                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = colorFor)
                         Icon(modifier = Modifier.size(42.dp).padding(8.dp),
-                            imageVector = Icons.Rounded.Savings, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = textColor)
+                            imageVector = Icons.Rounded.Savings, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = colorFor)
                     }
                 }
             }
@@ -312,7 +315,7 @@ internal fun AboutNewSection(
                 Spacer(modifier = Modifier.size(18.dp))
                 Card(
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
                 ) {
                     Row(

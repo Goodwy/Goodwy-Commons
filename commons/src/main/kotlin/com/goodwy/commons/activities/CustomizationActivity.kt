@@ -35,12 +35,12 @@ import kotlin.math.abs
 
 class CustomizationActivity : BaseSimpleActivity() {
     companion object {
-        private val THEME_LIGHT = 0
-        private val THEME_DARK = 1
-        private val THEME_BLACK = 2
-        private val THEME_GRAY = 3
-        private val THEME_CUSTOM = 4
-        private val THEME_SYSTEM = 5    // Material You
+        private const val THEME_LIGHT = 0
+        private const val THEME_DARK = 1
+        private const val THEME_BLACK = 2
+        private const val THEME_GRAY = 3
+        private const val THEME_CUSTOM = 4
+        private const val THEME_SYSTEM = 5    // Material You
     }
 
     private var curTextColor = 0
@@ -150,7 +150,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         setupUseAccentColor()
     }
 
-    private fun updateHoldersColor(color: Int = getSurfaceColor()) {
+    private fun updateHoldersColor() {
+        val color = getCurrentSurfaceColor()
         arrayOf(
             binding.themeHolder,
             binding.primaryColorsHolder,
@@ -297,7 +298,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
                 curTopAppBarColorIcon = baseConfig.topAppBarColorIcon
                 curTopAppBarColorTitle = baseConfig.topAppBarColorTitle
-                curIsUsingAccentColor = baseConfig.isUsingAccentColor
+                curIsUsingAccentColor = binding.customizationUseAccentColor.isChecked
                 curTextCursorColor = baseConfig.textCursorColor
 
                 setTheme(getThemeId(curPrimaryColor))
@@ -327,7 +328,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             curBackgroundColor = getColor(theme.backgroundColorId)
             curTopAppBarColorIcon = baseConfig.topAppBarColorIcon
             curTopAppBarColorTitle = baseConfig.topAppBarColorTitle
-            curIsUsingAccentColor = baseConfig.isUsingAccentColor
+            curIsUsingAccentColor = binding.customizationUseAccentColor.isChecked
             curTextCursorColor = baseConfig.textCursorColor
 
             if (curSelectedThemeId != THEME_SYSTEM) {
@@ -355,13 +356,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationUseAccentColor.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
         binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
 
-        val holdersColor = when {
-            curSelectedThemeId == THEME_SYSTEM -> getCurrentStatusBarColor()
-            curBackgroundColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background)
-            curBackgroundColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background)
-            else -> curBackgroundColor.lightenColor(4)
-        }
-        updateHoldersColor(holdersColor)
+        updateHoldersColor()
 
         hasUnsavedChanges = true
         refreshMenuItems()
@@ -394,8 +389,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getSystemThemeColors(): MyTheme {
         return MyTheme(
             labelId = R.string.system_default,
-            textColorId = R.color.theme_dark_text_color,
-            backgroundColorId = R.color.theme_dark_background_color,
+            textColorId = R.color.theme_black_text_color,
+            backgroundColorId = R.color.theme_black_background_color,
             primaryColorId = R.color.color_primary,
             appIconColorId = curAppIconColor
         )
@@ -447,12 +442,12 @@ class CustomizationActivity : BaseSimpleActivity() {
                 it.isEnabled = true
                 it.alpha = 0.3f
             } else {
-                if (curSelectedThemeId == THEME_SYSTEM) {
-                    it.isEnabled = false
-                    it.alpha = 0.3f
-                } else {
+                if (curSelectedThemeId != THEME_SYSTEM || !isSPlus()) {
                     it.isEnabled = true
                     it.alpha = 1f
+                } else {
+                    it.isEnabled = false
+                    it.alpha = 0.3f
                 }
             }
         }
@@ -462,12 +457,12 @@ class CustomizationActivity : BaseSimpleActivity() {
                 this.isEnabled = true
                 this.alpha = 0.3f
             } else {
-                if (curSelectedThemeId == THEME_SYSTEM || !curIsUsingAccentColor) {
-                    this.isEnabled = false
-                    this.alpha = 0.3f
-                } else {
+                if ((curSelectedThemeId != THEME_SYSTEM || !isSPlus()) && curIsUsingAccentColor) {
                     this.isEnabled = true
                     this.alpha = 1f
+                } else {
+                    this.isEnabled = false
+                    this.alpha = 0.3f
                 }
             }
         }
@@ -661,12 +656,12 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (baseConfig.wasAppIconCustomizationWarningShown || !isProVersion()) {
                 pickAppIconColor()
             } else {
-                val message = resources.getString(com.goodwy.strings.R.string.app_icon_color_shortcuts_warning_g) + "\n\n" +
-                    resources.getString(com.goodwy.strings.R.string.app_icon_color_warning_g)
+                val message = resources.getString(stringsR.string.app_icon_color_shortcuts_warning_g) + "\n\n" +
+                    resources.getString(stringsR.string.app_icon_color_warning_g)
                 ConfirmationDialog(
                     activity = this,
                     message = message,
-                    messageId = com.goodwy.strings.R.string.app_icon_color_warning_g,
+                    messageId = stringsR.string.app_icon_color_warning_g,
                     positive = R.string.ok,
                     negative = 0
                 ) {
@@ -850,8 +845,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             checkedItemId = curAppIconColor + 1,
             defaultItemId = APP_ICON_ORIGINAL + 1,
             titleId = R.string.app_icon_color,
-            descriptionId = resources.getString(com.goodwy.strings.R.string.app_icon_color_shortcuts_warning_g) + "\n\n"
-                + resources.getString(com.goodwy.strings.R.string.app_icon_color_warning_g)
+            descriptionId = resources.getString(stringsR.string.app_icon_color_shortcuts_warning_g) + "\n\n"
+                + resources.getString(stringsR.string.app_icon_color_warning_g)
         ) { wasPositivePressed, newValue ->
             if (wasPositivePressed && isProVersion()) {
                 if (curAppIconColor != newValue - 1) {
@@ -886,7 +881,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 ConfirmationDialog(
                     activity = this,
                     message = "",
-                    messageId = com.goodwy.strings.R.string.global_theme_success_g,
+                    messageId = stringsR.string.global_theme_success_g,
                     positive = R.string.ok,
                     negative = 0,
                     callback = {}
@@ -953,6 +948,16 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getCurrentStatusBarColor() = when (binding.customizationTheme.value) {
         getMaterialYouString() -> resources.getColor(R.color.you_status_bar_color)
         else -> curBackgroundColor
+    }
+
+    private fun getCurrentSurfaceColor(): Int {
+        val bottomColor = when {
+            binding.customizationTheme.value == getMaterialYouString() -> resources.getColor(R.color.you_surface_color, theme)
+            curBackgroundColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
+            curBackgroundColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
+            else -> curBackgroundColor.lightenColor(4)
+        }
+        return bottomColor
     }
 
     private fun getCurrentAccentOrPrimaryColor() = when {
@@ -1039,7 +1044,12 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
             customizationUseAccentColorFaq.imageTintList = ColorStateList.valueOf(getProperTextColor())
             customizationUseAccentColorFaq.setOnClickListener {
-                ConfirmationDialog(this@CustomizationActivity, messageId = com.goodwy.strings.R.string.use_accent_color_summary, positive = com.goodwy.commons.R.string.ok, negative = 0) {}
+                ConfirmationDialog(
+                    activity = this@CustomizationActivity,
+                    messageId = stringsR.string.use_accent_color_summary,
+                    positive = R.string.ok,
+                    negative = 0
+                ) {}
             }
         }
     }

@@ -169,25 +169,4 @@ class AboutActivity : BaseComposeActivity() {
     @Composable
     private fun showGithub() =
         remember { !intent.getStringExtra(APP_REPOSITORY_NAME).isNullOrEmpty() }
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        changeAutoTheme()
-    }
-
-    private fun changeAutoTheme() {
-        syncGlobalConfig {
-            baseConfig.apply {
-                if (isAutoTheme()) {
-                    val isUsingSystemDarkTheme = isSystemInDarkMode()
-                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color)
-                    backgroundColor =
-                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color)
-                    finish()
-                    startActivity(intent)
-                }
-            }
-        }
-        return
-    }
 }

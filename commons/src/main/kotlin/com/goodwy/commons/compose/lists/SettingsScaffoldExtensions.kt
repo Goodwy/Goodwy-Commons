@@ -35,7 +35,7 @@ internal fun ScreenBoxSettingsScaffold(paddingValues: PaddingValues, modifier: M
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(SimpleTheme.colorScheme.surface)
+            .background(SimpleTheme.colorScheme.background) // TODO Compose background
             .padding(
                 top = paddingValues.calculateTopPadding(),
                 start = paddingValues.calculateStartPadding(layoutDirection),

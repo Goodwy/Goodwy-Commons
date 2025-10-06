@@ -1,6 +1,5 @@
 package com.goodwy.commons.activities
 
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.remember
@@ -8,10 +7,6 @@ import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.goodwy.commons.compose.screens.ContributorsScreen
 import com.goodwy.commons.compose.theme.AppThemeSurface
-import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.isAutoTheme
-import com.goodwy.commons.extensions.isSystemInDarkMode
-import com.goodwy.commons.extensions.syncGlobalConfig
 import com.goodwy.commons.models.LanguageContributor
 import kotlinx.collections.immutable.toImmutableList
 
@@ -74,22 +69,4 @@ class ContributorsActivity : BaseComposeActivity() {
         LanguageContributor(R.drawable.ic_flag_chinese_cn_vector, R.string.translation_chinese_cn, R.string.translators_chinese_cn),
         LanguageContributor(R.drawable.ic_flag_chinese_tw_vector, R.string.translation_chinese_tw, R.string.translators_chinese_tw)
     ).toImmutableList()
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        changeAutoTheme()
-    }
-
-    private fun changeAutoTheme() {
-        syncGlobalConfig {
-            baseConfig.apply {
-                if (isAutoTheme()) {
-                    val isUsingSystemDarkTheme = isSystemInDarkMode()
-                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color)
-                    backgroundColor =
-                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color)
-                }
-            }
-        }
-    }
 }

@@ -5,7 +5,6 @@ import android.animation.ValueAnimator
 import android.animation.ObjectAnimator
 import android.animation.StateListAnimator
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.app.ActivityManager
 import android.app.RecoverableSecurityException
 import android.app.role.RoleManager
@@ -111,6 +110,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         super.onCreate(savedInstanceState)
+
+        if (isAutoTheme()) changeAutoTheme()
+
         if (!packageName.startsWith("com.goodwy.", true)) {
             if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
                 val label = "You are using a fake version of the app. For your own safety download the original one from play.google.com. Thanks"
@@ -169,6 +171,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         actionOnPermission = null
     }
 
+    // Used when the manifest prohibits automatic updates for the application android:configChanges="uiMode"
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         handleNavigationAndScrolling()
@@ -180,9 +183,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             baseConfig.apply {
                 if (isAutoTheme() && useChangeAutoTheme) {
                     val isUsingSystemDarkTheme = isSystemInDarkMode()
-                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color)
+                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
                     backgroundColor =
-                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color)
+                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
                 }
             }
         }

@@ -1,6 +1,5 @@
 package com.goodwy.commons.activities
 
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.derivedStateOf
@@ -68,22 +67,4 @@ class LicenseActivity : BaseComposeActivity() {
         License(LICENSE_ZIP4J, R.string.zip4j_title, R.string.zip4j_text, R.string.zip4j_url),
         License(LICENSE_EVALEX, R.string.evalex_title, R.string.evalex_text, R.string.evalex_url)
     )
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        changeAutoTheme()
-    }
-
-    private fun changeAutoTheme() {
-        syncGlobalConfig {
-            baseConfig.apply {
-                if (isAutoTheme()) {
-                    val isUsingSystemDarkTheme = isSystemInDarkMode()
-                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color)
-                    backgroundColor =
-                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color)
-                }
-            }
-        }
-    }
 }

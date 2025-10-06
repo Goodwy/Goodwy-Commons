@@ -45,28 +45,28 @@
     <application android:supportsRtl="true">
         <activity
             android:name="com.goodwy.commons.activities.ContributorsActivity"
-            android:configChanges="orientation|uiMode"
+            android:configChanges="orientation"
             android:exported="false"
             android:label="@string/contributors"
             android:parentActivityName="com.goodwy.commons.activities.AboutActivity" />
 
         <activity
             android:name="com.goodwy.commons.activities.FAQActivity"
-            android:configChanges="orientation|uiMode"
+            android:configChanges="orientation"
             android:exported="false"
             android:label="@string/frequently_asked_questions"
             android:parentActivityName="com.goodwy.commons.activities.AboutActivity" />
 
         <activity
             android:name="com.goodwy.commons.activities.LicenseActivity"
-            android:configChanges="orientation|uiMode"
+            android:configChanges="orientation"
             android:exported="false"
             android:label="@string/third_party_licences"
             android:parentActivityName="com.goodwy.commons.activities.AboutActivity" />
 
         <activity
             android:name=".activities.ManageBlockedNumbersActivity"
-            android:configChanges="orientation|uiMode"
+            android:configChanges="orientation"
             android:enableOnBackInvokedCallback="true"
             android:exported="false"
             android:label="@string/manage_blocked_numbers"

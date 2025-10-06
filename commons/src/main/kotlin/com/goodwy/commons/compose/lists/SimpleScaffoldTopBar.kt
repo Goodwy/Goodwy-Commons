@@ -135,8 +135,8 @@ fun simpleTopAppBarColors(
     contrastColor: Color
 ) = TopAppBarDefaults.topAppBarColors(
     scrolledContainerColor = Color(statusBarColor),
-    containerColor = if (colorTransitionFraction == 1f) contrastColor else SimpleTheme.colorScheme.surface,
-    navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else SimpleTheme.colorScheme.surface
+    containerColor = if (colorTransitionFraction == 1f) contrastColor else SimpleTheme.colorScheme.background, // TODO Compose background
+    navigationIconContentColor = if (colorTransitionFraction == 1f) contrastColor else SimpleTheme.colorScheme.background
 )
 
 @Composable

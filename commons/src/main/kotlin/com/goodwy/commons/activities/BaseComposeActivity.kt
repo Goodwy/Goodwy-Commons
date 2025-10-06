@@ -1,8 +1,13 @@
 package com.goodwy.commons.activities
 
 import android.content.Context
+import android.content.res.Configuration
 import androidx.activity.ComponentActivity
+import com.goodwy.commons.R
 import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.isAutoTheme
+import com.goodwy.commons.extensions.isSystemInDarkMode
+import com.goodwy.commons.extensions.syncGlobalConfig
 import com.goodwy.commons.helpers.MyContextWrapper
 import com.goodwy.commons.helpers.REQUEST_APP_UNLOCK
 import com.goodwy.commons.helpers.isTiramisuPlus
@@ -19,6 +24,24 @@ abstract class BaseComposeActivity : ComponentActivity() {
             super.attachBaseContext(MyContextWrapper(newBase).wrap(newBase, "en"))
         } else {
             super.attachBaseContext(newBase)
+        }
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        changeAutoTheme()
+    }
+
+    private fun changeAutoTheme() {
+        syncGlobalConfig {
+            baseConfig.apply {
+                if (isAutoTheme()) {
+                    val isUsingSystemDarkTheme = isSystemInDarkMode()
+                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
+                    backgroundColor =
+                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
+                }
+            }
         }
     }
 }

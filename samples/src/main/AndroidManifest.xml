@@ -26,7 +26,7 @@
 
         <activity
             android:name="com.goodwy.commons.samples.activities.MainActivity"
-            android:configChanges="orientation|uiMode"
+            android:configChanges="orientation"
             android:exported="true">
         </activity>
 
@@ -35,14 +35,14 @@
             android:theme="@style/SplashTheme"/>
 
         <activity android:name="com.goodwy.commons.activities.AboutActivity"
-            android:configChanges="orientation|uiMode" />
+            android:configChanges="orientation" />
 
         <activity android:name="com.goodwy.commons.activities.CustomizationActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"/>
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
         <activity android:name="com.goodwy.commons.activities.PurchaseActivity"
             android:exported="true"
-            android:configChanges="orientation|keyboardHidden|screenSize|uiMode">
+            android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
