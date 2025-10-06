@@ -3,7 +3,7 @@ package com.goodwy.commons.helpers
 import android.net.Uri
 
 object MyContentProvider {
-    private const val AUTHORITY = "com.goodwy.commons.provider"
+    private const val AUTHORITY = "com.goodwy.android.provider"
     val MY_CONTENT_URI: Uri = Uri.parse("content://$AUTHORITY/settings")
 
     const val ACTION_GLOBAL_CONFIG_UPDATED = "com.goodwy.android.GLOBAL_CONFIG_UPDATED"
@@ -22,4 +22,5 @@ object MyContentProvider {
     const val GLOBAL_THEME_DISABLED = 0
     const val GLOBAL_THEME_SYSTEM = 1
     const val GLOBAL_THEME_CUSTOM = 2
+    const val GLOBAL_THEME_AUTO = 3
 }

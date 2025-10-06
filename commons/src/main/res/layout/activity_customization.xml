@@ -287,8 +287,9 @@
 
                     <RelativeLayout
                         android:id="@+id/customizationAppIconColorHolder"
+                        style="@style/SettingsHolderStyle"
                         android:layout_below="@+id/customizationTextCursorColorHolder"
-                        style="@style/SettingsHolderStyle">
+                        android:layout_marginTop="-1dp">
 
                         <com.goodwy.commons.views.MyTextView
                             android:id="@+id/customizationAppIconColorLabel"
@@ -296,29 +297,29 @@
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_toStartOf="@+id/customizationAppIconColorBeta"
-                            android:text="@string/app_icon_color"/>
+                            android:text="@string/app_icon_color" />
 
                         <TextView
                             android:id="@+id/customizationAppIconColorBeta"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginStart="@dimen/small_margin"
                             android:layout_marginEnd="@dimen/normal_margin"
-                            android:layout_centerVertical="true"
                             android:layout_toStartOf="@+id/customizationAppIconColor"
                             android:background="@drawable/button_rounded_5dp"
                             android:backgroundTint="@color/red_missed"
                             android:clickable="false"
-                            android:paddingTop="@dimen/tiny_margin"
-                            android:paddingBottom="@dimen/tiny_margin"
+                            android:includeFontPadding="false"
                             android:paddingStart="5dp"
+                            android:paddingTop="@dimen/tiny_margin"
                             android:paddingEnd="5dp"
+                            android:paddingBottom="@dimen/tiny_margin"
                             android:text="@string/beta"
-                            android:textSize="12sp"
-                            android:textColor="@color/white"
                             android:textAllCaps="true"
-                            android:textStyle="bold"
-                            android:includeFontPadding="false"/>
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/customizationAppIconColor"

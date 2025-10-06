@@ -17,6 +17,7 @@ import com.goodwy.commons.helpers.MyContentProvider.COL_BACKGROUND_COLOR
 import com.goodwy.commons.helpers.MyContentProvider.COL_PRIMARY_COLOR
 import com.goodwy.commons.helpers.MyContentProvider.COL_TEXT_COLOR
 import com.goodwy.commons.helpers.MyContentProvider.COL_THEME_TYPE
+import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_AUTO
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_CUSTOM
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_DISABLED
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_SYSTEM
@@ -41,6 +42,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         private const val THEME_GRAY = 3
         private const val THEME_CUSTOM = 4
         private const val THEME_SYSTEM = 5    // Material You
+        private const val THEME_AUTO = 6
     }
 
     private var curTextColor = 0
@@ -188,13 +190,13 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupThemes() {
         predefinedThemes.apply {
-            put(
+            if (isSPlus()) put(
                 THEME_SYSTEM,
-                if (isSPlus()) {
-                    getSystemThemeColors()
-                } else {
-                    getAutoThemeColors()
-                }
+                getSystemThemeColors()
+            )
+            put(
+                THEME_AUTO,
+                getAutoThemeColors()
             )
             put(
                 THEME_LIGHT,
@@ -334,7 +336,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (curSelectedThemeId != THEME_SYSTEM) {
                 curPrimaryColor = getColor(theme.primaryColorId)
                 curAccentColor = getColor(R.color.color_accent) // (R.color.color_primary) TODO accent color when choosing a theme R.color.color_primary
-                curAppIconColor = theme.appIconColorId
+//                curAppIconColor = theme.appIconColorId
             } else {
                 curPrimaryColor = getCurrentPrimaryColor()
             }
@@ -402,12 +404,17 @@ class CustomizationActivity : BaseSimpleActivity() {
             || curSelectedThemeId == THEME_SYSTEM
         ) {
             return THEME_SYSTEM
+        } else if (
+            (baseConfig.isAutoThemeEnabled && !hasUnsavedChanges)
+            || curSelectedThemeId == THEME_AUTO
+        ) {
+            return THEME_AUTO
         }
 
         var themeId = THEME_CUSTOM
         resources.apply {
             for ((key, value) in predefinedThemes
-                .filter { it.key != THEME_CUSTOM && it.key != THEME_SYSTEM }) {
+                .filter { it.key != THEME_CUSTOM && it.key != THEME_SYSTEM && it.key != THEME_AUTO }) {
                 if (curTextColor == getColor(value.textColorId) &&
                     curBackgroundColor == getColor(value.backgroundColorId) &&
                     curPrimaryColor == getColor(value.primaryColorId) &&
@@ -432,13 +439,14 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun updateAutoThemeFields() {
+        val isProVersion = isProVersion()
         binding.customizationThemeDescription.beVisibleIf(curSelectedThemeId == THEME_SYSTEM)
         binding.customizationThemeHolder.apply {
-            alpha = if (!isProVersion()) 0.3f else 1f
+            alpha = if (!isProVersion) 0.3f else 1f
         }
 
         arrayOf(binding.customizationPrimaryColorHolder, binding.customizationTextCursorColorHolder).forEach {
-            if (!isProVersion()) {
+            if (!isProVersion) {
                 it.isEnabled = true
                 it.alpha = 0.3f
             } else {
@@ -453,7 +461,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         binding.customizationAccentColorHolder.apply {
-            if (!isProVersion()) {
+            if (!isProVersion) {
                 this.isEnabled = true
                 this.alpha = 0.3f
             } else {
@@ -468,7 +476,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         binding.customizationAppIconColorHolder.apply {
-            if (!isProVersion()) {
+            if (!isProVersion) {
                 this.alpha = 0.3f
             } else {
                 this.alpha = 1f
@@ -476,7 +484,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         arrayOf(binding.customizationTextColorHolder, binding.customizationBackgroundColorHolder).forEach {
-            if (!isProVersion()) {
+            if (!isProVersion) {
                 it.isEnabled = true
                 it.alpha = 0.3f
             } else {
@@ -530,11 +538,13 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         baseConfig.isGlobalThemeEnabled = binding.applyToAll.isChecked
         baseConfig.isSystemThemeEnabled = curSelectedThemeId == THEME_SYSTEM
+        baseConfig.isAutoThemeEnabled = curSelectedThemeId == THEME_AUTO
 
         if (isPro()) {
             val globalThemeType = when {
                 baseConfig.isGlobalThemeEnabled.not() -> GLOBAL_THEME_DISABLED
                 baseConfig.isSystemThemeEnabled -> GLOBAL_THEME_SYSTEM
+                baseConfig.isAutoThemeEnabled -> GLOBAL_THEME_AUTO
                 else -> GLOBAL_THEME_CUSTOM
             }
 
@@ -592,7 +602,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationAccentColor.setFillWithStroke(accentColor, backgroundColor)
         binding.customizationBackgroundColor.setFillWithStroke(backgroundColor, backgroundColor)
 //        binding.customizationAppIconColor.setFillWithStroke(curAppIconColor, backgroundColor)
-        binding.customizationAppIconColor.setImageDrawable(getAppIcon())
+        binding.customizationAppIconColor.setImageDrawable(getAppIcon(curAppIconColor))
 //        binding.applyToAll.setTextColor(primaryColor.getContrastColor())
         updateTextCursor(curTextCursorColor)
 
@@ -852,7 +862,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 if (curAppIconColor != newValue - 1) {
                     curAppIconColor = newValue - 1
                     colorChanged()
-                    updateColorTheme(getCurrentThemeId())
+//                    updateColorTheme(getCurrentThemeId())
                     binding.customizationAppIconColor.setImageDrawable(getAppIcon(curAppIconColor))
                 }
             } else {

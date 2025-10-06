@@ -108,7 +108,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (useDynamicTheme) {
             setTheme(getThemeId(showTransparentTop = showTransparentTop))
         }
-
         super.onCreate(savedInstanceState)
 
         if (isAutoTheme()) changeAutoTheme()
@@ -179,14 +178,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun changeAutoTheme() {
+        if (isDestroyed || isFinishing) return
         syncGlobalConfig {
+            if (isDestroyed || isFinishing) return@syncGlobalConfig
             baseConfig.apply {
                 if (isAutoTheme() && useChangeAutoTheme) {
-                    val isUsingSystemDarkTheme = isSystemInDarkMode()
-                    textColor = resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
-                    backgroundColor =
-                        resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
+                    runOnUiThread {
+                        if (isDestroyed || isFinishing) return@runOnUiThread
+                        val isUsingSystemDarkTheme = isSystemInDarkMode()
+                        textColor =
+                            resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_text_color else R.color.theme_light_text_color)
+                        backgroundColor =
+                            resources.getColor(if (isUsingSystemDarkTheme) R.color.theme_black_background_color else R.color.theme_light_background_color)
+                    }
                 }
+
             }
         }
     }

@@ -11,6 +11,7 @@ import androidx.loader.content.CursorLoader
 import com.google.android.material.color.MaterialColors
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
+import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_AUTO
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_SYSTEM
 import com.goodwy.commons.models.GlobalConfig
 import com.goodwy.commons.models.isGlobalThemingEnabled
@@ -20,7 +21,7 @@ fun Context.isDynamicTheme() = isSPlus() && baseConfig.isSystemThemeEnabled
 
 fun Context.isSystemInDarkMode() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0
 
-fun Context.isAutoTheme() = !isSPlus() && baseConfig.isSystemThemeEnabled
+fun Context.isAutoTheme() = baseConfig.isAutoThemeEnabled
 
 fun Context.isLightTheme() = baseConfig.backgroundColor == resources.getColor(R.color.theme_light_background_color, theme)
 
@@ -130,6 +131,7 @@ fun Context.syncGlobalConfig(callback: (() -> Unit)? = null) {
                     if (it.isGlobalThemingEnabled()) {
                         isGlobalThemeEnabled = true
                         isSystemThemeEnabled = it.themeType == GLOBAL_THEME_SYSTEM
+                        isAutoThemeEnabled = it.themeType == GLOBAL_THEME_AUTO
                         textColor = it.textColor
                         backgroundColor = it.backgroundColor
                         primaryColor = it.primaryColor
