@@ -831,6 +831,10 @@ open class BaseConfig(val context: Context) {
         set(blockingType) = prefs.edit { putInt(BLOCKING_TYPE, blockingType) }
 
     val isBlockingType: Flow<Int> = ::blockingType.asFlowNonNull()
+
+    var textAlignment: Int
+        get() = prefs.getInt(TEXT_ALIGNMENT, TEXT_ALIGNMENT_START)
+        set(textAlignment) = prefs.edit { putInt(TEXT_ALIGNMENT, textAlignment) }
 }
 
 

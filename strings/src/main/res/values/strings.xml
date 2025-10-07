@@ -261,6 +261,8 @@
     <string name="action_on_message_click">Action on message click</string>
     <string name="invert_color">Invert colors</string>
     <string name="speech_bubble">Speech bubble</string>
+    <string name="text_alignment">Text alignment</string>
+    <string name="text_alignment_along_edges">Along the edges</string>
 
     <!-- Gallery -->
     <string name="library">Library</string>

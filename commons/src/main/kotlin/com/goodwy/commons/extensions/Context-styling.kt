@@ -223,7 +223,7 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
         isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme)
         baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
         baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
-        else -> baseConfig.backgroundColor.lightenColor(4)
+        else -> baseColor.lightenColor(4)
     }
     return bottomColor
 }
@@ -246,7 +246,7 @@ fun Context.getSurfaceColor(): Int {
         isDynamicTheme() -> resources.getColor(R.color.you_surface_color, theme)
         baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
         baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
-        else -> baseConfig.backgroundColor.lightenColor(4)
+        else -> baseColor.lightenColor(4)
     }
     return bottomColor
 }

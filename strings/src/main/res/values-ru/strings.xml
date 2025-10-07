@@ -255,6 +255,8 @@
     <string name="action_on_message_click">Действие при клике по сообщению</string>
     <string name="invert_color">Инвертировать цвета</string>
     <string name="speech_bubble">Стиль сообщений</string>
+    <string name="text_alignment">Выравнивание текста</string>
+    <string name="text_alignment_along_edges">По краям</string>
 
     <!-- Gallery -->
     <string name="library">Медиатека</string>
