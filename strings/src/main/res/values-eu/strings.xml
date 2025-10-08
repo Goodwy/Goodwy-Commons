@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Arazoak direla eta, aldi baterako ezin dugu ordainketa egin Google Play bidez,
+            beraz, epe honetarako erabiltzaile guztiei aplikazioaren eginbide guztiak eskuz desblokeatzeko aukera ematen diegu. <br>
+            Lineaz kanpo dauden gure aplikazioak gustatzen bazaizkizu, intrusiboak ez direnak eta iragarkirik ez dutenak,
+            mesedez kontuan hartu gurekin nolabait laguntzea. Asko eskertuko genuke.<br><br>
+            Eskerrik asko!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -106,6 +113,7 @@
     <string name="end_search_when_changing_tab">End search when changing tab</string>
     <string name="change_top_bar_colour_when_scrolling">Change top bar colour when scrolling</string>
     <string name="global_theme_success_g">The current theme has been successfully applied to all Right apps. Any future changes to this theme will be synced automatically.</string>
+    <string name="enter_pattern">Sartu zure eredua</string>
     <string name="call_screen_background">Deien pantailaren atzeko planoa</string>
     <string name="contact_photo">Harremanetarako argazkia</string>
     <string name="blurry_contact_photo">Kontaktuaren argazki lausoa</string>
@@ -149,10 +157,12 @@
     <string name="hide_blocked_numbers">Ezkutatu blokeatuta</string>
     <string name="paste_g">Txertatu</string>
     <string name="recents">Azken aldiak</string>
+    <string name="blocked_call">Blokeatutako deia</string>
     <string name="unblock_confirmation">Ziur \"% s\" desblokeatu nahi duzula?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Harremanetarako irudi txikien tamaina</string>
+    <string name="use_persian_digits">Erabili persiar zifrak</string>
     <string name="purchase_simple_thank_you_g">Erosi Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Eguneratu Goodwy Thank You azken bertsiora</string>
@@ -162,6 +172,7 @@
         You can find the guide at https://github.com/Goodwy/Discussion , or just shoot me a message at goodwy.dev@gmail.com if you need help.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Arazo hau zure abiarazleak ikonoen pertsonalizazioa guztiz onartzen ez duenean sortzen da. Saiatu aplikazioa abiarazten Google Play edo widget baten bidez, eskuragarri badago.\n        Abiarazi ondoren, leheneratu aplikazioaren ikonoaren kolore lehenetsia. Muturreko kasuetan, baliteke aplikazioa berriro instalatzea beharrezkoa izatea.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -236,6 +247,7 @@
     <string name="speech_bubble">Hizketa-burbuila</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Ertzetan zehar</string>
     <string name="library">Liburutegia</string>
     <string name="open_in_maps">Ireki Maps-en</string>
 
@@ -250,6 +262,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Interneteko bilaketa</string>
     <string name="show_number_blocking_button">Erakutsi zenbakia blokeatzeko botoia</string>
+    <string name="blocking_type_silence">Dei lasai bat</string>
+    <string name="blocking_type_silence_summary">Jasotako deirako deia isilarazi behar den ezartzen du</string>
     <string name="relation_g">Harremana</string>
     <string name="relations_g">Lotutako pertsonak</string>
     <string name="relation_hint_g">Lotutako pertsona</string>
@@ -320,4 +334,21 @@
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="more_apps_from_us_g">Gure aplikazio gehiago</string>
+    <string name="text_alignment">Testuaren lerrokatzea</string>
+    <string name="typeface">Letra tipoa</string>
+    <string name="long_click_g">Egin klik luzea %s</string>
+    <string name="use_persian_calendar">Erabili persiar egutegia</string>
+    <string name="blocking_type">Blokeo mota</string>
+    <string name="blocking_type_do_not_reject">Ez baztertu</string>
+    <string name="blocking_type_do_not_reject_summary">Baztertu sarrerako deia erabiltzaileak erantzun ez balu bezala</string>
+    <string name="blocking_type_reject">Baztertu</string>
+    <string name="blocking_type_reject_summary">Baztertu sarrerako deia erabiltzaileak eskuz baztertu balu bezala</string>
+    <string name="billing_error_application_signature_not_correct">RuStore bidez ordaintzeko RuStore-ko aplikazioaren bertsioa instalatu behar duzu</string>
+    <string name="date">Data</string>
+    <string name="starts">Hasi</string>
+    <string name="ends">Amaiera</string>
+    <string name="time_zone">Ordu-eremua</string>
+    <string name="event_type">Gertaera mota</string>
+    <string name="availability">Eskuragarritasuna</string>
+    <string name="attendees">Bertaratutakoak</string>
 </resources>

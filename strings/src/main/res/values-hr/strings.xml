@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Zbog problema trenutno nismo u mogućnosti vršiti plaćanja putem Google Playa,
+            stoga za ovo razdoblje svim korisnicima dajemo mogućnost ručnog otključavanja svih značajki aplikacije. <br>
+            Ako vam se sviđaju naše aplikacije koje su offline, nenametljive i bez oglasa,
+            razmislite o tome da nas na neki način podržite. Bili bismo vam jako zahvalni.<br><br>
+            Hvala!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Sakrij blokirano</string>
     <string name="paste_g">Umetnuti</string>
     <string name="recents">Nedavni</string>
+    <string name="blocked_call">Blokiran poziv</string>
     <string name="unblock_confirmation">Jeste li sigurni da želite deblokirati \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Veličina minijatura kontakata</string>
     <string name="long_click_g">Dugi klik %s</string>
+    <string name="use_persian_digits">Koristite perzijske znamenke</string>
     <string name="purchase_simple_thank_you_g">Kupite Jednostavno Hvala</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Molim ažurirajte Jednostavno hvala na najnoviju verziju</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">Govorni oblačić</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Po rubovima</string>
     <string name="library">Knjižnica</string>
     <string name="open_in_maps">Otvori u Kartama</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Pretraživanje interneta</string>
     <string name="show_number_blocking_button">Prikaži gumb za zaključavanje broja</string>
+    <string name="blocking_type_silence">Tihi poziv</string>
+    <string name="blocking_type_silence_summary">Postavlja treba li zvono utišati za dolazni poziv</string>
     <string name="relation_g">Odnos</string>
     <string name="relations_g">Povezane osobe</string>
     <string name="relation_hint_g">Povezana osoba</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Za plaćanje putem RuStorea morate instalirati verziju aplikacije iz RuStorea</string>
     <string name="date">Datum</string>
     <string name="starts">Započinje</string>
     <string name="ends">Krajeve</string>
@@ -331,4 +344,11 @@
     <string name="attendees">Sudionika</string>
     <string name="typeface">Oblici pisma</string>
     <string name="more_apps_from_us_g">Daljnje aplikacje od nas</string>
+    <string name="text_alignment">Poravnanje teksta</string>
+    <string name="use_persian_calendar">Koristite perzijski kalendar</string>
+    <string name="blocking_type">Vrsta blokiranja</string>
+    <string name="blocking_type_do_not_reject">Ne odbijajte</string>
+    <string name="blocking_type_do_not_reject_summary">Odbijte dolazni poziv kao da korisnik nije odgovorio</string>
+    <string name="blocking_type_reject">Odbiti</string>
+    <string name="blocking_type_reject_summary">Odbijte dolazni poziv kao da ga je korisnik odbio ručno</string>
 </resources>

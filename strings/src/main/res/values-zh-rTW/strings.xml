@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+由於一些問題，我們暫時無法透過 Google Play 付款，
+因此在此期間，我們為所有用戶提供手動解鎖應用程式所有功能的選項。 <br>
+如果您喜歡我們離線、無幹擾且無廣告的應用程式，
+請考慮以某種方式支持我們。我們將不勝感激。 <br><br>
+謝謝！
+]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">隱藏被阻止</string>
     <string name="paste_g">插入</string>
     <string name="recents">最近</string>
+    <string name="blocked_call">阻止呼叫</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">聯繫人縮圖大小</string>
     <string name="long_click_g">長按 %s</string>
+    <string name="use_persian_digits">使用波斯數字</string>
     <string name="purchase_simple_thank_you_g">購買Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">請更新[Goodwy Thank You]至最新版本</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">對話泡泡</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">沿著邊緣</string>
     <string name="library">圖書館</string>
     <string name="open_in_maps">在地圖中打開</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">搜索 Internet</string>
     <string name="show_number_blocking_button">顯示數字區塊按鈕</string>
+    <string name="blocking_type_silence">安靜的通話</string>
+    <string name="blocking_type_silence_summary">設定來電時是否應靜音</string>
     <string name="relation_g">關係</string>
     <string name="relations_g">相關人員</string>
     <string name="relation_hint_g">相關人員</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">要透過 RuStore 付款，您需要安裝 RuStore 的應用程式版本</string>
     <string name="date">日期</string>
     <string name="starts">開始</string>
     <string name="ends">結束</string>
@@ -331,4 +344,11 @@
     <string name="attendees">出席者</string>
     <string name="typeface">字體</string>
     <string name="more_apps_from_us_g">更多我們的應用程式</string>
+    <string name="text_alignment">文字對齊</string>
+    <string name="use_persian_calendar">使用波斯曆</string>
+    <string name="blocking_type">阻塞類型</string>
+    <string name="blocking_type_do_not_reject">不要拒絕</string>
+    <string name="blocking_type_do_not_reject_summary">拒絕來電，如用戶未接聽一樣</string>
+    <string name="blocking_type_reject">拒絕</string>
+    <string name="blocking_type_reject_summary">拒絕來電，就像用戶手動拒絕一樣</string>
 </resources>

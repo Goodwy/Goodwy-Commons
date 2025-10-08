@@ -9,7 +9,7 @@
     <string name="incoming_call">Входящий</string>
     <string name="outgoing_call">Исходящий</string>
     <string name="missed_call">Пропущенный</string>
-    <string name="blocked_call">Заблокированный</string>
+    <string name="blocked_call">Заблокированный вызов</string>
     <string name="unblock_confirmation">Разблокировать \"%s\"?</string>
     <string name="unblock_number">Разблокировать номер</string>
     <string name="unblock_numbers">Разблокировать номера</string>
@@ -167,8 +167,8 @@
     <string name="use_contact_colors">Использовать цвета контактов</string>
     <string name="typeface">Шрифт</string>
     <string name="long_click_g">Долгое нажатие %s</string>
-    <string name="use_persian_calendar">Использовать Персидский календарь</string>
-    <string name="use_persian_digits">Использовать Персидские цифры</string>
+    <string name="use_persian_calendar">Использовать персидский календарь</string>
+    <string name="use_persian_digits">Используйте персидские цифры</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Размер фото контакта</string>
@@ -274,7 +274,7 @@
     <string name="blocking_type">Тип блокировки</string>
     <string name="blocking_type_do_not_reject">Не отклонять</string>
     <string name="blocking_type_do_not_reject_summary">Отклонить входящий вызов, как если бы пользователь не ответил</string>
-    <string name="blocking_type_reject">Отклонить</string>
+    <string name="blocking_type_reject">Отклонять</string>
     <string name="blocking_type_reject_summary">Отклонить входящий вызов, как если бы пользователь отклонил его вручную</string>
     <string name="blocking_type_silence">Тихий звонок</string>
     <string name="blocking_type_silence_summary">Отключить звук звонка для входящего вызова</string>
@@ -349,7 +349,7 @@
     <string name="billing_subscriptions">Подписки</string>
     <string name="billing_change_to_google_play">Использовать Google Play</string>
     <string name="billing_change_to_ru_store">Использовать RuStore</string>
-    <string name="billing_error_application_signature_not_correct">Для оплаты через RuStore необходимо установить версию приложения из RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Для оплаты через RuStore вам необходимо установить версию приложения от RuStore.</string>
 
     <!-- Calendar -->
     <string name="date">Дата</string>

@@ -15,6 +15,7 @@
     <string name="end">Diwedd</string>
 
     <!-- Support project -->
+    <string name="rate_g">Cyfradd</string>
     <string name="action_support_project">Cymorth prosiect</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -54,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Oherwydd problemau ni allwn wneud taliadau dros dro trwy Google Play,
+            felly am y cyfnod hwn rydym yn rhoi'r opsiwn i bob defnyddiwr ddatgloi holl nodweddion yr app â llaw. <br>
+            Os ydych chi'n hoffi ein apps all-lein, nad ydynt yn ymwthiol a heb unrhyw hysbysebion,
+            ystyriwch ein cefnogi mewn rhyw ffordd. Byddem yn ddiolchgar iawn.<br><br>
+            Diolch!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -149,11 +157,13 @@
     <string name="hide_blocked_numbers">Cuddio wedi blocio</string>
     <string name="paste_g">Mewnosod</string>
     <string name="recents">Diweddar</string>
+    <string name="blocked_call">Galwad wedi\'i Rhwystro</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Maint mân-luniau cyswllt</string>
     <string name="long_click_g">Cliciwch hir %s</string>
+    <string name="use_persian_digits">Defnyddiwch ddigidau Perseg</string>
     <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
     <string name="copyright_g">f %1$s\nHawlfraint © Goodwy %2$d</string>
     <string name="update_thank_you_g">Diweddara Goodwy Thank You i\'r fersiwn diweddaraf</string>
@@ -238,6 +248,7 @@
     <string name="speech_bubble">Swigen lleferydd</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Ar hyd yr ymylon</string>
     <string name="library">Llyfrgell</string>
     <string name="open_in_maps">Agor mewn Mapiau</string>
 
@@ -252,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Chwilio\'r Rhyngrwyd</string>
     <string name="show_number_blocking_button">Dangos rhif clo botwm</string>
+    <string name="blocking_type_silence">Galwad dawel</string>
+    <string name="blocking_type_silence_summary">Yn pennu a ddylid tawelu\'r canu ar gyfer yr alwad sy\'n dod i mewn</string>
     <string name="relation_g">Perthynas</string>
     <string name ="relations_g">Personau Cysylltiedig</string>
     <string name ="relation_hint_g">Person Cysylltiedig</string>
@@ -321,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">I dalu trwy RuStore mae angen i chi osod y fersiwn app o RuStore</string>
     <string name="date">Dyddiad</string>
     <string name="starts">Dechrau</string>
     <string name="ends">Diwedd</string>
@@ -329,4 +343,12 @@
     <string name="availability">Argaeledd</string>
     <string name="attendees">Mynychwyr</string>
     <string name="typeface">Wynebfath</string>
+    <string name="text_alignment">Aliniad testun</string>
+    <string name="more_apps_from_us_g">Mwy o apiau gennym ni</string>
+    <string name="use_persian_calendar">Defnyddiwch galendr Perseg</string>
+    <string name="blocking_type">Math blocio</string>
+    <string name="blocking_type_do_not_reject">Peidiwch â gwrthod</string>
+    <string name="blocking_type_do_not_reject_summary">Gwrthod galwad sy\'n dod i mewn fel pe na bai\'r defnyddiwr yn ateb</string>
+    <string name="blocking_type_reject">Gwrthod</string>
+    <string name="blocking_type_reject_summary">Gwrthod galwad sy\'n dod i mewn fel pe bai\'r defnyddiwr wedi ei wrthod â llaw</string>
 </resources>

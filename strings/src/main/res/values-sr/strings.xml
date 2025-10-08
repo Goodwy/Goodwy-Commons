@@ -161,10 +161,12 @@
     <string name="hide_blocked_numbers">Сакриј блокирано</string>
     <string name="paste_g">Уметните</string>
     <string name="recents">Недавно</string>
+    <string name="blocked_call">Блокирани позив</string>
     <string name="unblock_confirmation">Да ли сте сигурни да желите да одблокирате \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Величина сличица контаката</string>
+    <string name="use_persian_digits">Користите персијске цифре</string>
     <string name="purchase_simple_thank_you_g">Купите Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАуторско право © Goodwy %2$d</string>
     <string name="update_thank_you_g">Молимо ажурирајте Goodwy Thank You на најновију верзију</string>
@@ -248,6 +250,7 @@
     <string name="speech_bubble">Облачић за говор</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">По ивицама</string>
     <string name="library">Библиотека</string>
     <string name="open_in_maps">Отвори у Мапама</string>
     <string name="all_g">Све</string>
@@ -262,6 +265,8 @@
 
     <!-- Relation types -->
     <string name="show_number_blocking_button">Прикажи дугме за блокирање бројева</string>
+    <string name="blocking_type_silence">Тихи позив</string>
+    <string name="blocking_type_silence_summary">Подешава да ли звоно треба да буде утишано за долазни позив</string>
     <string name="relation_g">Однос</string>
     <string name="relations_g">Повезане особе</string>
     <string name="relation_hint_g">Повезана особа</string>
@@ -331,7 +336,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
-    <string name="billing_error_application_signature_not_correct">Да бисте платили преко RuStore-а, потребно је да инсталирате верзију апликације са RuStore-а</string>
+    <string name="billing_error_application_signature_not_correct">Да бисте платили преко РуСторе-а, потребно је да инсталирате верзију апликације са РуСторе-а</string>
 
     <!-- Calendar -->
     <string name="date">Датум</string>
@@ -342,4 +347,11 @@
     <string name="availability">Доступност</string>
     <string name="attendees">Учесници</string>
     <string name="more_apps_from_us_g">Више апликација од нас</string>
+    <string name="text_alignment">Поравнање текста</string>
+    <string name="use_persian_calendar">Користите персијски календар</string>
+    <string name="blocking_type">Тип блокирања</string>
+    <string name="blocking_type_do_not_reject">Немојте одбити</string>
+    <string name="blocking_type_do_not_reject_summary">Одбијте долазни позив као да корисник није одговорио</string>
+    <string name="blocking_type_reject">Одбити</string>
+    <string name="blocking_type_reject_summary">Одбијте долазни позив као да га је корисник одбио ручно</string>
 </resources>

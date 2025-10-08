@@ -9,6 +9,7 @@
     <string name="incoming_call">Inkommende anrop</string>
     <string name="outgoing_call">Utgående anrop</string>
     <string name="missed_call">Misset anrop</string>
+    <string name="blocked_call">Blokkert anrop</string>
     <string name="unblock_confirmation">Er du sikker på at du vil oppheve blokkeringen av \"%s\"?</string>
     <string name="unblock_number">Fjern blokkering av nummer</string>
     <string name="unblock_numbers">Oppheve blokkeringen av numre</string>
@@ -170,6 +171,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">Størrelse på kontaktminiatyrer</string>
     <string name="long_click_g">Langt klikk %s</string>
+    <string name="use_persian_digits">Bruk persiske sifre</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -254,6 +256,7 @@
     <string name="speech_bubble">Snakkeboble</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Langs kantene</string>
     <string name="library">Bibliotek</string>
     <string name="open_in_maps">Åpne i Maps</string>
 
@@ -268,6 +271,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Søk på Internett</string>
     <string name="show_number_blocking_button">Vis nummerlåsknapp</string>
+    <string name="blocking_type_silence">En stille samtale</string>
+    <string name="blocking_type_silence_summary">Angir om ringing skal dempes for den innkommende samtalen</string>
     <string name="relation_g">Relationship</string>
     <string name="relations_g">Pårørende</string>
     <string name="relation_hint_g">Tilknyttet person</string>
@@ -337,6 +342,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">For å betale via RuStore må du installere appversjonen fra RuStore</string>
     <string name="date">Daddel</string>
     <string name="starts">Starter</string>
     <string name="ends">Ender</string>
@@ -345,4 +351,11 @@
     <string name="availability">Tilgjengelighet</string>
     <string name="attendees">Deltakere</string>
     <string name="typeface">Skriftsnitt</string>
+    <string name="text_alignment">Tekstjustering</string>
+    <string name="use_persian_calendar">Bruk persisk kalender</string>
+    <string name="blocking_type">Blokkeringstype</string>
+    <string name="blocking_type_do_not_reject">Ikke avvis</string>
+    <string name="blocking_type_do_not_reject_summary">Avvis et innkommende anrop som om brukeren ikke svarte</string>
+    <string name="blocking_type_reject">Avvis</string>
+    <string name="blocking_type_reject_summary">Avvis et innkommende anrop som om brukeren hadde avvist det manuelt</string>
 </resources>

@@ -160,11 +160,13 @@
     <string name="hide_blocked_numbers">Skrij blokirano</string>
     <string name="paste_g">Vstaviti</string>
     <string name="recents">Nedavni</string>
+    <string name="blocked_call">Blokiran klic</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Velikost sličic stikov</string>
     <string name="long_click_g">Dolgi klik %s</string>
+    <string name="use_persian_digits">Uporabite perzijske številke</string>
     <string name="purchase_simple_thank_you_g">Kupite aplikacijo Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Prosimo nadgradite Goodwy Thank You na zadnjo verzijo</string>
@@ -249,6 +251,7 @@
     <string name="speech_bubble">Bublinica govora</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Po robovih</string>
     <string name="library">Knjižnica</string>
     <string name="open_in_maps">Odprto v zemljevidih</string>
 
@@ -263,6 +266,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Iskanje po internetu</string>
     <string name="show_number_blocking_button">Pokaži gumb za zaklepanje številk</string>
+    <string name="blocking_type_silence">Tihi klic</string>
+    <string name="blocking_type_silence_summary">Nastavi, ali naj bo zvonjenje za dohodni klic utišano</string>
     <string name="relation_g">Ime relacije</string>
     <string name="relations_g">Povezane osebe</string>
     <string name="relation_hint_g">Povezana oseba</string>
@@ -332,6 +337,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Za plačilo prek RuStore morate namestiti različico aplikacije iz RuStore</string>
     <string name="date">Datelj</string>
     <string name="starts">Začne</string>
     <string name="ends">Konča</string>
@@ -341,4 +347,11 @@
     <string name="attendees">Udeležencev</string>
     <string name="typeface">Tipografija</string>
     <string name="more_apps_from_us_g">Več aplikacij od nas</string>
+    <string name="text_alignment">Poravnava besedila</string>
+    <string name="use_persian_calendar">Uporabite perzijski koledar</string>
+    <string name="blocking_type">Vrsta blokiranja</string>
+    <string name="blocking_type_do_not_reject">Ne zavrni</string>
+    <string name="blocking_type_do_not_reject_summary">Zavrnite dohodni klic, kot da se uporabnik ne bi oglasil</string>
+    <string name="blocking_type_reject">Zavrni</string>
+    <string name="blocking_type_reject_summary">Zavrnite dohodni klic, kot da bi ga uporabnik zavrnil ročno</string>
 </resources>

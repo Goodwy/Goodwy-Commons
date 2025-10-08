@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+Do một số vấn đề, chúng tôi tạm thời không thể thanh toán qua Google Play,
+vì vậy, trong thời gian này, chúng tôi cung cấp cho tất cả người dùng tùy chọn mở khóa thủ công tất cả các tính năng của ứng dụng. <br>
+Nếu bạn thích các ứng dụng ngoại tuyến, không gây khó chịu và không có quảng cáo của chúng tôi,
+vui lòng cân nhắc hỗ trợ chúng tôi theo cách nào đó. Chúng tôi sẽ rất biết ơn.<br><br>
+Cảm ơn bạn!
+]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Ẩn bị chặn</string>
     <string name="paste_g">Chèn</string>
     <string name="recents">Gần đây</string>
+    <string name="blocked_call">Cuộc gọi bị chặn</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Kích thước hình thu nhỏ liên hệ</string>
     <string name="long_click_g">Nhấp chuột dài %s</string>
+    <string name="use_persian_digits">Sử dụng chữ số Ba Tư</string>
     <string name="purchase_simple_thank_you_g">Cảm ơn vì đã mua hàng Goodwy</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Vui lòng cập nhật Goodwy Thank You lên phiên bản mới nhất</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">Bong bóng lời nói</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Dọc theo các cạnh</string>
     <string name="library">Thư viện</string>
     <string name="open_in_maps">Mở trong Bản đồ</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Tìm kiếm trên Internet</string>
     <string name="show_number_blocking_button">Hiển thị nút khóa số</string>
+    <string name="blocking_type_silence">Một cuộc gọi yên tĩnh</string>
+    <string name="blocking_type_silence_summary">Thiết lập xem có nên tắt tiếng chuông khi có cuộc gọi đến hay không</string>
     <string name="relation_g">Perthynas</string>
     <string name="relations_g">Personau Cysylltiedig</string>
     <string name="relation_hint_g">Person Cysylltiedig</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Để thanh toán qua RuStore, bạn cần cài đặt phiên bản ứng dụng từ RuStore</string>
     <string name="date">Ngày</string>
     <string name="starts">Bắt đầu</string>
     <string name="ends">Kết thúc</string>
@@ -331,4 +344,11 @@
     <string name="attendees">Tham dự</string>
     <string name="typeface">Kiểu chữ</string>
     <string name="more_apps_from_us_g">Các app khác</string>
+    <string name="text_alignment">Căn chỉnh văn bản</string>
+    <string name="use_persian_calendar">Sử dụng lịch Ba Tư</string>
+    <string name="blocking_type">Loại chặn</string>
+    <string name="blocking_type_do_not_reject">Đừng từ chối</string>
+    <string name="blocking_type_do_not_reject_summary">Từ chối cuộc gọi đến như thể người dùng không trả lời</string>
+    <string name="blocking_type_reject">Từ chối</string>
+    <string name="blocking_type_reject_summary">Từ chối cuộc gọi đến như thể người dùng đã từ chối thủ công</string>
 </resources>

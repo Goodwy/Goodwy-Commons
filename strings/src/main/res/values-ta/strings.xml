@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            சிக்கல்கள் காரணமாக, Google Play மூலம் எங்களால் தற்காலிகமாக பணம் செலுத்த முடியவில்லை,
+            எனவே இந்த காலகட்டத்தில், பயன்பாட்டின் அனைத்து அம்சங்களையும் கைமுறையாக திறக்க அனைத்து பயனர்களுக்கும் விருப்பத்தை வழங்குகிறோம். <br>
+            ஆஃப்லைனில் உள்ள, ஊடுருவாத மற்றும் விளம்பரங்கள் இல்லாத எங்கள் பயன்பாடுகளை நீங்கள் விரும்பினால்,
+            தயவு செய்து ஏதாவது ஒரு வகையில் எங்களை ஆதரிப்பதை கருத்தில் கொள்ளவும். நாங்கள் மிகவும் நன்றியுள்ளவர்களாக இருப்போம்.<br><br>
+            நன்றி!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">மறை தடுக்கப்பட்டது</string>
     <string name="paste_g">செருகு</string>
     <string name="recents">சமீபத்தியவை</string>
+    <string name="blocked_call">தடுக்கப்பட்ட அழைப்பு</string>
     <string name="unblock_confirmation">\"%s\" ஐ நிச்சயமாக நீக்க விரும்புகிறீர்களா?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">தொடர்பு சிறுபடங்களின் அளவு</string>
     <string name="long_click_g">%sஐ நீண்ட கிளிக் செய்யவும்</string>
+    <string name="use_persian_digits">பாரசீக இலக்கங்களைப் பயன்படுத்தவும்</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">பேச்சு குமிழி</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">விளிம்புகளில்</string>
     <string name="library">நூலகம்</string>
     <string name="open_in_maps">வரைபடத்தில் திற</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">இணைய தேடல்</string>
     <string name="show_number_blocking_button">எண் தடுப்பு பொத்தானைக் காட்டு</string>
+    <string name="blocking_type_silence">ஒரு அமைதியான அழைப்பு</string>
+    <string name="blocking_type_silence_summary">உள்வரும் அழைப்பிற்கு ஒலிப்பதை அமைதிப்படுத்த வேண்டுமா என்பதை அமைக்கிறது</string>
     <string name="relation_g">உறவு</string>
     <string name="relations_g">தொடர்புடைய நபர்கள்</string>
     <string name="relation_hint_g">தொடர்புடைய நபர்</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">RuStore வழியாக பணம் செலுத்த, RuStore இலிருந்து ஆப்ஸ் பதிப்பை நிறுவ வேண்டும்</string>
     <string name="date">தேதி</string>
     <string name="starts">தொடங்குகிறது</string>
     <string name="ends">முடிவடைகிறது</string>
@@ -331,4 +344,11 @@
     <string name="attendees">பங்கேற்பாளர்கள்</string>
     <string name="typeface">எழுத்து வடிவம்</string>
     <string name="more_apps_from_us_g">எங்களிடமிருந்து மேலும் செயலிகள்</string>
+    <string name="text_alignment">உரை சீரமைப்பு</string>
+    <string name="use_persian_calendar">பாரசீக நாட்காட்டியைப் பயன்படுத்தவும்</string>
+    <string name="blocking_type">தடுப்பு வகை</string>
+    <string name="blocking_type_do_not_reject">நிராகரிக்க வேண்டாம்</string>
+    <string name="blocking_type_do_not_reject_summary">பயனர் பதிலளிக்காதது போல் உள்வரும் அழைப்பை நிராகரிக்கவும்</string>
+    <string name="blocking_type_reject">நிராகரிக்கவும்</string>
+    <string name="blocking_type_reject_summary">உள்வரும் அழைப்பை பயனர் கைமுறையாக நிராகரித்தது போல் நிராகரிக்கவும்</string>
 </resources>

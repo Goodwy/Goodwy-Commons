@@ -160,11 +160,13 @@
     <string name="hide_blocked_numbers">Masquer bloqué</string>
     <string name="paste_g">Insérer</string>
     <string name="recents">Récent</string>
+    <string name="blocked_call">Appel bloqué</string>
     <string name="unblock_confirmation">Êtes-vous sûr de vouloir débloquer \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Taille des vignettes de contact</string>
     <string name="long_click_g">Clic long %s</string>
+    <string name="use_persian_digits">Utiliser des chiffres persans</string>
     <string name="purchase_simple_thank_you_g">Acheter Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Veuillez mettre à jour Goodwy Thank You</string>
@@ -249,6 +251,7 @@
     <string name="speech_bubble">Bulle de dialogue</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Le long des bords</string>
     <string name="library">Bibliothèque</string>
     <string name="open_in_maps">Ouvrir dans les cartes</string>
 
@@ -263,6 +266,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Rechercher sur Internet</string>
     <string name="show_number_blocking_button">Afficher le bouton de verrouillage du numéro</string>
+    <string name="blocking_type_silence">Un appel silencieux</string>
+    <string name="blocking_type_silence_summary">Définit si la sonnerie doit être désactivée pour l\'appel entrant</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Personnes apparentées</string>
     <string name="relation_hint_g">Personne apparentée</string>
@@ -332,6 +337,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Pour payer via RuStore, vous devez installer la version de l\'application depuis RuStore</string>
     <string name="date">Date</string>
     <string name="starts">Commence</string>
     <string name="ends">Finit</string>
@@ -341,4 +347,11 @@
     <string name="attendees">Participants</string>
     <string name="typeface">Fonte de caractères</string>
     <string name="more_apps_from_us_g">Plus d\'applications simples</string>
+    <string name="text_alignment">Alignement du texte</string>
+    <string name="use_persian_calendar">Utiliser le calendrier persan</string>
+    <string name="blocking_type">Type de blocage</string>
+    <string name="blocking_type_do_not_reject">Ne rejetez pas</string>
+    <string name="blocking_type_do_not_reject_summary">Rejeter un appel entrant comme si l\'utilisateur n\'avait pas répondu</string>
+    <string name="blocking_type_reject">Rejeter</string>
+    <string name="blocking_type_reject_summary">Rejeter un appel entrant comme si l\'utilisateur l\'avait rejeté manuellement</string>
 </resources>

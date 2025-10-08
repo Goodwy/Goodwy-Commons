@@ -9,6 +9,7 @@
     <string name="incoming_call">สายเรียกเข้า</string>
     <string name="outgoing_call">โทรออก</string>
     <string name="missed_call">สายที่ไม่ได้รับ</string>
+    <string name="blocked_call">บล็อคการโทร</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">ปลดบล็อกหมายเลข</string>
     <string name="unblock_numbers">ปลดบล็อกหมายเลข</string>
@@ -32,6 +33,7 @@
     <string name="end">สิ้นสุด</string>
 
     <!-- Support project -->
+    <string name="rate_g">ประเมิน</string>
     <string name="action_support_project">การสนับสนุนโครงการ</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -71,6 +73,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+เนื่องจากปัญหาต่างๆ เราจึงไม่สามารถชำระเงินผ่าน Google Play ได้ชั่วคราว
+ดังนั้นในช่วงเวลานี้ เราจึงให้ผู้ใช้ทุกคนสามารถปลดล็อกฟีเจอร์ทั้งหมดของแอปได้ด้วยตนเอง<br>
+หากคุณชื่นชอบแอปของเราที่ใช้งานได้แบบออฟไลน์ ไม่รบกวนการใช้งาน และไม่มีโฆษณา
+โปรดพิจารณาสนับสนุนเราในรูปแบบใดรูปแบบหนึ่ง เราจะรู้สึกขอบคุณเป็นอย่างยิ่ง<br><br>
+ขอบคุณ!
+]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -156,6 +165,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">ขนาดภาพขนาดย่อของผู้ติดต่อ</string>
     <string name="long_click_g">คลิกยาว %s</string>
+    <string name="use_persian_digits">ใช้ตัวเลขเปอร์เซีย</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -240,6 +250,7 @@
     <string name="speech_bubble">กรอบคำพูด</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">ตามขอบ</string>
     <string name="library">ห้องสมุด</string>
     <string name="open_in_maps">เปิดในแผนที่</string>
 
@@ -254,6 +265,8 @@
     <!-- Relation types -->
     <string name="search_the_web">ค้นหาอินเทอร์เน็ต</string>
     <string name="show_number_blocking_button">แสดงปุ่มล็อคตัวเลข</string>
+    <string name="blocking_type_silence">เสียงเรียกอันเงียบงัน</string>
+    <string name="blocking_type_silence_summary">ตั้งค่าว่าควรปิดเสียงการโทรเข้าหรือไม่</string>
     <string name="relation_g">ความสัมพันธ์</string>
     <string name="relations_g">บุคคลที่เกี่ยวข้อง</string>
     <string name="relation_hint_g">บุคคลที่เกี่ยวข้อง</string>
@@ -323,6 +336,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">หากต้องการชำระเงินผ่าน RuStore คุณต้องติดตั้งแอปเวอร์ชันจาก RuStore</string>
     <string name="date">วันที่</string>
     <string name="starts">เริ่ม ต้น</string>
     <string name="ends">สิ้น สุด</string>
@@ -331,4 +345,12 @@
     <string name="availability">ความสะดวก</string>
     <string name="attendees">ผู้เข้าร่วมประชุม</string>
     <string name="typeface">แบบอักษร</string>
+    <string name="text_alignment">การจัดตำแหน่งข้อความ</string>
+    <string name="more_apps_from_us_g">แอปเพิ่มเติมจากเรา</string>
+    <string name="use_persian_calendar">ใช้ปฏิทินเปอร์เซีย</string>
+    <string name="blocking_type">ประเภทการบล็อค</string>
+    <string name="blocking_type_do_not_reject">อย่าปฏิเสธ</string>
+    <string name="blocking_type_do_not_reject_summary">ปฏิเสธสายเรียกเข้าราวกับว่าผู้ใช้ไม่รับสาย</string>
+    <string name="blocking_type_reject">ปฏิเสธ</string>
+    <string name="blocking_type_reject_summary">ปฏิเสธสายเรียกเข้าราวกับว่าผู้ใช้ได้ปฏิเสธด้วยตนเอง</string>
 </resources>

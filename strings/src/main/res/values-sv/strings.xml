@@ -160,11 +160,13 @@
     <string name="hide_blocked_numbers">Dölj blockerad</string>
     <string name="paste_g">Infoga</string>
     <string name="recents">Senaste</string>
+    <string name="blocked_call">Blockerat samtal</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Storlek på kontaktminiatyrer</string>
     <string name="long_click_g">Långt klick %s</string>
+    <string name="use_persian_digits">Använd persiska siffror</string>
     <string name="purchase_simple_thank_you_g">Köp Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Uppdatera Goodwy Thank You till den senaste versionen</string>
@@ -249,6 +251,7 @@
     <string name="speech_bubble">Talbubbla</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Längs kanterna</string>
     <string name="library">Bibliotek</string>
     <string name="open_in_maps">Öppen i kartor</string>
 
@@ -263,6 +266,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Söka på Internet</string>
     <string name="show_number_blocking_button">Visa knapp för nummerlås</string>
+    <string name="blocking_type_silence">Ett tyst samtal</string>
+    <string name="blocking_type_silence_summary">Ställer in om ringsignalen ska tystas för det inkommande samtalet</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Relaterade personer</string>
     <string name="relation_hint_g">Relaterad person</string>
@@ -332,6 +337,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">För att betala via RuStore behöver du installera appversionen från RuStore</string>
     <string name="date">Datum</string>
     <string name="starts">Startar</string>
     <string name="ends">Ändar</string>
@@ -341,4 +347,11 @@
     <string name="attendees">Deltagare</string>
     <string name="typeface">Typsnitt</string>
     <string name="more_apps_from_us_g">Fler appar från oss</string>
+    <string name="text_alignment">Textjustering</string>
+    <string name="use_persian_calendar">Använd persisk kalender</string>
+    <string name="blocking_type">Blockerande typ</string>
+    <string name="blocking_type_do_not_reject">Avvisa inte</string>
+    <string name="blocking_type_do_not_reject_summary">Avvisa ett inkommande samtal som om användaren inte svarade</string>
+    <string name="blocking_type_reject">Avvisa</string>
+    <string name="blocking_type_reject_summary">Avvisa ett inkommande samtal som om användaren hade avvisat det manuellt</string>
 </resources>

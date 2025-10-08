@@ -1,5 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name_g" tools:ignore="MissingTranslation">Goodwy Commons</string>
     <string name="recorder_g">Recorder</string>
     <string name="player_g">Player</string>
     <string name="general">General</string>
@@ -10,6 +9,7 @@
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
+    <string name="blocked_call">Блокиран повик</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="unblock_numbers">Unblock numbers</string>
@@ -26,12 +26,14 @@
     <string name="interval">Interval</string>
     <string name="symbols_first">Symbols first (e.g. !@#$)</string>
     <string name="use_custom_notifications">Use custom notifications</string>
+    <string name="turn_on_screen">Вклучете го екранот</string>
     <string name="hide_top_bar_when_scrolling">Hide the top app bar when scrolling</string>
     <string name="unread_indicator_position">Unread indicator position</string>
     <string name="start">Start</string>
     <string name="end">End</string>
 
     <!-- Support project -->
+    <string name="rate_g">Оцени</string>
     <string name="action_support_project">Project support</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -71,6 +73,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Поради проблеми привремено не можеме да вршиме плаќања преку Google Play,
+            така што за овој период на сите корисници им даваме опција рачно да ги отклучат сите функции на апликацијата. <br>
+            Ако ви се допаѓаат нашите апликации кои се офлајн, ненаметливи и немаат реклами,
+            ве молиме размислете да не поддржите на некој начин. Ние би биле многу благодарни.<br><br>
+            Ви благодариме!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -92,6 +101,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">Additional colour used in some interface elements.</string>
     <string name="app_icon_color_warning_g">Caution: Certain launchers may not handle app icon customization correctly. If the icon disappears, attempt launching the app through Google Play or a widget, if accessible.</string>
+    <string name="app_icon_color_shortcuts_warning_g">Внимание: менувањето на иконата на апликацијата ќе ги отстрани кратенките на апликацијата.</string>
     <string name="show_contact_thumbnails_g">Show contact thumbnails</string>
     <string name="save_recordings_in_summary">Starting from Android 10+, the app does not have access to your files</string>
     <string name="round_play_icon">Round play/pause icon</string>
@@ -120,6 +130,7 @@
     <string name="end_search_when_changing_tab">End search when changing tab</string>
     <string name="change_top_bar_colour_when_scrolling">Change top bar colour when scrolling</string>
     <string name="global_theme_success_g">The current theme has been successfully applied to all Right apps. Any future changes to this theme will be synced automatically.</string>
+    <string name="enter_pattern">Внесете ја вашата шема</string>
     <string name="call_screen_background">Call screen background</string>
     <string name="contact_photo">Contact photo</string>
     <string name="blurry_contact_photo">Blurry contact photo</string>
@@ -148,10 +159,12 @@
     <string name="use_swipe_gestures_summary">This will disable gesture swiping of tabs</string>
     <string name="volume_g">Volume</string>
     <string name="vibrate_g">Vibrate</string>
+    <string name="ripple_g">Бран</string>
     <string name="use_contact_colors">Use contact colors</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Contact thumbnails size</string>
+    <string name="use_persian_digits">Користете персиски цифри</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -161,6 +174,7 @@
         You can find the guide at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just shoot me a message at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you need help.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">Овој проблем се јавува кога вашиот фрлач не поддржува целосно прилагодување на иконите. Обидете се да ја стартувате апликацијата преку Google Play или графичка контрола, доколку е достапна.\n        По стартувањето, вратете ја стандардната боја на иконата на апликацијата. Во екстремни случаи, може да биде потребно повторно инсталирање на апликацијата.</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -235,10 +249,12 @@
     <string name="speech_bubble">Speech bubble</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">По должината на рабовите</string>
     <string name="library">Library</string>
     <string name="open_in_maps">Open in Maps</string>
 
     <!-- Dialer -->
+    <string name="all_g">Сите</string>
     <string name="message_call_later">Can I call you later?</string>
     <string name="message_on_my_way">I\'m on my way.</string>
     <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
@@ -246,6 +262,8 @@
     <string name="mute">Mute</string>
 
     <!-- Relation types -->
+    <string name="blocking_type_silence">Тивок повик</string>
+    <string name="blocking_type_silence_summary">Поставува дали ѕвонењето треба да се прекине за дојдовниот повик</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>
@@ -315,5 +333,24 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
-    <string name="billing_error_application_signature_not_correct">To pay via RuStore you need to install the app version from RuStore</string>
+    <string name="billing_error_application_signature_not_correct">За да платите преку RuStore, треба да ја инсталирате верзијата на апликацијата од RuStore</string>
+    <string name="text_alignment">Порамнување на текстот</string>
+    <string name="search_the_web">Пребарајте на интернет</string>
+    <string name="show_number_blocking_button">Прикажи го копчето за блокирање броеви</string>
+    <string name="more_apps_from_us_g">Повеќе апликации од нас</string>
+    <string name="typeface">Шифра на печатење</string>
+    <string name="long_click_g">Долго кликнување на %s</string>
+    <string name="use_persian_calendar">Користете персиски календар</string>
+    <string name="blocking_type">Тип на блокирање</string>
+    <string name="blocking_type_do_not_reject">Не одбивајте</string>
+    <string name="blocking_type_do_not_reject_summary">Одбијте дојдовен повик како корисникот да не одговорил</string>
+    <string name="blocking_type_reject">Отфрли</string>
+    <string name="blocking_type_reject_summary">Одбијте дојдовен повик како корисникот да го одбил рачно</string>
+    <string name="date">Датум</string>
+    <string name="starts">Започнете</string>
+    <string name="ends">Крај</string>
+    <string name="time_zone">Временска зона</string>
+    <string name="event_type">Тип на настан</string>
+    <string name="availability">Достапност</string>
+    <string name="attendees">Присутните</string>
 </resources>

@@ -159,11 +159,13 @@
     <string name="hide_blocked_numbers">Blockiert ausblenden</string>
     <string name="paste_g">Einfügen</string>
     <string name="recents">Aktuell</string>
+    <string name="blocked_call">Blockierter Anruf</string>
     <string name="unblock_confirmation">Soll \"%s\" entsperren werden?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Größe der Miniaturansichten von Kontakten</string>
     <string name="long_click_g">Langer Klick %s</string>
+    <string name="use_persian_digits">Persische Ziffern verwenden</string>
     <string name="purchase_simple_thank_you_g">\"Goodwy Thank You\" App kaufen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Bitte aktualisieren Sie Goodwy Thank You auf die neueste Version</string>
@@ -248,6 +250,7 @@
     <string name="speech_bubble">Sprachblase</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Entlang der Kanten</string>
     <string name="library">Bibliothek</string>
     <string name="open_in_maps">In Karten öffnen</string>
 
@@ -262,6 +265,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Suche im Internet</string>
     <string name="show_number_blocking_button">Schaltfläche für die Nummernsperre anzeigen</string>
+    <string name="blocking_type_silence">Ein leiser Anruf</string>
+    <string name="blocking_type_silence_summary">Legt fest, ob das Klingeln bei eingehenden Anrufen stummgeschaltet werden soll</string>
     <string name="relation_g">Beziehung</string>
     <string name="relations_g">Verwandte Personen</string>
     <string name="relation_hint_g">Verwandte Person</string>
@@ -331,6 +336,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Um über RuStore zu bezahlen, müssen Sie die App-Version von RuStore installieren</string>
     <string name="date">Datum</string>
     <string name="starts">Beginnt</string>
     <string name="ends">Enden</string>
@@ -340,4 +346,11 @@
     <string name="attendees">Teilnehmer</string>
     <string name="typeface">Schrift</string>
     <string name="more_apps_from_us_g">Weitere Apps von uns</string>
+    <string name="text_alignment">Textausrichtung</string>
+    <string name="use_persian_calendar">Persischen Kalender verwenden</string>
+    <string name="blocking_type">Sperrtyp</string>
+    <string name="blocking_type_do_not_reject">Nicht ablehnen</string>
+    <string name="blocking_type_do_not_reject_summary">Einen eingehenden Anruf ablehnen, als ob der Benutzer nicht geantwortet hätte</string>
+    <string name="blocking_type_reject">Ablehnen</string>
+    <string name="blocking_type_reject_summary">Einen eingehenden Anruf ablehnen, als hätte der Benutzer ihn manuell abgelehnt</string>
 </resources>

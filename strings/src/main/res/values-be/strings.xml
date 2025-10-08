@@ -9,6 +9,7 @@
     <string name="incoming_call">Уваходны</string>
     <string name="outgoing_call">Выходны</string>
     <string name="missed_call">Прапушчаны</string>
+    <string name="blocked_call">Заблакіраваны выклік</string>
     <string name="unblock_confirmation">Разблакаваць \"%s\"?</string>
     <string name="unblock_number">Разблакаваць нумар</string>
     <string name="unblock_numbers">Разблакаваць нумары</string>
@@ -167,6 +168,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Памер мініяцюр кантактаў</string>
+    <string name="use_persian_digits">Выкарыстоўвайце персідскія лічбы</string>
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАўтарскія правы © Goodwy %2$d</string>
     <string name="update_thank_you_g">Абнавіце \"Goodwy Thank You\" да апошняй версіі.</string>
@@ -251,6 +253,7 @@
     <string name="speech_bubble">Стыль паведамленняў</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Па краях</string>
     <string name="library">Медыятэка</string>
     <string name="open_in_maps">Адкрыць у Картах</string>
     <string name="all_g">Усё</string>
@@ -265,6 +268,8 @@
 
     <!-- Relation types -->
     <string name="show_number_blocking_button">Паказваць кнопку блакіроўкі нумара</string>
+    <string name="blocking_type_silence">Ціхі званок</string>
+    <string name="blocking_type_silence_summary">Усталёўвае, ці трэба адключаць званок пры ўваходным выкліку</string>
     <string name="relation_g">Адносіны</string>
     <string name="relations_g">Змяненні, асобы</string>
     <string name="relation_hint_g">Звязаны твар</string>
@@ -334,7 +339,7 @@
     <string name="billing_subscriptions">Падпіскі</string>
     <string name="billing_change_to_google_play">Выкарыстоўваць Google Play</string>
     <string name="billing_change_to_ru_store">Выкарыстоўваць RuStore</string>
-    <string name="billing_error_application_signature_not_correct">Для аплаты праз RuStore неабходна ўсталяваць версію прыкладання з RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Для аплаты праз RuStore неабходна ўсталяваць версію праграмы з RuStore</string>
 
     <!-- Calendar -->
     <string name="date">Дата</string>
@@ -345,4 +350,11 @@
     <string name="availability">Даступнасць</string>
     <string name="attendees">Удзельнікі</string>
     <string name="more_apps_from_us_g">Больш праграм ад нас</string>
+    <string name="text_alignment">Выраўноўванне тэксту</string>
+    <string name="use_persian_calendar">Карыстайцеся персідскім календаром</string>
+    <string name="blocking_type">Тып блакіроўкі</string>
+    <string name="blocking_type_do_not_reject">Ці не адхіляць</string>
+    <string name="blocking_type_do_not_reject_summary">Адхіліць уваходны выклік, як калі б карыстач не адказаў</string>
+    <string name="blocking_type_reject">Адхіліць</string>
+    <string name="blocking_type_reject_summary">Адхіліць уваходны выклік, як калі б карыстач адхіліў яго ўручную</string>
 </resources>

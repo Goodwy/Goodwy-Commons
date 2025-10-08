@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Λόγω προβλημάτων δεν μπορούμε προσωρινά να πραγματοποιήσουμε πληρωμές μέσω του Google Play,
+            οπότε για αυτήν την περίοδο δίνουμε σε όλους τους χρήστες την επιλογή να ξεκλειδώσουν με μη αυτόματο τρόπο όλες τις λειτουργίες της εφαρμογής. <br>
+            Αν σας αρέσουν οι εφαρμογές μας που είναι εκτός σύνδεσης, μη παρεμβατικές και δεν έχουν διαφημίσεις,
+            σκεφτείτε να μας στηρίξετε με κάποιο τρόπο. Θα ήμασταν πολύ ευγνώμονες.<br><br>
+            Σας ευχαριστώ!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Απόκρυψη αποκλεισμένου</string>
     <string name="paste_g">Ενθέτω</string>
     <string name="recents">Πρόσφατος</string>
+    <string name="blocked_call">Αποκλεισμένη κλήση</string>
     <string name="unblock_confirmation">Είστε βέβαιοι ότι θέλετε να ξεμπλοκάρετε το \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Μέγεθος μικρογραφιών επαφών</string>
     <string name="long_click_g">Παρατεταμένο κλικ %s</string>
+    <string name="use_persian_digits">Χρησιμοποιήστε περσικά ψηφία</string>
     <string name="purchase_simple_thank_you_g">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστούμε στην τελευταία έκδοση</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">Φούσκα ομιλίας</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Κατά μήκος των άκρων</string>
     <string name="library">Βιβλιοθήκη</string>
     <string name="open_in_maps">Ανοιγμα σε χάρτες</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Αναζήτηση στο Internet</string>
     <string name="show_number_blocking_button">Εμφάνιση κουμπιού κλειδώματος αριθμού</string>
+    <string name="blocking_type_silence">Μια ήσυχη κλήση</string>
+    <string name="blocking_type_silence_summary">Ρυθμίζει εάν το κουδούνισμα θα πρέπει να σιωπά για την εισερχόμενη κλήση</string>
     <string name="relation_g">Σχέση</string>
     <string name="relations_g">Σχετικά πρόσωπα</string>
     <string name="relation_hint_g">Σχετικό πρόσωπο</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Για να πληρώσετε μέσω RuStore, πρέπει να εγκαταστήσετε την έκδοση της εφαρμογής από το RuStore</string>
     <string name="date">Ημερομηνία</string>
     <string name="starts">Ξεκινά</string>
     <string name="ends">Τελειώνει</string>
@@ -331,4 +344,11 @@
     <string name="attendees">Συμμετέχοντες</string>
     <string name="typeface">Γραμματοσειρά</string>
     <string name="more_apps_from_us_g">Περισσότερες εφαρμογές από εμάς</string>
+    <string name="text_alignment">Στοίχιση κειμένου</string>
+    <string name="use_persian_calendar">Χρησιμοποιήστε το περσικό ημερολόγιο</string>
+    <string name="blocking_type">Τύπος αποκλεισμού</string>
+    <string name="blocking_type_do_not_reject">Μην απορρίπτετε</string>
+    <string name="blocking_type_do_not_reject_summary">Απορρίψτε μια εισερχόμενη κλήση σαν να μην απαντούσε ο χρήστης</string>
+    <string name="blocking_type_reject">Απορρίπτω</string>
+    <string name="blocking_type_reject_summary">Απορρίψτε μια εισερχόμενη κλήση σαν να την είχε απορρίψει ο χρήστης χειροκίνητα</string>
 </resources>

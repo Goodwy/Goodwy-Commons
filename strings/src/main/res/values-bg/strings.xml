@@ -9,6 +9,7 @@
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
+    <string name="blocked_call">Блокирано обаждане</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Отблокиране на номер</string>
     <string name="unblock_numbers">Отблокиране на номера</string>
@@ -166,6 +167,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">Размер на миниатюрите на контактите</string>
     <string name="long_click_g">Дълго кликване %s</string>
+    <string name="use_persian_digits">Използвайте персийски цифри</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -250,6 +252,7 @@
     <string name="speech_bubble">Стил на съобщението</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">По ръбовете</string>
     <string name="library">Библиотека на медиите</string>
     <string name="open_in_maps">Отваряне в карти</string>
 
@@ -264,6 +267,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Търсене в интернет</string>
     <string name="show_number_blocking_button">Покажи бутона за заключване на номера</string>
+    <string name="blocking_type_silence">Тихо обаждане</string>
+    <string name="blocking_type_silence_summary">Задава дали звъненето да бъде заглушено за входящо повикване</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Свързани лица</string>
     <string name="relation_hint_g">Свързано лице</string>
@@ -333,7 +338,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
-    <string name="billing_error_application_signature_not_correct">За да платите през RuStore е необходимо да инсталирате версията на приложението от RuStore</string>
+    <string name="billing_error_application_signature_not_correct">За да платите чрез RuStore, трябва да инсталирате версията на приложението от RuStore</string>
     <string name="date">Дата</string>
     <string name="starts">Започва</string>
     <string name="ends">Завършва</string>
@@ -343,4 +348,11 @@
     <string name="attendees">Участниците</string>
     <string name="typeface">Шрифт</string>
     <string name="more_apps_from_us_g">Други наши приложения</string>
+    <string name="text_alignment">Подравняване на текст</string>
+    <string name="use_persian_calendar">Използвайте персийския календар</string>
+    <string name="blocking_type">Тип блокиране</string>
+    <string name="blocking_type_do_not_reject">Не отхвърляйте</string>
+    <string name="blocking_type_do_not_reject_summary">Отхвърлете входящо повикване, сякаш потребителят не е отговорил</string>
+    <string name="blocking_type_reject">Отхвърляне</string>
+    <string name="blocking_type_reject_summary">Отхвърлете входящо повикване, сякаш потребителят го е отхвърлил ръчно</string>
 </resources>

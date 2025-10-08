@@ -9,6 +9,7 @@
     <string name="incoming_call">آنے والی کال</string>
     <string name="outgoing_call">آؤٹ گوئنگ کال</string>
     <string name="missed_call">مسڈ کال</string>
+    <string name="blocked_call">بلاک کال</string>
     <string name="unblock_confirmation">کیا آپ واقعی \"%s\" کو غیر مسدود کرنا چاہتے ہیں؟</string>
     <string name="unblock_number">غیر مسدود نمبر</string>
     <string name="unblock_numbers">ان بلاک نمبرز</string>
@@ -72,6 +73,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            مسائل کی وجہ سے ہم عارضی طور پر Google Play کے ذریعے ادائیگیاں کرنے سے قاصر ہیں،
+            لہذا اس مدت کے لیے ہم تمام صارفین کو ایپ کی تمام خصوصیات کو دستی طور پر غیر مقفل کرنے کا اختیار دے رہے ہیں۔ <br>
+            اگر آپ ہماری ایپس کو پسند کرتے ہیں جو آف لائن ہیں، غیر مداخلت کرنے والی ہیں اور جن میں کوئی اشتہار نہیں ہے،
+            براہ کرم کسی طرح سے ہمارا ساتھ دینے پر غور کریں۔ ہم بہت مشکور ہوں گے۔<br><br>
+            شکریہ!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">پچھلی خریداری بحال کر دی گئی۔ تمام خصوصیات کا استعمال کرنے کے لیے براہ کرم ایپ کو دوبارہ شروع کریں۔</string>
     <string name="no_purchase_found">کوئی خریداری نہیں ملی۔</string>
     <string name="restore_purchase">خریداری بحال کریں</string>
@@ -157,6 +165,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">تھمب نیلز کا سائز رابطہ کریں۔</string>
     <string name="long_click_g">لمبا کلک %s</string>
+    <string name="use_persian_digits">فارسی ہندسے استعمال کریں۔</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -241,6 +250,7 @@
     <string name="speech_bubble">اسپیچ ببل</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">کناروں کے ساتھ ساتھ</string>
     <string name="library">کتب خانہ</string>
     <string name="open_in_maps">نقشوں میں کھولیں۔</string>
 
@@ -255,6 +265,8 @@
     <!-- Relation types -->
     <string name="search_the_web">انٹرنیٹ سرچ</string>
     <string name="show_number_blocking_button">نمبر بلاک دا بٹن وکھاؤ</string>
+    <string name="blocking_type_silence">ایک خاموش کال</string>
+    <string name="blocking_type_silence_summary">سیٹ کرتا ہے کہ آیا آنے والی کال کے لیے گھنٹی بجائی جائے گی یا نہیں</string>
     <string name="relation_g"> تعلق</string>
     <string name="relations_g">متعلقہ افراد</string>
     <string name="relation_hint_g">متعلقہ شخص</string>
@@ -324,6 +336,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">RuStore کے ذریعے ادائیگی کرنے کے لیے آپ کو RuStore سے ایپ ورژن انسٹال کرنا ہوگا۔</string>
     <string name="date">تریخ</string>
     <string name="starts">شروع ہوندا اے</string>
     <string name="ends">ختم ہو جاندا اے</string>
@@ -333,4 +346,11 @@
     <string name="attendees">حاضرین</string>
     <string name="typeface">ٹائپ فیس</string>
     <string name="more_apps_from_us_g">ساڈے ولوں ہور ایپلیکیشناں</string>
+    <string name="text_alignment">متن کی سیدھ</string>
+    <string name="use_persian_calendar">فارسی کیلنڈر استعمال کریں۔</string>
+    <string name="blocking_type">مسدود کرنے کی قسم</string>
+    <string name="blocking_type_do_not_reject">رد نہ کریں۔</string>
+    <string name="blocking_type_do_not_reject_summary">آنے والی کال کو اس طرح مسترد کریں جیسے صارف نے جواب نہیں دیا۔</string>
+    <string name="blocking_type_reject">رد کرنا</string>
+    <string name="blocking_type_reject_summary">آنے والی کال کو اس طرح مسترد کریں جیسے صارف نے اسے دستی طور پر مسترد کر دیا ہو۔</string>
 </resources>

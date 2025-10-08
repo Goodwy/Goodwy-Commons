@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            På grund af problemer er vi midlertidigt ude af stand til at foretage betalinger via Google Play,
+            så i denne periode giver vi alle brugere mulighed for manuelt at låse alle funktioner i appen op. <br>
+            Hvis du kan lide vores apps, som er offline, ikke-påtrængende og ikke har nogen annoncer,
+            overvej at støtte os på en eller anden måde. Vi ville være meget taknemmelige.<br><br>
+            Tak!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Skjul blokeret</string>
     <string name="paste_g">Indsætte</string>
     <string name="recents">Frisk</string>
+    <string name="blocked_call">Blokeret opkald</string>
     <string name="unblock_confirmation">Er du sikker på, at du vil fjerne blokeringen af \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Størrelse på kontaktminiaturer</string>
     <string name="long_click_g">Langt klik %s</string>
+    <string name="use_persian_digits">Brug persiske cifre</string>
     <string name="purchase_simple_thank_you_g">Køb Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Opdater venligst Goodwy Thank You til den seneste version</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">Tale-boble</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Langs kanterne</string>
     <string name="library">Bibliotek</string>
     <string name="open_in_maps">Opnå i kort</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Søg på internettet</string>
     <string name="show_number_blocking_button">Vis knappen Nummerlås</string>
+    <string name="blocking_type_silence">Et stille opkald</string>
+    <string name="blocking_type_silence_summary">Indstiller, om ringningen skal afbrydes for det indgående opkald</string>
     <string name="relation_g">Forhold</string>
     <string name="relations_g">Nærtstående personer</string>
     <string name="relation_hint_g">Nærtstående person</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">For at betale via RuStore skal du installere appversionen fra RuStore</string>
     <string name="date">Dato</string>
     <string name="starts">Starter</string>
     <string name="ends">Ender</string>
@@ -331,4 +344,11 @@
     <string name="attendees">Deltagere</string>
     <string name="typeface">Skrifttype</string>
     <string name="more_apps_from_us_g">Flere apps fra os</string>
+    <string name="text_alignment">Tekstjustering</string>
+    <string name="use_persian_calendar">Brug persisk kalender</string>
+    <string name="blocking_type">Blokerende type</string>
+    <string name="blocking_type_do_not_reject">Afvis ikke</string>
+    <string name="blocking_type_do_not_reject_summary">Afvis et indgående opkald, som om brugeren ikke svarede</string>
+    <string name="blocking_type_reject">Afvise</string>
+    <string name="blocking_type_reject_summary">Afvis et indgående opkald, som om brugeren havde afvist det manuelt</string>
 </resources>

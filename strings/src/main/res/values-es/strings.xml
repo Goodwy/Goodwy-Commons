@@ -55,6 +55,12 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+Debido a problemas, temporalmente no podemos realizar pagos a través de Google Play. Por lo tanto, durante este periodo, ofrecemos a todos los usuarios la opción de desbloquear manualmente todas las funciones de la aplicación. <br>
+Si te gustan nuestras aplicaciones sin conexión, no intrusivas y sin anuncios,
+por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br><br>
+¡Gracias!
+]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +156,13 @@
     <string name="hide_blocked_numbers">Ocultar bloqueado</string>
     <string name="paste_g">Insertar</string>
     <string name="recents">Reciente</string>
+    <string name="blocked_call">Llamada bloqueada</string>
     <string name="unblock_confirmation">¿Estás seguro de que quieres desbloquear \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Tamaño de las miniaturas de contacto</string>
     <string name="long_click_g">Clic largo %s</string>
+    <string name="use_persian_digits">Utilice dígitos persas</string>
     <string name="purchase_simple_thank_you_g">Comprar Simple Gracias</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Por favor, actualice Simple Gracias a la última versión</string>
@@ -239,6 +247,7 @@
     <string name="speech_bubble">Burbuja de discurso</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">A lo largo de los bordes</string>
     <string name="library">Biblioteca</string>
     <string name="open_in_maps">Abrir en Mapas</string>
 
@@ -253,6 +262,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Buscar en Internet</string>
     <string name="show_number_blocking_button">Mostrar botón de bloqueo de números</string>
+    <string name="blocking_type_silence">Una llamada silenciosa</string>
+    <string name="blocking_type_silence_summary">Establece si se debe silenciar el timbre para la llamada entrante</string>
     <string name="relation_g">Relación</string>
     <string name="relations_g">Personas relacionadas</string>
     <string name="relation_hint_g">Persona relacionada</string>
@@ -322,6 +333,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Para pagar a través de RuStore necesitas instalar la versión de la aplicación de RuStore</string>
     <string name="date">Fecha</string>
     <string name="starts">Comienza</string>
     <string name="ends">Termina</string>
@@ -331,4 +343,11 @@
     <string name="attendees">Asistentes</string>
     <string name="typeface">Tipo de letra</string>
     <string name="more_apps_from_us_g">Más aplicaciones nuestras</string>
+    <string name="text_alignment">Alineación de texto</string>
+    <string name="use_persian_calendar">Utilice el calendario persa</string>
+    <string name="blocking_type">Tipo de bloqueo</string>
+    <string name="blocking_type_do_not_reject">No rechaces</string>
+    <string name="blocking_type_do_not_reject_summary">Rechazar una llamada entrante como si el usuario no hubiera respondido</string>
+    <string name="blocking_type_reject">Rechazar</string>
+    <string name="blocking_type_reject_summary">Rechazar una llamada entrante como si el usuario la hubiera rechazado manualmente</string>
 </resources>

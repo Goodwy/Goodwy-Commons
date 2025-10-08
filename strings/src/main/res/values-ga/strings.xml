@@ -1,5 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name_g" tools:ignore="MissingTranslation">Goodwy Commons</string>
     <string name="recorder_g">Recorder</string>
     <string name="player_g">Player</string>
     <string name="general">General</string>
@@ -10,6 +9,7 @@
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
+    <string name="blocked_call">Glao Coiscthe</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="unblock_numbers">Unblock numbers</string>
@@ -175,6 +175,7 @@
     <string name="long_click_g">Long click %s</string>
 
     <!-- Other -->
+    <string name="use_persian_digits">Úsáid digití Peirsis</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -260,6 +261,7 @@
     <string name="speech_bubble">Speech bubble</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Chomh maith leis an imill</string>
     <string name="library">Library</string>
     <string name="open_in_maps">Open in Maps</string>
     <string name="all_g">All</string>
@@ -274,6 +276,8 @@
     <string name="show_number_blocking_button">Show the number blocking button</string>
 
     <!-- Relation types -->
+    <string name="blocking_type_silence">Glaoch ciúin</string>
+    <string name="blocking_type_silence_summary">Socraíonn sé cé acu ar cheart an glaoch a chur ina thost don ghlao isteach</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>
@@ -343,7 +347,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
-    <string name="billing_error_application_signature_not_correct">To pay via RuStore you need to install the app version from RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Chun íoc trí RuStore ní mór duit an leagan app a shuiteáil ó RuStore</string>
 
     <!-- Calendar -->
     <string name="date">Date</string>
@@ -353,4 +357,11 @@
     <string name="event_type">Event type</string>
     <string name="availability">Availability</string>
     <string name="attendees">Attendees</string>
+    <string name="text_alignment">Ailíniú téacs</string>
+    <string name="use_persian_calendar">Úsáid féilire Peirsis</string>
+    <string name="blocking_type">Cineál blocála</string>
+    <string name="blocking_type_do_not_reject">Ná diúltaigh</string>
+    <string name="blocking_type_do_not_reject_summary">Diúltaigh glao isteach amhail is nár fhreagair an t-úsáideoir</string>
+    <string name="blocking_type_reject">Diúltaigh</string>
+    <string name="blocking_type_reject_summary">Diúltaigh glao isteach amhail is gur dhiúltaigh an t-úsáideoir de láimh é</string>
 </resources>

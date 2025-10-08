@@ -15,6 +15,7 @@
     <string name="end">Son</string>
 
     <!-- Support project -->
+    <string name="rate_g">Qiymətləndirmə</string>
     <string name="action_support_project">Layihə dəstəyi</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -54,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Problemlərə görə biz müvəqqəti olaraq Google Play vasitəsilə ödəniş edə bilmirik,
+            bu müddət ərzində biz bütün istifadəçilərə tətbiqin bütün xüsusiyyətlərini əl ilə açmaq imkanı veririk. <br>
+            Oflayn, müdaxilə etməyən və heç bir reklamı olmayan tətbiqlərimizi bəyənirsinizsə,
+            zəhmət olmasa bizə bir şəkildə dəstək olun. Biz çox minnətdar olardıq.<br><br>
+            Təşəkkür edirəm!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +158,13 @@
     <string name="hide_blocked_numbers">Gizlət bloklandı</string>
     <string name="paste_g">Daxil et</string>
     <string name="recents">Son zamanlar</string>
+    <string name="blocked_call">Bloklanmış Zəng</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Əlaqə miniatürlərinin ölçüsü</string>
     <string name="long_click_g">Uzun klikləyin %s</string>
+    <string name="use_persian_digits">Fars rəqəmlərindən istifadə edin</string>
     <string name="purchase_simple_thank_you_g">Sadə Təşəkkür\'ü Alın</string>
     <string name="copyright_g">v %1$s\nMüəllif Hüquqları © Goodwy %2$d</string>
     <string name="update_thank_you_g">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>
@@ -239,6 +249,7 @@
     <string name="speech_bubble">Nitq üslubu</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Kenarlar boyunca</string>
     <string name="library">Kitabxana</string>
     <string name="open_in_maps">Xəritədə açın</string>
 
@@ -253,6 +264,8 @@
     <!-- Relation types -->
     <string name="search_the_web">İnternet axtarışı</string>
     <string name="show_number_blocking_button">Nömrə bloku düyməsini göstərin</string>
+    <string name="blocking_type_silence">Sakit zəng</string>
+    <string name="blocking_type_silence_summary">Daxil olan zəng üçün zəngin susdurulmalı olub-olmadığını təyin edir</string>
     <string name="relation_g">Əlaqə</string>
     <string name="relations_g">Əlaqədar şəxslər</string>
     <string name="relation_hint_g">Əlaqədar şəxs</string>
@@ -322,6 +335,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">RuStore vasitəsilə ödəniş etmək üçün siz RuStore-dan proqram versiyasını quraşdırmalısınız</string>
     <string name="date">Tarix</string>
     <string name="starts">Başlayır</string>
     <string name="ends">Bitirir</string>
@@ -330,4 +344,12 @@
     <string name="availability">Mövcudluq</string>
     <string name="attendees">Iştirakçılar</string>
     <string name="typeface">Yazı tipi</string>
+    <string name="text_alignment">Mətnin uyğunlaşdırılması</string>
+    <string name="more_apps_from_us_g">Bizdən daha çox proqram</string>
+    <string name="use_persian_calendar">Fars təqvimindən istifadə edin</string>
+    <string name="blocking_type">Bloklama növü</string>
+    <string name="blocking_type_do_not_reject">Rədd etməyin</string>
+    <string name="blocking_type_do_not_reject_summary">İstifadəçi cavab verməmiş kimi daxil olan zəngi rədd edin</string>
+    <string name="blocking_type_reject">Rədd edin</string>
+    <string name="blocking_type_reject_summary">İstifadəçi onu əl ilə rədd etmiş kimi daxil olan zəngi rədd edin</string>
 </resources>

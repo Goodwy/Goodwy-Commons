@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            A causa de problemes, no podem fer pagaments a través de Google Play temporalment,
+            així que durant aquest període oferim a tots els usuaris l'opció de desbloquejar manualment totes les funcions de l'aplicació. <br>
+            Si t'agraden les nostres aplicacions que estan fora de línia, no intrusives i no tenen anuncis,
+            si us plau, considereu donar-nos suport d'alguna manera. Estaríem molt agraïts.<br><br>
+            Gràcies!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Amaga bloquejat</string>
     <string name="paste_g">Inserir</string>
     <string name="recents">Recents</string>
+    <string name="blocked_call">Trucada bloquejada</string>
     <string name="unblock_confirmation">Jeste li sigurni da želite deblokirati \'%s\'?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Mida de les miniatures de contacte</string>
     <string name="long_click_g">Feu clic llarg %s</string>
+    <string name="use_persian_digits">Utilitza els dígits perses</string>
     <string name="purchase_simple_thank_you_g">Compra Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Si us plau, actualitzeu Goodwy Thank You a la darrera versió</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">Bafarola</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Al llarg de les vores</string>
     <string name="library">Biblioteca</string>
     <string name="open_in_maps">Obre a Maps</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Cercar a Internet</string>
     <string name="show_number_blocking_button">Mostra el botó de bloqueig de números</string>
+    <string name="blocking_type_silence">Una trucada tranquil·la</string>
+    <string name="blocking_type_silence_summary">Estableix si s\'ha de silenciar el timbre per a la trucada entrant</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Persones relacionades</string>
     <string name="relation_hint_g">Persona relacionada</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Per pagar mitjançant RuStore, cal instal·lar la versió de l\'aplicació de RuStore</string>
     <string name="date">Datar</string>
     <string name="starts">Comença</string>
     <string name="ends">Acaba</string>
@@ -331,4 +344,11 @@
     <string name="attendees">Assistents</string>
     <string name="typeface">Tipografia</string>
     <string name="more_apps_from_us_g">Més aplicacions nostres</string>
+    <string name="text_alignment">Alineació del text</string>
+    <string name="use_persian_calendar">Utilitzeu el calendari persa</string>
+    <string name="blocking_type">Tipus de bloqueig</string>
+    <string name="blocking_type_do_not_reject">No rebutjar</string>
+    <string name="blocking_type_do_not_reject_summary">Rebutja una trucada entrant com si l\'usuari no respongués</string>
+    <string name="blocking_type_reject">Rebutja</string>
+    <string name="blocking_type_reject_summary">Rebutja una trucada entrant com si l\'usuari l\'hagués rebutjat manualment</string>
 </resources>

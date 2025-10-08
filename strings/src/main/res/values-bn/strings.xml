@@ -9,6 +9,7 @@
     <string name="incoming_call">আগত কল</string>
     <string name="outgoing_call">আউটগোয়িং কল</string>
     <string name="missed_call">মিসড কল</string>
+    <string name="blocked_call">ব্লকড কল</string>
     <string name="unblock_confirmation">আপনি কি \"%s\" আনব্লক করার বিষয়ে নিশ্চিত?</string>
     <string name="unblock_number"> আনব্লক নম্বর</string>
     <string name="unblock_numbers"> নম্বর আনব্লক করুন</string>
@@ -25,12 +26,14 @@
     <string name="interval">ব্যবধান</string>
     <string name="symbols_first">প্রথমে প্রতীক (যেমন !@#$)</string>
     <string name="use_custom_notifications">কাস্টম বিজ্ঞপ্তি ব্যবহার করুন</string>
+    <string name="turn_on_screen">পর্দা চালু করুন</string>
     <string name="hide_top_bar_when_scrolling">স্ক্রোল করার সময় শীর্ষ অ্যাপ বার লুকান</string>
     <string name="unread_indicator_position">অপঠিত সূচক অবস্থান</string>
     <string name="start">শুরু</string>
     <string name="end">শেষ</string>
 
     <!-- Support project -->
+    <string name="rate_g">হার</string>
     <string name="action_support_project">Project support</string>
     <string name="pref_pay_summary">Get the paid app to support future developments and extra features</string>
     <string name="support_project_summary">Get one of our paid apps to support future development and unlock extra features</string>
@@ -70,6 +73,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            সমস্যার কারণে আমরা সাময়িকভাবে Google Play এর মাধ্যমে অর্থপ্রদান করতে পারছি না,
+            তাই এই সময়ের জন্য আমরা সমস্ত ব্যবহারকারীদের অ্যাপের সমস্ত বৈশিষ্ট্য ম্যানুয়ালি আনলক করার বিকল্প দিচ্ছি। <br>
+            আপনি যদি আমাদের অ্যাপগুলি পছন্দ করেন যা অফলাইন, অ-অনুপ্রবেশকারী এবং কোনো বিজ্ঞাপন নেই,
+            কোন উপায়ে আমাদের সমর্থন বিবেচনা করুন. আমরা খুব কৃতজ্ঞ থাকব৷<br><br>৷
+            ধন্যবাদ!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -91,6 +101,7 @@
     <!-- Settings -->
     <string name="use_accent_color_summary">Additional colour used in some interface elements.</string>
     <string name="app_icon_color_warning_g">Caution: Certain launchers may not handle app icon customization correctly. If the icon disappears, attempt launching the app through Google Play or a widget, if accessible.</string>
+    <string name="app_icon_color_shortcuts_warning_g">সতর্কতা: অ্যাপের আইকন পরিবর্তন করলে অ্যাপের শর্টকাটগুলো মুছে যাবে।</string>
     <string name="show_contact_thumbnails_g">যোগাযোগের থাম্বনেইল দেখান</string>
     <string name="save_recordings_in_summary">Android 10+ থেকে শুরু করে, অ্যাপটির আপনার ফাইলগুলিতে অ্যাক্সেস নেই</string>
     <string name="round_play_icon"> রাউন্ড প্লে/পজ আইকন</string>
@@ -119,6 +130,7 @@
     <string name="end_search_when_changing_tab">End search when changing tab</string>
     <string name="change_top_bar_colour_when_scrolling">Change top bar colour when scrolling</string>
     <string name="global_theme_success_g">The current theme has been successfully applied to all Right apps. Any future changes to this theme will be synced automatically.</string>
+    <string name="enter_pattern">আপনার প্যাটার্ন লিখুন</string>
     <string name="call_screen_background">কল স্ক্রীন ব্যাকগ্রাউন্ড</string>
     <string name="contact_photo">যোগাযোগের ছবি</string>
     <string name="blurry_contact_photo">অস্পষ্ট যোগাযোগের ছবি</string>৷
@@ -147,10 +159,12 @@
     <string name="use_swipe_gestures_summary">এটি ট্যাবগুলির অঙ্গভঙ্গি সোয়াইপিং অক্ষম করবে</string>
     <string name="volume_g">ভলিউম</string>
     <string name="vibrate_g">কম্পন</string>
+    <string name="ripple_g">লহর</string>
     <string name="use_contact_colors">যোগাযোগের রং ব্যবহার করুন</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">যোগাযোগ থাম্বনেল আকার</string>
+    <string name="use_persian_digits">ফার্সি অঙ্ক ব্যবহার করুন</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -160,6 +174,7 @@
         You can find the guide at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just shoot me a message at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you need help.
         ]]>
     </string>
+    <string name="faq_6_text_commons_g">এই সমস্যাটি দেখা দেয় যখন আপনার লঞ্চার আইকন কাস্টমাইজেশন সম্পূর্ণরূপে সমর্থন করে না। অ্যাক্সেসযোগ্য হলে Google Play বা একটি উইজেটের মাধ্যমে অ্যাপটি চালু করার চেষ্টা করুন।\n        চালু করার পরে, ডিফল্ট অ্যাপ আইকনের রঙ পুনরুদ্ধার করুন। চরম ক্ষেত্রে, অ্যাপটি পুনরায় ইনস্টল করার প্রয়োজন হতে পারে।</string>
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
@@ -234,10 +249,12 @@
     <string name="speech_bubble">কথার বুদবুদ</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">প্রান্ত বরাবর</string>
     <string name="library">লাইব্রেরি</string>
     <string name="open_in_maps">মানচিত্রে খুলুন</string>৷
 
     <!-- Dialer -->
+    <string name="all_g">সব</string>
     <string name="message_call_later">আমি কি আপনাকে পরে কল করতে পারি?</string>
     <string name="message_on_my_way">আমি আমার পথে আছি।</string>
     <string name="message_cant_talk_right_now">দুঃখিত, আমি এখন কথা বলতে পারছি না।</string>
@@ -245,6 +262,8 @@
     <string name="mute">নিঃশব্দ</string>৷
 
     <!-- Relation types -->
+    <string name="blocking_type_silence">একটি শান্ত কল</string>
+    <string name="blocking_type_silence_summary">ইনকামিং কলের জন্য রিং বাজানো হবে কিনা তা সেট করে</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>
@@ -314,4 +333,24 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="text_alignment">পাঠ্য প্রান্তিককরণ</string>
+    <string name="search_the_web">ওয়েব অনুসন্ধান করুন</string>
+    <string name="show_number_blocking_button">নম্বর ব্লকিং বোতামটি দেখান</string>
+    <string name="more_apps_from_us_g">আমাদের থেকে আরও অ্যাপ</string>
+    <string name="typeface">টাইপফেস</string>
+    <string name="long_click_g">দীর্ঘক্ষণ %s ক্লিক করুন</string>
+    <string name="use_persian_calendar">ফার্সি ক্যালেন্ডার ব্যবহার করুন</string>
+    <string name="blocking_type">ব্লকিং টাইপ</string>
+    <string name="blocking_type_do_not_reject">প্রত্যাখ্যান করবেন না</string>
+    <string name="blocking_type_do_not_reject_summary">একটি ইনকামিং কল প্রত্যাখ্যান করুন যেন ব্যবহারকারী উত্তর দেয়নি</string>
+    <string name="blocking_type_reject">প্রত্যাখ্যান করুন</string>
+    <string name="blocking_type_reject_summary">একটি ইনকামিং কল প্রত্যাখ্যান করুন যেন ব্যবহারকারী এটি ম্যানুয়ালি প্রত্যাখ্যান করেছেন</string>
+    <string name="billing_error_application_signature_not_correct">RuStore এর মাধ্যমে অর্থ প্রদান করতে আপনাকে RuStore থেকে অ্যাপ সংস্করণটি ইনস্টল করতে হবে</string>
+    <string name="date">তারিখ</string>
+    <string name="starts">শুরু করুন</string>
+    <string name="ends">শেষ</string>
+    <string name="time_zone">সময় অঞ্চল</string>
+    <string name="event_type">ইভেন্টের ধরন</string>
+    <string name="availability">প্রাপ্যতা</string>
+    <string name="attendees">উপস্থিতরা</string>
 </resources>

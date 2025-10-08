@@ -160,11 +160,13 @@
     <string name="hide_blocked_numbers">Skrýt blokované</string>
     <string name="paste_g">Vložit</string>
     <string name="recents">Nedávný</string>
+    <string name="blocked_call">Blokovaný hovor</string>
     <string name="unblock_confirmation">Opravdu chcete odblokovat \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Velikost miniatur kontaktů</string>
     <string name="long_click_g">Dlouhé kliknutí %s</string>
+    <string name="use_persian_digits">Použijte perské číslice</string>
     <string name="purchase_simple_thank_you_g">Zakoupit Jednoduché děkuji</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aktualizujte prosím Jednoduché děkuji na nejnovější verzi</string>
@@ -249,6 +251,7 @@
     <string name="speech_bubble">Mluvní bublina</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Po okrajích</string>
     <string name="library">Knihovna</string>
     <string name="open_in_maps">Otevřít v mapách</string>
 
@@ -263,6 +266,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Vyhledávání na internetu</string>
     <string name="show_number_blocking_button">Zobrazit tlačítko zámku čísla</string>
+    <string name="blocking_type_silence">Tichý hovor</string>
+    <string name="blocking_type_silence_summary">Nastavuje, zda má být u příchozího hovoru ztišeno vyzvánění</string>
     <string name="relation_g">Vztah</string>
     <string name="relations_g">Související osoby</string>
     <string name="relation_hint_g">Související osoba</string>
@@ -332,6 +337,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Chcete-li platit přes RuStore, musíte si nainstalovat verzi aplikace z RuStore</string>
     <string name="date">Rande</string>
     <string name="starts">Startuje</string>
     <string name="ends">Končí</string>
@@ -341,4 +347,11 @@
     <string name="attendees">Účastníků</string>
     <string name="typeface">Druh písma</string>
     <string name="more_apps_from_us_g">Více aplikací od nás</string>
+    <string name="text_alignment">Zarovnání textu</string>
+    <string name="use_persian_calendar">Použijte perský kalendář</string>
+    <string name="blocking_type">Typ blokování</string>
+    <string name="blocking_type_do_not_reject">Neodmítat</string>
+    <string name="blocking_type_do_not_reject_summary">Odmítněte příchozí hovor, jako by uživatel neodpovídal</string>
+    <string name="blocking_type_reject">Odmítnout</string>
+    <string name="blocking_type_reject_summary">Odmítněte příchozí hovor, jako by jej uživatel odmítl ručně</string>
 </resources>

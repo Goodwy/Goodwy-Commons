@@ -9,6 +9,7 @@
     <string name="incoming_call">Tulev kõne</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Väljajäänud kõne</string>
+    <string name="blocked_call">Blokeeritud kõne</string>
     <string name="unblock_confirmation">Kas oled kindel, et soovid blokeeringu \"%s\" tühistada?</string>
     <string name="unblock_number">Blokeeringu numbri vabastamine</string>
     <string name="unblock_numbers">Blokeeringu numbrite vabastamine</string>
@@ -72,6 +73,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Probleemide tõttu ei saa me ajutiselt Google Play kaudu makseid teha,
+            nii et sel perioodil anname kõigile kasutajatele võimaluse kõik rakenduse funktsioonid käsitsi avada. <br>
+            Kui teile meeldivad meie rakendused, mis on võrguühenduseta, mittepealetükkivad ja millel pole reklaame,
+            palun kaaluge meie toetamist mingil moel. Oleksime väga tänulikud.<br><br>
+            Aitäh!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -157,6 +165,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">Kontakti pisipiltide suurus</string>
     <string name="long_click_g">Pikad klõpsud %s</string>
+    <string name="use_persian_digits">Kasutage Pärsia numbreid</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -241,6 +250,7 @@
     <string name="speech_bubble">Rääkimismull</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Mööda servi</string>
     <string name="library">Kirjandus</string>
     <string name="open_in_maps">Avatud kaartidel</string>
 
@@ -255,6 +265,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Internetist otsimine</string>
     <string name="show_number_blocking_button">Näita numbriluku nuppu</string>
+    <string name="blocking_type_silence">Vaikne kõne</string>
+    <string name="blocking_type_silence_summary">Määrab, kas sissetuleva kõne helin tuleb vaigistada</string>
     <string name="relation_g">Seos</string>
     <string name="relations_g">Seotud isikud</string>
     <string name="relation_hint_g">Seotud isik</string>
@@ -324,6 +336,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">RuStore\'i kaudu maksmiseks peate installima rakenduse versiooni RuStore\'ist</string>
     <string name="date">Kuupäev</string>
     <string name="starts">Hakkab</string>
     <string name="ends">Lõpeb</string>
@@ -333,4 +346,11 @@
     <string name="attendees">Osalejaid</string>
     <string name="typeface">Kirjatüüp</string>
     <string name="more_apps_from_us_g">Vaata kõiki meie rakendusi</string>
+    <string name="text_alignment">Teksti joondamine</string>
+    <string name="use_persian_calendar">Kasutage Pärsia kalendrit</string>
+    <string name="blocking_type">Blokeerimise tüüp</string>
+    <string name="blocking_type_do_not_reject">Ärge keelduge</string>
+    <string name="blocking_type_do_not_reject_summary">Keelduge sissetulevast kõnest nii, nagu kasutaja ei vastaks</string>
+    <string name="blocking_type_reject">Keeldu</string>
+    <string name="blocking_type_reject_summary">Keelduge sissetulevast kõnest nii, nagu oleks kasutaja selle käsitsi tagasi lükanud</string>
 </resources>

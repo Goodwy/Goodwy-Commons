@@ -9,6 +9,7 @@
     <string name="incoming_call">ਇਨਕਮਿੰਗ ਕਾਲ</string>
     <string name="outgoing_call">ਆਊਟਗੋਇੰਗ ਕਾਲ</string>
     <string name="missed_call">ਮਿਸਡ ਕਾਲ</string>
+    <string name="blocked_call">ਬਲੌਕ ਕੀਤੀ ਕਾਲ</string>
     <string name="unblock_confirmation">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ \'ਤੇ \"%s\ ਨੂੰ ਅਨਬਲੌਕ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ"?</string>
     <string name="unblock_number">ਨੰਬਰ ਨੂੰ ਅਨਬਲੌਕ ਕਰੋ</string>
     <string name="unblock_numbers">ਨੰਬਰਾਂ ਨੂੰ ਅਨਬਲੌਕ ਕਰੋ</string>
@@ -32,6 +33,7 @@
     <string name="end">ਅੰਤ</string>
 
     <!-- Support project -->
+    <string name="rate_g">ਦਰ</string>
     <string name="action_support_project">ਪ੍ਰੋਜੈਕਟ ਸਹਾਇਤਾ</string>
     <string name="pref_pay_summary">ਭਵਿੱਖ ਦੇ ਵਿਕਾਸ ਅਤੇ ਵਾਧੂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦਾ ਸਮਰਥਨ ਕਰਨ ਲਈ ਅਦਾਇਗੀ ਐਪ ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="support_project_summary">ਭਵਿੱਖ ਦੇ ਵਿਕਾਸ ਦਾ ਸਮਰਥਨ ਕਰਨ ਅਤੇ ਵਾਧੂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਅਨਲੌਕ ਕਰਨ ਲਈ ਸਾਡੀਆਂ ਭੁਗਤਾਨਸ਼ੁਦਾ ਐਪਾਂ ਵਿੱਚੋਂ ਇੱਕ ਪ੍ਰਾਪਤ ਕਰੋ</string>
@@ -71,6 +73,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            ਸਮੱਸਿਆਵਾਂ ਦੇ ਕਾਰਨ ਅਸੀਂ ਅਸਥਾਈ ਤੌਰ 'ਤੇ Google Play ਰਾਹੀਂ ਭੁਗਤਾਨ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ ਹਾਂ,
+            ਇਸ ਲਈ ਇਸ ਮਿਆਦ ਲਈ ਅਸੀਂ ਸਾਰੇ ਉਪਭੋਗਤਾਵਾਂ ਨੂੰ ਐਪ ਦੀਆਂ ਸਾਰੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਹੱਥੀਂ ਅਨਲੌਕ ਕਰਨ ਦਾ ਵਿਕਲਪ ਦੇ ਰਹੇ ਹਾਂ। <br>
+            ਜੇ ਤੁਸੀਂ ਸਾਡੀਆਂ ਐਪਾਂ ਨੂੰ ਪਸੰਦ ਕਰਦੇ ਹੋ ਜੋ ਔਫਲਾਈਨ, ਗੈਰ-ਦਖਲਅੰਦਾਜ਼ੀ ਅਤੇ ਕੋਈ ਵਿਗਿਆਪਨ ਨਹੀਂ ਹਨ,
+            ਕਿਰਪਾ ਕਰਕੇ ਕਿਸੇ ਤਰੀਕੇ ਨਾਲ ਸਾਡਾ ਸਮਰਥਨ ਕਰਨ 'ਤੇ ਵਿਚਾਰ ਕਰੋ। ਅਸੀਂ ਬਹੁਤ ਧੰਨਵਾਦੀ ਹੋਵਾਂਗੇ।<br><br>
+            ਤੁਹਾਡਾ ਧੰਨਵਾਦ!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">ਪਿਛਲੀ ਖਰੀਦ ਨੂੰ ਬਹਾਲ ਕੀਤਾ ਗਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਐਪ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰੋ।</string>
     <string name="no_purchase_found">ਕੋਈ ਖਰੀਦਦਾਰੀ ਨਹੀਂ ਮਿਲੀ।</string>
     <string name="restore_purchase">ਖਰੀਦ ਨੂੰ ਬਹਾਲ ਕਰੋ</string>
@@ -156,6 +165,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">ਸੰਪਰਕ ਥੰਬਨੇਲ ਦਾ ਆਕਾਰ</string>
     <string name="long_click_g">ਲੰਬੀ ਕਲਿੱਕ %s</string>
+    <string name="use_persian_digits">ਫ਼ਾਰਸੀ ਅੰਕਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -240,6 +250,7 @@
     <string name="speech_bubble">ਸਪੀਚ ਬੁਲਬੁਲਾ</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">ਕਿਨਾਰਿਆਂ ਦੇ ਨਾਲ</string>
     <string name="library">ਲਾਇਬ੍ਰੇਰੀ</string>
     <string name="open_in_maps">ਨਕਸ਼ੇ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
 
@@ -254,6 +265,8 @@
     <!-- Relation types -->
     <string name="search_the_web">ਇੰਟਰਨੈੱਟ ਖੋਜ</string>
     <string name="show_number_blocking_button">ਨੰਬਰ ਬਲਾਕ ਬਟਨ ਦਿਖਾਓ</string>
+    <string name="blocking_type_silence">ਇੱਕ ਸ਼ਾਂਤ ਕਾਲ</string>
+    <string name="blocking_type_silence_summary">ਸੈੱਟ ਕਰਦਾ ਹੈ ਕਿ ਕੀ ਇਨਕਮਿੰਗ ਕਾਲ ਲਈ ਰਿੰਗਿੰਗ ਨੂੰ ਸ਼ਾਂਤ ਕੀਤਾ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ</string>
     <string name="relation_g">ਸਬੰਧ</string>
     <string name="relations_g">ਸਬੰਧਤ ਵਿਅਕਤੀ</string>
     <string name="relation_hint_g">ਸੰਬੰਧਿਤ ਵਿਅਕਤੀ</string>
@@ -323,6 +336,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">RuStore ਰਾਹੀਂ ਭੁਗਤਾਨ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ RuStore ਤੋਂ ਐਪ ਸੰਸਕਰਣ ਸਥਾਪਤ ਕਰਨ ਦੀ ਲੋੜ ਹੈ</string>
     <string name="date">ਮਿਤੀ</string>
     <string name="starts">ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ</string>
     <string name="ends">ਖਤਮ ਹੁੰਦਾ ਹੈ</string>
@@ -331,4 +345,12 @@
     <string name="availability">ਉਪਲਬਧਤਾ</string>
     <string name="attendees">ਹਾਜ਼ਰੀਨ</string>
     <string name="typeface">ਟਾਈਪਫੇਸ</string>
+    <string name="text_alignment">ਟੈਕਸਟ ਅਲਾਈਨਮੈਂਟ</string>
+    <string name="more_apps_from_us_g">ਸਾਡੇ ਵੱਲੋਂ ਹੋਰ ਐਪਸ</string>
+    <string name="use_persian_calendar">ਫ਼ਾਰਸੀ ਕੈਲੰਡਰ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+    <string name="blocking_type">ਬਲਾਕਿੰਗ ਕਿਸਮ</string>
+    <string name="blocking_type_do_not_reject">ਅਸਵੀਕਾਰ ਨਾ ਕਰੋ</string>
+    <string name="blocking_type_do_not_reject_summary">ਇੱਕ ਇਨਕਮਿੰਗ ਕਾਲ ਨੂੰ ਅਸਵੀਕਾਰ ਕਰੋ ਜਿਵੇਂ ਕਿ ਉਪਭੋਗਤਾ ਨੇ ਜਵਾਬ ਨਹੀਂ ਦਿੱਤਾ</string>
+    <string name="blocking_type_reject">ਅਸਵੀਕਾਰ ਕਰੋ</string>
+    <string name="blocking_type_reject_summary">ਇੱਕ ਇਨਕਮਿੰਗ ਕਾਲ ਨੂੰ ਅਸਵੀਕਾਰ ਕਰੋ ਜਿਵੇਂ ਕਿ ਉਪਭੋਗਤਾ ਨੇ ਇਸਨੂੰ ਹੱਥੀਂ ਰੱਦ ਕਰ ਦਿੱਤਾ ਹੈ</string>
 </resources>

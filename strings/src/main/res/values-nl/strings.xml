@@ -55,6 +55,12 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+Vanwege problemen kunnen we tijdelijk geen betalingen doen via Google Play. Daarom bieden we alle gebruikers gedurende deze periode de mogelijkheid om alle functies van de app handmatig te ontgrendelen. <br>
+Als je onze apps leuk vindt, die offline, niet-opdringerig en advertentievrij zijn,
+overweeg dan om ons op de een of andere manier te steunen. We zouden je zeer dankbaar zijn.<br><br>
+Bedankt!
+]]></string>
     <string name="restored_previous_purchase_please_restart">Vorige aankoop hersteld. Start de app opnieuw op om gebruik te maken van alle functies.</string>
     <string name="no_purchase_found">Geen aankoop gevonden.</string>
     <string name="restore_purchase">Aankoop herstellen</string>
@@ -150,11 +156,13 @@
     <string name="hide_blocked_numbers">Geblokkeerd verbergen</string>
     <string name="paste_g">Invoegen</string>
     <string name="recents">Recent</string>
+    <string name="blocked_call">Geblokkeerde oproep</string>
     <string name="unblock_confirmation">Weet u zeker dat u \"%s\" wilt deblokkeren?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Grootte van contactminiaturen</string>
     <string name="long_click_g">Lange klik op %s</string>
+    <string name="use_persian_digits">Gebruik Perzische cijfers</string>
     <string name="purchase_simple_thank_you_g">Goodwy Bedankje kopen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Er is een nieuwe versie van Goodwy Bedankje</string>
@@ -239,6 +247,7 @@
     <string name="speech_bubble">Tekstballon stijl</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Langs de randen</string>
     <string name="library">Bibliotheek</string>
     <string name="open_in_maps">Openen in kaarten</string>
 
@@ -253,6 +262,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Zoeken op internet</string>
     <string name="show_number_blocking_button">Knop voor nummerblokkering weergeven</string>
+    <string name="blocking_type_silence">Een stille roep</string>
+    <string name="blocking_type_silence_summary">Hiermee stelt u in of de beltoon voor inkomende oproepen moet worden gedempt</string>
     <string name="relation_g">Relatie</string>
     <string name="relations_g">Verwante personen</string>
     <string name="relation_hint_g">Verwante persoon</string>
@@ -322,6 +333,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Om via RuStore te betalen, moet u de app-versie van RuStore installeren</string>
     <string name="date">Datum</string>
     <string name="starts">Begint</string>
     <string name="ends">Eindigt</string>
@@ -331,4 +343,11 @@
     <string name="attendees">Deelnemers</string>
     <string name="typeface">Lettertype</string>
     <string name="more_apps_from_us_g">Meer apps van ons</string>
+    <string name="text_alignment">Tekstuitlijning</string>
+    <string name="use_persian_calendar">Gebruik de Perzische kalender</string>
+    <string name="blocking_type">Blokkeringstype</string>
+    <string name="blocking_type_do_not_reject">Niet afwijzen</string>
+    <string name="blocking_type_do_not_reject_summary">Een binnenkomend gesprek afwijzen alsof de gebruiker niet heeft geantwoord</string>
+    <string name="blocking_type_reject">Afwijzen</string>
+    <string name="blocking_type_reject_summary">Een binnenkomend gesprek afwijzen alsof de gebruiker het handmatig heeft afgewezen</string>
 </resources>

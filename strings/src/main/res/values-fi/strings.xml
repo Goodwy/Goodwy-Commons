@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Ongelmien vuoksi emme voi tilapäisesti suorittaa maksuja Google Playn kautta,
+            joten tällä ajanjaksolla annamme kaikille käyttäjille mahdollisuuden avata manuaalisesti kaikki sovelluksen ominaisuudet. <br>
+            Jos pidät sovelluksistamme, jotka ovat offline-tilassa, ei-tunkeilevia ja joissa ei ole mainoksia,
+            Harkitse meidän tukemista jollain tavalla. Olisimme hyvin kiitollisia.<br><br>
+            Kiitos!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Piilota estetty</string>
     <string name="paste_g">Insertti</string>
     <string name="recents">Tuore</string>
+    <string name="blocked_call">Estetty puhelu</string>
     <string name="unblock_confirmation">Haluatko varmasti poistaa eston \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Yhteystietojen pikkukuvien koko</string>
     <string name="long_click_g">Pitkä klikkaus %s</string>
+    <string name="use_persian_digits">Käytä persialaisia ​​numeroita</string>
     <string name="purchase_simple_thank_you_g">Osta Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Päivitä Goodwy Thank You viimeisimpään versioon</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">Puhekupla</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Reunoja pitkin</string>
     <string name="library">Kirjasto</string>
     <string name="open_in_maps">Avaa kartoissa</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Hae Internetistä</string>
     <string name="show_number_blocking_button">Näytä numerolukituspainike</string>
+    <string name="blocking_type_silence">Hiljainen puhelu</string>
+    <string name="blocking_type_silence_summary">Määrittää, hiljennetäänkö soitto saapuvan puhelun aikana</string>
     <string name="relation_g">Suhde</string>
     <string name="relations_g">Lähipiiriin kuuluvat henkilöt</string>
     <string name="relation_hint_g">Liittyvä henkilö</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Maksaaksesi RuStoren kautta sinun on asennettava sovellusversio RuStoresta</string>
     <string name="date">Päivämäärä</string>
     <string name="starts">Alkaa</string>
     <string name="ends">Päättyy</string>
@@ -331,4 +344,11 @@
     <string name="attendees">Osallistujat</string>
     <string name="typeface">Kirjasin</string>
     <string name="more_apps_from_us_g">Lisää sovelluksia meiltä</string>
+    <string name="text_alignment">Tekstin tasaus</string>
+    <string name="use_persian_calendar">Käytä persialaista kalenteria</string>
+    <string name="blocking_type">Estotyyppi</string>
+    <string name="blocking_type_do_not_reject">Älä hylkää</string>
+    <string name="blocking_type_do_not_reject_summary">Hylkää saapuva puhelu ikään kuin käyttäjä ei vastaisi</string>
+    <string name="blocking_type_reject">Hylätä</string>
+    <string name="blocking_type_reject_summary">Hylkää saapuva puhelu ikään kuin käyttäjä olisi hylännyt sen manuaalisesti</string>
 </resources>

@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            עקב בעיות איננו יכולים לבצע תשלומים באופן זמני דרך Google Play,
+            אז לתקופה זו אנו נותנים לכל המשתמשים את האפשרות לבטל את הנעילה ידנית של כל התכונות של האפליקציה. <br>
+            אם אתה אוהב את האפליקציות שלנו שהן במצב לא מקוון, לא פולשניות ואין להן מודעות,
+            אנא שקול לתמוך בנו בדרך כלשהי. נהיה אסירי תודה.<br><br>
+            תודה לך!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">רכישה קודמת שוחזרה. אנא הפעל מחדש את האפליקציה כדי לעשות שימוש בכל התכונות.</string>
     <string name="no_purchase_found">לא נמצאה רכישה.</string>
     <string name="restore_purchase">שחזר רכישה</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">הסתר חסום</string>
     <string name="paste_g">להוסיף</string>
     <string name="recents">חדש</string>
+    <string name="blocked_call">שיחה חסומה</string>
     <string name="unblock_confirmation">לבטל את חסימת \"% s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">גודל תמונות ממוזערות של אנשי קשר</string>
     <string name="long_click_g">%s בלחיצה ארוכה</string>
+    <string name="use_persian_digits">השתמש בספרות פרסיות</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">בועת דיבור</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">לאורך הקצוות</string>
     <string name="library">ספרייה</string>
     <string name="open_in_maps">פתח במפות</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">חיפוש באינטרנט</string>
     <string name="show_number_blocking_button">לחצן \'הצג נעילת מספר\'</string>
+    <string name="blocking_type_silence">שיחה שקטה</string>
+    <string name="blocking_type_silence_summary">מגדיר אם יש להשתיק את הצלצול עבור השיחה הנכנסת</string>
     <string name="relation_g">קשר</string>
     <string name="relations_g">אנשים קשורים</string>
     <string name="relation_hint_g">אדם קשור</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">מינויים</string>
     <string name="billing_change_to_google_play">שנה ל-Google Play</string>
     <string name="billing_change_to_ru_store">שנה ל-RuStore</string>
+    <string name="billing_error_application_signature_not_correct">כדי לשלם באמצעות RuStore עליך להתקין את גרסת האפליקציה מ- RuStore</string>
     <string name="date">תמר</string>
     <string name="starts">מתחיל</string>
     <string name="ends">מסתיים</string>
@@ -331,4 +344,11 @@
     <string name="attendees">משתתפים</string>
     <string name="typeface">צורת גופן</string>
     <string name="more_apps_from_us_g">אפליקציות נוספות מאיתנו</string>
+    <string name="text_alignment">יישור טקסט</string>
+    <string name="use_persian_calendar">השתמש בלוח השנה הפרסי</string>
+    <string name="blocking_type">סוג חסימה</string>
+    <string name="blocking_type_do_not_reject">אל תדחה</string>
+    <string name="blocking_type_do_not_reject_summary">דחה שיחה נכנסת כאילו המשתמש לא ענה</string>
+    <string name="blocking_type_reject">לִדחוֹת</string>
+    <string name="blocking_type_reject_summary">דחה שיחה נכנסת כאילו המשתמש דחה אותה באופן ידני</string>
 </resources>

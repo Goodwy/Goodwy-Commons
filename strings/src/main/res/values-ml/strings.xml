@@ -9,6 +9,7 @@
     <string name="incoming_call">ഇൻകമിംഗ് കോൾ</string>
     <string name="outgoing_call">ഔട്ട്‌ഗോയിംഗ് കോൾ</string>
     <string name="missed_call">മിസ്ഡ് കോൾ</string>
+    <string name="blocked_call">തടഞ്ഞ കോൾ</string>
     <string name="unblock_confirmation">\"%s\ അൺബ്ലോക്ക് ചെയ്യണമെന്ന് തീർച്ചയാണോ"?</string>
     <string name="unblock_number">അൺബ്ലോക്ക് നമ്പർ</string>
     <string name="unblock_numbers">അൺബ്ലോക്ക് നമ്പറുകൾ</string>
@@ -32,6 +33,7 @@
     <string name="end">അവസാനം</string>
 
     <!-- Support project -->
+    <string name="rate_g">നിരക്ക്</string>
     <string name="action_support_project">പ്രോജക്റ്റ് പിന്തുണ</string>
     <string name="pref_pay_summary">ഭാവിയിലെ സംഭവവികാസങ്ങളും അധിക ഫീച്ചറുകളും പിന്തുണയ്ക്കാൻ പണമടച്ചുള്ള ആപ്പ് നേടൂ</string>
     <string name="support_project_summary">ഭാവിയിൽ വികസനം പിന്തുണയ്ക്കുന്നതിനും അധിക ഫീച്ചറുകൾ അൺലോക്ക് ചെയ്യുന്നതിനും ഞങ്ങളുടെ പണമടച്ചുള്ള ആപ്പുകളിൽ ഒന്ന് സ്വന്തമാക്കൂ</string>
@@ -71,6 +73,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            പ്രശ്‌നങ്ങൾ കാരണം ഞങ്ങൾക്ക് Google Play വഴി പേയ്‌മെൻ്റുകൾ നടത്താൻ താൽക്കാലികമായി കഴിയുന്നില്ല,
+            അതിനാൽ ഈ കാലയളവിൽ ഞങ്ങൾ എല്ലാ ഉപയോക്താക്കൾക്കും ആപ്പിൻ്റെ എല്ലാ സവിശേഷതകളും സ്വമേധയാ അൺലോക്ക് ചെയ്യാനുള്ള ഓപ്ഷൻ നൽകുന്നു. <br>
+            ഓഫ്‌ലൈനായതും നുഴഞ്ഞുകയറാത്തതും പരസ്യങ്ങളില്ലാത്തതുമായ ഞങ്ങളുടെ ആപ്പുകൾ നിങ്ങൾക്ക് ഇഷ്ടമാണെങ്കിൽ,
+            ഏതെങ്കിലും വിധത്തിൽ ഞങ്ങളെ പിന്തുണയ്ക്കുന്നത് പരിഗണിക്കുക. ഞങ്ങൾ വളരെ നന്ദിയുള്ളവരായിരിക്കും.<br><br>
+            നന്ദി!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">മുമ്പത്തെ വാങ്ങൽ പുനഃസ്ഥാപിച്ചു. എല്ലാ ഫീച്ചറുകളും ഉപയോഗിക്കുന്നതിന് ദയവായി ആപ്പ് പുനരാരംഭിക്കുക.</string>
     <string name="no_purchase_found">വാങ്ങലൊന്നും കണ്ടെത്തിയില്ല.</string>
     <string name="restore_purchase">വാങ്ങൽ പുനഃസ്ഥാപിക്കുക</string>
@@ -156,6 +165,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">കോൺടാക്റ്റ് ലഘുചിത്രങ്ങളുടെ വലുപ്പം</string>
     <string name="long_click_g">%s എന്നതിൽ ദീർഘ ക്ലിക്ക് ചെയ്യുക</string>
+    <string name="use_persian_digits">പേർഷ്യൻ അക്കങ്ങൾ ഉപയോഗിക്കുക</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -240,6 +250,7 @@
     <string name="speech_bubble">സംസാര ബബിൾ</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">അരികുകളിൽ</string>
     <string name="library">ലൈബ്രറി</string>
     <string name="open_in_maps">മാപ്പിൽ തുറക്കുക</string>
 
@@ -254,6 +265,8 @@
     <!-- Relation types -->
     <string name="search_the_web">ഇൻ്റർനെറ്റ് തിരയൽ</string>
     <string name="show_number_blocking_button">നമ്പർ ബ്ലോക്ക് ബട്ടൺ കാണിക്കുക</string>
+    <string name="blocking_type_silence">ശാന്തമായ ഒരു വിളി</string>
+    <string name="blocking_type_silence_summary">ഇൻകമിംഗ് കോളിനായി റിംഗിംഗ് നിശബ്ദമാക്കണമോ എന്ന് സജ്ജീകരിക്കുന്നു</string>
     <string name="relation_g">ബന്ധം</string>
     <string name="relations_g">ബന്ധപ്പെട്ട വ്യക്തികൾ</string>
     <string name="relation_hint_g">ബന്ധപ്പെട്ട വ്യക്തി</string>
@@ -323,6 +336,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">RuStore വഴി പണമടയ്ക്കാൻ നിങ്ങൾ RuStore-ൽ നിന്നുള്ള ആപ്പ് പതിപ്പ് ഇൻസ്റ്റാൾ ചെയ്യേണ്ടതുണ്ട്</string>
     <string name="date">തീയതി</string>
     <string name="starts">ആരംഭിക്കുന്നു</string>
     <string name="ends">അവസാനിക്കുന്നു</string>
@@ -331,4 +345,12 @@
     <string name="availability">ലഭ്യത</string>
     <string name="attendees">പങ്കെടുക്കുന്നവർ</string>
     <string name="typeface">ടൈപ്പ്ഫേസ്</string>
+    <string name="text_alignment">ടെക്സ്റ്റ് വിന്യാസം</string>
+    <string name="more_apps_from_us_g">ഞങ്ങളിൽ നിന്നുള്ള കൂടുതൽ ആപ്പുകൾ</string>
+    <string name="use_persian_calendar">പേർഷ്യൻ കലണ്ടർ ഉപയോഗിക്കുക</string>
+    <string name="blocking_type">തടയൽ തരം</string>
+    <string name="blocking_type_do_not_reject">തള്ളിക്കളയരുത്</string>
+    <string name="blocking_type_do_not_reject_summary">ഉപയോക്താവ് ഉത്തരം നൽകാത്തതുപോലെ ഒരു ഇൻകമിംഗ് കോൾ നിരസിക്കുക</string>
+    <string name="blocking_type_reject">നിരസിക്കുക</string>
+    <string name="blocking_type_reject_summary">ഉപയോക്താവ് സ്വമേധയാ നിരസിച്ചതുപോലെ ഒരു ഇൻകമിംഗ് കോൾ നിരസിക്കുക</string>
 </resources>

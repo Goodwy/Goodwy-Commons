@@ -160,11 +160,13 @@
     <string name="hide_blocked_numbers">Ocultar bloqueado</string>
     <string name="paste_g">Inserir</string>
     <string name="recents">Recentes</string>
+    <string name="blocked_call">Chamada bloqueada</string>
     <string name="unblock_confirmation">Tem certeza que quer desbloquear \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Tamanho das miniaturas de contato</string>
     <string name="long_click_g">Clique longo em %s</string>
+    <string name="use_persian_digits">Use dígitos persas</string>
     <string name="purchase_simple_thank_you_g">Comprar Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Por favor atualize a aplicação Goodwy Thank You para a versão mais recente</string>
@@ -249,6 +251,7 @@
     <string name="speech_bubble">Bolha de fala</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Ao longo das bordas</string>
     <string name="library">Biblioteca</string>
     <string name="open_in_maps">Aberto em Mapas</string>
 
@@ -263,6 +266,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Pesquisa na Internet</string>
     <string name="show_number_blocking_button">Mostrar o botão de bloqueio de número</string>
+    <string name="blocking_type_silence">Uma chamada silenciosa</string>
+    <string name="blocking_type_silence_summary">Define se o toque deve ser silenciado para a chamada recebida</string>
     <string name="relation_g">Relação</string>
     <string name="relations_g">Pessoas relacionadas</string>
     <string name="relation_hint_g">Pessoa relacionada</string>
@@ -332,6 +337,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Para pagar via RuStore você precisa instalar a versão do aplicativo da RuStore</string>
     <string name="date">Data</string>
     <string name="starts">Início</string>
     <string name="ends">Finalidades</string>
@@ -341,4 +347,11 @@
     <string name="attendees">Participantes</string>
     <string name="typeface">Tipo de letra</string>
     <string name="more_apps_from_us_g">Mais aplicativos nossos</string>
+    <string name="text_alignment">Alinhamento de texto</string>
+    <string name="use_persian_calendar">Use o calendário persa</string>
+    <string name="blocking_type">Tipo de bloqueio</string>
+    <string name="blocking_type_do_not_reject">Não rejeite</string>
+    <string name="blocking_type_do_not_reject_summary">Rejeitar uma chamada recebida como se o usuário não tivesse atendido</string>
+    <string name="blocking_type_reject">Rejeitar</string>
+    <string name="blocking_type_reject_summary">Rejeitar uma chamada recebida como se o usuário a tivesse rejeitado manualmente</string>
 </resources>

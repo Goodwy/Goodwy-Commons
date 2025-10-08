@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+現在、問題が発生しているため、Google Play でのお支払いが一時的にご利用いただけません。
+そのため、この期間中はすべてのユーザーにアプリの全機能を手動でロック解除するオプションを提供しています。<br>
+オフラインで邪魔にならず、広告も表示されない当社のアプリを気に入っていただけましたら、
+ぜひ何らかの形でサポートをご検討ください。大変ありがたく存じます。<br><br>
+ありがとうございます！
+]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">ブロックを隠す</string>
     <string name="paste_g">挿入する</string>
     <string name="recents">最近</string>
+    <string name="blocked_call">ブロックされた通話</string>
     <string name="unblock_confirmation">\"%s\" のブロックを解除してもよいですか?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">連絡先のサムネイルのサイズ</string>
     <string name="long_click_g">%s を長押し</string>
+    <string name="use_persian_digits">ペルシャ数字を使用する</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank Youを購入</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">\"Goodwy Thank You\" アプリを最新版に更新してください</string>
@@ -240,6 +249,7 @@
     <string name="speech_bubble">スピーチバブル</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">端に沿って</string>
     <string name="library">ライブラリ</string>
     <string name="open_in_maps">地図で開く</string>
 
@@ -254,6 +264,8 @@
     <!-- Relation types -->
     <string name="search_the_web">インターネットを検索する</string>
     <string name="show_number_blocking_button">番号ロックボタンを表示</string>
+    <string name="blocking_type_silence">静かな呼びかけ</string>
+    <string name="blocking_type_silence_summary">着信時に呼び出し音を消すかどうかを設定します</string>
     <string name="relation_g">関係</string>
     <string name="relations_g">関係者</string>
     <string name="relation_hint_g">関係者</string>
@@ -323,6 +335,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">RuStoreで支払うには、RuStoreのアプリバージョンをインストールする必要があります。</string>
     <string name="date">日付</string>
     <string name="starts">開始</string>
     <string name="ends">終了</string>
@@ -332,4 +345,11 @@
     <string name="attendees">参加者</string>
     <string name="typeface">書体</string>
     <string name="more_apps_from_us_g">当社の他のアプリ</string>
+    <string name="text_alignment">テキストの配置</string>
+    <string name="use_persian_calendar">ペルシャ暦を使用する</string>
+    <string name="blocking_type">ブロッキングタイプ</string>
+    <string name="blocking_type_do_not_reject">拒否しない</string>
+    <string name="blocking_type_do_not_reject_summary">ユーザーが応答しなかったかのように着信を拒否する</string>
+    <string name="blocking_type_reject">拒否する</string>
+    <string name="blocking_type_reject_summary">ユーザーが手動で拒否したかのように着信を拒否する</string>
 </resources>

@@ -162,11 +162,13 @@ Będziemy bardzo wdzięczni.
     <string name="hide_blocked_numbers">Ukryj zablokowane</string>
     <string name="paste_g">Wstawiać</string>
     <string name="recents">Niedawny</string>
+    <string name="blocked_call">Zablokowane połączenie</string>
     <string name="unblock_confirmation">Czy na pewno chcesz odblokować \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Rozmiar miniatur kontaktów</string>
     <string name="long_click_g">Długie kliknięcie %s</string>
+    <string name="use_persian_digits">Użyj cyfr perskich</string>
     <string name="purchase_simple_thank_you_g">Kup aplikację „Goodwy podziękowanie”</string>
     <string name="copyright_g">Wersja %1$s\n© Goodwy %2$d</string>
     <string name="update_thank_you_g">Zaktualizuj aplikację Goodwy podziękowanie do najnowszej wersji</string>
@@ -248,6 +250,7 @@ Będziemy bardzo wdzięczni.
     <string name="speech_bubble">Bańka z mową</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Wzdłuż krawędzi</string>
     <string name="library">Biblioteka</string>
     <string name="open_in_maps">Otwórz w Mapach</string>
 
@@ -262,6 +265,8 @@ Będziemy bardzo wdzięczni.
     <!-- Relation types -->
     <string name="search_the_web">Szukaj w Internecie</string>
     <string name="show_number_blocking_button">Pokaż przycisk blokady numeru</string>
+    <string name="blocking_type_silence">Cichy telefon</string>
+    <string name="blocking_type_silence_summary">Ustawia, czy dzwonek ma zostać wyciszony dla połączeń przychodzących</string>
     <string name="relation_g">Relacja</string>
     <string name="relations_g">Powiązane osoby</string>
     <string name="relation_hint_g">Osoba powiązana</string>
@@ -331,6 +336,7 @@ Będziemy bardzo wdzięczni.
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Aby zapłacić za pośrednictwem RuStore, musisz zainstalować wersję aplikacji z RuStore</string>
     <string name="date">Data</string>
     <string name="starts">Zaczyna się</string>
     <string name="ends">Kończy się</string>
@@ -340,4 +346,11 @@ Będziemy bardzo wdzięczni.
     <string name="attendees">Uczestników</string>
     <string name="typeface">Krój pisma</string>
     <string name="more_apps_from_us_g">Więcej naszych aplikacji</string>
+    <string name="text_alignment">Wyrównanie tekstu</string>
+    <string name="use_persian_calendar">Użyj kalendarza perskiego</string>
+    <string name="blocking_type">Typ blokowania</string>
+    <string name="blocking_type_do_not_reject">Nie odrzucaj</string>
+    <string name="blocking_type_do_not_reject_summary">Odrzuć połączenie przychodzące, tak jakby użytkownik nie odebrał</string>
+    <string name="blocking_type_reject">Odrzucić</string>
+    <string name="blocking_type_reject_summary">Odrzuć połączenie przychodzące tak, jakby użytkownik odrzucił je ręcznie</string>
 </resources>

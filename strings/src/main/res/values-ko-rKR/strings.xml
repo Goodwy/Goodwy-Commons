@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+문제로 인해 Google Play를 통한 결제가 일시적으로 불가능하여
+이 기간 동안 모든 사용자에게 앱의 모든 기능을 수동으로 잠금 해제할 수 있는 옵션을 제공하고 있습니다. <br>
+오프라인 환경에서도 방해가 되지 않고 광고가 없는 저희 앱이 마음에 드신다면
+어떤 방식으로든 저희를 후원해 주세요. 정말 감사하겠습니다.<br><br>
+감사합니다!
+]]></string>
     <string name="restored_previous_purchase_please_restart">이전 구매를 복원했습니다. 모든 기능을 사용하려면 앱을 다시 시작하세요.</string>
     <string name="no_purchase_found">구매를 찾을 수 없습니다.</string>
     <string name="restore_purchase">구매 복원</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">차단된 숨기기</string>
     <string name="paste_g">삽입하다</string>
     <string name="recents">최근</string>
+    <string name="blocked_call">차단된 통화</string>
     <string name="unblock_confirmation">\"%s\" 차단을 해제하시겠습니까?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">연락처 썸네일 크기</string>
     <string name="long_click_g">%s을(를) 길게 클릭합니다.</string>
+    <string name="use_persian_digits">페르시아 숫자를 사용하세요</string>
     <string name="purchase_simple_thank_you_g">심플 Thank You 구매하기</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Goodwy Thank You 를 최신 버전으로 업데이트 해 주세요.</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">말풍선</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">가장자리를 따라</string>
     <string name="library">도서관</string>
     <string name="open_in_maps">지도에서 열기</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">인터넷 검색</string>
     <string name="show_number_blocking_button">숫자 잠금 버튼 표시</string>
+    <string name="blocking_type_silence">조용한 전화</string>
+    <string name="blocking_type_silence_summary">수신 통화에 대한 벨소리를 무음으로 설정할지 여부를 설정합니다.</string>
     <string name="relation_g">관계</string>
     <string name="relations_g">관련자</string>
     <string name="relation_hint_g">관련자</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">RuStore를 통해 결제하려면 RuStore에서 앱 버전을 설치해야 합니다.</string>
     <string name="date">날짜</string>
     <string name="starts">시작</string>
     <string name="ends">끝납니다</string>
@@ -331,4 +344,11 @@
     <string name="attendees">참석자</string>
     <string name="typeface">서체</string>
     <string name="more_apps_from_us_g">더 많은 앱</string>
+    <string name="text_alignment">텍스트 정렬</string>
+    <string name="use_persian_calendar">페르시아력을 사용하세요</string>
+    <string name="blocking_type">차단형</string>
+    <string name="blocking_type_do_not_reject">거부하지 마세요</string>
+    <string name="blocking_type_do_not_reject_summary">사용자가 응답하지 않은 것처럼 수신 전화를 거부합니다.</string>
+    <string name="blocking_type_reject">거부하다</string>
+    <string name="blocking_type_reject_summary">사용자가 수동으로 거부한 것처럼 수신 통화를 거부합니다.</string>
 </resources>

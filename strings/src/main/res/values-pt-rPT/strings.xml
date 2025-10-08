@@ -1,5 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name_g" tools:ignore="MissingTranslation">Goodwy Commons</string>
     <string name="recorder_g">Recorder</string>
     <string name="player_g">Player</string>
     <string name="general">General</string>
@@ -10,6 +9,7 @@
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
+    <string name="blocked_call">Chamada bloqueada</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="unblock_numbers">Unblock numbers</string>
@@ -168,6 +168,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">Contact thumbnails size</string>
     <string name="long_click_g">Clique longo %s</string>
+    <string name="use_persian_digits">Use dígitos persas</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -252,6 +253,7 @@
     <string name="speech_bubble">Speech bubble</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Ao longo das bordas</string>
     <string name="library">Library</string>
     <string name="open_in_maps">Open in Maps</string>
 
@@ -266,6 +268,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Pesquisa na Internet</string>
     <string name="show_number_blocking_button">Mostrar o botão de bloqueio de números</string>
+    <string name="blocking_type_silence">Uma chamada silenciosa</string>
+    <string name="blocking_type_silence_summary">Define se o toque deve ser silenciado para a chamada recebida</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>
@@ -335,7 +339,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
-    <string name="billing_error_application_signature_not_correct">To pay via RuStore you need to install the app version from RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Para pagar via RuStore você precisa instalar a versão do aplicativo da RuStore</string>
     <string name="date">Data</string>
     <string name="starts">Começa</string>
     <string name="ends">Finais</string>
@@ -345,4 +349,11 @@
     <string name="attendees">Participantes</string>
     <string name="typeface">Tipo de letra</string>
     <string name="more_apps_from_us_g">Mais aplicações nossas</string>
+    <string name="text_alignment">Alinhamento de texto</string>
+    <string name="use_persian_calendar">Use o calendário persa</string>
+    <string name="blocking_type">Tipo de bloqueio</string>
+    <string name="blocking_type_do_not_reject">Não rejeite</string>
+    <string name="blocking_type_do_not_reject_summary">Rejeitar uma chamada recebida como se o usuário não tivesse atendido</string>
+    <string name="blocking_type_reject">Rejeitar</string>
+    <string name="blocking_type_reject_summary">Rejeitar uma chamada recebida como se o usuário a tivesse rejeitado manualmente</string>
 </resources>

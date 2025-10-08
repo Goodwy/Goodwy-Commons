@@ -55,6 +55,11 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+بسبب بعض المشاكل، لا يمكننا الدفع عبر جوجل بلاي مؤقتًا، لذلك نتيح لجميع المستخدمين خلال هذه الفترة خيار إلغاء قفل جميع ميزات التطبيق يدويًا. <br>
+إذا أعجبتك تطبيقاتنا، فهي تعمل دون اتصال بالإنترنت، وغير مزعجة، وخالية من الإعلانات، فيرجى دعمنا بأي شكل من الأشكال. سنكون ممتنين للغاية. <br><br>
+شكرًا لك!
+]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -151,11 +156,13 @@
     <string name="hide_blocked_numbers">إخفاء المحظور</string>
     <string name="paste_g">أدخل</string>
     <string name="recents">حديث</string>
+    <string name="blocked_call">مكالمة محظورة</string>
     <string name="unblock_confirmation">هل تريد بالتأكيد إلغاء حظر \"%s\"؟</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">حجم الصور المصغرة لجهات الاتصال</string>
     <string name="long_click_g">انقر لفترة طويلة %s</string>
+    <string name="use_persian_digits">استخدم الأرقام الفارسية</string>
     <string name="purchase_simple_thank_you_g">شراء تطبيق (Goodwy Thank You)</string>
     <string name="copyright_g">v %1$s\nحقوق النشر © Goodwy %2$d</string>
     <string name="update_thank_you_g">يرجى تحديث تطبيق (Goodwy Thank You) إلى أحدث إصدار</string>
@@ -237,6 +244,7 @@
     <string name="speech_bubble">فقاعة كلامية</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">على طول الحواف</string>
     <string name="library">المكتبة</string>
     <string name="open_in_maps">فتح في الخرائط</string>
 
@@ -251,6 +259,8 @@
     <!-- Relation types -->
     <string name="search_the_web">ابحث في الإنترنت</string>
     <string name="show_number_blocking_button">إظهار زر قفل الأرقام</string>
+    <string name="blocking_type_silence">مكالمة هادئة</string>
+    <string name="blocking_type_silence_summary">يحدد ما إذا كان يجب إسكات الرنين للمكالمة الواردة</string>
     <string name="relation_g">العلاقة</string>
     <string name="relations_g">الأشخاص ذوو الصلة</string>
     <string name="relation_hint_g">الشخص ذو الصلة</string>
@@ -320,6 +330,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">للدفع عبر RuStore، تحتاج إلى تثبيت إصدار التطبيق من RuStore</string>
     <string name="date">تاريخ</string>
     <string name="starts">يبدا</string>
     <string name="ends">ينتهي</string>
@@ -329,4 +340,11 @@
     <string name="attendees">الحضور</string>
     <string name="typeface">محرف</string>
     <string name="more_apps_from_us_g">المزيد من تطبيقاتنا</string>
+    <string name="text_alignment">محاذاة النص</string>
+    <string name="use_persian_calendar">استخدم التقويم الفارسي</string>
+    <string name="blocking_type">نوع الحظر</string>
+    <string name="blocking_type_do_not_reject">لا ترفض</string>
+    <string name="blocking_type_do_not_reject_summary">رفض مكالمة واردة كما لو أن المستخدم لم يرد</string>
+    <string name="blocking_type_reject">يرفض</string>
+    <string name="blocking_type_reject_summary">رفض مكالمة واردة كما لو أن المستخدم رفضها يدويًا</string>
 </resources>

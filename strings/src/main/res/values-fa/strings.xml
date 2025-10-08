@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            به دلیل مشکلاتی که موقتاً قادر به پرداخت از طریق Google Play نیستیم،
+            بنابراین برای این مدت به همه کاربران این امکان را می دهیم که به صورت دستی تمام ویژگی های برنامه را باز کنند. <br>
+            اگر برنامه های ما را که آفلاین، غیر مزاحم و بدون تبلیغات هستند دوست دارید،
+            لطفا به نوعی از ما حمایت کنید. ما بسیار سپاسگزار خواهیم بود.<br><br>
+            متشکرم
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -141,7 +148,7 @@
     <string name="typeface">تایپ فیس</string>
     <string name="long_click_g">کلیک طولانی %s</string>
     <string name="use_persian_calendar">استفاده از تقویم فارسی</string>
-    <string name="use_persian_digits">از اعداد فارسی استفاده کنید</string>
+    <string name="use_persian_digits">از ارقام فارسی استفاده کنید</string>
 
     <string name="accent_color">رنگ لهجه</string>
     <string name="use_accent_color">استفاده از رنگ لهجه</string>
@@ -155,6 +162,7 @@
     <string name="hide_blocked_numbers">مخفی کردن مسدود شده</string>
     <string name="paste_g">درج</string>
     <string name="recents">اخیر</string>
+    <string name="blocked_call">تماس مسدود شده</string>
     <string name="unblock_confirmation">آیا مطمئن هستید که می خواهید \"%s\" را رفع انسداد کنید؟</string>
 
     <!-- Other -->
@@ -242,6 +250,7 @@
     <string name="speech_bubble">حباب گفتار</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">در امتداد لبه ها</string>
     <string name="library">کتابخانه</string>
     <string name="open_in_maps">باز کردن در Maps</string>
 
@@ -256,6 +265,8 @@
     <!-- Relation types -->
     <string name="search_the_web">جستجو در اینترنت</string>
     <string name="show_number_blocking_button">نمایش دکمه قفل شماره</string>
+    <string name="blocking_type_silence">یک تماس آرام</string>
+    <string name="blocking_type_silence_summary">تنظیم می کند که آیا زنگ برای تماس ورودی باید بی صدا شود یا خیر</string>
     <string name="relation_g">ارتباط</string>
     <string name="relations_g">شخص ذي صلة</string>
     <string name="relation_hint_g">شخص مرتبط</string>
@@ -325,6 +336,7 @@
     <string name="billing_subscriptions">اشتراک‌ها</string>
     <string name="billing_change_to_google_play">تغییر به Google Play</string>
     <string name="billing_change_to_ru_store">تغییر به RuStore</string>
+    <string name="billing_error_application_signature_not_correct">برای پرداخت از طریق RuStore باید نسخه برنامه را از RuStore نصب کنید</string>
     <string name="date">تاریخ</string>
     <string name="starts">شروع</string>
     <string name="ends">پایان</string>
@@ -333,4 +345,10 @@
     <string name="availability">دسترس بودن</string>
     <string name="attendees">شرکت کنندگان</string>
     <string name="more_apps_from_us_g">برنامه‌های دیگر ما</string>
+    <string name="text_alignment">تراز کردن متن</string>
+    <string name="blocking_type">نوع مسدود کردن</string>
+    <string name="blocking_type_do_not_reject">رد نکنید</string>
+    <string name="blocking_type_do_not_reject_summary">رد تماس ورودی به گونه ای که گویی کاربر پاسخ نداده است</string>
+    <string name="blocking_type_reject">رد کردن</string>
+    <string name="blocking_type_reject_summary">تماس دریافتی را رد کنید، انگار که کاربر به صورت دستی آن را رد کرده است</string>
 </resources>

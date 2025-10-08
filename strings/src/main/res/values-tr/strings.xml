@@ -160,11 +160,13 @@
     <string name="hide_blocked_numbers">Engellenenleri gizle</string>
     <string name="paste_g">Yapıştır</string>
     <string name="recents">Gecmiş</string>
+    <string name="blocked_call">Engellenen Çağrı</string>
     <string name="unblock_confirmation">\"%s\" engellemesini kaldırmak istediğinizden emin misiniz?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Kişi küçük resimlerinin boyutu</string>
     <string name="long_click_g">Uzun tıklama %s</string>
+    <string name="use_persian_digits">Farsça rakamları kullanın</string>
     <string name="purchase_simple_thank_you_g">Goodwy Teşekkürler\'i Satın Al</string>
     <string name="copyright_g">v %1$s\nTelif hakkı © Goodwy %2$d</string>
     <string name="update_thank_you_g">Lütfen Goodwy Teşekkürler\'i son sürüme güncelleyin</string>
@@ -249,6 +251,7 @@
     <string name="speech_bubble">Konuşma balonu</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Kenarlar boyunca</string>
     <string name="library">Kütüphane</string>
     <string name="open_in_maps">Haritalarda Aç</string>
 
@@ -263,6 +266,8 @@
     <!-- Relation types -->
     <string name="search_the_web">İnternet\'te arama yapın</string>
     <string name="show_number_blocking_button">Numara engelleme düğmesini göster</string>
+    <string name="blocking_type_silence">Sessiz bir çağrı</string>
+    <string name="blocking_type_silence_summary">Gelen çağrı için zil sesinin sessize alınıp alınmayacağını ayarlar</string>
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
     <string name="relation_hint_g">İlgili Kişi</string>
@@ -332,6 +337,7 @@
     <string name="billing_subscriptions">Abonelikler</string>
     <string name="billing_change_to_google_play">Google Play ile değiştir</string>
     <string name="billing_change_to_ru_store">RuStore ile değiştir</string>
+    <string name="billing_error_application_signature_not_correct">RuStore üzerinden ödeme yapmak için RuStore\'dan uygulama sürümünü yüklemeniz gerekir</string>
     <string name="date">Tarih</string>
     <string name="starts">Başlar</string>
     <string name="ends">Biter</string>
@@ -341,4 +347,11 @@
     <string name="attendees">Katılımcı</string>
     <string name="typeface">Yazı tipi</string>
     <string name="more_apps_from_us_g">Diğer uygulamalarımız</string>
+    <string name="text_alignment">Metin hizalaması</string>
+    <string name="use_persian_calendar">Fars takvimini kullan</string>
+    <string name="blocking_type">Engelleme türü</string>
+    <string name="blocking_type_do_not_reject">Reddetme</string>
+    <string name="blocking_type_do_not_reject_summary">Gelen bir aramayı, kullanıcı cevap vermemiş gibi reddedin</string>
+    <string name="blocking_type_reject">Reddetmek</string>
+    <string name="blocking_type_reject_summary">Gelen bir aramayı, kullanıcı manuel olarak reddetmiş gibi reddedin</string>
 </resources>

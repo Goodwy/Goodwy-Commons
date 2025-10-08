@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Problémák miatt átmenetileg nem tudunk fizetni a Google Playen keresztül,
+            ezért erre az időszakra minden felhasználónak lehetőséget adunk az alkalmazás összes funkciójának manuális feloldására. <br>
+            Ha kedveli az offline, nem tolakodó és hirdetéseket nem tartalmazó alkalmazásainkat,
+            kérjük, fontolja meg, hogy támogasson minket valamilyen módon. Nagyon hálásak lennénk.<br><br>
+            Köszönöm!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Letiltás elrejtése</string>
     <string name="paste_g">Beilleszt</string>
     <string name="recents">Friss</string>
+    <string name="blocked_call">Blokkolt hívás</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Névjegyek miniatűrjeinek mérete</string>
     <string name="long_click_g">Hosszú kattintás %s</string>
+    <string name="use_persian_digits">Használjon perzsa számjegyeket</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank You megvásárlása</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Kérjük frissítse a Goodwy Thank You alkalmazást a legújabb verzióra</string>
@@ -237,10 +246,12 @@
     <string name="speech_bubble">Beszédbuborék</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">A szélek mentén</string>
     <string name="library">Könyvtár</string>
     <string name="open_in_maps">Megnyitás a térképeken</string>
 
     <!-- Dialer -->
+    <string name="all_g">Minden</string>
     <string name="message_call_later">Felhívhatom később?</string>
     <string name="message_on_my_way">Úton vagyok.</string>
     <string name="message_cant_talk_right_now">Sajnálom, most nem tudok beszélni.</string>
@@ -250,6 +261,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Keresés az interneten</string>
     <string name="show_number_blocking_button">Számzár gomb megjelenítése</string>
+    <string name="blocking_type_silence">Csendes hívás</string>
+    <string name="blocking_type_silence_summary">Beállítja, hogy a csengetést el kell-e némítani a bejövő hívásnál</string>
     <string name="relation_g">Kapcsolat</string>
     <string name="relations_g">Kapcsolódó személyek</string>
     <string name="relation_hint_g">Kapcsolódó személy</string>
@@ -319,6 +332,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">A RuStore-on keresztül történő fizetéshez telepítenie kell az alkalmazás verzióját a RuStore-ból</string>
     <string name="date">Dátum</string>
     <string name="starts">Elindul</string>
     <string name="ends">Véget ér</string>
@@ -328,4 +342,11 @@
     <string name="attendees">Résztvevők</string>
     <string name="typeface">Betűkép</string>
     <string name="more_apps_from_us_g">További alkalmazásaink</string>
+    <string name="text_alignment">Szöveg igazítás</string>
+    <string name="use_persian_calendar">Használj perzsa naptárat</string>
+    <string name="blocking_type">Blokkolás típusa</string>
+    <string name="blocking_type_do_not_reject">Ne utasítsd el</string>
+    <string name="blocking_type_do_not_reject_summary">A bejövő hívás elutasítása úgy, mintha a felhasználó nem vette volna fel</string>
+    <string name="blocking_type_reject">Elutasít</string>
+    <string name="blocking_type_reject_summary">A bejövő hívás elutasítása úgy, mintha a felhasználó manuálisan utasította volna el</string>
 </resources>

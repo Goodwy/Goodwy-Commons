@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Dėl problemų laikinai negalime atlikti mokėjimų per „Google Play“,
+            todėl šiuo laikotarpiu visiems vartotojams suteikiame galimybę rankiniu būdu atrakinti visas programos funkcijas. <br>
+            Jei jums patinka mūsų programos, kurios yra neprisijungusios, neįkyrios ir kuriose nėra skelbimų,
+            apsvarstykite galimybę kaip nors mus paremti. Būtume labai dėkingi.<br><br>
+            Ačiū!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Slėpti užblokuotą</string>
     <string name="paste_g">Įterpti</string>
     <string name="recents">Naujas</string>
+    <string name="blocked_call">Užblokuotas skambutis</string>
     <string name="unblock_confirmation">Ar tikrai norite atblokuoti \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Kontaktinių miniatiūrų dydis</string>
     <string name="long_click_g">Ilgas paspaudimas %s</string>
+    <string name="use_persian_digits">Naudokite persiškus skaitmenis</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nVisos teisės saugomos © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -238,6 +247,7 @@
     <string name="speech_bubble">Kalbos burbulas</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Išilgai kraštų</string>
     <string name="library">Biblioteka</string>
     <string name="open_in_maps">Atidaryti žemėlapiuose</string>
 
@@ -252,6 +262,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Paieška internete</string>
     <string name="show_number_blocking_button">Rodyti skaičių užrakto mygtuką</string>
+    <string name="blocking_type_silence">Tylus skambutis</string>
+    <string name="blocking_type_silence_summary">Nustatoma, ar turi būti nutildytas įeinančio skambučio skambėjimas</string>
     <string name="relation_g">Ryšys</string>
     <string name="relations_g">Susiję asmenys</string>
     <string name="relation_hint_g">Susijęs asmuo</string>
@@ -321,6 +333,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Norėdami mokėti per „RuStore“, turite įdiegti programos versiją iš „RuStore“.</string>
     <string name="date">Data</string>
     <string name="starts">Pradeda</string>
     <string name="ends">Baigiasi</string>
@@ -330,4 +343,11 @@
     <string name="attendees">Dalyvių</string>
     <string name="typeface">Šriftas</string>
     <string name="more_apps_from_us_g">Kitos mūsų programėlės</string>
+    <string name="text_alignment">Teksto lygiavimas</string>
+    <string name="use_persian_calendar">Naudokite persų kalendorių</string>
+    <string name="blocking_type">Blokavimo tipas</string>
+    <string name="blocking_type_do_not_reject">Neatmesti</string>
+    <string name="blocking_type_do_not_reject_summary">Atmeskite įeinantį skambutį taip, lyg vartotojas neatsiliepė</string>
+    <string name="blocking_type_reject">Atmesti</string>
+    <string name="blocking_type_reject_summary">Atmeskite įeinantį skambutį taip, lyg vartotojas būtų jį atmetęs rankiniu būdu</string>
 </resources>

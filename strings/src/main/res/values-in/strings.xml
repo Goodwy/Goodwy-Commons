@@ -55,6 +55,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+Karena beberapa masalah, untuk sementara kami tidak dapat melakukan pembayaran melalui Google Play.
+Oleh karena itu, untuk sementara waktu ini kami memberikan opsi kepada semua pengguna untuk membuka kunci semua fitur aplikasi secara manual. <br>
+Jika Anda menyukai aplikasi kami yang offline, tidak mengganggu, dan bebas iklan,
+mohon pertimbangkan untuk mendukung kami. Kami akan sangat berterima kasih.<br><br>
+Terima kasih!
+]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -150,11 +157,13 @@
     <string name="hide_blocked_numbers">Sembunyikan diblokir</string>
     <string name="paste_g">Menyisipkan</string>
     <string name="recents">Terbaru</string>
+    <string name="blocked_call">Panggilan Terblokir</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Ukuran thumbnail kontak</string>
     <string name="long_click_g">Klik lama %s</string>
+    <string name="use_persian_digits">Gunakan angka Persia</string>
     <string name="purchase_simple_thank_you_g">Beli Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nHak cipta © Goodwy %2$d</string>
     <string name="update_thank_you_g">Silakan perbarui Goodwy Thank You ke versi terbaru</string>
@@ -239,6 +248,7 @@
     <string name="speech_bubble">Gelembung ucapan</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">Sepanjang tepian</string>
     <string name="library">Perpustakaan</string>
     <string name="open_in_maps">Buka di Peta</string>
 
@@ -253,6 +263,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Pencarian internet</string>
     <string name="show_number_blocking_button">Tampilkan tombol blok nomor</string>
+    <string name="blocking_type_silence">Panggilan yang tenang</string>
+    <string name="blocking_type_silence_summary">Mengatur apakah dering harus dibungkam untuk panggilan masuk</string>
     <string name="relation_g">Hubungan</string>
     <string name="relations_g">Orang Terkait</string>
     <string name="relation_hint_g">Orang Terkait</string>
@@ -322,6 +334,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Untuk membayar melalui RuStore Anda perlu menginstal versi aplikasi dari RuStore</string>
     <string name="date">Tanggal</string>
     <string name="starts">Dimulai</string>
     <string name="ends">Berakhir</string>
@@ -331,4 +344,11 @@
     <string name="attendees">Peserta</string>
     <string name="typeface">Jenis huruf</string>
     <string name="more_apps_from_us_g">Lebih banyak aplikasi dari kami</string>
+    <string name="text_alignment">Perataan teks</string>
+    <string name="use_persian_calendar">Gunakan kalender Persia</string>
+    <string name="blocking_type">Jenis pemblokiran</string>
+    <string name="blocking_type_do_not_reject">Jangan menolak</string>
+    <string name="blocking_type_do_not_reject_summary">Tolak panggilan masuk seolah-olah pengguna tidak menjawab</string>
+    <string name="blocking_type_reject">Menolak</string>
+    <string name="blocking_type_reject_summary">Tolak panggilan masuk seolah-olah pengguna telah menolaknya secara manual</string>
 </resources>

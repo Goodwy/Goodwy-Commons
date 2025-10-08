@@ -9,6 +9,7 @@
     <string name="incoming_call">Incoming Call</string>
     <string name="outgoing_call">Outgoing Call</string>
     <string name="missed_call">Missed Call</string>
+    <string name="blocked_call">Apel blocat</string>
     <string name="unblock_confirmation">Are you sure you want to unblock \"%s\"?</string>
     <string name="unblock_number">Unblock number</string>
     <string name="unblock_numbers">Unblock numbers</string>
@@ -72,6 +73,13 @@
     </string>
 
     <!--Billing-->
+    <string name="donate_text_no_gp_g"><![CDATA[
+            Din cauza unor probleme, temporar nu putem efectua plăți prin Google Play,
+            deci, pentru această perioadă, oferim tuturor utilizatorilor opțiunea de a debloca manual toate funcțiile aplicației. <br>
+            Dacă vă plac aplicațiile noastre care sunt offline, non-intruzive și nu au reclame,
+            vă rugăm să luați în considerare să ne susțineți într-un fel. V-am fi foarte recunoscători.<br><br>
+            Multumesc!
+        ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="no_purchase_found">No purchase found.</string>
     <string name="restore_purchase">Restore purchase</string>
@@ -157,6 +165,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">Dimensiunea miniaturilor contactelor</string>
     <string name="long_click_g">Faceți clic lung pe %s</string>
+    <string name="use_persian_digits">Folosiți cifre persane</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -241,6 +250,7 @@
     <string name="speech_bubble">Bula de vorbire</string>
 
     <!-- Gallery -->
+    <string name="text_alignment_along_edges">De-a lungul marginilor</string>
     <string name="library">Bibliotecă</string>
     <string name="open_in_maps">Deschis în hărți</string>
 
@@ -255,6 +265,8 @@
     <!-- Relation types -->
     <string name="search_the_web">Căutați pe internet</string>
     <string name="show_number_blocking_button">Afișați butonul de blocare a numărului</string>
+    <string name="blocking_type_silence">Un apel liniștit</string>
+    <string name="blocking_type_silence_summary">Setează dacă sunetul trebuie oprit pentru apelul primit</string>
     <string name="relation_g">Relație</string>
     <string name="relations_g">Persoane înrudite</string>
     <string name="relation_hint_g">Persoană înrudită</string>
@@ -324,6 +336,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_error_application_signature_not_correct">Pentru a plăti prin RuStore, trebuie să instalați versiunea aplicației din RuStore</string>
     <string name="date">Dată</string>
     <string name="starts">Începe</string>
     <string name="ends">Se termină</string>
@@ -333,4 +346,11 @@
     <string name="attendees">Participanţi</string>
     <string name="typeface">Caractere</string>
     <string name="more_apps_from_us_g">Alte aplicații de la noi</string>
+    <string name="text_alignment">Alinierea textului</string>
+    <string name="use_persian_calendar">Folosește calendarul persan</string>
+    <string name="blocking_type">Tip de blocare</string>
+    <string name="blocking_type_do_not_reject">Nu respinge</string>
+    <string name="blocking_type_do_not_reject_summary">Respingeți un apel primit ca și cum utilizatorul nu ar fi răspuns</string>
+    <string name="blocking_type_reject">Respinge</string>
+    <string name="blocking_type_reject_summary">Respingeți un apel primit ca și cum utilizatorul l-ar fi respins manual</string>
 </resources>
