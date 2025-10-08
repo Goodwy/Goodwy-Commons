@@ -251,6 +251,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Gar malām</string>
+    <string name="voice_input">Balss ievade</string>
     <string name="library">Library</string>
     <string name="open_in_maps">Open in Maps</string>
 

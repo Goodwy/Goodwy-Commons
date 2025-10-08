@@ -249,6 +249,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">விளிம்புகளில்</string>
+    <string name="voice_input">குரல் உள்ளீடு</string>
     <string name="library">நூலகம்</string>
     <string name="open_in_maps">வரைபடத்தில் திற</string>
 

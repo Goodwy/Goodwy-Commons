@@ -251,6 +251,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Mööda servi</string>
+    <string name="voice_input">Häälsisend</string>
     <string name="library">Kirjandus</string>
     <string name="open_in_maps">Avatud kaartidel</string>
 

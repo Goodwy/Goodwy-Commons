@@ -251,6 +251,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">ਕਿਨਾਰਿਆਂ ਦੇ ਨਾਲ</string>
+    <string name="voice_input">ਵੌਇਸ ਇਨਪੁੱਟ</string>
     <string name="library">ਲਾਇਬ੍ਰੇਰੀ</string>
     <string name="open_in_maps">ਨਕਸ਼ੇ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
 

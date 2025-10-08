@@ -249,6 +249,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Po rubovima</string>
+    <string name="voice_input">Glasovni unos</string>
     <string name="library">Knjižnica</string>
     <string name="open_in_maps">Otvori u Kartama</string>
 

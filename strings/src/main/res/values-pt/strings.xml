@@ -252,6 +252,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Ao longo das bordas</string>
+    <string name="voice_input">Entrada de voz</string>
     <string name="library">Biblioteca</string>
     <string name="open_in_maps">Aberto em Mapas</string>
 

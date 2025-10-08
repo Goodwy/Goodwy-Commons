@@ -251,6 +251,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">ตามขอบ</string>
+    <string name="voice_input">การป้อนข้อมูลด้วยเสียง</string>
     <string name="library">ห้องสมุด</string>
     <string name="open_in_maps">เปิดในแผนที่</string>
 

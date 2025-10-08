@@ -251,6 +251,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">По ивицама</string>
+    <string name="voice_input">Гласовни унос</string>
     <string name="library">Библиотека</string>
     <string name="open_in_maps">Отвори у Мапама</string>
     <string name="all_g">Све</string>

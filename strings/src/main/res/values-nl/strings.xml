@@ -248,6 +248,7 @@ Bedankt!
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Langs de randen</string>
+    <string name="voice_input">Spraakinvoer</string>
     <string name="library">Bibliotheek</string>
     <string name="open_in_maps">Openen in kaarten</string>
 

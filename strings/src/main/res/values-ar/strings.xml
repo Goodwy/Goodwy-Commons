@@ -245,6 +245,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">على طول الحواف</string>
+    <string name="voice_input">إدخال الصوت</string>
     <string name="library">المكتبة</string>
     <string name="open_in_maps">فتح في الخرائط</string>
 

@@ -250,6 +250,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Kenarlar boyunca</string>
+    <string name="voice_input">Səs daxiletmə</string>
     <string name="library">Kitabxana</string>
     <string name="open_in_maps">Xəritədə açın</string>
 

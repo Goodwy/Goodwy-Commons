@@ -251,6 +251,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Laŭ la randoj</string>
+    <string name="voice_input">Voĉa enigo</string>
     <string name="library">Biblioteko</string>
     <string name="open_in_maps">Malfermu en Mapoj</string>
 

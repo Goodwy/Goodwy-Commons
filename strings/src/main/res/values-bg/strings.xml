@@ -253,6 +253,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">По ръбовете</string>
+    <string name="voice_input">Гласово въвеждане</string>
     <string name="library">Библиотека на медиите</string>
     <string name="open_in_maps">Отваряне в карти</string>
 

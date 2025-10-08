@@ -249,6 +249,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Κατά μήκος των άκρων</string>
+    <string name="voice_input">Φωνητική είσοδος</string>
     <string name="library">Βιβλιοθήκη</string>
     <string name="open_in_maps">Ανοιγμα σε χάρτες</string>
 

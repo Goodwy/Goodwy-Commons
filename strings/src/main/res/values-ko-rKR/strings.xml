@@ -249,6 +249,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">가장자리를 따라</string>
+    <string name="voice_input">음성 입력</string>
     <string name="library">도서관</string>
     <string name="open_in_maps">지도에서 열기</string>
 

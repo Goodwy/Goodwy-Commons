@@ -249,6 +249,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">לאורך הקצוות</string>
+    <string name="voice_input">קלט קולי</string>
     <string name="library">ספרייה</string>
     <string name="open_in_maps">פתח במפות</string>
 

@@ -252,6 +252,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Po robovih</string>
+    <string name="voice_input">Glasovni vnos</string>
     <string name="library">Knjižnica</string>
     <string name="open_in_maps">Odprto v zemljevidih</string>
 

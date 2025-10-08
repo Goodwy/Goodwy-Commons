@@ -251,6 +251,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">در امتداد لبه ها</string>
+    <string name="voice_input">ورودی صوتی</string>
     <string name="library">کتابخانه</string>
     <string name="open_in_maps">باز کردن در Maps</string>
 

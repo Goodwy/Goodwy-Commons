@@ -251,6 +251,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">沿著邊緣</string>
+    <string name="voice_input">語音輸入</string>
     <string name="library">圖書館</string>
     <string name="open_in_maps">在地圖中打開</string>
 

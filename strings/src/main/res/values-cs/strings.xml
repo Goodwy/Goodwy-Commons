@@ -252,6 +252,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Po okrajích</string>
+    <string name="voice_input">Hlasový vstup</string>
     <string name="library">Knihovna</string>
     <string name="open_in_maps">Otevřít v mapách</string>
 

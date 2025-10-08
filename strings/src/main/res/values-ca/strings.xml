@@ -249,6 +249,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Al llarg de les vores</string>
+    <string name="voice_input">Entrada de veu</string>
     <string name="library">Biblioteca</string>
     <string name="open_in_maps">Obre a Maps</string>
 

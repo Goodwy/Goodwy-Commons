@@ -252,6 +252,7 @@
 
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Längs kanterna</string>
+    <string name="voice_input">Röstinmatning</string>
     <string name="library">Bibliotek</string>
     <string name="open_in_maps">Öppen i kartor</string>
 
