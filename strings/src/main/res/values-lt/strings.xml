@@ -56,7 +56,7 @@
 
     <!--Billing-->
     <string name="donate_text_no_gp_g"><![CDATA[
-            Dėl problemų laikinai negalime atlikti mokėjimų per „Google Play“,
+            Dėl problemų laikinai negalime atlikti mokėjimų per Google Play,
             todėl šiuo laikotarpiu visiems vartotojams suteikiame galimybę rankiniu būdu atrakinti visas programos funkcijas. <br>
             Jei jums patinka mūsų programos, kurios yra neprisijungusios, neįkyrios ir kuriose nėra skelbimų,
             apsvarstykite galimybę kaip nors mus paremti. Būtume labai dėkingi.<br><br>
@@ -333,7 +333,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
-    <string name="billing_error_application_signature_not_correct">Norėdami mokėti per „RuStore“, turite įdiegti programos versiją iš „RuStore“.</string>
+    <string name="billing_error_application_signature_not_correct">Norėdami mokėti per RuStore, turite įdiegti programos versiją iš RuStore.</string>
     <string name="date">Data</string>
     <string name="starts">Pradeda</string>
     <string name="ends">Baigiasi</string>

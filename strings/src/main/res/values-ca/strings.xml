@@ -57,9 +57,9 @@
     <!--Billing-->
     <string name="donate_text_no_gp_g"><![CDATA[
             A causa de problemes, no podem fer pagaments a través de Google Play temporalment,
-            així que durant aquest període oferim a tots els usuaris l'opció de desbloquejar manualment totes les funcions de l'aplicació. <br>
-            Si t'agraden les nostres aplicacions que estan fora de línia, no intrusives i no tenen anuncis,
-            si us plau, considereu donar-nos suport d'alguna manera. Estaríem molt agraïts.<br><br>
+            així que durant aquest període oferim a tots els usuaris l\'opció de desbloquejar manualment totes les funcions de l\'aplicació. <br>
+            Si t\'agraden les nostres aplicacions que estan fora de línia, no intrusives i no tenen anuncis,
+            si us plau, considereu donar-nos suport d\'alguna manera. Estaríem molt agraïts.<br><br>
             Gràcies!
         ]]></string>
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
