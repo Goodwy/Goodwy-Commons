@@ -55,7 +55,7 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
             onSearchTextChangedListener?.invoke(text)
         }
 
-        binding.topToolbarSearchIcon.apply {
+        binding.topToolbarSearchSpeechToText.apply {
             beVisibleIf(showSpeechToText && binding.topToolbarSearch.text!!.isEmpty())
             setOnClickListener {
                 onSpeechToTextClickListener?.invoke()
@@ -121,6 +121,7 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
         setBackgroundColor(backgroundColor)
         binding.topAppBarLayout.setBackgroundColor(backgroundColor)
         binding.topToolbarSearchIcon.applyColorFilter(contrastColor)
+        binding.topToolbarSearchSpeechToText.applyColorFilter(contrastColor)
         //binding.topToolbarHolder.background?.applyColorFilter(primaryColor.adjustAlpha(LOWER_ALPHA))
         //binding.topToolbarSearch.setTextColor(contrastColor)
         //binding.topToolbarSearch.setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
@@ -148,7 +149,7 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     fun clearSearch() {
-        binding.topToolbarSearchIcon.beVisibleIf(showSpeechToText && binding.topToolbarSearch.text!!.isEmpty())
+        binding.topToolbarSearchSpeechToText.beVisibleIf(showSpeechToText && binding.topToolbarSearch.text!!.isEmpty())
         binding.topToolbarSearchClear.beVisibleIf(binding.topToolbarSearch.text!!.isNotEmpty())
         binding.topToolbarSearchClear.setOnClickListener {
             binding.topToolbarSearch.setText("")
