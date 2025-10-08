@@ -15,6 +15,7 @@ import android.os.*
 import android.provider.ContactsContract
 import android.provider.DocumentsContract
 import android.provider.MediaStore
+import android.speech.RecognizerIntent
 import android.telecom.PhoneAccountHandle
 import android.telecom.TelecomManager
 import android.view.View
@@ -47,6 +48,8 @@ import com.goodwy.commons.views.MyTextView
 import java.io.*
 import java.util.TreeSet
 import androidx.core.net.toUri
+import com.goodwy.commons.extensions.toast
+import java.util.Locale
 
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
@@ -1752,4 +1755,28 @@ fun Activity.maybeShowNumberPickerDialog(
             toast(R.string.no_phone_number_found)
         }
     }
+}
+
+fun Activity.speechToText() {
+    val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
+        putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+        putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
+//            putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak to text")
+    }
+
+    if (isSpeechToTextAvailable()) {
+        try {
+            startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT)
+        } catch (_: ActivityNotFoundException) {
+            baseConfig.useSpeechToText = false
+            toast("Speech recognition is not supported")
+        }
+    }
+}
+
+fun Activity.isSpeechToTextAvailable(): Boolean {
+    val activities: List<*> = packageManager.queryIntentActivities(
+        Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0
+    )
+    return activities.isNotEmpty()
 }

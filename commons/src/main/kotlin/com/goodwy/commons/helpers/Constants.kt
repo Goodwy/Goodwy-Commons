@@ -261,6 +261,7 @@ const val NEED_INIT = "need_init"
 const val IS_MIUI = "is_miui"
 const val BLOCKING_TYPE = "blocking_type"
 const val TEXT_ALIGNMENT = "text_alignment"
+const val USE_SPEECH_TO_TEXT = "use_speech_to_text"
 
 const val IS_RIGHT_APP = "is_right_app"
 const val IS_PRO_VERSION = "is_pro_version"
@@ -344,6 +345,7 @@ const val REQUEST_CODE_SET_DEFAULT_DIALER = 1007
 const val CREATE_DOCUMENT_SDK_30 = 1008
 const val REQUEST_CODE_SET_DEFAULT_CALLER_ID = 1010
 const val REQUEST_APP_UNLOCK = 1012
+const val REQUEST_CODE_SPEECH_INPUT = 1081
 
 // sorting
 const val SORT_ORDER = "sort_order"

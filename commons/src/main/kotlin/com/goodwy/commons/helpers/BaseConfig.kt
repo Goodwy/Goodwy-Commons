@@ -835,6 +835,10 @@ open class BaseConfig(val context: Context) {
     var textAlignment: Int
         get() = prefs.getInt(TEXT_ALIGNMENT, TEXT_ALIGNMENT_START)
         set(textAlignment) = prefs.edit { putInt(TEXT_ALIGNMENT, textAlignment) }
+
+    var useSpeechToText: Boolean
+        get() = prefs.getBoolean(USE_SPEECH_TO_TEXT, true)
+        set(useSpeechToText) = prefs.edit { putBoolean(USE_SPEECH_TO_TEXT, useSpeechToText) }
 }
 
 

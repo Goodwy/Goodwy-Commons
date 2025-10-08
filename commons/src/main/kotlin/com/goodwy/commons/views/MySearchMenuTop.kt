@@ -19,6 +19,8 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
     var onSearchClosedListener: (() -> Unit)? = null
     var onSearchTextChangedListener: ((text: String) -> Unit)? = null
     var onNavigateBackClickListener: (() -> Unit)? = null
+    var showSpeechToText = false
+    var onSpeechToTextClickListener: (() -> Unit)? = null
 
     val binding = MenuSearchTopBinding.inflate(LayoutInflater.from(context), this, true)
 
@@ -46,6 +48,13 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
 
         binding.topToolbarSearch.onTextChangeListener { text ->
             onSearchTextChangedListener?.invoke(text)
+        }
+
+        binding.topToolbarSearchSpeechToText.apply {
+            beVisibleIf(showSpeechToText && binding.topToolbarSearch.text!!.isEmpty())
+            setOnClickListener {
+                onSpeechToTextClickListener?.invoke()
+            }
         }
     }
 
@@ -108,9 +117,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
         binding.topAppBarLayout.setBackgroundColor(backgroundColor)
         val searchIconColor = if (context.baseConfig.topAppBarColorIcon) primaryColor else contrastColor
         binding.topToolbarSearchIcon.applyColorFilter(searchIconColor)
-        //binding.topToolbarHolder.background?.applyColorFilter(primaryColor.adjustAlpha(LOWER_ALPHA))
-        //binding.topToolbarSearch.setTextColor(contrastColor)
-        //binding.topToolbarSearch.setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
+        binding.topToolbarSearchSpeechToText.applyColorFilter(contrastColor)
         binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
         (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, Color.TRANSPARENT, useColorForStatusBar = false)
 
@@ -133,9 +140,16 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
     }
 
     fun clearSearch() {
-        binding.topToolbarSearchClear.beVisibleIf(binding.topToolbarSearch.text!!.isNotEmpty())
+        val showClear = binding.topToolbarSearch.text!!.isNotEmpty()
+        binding.topToolbarSearchSpeechToText.beVisibleIf(showSpeechToText && !showClear)
+        binding.topToolbarSearchClear.beVisibleIf(showClear)
         binding.topToolbarSearchClear.setOnClickListener {
             binding.topToolbarSearch.setText("")
         }
+    }
+
+    fun setText(text: String) {
+        binding.topToolbarSearch.setText(text)
+        openSearch()
     }
 }

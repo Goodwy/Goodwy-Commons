@@ -116,9 +116,6 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
         binding.topAppBarLayout.setBackgroundColor(backgroundColor)
         binding.topToolbarSearchIcon.applyColorFilter(contrastColor)
         binding.topToolbarSearchSpeechToText.applyColorFilter(contrastColor)
-        //binding.topToolbarHolder.background?.applyColorFilter(primaryColor.adjustAlpha(LOWER_ALPHA))
-        //binding.topToolbarSearch.setTextColor(contrastColor)
-        //binding.topToolbarSearch.setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
         binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
         (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, backgroundColor)
 
