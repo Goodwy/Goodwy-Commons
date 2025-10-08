@@ -49,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/top_toolbar_search_icon"
-                android:layout_toStartOf="@+id/top_toolbar_search_clear"
+                android:layout_toStartOf="@+id/topToolbarSearchClear"
                 android:background="@null"
                 android:ellipsize="end"
                 android:gravity="start|center_vertical"
@@ -62,7 +62,21 @@
                 android:textSize="@dimen/big_text_size" />
 
             <ImageView
-                android:id="@+id/top_toolbar_search_clear"
+                android:id="@+id/topToolbarSearchClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/topToolbarSearchSpeechToText"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="?selectableItemBackgroundBorderless"
+                android:alpha="0.4"
+                android:src="@drawable/ic_clear_round"
+                android:visibility="gone"
+                android:contentDescription="@string/delete"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/topToolbarSearchSpeechToText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -70,7 +84,7 @@
                 android:layout_marginEnd="@dimen/medium_margin"
                 android:background="?selectableItemBackgroundBorderless"
                 android:alpha="0.4"
-                android:src="@drawable/ic_clear_round"
+                android:src="@drawable/ic_microphone_vector"
                 android:visibility="gone"
                 android:contentDescription="@string/delete"
                 tools:visibility="visible" />

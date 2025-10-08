@@ -18,6 +18,8 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
     var onSearchClosedListener: (() -> Unit)? = null
     var onSearchTextChangedListener: ((text: String) -> Unit)? = null
     var onNavigateBackClickListener: (() -> Unit)? = null
+    var showSpeechToText = false
+    var onSpeechToTextClickListener: (() -> Unit)? = null
 
     val binding = MenuSearchBinding.inflate(LayoutInflater.from(context), this, true)
 
@@ -44,13 +46,20 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
         }
 
         binding.topToolbarSearch.onTextChangeListener { text ->
-            val size = text.length
-//            if (size == 1) post { openSearch() }
-            if (size == 0 && !useArrowIcon) {
-//                binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_search_vector)
-                binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.search)
-            }
+//            val size = text.length
+////            if (size == 1) post { openSearch() }
+//            if (size == 0 && !useArrowIcon) {
+////                binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_search_vector)
+//                binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.search)
+//            }
             onSearchTextChangedListener?.invoke(text)
+        }
+
+        binding.topToolbarSearchIcon.apply {
+            beVisibleIf(showSpeechToText && binding.topToolbarSearch.text!!.isEmpty())
+            setOnClickListener {
+                onSpeechToTextClickListener?.invoke()
+            }
         }
     }
 
@@ -139,6 +148,7 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     fun clearSearch() {
+        binding.topToolbarSearchIcon.beVisibleIf(showSpeechToText && binding.topToolbarSearch.text!!.isEmpty())
         binding.topToolbarSearchClear.beVisibleIf(binding.topToolbarSearch.text!!.isNotEmpty())
         binding.topToolbarSearchClear.setOnClickListener {
             binding.topToolbarSearch.setText("")
