@@ -65,7 +65,7 @@
                 android:id="@+id/topToolbarSearchClear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@+id/topToolbarSearchSpeechToText"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/medium_margin"
                 android:background="?selectableItemBackgroundBorderless"
@@ -86,7 +86,7 @@
                 android:alpha="0.4"
                 android:src="@drawable/ic_microphone_vector"
                 android:visibility="gone"
-                android:contentDescription="@string/delete"
+                android:contentDescription="@string/voice_input"
                 tools:visibility="visible" />
         </RelativeLayout>
     </RelativeLayout>
