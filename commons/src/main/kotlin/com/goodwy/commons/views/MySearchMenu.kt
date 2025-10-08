@@ -153,5 +153,6 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     fun setText(text: String) {
         binding.topToolbarSearch.setText(text)
+        openSearch()
     }
 }
