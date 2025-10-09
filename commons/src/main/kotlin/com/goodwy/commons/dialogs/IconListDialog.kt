@@ -26,6 +26,16 @@ class IconListDialog(
     init {
         val view = DialogIconListBinding.inflate(activity.layoutInflater, null, false).apply {
             when (items.size) {
+                2 -> {
+                    arrayOf(icon3Holder, icon4Holder, icon5Holder, icon6Holder, icon7Holder, icon8Holder,
+                        icon9Holder, icon10Holder, icon11Holder, icon12Holder
+                    ).forEach {
+                        it.beGone()
+                    }
+                    arrayOf(icon1, icon2).forEachIndexed { index, imageView ->
+                        imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
+                    }
+                }
                 3 -> {
                     arrayOf(icon4Holder, icon5Holder, icon6Holder, icon7Holder, icon8Holder,
                         icon9Holder, icon10Holder, icon11Holder, icon12Holder
