@@ -166,6 +166,7 @@
     <string name="use_persian_digits">使用波斯數字</string>
     <string name="floating_button_style">浮動按鈕樣式</string>
     <string name="square">方塊</string>
+    <string name="on">開啟</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -268,6 +269,7 @@
     <string name="show_number_blocking_button">顯示數字區塊按鈕</string>
     <string name="blocking_type_silence">安靜的通話</string>
     <string name="blocking_type_silence_summary">設定來電時是否應靜音</string>
+    <string name="enable_blocking_summary">新增快速設定磁貼以便快速切換</string>
     <string name="relation_g">關係</string>
     <string name="relations_g">相關人員</string>
     <string name="relation_hint_g">相關人員</string>
@@ -355,4 +357,6 @@
     <string name="blocking_type_reject">拒絕</string>
     <string name="blocking_type_reject_summary">拒絕來電，就像用戶手動拒絕一樣</string>
     <string name="circle">圓圈</string>
+    <string name="off">斷開</string>
+    <string name="enable_blocking">啟用封鎖</string>
 </resources>

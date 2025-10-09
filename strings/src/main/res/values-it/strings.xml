@@ -164,6 +164,7 @@ Grazie!
     <string name="use_persian_digits">Usa cifre persiane</string>
     <string name="floating_button_style">Stile del pulsante mobile</string>
     <string name="square">Piazza</string>
+    <string name="on">Accesso</string>
     <string name="purchase_simple_thank_you_g">Acquista Goodwy Grazie</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aggiornare Semplice Ringraziamento all\'ultima versione</string>
@@ -266,6 +267,7 @@ Grazie!
     <string name="show_number_blocking_button">Mostra il pulsante di blocco del numero</string>
     <string name="blocking_type_silence">Una chiamata silenziosa</string>
     <string name="blocking_type_silence_summary">Imposta se la suoneria deve essere disattivata per la chiamata in arrivo</string>
+    <string name="enable_blocking_summary">Aggiungi un riquadro delle impostazioni rapide per un cambio rapido</string>
     <string name="relation_g">Relazione</string>
     <string name="relations_g">Persone correlate</string>
     <string name="relation_hint_g">Persona correlata</string>
@@ -353,4 +355,6 @@ Grazie!
     <string name="blocking_type_reject">Rifiutare</string>
     <string name="blocking_type_reject_summary">Rifiuta una chiamata in arrivo come se l\'utente l\'avesse rifiutata manualmente</string>
     <string name="circle">Cerchio</string>
+    <string name="off">Discon</string>
+    <string name="enable_blocking">Abilita il blocco</string>
 </resources>

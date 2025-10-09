@@ -164,6 +164,7 @@
     <string name="use_persian_digits">ペルシャ数字を使用する</string>
     <string name="floating_button_style">フローティングボタンスタイル</string>
     <string name="square">四角</string>
+    <string name="on">オン</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank Youを購入</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">\"Goodwy Thank You\" アプリを最新版に更新してください</string>
@@ -267,6 +268,7 @@
     <string name="show_number_blocking_button">番号ロックボタンを表示</string>
     <string name="blocking_type_silence">静かな呼びかけ</string>
     <string name="blocking_type_silence_summary">着信時に呼び出し音を消すかどうかを設定します</string>
+    <string name="enable_blocking_summary">クイック設定タイルを追加して、素早く切り替えられるようにします</string>
     <string name="relation_g">関係</string>
     <string name="relations_g">関係者</string>
     <string name="relation_hint_g">関係者</string>
@@ -354,4 +356,6 @@
     <string name="blocking_type_reject">拒否する</string>
     <string name="blocking_type_reject_summary">ユーザーが手動で拒否したかのように着信を拒否する</string>
     <string name="circle">丸</string>
+    <string name="off">切断</string>
+    <string name="enable_blocking">ブロックを有効にする</string>
 </resources>

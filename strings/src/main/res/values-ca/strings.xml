@@ -164,6 +164,7 @@
     <string name="use_persian_digits">Utilitza els dígits perses</string>
     <string name="floating_button_style">Estil de botó flotant</string>
     <string name="square">Quadrat</string>
+    <string name="on">Encès</string>
     <string name="purchase_simple_thank_you_g">Compra Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Si us plau, actualitzeu Goodwy Thank You a la darrera versió</string>
@@ -266,6 +267,7 @@
     <string name="show_number_blocking_button">Mostra el botó de bloqueig de números</string>
     <string name="blocking_type_silence">Una trucada tranquil·la</string>
     <string name="blocking_type_silence_summary">Estableix si s\'ha de silenciar el timbre per a la trucada entrant</string>
+    <string name="enable_blocking_summary">Afegiu una fitxa de configuració ràpida per canviar ràpidament</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Persones relacionades</string>
     <string name="relation_hint_g">Persona relacionada</string>
@@ -353,4 +355,6 @@
     <string name="blocking_type_reject">Rebutja</string>
     <string name="blocking_type_reject_summary">Rebutja una trucada entrant com si l\'usuari l\'hagués rebutjat manualment</string>
     <string name="circle">Cercle</string>
+    <string name="off">Desconnectat</string>
+    <string name="enable_blocking">Activa el bloqueig</string>
 </resources>

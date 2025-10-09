@@ -165,6 +165,7 @@
     <string name="use_persian_digits">Fars rəqəmlərindən istifadə edin</string>
     <string name="floating_button_style">Üzən düymə tərzi</string>
     <string name="square">Kvadrat</string>
+    <string name="on">Aktiv</string>
     <string name="purchase_simple_thank_you_g">Sadə Təşəkkür\'ü Alın</string>
     <string name="copyright_g">v %1$s\nMüəllif Hüquqları © Goodwy %2$d</string>
     <string name="update_thank_you_g">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>
@@ -267,6 +268,7 @@
     <string name="show_number_blocking_button">Nömrə bloku düyməsini göstərin</string>
     <string name="blocking_type_silence">Sakit zəng</string>
     <string name="blocking_type_silence_summary">Daxil olan zəng üçün zəngin susdurulmalı olub-olmadığını təyin edir</string>
+    <string name="enable_blocking_summary">Sürətli keçid üçün sürətli parametrlər plitəsi əlavə edin</string>
     <string name="relation_g">Əlaqə</string>
     <string name="relations_g">Əlaqədar şəxslər</string>
     <string name="relation_hint_g">Əlaqədar şəxs</string>
@@ -354,4 +356,6 @@
     <string name="blocking_type_reject">Rədd edin</string>
     <string name="blocking_type_reject_summary">İstifadəçi onu əl ilə rədd etmiş kimi daxil olan zəngi rədd edin</string>
     <string name="circle">Dairə</string>
+    <string name="off">Açıq</string>
+    <string name="enable_blocking">Bloklamanı aktivləşdirin</string>
 </resources>

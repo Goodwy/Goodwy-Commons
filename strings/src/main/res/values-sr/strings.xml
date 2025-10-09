@@ -167,6 +167,7 @@
     <string name="use_persian_digits">Користите персијске цифре</string>
     <string name="floating_button_style">Стил плутајућег дугмета</string>
     <string name="square">Скуаре</string>
+    <string name="on">Укљ</string>
     <string name="purchase_simple_thank_you_g">Купите Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАуторско право © Goodwy %2$d</string>
     <string name="update_thank_you_g">Молимо ажурирајте Goodwy Thank You на најновију верзију</string>
@@ -268,6 +269,7 @@
     <string name="show_number_blocking_button">Прикажи дугме за блокирање бројева</string>
     <string name="blocking_type_silence">Тихи позив</string>
     <string name="blocking_type_silence_summary">Подешава да ли звоно треба да буде утишано за долазни позив</string>
+    <string name="enable_blocking_summary">Додајте плочицу за брза подешавања за брзо пребацивање</string>
     <string name="relation_g">Однос</string>
     <string name="relations_g">Повезане особе</string>
     <string name="relation_hint_g">Повезана особа</string>
@@ -356,4 +358,6 @@
     <string name="blocking_type_reject">Одбити</string>
     <string name="blocking_type_reject_summary">Одбијте долазни позив као да га је корисник одбио ручно</string>
     <string name="circle">Цирцле</string>
+    <string name="off">Искљ</string>
+    <string name="enable_blocking">Омогући блокирање</string>
 </resources>

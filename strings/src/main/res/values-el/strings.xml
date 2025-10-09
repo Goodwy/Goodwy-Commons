@@ -164,6 +164,7 @@
     <string name="use_persian_digits">Χρησιμοποιήστε περσικά ψηφία</string>
     <string name="floating_button_style">Στυλ αιωρούμενου κουμπιού</string>
     <string name="square">Πλατεία</string>
+    <string name="on">Ενεργοποίηση</string>
     <string name="purchase_simple_thank_you_g">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστούμε στην τελευταία έκδοση</string>
@@ -266,6 +267,7 @@
     <string name="show_number_blocking_button">Εμφάνιση κουμπιού κλειδώματος αριθμού</string>
     <string name="blocking_type_silence">Μια ήσυχη κλήση</string>
     <string name="blocking_type_silence_summary">Ρυθμίζει εάν το κουδούνισμα θα πρέπει να σιωπά για την εισερχόμενη κλήση</string>
+    <string name="enable_blocking_summary">Προσθέστε ένα πλακίδιο γρήγορων ρυθμίσεων για γρήγορη εναλλαγή</string>
     <string name="relation_g">Σχέση</string>
     <string name="relations_g">Σχετικά πρόσωπα</string>
     <string name="relation_hint_g">Σχετικό πρόσωπο</string>
@@ -353,4 +355,6 @@
     <string name="blocking_type_reject">Απορρίπτω</string>
     <string name="blocking_type_reject_summary">Απορρίψτε μια εισερχόμενη κλήση σαν να την είχε απορρίψει ο χρήστης χειροκίνητα</string>
     <string name="circle">Κύκλος</string>
+    <string name="off">Απενεργοποίηση</string>
+    <string name="enable_blocking">Ενεργοποίηση αποκλεισμού</string>
 </resources>

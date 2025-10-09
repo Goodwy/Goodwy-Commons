@@ -166,6 +166,7 @@
     <string name="use_persian_digits">فارسی ہندسے استعمال کریں۔</string>
     <string name="floating_button_style">فلوٹنگ بٹن اسٹائل</string>
     <string name="square">مربع</string>
+    <string name="on">چالو</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -268,6 +269,7 @@
     <string name="show_number_blocking_button">نمبر بلاک دا بٹن وکھاؤ</string>
     <string name="blocking_type_silence">ایک خاموش کال</string>
     <string name="blocking_type_silence_summary">سیٹ کرتا ہے کہ آیا آنے والی کال کے لیے گھنٹی بجائی جائے گی یا نہیں</string>
+    <string name="enable_blocking_summary">فوری سوئچنگ کے لیے فوری ترتیبات کا ٹائل شامل کریں۔</string>
     <string name="relation_g"> تعلق</string>
     <string name="relations_g">متعلقہ افراد</string>
     <string name="relation_hint_g">متعلقہ شخص</string>
@@ -355,4 +357,6 @@
     <string name="blocking_type_reject">رد کرنا</string>
     <string name="blocking_type_reject_summary">آنے والی کال کو اس طرح مسترد کریں جیسے صارف نے اسے دستی طور پر مسترد کر دیا ہو۔</string>
     <string name="circle">دائرہ</string>
+    <string name="off">منقطع</string>
+    <string name="enable_blocking">بلاکنگ کو فعال کریں۔</string>
 </resources>

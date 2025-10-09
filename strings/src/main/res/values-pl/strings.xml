@@ -169,6 +169,7 @@ Będziemy bardzo wdzięczni.
     <string name="use_persian_digits">Użyj cyfr perskich</string>
     <string name="floating_button_style">Styl przycisku pływającego</string>
     <string name="square">Kwadrat</string>
+    <string name="on">Wł</string>
     <string name="purchase_simple_thank_you_g">Kup aplikację „Goodwy podziękowanie”</string>
     <string name="copyright_g">Wersja %1$s\n© Goodwy %2$d</string>
     <string name="update_thank_you_g">Zaktualizuj aplikację Goodwy podziękowanie do najnowszej wersji</string>
@@ -268,6 +269,7 @@ Będziemy bardzo wdzięczni.
     <string name="show_number_blocking_button">Pokaż przycisk blokady numeru</string>
     <string name="blocking_type_silence">Cichy telefon</string>
     <string name="blocking_type_silence_summary">Ustawia, czy dzwonek ma zostać wyciszony dla połączeń przychodzących</string>
+    <string name="enable_blocking_summary">Dodaj kafelek szybkich ustawień umożliwiający szybkie przełączanie</string>
     <string name="relation_g">Relacja</string>
     <string name="relations_g">Powiązane osoby</string>
     <string name="relation_hint_g">Osoba powiązana</string>
@@ -355,4 +357,6 @@ Będziemy bardzo wdzięczni.
     <string name="blocking_type_reject">Odrzucić</string>
     <string name="blocking_type_reject_summary">Odrzuć połączenie przychodzące tak, jakby użytkownik odrzucił je ręcznie</string>
     <string name="circle">Koło</string>
+    <string name="off">Wył</string>
+    <string name="enable_blocking">Włącz blokowanie</string>
 </resources>

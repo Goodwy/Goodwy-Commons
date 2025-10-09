@@ -177,6 +177,8 @@
     <string name="floating_button_style">Floating button style</string>
     <string name="circle">Circle</string>
     <string name="square">Square</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

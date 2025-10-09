@@ -165,6 +165,7 @@
     <string name="use_persian_digits">Koristite perzijske cifre</string>
     <string name="floating_button_style">Stil plutajućeg dugmeta</string>
     <string name="square">Square</string>
+    <string name="on">Uključeno</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -265,6 +266,7 @@
     <!-- Relation types -->
     <string name="blocking_type_silence">Tihi poziv</string>
     <string name="blocking_type_silence_summary">Podešava da li zvono treba biti utišano za dolazni poziv</string>
+    <string name="enable_blocking_summary">Dodajte pločicu brzih postavki za brzo prebacivanje</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>
@@ -355,4 +357,6 @@
     <string name="availability">Dostupnost</string>
     <string name="attendees">Polaznici</string>
     <string name="circle">Krug</string>
+    <string name="off">Isključeno</string>
+    <string name="enable_blocking">Omogući blokiranje</string>
 </resources>

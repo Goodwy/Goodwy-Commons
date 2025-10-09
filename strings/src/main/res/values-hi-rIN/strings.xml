@@ -164,6 +164,7 @@
     <string name="use_persian_digits">फ़ारसी अंकों का प्रयोग करें</string>
     <string name="floating_button_style">फ़्लोटिंग बटन शैली</string>
     <string name="square">वर्ग</string>
+    <string name="on">चालू</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">सं %1$s\nकॉपीराइट © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -266,6 +267,7 @@
     <string name="show_number_blocking_button">नंबर लॉक बटन दिखाएं</string>
     <string name="blocking_type_silence">एक शांत कॉल</string>
     <string name="blocking_type_silence_summary">यह निर्धारित करता है कि आने वाली कॉल के लिए रिंगिंग बंद की जानी चाहिए या नहीं</string>
+    <string name="enable_blocking_summary">त्वरित स्विचिंग के लिए त्वरित सेटिंग टाइल जोड़ें</string>
     <string name="relation_g">रिश्ता</string>
     <string name="relations_g">संबंधित व्यक्ति</string>
     <string name="relation_hint_g">संबंधित व्यक्ति</string>
@@ -353,4 +355,6 @@
     <string name="blocking_type_reject">अस्वीकार करना</string>
     <string name="blocking_type_reject_summary">आने वाली कॉल को ऐसे अस्वीकार करें जैसे उपयोगकर्ता ने उसे मैन्युअल रूप से अस्वीकार किया हो</string>
     <string name="circle">घेरा</string>
+    <string name="off">डिस्कनेक्ट</string>
+    <string name="enable_blocking">ब्लॉकिंग सक्षम करें</string>
 </resources>

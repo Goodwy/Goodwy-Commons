@@ -166,6 +166,7 @@
     <string name="use_persian_digits">പേർഷ്യൻ അക്കങ്ങൾ ഉപയോഗിക്കുക</string>
     <string name="floating_button_style">ഫ്ലോട്ടിംഗ് ബട്ടൺ ശൈലി</string>
     <string name="square">സമചതുരം</string>
+    <string name="on">ഓൺ</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -268,6 +269,7 @@
     <string name="show_number_blocking_button">നമ്പർ ബ്ലോക്ക് ബട്ടൺ കാണിക്കുക</string>
     <string name="blocking_type_silence">ശാന്തമായ ഒരു വിളി</string>
     <string name="blocking_type_silence_summary">ഇൻകമിംഗ് കോളിനായി റിംഗിംഗ് നിശബ്ദമാക്കണമോ എന്ന് സജ്ജീകരിക്കുന്നു</string>
+    <string name="enable_blocking_summary">പെട്ടെന്നുള്ള സ്വിച്ചിംഗിനായി ഒരു ദ്രുത ക്രമീകരണ ടൈൽ ചേർക്കുക</string>
     <string name="relation_g">ബന്ധം</string>
     <string name="relations_g">ബന്ധപ്പെട്ട വ്യക്തികൾ</string>
     <string name="relation_hint_g">ബന്ധപ്പെട്ട വ്യക്തി</string>
@@ -355,4 +357,6 @@
     <string name="blocking_type_reject">നിരസിക്കുക</string>
     <string name="blocking_type_reject_summary">ഉപയോക്താവ് സ്വമേധയാ നിരസിച്ചതുപോലെ ഒരു ഇൻകമിംഗ് കോൾ നിരസിക്കുക</string>
     <string name="circle">വൃത്തം</string>
+    <string name="off">ഓഫ്</string>
+    <string name="enable_blocking">തടയൽ പ്രവർത്തനക്ഷമമാക്കുക</string>
 </resources>

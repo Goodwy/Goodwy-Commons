@@ -164,6 +164,7 @@
     <string name="use_persian_digits">Koristite perzijske znamenke</string>
     <string name="floating_button_style">Stil plutajućeg gumba</string>
     <string name="square">Kvadrat</string>
+    <string name="on">Uključeno</string>
     <string name="purchase_simple_thank_you_g">Kupite Jednostavno Hvala</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Molim ažurirajte Jednostavno hvala na najnoviju verziju</string>
@@ -266,6 +267,7 @@
     <string name="show_number_blocking_button">Prikaži gumb za zaključavanje broja</string>
     <string name="blocking_type_silence">Tihi poziv</string>
     <string name="blocking_type_silence_summary">Postavlja treba li zvono utišati za dolazni poziv</string>
+    <string name="enable_blocking_summary">Dodajte pločicu brzih postavki za brzo prebacivanje</string>
     <string name="relation_g">Odnos</string>
     <string name="relations_g">Povezane osobe</string>
     <string name="relation_hint_g">Povezana osoba</string>
@@ -353,4 +355,6 @@
     <string name="blocking_type_reject">Odbiti</string>
     <string name="blocking_type_reject_summary">Odbijte dolazni poziv kao da ga je korisnik odbio ručno</string>
     <string name="circle">Krug</string>
+    <string name="off">Isključeno</string>
+    <string name="enable_blocking">Omogući blokiranje</string>
 </resources>

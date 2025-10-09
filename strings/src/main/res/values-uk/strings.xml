@@ -169,6 +169,7 @@
     <string name="use_persian_digits">Використовуйте перські цифри</string>
     <string name="floating_button_style">Стиль плаваючої кнопки</string>
     <string name="square">Квадратний</string>
+    <string name="on">Увімк</string>
     <string name="purchase_simple_thank_you_g">Купити Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАвторські права © Goodwy %2$d</string>
     <string name="update_thank_you_g">Оновіть \"Goodwy Thank You\" до останньої версії.</string>
@@ -271,6 +272,7 @@
     <string name="show_number_blocking_button">Показати кнопку блокування номера</string>
     <string name="blocking_type_silence">Тихий дзвінок</string>
     <string name="blocking_type_silence_summary">Встановлює, чи слід вимикати дзвінок для вхідного виклику</string>
+    <string name="enable_blocking_summary">Додайте плитку швидких налаштувань для швидкого перемикання</string>
     <string name="relation_g">Відносини</string>
     <string name="relations_g">Пов\'язані особи</string>
     <string name="relation_hint_g">Пов\'язана особа</string>
@@ -359,4 +361,6 @@
     <string name="blocking_type_reject">Відхиляти</string>
     <string name="blocking_type_reject_summary">Відхилити вхідний дзвінок, начебто користувач відхилив його вручну</string>
     <string name="circle">Коло</string>
+    <string name="off">Вимк</string>
+    <string name="enable_blocking">Увімкнути блокування</string>
 </resources>

@@ -166,6 +166,7 @@
     <string name="use_persian_digits">Uzu persajn ciferojn</string>
     <string name="floating_button_style">Flosanta butono stilo</string>
     <string name="square">Kvadrato</string>
+    <string name="on">Ŝaltita</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -268,6 +269,7 @@
     <string name="show_number_blocking_button">Montru butonon de numero-bloko</string>
     <string name="blocking_type_silence">Trankvila voko</string>
     <string name="blocking_type_silence_summary">Agordas ĉu sonorado devas esti silentigita por la envenanta voko</string>
+    <string name="enable_blocking_summary">Aldonu rapidan agordan kahelon por rapida ŝanĝado</string>
     <string name="relation_g">Rilato</string>
     <string name="relations_g">Rilataj Personoj</string>
     <string name="relation_hint_g">Rilata Persono</string>
@@ -355,4 +357,6 @@
     <string name="blocking_type_reject">Malakcepti</string>
     <string name="blocking_type_reject_summary">Malakcepti alvenantan vokon kvazaŭ la uzanto malakceptis ĝin permane</string>
     <string name="circle">Rondo</string>
+    <string name="off">Malŝaltita</string>
+    <string name="enable_blocking">Ebligu blokadon</string>
 </resources>

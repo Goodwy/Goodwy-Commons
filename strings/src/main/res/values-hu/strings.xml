@@ -164,6 +164,7 @@
     <string name="use_persian_digits">Használjon perzsa számjegyeket</string>
     <string name="floating_button_style">Lebegő gomb stílus</string>
     <string name="square">Négyzet</string>
+    <string name="on">Be</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank You megvásárlása</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Kérjük frissítse a Goodwy Thank You alkalmazást a legújabb verzióra</string>
@@ -264,6 +265,7 @@
     <string name="show_number_blocking_button">Számzár gomb megjelenítése</string>
     <string name="blocking_type_silence">Csendes hívás</string>
     <string name="blocking_type_silence_summary">Beállítja, hogy a csengetést el kell-e némítani a bejövő hívásnál</string>
+    <string name="enable_blocking_summary">Adjon hozzá egy gyorsbeállítási csempét a gyors váltáshoz</string>
     <string name="relation_g">Kapcsolat</string>
     <string name="relations_g">Kapcsolódó személyek</string>
     <string name="relation_hint_g">Kapcsolódó személy</string>
@@ -351,4 +353,6 @@
     <string name="blocking_type_reject">Elutasít</string>
     <string name="blocking_type_reject_summary">A bejövő hívás elutasítása úgy, mintha a felhasználó manuálisan utasította volna el</string>
     <string name="circle">Kör</string>
+    <string name="off">Ki</string>
+    <string name="enable_blocking">Blokkolás engedélyezése</string>
 </resources>

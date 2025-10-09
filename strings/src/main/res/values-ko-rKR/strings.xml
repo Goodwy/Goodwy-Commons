@@ -164,6 +164,7 @@
     <string name="use_persian_digits">페르시아 숫자를 사용하세요</string>
     <string name="floating_button_style">플로팅 버튼 스타일</string>
     <string name="square">정사각형</string>
+    <string name="on">켬</string>
     <string name="purchase_simple_thank_you_g">심플 Thank You 구매하기</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Goodwy Thank You 를 최신 버전으로 업데이트 해 주세요.</string>
@@ -266,6 +267,7 @@
     <string name="show_number_blocking_button">숫자 잠금 버튼 표시</string>
     <string name="blocking_type_silence">조용한 전화</string>
     <string name="blocking_type_silence_summary">수신 통화에 대한 벨소리를 무음으로 설정할지 여부를 설정합니다.</string>
+    <string name="enable_blocking_summary">빠른 전환을 위한 빠른 설정 타일 추가</string>
     <string name="relation_g">관계</string>
     <string name="relations_g">관련자</string>
     <string name="relation_hint_g">관련자</string>
@@ -353,4 +355,6 @@
     <string name="blocking_type_reject">거부하다</string>
     <string name="blocking_type_reject_summary">사용자가 수동으로 거부한 것처럼 수신 통화를 거부합니다.</string>
     <string name="circle">원</string>
+    <string name="off">연결 끊김</string>
+    <string name="enable_blocking">차단 활성화</string>
 </resources>

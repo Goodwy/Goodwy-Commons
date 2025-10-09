@@ -164,6 +164,7 @@
     <string name="use_persian_digits">பாரசீக இலக்கங்களைப் பயன்படுத்தவும்</string>
     <string name="floating_button_style">மிதக்கும் பொத்தான் பாணி</string>
     <string name="square">சதுரம்</string>
+    <string name="on">ஆன்</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -266,6 +267,7 @@
     <string name="show_number_blocking_button">எண் தடுப்பு பொத்தானைக் காட்டு</string>
     <string name="blocking_type_silence">ஒரு அமைதியான அழைப்பு</string>
     <string name="blocking_type_silence_summary">உள்வரும் அழைப்பிற்கு ஒலிப்பதை அமைதிப்படுத்த வேண்டுமா என்பதை அமைக்கிறது</string>
+    <string name="enable_blocking_summary">விரைவாக மாறுவதற்கு விரைவு செட்டிங்ஸ் டைலைச் சேர்க்கவும்</string>
     <string name="relation_g">உறவு</string>
     <string name="relations_g">தொடர்புடைய நபர்கள்</string>
     <string name="relation_hint_g">தொடர்புடைய நபர்</string>
@@ -353,4 +355,6 @@
     <string name="blocking_type_reject">நிராகரிக்கவும்</string>
     <string name="blocking_type_reject_summary">உள்வரும் அழைப்பை பயனர் கைமுறையாக நிராகரித்தது போல் நிராகரிக்கவும்</string>
     <string name="circle">வட்டம்</string>
+    <string name="off">துண்டிக்கப்பட்டது</string>
+    <string name="enable_blocking">தடுப்பதை இயக்கு</string>
 </resources>

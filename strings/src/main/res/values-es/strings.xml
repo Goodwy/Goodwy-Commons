@@ -163,6 +163,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="use_persian_digits">Utilice dígitos persas</string>
     <string name="floating_button_style">Estilo de botón flotante</string>
     <string name="square">Cuadrado</string>
+    <string name="on">Enc</string>
     <string name="purchase_simple_thank_you_g">Comprar Simple Gracias</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Por favor, actualice Simple Gracias a la última versión</string>
@@ -265,6 +266,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="show_number_blocking_button">Mostrar botón de bloqueo de números</string>
     <string name="blocking_type_silence">Una llamada silenciosa</string>
     <string name="blocking_type_silence_summary">Establece si se debe silenciar el timbre para la llamada entrante</string>
+    <string name="enable_blocking_summary">Agregue un mosaico de configuración rápida para cambiar rápidamente</string>
     <string name="relation_g">Relación</string>
     <string name="relations_g">Personas relacionadas</string>
     <string name="relation_hint_g">Persona relacionada</string>
@@ -352,4 +354,6 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="blocking_type_reject">Rechazar</string>
     <string name="blocking_type_reject_summary">Rechazar una llamada entrante como si el usuario la hubiera rechazado manualmente</string>
     <string name="circle">Círculo</string>
+    <string name="off">Descon</string>
+    <string name="enable_blocking">Habilitar bloqueo</string>
 </resources>

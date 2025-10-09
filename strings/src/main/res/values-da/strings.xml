@@ -164,6 +164,7 @@
     <string name="use_persian_digits">Brug persiske cifre</string>
     <string name="floating_button_style">Stil med flydende knap</string>
     <string name="square">Firkant</string>
+    <string name="on">Til</string>
     <string name="purchase_simple_thank_you_g">Køb Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Opdater venligst Goodwy Thank You til den seneste version</string>
@@ -266,6 +267,7 @@
     <string name="show_number_blocking_button">Vis knappen Nummerlås</string>
     <string name="blocking_type_silence">Et stille opkald</string>
     <string name="blocking_type_silence_summary">Indstiller, om ringningen skal afbrydes for det indgående opkald</string>
+    <string name="enable_blocking_summary">Tilføj en flise med hurtige indstillinger for hurtigt at skifte</string>
     <string name="relation_g">Forhold</string>
     <string name="relations_g">Nærtstående personer</string>
     <string name="relation_hint_g">Nærtstående person</string>
@@ -353,4 +355,6 @@
     <string name="blocking_type_reject">Afvise</string>
     <string name="blocking_type_reject_summary">Afvis et indgående opkald, som om brugeren havde afvist det manuelt</string>
     <string name="circle">Cirkel</string>
+    <string name="off">Fra</string>
+    <string name="enable_blocking">Aktiver blokering</string>
 </resources>

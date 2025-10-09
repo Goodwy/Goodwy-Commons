@@ -163,6 +163,7 @@
     <string name="use_persian_digits">استخدم الأرقام الفارسية</string>
     <string name="floating_button_style">نمط الزر العائم</string>
     <string name="square">مربع</string>
+    <string name="on">تشغيل</string>
     <string name="purchase_simple_thank_you_g">شراء تطبيق (Goodwy Thank You)</string>
     <string name="copyright_g">v %1$s\nحقوق النشر © Goodwy %2$d</string>
     <string name="update_thank_you_g">يرجى تحديث تطبيق (Goodwy Thank You) إلى أحدث إصدار</string>
@@ -262,6 +263,7 @@
     <string name="show_number_blocking_button">إظهار زر قفل الأرقام</string>
     <string name="blocking_type_silence">مكالمة هادئة</string>
     <string name="blocking_type_silence_summary">يحدد ما إذا كان يجب إسكات الرنين للمكالمة الواردة</string>
+    <string name="enable_blocking_summary">أضف مربع إعدادات سريعة للتبديل السريع</string>
     <string name="relation_g">العلاقة</string>
     <string name="relations_g">الأشخاص ذوو الصلة</string>
     <string name="relation_hint_g">الشخص ذو الصلة</string>
@@ -349,4 +351,6 @@
     <string name="blocking_type_reject">يرفض</string>
     <string name="blocking_type_reject_summary">رفض مكالمة واردة كما لو أن المستخدم رفضها يدويًا</string>
     <string name="circle">دائرة</string>
+    <string name="off">فصل</string>
+    <string name="enable_blocking">تمكين الحظر</string>
 </resources>

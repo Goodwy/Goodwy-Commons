@@ -172,6 +172,7 @@
     <string name="contact_thumbnails_size">Размер фото контакта</string>
     <string name="floating_button_style">Стиль плавающей кнопки</string>
     <string name="square">Квадрат</string>
+    <string name="on">Вкл.</string>
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАвторские права © Goodwy %2$d</string>
     <string name="update_thank_you_g">Обновите \"Goodwy Thank You\" до последней версии.</string>
@@ -281,6 +282,7 @@
     <string name="blocking_type_silence_summary">Отключить звук звонка для входящего вызова</string>
 
     <!-- Relation types -->
+    <string name="enable_blocking_summary">Добавьте плитку быстрых настроек для быстрого переключения</string>
     <string name="relation_g">Отношения</string>
     <string name="relations_g">Связанные лица</string>
     <string name="relation_hint_g">Связанное лицо</string>
@@ -362,4 +364,6 @@
     <string name="attendees">Участники</string>
     <string name="more_apps_from_us_g">Другие наши приложения</string>
     <string name="circle">Круг</string>
+    <string name="off">Откл.</string>
+    <string name="enable_blocking">Включить блокировку</string>
 </resources>

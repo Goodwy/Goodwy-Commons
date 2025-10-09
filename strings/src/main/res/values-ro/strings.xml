@@ -166,6 +166,7 @@
     <string name="use_persian_digits">Folosiți cifre persane</string>
     <string name="floating_button_style">Stil de buton plutitor</string>
     <string name="square">Pătrat</string>
+    <string name="on">Activ</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -268,6 +269,7 @@
     <string name="show_number_blocking_button">Afișați butonul de blocare a numărului</string>
     <string name="blocking_type_silence">Un apel liniștit</string>
     <string name="blocking_type_silence_summary">Setează dacă sunetul trebuie oprit pentru apelul primit</string>
+    <string name="enable_blocking_summary">Adăugați o dală cu setări rapide pentru comutare rapidă</string>
     <string name="relation_g">Relație</string>
     <string name="relations_g">Persoane înrudite</string>
     <string name="relation_hint_g">Persoană înrudită</string>
@@ -355,4 +357,6 @@
     <string name="blocking_type_reject">Respinge</string>
     <string name="blocking_type_reject_summary">Respingeți un apel primit ca și cum utilizatorul l-ar fi respins manual</string>
     <string name="circle">Cerc</string>
+    <string name="off">Dezact</string>
+    <string name="enable_blocking">Activați blocarea</string>
 </resources>

@@ -166,6 +166,7 @@
     <string name="use_persian_digits">Persische Ziffern verwenden</string>
     <string name="floating_button_style">Schwebender Schaltflächenstil</string>
     <string name="square">Quadrat</string>
+    <string name="on">Ein</string>
     <string name="purchase_simple_thank_you_g">\"Goodwy Thank You\" App kaufen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Bitte aktualisieren Sie Goodwy Thank You auf die neueste Version</string>
@@ -268,6 +269,7 @@
     <string name="show_number_blocking_button">Schaltfläche für die Nummernsperre anzeigen</string>
     <string name="blocking_type_silence">Ein leiser Anruf</string>
     <string name="blocking_type_silence_summary">Legt fest, ob das Klingeln bei eingehenden Anrufen stummgeschaltet werden soll</string>
+    <string name="enable_blocking_summary">Fügen Sie eine Schnelleinstellungskachel zum schnellen Wechseln hinzu</string>
     <string name="relation_g">Beziehung</string>
     <string name="relations_g">Verwandte Personen</string>
     <string name="relation_hint_g">Verwandte Person</string>
@@ -355,4 +357,6 @@
     <string name="blocking_type_reject">Ablehnen</string>
     <string name="blocking_type_reject_summary">Einen eingehenden Anruf ablehnen, als hätte der Benutzer ihn manuell abgelehnt</string>
     <string name="circle">Kreis</string>
+    <string name="off">Aus</string>
+    <string name="enable_blocking">Blockierung aktivieren</string>
 </resources>

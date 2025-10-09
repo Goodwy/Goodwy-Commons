@@ -176,6 +176,7 @@
     <string name="use_persian_digits">Úsáid digití Peirsis</string>
     <string name="floating_button_style">Stíl cnaipe ar snámh</string>
     <string name="square">Cearnóg</string>
+    <string name="on">Ar siúl</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -279,6 +280,7 @@
     <!-- Relation types -->
     <string name="blocking_type_silence">Glaoch ciúin</string>
     <string name="blocking_type_silence_summary">Socraíonn sé cé acu ar cheart an glaoch a chur ina thost don ghlao isteach</string>
+    <string name="enable_blocking_summary">Cuir tíl socruithe tapa leis le haghaidh athrú tapa</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>
@@ -366,4 +368,6 @@
     <string name="blocking_type_reject">Diúltaigh</string>
     <string name="blocking_type_reject_summary">Diúltaigh glao isteach amhail is gur dhiúltaigh an t-úsáideoir de láimh é</string>
     <string name="circle">Ciorcal</string>
+    <string name="off">Dícheangailte</string>
+    <string name="enable_blocking">Cumasaigh blocáil</string>
 </resources>

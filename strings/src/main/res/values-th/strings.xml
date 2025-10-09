@@ -166,6 +166,7 @@
     <string name="use_persian_digits">ใช้ตัวเลขเปอร์เซีย</string>
     <string name="floating_button_style">สไตล์ปุ่มลอย</string>
     <string name="square">สี่เหลี่ยม</string>
+    <string name="on">เปิด</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -268,6 +269,7 @@
     <string name="show_number_blocking_button">แสดงปุ่มล็อคตัวเลข</string>
     <string name="blocking_type_silence">เสียงเรียกอันเงียบงัน</string>
     <string name="blocking_type_silence_summary">ตั้งค่าว่าควรปิดเสียงการโทรเข้าหรือไม่</string>
+    <string name="enable_blocking_summary">เพิ่มไทล์การตั้งค่าด่วนสำหรับการสลับอย่างรวดเร็ว</string>
     <string name="relation_g">ความสัมพันธ์</string>
     <string name="relations_g">บุคคลที่เกี่ยวข้อง</string>
     <string name="relation_hint_g">บุคคลที่เกี่ยวข้อง</string>
@@ -355,4 +357,6 @@
     <string name="blocking_type_reject">ปฏิเสธ</string>
     <string name="blocking_type_reject_summary">ปฏิเสธสายเรียกเข้าราวกับว่าผู้ใช้ได้ปฏิเสธด้วยตนเอง</string>
     <string name="circle">วงกลม</string>
+    <string name="off">ตัดการเชื่อมต่อ</string>
+    <string name="enable_blocking">เปิดใช้งานการบล็อค</string>
 </resources>

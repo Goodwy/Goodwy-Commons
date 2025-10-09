@@ -169,6 +169,7 @@
     <string name="use_persian_digits">Use dígitos persas</string>
     <string name="floating_button_style">Estilo de botão flutuante</string>
     <string name="square">Quadrado</string>
+    <string name="on">Ligado</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -271,6 +272,7 @@
     <string name="show_number_blocking_button">Mostrar o botão de bloqueio de números</string>
     <string name="blocking_type_silence">Uma chamada silenciosa</string>
     <string name="blocking_type_silence_summary">Define se o toque deve ser silenciado para a chamada recebida</string>
+    <string name="enable_blocking_summary">Adicione um bloco de configurações rápidas para troca rápida</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>
@@ -358,4 +360,6 @@
     <string name="blocking_type_reject">Rejeitar</string>
     <string name="blocking_type_reject_summary">Rejeitar uma chamada recebida como se o usuário a tivesse rejeitado manualmente</string>
     <string name="circle">Círculo</string>
+    <string name="off">Desligado</string>
+    <string name="enable_blocking">Habilitar bloqueio</string>
 </resources>

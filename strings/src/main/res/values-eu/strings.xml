@@ -163,6 +163,7 @@
     <string name="use_persian_digits">Erabili persiar zifrak</string>
     <string name="floating_button_style">Botoi flotagarriaren estiloa</string>
     <string name="square">Plaza</string>
+    <string name="on">Piztuta</string>
     <string name="purchase_simple_thank_you_g">Erosi Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Eguneratu Goodwy Thank You azken bertsiora</string>
@@ -265,6 +266,7 @@
     <string name="show_number_blocking_button">Erakutsi zenbakia blokeatzeko botoia</string>
     <string name="blocking_type_silence">Dei lasai bat</string>
     <string name="blocking_type_silence_summary">Jasotako deirako deia isilarazi behar den ezartzen du</string>
+    <string name="enable_blocking_summary">Gehitu ezarpen bizkorreko lauza bat azkar aldatzeko</string>
     <string name="relation_g">Harremana</string>
     <string name="relations_g">Lotutako pertsonak</string>
     <string name="relation_hint_g">Lotutako pertsona</string>
@@ -353,4 +355,6 @@
     <string name="availability">Eskuragarritasuna</string>
     <string name="attendees">Bertaratutakoak</string>
     <string name="circle">Zirkulua</string>
+    <string name="off">Deskonektatuta</string>
+    <string name="enable_blocking">Gaitu blokeoa</string>
 </resources>

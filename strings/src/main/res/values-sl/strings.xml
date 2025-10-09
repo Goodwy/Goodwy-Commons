@@ -167,6 +167,7 @@
     <string name="use_persian_digits">Uporabite perzijske številke</string>
     <string name="floating_button_style">Slog plavajočega gumba</string>
     <string name="square">kvadrat</string>
+    <string name="on">Vklop</string>
     <string name="purchase_simple_thank_you_g">Kupite aplikacijo Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Prosimo nadgradite Goodwy Thank You na zadnjo verzijo</string>
@@ -269,6 +270,7 @@
     <string name="show_number_blocking_button">Pokaži gumb za zaklepanje številk</string>
     <string name="blocking_type_silence">Tihi klic</string>
     <string name="blocking_type_silence_summary">Nastavi, ali naj bo zvonjenje za dohodni klic utišano</string>
+    <string name="enable_blocking_summary">Dodajte ploščico hitrih nastavitev za hitro preklapljanje</string>
     <string name="relation_g">Ime relacije</string>
     <string name="relations_g">Povezane osebe</string>
     <string name="relation_hint_g">Povezana oseba</string>
@@ -356,4 +358,6 @@
     <string name="blocking_type_reject">Zavrni</string>
     <string name="blocking_type_reject_summary">Zavrnite dohodni klic, kot da bi ga uporabnik zavrnil ročno</string>
     <string name="circle">krog</string>
+    <string name="off">Izklop</string>
+    <string name="enable_blocking">Omogoči blokiranje</string>
 </resources>

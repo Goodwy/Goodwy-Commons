@@ -167,6 +167,7 @@
     <string name="use_persian_digits">Farsça rakamları kullanın</string>
     <string name="floating_button_style">Yüzen düğme stili</string>
     <string name="square">Kare</string>
+    <string name="on">Açık</string>
     <string name="purchase_simple_thank_you_g">Goodwy Teşekkürler\'i Satın Al</string>
     <string name="copyright_g">v %1$s\nTelif hakkı © Goodwy %2$d</string>
     <string name="update_thank_you_g">Lütfen Goodwy Teşekkürler\'i son sürüme güncelleyin</string>
@@ -269,6 +270,7 @@
     <string name="show_number_blocking_button">Numara engelleme düğmesini göster</string>
     <string name="blocking_type_silence">Sessiz bir çağrı</string>
     <string name="blocking_type_silence_summary">Gelen çağrı için zil sesinin sessize alınıp alınmayacağını ayarlar</string>
+    <string name="enable_blocking_summary">Hızlı geçiş için hızlı ayarlar kutucuğu ekleyin</string>
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
     <string name="relation_hint_g">İlgili Kişi</string>
@@ -356,4 +358,6 @@
     <string name="blocking_type_reject">Reddetmek</string>
     <string name="blocking_type_reject_summary">Gelen bir aramayı, kullanıcı manuel olarak reddetmiş gibi reddedin</string>
     <string name="circle">Daire</string>
+    <string name="off">Bağlantı Kesildi</string>
+    <string name="enable_blocking">Engellemeyi etkinleştir</string>
 </resources>

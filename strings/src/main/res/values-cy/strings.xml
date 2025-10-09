@@ -164,6 +164,7 @@
     <string name="use_persian_digits">Defnyddiwch ddigidau Perseg</string>
     <string name="floating_button_style">Arddull botwm arnawf</string>
     <string name="square">Sgwâr</string>
+    <string name="on">Ymlaen</string>
     <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
     <string name="copyright_g">f %1$s\nHawlfraint © Goodwy %2$d</string>
     <string name="update_thank_you_g">Diweddara Goodwy Thank You i\'r fersiwn diweddaraf</string>
@@ -266,6 +267,7 @@
     <string name="show_number_blocking_button">Dangos rhif clo botwm</string>
     <string name="blocking_type_silence">Galwad dawel</string>
     <string name="blocking_type_silence_summary">Yn pennu a ddylid tawelu\'r canu ar gyfer yr alwad sy\'n dod i mewn</string>
+    <string name="enable_blocking_summary">Ychwanegwch deilsen gosodiadau cyflym ar gyfer newid cyflym</string>
     <string name="relation_g">Perthynas</string>
     <string name ="relations_g">Personau Cysylltiedig</string>
     <string name ="relation_hint_g">Person Cysylltiedig</string>
@@ -353,4 +355,6 @@
     <string name="blocking_type_reject">Gwrthod</string>
     <string name="blocking_type_reject_summary">Gwrthod galwad sy\'n dod i mewn fel pe bai\'r defnyddiwr wedi ei wrthod â llaw</string>
     <string name="circle">Cylch</string>
+    <string name="off">Wedi\'i ddatgysylltu</string>
+    <string name="enable_blocking">Galluogi blocio</string>
 </resources>

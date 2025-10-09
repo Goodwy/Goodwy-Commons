@@ -167,6 +167,7 @@
     <string name="use_persian_digits">Utiliser des chiffres persans</string>
     <string name="floating_button_style">Style de bouton flottant</string>
     <string name="square">Carré</string>
+    <string name="on">Activ</string>
     <string name="purchase_simple_thank_you_g">Acheter Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Veuillez mettre à jour Goodwy Thank You</string>
@@ -269,6 +270,7 @@
     <string name="show_number_blocking_button">Afficher le bouton de verrouillage du numéro</string>
     <string name="blocking_type_silence">Un appel silencieux</string>
     <string name="blocking_type_silence_summary">Définit si la sonnerie doit être désactivée pour l\'appel entrant</string>
+    <string name="enable_blocking_summary">Ajoutez une tuile de paramètres rapides pour une commutation rapide</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Personnes apparentées</string>
     <string name="relation_hint_g">Personne apparentée</string>
@@ -356,4 +358,6 @@
     <string name="blocking_type_reject">Rejeter</string>
     <string name="blocking_type_reject_summary">Rejeter un appel entrant comme si l\'utilisateur l\'avait rejeté manuellement</string>
     <string name="circle">Cercle</string>
+    <string name="off">Désact</string>
+    <string name="enable_blocking">Activer le blocage</string>
 </resources>
