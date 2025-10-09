@@ -171,6 +171,7 @@
     <string name="long_click_g">Langt klikk %s</string>
     <string name="use_persian_digits">Bruk persiske sifre</string>
     <string name="floating_button_style">Flytende knappstil</string>
+    <string name="square">Kvadrat</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -358,4 +359,5 @@
     <string name="blocking_type_do_not_reject_summary">Avvis et innkommende anrop som om brukeren ikke svarte</string>
     <string name="blocking_type_reject">Avvis</string>
     <string name="blocking_type_reject_summary">Avvis et innkommende anrop som om brukeren hadde avvist det manuelt</string>
+    <string name="circle">Sirkel</string>
 </resources>

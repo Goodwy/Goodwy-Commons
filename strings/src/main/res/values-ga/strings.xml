@@ -175,6 +175,7 @@
     <!-- Other -->
     <string name="use_persian_digits">Úsáid digití Peirsis</string>
     <string name="floating_button_style">Stíl cnaipe ar snámh</string>
+    <string name="square">Cearnóg</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -364,4 +365,5 @@
     <string name="blocking_type_do_not_reject_summary">Diúltaigh glao isteach amhail is nár fhreagair an t-úsáideoir</string>
     <string name="blocking_type_reject">Diúltaigh</string>
     <string name="blocking_type_reject_summary">Diúltaigh glao isteach amhail is gur dhiúltaigh an t-úsáideoir de láimh é</string>
+    <string name="circle">Ciorcal</string>
 </resources>

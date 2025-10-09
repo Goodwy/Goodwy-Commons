@@ -163,6 +163,7 @@
     <string name="long_click_g">लंबा क्लिक %s</string>
     <string name="use_persian_digits">फ़ारसी अंकों का प्रयोग करें</string>
     <string name="floating_button_style">फ़्लोटिंग बटन शैली</string>
+    <string name="square">वर्ग</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">सं %1$s\nकॉपीराइट © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -351,4 +352,5 @@
     <string name="blocking_type_do_not_reject_summary">आने वाली कॉल को ऐसे अस्वीकार करें जैसे कि उपयोगकर्ता ने उत्तर नहीं दिया हो</string>
     <string name="blocking_type_reject">अस्वीकार करना</string>
     <string name="blocking_type_reject_summary">आने वाली कॉल को ऐसे अस्वीकार करें जैसे उपयोगकर्ता ने उसे मैन्युअल रूप से अस्वीकार किया हो</string>
+    <string name="circle">घेरा</string>
 </resources>

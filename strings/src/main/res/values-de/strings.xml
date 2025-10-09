@@ -165,6 +165,7 @@
     <string name="long_click_g">Langer Klick %s</string>
     <string name="use_persian_digits">Persische Ziffern verwenden</string>
     <string name="floating_button_style">Schwebender Schaltflächenstil</string>
+    <string name="square">Quadrat</string>
     <string name="purchase_simple_thank_you_g">\"Goodwy Thank You\" App kaufen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Bitte aktualisieren Sie Goodwy Thank You auf die neueste Version</string>
@@ -353,4 +354,5 @@
     <string name="blocking_type_do_not_reject_summary">Einen eingehenden Anruf ablehnen, als ob der Benutzer nicht geantwortet hätte</string>
     <string name="blocking_type_reject">Ablehnen</string>
     <string name="blocking_type_reject_summary">Einen eingehenden Anruf ablehnen, als hätte der Benutzer ihn manuell abgelehnt</string>
+    <string name="circle">Kreis</string>
 </resources>

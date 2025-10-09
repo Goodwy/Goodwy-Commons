@@ -163,6 +163,7 @@
     <string name="long_click_g">Hosszú kattintás %s</string>
     <string name="use_persian_digits">Használjon perzsa számjegyeket</string>
     <string name="floating_button_style">Lebegő gomb stílus</string>
+    <string name="square">Négyzet</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank You megvásárlása</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Kérjük frissítse a Goodwy Thank You alkalmazást a legújabb verzióra</string>
@@ -349,4 +350,5 @@
     <string name="blocking_type_do_not_reject_summary">A bejövő hívás elutasítása úgy, mintha a felhasználó nem vette volna fel</string>
     <string name="blocking_type_reject">Elutasít</string>
     <string name="blocking_type_reject_summary">A bejövő hívás elutasítása úgy, mintha a felhasználó manuálisan utasította volna el</string>
+    <string name="circle">Kör</string>
 </resources>

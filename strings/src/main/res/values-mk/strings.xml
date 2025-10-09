@@ -164,6 +164,7 @@
     <string name="contact_thumbnails_size">Contact thumbnails size</string>
     <string name="use_persian_digits">Користете персиски цифри</string>
     <string name="floating_button_style">Стил на пловечки копчиња</string>
+    <string name="square">Плоштад</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -353,4 +354,5 @@
     <string name="event_type">Тип на настан</string>
     <string name="availability">Достапност</string>
     <string name="attendees">Присутните</string>
+    <string name="circle">Заокружете</string>
 </resources>

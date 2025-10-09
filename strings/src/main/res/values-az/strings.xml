@@ -164,6 +164,7 @@
     <string name="long_click_g">Uzun klikləyin %s</string>
     <string name="use_persian_digits">Fars rəqəmlərindən istifadə edin</string>
     <string name="floating_button_style">Üzən düymə tərzi</string>
+    <string name="square">Kvadrat</string>
     <string name="purchase_simple_thank_you_g">Sadə Təşəkkür\'ü Alın</string>
     <string name="copyright_g">v %1$s\nMüəllif Hüquqları © Goodwy %2$d</string>
     <string name="update_thank_you_g">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>
@@ -352,4 +353,5 @@
     <string name="blocking_type_do_not_reject_summary">İstifadəçi cavab verməmiş kimi daxil olan zəngi rədd edin</string>
     <string name="blocking_type_reject">Rədd edin</string>
     <string name="blocking_type_reject_summary">İstifadəçi onu əl ilə rədd etmiş kimi daxil olan zəngi rədd edin</string>
+    <string name="circle">Dairə</string>
 </resources>

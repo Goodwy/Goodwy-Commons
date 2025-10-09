@@ -171,6 +171,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">Размер фото контакта</string>
     <string name="floating_button_style">Стиль плавающей кнопки</string>
+    <string name="square">Квадрат</string>
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАвторские права © Goodwy %2$d</string>
     <string name="update_thank_you_g">Обновите \"Goodwy Thank You\" до последней версии.</string>
@@ -360,4 +361,5 @@
     <string name="availability">Доступность</string>
     <string name="attendees">Участники</string>
     <string name="more_apps_from_us_g">Другие наши приложения</string>
+    <string name="circle">Круг</string>
 </resources>

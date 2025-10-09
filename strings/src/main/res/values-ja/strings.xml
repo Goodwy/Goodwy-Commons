@@ -163,6 +163,7 @@
     <string name="long_click_g">%s を長押し</string>
     <string name="use_persian_digits">ペルシャ数字を使用する</string>
     <string name="floating_button_style">フローティングボタンスタイル</string>
+    <string name="square">四角</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank Youを購入</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">\"Goodwy Thank You\" アプリを最新版に更新してください</string>
@@ -352,4 +353,5 @@
     <string name="blocking_type_do_not_reject_summary">ユーザーが応答しなかったかのように着信を拒否する</string>
     <string name="blocking_type_reject">拒否する</string>
     <string name="blocking_type_reject_summary">ユーザーが手動で拒否したかのように着信を拒否する</string>
+    <string name="circle">丸</string>
 </resources>

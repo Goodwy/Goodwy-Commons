@@ -165,6 +165,7 @@
     <string name="long_click_g">Longa klako %s</string>
     <string name="use_persian_digits">Uzu persajn ciferojn</string>
     <string name="floating_button_style">Flosanta butono stilo</string>
+    <string name="square">Kvadrato</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -353,4 +354,5 @@
     <string name="blocking_type_do_not_reject_summary">Malakcepti alvenantan vokon kvazaŭ la uzanto ne respondus</string>
     <string name="blocking_type_reject">Malakcepti</string>
     <string name="blocking_type_reject_summary">Malakcepti alvenantan vokon kvazaŭ la uzanto malakceptis ĝin permane</string>
+    <string name="circle">Rondo</string>
 </resources>

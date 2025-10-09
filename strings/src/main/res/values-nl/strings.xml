@@ -162,6 +162,7 @@ Bedankt!
     <string name="long_click_g">Lange klik op %s</string>
     <string name="use_persian_digits">Gebruik Perzische cijfers</string>
     <string name="floating_button_style">Zwevende knopstijl</string>
+    <string name="square">Vierkant</string>
     <string name="purchase_simple_thank_you_g">Goodwy Bedankje kopen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Er is een nieuwe versie van Goodwy Bedankje</string>
@@ -350,4 +351,5 @@ Bedankt!
     <string name="blocking_type_do_not_reject_summary">Een binnenkomend gesprek afwijzen alsof de gebruiker niet heeft geantwoord</string>
     <string name="blocking_type_reject">Afwijzen</string>
     <string name="blocking_type_reject_summary">Een binnenkomend gesprek afwijzen alsof de gebruiker het handmatig heeft afgewezen</string>
+    <string name="circle">Cirkel</string>
 </resources>

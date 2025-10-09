@@ -165,6 +165,7 @@
     <string name="long_click_g">%s എന്നതിൽ ദീർഘ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="use_persian_digits">പേർഷ്യൻ അക്കങ്ങൾ ഉപയോഗിക്കുക</string>
     <string name="floating_button_style">ഫ്ലോട്ടിംഗ് ബട്ടൺ ശൈലി</string>
+    <string name="square">സമചതുരം</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -353,4 +354,5 @@
     <string name="blocking_type_do_not_reject_summary">ഉപയോക്താവ് ഉത്തരം നൽകാത്തതുപോലെ ഒരു ഇൻകമിംഗ് കോൾ നിരസിക്കുക</string>
     <string name="blocking_type_reject">നിരസിക്കുക</string>
     <string name="blocking_type_reject_summary">ഉപയോക്താവ് സ്വമേധയാ നിരസിച്ചതുപോലെ ഒരു ഇൻകമിംഗ് കോൾ നിരസിക്കുക</string>
+    <string name="circle">വൃത്തം</string>
 </resources>

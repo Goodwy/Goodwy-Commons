@@ -163,6 +163,7 @@ Grazie!
     <string name="long_click_g">Fare clic a lungo su %s</string>
     <string name="use_persian_digits">Usa cifre persiane</string>
     <string name="floating_button_style">Stile del pulsante mobile</string>
+    <string name="square">Piazza</string>
     <string name="purchase_simple_thank_you_g">Acquista Goodwy Grazie</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aggiornare Semplice Ringraziamento all\'ultima versione</string>
@@ -351,4 +352,5 @@ Grazie!
     <string name="blocking_type_do_not_reject_summary">Rifiuta una chiamata in arrivo come se l\'utente non avesse risposto</string>
     <string name="blocking_type_reject">Rifiutare</string>
     <string name="blocking_type_reject_summary">Rifiuta una chiamata in arrivo come se l\'utente l\'avesse rifiutata manualmente</string>
+    <string name="circle">Cerchio</string>
 </resources>

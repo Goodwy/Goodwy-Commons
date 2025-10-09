@@ -165,6 +165,7 @@
     <string name="long_click_g">Garš klikšķis %s</string>
     <string name="use_persian_digits">Izmantojiet persiešu ciparus</string>
     <string name="floating_button_style">Peldošās pogas stils</string>
+    <string name="square">Kvadrāts</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -353,4 +354,5 @@
     <string name="blocking_type_do_not_reject_summary">Noraidīt ienākošo zvanu tā, it kā lietotājs neatbildētu</string>
     <string name="blocking_type_reject">Noraidīt</string>
     <string name="blocking_type_reject_summary">Noraidīt ienākošo zvanu tā, it kā lietotājs to būtu noraidījis manuāli</string>
+    <string name="circle">Aplis</string>
 </resources>

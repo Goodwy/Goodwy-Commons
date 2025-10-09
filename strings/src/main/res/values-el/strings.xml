@@ -163,6 +163,7 @@
     <string name="long_click_g">Παρατεταμένο κλικ %s</string>
     <string name="use_persian_digits">Χρησιμοποιήστε περσικά ψηφία</string>
     <string name="floating_button_style">Στυλ αιωρούμενου κουμπιού</string>
+    <string name="square">Πλατεία</string>
     <string name="purchase_simple_thank_you_g">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστούμε στην τελευταία έκδοση</string>
@@ -351,4 +352,5 @@
     <string name="blocking_type_do_not_reject_summary">Απορρίψτε μια εισερχόμενη κλήση σαν να μην απαντούσε ο χρήστης</string>
     <string name="blocking_type_reject">Απορρίπτω</string>
     <string name="blocking_type_reject_summary">Απορρίψτε μια εισερχόμενη κλήση σαν να την είχε απορρίψει ο χρήστης χειροκίνητα</string>
+    <string name="circle">Κύκλος</string>
 </resources>

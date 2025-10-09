@@ -175,6 +175,8 @@
     <string name="use_persian_calendar">Use Persian calendar</string>
     <string name="use_persian_digits">Use Persian digits</string>
     <string name="floating_button_style">Floating button style</string>
+    <string name="circle">Circle</string>
+    <string name="square">Square</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

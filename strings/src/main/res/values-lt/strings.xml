@@ -163,6 +163,7 @@
     <string name="long_click_g">Ilgas paspaudimas %s</string>
     <string name="use_persian_digits">Naudokite persiškus skaitmenis</string>
     <string name="floating_button_style">Plaukiojančio mygtuko stilius</string>
+    <string name="square">Kvadratas</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nVisos teisės saugomos © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -350,4 +351,5 @@
     <string name="blocking_type_do_not_reject_summary">Atmeskite įeinantį skambutį taip, lyg vartotojas neatsiliepė</string>
     <string name="blocking_type_reject">Atmesti</string>
     <string name="blocking_type_reject_summary">Atmeskite įeinantį skambutį taip, lyg vartotojas būtų jį atmetęs rankiniu būdu</string>
+    <string name="circle">Apskritimas</string>
 </resources>

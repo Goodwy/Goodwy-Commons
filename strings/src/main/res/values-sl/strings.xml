@@ -166,6 +166,7 @@
     <string name="long_click_g">Dolgi klik %s</string>
     <string name="use_persian_digits">Uporabite perzijske številke</string>
     <string name="floating_button_style">Slog plavajočega gumba</string>
+    <string name="square">kvadrat</string>
     <string name="purchase_simple_thank_you_g">Kupite aplikacijo Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Prosimo nadgradite Goodwy Thank You na zadnjo verzijo</string>
@@ -354,4 +355,5 @@
     <string name="blocking_type_do_not_reject_summary">Zavrnite dohodni klic, kot da se uporabnik ne bi oglasil</string>
     <string name="blocking_type_reject">Zavrni</string>
     <string name="blocking_type_reject_summary">Zavrnite dohodni klic, kot da bi ga uporabnik zavrnil ročno</string>
+    <string name="circle">krog</string>
 </resources>

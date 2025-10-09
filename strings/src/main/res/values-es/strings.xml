@@ -162,6 +162,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="long_click_g">Clic largo %s</string>
     <string name="use_persian_digits">Utilice dígitos persas</string>
     <string name="floating_button_style">Estilo de botón flotante</string>
+    <string name="square">Cuadrado</string>
     <string name="purchase_simple_thank_you_g">Comprar Simple Gracias</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Por favor, actualice Simple Gracias a la última versión</string>
@@ -350,4 +351,5 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="blocking_type_do_not_reject_summary">Rechazar una llamada entrante como si el usuario no hubiera respondido</string>
     <string name="blocking_type_reject">Rechazar</string>
     <string name="blocking_type_reject_summary">Rechazar una llamada entrante como si el usuario la hubiera rechazado manualmente</string>
+    <string name="circle">Círculo</string>
 </resources>

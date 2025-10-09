@@ -165,6 +165,7 @@
     <string name="long_click_g">Pikad klõpsud %s</string>
     <string name="use_persian_digits">Kasutage Pärsia numbreid</string>
     <string name="floating_button_style">Ujuva nupu stiil</string>
+    <string name="square">Ruut</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -353,4 +354,5 @@
     <string name="blocking_type_do_not_reject_summary">Keelduge sissetulevast kõnest nii, nagu kasutaja ei vastaks</string>
     <string name="blocking_type_reject">Keeldu</string>
     <string name="blocking_type_reject_summary">Keelduge sissetulevast kõnest nii, nagu oleks kasutaja selle käsitsi tagasi lükanud</string>
+    <string name="circle">Ring</string>
 </resources>

@@ -166,6 +166,7 @@
     <string name="long_click_g">Dlouhé kliknutí %s</string>
     <string name="use_persian_digits">Použijte perské číslice</string>
     <string name="floating_button_style">Styl plovoucího tlačítka</string>
+    <string name="square">Náměstí</string>
     <string name="purchase_simple_thank_you_g">Zakoupit Jednoduché děkuji</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aktualizujte prosím Jednoduché děkuji na nejnovější verzi</string>
@@ -354,4 +355,5 @@
     <string name="blocking_type_do_not_reject_summary">Odmítněte příchozí hovor, jako by uživatel neodpovídal</string>
     <string name="blocking_type_reject">Odmítnout</string>
     <string name="blocking_type_reject_summary">Odmítněte příchozí hovor, jako by jej uživatel odmítl ručně</string>
+    <string name="circle">Kruh</string>
 </resources>

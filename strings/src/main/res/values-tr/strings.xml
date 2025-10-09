@@ -166,6 +166,7 @@
     <string name="long_click_g">Uzun tıklama %s</string>
     <string name="use_persian_digits">Farsça rakamları kullanın</string>
     <string name="floating_button_style">Yüzen düğme stili</string>
+    <string name="square">Kare</string>
     <string name="purchase_simple_thank_you_g">Goodwy Teşekkürler\'i Satın Al</string>
     <string name="copyright_g">v %1$s\nTelif hakkı © Goodwy %2$d</string>
     <string name="update_thank_you_g">Lütfen Goodwy Teşekkürler\'i son sürüme güncelleyin</string>
@@ -354,4 +355,5 @@
     <string name="blocking_type_do_not_reject_summary">Gelen bir aramayı, kullanıcı cevap vermemiş gibi reddedin</string>
     <string name="blocking_type_reject">Reddetmek</string>
     <string name="blocking_type_reject_summary">Gelen bir aramayı, kullanıcı manuel olarak reddetmiş gibi reddedin</string>
+    <string name="circle">Daire</string>
 </resources>

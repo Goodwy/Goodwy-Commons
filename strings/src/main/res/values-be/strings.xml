@@ -168,6 +168,7 @@
     <string name="contact_thumbnails_size">Памер мініяцюр кантактаў</string>
     <string name="use_persian_digits">Выкарыстоўвайце персідскія лічбы</string>
     <string name="floating_button_style">Стыль плаваючай кнопкі</string>
+    <string name="square">квадратны</string>
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАўтарскія правы © Goodwy %2$d</string>
     <string name="update_thank_you_g">Абнавіце \"Goodwy Thank You\" да апошняй версіі.</string>
@@ -357,4 +358,5 @@
     <string name="blocking_type_do_not_reject_summary">Адхіліць уваходны выклік, як калі б карыстач не адказаў</string>
     <string name="blocking_type_reject">Адхіліць</string>
     <string name="blocking_type_reject_summary">Адхіліць уваходны выклік, як калі б карыстач адхіліў яго ўручную</string>
+    <string name="circle">Круг</string>
 </resources>

@@ -165,6 +165,7 @@
     <string name="long_click_g">ਲੰਬੀ ਕਲਿੱਕ %s</string>
     <string name="use_persian_digits">ਫ਼ਾਰਸੀ ਅੰਕਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="floating_button_style">ਫਲੋਟਿੰਗ ਬਟਨ ਸ਼ੈਲੀ</string>
+    <string name="square">ਵਰਗ</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -353,4 +354,5 @@
     <string name="blocking_type_do_not_reject_summary">ਇੱਕ ਇਨਕਮਿੰਗ ਕਾਲ ਨੂੰ ਅਸਵੀਕਾਰ ਕਰੋ ਜਿਵੇਂ ਕਿ ਉਪਭੋਗਤਾ ਨੇ ਜਵਾਬ ਨਹੀਂ ਦਿੱਤਾ</string>
     <string name="blocking_type_reject">ਅਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="blocking_type_reject_summary">ਇੱਕ ਇਨਕਮਿੰਗ ਕਾਲ ਨੂੰ ਅਸਵੀਕਾਰ ਕਰੋ ਜਿਵੇਂ ਕਿ ਉਪਭੋਗਤਾ ਨੇ ਇਸਨੂੰ ਹੱਥੀਂ ਰੱਦ ਕਰ ਦਿੱਤਾ ਹੈ</string>
+    <string name="circle">ਚੱਕਰ</string>
 </resources>

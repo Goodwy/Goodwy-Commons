@@ -166,6 +166,7 @@
     <string name="long_click_g">Clique longo em %s</string>
     <string name="use_persian_digits">Use dígitos persas</string>
     <string name="floating_button_style">Estilo de botão flutuante</string>
+    <string name="square">Quadrado</string>
     <string name="purchase_simple_thank_you_g">Comprar Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Por favor atualize a aplicação Goodwy Thank You para a versão mais recente</string>
@@ -354,4 +355,5 @@
     <string name="blocking_type_do_not_reject_summary">Rejeitar uma chamada recebida como se o usuário não tivesse atendido</string>
     <string name="blocking_type_reject">Rejeitar</string>
     <string name="blocking_type_reject_summary">Rejeitar uma chamada recebida como se o usuário a tivesse rejeitado manualmente</string>
+    <string name="circle">Círculo</string>
 </resources>

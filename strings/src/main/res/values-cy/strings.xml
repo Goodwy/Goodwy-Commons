@@ -163,6 +163,7 @@
     <string name="long_click_g">Cliciwch hir %s</string>
     <string name="use_persian_digits">Defnyddiwch ddigidau Perseg</string>
     <string name="floating_button_style">Arddull botwm arnawf</string>
+    <string name="square">Sgwâr</string>
     <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
     <string name="copyright_g">f %1$s\nHawlfraint © Goodwy %2$d</string>
     <string name="update_thank_you_g">Diweddara Goodwy Thank You i\'r fersiwn diweddaraf</string>
@@ -351,4 +352,5 @@
     <string name="blocking_type_do_not_reject_summary">Gwrthod galwad sy\'n dod i mewn fel pe na bai\'r defnyddiwr yn ateb</string>
     <string name="blocking_type_reject">Gwrthod</string>
     <string name="blocking_type_reject_summary">Gwrthod galwad sy\'n dod i mewn fel pe bai\'r defnyddiwr wedi ei wrthod â llaw</string>
+    <string name="circle">Cylch</string>
 </resources>

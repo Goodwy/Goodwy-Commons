@@ -163,6 +163,7 @@
     <string name="long_click_g">%s을(를) 길게 클릭합니다.</string>
     <string name="use_persian_digits">페르시아 숫자를 사용하세요</string>
     <string name="floating_button_style">플로팅 버튼 스타일</string>
+    <string name="square">정사각형</string>
     <string name="purchase_simple_thank_you_g">심플 Thank You 구매하기</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Goodwy Thank You 를 최신 버전으로 업데이트 해 주세요.</string>
@@ -351,4 +352,5 @@
     <string name="blocking_type_do_not_reject_summary">사용자가 응답하지 않은 것처럼 수신 전화를 거부합니다.</string>
     <string name="blocking_type_reject">거부하다</string>
     <string name="blocking_type_reject_summary">사용자가 수동으로 거부한 것처럼 수신 통화를 거부합니다.</string>
+    <string name="circle">원</string>
 </resources>

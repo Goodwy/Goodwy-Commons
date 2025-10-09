@@ -163,6 +163,7 @@
     <string name="long_click_g">%sஐ நீண்ட கிளிக் செய்யவும்</string>
     <string name="use_persian_digits">பாரசீக இலக்கங்களைப் பயன்படுத்தவும்</string>
     <string name="floating_button_style">மிதக்கும் பொத்தான் பாணி</string>
+    <string name="square">சதுரம்</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -351,4 +352,5 @@
     <string name="blocking_type_do_not_reject_summary">பயனர் பதிலளிக்காதது போல் உள்வரும் அழைப்பை நிராகரிக்கவும்</string>
     <string name="blocking_type_reject">நிராகரிக்கவும்</string>
     <string name="blocking_type_reject_summary">உள்வரும் அழைப்பை பயனர் கைமுறையாக நிராகரித்தது போல் நிராகரிக்கவும்</string>
+    <string name="circle">வட்டம்</string>
 </resources>

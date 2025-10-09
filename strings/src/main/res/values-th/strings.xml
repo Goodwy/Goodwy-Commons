@@ -165,6 +165,7 @@
     <string name="long_click_g">คลิกยาว %s</string>
     <string name="use_persian_digits">ใช้ตัวเลขเปอร์เซีย</string>
     <string name="floating_button_style">สไตล์ปุ่มลอย</string>
+    <string name="square">สี่เหลี่ยม</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -353,4 +354,5 @@
     <string name="blocking_type_do_not_reject_summary">ปฏิเสธสายเรียกเข้าราวกับว่าผู้ใช้ไม่รับสาย</string>
     <string name="blocking_type_reject">ปฏิเสธ</string>
     <string name="blocking_type_reject_summary">ปฏิเสธสายเรียกเข้าราวกับว่าผู้ใช้ได้ปฏิเสธด้วยตนเอง</string>
+    <string name="circle">วงกลม</string>
 </resources>

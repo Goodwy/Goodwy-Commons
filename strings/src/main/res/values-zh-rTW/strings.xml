@@ -163,6 +163,7 @@
     <string name="long_click_g">長按 %s</string>
     <string name="use_persian_digits">使用波斯數字</string>
     <string name="floating_button_style">浮動按鈕樣式</string>
+    <string name="square">方塊</string>
     <string name="purchase_simple_thank_you_g">購買Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">請更新[Goodwy Thank You]至最新版本</string>
@@ -351,4 +352,5 @@
     <string name="blocking_type_do_not_reject_summary">拒絕來電，如用戶未接聽一樣</string>
     <string name="blocking_type_reject">拒絕</string>
     <string name="blocking_type_reject_summary">拒絕來電，就像用戶手動拒絕一樣</string>
+    <string name="circle">圓圈</string>
 </resources>
