@@ -99,8 +99,6 @@ Grazie!
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
     <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
     <string name="tab_navigation">Navigazione a schede</string>
@@ -164,6 +162,7 @@ Grazie!
     <string name="contact_thumbnails_size">Dimensione delle miniature dei contatti</string>
     <string name="long_click_g">Fare clic a lungo su %s</string>
     <string name="use_persian_digits">Usa cifre persiane</string>
+    <string name="floating_button_style">Stile del pulsante mobile</string>
     <string name="purchase_simple_thank_you_g">Acquista Goodwy Grazie</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aggiornare Semplice Ringraziamento all\'ultima versione</string>

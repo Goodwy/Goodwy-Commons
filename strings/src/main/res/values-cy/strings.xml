@@ -99,8 +99,6 @@
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
     <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
     <string name="tab_navigation">Llywio tablau</string>
@@ -164,6 +162,7 @@
     <string name="contact_thumbnails_size">Maint mân-luniau cyswllt</string>
     <string name="long_click_g">Cliciwch hir %s</string>
     <string name="use_persian_digits">Defnyddiwch ddigidau Perseg</string>
+    <string name="floating_button_style">Arddull botwm arnawf</string>
     <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
     <string name="copyright_g">f %1$s\nHawlfraint © Goodwy %2$d</string>
     <string name="update_thank_you_g">Diweddara Goodwy Thank You i\'r fersiwn diweddaraf</string>

@@ -116,8 +116,6 @@
     <string name="kids_mode_summary"> ਸਰਲ ਇੰਟਰਫੇਸ, ਰੰਗ ਚੁਣੋ</string>
     <string name="restart_required">ਐਪਲੀਕੇਸ਼ਨ ਰੀਸਟਾਰਟ ਦੀ ਲੋੜ ਹੈ</string>
     <string name="transparent_bar">ਪਾਰਦਰਸ਼ੀ ਬਾਰ</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਕੁਝ ਤੱਤਾਂ ਦੀ ਦਿੱਖ ਨੂੰ ਬਦਲਦਾ ਹੈ</string>
     <string name="bottom_navigation_bar"> ਹੇਠਲਾ ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ</string>
     <string name="bottom_navigation_bar_summary">ਟੈਬ ਬਾਰ ਹੇਠਾਂ ਵੱਲ ਚਲੇ ਜਾਵੇਗੀ</string>
     <string name="tab_navigation">ਟੈਬ ਨੈਵੀਗੇਸ਼ਨ</string>
@@ -166,6 +164,7 @@
     <string name="contact_thumbnails_size">ਸੰਪਰਕ ਥੰਬਨੇਲ ਦਾ ਆਕਾਰ</string>
     <string name="long_click_g">ਲੰਬੀ ਕਲਿੱਕ %s</string>
     <string name="use_persian_digits">ਫ਼ਾਰਸੀ ਅੰਕਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+    <string name="floating_button_style">ਫਲੋਟਿੰਗ ਬਟਨ ਸ਼ੈਲੀ</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

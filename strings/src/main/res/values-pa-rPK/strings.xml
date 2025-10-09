@@ -116,8 +116,6 @@
     <string name="kids_mode_summary">آسان انٹرفیس، رنگ منتخب کریں</string>
     <string name="restart_required">ایپلیکیشن دوبارہ شروع کرنا ضروری ہے</string>
     <string name="transparent_bar"> شفاف بارز</string>
-    <string name="material_design_3">میٹریل ڈیزائن 3</string>
-    <string name="material_design_3_summary">ایپلی کیشن کے کچھ عناصر کی ظاہری شکل کو تبدیل کرتا ہے</string>
     <string name="bottom_navigation_bar">نیچے نیویگیشن بار</string>
     <string name="bottom_navigation_bar_summary">ٹیب بار نیچے چلے جائیں گے</string>
     <string name="tab_navigation">ٹیب نیویگیشن</string>
@@ -166,6 +164,7 @@
     <string name="contact_thumbnails_size">تھمب نیلز کا سائز رابطہ کریں۔</string>
     <string name="long_click_g">لمبا کلک %s</string>
     <string name="use_persian_digits">فارسی ہندسے استعمال کریں۔</string>
+    <string name="floating_button_style">فلوٹنگ بٹن اسٹائل</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

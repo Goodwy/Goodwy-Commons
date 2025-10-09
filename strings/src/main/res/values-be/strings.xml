@@ -118,8 +118,6 @@
     <string name="kids_mode_summary">Спрошчаны інтэрфейс, выбар размалёвак</string>
     <string name="restart_required">Патрабуецца перазапуск прыкладання</string>
     <string name="transparent_bar">Празрыстыя панэлі</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Змяняе выгляд некаторых элементаў прыкладання</string>
     <string name="bottom_navigation_bar">Ніжняя панэль навігацыі</string>
     <string name="bottom_navigation_bar_summary">Панэль укладак перамесціцца ўніз</string>
     <string name="tab_navigation">Навігацыя ўкладак</string>
@@ -169,6 +167,7 @@
     <!-- Other -->
     <string name="contact_thumbnails_size">Памер мініяцюр кантактаў</string>
     <string name="use_persian_digits">Выкарыстоўвайце персідскія лічбы</string>
+    <string name="floating_button_style">Стыль плаваючай кнопкі</string>
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАўтарскія правы © Goodwy %2$d</string>
     <string name="update_thank_you_g">Абнавіце \"Goodwy Thank You\" да апошняй версіі.</string>

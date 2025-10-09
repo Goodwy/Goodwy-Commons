@@ -120,8 +120,6 @@
     <string name="kids_mode_summary">Упрощенный интерфейс, выбор раскрасок</string>
     <string name="restart_required">Требуется перезапуск приложения</string>
     <string name="transparent_bar">Прозрачные панели</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Изменяет вид некоторых элементов приложения</string>
     <string name="bottom_navigation_bar">Нижняя панель навигации</string>
     <string name="bottom_navigation_bar_summary">Панель вкладок переместится вниз</string>
     <string name="tab_navigation">Навигация вкладок</string>
@@ -172,6 +170,7 @@
 
     <!-- Other -->
     <string name="contact_thumbnails_size">Размер фото контакта</string>
+    <string name="floating_button_style">Стиль плавающей кнопки</string>
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАвторские права © Goodwy %2$d</string>
     <string name="update_thank_you_g">Обновите \"Goodwy Thank You\" до последней версии.</string>

@@ -99,8 +99,6 @@
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
     <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">하단 탐색 모음</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
     <string name="tab_navigation">탭 탐색</string>
@@ -164,6 +162,7 @@
     <string name="contact_thumbnails_size">연락처 썸네일 크기</string>
     <string name="long_click_g">%s을(를) 길게 클릭합니다.</string>
     <string name="use_persian_digits">페르시아 숫자를 사용하세요</string>
+    <string name="floating_button_style">플로팅 버튼 스타일</string>
     <string name="purchase_simple_thank_you_g">심플 Thank You 구매하기</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Goodwy Thank You 를 최신 버전으로 업데이트 해 주세요.</string>

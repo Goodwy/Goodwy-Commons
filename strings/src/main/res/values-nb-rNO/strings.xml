@@ -122,8 +122,6 @@
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Omstart av applikasjonen påkrevd</string>
     <string name="transparent_bar">Transparente stolper</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Endrer utseendet på enkelte elementer i applikasjonen</string>
     <string name="bottom_navigation_bar">Nedre navigasjonslinje</string>
     <string name="bottom_navigation_bar_summary">Fanelinjen flyttes til bunnen</string>
     <string name="tab_navigation">Navigering via faner</string>
@@ -172,6 +170,7 @@
     <string name="contact_thumbnails_size">Størrelse på kontaktminiatyrer</string>
     <string name="long_click_g">Langt klikk %s</string>
     <string name="use_persian_digits">Bruk persiske sifre</string>
+    <string name="floating_button_style">Flytende knappstil</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

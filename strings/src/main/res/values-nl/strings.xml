@@ -98,8 +98,6 @@ Bedankt!
     <string name="kids_mode_summary">Vereenvoudigde interface, kies kleuren</string>
     <string name="restart_required">Herstart toepassing vereist</string>
     <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Verandert het uiterlijk van sommige elementen van de applicatie</string>
     <string name="bottom_navigation_bar">Onderste navigatiebalk</string>
     <string name="bottom_navigation_bar_summary">De tabbalk naar beneden</string>
     <string name="tab_navigation">Tabblad navigatie</string>
@@ -163,6 +161,7 @@ Bedankt!
     <string name="contact_thumbnails_size">Grootte van contactminiaturen</string>
     <string name="long_click_g">Lange klik op %s</string>
     <string name="use_persian_digits">Gebruik Perzische cijfers</string>
+    <string name="floating_button_style">Zwevende knopstijl</string>
     <string name="purchase_simple_thank_you_g">Goodwy Bedankje kopen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Er is een nieuwe versie van Goodwy Bedankje</string>

@@ -126,8 +126,6 @@
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
     <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
     <string name="tab_navigation">Tab navigation</string>
@@ -176,6 +174,7 @@
     <string name="long_click_g">Long click %s</string>
     <string name="use_persian_calendar">Use Persian calendar</string>
     <string name="use_persian_digits">Use Persian digits</string>
+    <string name="floating_button_style">Floating button style</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

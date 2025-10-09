@@ -102,8 +102,6 @@
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
     <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
     <string name="tab_navigation">Navigace na záložce</string>
@@ -167,6 +165,7 @@
     <string name="contact_thumbnails_size">Velikost miniatur kontaktů</string>
     <string name="long_click_g">Dlouhé kliknutí %s</string>
     <string name="use_persian_digits">Použijte perské číslice</string>
+    <string name="floating_button_style">Styl plovoucího tlačítka</string>
     <string name="purchase_simple_thank_you_g">Zakoupit Jednoduché děkuji</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aktualizujte prosím Jednoduché děkuji na nejnovější verzi</string>

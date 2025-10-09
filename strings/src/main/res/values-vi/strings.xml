@@ -99,8 +99,6 @@ Cảm ơn bạn!
     <string name="kids_mode_summary">Simplified interface, choose coloring</string>
     <string name="restart_required">Application restart required</string>
     <string name="transparent_bar">Transparent bars</string>
-    <string name="material_design_3">Material Design 3</string>
-    <string name="material_design_3_summary">Changes the appearance of some elements of the application</string>
     <string name="bottom_navigation_bar">Bottom navigation bar</string>
     <string name="bottom_navigation_bar_summary">The tab bar will move to the bottom</string>
     <string name="tab_navigation">Điều hướng tab</string>
@@ -164,6 +162,7 @@ Cảm ơn bạn!
     <string name="contact_thumbnails_size">Kích thước hình thu nhỏ liên hệ</string>
     <string name="long_click_g">Nhấp chuột dài %s</string>
     <string name="use_persian_digits">Sử dụng chữ số Ba Tư</string>
+    <string name="floating_button_style">Kiểu nút nổi</string>
     <string name="purchase_simple_thank_you_g">Cảm ơn vì đã mua hàng Goodwy</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Vui lòng cập nhật Goodwy Thank You lên phiên bản mới nhất</string>
