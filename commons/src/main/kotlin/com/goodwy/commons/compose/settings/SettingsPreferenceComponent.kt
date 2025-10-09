@@ -38,13 +38,14 @@ fun SettingsPreferenceComponent(
     isPreferenceEnabled: Boolean = true,
     doOnPreferenceLongClick: (() -> Unit)? = null,
     doOnPreferenceClick: (() -> Unit)? = null,
+    backgroundColor: Color = MaterialTheme.colorScheme.surface,
     preferenceValueColor: Color = preferenceValueColor(isEnabled = isPreferenceEnabled),
     preferenceLabelColor: Color = preferenceLabelColor(isEnabled = isPreferenceEnabled)
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(color = MaterialTheme.colorScheme.surface)
+            .background(color = backgroundColor)
             .combinedClickable(
                 enabled = isPreferenceEnabled,
                 onClick = { doOnPreferenceClick?.invoke() },

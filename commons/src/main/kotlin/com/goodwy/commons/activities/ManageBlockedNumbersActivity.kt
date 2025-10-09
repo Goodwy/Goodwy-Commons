@@ -100,6 +100,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             val isTopAppBarColorIcon by config.isTopAppBarColorIcon.collectAsStateWithLifecycle(initialValue = config.topAppBarColorIcon)
             val isTopAppBarColorTitle by config.isTopAppBarColorTitle.collectAsStateWithLifecycle(initialValue = config.topAppBarColorTitle)
             val isBlockingType by config.isBlockingType.collectAsStateWithLifecycle(initialValue = config.blockingType)
+            val isBlockingEnabled by config.isBlockingEnabled.collectAsStateWithLifecycle(initialValue = config.blockingEnabled)
             val isDialer = remember {
                 config.appId.startsWith("com.goodwy.dialer")
             }
@@ -186,9 +187,14 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     onCopy = { blockedNumber ->
                         copyToClipboard(blockedNumber.number)
                     },
-                    isBlockingType= isBlockingType,
+                    isBlockingType = isBlockingType,
                     onBlockingType = {
                         blockingTypeDialogState.show()
+                    },
+                    isBlockingEnabled = isBlockingEnabled,
+                    onBlockingEnabledChange = { isChecked ->
+                        config.blockingEnabled = isChecked
+                        onCheckedSetCallerIdAsDefault(isChecked)
                     },
                 )
             }

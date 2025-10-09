@@ -262,6 +262,7 @@ const val IS_MIUI = "is_miui"
 const val BLOCKING_TYPE = "blocking_type"
 const val TEXT_ALIGNMENT = "text_alignment"
 const val USE_SPEECH_TO_TEXT = "use_speech_to_text"
+const val BLOCKING_ENABLED = "blocking_enabled"
 
 const val IS_RIGHT_APP = "is_right_app"
 const val IS_PRO_VERSION = "is_pro_version"

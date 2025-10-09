@@ -92,6 +92,8 @@ internal fun ManageBlockedNumbersScreen(
     onCopy: (BlockedNumber) -> Unit,
     isBlockingType: Int,
     onBlockingType: () -> Unit,
+    isBlockingEnabled: Boolean,
+    onBlockingEnabledChange: (Boolean) -> Unit,
 ) {
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
     val hapticFeedback = LocalHapticFeedback.current
@@ -199,10 +201,21 @@ internal fun ManageBlockedNumbersScreen(
         ) {
             item {
                 SettingsSwitchComponent(
+                    label = stringResource(id = com.goodwy.strings.R.string.enable_blocking),
+                    value = stringResource(id = com.goodwy.strings.R.string.enable_blocking_summary),
+                    initialValue = isBlockingEnabled,
+                    onChange = onBlockingEnabledChange,
+                    modifier = Modifier.topAppBarPaddings(),
+                    scaleSwitch = 0.8F,
+                    showCheckmark = showCheckmarksOnSwitches,
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_check)
+                )
+                SettingsSwitchComponent(
                     label = if (isDialer) stringResource(id = R.string.block_unknown_calls) else stringResource(id = R.string.block_unknown_messages),
                     initialValue = isBlockUnknownSelected,
                     onChange = onBlockUnknownSelectedChange,
                     modifier = Modifier.topAppBarPaddings(),
+                    isPreferenceEnabled = isBlockingEnabled,
                     scaleSwitch = 0.8F,
                     showCheckmark = showCheckmarksOnSwitches,
                     checkmark = ImageVector.vectorResource(R.drawable.ic_no_accounts)
@@ -212,6 +225,7 @@ internal fun ManageBlockedNumbersScreen(
                     initialValue = isHiddenSelected,
                     onChange = onHiddenSelectedChange,
                     modifier = Modifier.topAppBarPaddings(),
+                    isPreferenceEnabled = isBlockingEnabled,
                     scaleSwitch = 0.8F,
                     showCheckmark = showCheckmarksOnSwitches,
                     checkmark = ImageVector.vectorResource(R.drawable.ic_question)
@@ -230,8 +244,9 @@ internal fun ManageBlockedNumbersScreen(
                         else -> stringResource(id = com.goodwy.strings.R.string.blocking_type_reject)
 
                     },
-                    isPreferenceEnabled = isBlockUnknownSelected || isHiddenSelected,
-                    doOnPreferenceClick = onBlockingType
+                    isPreferenceEnabled = isBlockingEnabled && (isBlockUnknownSelected || isHiddenSelected),
+                    doOnPreferenceClick = onBlockingType,
+                    backgroundColor = MaterialTheme.colorScheme.background
                 )
                 Spacer(modifier = Modifier.size(8.dp))
             }
@@ -728,7 +743,9 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
             onEdit = {},
             onCopy = {},
             isBlockingType = 1,
-            onBlockingType = {}
+            onBlockingType = {},
+            isBlockingEnabled = true,
+            onBlockingEnabledChange = {}
         ) //{}
     }
 }
