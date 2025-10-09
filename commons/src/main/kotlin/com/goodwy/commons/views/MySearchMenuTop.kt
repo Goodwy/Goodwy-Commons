@@ -21,6 +21,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
     var onNavigateBackClickListener: (() -> Unit)? = null
     var showSpeechToText = false
     var onSpeechToTextClickListener: (() -> Unit)? = null
+    var inFocus = false
 
     val binding = MenuSearchTopBinding.inflate(LayoutInflater.from(context), this, true)
 
@@ -40,6 +41,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
 
         post {
             binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
+                inFocus = hasFocus
                 if (hasFocus) {
                     openSearch()
                 }
@@ -144,7 +146,8 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
         binding.topToolbarSearchSpeechToText.beVisibleIf(showSpeechToText && !showClear)
         binding.topToolbarSearchClear.beVisibleIf(showClear)
         binding.topToolbarSearchClear.setOnClickListener {
-            binding.topToolbarSearch.setText("")
+            if (inFocus) binding.topToolbarSearch.setText("")
+            else closeSearch()
         }
     }
 
