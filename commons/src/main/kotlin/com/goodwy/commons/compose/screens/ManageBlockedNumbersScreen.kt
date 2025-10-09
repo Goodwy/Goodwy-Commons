@@ -424,7 +424,7 @@ private fun blockedNumberListItemColors(
             SimpleTheme.colorScheme.primary.copy(alpha = 0.3f)
         }
     } else {
-        SimpleTheme.colorScheme.surface
+        SimpleTheme.colorScheme.background
     },
     trailingIconColor = iconsColor
 )

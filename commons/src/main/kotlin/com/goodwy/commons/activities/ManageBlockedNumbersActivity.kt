@@ -285,13 +285,14 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
 
             requestCode == REQUEST_CODE_SET_DEFAULT_CALLER_ID && resultCode != RESULT_OK -> {
                 toast(R.string.must_make_default_caller_id_app, length = Toast.LENGTH_LONG)
+                baseConfig.blockingEnabled = false
                 baseConfig.blockUnknownNumbers = false
                 baseConfig.blockHiddenNumbers = false
                 intent.action = null
             }
 
             intent.action == SET_DEFAULT_CALLER_ID && resultCode == RESULT_OK -> {
-                baseConfig.blockUnknownNumbers = true
+                baseConfig.blockingEnabled = true
             }
         }
     }
