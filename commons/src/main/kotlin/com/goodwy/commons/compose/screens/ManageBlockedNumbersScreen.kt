@@ -324,7 +324,8 @@ internal fun ManageBlockedNumbersScreen(
                             blockedNumber = blockedNumber,
                             onDelete = onDelete,
                             onCopy = onCopy,
-                            isSelected = isSelected
+                            isSelected = isSelected,
+                            isBlockingEnabled = isBlockingEnabled
                         )
                     }
                 }
@@ -373,6 +374,7 @@ private fun BlockedNumber(
     onDelete: (Set<Long>) -> Unit,
     onCopy: (BlockedNumber) -> Unit,
     isSelected: Boolean,
+    isBlockingEnabled: Boolean,
 ) {
     val hasContactName = blockedNumber.contactName != null
     val contactNameContent = remember {
@@ -408,7 +410,8 @@ private fun BlockedNumber(
             )
         },
         colors = blockedNumberListItemColors(
-            isSelected = isSelected
+            isSelected = isSelected,
+            isBlockingEnabled = isBlockingEnabled,
         )
     )
 }
@@ -416,6 +419,7 @@ private fun BlockedNumber(
 @Composable
 private fun blockedNumberListItemColors(
     isSelected: Boolean,
+    isBlockingEnabled: Boolean,
 ) = ListItemDefaults.colors(
     containerColor = if (isSelected) {
         if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
@@ -426,7 +430,9 @@ private fun blockedNumberListItemColors(
     } else {
         SimpleTheme.colorScheme.background
     },
-    trailingIconColor = iconsColor
+    trailingIconColor = if (isBlockingEnabled) iconsColor else iconsColor.copy(0.6f),
+    headlineColor = if (isBlockingEnabled) SimpleTheme.colorScheme.onSurface else disabledTextColor,
+    supportingColor = if (isBlockingEnabled) SimpleTheme.colorScheme.onSurfaceVariant else disabledTextColor,
 )
 
 
