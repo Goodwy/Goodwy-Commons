@@ -345,6 +345,7 @@
     <string name="availability">Elérhetőség</string>
     <string name="attendees">Résztvevők</string>
     <string name="typeface">Betűkép</string>
+    <string name="minus">Mínusz</string>
     <string name="more_apps_from_us_g">További alkalmazásaink</string>
     <string name="text_alignment">Szöveg igazítás</string>
     <string name="use_persian_calendar">Használj perzsa naptárat</string>
@@ -356,4 +357,5 @@
     <string name="circle">Kör</string>
     <string name="off">Ki</string>
     <string name="enable_blocking">Blokkolás engedélyezése</string>
+    <string name="plus">Plusz</string>
 </resources>

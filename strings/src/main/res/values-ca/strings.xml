@@ -347,6 +347,7 @@
     <string name="availability">Disponibilitat</string>
     <string name="attendees">Assistents</string>
     <string name="typeface">Tipografia</string>
+    <string name="minus">Menys</string>
     <string name="more_apps_from_us_g">Més aplicacions nostres</string>
     <string name="text_alignment">Alineació del text</string>
     <string name="use_persian_calendar">Utilitzeu el calendari persa</string>
@@ -358,4 +359,5 @@
     <string name="circle">Cercle</string>
     <string name="off">Desconnectat</string>
     <string name="enable_blocking">Activa el bloqueig</string>
+    <string name="plus">A més</string>
 </resources>

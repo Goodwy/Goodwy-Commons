@@ -350,6 +350,7 @@
     <string name="availability">Kullanılabilirlik</string>
     <string name="attendees">Katılımcı</string>
     <string name="typeface">Yazı tipi</string>
+    <string name="minus">Eksi</string>
     <string name="more_apps_from_us_g">Diğer uygulamalarımız</string>
     <string name="text_alignment">Metin hizalaması</string>
     <string name="use_persian_calendar">Fars takvimini kullan</string>
@@ -361,4 +362,5 @@
     <string name="circle">Daire</string>
     <string name="off">Bağlantı Kesildi</string>
     <string name="enable_blocking">Engellemeyi etkinleştir</string>
+    <string name="plus">Artı</string>
 </resources>

@@ -346,6 +346,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="availability">Disponibilidad</string>
     <string name="attendees">Asistentes</string>
     <string name="typeface">Tipo de letra</string>
+    <string name="minus">Menos</string>
     <string name="more_apps_from_us_g">Más aplicaciones nuestras</string>
     <string name="text_alignment">Alineación de texto</string>
     <string name="use_persian_calendar">Utilice el calendario persa</string>
@@ -357,4 +358,5 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="circle">Círculo</string>
     <string name="off">Descon</string>
     <string name="enable_blocking">Habilitar bloqueo</string>
+    <string name="plus">Más</string>
 </resources>

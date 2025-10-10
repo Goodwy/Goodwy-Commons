@@ -347,6 +347,7 @@
     <string name="availability">Tilgængelighed</string>
     <string name="attendees">Deltagere</string>
     <string name="typeface">Skrifttype</string>
+    <string name="minus">Minus</string>
     <string name="more_apps_from_us_g">Flere apps fra os</string>
     <string name="text_alignment">Tekstjustering</string>
     <string name="use_persian_calendar">Brug persisk kalender</string>
@@ -358,4 +359,5 @@
     <string name="circle">Cirkel</string>
     <string name="off">Fra</string>
     <string name="enable_blocking">Aktiver blokering</string>
+    <string name="plus">Plus</string>
 </resources>

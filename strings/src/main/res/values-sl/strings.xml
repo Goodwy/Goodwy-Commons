@@ -350,6 +350,7 @@
     <string name="availability">Razpoložljivost</string>
     <string name="attendees">Udeležencev</string>
     <string name="typeface">Tipografija</string>
+    <string name="minus">minus</string>
     <string name="more_apps_from_us_g">Več aplikacij od nas</string>
     <string name="text_alignment">Poravnava besedila</string>
     <string name="use_persian_calendar">Uporabite perzijski koledar</string>
@@ -361,4 +362,5 @@
     <string name="circle">krog</string>
     <string name="off">Izklop</string>
     <string name="enable_blocking">Omogoči blokiranje</string>
+    <string name="plus">Plus</string>
 </resources>

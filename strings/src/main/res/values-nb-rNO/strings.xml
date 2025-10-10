@@ -34,6 +34,7 @@
 
     <!-- About -->
     <!--    <string name="more_apps">Flere apper</string>-->
+    <string name="minus">Minus</string>
     <string name="more_apps_from_us_g">Flere apper fra oss</string>
     <!--    <string name="rate_us">Vurder oss</string>-->
     <string name="rate_g">Vurder</string>
@@ -365,4 +366,5 @@
     <string name="circle">Sirkel</string>
     <string name="off">Av</string>
     <string name="enable_blocking">Aktiver blokkering</string>
+    <string name="plus">Pluss</string>
 </resources>

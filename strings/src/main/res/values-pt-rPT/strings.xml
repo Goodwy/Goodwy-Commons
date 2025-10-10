@@ -352,6 +352,7 @@
     <string name="availability">Disponibilidade</string>
     <string name="attendees">Participantes</string>
     <string name="typeface">Tipo de letra</string>
+    <string name="minus">Menos</string>
     <string name="more_apps_from_us_g">Mais aplicações nossas</string>
     <string name="text_alignment">Alinhamento de texto</string>
     <string name="use_persian_calendar">Use o calendário persa</string>
@@ -363,4 +364,5 @@
     <string name="circle">Círculo</string>
     <string name="off">Desligado</string>
     <string name="enable_blocking">Habilitar bloqueio</string>
+    <string name="plus">Mais</string>
 </resources>

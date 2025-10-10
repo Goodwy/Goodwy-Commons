@@ -348,6 +348,7 @@
     <string name="attendees">Mynychwyr</string>
     <string name="typeface">Wynebfath</string>
     <string name="text_alignment">Aliniad testun</string>
+    <string name="minus">Llai</string>
     <string name="more_apps_from_us_g">Mwy o apiau gennym ni</string>
     <string name="use_persian_calendar">Defnyddiwch galendr Perseg</string>
     <string name="blocking_type">Math blocio</string>
@@ -358,4 +359,5 @@
     <string name="circle">Cylch</string>
     <string name="off">Wedi\'i ddatgysylltu</string>
     <string name="enable_blocking">Galluogi blocio</string>
+    <string name="plus">Byd Gwaith</string>
 </resources>

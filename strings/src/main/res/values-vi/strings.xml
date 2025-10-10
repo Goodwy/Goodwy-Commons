@@ -347,6 +347,7 @@ Cảm ơn bạn!
     <string name="availability">Sẵn sàng</string>
     <string name="attendees">Tham dự</string>
     <string name="typeface">Kiểu chữ</string>
+    <string name="minus">Trừ</string>
     <string name="more_apps_from_us_g">Các app khác</string>
     <string name="text_alignment">Căn chỉnh văn bản</string>
     <string name="use_persian_calendar">Sử dụng lịch Ba Tư</string>
@@ -358,4 +359,5 @@ Cảm ơn bạn!
     <string name="circle">Vòng tròn</string>
     <string name="off">Ngắt kết nối</string>
     <string name="enable_blocking">Cho phép chặn</string>
+    <string name="plus">Thêm</string>
 </resources>

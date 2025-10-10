@@ -350,6 +350,7 @@
     <string name="availability">Dostupnost</string>
     <string name="attendees">Účastníků</string>
     <string name="typeface">Druh písma</string>
+    <string name="minus">Mínus</string>
     <string name="more_apps_from_us_g">Více aplikací od nás</string>
     <string name="text_alignment">Zarovnání textu</string>
     <string name="use_persian_calendar">Použijte perský kalendář</string>
@@ -361,4 +362,5 @@
     <string name="circle">Kruh</string>
     <string name="off">Vyp</string>
     <string name="enable_blocking">Povolit blokování</string>
+    <string name="plus">Plus</string>
 </resources>

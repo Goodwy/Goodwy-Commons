@@ -347,6 +347,7 @@
     <string name="availability">प्राप्‍यता</string>
     <string name="attendees">सहभागियों</string>
     <string name="typeface">मुद्री-रूप</string>
+    <string name="minus">ऋण</string>
     <string name="more_apps_from_us_g">हमारी ओर से और भी ऐप्स</string>
     <string name="text_alignment">पाठ संरेखण</string>
     <string name="use_persian_calendar">फ़ारसी कैलेंडर का उपयोग करें</string>
@@ -358,4 +359,5 @@
     <string name="circle">घेरा</string>
     <string name="off">डिस्कनेक्ट</string>
     <string name="enable_blocking">ब्लॉकिंग सक्षम करें</string>
+    <string name="plus">प्लस</string>
 </resources>

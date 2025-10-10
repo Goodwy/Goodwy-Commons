@@ -348,6 +348,7 @@
     <string name="event_type">نوع رویداد</string>
     <string name="availability">دسترس بودن</string>
     <string name="attendees">شرکت کنندگان</string>
+    <string name="minus">منهای</string>
     <string name="more_apps_from_us_g">برنامه‌های دیگر ما</string>
     <string name="text_alignment">تراز کردن متن</string>
     <string name="blocking_type">نوع مسدود کردن</string>
@@ -358,4 +359,5 @@
     <string name="circle">دایره</string>
     <string name="off">قطع شده</string>
     <string name="enable_blocking">مسدود کردن را فعال کنید</string>
+    <string name="plus">به علاوه</string>
 </resources>

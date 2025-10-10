@@ -347,6 +347,7 @@ Grazie!
     <string name="availability">Disponibilità</string>
     <string name="attendees">Partecipanti</string>
     <string name="typeface">Carattere tipografico</string>
+    <string name="minus">Meno</string>
     <string name="more_apps_from_us_g">Altre nostre app</string>
     <string name="text_alignment">Allineamento del testo</string>
     <string name="use_persian_calendar">Usa il calendario persiano</string>
@@ -358,4 +359,5 @@ Grazie!
     <string name="circle">Cerchio</string>
     <string name="off">Discon</string>
     <string name="enable_blocking">Abilita il blocco</string>
+    <string name="plus">Più</string>
 </resources>

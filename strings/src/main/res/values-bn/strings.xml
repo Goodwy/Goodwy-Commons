@@ -340,6 +340,7 @@
     <string name="text_alignment">পাঠ্য প্রান্তিককরণ</string>
     <string name="search_the_web">ওয়েব অনুসন্ধান করুন</string>
     <string name="show_number_blocking_button">নম্বর ব্লকিং বোতামটি দেখান</string>
+    <string name="minus">মাইনাস</string>
     <string name="more_apps_from_us_g">আমাদের থেকে আরও অ্যাপ</string>
     <string name="typeface">টাইপফেস</string>
     <string name="long_click_g">দীর্ঘক্ষণ %s ক্লিক করুন</string>
@@ -360,4 +361,5 @@
     <string name="circle">বৃত্ত</string>
     <string name="off">বিচ্ছিন্ন</string>
     <string name="enable_blocking">ব্লকিং সক্ষম করুন</string>
+    <string name="plus">প্লাস</string>
 </resources>

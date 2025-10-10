@@ -342,6 +342,7 @@
     <string name="availability">可用性</string>
     <string name="attendees">与会者</string>
     <string name="typeface">字体</string>
+    <string name="minus">减</string>
     <string name="more_apps_from_us_g">我们的其他应用</string>
     <string name="text_alignment">文本对齐</string>
     <string name="use_persian_calendar">使用波斯历</string>
@@ -353,4 +354,5 @@
     <string name="circle">圆圈</string>
     <string name="off">断开</string>
     <string name="enable_blocking">启用阻止</string>
+    <string name="plus">加</string>
 </resources>

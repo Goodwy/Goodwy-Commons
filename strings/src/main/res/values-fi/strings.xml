@@ -347,6 +347,7 @@
     <string name="availability">Saatavuus</string>
     <string name="attendees">Osallistujat</string>
     <string name="typeface">Kirjasin</string>
+    <string name="minus">Miinus</string>
     <string name="more_apps_from_us_g">Lisää sovelluksia meiltä</string>
     <string name="text_alignment">Tekstin tasaus</string>
     <string name="use_persian_calendar">Käytä persialaista kalenteria</string>
@@ -358,4 +359,5 @@
     <string name="circle">Ympyrä</string>
     <string name="off">Pois</string>
     <string name="enable_blocking">Ota esto käyttöön</string>
+    <string name="plus">Plus</string>
 </resources>

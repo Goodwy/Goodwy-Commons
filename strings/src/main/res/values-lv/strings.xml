@@ -350,6 +350,7 @@
     <string name="attendees">Dalībnieki</string>
     <string name="typeface">Burtveidols</string>
     <string name="text_alignment">Teksta izlīdzināšana</string>
+    <string name="minus">Mīnuss</string>
     <string name="more_apps_from_us_g">Vairāk mūsu lietotņu</string>
     <string name="use_persian_calendar">Izmantojiet persiešu kalendāru</string>
     <string name="blocking_type">Bloķēšanas veids</string>
@@ -360,4 +361,5 @@
     <string name="circle">Aplis</string>
     <string name="off">Atvienots</string>
     <string name="enable_blocking">Iespējot bloķēšanu</string>
+    <string name="plus">Plus</string>
 </resources>

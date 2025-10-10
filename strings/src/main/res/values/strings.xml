@@ -32,6 +32,8 @@
     <string name="unread_indicator_position">Unread indicator position</string>
     <string name="start">Start</string>
     <string name="end">End</string>
+    <string name="plus">Plus</string>
+    <string name="minus">Minus</string>
 
     <!-- About -->
 <!--    <string name="more_apps">More apps</string>-->

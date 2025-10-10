@@ -349,6 +349,7 @@ Będziemy bardzo wdzięczni.
     <string name="availability">Dostępność</string>
     <string name="attendees">Uczestników</string>
     <string name="typeface">Krój pisma</string>
+    <string name="minus">Minus</string>
     <string name="more_apps_from_us_g">Więcej naszych aplikacji</string>
     <string name="text_alignment">Wyrównanie tekstu</string>
     <string name="use_persian_calendar">Użyj kalendarza perskiego</string>
@@ -360,4 +361,5 @@ Będziemy bardzo wdzięczni.
     <string name="circle">Koło</string>
     <string name="off">Wył</string>
     <string name="enable_blocking">Włącz blokowanie</string>
+    <string name="plus">Plus</string>
 </resources>

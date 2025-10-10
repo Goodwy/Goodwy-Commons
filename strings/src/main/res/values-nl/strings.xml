@@ -346,6 +346,7 @@ Bedankt!
     <string name="availability">Beschikbaarheid</string>
     <string name="attendees">Deelnemers</string>
     <string name="typeface">Lettertype</string>
+    <string name="minus">Minus</string>
     <string name="more_apps_from_us_g">Meer apps van ons</string>
     <string name="text_alignment">Tekstuitlijning</string>
     <string name="use_persian_calendar">Gebruik de Perzische kalender</string>
@@ -357,4 +358,5 @@ Bedankt!
     <string name="circle">Cirkel</string>
     <string name="off">Uit</string>
     <string name="enable_blocking">Blokkering inschakelen</string>
+    <string name="plus">Plus</string>
 </resources>

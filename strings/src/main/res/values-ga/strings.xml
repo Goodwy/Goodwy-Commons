@@ -34,6 +34,7 @@
 
     <!-- About -->
 <!--    <string name="more_apps">More apps</string>-->
+    <string name="minus">Lúide</string>
     <string name="more_apps_from_us_g">Tuilleadh aipeanna uainn</string>
 <!--    <string name="rate_us">Rate us</string>-->
     <string name="rate_g">Ráta</string>
@@ -371,4 +372,5 @@
     <string name="circle">Ciorcal</string>
     <string name="off">Dícheangailte</string>
     <string name="enable_blocking">Cumasaigh blocáil</string>
+    <string name="plus">Móide</string>
 </resources>

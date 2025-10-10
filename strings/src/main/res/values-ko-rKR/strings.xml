@@ -347,6 +347,7 @@
     <string name="availability">가용도</string>
     <string name="attendees">참석자</string>
     <string name="typeface">서체</string>
+    <string name="minus">마이너스</string>
     <string name="more_apps_from_us_g">더 많은 앱</string>
     <string name="text_alignment">텍스트 정렬</string>
     <string name="use_persian_calendar">페르시아력을 사용하세요</string>
@@ -358,4 +359,5 @@
     <string name="circle">원</string>
     <string name="off">연결 끊김</string>
     <string name="enable_blocking">차단 활성화</string>
+    <string name="plus">을 더한</string>
 </resources>

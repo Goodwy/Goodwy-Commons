@@ -346,6 +346,7 @@
     <string name="availability">Prieinamumas</string>
     <string name="attendees">Dalyvių</string>
     <string name="typeface">Šriftas</string>
+    <string name="minus">Minusas</string>
     <string name="more_apps_from_us_g">Kitos mūsų programėlės</string>
     <string name="text_alignment">Teksto lygiavimas</string>
     <string name="use_persian_calendar">Naudokite persų kalendorių</string>
@@ -357,4 +358,5 @@
     <string name="circle">Apskritimas</string>
     <string name="off">Atjungta</string>
     <string name="enable_blocking">Įgalinti blokavimą</string>
+    <string name="plus">Pliusas</string>
 </resources>

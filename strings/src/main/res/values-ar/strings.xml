@@ -343,6 +343,7 @@
     <string name="availability">توافر</string>
     <string name="attendees">الحضور</string>
     <string name="typeface">محرف</string>
+    <string name="minus">ناقص</string>
     <string name="more_apps_from_us_g">المزيد من تطبيقاتنا</string>
     <string name="text_alignment">محاذاة النص</string>
     <string name="use_persian_calendar">استخدم التقويم الفارسي</string>
@@ -354,4 +355,5 @@
     <string name="circle">دائرة</string>
     <string name="off">فصل</string>
     <string name="enable_blocking">تمكين الحظر</string>
+    <string name="plus">زائد</string>
 </resources>

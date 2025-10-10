@@ -337,6 +337,7 @@
     <string name="billing_subscriptions">Subscriptions</string>
     <string name="billing_change_to_google_play">Change to Google Play</string>
     <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="minus">Minus</string>
     <string name="more_apps_from_us_g">Gure aplikazio gehiago</string>
     <string name="text_alignment">Testuaren lerrokatzea</string>
     <string name="typeface">Letra tipoa</string>
@@ -358,4 +359,5 @@
     <string name="circle">Zirkulua</string>
     <string name="off">Deskonektatuta</string>
     <string name="enable_blocking">Gaitu blokeoa</string>
+    <string name="plus">Gainera</string>
 </resources>

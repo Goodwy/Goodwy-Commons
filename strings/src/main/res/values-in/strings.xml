@@ -347,6 +347,7 @@ Terima kasih!
     <string name="availability">Tersedianya</string>
     <string name="attendees">Peserta</string>
     <string name="typeface">Jenis huruf</string>
+    <string name="minus">Kurang</string>
     <string name="more_apps_from_us_g">Lebih banyak aplikasi dari kami</string>
     <string name="text_alignment">Perataan teks</string>
     <string name="use_persian_calendar">Gunakan kalender Persia</string>
@@ -358,4 +359,5 @@ Terima kasih!
     <string name="circle">Lingkaran</string>
     <string name="off">Terputus</string>
     <string name="enable_blocking">Aktifkan pemblokiran</string>
+    <string name="plus">Plus</string>
 </resources>

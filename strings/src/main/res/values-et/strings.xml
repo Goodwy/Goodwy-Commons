@@ -349,6 +349,7 @@
     <string name="availability">Saadavus</string>
     <string name="attendees">Osalejaid</string>
     <string name="typeface">Kirjatüüp</string>
+    <string name="minus">Miinus</string>
     <string name="more_apps_from_us_g">Vaata kõiki meie rakendusi</string>
     <string name="text_alignment">Teksti joondamine</string>
     <string name="use_persian_calendar">Kasutage Pärsia kalendrit</string>
@@ -360,4 +361,5 @@
     <string name="circle">Ring</string>
     <string name="off">Väljas</string>
     <string name="enable_blocking">Luba blokeerimine</string>
+    <string name="plus">Pluss</string>
 </resources>

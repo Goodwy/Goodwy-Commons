@@ -350,6 +350,7 @@
     <string name="availability">Tillgänglighet</string>
     <string name="attendees">Deltagare</string>
     <string name="typeface">Typsnitt</string>
+    <string name="minus">Minus</string>
     <string name="more_apps_from_us_g">Fler appar från oss</string>
     <string name="text_alignment">Textjustering</string>
     <string name="use_persian_calendar">Använd persisk kalender</string>
@@ -361,4 +362,5 @@
     <string name="circle">Cirkel</string>
     <string name="off">Av</string>
     <string name="enable_blocking">Aktivera blockering</string>
+    <string name="plus">Plus</string>
 </resources>

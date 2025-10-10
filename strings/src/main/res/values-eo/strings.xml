@@ -349,6 +349,7 @@
     <string name="availability">Havebleco</string>
     <string name="attendees">Ĉeestantoj</string>
     <string name="typeface">Tiparo</string>
+    <string name="minus">Minuso</string>
     <string name="more_apps_from_us_g">Pli da aplikaĵoj niaj</string>
     <string name="text_alignment">Teksta vicigo</string>
     <string name="use_persian_calendar">Uzu persan kalendaron</string>
@@ -360,4 +361,5 @@
     <string name="circle">Rondo</string>
     <string name="off">Malŝaltita</string>
     <string name="enable_blocking">Ebligu blokadon</string>
+    <string name="plus">Plie</string>
 </resources>

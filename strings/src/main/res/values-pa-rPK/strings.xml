@@ -349,6 +349,7 @@
     <string name="availability">دستیابی</string>
     <string name="attendees">حاضرین</string>
     <string name="typeface">ٹائپ فیس</string>
+    <string name="minus">مائنس</string>
     <string name="more_apps_from_us_g">ساڈے ولوں ہور ایپلیکیشناں</string>
     <string name="text_alignment">متن کی سیدھ</string>
     <string name="use_persian_calendar">فارسی کیلنڈر استعمال کریں۔</string>
@@ -360,4 +361,5 @@
     <string name="circle">دائرہ</string>
     <string name="off">منقطع</string>
     <string name="enable_blocking">بلاکنگ کو فعال کریں۔</string>
+    <string name="plus">پلس</string>
 </resources>
