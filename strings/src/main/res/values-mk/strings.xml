@@ -267,6 +267,7 @@
     <string name="blocking_type_silence">Тивок повик</string>
     <string name="blocking_type_silence_summary">Поставува дали ѕвонењето треба да се прекине за дојдовниот повик</string>
     <string name="enable_blocking_summary">Додајте плочка за брзи поставки за брзо префрлување</string>
+    <string name="bottom_indent">Долна алинеја</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

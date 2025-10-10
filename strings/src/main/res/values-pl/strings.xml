@@ -270,6 +270,7 @@ Będziemy bardzo wdzięczni.
     <string name="blocking_type_silence">Cichy telefon</string>
     <string name="blocking_type_silence_summary">Ustawia, czy dzwonek ma zostać wyciszony dla połączeń przychodzących</string>
     <string name="enable_blocking_summary">Dodaj kafelek szybkich ustawień umożliwiający szybkie przełączanie</string>
+    <string name="bottom_indent">Wcięcie dolne</string>
     <string name="relation_g">Relacja</string>
     <string name="relations_g">Powiązane osoby</string>
     <string name="relation_hint_g">Osoba powiązana</string>

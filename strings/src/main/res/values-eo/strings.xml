@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">Trankvila voko</string>
     <string name="blocking_type_silence_summary">Agordas ĉu sonorado devas esti silentigita por la envenanta voko</string>
     <string name="enable_blocking_summary">Aldonu rapidan agordan kahelon por rapida ŝanĝado</string>
+    <string name="bottom_indent">Malsupra streko</string>
     <string name="relation_g">Rilato</string>
     <string name="relations_g">Rilataj Personoj</string>
     <string name="relation_hint_g">Rilata Persono</string>

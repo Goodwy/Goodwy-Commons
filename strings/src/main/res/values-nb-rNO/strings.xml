@@ -276,6 +276,7 @@
     <string name="blocking_type_silence">En stille samtale</string>
     <string name="blocking_type_silence_summary">Angir om ringing skal dempes for den innkommende samtalen</string>
     <string name="enable_blocking_summary">Legg til en hurtiginnstillingsflis for raskt bytte</string>
+    <string name="bottom_indent">Nedre innrykk</string>
     <string name="relation_g">Relationship</string>
     <string name="relations_g">Pårørende</string>
     <string name="relation_hint_g">Tilknyttet person</string>

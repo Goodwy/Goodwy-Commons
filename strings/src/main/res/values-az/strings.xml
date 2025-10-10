@@ -269,6 +269,7 @@
     <string name="blocking_type_silence">Sakit zəng</string>
     <string name="blocking_type_silence_summary">Daxil olan zəng üçün zəngin susdurulmalı olub-olmadığını təyin edir</string>
     <string name="enable_blocking_summary">Sürətli keçid üçün sürətli parametrlər plitəsi əlavə edin</string>
+    <string name="bottom_indent">Aşağı abzas</string>
     <string name="relation_g">Əlaqə</string>
     <string name="relations_g">Əlaqədar şəxslər</string>
     <string name="relation_hint_g">Əlaqədar şəxs</string>

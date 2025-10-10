@@ -267,6 +267,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="blocking_type_silence">Una llamada silenciosa</string>
     <string name="blocking_type_silence_summary">Establece si se debe silenciar el timbre para la llamada entrante</string>
     <string name="enable_blocking_summary">Agregue un mosaico de configuración rápida para cambiar rápidamente</string>
+    <string name="bottom_indent">Sangría inferior</string>
     <string name="relation_g">Relación</string>
     <string name="relations_g">Personas relacionadas</string>
     <string name="relation_hint_g">Persona relacionada</string>

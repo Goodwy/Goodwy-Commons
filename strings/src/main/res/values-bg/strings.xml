@@ -272,6 +272,7 @@
     <string name="blocking_type_silence">Тихо обаждане</string>
     <string name="blocking_type_silence_summary">Задава дали звъненето да бъде заглушено за входящо повикване</string>
     <string name="enable_blocking_summary">Добавете плочка за бързи настройки за бързо превключване</string>
+    <string name="bottom_indent">Долен отстъп</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Свързани лица</string>
     <string name="relation_hint_g">Свързано лице</string>

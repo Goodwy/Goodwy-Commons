@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Sessiz bir çağrı</string>
     <string name="blocking_type_silence_summary">Gelen çağrı için zil sesinin sessize alınıp alınmayacağını ayarlar</string>
     <string name="enable_blocking_summary">Hızlı geçiş için hızlı ayarlar kutucuğu ekleyin</string>
+    <string name="bottom_indent">Alt girinti</string>
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
     <string name="relation_hint_g">İlgili Kişi</string>

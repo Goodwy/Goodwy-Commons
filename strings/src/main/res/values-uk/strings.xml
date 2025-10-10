@@ -273,6 +273,7 @@
     <string name="blocking_type_silence">Тихий дзвінок</string>
     <string name="blocking_type_silence_summary">Встановлює, чи слід вимикати дзвінок для вхідного виклику</string>
     <string name="enable_blocking_summary">Додайте плитку швидких налаштувань для швидкого перемикання</string>
+    <string name="bottom_indent">Нижній відступ</string>
     <string name="relation_g">Відносини</string>
     <string name="relations_g">Пов\'язані особи</string>
     <string name="relation_hint_g">Пов\'язана особа</string>

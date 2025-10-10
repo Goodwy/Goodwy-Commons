@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Tichý hovor</string>
     <string name="blocking_type_silence_summary">Nastavuje, či má byť zvonenie pri prichádzajúcom hovore stíšené</string>
     <string name="enable_blocking_summary">Pridajte dlaždicu rýchlych nastavení na rýchle prepínanie</string>
+    <string name="bottom_indent">Spodná zarážka</string>
     <string name="relation_g">Vzťah</string>
     <string name="relations_g">Súvisiace osoby</string>
     <string name="relation_hint_g">Spriaznená osoba</string>

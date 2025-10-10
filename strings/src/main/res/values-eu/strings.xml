@@ -267,6 +267,7 @@
     <string name="blocking_type_silence">Dei lasai bat</string>
     <string name="blocking_type_silence_summary">Jasotako deirako deia isilarazi behar den ezartzen du</string>
     <string name="enable_blocking_summary">Gehitu ezarpen bizkorreko lauza bat azkar aldatzeko</string>
+    <string name="bottom_indent">Beheko koska</string>
     <string name="relation_g">Harremana</string>
     <string name="relations_g">Lotutako pertsonak</string>
     <string name="relation_hint_g">Lotutako pertsona</string>

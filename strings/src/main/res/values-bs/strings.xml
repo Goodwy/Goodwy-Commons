@@ -267,6 +267,7 @@
     <string name="blocking_type_silence">Tihi poziv</string>
     <string name="blocking_type_silence_summary">Podešava da li zvono treba biti utišano za dolazni poziv</string>
     <string name="enable_blocking_summary">Dodajte pločicu brzih postavki za brzo prebacivanje</string>
+    <string name="bottom_indent">Donja uvlaka</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

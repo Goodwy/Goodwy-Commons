@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">ایک خاموش کال</string>
     <string name="blocking_type_silence_summary">سیٹ کرتا ہے کہ آیا آنے والی کال کے لیے گھنٹی بجائی جائے گی یا نہیں</string>
     <string name="enable_blocking_summary">فوری سوئچنگ کے لیے فوری ترتیبات کا ٹائل شامل کریں۔</string>
+    <string name="bottom_indent">نیچے کا حاشیہ</string>
     <string name="relation_g"> تعلق</string>
     <string name="relations_g">متعلقہ افراد</string>
     <string name="relation_hint_g">متعلقہ شخص</string>

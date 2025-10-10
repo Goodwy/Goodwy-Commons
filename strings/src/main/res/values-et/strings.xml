@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">Vaikne kõne</string>
     <string name="blocking_type_silence_summary">Määrab, kas sissetuleva kõne helin tuleb vaigistada</string>
     <string name="enable_blocking_summary">Kiireks vahetamiseks lisage kiirseadete paan</string>
+    <string name="bottom_indent">Alumine taane</string>
     <string name="relation_g">Seos</string>
     <string name="relations_g">Seotud isikud</string>
     <string name="relation_hint_g">Seotud isik</string>

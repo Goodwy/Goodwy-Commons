@@ -268,6 +268,7 @@
     <string name="blocking_type_silence">Et stille opkald</string>
     <string name="blocking_type_silence_summary">Indstiller, om ringningen skal afbrydes for det indgående opkald</string>
     <string name="enable_blocking_summary">Tilføj en flise med hurtige indstillinger for hurtigt at skifte</string>
+    <string name="bottom_indent">Nederste indrykning</string>
     <string name="relation_g">Forhold</string>
     <string name="relations_g">Nærtstående personer</string>
     <string name="relation_hint_g">Nærtstående person</string>

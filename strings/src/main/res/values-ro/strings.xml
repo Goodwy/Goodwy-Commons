@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">Un apel liniștit</string>
     <string name="blocking_type_silence_summary">Setează dacă sunetul trebuie oprit pentru apelul primit</string>
     <string name="enable_blocking_summary">Adăugați o dală cu setări rapide pentru comutare rapidă</string>
+    <string name="bottom_indent">Indentatură de jos</string>
     <string name="relation_g">Relație</string>
     <string name="relations_g">Persoane înrudite</string>
     <string name="relation_hint_g">Persoană înrudită</string>

@@ -283,6 +283,7 @@
 
     <!-- Relation types -->
     <string name="enable_blocking_summary">Добавьте плитку быстрых настроек для быстрого переключения</string>
+    <string name="bottom_indent">Нижний отступ</string>
     <string name="relation_g">Отношения</string>
     <string name="relations_g">Связанные лица</string>
     <string name="relation_hint_g">Связанное лицо</string>

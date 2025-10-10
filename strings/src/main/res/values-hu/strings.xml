@@ -266,6 +266,7 @@
     <string name="blocking_type_silence">Csendes hívás</string>
     <string name="blocking_type_silence_summary">Beállítja, hogy a csengetést el kell-e némítani a bejövő hívásnál</string>
     <string name="enable_blocking_summary">Adjon hozzá egy gyorsbeállítási csempét a gyors váltáshoz</string>
+    <string name="bottom_indent">Alsó behúzás</string>
     <string name="relation_g">Kapcsolat</string>
     <string name="relations_g">Kapcsolódó személyek</string>
     <string name="relation_hint_g">Kapcsolódó személy</string>

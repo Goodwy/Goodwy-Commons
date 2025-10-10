@@ -268,6 +268,7 @@ Terima kasih!
     <string name="blocking_type_silence">Panggilan yang tenang</string>
     <string name="blocking_type_silence_summary">Mengatur apakah dering harus dibungkam untuk panggilan masuk</string>
     <string name="enable_blocking_summary">Tambahkan ubin pengaturan cepat untuk peralihan cepat</string>
+    <string name="bottom_indent">Lekukan bawah</string>
     <string name="relation_g">Hubungan</string>
     <string name="relations_g">Orang Terkait</string>
     <string name="relation_hint_g">Orang Terkait</string>

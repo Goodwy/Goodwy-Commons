@@ -268,6 +268,7 @@
     <string name="blocking_type_silence">एक शांत कॉल</string>
     <string name="blocking_type_silence_summary">यह निर्धारित करता है कि आने वाली कॉल के लिए रिंगिंग बंद की जानी चाहिए या नहीं</string>
     <string name="enable_blocking_summary">त्वरित स्विचिंग के लिए त्वरित सेटिंग टाइल जोड़ें</string>
+    <string name="bottom_indent">निचला इंडेंट</string>
     <string name="relation_g">रिश्ता</string>
     <string name="relations_g">संबंधित व्यक्ति</string>
     <string name="relation_hint_g">संबंधित व्यक्ति</string>

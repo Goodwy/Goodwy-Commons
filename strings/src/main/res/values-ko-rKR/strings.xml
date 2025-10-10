@@ -268,6 +268,7 @@
     <string name="blocking_type_silence">조용한 전화</string>
     <string name="blocking_type_silence_summary">수신 통화에 대한 벨소리를 무음으로 설정할지 여부를 설정합니다.</string>
     <string name="enable_blocking_summary">빠른 전환을 위한 빠른 설정 타일 추가</string>
+    <string name="bottom_indent">하단 들여쓰기</string>
     <string name="relation_g">관계</string>
     <string name="relations_g">관련자</string>
     <string name="relation_hint_g">관련자</string>

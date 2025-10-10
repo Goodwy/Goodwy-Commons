@@ -273,6 +273,7 @@
     <string name="blocking_type_silence">Ціхі званок</string>
     <string name="blocking_type_silence_summary">Усталёўвае, ці трэба адключаць званок пры ўваходным выкліку</string>
     <string name="enable_blocking_summary">Дадайце плітку хуткіх налад для хуткага пераключэння</string>
+    <string name="bottom_indent">Ніжні водступ</string>
     <string name="relation_g">Адносіны</string>
     <string name="relations_g">Змяненні, асобы</string>
     <string name="relation_hint_g">Звязаны твар</string>

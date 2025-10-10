@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">Kluss zvans</string>
     <string name="blocking_type_silence_summary">Iestata, vai zvana signāls ir jāizslēdz ienākošajam zvanam</string>
     <string name="enable_blocking_summary">Pievienojiet ātro iestatījumu elementu ātrai pārslēgšanai</string>
+    <string name="bottom_indent">Apakšējā atkāpe</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

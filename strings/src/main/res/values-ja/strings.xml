@@ -269,6 +269,7 @@
     <string name="blocking_type_silence">静かな呼びかけ</string>
     <string name="blocking_type_silence_summary">着信時に呼び出し音を消すかどうかを設定します</string>
     <string name="enable_blocking_summary">クイック設定タイルを追加して、素早く切り替えられるようにします</string>
+    <string name="bottom_indent">下部インデント</string>
     <string name="relation_g">関係</string>
     <string name="relations_g">関係者</string>
     <string name="relation_hint_g">関係者</string>

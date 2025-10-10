@@ -263,6 +263,7 @@
     <string name="blocking_type_silence">安静的通话</string>
     <string name="blocking_type_silence_summary">设置来电时是否应静音</string>
     <string name="enable_blocking_summary">添加快速设置磁贴以便快速切换</string>
+    <string name="bottom_indent">底部缩进</string>
     <string name="relation_g">关系</string>
     <string name="relations_g">相关人员</string>
     <string name="relation_hint_g">相关人员</string>

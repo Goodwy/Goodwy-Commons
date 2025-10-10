@@ -267,6 +267,7 @@ Bedankt!
     <string name="blocking_type_silence">Een stille roep</string>
     <string name="blocking_type_silence_summary">Hiermee stelt u in of de beltoon voor inkomende oproepen moet worden gedempt</string>
     <string name="enable_blocking_summary">Voeg een tegel voor snelle instellingen toe voor snel schakelen</string>
+    <string name="bottom_indent">Onderste inspringing</string>
     <string name="relation_g">Relatie</string>
     <string name="relations_g">Verwante personen</string>
     <string name="relation_hint_g">Verwante persoon</string>

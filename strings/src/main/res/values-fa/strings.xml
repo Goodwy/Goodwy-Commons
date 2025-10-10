@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">یک تماس آرام</string>
     <string name="blocking_type_silence_summary">تنظیم می کند که آیا زنگ برای تماس ورودی باید بی صدا شود یا خیر</string>
     <string name="enable_blocking_summary">یک کاشی تنظیمات سریع برای تعویض سریع اضافه کنید</string>
+    <string name="bottom_indent">تورفتگی پایین</string>
     <string name="relation_g">ارتباط</string>
     <string name="relations_g">شخص ذي صلة</string>
     <string name="relation_hint_g">شخص مرتبط</string>

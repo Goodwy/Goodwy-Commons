@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Un appel silencieux</string>
     <string name="blocking_type_silence_summary">Définit si la sonnerie doit être désactivée pour l\'appel entrant</string>
     <string name="enable_blocking_summary">Ajoutez une tuile de paramètres rapides pour une commutation rapide</string>
+    <string name="bottom_indent">Retrait inférieur</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Personnes apparentées</string>
     <string name="relation_hint_g">Personne apparentée</string>

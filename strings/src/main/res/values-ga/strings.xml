@@ -281,6 +281,7 @@
     <string name="blocking_type_silence">Glaoch ciúin</string>
     <string name="blocking_type_silence_summary">Socraíonn sé cé acu ar cheart an glaoch a chur ina thost don ghlao isteach</string>
     <string name="enable_blocking_summary">Cuir tíl socruithe tapa leis le haghaidh athrú tapa</string>
+    <string name="bottom_indent">fleasc bun</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

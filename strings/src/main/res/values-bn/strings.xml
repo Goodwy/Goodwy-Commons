@@ -267,6 +267,7 @@
     <string name="blocking_type_silence">একটি শান্ত কল</string>
     <string name="blocking_type_silence_summary">ইনকামিং কলের জন্য রিং বাজানো হবে কিনা তা সেট করে</string>
     <string name="enable_blocking_summary">দ্রুত পরিবর্তনের জন্য একটি দ্রুত সেটিংস টাইল যোগ করুন</string>
+    <string name="bottom_indent">নীচের ইন্ডেন্ট</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

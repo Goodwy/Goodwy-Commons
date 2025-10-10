@@ -267,6 +267,7 @@
     <string name="blocking_type_silence">Tylus skambutis</string>
     <string name="blocking_type_silence_summary">Nustatoma, ar turi būti nutildytas įeinančio skambučio skambėjimas</string>
     <string name="enable_blocking_summary">Pridėkite greitųjų nustatymų plytelę, kad galėtumėte greitai perjungti</string>
+    <string name="bottom_indent">Apatinė įtrauka</string>
     <string name="relation_g">Ryšys</string>
     <string name="relations_g">Susiję asmenys</string>
     <string name="relation_hint_g">Susijęs asmuo</string>

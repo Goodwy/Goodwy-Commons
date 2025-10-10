@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">เสียงเรียกอันเงียบงัน</string>
     <string name="blocking_type_silence_summary">ตั้งค่าว่าควรปิดเสียงการโทรเข้าหรือไม่</string>
     <string name="enable_blocking_summary">เพิ่มไทล์การตั้งค่าด่วนสำหรับการสลับอย่างรวดเร็ว</string>
+    <string name="bottom_indent">เยื้องล่าง</string>
     <string name="relation_g">ความสัมพันธ์</string>
     <string name="relations_g">บุคคลที่เกี่ยวข้อง</string>
     <string name="relation_hint_g">บุคคลที่เกี่ยวข้อง</string>

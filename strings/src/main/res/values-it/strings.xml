@@ -268,6 +268,7 @@ Grazie!
     <string name="blocking_type_silence">Una chiamata silenziosa</string>
     <string name="blocking_type_silence_summary">Imposta se la suoneria deve essere disattivata per la chiamata in arrivo</string>
     <string name="enable_blocking_summary">Aggiungi un riquadro delle impostazioni rapide per un cambio rapido</string>
+    <string name="bottom_indent">Rientro inferiore</string>
     <string name="relation_g">Relazione</string>
     <string name="relations_g">Persone correlate</string>
     <string name="relation_hint_g">Persona correlata</string>

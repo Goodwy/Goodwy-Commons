@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Uma chamada silenciosa</string>
     <string name="blocking_type_silence_summary">Define se o toque deve ser silenciado para a chamada recebida</string>
     <string name="enable_blocking_summary">Adicione um bloco de configurações rápidas para troca rápida</string>
+    <string name="bottom_indent">Recuo inferior</string>
     <string name="relation_g">Relação</string>
     <string name="relations_g">Pessoas relacionadas</string>
     <string name="relation_hint_g">Pessoa relacionada</string>

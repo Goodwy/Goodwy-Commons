@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">ਇੱਕ ਸ਼ਾਂਤ ਕਾਲ</string>
     <string name="blocking_type_silence_summary">ਸੈੱਟ ਕਰਦਾ ਹੈ ਕਿ ਕੀ ਇਨਕਮਿੰਗ ਕਾਲ ਲਈ ਰਿੰਗਿੰਗ ਨੂੰ ਸ਼ਾਂਤ ਕੀਤਾ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ</string>
     <string name="enable_blocking_summary">ਤੇਜ਼ ਸਵਿਚਿੰਗ ਲਈ ਇੱਕ ਤੇਜ਼ ਸੈਟਿੰਗ ਟਾਇਲ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="bottom_indent">ਹੇਠਲਾ ਵਿੱਥ</string>
     <string name="relation_g">ਸਬੰਧ</string>
     <string name="relations_g">ਸਬੰਧਤ ਵਿਅਕਤੀ</string>
     <string name="relation_hint_g">ਸੰਬੰਧਿਤ ਵਿਅਕਤੀ</string>

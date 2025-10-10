@@ -270,6 +270,7 @@
     <string name="blocking_type_silence">ശാന്തമായ ഒരു വിളി</string>
     <string name="blocking_type_silence_summary">ഇൻകമിംഗ് കോളിനായി റിംഗിംഗ് നിശബ്ദമാക്കണമോ എന്ന് സജ്ജീകരിക്കുന്നു</string>
     <string name="enable_blocking_summary">പെട്ടെന്നുള്ള സ്വിച്ചിംഗിനായി ഒരു ദ്രുത ക്രമീകരണ ടൈൽ ചേർക്കുക</string>
+    <string name="bottom_indent">താഴെയുള്ള ഇൻഡൻ്റ്</string>
     <string name="relation_g">ബന്ധം</string>
     <string name="relations_g">ബന്ധപ്പെട്ട വ്യക്തികൾ</string>
     <string name="relation_hint_g">ബന്ധപ്പെട്ട വ്യക്തി</string>

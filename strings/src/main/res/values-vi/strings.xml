@@ -268,6 +268,7 @@ Cảm ơn bạn!
     <string name="blocking_type_silence">Một cuộc gọi yên tĩnh</string>
     <string name="blocking_type_silence_summary">Thiết lập xem có nên tắt tiếng chuông khi có cuộc gọi đến hay không</string>
     <string name="enable_blocking_summary">Thêm ô cài đặt nhanh để chuyển đổi nhanh</string>
+    <string name="bottom_indent">thụt lề dưới</string>
     <string name="relation_g">Perthynas</string>
     <string name="relations_g">Personau Cysylltiedig</string>
     <string name="relation_hint_g">Person Cysylltiedig</string>

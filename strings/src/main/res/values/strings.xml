@@ -290,6 +290,7 @@
     <string name="blocking_type_silence_summary">Sets whether ringing should be silenced for the incoming call</string>
     <string name="enable_blocking">Enable blocking</string>
     <string name="enable_blocking_summary">Add a quick settings tile for quick switching</string>
+    <string name="bottom_indent">Bottom indent</string>
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>
