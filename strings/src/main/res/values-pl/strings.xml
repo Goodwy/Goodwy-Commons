@@ -253,6 +253,7 @@ Będziemy bardzo wdzięczni.
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Wzdłuż krawędzi</string>
     <string name="voice_input">Wprowadzanie głosowe</string>
+    <string name="status">Status</string>
     <string name="library">Biblioteka</string>
     <string name="open_in_maps">Otwórz w Mapach</string>
 

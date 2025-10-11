@@ -256,6 +256,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">По краях</string>
     <string name="voice_input">Голосове введення</string>
+    <string name="status">Статус</string>
     <string name="library">Медіатека</string>
     <string name="open_in_maps">Відкрити у Картах</string>
     <string name="all_g">Усі</string>

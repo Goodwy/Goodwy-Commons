@@ -250,6 +250,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Išilgai kraštų</string>
     <string name="voice_input">Balso įvestis</string>
+    <string name="status">Būsena</string>
     <string name="library">Biblioteka</string>
     <string name="open_in_maps">Atidaryti žemėlapiuose</string>
 

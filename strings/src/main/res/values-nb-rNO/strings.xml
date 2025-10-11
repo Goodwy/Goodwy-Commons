@@ -260,6 +260,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Langs kantene</string>
     <string name="voice_input">Stemmeinndata</string>
+    <string name="status">Status</string>
     <string name="library">Bibliotek</string>
     <string name="open_in_maps">Åpne i Maps</string>
 

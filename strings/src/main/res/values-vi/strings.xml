@@ -251,6 +251,7 @@ Cảm ơn bạn!
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Dọc theo các cạnh</string>
     <string name="voice_input">Nhập liệu bằng giọng nói</string>
+    <string name="status">Trạng thái</string>
     <string name="library">Thư viện</string>
     <string name="open_in_maps">Mở trong Bản đồ</string>
 

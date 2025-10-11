@@ -253,6 +253,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">کناروں کے ساتھ ساتھ</string>
     <string name="voice_input">صوتی ان پٹ</string>
+    <string name="status">حیثیت</string>
     <string name="library">کتب خانہ</string>
     <string name="open_in_maps">نقشوں میں کھولیں۔</string>
 

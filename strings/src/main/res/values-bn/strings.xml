@@ -252,6 +252,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">প্রান্ত বরাবর</string>
     <string name="voice_input">ভয়েস ইনপুট</string>
+    <string name="status">স্ট্যাটাস</string>
     <string name="library">লাইব্রেরি</string>
     <string name="open_in_maps">মানচিত্রে খুলুন</string>৷
 

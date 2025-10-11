@@ -251,6 +251,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">किनारों के साथ</string>
     <string name="voice_input">ध्वनि इनपुट</string>
+    <string name="status">स्थिति</string>
     <string name="library">पुस्तकालय</string>
     <string name="open_in_maps">मैप्स में खोलें</string>
 

@@ -246,6 +246,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">沿着边缘</string>
     <string name="voice_input">语音输入</string>
+    <string name="status">地位</string>
     <string name="library">图书馆</string>
     <string name="open_in_maps">在地图中打开</string>
 

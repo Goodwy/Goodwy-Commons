@@ -254,6 +254,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Kenarlar boyunca</string>
     <string name="voice_input">Ses girişi</string>
+    <string name="status">Durum</string>
     <string name="library">Kütüphane</string>
     <string name="open_in_maps">Haritalarda Aç</string>
 

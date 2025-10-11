@@ -252,6 +252,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">端に沿って</string>
     <string name="voice_input">音声入力</string>
+    <string name="status">状態</string>
     <string name="library">ライブラリ</string>
     <string name="open_in_maps">地図で開く</string>
 

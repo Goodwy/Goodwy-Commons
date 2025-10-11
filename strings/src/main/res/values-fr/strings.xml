@@ -254,6 +254,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Le long des bords</string>
     <string name="voice_input">Saisie vocale</string>
+    <string name="status">Statut</string>
     <string name="library">Bibliothèque</string>
     <string name="open_in_maps">Ouvrir dans les cartes</string>
 

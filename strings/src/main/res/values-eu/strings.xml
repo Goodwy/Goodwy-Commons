@@ -250,6 +250,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Ertzetan zehar</string>
     <string name="voice_input">Ahotsaren sarrera</string>
+    <string name="status">Egoera</string>
     <string name="library">Liburutegia</string>
     <string name="open_in_maps">Ireki Maps-en</string>
 

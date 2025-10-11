@@ -251,6 +251,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Reunoja pitkin</string>
     <string name="voice_input">Äänisyöttö</string>
+    <string name="status">Status</string>
     <string name="library">Kirjasto</string>
     <string name="open_in_maps">Avaa kartoissa</string>
 

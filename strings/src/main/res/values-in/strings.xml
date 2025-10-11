@@ -251,6 +251,7 @@ Terima kasih!
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Sepanjang tepian</string>
     <string name="voice_input">Masukan suara</string>
+    <string name="status">Status</string>
     <string name="library">Perpustakaan</string>
     <string name="open_in_maps">Buka di Peta</string>
 

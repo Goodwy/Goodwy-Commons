@@ -253,6 +253,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Entlang der Kanten</string>
     <string name="voice_input">Spracheingabe</string>
+    <string name="status">Status</string>
     <string name="library">Bibliothek</string>
     <string name="open_in_maps">In Karten öffnen</string>
 

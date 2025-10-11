@@ -261,6 +261,7 @@
 
     <!-- Gallery -->
     <string name="voice_input">Голосовой ввод</string>
+    <string name="status">Статус</string>
     <string name="library">Медиатека</string>
     <string name="open_in_maps">Открыть в Картах</string>
     <string name="all_g">Все</string>

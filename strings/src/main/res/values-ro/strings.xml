@@ -253,6 +253,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">De-a lungul marginilor</string>
     <string name="voice_input">Intrare vocală</string>
+    <string name="status">Stare</string>
     <string name="library">Bibliotecă</string>
     <string name="open_in_maps">Deschis în hărți</string>
 

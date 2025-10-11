@@ -269,6 +269,7 @@
     <string name="text_alignment">Text alignment</string>
     <string name="text_alignment_along_edges">Along the edges</string>
     <string name="voice_input">Voice input</string>
+    <string name="status">Status</string>
 
     <!-- Gallery -->
     <string name="library">Library</string>

@@ -265,6 +265,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Chomh maith leis an imill</string>
     <string name="voice_input">Ionchur gutha</string>
+    <string name="status">Stádas</string>
     <string name="library">Library</string>
     <string name="open_in_maps">Open in Maps</string>
     <string name="all_g">All</string>

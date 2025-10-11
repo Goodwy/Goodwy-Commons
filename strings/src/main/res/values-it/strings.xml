@@ -251,6 +251,7 @@ Grazie!
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Lungo i bordi</string>
     <string name="voice_input">Input vocale</string>
+    <string name="status">Stato</string>
     <string name="library">Libreria</string>
     <string name="open_in_maps">Aprire in Mappe</string>
 

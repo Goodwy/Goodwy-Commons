@@ -251,6 +251,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Langs kanterne</string>
     <string name="voice_input">Stemmeinput</string>
+    <string name="status">Status</string>
     <string name="library">Bibliotek</string>
     <string name="open_in_maps">Opnå i kort</string>
 

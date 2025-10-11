@@ -251,6 +251,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">Ar hyd yr ymylon</string>
     <string name="voice_input">Mewnbwn llais</string>
+    <string name="status">Statws</string>
     <string name="library">Llyfrgell</string>
     <string name="open_in_maps">Agor mewn Mapiau</string>
 

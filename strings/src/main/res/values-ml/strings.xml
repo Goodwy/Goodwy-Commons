@@ -253,6 +253,7 @@
     <!-- Gallery -->
     <string name="text_alignment_along_edges">അരികുകളിൽ</string>
     <string name="voice_input">വോയ്സ് ഇൻപുട്ട്</string>
+    <string name="status">നില</string>
     <string name="library">ലൈബ്രറി</string>
     <string name="open_in_maps">മാപ്പിൽ തുറക്കുക</string>
 
