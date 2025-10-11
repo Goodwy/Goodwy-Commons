@@ -249,8 +249,8 @@ internal fun ManageBlockedNumbersScreen(
                     doOnPreferenceClick = onBlockingType,
                     backgroundColor = MaterialTheme.colorScheme.background
                 )
-                Spacer(modifier = Modifier.size(8.dp))
-                Card(modifier = Modifier.padding(20.dp)) {
+                Spacer(modifier = Modifier.size(16.dp))
+                Card(modifier = Modifier.padding(horizontal = 20.dp)) {
                     Text(
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
                         text = if (isBlockingEnabled || !isDialer) stringResource(id = com.goodwy.strings.R.string.сalls_and_messages_blocked_warning)
