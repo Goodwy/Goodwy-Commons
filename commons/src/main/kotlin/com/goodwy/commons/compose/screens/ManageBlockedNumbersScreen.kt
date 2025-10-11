@@ -200,7 +200,7 @@ internal fun ManageBlockedNumbersScreen(
             contentPadding = PaddingValues(bottom = paddingValues.calculateBottomPadding())
         ) {
             item {
-                SettingsSwitchComponent(
+                if (isDialer) SettingsSwitchComponent(
                     label = stringResource(id = com.goodwy.strings.R.string.enable_blocking),
                     value = stringResource(id = com.goodwy.strings.R.string.enable_blocking_summary),
                     initialValue = isBlockingEnabled,
@@ -220,8 +220,9 @@ internal fun ManageBlockedNumbersScreen(
                     showCheckmark = showCheckmarksOnSwitches,
                     checkmark = ImageVector.vectorResource(R.drawable.ic_no_accounts)
                 )
-                SettingsSwitchComponent(
-                    label = if (isDialer) stringResource(id = R.string.block_hidden_calls) else stringResource(id = R.string.block_hidden_messages),
+                // Not used for messages
+                if (isDialer) SettingsSwitchComponent(
+                    label = stringResource(id = R.string.block_hidden_calls),
                     initialValue = isHiddenSelected,
                     onChange = onHiddenSelectedChange,
                     modifier = Modifier.topAppBarPaddings(),
@@ -249,6 +250,13 @@ internal fun ManageBlockedNumbersScreen(
                     backgroundColor = MaterialTheme.colorScheme.background
                 )
                 Spacer(modifier = Modifier.size(8.dp))
+                Card(modifier = Modifier.padding(20.dp)) {
+                    Text(
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                        text = if (isBlockingEnabled) stringResource(id = com.goodwy.strings.R.string.сalls_and_messages_blocked_warning)
+                                else stringResource(id = com.goodwy.strings.R.string.messages_blocked_warning)
+                    )
+                }
             }
             when {
                 !hasGivenPermissionToBlock -> {

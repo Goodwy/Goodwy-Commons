@@ -266,7 +266,7 @@
     <string name="show_number_blocking_button">Erakutsi zenbakia blokeatzeko botoia</string>
     <string name="blocking_type_silence">Dei lasai bat</string>
     <string name="blocking_type_silence_summary">Jasotako deirako deia isilarazi behar den ezartzen du</string>
-    <string name="enable_blocking_summary">Gehitu ezarpen bizkorreko lauza bat azkar aldatzeko</string>
+    <string name="enable_blocking_summary">Desgaituta dagoenean, blokeo-ezarpen guztiak kenduko dira deietarako. Mezuak blokeatuta egongo dira blokeatutako zerrendako zenbakientzat.\nEzarpen bizkorren fitxa gehi dezakezu erraz aldatzeko.</string>
     <string name="bottom_indent">Beheko koska</string>
     <string name="relation_g">Harremana</string>
     <string name="relations_g">Lotutako pertsonak</string>
@@ -358,6 +358,8 @@
     <string name="attendees">Bertaratutakoak</string>
     <string name="circle">Zirkulua</string>
     <string name="off">Deskonektatuta</string>
+    <string name="сalls_and_messages_blocked_warning">Blokeatutako zenbakien deiak eta mezuak ez dira jasoko.</string>
+    <string name="messages_blocked_warning">Blokeatutako zenbakien mezuak ez dira jasoko.</string>
     <string name="enable_blocking">Gaitu blokeoa</string>
     <string name="plus">Gainera</string>
 </resources>

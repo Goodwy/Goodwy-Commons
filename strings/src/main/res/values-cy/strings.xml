@@ -267,7 +267,7 @@
     <string name="show_number_blocking_button">Dangos rhif clo botwm</string>
     <string name="blocking_type_silence">Galwad dawel</string>
     <string name="blocking_type_silence_summary">Yn pennu a ddylid tawelu\'r canu ar gyfer yr alwad sy\'n dod i mewn</string>
-    <string name="enable_blocking_summary">Ychwanegwch deilsen gosodiadau cyflym ar gyfer newid cyflym</string>
+    <string name="enable_blocking_summary">Pan fydd yn anabl, bydd yr holl osodiadau blocio yn cael eu dileu ar gyfer galwadau. Bydd negeseuon yn dal i gael eu rhwystro ar gyfer rhifau ar y rhestr sydd wedi\'i rhwystro.\nGallwch ychwanegu teilsen gosodiadau cyflym i\'w newid yn hawdd.</string>
     <string name="bottom_indent">mewnoliad gwaelod</string>
     <string name="relation_g">Perthynas</string>
     <string name ="relations_g">Personau Cysylltiedig</string>
@@ -358,6 +358,8 @@
     <string name="blocking_type_reject_summary">Gwrthod galwad sy\'n dod i mewn fel pe bai\'r defnyddiwr wedi ei wrthod â llaw</string>
     <string name="circle">Cylch</string>
     <string name="off">Wedi\'i ddatgysylltu</string>
+    <string name="сalls_and_messages_blocked_warning">Ni fydd galwadau a negeseuon o rifau sydd wedi\'u blocio yn cael eu derbyn.</string>
+    <string name="messages_blocked_warning">Ni fydd negeseuon o rifau sydd wedi\'u rhwystro yn cael eu derbyn.</string>
     <string name="enable_blocking">Galluogi blocio</string>
     <string name="plus">Byd Gwaith</string>
 </resources>

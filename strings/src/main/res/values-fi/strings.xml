@@ -267,7 +267,7 @@
     <string name="show_number_blocking_button">Näytä numerolukituspainike</string>
     <string name="blocking_type_silence">Hiljainen puhelu</string>
     <string name="blocking_type_silence_summary">Määrittää, hiljennetäänkö soitto saapuvan puhelun aikana</string>
-    <string name="enable_blocking_summary">Lisää pika-asetusruutu nopeaa vaihtoa varten</string>
+    <string name="enable_blocking_summary">Kun se on poistettu käytöstä, kaikki puhelujen estoasetukset poistetaan. Viestit estetään edelleen estettyjen luettelossa olevien numeroiden osalta.\nVoit lisätä pika-asetusruudun vaihtamisen helpottamiseksi.</string>
     <string name="bottom_indent">Alempi sisennys</string>
     <string name="relation_g">Suhde</string>
     <string name="relations_g">Lähipiiriin kuuluvat henkilöt</string>
@@ -358,6 +358,8 @@
     <string name="blocking_type_reject_summary">Hylkää saapuva puhelu ikään kuin käyttäjä olisi hylännyt sen manuaalisesti</string>
     <string name="circle">Ympyrä</string>
     <string name="off">Pois</string>
+    <string name="сalls_and_messages_blocked_warning">Estetyistä numeroista tulevia puheluita ja viestejä ei vastaanoteta.</string>
+    <string name="messages_blocked_warning">Estetyistä numeroista tulevia viestejä ei vastaanoteta.</string>
     <string name="enable_blocking">Ota esto käyttöön</string>
     <string name="plus">Plus</string>
 </resources>

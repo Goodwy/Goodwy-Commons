@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">نمایش دکمه قفل شماره</string>
     <string name="blocking_type_silence">یک تماس آرام</string>
     <string name="blocking_type_silence_summary">تنظیم می کند که آیا زنگ برای تماس ورودی باید بی صدا شود یا خیر</string>
-    <string name="enable_blocking_summary">یک کاشی تنظیمات سریع برای تعویض سریع اضافه کنید</string>
+    <string name="enable_blocking_summary">در صورت غیرفعال شدن، تمام تنظیمات مسدودسازی برای تماس ها حذف خواهد شد. پیام ها همچنان برای شماره های موجود در لیست مسدود شده مسدود خواهند شد.\nبرای جابجایی آسان می توانید یک کاشی تنظیمات سریع اضافه کنید.</string>
     <string name="bottom_indent">تورفتگی پایین</string>
     <string name="relation_g">ارتباط</string>
     <string name="relations_g">شخص ذي صلة</string>
@@ -358,6 +358,8 @@
     <string name="blocking_type_reject_summary">تماس دریافتی را رد کنید، انگار که کاربر به صورت دستی آن را رد کرده است</string>
     <string name="circle">دایره</string>
     <string name="off">قطع شده</string>
+    <string name="сalls_and_messages_blocked_warning">تماس ها و پیام های شماره های مسدود شده دریافت نمی شود.</string>
+    <string name="messages_blocked_warning">پیام های شماره های مسدود شده دریافت نمی شود.</string>
     <string name="enable_blocking">مسدود کردن را فعال کنید</string>
     <string name="plus">به علاوه</string>
 </resources>

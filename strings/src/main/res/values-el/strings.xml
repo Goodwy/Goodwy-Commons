@@ -267,7 +267,7 @@
     <string name="show_number_blocking_button">Εμφάνιση κουμπιού κλειδώματος αριθμού</string>
     <string name="blocking_type_silence">Μια ήσυχη κλήση</string>
     <string name="blocking_type_silence_summary">Ρυθμίζει εάν το κουδούνισμα θα πρέπει να σιωπά για την εισερχόμενη κλήση</string>
-    <string name="enable_blocking_summary">Προσθέστε ένα πλακίδιο γρήγορων ρυθμίσεων για γρήγορη εναλλαγή</string>
+    <string name="enable_blocking_summary">Όταν είναι απενεργοποιημένη, όλες οι ρυθμίσεις αποκλεισμού θα καταργηθούν για κλήσεις. Τα μηνύματα θα εξακολουθούν να αποκλείονται για αριθμούς στη λίστα αποκλεισμένων.\nΜπορείτε να προσθέσετε ένα πλακίδιο γρήγορων ρυθμίσεων για εύκολη εναλλαγή.</string>
     <string name="bottom_indent">Κάτω εσοχή</string>
     <string name="relation_g">Σχέση</string>
     <string name="relations_g">Σχετικά πρόσωπα</string>
@@ -358,6 +358,8 @@
     <string name="blocking_type_reject_summary">Απορρίψτε μια εισερχόμενη κλήση σαν να την είχε απορρίψει ο χρήστης χειροκίνητα</string>
     <string name="circle">Κύκλος</string>
     <string name="off">Απενεργοποίηση</string>
+    <string name="сalls_and_messages_blocked_warning">Κλήσεις και μηνύματα από αποκλεισμένους αριθμούς δεν θα λαμβάνονται.</string>
+    <string name="messages_blocked_warning">Μηνύματα από αποκλεισμένους αριθμούς δεν θα λαμβάνονται.</string>
     <string name="enable_blocking">Ενεργοποίηση αποκλεισμού</string>
     <string name="plus">Συν</string>
 </resources>

@@ -270,7 +270,7 @@
     <string name="show_number_blocking_button">Afficher le bouton de verrouillage du numéro</string>
     <string name="blocking_type_silence">Un appel silencieux</string>
     <string name="blocking_type_silence_summary">Définit si la sonnerie doit être désactivée pour l\'appel entrant</string>
-    <string name="enable_blocking_summary">Ajoutez une tuile de paramètres rapides pour une commutation rapide</string>
+    <string name="enable_blocking_summary">Une fois désactivé, tous les paramètres de blocage des appels seront supprimés. Les messages resteront bloqués pour les numéros figurant sur la liste bloquée. Vous pouvez ajouter une mosaïque de paramètres rapides pour faciliter la transition.</string>
     <string name="bottom_indent">Retrait inférieur</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Personnes apparentées</string>
@@ -361,6 +361,8 @@
     <string name="blocking_type_reject_summary">Rejeter un appel entrant comme si l\'utilisateur l\'avait rejeté manuellement</string>
     <string name="circle">Cercle</string>
     <string name="off">Désact</string>
+    <string name="сalls_and_messages_blocked_warning">Les appels et messages provenant de numéros bloqués ne seront pas reçus.</string>
+    <string name="messages_blocked_warning">Les messages provenant de numéros bloqués ne seront pas reçus.</string>
     <string name="enable_blocking">Activer le blocage</string>
     <string name="plus">Plus</string>
 </resources>

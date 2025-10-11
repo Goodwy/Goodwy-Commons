@@ -268,7 +268,7 @@
     <string name="show_number_blocking_button">Nömrə bloku düyməsini göstərin</string>
     <string name="blocking_type_silence">Sakit zəng</string>
     <string name="blocking_type_silence_summary">Daxil olan zəng üçün zəngin susdurulmalı olub-olmadığını təyin edir</string>
-    <string name="enable_blocking_summary">Sürətli keçid üçün sürətli parametrlər plitəsi əlavə edin</string>
+    <string name="enable_blocking_summary">Deaktiv edildikdə, zənglər üçün bütün bloklama parametrləri silinəcək. Mesajlar bloklanmış siyahıdakı nömrələr üçün hələ də bloklanacaq.\nAsan keçid üçün sürətli parametrlər plitəsi əlavə edə bilərsiniz.</string>
     <string name="bottom_indent">Aşağı abzas</string>
     <string name="relation_g">Əlaqə</string>
     <string name="relations_g">Əlaqədar şəxslər</string>
@@ -359,6 +359,8 @@
     <string name="blocking_type_reject_summary">İstifadəçi onu əl ilə rədd etmiş kimi daxil olan zəngi rədd edin</string>
     <string name="circle">Dairə</string>
     <string name="off">Açıq</string>
+    <string name="сalls_and_messages_blocked_warning">Bloklanmış nömrələrdən gələn zənglər və mesajlar qəbul edilməyəcək.</string>
+    <string name="messages_blocked_warning">Bloklanmış nömrələrdən mesajlar qəbul edilməyəcək.</string>
     <string name="enable_blocking">Bloklamanı aktivləşdirin</string>
     <string name="plus">Üstəlik</string>
 </resources>

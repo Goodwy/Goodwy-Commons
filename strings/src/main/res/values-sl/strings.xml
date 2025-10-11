@@ -270,7 +270,7 @@
     <string name="show_number_blocking_button">Pokaži gumb za zaklepanje številk</string>
     <string name="blocking_type_silence">Tihi klic</string>
     <string name="blocking_type_silence_summary">Nastavi, ali naj bo zvonjenje za dohodni klic utišano</string>
-    <string name="enable_blocking_summary">Dodajte ploščico hitrih nastavitev za hitro preklapljanje</string>
+    <string name="enable_blocking_summary">Ko je onemogočeno, bodo vse nastavitve blokiranja za klice odstranjene. Sporočila bodo še vedno blokirana za številke na seznamu blokiranih.\nZa enostavno preklapljanje lahko dodate ploščico s hitrimi nastavitvami.</string>
     <string name="bottom_indent">Spodnja alineja</string>
     <string name="relation_g">Ime relacije</string>
     <string name="relations_g">Povezane osebe</string>
@@ -361,6 +361,8 @@
     <string name="blocking_type_reject_summary">Zavrnite dohodni klic, kot da bi ga uporabnik zavrnil ročno</string>
     <string name="circle">krog</string>
     <string name="off">Izklop</string>
+    <string name="сalls_and_messages_blocked_warning">Klici in sporočila z blokiranih številk ne bodo sprejeti.</string>
+    <string name="messages_blocked_warning">Sporočila z blokiranih številk ne bodo sprejeta.</string>
     <string name="enable_blocking">Omogoči blokiranje</string>
     <string name="plus">Plus</string>
 </resources>

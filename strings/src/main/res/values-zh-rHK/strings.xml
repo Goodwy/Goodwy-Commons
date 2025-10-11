@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">顯示數字區塊按鈕</string>
     <string name="blocking_type_silence">安靜的通話</string>
     <string name="blocking_type_silence_summary">設定來電時是否應靜音</string>
-    <string name="enable_blocking_summary">新增快速設定磁貼以便快速切換</string>
+    <string name="enable_blocking_summary">停用後，所有來電屏蔽設定都將移除。但封鎖清單中的號碼仍會被封鎖資訊。\n您可以新增快捷設定圖塊，方便切換。</string>
     <string name="bottom_indent">底部縮排</string>
     <string name="relation_g">關係</string>
     <string name="relations_g">相關人員</string>
@@ -360,6 +360,8 @@
     <string name="blocking_type_reject_summary">拒絕來電，就像用戶手動拒絕一樣</string>
     <string name="circle">圓圈</string>
     <string name="off">斷開</string>
+    <string name="сalls_and_messages_blocked_warning">將不會收到來自被封鎖號碼的電話和訊息。</string>
+    <string name="messages_blocked_warning">不會收到來自被封鎖號碼的訊息。</string>
     <string name="enable_blocking">啟用封鎖</string>
     <string name="plus">加</string>
 </resources>

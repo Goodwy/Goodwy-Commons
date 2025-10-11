@@ -282,7 +282,7 @@
     <string name="blocking_type_silence_summary">Отключить звук звонка для входящего вызова</string>
 
     <!-- Relation types -->
-    <string name="enable_blocking_summary">Добавьте плитку быстрых настроек для быстрого переключения</string>
+    <string name="enable_blocking_summary">При выключении для звонков перестанут действовать все настройки блокировок. Сообщения будут по-прежнему блокироваться для номеров из списка заблокированных. \nВы можете добавить плитку быстрых настроек для удобного переключения.</string>
     <string name="bottom_indent">Нижний отступ</string>
     <string name="relation_g">Отношения</string>
     <string name="relations_g">Связанные лица</string>
@@ -367,6 +367,8 @@
     <string name="more_apps_from_us_g">Другие наши приложения</string>
     <string name="circle">Круг</string>
     <string name="off">Откл.</string>
+    <string name="сalls_and_messages_blocked_warning">Звонки и сообщения с заблокированных номеров поступать не будут.</string>
+    <string name="messages_blocked_warning">Cообщения с заблокированных номеров поступать не будут.</string>
     <string name="enable_blocking">Включить блокировку</string>
     <string name="plus">Плюс</string>
 </resources>

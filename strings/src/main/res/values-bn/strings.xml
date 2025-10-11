@@ -266,7 +266,7 @@
     <!-- Relation types -->
     <string name="blocking_type_silence">একটি শান্ত কল</string>
     <string name="blocking_type_silence_summary">ইনকামিং কলের জন্য রিং বাজানো হবে কিনা তা সেট করে</string>
-    <string name="enable_blocking_summary">দ্রুত পরিবর্তনের জন্য একটি দ্রুত সেটিংস টাইল যোগ করুন</string>
+    <string name="enable_blocking_summary">অক্ষম করা হলে, কলের জন্য সমস্ত ব্লকিং সেটিংস সরানো হবে৷ অবরুদ্ধ তালিকায় থাকা নম্বরগুলির জন্য বার্তাগুলি এখনও অবরুদ্ধ করা হবে৷\nসহজে স্যুইচ করার জন্য আপনি একটি দ্রুত সেটিংস টাইল যোগ করতে পারেন।</string>
     <string name="bottom_indent">নীচের ইন্ডেন্ট</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
@@ -360,6 +360,8 @@
     <string name="attendees">উপস্থিতরা</string>
     <string name="circle">বৃত্ত</string>
     <string name="off">বিচ্ছিন্ন</string>
+    <string name="сalls_and_messages_blocked_warning">ব্লক করা নম্বর থেকে কল এবং বার্তা গ্রহণ করা হবে না.</string>
+    <string name="messages_blocked_warning">ব্লক করা নম্বর থেকে বার্তা পাওয়া যাবে না।</string>
     <string name="enable_blocking">ব্লকিং সক্ষম করুন</string>
     <string name="plus">প্লাস</string>
 </resources>

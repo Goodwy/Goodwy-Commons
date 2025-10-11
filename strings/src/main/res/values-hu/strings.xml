@@ -265,7 +265,7 @@
     <string name="show_number_blocking_button">Számzár gomb megjelenítése</string>
     <string name="blocking_type_silence">Csendes hívás</string>
     <string name="blocking_type_silence_summary">Beállítja, hogy a csengetést el kell-e némítani a bejövő hívásnál</string>
-    <string name="enable_blocking_summary">Adjon hozzá egy gyorsbeállítási csempét a gyors váltáshoz</string>
+    <string name="enable_blocking_summary">Ha le van tiltva, a hívások összes blokkolási beállítása törlődik. Az üzenetek továbbra is blokkolva lesznek a blokkolt listán szereplő számoknál.\nAz egyszerű váltás érdekében hozzáadhat egy gyorsbeállítási csempét.</string>
     <string name="bottom_indent">Alsó behúzás</string>
     <string name="relation_g">Kapcsolat</string>
     <string name="relations_g">Kapcsolódó személyek</string>
@@ -356,6 +356,8 @@
     <string name="blocking_type_reject_summary">A bejövő hívás elutasítása úgy, mintha a felhasználó manuálisan utasította volna el</string>
     <string name="circle">Kör</string>
     <string name="off">Ki</string>
+    <string name="сalls_and_messages_blocked_warning">A blokkolt számokról érkező hívások és üzenetek nem fogadhatók.</string>
+    <string name="messages_blocked_warning">A blokkolt számokról érkező üzenetek nem fogadhatók.</string>
     <string name="enable_blocking">Blokkolás engedélyezése</string>
     <string name="plus">Plusz</string>
 </resources>

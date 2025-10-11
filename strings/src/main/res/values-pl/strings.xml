@@ -269,7 +269,7 @@ Będziemy bardzo wdzięczni.
     <string name="show_number_blocking_button">Pokaż przycisk blokady numeru</string>
     <string name="blocking_type_silence">Cichy telefon</string>
     <string name="blocking_type_silence_summary">Ustawia, czy dzwonek ma zostać wyciszony dla połączeń przychodzących</string>
-    <string name="enable_blocking_summary">Dodaj kafelek szybkich ustawień umożliwiający szybkie przełączanie</string>
+    <string name="enable_blocking_summary">Po wyłączeniu wszystkie ustawienia blokowania połączeń zostaną usunięte. Wiadomości nadal będą blokowane dla numerów z listy blokowanych.\nMożesz dodać kafelek szybkich ustawień, aby ułatwić przełączanie.</string>
     <string name="bottom_indent">Wcięcie dolne</string>
     <string name="relation_g">Relacja</string>
     <string name="relations_g">Powiązane osoby</string>
@@ -360,6 +360,8 @@ Będziemy bardzo wdzięczni.
     <string name="blocking_type_reject_summary">Odrzuć połączenie przychodzące tak, jakby użytkownik odrzucił je ręcznie</string>
     <string name="circle">Koło</string>
     <string name="off">Wył</string>
+    <string name="сalls_and_messages_blocked_warning">Połączenia i wiadomości z zablokowanych numerów nie będą odbierane.</string>
+    <string name="messages_blocked_warning">Wiadomości z zablokowanych numerów nie będą odbierane.</string>
     <string name="enable_blocking">Włącz blokowanie</string>
     <string name="plus">Plus</string>
 </resources>

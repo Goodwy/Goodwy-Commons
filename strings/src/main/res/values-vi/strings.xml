@@ -267,7 +267,7 @@ Cảm ơn bạn!
     <string name="show_number_blocking_button">Hiển thị nút khóa số</string>
     <string name="blocking_type_silence">Một cuộc gọi yên tĩnh</string>
     <string name="blocking_type_silence_summary">Thiết lập xem có nên tắt tiếng chuông khi có cuộc gọi đến hay không</string>
-    <string name="enable_blocking_summary">Thêm ô cài đặt nhanh để chuyển đổi nhanh</string>
+    <string name="enable_blocking_summary">Khi tắt, tất cả cài đặt chặn cuộc gọi sẽ bị xóa. Tin nhắn vẫn sẽ bị chặn đối với các số trong danh sách chặn.\nBạn có thể thêm ô cài đặt nhanh để dễ dàng chuyển đổi.</string>
     <string name="bottom_indent">thụt lề dưới</string>
     <string name="relation_g">Perthynas</string>
     <string name="relations_g">Personau Cysylltiedig</string>
@@ -358,6 +358,8 @@ Cảm ơn bạn!
     <string name="blocking_type_reject_summary">Từ chối cuộc gọi đến như thể người dùng đã từ chối thủ công</string>
     <string name="circle">Vòng tròn</string>
     <string name="off">Ngắt kết nối</string>
+    <string name="сalls_and_messages_blocked_warning">Các cuộc gọi và tin nhắn từ số bị chặn sẽ không được nhận.</string>
+    <string name="messages_blocked_warning">Tin nhắn từ số bị chặn sẽ không được nhận.</string>
     <string name="enable_blocking">Cho phép chặn</string>
     <string name="plus">Thêm</string>
 </resources>

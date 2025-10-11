@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">Прикажи дугме за блокирање бројева</string>
     <string name="blocking_type_silence">Тихи позив</string>
     <string name="blocking_type_silence_summary">Подешава да ли звоно треба да буде утишано за долазни позив</string>
-    <string name="enable_blocking_summary">Додајте плочицу за брза подешавања за брзо пребацивање</string>
+    <string name="enable_blocking_summary">Када је онемогућено, сва подешавања блокирања ће бити уклоњена за позиве. Поруке ће и даље бити блокиране за бројеве са листе блокираних.\nМожете додати плочицу за брза подешавања за лако пребацивање.</string>
     <string name="bottom_indent">Доња увлака</string>
     <string name="relation_g">Однос</string>
     <string name="relations_g">Повезане особе</string>
@@ -361,6 +361,8 @@
     <string name="blocking_type_reject_summary">Одбијте долазни позив као да га је корисник одбио ручно</string>
     <string name="circle">Цирцле</string>
     <string name="off">Искљ</string>
+    <string name="сalls_and_messages_blocked_warning">Неће се примати позиви и поруке са блокираних бројева.</string>
+    <string name="messages_blocked_warning">Поруке са блокираних бројева се неће примати.</string>
     <string name="enable_blocking">Омогући блокирање</string>
     <string name="plus">Плус</string>
 </resources>

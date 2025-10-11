@@ -270,7 +270,7 @@
     <string name="show_number_blocking_button">Visa knapp för nummerlås</string>
     <string name="blocking_type_silence">Ett tyst samtal</string>
     <string name="blocking_type_silence_summary">Ställer in om ringsignalen ska tystas för det inkommande samtalet</string>
-    <string name="enable_blocking_summary">Lägg till en ruta för snabbinställningar för snabb växling</string>
+    <string name="enable_blocking_summary">När den är inaktiverad kommer alla blockeringsinställningar att tas bort för samtal. Meddelanden kommer fortfarande att blockeras för nummer på blockeringslistan.\nDu kan lägga till en ruta för snabbinställningar för att enkelt byta.</string>
     <string name="bottom_indent">Nedre indrag</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Relaterade personer</string>
@@ -361,6 +361,8 @@
     <string name="blocking_type_reject_summary">Avvisa ett inkommande samtal som om användaren hade avvisat det manuellt</string>
     <string name="circle">Cirkel</string>
     <string name="off">Av</string>
+    <string name="сalls_and_messages_blocked_warning">Samtal och meddelanden från blockerade nummer tas inte emot.</string>
+    <string name="messages_blocked_warning">Meddelanden från blockerade nummer kommer inte att tas emot.</string>
     <string name="enable_blocking">Aktivera blockering</string>
     <string name="plus">Plus</string>
 </resources>

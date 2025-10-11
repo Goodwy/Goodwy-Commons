@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">Afișați butonul de blocare a numărului</string>
     <string name="blocking_type_silence">Un apel liniștit</string>
     <string name="blocking_type_silence_summary">Setează dacă sunetul trebuie oprit pentru apelul primit</string>
-    <string name="enable_blocking_summary">Adăugați o dală cu setări rapide pentru comutare rapidă</string>
+    <string name="enable_blocking_summary">Când este dezactivată, toate setările de blocare vor fi eliminate pentru apeluri. Mesajele vor fi blocate în continuare pentru numerele din lista blocate.\nPuteți adăuga o țiglă de setări rapide pentru o comutare ușoară.</string>
     <string name="bottom_indent">Indentatură de jos</string>
     <string name="relation_g">Relație</string>
     <string name="relations_g">Persoane înrudite</string>
@@ -360,6 +360,8 @@
     <string name="blocking_type_reject_summary">Respingeți un apel primit ca și cum utilizatorul l-ar fi respins manual</string>
     <string name="circle">Cerc</string>
     <string name="off">Dezact</string>
+    <string name="сalls_and_messages_blocked_warning">Apelurile și mesajele de la numerele blocate nu vor fi primite.</string>
+    <string name="messages_blocked_warning">Mesajele de la numerele blocate nu vor fi primite.</string>
     <string name="enable_blocking">Activați blocarea</string>
     <string name="plus">Plus</string>
 </resources>

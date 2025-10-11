@@ -270,7 +270,7 @@
     <string name="show_number_blocking_button">Zobrazit tlačítko zámku čísla</string>
     <string name="blocking_type_silence">Tichý hovor</string>
     <string name="blocking_type_silence_summary">Nastavuje, zda má být u příchozího hovoru ztišeno vyzvánění</string>
-    <string name="enable_blocking_summary">Přidejte dlaždici rychlého nastavení pro rychlé přepínání</string>
+    <string name="enable_blocking_summary">Je-li zakázáno, všechna nastavení blokování hovorů budou odstraněna. Zprávy budou stále blokovány pro čísla na seznamu blokovaných.\nPro snadné přepínání můžete přidat dlaždici rychlého nastavení.</string>
     <string name="bottom_indent">Spodní odsazení</string>
     <string name="relation_g">Vztah</string>
     <string name="relations_g">Související osoby</string>
@@ -361,6 +361,8 @@
     <string name="blocking_type_reject_summary">Odmítněte příchozí hovor, jako by jej uživatel odmítl ručně</string>
     <string name="circle">Kruh</string>
     <string name="off">Vyp</string>
+    <string name="сalls_and_messages_blocked_warning">Hovory a zprávy z blokovaných čísel nebudou přijímány.</string>
+    <string name="messages_blocked_warning">Zprávy z blokovaných čísel nebudou přijímány.</string>
     <string name="enable_blocking">Povolit blokování</string>
     <string name="plus">Plus</string>
 </resources>

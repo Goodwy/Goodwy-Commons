@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">Montru butonon de numero-bloko</string>
     <string name="blocking_type_silence">Trankvila voko</string>
     <string name="blocking_type_silence_summary">Agordas ĉu sonorado devas esti silentigita por la envenanta voko</string>
-    <string name="enable_blocking_summary">Aldonu rapidan agordan kahelon por rapida ŝanĝado</string>
+    <string name="enable_blocking_summary">Kiam estas malŝaltita, ĉiuj blokaj agordoj estos forigitaj por vokoj. Mesaĝoj ankoraŭ estos blokitaj por numeroj en la blokita listo.\nVi povas aldoni rapidan kahelon de agordoj por facila ŝanĝado.</string>
     <string name="bottom_indent">Malsupra streko</string>
     <string name="relation_g">Rilato</string>
     <string name="relations_g">Rilataj Personoj</string>
@@ -360,6 +360,8 @@
     <string name="blocking_type_reject_summary">Malakcepti alvenantan vokon kvazaŭ la uzanto malakceptis ĝin permane</string>
     <string name="circle">Rondo</string>
     <string name="off">Malŝaltita</string>
+    <string name="сalls_and_messages_blocked_warning">Vokoj kaj mesaĝoj de blokitaj numeroj ne estos ricevitaj.</string>
+    <string name="messages_blocked_warning">Mesaĝoj de blokitaj numeroj ne estos ricevitaj.</string>
     <string name="enable_blocking">Ebligu blokadon</string>
     <string name="plus">Plie</string>
 </resources>

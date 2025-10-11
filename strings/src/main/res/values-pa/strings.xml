@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">ਨੰਬਰ ਬਲਾਕ ਬਟਨ ਦਿਖਾਓ</string>
     <string name="blocking_type_silence">ਇੱਕ ਸ਼ਾਂਤ ਕਾਲ</string>
     <string name="blocking_type_silence_summary">ਸੈੱਟ ਕਰਦਾ ਹੈ ਕਿ ਕੀ ਇਨਕਮਿੰਗ ਕਾਲ ਲਈ ਰਿੰਗਿੰਗ ਨੂੰ ਸ਼ਾਂਤ ਕੀਤਾ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ</string>
-    <string name="enable_blocking_summary">ਤੇਜ਼ ਸਵਿਚਿੰਗ ਲਈ ਇੱਕ ਤੇਜ਼ ਸੈਟਿੰਗ ਟਾਇਲ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="enable_blocking_summary">ਅਯੋਗ ਹੋਣ \'ਤੇ, ਕਾਲਾਂ ਲਈ ਸਾਰੀਆਂ ਬਲਾਕਿੰਗ ਸੈਟਿੰਗਾਂ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ। ਬਲੌਕ ਕੀਤੀ ਸੂਚੀ ਵਿੱਚ ਨੰਬਰਾਂ ਲਈ ਸੁਨੇਹੇ ਅਜੇ ਵੀ ਬਲੌਕ ਕੀਤੇ ਜਾਣਗੇ।\nਤੁਸੀਂ ਆਸਾਨ ਸਵਿਚਿੰਗ ਲਈ ਇੱਕ ਤੇਜ਼ ਸੈਟਿੰਗ ਟਾਇਲ ਜੋੜ ਸਕਦੇ ਹੋ।</string>
     <string name="bottom_indent">ਹੇਠਲਾ ਵਿੱਥ</string>
     <string name="relation_g">ਸਬੰਧ</string>
     <string name="relations_g">ਸਬੰਧਤ ਵਿਅਕਤੀ</string>
@@ -360,6 +360,8 @@
     <string name="blocking_type_reject_summary">ਇੱਕ ਇਨਕਮਿੰਗ ਕਾਲ ਨੂੰ ਅਸਵੀਕਾਰ ਕਰੋ ਜਿਵੇਂ ਕਿ ਉਪਭੋਗਤਾ ਨੇ ਇਸਨੂੰ ਹੱਥੀਂ ਰੱਦ ਕਰ ਦਿੱਤਾ ਹੈ</string>
     <string name="circle">ਚੱਕਰ</string>
     <string name="off">ਕੱਟੋ</string>
+    <string name="сalls_and_messages_blocked_warning">ਬਲੌਕ ਕੀਤੇ ਨੰਬਰਾਂ ਤੋਂ ਕਾਲਾਂ ਅਤੇ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਣਗੇ।</string>
+    <string name="messages_blocked_warning">ਬਲੌਕ ਕੀਤੇ ਨੰਬਰਾਂ ਤੋਂ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਣਗੇ।</string>
     <string name="enable_blocking">ਬਲਾਕਿੰਗ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</string>
     <string name="plus">ਪਲੱਸ</string>
 </resources>

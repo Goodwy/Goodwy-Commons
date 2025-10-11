@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">แสดงปุ่มล็อคตัวเลข</string>
     <string name="blocking_type_silence">เสียงเรียกอันเงียบงัน</string>
     <string name="blocking_type_silence_summary">ตั้งค่าว่าควรปิดเสียงการโทรเข้าหรือไม่</string>
-    <string name="enable_blocking_summary">เพิ่มไทล์การตั้งค่าด่วนสำหรับการสลับอย่างรวดเร็ว</string>
+    <string name="enable_blocking_summary">เมื่อปิดใช้งาน การตั้งค่าการบล็อกการโทรทั้งหมดจะถูกลบออก ข้อความจะยังคงถูกบล็อกสำหรับหมายเลขที่อยู่ในรายการที่ถูกบล็อก\nคุณสามารถเพิ่มไทล์การตั้งค่าด่วนเพื่อสลับเปลี่ยนได้ง่าย</string>
     <string name="bottom_indent">เยื้องล่าง</string>
     <string name="relation_g">ความสัมพันธ์</string>
     <string name="relations_g">บุคคลที่เกี่ยวข้อง</string>
@@ -360,6 +360,8 @@
     <string name="blocking_type_reject_summary">ปฏิเสธสายเรียกเข้าราวกับว่าผู้ใช้ได้ปฏิเสธด้วยตนเอง</string>
     <string name="circle">วงกลม</string>
     <string name="off">ตัดการเชื่อมต่อ</string>
+    <string name="сalls_and_messages_blocked_warning">จะไม่รับสายหรือข้อความจากหมายเลขที่ถูกบล็อค</string>
+    <string name="messages_blocked_warning">ข้อความจากหมายเลขที่ถูกบล็อคจะไม่ได้รับ</string>
     <string name="enable_blocking">เปิดใช้งานการบล็อค</string>
     <string name="plus">พลัส</string>
 </resources>

@@ -281,7 +281,7 @@
     <!-- Relation types -->
     <string name="blocking_type_silence">Glaoch ciúin</string>
     <string name="blocking_type_silence_summary">Socraíonn sé cé acu ar cheart an glaoch a chur ina thost don ghlao isteach</string>
-    <string name="enable_blocking_summary">Cuir tíl socruithe tapa leis le haghaidh athrú tapa</string>
+    <string name="enable_blocking_summary">Nuair a bheidh sé díchumasaithe, bainfear gach socrú blocála le haghaidh glaonna. Cuirfear bac fós ar theachtaireachtaí le haghaidh uimhreacha ar an liosta bactha.\nIs féidir leat tíl socruithe tapa a chur leis le haghaidh athrú éasca.</string>
     <string name="bottom_indent">fleasc bun</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
@@ -371,6 +371,8 @@
     <string name="blocking_type_reject_summary">Diúltaigh glao isteach amhail is gur dhiúltaigh an t-úsáideoir de láimh é</string>
     <string name="circle">Ciorcal</string>
     <string name="off">Dícheangailte</string>
+    <string name="сalls_and_messages_blocked_warning">Ní gheofar glaonna agus teachtaireachtaí ó uimhreacha bactha.</string>
+    <string name="messages_blocked_warning">Ní gheofar teachtaireachtaí ó uimhreacha bactha.</string>
     <string name="enable_blocking">Cumasaigh blocáil</string>
     <string name="plus">Móide</string>
 </resources>

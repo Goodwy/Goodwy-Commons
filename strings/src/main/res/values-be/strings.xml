@@ -272,7 +272,7 @@
     <string name="show_number_blocking_button">Паказваць кнопку блакіроўкі нумара</string>
     <string name="blocking_type_silence">Ціхі званок</string>
     <string name="blocking_type_silence_summary">Усталёўвае, ці трэба адключаць званок пры ўваходным выкліку</string>
-    <string name="enable_blocking_summary">Дадайце плітку хуткіх налад для хуткага пераключэння</string>
+    <string name="enable_blocking_summary">Пры выключэнні для званкоў перастануць дзейнічаць усе налады блакіровак. Паведамленні будуць па-ранейшаму блакавацца для нумароў са спісу заблакаваных. \nВы можаце дадаць плітку хуткіх налад для зручнага пераключэння.</string>
     <string name="bottom_indent">Ніжні водступ</string>
     <string name="relation_g">Адносіны</string>
     <string name="relations_g">Змяненні, асобы</string>
@@ -364,6 +364,8 @@
     <string name="blocking_type_reject_summary">Адхіліць уваходны выклік, як калі б карыстач адхіліў яго ўручную</string>
     <string name="circle">Круг</string>
     <string name="off">Адкл</string>
+    <string name="сalls_and_messages_blocked_warning">Званкі і паведамленні з заблакіраваных нумароў паступаць не будуць.</string>
+    <string name="messages_blocked_warning">Паведамлення з заблакіраваных нумароў паступаць не будуць</string>
     <string name="enable_blocking">Уключыць блакіроўку</string>
     <string name="plus">Плюс</string>
 </resources>

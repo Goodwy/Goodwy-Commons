@@ -267,7 +267,7 @@
     <string name="show_number_blocking_button">숫자 잠금 버튼 표시</string>
     <string name="blocking_type_silence">조용한 전화</string>
     <string name="blocking_type_silence_summary">수신 통화에 대한 벨소리를 무음으로 설정할지 여부를 설정합니다.</string>
-    <string name="enable_blocking_summary">빠른 전환을 위한 빠른 설정 타일 추가</string>
+    <string name="enable_blocking_summary">비활성화하면 모든 통화 차단 설정이 제거됩니다. 단, 차단 목록에 있는 번호의 메시지는 계속 차단됩니다.\n빠른 설정 타일을 추가하여 간편하게 전환할 수 있습니다.</string>
     <string name="bottom_indent">하단 들여쓰기</string>
     <string name="relation_g">관계</string>
     <string name="relations_g">관련자</string>
@@ -358,6 +358,8 @@
     <string name="blocking_type_reject_summary">사용자가 수동으로 거부한 것처럼 수신 통화를 거부합니다.</string>
     <string name="circle">원</string>
     <string name="off">연결 끊김</string>
+    <string name="сalls_and_messages_blocked_warning">차단된 번호로 오는 전화와 메시지는 수신되지 않습니다.</string>
+    <string name="messages_blocked_warning">차단된 번호에서 온 메시지는 수신되지 않습니다.</string>
     <string name="enable_blocking">차단 활성화</string>
     <string name="plus">을 더한</string>
 </resources>

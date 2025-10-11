@@ -271,7 +271,7 @@
     <string name="show_number_blocking_button">Покажи бутона за заключване на номера</string>
     <string name="blocking_type_silence">Тихо обаждане</string>
     <string name="blocking_type_silence_summary">Задава дали звъненето да бъде заглушено за входящо повикване</string>
-    <string name="enable_blocking_summary">Добавете плочка за бързи настройки за бързо превключване</string>
+    <string name="enable_blocking_summary">Когато е деактивирано, всички настройки за блокиране ще бъдат премахнати за повиквания. Съобщенията все още ще бъдат блокирани за номера в списъка с блокирани.\nМожете да добавите плочка за бързи настройки за лесно превключване.</string>
     <string name="bottom_indent">Долен отстъп</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Свързани лица</string>
@@ -362,6 +362,8 @@
     <string name="blocking_type_reject_summary">Отхвърлете входящо повикване, сякаш потребителят го е отхвърлил ръчно</string>
     <string name="circle">кръг</string>
     <string name="off">Изкл</string>
+    <string name="сalls_and_messages_blocked_warning">Обаждания и съобщения от блокирани номера няма да се получават.</string>
+    <string name="messages_blocked_warning">Съобщения от блокирани номера няма да се получават.</string>
     <string name="enable_blocking">Разрешете блокирането</string>
     <string name="plus">плюс</string>
 </resources>

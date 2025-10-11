@@ -267,7 +267,7 @@ Terima kasih!
     <string name="show_number_blocking_button">Tampilkan tombol blok nomor</string>
     <string name="blocking_type_silence">Panggilan yang tenang</string>
     <string name="blocking_type_silence_summary">Mengatur apakah dering harus dibungkam untuk panggilan masuk</string>
-    <string name="enable_blocking_summary">Tambahkan ubin pengaturan cepat untuk peralihan cepat</string>
+    <string name="enable_blocking_summary">Jika dinonaktifkan, semua pengaturan pemblokiran akan dihapus untuk panggilan. Pesan akan tetap diblokir untuk nomor yang ada di daftar blokir.\nAnda dapat menambahkan ubin pengaturan cepat untuk memudahkan peralihan.</string>
     <string name="bottom_indent">Lekukan bawah</string>
     <string name="relation_g">Hubungan</string>
     <string name="relations_g">Orang Terkait</string>
@@ -358,6 +358,8 @@ Terima kasih!
     <string name="blocking_type_reject_summary">Tolak panggilan masuk seolah-olah pengguna telah menolaknya secara manual</string>
     <string name="circle">Lingkaran</string>
     <string name="off">Terputus</string>
+    <string name="сalls_and_messages_blocked_warning">Panggilan dan pesan dari nomor yang diblokir tidak akan diterima.</string>
+    <string name="messages_blocked_warning">Pesan dari nomor yang diblokir tidak akan diterima.</string>
     <string name="enable_blocking">Aktifkan pemblokiran</string>
     <string name="plus">Plus</string>
 </resources>

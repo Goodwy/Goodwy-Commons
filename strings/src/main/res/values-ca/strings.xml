@@ -267,7 +267,7 @@
     <string name="show_number_blocking_button">Mostra el botó de bloqueig de números</string>
     <string name="blocking_type_silence">Una trucada tranquil·la</string>
     <string name="blocking_type_silence_summary">Estableix si s\'ha de silenciar el timbre per a la trucada entrant</string>
-    <string name="enable_blocking_summary">Afegiu una fitxa de configuració ràpida per canviar ràpidament</string>
+    <string name="enable_blocking_summary">Quan estigui desactivat, tots els paràmetres de bloqueig s\'eliminaran per a les trucades. Els missatges es continuaran bloquejant per als números de la llista bloquejada.\nPodeu afegir una fitxa de configuració ràpida per canviar fàcilment.</string>
     <string name="bottom_indent">Sagnat inferior</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Persones relacionades</string>
@@ -358,6 +358,8 @@
     <string name="blocking_type_reject_summary">Rebutja una trucada entrant com si l\'usuari l\'hagués rebutjat manualment</string>
     <string name="circle">Cercle</string>
     <string name="off">Desconnectat</string>
+    <string name="сalls_and_messages_blocked_warning">Les trucades i missatges de números bloquejats no es rebran.</string>
+    <string name="messages_blocked_warning">Els missatges dels números bloquejats no es rebran.</string>
     <string name="enable_blocking">Activa el bloqueig</string>
     <string name="plus">A més</string>
 </resources>

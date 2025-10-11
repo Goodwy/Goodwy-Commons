@@ -266,7 +266,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="show_number_blocking_button">Mostrar botón de bloqueo de números</string>
     <string name="blocking_type_silence">Una llamada silenciosa</string>
     <string name="blocking_type_silence_summary">Establece si se debe silenciar el timbre para la llamada entrante</string>
-    <string name="enable_blocking_summary">Agregue un mosaico de configuración rápida para cambiar rápidamente</string>
+    <string name="enable_blocking_summary">Al desactivar esta opción, se eliminarán todos los bloqueos de llamadas. Los mensajes seguirán bloqueados para los números de la lista de bloqueados.\nPuedes añadir un panel de ajustes rápidos para cambiar fácilmente.</string>
     <string name="bottom_indent">Sangría inferior</string>
     <string name="relation_g">Relación</string>
     <string name="relations_g">Personas relacionadas</string>
@@ -357,6 +357,8 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="blocking_type_reject_summary">Rechazar una llamada entrante como si el usuario la hubiera rechazado manualmente</string>
     <string name="circle">Círculo</string>
     <string name="off">Descon</string>
+    <string name="сalls_and_messages_blocked_warning">No se recibirán llamadas ni mensajes de números bloqueados.</string>
+    <string name="messages_blocked_warning">No se recibirán mensajes de números bloqueados.</string>
     <string name="enable_blocking">Habilitar bloqueo</string>
     <string name="plus">Más</string>
 </resources>

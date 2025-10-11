@@ -267,7 +267,7 @@ Grazie!
     <string name="show_number_blocking_button">Mostra il pulsante di blocco del numero</string>
     <string name="blocking_type_silence">Una chiamata silenziosa</string>
     <string name="blocking_type_silence_summary">Imposta se la suoneria deve essere disattivata per la chiamata in arrivo</string>
-    <string name="enable_blocking_summary">Aggiungi un riquadro delle impostazioni rapide per un cambio rapido</string>
+    <string name="enable_blocking_summary">Se disabilitata, tutte le impostazioni di blocco per le chiamate verranno rimosse. I messaggi per i numeri presenti nell\'elenco dei bloccati continueranno a essere bloccati.\nÈ possibile aggiungere un riquadro delle impostazioni rapide per passare facilmente da una all\'altra.</string>
     <string name="bottom_indent">Rientro inferiore</string>
     <string name="relation_g">Relazione</string>
     <string name="relations_g">Persone correlate</string>
@@ -358,6 +358,8 @@ Grazie!
     <string name="blocking_type_reject_summary">Rifiuta una chiamata in arrivo come se l\'utente l\'avesse rifiutata manualmente</string>
     <string name="circle">Cerchio</string>
     <string name="off">Discon</string>
+    <string name="сalls_and_messages_blocked_warning">Non verranno ricevute chiamate e messaggi provenienti da numeri bloccati.</string>
+    <string name="messages_blocked_warning">I messaggi provenienti da numeri bloccati non verranno ricevuti.</string>
     <string name="enable_blocking">Abilita il blocco</string>
     <string name="plus">Più</string>
 </resources>

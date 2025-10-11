@@ -266,7 +266,7 @@ Bedankt!
     <string name="show_number_blocking_button">Knop voor nummerblokkering weergeven</string>
     <string name="blocking_type_silence">Een stille roep</string>
     <string name="blocking_type_silence_summary">Hiermee stelt u in of de beltoon voor inkomende oproepen moet worden gedempt</string>
-    <string name="enable_blocking_summary">Voeg een tegel voor snelle instellingen toe voor snel schakelen</string>
+    <string name="enable_blocking_summary">Wanneer uitgeschakeld, worden alle blokkeringsinstellingen voor oproepen verwijderd. Berichten voor nummers op de blokkeerlijst worden nog steeds geblokkeerd.\nJe kunt een tegel met snelle instellingen toevoegen om eenvoudig te kunnen schakelen.</string>
     <string name="bottom_indent">Onderste inspringing</string>
     <string name="relation_g">Relatie</string>
     <string name="relations_g">Verwante personen</string>
@@ -357,6 +357,8 @@ Bedankt!
     <string name="blocking_type_reject_summary">Een binnenkomend gesprek afwijzen alsof de gebruiker het handmatig heeft afgewezen</string>
     <string name="circle">Cirkel</string>
     <string name="off">Uit</string>
+    <string name="сalls_and_messages_blocked_warning">Oproepen en berichten van geblokkeerde nummers kunt u niet ontvangen.</string>
+    <string name="messages_blocked_warning">Berichten van geblokkeerde nummers worden niet ontvangen.</string>
     <string name="enable_blocking">Blokkering inschakelen</string>
     <string name="plus">Plus</string>
 </resources>

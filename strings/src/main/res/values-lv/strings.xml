@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">Rādīt numuru bloķēšanas pogu</string>
     <string name="blocking_type_silence">Kluss zvans</string>
     <string name="blocking_type_silence_summary">Iestata, vai zvana signāls ir jāizslēdz ienākošajam zvanam</string>
-    <string name="enable_blocking_summary">Pievienojiet ātro iestatījumu elementu ātrai pārslēgšanai</string>
+    <string name="enable_blocking_summary">Ja tas ir atspējots, visi zvanu bloķēšanas iestatījumi tiks noņemti. Ziņojumi joprojām tiks bloķēti numuriem bloķēto sarakstā.\nLai atvieglotu pārslēgšanu, varat pievienot ātro iestatījumu elementu.</string>
     <string name="bottom_indent">Apakšējā atkāpe</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
@@ -360,6 +360,8 @@
     <string name="blocking_type_reject_summary">Noraidīt ienākošo zvanu tā, it kā lietotājs to būtu noraidījis manuāli</string>
     <string name="circle">Aplis</string>
     <string name="off">Atvienots</string>
+    <string name="сalls_and_messages_blocked_warning">Zvani un ziņas no bloķētiem numuriem netiks saņemti.</string>
+    <string name="messages_blocked_warning">Ziņojumi no bloķētiem numuriem netiks saņemti.</string>
     <string name="enable_blocking">Iespējot bloķēšanu</string>
     <string name="plus">Plus</string>
 </resources>

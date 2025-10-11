@@ -270,7 +270,7 @@
     <string name="show_number_blocking_button">Numara engelleme düğmesini göster</string>
     <string name="blocking_type_silence">Sessiz bir çağrı</string>
     <string name="blocking_type_silence_summary">Gelen çağrı için zil sesinin sessize alınıp alınmayacağını ayarlar</string>
-    <string name="enable_blocking_summary">Hızlı geçiş için hızlı ayarlar kutucuğu ekleyin</string>
+    <string name="enable_blocking_summary">Devre dışı bırakıldığında, aramalar için tüm engelleme ayarları kaldırılır. Engellenen numaralar listesindeki mesajlar yine de engellenir.\nKolayca geçiş yapmak için hızlı ayarlar kutucuğu ekleyebilirsiniz.</string>
     <string name="bottom_indent">Alt girinti</string>
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
@@ -361,6 +361,8 @@
     <string name="blocking_type_reject_summary">Gelen bir aramayı, kullanıcı manuel olarak reddetmiş gibi reddedin</string>
     <string name="circle">Daire</string>
     <string name="off">Bağlantı Kesildi</string>
+    <string name="сalls_and_messages_blocked_warning">Engellenen numaralardan gelen çağrı ve mesajlar alınmayacaktır.</string>
+    <string name="messages_blocked_warning">Engellenen numaralardan gelen mesajlar alınmayacaktır.</string>
     <string name="enable_blocking">Engellemeyi etkinleştir</string>
     <string name="plus">Artı</string>
 </resources>

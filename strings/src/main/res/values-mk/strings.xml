@@ -266,7 +266,7 @@
     <!-- Relation types -->
     <string name="blocking_type_silence">Тивок повик</string>
     <string name="blocking_type_silence_summary">Поставува дали ѕвонењето треба да се прекине за дојдовниот повик</string>
-    <string name="enable_blocking_summary">Додајте плочка за брзи поставки за брзо префрлување</string>
+    <string name="enable_blocking_summary">Кога е оневозможено, сите поставки за блокирање ќе бидат отстранети за повици. Пораките сепак ќе бидат блокирани за броевите на блокираната листа.\nМожете да додадете плочка за брзи поставки за лесно префрлување.</string>
     <string name="bottom_indent">Долна алинеја</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
@@ -360,6 +360,8 @@
     <string name="attendees">Присутните</string>
     <string name="circle">Заокружете</string>
     <string name="off">Исклучен</string>
+    <string name="сalls_and_messages_blocked_warning">Повиците и пораките од блокираните броеви нема да се примаат.</string>
+    <string name="messages_blocked_warning">Пораките од блокираните броеви нема да се примаат.</string>
     <string name="enable_blocking">Овозможи блокирање</string>
     <string name="plus">Плус</string>
 </resources>

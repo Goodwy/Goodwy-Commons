@@ -266,7 +266,7 @@
     <!-- Relation types -->
     <string name="blocking_type_silence">Tihi poziv</string>
     <string name="blocking_type_silence_summary">Podešava da li zvono treba biti utišano za dolazni poziv</string>
-    <string name="enable_blocking_summary">Dodajte pločicu brzih postavki za brzo prebacivanje</string>
+    <string name="enable_blocking_summary">Kada je onemogućeno, sve postavke blokiranja će biti uklonjene za pozive. Poruke će i dalje biti blokirane za brojeve na listi blokiranih.\nMožete dodati pločicu brzih postavki za jednostavno prebacivanje.</string>
     <string name="bottom_indent">Donja uvlaka</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
@@ -360,6 +360,8 @@
     <string name="attendees">Polaznici</string>
     <string name="circle">Krug</string>
     <string name="off">Isključeno</string>
+    <string name="сalls_and_messages_blocked_warning">Pozivi i poruke sa blokiranih brojeva neće se primati.</string>
+    <string name="messages_blocked_warning">Poruke sa blokiranih brojeva neće se primati.</string>
     <string name="enable_blocking">Omogući blokiranje</string>
     <string name="plus">Plus</string>
 </resources>

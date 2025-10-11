@@ -266,7 +266,7 @@
     <string name="show_number_blocking_button">Rodyti skaičių užrakto mygtuką</string>
     <string name="blocking_type_silence">Tylus skambutis</string>
     <string name="blocking_type_silence_summary">Nustatoma, ar turi būti nutildytas įeinančio skambučio skambėjimas</string>
-    <string name="enable_blocking_summary">Pridėkite greitųjų nustatymų plytelę, kad galėtumėte greitai perjungti</string>
+    <string name="enable_blocking_summary">Kai išjungta, visi skambučių blokavimo nustatymai bus pašalinti. Pranešimai vis tiek bus užblokuoti blokuojamųjų sąraše esantiems numeriams.\nGalite pridėti greitųjų nustatymų plytelę, kad būtų lengva perjungti.</string>
     <string name="bottom_indent">Apatinė įtrauka</string>
     <string name="relation_g">Ryšys</string>
     <string name="relations_g">Susiję asmenys</string>
@@ -357,6 +357,8 @@
     <string name="blocking_type_reject_summary">Atmeskite įeinantį skambutį taip, lyg vartotojas būtų jį atmetęs rankiniu būdu</string>
     <string name="circle">Apskritimas</string>
     <string name="off">Atjungta</string>
+    <string name="сalls_and_messages_blocked_warning">Skambučiai ir žinutės iš užblokuotų numerių nebus priimami.</string>
+    <string name="messages_blocked_warning">Žinutės iš užblokuotų numerių nebus gaunamos.</string>
     <string name="enable_blocking">Įgalinti blokavimą</string>
     <string name="plus">Pliusas</string>
 </resources>

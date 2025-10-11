@@ -267,7 +267,7 @@
     <string name="show_number_blocking_button">Vis knappen Nummerlås</string>
     <string name="blocking_type_silence">Et stille opkald</string>
     <string name="blocking_type_silence_summary">Indstiller, om ringningen skal afbrydes for det indgående opkald</string>
-    <string name="enable_blocking_summary">Tilføj en flise med hurtige indstillinger for hurtigt at skifte</string>
+    <string name="enable_blocking_summary">Når deaktiveret, vil alle blokeringsindstillinger blive fjernet for opkald. Beskeder vil stadig blive blokeret for numre på den blokerede liste.\nDu kan tilføje en flise med hurtige indstillinger for let skift.</string>
     <string name="bottom_indent">Nederste indrykning</string>
     <string name="relation_g">Forhold</string>
     <string name="relations_g">Nærtstående personer</string>
@@ -358,6 +358,8 @@
     <string name="blocking_type_reject_summary">Afvis et indgående opkald, som om brugeren havde afvist det manuelt</string>
     <string name="circle">Cirkel</string>
     <string name="off">Fra</string>
+    <string name="сalls_and_messages_blocked_warning">Opkald og beskeder fra blokerede numre modtages ikke.</string>
+    <string name="messages_blocked_warning">Beskeder fra blokerede numre modtages ikke.</string>
     <string name="enable_blocking">Aktiver blokering</string>
     <string name="plus">Plus</string>
 </resources>

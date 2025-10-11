@@ -269,7 +269,7 @@
     <string name="show_number_blocking_button">Näita numbriluku nuppu</string>
     <string name="blocking_type_silence">Vaikne kõne</string>
     <string name="blocking_type_silence_summary">Määrab, kas sissetuleva kõne helin tuleb vaigistada</string>
-    <string name="enable_blocking_summary">Kiireks vahetamiseks lisage kiirseadete paan</string>
+    <string name="enable_blocking_summary">Kui see on keelatud, eemaldatakse kõik kõnede blokeerimisseaded. Sõnumid blokeeritakse endiselt blokeeritud loendis olevate numbrite puhul.\nLihtsaks vahetamiseks saate lisada kiirseadete paani.</string>
     <string name="bottom_indent">Alumine taane</string>
     <string name="relation_g">Seos</string>
     <string name="relations_g">Seotud isikud</string>
@@ -360,6 +360,8 @@
     <string name="blocking_type_reject_summary">Keelduge sissetulevast kõnest nii, nagu oleks kasutaja selle käsitsi tagasi lükanud</string>
     <string name="circle">Ring</string>
     <string name="off">Väljas</string>
+    <string name="сalls_and_messages_blocked_warning">Blokeeritud numbritelt saabuvaid kõnesid ja sõnumeid vastu ei võeta.</string>
+    <string name="messages_blocked_warning">Blokeeritud numbritelt sõnumeid vastu ei võeta.</string>
     <string name="enable_blocking">Luba blokeerimine</string>
     <string name="plus">Pluss</string>
 </resources>
