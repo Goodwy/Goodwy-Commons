@@ -387,13 +387,17 @@ private fun BlockedNumber(
     val contactNameContent = remember {
         movableContentOf {
             Text(
+                modifier = Modifier.padding(horizontal = 16.dp),
                 text = blockedNumber.contactName.toString(),
             )
         }
     }
     val blockedNumberContent = remember {
         movableContentOf {
-            BlockedNumberHeadlineContent(blockedNumber = blockedNumber, hasContactName = hasContactName)
+            BlockedNumberHeadlineContent(
+                modifier = Modifier.padding(horizontal = 16.dp),
+                blockedNumber = blockedNumber,
+                hasContactName = hasContactName)
         }
     }
     ListItem(
