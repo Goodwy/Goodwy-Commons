@@ -387,7 +387,7 @@ private fun BlockedNumber(
     val contactNameContent = remember {
         movableContentOf {
             Text(
-                modifier = Modifier.padding(horizontal = 16.dp),
+                modifier = Modifier.padding(horizontal = 8.dp),
                 text = blockedNumber.contactName.toString(),
             )
         }
@@ -395,7 +395,7 @@ private fun BlockedNumber(
     val blockedNumberContent = remember {
         movableContentOf {
             BlockedNumberHeadlineContent(
-                modifier = Modifier.padding(horizontal = 16.dp),
+                modifier = Modifier.padding(horizontal = 8.dp),
                 blockedNumber = blockedNumber,
                 hasContactName = hasContactName)
         }
