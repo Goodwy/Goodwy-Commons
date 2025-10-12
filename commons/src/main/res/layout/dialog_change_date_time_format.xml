@@ -122,6 +122,7 @@
                 android:id="@+id/change_date_time_dialog_use_shamsi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:paddingTop="@dimen/smaller_margin"
                 android:paddingBottom="@dimen/smaller_margin"
                 android:text="@string/use_persian_calendar" />
@@ -131,6 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
                 android:background="@drawable/button_rounded_5dp"
                 android:backgroundTint="@color/red_missed"
                 android:clickable="false"
@@ -143,7 +145,8 @@
                 android:textColor="@color/white"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:includeFontPadding="false"/>
+                android:includeFontPadding="false"
+                android:layout_gravity="center_vertical"/>
         </LinearLayout>
 
     </LinearLayout>
