@@ -104,7 +104,9 @@ internal fun AboutNewSection(
                 colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.background),
                 leadingContent = {
                     Box(
-                        modifier = Modifier.width(72.dp).padding(bottom = 8.dp),
+                        modifier = Modifier
+                            .width(72.dp)
+                            .padding(bottom = 8.dp),
                         contentAlignment = Alignment.Center
                     )
                     {
@@ -164,9 +166,13 @@ internal fun AboutNewSection(
                         Box (modifier = Modifier
                             .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                             .width(42.dp)) {
-                            Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
+                            Icon(modifier = Modifier
+                                .alpha(0.2f)
+                                .size(42.dp),
                                 imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.rate_g), tint = textColor)
-                            Icon(modifier = Modifier.size(42.dp).padding(8.dp),
+                            Icon(modifier = Modifier
+                                .size(42.dp)
+                                .padding(8.dp),
                                 imageVector = Icons.Rounded.Star, contentDescription = stringResource(id = stringsR.string.rate_g), tint = textColor)
                         }
                     }
@@ -194,7 +200,9 @@ internal fun AboutNewSection(
                     Box (modifier = Modifier
                         .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                         .width(42.dp)) {
-                        Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
+                        Icon(modifier = Modifier
+                            .alpha(0.2f)
+                            .size(42.dp),
                             imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.more_apps_from_us_g), tint = textColor)
                         if (ruStoreInstalled && !context.baseConfig.useGooglePlay) {
                             Icon(modifier = Modifier
@@ -204,7 +212,9 @@ internal fun AboutNewSection(
                                 contentDescription = stringResource(id = stringsR.string.more_apps_from_us_g), tint = textColor)
                         }
                         else {
-                            Icon(modifier = Modifier.size(42.dp).padding(start = 10.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
+                            Icon(modifier = Modifier
+                                .size(42.dp)
+                                .padding(start = 10.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
                                 painter = painterResource(id = R.drawable.ic_google_play_vector),
                                 contentDescription = stringResource(id = stringsR.string.more_apps_from_us_g), tint = textColor)
                         }
@@ -233,9 +243,13 @@ internal fun AboutNewSection(
                     Box (modifier = Modifier
                         .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                         .width(42.dp)) {
-                        Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
+                        Icon(modifier = Modifier
+                            .alpha(0.2f)
+                            .size(42.dp),
                             imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.privacy_policy), tint = textColor)
-                        Icon(modifier = Modifier.size(42.dp).padding(8.dp),
+                        Icon(modifier = Modifier
+                            .size(42.dp)
+                            .padding(8.dp),
                             imageVector = Icons.Rounded.Policy, contentDescription = stringResource(id = R.string.privacy_policy), tint = textColor)
                     }
                 }
@@ -266,13 +280,17 @@ internal fun AboutNewSection(
                             .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
                             .width(42.dp)) {
                             Icon(
-                                modifier = Modifier.alpha(0.2f).size(42.dp),
+                                modifier = Modifier
+                                    .alpha(0.2f)
+                                    .size(42.dp),
                                 imageVector = Icons.Rounded.Circle,
                                 contentDescription = stringResource(id = R.string.frequently_asked_questions),
                                 tint = textColor
                             )
                             Icon(
-                                modifier = Modifier.size(42.dp).padding(8.dp),
+                                modifier = Modifier
+                                    .size(42.dp)
+                                    .padding(8.dp),
                                 imageVector = Icons.Rounded.QuestionMark,
                                 contentDescription = stringResource(id = R.string.frequently_asked_questions),
                                 tint = textColor
@@ -288,26 +306,42 @@ internal fun AboutNewSection(
                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
             ) {
                 val colorFor = contentColorFor(MaterialTheme.colorScheme.primaryContainer)
-                Row (
+                Row(
                     modifier = Modifier
                         .fillMaxSize()
                         .clickable(onClick = onTipJarClick),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Text(modifier = Modifier
-                        .padding(start = 16.dp, end = 8.dp)
-                        .weight(1f),
+                    Text(
+                        modifier = Modifier
+                            .padding(start = 16.dp, end = 8.dp)
+                            .weight(1f),
                         text = stringResource(stringsR.string.tip_jar).toUpperCase(LocaleList.current),
                         fontSize = 14.sp,
                         lineHeight = 18.sp,
-                        color = colorFor,)
-                    Box (modifier = Modifier
-                        .padding(end = 8.dp, top = 8.dp, bottom = 8.dp)
-                        .width(42.dp)) {
-                        Icon(modifier = Modifier.alpha(0.2f).size(42.dp),
-                            imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = colorFor)
-                        Icon(modifier = Modifier.size(42.dp).padding(8.dp),
-                            imageVector = Icons.Rounded.Savings, contentDescription = stringResource(id = stringsR.string.tip_jar), tint = colorFor)
+                        color = colorFor,
+                    )
+                    Box(
+                        modifier = Modifier
+                            .padding(end = 7.dp, top = 8.dp, bottom = 8.dp)
+                            .width(44.dp)
+                    ) {
+                        Icon(
+                            modifier = Modifier
+                                .alpha(0.2f)
+                                .size(44.dp),
+                            imageVector = Icons.Rounded.Circle,
+                            contentDescription = stringResource(id = stringsR.string.tip_jar),
+                            tint = colorFor
+                        )
+                        Icon(
+                            modifier = Modifier
+                                .size(44.dp)
+                                .padding(8.dp),
+                            imageVector = Icons.Rounded.Savings,
+                            contentDescription = stringResource(id = stringsR.string.tip_jar),
+                            tint = colorFor
+                        )
                     }
                 }
             }
@@ -339,11 +373,15 @@ internal fun AboutNewSection(
                                 .width(42.dp)
                         ) {
                             Icon(
-                                modifier = Modifier.alpha(0.2f).size(42.dp),
+                                modifier = Modifier
+                                    .alpha(0.2f)
+                                    .size(42.dp),
                                 imageVector = Icons.Rounded.Circle, contentDescription = stringResource(id = R.string.privacy_policy), tint = textColor
                             )
                             Icon(
-                                modifier = Modifier.size(42.dp).padding(8.dp),
+                                modifier = Modifier
+                                    .size(42.dp)
+                                    .padding(8.dp),
                                 painter = painterResource(id = R.drawable.ic_github_vector),
                                 contentDescription = stringResource(id = R.string.privacy_policy),
                                 tint = textColor
