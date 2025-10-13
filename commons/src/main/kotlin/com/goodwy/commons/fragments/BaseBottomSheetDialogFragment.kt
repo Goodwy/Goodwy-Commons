@@ -22,7 +22,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
         val context = requireContext()
 
         view.bottomSheetHolder.background = ResourcesCompat.getDrawable(context.resources, R.drawable.bottom_sheet_bg, context.theme).apply {
-            val backgroundColor = if (requireContext().isBlackTheme()) context.getBottomNavigationBackgroundColor() else context.getProperBackgroundColor()
+            val backgroundColor = if (requireContext().isBlackTheme()) context.getSurfaceColor() else context.getProperBackgroundColor()
             (this as LayerDrawable).findDrawableByLayerId(R.id.bottom_sheet_background).applyColorFilter(backgroundColor)
         }
         return view.root

@@ -32,7 +32,7 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
         context.updateTextColors(binding.fingerprintLockHolder)
         binding.fingerprintImage.applyColorFilter(textColor)
 
-        binding.fingerprintSettings.background.applyColorFilter(context.getBottomNavigationBackgroundColor())
+        binding.fingerprintSettings.background.applyColorFilter(context.getSurfaceColor())
         binding.fingerprintSettings.setOnClickListener {
             context.startActivity(Intent(Settings.ACTION_SETTINGS))
         }

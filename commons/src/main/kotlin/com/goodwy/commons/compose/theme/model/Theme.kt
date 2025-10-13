@@ -17,6 +17,7 @@ sealed class Theme : CommonTheme {
 
     @Stable
     data class SystemDefaultMaterialYou(
+        override val accentColorInt: Int,
         override val primaryColorInt: Int,
         override val backgroundColorInt: Int,
         override val appIconColorInt: Int,
@@ -27,7 +28,7 @@ sealed class Theme : CommonTheme {
 
     @Stable
     data class White(
-        val accentColor: Int,
+        override val accentColorInt: Int,
         override val primaryColorInt: Int,
         override val backgroundColorInt: Int,
         override val appIconColorInt: Int,
@@ -38,7 +39,7 @@ sealed class Theme : CommonTheme {
 
     @Stable
     data class Light(
-        val accentColor: Int,
+        override val accentColorInt: Int,
         override val primaryColorInt: Int,
         override val backgroundColorInt: Int,
         override val appIconColorInt: Int,
@@ -49,7 +50,7 @@ sealed class Theme : CommonTheme {
 
     @Stable
     data class Gray(
-        val accentColor: Int,
+        override val accentColorInt: Int,
         override val primaryColorInt: Int,
         override val backgroundColorInt: Int,
         override val appIconColorInt: Int,
@@ -60,7 +61,7 @@ sealed class Theme : CommonTheme {
 
     @Stable
     data class Dark(
-        val accentColor: Int,
+        override val accentColorInt: Int,
         override val primaryColorInt: Int,
         override val backgroundColorInt: Int,
         override val appIconColorInt: Int,
@@ -71,7 +72,7 @@ sealed class Theme : CommonTheme {
 
     @Stable
     data class Black(
-        val accentColor: Int,
+        override val accentColorInt: Int,
         override val primaryColorInt: Int,
         override val backgroundColorInt: Int,
         override val appIconColorInt: Int,
@@ -82,7 +83,7 @@ sealed class Theme : CommonTheme {
 
     @Stable
     data class BlackAndWhite(
-        val accentColor: Int,
+        override val accentColorInt: Int,
         override val primaryColorInt: Int,
         override val backgroundColorInt: Int,
         override val appIconColorInt: Int,
@@ -93,7 +94,7 @@ sealed class Theme : CommonTheme {
 
     @Stable
     data class Custom(
-        val accentColor: Int,
+        override val accentColorInt: Int,
         override val primaryColorInt: Int,
         override val backgroundColorInt: Int,
         override val appIconColorInt: Int,
@@ -108,6 +109,7 @@ sealed class Theme : CommonTheme {
             val context = LocalContext.current
             val config = remember { context.config }
             return SystemDefaultMaterialYou(
+                accentColorInt = if (config.isUsingAccentColor) config.accentColor else config.primaryColor,
                 appIconColorInt = config.appIconColor,
                 primaryColorInt = config.primaryColor,
                 backgroundColorInt = config.backgroundColor,

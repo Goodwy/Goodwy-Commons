@@ -68,7 +68,7 @@ class PinTab(context: Context, attrs: AttributeSet) : BaseSecurityTab(context, a
             } else if (context.isBlackTheme()) {
                 it.background.applyColorFilter(context.getProperBackgroundColor())
             } else {
-                it.background.applyColorFilter(context.getBottomNavigationBackgroundColor())
+                it.background.applyColorFilter(context.getSurfaceColor())
             }
         }
     }

@@ -3,17 +3,15 @@ package com.goodwy.commons.compose.theme
 import android.content.Context
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.extensions.baseConfig
 
 fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou): Theme {
     val baseConfig = context.config
     val primaryColorInt = baseConfig.primaryColor
     val isSystemInDarkTheme = context.isDarkMode()
-    val accentColor = baseConfig.accentColor
+    val accentColorInt = if (baseConfig.isUsingAccentColor) baseConfig.accentColor else primaryColorInt
 
     val backgroundColorTheme = if (context.isDynamicTheme() || context.isAutoTheme()) {
         if (isSystemInDarkTheme) theme_black_background_color else theme_light_background_color
@@ -39,14 +37,15 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
         ) primaryColorInt.darkenColor(45)
         else if (context.isLightTheme()
             || context.isGrayTheme()
-        ) primaryColorInt.lightenColor(30)
-        else statusBarColor.lightenColor(6)
+        ) primaryColorInt.lightenColor(25)
+        else if (baseConfig.backgroundColor.getContrastColor() == android.graphics.Color.WHITE) primaryColorInt.darkenColor(45)
+        else primaryColorInt.lightenColor(25)
 
     val theme = when {
         context.isDynamicTheme() -> materialYouTheme
-        backgroundColor == theme_light_background_color.toArgb() -> {
+        context.isLightTheme() -> {
             Theme.Light(
-                accentColor = accentColor,
+                accentColorInt = accentColorInt,
                 primaryColorInt = primaryColorInt,
                 backgroundColorInt = backgroundColor,
                 appIconColorInt = appIconColor,
@@ -55,9 +54,9 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
                 primaryContainerInt = primaryContainer
             )
         }
-        backgroundColor == theme_black_background_color.toArgb() -> {
+        context.isBlackTheme() -> {
             Theme.Black(
-                accentColor = accentColor,
+                accentColorInt = accentColorInt,
                 primaryColorInt = primaryColorInt,
                 backgroundColorInt = backgroundColor,
                 appIconColorInt = appIconColor,
@@ -68,7 +67,7 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
         }
         context.isGrayTheme() -> {
             Theme.Gray(
-                accentColor = accentColor,
+                accentColorInt = accentColorInt,
                 primaryColorInt = primaryColorInt,
                 backgroundColorInt = backgroundColor,
                 appIconColorInt = appIconColor,
@@ -79,7 +78,7 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
         }
         context.isDarkTheme() -> {
             Theme.Dark(
-                accentColor = accentColor,
+                accentColorInt = accentColorInt,
                 primaryColorInt = primaryColorInt,
                 backgroundColorInt = backgroundColor,
                 appIconColorInt = appIconColor,
@@ -90,7 +89,7 @@ fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou)
         }
         else -> {
             Theme.Custom(
-                accentColor = accentColor,
+                accentColorInt = accentColorInt,
                 primaryColorInt = primaryColorInt,
                 backgroundColorInt = backgroundColor,
                 appIconColorInt = appIconColor,

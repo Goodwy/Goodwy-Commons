@@ -5,6 +5,7 @@ import androidx.compose.ui.graphics.Color
 
 @Immutable
 interface CommonTheme {
+    val accentColorInt: Int
     val primaryColorInt: Int
     val backgroundColorInt: Int
     val appIconColorInt: Int
@@ -12,6 +13,7 @@ interface CommonTheme {
     val surfaceVariantInt: Int
     val primaryContainerInt: Int
 
+    val accentColor get() = Color(accentColorInt)
     val primaryColor get() = Color(primaryColorInt)
     val backgroundColor get() = Color(backgroundColorInt)
     val appIconColor get() = Color(appIconColorInt)

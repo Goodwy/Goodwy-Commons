@@ -2,7 +2,7 @@
 <resources>
     <color name="color_primary">@color/primary</color> <!--@color/indigo_600--> <!--@color/md_blue_600-->
     <color name="color_primary_dark">@color/indigo_500</color> <!--@color/md_blue_800-->
-    <color name="color_accent">@color/color_primary</color>
+    <color name="color_accent">#FF09F4A1</color>  <!--@color/color_primary-->
     <color name="white">#FFFFFFFF</color>
 
     <color name="pressed_item_foreground">#08000000</color>

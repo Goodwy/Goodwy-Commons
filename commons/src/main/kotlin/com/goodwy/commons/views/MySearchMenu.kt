@@ -108,18 +108,17 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
         binding.topToolbarSearchIcon.contentDescription = resources.getString(accessibilityString)
     }
 
-    fun updateColors(background: Int = -1, scrollOffset: Int = 0) {
-        val backgroundColor = if (background == -1) context.getProperBackgroundColor() else background
-        val contrastColor = backgroundColor.getContrastColor()
+    fun updateColors(background: Int = context.getProperBackgroundColor(), scrollOffset: Int = 0) {
+        val contrastColor = background.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
-        val searchHolderColor = if (scrollOffset == 0) context.getBottomNavigationBackgroundColor() else context.getBottomNavigationBackgroundColor().darkenColor(4)
+        val searchHolderColor = if (scrollOffset == 0) context.getSurfaceColor() else context.getSurfaceColor().darkenColor(4)
 
-        setBackgroundColor(backgroundColor)
-        binding.topAppBarLayout.setBackgroundColor(backgroundColor)
+        setBackgroundColor(background)
+        binding.topAppBarLayout.setBackgroundColor(background)
         binding.topToolbarSearchIcon.applyColorFilter(contrastColor)
         binding.topToolbarSearchSpeechToText.applyColorFilter(contrastColor)
         binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
-        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, backgroundColor)
+        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, background)
 
         binding.topToolbarSearchHolder.setBackgroundResource(R.drawable.search_bg)
         binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(searchHolderColor)

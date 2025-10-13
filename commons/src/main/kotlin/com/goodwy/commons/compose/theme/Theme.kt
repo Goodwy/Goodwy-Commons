@@ -38,68 +38,93 @@ internal fun Theme(
                     dynamicDarkColorScheme(context).copy(
                         background = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_1000),
                         surface = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_900),
+                        secondary = theme.accentColor,
                     )
                 } else {
                     dynamicLightColorScheme(context).copy(
                         background = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_50),
                         surface = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_10),
+                        secondary = theme.accentColor,
                     )
                 }
             }
 
-            (theme is Theme.Custom && theme.backgroundColor.isLitWell()) || theme is Theme.Light -> lightColorScheme(
+            theme is Theme.Light -> lightColorScheme(
                 primary = theme.primaryColor,
                 onPrimary = Color(theme.primaryColorInt.getContrastColor()),
+                secondary = theme.accentColor,
                 background = theme.backgroundColor,
                 onBackground = theme.textColor,
                 surface = bottom_tabs_light_background, // card color
                 onSurface = theme.textColor, // text color
                 surfaceVariant = theme.surfaceVariant,
-                primaryContainer = Color(theme.primaryColorInt.lightenColor(25))
+                primaryContainer = theme.primaryContainer,
+                onPrimaryContainer = Color(theme.primaryContainerInt.getContrastColor())
             )
 
-            theme is Theme.Gray -> darkColorScheme(
+            theme is Theme.Gray -> lightColorScheme(
                 primary = theme.primaryColor,
                 onPrimary = Color(theme.primaryColorInt.getContrastColor()),
+                secondary = theme.accentColor,
                 background = theme.backgroundColor,
                 onBackground = theme.textColor,
-                surface = Color(theme.backgroundColorInt.lightenColor(4)),
+                surface = Color(theme.backgroundColorInt.lightenColor(8)),
                 onSurface = theme.textColor,
                 surfaceVariant = theme.surfaceVariant,
-                primaryContainer = theme.primaryContainer
+                primaryContainer = theme.primaryContainer,
+                onPrimaryContainer = Color(theme.primaryContainerInt.getContrastColor())
             )
 
             theme is Theme.Dark -> darkColorScheme(
                 primary = theme.primaryColor,
                 onPrimary = Color(theme.primaryColorInt.getContrastColor()),
+                secondary = theme.accentColor,
                 background = theme.backgroundColor,
                 onBackground = theme.textColor,
                 surface = bottom_tabs_dark_background,
                 onSurface = theme.textColor,
                 surfaceVariant = theme.surfaceVariant,
-                primaryContainer = theme.primaryContainer
+                primaryContainer = theme.primaryContainer,
+                onPrimaryContainer = Color(theme.primaryContainerInt.getContrastColor())
             )
 
             theme is Theme.Black -> darkColorScheme(
                 primary = theme.primaryColor,
                 onPrimary = Color(theme.primaryColorInt.getContrastColor()),
+                secondary = theme.accentColor,
                 background = theme.backgroundColor,
                 onBackground = theme.textColor,
                 surface = bottom_tabs_black_background,
                 onSurface = theme.textColor,
                 surfaceVariant = theme.surfaceVariant,
-                primaryContainer = Color(theme.primaryColorInt.darkenColor(45))
+                primaryContainer = theme.primaryContainer,
+                onPrimaryContainer = Color(theme.primaryContainerInt.getContrastColor())
+            )
+
+            theme is Theme.Custom && theme.backgroundColor.isLitWell() -> lightColorScheme(
+                primary = theme.primaryColor,
+                onPrimary = Color(theme.primaryColorInt.getContrastColor()),
+                secondary = theme.accentColor,
+                background = theme.backgroundColor,
+                onBackground = theme.textColor,
+                surface = Color(theme.backgroundColorInt.lightenColor(8)),
+                onSurface = theme.textColor, // text color
+                surfaceVariant = theme.surfaceVariant,
+                primaryContainer = theme.primaryContainer,
+                onPrimaryContainer = Color(theme.primaryContainerInt.getContrastColor())
             )
 
             theme is Theme.Custom -> darkColorScheme(
                 primary = theme.primaryColor,
                 onPrimary = Color(theme.primaryColorInt.getContrastColor()),
+                secondary = theme.accentColor,
                 background = theme.backgroundColor,
                 onBackground = theme.textColor,
-                surface = bottom_tabs_black_background,
+                surface = Color(theme.backgroundColorInt.lightenColor(8)),
                 onSurface = theme.textColor,
                 surfaceVariant = theme.surfaceVariant,
-                primaryContainer = theme.primaryContainer
+                primaryContainer = theme.primaryContainer,
+                onPrimaryContainer = Color(theme.primaryContainerInt.getContrastColor())
             )
 
             else -> lightColorScheme

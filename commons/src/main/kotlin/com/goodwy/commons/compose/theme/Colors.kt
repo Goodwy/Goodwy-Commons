@@ -8,7 +8,7 @@ val color_black = Color.Black
 val color_primary = Color(0xFF5589F1)
 val color_on_primary = color_white
 val color_primary_dark = Color(0xFF2960F5)
-val color_accent = color_primary
+val color_accent = Color(0xFF09F4A1)
 
 val color_background_light = color_white
 val color_text_light = Color(0xFF424242)

@@ -1541,10 +1541,11 @@ fun Activity.setupDialogStuff(
             getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(dialogButtonColor)
             getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
 
+            //TODO Dialog background
             val bgDrawable = when {
                 isDynamicTheme() -> ResourcesCompat.getDrawable(resources, R.drawable.dialog_you_background, theme)
-                isBlackTheme() -> resources.getColoredDrawableWithColor(this@setupDialogStuff, R.drawable.dialog_bg, getBottomNavigationBackgroundColor())
-                else -> resources.getColoredDrawableWithColor(this@setupDialogStuff, R.drawable.dialog_bg, baseConfig.backgroundColor) //TODO Dialog background
+                isBlackTheme() -> resources.getColoredDrawableWithColor(this@setupDialogStuff, R.drawable.dialog_bg, getSurfaceColor())
+                else -> resources.getColoredDrawableWithColor(this@setupDialogStuff, R.drawable.dialog_bg, baseConfig.backgroundColor)
             }
 
             window?.setBackgroundDrawable(bgDrawable)

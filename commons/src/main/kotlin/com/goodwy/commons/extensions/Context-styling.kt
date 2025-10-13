@@ -1,6 +1,5 @@
 package com.goodwy.commons.extensions
 
-import android.annotation.SuppressLint
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
@@ -8,7 +7,6 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.view.ViewGroup
 import androidx.loader.content.CursorLoader
-import com.google.android.material.color.MaterialColors
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_AUTO
@@ -48,43 +46,39 @@ fun Context.getProperPrimaryColor() = when {
 
 fun Context.getProperAccentColor() = when {
     !baseConfig.isUsingAccentColor -> getProperPrimaryColor()
-    isDynamicTheme() -> resources.getColor(R.color.you_primary_dark_color, theme)
+//    isDynamicTheme() -> resources.getColor(R.color.you_primary_dark_color, theme)
     else -> baseConfig.accentColor
-}
-
-fun Context.getProperStatusBarColor() = when {
-    isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme)
-    else -> getProperBackgroundColor()
 }
 
 // get the color of the status bar with material activity, if the layout is scrolled down a bit
 fun Context.getColoredMaterialStatusBarColor(): Int {
     return when {
         isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme).lightenColor(2)
-        else -> getBottomNavigationBackgroundColor().lightenColor(2)
+        else -> getSurfaceColor().lightenColor(2)
     }
 }
 
 fun Context.updateTextColors(viewGroup: ViewGroup) {
     val textColor = getProperTextColor()
     val backgroundColor = getProperBackgroundColor()
-    val accentColor = getProperPrimaryColor()
+    val primaryColor = getProperPrimaryColor()
+    val accentColor = getProperAccentColor()
     val textCursorColor = getProperTextCursorColor()
 
     val cnt = viewGroup.childCount
     (0 until cnt).map { viewGroup.getChildAt(it) }.forEach {
         when (it) {
-            is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyTextView -> it.setColors(textColor, primaryColor, backgroundColor)
+            is MyAppCompatSpinner -> it.setColors(textColor, primaryColor, backgroundColor)
             is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
             is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
             is MyMaterialSwitch -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyEditText -> it.setColors(textColor, accentColor, textCursorColor)
-            is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, textCursorColor)
-            is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
-            is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor.getContrastColor())
-            is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyTextInputLayout -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyEditText -> it.setColors(textColor, primaryColor, textCursorColor)
+            is MyAutoCompleteTextView -> it.setColors(textColor, primaryColor, textCursorColor)
+            is MyFloatingActionButton -> it.setColors(textColor, primaryColor, backgroundColor)
+            is MySeekBar -> it.setColors(textColor, primaryColor, backgroundColor.getContrastColor())
+            is MyButton -> it.setColors(textColor, primaryColor, backgroundColor)
+            is MyTextInputLayout -> it.setColors(textColor, primaryColor, backgroundColor)
             is ViewGroup -> updateTextColors(it)
         }
     }
@@ -217,14 +211,14 @@ fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enabl
 
 fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_colors).toCollection(ArrayList())
 
-fun Context.getBottomNavigationBackgroundColor(): Int {
+fun Context.getSurfaceColor(): Int {
     val baseColor = baseConfig.backgroundColor
     val bottomColor = when {
-        isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme)
+        isDynamicTheme() -> resources.getColor(R.color.you_surface_color, theme)
         isLightTheme() -> resources.getColor(R.color.bottom_tabs_light_background, theme)
         isBlackTheme() -> resources.getColor(R.color.bottom_tabs_black_background, theme)
         isDarkTheme() -> resources.getColor(R.color.bottom_tabs_dark_background, theme)
-        else -> baseColor.lightenColor(4)
+        else -> baseColor.lightenColor(8)
     }
     return bottomColor
 }
@@ -239,16 +233,4 @@ fun Context.getDialogBackgroundColor(): Int {
 fun Context.getProperTextCursorColor() = when {
     isDynamicTheme() -> resources.getColor(R.color.you_primary_color, theme)
     else -> baseConfig.textCursorColor
-}
-
-fun Context.getSurfaceColor(): Int {
-    val baseColor = baseConfig.backgroundColor
-    val bottomColor = when {
-        isDynamicTheme() -> resources.getColor(R.color.you_surface_color, theme)
-        isLightTheme() -> resources.getColor(R.color.bottom_tabs_light_background, theme)
-        isBlackTheme() -> resources.getColor(R.color.bottom_tabs_black_background, theme)
-        isDarkTheme() -> resources.getColor(R.color.bottom_tabs_dark_background, theme)
-        else -> baseColor.lightenColor(4)
-    }
-    return bottomColor
 }

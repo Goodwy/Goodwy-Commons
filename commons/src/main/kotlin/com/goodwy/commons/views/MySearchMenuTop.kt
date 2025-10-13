@@ -113,7 +113,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
         val backgroundColor = context.getProperBackgroundColor()
         val contrastColor = backgroundColor.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
-        val bottomNavigationBackgroundColor = context.getBottomNavigationBackgroundColor()
+        val surfaceColor = context.getSurfaceColor()
 
         setBackgroundColor(backgroundColor)
         binding.topAppBarLayout.setBackgroundColor(backgroundColor)
@@ -124,7 +124,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
         (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, Color.TRANSPARENT, useColorForStatusBar = false)
 
         binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)
-        binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(bottomNavigationBackgroundColor)
+        binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(surfaceColor)
         binding.topToolbarSearchClear.applyColorFilter(contrastColor)
     }
 

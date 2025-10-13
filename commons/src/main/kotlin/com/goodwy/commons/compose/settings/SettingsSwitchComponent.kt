@@ -36,7 +36,8 @@ fun SettingsSwitchComponent(
     checkmark: ImageVector = Icons.Rounded.Check,
     onChange: ((Boolean) -> Unit)? = null,
     switchColors: SwitchColors = SwitchDefaults.colors(
-        checkedThumbColor = Color.White,
+        checkedThumbColor = MaterialTheme.colorScheme.onSecondary,//Color.White,
+        checkedTrackColor = MaterialTheme.colorScheme.secondary,
         checkedIconColor = Color.Black
     ),
     scaleSwitch: Float = 1F,

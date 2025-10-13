@@ -602,7 +602,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         if (!appAllInstalled) binding.collectionLogo.applyColorFilter(primaryColor)
         binding.collectionChevron.applyColorFilter(getProperTextColor())
-        binding.collectionSubtitle.background.applyColorFilter(getBottomNavigationBackgroundColor())
+        binding.collectionSubtitle.background.applyColorFilter(getSurfaceColor())
 
         val items = arrayOf(
             SimpleListItem(1, R.string.right_dialer, imageRes = R.drawable.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),

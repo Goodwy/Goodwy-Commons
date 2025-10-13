@@ -57,7 +57,7 @@ class SecurityDialog(
                 if (activity.isDynamicTheme()) {
                     dialogTabLayout.setBackgroundColor(activity.resources.getColor(R.color.you_dialog_background_color))
                 } else if (root.context.isBlackTheme()) {
-                    dialogTabLayout.setBackgroundColor(root.context.getBottomNavigationBackgroundColor())
+                    dialogTabLayout.setBackgroundColor(root.context.getSurfaceColor())
                 } else {
                     dialogTabLayout.setBackgroundColor(root.context.getProperBackgroundColor())
                 }
