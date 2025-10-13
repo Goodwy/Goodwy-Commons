@@ -963,8 +963,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getCurrentSurfaceColor(): Int {
         val bottomColor = when {
             binding.customizationTheme.value == getMaterialYouString() -> resources.getColor(R.color.you_surface_color, theme)
-            curBackgroundColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
-            curBackgroundColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
+            isLightTheme() -> resources.getColor(R.color.bottom_tabs_light_background, theme)
+            isBlackTheme() -> resources.getColor(R.color.bottom_tabs_black_background, theme)
+            isDarkTheme() -> resources.getColor(R.color.bottom_tabs_dark_background, theme)
             else -> curBackgroundColor.lightenColor(4)
         }
         return bottomColor

@@ -221,8 +221,9 @@ fun Context.getBottomNavigationBackgroundColor(): Int {
     val baseColor = baseConfig.backgroundColor
     val bottomColor = when {
         isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme)
-        baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
-        baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
+        isLightTheme() -> resources.getColor(R.color.bottom_tabs_light_background, theme)
+        isBlackTheme() -> resources.getColor(R.color.bottom_tabs_black_background, theme)
+        isDarkTheme() -> resources.getColor(R.color.bottom_tabs_dark_background, theme)
         else -> baseColor.lightenColor(4)
     }
     return bottomColor
@@ -244,8 +245,9 @@ fun Context.getSurfaceColor(): Int {
     val baseColor = baseConfig.backgroundColor
     val bottomColor = when {
         isDynamicTheme() -> resources.getColor(R.color.you_surface_color, theme)
-        baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background, theme)
-        baseColor == Color.BLACK -> resources.getColor(R.color.bottom_tabs_black_background, theme)
+        isLightTheme() -> resources.getColor(R.color.bottom_tabs_light_background, theme)
+        isBlackTheme() -> resources.getColor(R.color.bottom_tabs_black_background, theme)
+        isDarkTheme() -> resources.getColor(R.color.bottom_tabs_dark_background, theme)
         else -> baseColor.lightenColor(4)
     }
     return bottomColor

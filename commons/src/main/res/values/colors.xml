@@ -15,6 +15,7 @@
     <color name="divider">#80c6c6c7</color>
     <color name="bottom_tabs_light_background">#FFF1F1F1</color>
     <color name="bottom_tabs_black_background">#FF1B1B1B</color> <!--#44666666 transparency sometimes gets in the way-->
+    <color name="bottom_tabs_dark_background">#FF323236</color>
     <color name="disabled_text_color_highlight">#00FFFFFF</color>
 
     <color name="hint_white">#99FFFFFF</color>
@@ -27,7 +28,7 @@
     <color name="theme_gray_text_color">@color/md_grey_900</color>
     <color name="theme_gray_background_color">#ebebeb</color>
     <color name="theme_dark_text_color">@color/md_grey_200</color>
-    <color name="theme_dark_background_color">#1e2225</color> <!--@color/md_grey_800-->
+    <color name="theme_dark_background_color">#1C1C1E</color> <!--@color/md_grey_800-->
     <color name="theme_black_text_color">@color/md_grey_200</color>
     <color name="theme_black_background_color">#000000</color>
     <color name="theme_solarized_background_color">@color/md_indigo_900_dark</color>

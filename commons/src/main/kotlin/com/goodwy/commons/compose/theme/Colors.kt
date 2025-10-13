@@ -22,6 +22,7 @@ val gradient_grey_start = Color(0xCC000000)
 val dark_grey = Color(0xFF333333)
 val bottom_tabs_light_background = Color(0xFFF1F1F1)
 val bottom_tabs_black_background = Color(0xFF1B1B1B)
+val bottom_tabs_dark_background = Color(0xFF323236)
 val disabled_text_color_highlight = Color(0x00FFFFFF)
 
 val hint_white = Color(0x99FFFFFF)
