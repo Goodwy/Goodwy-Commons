@@ -106,6 +106,9 @@
                         <com.goodwy.commons.views.MyTextView
                             android:id="@+id/customization_primary_color_label"
                             style="@style/SettingsTextLabelStyle"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/customization_primary_color"
+                            android:layout_marginEnd="@dimen/activity_margin"
                             android:text="@string/primary_color"/>
 
                         <ImageView
@@ -200,6 +203,9 @@
                         <com.goodwy.commons.views.MyTextView
                             android:id="@+id/customization_accent_color_label"
                             style="@style/SettingsTextLabelStyle"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/customization_accent_color"
+                            android:layout_marginEnd="@dimen/activity_margin"
                             android:text="@string/accent_color"/>
 
                         <ImageView
@@ -221,6 +227,9 @@
                         <com.goodwy.commons.views.MyTextView
                             android:id="@+id/customization_background_color_label"
                             style="@style/SettingsTextLabelStyle"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/customization_background_color"
+                            android:layout_marginEnd="@dimen/activity_margin"
                             android:text="@string/background_color"/>
 
                         <ImageView
@@ -242,6 +251,9 @@
                         <com.goodwy.commons.views.MyTextView
                             android:id="@+id/customization_text_color_label"
                             style="@style/SettingsTextLabelStyle"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/customization_text_color"
+                            android:layout_marginEnd="@dimen/activity_margin"
                             android:text="@string/text_color"/>
 
                         <ImageView
@@ -263,15 +275,20 @@
                         <com.goodwy.commons.views.MyTextView
                             android:id="@+id/customization_text_cursor_color_label"
                             style="@style/SettingsTextLabelStyle"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/customization_text_cursor_color_default"
+                            android:layout_marginEnd="8dp"
                             android:text="@string/text_cursor_color"/>
 
                         <com.goodwy.commons.views.MyTextView
                             android:id="@+id/customization_text_cursor_color_default"
                             style="@style/SettingsTextValueStyle"
+                            android:maxWidth="@dimen/settings_value_width_long"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="@dimen/settings_margin"
                             android:text="@string/default_color"
-                            android:visibility="gone"/>
+                            android:visibility="gone"
+                            tools:visibility="visible"/>
 
                         <ImageView
                             android:id="@+id/customization_text_cursor_color"
@@ -295,31 +312,9 @@
                             android:id="@+id/customizationAppIconColorLabel"
                             style="@style/SettingsTextLabelStyle"
                             android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:layout_toStartOf="@+id/customizationAppIconColorBeta"
-                            android:text="@string/app_icon_color" />
-
-                        <TextView
-                            android:id="@+id/customizationAppIconColorBeta"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="@dimen/small_margin"
-                            android:layout_marginEnd="@dimen/normal_margin"
                             android:layout_toStartOf="@+id/customizationAppIconColor"
-                            android:background="@drawable/button_rounded_5dp"
-                            android:backgroundTint="@color/red_missed"
-                            android:clickable="false"
-                            android:includeFontPadding="false"
-                            android:paddingStart="5dp"
-                            android:paddingTop="@dimen/tiny_margin"
-                            android:paddingEnd="5dp"
-                            android:paddingBottom="@dimen/tiny_margin"
-                            android:text="@string/beta"
-                            android:textAllCaps="true"
-                            android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                            android:layout_marginEnd="@dimen/activity_margin"
+                            android:text="@string/app_icon_color" />
 
                         <ImageView
                             android:id="@+id/customizationAppIconColor"
