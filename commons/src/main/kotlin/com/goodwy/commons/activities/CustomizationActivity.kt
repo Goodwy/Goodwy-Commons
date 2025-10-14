@@ -320,10 +320,9 @@ class CustomizationActivity : BaseSimpleActivity() {
             curIsUsingAccentColor = binding.customizationUseAccentColor.isChecked
             curTextCursorColor = baseConfig.textCursorColor
 
-            if (curSelectedThemeId != THEME_SYSTEM) {
+            if (curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_AUTO) {
                 curPrimaryColor = getColor(theme.primaryColorId)
-                curAccentColor = getColor(R.color.color_accent) // (R.color.color_primary) TODO accent color when choosing a theme R.color.color_primary
-//                curAppIconColor = theme.appIconColorId
+                curAccentColor = getColor(R.color.color_accent)
             } else {
                 curPrimaryColor = getCurrentPrimaryColor()
             }
