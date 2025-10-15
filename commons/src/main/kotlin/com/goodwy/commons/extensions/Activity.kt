@@ -86,10 +86,12 @@ fun Activity.appLaunched(appId: String) {
 
     baseConfig.appRunCount++
 
-    if (!isTalkBackOn()) {
-        if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
-            if (!resources.getBoolean(R.bool.hide_google_relations)) {
-                if (isPlayStoreInstalled() || isRuStoreInstalled()) RateStarsDialog(this)
+    if (!baseConfig.wasAppRated) {
+        if (!isTalkBackOn()) {
+            if (baseConfig.appRunCount % 40 == 0) {
+                if (!resources.getBoolean(R.bool.hide_google_relations)) {
+                    if (isPlayStoreInstalled() || isRuStoreInstalled()) RateStarsDialog(this)
+                }
             }
         }
     }
