@@ -58,6 +58,13 @@ fun Context.getColoredMaterialStatusBarColor(): Int {
     }
 }
 
+fun Context.getColoredMaterialSearchBarColor(): Int {
+    return when {
+        isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme).darkenColor(4)
+        else -> getSurfaceColor().darkenColor(4)
+    }
+}
+
 fun Context.updateTextColors(viewGroup: ViewGroup) {
     val textColor = getProperTextColor()
     val backgroundColor = getProperBackgroundColor()
