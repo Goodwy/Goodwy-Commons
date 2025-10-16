@@ -111,7 +111,10 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
     fun updateColors(background: Int = context.getProperBackgroundColor(), scrollOffset: Int = 0) {
         val contrastColor = background.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
-        val searchHolderColor = if (scrollOffset == 0) context.getSurfaceColor() else context.getColoredMaterialSearchBarColor()
+        val surfaceColor =
+            if (context.isDynamicTheme() && !context.isSystemInDarkMode()) context.getProperBackgroundColor()
+            else context.getSurfaceColor()
+        val searchHolderColor = if (scrollOffset == 0) surfaceColor else context.getColoredMaterialSearchBarColor()
 
         setBackgroundColor(background)
         binding.topAppBarLayout.setBackgroundColor(background)
