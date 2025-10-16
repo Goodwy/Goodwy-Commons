@@ -223,6 +223,7 @@ fun Context.getSurfaceColor(): Int {
     val bottomColor = when {
         isDynamicTheme() -> resources.getColor(R.color.you_surface_color, theme)
         isLightTheme() -> resources.getColor(R.color.bottom_tabs_light_background, theme)
+        isGrayTheme() -> resources.getColor(R.color.bottom_tabs_gray_background, theme)
         isBlackTheme() -> resources.getColor(R.color.bottom_tabs_black_background, theme)
         isDarkTheme() -> resources.getColor(R.color.bottom_tabs_dark_background, theme)
         else -> baseColor.lightenColor(8)

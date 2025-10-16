@@ -68,7 +68,7 @@ internal fun Theme(
                 secondary = theme.accentColor,
                 background = theme.backgroundColor,
                 onBackground = theme.textColor,
-                surface = Color(theme.backgroundColorInt.lightenColor(8)),
+                surface = bottom_tabs_gray_background,
                 onSurface = theme.textColor,
                 surfaceVariant = theme.surfaceVariant,
                 primaryContainer = theme.primaryContainer,

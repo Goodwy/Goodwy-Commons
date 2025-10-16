@@ -14,8 +14,9 @@
     <color name="dark_grey">#FF333333</color>
     <color name="divider">#80c6c6c7</color>
     <color name="bottom_tabs_light_background">#FFF1F1F1</color>
-    <color name="bottom_tabs_black_background">#FF1B1B1B</color> <!--#44666666 transparency sometimes gets in the way-->
+    <color name="bottom_tabs_gray_background">#FFFDFDFD</color>
     <color name="bottom_tabs_dark_background">#FF323236</color>
+    <color name="bottom_tabs_black_background">#FF1B1B1B</color> <!--#44666666 transparency sometimes gets in the way-->
     <color name="disabled_text_color_highlight">#00FFFFFF</color>
 
     <color name="hint_white">#99FFFFFF</color>
