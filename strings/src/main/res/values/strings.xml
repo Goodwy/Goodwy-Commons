@@ -296,6 +296,8 @@
     <string name="enable_blocking">Enable blocking</string>
     <string name="enable_blocking_summary">When disabled, all blocking settings will be removed for calls. Messages will still be blocked for numbers on the blocked list.
 You can add a quick settings tile for easy switching.</string>
+    <string name="block_unknown_calls_summary">Calls from unsaved numbers will be blocked and displayed on the Recents list.
+Incoming calls will continue to ring from people in your contacts and recent outgoing calls.</string>
     <string name="bottom_indent">Bottom indent</string>
 
     <!-- Relation types -->

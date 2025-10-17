@@ -268,6 +268,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="blocking_type_silence">Una llamada silenciosa</string>
     <string name="blocking_type_silence_summary">Establece si se debe silenciar el timbre para la llamada entrante</string>
     <string name="enable_blocking_summary">Al desactivar esta opción, se eliminarán todos los bloqueos de llamadas. Los mensajes seguirán bloqueados para los números de la lista de bloqueados.\nPuedes añadir un panel de ajustes rápidos para cambiar fácilmente.</string>
+    <string name="block_unknown_calls_summary">Las llamadas de números desconocidos se bloquearán y se mostrarán en la lista \"Recientes\".\nLas llamadas entrantes de tus contactos y de personas a las que hayas llamado recientemente seguirán sonando.</string>
     <string name="bottom_indent">Sangría inferior</string>
     <string name="relation_g">Relación</string>
     <string name="relations_g">Personas relacionadas</string>

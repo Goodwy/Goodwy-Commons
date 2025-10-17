@@ -271,6 +271,7 @@ Będziemy bardzo wdzięczni.
     <string name="blocking_type_silence">Cichy telefon</string>
     <string name="blocking_type_silence_summary">Ustawia, czy dzwonek ma zostać wyciszony dla połączeń przychodzących</string>
     <string name="enable_blocking_summary">Po wyłączeniu wszystkie ustawienia blokowania połączeń zostaną usunięte. Wiadomości nadal będą blokowane dla numerów z listy blokowanych.\nMożesz dodać kafelek szybkich ustawień, aby ułatwić przełączanie.</string>
+    <string name="block_unknown_calls_summary">Połączenia z nieznanych numerów będą blokowane i wyświetlane na liście „Ostatnie”.\nPołączenia przychodzące od osób z Twoich kontaktów i od osób, do których ostatnio dzwoniłeś, nadal będą dzwonić.</string>
     <string name="bottom_indent">Wcięcie dolne</string>
     <string name="relation_g">Relacja</string>
     <string name="relations_g">Powiązane osoby</string>

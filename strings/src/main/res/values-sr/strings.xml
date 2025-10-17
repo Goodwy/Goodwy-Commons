@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Тихи позив</string>
     <string name="blocking_type_silence_summary">Подешава да ли звоно треба да буде утишано за долазни позив</string>
     <string name="enable_blocking_summary">Када је онемогућено, сва подешавања блокирања ће бити уклоњена за позиве. Поруке ће и даље бити блокиране за бројеве са листе блокираних.\nМожете додати плочицу за брза подешавања за лако пребацивање.</string>
+    <string name="block_unknown_calls_summary">Позиви са непознатих бројева биће блокирани и приказани на листи „Недавни“.\nДолазни позиви од људи у вашим контактима и од људи које сте недавно звали ће наставити да звоне.</string>
     <string name="bottom_indent">Доња увлака</string>
     <string name="relation_g">Однос</string>
     <string name="relations_g">Повезане особе</string>

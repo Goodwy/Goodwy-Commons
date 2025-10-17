@@ -269,6 +269,7 @@ Grazie!
     <string name="blocking_type_silence">Una chiamata silenziosa</string>
     <string name="blocking_type_silence_summary">Imposta se la suoneria deve essere disattivata per la chiamata in arrivo</string>
     <string name="enable_blocking_summary">Se disabilitata, tutte le impostazioni di blocco per le chiamate verranno rimosse. I messaggi per i numeri presenti nell\'elenco dei bloccati continueranno a essere bloccati.\nÈ possibile aggiungere un riquadro delle impostazioni rapide per passare facilmente da una all\'altra.</string>
+    <string name="block_unknown_calls_summary">Le chiamate provenienti da numeri sconosciuti verranno bloccate e visualizzate nell\'elenco \"Recenti\".\nLe chiamate in arrivo dalle persone presenti nei tuoi contatti e dalle persone che hai chiamato di recente continueranno a squillare.</string>
     <string name="bottom_indent">Rientro inferiore</string>
     <string name="relation_g">Relazione</string>
     <string name="relations_g">Persone correlate</string>

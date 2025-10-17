@@ -269,6 +269,7 @@
     <string name="blocking_type_silence">Et stille opkald</string>
     <string name="blocking_type_silence_summary">Indstiller, om ringningen skal afbrydes for det indgående opkald</string>
     <string name="enable_blocking_summary">Når deaktiveret, vil alle blokeringsindstillinger blive fjernet for opkald. Beskeder vil stadig blive blokeret for numre på den blokerede liste.\nDu kan tilføje en flise med hurtige indstillinger for let skift.</string>
+    <string name="block_unknown_calls_summary">Opkald fra ukendte numre vil blive blokeret og vist på listen \"Seneste\".\nIndgående opkald fra personer i dine kontakter og fra personer, du for nylig har ringet til, vil fortsætte med at ringe.</string>
     <string name="bottom_indent">Nederste indrykning</string>
     <string name="relation_g">Forhold</string>
     <string name="relations_g">Nærtstående personer</string>

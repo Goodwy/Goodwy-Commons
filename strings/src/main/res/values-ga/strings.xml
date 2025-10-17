@@ -283,6 +283,7 @@
     <string name="blocking_type_silence">Glaoch ciúin</string>
     <string name="blocking_type_silence_summary">Socraíonn sé cé acu ar cheart an glaoch a chur ina thost don ghlao isteach</string>
     <string name="enable_blocking_summary">Nuair a bheidh sé díchumasaithe, bainfear gach socrú blocála le haghaidh glaonna. Cuirfear bac fós ar theachtaireachtaí le haghaidh uimhreacha ar an liosta bactha.\nIs féidir leat tíl socruithe tapa a chur leis le haghaidh athrú éasca.</string>
+    <string name="block_unknown_calls_summary">Cuirfear bac ar ghlaonna ó uimhreacha anaithnide agus taispeánfar iad sa liosta \"Le Déanaí\".\nLeanfaidh glaonna isteach ó dhaoine i do theagmhálaithe agus ó dhaoine ar ghlaoigh tú orthu le déanaí ag glaoch.</string>
     <string name="bottom_indent">fleasc bun</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>

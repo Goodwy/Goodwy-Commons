@@ -264,6 +264,7 @@
     <string name="blocking_type_silence">安静的通话</string>
     <string name="blocking_type_silence_summary">设置来电时是否应静音</string>
     <string name="enable_blocking_summary">停用后，所有来电屏蔽设置都将被移除。但屏蔽列表中的号码仍会被屏蔽信息。\n您可以添加快捷设置图块，方便切换。</string>
+    <string name="block_unknown_calls_summary">来自未知号码的来电将被屏蔽并显示在“最近通话”列表中。\n来自您通讯录中联系人和您最近拨打过的联系人的来电将继续响铃。</string>
     <string name="bottom_indent">底部缩进</string>
     <string name="relation_g">关系</string>
     <string name="relations_g">相关人员</string>

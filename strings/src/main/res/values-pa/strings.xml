@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">ਇੱਕ ਸ਼ਾਂਤ ਕਾਲ</string>
     <string name="blocking_type_silence_summary">ਸੈੱਟ ਕਰਦਾ ਹੈ ਕਿ ਕੀ ਇਨਕਮਿੰਗ ਕਾਲ ਲਈ ਰਿੰਗਿੰਗ ਨੂੰ ਸ਼ਾਂਤ ਕੀਤਾ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ</string>
     <string name="enable_blocking_summary">ਅਯੋਗ ਹੋਣ \'ਤੇ, ਕਾਲਾਂ ਲਈ ਸਾਰੀਆਂ ਬਲਾਕਿੰਗ ਸੈਟਿੰਗਾਂ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ। ਬਲੌਕ ਕੀਤੀ ਸੂਚੀ ਵਿੱਚ ਨੰਬਰਾਂ ਲਈ ਸੁਨੇਹੇ ਅਜੇ ਵੀ ਬਲੌਕ ਕੀਤੇ ਜਾਣਗੇ।\nਤੁਸੀਂ ਆਸਾਨ ਸਵਿਚਿੰਗ ਲਈ ਇੱਕ ਤੇਜ਼ ਸੈਟਿੰਗ ਟਾਇਲ ਜੋੜ ਸਕਦੇ ਹੋ।</string>
+    <string name="block_unknown_calls_summary">ਅਣਜਾਣ ਨੰਬਰਾਂ ਤੋਂ ਆਉਣ ਵਾਲੀਆਂ ਕਾਲਾਂ ਨੂੰ ਬਲੌਕ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ \"ਹਾਲੀਆ\" ਸੂਚੀ ਵਿੱਚ ਪ੍ਰਦਰਸ਼ਿਤ ਕੀਤਾ ਜਾਵੇਗਾ।\nਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਵਿੱਚ ਲੋਕਾਂ ਅਤੇ ਜਿਨ੍ਹਾਂ ਲੋਕਾਂ ਨੂੰ ਤੁਸੀਂ ਹਾਲ ਹੀ ਵਿੱਚ ਕਾਲ ਕੀਤੀ ਹੈ, ਉਨ੍ਹਾਂ ਤੋਂ ਆਉਣ ਵਾਲੀਆਂ ਕਾਲਾਂ ਦੀ ਘੰਟੀ ਵੱਜਦੀ ਰਹੇਗੀ।</string>
     <string name="bottom_indent">ਹੇਠਲਾ ਵਿੱਥ</string>
     <string name="relation_g">ਸਬੰਧ</string>
     <string name="relations_g">ਸਬੰਧਤ ਵਿਅਕਤੀ</string>

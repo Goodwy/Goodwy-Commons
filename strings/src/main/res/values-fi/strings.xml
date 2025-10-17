@@ -269,6 +269,7 @@
     <string name="blocking_type_silence">Hiljainen puhelu</string>
     <string name="blocking_type_silence_summary">Määrittää, hiljennetäänkö soitto saapuvan puhelun aikana</string>
     <string name="enable_blocking_summary">Kun se on poistettu käytöstä, kaikki puhelujen estoasetukset poistetaan. Viestit estetään edelleen estettyjen luettelossa olevien numeroiden osalta.\nVoit lisätä pika-asetusruudun vaihtamisen helpottamiseksi.</string>
+    <string name="block_unknown_calls_summary">Tuntemattomista numeroista tulevat puhelut estetään ja näytetään \"Viimeisimmät\"-luettelossa.\nYhteystiedoissasi olevilta henkilöiltä ja henkilöiltä, ​​joille olet äskettäin soittanut, saapuvat puhelut soivat edelleen.</string>
     <string name="bottom_indent">Alempi sisennys</string>
     <string name="relation_g">Suhde</string>
     <string name="relations_g">Lähipiiriin kuuluvat henkilöt</string>

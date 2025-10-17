@@ -269,6 +269,7 @@
     <string name="blocking_type_silence">שיחה שקטה</string>
     <string name="blocking_type_silence_summary">מגדיר אם יש להשתיק את הצלצול עבור השיחה הנכנסת</string>
     <string name="enable_blocking_summary">כאשר מושבת, כל הגדרות החסימה יוסרו עבור שיחות. הודעות עדיין ייחסמו למספרים ברשימת החסומים.\nאתה יכול להוסיף אריח הגדרות מהירות למעבר קל.</string>
+    <string name="block_unknown_calls_summary">שיחות ממספרים לא ידועים ייחסמו ויוצגו ברשימת \"אחרונים\".\nשיחות נכנסות מאנשים באנשי הקשר שלך ומאנשים שהתקשרת אליהם לאחרונה ימשיכו לצלצל.</string>
     <string name="bottom_indent">כניסה תחתונה</string>
     <string name="relation_g">קשר</string>
     <string name="relations_g">אנשים קשורים</string>

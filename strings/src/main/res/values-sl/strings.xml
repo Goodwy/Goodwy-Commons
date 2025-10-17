@@ -272,6 +272,7 @@
     <string name="blocking_type_silence">Tihi klic</string>
     <string name="blocking_type_silence_summary">Nastavi, ali naj bo zvonjenje za dohodni klic utišano</string>
     <string name="enable_blocking_summary">Ko je onemogočeno, bodo vse nastavitve blokiranja za klice odstranjene. Sporočila bodo še vedno blokirana za številke na seznamu blokiranih.\nZa enostavno preklapljanje lahko dodate ploščico s hitrimi nastavitvami.</string>
+    <string name="block_unknown_calls_summary">Klici z neznanih številk bodo blokirani in prikazani na seznamu »Nedavni«.\nDohodni klici oseb v vaših stikih in oseb, ki ste jih nedavno klicali, bodo še naprej zvonili.</string>
     <string name="bottom_indent">Spodnja alineja</string>
     <string name="relation_g">Ime relacije</string>
     <string name="relations_g">Povezane osebe</string>

@@ -278,6 +278,7 @@
     <string name="blocking_type_silence">En stille samtale</string>
     <string name="blocking_type_silence_summary">Angir om ringing skal dempes for den innkommende samtalen</string>
     <string name="enable_blocking_summary">Når den er deaktivert, vil alle blokkeringsinnstillinger bli fjernet for samtaler. Meldinger vil fortsatt være blokkert for numre på blokkeringslisten.\nDu kan legge til en hurtiginnstillingsflis for enkelt bytte.</string>
+    <string name="block_unknown_calls_summary">Anrop fra ukjente numre vil bli blokkert og vist i «Siste»-listen.\nInnkommende anrop fra personer i kontaktene dine og fra personer du nylig har ringt, vil fortsette å ringe.</string>
     <string name="bottom_indent">Nedre innrykk</string>
     <string name="relation_g">Relationship</string>
     <string name="relations_g">Pårørende</string>

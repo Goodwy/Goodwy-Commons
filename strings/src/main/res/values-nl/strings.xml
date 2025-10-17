@@ -268,6 +268,7 @@ Bedankt!
     <string name="blocking_type_silence">Een stille roep</string>
     <string name="blocking_type_silence_summary">Hiermee stelt u in of de beltoon voor inkomende oproepen moet worden gedempt</string>
     <string name="enable_blocking_summary">Wanneer uitgeschakeld, worden alle blokkeringsinstellingen voor oproepen verwijderd. Berichten voor nummers op de blokkeerlijst worden nog steeds geblokkeerd.\nJe kunt een tegel met snelle instellingen toevoegen om eenvoudig te kunnen schakelen.</string>
+    <string name="block_unknown_calls_summary">Oproepen van onbekende nummers worden geblokkeerd en weergegeven in de lijst \'Recente oproepen\'.\nInkomende oproepen van mensen in je contacten en van mensen die je recent hebt gebeld, blijven overgaan.</string>
     <string name="bottom_indent">Onderste inspringing</string>
     <string name="relation_g">Relatie</string>
     <string name="relations_g">Verwante personen</string>

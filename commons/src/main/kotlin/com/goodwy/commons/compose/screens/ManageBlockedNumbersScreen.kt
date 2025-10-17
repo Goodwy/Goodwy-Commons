@@ -211,7 +211,12 @@ internal fun ManageBlockedNumbersScreen(
                     checkmark = ImageVector.vectorResource(R.drawable.ic_check)
                 )
                 SettingsSwitchComponent(
-                    label = if (isDialer) stringResource(id = R.string.block_unknown_calls) else stringResource(id = R.string.block_unknown_messages),
+                    label =
+                        if (isDialer) stringResource(id = R.string.block_unknown_calls)
+                        else stringResource(id = R.string.block_unknown_messages),
+                    value =
+                        if (isDialer) stringResource(id = com.goodwy.strings.R.string.block_unknown_calls_summary)
+                        else null,
                     initialValue = isBlockUnknownSelected,
                     onChange = onBlockUnknownSelectedChange,
                     modifier = Modifier.topAppBarPaddings(),
@@ -253,8 +258,9 @@ internal fun ManageBlockedNumbersScreen(
                 Card(modifier = Modifier.padding(horizontal = 20.dp)) {
                     Text(
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
-                        text = if (isBlockingEnabled || !isDialer) stringResource(id = com.goodwy.strings.R.string.сalls_and_messages_blocked_warning)
-                                else stringResource(id = com.goodwy.strings.R.string.messages_blocked_warning)
+                        text =
+                            if (isBlockingEnabled || !isDialer) stringResource(id = com.goodwy.strings.R.string.сalls_and_messages_blocked_warning)
+                            else stringResource(id = com.goodwy.strings.R.string.messages_blocked_warning)
                     )
                 }
             }

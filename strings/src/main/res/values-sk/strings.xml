@@ -272,6 +272,7 @@
     <string name="blocking_type_silence">Tichý hovor</string>
     <string name="blocking_type_silence_summary">Nastavuje, či má byť zvonenie pri prichádzajúcom hovore stíšené</string>
     <string name="enable_blocking_summary">Keď je táto možnosť zakázaná, všetky nastavenia blokovania budú pre hovory odstránené. Správy budú stále blokované pre čísla na zozname blokovaných.\nPre jednoduché prepínanie môžete pridať dlaždicu rýchlych nastavení.</string>
+    <string name="block_unknown_calls_summary">Hovory z neznámych čísel budú blokované a zobrazené v zozname „Nedávne“.\nPrichádzajúce hovory od ľudí vo vašich kontaktoch a od ľudí, ktorým ste nedávno volali, budú naďalej zvoniť.</string>
     <string name="bottom_indent">Spodná zarážka</string>
     <string name="relation_g">Vzťah</string>
     <string name="relations_g">Súvisiace osoby</string>

@@ -268,6 +268,7 @@
     <string name="blocking_type_silence">Dei lasai bat</string>
     <string name="blocking_type_silence_summary">Jasotako deirako deia isilarazi behar den ezartzen du</string>
     <string name="enable_blocking_summary">Desgaituta dagoenean, blokeo-ezarpen guztiak kenduko dira deietarako. Mezuak blokeatuta egongo dira blokeatutako zerrendako zenbakientzat.\nEzarpen bizkorren fitxa gehi dezakezu erraz aldatzeko.</string>
+    <string name="block_unknown_calls_summary">Zenbaki ezezagunetatik datozen deiak blokeatu eta \"Azkenak\" zerrendan agertuko dira.\nZure kontaktuetan dauden pertsonen eta duela gutxi deitu dituzun pertsonen sarrerako deiek jotzen jarraituko dute.</string>
     <string name="bottom_indent">Beheko koska</string>
     <string name="relation_g">Harremana</string>
     <string name="relations_g">Lotutako pertsonak</string>

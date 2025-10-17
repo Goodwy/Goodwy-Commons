@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Kluss zvans</string>
     <string name="blocking_type_silence_summary">Iestata, vai zvana signāls ir jāizslēdz ienākošajam zvanam</string>
     <string name="enable_blocking_summary">Ja tas ir atspējots, visi zvanu bloķēšanas iestatījumi tiks noņemti. Ziņojumi joprojām tiks bloķēti numuriem bloķēto sarakstā.\nLai atvieglotu pārslēgšanu, varat pievienot ātro iestatījumu elementu.</string>
+    <string name="block_unknown_calls_summary">Zvani no nezināmiem numuriem tiks bloķēti un parādīti sarakstā “Nesenie”.\nIenākošie zvani no personām jūsu kontaktpersonās un personām, kurām nesen zvanījāt, turpinās zvanīt.</string>
     <string name="bottom_indent">Apakšējā atkāpe</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>

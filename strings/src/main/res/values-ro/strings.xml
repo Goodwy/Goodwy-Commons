@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Un apel liniștit</string>
     <string name="blocking_type_silence_summary">Setează dacă sunetul trebuie oprit pentru apelul primit</string>
     <string name="enable_blocking_summary">Când este dezactivată, toate setările de blocare vor fi eliminate pentru apeluri. Mesajele vor fi blocate în continuare pentru numerele din lista blocate.\nPuteți adăuga o țiglă de setări rapide pentru o comutare ușoară.</string>
+    <string name="block_unknown_calls_summary">Apelurile de la numere necunoscute vor fi blocate și afișate în lista „Recente”.\nApelurile primite de la persoanele din contactele dvs. și de la persoanele pe care le-ați apelat recent vor continua să sune.</string>
     <string name="bottom_indent">Indentatură de jos</string>
     <string name="relation_g">Relație</string>
     <string name="relations_g">Persoane înrudite</string>

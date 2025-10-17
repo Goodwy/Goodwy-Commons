@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">یک تماس آرام</string>
     <string name="blocking_type_silence_summary">تنظیم می کند که آیا زنگ برای تماس ورودی باید بی صدا شود یا خیر</string>
     <string name="enable_blocking_summary">در صورت غیرفعال شدن، تمام تنظیمات مسدودسازی برای تماس ها حذف خواهد شد. پیام ها همچنان برای شماره های موجود در لیست مسدود شده مسدود خواهند شد.\nبرای جابجایی آسان می توانید یک کاشی تنظیمات سریع اضافه کنید.</string>
+    <string name="block_unknown_calls_summary">تماس‌های دریافتی از شماره‌های ناشناس مسدود شده و در لیست «تماس‌های اخیر» نمایش داده می‌شوند. تماس‌های دریافتی از افراد موجود در مخاطبین شما و افرادی که اخیراً با آنها تماس گرفته‌اید، همچنان زنگ خواهند خورد.</string>
     <string name="bottom_indent">تورفتگی پایین</string>
     <string name="relation_g">ارتباط</string>
     <string name="relations_g">شخص ذي صلة</string>

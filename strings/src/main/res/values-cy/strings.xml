@@ -269,6 +269,7 @@
     <string name="blocking_type_silence">Galwad dawel</string>
     <string name="blocking_type_silence_summary">Yn pennu a ddylid tawelu\'r canu ar gyfer yr alwad sy\'n dod i mewn</string>
     <string name="enable_blocking_summary">Pan fydd yn anabl, bydd yr holl osodiadau blocio yn cael eu dileu ar gyfer galwadau. Bydd negeseuon yn dal i gael eu rhwystro ar gyfer rhifau ar y rhestr sydd wedi\'i rhwystro.\nGallwch ychwanegu teilsen gosodiadau cyflym i\'w newid yn hawdd.</string>
+    <string name="block_unknown_calls_summary">Bydd galwadau o rifau anhysbys yn cael eu blocio a\'u harddangos yn y rhestr \"Diweddar\".\nBydd galwadau sy\'n dod i mewn gan bobl yn eich cysylltiadau a chan bobl rydych chi wedi\'u ffonio\'n ddiweddar yn parhau i ganu.</string>
     <string name="bottom_indent">mewnoliad gwaelod</string>
     <string name="relation_g">Perthynas</string>
     <string name ="relations_g">Personau Cysylltiedig</string>

@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Vaikne kõne</string>
     <string name="blocking_type_silence_summary">Määrab, kas sissetuleva kõne helin tuleb vaigistada</string>
     <string name="enable_blocking_summary">Kui see on keelatud, eemaldatakse kõik kõnede blokeerimisseaded. Sõnumid blokeeritakse endiselt blokeeritud loendis olevate numbrite puhul.\nLihtsaks vahetamiseks saate lisada kiirseadete paani.</string>
+    <string name="block_unknown_calls_summary">Tundmatutelt numbritelt tulevad kõned blokeeritakse ja kuvatakse loendis „Hiljutised”.\nSissetulevad kõned teie kontaktidelt ja inimestelt, kellele olete hiljuti helistanud, helisevad edasi.</string>
     <string name="bottom_indent">Alumine taane</string>
     <string name="relation_g">Seos</string>
     <string name="relations_g">Seotud isikud</string>

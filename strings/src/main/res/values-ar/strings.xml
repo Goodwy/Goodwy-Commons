@@ -265,6 +265,7 @@
     <string name="blocking_type_silence">مكالمة هادئة</string>
     <string name="blocking_type_silence_summary">يحدد ما إذا كان يجب إسكات الرنين للمكالمة الواردة</string>
     <string name="enable_blocking_summary">عند تعطيلها، ستُزال جميع إعدادات حظر المكالمات. ستظل الرسائل محظورة للأرقام المدرجة في قائمة الحظر. يمكنك إضافة مربع إعدادات سريع للتبديل بسهولة.</string>
+    <string name="block_unknown_calls_summary">سيتم حظر المكالمات الواردة من أرقام غير معروفة وعرضها في قائمة \"المكالمات الأخيرة\".\n\nسيستمر رنين المكالمات الواردة من جهات اتصالك ومن الأشخاص الذين اتصلت بهم مؤخرًا.</string>
     <string name="bottom_indent">المسافة البادئة السفلية</string>
     <string name="relation_g">العلاقة</string>
     <string name="relations_g">الأشخاص ذوو الصلة</string>

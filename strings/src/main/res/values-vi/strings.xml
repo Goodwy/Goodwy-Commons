@@ -269,6 +269,7 @@ Cảm ơn bạn!
     <string name="blocking_type_silence">Một cuộc gọi yên tĩnh</string>
     <string name="blocking_type_silence_summary">Thiết lập xem có nên tắt tiếng chuông khi có cuộc gọi đến hay không</string>
     <string name="enable_blocking_summary">Khi tắt, tất cả cài đặt chặn cuộc gọi sẽ bị xóa. Tin nhắn vẫn sẽ bị chặn đối với các số trong danh sách chặn.\nBạn có thể thêm ô cài đặt nhanh để dễ dàng chuyển đổi.</string>
+    <string name="block_unknown_calls_summary">Các cuộc gọi từ số lạ sẽ bị chặn và hiển thị trong danh sách \"Gần đây\".\nCác cuộc gọi đến từ những người trong danh bạ và từ những người bạn đã gọi gần đây sẽ tiếp tục đổ chuông.</string>
     <string name="bottom_indent">thụt lề dưới</string>
     <string name="relation_g">Perthynas</string>
     <string name="relations_g">Personau Cysylltiedig</string>

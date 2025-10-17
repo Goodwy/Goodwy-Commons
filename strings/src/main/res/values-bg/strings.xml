@@ -273,6 +273,7 @@
     <string name="blocking_type_silence">Тихо обаждане</string>
     <string name="blocking_type_silence_summary">Задава дали звъненето да бъде заглушено за входящо повикване</string>
     <string name="enable_blocking_summary">Когато е деактивирано, всички настройки за блокиране ще бъдат премахнати за повиквания. Съобщенията все още ще бъдат блокирани за номера в списъка с блокирани.\nМожете да добавите плочка за бързи настройки за лесно превключване.</string>
+    <string name="block_unknown_calls_summary">Обажданията от непознати номера ще бъдат блокирани и ще се показват в списъка „Последни“.\nВходящите повиквания от хора във вашите контакти и от хора, на които наскоро сте се обаждали, ще продължат да звънят.</string>
     <string name="bottom_indent">Долен отстъп</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Свързани лица</string>

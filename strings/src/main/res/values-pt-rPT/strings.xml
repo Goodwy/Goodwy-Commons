@@ -274,6 +274,7 @@
     <string name="blocking_type_silence">Uma chamada silenciosa</string>
     <string name="blocking_type_silence_summary">Define se o toque deve ser silenciado para a chamada recebida</string>
     <string name="enable_blocking_summary">Quando desativado, todas as configurações de bloqueio de chamadas serão removidas. As mensagens continuarão bloqueadas para números na lista de bloqueados.\nVocê pode adicionar um bloco de configurações rápidas para alternar facilmente.</string>
+    <string name="block_unknown_calls_summary">Chamadas de números desconhecidos serão bloqueadas e exibidas na lista \"Recentes\".\nChamadas recebidas de pessoas em seus contatos e de pessoas para quem você ligou recentemente continuarão tocando.</string>
     <string name="bottom_indent">Recuo inferior</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>

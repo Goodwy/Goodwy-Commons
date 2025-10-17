@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">Ein leiser Anruf</string>
     <string name="blocking_type_silence_summary">Legt fest, ob das Klingeln bei eingehenden Anrufen stummgeschaltet werden soll</string>
     <string name="enable_blocking_summary">Wenn diese Option deaktiviert ist, werden alle Sperreinstellungen für Anrufe entfernt. Nachrichten für Nummern auf der Sperrliste werden weiterhin gesperrt.\nSie können eine Schnelleinstellungskachel zum einfachen Wechseln hinzufügen.</string>
+    <string name="block_unknown_calls_summary">Anrufe von unbekannten Nummern werden blockiert und in der Liste „Letzte Anrufe“ angezeigt.\nEingehende Anrufe von Personen in Ihren Kontakten und von Personen, die Sie kürzlich angerufen haben, klingeln weiterhin.</string>
     <string name="bottom_indent">Unterer Einzug</string>
     <string name="relation_g">Beziehung</string>
     <string name="relations_g">Verwandte Personen</string>

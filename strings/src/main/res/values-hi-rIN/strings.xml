@@ -269,6 +269,7 @@
     <string name="blocking_type_silence">एक शांत कॉल</string>
     <string name="blocking_type_silence_summary">यह निर्धारित करता है कि आने वाली कॉल के लिए रिंगिंग बंद की जानी चाहिए या नहीं</string>
     <string name="enable_blocking_summary">अक्षम होने पर, कॉल के लिए सभी ब्लॉकिंग सेटिंग्स हटा दी जाएँगी। ब्लॉक की गई सूची में मौजूद नंबरों के लिए संदेश अभी भी ब्लॉक रहेंगे।\nआप आसानी से स्विच करने के लिए एक त्वरित सेटिंग टाइल जोड़ सकते हैं।</string>
+    <string name="block_unknown_calls_summary">अज्ञात नंबरों से आने वाली कॉल ब्लॉक कर दी जाएँगी और \"हाल ही की\" सूची में दिखाई जाएँगी।\nआपके संपर्कों में शामिल लोगों और जिन लोगों को आपने हाल ही में कॉल किया है, उनसे आने वाली कॉल बजती रहेंगी।</string>
     <string name="bottom_indent">निचला इंडेंट</string>
     <string name="relation_g">रिश्ता</string>
     <string name="relations_g">संबंधित व्यक्ति</string>

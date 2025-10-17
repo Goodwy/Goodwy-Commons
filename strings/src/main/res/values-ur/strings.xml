@@ -271,6 +271,7 @@
     <string name="blocking_type_silence">ایک خاموش کال</string>
     <string name="blocking_type_silence_summary">سیٹ کرتا ہے کہ آیا آنے والی کال کے لیے گھنٹی بجائی جائے گی یا نہیں</string>
     <string name="enable_blocking_summary">غیر فعال ہونے پر، تمام بلاکنگ سیٹنگز کالز کے لیے ہٹا دی جائیں گی۔ مسدود فہرست میں موجود نمبروں کے لیے پیغامات ابھی بھی مسدود رہیں گے۔\nآپ آسان سوئچنگ کے لیے فوری سیٹنگز ٹائل شامل کر سکتے ہیں۔</string>
+    <string name="block_unknown_calls_summary">نامعلوم نمبروں سے آنے والی کالیں بلاک کر دی جائیں گی اور \"حالیہ\" کی فہرست میں دکھائی جائیں گی۔\nآپ کے رابطوں میں موجود لوگوں اور جن لوگوں کو آپ نے حال ہی میں کال کی ہے ان کی آنے والی کالیں بجتی رہیں گی۔</string>
     <string name="bottom_indent">نیچے کا حاشیہ</string>
     <string name="relation_g"> تعلق</string>
     <string name="relations_g">متعلقہ افراد</string>

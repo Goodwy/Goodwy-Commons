@@ -268,6 +268,7 @@
     <string name="blocking_type_silence">একটি শান্ত কল</string>
     <string name="blocking_type_silence_summary">ইনকামিং কলের জন্য রিং বাজানো হবে কিনা তা সেট করে</string>
     <string name="enable_blocking_summary">অক্ষম করা হলে, কলের জন্য সমস্ত ব্লকিং সেটিংস সরানো হবে৷ অবরুদ্ধ তালিকায় থাকা নম্বরগুলির জন্য বার্তাগুলি এখনও অবরুদ্ধ করা হবে৷\nসহজে স্যুইচ করার জন্য আপনি একটি দ্রুত সেটিংস টাইল যোগ করতে পারেন।</string>
+    <string name="block_unknown_calls_summary">অজানা নম্বর থেকে আসা কলগুলি ব্লক করা হবে এবং \"সাম্প্রতিক\" তালিকায় প্রদর্শিত হবে।\nআপনার পরিচিতিতে থাকা ব্যক্তিদের এবং সম্প্রতি যাদের সাথে আপনি কল করেছেন তাদের কাছ থেকে আসা কলগুলি ক্রমাগত বেজে উঠবে।</string>
     <string name="bottom_indent">নীচের ইন্ডেন্ট</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
