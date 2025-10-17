@@ -60,7 +60,7 @@ fun Context.getColoredMaterialStatusBarColor(): Int {
 
 fun Context.getColoredMaterialSearchBarColor(): Int {
     return when {
-        isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme).darkenColor(4)
+        isDynamicTheme() -> resources.getColor(R.color.you_status_bar_color, theme).darkenColor(2)
         else -> getSurfaceColor().darkenColor(4)
     }
 }
