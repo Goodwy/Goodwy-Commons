@@ -245,9 +245,9 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(USE_ICON_TABS, false)
         set(useIconTabs) = prefs.edit { putBoolean(USE_ICON_TABS, useIconTabs) }
 
-    var tabsChanged: Boolean
-        get() = prefs.getBoolean(TABS_CHANGED, true)
-        set(tabsChanged) = prefs.edit { putBoolean(TABS_CHANGED, tabsChanged) }
+    var needRestart: Boolean
+        get() = prefs.getBoolean(NEED_RESTART, true)
+        set(needRestart) = prefs.edit { putBoolean(NEED_RESTART, needRestart) }
 
     var useDividers: Boolean
         get() = prefs.getBoolean(USE_DIVIDERS, false)

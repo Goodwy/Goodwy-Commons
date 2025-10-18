@@ -730,7 +730,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curTextCursorColor = color
                     colorChanged()
                     binding.customizationTextCursorColor.setFillWithStroke(color, getCurrentBackgroundColor())
-                    baseConfig.tabsChanged = true //without it the color of the cursor in the search menu does not change
+                    baseConfig.needRestart = true //without it the color of the cursor in the search menu does not change
                 }
             }
             if (wasDefaultPressed) {
@@ -739,7 +739,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curTextCursorColor = colorDefault
                     colorChanged()
                     binding.customizationTextCursorColor.setFillWithStroke(colorDefault, getCurrentBackgroundColor())
-                    baseConfig.tabsChanged = true //without it the color of the cursor in the search menu does not change
+                    baseConfig.needRestart = true //without it the color of the cursor in the search menu does not change
                 }
             }
         }
