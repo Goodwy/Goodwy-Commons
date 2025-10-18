@@ -125,7 +125,9 @@ class VcfExporter {
                         }
 
                         else -> {
-                            if (event.label == activity.getString(com.goodwy.strings.R.string.death)) {
+                            if (event.label == activity.getString(com.goodwy.strings.R.string.death)
+                                || event.type == CUSTOM_EVENT_TYPE_DEATH
+                            ) {
                                 if (event.value.startsWith("--")) {
                                     val partial = PartialDate.builder()
                                         .month(dateTime.monthOfYear)

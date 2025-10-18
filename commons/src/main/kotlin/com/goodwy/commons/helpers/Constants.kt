@@ -817,6 +817,8 @@ const val DEFAULT_RELATION_TYPE = ContactsContract.CommonDataKinds.Relation.TYPE
 const val DEFAULT_IM_TYPE = ContactsContract.CommonDataKinds.Im.PROTOCOL_SKYPE
 const val DEFAULT_MIMETYPE = ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE
 
+const val CUSTOM_EVENT_TYPE_DEATH = 40
+
 // contact photo changes
 const val PHOTO_ADDED = 1
 const val PHOTO_REMOVED = 2

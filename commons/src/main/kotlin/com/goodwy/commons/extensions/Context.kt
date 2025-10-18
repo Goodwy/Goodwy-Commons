@@ -1455,6 +1455,7 @@ fun Context.getEventTypeText(type: Int, label: String): String {
             when (type) {
                 Event.TYPE_ANNIVERSARY -> R.string.anniversary
                 Event.TYPE_BIRTHDAY -> R.string.birthday
+                CUSTOM_EVENT_TYPE_DEATH -> com.goodwy.strings.R.string.death
                 else -> R.string.other
             }
         )
