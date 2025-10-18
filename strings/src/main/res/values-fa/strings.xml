@@ -214,6 +214,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">نمایش لقب مخاطبین (در صورت وجود) به جای نام آنها</string>
+    <string name="death">مرگ</string>
     <string name="get">دریافت</string>
     <string name="open">باز کردن</string>
     <string name="collection">مجموعه</string>

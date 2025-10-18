@@ -221,6 +221,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Показывать псевдонимы контактов (если они есть) вместо имени</string>
+    <string name="death">Смерть</string>
     <string name="get">Загрузить</string>
     <string name="open">Открыть</string>
     <string name="collection">Коллекция</string>

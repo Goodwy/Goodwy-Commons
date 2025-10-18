@@ -212,6 +212,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Näytä yhteyshenkilöiden lempinimet (jos sellaisia ​​on) nimen sijaan</string>
+    <string name="death">Kuolema</string>
     <string name="get">Hanki</string>
     <string name="open">Avaa</string>
     <string name="collection">Kokoelma</string>

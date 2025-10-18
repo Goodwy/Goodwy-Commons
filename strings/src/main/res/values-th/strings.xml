@@ -214,6 +214,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">แสดงชื่อเล่นของผู้ติดต่อ (ถ้ามี) แทนชื่อของพวกเขา</string>
+    <string name="death">ความตาย</string>
     <string name="get">รับ</string>
     <string name="open">เปิด</string>
     <string name="collection">คอลเลคชัน</string>

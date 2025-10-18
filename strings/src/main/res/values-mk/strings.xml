@@ -213,6 +213,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Прикажи прекари на контакти (доколку ги има) наместо нивното име</string>
+    <string name="death">Смрт</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

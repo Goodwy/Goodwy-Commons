@@ -214,6 +214,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Прикажи надимке контаката (ако их има) уместо њиховог имена</string>
+    <string name="death">Смрт</string>
     <string name="get">Преузми</string>
     <string name="open">Отвори</string>
     <string name="collection">Колекција</string>

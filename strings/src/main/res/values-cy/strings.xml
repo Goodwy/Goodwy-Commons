@@ -212,6 +212,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Dangos llysenwau cysylltiadau (os oes rhai) yn lle eu henw</string>
+    <string name="death">Marwolaeth</string>
     <string name="get">Cael</string>
     <string name="open">Agor</string>
     <string name="collection">Casgliad</string>

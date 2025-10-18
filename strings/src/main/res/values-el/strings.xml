@@ -212,6 +212,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Εμφάνιση ψευδωνύμων επαφών (εάν υπάρχουν) αντί για το όνομά τους</string>
+    <string name="death">Θάνατος</string>
     <string name="get">Λήψη</string>
     <string name="open">Ανοίξτε το</string>
     <string name="collection">Συλλογή</string>

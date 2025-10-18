@@ -211,6 +211,7 @@ Bedankt!
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Toon de bijnamen van contactpersonen (indien van toepassing) in plaats van hun naam</string>
+    <string name="death">Dood</string>
     <string name="get">Haal</string>
     <string name="open">Open</string>
     <string name="collection">Collectie</string>

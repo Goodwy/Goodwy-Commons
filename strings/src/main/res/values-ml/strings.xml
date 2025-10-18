@@ -214,6 +214,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">കോൺടാക്റ്റുകളുടെ പേരിന് പകരം അവരുടെ വിളിപ്പേരുകൾ (എന്തെങ്കിലും ഉണ്ടെങ്കിൽ) കാണിക്കുക</string>
+    <string name="death">മരണം</string>
     <string name="get">നേടുക</string>
     <string name="open">തുറക്കുക</string>
     <string name="collection">ശേഖരം</string>

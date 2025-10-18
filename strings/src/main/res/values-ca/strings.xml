@@ -212,6 +212,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Mostra els sobrenoms dels contactes (si n\'hi ha) en comptes del seu nom</string>
+    <string name="death">Mort</string>
     <string name="get">Obtén</string>
     <string name="open">Obre</string>
     <string name="collection">Col·lecció</string>

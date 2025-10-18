@@ -211,6 +211,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Rodyti kontaktų pravardes (jei yra) vietoj jų vardo</string>
+    <string name="death">Mirtis</string>
     <string name="get">Gauti</string>
     <string name="open">Atidaryti</string>
     <string name="collection">Surinkimas</string>

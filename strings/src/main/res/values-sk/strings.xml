@@ -215,6 +215,7 @@
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Zobraziť prezývky kontaktov (ak nejaké existujú) namiesto ich mien</string>
+    <string name="death">Smrť</string>
     <string name="get">Získať</string>
     <string name="open">Otvoriť</string>
     <string name="collection">Zbierka</string>

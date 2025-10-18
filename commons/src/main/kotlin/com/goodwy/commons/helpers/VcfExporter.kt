@@ -1,5 +1,6 @@
 package com.goodwy.commons.helpers
 
+import android.content.Context
 import android.net.Uri
 import android.provider.ContactsContract.CommonDataKinds
 import android.provider.ContactsContract.CommonDataKinds.Event
@@ -22,6 +23,7 @@ import ezvcard.property.Address
 import ezvcard.property.Anniversary
 import ezvcard.property.Birthday
 import ezvcard.property.Categories
+import ezvcard.property.Deathdate
 import ezvcard.property.Email
 import ezvcard.property.FormattedName
 import ezvcard.property.Impp
@@ -60,6 +62,8 @@ class VcfExporter {
             val cards = ArrayList<VCard>()
             for (contact in contacts) {
                 val card = VCard()
+
+                card.addProperty(RawProperty("X-PRODID", getAppInfo(activity)))
 
                 val formattedName = arrayOf(contact.prefix, contact.firstName, contact.middleName, contact.surname, contact.suffix)
                     .filter { it.isNotEmpty() }
@@ -106,6 +110,7 @@ class VcfExporter {
                                 card.birthdays.add(Birthday(date))
                             }
                         }
+
                         Event.TYPE_ANNIVERSARY -> {
                             if (event.value.startsWith("--")) {
                                 val partial = PartialDate.builder()
@@ -118,18 +123,31 @@ class VcfExporter {
                                 card.anniversaries.add(Anniversary(date))
                             }
                         }
+
                         else -> {
-                            val eventLabel = event.label.ifBlank { activity.getString(R.string.other) }
-                            val normalizedLabel = "X-EVENT-$eventLabel".replace(" ", "_")
-
-                            val dateString = if (event.value.startsWith("--")) {
-                                "--${dateTime.monthOfYear.toString().padStart(2, '0')}-${dateTime.dayOfMonth.toString().padStart(2, '0')}"
+                            if (event.label == activity.getString(com.goodwy.strings.R.string.death)) {
+                                if (event.value.startsWith("--")) {
+                                    val partial = PartialDate.builder()
+                                        .month(dateTime.monthOfYear)
+                                        .date(dateTime.dayOfMonth)
+                                        .build()
+                                    card.deathdates.add(Deathdate(partial))
+                                } else {
+                                    val date = LocalDate.of(dateTime.year, dateTime.monthOfYear, dateTime.dayOfMonth)
+                                    card.deathdates.add(Deathdate(date))
+                                }
                             } else {
-                                LocalDate.of(dateTime.year, dateTime.monthOfYear, dateTime.dayOfMonth).toString()
-                            }
+                                val eventLabel = event.label.ifBlank { activity.getString(R.string.other) }
 
-                            val customProperty = RawProperty(normalizedLabel, dateString)
-                            card.addProperty(customProperty)
+                                val dateString = if (event.value.startsWith("--")) {
+                                    "--${dateTime.monthOfYear.toString().padStart(2, '0')}-${dateTime.dayOfMonth.toString().padStart(2, '0')}"
+                                } else {
+                                    LocalDate.of(dateTime.year, dateTime.monthOfYear, dateTime.dayOfMonth).toString()
+                                }
+
+                                card.addProperty(RawProperty("X-EVENT-DATE", dateString))
+                                card.addProperty(RawProperty("X-EVENT-LABEL", eventLabel))
+                            }
                         }
                     }
                 }
@@ -242,5 +260,16 @@ class VcfExporter {
         StructuredPostal.TYPE_WORK -> WORK
         StructuredPostal.TYPE_OTHER -> OTHER
         else -> label
+    }
+
+    private fun getAppInfo(context: Context): String {
+        return try {
+            val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+            val packageName = packageInfo.packageName ?: "unknown"
+            val versionName = packageInfo.versionName ?: "unknown"
+            "//$packageName//$versionName"
+        } catch (_: Exception) {
+            "unknown"
+        }
     }
 }
