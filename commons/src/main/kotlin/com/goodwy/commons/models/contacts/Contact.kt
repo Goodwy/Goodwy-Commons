@@ -170,7 +170,7 @@ data class Contact(
 
     fun getBubbleText(): String {
         return try {
-            val firstName = if (showNicknameInsteadNames && nickname.isBlank()) nickname else firstName
+            val firstName = if (showNicknameInsteadNames && nickname.isNotEmpty()) nickname else firstName
             var name = when {
                 isABusinessContact() -> getFullCompany()
                 sorting and SORT_BY_SURNAME != 0 && surname.isNotEmpty() -> surname
@@ -198,7 +198,7 @@ data class Contact(
     }
 
     fun getNameToDisplay(): String {
-        val firstName = if (showNicknameInsteadNames && nickname.isBlank()) nickname else firstName
+        val firstName = if (showNicknameInsteadNames && nickname.isNotEmpty()) nickname else firstName
         val firstMiddle = "$firstName $middleName".trim()
         val firstPart = if (startWithSurname) {
             if (surname.isNotEmpty() && firstMiddle.isNotEmpty()) {
