@@ -456,7 +456,8 @@ class ContactsHelper(val context: Context) {
         val projection = arrayOf(
             Data.RAW_CONTACT_ID,
             CommonDataKinds.Event.START_DATE,
-            CommonDataKinds.Event.TYPE
+            CommonDataKinds.Event.TYPE,
+            CommonDataKinds.Event.LABEL
         )
 
         val selection = getSourcesSelection(true, contactId != null)
@@ -466,12 +467,13 @@ class ContactsHelper(val context: Context) {
             val id = cursor.getIntValue(Data.RAW_CONTACT_ID)
             val startDate = cursor.getStringValue(CommonDataKinds.Event.START_DATE) ?: return@queryCursor
             val type = cursor.getIntValue(CommonDataKinds.Event.TYPE)
+            val label = cursor.getStringValue(CommonDataKinds.Event.LABEL) ?: ""
 
             if (events[id] == null) {
                 events.put(id, ArrayList())
             }
 
-            events[id]!!.add(Event(startDate, type))
+            events[id]!!.add(Event(startDate, type, label))
         }
 
         return events
@@ -1292,6 +1294,7 @@ class ContactsHelper(val context: Context) {
                     withValue(Data.MIMETYPE, CommonDataKinds.Event.CONTENT_ITEM_TYPE)
                     withValue(CommonDataKinds.Event.START_DATE, it.value)
                     withValue(CommonDataKinds.Event.TYPE, it.type)
+                    withValue(CommonDataKinds.Event.LABEL, it.label)
                     operations.add(build())
                 }
             }
@@ -1598,6 +1601,7 @@ class ContactsHelper(val context: Context) {
                     withValue(Data.MIMETYPE, CommonDataKinds.Event.CONTENT_ITEM_TYPE)
                     withValue(CommonDataKinds.Event.START_DATE, it.value)
                     withValue(CommonDataKinds.Event.TYPE, it.type)
+                    withValue(CommonDataKinds.Event.LABEL, it.label)
                     operations.add(build())
                 }
             }

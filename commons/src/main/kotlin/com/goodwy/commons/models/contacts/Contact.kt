@@ -385,7 +385,7 @@ data class Contact(
         }
 
         if (events.isNotEmpty()) events.forEach {
-            contactToText = contactToText + context.getString(getEventTextId(it.type)) + " " + it.value + "\n"
+            contactToText = contactToText + context.getEventTypeText(it.type, it.label) + " " + it.value + "\n"
         }
 
         if (notes.isNotEmpty()) contactToText = contactToText + notes + "\n"

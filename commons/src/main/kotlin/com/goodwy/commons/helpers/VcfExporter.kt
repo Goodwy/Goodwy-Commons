@@ -27,6 +27,7 @@ import ezvcard.property.FormattedName
 import ezvcard.property.Impp
 import ezvcard.property.Organization
 import ezvcard.property.Photo
+import ezvcard.property.RawProperty
 import ezvcard.property.StructuredName
 import ezvcard.property.Telephone
 import ezvcard.property.Title
@@ -91,29 +92,44 @@ class VcfExporter {
                 }
 
                 contact.events.forEach { event ->
-                    if (event.type == Event.TYPE_ANNIVERSARY || event.type == Event.TYPE_BIRTHDAY) {
-                        val dateTime = event.value.getDateTimeFromDateString(false)
-                        if (event.value.startsWith("--")) {
-                            val partial = PartialDate.builder()
-                                .month(dateTime.monthOfYear)
-                                .date(dateTime.dayOfMonth)
-                                .build()
-
-                            if (event.type == Event.TYPE_BIRTHDAY) {
+                    val dateTime = event.value.getDateTimeFromDateString(false)
+                    when (event.type) {
+                        Event.TYPE_BIRTHDAY -> {
+                            if (event.value.startsWith("--")) {
+                                val partial = PartialDate.builder()
+                                    .month(dateTime.monthOfYear)
+                                    .date(dateTime.dayOfMonth)
+                                    .build()
                                 card.birthdays.add(Birthday(partial))
                             } else {
-                                card.anniversaries.add(Anniversary(partial))
-
-                            }
-                        } else {
-                            val date = LocalDate
-                                .of(dateTime.year, dateTime.monthOfYear, dateTime.dayOfMonth)
-
-                            if (event.type == Event.TYPE_BIRTHDAY) {
+                                val date = LocalDate.of(dateTime.year, dateTime.monthOfYear, dateTime.dayOfMonth)
                                 card.birthdays.add(Birthday(date))
+                            }
+                        }
+                        Event.TYPE_ANNIVERSARY -> {
+                            if (event.value.startsWith("--")) {
+                                val partial = PartialDate.builder()
+                                    .month(dateTime.monthOfYear)
+                                    .date(dateTime.dayOfMonth)
+                                    .build()
+                                card.anniversaries.add(Anniversary(partial))
                             } else {
+                                val date = LocalDate.of(dateTime.year, dateTime.monthOfYear, dateTime.dayOfMonth)
                                 card.anniversaries.add(Anniversary(date))
                             }
+                        }
+                        else -> {
+                            val eventLabel = event.label ?: activity.getString(R.string.other)
+                            val normalizedLabel = "X-$eventLabel".uppercase().replace(" ", "-")
+
+                            val dateString = if (event.value.startsWith("--")) {
+                                "--${dateTime.monthOfYear.toString().padStart(2, '0')}-${dateTime.dayOfMonth.toString().padStart(2, '0')}"
+                            } else {
+                                LocalDate.of(dateTime.year, dateTime.monthOfYear, dateTime.dayOfMonth).toString()
+                            }
+
+                            val customProperty = RawProperty(normalizedLabel, dateString)
+                            card.addProperty(customProperty)
                         }
                     }
                 }

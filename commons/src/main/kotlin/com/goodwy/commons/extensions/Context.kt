@@ -1447,10 +1447,18 @@ fun Context.getRelationTypeText(type: Int, label: String): String {
     }
 }
 
-fun getEventTextId(type: Int) = when (type) {
-    Event.TYPE_ANNIVERSARY -> R.string.anniversary
-    Event.TYPE_BIRTHDAY -> R.string.birthday
-    else -> R.string.other
+fun Context.getEventTypeText(type: Int, label: String): String {
+    return if (type == BaseTypes.TYPE_CUSTOM) {
+        label
+    } else {
+        getString(
+            when (type) {
+                Event.TYPE_ANNIVERSARY -> R.string.anniversary
+                Event.TYPE_BIRTHDAY -> R.string.birthday
+                else -> R.string.other
+            }
+        )
+    }
 }
 
 
