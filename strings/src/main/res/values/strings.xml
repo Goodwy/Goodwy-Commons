@@ -222,12 +222,12 @@
     <string name="add_website">Add website</string>
     <string name="add_group">Add a group</string>
     <string name="add_related_person">Add related person</string>
-
     <string name="video_call">Video call</string>
     <string name="screen_slide_animation">Screen slide animation</string>
     <string name="screen_slide_animation_zoomout">Zoom-out</string>
     <string name="screen_slide_animation_depth">Depth</string>
     <string name="show_phone_numbers_g">Show phone numbers</string>
+    <string name="show_nicknames_instead_of_names">Shows contact\'s nicknames (when available) instead of their first names</string>
 
     <!-- Apps -->
     <string name="get">Get</string>

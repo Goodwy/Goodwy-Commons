@@ -212,6 +212,7 @@
     <string name="show_phone_numbers_g">Telefon nömrələrini əsas ekranda göstər</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Kontaktların adlarının əvəzinə ləqəblərini (əgər varsa) göstərin</string>
     <string name="get">Yüklə</string>
     <string name="open">Açıq</string>
     <string name="collection">Kolleksiya</string>

@@ -213,6 +213,7 @@
     <string name="show_phone_numbers_g">Montri telefonnumeroj</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Montri kromnomojn de kontaktoj (se ekzistas) anstataŭ ilian nomon</string>
     <string name="get">Akiri</string>
     <string name="open">Malfermu</string>
     <string name="collection">Kolekto</string>

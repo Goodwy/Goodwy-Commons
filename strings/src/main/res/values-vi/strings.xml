@@ -211,6 +211,7 @@ Cảm ơn bạn!
     <string name="show_phone_numbers_g">Hiển thị số điện thoại</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Hiển thị biệt danh của người liên hệ (nếu có) thay vì tên của họ</string>
     <string name="get">Nhận</string>
     <string name="open">Mở</string>
     <string name="collection">Bộ sưu tập</string>

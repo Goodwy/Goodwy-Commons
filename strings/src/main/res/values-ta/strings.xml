@@ -211,6 +211,7 @@
     <string name="show_phone_numbers_g">தொலைபேசி எண்களைக் காட்டு</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">தொடர்புகளின் பெயருக்குப் பதிலாக அவர்களின் புனைப்பெயர்களைக் (ஏதேனும் இருந்தால்) காட்டு.</string>
     <string name="get">பெறு</string>
     <string name="open">திற</string>
     <string name="collection">சேகரிப்பு</string>

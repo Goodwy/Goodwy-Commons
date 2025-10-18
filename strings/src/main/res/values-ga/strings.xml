@@ -225,6 +225,7 @@
     <string name="show_phone_numbers_g">Show phone numbers</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Taispeáin leasainmneacha na dteagmhálaithe (más ann dóibh) in ionad a n-ainm</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

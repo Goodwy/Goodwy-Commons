@@ -211,6 +211,7 @@
     <string name="show_phone_numbers_g">Dangos rhifau ffôn ar y brif sgrin</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Dangos llysenwau cysylltiadau (os oes rhai) yn lle eu henw</string>
     <string name="get">Cael</string>
     <string name="open">Agor</string>
     <string name="collection">Casgliad</string>

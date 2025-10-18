@@ -211,6 +211,7 @@
     <string name="show_phone_numbers_g">הצג מספרי טלפון</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">הצג כינויים של אנשי קשר (אם יש) במקום שמם</string>
     <string name="get">קבל</string>
     <string name="open">פתח</string>
     <string name="collection">אוסף</string>

@@ -212,6 +212,7 @@
     <string name="show_phone_numbers_g">ফোন নম্বর দেখান</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">পরিচিতিদের নামের পরিবর্তে তাদের ডাকনাম (যদি থাকে) দেখান</string>
     <string name="get">পান</string>
     <string name="open">খুলুন</string>৷
     <string name="collection">সংগ্রহ</string>

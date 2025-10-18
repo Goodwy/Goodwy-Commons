@@ -213,6 +213,7 @@
     <string name="show_phone_numbers_g">ਫ਼ੋਨ ਨੰਬਰ ਦਿਖਾਓ</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">ਸੰਪਰਕਾਂ ਦੇ ਨਾਮ ਦੀ ਬਜਾਏ ਉਨ੍ਹਾਂ ਦੇ ਉਪਨਾਮ (ਜੇ ਕੋਈ ਹਨ) ਦਿਖਾਓ</string>
     <string name="get">ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="open">ਖੋਲੋ</string>
     <string name="collection">ਸੰਗ੍ਰਹਿ</string>

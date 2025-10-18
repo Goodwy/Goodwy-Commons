@@ -211,6 +211,7 @@ Grazie!
     <string name="show_phone_numbers_g">Mostra i numeri di telefono</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Mostra i soprannomi dei contatti (se presenti) invece del loro nome</string>
     <string name="get">Prendi</string>
     <string name="open">Aprire</string>
     <string name="collection">Collezione</string>

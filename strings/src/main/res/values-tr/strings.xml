@@ -214,6 +214,7 @@
     <string name="show_phone_numbers_g">Telefon numaralarını göster</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Kişilerin adları yerine takma adlarını (varsa) göster</string>
     <string name="get">Almak</string>
     <string name="open">Açık</string>
     <string name="collection">Koleksiyon</string>

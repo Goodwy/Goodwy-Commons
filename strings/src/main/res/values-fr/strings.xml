@@ -214,6 +214,7 @@
     <string name="show_phone_numbers_g">Afficher les numéros de téléphone</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Afficher les surnoms des contacts (le cas échéant) au lieu de leur nom</string>
     <string name="get">Obtenir</string>
     <string name="open">Ouverture</string>
     <string name="collection">Collection</string>

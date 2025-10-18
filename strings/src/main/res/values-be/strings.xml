@@ -216,6 +216,7 @@
     <string name="show_phone_numbers_g">Паказваць нумары тэлефонаў</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Паказваць псеўданімы кантактаў (калі яны ёсць) замест імя</string>
     <string name="get">Загрузіць</string>
     <string name="open">Адкрыць</string>
     <string name="collection">Калекцыя</string>

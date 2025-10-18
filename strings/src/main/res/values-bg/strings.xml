@@ -215,6 +215,7 @@
     <string name="show_phone_numbers_g">Показване на телефонни номера</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Показване на прякорите на контактите (ако има такива) вместо името им</string>
     <string name="get">Зареждане</string>
     <string name="open">Отваряне</string>
     <string name="collection">Колекция</string>

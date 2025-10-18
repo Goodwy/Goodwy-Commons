@@ -845,6 +845,10 @@ open class BaseConfig(val context: Context) {
     var useSpeechToText: Boolean
         get() = prefs.getBoolean(USE_SPEECH_TO_TEXT, true)
         set(useSpeechToText) = prefs.edit { putBoolean(USE_SPEECH_TO_TEXT, useSpeechToText) }
+
+    var showNicknameInsteadNames: Boolean
+        get() = prefs.getBoolean(SHOW_NICKNAME_INSTEAD_NAME, false)
+        set(showNicknameInsteadNames) = prefs.edit { putBoolean(SHOW_NICKNAME_INSTEAD_NAME, showNicknameInsteadNames) }
 }
 
 

@@ -213,6 +213,7 @@ Będziemy bardzo wdzięczni.
     <string name="show_phone_numbers_g">Pokazuj numery telefonów</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Pokaż pseudonimy kontaktów (jeśli istnieją) zamiast ich nazw</string>
     <string name="get">Wejdź na stronę</string>
     <string name="open">Otwórz</string>
     <string name="collection">Kolekcja</string>

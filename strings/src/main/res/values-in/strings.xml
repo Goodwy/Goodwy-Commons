@@ -211,6 +211,7 @@ Terima kasih!
     <string name="show_phone_numbers_g">Tampilkan nomor telepon</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Tampilkan nama panggilan kontak (jika ada) alih-alih nama mereka</string>
     <string name="get">Dapatkan</string>
     <string name="open">Buka</string>
     <string name="collection">Koleksi</string>

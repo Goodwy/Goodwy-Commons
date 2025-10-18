@@ -220,6 +220,7 @@
     <string name="show_phone_numbers_g">Показывать номера телефонов</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Показывать псевдонимы контактов (если они есть) вместо имени</string>
     <string name="get">Загрузить</string>
     <string name="open">Открыть</string>
     <string name="collection">Коллекция</string>

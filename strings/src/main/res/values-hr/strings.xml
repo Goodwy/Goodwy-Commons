@@ -211,6 +211,7 @@
     <string name="show_phone_numbers_g">Prikaži telefonske brojeve</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Prikaži nadimke kontakata (ako ih ima) umjesto njihovog imena</string>
     <string name="get">Dohvati</string>
     <string name="open">Otvori</string>
     <string name="collection">Zbirka</string>

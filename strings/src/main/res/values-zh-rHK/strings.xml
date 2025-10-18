@@ -213,6 +213,7 @@
     <string name="show_phone_numbers_g">显示电话号码</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">顯示聯絡人的暱稱（如果有）而不是他們的名字</string>
     <string name="get">獲取</string>
     <string name="open">打開</string>
     <string name="collection">收藏</string>

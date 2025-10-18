@@ -207,6 +207,7 @@
     <string name="show_phone_numbers_g">إظهار أرقام الهواتف</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">إظهار ألقاب جهات الاتصال (إن وجدت) بدلاً من اسمها</string>
     <string name="get">تنزيل</string>
     <string name="open">فتح</string>
     <string name="collection">المجموعة</string>

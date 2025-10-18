@@ -209,6 +209,7 @@
     <string name="show_phone_numbers_g">Telefonszámok megjelenítése</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">A partnerek beceneveinek (ha vannak) megjelenítése a nevük helyett</string>
     <string name="get">Letöltés</string>
     <string name="open">Nyitott</string>
     <string name="collection">Gyűjtemény</string>

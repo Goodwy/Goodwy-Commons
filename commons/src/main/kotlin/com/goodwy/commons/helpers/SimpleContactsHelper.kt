@@ -143,6 +143,7 @@ class SimpleContactsHelper(val context: Context) {
             val contactId = cursor.getIntValue(Data.CONTACT_ID)
             val mimetype = cursor.getStringValue(Data.MIMETYPE)
             val photoUri = cursor.getStringValue(StructuredName.PHOTO_THUMBNAIL_URI) ?: ""
+
             val isPerson = mimetype == StructuredName.CONTENT_ITEM_TYPE
             if (isPerson) {
                 val prefix = cursor.getStringValue(StructuredName.PREFIX) ?: ""

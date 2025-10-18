@@ -212,6 +212,7 @@
     <string name="show_phone_numbers_g">Show phone numbers</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Прикажи прекари на контакти (доколку ги има) наместо нивното име</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

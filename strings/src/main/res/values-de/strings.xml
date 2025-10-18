@@ -213,6 +213,7 @@
     <string name="show_phone_numbers_g">Telefonnummern anzeigen</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Zeigen Sie die Spitznamen der Kontakte (falls vorhanden) anstelle ihres Namens an</string>
     <string name="get">Get</string>
     <string name="open">Öffnen</string>
     <string name="collection">Sammlung</string>

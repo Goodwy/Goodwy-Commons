@@ -51,6 +51,7 @@ data class Contact(
     companion object {
         var sorting = 0
         var startWithSurname = false
+        var showNicknameInsteadNames = false
         var sortingSymbolsFirst = false
         var collator: Collator? = null
     }
@@ -169,6 +170,7 @@ data class Contact(
 
     fun getBubbleText(): String {
         return try {
+            val firstName = if (showNicknameInsteadNames && nickname.isBlank()) nickname else firstName
             var name = when {
                 isABusinessContact() -> getFullCompany()
                 sorting and SORT_BY_SURNAME != 0 && surname.isNotEmpty() -> surname
@@ -196,6 +198,7 @@ data class Contact(
     }
 
     fun getNameToDisplay(): String {
+        val firstName = if (showNicknameInsteadNames && nickname.isBlank()) nickname else firstName
         val firstMiddle = "$firstName $middleName".trim()
         val firstPart = if (startWithSurname) {
             if (surname.isNotEmpty() && firstMiddle.isNotEmpty()) {
@@ -215,6 +218,7 @@ data class Contact(
 
         return when {
             fullName.isNotBlank() -> fullName
+            nickname.isNotBlank() -> nickname
             organization.isNotBlank() -> organization
             !email.isNullOrBlank() -> email
             !phoneNumber.isNullOrBlank() -> phoneNumber

@@ -210,6 +210,7 @@
     <string name="show_phone_numbers_g">Erakutsi telefono zenbakiak pantaila nagusian</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Erakutsi kontaktuen ezizenak (baldin badaude) izenaren ordez</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Bilduma</string>

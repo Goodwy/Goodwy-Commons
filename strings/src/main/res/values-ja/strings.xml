@@ -212,6 +212,7 @@
     <string name="show_phone_numbers_g">電話番号を表示</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">連絡先の名前の代わりにニックネーム（ある場合）を表示する</string>
     <string name="get">ゲット</string>
     <string name="open">開く</string>
     <string name="collection">コレクション</string>

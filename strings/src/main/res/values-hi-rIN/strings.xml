@@ -211,6 +211,7 @@
     <string name="show_phone_numbers_g">फ़ोन नंबर दिखाएं</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">संपर्कों के नाम के बजाय उनके उपनाम (यदि कोई हो) दिखाएं</string>
     <string name="get">प्राप्त करें</string>
     <string name="open">खुला</string>
     <string name="collection">संग्रह</string>

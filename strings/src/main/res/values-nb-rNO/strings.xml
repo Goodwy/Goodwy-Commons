@@ -220,6 +220,7 @@
     <string name="show_phone_numbers_g">Vis telefonnumre</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Vis kontaktenes kallenavn (hvis noen) i stedet for navnet deres</string>
     <string name="get">Få</string>
     <string name="open">Åpent</string>
     <string name="collection">Innsamling</string>

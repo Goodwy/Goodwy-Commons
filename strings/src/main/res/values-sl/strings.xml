@@ -214,6 +214,7 @@
     <string name="show_phone_numbers_g">Prikaži telefonske številke</string>
 
     <!-- Apps -->
+    <string name="show_nicknames_instead_of_names">Prikaži vzdevke stikov (če obstajajo) namesto njihovega imena</string>
     <string name="get">Pridobi</string>
     <string name="open">Odpri</string>
     <string name="collection">Zbirka</string>
