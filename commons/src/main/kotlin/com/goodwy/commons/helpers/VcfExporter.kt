@@ -119,8 +119,8 @@ class VcfExporter {
                             }
                         }
                         else -> {
-                            val eventLabel = event.label ?: activity.getString(R.string.other)
-                            val normalizedLabel = "X-$eventLabel".uppercase().replace(" ", "-")
+                            val eventLabel = event.label.ifBlank { activity.getString(R.string.other) }
+                            val normalizedLabel = "X-EVENT-$eventLabel".replace(" ", "_")
 
                             val dateString = if (event.value.startsWith("--")) {
                                 "--${dateTime.monthOfYear.toString().padStart(2, '0')}-${dateTime.dayOfMonth.toString().padStart(2, '0')}"
