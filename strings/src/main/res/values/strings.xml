@@ -229,6 +229,7 @@
     <string name="show_phone_numbers_g">Show phone numbers</string>
     <string name="show_nicknames_instead_of_names">Shows contact\'s nicknames (when available) instead of their first names</string>
     <string name="death">Death</string>
+    <string name="add_field">Add field</string>
 
     <!-- Apps -->
     <string name="get">Get</string>

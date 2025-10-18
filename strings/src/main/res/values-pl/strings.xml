@@ -215,6 +215,7 @@ Będziemy bardzo wdzięczni.
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Pokaż pseudonimy kontaktów (jeśli istnieją) zamiast ich nazw</string>
     <string name="death">Śmierć</string>
+    <string name="add_field">Dodaj pole</string>
     <string name="get">Wejdź na stronę</string>
     <string name="open">Otwórz</string>
     <string name="collection">Kolekcja</string>

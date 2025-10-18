@@ -216,6 +216,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Afficher les surnoms des contacts (le cas échéant) au lieu de leur nom</string>
     <string name="death">La mort</string>
+    <string name="add_field">Ajouter un champ</string>
     <string name="get">Obtenir</string>
     <string name="open">Ouverture</string>
     <string name="collection">Collection</string>

@@ -208,6 +208,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">显示联系人的昵称（如果有）而不是他们的名字</string>
     <string name="death">死亡</string>
+    <string name="add_field">添加字段</string>
     <string name="get">获取</string>
     <string name="open">开放式</string>
     <string name="collection">集合</string>

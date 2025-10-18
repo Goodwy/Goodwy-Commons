@@ -218,6 +218,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Показувати псевдоніми контактів (якщо вони є) замість імені</string>
     <string name="death">Смерть</string>
+    <string name="add_field">Додати поле</string>
     <string name="get">Завантажити</string>
     <string name="open">Відкрити</string>
     <string name="collection">Колекція</string>

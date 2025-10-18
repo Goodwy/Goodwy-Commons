@@ -209,6 +209,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">إظهار ألقاب جهات الاتصال (إن وجدت) بدلاً من اسمها</string>
     <string name="death">موت</string>
+    <string name="add_field">إضافة حقل</string>
     <string name="get">تنزيل</string>
     <string name="open">فتح</string>
     <string name="collection">المجموعة</string>

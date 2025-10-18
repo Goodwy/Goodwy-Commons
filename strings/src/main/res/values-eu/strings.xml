@@ -212,6 +212,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Erakutsi kontaktuen ezizenak (baldin badaude) izenaren ordez</string>
     <string name="death">Heriotza</string>
+    <string name="add_field">Gehitu eremua</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Bilduma</string>

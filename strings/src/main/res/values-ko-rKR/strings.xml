@@ -213,6 +213,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">이름 대신 연락처의 별명(있는 경우)을 표시합니다.</string>
     <string name="death">죽음</string>
+    <string name="add_field">필드 추가</string>
     <string name="get">받기</string>
     <string name="open">열기</string>
     <string name="collection">컬렉션</string>

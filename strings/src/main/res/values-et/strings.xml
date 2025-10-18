@@ -215,6 +215,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Kuva kontaktide hüüdnimed (kui neid on) nime asemel</string>
     <string name="death">Surm</string>
+    <string name="add_field">Lisa väli</string>
     <string name="get">Hangi</string>
     <string name="open">Ava</string>
     <string name="collection">Kogu</string>

@@ -213,6 +213,7 @@ Cảm ơn bạn!
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Hiển thị biệt danh của người liên hệ (nếu có) thay vì tên của họ</string>
     <string name="death">Cái chết</string>
+    <string name="add_field">Thêm trường</string>
     <string name="get">Nhận</string>
     <string name="open">Mở</string>
     <string name="collection">Bộ sưu tập</string>

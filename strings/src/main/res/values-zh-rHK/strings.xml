@@ -215,6 +215,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">顯示聯絡人的暱稱（如果有）而不是他們的名字</string>
     <string name="death">死亡</string>
+    <string name="add_field">新增字段</string>
     <string name="get">獲取</string>
     <string name="open">打開</string>
     <string name="collection">收藏</string>

@@ -216,6 +216,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Visa kontakternas smeknamn (om sådana finns) istället för deras namn</string>
     <string name="death">Död</string>
+    <string name="add_field">Lägg till fält</string>
     <string name="get">Hämta</string>
     <string name="open">Öppna</string>
     <string name="collection">Samling</string>

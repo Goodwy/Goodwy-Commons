@@ -222,6 +222,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Vis kontaktenes kallenavn (hvis noen) i stedet for navnet deres</string>
     <string name="death">Død</string>
+    <string name="add_field">Legg til felt</string>
     <string name="get">Få</string>
     <string name="open">Åpent</string>
     <string name="collection">Innsamling</string>

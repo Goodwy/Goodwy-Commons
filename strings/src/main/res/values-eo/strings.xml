@@ -215,6 +215,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Montri kromnomojn de kontaktoj (se ekzistas) anstataŭ ilian nomon</string>
     <string name="death">Morto</string>
+    <string name="add_field">Aldoni kampon</string>
     <string name="get">Akiri</string>
     <string name="open">Malfermu</string>
     <string name="collection">Kolekto</string>

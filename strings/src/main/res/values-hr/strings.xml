@@ -213,6 +213,7 @@
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Prikaži nadimke kontakata (ako ih ima) umjesto njihovog imena</string>
     <string name="death">Smrt</string>
+    <string name="add_field">Dodaj polje</string>
     <string name="get">Dohvati</string>
     <string name="open">Otvori</string>
     <string name="collection">Zbirka</string>
