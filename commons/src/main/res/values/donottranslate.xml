@@ -276,4 +276,6 @@
     <string name="signal" translatable="false">Signal</string>
     <string name="twitter" translatable="false">X</string>
     <string name="linkedin" translatable="false">LinkedIn</string>
+    <string name="threema" translatable="false">Threema</string>
+    <string name="max" translatable="false">MAX</string>
 </resources>

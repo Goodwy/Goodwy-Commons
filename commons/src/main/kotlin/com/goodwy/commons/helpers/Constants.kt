@@ -824,6 +824,8 @@ const val PROTOCOL_VIBER = 126
 const val PROTOCOL_SIGNAL = 127
 const val PROTOCOL_TWITTER = 128
 const val PROTOCOL_LINKEDIN = 129
+const val PROTOCOL_THREEMA = 130
+const val PROTOCOL_MAX = 131
 
 const val DEFAULT_EMAIL_TYPE = ContactsContract.CommonDataKinds.Email.TYPE_HOME
 const val DEFAULT_PHONE_NUMBER_TYPE = ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE
