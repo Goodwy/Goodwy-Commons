@@ -807,6 +807,24 @@ const val SHOW_RINGTONE_FIELD = 65536
 const val SHOW_MESSENGERS_ACTIONS_FIELD = 131072
 const val SHOW_RELATIONS_FIELD = 262144
 
+// IMs
+const val PROTOCOL_TEAMS = 103 // ContactsContract.Im.PROTOCOL_SKYPE
+const val PROTOCOL_WECOM = 104 // ContactsContract.Im.PROTOCOL_QQ
+const val PROTOCOL_GOOGLE_CHAT = 105 // ContactsContract.Im.PROTOCOL_GOOGLE_TALK
+const val PROTOCOL_MATRIX = 111
+const val PROTOCOL_DISCORD = 112
+const val PROTOCOL_WECHAT = 113
+const val PROTOCOL_LINE = 114
+const val PROTOCOL_TELEGRAM = 121
+const val PROTOCOL_TELEGRAM_CHANNEL = 122
+const val PROTOCOL_WHATSAPP = 123
+const val PROTOCOL_INSTAGRAM = 124
+const val PROTOCOL_FACEBOOK = 125
+const val PROTOCOL_VIBER = 126
+const val PROTOCOL_SIGNAL = 127
+const val PROTOCOL_TWITTER = 128
+const val PROTOCOL_LINKEDIN = 129
+
 const val DEFAULT_EMAIL_TYPE = ContactsContract.CommonDataKinds.Email.TYPE_HOME
 const val DEFAULT_PHONE_NUMBER_TYPE = ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE
 const val DEFAULT_ADDRESS_TYPE = ContactsContract.CommonDataKinds.StructuredPostal.TYPE_HOME
@@ -814,7 +832,7 @@ const val DEFAULT_EVENT_TYPE = ContactsContract.CommonDataKinds.Event.TYPE_BIRTH
 const val DEFAULT_ORGANIZATION_TYPE = ContactsContract.CommonDataKinds.Organization.TYPE_WORK
 const val DEFAULT_WEBSITE_TYPE = ContactsContract.CommonDataKinds.Website.TYPE_HOMEPAGE
 const val DEFAULT_RELATION_TYPE = ContactsContract.CommonDataKinds.Relation.TYPE_FRIEND
-const val DEFAULT_IM_TYPE = ContactsContract.CommonDataKinds.Im.PROTOCOL_SKYPE
+const val DEFAULT_IM_TYPE = PROTOCOL_TELEGRAM
 const val DEFAULT_MIMETYPE = ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE
 
 const val CUSTOM_EVENT_TYPE_DEATH = 40

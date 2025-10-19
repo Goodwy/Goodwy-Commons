@@ -30,11 +30,8 @@
     <string name="my_website">\nhttps://www.goodwy.dev/</string>
     <string name="my_email">goodwy.dev@gmail.com</string>
     <string name="my_fake_email">noreply@gmail.com</string>
-    <string name="facebook">Facebook</string>
     <string name="reddit">Reddit</string>
-    <string name="telegram">Telegram</string>
     <string name="github">GitHub</string>
-    <string name="viber">Viber</string>
 
     <!-- Donation options -->
     <string name="github_sponsors">GitHub Sponsors</string>
@@ -83,7 +80,7 @@
     <string name="translators_portuguese">ailmcoll, floppyD, hugomg, lnux-usr, marciozomb13, matheusvictor, RodolfoCandido, rodymacedo, smarquespt</string>
     <string name="translators_romanian">melintemarian</string>
     <string name="translators_russian">antonv6, AVM77, macbaze, solokot, trubitsyn</string>
-    <string name="translators_serbian"></string>
+    <string name="translators_serbian">Sijera</string>
     <string name="translators_slovak">tibbi</string>
     <string name="translators_slovenian">franga2000, rmajc</string>
     <string name="translators_spanish">FredMan95, Guzleon, MarcAbonce, mlopezgva, Yngvar-Skjaldulfsson</string>
@@ -252,4 +249,31 @@
     <string name="typeface_bold">Bold</string>
     <string name="typeface_bold_italic">Bold Italic</string>
     <string name="typeface_italic">Italic</string>
+
+    <!-- Messengers -->
+    <string name="im" translatable="false">IM</string>
+    <string name="aim" translatable="false">AIM</string>
+    <string name="windows_live" translatable="false">Windows Live</string>
+    <string name="yahoo" translatable="false">Yahoo</string>
+    <string name="skype" translatable="false">Skype</string>
+    <string name="qq" translatable="false">QQ</string>
+    <string name="hangouts" translatable="false">Hangouts</string>
+    <string name="icq" translatable="false">ICQ</string>
+    <string name="jabber" translatable="false">Jabber</string>
+    <string name="telegram" translatable="false">Telegram</string>
+    <string name="viber" translatable="false">Viber</string>
+    <string name="google_chat" translatable="false">Google Chat</string>
+    <string name="teams" translatable="false">Teams</string>
+    <string name="matrix" translatable="false">Matrix</string>
+    <string name="discord" translatable="false">Discord</string>
+    <string name="wechat" translatable="false">WeChat</string>
+    <string name="line" translatable="false">Line</string>
+    <string name="wecom" translatable="false">WeCom</string>
+    <string name="telegram_channel" translatable="false">Telegram channel</string>
+    <string name="whatsapp" translatable="false">WhatsApp</string>
+    <string name="instagram" translatable="false">Instagram</string>
+    <string name="facebook" translatable="false">Facebook</string>
+    <string name="signal" translatable="false">Signal</string>
+    <string name="twitter" translatable="false">X</string>
+    <string name="linkedin" translatable="false">LinkedIn</string>
 </resources>
