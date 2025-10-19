@@ -216,6 +216,7 @@
     <string name="show_nicknames_instead_of_names">Afișați poreclele contactelor (dacă există) în loc de numele lor</string>
     <string name="death">Moarte</string>
     <string name="add_field">Adăugați un câmp</string>
+    <string name="failed_open_link">Nu s-a putut deschide linkul</string>
     <string name="get">Obțineți</string>
     <string name="open">Deschideți</string>
     <string name="collection">Colecție</string>

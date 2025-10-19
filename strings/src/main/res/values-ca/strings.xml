@@ -214,6 +214,7 @@
     <string name="show_nicknames_instead_of_names">Mostra els sobrenoms dels contactes (si n\'hi ha) en comptes del seu nom</string>
     <string name="death">Mort</string>
     <string name="add_field">Afegeix un camp</string>
+    <string name="failed_open_link">No s\'ha pogut obrir l\'enllaç</string>
     <string name="get">Obtén</string>
     <string name="open">Obre</string>
     <string name="collection">Col·lecció</string>

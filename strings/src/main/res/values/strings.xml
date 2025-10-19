@@ -230,6 +230,7 @@
     <string name="show_nicknames_instead_of_names">Shows contact\'s nicknames (when available) instead of their first names</string>
     <string name="death">Death</string>
     <string name="add_field">Add field</string>
+    <string name="failed_open_link">Failed to open link</string>
 
     <!-- Apps -->
     <string name="get">Get</string>

@@ -217,6 +217,7 @@
     <string name="show_nicknames_instead_of_names">Zobraziť prezývky kontaktov (ak nejaké existujú) namiesto ich mien</string>
     <string name="death">Smrť</string>
     <string name="add_field">Pridať pole</string>
+    <string name="failed_open_link">Nepodarilo sa otvoriť odkaz</string>
     <string name="get">Získať</string>
     <string name="open">Otvoriť</string>
     <string name="collection">Zbierka</string>

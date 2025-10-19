@@ -214,6 +214,7 @@
     <string name="show_nicknames_instead_of_names">Dangos llysenwau cysylltiadau (os oes rhai) yn lle eu henw</string>
     <string name="death">Marwolaeth</string>
     <string name="add_field">Ychwanegu maes</string>
+    <string name="failed_open_link">Methwyd agor y ddolen</string>
     <string name="get">Cael</string>
     <string name="open">Agor</string>
     <string name="collection">Casgliad</string>

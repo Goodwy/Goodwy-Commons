@@ -214,6 +214,7 @@
     <string name="show_nicknames_instead_of_names">தொடர்புகளின் பெயருக்குப் பதிலாக அவர்களின் புனைப்பெயர்களைக் (ஏதேனும் இருந்தால்) காட்டு.</string>
     <string name="death">இறப்பு</string>
     <string name="add_field">புலத்தைச் சேர்</string>
+    <string name="failed_open_link">இணைப்பைத் திறக்க முடியவில்லை.</string>
     <string name="get">பெறு</string>
     <string name="open">திற</string>
     <string name="collection">சேகரிப்பு</string>

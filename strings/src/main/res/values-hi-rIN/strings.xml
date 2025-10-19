@@ -214,6 +214,7 @@
     <string name="show_nicknames_instead_of_names">संपर्कों के नाम के बजाय उनके उपनाम (यदि कोई हो) दिखाएं</string>
     <string name="death">मौत</string>
     <string name="add_field">क्षेत्र जोड़ें</string>
+    <string name="failed_open_link">लिंक खोलने में विफल</string>
     <string name="get">प्राप्त करें</string>
     <string name="open">खुला</string>
     <string name="collection">संग्रह</string>

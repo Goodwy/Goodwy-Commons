@@ -215,6 +215,7 @@
     <string name="show_nicknames_instead_of_names">পরিচিতিদের নামের পরিবর্তে তাদের ডাকনাম (যদি থাকে) দেখান</string>
     <string name="death">মৃত্যু</string>
     <string name="add_field">ক্ষেত্র যোগ করুন</string>
+    <string name="failed_open_link">লিঙ্কটি খুলতে ব্যর্থ হয়েছে</string>
     <string name="get">পান</string>
     <string name="open">খুলুন</string>৷
     <string name="collection">সংগ্রহ</string>

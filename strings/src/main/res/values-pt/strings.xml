@@ -217,6 +217,7 @@
     <string name="show_nicknames_instead_of_names">Mostrar apelidos dos contatos (se houver) em vez de seus nomes</string>
     <string name="death">Morte</string>
     <string name="add_field">Adicionar campo</string>
+    <string name="failed_open_link">Falha ao abrir o link</string>
     <string name="get">Obter</string>
     <string name="open">Abrir</string>
     <string name="collection">Colecção</string>

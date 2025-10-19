@@ -217,6 +217,7 @@
     <string name="show_nicknames_instead_of_names">Prikaži vzdevke stikov (če obstajajo) namesto njihovega imena</string>
     <string name="death">Smrt</string>
     <string name="add_field">Dodaj polje</string>
+    <string name="failed_open_link">Povezave ni bilo mogoče odpreti</string>
     <string name="get">Pridobi</string>
     <string name="open">Odpri</string>
     <string name="collection">Zbirka</string>

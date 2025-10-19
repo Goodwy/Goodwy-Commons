@@ -216,6 +216,7 @@
     <string name="show_nicknames_instead_of_names">رابطوں کے نام کے بجائے ان کے عرفی نام (اگر کوئی ہیں) دکھائیں۔</string>
     <string name="death">موت</string>
     <string name="add_field">فیلڈ شامل کریں۔</string>
+    <string name="failed_open_link">لنک کھولنے میں ناکام</string>
     <string name="get">حاصل کریں</string>
     <string name="open">کھولیں</string>
     <string name="collection">مجموعہ</string>

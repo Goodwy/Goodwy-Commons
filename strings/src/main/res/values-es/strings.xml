@@ -213,6 +213,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="show_nicknames_instead_of_names">Mostrar los apodos de los contactos (si los hay) en lugar de su nombre</string>
     <string name="death">Muerte</string>
     <string name="add_field">Agregar campo</string>
+    <string name="failed_open_link">No se pudo abrir el enlace</string>
     <string name="get">Obtener</string>
     <string name="open">Abrir</string>
     <string name="collection">Colección</string>

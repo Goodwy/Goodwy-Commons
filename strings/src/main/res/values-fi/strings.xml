@@ -214,6 +214,7 @@
     <string name="show_nicknames_instead_of_names">Näytä yhteyshenkilöiden lempinimet (jos sellaisia ​​on) nimen sijaan</string>
     <string name="death">Kuolema</string>
     <string name="add_field">Lisää kenttä</string>
+    <string name="failed_open_link">Linkin avaaminen epäonnistui</string>
     <string name="get">Hanki</string>
     <string name="open">Avaa</string>
     <string name="collection">Kokoelma</string>

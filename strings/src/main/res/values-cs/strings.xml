@@ -217,6 +217,7 @@
     <string name="show_nicknames_instead_of_names">Zobrazit přezdívky kontaktů (pokud nějaké existují) místo jejich jmen</string>
     <string name="death">Smrt</string>
     <string name="add_field">Přidat pole</string>
+    <string name="failed_open_link">Odkaz se nepodařilo otevřít</string>
     <string name="get">Získat</string>
     <string name="open">Otevřít</string>
     <string name="collection">Sbírka</string>

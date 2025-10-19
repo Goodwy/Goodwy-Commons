@@ -216,6 +216,7 @@
     <string name="show_nicknames_instead_of_names">Rādīt kontaktpersonu iesaukas (ja tādas ir) vārdu vietā</string>
     <string name="death">Nāve</string>
     <string name="add_field">Pievienot lauku</string>
+    <string name="failed_open_link">Neizdevās atvērt saiti</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

@@ -214,6 +214,7 @@ Grazie!
     <string name="show_nicknames_instead_of_names">Mostra i soprannomi dei contatti (se presenti) invece del loro nome</string>
     <string name="death">Morte</string>
     <string name="add_field">Aggiungi campo</string>
+    <string name="failed_open_link">Impossibile aprire il collegamento</string>
     <string name="get">Prendi</string>
     <string name="open">Aprire</string>
     <string name="collection">Collezione</string>

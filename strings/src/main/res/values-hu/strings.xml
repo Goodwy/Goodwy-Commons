@@ -212,6 +212,7 @@
     <string name="show_nicknames_instead_of_names">A partnerek beceneveinek (ha vannak) megjelenítése a nevük helyett</string>
     <string name="death">Halál</string>
     <string name="add_field">Mező hozzáadása</string>
+    <string name="failed_open_link">Nem sikerült megnyitni a linket</string>
     <string name="get">Letöltés</string>
     <string name="open">Nyitott</string>
     <string name="collection">Gyűjtemény</string>

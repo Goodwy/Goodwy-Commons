@@ -214,6 +214,7 @@
     <string name="show_nicknames_instead_of_names">Vis kontakternes kaldenavne (hvis nogen) i stedet for deres navn</string>
     <string name="death">Død</string>
     <string name="add_field">Tilføj felt</string>
+    <string name="failed_open_link">Kunne ikke åbne linket</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Kollektion</string>
