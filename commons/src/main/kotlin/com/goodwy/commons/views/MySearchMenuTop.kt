@@ -39,16 +39,22 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
             }
         }
 
-        post {
-            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
-                inFocus = hasFocus
-                if (hasFocus) {
-                    openSearch()
-                }
-            }
-        }
+//        post {
+//            binding.topToolbarSearch.setOnFocusChangeListener { v, hasFocus ->
+//                inFocus = hasFocus
+//                if (hasFocus) {
+//                    openSearch()
+//                }
+//            }
+//        }
 
         binding.topToolbarSearch.onTextChangeListener { text ->
+            val size = text.length
+            if (size == 1) openSearch()
+            if (size == 0 && !useArrowIcon) {
+                binding.topToolbarSearchIcon.setImageResource(R.drawable.ic_search_vector)
+                binding.topToolbarSearchIcon.contentDescription = resources.getString(R.string.search)
+            }
             onSearchTextChangedListener?.invoke(text)
         }
 
@@ -112,7 +118,9 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
     fun updateColors(background: Int = context.getProperBackgroundColor()) {
         val contrastColor = background.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
-        val surfaceColor = context.getSurfaceColor()
+        val surfaceColor =
+            if (context.isDynamicTheme() && !context.isSystemInDarkMode()) context.getProperBackgroundColor()
+            else context.getSurfaceColor()
 
         setBackgroundColor(background)
         binding.topAppBarLayout.setBackgroundColor(background)
