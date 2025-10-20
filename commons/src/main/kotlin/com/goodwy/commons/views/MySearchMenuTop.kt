@@ -119,7 +119,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
         val contrastColor = background.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
         val surfaceColor =
-            if (context.isDynamicTheme() && !context.isSystemInDarkMode()) context.getProperBackgroundColor()
+            if (context.isDynamicTheme() && !context.isSystemInDarkMode()) context.getSurfaceColor()
             else if (background == context.getProperBackgroundColor()) context.getSurfaceColor()
             else context.getProperBackgroundColor()
 
