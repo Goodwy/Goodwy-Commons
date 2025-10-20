@@ -56,9 +56,9 @@ fun View.fadeOut(duration: Long = SHORT_ANIMATION_DURATION) {
 @SuppressLint("UseCompatLoadingForDrawables")
 fun View.setupViewBackground(context: Context) {
     background = if (context.isDynamicTheme()) {
-        resources.getDrawable(R.drawable.selector_clickable_you)
+        resources.getDrawable(R.drawable.selector_clickable_you, this.context.theme)
     } else {
-        resources.getDrawable(R.drawable.selector_clickable)
+        resources.getDrawable(R.drawable.selector_clickable, this.context.theme)
     }
 }
 

@@ -410,7 +410,7 @@ class SimpleContactsHelper(val context: Context) {
     @SuppressLint("UseCompatLoadingForDrawables")
     fun getColoredGroupIcon(title: String): Drawable {
 //        val icon = ResourcesCompat.getDrawable(context.resources, R.drawable.ic_group_circle_bg, null)
-        val icon = context.resources.getDrawable(R.drawable.ic_group_circle_bg)
+        val icon = context.resources.getDrawable(R.drawable.ic_group_circle_bg, context.theme)
         if (context.baseConfig.useColoredContacts) {
             val letterBackgroundColors = context.getLetterBackgroundColors()
             val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()

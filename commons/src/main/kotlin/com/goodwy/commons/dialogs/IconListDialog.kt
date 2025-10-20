@@ -33,7 +33,7 @@ class IconListDialog(
                         it.beGone()
                     }
                     arrayOf(icon1, icon2).forEachIndexed { index, imageView ->
-                        imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
+                        imageView.setImageDrawable(activity.resources.getDrawable(items[index], activity.theme))
                     }
                 }
                 3 -> {
@@ -43,7 +43,7 @@ class IconListDialog(
                         it.beGone()
                     }
                     arrayOf(icon1, icon2, icon3).forEachIndexed { index, imageView ->
-                        imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
+                        imageView.setImageDrawable(activity.resources.getDrawable(items[index], activity.theme))
                     }
                 }
                 4 -> {
@@ -53,14 +53,14 @@ class IconListDialog(
                         it.beGone()
                     }
                     arrayOf(icon1, icon2, icon3, icon4).forEachIndexed { index, imageView ->
-                        imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
+                        imageView.setImageDrawable(activity.resources.getDrawable(items[index], activity.theme))
                     }
                 }
                 12 -> {
                     arrayOf(icon1, icon2, icon3, icon4, icon5, icon6,
                         icon7, icon8, icon9, icon10, icon11, icon12
                     ).forEachIndexed { index, imageView ->
-                        imageView.setImageDrawable(activity.resources.getDrawable(items[index]))
+                        imageView.setImageDrawable(activity.resources.getDrawable(items[index], activity.theme))
                     }
                 }
             }

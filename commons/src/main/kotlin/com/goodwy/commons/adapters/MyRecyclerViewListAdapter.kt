@@ -108,7 +108,7 @@ abstract class MyRecyclerViewListAdapter<T>(
                 //if (activity.isDynamicTheme()) {
                     actBarTextView?.onGlobalLayout {
                         val backArrow = activity.findViewById<ImageView>(androidx.appcompat.R.id.action_mode_close_button)
-                        backArrow?.setImageDrawable(resources.getDrawable(R.drawable.ic_chevron_left_vector))
+                        backArrow?.setImageDrawable(resources.getDrawable(R.drawable.ic_chevron_left_vector, activity.theme))
                         backArrow?.applyColorFilter(bgColor.getContrastColor())
                     }
                 //}
@@ -298,7 +298,7 @@ abstract class MyRecyclerViewListAdapter<T>(
 
         if (add) {
             DividerItemDecoration(activity, DividerItemDecoration.VERTICAL).apply {
-                setDrawable(resources.getDrawable(R.drawable.divider))
+                setDrawable(resources.getDrawable(R.drawable.divider, activity.theme))
                 recyclerView.addItemDecoration(this)
             }
         }

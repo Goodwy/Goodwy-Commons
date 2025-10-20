@@ -1441,8 +1441,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun getAppIcon(currentAppIconColorIndex: Int = getCurrentAppIconColorIndex()): Drawable {
         val appIconIDs = getAppIconIDs()
         if (appIconIDs.size - 1 < currentAppIconColorIndex) {
-            return resources.getDrawable(R.drawable.ic_launcher)
+            return resources.getDrawable(R.drawable.ic_launcher, theme)
         }
-        return resources.getDrawable(appIconIDs[currentAppIconColorIndex])
+        return resources.getDrawable(appIconIDs[currentAppIconColorIndex], theme)
     }
 }

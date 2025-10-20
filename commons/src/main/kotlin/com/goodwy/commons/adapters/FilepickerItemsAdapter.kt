@@ -144,7 +144,7 @@ class FilepickerItemsAdapter(
         val folderColor = if (useAccentColor) accentColor else properPrimaryColor
         folderDrawable = resources.getColoredDrawableWithColor(R.drawable.ic_folder_color, folderColor)
         folderDrawable.alpha = 180
-        fileDrawable = resources.getDrawable(R.drawable.ic_file_generic)
+        fileDrawable = resources.getDrawable(R.drawable.ic_file_generic, activity.theme)
         fileDrawables = getFilePlaceholderDrawables(activity)
     }
 

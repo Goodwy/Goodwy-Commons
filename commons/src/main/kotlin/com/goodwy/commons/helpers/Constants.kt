@@ -778,7 +778,7 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
         put("xml", R.drawable.ic_file_xml)
         put("zip", R.drawable.ic_file_zip)
     }.forEach { (key, value) ->
-        fileDrawables[key] = context.resources.getDrawable(value)
+        fileDrawables[key] = context.resources.getDrawable(value, context.theme)
     }
     return fileDrawables
 }
