@@ -129,7 +129,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
         binding.topToolbarSearchIcon.applyColorFilter(searchIconColor)
         binding.topToolbarSearchSpeechToText.applyColorFilter(contrastColor)
         binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
-        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, Color.TRANSPARENT, useColorForStatusBar = false)
+//        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, Color.TRANSPARENT, useColorForStatusBar = false)
 
         binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)
         binding.topToolbarHolder.backgroundTintList = ColorStateList.valueOf(surfaceColor)
