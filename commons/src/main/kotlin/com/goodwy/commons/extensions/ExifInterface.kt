@@ -1,11 +1,10 @@
 package com.goodwy.commons.extensions
 
-import android.annotation.TargetApi
 import android.content.Context
-import android.os.Build
 import androidx.exifinterface.media.ExifInterface
 import java.text.SimpleDateFormat
 import java.util.Locale
+import kotlin.math.roundToInt
 
 fun ExifInterface.copyTo(destination: ExifInterface, copyOrientation: Boolean = true) {
     val attributes = arrayListOf(
@@ -46,7 +45,7 @@ fun ExifInterface.copyTo(destination: ExifInterface, copyOrientation: Boolean = 
 
     try {
         destination.saveAttributes()
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
 }
 
@@ -100,7 +99,7 @@ fun ExifInterface.getExifProperties(): String {
             exifString += if (exposureValue > 1f) {
                 "•  ${exposureValue}s  "
             } else {
-                "•  1/${Math.round(1 / exposureValue)}s  "
+                "•  1/${(1 / exposureValue).roundToInt()}s  "
             }
         }
     }
@@ -122,15 +121,14 @@ fun ExifInterface.getExifProperties(): String {
     return exifString.trim()
 }
 
-@TargetApi(Build.VERSION_CODES.N)
 fun ExifInterface.getExifDateTaken(context: Context): String {
     val dateTime = getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: getAttribute(ExifInterface.TAG_DATETIME)
     dateTime.let {
         if (it?.isNotEmpty() == true) {
             try {
                 val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
-                return simpleDateFormat.parse(it).time.formatDate(context).trim()
-            } catch (ignored: Exception) {
+                return simpleDateFormat.parse(it)!!.time.formatDate(context).trim()
+            } catch (_: Exception) {
             }
         }
     }

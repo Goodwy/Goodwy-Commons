@@ -3,7 +3,6 @@ package com.goodwy.commons.dialogs
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.media.MediaPlayer
-import android.net.Uri
 import android.view.ViewGroup
 import android.widget.RadioGroup
 import androidx.appcompat.app.AlertDialog
@@ -17,6 +16,7 @@ import com.goodwy.commons.helpers.SILENT
 import com.goodwy.commons.models.AlarmSound
 import com.goodwy.commons.models.RadioItem
 import com.goodwy.commons.views.MyCompatRadioButton
+import androidx.core.net.toUri
 
 class SelectAlarmSoundDialog(
     val activity: BaseSimpleActivity, val currentUri: String, val audioStream: Int, val pickAudioIntentId: Int,
@@ -114,7 +114,7 @@ class SelectAlarmSoundDialog(
 
                 try {
                     activity.startActivityForResult(intent, pickAudioIntentId)
-                } catch (e: ActivityNotFoundException) {
+                } catch (_: ActivityNotFoundException) {
                     activity.toast(R.string.no_app_found)
                 }
                 dialog?.dismiss()
@@ -130,7 +130,7 @@ class SelectAlarmSoundDialog(
                 }
 
                 mediaPlayer?.apply {
-                    setDataSource(activity, Uri.parse(alarmSound.uri))
+                    setDataSource(activity, alarmSound.uri.toUri())
                     prepare()
                     start()
                 }

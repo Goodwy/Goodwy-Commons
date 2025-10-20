@@ -3,12 +3,10 @@ package com.goodwy.commons.views
 import android.app.Activity
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import com.google.android.material.appbar.AppBarLayout
 import com.goodwy.commons.R
-import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.databinding.MenuSearchTopBinding
 import com.goodwy.commons.extensions.*
 
@@ -128,7 +126,13 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : AppBarLayout
         val searchIconColor = if (context.baseConfig.topAppBarColorIcon) primaryColor else contrastColor
         binding.topToolbarSearchIcon.applyColorFilter(searchIconColor)
         binding.topToolbarSearchSpeechToText.applyColorFilter(contrastColor)
-        binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
+        binding.topToolbarSearch.setColors(
+            contrastColor,
+            primaryColor,
+            context.getProperTextCursorColor()
+        )
+
+        //No need to update the status bar when using it in a dialog
 //        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, Color.TRANSPARENT, useColorForStatusBar = false)
 
         binding.topToolbarHolder.setBackgroundResource(R.drawable.search_bg)

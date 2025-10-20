@@ -24,7 +24,6 @@ import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 import com.goodwy.commons.models.contacts.Organization as MyOrganization
 import android.graphics.Bitmap
-import androidx.core.content.res.ResourcesCompat
 import java.text.Collator
 import kotlin.math.abs
 import androidx.core.graphics.drawable.toDrawable
@@ -52,7 +51,7 @@ class SimpleContactsHelper(val context: Context) {
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
-                val startIndex = Math.max(0, it.phoneNumbers.first().normalizedNumber.length - 9)
+                val startIndex = 0.coerceAtLeast(it.phoneNumbers.first().normalizedNumber.length - 9)
                 it.phoneNumbers.first().normalizedNumber.substring(startIndex)
             }.distinctBy { it.rawId }.toMutableList() as ArrayList<SimpleContact>
 
@@ -288,7 +287,7 @@ class SimpleContactsHelper(val context: Context) {
                     return cursor.getStringValue(PhoneLookup.DISPLAY_NAME)
                 }
             }
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         }
 
         return number
@@ -311,7 +310,7 @@ class SimpleContactsHelper(val context: Context) {
                     return cursor.getStringValue(PhoneLookup.PHOTO_URI) ?: ""
                 }
             }
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         }
 
         return ""
@@ -473,7 +472,7 @@ class SimpleContactsHelper(val context: Context) {
                     .get()
 
                 callback(bitmap)
-            } catch (ignored: Exception) {
+            } catch (_: Exception) {
                 callback(placeholder.bitmap)
             }
         }

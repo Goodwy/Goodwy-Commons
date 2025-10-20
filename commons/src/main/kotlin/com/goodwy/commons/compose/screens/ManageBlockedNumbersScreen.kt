@@ -17,11 +17,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.Delete
+import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material.icons.rounded.MoreVert
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
@@ -256,12 +258,19 @@ internal fun ManageBlockedNumbersScreen(
                 )
                 Spacer(modifier = Modifier.size(16.dp))
                 Card(modifier = Modifier.padding(horizontal = 20.dp)) {
-                    Text(
-                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
-                        text =
-                            if (isBlockingEnabled || !isDialer) stringResource(id = com.goodwy.strings.R.string.сalls_and_messages_blocked_warning)
-                            else stringResource(id = com.goodwy.strings.R.string.messages_blocked_warning)
-                    )
+                    Box (modifier = Modifier.padding(horizontal = 12.dp)) {
+                        Text(
+                            modifier = Modifier.padding(top = 8.dp, bottom = 16.dp),
+                            text =
+                                if (isBlockingEnabled || !isDialer) stringResource(id = com.goodwy.strings.R.string.сalls_and_messages_blocked_warning)
+                                else stringResource(id = com.goodwy.strings.R.string.messages_blocked_warning)
+                        )
+                        Icon(
+                            modifier = Modifier.align(BottomCenter),
+                            imageVector = Icons.Rounded.KeyboardArrowDown,
+                            contentDescription = null
+                        )
+                    }
                 }
             }
             when {

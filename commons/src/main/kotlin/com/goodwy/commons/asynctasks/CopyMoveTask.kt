@@ -5,6 +5,7 @@ import android.app.NotificationManager
 import android.content.ContentValues
 import android.os.AsyncTask
 import android.os.Handler
+import android.os.Looper
 import android.provider.MediaStore
 import androidx.core.app.NotificationCompat
 import androidx.core.util.Pair
@@ -15,7 +16,6 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.CONFLICT_KEEP_BOTH
 import com.goodwy.commons.helpers.CONFLICT_SKIP
 import com.goodwy.commons.helpers.getConflictResolution
-import com.goodwy.commons.helpers.isOreoPlus
 import com.goodwy.commons.interfaces.CopyMoveListener
 import com.goodwy.commons.models.FileDirItem
 import java.io.File
@@ -24,13 +24,18 @@ import java.io.OutputStream
 import java.lang.ref.WeakReference
 
 class CopyMoveTask(
-    val activity: BaseSimpleActivity, val copyOnly: Boolean, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
-    listener: CopyMoveListener, val copyHidden: Boolean
+    activity: BaseSimpleActivity,
+    val copyOnly: Boolean,
+    val copyMediaOnly: Boolean,
+    val conflictResolutions: LinkedHashMap<String, Int>,
+    listener: CopyMoveListener,
+    val copyHidden: Boolean
 ) : AsyncTask<Pair<ArrayList<FileDirItem>, String>, Void, Boolean>() {
     private val INITIAL_PROGRESS_DELAY = 3000L
     private val PROGRESS_RECHECK_INTERVAL = 500L
 
-    private var mListener: WeakReference<CopyMoveListener>? = null
+    private var mActivity: WeakReference<BaseSimpleActivity> = WeakReference(activity)
+    private var mListener: WeakReference<CopyMoveListener>? = WeakReference(listener)
     private var mTransferredFiles = ArrayList<FileDirItem>()
     private var mFileDirItemsToDelete = ArrayList<FileDirItem>()        // confirm the deletion of files on Android 11 from Downloads and Android at once
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
@@ -39,23 +44,24 @@ class CopyMoveTask(
     private var mDestinationPath = ""
 
     // progress indication
-    private var mNotificationBuilder: NotificationCompat.Builder
+    private var mNotificationBuilder: NotificationCompat.Builder? = null
     private var mCurrFilename = ""
     private var mCurrentProgress = 0L
     private var mMaxSize = 0
     private var mNotifId = 0
     private var mIsTaskOver = false
-    private var mProgressHandler = Handler()
+    private var mProgressHandler: Handler? = null
 
     init {
-        mListener = WeakReference(listener)
-        mNotificationBuilder = NotificationCompat.Builder(activity)
+        mProgressHandler = Handler(Looper.getMainLooper())
     }
 
     override fun doInBackground(vararg params: Pair<ArrayList<FileDirItem>, String>): Boolean {
         if (params.isEmpty()) {
             return false
         }
+
+        val activity = mActivity.get() ?: return false
 
         val pair = params[0]
         mFiles = pair.first!!
@@ -75,7 +81,7 @@ class CopyMoveTask(
             }
         }
 
-        mProgressHandler.postDelayed({
+        mProgressHandler?.postDelayed({
             initProgressNotification()
             updateProgress()
         }, INITIAL_PROGRESS_DELAY)
@@ -106,13 +112,16 @@ class CopyMoveTask(
     }
 
     override fun onPostExecute(success: Boolean) {
+        val activity = mActivity.get() ?: return
+
         if (activity.isFinishing || activity.isDestroyed) {
+            cleanup()
             return
         }
 
         deleteProtectedFiles()
-        mProgressHandler.removeCallbacksAndMessages(null)
-        activity.notificationManager.cancel(mNotifId)
+        cleanup()
+
         val listener = mListener?.get() ?: return
 
         if (success) {
@@ -123,37 +132,57 @@ class CopyMoveTask(
     }
 
     private fun initProgressNotification() {
+        val activity = mActivity.get() ?: return
+
         val channelId = "Copy/Move"
         val title = activity.getString(if (copyOnly) R.string.copying else R.string.moving)
-        if (isOreoPlus()) {
-            val importance = NotificationManager.IMPORTANCE_LOW
-            NotificationChannel(channelId, title, importance).apply {
-                enableLights(false)
-                enableVibration(false)
-                activity.notificationManager.createNotificationChannel(this)
-            }
+        val importance = NotificationManager.IMPORTANCE_LOW
+        NotificationChannel(channelId, title, importance).apply {
+            enableLights(false)
+            enableVibration(false)
+            activity.notificationManager.createNotificationChannel(this)
         }
 
-        mNotificationBuilder.setContentTitle(title)
-            .setSmallIcon(R.drawable.ic_copy_vector)
-            .setChannelId(channelId)
+        mNotificationBuilder = NotificationCompat.Builder(activity).apply {
+            setContentTitle(title)
+            setSmallIcon(R.drawable.ic_copy_vector)
+            setChannelId(channelId)
+        }
+    }
+
+    private fun cleanup() {
+        mProgressHandler?.removeCallbacksAndMessages(null)
+        mProgressHandler = null
+        mNotificationBuilder = null
+
+        val activity = mActivity.get()
+        activity?.notificationManager?.cancel(mNotifId)
+    }
+
+    override fun onCancelled() {
+        cleanup()
     }
 
     private fun updateProgress() {
         if (mIsTaskOver) {
-            activity.notificationManager.cancel(mNotifId)
-            cancel(true)
+            cleanup()
             return
         }
 
-        mNotificationBuilder.apply {
+        val activity = mActivity.get()
+        if (activity == null || activity.isFinishing || activity.isDestroyed) {
+            cleanup()
+            return
+        }
+
+        mNotificationBuilder?.apply {
             setContentText(mCurrFilename)
             setProgress(mMaxSize, (mCurrentProgress / 1000).toInt(), false)
             activity.notificationManager.notify(mNotifId, build())
         }
 
-        mProgressHandler.removeCallbacksAndMessages(null)
-        mProgressHandler.postDelayed({
+        mProgressHandler?.removeCallbacksAndMessages(null)
+        mProgressHandler?.postDelayed({
             updateProgress()
 
             if (mCurrentProgress / 1000 >= mMaxSize) {
@@ -171,6 +200,8 @@ class CopyMoveTask(
     }
 
     private fun copyDirectory(source: FileDirItem, destinationPath: String) {
+        val activity = mActivity.get() ?: return
+
         if (!activity.createDirectorySync(destinationPath)) {
             val error = String.format(activity.getString(R.string.could_not_create_folder), destinationPath)
             activity.showErrorToast(error)
@@ -238,6 +269,8 @@ class CopyMoveTask(
     }
 
     private fun copyFile(source: FileDirItem, destination: FileDirItem) {
+        val activity = mActivity.get() ?: return
+
         if (copyMediaOnly && !source.path.isMediaFile()) {
             mCurrentProgress += source.size
             return
@@ -312,6 +345,8 @@ class CopyMoveTask(
     }
 
     private fun deleteSourceFile(source: FileDirItem) {
+        val activity = mActivity.get() ?: return
+
         if (activity.isRestrictedWithSAFSdk30(source.path) && !activity.canManageMedia()) {
             mFileDirItemsToDelete.add(source)
         } else {
@@ -322,6 +357,8 @@ class CopyMoveTask(
 
     // if we delete multiple files from Downloads folder on Android 11 or 12 without being a Media Management app, show the confirmation dialog just once
     private fun deleteProtectedFiles() {
+        val activity = mActivity.get() ?: return
+
         if (mFileDirItemsToDelete.isNotEmpty()) {
             val fileUris = activity.getFileUrisFromFileDirItems(mFileDirItemsToDelete)
             activity.deleteSDK30Uris(fileUris) { success ->
@@ -335,6 +372,8 @@ class CopyMoveTask(
     }
 
     private fun copyOldLastModified(sourcePath: String, destinationPath: String) {
+        val activity = mActivity.get() ?: return
+
         val projection = arrayOf(
             MediaStore.Images.Media.DATE_TAKEN,
             MediaStore.Images.Media.DATE_MODIFIED

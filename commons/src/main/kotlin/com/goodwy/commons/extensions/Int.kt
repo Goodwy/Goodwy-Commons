@@ -13,6 +13,7 @@ import com.goodwy.commons.helpers.WCAG_AA_NORMAL
 import java.text.DecimalFormat
 import java.util.Locale
 import java.util.Random
+import kotlin.math.roundToInt
 
 fun Int.getContrastColor(): Int {
     val luminance = ColorUtils.calculateLuminance(this)
@@ -22,7 +23,7 @@ fun Int.getContrastColor(): Int {
 fun Int.toHex() = String.format("#%06X", 0xFFFFFF and this).uppercase(Locale.getDefault())
 
 fun Int.adjustAlpha(factor: Float): Int {
-    val alpha = Math.round(Color.alpha(this) * factor)
+    val alpha = (Color.alpha(this) * factor).roundToInt()
     val red = Color.red(this)
     val green = Color.green(this)
     val blue = Color.blue(this)

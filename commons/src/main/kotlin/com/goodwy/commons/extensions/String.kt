@@ -5,7 +5,6 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
-import android.os.Build
 import android.os.StatFs
 import android.provider.MediaStore
 import android.telephony.PhoneNumberUtils
@@ -199,7 +198,7 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
             if (result.find()) {
                 spannableString.setSpan(ForegroundColorSpan(color), result.start(), result.end(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
             }
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         }
 
         return spannableString
@@ -209,7 +208,7 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
         val endIndex = Math.min(it + textToHighlight.length, length)
         try {
             spannableString.setSpan(ForegroundColorSpan(color), it, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
-        } catch (ignored: IndexOutOfBoundsException) {
+        } catch (_: IndexOutOfBoundsException) {
         }
     }
 
@@ -254,7 +253,7 @@ fun String.getAvailableStorageB(): Long {
         val stat = StatFs(this)
         val bytesAvailable = stat.blockSizeLong * stat.availableBlocksLong
         bytesAvailable
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         -1L
     }
 }
@@ -316,7 +315,7 @@ fun String.highlightTextFromNumbers(textToHighlight: String, primaryColor: Int):
         val endIndex = (startIndex + textToHighlight.length).coerceAtMost(length)
         try {
             spannableString.setSpan(ForegroundColorSpan(primaryColor), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
-        } catch (ignored: IndexOutOfBoundsException) {
+        } catch (_: IndexOutOfBoundsException) {
         }
     }
 
@@ -346,7 +345,7 @@ fun String.getDateTimeFromDateString(showYearsSince: Boolean, viewToUpdate: Text
 
             viewToUpdate?.text = formattedString
             break
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         }
     }
     return date
@@ -375,7 +374,7 @@ fun String.getDateFormattedFromDateString(showYearsSince: Boolean): String {
             }
 
             break
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         }
     }
     return formattedString
@@ -1007,8 +1006,7 @@ fun String.isBlockedNumberPattern() = contains("*")
 fun String?.fromHtml(): Spanned =
     when {
         this == null -> SpannableString("")
-        Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> Html.fromHtml(this, Html.FROM_HTML_MODE_LEGACY)
-        else -> Html.fromHtml(this)
+        else -> Html.fromHtml(this, Html.FROM_HTML_MODE_LEGACY)
     }
 
 //This converts the string to RTL and left-aligns it if there is at least one RTL-language character in the string, and returns to LTR otherwise.

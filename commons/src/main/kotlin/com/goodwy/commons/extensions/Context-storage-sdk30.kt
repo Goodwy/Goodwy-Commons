@@ -197,7 +197,7 @@ fun Context.getDocumentSdk30(path: String): DocumentFile? {
             document = document?.findFile(part)
         }
         document
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
         null
     }
 }

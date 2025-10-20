@@ -1,5 +1,6 @@
 package com.goodwy.commons.models
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
 import android.provider.MediaStore
@@ -8,6 +9,7 @@ import com.bumptech.glide.signature.ObjectKey
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.*
 import java.io.File
+import androidx.core.net.toUri
 
 open class FileDirItem(
     val path: String,
@@ -77,15 +79,16 @@ open class FileDirItem(
         else -> name
     }
 
+    @SuppressLint("Recycle")
     fun getProperSize(context: Context, countHidden: Boolean): Long {
         return when {
             context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFFileSize(path)
             context.isPathOnOTG(path) -> context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
-            isNougatPlus() && path.startsWith("content://") -> {
+            path.startsWith("content://") -> {
                 try {
-                    context.contentResolver.openInputStream(Uri.parse(path))?.available()?.toLong() ?: 0L
-                } catch (e: Exception) {
-                    context.getSizeFromContentUri(Uri.parse(path))
+                    context.contentResolver.openInputStream(path.toUri())?.available()?.toLong() ?: 0L
+                } catch (_: Exception) {
+                    context.getSizeFromContentUri(path.toUri())
                 }
             }
 
@@ -115,7 +118,7 @@ open class FileDirItem(
         return when {
             context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFLastModified(path)
             context.isPathOnOTG(path) -> context.getFastDocumentFile(path)?.lastModified() ?: 0L
-            isNougatPlus() && path.startsWith("content://") -> context.getMediaStoreLastModified(path)
+            path.startsWith("content://") -> context.getMediaStoreLastModified(path)
             else -> File(path).lastModified()
         }
     }

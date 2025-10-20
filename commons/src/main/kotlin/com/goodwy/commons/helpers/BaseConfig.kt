@@ -85,7 +85,7 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(INTERNAL_STORAGE_PATH, getDefaultInternalPath())!!
         set(internalStoragePath) = prefs.edit { putString(INTERNAL_STORAGE_PATH, internalStoragePath) }
 
-    private fun getDefaultInternalPath() = if (prefs.contains(INTERNAL_STORAGE_PATH)) "" else context.getInternalStoragePath()
+    private fun getDefaultInternalPath() = if (prefs.contains(INTERNAL_STORAGE_PATH)) "" else getInternalStoragePath()
 
     var textColor: Int
         get() = prefs.getInt(TEXT_COLOR, ContextCompat.getColor(context, R.color.default_text_color))
@@ -437,6 +437,7 @@ open class BaseConfig(val context: Context) {
             "mmmmdy" -> DATE_FORMAT_SIX
             "mm-dd-y" -> DATE_FORMAT_SEVEN
             "dd-mm-y" -> DATE_FORMAT_EIGHT
+            "y.mm.dd" -> DATE_FORMAT_TEN
             else -> DATE_FORMAT_ONE
         }
     }

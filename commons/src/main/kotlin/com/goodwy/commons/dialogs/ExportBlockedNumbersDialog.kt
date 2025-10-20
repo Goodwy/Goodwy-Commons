@@ -21,7 +21,7 @@ class ExportBlockedNumbersDialog(
     init {
         val view = DialogExportBlockedNumbersBinding.inflate(activity.layoutInflater, null, false).apply {
             exportBlockedNumbersFolder.text = activity.humanizePath(realPath)
-            exportBlockedNumbersFilename.setText("${activity.getString(R.string.blocked_numbers)}_${activity.getCurrentFormattedDateTime()}")
+            exportBlockedNumbersFilename.setText("${activity.getString(R.string.blocked_numbers)}_${getCurrentFormattedDateTime()}")
 
             if (hidePath) {
                 exportBlockedNumbersFolderLabel.beGone()

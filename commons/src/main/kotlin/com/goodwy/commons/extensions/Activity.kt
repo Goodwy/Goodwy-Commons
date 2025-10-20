@@ -48,7 +48,6 @@ import com.goodwy.commons.views.MyTextView
 import java.io.*
 import java.util.TreeSet
 import androidx.core.net.toUri
-import com.goodwy.commons.extensions.toast
 import java.util.Locale
 
 fun Activity.appLaunched(appId: String) {
@@ -100,7 +99,7 @@ fun Activity.appLaunched(appId: String) {
 fun Activity.isAppInstalledOnSDCard(): Boolean = try {
     val applicationInfo = packageManager.getPackageInfo(packageName, 0).applicationInfo
     (applicationInfo?.flags?.and(ApplicationInfo.FLAG_EXTERNAL_STORAGE)) == ApplicationInfo.FLAG_EXTERNAL_STORAGE
-} catch (e: Exception) {
+} catch (_: Exception) {
     false
 }
 
@@ -115,16 +114,16 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_SD)
                             checkedDocumentPath = path
                             return@apply
-                        } catch (e: Exception) {
+                        } catch (_: Exception) {
                             type = "*/*"
                         }
 
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_SD)
                             checkedDocumentPath = path
-                        } catch (e: ActivityNotFoundException) {
+                        } catch (_: ActivityNotFoundException) {
                             toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
-                        } catch (e: Exception) {
+                        } catch (_: Exception) {
                             toast(R.string.unknown_error_occurred)
                         }
                     }
@@ -168,16 +167,16 @@ private fun BaseSimpleActivity.openDocumentTreeSdk30(path: String) {
             startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_SDK_30)
             checkedDocumentPath = path
             return@apply
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             type = "*/*"
         }
 
         try {
             startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_SDK_30)
             checkedDocumentPath = path
-        } catch (e: ActivityNotFoundException) {
+        } catch (_: ActivityNotFoundException) {
             toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             toast(R.string.unknown_error_occurred)
         }
     }
@@ -199,16 +198,16 @@ fun BaseSimpleActivity.isShowingSAFCreateDocumentDialogSdk30(path: String): Bool
                             startActivityForResult(this, CREATE_DOCUMENT_SDK_30)
                             checkedDocumentPath = path
                             return@apply
-                        } catch (e: Exception) {
+                        } catch (_: Exception) {
                             type = "*/*"
                         }
 
                         try {
                             startActivityForResult(this, CREATE_DOCUMENT_SDK_30)
                             checkedDocumentPath = path
-                        } catch (e: ActivityNotFoundException) {
+                        } catch (_: ActivityNotFoundException) {
                             toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
-                        } catch (e: Exception) {
+                        } catch (_: Exception) {
                             toast(R.string.unknown_error_occurred)
                         }
                     }
@@ -300,7 +299,7 @@ fun BaseSimpleActivity.startIntentForUriAction(
 ): Boolean {
     val intent = Intent(action, uri)
     if (componentName != null) {
-        intent.setComponent(componentName)
+        intent.component = componentName
     }
     return try {
         startActivity(intent)
@@ -329,16 +328,16 @@ fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
                         checkedDocumentPath = path
                         return@apply
-                    } catch (e: Exception) {
+                    } catch (_: Exception) {
                         type = "*/*"
                     }
 
                     try {
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
                         checkedDocumentPath = path
-                    } catch (e: ActivityNotFoundException) {
+                    } catch (_: ActivityNotFoundException) {
                         toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
-                    } catch (e: Exception) {
+                    } catch (_: Exception) {
                         toast(R.string.unknown_error_occurred)
                     }
                 }
@@ -364,7 +363,7 @@ fun Activity.launchViewIntent(url: String) {
         Intent(Intent.ACTION_VIEW, url.toUri()).apply {
             try {
                 startActivity(this)
-            } catch (e: ActivityNotFoundException) {
+            } catch (_: ActivityNotFoundException) {
                 toast(R.string.no_browser_found)
             } catch (e: Exception) {
                 showErrorToast(e)
@@ -378,7 +377,7 @@ fun Activity.launchInternetSearch(query: String) {
         putExtra(SearchManager.QUERY, query)
         try {
             startActivity(this)
-        } catch (e: ActivityNotFoundException) {
+        } catch (_: ActivityNotFoundException) {
             toast(R.string.no_browser_found)
         } catch (e: Exception) {
             showErrorToast(e)
@@ -390,7 +389,7 @@ fun Activity.launchAppRatingPage() {
     hideKeyboard()
     try {
         launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
-    } catch (ignored: ActivityNotFoundException) {
+    } catch (_: ActivityNotFoundException) {
         launchViewIntent(getStoreUrl())
     }
 }
@@ -407,7 +406,7 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
 
             try {
                 startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-            } catch (e: ActivityNotFoundException) {
+            } catch (_: ActivityNotFoundException) {
                 toast(R.string.no_app_found)
             } catch (e: RuntimeException) {
                 if (e.cause is TransactionTooLargeException) {
@@ -447,7 +446,7 @@ fun Activity.sharePathsIntent(paths: List<String>, applicationId: String) {
 
                 try {
                     startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-                } catch (e: ActivityNotFoundException) {
+                } catch (_: ActivityNotFoundException) {
                     toast(R.string.no_app_found)
                 } catch (e: RuntimeException) {
                     if (e.cause is TransactionTooLargeException) {
@@ -474,7 +473,7 @@ fun Activity.setAsIntent(path: String, applicationId: String) {
 
             try {
                 startActivityForResult(chooser, REQUEST_SET_AS)
-            } catch (e: ActivityNotFoundException) {
+            } catch (_: ActivityNotFoundException) {
                 toast(R.string.no_app_found)
             } catch (e: Exception) {
                 showErrorToast(e)
@@ -492,7 +491,7 @@ fun Activity.shareTextIntent(text: String) {
 
             try {
                 startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-            } catch (e: ActivityNotFoundException) {
+            } catch (_: ActivityNotFoundException) {
                 toast(R.string.no_app_found)
             } catch (e: RuntimeException) {
                 if (e.cause is TransactionTooLargeException) {
@@ -541,7 +540,7 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
             try {
                 val chooser = Intent.createChooser(this, getString(R.string.edit_with))
                 startActivityForResult(if (forceChooser) chooser else this, REQUEST_EDIT_IMAGE)
-            } catch (e: ActivityNotFoundException) {
+            } catch (_: ActivityNotFoundException) {
                 toast(R.string.no_app_found)
             } catch (e: Exception) {
                 showErrorToast(e)
@@ -559,7 +558,7 @@ fun Activity.openPathIntent(
 ) {
     ensureBackgroundThread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
-        val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
+        val mimeType = forceMimeType.ifEmpty { getUriMimeType(path, newUri) }
         Intent().apply {
             action = Intent.ACTION_VIEW
             setDataAndType(newUri, mimeType)
@@ -578,7 +577,7 @@ fun Activity.openPathIntent(
             try {
                 val chooser = Intent.createChooser(this, getString(R.string.open_with))
                 startActivity(if (forceChooser) chooser else this)
-            } catch (e: ActivityNotFoundException) {
+            } catch (_: ActivityNotFoundException) {
                 if (!tryGenericMimeType(this, mimeType, newUri)) {
                     toast(R.string.no_app_found)
                 }
@@ -661,7 +660,7 @@ fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boo
     return try {
         startActivity(intent)
         true
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         false
     }
 }
@@ -1035,7 +1034,7 @@ fun BaseSimpleActivity.renameFile(
                 ensureBackgroundThread {
                     try {
                         DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath.getFilenameFromPath())
-                    } catch (ignored: FileNotFoundException) {
+                    } catch (_: FileNotFoundException) {
                         // FileNotFoundException is thrown in some weird cases, but renaming works just fine
                     } catch (e: Exception) {
                         showErrorToast(e)
@@ -1220,13 +1219,14 @@ private fun BaseSimpleActivity.renameCasually(
     }
 }
 
-fun Activity.createTempFile(file: File): File? {
+@Suppress("DEPRECATION")
+fun createTempFile(file: File): File? {
     return if (file.isDirectory) {
         createTempDir("temp", "${System.currentTimeMillis()}", file.parentFile)
     } else {
         if (isRPlus()) {
             // this can throw FileSystemException, lets catch and handle it at the place calling this function
-                kotlin.io.path.createTempFile(file.parentFile.toPath(), "temp", "${System.currentTimeMillis()}").toFile()
+                kotlin.io.path.createTempFile(file.parentFile!!.toPath(), "temp", "${System.currentTimeMillis()}").toFile()
         } else {
             createTempFile("temp", "${System.currentTimeMillis()}", file.parentFile)
         }
@@ -1326,7 +1326,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                             createSAFFileSdk30(fileDirItem.path)
                         }
                         applicationContext.contentResolver.openOutputStream(uri, "wt")
-                    } catch (e: Exception) {
+                    } catch (_: Exception) {
                         null
                     } ?: createCasualFileOutputStream(this, targetFile)
                 )
@@ -1338,7 +1338,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                 try {
                     val fileUri = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
                     applicationContext.contentResolver.openOutputStream(fileUri.first(), "wt")
-                } catch (e: Exception) {
+                } catch (_: Exception) {
                     null
                 } ?: createCasualFileOutputStream(this, targetFile)
             )
@@ -1688,10 +1688,10 @@ fun Activity.checkAppSideloading(): Boolean {
     return isSideloaded
 }
 
-fun Activity.isAppSideloaded(): Boolean {
+fun isAppSideloaded(): Boolean {
     return try {
         false
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         true
     }
 }

@@ -11,7 +11,6 @@ import com.goodwy.commons.R
 import com.goodwy.commons.databinding.DialogRenameItemsPatternBinding
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.helpers.isNougatPlus
 import com.goodwy.commons.interfaces.RenameTab
 import com.goodwy.commons.models.Android30RenameFormat
 import com.goodwy.commons.models.FileDirItem
@@ -115,11 +114,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
     private fun getNewPath(path: String, useMediaFileExtension: Boolean): String? {
         try {
             val exif = ExifInterface(path)
-            var dateTime = if (isNougatPlus()) {
-                exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
-            } else {
-                exif.getAttribute(ExifInterface.TAG_DATETIME)
-            }
+            var dateTime = exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
 
             if (dateTime == null) {
                 val calendar = Calendar.getInstance(Locale.ENGLISH)

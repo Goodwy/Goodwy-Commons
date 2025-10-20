@@ -1,11 +1,9 @@
 package com.goodwy.commons.extensions
 
-import android.annotation.TargetApi
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor
 import android.net.Uri
-import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.provider.ContactsContract
@@ -25,6 +23,7 @@ import com.goodwy.commons.models.contacts.Organization
 import com.goodwy.commons.models.contacts.SocialAction
 import java.io.File
 import java.util.ArrayList
+import androidx.core.net.toUri
 
 val Context.contactsDB: ContactsDao get() = ContactsDatabase.getInstance(applicationContext).ContactsDao()
 
@@ -41,7 +40,7 @@ fun Context.getEmptyContact(): Contact {
 
 fun Context.sendAddressIntent(address: String) {
     val location = Uri.encode(address)
-    val uri = Uri.parse("geo:0,0?q=$location")
+    val uri = "geo:0,0?q=$location".toUri()
 
     Intent(Intent.ACTION_VIEW, uri).apply {
         launchActivityIntent(this)
@@ -58,7 +57,7 @@ fun Context.openWebsiteIntent(url: String) {
     }
 
     Intent(Intent.ACTION_VIEW).apply {
-        data = Uri.parse(website)
+        data = website.toUri()
         launchActivityIntent(this)
     }
 }
@@ -82,7 +81,7 @@ fun Context.getContactUriRawId(uri: Uri): Int {
         if (cursor!!.moveToFirst()) {
             return cursor.getIntValue(ContactsContract.Contacts.NAME_RAW_CONTACT_ID)
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     } finally {
         cursor?.close()
     }
@@ -111,7 +110,7 @@ fun lookupContactUri(lookup: String, context: Context): Uri? {
     val lookupUri = Uri.withAppendedPath(ContactsContract.Contacts.CONTENT_LOOKUP_URI, lookup)
     return try {
         ContactsContract.Contacts.lookupContact(context.contentResolver, lookupUri)
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         null
     }
 }
@@ -136,7 +135,7 @@ fun Context.getPhotoThumbnailSize(): Int {
         if (cursor?.moveToFirst() == true) {
             return cursor.getIntValue(ContactsContract.DisplayPhoto.THUMBNAIL_MAX_DIM)
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     } finally {
         cursor?.close()
     }
@@ -199,7 +198,7 @@ fun Context.sendSMSToContacts(contacts: ArrayList<Contact>) {
     }
 
     val uriString = "smsto:${numbers.toString().trimEnd(';')}"
-    Intent(Intent.ACTION_SENDTO, Uri.parse(uriString)).apply {
+    Intent(Intent.ACTION_SENDTO, uriString.toUri()).apply {
         launchActivityIntent(this)
     }
 }
@@ -382,7 +381,6 @@ fun Context.isContactBlocked(contact: Contact, callback: (Boolean) -> Unit) {
     }
 }
 
-@TargetApi(Build.VERSION_CODES.N)
 fun Context.blockContact(contact: Contact): Boolean {
     var contactBlocked = true
     ensureBackgroundThread {
@@ -395,7 +393,6 @@ fun Context.blockContact(contact: Contact): Boolean {
     return contactBlocked
 }
 
-@TargetApi(Build.VERSION_CODES.N)
 fun Context.unblockContact(contact: Contact): Boolean {
     var contactUnblocked = true
     ensureBackgroundThread {

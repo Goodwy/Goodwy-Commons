@@ -32,7 +32,7 @@ fun Bitmap.cropCenter(
             newHeight // new height
         )
 
-    } catch (e:IllegalArgumentException){
+    } catch (_:IllegalArgumentException){
         null
     }
 }

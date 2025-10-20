@@ -1,10 +1,11 @@
 package com.goodwy.commons.helpers
 
 import android.net.Uri
+import androidx.core.net.toUri
 
 object MyContentProvider {
     private const val AUTHORITY = "com.goodwy.android.provider"
-    val MY_CONTENT_URI: Uri = Uri.parse("content://$AUTHORITY/settings")
+    val MY_CONTENT_URI: Uri = "content://$AUTHORITY/settings".toUri()
 
     const val ACTION_GLOBAL_CONFIG_UPDATED = "com.goodwy.android.GLOBAL_CONFIG_UPDATED"
     const val PERMISSION_WRITE_GLOBAL_SETTINGS = "com.goodwy.android.permission.WRITE_GLOBAL_SETTINGS"

@@ -147,7 +147,7 @@ fun File.doesParentHaveNoMedia(): Boolean {
 fun File.getDigest(algorithm: String): String? {
     return try {
         inputStream().getDigest(algorithm)
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         null
     }
 }

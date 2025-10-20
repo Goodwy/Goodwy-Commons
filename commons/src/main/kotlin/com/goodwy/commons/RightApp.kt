@@ -3,7 +3,6 @@ package com.goodwy.commons
 import android.app.Application
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.goodwy.commons.extensions.appLockManager
-import com.goodwy.commons.extensions.checkUseEnglish
 
 open class RightApp : Application() {
 
@@ -11,7 +10,6 @@ open class RightApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        checkUseEnglish()
         setupAppLockManager()
     }
 

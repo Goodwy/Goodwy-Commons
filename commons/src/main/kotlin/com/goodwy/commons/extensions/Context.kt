@@ -82,6 +82,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.joda.time.DateTimeConstants
 import java.util.concurrent.TimeUnit
+import kotlin.math.roundToInt
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -105,7 +106,7 @@ fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
                 doToast(this, msg, length)
             }
         }
-    } catch (e: Exception) {
+    } catch (_: Exception) {
     }
 }
 
@@ -132,7 +133,7 @@ val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 val Context.otgPath: String get() = baseConfig.OTGPath
 
-fun Context.isFingerPrintSensorAvailable() = Reprint.isHardwarePresent()
+fun isFingerPrintSensorAvailable() = Reprint.isHardwarePresent()
 
 fun Context.isBiometricIdAvailable(): Boolean = when (BiometricManager.from(this).canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_WEAK)) {
     BiometricManager.BIOMETRIC_SUCCESS, BiometricManager.BIOMETRIC_STATUS_UNKNOWN -> true
@@ -158,7 +159,7 @@ fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
                 return cursor.getLongValue(BaseColumns._ID)
             }
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
     return 0
 }
@@ -193,7 +194,7 @@ fun Context.getLatestMediaByDateId(uri: Uri = Files.getContentUri("external")): 
                 return cursor.getLongValue(BaseColumns._ID)
             }
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
     return 0
 }
@@ -253,7 +254,7 @@ fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Ar
                 }
             }
         }
-    } catch (e: Exception) {
+    } catch (_: Exception) {
     }
     return null
 }
@@ -269,7 +270,7 @@ fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this,
 fun Context.hasAllPermissions(permIds: Collection<Int>) = permIds.all(this::hasPermission)
 
 @SuppressLint("InlinedApi")
-fun Context.getPermissionString(id: Int) = when (id) {
+fun getPermissionString(id: Int) = when (id) {
     PERMISSION_READ_STORAGE -> Manifest.permission.READ_EXTERNAL_STORAGE
     PERMISSION_WRITE_STORAGE -> Manifest.permission.WRITE_EXTERNAL_STORAGE
     PERMISSION_CAMERA -> Manifest.permission.CAMERA
@@ -300,7 +301,7 @@ fun Context.getPermissionString(id: Int) = when (id) {
 fun Context.launchActivityIntent(intent: Intent) {
     try {
         startActivity(intent)
-    } catch (e: ActivityNotFoundException) {
+    } catch (_: ActivityNotFoundException) {
         toast(R.string.no_app_found)
     } catch (e: Exception) {
         showErrorToast(e)
@@ -345,7 +346,7 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
                 return Uri.withAppendedPath(uri, id)
             }
         }
-    } catch (e: Exception) {
+    } catch (_: Exception) {
     }
     return null
 }
@@ -375,7 +376,6 @@ fun Context.queryCursor(
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 fun Context.queryCursor(
     uri: Uri,
     projection: Array<String>,
@@ -412,7 +412,7 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
     if (mimetype.isEmpty()) {
         try {
             mimetype = contentResolver.getType(uri) ?: ""
-        } catch (e: IllegalStateException) {
+        } catch (_: IllegalStateException) {
         }
     }
     return mimetype
@@ -449,7 +449,7 @@ fun Context.ensurePublicUri(uri: Uri, applicationId: String): Uri {
     return if (uri.scheme == "content") {
         uri
     } else {
-        val file = File(uri.path)
+        val file = File(uri.path!!)
         getFilePublicUri(file, applicationId)
     }
 }
@@ -466,7 +466,7 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
                 return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
             }
         }
-    } catch (e: Exception) {
+    } catch (_: Exception) {
     }
     return null
 }
@@ -480,7 +480,7 @@ fun Context.getSizeFromContentUri(uri: Uri): Long {
                 return cursor.getLongValue(OpenableColumns.SIZE)
             }
         }
-    } catch (e: Exception) {
+    } catch (_: Exception) {
     }
     return 0L
 }
@@ -492,11 +492,11 @@ fun Context.getMyContactsCursor(favoritesOnly: Boolean, withPhoneNumbersOnly: Bo
     val getWithPhoneNumbersOnly = if (withPhoneNumbersOnly) "1" else "0"
     val args = arrayOf(getFavoritesOnly, getWithPhoneNumbersOnly)
     CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, args, null).loadInBackground()
-} catch (e: Exception) {
+} catch (_: Exception) {
     null
 }
 
-fun Context.getCurrentFormattedDateTime(): String {
+fun getCurrentFormattedDateTime(): String {
     val simpleDateFormat = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault())
     return simpleDateFormat.format(Date(System.currentTimeMillis()))
 }
@@ -711,7 +711,7 @@ fun Context.getDefaultAlarmTitle(type: Int): String {
     val alarmString = getString(R.string.alarm)
     return try {
         RingtoneManager.getRingtone(this, RingtoneManager.getDefaultUri(type))?.getTitle(this) ?: alarmString
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         alarmString
     }
 }
@@ -722,7 +722,7 @@ fun Context.grantReadUriPermission(uriString: String) {
     try {
         // ensure custom reminder sounds play well
         grantUriPermission("com.android.systemui", uriString.toUri(), Intent.FLAG_GRANT_READ_URI_PERMISSION)
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
 }
 
@@ -768,7 +768,7 @@ fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
     }
 }
 
-fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
+fun saveExifRotation(exif: ExifInterface, degrees: Int) {
     val orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL)
     val orientationDegrees = (orientation.degreesFromOrientation() + degrees) % 360
     exif.setAttribute(ExifInterface.TAG_ORIENTATION, orientationDegrees.orientationFromDegrees())
@@ -825,7 +825,7 @@ fun Context.getVideoResolution(path: String): Point? {
         val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)!!.toInt()
         val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT)!!.toInt()
         Point(width, height)
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
         null
     }
 
@@ -837,7 +837,7 @@ fun Context.getVideoResolution(path: String): Point? {
             val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)!!.toInt()
             val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT)!!.toInt()
             point = Point(width, height)
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         }
     }
 
@@ -857,17 +857,17 @@ fun Context.getDuration(path: String): Int? {
         val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         cursor?.use {
             if (cursor.moveToFirst()) {
-                return Math.round(cursor.getIntValue(MediaColumns.DURATION) / 1000.toDouble()).toInt()
+                return (cursor.getIntValue(MediaColumns.DURATION) / 1000.toDouble()).roundToInt().toInt()
             }
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
 
     return try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(path)
-        Math.round(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)!!.toInt() / 1000f)
-    } catch (ignored: Exception) {
+        (retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)!!.toInt() / 1000f).roundToInt()
+    } catch (_: Exception) {
         null
     }
 }
@@ -888,14 +888,14 @@ fun Context.getTitle(path: String): String? {
                 return cursor.getStringValue(MediaColumns.TITLE)
             }
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
 
     return try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(path)
         retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
         null
     }
 }
@@ -916,14 +916,14 @@ fun Context.getArtist(path: String): String? {
                 return cursor.getStringValue(Audio.Media.ARTIST)
             }
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
 
     return try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(path)
         retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
         null
     }
 }
@@ -944,14 +944,14 @@ fun Context.getAlbum(path: String): String? {
                 return cursor.getStringValue(Audio.Media.ALBUM)
             }
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
 
     return try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(path)
         retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
         null
     }
 }
@@ -972,7 +972,7 @@ fun Context.getMediaStoreLastModified(path: String): Long {
                 return cursor.getLongValue(MediaColumns.DATE_MODIFIED) * 1000
             }
         }
-    } catch (ignored: Exception) {
+    } catch (_: Exception) {
     }
     return 0
 }
@@ -1073,7 +1073,7 @@ fun Context.isUsingGestureNavigation(): Boolean {
         } else {
             false
         }
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         false
     }
 }
@@ -1107,11 +1107,10 @@ fun Context.getContactsHasMap(withComparableNumbers: Boolean = false, callback: 
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.N)
 fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) -> Unit) {
     getContactsHasMap(true) { contacts ->
         val blockedNumbers = ArrayList<BlockedNumber>()
-        if (!isNougatPlus() || !isDefaultDialer()) {
+        if (!isDefaultDialer()) {
             callback(blockedNumbers)
         }
 
@@ -1141,10 +1140,9 @@ fun Context.getBlockedNumbersWithContact(callback: (ArrayList<BlockedNumber>) ->
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.N)
 fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
     val blockedNumbers = ArrayList<BlockedNumber>()
-    if (!isNougatPlus() || !isDefaultDialer()) {
+    if (!isDefaultDialer()) {
         return blockedNumbers
     }
 
@@ -1167,7 +1165,6 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
     return blockedNumbers
 }
 
-@RequiresApi(Build.VERSION_CODES.N)
 fun Context.addBlockedNumber(number: String): Boolean {
     ContentValues().apply {
         put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, number)
@@ -1184,7 +1181,6 @@ fun Context.addBlockedNumber(number: String): Boolean {
     return true
 }
 
-@RequiresApi(Build.VERSION_CODES.N)
 fun Context.deleteBlockedNumber(number: String): Boolean {
     val selection = "${BlockedNumbers.COLUMN_ORIGINAL_NUMBER} = ?"
     val selectionArgs = arrayOf(number)
@@ -1198,12 +1194,7 @@ fun Context.deleteBlockedNumber(number: String): Boolean {
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.N)
 fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
-    if (!isNougatPlus()) {
-        return false
-    }
-
     val numberToCompare = number.trimToComparableNumber()
 
     return blockedNumbers.any {
@@ -1213,7 +1204,6 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     } || isNumberBlockedByPattern(number, blockedNumbers)
 }
 
-@RequiresApi(Build.VERSION_CODES.N)
 fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
     for (blockedNumber in blockedNumbers) {
         val num = blockedNumber.number
@@ -1277,16 +1267,9 @@ fun Context.sendEmailIntent(recipient: String) {
 }
 
 fun Context.openNotificationSettings() {
-    if (isOreoPlus()) {
-        val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
-        intent.putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
-        startActivity(intent)
-    } else {
-        // For Android versions below Oreo, you can't directly open the app's notification settings.
-        // You can open the general notification settings instead.
-        val intent = Intent(Settings.ACTION_SETTINGS)
-        startActivity(intent)
-    }
+    val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+    intent.putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+    startActivity(intent)
 }
 
 fun Context.getTempFile(folderName: String, filename: String): File? {
@@ -1380,66 +1363,66 @@ fun Context.getRelationTypeText(type: Int, label: String): String {
     } else {
         getString(
             when (type) {
-                // Relation.TYPE_CUSTOM   -> com.goodwy.strings.R.string.custom
-                Relation.TYPE_ASSISTANT   -> com.goodwy.strings.R.string.relation_assistant_g
-                Relation.TYPE_BROTHER     -> com.goodwy.strings.R.string.relation_brother_g
-                Relation.TYPE_CHILD       -> com.goodwy.strings.R.string.relation_child_g
-                Relation.TYPE_DOMESTIC_PARTNER -> com.goodwy.strings.R.string.relation_domestic_partner_g
-                Relation.TYPE_FATHER      -> com.goodwy.strings.R.string.relation_father_g
-                Relation.TYPE_FRIEND      -> com.goodwy.strings.R.string.relation_friend_g
-                Relation.TYPE_MANAGER     -> com.goodwy.strings.R.string.relation_manager_g
-                Relation.TYPE_MOTHER      -> com.goodwy.strings.R.string.relation_mother_g
-                Relation.TYPE_PARENT      -> com.goodwy.strings.R.string.relation_parent_g
-                Relation.TYPE_PARTNER     -> com.goodwy.strings.R.string.relation_partner_g
-                Relation.TYPE_REFERRED_BY -> com.goodwy.strings.R.string.relation_referred_by_g
-                Relation.TYPE_RELATIVE    -> com.goodwy.strings.R.string.relation_relative_g
-                Relation.TYPE_SISTER      -> com.goodwy.strings.R.string.relation_sister_g
-                Relation.TYPE_SPOUSE      -> com.goodwy.strings.R.string.relation_spouse_g
+                // Relation.TYPE_CUSTOM   -> stringsR.string.custom
+                Relation.TYPE_ASSISTANT   -> stringsR.string.relation_assistant_g
+                Relation.TYPE_BROTHER     -> stringsR.string.relation_brother_g
+                Relation.TYPE_CHILD       -> stringsR.string.relation_child_g
+                Relation.TYPE_DOMESTIC_PARTNER -> stringsR.string.relation_domestic_partner_g
+                Relation.TYPE_FATHER      -> stringsR.string.relation_father_g
+                Relation.TYPE_FRIEND      -> stringsR.string.relation_friend_g
+                Relation.TYPE_MANAGER     -> stringsR.string.relation_manager_g
+                Relation.TYPE_MOTHER      -> stringsR.string.relation_mother_g
+                Relation.TYPE_PARENT      -> stringsR.string.relation_parent_g
+                Relation.TYPE_PARTNER     -> stringsR.string.relation_partner_g
+                Relation.TYPE_REFERRED_BY -> stringsR.string.relation_referred_by_g
+                Relation.TYPE_RELATIVE    -> stringsR.string.relation_relative_g
+                Relation.TYPE_SISTER      -> stringsR.string.relation_sister_g
+                Relation.TYPE_SPOUSE      -> stringsR.string.relation_spouse_g
 
                 // Relation types defined in vCard 4.0
-                ContactRelation.TYPE_CONTACT -> com.goodwy.strings.R.string.relation_contact_g
-                ContactRelation.TYPE_ACQUAINTANCE -> com.goodwy.strings.R.string.relation_acquaintance_g
-                // ContactRelation.TYPE_FRIEND -> com.goodwy.strings.R.string.relation_friend
-                ContactRelation.TYPE_MET -> com.goodwy.strings.R.string.relation_met_g
-                ContactRelation.TYPE_CO_WORKER -> com.goodwy.strings.R.string.relation_co_worker_g
-                ContactRelation.TYPE_COLLEAGUE -> com.goodwy.strings.R.string.relation_colleague_g
-                ContactRelation.TYPE_CO_RESIDENT -> com.goodwy.strings.R.string.relation_co_resident_g
-                ContactRelation.TYPE_NEIGHBOR -> com.goodwy.strings.R.string.relation_neighbor_g
-                // ContactRelation.TYPE_CHILD -> com.goodwy.strings.R.string.relation_child
-                // ContactRelation.TYPE_PARENT -> com.goodwy.strings.R.string.relation_parent
-                ContactRelation.TYPE_SIBLING -> com.goodwy.strings.R.string.relation_sibling_g
-                // ContactRelation.TYPE_SPOUSE -> com.goodwy.strings.R.string.relation_spouse
-                ContactRelation.TYPE_KIN -> com.goodwy.strings.R.string.relation_kin_g
-                ContactRelation.TYPE_MUSE -> com.goodwy.strings.R.string.relation_muse_g
-                ContactRelation.TYPE_CRUSH -> com.goodwy.strings.R.string.relation_crush_g
-                ContactRelation.TYPE_DATE -> com.goodwy.strings.R.string.relation_date_g
-                ContactRelation.TYPE_SWEETHEART -> com.goodwy.strings.R.string.relation_sweetheart_g
-                ContactRelation.TYPE_ME -> com.goodwy.strings.R.string.relation_me_g
-                ContactRelation.TYPE_AGENT -> com.goodwy.strings.R.string.relation_agent_g
-                ContactRelation.TYPE_EMERGENCY -> com.goodwy.strings.R.string.relation_emergency_g
+                ContactRelation.TYPE_CONTACT -> stringsR.string.relation_contact_g
+                ContactRelation.TYPE_ACQUAINTANCE -> stringsR.string.relation_acquaintance_g
+                // ContactRelation.TYPE_FRIEND -> stringsR.string.relation_friend
+                ContactRelation.TYPE_MET -> stringsR.string.relation_met_g
+                ContactRelation.TYPE_CO_WORKER -> stringsR.string.relation_co_worker_g
+                ContactRelation.TYPE_COLLEAGUE -> stringsR.string.relation_colleague_g
+                ContactRelation.TYPE_CO_RESIDENT -> stringsR.string.relation_co_resident_g
+                ContactRelation.TYPE_NEIGHBOR -> stringsR.string.relation_neighbor_g
+                // ContactRelation.TYPE_CHILD -> stringsR.string.relation_child
+                // ContactRelation.TYPE_PARENT -> stringsR.string.relation_parent
+                ContactRelation.TYPE_SIBLING -> stringsR.string.relation_sibling_g
+                // ContactRelation.TYPE_SPOUSE -> stringsR.string.relation_spouse
+                ContactRelation.TYPE_KIN -> stringsR.string.relation_kin_g
+                ContactRelation.TYPE_MUSE -> stringsR.string.relation_muse_g
+                ContactRelation.TYPE_CRUSH -> stringsR.string.relation_crush_g
+                ContactRelation.TYPE_DATE -> stringsR.string.relation_date_g
+                ContactRelation.TYPE_SWEETHEART -> stringsR.string.relation_sweetheart_g
+                ContactRelation.TYPE_ME -> stringsR.string.relation_me_g
+                ContactRelation.TYPE_AGENT -> stringsR.string.relation_agent_g
+                ContactRelation.TYPE_EMERGENCY -> stringsR.string.relation_emergency_g
 
-                ContactRelation.TYPE_SUPERIOR -> com.goodwy.strings.R.string.relation_superior_g
-                ContactRelation.TYPE_SUBORDINATE -> com.goodwy.strings.R.string.relation_subordinate_g
-                ContactRelation.TYPE_HUSBAND -> com.goodwy.strings.R.string.relation_husband_g
-                ContactRelation.TYPE_WIFE -> com.goodwy.strings.R.string.relation_wife_g
-                ContactRelation.TYPE_SON -> com.goodwy.strings.R.string.relation_son_g
-                ContactRelation.TYPE_DAUGHTER -> com.goodwy.strings.R.string.relation_daughter_g
-                ContactRelation.TYPE_GRANDPARENT -> com.goodwy.strings.R.string.relation_grandparent_g
-                ContactRelation.TYPE_GRANDFATHER -> com.goodwy.strings.R.string.relation_grandfather_g
-                ContactRelation.TYPE_GRANDMOTHER -> com.goodwy.strings.R.string.relation_grandmother_g
-                ContactRelation.TYPE_GRANDCHILD -> com.goodwy.strings.R.string.relation_grandchild_g
-                ContactRelation.TYPE_GRANDSON -> com.goodwy.strings.R.string.relation_grandson_g
-                ContactRelation.TYPE_GRANDDAUGHTER -> com.goodwy.strings.R.string.relation_granddaughter_g
-                ContactRelation.TYPE_UNCLE -> com.goodwy.strings.R.string.relation_uncle_g
-                ContactRelation.TYPE_AUNT -> com.goodwy.strings.R.string.relation_aunt_g
-                ContactRelation.TYPE_NEPHEW -> com.goodwy.strings.R.string.relation_nephew_g
-                ContactRelation.TYPE_NIECE -> com.goodwy.strings.R.string.relation_niece_g
-                ContactRelation.TYPE_FATHER_IN_LAW -> com.goodwy.strings.R.string.relation_father_in_law_g
-                ContactRelation.TYPE_MOTHER_IN_LAW -> com.goodwy.strings.R.string.relation_mother_in_law_g
-                ContactRelation.TYPE_SON_IN_LAW -> com.goodwy.strings.R.string.relation_son_in_law_g
-                ContactRelation.TYPE_DAUGHTER_IN_LAW -> com.goodwy.strings.R.string.relation_daughter_in_law_g
-                ContactRelation.TYPE_BROTHER_IN_LAW -> com.goodwy.strings.R.string.relation_brother_in_law_g
-                ContactRelation.TYPE_SISTER_IN_LAW -> com.goodwy.strings.R.string.relation_sister_in_law_g
+                ContactRelation.TYPE_SUPERIOR -> stringsR.string.relation_superior_g
+                ContactRelation.TYPE_SUBORDINATE -> stringsR.string.relation_subordinate_g
+                ContactRelation.TYPE_HUSBAND -> stringsR.string.relation_husband_g
+                ContactRelation.TYPE_WIFE -> stringsR.string.relation_wife_g
+                ContactRelation.TYPE_SON -> stringsR.string.relation_son_g
+                ContactRelation.TYPE_DAUGHTER -> stringsR.string.relation_daughter_g
+                ContactRelation.TYPE_GRANDPARENT -> stringsR.string.relation_grandparent_g
+                ContactRelation.TYPE_GRANDFATHER -> stringsR.string.relation_grandfather_g
+                ContactRelation.TYPE_GRANDMOTHER -> stringsR.string.relation_grandmother_g
+                ContactRelation.TYPE_GRANDCHILD -> stringsR.string.relation_grandchild_g
+                ContactRelation.TYPE_GRANDSON -> stringsR.string.relation_grandson_g
+                ContactRelation.TYPE_GRANDDAUGHTER -> stringsR.string.relation_granddaughter_g
+                ContactRelation.TYPE_UNCLE -> stringsR.string.relation_uncle_g
+                ContactRelation.TYPE_AUNT -> stringsR.string.relation_aunt_g
+                ContactRelation.TYPE_NEPHEW -> stringsR.string.relation_nephew_g
+                ContactRelation.TYPE_NIECE -> stringsR.string.relation_niece_g
+                ContactRelation.TYPE_FATHER_IN_LAW -> stringsR.string.relation_father_in_law_g
+                ContactRelation.TYPE_MOTHER_IN_LAW -> stringsR.string.relation_mother_in_law_g
+                ContactRelation.TYPE_SON_IN_LAW -> stringsR.string.relation_son_in_law_g
+                ContactRelation.TYPE_DAUGHTER_IN_LAW -> stringsR.string.relation_daughter_in_law_g
+                ContactRelation.TYPE_BROTHER_IN_LAW -> stringsR.string.relation_brother_in_law_g
+                ContactRelation.TYPE_SISTER_IN_LAW -> stringsR.string.relation_sister_in_law_g
 
                 else -> R.string.other
             }
@@ -1455,7 +1438,7 @@ fun Context.getEventTypeText(type: Int, label: String): String {
             when (type) {
                 Event.TYPE_ANNIVERSARY -> R.string.anniversary
                 Event.TYPE_BIRTHDAY -> R.string.birthday
-                CUSTOM_EVENT_TYPE_DEATH -> com.goodwy.strings.R.string.death
+                CUSTOM_EVENT_TYPE_DEATH -> stringsR.string.death
                 else -> R.string.other
             }
         )
@@ -1526,7 +1509,7 @@ suspend fun getSystemProperty(propName: String): String? = withContext(Dispatche
         input = BufferedReader(InputStreamReader(process.inputStream), 1024)
         line = input.readLine()
         input.close()
-    } catch (ex: IOException) {
+    } catch (_: IOException) {
         return@withContext null
     } finally {
         if (input != null) {
@@ -1577,16 +1560,11 @@ fun Context.isTalkBackOn(): Boolean {
 
 fun Context.sysLocale(): Locale? {
     val config = this.resources.configuration
-    return if (isNougatPlus()) {
-        getSystemLocale(config)
-    } else {
-        getSystemLocaleLegacy(config)
-    }
+    return getSystemLocale(config)
 }
 
 private fun getSystemLocaleLegacy(config: Configuration) = config.locale
 
-@RequiresApi(Build.VERSION_CODES.N)
 private fun getSystemLocale(config: Configuration) = config.locales.get(0)
 
 fun Context.googlePlayDevUrlRes(): Int {

@@ -3,21 +3,17 @@ package com.goodwy.commons.compose.theme
 import android.content.Context
 import androidx.annotation.ColorRes
 import androidx.annotation.DoNotInline
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
-import com.goodwy.commons.extensions.darkenColor
 import com.goodwy.commons.extensions.getContrastColor
 import com.goodwy.commons.extensions.lightenColor
-import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.helpers.isSPlus
 
 @Composable
@@ -164,7 +160,6 @@ private fun previewColorScheme() = if (isSystemInDarkTheme()) {
     lightColorScheme
 }
 
-@RequiresApi(23)
 private object ColorResourceHelper {
     @DoNotInline
     fun getColor(context: Context, @ColorRes id: Int): Color {

@@ -2,11 +2,9 @@ package com.goodwy.commons.extensions
 
 import android.text.Editable
 import android.text.Spannable
-import android.text.SpannableString
 import android.text.TextWatcher
 import android.text.style.BackgroundColorSpan
 import android.widget.EditText
-import android.widget.TextView
 import androidx.core.graphics.ColorUtils
 
 val EditText.value: String get() = text.toString().trim()

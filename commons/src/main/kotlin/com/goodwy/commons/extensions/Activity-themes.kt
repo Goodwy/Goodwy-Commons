@@ -1,9 +1,7 @@
 package com.goodwy.commons.extensions
 
 import android.app.Activity
-import android.graphics.Color
 import com.goodwy.commons.R
-import com.goodwy.commons.helpers.DARK_GREY
 
 fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop: Boolean = false) = when {
     isDynamicTheme() -> if (isSystemInDarkMode()) R.style.AppTheme_Base_System else R.style.AppTheme_Base_System_Light
@@ -191,7 +189,7 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop
             -14273992 -> R.style.AppTheme_Blue_Grey_900_core
 
             -1 -> R.style.AppTheme_Grey_100_core
-            -1118482 -> R.style.AppTheme_Grey_200_core
+//            -1118482 -> R.style.AppTheme_Grey_200_core
             -2039584 -> R.style.AppTheme_Grey_300_core
             -4342339 -> R.style.AppTheme_Grey_400_core
             -6381922 -> R.style.AppTheme_Grey_500_core

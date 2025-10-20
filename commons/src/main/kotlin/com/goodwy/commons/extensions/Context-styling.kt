@@ -168,7 +168,7 @@ fun Context.withGlobalConfig(callback: (globalConfig: GlobalConfig?) -> Unit) {
     }
 }
 
-fun Context.getGlobalConfig(cursorLoader: CursorLoader): GlobalConfig? {
+fun getGlobalConfig(cursorLoader: CursorLoader): GlobalConfig? {
     val cursor = cursorLoader.loadInBackground()
     cursor?.use {
         if (cursor.moveToFirst()) {
@@ -183,7 +183,7 @@ fun Context.getGlobalConfig(cursorLoader: CursorLoader): GlobalConfig? {
                     showCheckmarksOnSwitches = cursor.getIntValue(MyContentProvider.COL_SHOW_CHECKMARKS_ON_SWITCHES) != 0,
                     lastUpdatedTS = cursor.getIntValue(MyContentProvider.COL_LAST_UPDATED_TS)
                 )
-            } catch (e: Exception) {
+            } catch (_: Exception) {
             }
         }
     }

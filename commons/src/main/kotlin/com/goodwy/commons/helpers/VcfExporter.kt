@@ -36,6 +36,7 @@ import ezvcard.property.Title
 import ezvcard.util.PartialDate
 import java.io.OutputStream
 import java.time.LocalDate
+import androidx.core.net.toUri
 
 class VcfExporter {
 
@@ -205,7 +206,7 @@ class VcfExporter {
                 }
 
                 if (contact.thumbnailUri.isNotEmpty()) {
-                    val photoByteArray = MediaStore.Images.Media.getBitmap(activity.contentResolver, Uri.parse(contact.thumbnailUri)).getByteArray()
+                    val photoByteArray = MediaStore.Images.Media.getBitmap(activity.contentResolver, contact.thumbnailUri.toUri()).getByteArray()
                     val photo = Photo(photoByteArray, ImageType.JPEG)
                     card.addPhoto(photo)
                 }

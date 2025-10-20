@@ -1,7 +1,6 @@
 package com.goodwy.commons.dialogs
 
 import android.app.Activity
-import android.net.Uri
 import android.os.Environment
 import android.provider.MediaStore
 import android.view.View
@@ -100,24 +99,24 @@ class PropertiesDialog : BasePropertiesDialog {
                     }
                 }
 
-                val exif = if (isNougatPlus() && mActivity.isPathOnOTG(fileDirItem.path)) {
+                val exif = if (mActivity.isPathOnOTG(fileDirItem.path)) {
                     ExifInterface((mActivity as BaseSimpleActivity).getFileInputStreamSync(fileDirItem.path)!!)
-                } else if (isNougatPlus() && fileDirItem.path.startsWith("content://")) {
+                } else if (fileDirItem.path.startsWith("content://")) {
                     try {
                         ExifInterface(mActivity.contentResolver.openInputStream(fileDirItem.path.toUri())!!)
-                    } catch (e: Exception) {
+                    } catch (_: Exception) {
                         return@ensureBackgroundThread
                     }
                 } else if (mActivity.isRestrictedSAFOnlyRoot(path)) {
                     try {
                         ExifInterface(mActivity.contentResolver.openInputStream(mActivity.getAndroidSAFUri(path))!!)
-                    } catch (e: Exception) {
+                    } catch (_: Exception) {
                         return@ensureBackgroundThread
                     }
                 } else {
                     try {
                         ExifInterface(fileDirItem.path)
-                    } catch (e: Exception) {
+                    } catch (_: Exception) {
                         return@ensureBackgroundThread
                     }
                 }
@@ -297,18 +296,18 @@ class PropertiesDialog : BasePropertiesDialog {
     }
 
     private fun addExifProperties(path: String, activity: Activity) {
-        val exif = if (isNougatPlus() && activity.isPathOnOTG(path)) {
+        val exif = if (activity.isPathOnOTG(path)) {
             ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(path)!!)
-        } else if (isNougatPlus() && path.startsWith("content://")) {
+        } else if (path.startsWith("content://")) {
             try {
                 ExifInterface(activity.contentResolver.openInputStream(path.toUri())!!)
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 return
             }
         } else if (activity.isRestrictedSAFOnlyRoot(path)) {
             try {
                 ExifInterface(activity.contentResolver.openInputStream(activity.getAndroidSAFUri(path))!!)
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 return
             }
         } else {
