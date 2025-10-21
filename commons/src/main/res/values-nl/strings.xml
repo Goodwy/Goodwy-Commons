@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--TODO Edit-->
     <string name="cancel">Annuleren</string>
     <string name="close">Sluiten</string>
     <string name="back">Terug</string>
@@ -1041,4 +1042,9 @@
     <string name="requires_fossify_thank_you">Vereist Fossify Bedankje</string>
     <string name="enables_more_customization">Maakt meer aanpassingen mogelijk</string>
     <string name="translation_latvian">Lets</string>
+    <string name="exoplayer_title">ExoPlayer (videospeler)</string>
+    <plurals name="files_saved">
+        <item quantity="one">Bestand is opgeslagen</item>
+        <item quantity="other">Bestanden zijn opgeslagen</item>
+    </plurals>
 </resources>

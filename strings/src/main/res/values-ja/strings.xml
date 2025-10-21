@@ -36,6 +36,11 @@
     <string name="lifebuoy_title">私たちはあなたをサポートします</string>
     <string name="lifebuoy_summary">何らかの理由で私たちのアプリを買う余裕がないが、本当にすべての機能を使用したい場合は、メールでお問い合わせください</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+これらの方々は、GitHub 上のオープンソースプロジェクト Right に加え、私たちの基盤となっている Fossify と Simple Mobile Tools にも貢献してくださっています。<br><br>
+
+貢献していただいた皆様に深く感謝申し上げます。皆様のご支援に深く感謝いたします &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">良いサポート</string>
     <string name="tip_excellent">優れたサポート</string>
@@ -183,13 +188,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+このリストには、私たちのアプリケーションに多大な貢献をしてくださった皆様が含まれています。翻訳はボランティアによって行われています。
+あなたも協力したい場合はお知らせください。翻訳ガイドは<a href="https://github.com/Goodwy/Discussion">こちらのウェブサイト</a>に掲載されています。ご質問がある場合は、<a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a>までお問い合わせください。
+貢献者の皆様と支援者の皆様に感謝申し上げます。
+]]></string>
     <string name="deprecated_app_g">非推奨: このバージョンのアプリはメンテナンスが行われなくなります。こちらのURLからPro版を入手してください。https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">どのアプリでも、購入後２時間以内にアンインストールすると自動的に払い戻しされることを覚えていてください。それ以降に払い戻しが必要な場合は、こちらにお問い合わせください。goodwy.dev@gmail.com
 お試ししやすいかと思います :)</string>

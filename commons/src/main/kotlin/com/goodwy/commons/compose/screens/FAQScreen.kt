@@ -20,6 +20,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.compose.components.LinkifyTextComponent
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.lists.SimpleLazyListScaffold
+import com.goodwy.commons.compose.settings.SettingsGroup
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.extensions.fromHtml
@@ -52,19 +53,14 @@ internal fun FAQScreen(
             } else if (faqItem.text is Int) {
                 stringResource(id = faqItem.text).fromHtml()
             } else faqItem.text
-            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)
-                .background(color = MaterialTheme.colorScheme.surfaceVariant, shape = RoundedCornerShape(12.dp))
-                .clickable {onCopy("$title\n\n$text")}
-            ) {
+            SettingsGroup {
                 ListItem(
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 8.dp),
-                    colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                     headlineContent = {
                         Text(
                             text = title,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(bottom = 6.dp),
+                                .padding(top = 6.dp, bottom = 8.dp),
                             color = SimpleTheme.colorScheme.primary,
                             lineHeight = 16.sp,
                         )
@@ -72,26 +68,33 @@ internal fun FAQScreen(
                     supportingContent = {
                         if (faqItem.value != null && faqItem.text is Int) {
                             LinkifyTextComponent(
+                                modifier = Modifier.padding(bottom = 6.dp),
                                 text = { text as Spanned },
-                                modifier = Modifier.fillMaxWidth(),
                                 fontSize = 14.sp
                             )
                         } else if (faqItem.text is Int) {
                             LinkifyTextComponent(
+                                modifier = Modifier.padding(bottom = 6.dp),
                                 text = { text as Spanned },
-                                modifier = Modifier.fillMaxWidth(),
                                 fontSize = 14.sp
                             )
                         } else {
                             Text(
+                                modifier = Modifier.padding(bottom = 6.dp),
                                 text = faqItem.text as String,
-                                modifier = Modifier.fillMaxWidth(),
                                 fontSize = 14.sp
                             )
                         }
                     },
+                    colors = ListItemDefaults.colors(
+                        headlineColor = SimpleTheme.colorScheme.primary,
+                        supportingColor = SimpleTheme.colorScheme.onSurface)
                 )
             }
+        }
+
+        item {
+            Spacer(modifier = Modifier.padding(bottom = 56.dp))
         }
     }
 }

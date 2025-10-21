@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">Chúng tôi sẽ hỗ trợ bạn</string>
     <string name="lifebuoy_summary">Nếu vì lý do nào đó bạn không đủ khả năng mua ứng dụng của chúng tôi, nhưng thực sự muốn sử dụng tất cả các tính năng, chỉ cần gửi email cho chúng tôi</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Những người này đã đóng góp cho dự án Right mã nguồn mở trên GitHub,
+cũng như cho Fossify và Simple Mobile Tools, những nền tảng mà chúng tôi dựa vào.<br><br>
+
+Xin cảm ơn tất cả những người đóng góp, chúng tôi vô cùng trân trọng sự giúp đỡ của các bạn
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Hỗ trợ tốt</string>
     <string name="tip_excellent">Hỗ trợ tuyệt vời</string>
@@ -183,13 +189,11 @@ Cảm ơn bạn!
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Danh sách này bao gồm tất cả những người đã đóng góp đáng kể cho bất kỳ ứng dụng nào của chúng tôi. Việc dịch thuật được thực hiện bởi các tình nguyện viên,
+hãy cho chúng tôi biết nếu bạn cũng muốn giúp đỡ. Hướng dẫn dịch thuật có tại <a href="https://github.com/Goodwy/Discussion">trang web này</a>, hoặc chỉ cần liên hệ với chúng tôi tại <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> nếu bạn có bất kỳ câu hỏi nào.
+Xin cảm ơn tất cả những người đóng góp và những người ủng hộ khác!
+]]></string>
     <string name="deprecated_app_g">THÔNG BÁO: Phiên bản của ứng dụng này không còn được duy trì, hãy tải phiên bản Pro tại https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Đừng quên rằng nếu bạn gỡ cài đặt bất kỳ ứng dụng phải trả tiền nào trong vòng 2 giờ, bạn sẽ tự động được hoàn lại tiền. Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại goodwy.dev@gmail.com và bạn sẽ nhận được nó.Thật dễ dàng đúng không :)</string>
 

@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">Támogatjuk Önt</string>
     <string name="lifebuoy_summary">Ha valamilyen oknál fogva nem engedheti meg magának az alkalmazásunkat, de valóban szeretné használni az összes funkciót, csak írjon nekünk e-mailt</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Ezek az emberek hozzájárultak a GitHubon található nyílt forráskódú Right projekthez,
+valamint a Fossify és a Simple Mobile Tools projektekhez, amelyekre épülünk.<br><br>
+
+Köszönjük minden közreműködőnknek, nagyra értékeljük a segítségüket &10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Jó támogatás</string>
     <string name="tip_excellent">Kiváló támogatás</string>
@@ -181,13 +187,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Ez a lista mindenkit tartalmaz, aki észrevehetően segített bármelyik alkalmazásunkban. A fordításokat önkéntesek végzik,
+jelezd, ha te is szeretnél segíteni. A fordítási útmutató <a href="https://github.com/Goodwy/Discussion">ezen a weboldalon</a> található, vagy ha bármilyen kérdésed van, vedd fel velünk a kapcsolatot a <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> címen.
+Köszönjük minden közreműködőnek és támogatónak!
+]]></string>
     <string name="deprecated_app_g">ELAVULT: Az alkalmazás ezen verziója már nem fog frissülni, töltse le a Pro verziót a https://play.google.com/store/apps/details\?id=com.goodwy.xxx.pro címről</string>
     <string name="pro_app_refund_g">Ne felejtse el, hogy ha 2 órán belül eltávolítja a fizetős alkalmazásunkat, akkor automatikusan visszatérítjük az árát. Ha később bármikor mégis visszatérítést szeretne, lépjen kapcsolatba velünk a goodwy.dev@gmail.com címen, és visszakapja. Ez is megkönnyíti a kipróbálást :)</string>
 

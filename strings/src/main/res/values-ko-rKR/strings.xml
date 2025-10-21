@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">우리는 당신을 지원할 것입니다</string>
     <string name="lifebuoy_summary">어떤 이유로 당신은 우리의 응용 프로그램을 감당할 수 없습니다, 하지만 정말 모든 기능을 사용하고 싶다면, 그냥 이메일을 보내 주시기 바랍니다</string>
     <string name="participants_title">참가자</string>
+    <string name="participants_subtitle"><![CDATA[
+이분들은 GitHub의 오픈소스 Right 프로젝트와
+저희의 기반이 되는 Fossify 및 Simple Mobile Tools에도 기여해 주셨습니다.<br><br>
+
+모든 기여자분들께 감사드립니다. 여러분의 도움에 진심으로 감사드립니다.
+]]></string>
     <string name="special_thanks_to">특별한 감사 대상</string>
     <string name="tip_kind">좋은 지원</string>
     <string name="tip_excellent">우수한 지원</string>
@@ -183,13 +189,11 @@
         앱을 제거하면 모든 비공개 연락처가 앱과 함께 삭제되므로 앱을 제거하기 전에 연락처를 백업하세요.</string>
     <string name="faq_101_title_commons_g">비공개 연락처를 만들려면 어떻게 해야 하나요?</string>
     <string name="faq_101_text_commons_g">연락처를 만들 때는 연락처의 출처를 선택해야 합니다: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+이 목록에는 저희 애플리케이션에 큰 도움을 주신 모든 분들이 포함되어 있습니다. 번역은 자원봉사자들이 담당하고 있습니다.
+혹시 도움을 주실 수 있다면 알려주세요. 번역 가이드는 <a href="https://github.com/Goodwy/Discussion">이 웹사이트</a>에서 확인하실 수 있으며, 질문이 있으시면 <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a>으로 문의해 주세요.
+모든 기여자와 후원자분들께 감사드립니다!
+]]></string>
     <string name="deprecated_app_g">구버전 경고: 이 버전의 앱은 더이상 관리되지 않습니다. Pro 버전을 설치해 주세요: https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">플레이스토어에서 구매한 앱은 2시간 내에 삭제하면 자동으로 환불받을 수 있다는 사실을 항상 잊지 마시기 바랍니다. 만약 이후에 환불이 필요하시다면, goodwy.dev@gmail.com 으로 연락 주시면 해결해 드리겠습니다. 이제 한번 써보는 것도 나쁘지 않겠죠 :)</string>
 

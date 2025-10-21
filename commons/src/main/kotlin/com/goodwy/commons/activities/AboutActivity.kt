@@ -1,7 +1,10 @@
 package com.goodwy.commons.activities
 
 import android.content.Intent
-import android.content.res.Configuration
+import android.content.Intent.ACTION_SEND
+import android.content.Intent.EXTRA_SUBJECT
+import android.content.Intent.EXTRA_TEXT
+import android.content.Intent.createChooser
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
@@ -51,6 +54,8 @@ class AboutActivity : BaseComposeActivity() {
                             onTipJarClick = ::onTipJarClick,
                             onGithubClick = ::onGithubClick,
                             showGithub = showGithub(),
+                            onLicenseClick = ::onLicenseClick,
+                            onContributorsClick = ::onContributorsClick,
                         )
                     },
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
@@ -161,12 +166,49 @@ class AboutActivity : BaseComposeActivity() {
     }
 
     private fun onGithubClick() {
-        val repositoryName = intent.getStringExtra(APP_REPOSITORY_NAME) ?: return
-        val url = "https://github.com/Goodwy/$repositoryName"
-        launchViewIntent(url)
+        launchViewIntent(getGithubUrl())
     }
 
     @Composable
     private fun showGithub() =
         remember { !intent.getStringExtra(APP_REPOSITORY_NAME).isNullOrEmpty() }
+
+    private fun getGithubUrl(): String {
+        val repositoryName = intent.getStringExtra(APP_REPOSITORY_NAME)
+        return "https://github.com/Goodwy/$repositoryName"
+    }
+
+    private fun onInviteClick() {
+        val storeUrl = when {
+            resources.getBoolean(R.bool.hide_google_relations) -> getGithubUrl()
+            else -> getStoreUrl()
+        }
+
+        val text = String.format(getString(R.string.share_text), appName, storeUrl)
+        Intent().apply {
+            action = ACTION_SEND
+            putExtra(EXTRA_SUBJECT, appName)
+            putExtra(EXTRA_TEXT, text)
+            type = "text/plain"
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(createChooser(this, getString(R.string.invite_via)))
+        }
+    }
+
+    private fun onContributorsClick() {
+        val intent = Intent(applicationContext, ContributorsActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun onLicenseClick() {
+        Intent(applicationContext, LicenseActivity::class.java).apply {
+            putExtra(
+                APP_ICON_IDS,
+                intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList<String>()
+            )
+            putExtra(APP_LAUNCHER_NAME, intent.getStringExtra(APP_LAUNCHER_NAME) ?: "")
+            putExtra(APP_LICENSES, intent.getLongExtra(APP_LICENSES, 0))
+            startActivity(this)
+        }
+    }
 }

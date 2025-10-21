@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--TODO Edit-->
     <string name="cancel">Avbryt</string>
     <string name="close">Lukk</string>
     <string name="back">Tilbake</string>
@@ -585,4 +586,15 @@
     <string name="internal_storage">Intern lagring</string>
     <string name="files_tab">Filer</string>
     <string name="recent_files_tab">Nylige filer</string>
+    <plurals name="column_counts">
+        <item quantity="one">%d kolonne</item>
+        <item quantity="other">%d kolonner</item>
+    </plurals>
+    <plurals name="row_counts">
+        <item quantity="one">%d rekke</item>
+        <item quantity="other">%d rekker</item>
+    </plurals>
+    <string name="backups">Sikkerhetskopier</string>
+    <string name="enable_automatic_backups">Aktiver automatiske sikkerhetskopier</string>
+    <string name="manage_automatic_backups">Håndter automatiske sikkerhetskopier</string>
 </resources>

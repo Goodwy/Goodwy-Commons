@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">我們將為您提供支援</string>
     <string name="lifebuoy_summary">如果由於某種原因您買不起我們的應用程式，但真的想使用所有功能，只需給我們發電子郵件</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+這些人為 GitHub 上的開源 Right 專案做出了貢獻，
+也為我們賴以生存的 Fossify 和 Simple Mobile Tools 做出了貢獻。 <br><br>
+
+感謝所有貢獻者，我們非常感謝你們的幫助 &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">良好的支援</string>
     <string name="tip_excellent">出色的支援</string>
@@ -183,13 +189,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+此列表包含所有為我們的應用程式提供過顯著幫助的人員。翻譯工作由志工負責，
+如果您也想提供協助，請告訴我們。翻譯指南位於<a href="https://github.com/Goodwy/Discussion">本網站</a>，或如果您有任何疑問，請發送電子郵件至<a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a>聯繫我們。
+感謝所有貢獻者和其他支持者！
+]]></string>
     <string name="deprecated_app_g">已捨棄: 這版本的應用程式不再維護，在這取得專業版  https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">別忘記如果您在2小時內解除安裝任何付費應用程式，將會自動被退款。若您在之後隨時想退款，只要透過 goodwy.dev@gmail.com 聯絡我們，即可收到退款。這麼一來輕鬆就能試用了 :)</string>
 

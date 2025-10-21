@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">Mes jums padėsime</string>
     <string name="lifebuoy_summary">Jei dėl kokių nors priežasčių negalite sau leisti mūsų programos, bet tikrai norite naudotis visomis funkcijomis, tiesiog atsiųskite mums el. laišką</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Šie žmonės prisidėjo prie atvirojo kodo „Right“ projekto „GitHub“ platformoje,
+taip pat prie „Fossify“ ir „Simple Mobile Tools“, kuriais mes esame paremti.<br><br>
+
+Dėkojame visiems mūsų prisidėjusiems, labai vertiname jūsų pagalbą &10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Geras palaikymas</string>
     <string name="tip_excellent">Puikus palaikymas</string>
@@ -182,13 +188,12 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Šiame sąraše yra visi, kurie pastebimai padėjo kuriai nors mūsų programėlei. Vertimus atlieka savanoriai,
+praneškite mums, jei taip pat norite padėti. Vertimo vadovas yra <a href="https://github.com/Goodwy/Discussion">šioje svetainėje</a> arba tiesiog susisiekite su mumis adresu <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a>, jei turite klausimų.
+
+Dėkojame visiems prisidėjusiems ir kitiems rėmėjams!
+]]></string>
     <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 

@@ -320,7 +320,7 @@
     <style name="PinNumberStyle">
         <item name="android:gravity">center</item>
         <item name="android:padding">@dimen/small_margin</item>
-        <item name="android:textSize">@dimen/big_text_size</item>
+        <item name="android:textSize">@dimen/extra_big_text_size</item>
         <item name="android:background">@drawable/ripple_all_corners</item>
     </style>
 

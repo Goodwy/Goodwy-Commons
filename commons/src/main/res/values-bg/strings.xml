@@ -67,7 +67,7 @@
     <string name="app_corrupt">Развалено приложение</string>
     <string name="disclaimer">Отказ от отговорност</string>
     <string name="take_photo">Снимане</string>
-    <string name="choose_photo">на снимка</string>
+    <string name="choose_photo">Избиране на снимка</string>
     <string name="choose_video">Избиране на видео</string>
     <string name="choose_contact">Избиране на контакт</string>
     <string name="choose_file">Избиране на файл</string>
@@ -119,9 +119,9 @@
     <string name="must_make_default_dialer">За да блокирате номера, трябва да настроите приложението като посразбирано приложение за набиране.</string>
     <string name="set_as_default">Задаване на подразбирано</string>
     <string name="block_confirmation">Желаете да блокирате „%s“?</string>
-    <string name="block_unknown_calls">Блокиране на позвъняване от неизвестни контакти</string>
+    <string name="block_unknown_calls">Отклоняване на обаждания от невъведени номера</string>
     <string name="block_hidden_calls">Блокиране на позвъняване от скрити номера</string>
-    <string name="block_unknown_messages">Блокиране на съобщения от неизвестни контакти</string>
+    <string name="block_unknown_messages">Отклоняване на съобщения от невъведени номера</string>
     <string name="block_hidden_messages">Блокиране на съобщения от скрити номера</string>
     <string name="add_blocked_number_helper_text">Въведете номер или шаблон (напр. *12345*, +1*8888), за да блокирате всички позвънявания и съобщения от номера, отговарящи на шаблона.</string>
     <string name="must_make_default_caller_id_app">Не можете да блокирате неизвестни номера без разрешение за идентификация на обаждащия се.</string>
@@ -1031,4 +1031,8 @@
     <string name="requires_fossify_thank_you">Изисква Fossify Thank You</string>
     <string name="enables_more_customization">Възможност за повече приспособяване</string>
     <string name="translation_latvian">Латвийски</string>
+    <plurals name="files_saved">
+        <item quantity="one">Файлът е запазен</item>
+        <item quantity="other">Файловете за запазени</item>
+    </plurals>
 </resources>

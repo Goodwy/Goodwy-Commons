@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">Vi kommer att stödja dig</string>
     <string name="lifebuoy_summary">Om du av någon anledning inte har råd med vår app, men verkligen vill använda alla funktioner, är det bara att maila oss</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Dessa personer har bidragit till det öppna källkodsprojektet Right på GitHub,
+samt till Fossify och Simple Mobile Tools, som vi är baserade på.<br><br>
+
+Tack till alla våra bidragsgivare, vi uppskattar verkligen er hjälp &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Bra stöd</string>
     <string name="tip_excellent">Utmärkt stöd</string>
@@ -186,13 +192,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Denna lista innehåller alla som märkbart hjälpt till med någon av våra applikationer. Översättningar hanteras av volontärer, låt oss veta om du också vill hjälpa till. Guiden till översättning finns på <a href="https://github.com/Goodwy/Discussion">denna webbplats</a>, eller kontakta oss bara på <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> om du har några frågor.
+
+Tack till alla bidragsgivare och andra supportrar!
+]]></string>
     <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 

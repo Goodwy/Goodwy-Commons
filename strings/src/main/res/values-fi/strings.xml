@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">Tuemme sinua</string>
     <string name="lifebuoy_summary">Jos jostain syystä sinulla ei ole varaa sovellukseemme, mutta haluat todella käyttää kaikkia ominaisuuksia, lähetä meille sähköpostia</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Nämä ihmiset ovat osallistuneet avoimen lähdekoodin Right-projektiin GitHubissa,
+sekä Fossifyyn ja Simple Mobile Toolsiin, joihin pohjaudumme.<br><br>
+
+Kiitos kaikille avustajillemme, arvostamme suuresti apuanne &10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Hyvä tuki</string>
     <string name="tip_excellent">Erinomainen tuki</string>
@@ -183,13 +189,12 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Tämä lista sisältää kaikki, jotka ovat merkittävästi auttaneet sovellustemme kehittämisessä. Käännökset hoitavat vapaaehtoiset,
+kerro meille, jos haluat sinäkin auttaa. Käännösopas löytyy <a href="https://github.com/Goodwy/Discussion">täältä verkkosivustolta</a> tai ota meihin yhteyttä osoitteessa <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a>, jos sinulla on kysyttävää.
+
+Kiitos kaikille avustajille ja muille tukijoille!
+]]></string>
     <string name="deprecated_app_g">VANHENTUNUT:: Tätä sovellusversiota ei enää ylläpidetä, hanki Pro-versio osoitteesta https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse goodwy.dev@gmail.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>
 

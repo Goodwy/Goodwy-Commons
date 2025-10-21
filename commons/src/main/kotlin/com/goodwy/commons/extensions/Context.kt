@@ -300,6 +300,7 @@ fun getPermissionString(id: Int) = when (id) {
 
 fun Context.launchActivityIntent(intent: Intent) {
     try {
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
     } catch (_: ActivityNotFoundException) {
         toast(R.string.no_app_found)
@@ -779,11 +780,15 @@ fun Context.getLaunchIntent() = packageManager.getLaunchIntentForPackage(baseCon
 
 fun Context.getCanAppBeUpgraded() = proPackages.contains(baseConfig.appId.removeSuffix(".debug").removePrefix("com.goodwy."))
 
-fun Context.getProUrl() = "https://play.google.com/store/apps/details?id=${baseConfig.appId.removeSuffix(".debug")}.pro"
-
 fun Context.getStoreUrl() = "https://play.google.com/store/apps/details?id=${packageName.removeSuffix(".debug")}"
 
 fun Context.getTimeFormat() = if (baseConfig.use24HourFormat) TIME_FORMAT_24 else TIME_FORMAT_12
+
+fun Context.getTimeFormatWithSeconds() = if (baseConfig.use24HourFormat) {
+    TIME_FORMAT_24_WITH_SECS
+} else {
+    TIME_FORMAT_12_WITH_SECS
+}
 
 fun Context.getResolution(path: String): Point? {
     return if (path.isImageFast() || path.isImageSlow()) {

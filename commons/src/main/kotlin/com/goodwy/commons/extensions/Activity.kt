@@ -46,9 +46,9 @@ import com.goodwy.commons.helpers.MyContentProvider.MY_CONTENT_URI
 import com.goodwy.commons.models.*
 import com.goodwy.commons.views.MyTextView
 import java.io.*
+import java.util.Locale
 import java.util.TreeSet
 import androidx.core.net.toUri
-import java.util.Locale
 
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
@@ -301,6 +301,7 @@ fun BaseSimpleActivity.startIntentForUriAction(
     if (componentName != null) {
         intent.component = componentName
     }
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     return try {
         startActivity(intent)
         true
@@ -361,6 +362,7 @@ fun Activity.launchViewIntent(url: String) {
     hideKeyboard()
     ensureBackgroundThread {
         Intent(Intent.ACTION_VIEW, url.toUri()).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             try {
                 startActivity(this)
             } catch (_: ActivityNotFoundException) {
@@ -400,8 +402,9 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
         Intent().apply {
             action = Intent.ACTION_SEND
             putExtra(EXTRA_STREAM, newUri)
-            type = getUriMimeType(path, newUri)
+            type = getUriMimeType(path, newUri).normalizeMimeTypeForSharing()
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             grantUriPermission("android", newUri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
             try {
@@ -437,11 +440,13 @@ fun Activity.sharePathsIntent(paths: List<String>, applicationId: String) {
             if (mimeType.isEmpty() || mimeType == "*/*") {
                 mimeType = paths.getMimeType()
             }
+            mimeType = mimeType.normalizeMimeTypeForSharing()
 
             Intent().apply {
                 action = Intent.ACTION_SEND_MULTIPLE
                 type = mimeType
                 addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 putParcelableArrayListExtra(EXTRA_STREAM, newUris)
 
                 try {
@@ -469,6 +474,7 @@ fun Activity.setAsIntent(path: String, applicationId: String) {
             action = Intent.ACTION_ATTACH_DATA
             setDataAndType(newUri, getUriMimeType(path, newUri))
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             val chooser = Intent.createChooser(this, getString(R.string.set_as))
 
             try {
@@ -488,6 +494,7 @@ fun Activity.shareTextIntent(text: String) {
             action = Intent.ACTION_SEND
             type = "text/plain"
             putExtra(Intent.EXTRA_TEXT, text)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
             try {
                 startActivity(Intent.createChooser(this, getString(R.string.share_via)))
@@ -536,6 +543,7 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
             }
 
             putExtra(REAL_FILE_PATH, path)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
             try {
                 val chooser = Intent.createChooser(this, getString(R.string.edit_with))
@@ -573,6 +581,7 @@ fun Activity.openPathIntent(
             }
 
             putExtra(REAL_FILE_PATH, path)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
             try {
                 val chooser = Intent.createChooser(this, getString(R.string.open_with))

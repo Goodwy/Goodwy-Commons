@@ -36,6 +36,11 @@
     <string name="lifebuoy_title">நாங்கள் உங்களுக்கு ஆதரவளிப்போம்</string>
     <string name="lifebuoy_summary">சில காரணங்களால் நீங்கள் எங்கள் பயன்பாட்டை வாங்க முடியாது, ஆனால் உண்மையில் அனைத்து அம்சங்களையும் பயன்படுத்த விரும்பினால், எங்களுக்கு மின்னஞ்சல் அனுப்பவும்</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+இந்த நபர்கள் GitHub இல் உள்ள திறந்த மூல வலது திட்டத்திற்கும், நாங்கள் அடிப்படையாகக் கொண்ட Fossify மற்றும் Simple Mobile Tools க்கும் பங்களித்துள்ளனர்.<br><br>
+
+எங்கள் அனைத்து பங்களிப்பாளர்களுக்கும் நன்றி, உங்கள் உதவியை நாங்கள் மிகவும் பாராட்டுகிறோம் &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">நல்ல ஆதரவு</string>
     <string name="tip_excellent">சிறந்த ஆதரவு</string>
@@ -183,13 +188,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+இந்தப் பட்டியலில் எங்கள் பயன்பாடுகளுக்கு குறிப்பிடத்தக்க வகையில் உதவிய அனைவரும் உள்ளனர். மொழிபெயர்ப்புகள் தன்னார்வலர்களால் கையாளப்படுகின்றன,
+நீங்களும் உதவ விரும்பினால் எங்களுக்குத் தெரியப்படுத்துங்கள். மொழிபெயர்ப்பதற்கான வழிகாட்டி <a href="https://github.com/Goodwy/Discussion">இந்த வலைத்தளத்தில்</a> உள்ளது, அல்லது ஏதேனும் கேள்விகள் இருந்தால் <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> என்ற முகவரியில் எங்களைத் தொடர்பு கொள்ளவும்.
+அனைத்து பங்களிப்பாளர்கள் மற்றும் பிற ஆதரவாளர்களுக்கும் நன்றி!
+]]></string>
     <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 

@@ -1,5 +1,6 @@
 package com.goodwy.commons.compose.screens
 
+import android.text.Spanned
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -21,8 +22,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.compose.components.LinkifyTextComponent
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.lists.SimpleLazyListScaffold
-import com.goodwy.commons.compose.settings.SettingsGroupTitle
-import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
+import com.goodwy.commons.compose.settings.SettingsGroup
 import com.goodwy.commons.compose.settings.SettingsListItem
 import com.goodwy.commons.compose.settings.SettingsTitleTextComponent
 import com.goodwy.commons.compose.theme.AppThemeSurface
@@ -30,7 +30,7 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.extensions.fromHtml
 import com.goodwy.commons.models.LanguageContributor
 
-private val titleStartPadding = Modifier.padding(start = 40.dp)
+private val titleStartPadding = Modifier.padding(start = 36.dp)
 
 @Composable
 internal fun ContributorsScreen(
@@ -40,7 +40,7 @@ internal fun ContributorsScreen(
     SimpleLazyListScaffold(
         title = { scrolledColor ->
             Text(
-                text = stringResource(id = R.string.contributors),
+                text = stringResource(id = com.goodwy.strings.R.string.participants_title),
                 modifier = Modifier.fillMaxWidth(),
                 color = scrolledColor,
                 overflow = TextOverflow.Ellipsis,
@@ -50,56 +50,62 @@ internal fun ContributorsScreen(
         goBack = goBack
     ) {
         item {
-            SettingsGroupTitle {
-                SettingsTitleTextComponent(
-                    text = stringResource(id = R.string.development),
-                    modifier = titleStartPadding
-                )
-            }
-        }
-        item {
-            SettingsListItem(
-                text = stringResource(id = R.string.contributors_developers),
-                icon = R.drawable.ic_code_vector,
-                tint = SimpleTheme.colorScheme.onSurface,
-                fontSize = 14.sp
+            val text = stringResource(id = com.goodwy.strings.R.string.participants_subtitle)
+            LinkifyTextComponent(
+                modifier = Modifier.padding(horizontal = 36.dp, vertical = 12.dp),
+                text = { text.fromHtml() },
             )
         }
         item {
-            Spacer(modifier = Modifier.padding(vertical = SimpleTheme.dimens.padding.medium))
+            SettingsTitleTextComponent(
+                text = stringResource(id = R.string.development),
+                modifier = titleStartPadding
+            )
         }
         item {
-            SettingsHorizontalDivider()
-        }
-        item {
-            SettingsGroupTitle {
-                SettingsTitleTextComponent(
-                    text = stringResource(id = R.string.translation),
-                    modifier = titleStartPadding
+            SettingsGroup (modifier = Modifier.fillMaxWidth().padding(top = 0.dp)) {
+                SettingsListItem(
+                    text = stringResource(id = R.string.contributors_developers),
+                    icon = R.drawable.ic_code_vector,
+                    tint = SimpleTheme.colorScheme.onSurface,
+                    fontSize = 14.sp
                 )
             }
+        }
+        item {
+            Spacer(modifier = Modifier.padding(vertical = SimpleTheme.dimens.padding.small))
+        }
+        item {
+            SettingsTitleTextComponent(
+                text = stringResource(id = R.string.translation),
+                modifier = titleStartPadding
+            )
         }
         items(contributors, key = { it.contributorsId.plus(it.iconId).plus(it.labelId) }) {
-            ContributorItem(
-                languageContributor = it
-            )
+            SettingsGroup (modifier = Modifier.fillMaxWidth().padding(top = 0.dp)) {
+                ContributorItem(
+                    languageContributor = it
+                )
+            }
         }
 
         item {
-            SettingsListItem(
-                icon = R.drawable.ic_heart_vector,
-                text = {
-                    val source = stringResource(id = com.goodwy.strings.R.string.contributors_label_g)
-                    LinkifyTextComponent {
-                        source.fromHtml()
-                    }
-                },
-                tint = SimpleTheme.colorScheme.onSurface
-            )
+            SettingsGroup {
+                SettingsListItem(
+                    icon = R.drawable.ic_heart_vector,
+                    text = {
+                        val source = stringResource(id = com.goodwy.strings.R.string.contributors_label_g)
+                        LinkifyTextComponent {
+                            source.fromHtml()
+                        }
+                    },
+                    tint = SimpleTheme.colorScheme.onSurface
+                )
+            }
         }
 
         item {
-            Spacer(modifier = Modifier.padding(bottom = SimpleTheme.dimens.padding.medium))
+            Spacer(modifier = Modifier.padding(bottom = 56.dp))
         }
     }
 }
@@ -119,7 +125,7 @@ private fun ContributorItem(
             )
         },
         leadingContent = {
-            val imageSize = Modifier.size(SimpleTheme.dimens.icon.extraSmall)
+            val imageSize = Modifier.size(SimpleTheme.dimens.icon.medium)
             Image(
                 modifier = imageSize,
                 painter = painterResource(id = languageContributor.iconId),

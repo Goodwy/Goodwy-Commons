@@ -54,6 +54,12 @@
     <string name="lifebuoy_title">Vă vom sprijini</string>
     <string name="lifebuoy_summary">Dacă, din anumite motive, nu vă puteți permite aplicația noastră, dar doriți cu adevărat să utilizați toate funcțiile, trebuie doar să ne trimiteți un e-mail</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Aceste persoane au contribuit la proiectul open-source Right de pe GitHub,
+precum și la Fossify și Simple Mobile Tools, pe care ne bazăm.<br><br>
+
+Mulțumim tuturor contribuitorilor noștri, apreciem foarte mult ajutorul vostru &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Suport bun</string>
     <string name="tip_excellent">Suport excelent</string>
@@ -185,13 +191,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Această listă conține pe toți cei care au ajutat în mod semnificativ la oricare dintre aplicațiile noastre. Traducerile sunt gestionate de voluntari,
+spuneți-ne dacă doriți și dumneavoastră să ajutați. Ghidul de traducere se află pe <a href="https://github.com/Goodwy/Discussion">acest site web</a> sau contactați-ne la <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> dacă aveți întrebări.
+Mulțumim tuturor contribuitorilor și celorlalți susținători!
+]]></string>
     <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 

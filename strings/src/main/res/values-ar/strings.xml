@@ -36,6 +36,11 @@
     <string name="lifebuoy_title">سوف ندعمك</string>
     <string name="lifebuoy_summary">إذا كنت لا تستطيع تحمل تكاليف تطبيقنا لسبب ما ، ولكنك تريد حقا استخدام جميع الميزات ، فما عليك سوى مراسلتنا عبر البريد الإلكتروني</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+ساهم هؤلاء الأشخاص في مشروع Right مفتوح المصدر على GitHub، بالإضافة إلى Fossify وSimple Mobile Tools، التي نعتمد عليها.<br><br>
+
+شكرًا جزيلاً لجميع مساهمينا، ونقدر مساعدتكم كثيرًا &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">دعم جيد</string>
     <string name="tip_excellent">دعم ممتاز</string>
@@ -179,13 +184,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+تضم هذه القائمة كل من ساهم بشكل ملحوظ في أيٍّ من تطبيقاتنا. تتم عمليات الترجمة بواسطة متطوعين،
+أخبرنا إذا كنت ترغب في المساعدة أيضًا. دليل الترجمة موجود على <a href="https://github.com/Goodwy/Discussion">هذا الموقع</a>، أو تواصل معنا على <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> إذا كانت لديك أي أسئلة.
+شكرًا لجميع المساهمين والداعمين الآخرين!
+]]></string>
     <string name="deprecated_app_g">لم يعد يجري العمل عليه: لم يعد هذا الإصدار من التطبيق يجري العمل عليه، قم بالحصول على الإصدار الـ Pro على https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">لا تنسى أنه إذا قمت بإلغاء تثبيت أي تطبيق مدفوع في غضون ساعتين ، فسيتم إسترداد أموالك تلقائياً. إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على goodwy.dev@gmail.com وستحصل عليه. هذا يجعل من السهل تجربته :)</string>
 

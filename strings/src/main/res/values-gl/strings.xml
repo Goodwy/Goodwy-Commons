@@ -37,6 +37,12 @@
     <string name="lifebuoy_title">Apoiarémoste</string>
     <string name="lifebuoy_summary">Se por algún motivo non podes pagar a nosa aplicación, pero realmente queres usar todas as funcións, envíanos un correo electrónico</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Estas persoas contribuíron ao proxecto de código aberto Right en GitHub,
+así como a Fossify e Simple Mobile Tools, nos que nos baseamos.<br><br>
+
+Grazas a todos os nosos colaboradores, agradecemos moito a vosa axuda &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Bo apoio</string>
     <string name="tip_excellent">Excelente apoio</string>
@@ -183,13 +189,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Esta lista contén a todas as persoas que axudaron notablemente en calquera das nosas aplicacións. As traducións son realizadas por voluntarios,
+avísanos se ti tamén queres axudar. A guía para traducir está en <a href="https://github.com/Goodwy/Discussion">este sitio web</a> ou simplemente ponte en contacto connosco en <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> se tes algunha pregunta.
+Grazas a todos os colaboradores e demais apoiadores!
+]]></string>
     <string name="deprecated_app_g">OBSOLETA: Esta versión do app xa non se está mantendo, obtén a versión Pro en https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Non esquezas que se desinstalas calquera app de pago antes de 2 horas, devolveránseche os cartos automáticamente. Se queres unha devolución máis tarde, contáctanos en goodwy.dev@gmail.com e terala. Isto fai que sexa fácil probala :)</string>
 

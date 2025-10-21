@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">我们将为您提供支持</string>
     <string name="lifebuoy_summary">如果由于某种原因您买不起我们的应用程序，但真的想使用所有功能，只需给我们发电子邮件</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+这些人为 GitHub 上的开源 Right 项目做出了贡献，
+也为我们赖以生存的 Fossify 和 Simple Mobile Tools 做出了贡献。<br><br>
+
+感谢所有贡献者，我们非常感谢你们的帮助 &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">良好的支持</string>
     <string name="tip_excellent">出色的支持</string>
@@ -178,13 +184,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+此列表包含所有为我们的应用程序提供过显著帮助的人员。翻译工作由志愿者负责，
+如果您也想提供帮助，请告诉我们。翻译指南位于<a href="https://github.com/Goodwy/Discussion">本网站</a>，或者如果您有任何疑问，请发送电子邮件至<a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a>联系我们。
+感谢所有贡献者和其他支持者！
+]]></string>
     <string name="deprecated_app_g">已弃用：该应用版本已不再维护，请在以下链接获取专业版 https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 goodwy.dev@gmail.com 联系我们即可。这样您就可以放心试用了 :)</string>
 

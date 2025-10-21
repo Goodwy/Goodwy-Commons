@@ -15,12 +15,12 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 
 @Composable
 fun SettingsGroup(
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
     title: @Composable (() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit,
 ) {
     Column(
-        modifier = modifier.fillMaxWidth().padding(top = 12.dp),
+        modifier = modifier,
     ) {
         if (title != null) {
             SettingsGroupTitle(title = title)
@@ -28,7 +28,9 @@ fun SettingsGroup(
         Card(
             modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 4.dp),
             shape = RoundedCornerShape(16.dp),
-        ) { content() }
+        ) {
+            content()
+        }
     }
 }
 

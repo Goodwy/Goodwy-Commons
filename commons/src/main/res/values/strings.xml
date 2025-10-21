@@ -7,7 +7,10 @@
     <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">Save as</string>
-    <string name="file_saved">File saved successfully</string>
+    <plurals name="files_saved">
+        <item quantity="one">File saved successfully</item>
+        <item quantity="other">Files saved successfully</item>
+    </plurals>
     <string name="invalid_file_format">Invalid file format</string>
     <string name="out_of_memory_error">Out of memory error</string>
     <string name="an_error_occurred">An error occurred: %s</string>
@@ -1041,6 +1044,7 @@
     <string name="translation_belarusian">Belarusan</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_brazil">Brazil</string>
     <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_central_kurdish">Central Kurdish</string>
     <string name="translation_catalan">Catalan</string>

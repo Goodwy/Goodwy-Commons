@@ -2,6 +2,7 @@ package com.goodwy.commons.compose.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ListItem
@@ -10,9 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.lists.SimpleLazyListScaffold
+import com.goodwy.commons.compose.settings.SettingsGroup
 import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
@@ -32,12 +35,13 @@ internal fun LicenseScreen(
         goBack = goBack
     ) {
         itemsIndexed(thirdPartyLicenses) { index, license ->
-            Column {
+            SettingsGroup {
                 LicenseItem(license, onLicenseClick)
-                if (index != thirdPartyLicenses.lastIndex) {
-                    SettingsHorizontalDivider(modifier = Modifier.padding(bottom = SimpleTheme.dimens.padding.small))
-                }
             }
+        }
+
+        item {
+            Spacer(modifier = Modifier.padding(bottom = 56.dp))
         }
     }
 }
@@ -47,20 +51,26 @@ private fun LicenseItem(
     license: License,
     onLicenseClick: (urlId: Int) -> Unit
 ) {
-    ListItem(headlineContent = {
-        Text(
-            text = stringResource(id = license.titleId),
-            modifier = Modifier
-                .clickable {
-                    onLicenseClick(license.urlId)
-                }
-        )
-    }, supportingContent = {
-        Text(
-            text = stringResource(id = license.textId),
-            modifier = Modifier.padding(top = SimpleTheme.dimens.padding.extraSmall),
-        )
-    }, colors = ListItemDefaults.colors(headlineColor = SimpleTheme.colorScheme.primary, supportingColor = SimpleTheme.colorScheme.onSurface))
+    ListItem(
+        headlineContent = {
+            Text(
+                text = stringResource(id = license.titleId),
+                modifier = Modifier
+                    .clickable {
+                        onLicenseClick(license.urlId)
+                    }
+            )
+        },
+        supportingContent = {
+            Text(
+                text = stringResource(id = license.textId),
+                modifier = Modifier.padding(top = SimpleTheme.dimens.padding.extraSmall),
+            )
+        },
+        colors = ListItemDefaults.colors(
+            headlineColor = SimpleTheme.colorScheme.primary,
+            supportingColor = SimpleTheme.colorScheme.onSurface)
+    )
 }
 
 @Composable

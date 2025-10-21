@@ -15,7 +15,6 @@ import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.ChangeDateTimeFormatDialog
-import com.goodwy.commons.dialogs.FilePickerDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
@@ -51,7 +50,7 @@ class MainActivity : BaseSimpleActivity() {
                     showComposeDialogs = {
                         startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
                     },
-                    openTestButton = ::setupStartDate,
+                    openTestButton = ::securityDialog,//::setupStartDate,
                     showMoreApps = showMoreApps,
                     openAbout = ::launchAbout,
                     moreAppsFromUs = ::launchMoreAppsFromUsIntent,

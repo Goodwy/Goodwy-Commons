@@ -36,6 +36,11 @@
     <string name="lifebuoy_title">Sizi destekleyeceğiz</string>
     <string name="lifebuoy_summary">Herhangi bir nedenle uygulamamızı karşılayamıyorsanız, ancak gerçekten tüm özellikleri kullanmak istiyorsanız, bize e-posta göndermeniz yeterlidir.</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Bu kişiler, GitHub\'daki açık kaynaklı Right projesine ve temel aldığımız Fossify ve Simple Mobile Tools\'a katkıda bulundular.<br><br>
+
+Tüm katkıda bulunanlara teşekkür ederiz, yardımlarınız için minnettarız &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Özel teşekkürler</string>
     <string name="tip_kind">İyi destek</string>
     <string name="tip_excellent">Mükemmel destek</string>
@@ -186,13 +191,11 @@
         Eğer uygulamayı silerseniz özel Kişi-Kişiler de uygulamayla birlikte silinecektir, bu yüzden uygulamayı silmeden önce lütfen kişilerinizi yedekleyiniz.</string>
     <string name="faq_101_title_commons_g">Nasıl özel Kişi-Kişiler oluşturulur?</string>
     <string name="faq_101_text_commons_g">Bir kişi oluşturduğunuzda o kişinin kaynağını belirlemeniz gerekir: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-           Bu liste, sadece bu uygulamaya değil, Goodwy paketi içindeki herhangi bir uygulamaya belirgin bir şekilde yardımcı olan herkesi içerir. Çeviriler gönüllüler tarafından yapılmaktadır,
-            siz de yardım etmek isterseniz bize bildirin. Çeviri rehberi <a href="https://github.com/Goodwy/Discussion">this website</a> sitesindedir. Herhangi bir sorunuz olursa <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> adresinden ulaşabilirsiniz (ingilizce)
-            Tüm destekçi ve katılımcılara teşekkürler!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Bu liste, uygulamalarımıza gözle görülür şekilde yardımcı olan herkesi içerir. Çeviriler gönüllüler tarafından yapılmaktadır.
+Siz de yardımcı olmak isterseniz bize bildirin. Çeviri kılavuzuna <a href="https://github.com/Goodwy/Discussion">bu web sitesinde</a> ulaşabilirsiniz veya herhangi bir sorunuz varsa <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> adresinden bize ulaşabilirsiniz.
+Tüm katkıda bulunanlara ve diğer destekçilere teşekkürler!
+]]></string>
     <string name="deprecated_app_g">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro (Eski link düzeltilmeli) </string>
     <string name="pro_app_refund_g">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, goodwy.dev@gmail.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
 

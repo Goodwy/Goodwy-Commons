@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">Kami akan mendukung Anda</string>
     <string name="lifebuoy_summary">Jika karena alasan tertentu Anda tidak mampu membeli aplikasi kami, tetapi benar-benar ingin menggunakan semua fiturnya, cukup kirimkan email kepada kami</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Orang-orang ini telah berkontribusi pada proyek Right sumber terbuka di GitHub,
+serta Fossify dan Simple Mobile Tools, yang menjadi dasar kami.<br><br>
+
+Terima kasih kepada semua kontributor kami, kami sangat menghargai bantuan Anda &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Dukungan yang baik</string>
     <string name="tip_excellent">Dukungan yang sangat baik</string>
@@ -183,13 +189,11 @@ Terima kasih!
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Daftar ini berisi semua orang yang telah membantu aplikasi kami. Penerjemahan ditangani oleh sukarelawan,
+beri tahu kami jika Anda ingin membantu juga. Panduan penerjemahan tersedia di <a href="https://github.com/Goodwy/Discussion">situs web ini</a>, atau hubungi kami di <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> jika Anda memiliki pertanyaan.
+Terima kasih kepada semua kontributor dan pendukung lainnya!
+]]></string>
     <string name="deprecated_app_g">TIDAK DIDUKUNG: Versi aplikasi ini tidak lagi dikembangkan, dapatkan versi Pro di https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Jangan lupa, jika anda untuk mencopot aplikasi berbayar manapun dalam waktu 2 jam, uang anda akan otomatis dikembalikan. Jika anda ingin pengembalian dilakukan lain waktu, cukup hubungi goodwy.dev@gmail.com dan anda akan mendapatkannya. Mempermudah anda untuk mencobanya terlebih dahulu. :)</string>
 

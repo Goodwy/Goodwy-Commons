@@ -36,6 +36,13 @@
     <string name="lifebuoy_title">Podprli vas bomo</string>
     <string name="lifebuoy_summary">Če si iz nekega razloga ne morete privoščiti naše aplikacije, vendar res želite uporabiti vse funkcije, nam pišite po e-pošti</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Ti ljudje so prispevali k odprtokodnemu projektu Right na GitHubu,
+kot tudi k Fossify in Simple Mobile Tools, na katerih temeljimo.<br><br>
+
+
+Hvala vsem našim sodelavcem, zelo cenimo vašo pomoč &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Dobra podpora</string>
     <string name="tip_excellent">Odlična podpora</string>
@@ -186,13 +193,10 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Ta seznam vsebuje vse, ki so opazno pomagali pri kateri koli od naših aplikacij. Prevode opravljajo prostovoljci, sporočite nam, če želite pomagati tudi vi. Vodnik za prevajanje je na <a href="https://github.com/Goodwy/Discussion">tej spletni strani</a> ali pa nas preprosto kontaktirajte na <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a>, če imate kakršna koli vprašanja.
+Hvala vsem sodelavcem in drugim podpornikom!
+]]></string>
     <string name="deprecated_app_g">ZASTARELO: Ta verzija aplikacije se ne vzdržuje več, pridobite si Pro verzijo na https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Ne pozabite - če odstranite katerokoli plačljivo aplikacijo v dveh urah, dobite povrnjen avtomatično denar. Če želite povrnitev denarja po preteku tega časa, nas kontaktirajte na goodwy.dev@gmail.com in poskrbeli bomo za to. Zaradi tega je preizkušanje aplikacije še bolj preprosto. :)</string>
 

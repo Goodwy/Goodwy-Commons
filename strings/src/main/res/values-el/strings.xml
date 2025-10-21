@@ -36,6 +36,12 @@
     <string name="lifebuoy_title">Θα σας υποστηρίξουμε</string>
     <string name="lifebuoy_summary">Εάν για κάποιο λόγο δεν μπορείτε να αντέξετε οικονομικά την εφαρμογή μας, αλλά θέλετε πραγματικά να χρησιμοποιήσετε όλες τις δυνατότητες, απλώς στείλτε μας email</string>
     <string name="participants_title">Participants</string>
+    <string name="participants_subtitle"><![CDATA[
+Αυτά τα άτομα έχουν συνεισφέρει στο έργο ανοιχτού κώδικα Right στο GitHub,
+καθώς και στο Fossify και το Simple Mobile Tools, στα οποία βασιζόμαστε.<br><br>
+
+Ευχαριστούμε όλους τους συνεισφέροντες μας, εκτιμούμε ιδιαίτερα τη βοήθειά σας &#10084;&#65039;
+]]></string>
     <string name="special_thanks_to">Special thanks to</string>
     <string name="tip_kind">Καλή υποστήριξη</string>
     <string name="tip_excellent">Εξαιρετική υποστήριξη</string>
@@ -183,13 +189,11 @@
         If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
-    <string name="contributors_label_g">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Goodwy suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/Goodwy/Discussion">this website</a>, or just contact us at <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label_g"><![CDATA[
+Αυτή η λίστα περιέχει όλους όσους βοήθησαν σημαντικά σε οποιαδήποτε από τις εφαρμογές μας. Οι μεταφράσεις γίνονται από εθελοντές,
+ενημερώστε μας αν θέλετε να βοηθήσετε κι εσείς. Ο οδηγός για τη μετάφραση βρίσκεται σε <a href="https://github.com/Goodwy/Discussion">αυτόν τον ιστότοπο</a> ή απλώς επικοινωνήστε μαζί μας στη διεύθυνση <a href="mailto:goodwy.dev@gmail.com">goodwy.dev@gmail.com</a> αν έχετε οποιεσδήποτε ερωτήσεις.
+Ευχαριστούμε όλους τους συνεισφέροντες και τους άλλους υποστηρικτές!
+]]></string>
     <string name="deprecated_app_g">ΚΑΤΑΡΓΗΣΗ: Αυτή η έκδοση της εφαρμογής δεν υποστηρίζεται πλέον, λάβετε την έκδοση Pro εδώ https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Μην ξεχνάτε οτι αν απεγκατασταθεί εντός 2 ωρών, θα επιστραφούν αυτόματα τα χρήματα σας. Αν θέλετε επιστροφή χρημάτων οποιαδήποτε στιγμή αργότερα, απλά επικοινωνήστε μαζί μας στο goodwy.dev@gmail.com και θα τα λάβετε. Αυτό το κάνει εύκολότερο για να την δοκιμάσετε :)</string>
 
