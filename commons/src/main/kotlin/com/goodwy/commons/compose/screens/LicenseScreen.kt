@@ -16,7 +16,6 @@ import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.lists.SimpleLazyListScaffold
 import com.goodwy.commons.compose.settings.SettingsGroup
-import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.helpers.*

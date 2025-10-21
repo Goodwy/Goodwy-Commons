@@ -1,6 +1,5 @@
 package com.goodwy.commons.compose.screens
 
-import android.text.Spanned
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth

@@ -7,6 +7,7 @@
     <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">Save as</string>
+    <string name="file_saved">File saved successfully</string>
     <plurals name="files_saved">
         <item quantity="one">File saved successfully</item>
         <item quantity="other">Files saved successfully</item>
