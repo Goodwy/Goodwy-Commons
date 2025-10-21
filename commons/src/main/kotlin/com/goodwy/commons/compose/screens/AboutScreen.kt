@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Article
-import androidx.compose.material.icons.outlined.Article
 import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -74,6 +73,7 @@ private fun AboutScreenPreview() {
                     showGithub = true,
                     onLicenseClick = {},
                     onContributorsClick = {},
+                    onVersionClick = {},
                 )
             },
             isTopAppBarColorIcon = true,
@@ -96,6 +96,7 @@ internal fun AboutNewSection(
     showGithub: Boolean = true,
     onLicenseClick: () -> Unit,
     onContributorsClick: () -> Unit,
+    onVersionClick: () -> Unit,
 ) {
     Box(
         modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.about_margin))
@@ -104,50 +105,52 @@ internal fun AboutNewSection(
         val textColor = MaterialTheme.colorScheme.onSurface
         val playStoreInstalled = context.isPlayStoreInstalled()
         val ruStoreInstalled = context.isRuStoreInstalled()
-        Column(Modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp, bottom = 26.dp)) {
-            ListItem(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.background),
-                leadingContent = {
-                    Box(
-                        modifier = Modifier
-                            .width(72.dp)
-                            .padding(bottom = 8.dp),
-                        contentAlignment = Alignment.Center
-                    )
-                    {
-                        Icon(
+        Column(Modifier.padding(start = 16.dp, end = 16.dp, bottom = 26.dp)) {
+            Card(shape = RoundedCornerShape(16.dp)) {
+                ListItem(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable(onClick = onVersionClick),
+                    colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.background),
+                    leadingContent = {
+                        Box(
                             modifier = Modifier
-                                .size(68.dp)
-                                .shadow(elevation = 10.dp, shape = RoundedCornerShape(34.dp), clip = true),
-                            painter = painterResource(id = R.drawable.ic_launcher),
-                            contentDescription = null,
+                                .width(72.dp)
+                                .padding(vertical = 8.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                modifier = Modifier
+                                    .size(68.dp)
+                                    .shadow(elevation = 10.dp, shape = RoundedCornerShape(34.dp), clip = true),
+                                painter = painterResource(id = R.drawable.ic_launcher),
+                                contentDescription = null,
+                            )
+                            Icon(
+                                modifier = Modifier
+                                    .size(72.dp),
+                                painter = painterResource(id = R.drawable.ic_launcher),
+                                contentDescription = appName,
+                                tint = Color.Unspecified
+                            )
+                        }
+                    },
+                    headlineContent = {
+                        Text(
+                            modifier = Modifier.padding(start = 12.dp),
+                            text = appName,
+                            fontSize = 18.sp,
                         )
-                        Icon(
-                            modifier = Modifier
-                                .size(72.dp),
-                            painter = painterResource(id = R.drawable.ic_launcher),
-                            contentDescription = appName,
-                            tint = Color.Unspecified
+                    },
+                    supportingContent = {
+                        Text(
+                            modifier = Modifier.padding(start = 12.dp),
+                            text = "Version: $appVersion",
+                            color = textColor.copy(alpha = 0.5F),
                         )
-                    }
-                },
-                headlineContent = {
-                    Text(
-                        modifier = Modifier.padding(start = 12.dp),
-                        text = appName,
-                        fontSize = 18.sp,
-                    )
-                },
-                supportingContent = {
-                    Text(
-                        modifier = Modifier.padding(start = 12.dp),
-                        text = "Version: $appVersion",
-                        color = textColor.copy(alpha = 0.5F),
-                    )
-                },
-            )
+                    },
+                )
+            }
             Spacer(modifier = Modifier.size(8.dp))
             HtmlText(stringResource(stringsR.string.about_summary), textColor = textColor)
             Spacer(modifier = Modifier.size(24.dp))

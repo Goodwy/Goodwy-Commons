@@ -6,6 +6,8 @@ import android.content.Intent.EXTRA_SUBJECT
 import android.content.Intent.EXTRA_TEXT
 import android.content.Intent.createChooser
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -26,6 +28,15 @@ import com.goodwy.commons.models.FAQItem
 
 class AboutActivity : BaseComposeActivity() {
     private val appName get() = intent.getStringExtra(APP_NAME) ?: ""
+
+    private var firstVersionClickTS = 0L
+    private var clicksSinceFirstClick = 0
+
+    companion object {
+        private const val EASTER_EGG_TIME_LIMIT = 8000L
+        private const val EASTER_EGG_REQUIRED_CLICKS = 7
+        private const val EASTER_EGG_REQUIRED_CLICKS_NEXT = 10
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +67,7 @@ class AboutActivity : BaseComposeActivity() {
                             showGithub = showGithub(),
                             onLicenseClick = ::onLicenseClick,
                             onContributorsClick = ::onContributorsClick,
+                            onVersionClick = ::onVersionClick
                         )
                     },
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
@@ -209,6 +221,26 @@ class AboutActivity : BaseComposeActivity() {
             putExtra(APP_LAUNCHER_NAME, intent.getStringExtra(APP_LAUNCHER_NAME) ?: "")
             putExtra(APP_LICENSES, intent.getLongExtra(APP_LICENSES, 0))
             startActivity(this)
+        }
+    }
+
+    private fun onVersionClick() {
+        if (firstVersionClickTS == 0L) {
+            firstVersionClickTS = System.currentTimeMillis()
+            Handler(Looper.getMainLooper()).postDelayed({
+                firstVersionClickTS = 0L
+                clicksSinceFirstClick = 0
+            }, EASTER_EGG_TIME_LIMIT)
+        }
+
+        clicksSinceFirstClick++
+        if (clicksSinceFirstClick == EASTER_EGG_REQUIRED_CLICKS) {
+            toast(R.string.hello)
+        } else if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS_NEXT) {
+            val appVersion = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+            toast("Version: $appVersion")
+            firstVersionClickTS = 0L
+            clicksSinceFirstClick = 0
         }
     }
 }
