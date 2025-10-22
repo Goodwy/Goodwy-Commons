@@ -31,6 +31,7 @@ fun SimpleColumnScaffold(
     scrollState: ScrollState = rememberScrollState(),
     isTopAppBarColorIcon: Boolean = false,
     isTopAppBarColorTitle: Boolean = false,
+    actions: @Composable RowScope.() -> Unit = {},
     content: @Composable (ColumnScope.(PaddingValues) -> Unit)
 ) {
     val iconColor = if (isTopAppBarColorIcon) MaterialTheme.colorScheme.primary else null
@@ -62,6 +63,7 @@ fun SimpleColumnScaffold(
                 contrastColor = contrastColor,
                 iconColor = iconColor,
                 textColor = titleColor,
+                actions = actions
             )
         },
     ) { paddingValues ->

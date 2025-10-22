@@ -3,6 +3,7 @@ package com.goodwy.commons.compose.screens
 import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Article
@@ -12,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
@@ -22,6 +24,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.intl.LocaleList
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -29,16 +32,22 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
+import com.goodwy.commons.compose.extensions.rememberMutableInteractionSource
 import com.goodwy.commons.compose.lists.SimpleColumnScaffold
+import com.goodwy.commons.compose.menus.ActionIconButton
 import com.goodwy.commons.compose.theme.AppThemeSurface
+import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.isPlayStoreInstalled
 import com.goodwy.commons.extensions.isRuStoreInstalled
+import java.util.Calendar
 import com.goodwy.strings.R as stringsR
 
 @Composable
 internal fun AboutScreen(
     goBack: () -> Unit,
+    onInviteClick: () -> Unit,
+    onKnownIssuesClick: () -> Unit,
     aboutSection: @Composable () -> Unit,
     isTopAppBarColorIcon: Boolean,
     isTopAppBarColorTitle: Boolean,
@@ -46,6 +55,30 @@ internal fun AboutScreen(
     SimpleColumnScaffold(
         title = stringResource(id = R.string.about),
         goBack = goBack,
+        actions = {
+            val iconColor =
+                if (isTopAppBarColorIcon) MaterialTheme.colorScheme.primary
+                else LocalContentColor.current
+            ActionIconButton(
+                onClick = onKnownIssuesClick,
+                contentColor = iconColor,
+            ) {
+                Icon(
+                    imageVector = Icons.Rounded.BugReport,
+                    contentDescription = stringResource(id = R.string.known_issues)
+                )
+            }
+            ActionIconButton(
+                onClick = onInviteClick,
+                contentColor = iconColor,
+            ) {
+                Icon(
+                    imageVector = Icons.Rounded.Share,
+                    contentDescription = stringResource(id = R.string.invite_friends)
+                )
+            }
+            Spacer(modifier = Modifier.size(4.dp))
+        },
         isTopAppBarColorIcon = isTopAppBarColorIcon,
         isTopAppBarColorTitle = isTopAppBarColorTitle,
     ) {
@@ -70,12 +103,16 @@ private fun AboutScreenPreview() {
                     onFAQClick = {},
                     onTipJarClick = {},
                     onGithubClick = {},
+                    onPatreonClick = {},
+                    onBuyMeaCoffeeClick = {},
                     showGithub = true,
                     onLicenseClick = {},
                     onContributorsClick = {},
                     onVersionClick = {},
                 )
             },
+            onInviteClick = {},
+            onKnownIssuesClick = {},
             isTopAppBarColorIcon = true,
             isTopAppBarColorTitle = true,
         )
@@ -93,6 +130,8 @@ internal fun AboutNewSection(
     onFAQClick: () -> Unit,
     onTipJarClick: () -> Unit,
     onGithubClick: () -> Unit,
+    onPatreonClick: () -> Unit,
+    onBuyMeaCoffeeClick: () -> Unit,
     showGithub: Boolean = true,
     onLicenseClick: () -> Unit,
     onContributorsClick: () -> Unit,
@@ -164,8 +203,12 @@ internal fun AboutNewSection(
             }
             AboutItem(
                 modifierIcon =
-                    if (ruStoreInstalled && !context.baseConfig.useGooglePlay) Modifier.size(42.dp).padding(9.dp)
-                    else Modifier.size(42.dp).padding(start = 10.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
+                    if (ruStoreInstalled && !context.baseConfig.useGooglePlay) Modifier
+                        .size(42.dp)
+                        .padding(9.dp)
+                    else Modifier
+                        .size(42.dp)
+                        .padding(start = 10.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
                 text = stringResource(stringsR.string.more_apps_from_us_g),
                 painter = painterResource(
                     id = if (ruStoreInstalled && !context.baseConfig.useGooglePlay) R.drawable.ic_rustore
@@ -206,22 +249,80 @@ internal fun AboutNewSection(
                 imageVector = Icons.Rounded.Policy,
                 onClick = onPrivacyPolicyClick,
             )
+            Spacer(modifier = Modifier.size(18.dp))
             if (showGithub) {
-                Spacer(modifier = Modifier.size(18.dp))
-                AboutItem(
-                    text = stringResource(R.string.github),
-                    painter = painterResource(id = R.drawable.ic_github_vector),
-                    onClick = onGithubClick,
-                )
+                Row(
+                    modifier = Modifier.fillMaxSize(),
+                    horizontalArrangement = Arrangement.Center,
+                ) {
+                    MyButton(
+                        text = stringResource(R.string.github),
+                        painter = painterResource(id = R.drawable.ic_github_vector),
+                        onClick = onGithubClick,
+                    )
+                    Spacer(modifier = Modifier.size(18.dp))
+                    MyButton(
+                        text = "patreon.com",
+                        painter = painterResource(id = R.drawable.ic_patreon),
+                        onClick = onPatreonClick,
+                    )
+                    Spacer(modifier = Modifier.size(18.dp))
+                    MyButton(
+                        text = "buymeacoffee.com",
+                        painter = painterResource(id = R.drawable.ic_bmc),
+                        onClick = onBuyMeaCoffeeClick,
+                    )
+                }
             }
-            Spacer(modifier = Modifier.size(32.dp))
+            Spacer(modifier = Modifier.size(20.dp))
+            val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+            Text(
+                modifier = Modifier.fillMaxSize(),
+                text = stringResource(R.string.copyright_new, currentYear),
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.bodyMedium
+            )
+            Spacer(modifier = Modifier.size(18.dp))
         }
     }
 }
 
 @Composable
+private fun MyButton(
+    text: String,
+    painter: Painter,
+    onClick: () -> Unit,
+) {
+    val navigationIconInteractionSource = rememberMutableInteractionSource()
+    Box(
+        modifier = Modifier
+            .size(62.dp)
+            .padding(SimpleTheme.dimens.padding.small)
+            .clip(RoundedCornerShape(50))
+            .clickable(
+                interactionSource = navigationIconInteractionSource,
+                indication = ripple(
+                    color = SimpleTheme.colorScheme.onSurface,
+                    bounded = true
+                ),
+                onClick = onClick
+            ),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(
+            modifier = Modifier.fillMaxSize().padding(8.dp),
+            painter = painter,
+            contentDescription = text,
+            tint = MaterialTheme.colorScheme.onSurface
+        )
+    }
+}
+
+@Composable
 private fun AboutItem(
-    modifierIcon: Modifier = Modifier.size(42.dp).padding(8.dp),
+    modifierIcon: Modifier = Modifier
+        .size(42.dp)
+        .padding(8.dp),
     cardColor: Color = MaterialTheme.colorScheme.surface,
     text: String,
     imageVector: ImageVector? = null,

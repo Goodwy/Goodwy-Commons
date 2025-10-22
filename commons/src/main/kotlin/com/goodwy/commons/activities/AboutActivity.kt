@@ -64,12 +64,16 @@ class AboutActivity : BaseComposeActivity() {
                             onFAQClick = ::launchFAQActivity,
                             onTipJarClick = ::onTipJarClick,
                             onGithubClick = ::onGithubClick,
+                            onPatreonClick = ::onPatreonClick,
+                            onBuyMeaCoffeeClick = ::onBuyMeaCoffeeClick,
                             showGithub = showGithub(),
                             onLicenseClick = ::onLicenseClick,
                             onContributorsClick = ::onContributorsClick,
-                            onVersionClick = ::onVersionClick
+                            onVersionClick = ::onVersionClick,
                         )
                     },
+                    onInviteClick = ::onInviteClick,
+                    onKnownIssuesClick = ::launchIssueTracker,
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
                     isTopAppBarColorTitle = isTopAppBarColorTitle,
                 )
@@ -177,6 +181,14 @@ class AboutActivity : BaseComposeActivity() {
         }
     }
 
+    private fun onPatreonClick() {
+        launchViewIntent("https://www.patreon.com/cw/Goodwy")
+    }
+
+    private fun onBuyMeaCoffeeClick() {
+        launchViewIntent("https://buymeacoffee.com/goodwy")
+    }
+
     private fun onGithubClick() {
         launchViewIntent(getGithubUrl())
     }
@@ -188,6 +200,12 @@ class AboutActivity : BaseComposeActivity() {
     private fun getGithubUrl(): String {
         val repositoryName = intent.getStringExtra(APP_REPOSITORY_NAME)
         return "https://github.com/Goodwy/$repositoryName"
+    }
+
+    private fun launchIssueTracker() {
+        launchViewIntent(
+            "${getGithubUrl()}/issues?q=is:open+is:issue+label:bug"
+        )
     }
 
     private fun onInviteClick() {

@@ -32,6 +32,7 @@
     <string name="my_fake_email">noreply@gmail.com</string>
     <string name="reddit">Reddit</string>
     <string name="github">GitHub</string>
+    <string name="copyright_new">© Goodwy, %s</string>
 
     <!-- Donation options -->
     <string name="github_sponsors">GitHub Sponsors</string>

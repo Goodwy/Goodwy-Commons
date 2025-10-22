@@ -28,6 +28,7 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 fun SimpleScaffoldTopBar(
     modifier: Modifier = Modifier,
     title: String,
+    actions: @Composable RowScope.() -> Unit = {},
     scrolledColor: Color,
     navigationIconInteractionSource: MutableInteractionSource = rememberMutableInteractionSource(),
     scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState()),
@@ -58,7 +59,8 @@ fun SimpleScaffoldTopBar(
         scrollBehavior = scrollBehavior,
         colors = simpleTopAppBarColors(statusBarColor, colorTransitionFraction, contrastColor),
         modifier = modifier.topAppBarPaddings(),
-        windowInsets = topAppBarInsets()
+        windowInsets = topAppBarInsets(),
+        actions = actions,
     )
 }
 
