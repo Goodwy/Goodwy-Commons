@@ -415,9 +415,30 @@ class SimpleContactsHelper(val context: Context) {
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
+    fun getColoredContactIcon(title: String): Drawable {
+        val icon = context.resources.getDrawable(R.drawable.placeholder_contact, context.theme)
+        if (context.baseConfig.useColoredContacts) {
+            val letterBackgroundColors = context.getLetterBackgroundColors()
+            val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()
+            (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+        }
+        return icon
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
     fun getColoredGroupIcon(title: String): Drawable {
-//        val icon = ResourcesCompat.getDrawable(context.resources, R.drawable.ic_group_circle_bg, null)
-        val icon = context.resources.getDrawable(R.drawable.ic_group_circle_bg, context.theme)
+        val icon = context.resources.getDrawable(R.drawable.placeholder_group, context.theme)
+        if (context.baseConfig.useColoredContacts) {
+            val letterBackgroundColors = context.getLetterBackgroundColors()
+            val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()
+            (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+        }
+        return icon
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    fun getColoredCompanyIcon(title: String): Drawable {
+        val icon = context.resources.getDrawable(R.drawable.placeholder_company, context.theme)
         if (context.baseConfig.useColoredContacts) {
             val letterBackgroundColors = context.getLetterBackgroundColors()
             val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()

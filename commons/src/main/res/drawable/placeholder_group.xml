@@ -7,8 +7,6 @@
     </item>
     <item android:id="@+id/attendee_icon"
         android:drawable="@drawable/ic_people_vector"
-        android:bottom="-3dp"
-        android:left="-3dp"
-        android:right="-3dp"
-        android:top="-3dp" />
+        android:height="@dimen/contact_photo_big_size"
+        android:width="@dimen/contact_photo_big_size" />
 </layer-list>
