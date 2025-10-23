@@ -167,8 +167,16 @@ class SimpleContactsHelper(val context: Context) {
             if (isOrganization) {
                 val company = cursor.getStringValue(Organization.COMPANY) ?: ""
                 val jobTitle = cursor.getStringValue(Organization.TITLE) ?: ""
-                if (company.isNotEmpty() || jobTitle.isNotEmpty()) {
+                if (company.isNotBlank() && jobTitle.isNotBlank()) {
                     val fullName = "$company, $jobTitle".trim()
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company, jobTitle)
+                    contacts.add(contact)
+                } else if (company.isNotBlank()) {
+                    val fullName = company.trim()
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company, jobTitle)
+                    contacts.add(contact)
+                } else if (jobTitle.isNotBlank()) {
+                    val fullName = jobTitle.trim()
                     val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList(), company, jobTitle)
                     contacts.add(contact)
                 }

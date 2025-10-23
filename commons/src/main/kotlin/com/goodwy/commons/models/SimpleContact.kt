@@ -130,7 +130,8 @@ data class SimpleContact(
     }
 
     fun isABusinessContact() =
-        (name == company && company.isNotEmpty()) ||
-            (name == "$company, $jobPosition" && company.isNotEmpty() && jobPosition.isNotEmpty())
+        (name == "$company, $jobPosition" && company.isNotBlank() && jobPosition.isNotBlank())
+            || (name == company && company.isNotBlank())
+            || (name == jobPosition && jobPosition.isNotBlank())
 }
 
