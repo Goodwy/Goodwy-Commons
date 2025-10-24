@@ -421,7 +421,7 @@ class SimpleContactsHelper(val context: Context) {
         if (context.baseConfig.useColoredContacts) {
             val letterBackgroundColors = context.getLetterBackgroundColors()
             val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()
-            (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+            (icon as LayerDrawable).findDrawableByLayerId(R.id.placeholder_contact_background).applyColorFilter(bgColor)
         }
         return icon
     }
@@ -432,7 +432,7 @@ class SimpleContactsHelper(val context: Context) {
         if (context.baseConfig.useColoredContacts) {
             val letterBackgroundColors = context.getLetterBackgroundColors()
             val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()
-            (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+            (icon as LayerDrawable).findDrawableByLayerId(R.id.placeholder_group_background).applyColorFilter(bgColor)
         }
         return icon
     }
@@ -443,7 +443,7 @@ class SimpleContactsHelper(val context: Context) {
         if (context.baseConfig.useColoredContacts) {
             val letterBackgroundColors = context.getLetterBackgroundColors()
             val bgColor = letterBackgroundColors[abs(title.hashCode()) % letterBackgroundColors.size].toInt()
-            (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+            (icon as LayerDrawable).findDrawableByLayerId(R.id.placeholder_company_background).applyColorFilter(bgColor)
         }
         return icon
     }
