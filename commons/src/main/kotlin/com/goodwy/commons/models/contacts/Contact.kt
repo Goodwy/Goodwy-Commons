@@ -140,13 +140,12 @@ data class Contact(
         val firstCharType = getCharType(first.first())
         val secondCharType = getCharType(second.first())
 
-        // First, we compare by character type (letters vs. non-letters)
-        if (firstCharType != secondCharType) {
-            return firstCharType.compareTo(secondCharType)
+        // Non-letters come before letters
+        return when {
+            firstCharType == CharType.LETTER && secondCharType == CharType.DIGIT -> -1
+            firstCharType == CharType.DIGIT && secondCharType == CharType.LETTER -> 1
+            else -> collator?.compare(first, second) ?: first.compareTo(second, true)
         }
-
-        // If the type is the same, compare the contents
-        return collator?.compare(first, second) ?: first.compareTo(second, true)
     }
 
     private fun compareWithLettersFirst(first: String, second: String): Int {

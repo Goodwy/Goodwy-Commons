@@ -28,6 +28,7 @@ import java.text.Collator
 import kotlin.math.abs
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.graphics.createBitmap
+import androidx.core.graphics.drawable.toBitmap
 import androidx.core.util.size
 
 class SimpleContactsHelper(val context: Context) {
@@ -481,28 +482,39 @@ class SimpleContactsHelper(val context: Context) {
         }
     }
 
-    fun getShortcutImage(path: String, placeholderName: String, callback: (image: Bitmap) -> Unit) {
+    fun getShortcutImage(path: String, placeholderName: String, isCompany: Boolean, callback: (image: Bitmap) -> Unit) {
         ensureBackgroundThread {
-            val placeholder = getContactLetterIcon(placeholderName).toDrawable(context.resources)
-            try {
-                val options = RequestOptions()
-                    .format(DecodeFormat.PREFER_ARGB_8888)
-                    .diskCacheStrategy(DiskCacheStrategy.NONE)
-                    .error(placeholder)
-                    .centerCrop()
+            if (isCompany) {
+                try {
+                    val bitmap = SimpleContactsHelper(context).getColoredCompanyIcon(path).toBitmap()
+                    callback(bitmap)
+                } catch (_: Exception) {
+                    @SuppressLint("UseCompatLoadingForDrawables")
+                    val placeholder = context.resources.getDrawable( R.drawable.placeholder_company, context.theme).toBitmap()
+                    callback(placeholder)
+                }
+            } else {
+                val placeholder = getContactLetterIcon(placeholderName).toDrawable(context.resources)
+                try {
+                    val options = RequestOptions()
+                        .format(DecodeFormat.PREFER_ARGB_8888)
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .error(placeholder)
+                        .centerCrop()
 
-                val size = context.resources.getDimension(R.dimen.shortcut_size).toInt()
-                val bitmap = Glide.with(context).asBitmap()
-                    .load(path)
-                    .placeholder(placeholder)
-                    .apply(options)
-                    .apply(RequestOptions.circleCropTransform())
-                    .into(size, size)
-                    .get()
+                    val size = context.resources.getDimension(R.dimen.shortcut_size).toInt()
+                    val bitmap = Glide.with(context).asBitmap()
+                        .load(path)
+                        .placeholder(placeholder)
+                        .apply(options)
+                        .apply(RequestOptions.circleCropTransform())
+                        .into(size, size)
+                        .get()
 
-                callback(bitmap)
-            } catch (_: Exception) {
-                callback(placeholder.bitmap)
+                    callback(bitmap)
+                } catch (_: Exception) {
+                    callback(placeholder.bitmap)
+                }
             }
         }
     }
