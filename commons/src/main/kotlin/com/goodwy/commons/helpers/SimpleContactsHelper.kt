@@ -486,7 +486,7 @@ class SimpleContactsHelper(val context: Context) {
         ensureBackgroundThread {
             if (isCompany) {
                 try {
-                    val bitmap = SimpleContactsHelper(context).getColoredCompanyIcon(path).toBitmap()
+                    val bitmap = SimpleContactsHelper(context).getColoredCompanyIcon(placeholderName).toBitmap()
                     callback(bitmap)
                 } catch (_: Exception) {
                     @SuppressLint("UseCompatLoadingForDrawables")
