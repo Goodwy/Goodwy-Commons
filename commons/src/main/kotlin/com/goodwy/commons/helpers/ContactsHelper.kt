@@ -103,7 +103,7 @@ class ContactsHelper(val context: Context) {
             Contact.showNicknameInsteadNames = context.baseConfig.showNicknameInsteadNames
             Contact.sortingSymbolsFirst = context.baseConfig.sortingSymbolsFirst
             Contact.collator = Collator.getInstance(context.sysLocale())
-            System.setProperty("java.util.Arrays.useLegacyMergeSort", "true") //https://stackoverflow.com/questions/11441666/java-error-comparison-method-violates-its-general-contract
+//            System.setProperty("java.util.Arrays.useLegacyMergeSort", "true") //https://stackoverflow.com/questions/11441666/java-error-comparison-method-violates-its-general-contract
             resultContacts.sort()
 
             Handler(Looper.getMainLooper()).post {
@@ -927,7 +927,17 @@ class ContactsHelper(val context: Context) {
     }
 
     private fun parseContactCursor(selection: String, selectionArgs: Array<String>): Contact? {
-        val storedGroups = getStoredGroupsSync()
+        var storedGroups: ArrayList<Group>? = null
+        val latch = java.util.concurrent.CountDownLatch(1)
+
+        ensureBackgroundThread {
+            storedGroups = getStoredGroupsSync()
+            latch.countDown()
+        }
+
+        latch.await() // Waiting for the background task to complete
+        storedGroups = storedGroups ?: ArrayList()
+
         val uri = Data.CONTENT_URI
         val projection = getContactProjection()
 

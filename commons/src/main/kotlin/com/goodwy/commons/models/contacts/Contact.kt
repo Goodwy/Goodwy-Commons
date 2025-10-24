@@ -59,29 +59,17 @@ data class Contact(
     override fun compareTo(other: Contact): Int {
         var result = when {
             sorting and SORT_BY_FIRST_NAME != 0 -> {
-                val firstString = firstName.normalizeString()
-                val secondString = other.firstName.normalizeString()
-                compareUsingStrings(firstString, secondString, other)
+                compareUsingStrings(getCompareStringForFirstName(), other.getCompareStringForFirstName(), other)
             }
-
             sorting and SORT_BY_MIDDLE_NAME != 0 -> {
-                val firstString = middleName.normalizeString()
-                val secondString = other.middleName.normalizeString()
-                compareUsingStrings(firstString, secondString, other)
+                compareUsingStrings(getCompareStringForMiddleName(), other.getCompareStringForMiddleName(), other)
             }
-
             sorting and SORT_BY_SURNAME != 0 -> {
-                val firstString = surname.normalizeString()
-                val secondString = other.surname.normalizeString()
-                compareUsingStrings(firstString, secondString, other)
+                compareUsingStrings(getCompareStringForSurname(), other.getCompareStringForSurname(), other)
             }
-
             sorting and SORT_BY_FULL_NAME != 0 -> {
-                val firstString = getNameToDisplay().normalizeString()
-                val secondString = other.getNameToDisplay().normalizeString()
-                compareUsingStrings(firstString, secondString, other)
+                compareUsingStrings(getCompareStringForFullName(), other.getCompareStringForFullName(), other)
             }
-
             else -> compareUsingIds(other)
         }
 
@@ -92,85 +80,106 @@ data class Contact(
         return result
     }
 
-    private fun compareUsingStrings(firstString: String, secondString: String, other: Contact): Int {
-        var firstValue = firstString
-        var secondValue = secondString
+    private fun getCompareStringForFirstName(): String {
+        val firstNameOrNickname = if (showNicknameInsteadNames && nickname.isNotBlank()) nickname else firstName
+        return if (firstNameOrNickname.isEmpty() && isNameEmpty()) getFallbackCompareString() else firstNameOrNickname.normalizeString()
+    }
 
-        if (firstValue.isEmpty() && firstName.isEmpty() && middleName.isEmpty() && surname.isEmpty()) {
-            val fullCompany = getFullCompany()
-            if (fullCompany.isNotEmpty()) {
-                firstValue = fullCompany.normalizeString()
-            } else if (emails.isNotEmpty()) {
-                firstValue = emails.first().value
-            }
-        }
+    private fun getCompareStringForMiddleName(): String {
+        return if (middleName.isEmpty() && isNameEmpty()) getFallbackCompareString() else middleName.normalizeString()
+    }
 
-        if (secondValue.isEmpty() && other.firstName.isEmpty() && other.middleName.isEmpty() && other.surname.isEmpty()) {
-            val otherFullCompany = other.getFullCompany()
-            if (otherFullCompany.isNotEmpty()) {
-                secondValue = otherFullCompany.normalizeString()
-            } else if (other.emails.isNotEmpty()) {
-                secondValue = other.emails.first().value
-            }
-        }
+    private fun getCompareStringForSurname(): String {
+        return if (surname.isEmpty() && isNameEmpty()) getFallbackCompareString() else surname.normalizeString()
+    }
 
-        try {
-            return if (sortingSymbolsFirst) {
-                //TODO Contacts sorting: symbols at the top
-                if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isDigit() == true) {
-                    -1
-                } else if (firstValue.firstOrNull()?.isDigit() == true && secondValue.firstOrNull()?.isLetter() == true) {
-                    1
-                } else {
-                    if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == true) {
-                        collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
-                    } else {
-                        if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
-                            1
-                        } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
-                            -1
-                        } else {
-                            if (firstValue.equals(secondValue, ignoreCase = true)) {
-                                collator?.compare(getNameToDisplay(), other.getNameToDisplay()) ?: getNameToDisplay().compareTo(other.getNameToDisplay(), true)
-                            } else {
-                                collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
-                            }
-                        }
-                    }
-                }
-            } else {
-                if (firstValue.firstOrNull()?.isLetter() == true && secondValue.firstOrNull()?.isLetter() == false) {
-                    -1
-                } else if (firstValue.firstOrNull()?.isLetter() == false && secondValue.firstOrNull()?.isLetter() == true) {
-                    1
-                } else {
-                    if (firstValue.isEmpty() && secondValue.isNotEmpty()) {
-                        1
-                    } else if (firstValue.isNotEmpty() && secondValue.isEmpty()) {
-                        -1
-                    } else {
-                        if (firstValue.equals(secondValue, ignoreCase = true)) {
-                            collator?.compare(getNameToDisplay(), other.getNameToDisplay()) ?: getNameToDisplay().compareTo(other.getNameToDisplay(), true)
-                        } else {
-                            collator?.compare(firstValue, secondValue) ?: firstValue.compareTo(secondValue, true)
-                        }
-                    }
-                }
-            }
-        } catch (e: Exception) {
-            return 0
+    private fun getCompareStringForFullName(): String {
+        return if (getNameToDisplay().isEmpty()) getFallbackCompareString() else getNameToDisplay().normalizeString()
+    }
+
+    private fun isNameEmpty(): Boolean {
+        val firstNameOrNickname = if (showNicknameInsteadNames && nickname.isNotBlank()) nickname else firstName
+        return firstNameOrNickname.isEmpty() && middleName.isEmpty() && surname.isEmpty()
+    }
+
+    private fun getFallbackCompareString(): String {
+        return when {
+            getFullCompany().isNotEmpty() -> getFullCompany().normalizeString()
+            emails.isNotEmpty() -> emails.first().value.normalizeString()
+            else -> "" // Guarantee a non-null string for comparison
         }
     }
 
+    private fun compareUsingStrings(firstString: String, secondString: String, other: Contact): Int {
+        // First, we compare taking into account sortingSymbolsFirst
+        val primaryComparison = compareStringsWithSymbols(firstString, secondString)
+        if (primaryComparison != 0) {
+            return primaryComparison
+        }
+
+        // If the main strings are equal, we compare by full name for sort stability.
+        return compareStringsWithSymbols(
+            getNameToDisplay().normalizeString(),
+            other.getNameToDisplay().normalizeString()
+        )
+    }
+
+    private fun compareStringsWithSymbols(first: String, second: String): Int {
+        if (first.isEmpty() && second.isEmpty()) return 0
+        if (first.isEmpty()) return 1
+        if (second.isEmpty()) return -1
+
+        return if (sortingSymbolsFirst) {
+            compareWithSymbolsFirst(first, second)
+        } else {
+            compareWithLettersFirst(first, second)
+        }
+    }
+
+    private fun compareWithSymbolsFirst(first: String, second: String): Int {
+        val firstCharType = getCharType(first.first())
+        val secondCharType = getCharType(second.first())
+
+        // First, we compare by character type (letters vs. non-letters)
+        if (firstCharType != secondCharType) {
+            return firstCharType.compareTo(secondCharType)
+        }
+
+        // If the type is the same, compare the contents
+        return collator?.compare(first, second) ?: first.compareTo(second, true)
+    }
+
+    private fun compareWithLettersFirst(first: String, second: String): Int {
+        val firstCharType = getCharType(first.first())
+        val secondCharType = getCharType(second.first())
+
+        // Letters come before non-letters
+        return when {
+            firstCharType == CharType.LETTER && secondCharType != CharType.LETTER -> -1
+            firstCharType != CharType.LETTER && secondCharType == CharType.LETTER -> 1
+            else -> collator?.compare(first, second) ?: first.compareTo(second, true)
+        }
+    }
+
+    private fun getCharType(char: Char): CharType {
+        return when {
+            char.isLetter() -> CharType.LETTER
+            char.isDigit() -> CharType.DIGIT
+            else -> CharType.SYMBOL
+        }
+    }
+
+    private enum class CharType {
+        LETTER, DIGIT, SYMBOL
+    }
+
     private fun compareUsingIds(other: Contact): Int {
-        val firstId = id
-        val secondId = other.id
-        return firstId.compareTo(secondId)
+        return id.compareTo(other.id)
     }
 
     fun getBubbleText(): String {
         return try {
-            val firstName = if (showNicknameInsteadNames && nickname.isNotEmpty()) nickname else firstName
+            val firstName = if (showNicknameInsteadNames && nickname.isNotBlank()) nickname else firstName
             var name = when {
                 isABusinessContact() -> getFullCompany()
                 sorting and SORT_BY_SURNAME != 0 && surname.isNotEmpty() -> surname
@@ -185,7 +194,7 @@ data class Contact(
             }
 
             name
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             ""
         }
     }
@@ -198,7 +207,7 @@ data class Contact(
     }
 
     fun getNameToDisplay(): String {
-        val firstName = if (showNicknameInsteadNames && nickname.isNotEmpty()) nickname else firstName
+        val firstName = if (showNicknameInsteadNames && nickname.isNotBlank()) nickname else firstName
         val firstMiddle = "$firstName $middleName".trim()
         val firstPart = if (startWithSurname) {
             if (surname.isNotEmpty() && firstMiddle.isNotEmpty()) {
@@ -356,7 +365,7 @@ data class Contact(
 
     fun isPrivate() = source == SMT_PRIVATE
 
-    fun getSignatureKey() = if (photoUri.isNotEmpty()) photoUri else hashCode()
+    fun getSignatureKey() = photoUri.ifEmpty { hashCode() }
 
     fun getPrimaryNumber(): String? {
         val primaryNumber = phoneNumbers.firstOrNull { it.isPrimary }
