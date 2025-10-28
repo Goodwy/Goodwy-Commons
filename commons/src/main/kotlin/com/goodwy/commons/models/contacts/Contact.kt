@@ -137,18 +137,28 @@ data class Contact(
     }
 
     private fun compareWithSymbolsFirst(first: String, second: String): Int {
+        if (first.isEmpty() && second.isEmpty()) return 0
+        if (first.isEmpty()) return 1
+        if (second.isEmpty()) return -1
+
         val firstCharType = getCharType(first.first())
         val secondCharType = getCharType(second.first())
 
         // Non-letters come before letters
         return when {
-            firstCharType == CharType.LETTER && secondCharType == CharType.DIGIT -> -1
-            firstCharType == CharType.DIGIT && secondCharType == CharType.LETTER -> 1
+            firstCharType == CharType.LETTER && secondCharType != CharType.LETTER -> 1
+            firstCharType != CharType.LETTER && secondCharType == CharType.LETTER -> -1
+            firstCharType == CharType.DIGIT && secondCharType == CharType.SYMBOL -> 1
+            firstCharType == CharType.SYMBOL && secondCharType == CharType.DIGIT -> -1
             else -> collator?.compare(first, second) ?: first.compareTo(second, true)
         }
     }
 
     private fun compareWithLettersFirst(first: String, second: String): Int {
+        if (first.isEmpty() && second.isEmpty()) return 0
+        if (first.isEmpty()) return 1
+        if (second.isEmpty()) return -1
+
         val firstCharType = getCharType(first.first())
         val secondCharType = getCharType(second.first())
 
@@ -160,8 +170,9 @@ data class Contact(
         }
     }
 
-    private fun getCharType(char: Char): CharType {
+    private fun getCharType(char: Char?): CharType {
         return when {
+            char == null -> CharType.SYMBOL
             char.isLetter() -> CharType.LETTER
             char.isDigit() -> CharType.DIGIT
             else -> CharType.SYMBOL
