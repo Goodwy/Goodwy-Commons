@@ -465,7 +465,7 @@ class ContactsHelper(val context: Context) {
 
         context.queryCursor(uri, projection, selection, selectionArgs, showErrors = true) { cursor ->
             val id = cursor.getIntValue(Data.RAW_CONTACT_ID)
-            val startDate = cursor.getStringValue(CommonDataKinds.Event.START_DATE) ?: return@queryCursor
+            val startDate = cursor.getStringValue(CommonDataKinds.Event.START_DATE) ?: ""
             val type = cursor.getIntValue(CommonDataKinds.Event.TYPE)
             val label = cursor.getStringValue(CommonDataKinds.Event.LABEL) ?: ""
 
