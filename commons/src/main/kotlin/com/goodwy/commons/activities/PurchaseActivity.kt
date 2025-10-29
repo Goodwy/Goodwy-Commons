@@ -557,7 +557,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             else Html.fromHtml(getString(stringsR.string.donate_text_g))
         binding.proDonateButton.apply {
             setOnClickListener {
-                launchViewIntent("https://www.goodwy.dev/support-project")
+                launchViewIntent(getString(R.string.donate_url))
             }
             background.setTint(primaryColor)
         }
