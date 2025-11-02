@@ -4,17 +4,23 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.addCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.auth.AuthPromptHost
 import com.goodwy.commons.R
 import com.goodwy.commons.adapters.AppLockAdapter
 import com.goodwy.commons.databinding.ActivityAppLockBinding
-import com.goodwy.commons.extensions.*
+import com.goodwy.commons.extensions.appLockManager
+import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.getProperBackgroundColor
+import com.goodwy.commons.extensions.getThemeId
+import com.goodwy.commons.extensions.isBiometricAuthSupported
+import com.goodwy.commons.extensions.onGlobalLayout
+import com.goodwy.commons.extensions.overrideActivityTransition
+import com.goodwy.commons.extensions.viewBinding
 import com.goodwy.commons.helpers.PROTECTION_FINGERPRINT
 import com.goodwy.commons.helpers.isRPlus
 import com.goodwy.commons.interfaces.HashListener
 
-class AppLockActivity : AppCompatActivity(), HashListener {
+class AppLockActivity : EdgeToEdgeActivity(), HashListener {
 
     private val binding by viewBinding(ActivityAppLockBinding::inflate)
 
@@ -24,6 +30,7 @@ class AppLockActivity : AppCompatActivity(), HashListener {
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.viewPager))
         onBackPressedDispatcher.addCallback(owner = this) {
             appLockManager.lock()
             finishAffinity()
@@ -75,10 +82,8 @@ class AppLockActivity : AppCompatActivity(), HashListener {
     }
 
     private fun setupTheme() {
-        setTheme(getThemeId(showTransparentTop = true))
+        setTheme(getThemeId())
         with(getProperBackgroundColor()) {
-            window.updateStatusBarColors(this)
-            window.updateNavigationBarColors(this)
             window.decorView.setBackgroundColor(this)
         }
     }

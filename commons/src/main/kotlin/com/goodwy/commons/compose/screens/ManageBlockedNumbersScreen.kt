@@ -541,7 +541,7 @@ private fun ActionModeToolbar(
         title = {
             Box(
                 modifier = Modifier
-                    .fillMaxHeight()
+//                    .fillMaxHeight()
                     .clickable {
                         if (selectedIdsCount == blockedNumbersCount) {
                             onBackClick()

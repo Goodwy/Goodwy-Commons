@@ -5,13 +5,26 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.appbar.MaterialToolbar
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.databinding.MenuSearchBinding
-import com.goodwy.commons.extensions.*
+import com.goodwy.commons.extensions.applyColorFilter
+import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.beVisibleIf
+import com.goodwy.commons.extensions.getColoredMaterialSearchBarColor
+import com.goodwy.commons.extensions.getContrastColor
+import com.goodwy.commons.extensions.getProperBackgroundColor
+import com.goodwy.commons.extensions.getProperPrimaryColor
+import com.goodwy.commons.extensions.getProperTextCursorColor
+import com.goodwy.commons.extensions.getSurfaceColor
+import com.goodwy.commons.extensions.hideKeyboard
+import com.goodwy.commons.extensions.isDynamicTheme
+import com.goodwy.commons.extensions.isSystemInDarkMode
+import com.goodwy.commons.extensions.onTextChangeListener
+import com.goodwy.commons.extensions.showKeyboard
 
-open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
+open class MySearchMenu(context: Context, attrs: AttributeSet) : MyAppBarLayout(context, attrs) {
     var isSearchOpen = false
     var useArrowIcon = false
     var onSearchOpenListener: (() -> Unit)? = null
@@ -22,9 +35,10 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
     var onSpeechToTextClickListener: (() -> Unit)? = null
     var inFocus = false
 
-    val binding = MenuSearchBinding.inflate(LayoutInflater.from(context), this, true)
+    val binding = MenuSearchBinding.inflate(LayoutInflater.from(context), this)
 
-    fun getToolbar() = binding.topToolbar
+    override val toolbar: MaterialToolbar?
+        get() = binding.topToolbar
 
     fun setupMenu() {
         binding.topToolbarSearchIcon.setOnClickListener {
@@ -87,14 +101,9 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
         binding.topToolbarSearch.hint = text
     }
 
-    fun toggleHideOnScroll(hideOnScroll: Boolean) {
-        val params = binding.topAppBarLayout.layoutParams as LayoutParams
-        if (hideOnScroll) {
-            params.scrollFlags = LayoutParams.SCROLL_FLAG_SCROLL or LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
-        } else {
-            params.scrollFlags = params.scrollFlags.removeBit(LayoutParams.SCROLL_FLAG_SCROLL or LayoutParams.SCROLL_FLAG_ENTER_ALWAYS)
-        }
-    }
+    @Suppress("unused", "EmptyFunctionBlock")
+    @Deprecated("This feature is broken for now.")
+    fun toggleHideOnScroll(hideOnScroll: Boolean) {}
 
     fun toggleForceArrowBackIcon(useArrowBack: Boolean) {
         this.useArrowIcon = useArrowBack
@@ -117,14 +126,18 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
         val searchHolderColor = if (scrollOffset == 0) surfaceColor else context.getColoredMaterialSearchBarColor()
 
         setBackgroundColor(background)
-        binding.topAppBarLayout.setBackgroundColor(background)
+        binding.searchBarContainer.setBackgroundColor(background)
         binding.topToolbarSearchIcon.applyColorFilter(contrastColor)
         binding.topToolbarSearchSpeechToText.applyColorFilter(contrastColor)
-        binding.topToolbarSearch.setColors(contrastColor, primaryColor, context.getProperTextCursorColor())
-        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, background)
+        binding.topToolbarSearch.setColors(
+            contrastColor,
+            primaryColor,
+            context.getProperTextCursorColor()
+        )
+        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.appBar, background)
 
-        binding.topToolbarSearchHolder.setBackgroundResource(R.drawable.search_bg)
-        binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(searchHolderColor)
+        binding.toolbarContainer.setBackgroundResource(R.drawable.search_bg)
+        binding.toolbarContainer.backgroundTintList = ColorStateList.valueOf(searchHolderColor)
         binding.topToolbarSearchClear.applyColorFilter(contrastColor)
 
         if (context.baseConfig.topAppBarColorTitle) binding.topToolbar.setTitleTextColor(ColorStateList.valueOf(primaryColor))
@@ -135,7 +148,7 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     fun searchBeVisibleIf(visible: Boolean = true) {
-        binding.topToolbarSearchHolder.beVisibleIf(visible)
+        binding.toolbarContainer.beVisibleIf(visible)
     }
 
     fun requestFocusAndShowKeyboard() {

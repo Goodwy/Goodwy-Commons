@@ -154,21 +154,21 @@ fun ComponentActivity.enableEdgeToEdgeSimple() {
 internal fun TransparentSystemBars(darkIcons: Boolean = !isSystemInDarkTheme()) {
     val systemUiController = rememberSystemUiController()
 
-//    DisposableEffect(systemUiController, darkIcons) {
-//        systemUiController.setSystemBarsColor(
-//            color = Color.Transparent,
-//            darkIcons = darkIcons,
-//            isNavigationBarContrastEnforced = true
-//        )
-//        onDispose { }
-//    }
-    SideEffect {
+    DisposableEffect(systemUiController, darkIcons) {
         systemUiController.setSystemBarsColor(
             color = Color.Transparent,
             darkIcons = darkIcons,
             isNavigationBarContrastEnforced = true
         )
+        onDispose { }
     }
+//    SideEffect {
+//        systemUiController.setSystemBarsColor(
+//            color = Color.Transparent,
+//            darkIcons = darkIcons,
+//            isNavigationBarContrastEnforced = true
+//        )
+//    }
 }
 
 @Composable

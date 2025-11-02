@@ -4,18 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/purchase_coordinator"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/purchase_app_bar_layout"
+        android:id="@+id/purchaseAppBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar"
+            android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/purchase_toolbar"
@@ -38,7 +41,7 @@
         android:id="@+id/purchase_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/purchase_app_bar_layout"
+        android:layout_below="@+id/purchaseAppBarLayout"
         android:fillViewport="true"
         android:scrollbars="none"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -110,7 +113,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_two_button"
@@ -131,7 +134,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_three_button"
@@ -152,7 +155,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -197,7 +200,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_two_sub_button"
@@ -218,7 +221,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_three_sub_button"
@@ -239,7 +242,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -286,7 +289,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_two_sub_year_button"
@@ -307,7 +310,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_three_sub_year_button"
@@ -328,12 +331,12 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
-                        tools:ignore="SmallSp" />
+                        tools:ignore="HardcodedText,SmallSp" />
                 </RelativeLayout>
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/theme_holder"
+                android:id="@+id/themeHolder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pay_app"
@@ -349,6 +352,7 @@
                     android:layout_marginBottom="@dimen/activity_margin"
                     android:src="@drawable/ic_invert_colors"
                     android:tint="@color/color_primary"
+                    android:contentDescription="@string/themes"
                     tools:ignore="UseAppTint" />
 
                 <RelativeLayout
@@ -376,17 +380,15 @@
                         android:background="@null"
                         android:clickable="false"
                         android:text="@string/themes_summary"
-                        android:textSize="12sp"/>
-
+                        android:textSize="12sp" />
                 </RelativeLayout>
-
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/color_holder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/theme_holder"
+                android:layout_below="@+id/themeHolder"
                 android:layout_marginTop="@dimen/normal_margin"
                 android:layout_marginHorizontal="@dimen/about_margin">
 
@@ -399,6 +401,7 @@
                     android:layout_marginBottom="@dimen/activity_margin"
                     android:src="@drawable/ic_palette"
                     android:tint="@color/color_primary"
+                    android:contentDescription="@string/color_title"
                     tools:ignore="UseAppTint" />
 
                 <RelativeLayout
@@ -450,6 +453,7 @@
                     android:padding="5dp"
                     android:src="@drawable/ic_plus_round"
                     android:tint="@color/color_primary"
+                    android:contentDescription="@string/plus_title"
                     tools:ignore="UseAppTint" />
 
                 <RelativeLayout
@@ -478,9 +482,7 @@
                         android:clickable="false"
                         android:text="@string/plus_summary"
                         android:textSize="12sp"/>
-
                 </RelativeLayout>
-
             </RelativeLayout>
 
             <RelativeLayout
@@ -501,6 +503,7 @@
                     android:padding="5dp"
                     android:src="@drawable/ic_lifebuoy"
                     android:tint="@color/color_primary"
+                    android:contentDescription="@string/lifebuoy_title"
                     tools:ignore="UseAppTint" />
 
                 <RelativeLayout
@@ -543,10 +546,9 @@
                         android:layout_alignBottom="@+id/lifebuoy_summary"
                         android:alpha="0.6"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/ic_mail_vector" />
-
+                        android:src="@drawable/ic_mail_vector"
+                        android:contentDescription="@string/lifebuoy_title" />
                 </RelativeLayout>
-
             </RelativeLayout>
 
             <RelativeLayout
@@ -568,6 +570,7 @@
                     android:layout_marginBottom="@dimen/activity_margin"
                     android:padding="5dp"
                     android:src="@drawable/ic_award"
+                    android:contentDescription="@string/collection"
                     tools:ignore="UseAppTint" />
 
                 <RelativeLayout
@@ -626,7 +629,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginEnd="@dimen/normal_margin"
                         android:alpha="0.6"
-                        android:src="@drawable/ic_chevron_right_vector" />
+                        android:src="@drawable/ic_chevron_right_vector"
+                        android:contentDescription="@null" />
 
                 </RelativeLayout>
 
@@ -640,7 +644,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/big_margin"
                 android:layout_marginBottom="48dp"
-                android:src="@drawable/logo_goodwy"/>
+                android:src="@drawable/logo_goodwy"
+                android:contentDescription="@null" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 

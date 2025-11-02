@@ -13,7 +13,7 @@
             android:id="@+id/dialog_tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/smaller_margin">
+            android:paddingTop="@dimen/medium_margin">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
@@ -24,7 +24,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/pin"/>
-
         </com.google.android.material.tabs.TabLayout>
 
         <com.goodwy.commons.views.MyDialogViewPager
@@ -32,6 +31,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dialog_tab_layout"/>
-
     </RelativeLayout>
 </com.goodwy.commons.views.MyScrollView>

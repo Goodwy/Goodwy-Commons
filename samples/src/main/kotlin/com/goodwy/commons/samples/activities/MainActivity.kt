@@ -29,7 +29,6 @@ import com.goodwy.commons.samples.screens.MainScreen
 
 class MainActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         appLaunched(BuildConfig.APPLICATION_ID)
         enableEdgeToEdgeSimple()

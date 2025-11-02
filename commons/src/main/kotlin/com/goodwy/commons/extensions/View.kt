@@ -4,7 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.HapticFeedbackConstants
 import android.view.View
+import android.view.ViewGroup
 import android.view.ViewTreeObserver
+import androidx.annotation.Px
+import androidx.core.view.marginBottom
+import androidx.core.view.marginLeft
+import androidx.core.view.marginRight
+import androidx.core.view.marginTop
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
 import com.goodwy.commons.R
 import com.goodwy.commons.helpers.SHORT_ANIMATION_DURATION
 
@@ -84,4 +92,55 @@ fun View.setHeightAndWidth(size: Int) {
     lp.height = size
     lp.width = size
     layoutParams = lp
+}
+
+fun View.ensureBasePadding(): IntArray {
+    val key = R.id.tag_base_padding
+    val base = getTag(key) as? IntArray
+    if (base != null) return base
+    val arr = intArrayOf(paddingLeft, paddingTop, paddingRight, paddingBottom)
+    setTag(key, arr)
+    return arr
+}
+
+fun View.updatePaddingWithBase(
+    @Px left: Int = 0,
+    @Px top: Int = 0,
+    @Px right: Int = 0,
+    @Px bottom: Int = 0,
+) {
+    val base = ensureBasePadding()
+    updatePadding(
+        left = base[0] + left,
+        top = base[1] + top,
+        right = base[2] + right,
+        bottom = base.last() + bottom
+    )
+}
+
+fun View.ensureBaseMargin(): IntArray {
+    val key = R.id.tag_base_margin
+    val base = getTag(key) as? IntArray
+    if (base != null) return base
+    val arr = intArrayOf(marginLeft, marginTop, marginRight, marginBottom)
+    setTag(key, arr)
+    return arr
+}
+
+fun View.updateMarginWithBase(
+    @Px left: Int = 0,
+    @Px top: Int = 0,
+    @Px right: Int = 0,
+    @Px bottom: Int = 0,
+) {
+    val base = ensureBaseMargin()
+    try {
+        updateLayoutParams<ViewGroup.MarginLayoutParams> {
+            leftMargin = base[0] + left
+            topMargin = base[1] + top
+            rightMargin = base[2] + right
+            bottomMargin = base.last() + bottom
+        }
+    } catch (ignored: ClassCastException) {
+    }
 }

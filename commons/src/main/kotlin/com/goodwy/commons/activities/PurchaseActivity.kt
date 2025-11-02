@@ -5,6 +5,8 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.*
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Html
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
@@ -23,6 +25,7 @@ import com.goodwy.commons.helpers.rustore.RuStoreModule
 import com.goodwy.commons.helpers.rustore.model.BillingEvent
 import com.goodwy.commons.helpers.rustore.model.BillingState
 import com.goodwy.commons.helpers.rustore.model.StartPurchasesEvent
+import com.goodwy.commons.models.MyTheme
 import com.goodwy.commons.models.SimpleListItem
 import com.goodwy.strings.R as stringsR
 import kotlinx.coroutines.*
@@ -32,6 +35,19 @@ import ru.rustore.sdk.core.exception.RuStoreException
 import ru.rustore.sdk.core.feature.model.FeatureAvailabilityResult
 
 class PurchaseActivity : BaseSimpleActivity() {
+
+    private var firstVersionClickTS = 0L
+    private var clicksSinceFirstClick = 0
+
+    companion object {
+        private const val EASTER_EGG_TIME_LIMIT = 8000L
+        private const val EASTER_EGG_REQUIRED_CLICKS = 7
+        private const val EASTER_EGG_REQUIRED_CLICKS_NEXT = 10
+        private const val THEME_LIGHT = 0
+        private const val THEME_DARK = 1
+        private const val THEME_BLACK = 2
+        private const val THEME_GRAY = 3
+    }
 
     private var appName = ""
     private var primaryColor = 0
@@ -45,6 +61,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var playStoreInstalled = true
     private var ruStoreInstalled = false
     private var showCollection = false
+    private val predefinedThemes = LinkedHashMap<Int, MyTheme>()
 
     private var ruStoreIsConnected = false
 
@@ -61,7 +78,6 @@ class PurchaseActivity : BaseSimpleActivity() {
     private val binding by viewBinding(ActivityPurchaseBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = false
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appName = intent.getStringExtra(APP_NAME) ?: ""
@@ -77,19 +93,12 @@ class PurchaseActivity : BaseSimpleActivity() {
         ruStoreInstalled = intent.getBooleanExtra(RU_STORE, false)
         showCollection = intent.getBooleanExtra(SHOW_COLLECTION, false)
 
-
         if (ruStoreInstalled) {
             ruStoreHelper = RuStoreHelper()
             ruStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
         }
         if (savedInstanceState == null && ruStoreInstalled) {
             ruStoreBillingClient!!.onNewIntent(intent)
-        }
-
-        // TODO TRANSPARENT Navigation Bar
-        setWindowTransparency(true) { _, _, leftNavigationBarSize, rightNavigationBarSize ->
-            binding.purchaseCoordinator.setPadding(leftNavigationBarSize, 0, rightNavigationBarSize, 0)
-            updateNavigationBarColor(getProperBackgroundColor())
         }
 
         arrayOf(
@@ -220,13 +229,17 @@ class PurchaseActivity : BaseSimpleActivity() {
         super.onResume()
         updateTextColors(binding.purchaseCoordinator)
         setupOptionsMenu()
-        setupToolbar(binding.purchaseToolbar, NavigationIcon.Arrow)
+
         val backgroundColor = getProperBackgroundColor()
+        setupToolbar(binding.purchaseToolbar, NavigationIcon.Arrow)
+        updateToolbarColors(binding.purchaseToolbar, backgroundColor, useOverflowIcon = false)
+        binding.purchaseAppBarLayout.setBackgroundColor(backgroundColor)
         binding.collapsingToolbar.setBackgroundColor(backgroundColor)
-        updateTopBarColors(binding.purchaseToolbar, backgroundColor, useOverflowIcon = false)
 
         setupChangeStoreMenu()
+        setupTheme()
         setupEmail()
+
         if (showCollection) setupCollection()
         if ((!resources.getBoolean(R.bool.using_no_gp) && playStoreInstalled) || ruStoreInstalled) {
             setupIcon()
@@ -289,6 +302,12 @@ class PurchaseActivity : BaseSimpleActivity() {
                 }
                 true
             }
+        }
+    }
+
+    private fun setupTheme() {
+        binding.themeHolder.setOnClickListener {
+            onThemeClick()
         }
     }
 
@@ -917,6 +936,91 @@ class PurchaseActivity : BaseSimpleActivity() {
                 }
                 showErrorToast(event.error.message.orEmpty(), Toast.LENGTH_LONG)
             }
+        }
+    }
+
+    private fun onThemeClick() {
+        if (firstVersionClickTS == 0L) {
+            firstVersionClickTS = System.currentTimeMillis()
+            Handler(Looper.getMainLooper()).postDelayed({
+                firstVersionClickTS = 0L
+                clicksSinceFirstClick = 0
+            }, EASTER_EGG_TIME_LIMIT)
+        }
+
+        clicksSinceFirstClick++
+        if (clicksSinceFirstClick == EASTER_EGG_REQUIRED_CLICKS) {
+            toast(R.string.hello)
+        } else if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS_NEXT && !isPro()) {
+            firstVersionClickTS = 0L
+            clicksSinceFirstClick = 0
+            toast("You hacked the system ;(")
+
+            if (!isAutoTheme() && !isDynamicTheme()) {
+                val themeId = when {
+                    isLightTheme() -> THEME_GRAY
+                    isGrayTheme() -> THEME_DARK
+                    isDarkTheme() -> THEME_BLACK
+                    else -> THEME_LIGHT
+                }
+                updateTheme(themeId)
+            }
+        }
+    }
+
+    private fun updateTheme(themeId: Int) {
+        setupThemes()
+        val theme = predefinedThemes[themeId]!!
+        baseConfig.textColor = getColor(theme.textColorId)
+        baseConfig.backgroundColor = getColor(theme.backgroundColorId)
+        baseConfig.primaryColor = getColor(theme.primaryColorId)
+
+        setTheme(getThemeId(baseConfig.customPrimaryColor))
+        recreate()
+    }
+
+    private fun setupThemes() {
+        predefinedThemes.apply {
+            put(
+                THEME_LIGHT,
+                MyTheme(
+                    labelId = R.string.light_theme,
+                    textColorId = R.color.theme_light_text_color,
+                    backgroundColorId = R.color.theme_light_background_color,
+                    primaryColorId = R.color.color_primary,
+                    appIconColorId = baseConfig.customAppIconColor
+                )
+            )
+            put(
+                THEME_GRAY,
+                MyTheme(
+                    labelId = stringsR.string.gray_theme,
+                    textColorId = R.color.theme_gray_text_color,
+                    backgroundColorId = R.color.theme_gray_background_color,
+                    primaryColorId = R.color.color_primary,
+                    appIconColorId = baseConfig.customAppIconColor
+                )
+            )
+            put(
+                THEME_DARK,
+                MyTheme(
+                    labelId = R.string.dark_theme,
+                    textColorId = R.color.theme_dark_text_color,
+                    backgroundColorId = R.color.theme_dark_background_color,
+                    primaryColorId = R.color.color_primary,
+                    appIconColorId = baseConfig.customAppIconColor
+                )
+            )
+            put(
+                THEME_BLACK,
+                MyTheme(
+                    labelId = stringsR.string.black,
+                    textColorId = R.color.theme_black_text_color,
+                    backgroundColorId = R.color.theme_black_background_color,
+                    primaryColorId = R.color.color_primary,
+                    appIconColorId = baseConfig.customAppIconColor
+                )
+            )
         }
     }
 }

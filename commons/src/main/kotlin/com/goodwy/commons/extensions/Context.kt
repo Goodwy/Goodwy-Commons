@@ -57,6 +57,7 @@ import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.net.toUri
 import androidx.core.os.bundleOf
 import androidx.exifinterface.media.ExifInterface
 import androidx.loader.content.CursorLoader
@@ -77,12 +78,11 @@ import java.io.InputStreamReader
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import androidx.core.net.toUri
+import java.util.concurrent.TimeUnit
+import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.joda.time.DateTimeConstants
-import java.util.concurrent.TimeUnit
-import kotlin.math.roundToInt
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -722,7 +722,11 @@ fun Context.getDefaultAlarmSound(type: Int) = AlarmSound(0, getDefaultAlarmTitle
 fun Context.grantReadUriPermission(uriString: String) {
     try {
         // ensure custom reminder sounds play well
-        grantUriPermission("com.android.systemui", uriString.toUri(), Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        grantUriPermission(
+            "com.android.systemui",
+            uriString.toUri(),
+            Intent.FLAG_GRANT_READ_URI_PERMISSION
+        )
     } catch (_: Exception) {
     }
 }
@@ -862,7 +866,7 @@ fun Context.getDuration(path: String): Int? {
         val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         cursor?.use {
             if (cursor.moveToFirst()) {
-                return (cursor.getIntValue(MediaColumns.DURATION) / 1000.toDouble()).roundToInt().toInt()
+                return (cursor.getIntValue(MediaColumns.DURATION) / 1000.toDouble()).roundToInt()
             }
         }
     } catch (_: Exception) {
@@ -1013,47 +1017,6 @@ val Context.notificationManager: NotificationManager get() = getSystemService(Co
 val Context.shortcutManager: ShortcutManager get() = getSystemService(ShortcutManager::class.java) as ShortcutManager
 
 val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
-val Context.navigationBarOnSide: Boolean get() = usableScreenSize.x < realScreenSize.x && usableScreenSize.x > usableScreenSize.y
-val Context.navigationBarOnBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
-val Context.navigationBarHeight: Int get() = if (navigationBarOnBottom && navigationBarSize.y != usableScreenSize.y) navigationBarSize.y else 0
-val Context.navigationBarWidth: Int get() = if (navigationBarOnSide) navigationBarSize.x else 0
-
-val Context.navigationBarSize: Point
-    get() = when {
-        navigationBarOnSide -> Point(newNavigationBarHeight, usableScreenSize.y)
-        navigationBarOnBottom -> Point(usableScreenSize.x, newNavigationBarHeight)
-        else -> Point()
-    }
-
-val Context.newNavigationBarHeight: Int
-    @SuppressLint("InternalInsetResource", "DiscouragedApi")
-    get() {
-        var navigationBarHeight = 0
-        val resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android")
-        if (resourceId > 0) {
-            navigationBarHeight = resources.getDimensionPixelSize(resourceId)
-        }
-        return navigationBarHeight
-    }
-
-val Context.statusBarHeight: Int
-    @SuppressLint("InternalInsetResource", "DiscouragedApi")
-    get() {
-        var statusBarHeight = 0
-        val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
-        if (resourceId > 0) {
-            statusBarHeight = resources.getDimensionPixelSize(resourceId)
-        }
-        return statusBarHeight
-    }
-
-val Context.actionBarHeight: Int
-    get() {
-        val styledAttributes = theme.obtainStyledAttributes(intArrayOf(android.R.attr.actionBarSize))
-        val actionBarHeight = styledAttributes.getDimension(0, 0f)
-        styledAttributes.recycle()
-        return actionBarHeight.toInt()
-    }
 
 val Context.usableScreenSize: Point
     get() {
@@ -1068,20 +1031,6 @@ val Context.realScreenSize: Point
         windowManager.defaultDisplay.getRealSize(size)
         return size
     }
-
-@SuppressLint("DiscouragedApi")
-fun Context.isUsingGestureNavigation(): Boolean {
-    return try {
-        val resourceId = resources.getIdentifier("config_navBarInteractionMode", "integer", "android")
-        if (resourceId > 0) {
-            resources.getInteger(resourceId) == 2
-        } else {
-            false
-        }
-    } catch (_: Exception) {
-        false
-    }
-}
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
 fun Context.isDefaultDialer(): Boolean {

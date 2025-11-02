@@ -77,7 +77,7 @@ fun ConfirmationAdvancedAlertDialog(
     androidx.compose.material3.AlertDialog(
         containerColor = dialogContainerColor,
         modifier = modifier
-            .dialogBorder,
+            .dialogBorder(),
         properties = DialogProperties(dismissOnClickOutside = cancelOnTouchOutside),
         onDismissRequest = {
             alertDialogState.hide()

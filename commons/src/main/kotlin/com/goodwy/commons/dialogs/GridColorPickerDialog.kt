@@ -2,6 +2,7 @@ package com.goodwy.commons.dialogs
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Color
 import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.annotation.ColorInt
@@ -22,7 +23,6 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.DialogWindowProvider
 import androidx.core.content.ContextCompat
 import androidx.core.view.updateLayoutParams
-import com.google.android.material.appbar.MaterialToolbar
 import com.goodwy.commons.R
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.compose.alert_dialog.AlertDialogState
@@ -35,25 +35,39 @@ import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.databinding.DialogGridColorPickerBinding
 import com.goodwy.commons.extensions.*
 import com.goodwy.commons.interfaces.LineColorPickerListener
-import com.goodwy.strings.R as stringsR
+import com.goodwy.commons.views.MyAppBarLayout
 
-class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val colorBackground: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.line_00,
-                            val primaryColors50: Int = R.array.line_10, val primaryColors100: Int = R.array.line_20, val primaryColors200: Int = R.array.line_30,
-                            val primaryColors300: Int = R.array.line_40, val primaryColors400: Int = R.array.line_50, val primaryColors500: Int = R.array.line_60,
-                            val primaryColors600: Int = R.array.line_70, val primaryColors700: Int = R.array.line_80, val primaryColors800: Int = R.array.line_90,
-                            val appIconIDs: ArrayList<Int>? = null, val toolbar: MaterialToolbar? = null, val title: String = activity.resources.getString(stringsR.string.color_title), val removeDimmedBackground: Boolean = false,
-                            showUseDefaultButton: Boolean = false, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
-
-    private val PRIMARY_COLORS_COUNT = 12
-    private val DEFAULT_PRIMARY_COLOR_INDEX = 5 //TODO DEFAULT PRIMARY COLOR CURSOR
-    private val DEFAULT_SECONDARY_COLOR_INDEX = 5
-    private val DEFAULT_COLOR_VALUE = activity.resources.getColor(R.color.color_primary)
-    private val backgroundColor = activity.baseConfig.backgroundColor
-    private var LINE_COLOR_INDEX = 2
+class GridColorPickerDialog(
+    val activity: BaseSimpleActivity,
+    val color: Int,
+    val colorBackground: Int,
+    val isPrimaryColorPicker: Boolean,
+    val primaryColors: Int = R.array.line_00,
+    val primaryColors50: Int = R.array.line_10,
+    val primaryColors100: Int = R.array.line_20,
+    val primaryColors200: Int = R.array.line_30,
+    val primaryColors300: Int = R.array.line_40,
+    val primaryColors400: Int = R.array.line_50,
+    val primaryColors500: Int = R.array.line_60,
+    val primaryColors600: Int = R.array.line_70,
+    val primaryColors700: Int = R.array.line_80,
+    val primaryColors800: Int = R.array.line_90,
+    val appIconIDs: ArrayList<Int>? = null,
+    val appBar: MyAppBarLayout? = null,
+    val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
+) {
+    companion object {
+        private val PRIMARY_COLORS_COUNT = 12
+        private val DEFAULT_PRIMARY_COLOR_INDEX = 5 //TODO DEFAULT PRIMARY COLOR CURSOR
+        private val DEFAULT_SECONDARY_COLOR_INDEX = 5
+        private var LINE_COLOR_INDEX = 2
+    }
 
     private var wasDimmedBackgroundRemoved = false
     private var dialog: AlertDialog? = null
     private var view = DialogGridColorPickerBinding.inflate(activity.layoutInflater, null, false)
+    private val defaultColorValue = activity.resources.getColor(R.color.color_primary)
+    private val backgroundColor = activity.baseConfig.backgroundColor
 
     init {
         view.apply {
@@ -63,7 +77,7 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
                 true
             }
 
-            gridColorTitle.text = title
+            gridColorTitle.text = activity.resources.getString(R.string.primary_color)
             gridColorCancel.applyColorFilter(activity.baseConfig.textColor)
             gridColorCancel.setOnClickListener { dialog?.dismiss() }
 
@@ -233,9 +247,7 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
 //            .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
 //            .setOnCancelListener { dialogDismissed() }
 //            .apply {
-//                if (showUseDefaultButton) {
-//                    setNeutralButton(R.string.use_default) { dialog, which -> useDefault() }
-//                }
+//                setNeutralButton(R.string.use_default) { dialog, which -> useDefault() }
 //                activity.setupDialogStuff(view.root, this) { alertDialog ->
 //                    dialog = alertDialog
 //                }
@@ -246,9 +258,7 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
             .setOnCancelListener { dialogDismissed() }
             .apply {
-                if (showUseDefaultButton) {
-                    setNeutralButton(R.string.default_color) { _, _ -> useDefault() }
-                }
+                setNeutralButton(R.string.default_color) { _, _ -> useDefault() }
                 activity.setupDialogStuff(view.root, this) { alertDialog ->
                     dialog = alertDialog
                 }
@@ -262,11 +272,11 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         view.gridColorNewColor.setFillWithStrokeRight(color, backgroundColor)
         if (isPrimaryColorPicker) {
 
-            if (toolbar != null) {
-                activity.updateTopBarColors(toolbar, colorBackground, color)
+            if (appBar != null) {
+                activity.updateTopBarColors(appBar, colorBackground, color)
             }
 
-            if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {
+            if (!wasDimmedBackgroundRemoved) {
                 dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
                 wasDimmedBackgroundRemoved = true
             }
@@ -274,7 +284,7 @@ class GridColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
     }
 
     private fun getColorIndexes(color: Int): Pair<Int, Int> {
-        if (color == DEFAULT_COLOR_VALUE) {
+        if (color == defaultColorValue) {
             return getDefaultColorPair()
         }
 
@@ -565,7 +575,7 @@ private fun Context.getColors(id: Int) = resources.getIntArray(id).toCollection(
 @SuppressLint("ResourceAsColor")
 @Composable
 @MyDevices
-private fun LineColorPickerAlertDialogPreview() {
+private fun GridColorPickerAlertDialogPreview() {
     AppThemeSurface {
         GridColorPickerAlertDialog(alertDialogState = rememberAlertDialogState(),
             color = R.color.color_primary,

@@ -106,7 +106,8 @@ object BlurFactory {
         var dest: Rect
 
         // assume all of the src bitmaps are the same height & width
-        wideBmp = createBitmap(outer.width, outer.height, outer.config)
+        val config = outer.config ?: Bitmap.Config.ARGB_8888
+        wideBmp = createBitmap(outer.width, outer.height, config)
         wideBmpCanvas = Canvas(wideBmp)
         src = Rect(0, 0, outer.width, outer.height)
         dest = Rect(src)

@@ -2,8 +2,8 @@ package com.goodwy.commons.dialogs
 
 import android.os.Environment
 import android.os.Parcelable
-import android.view.KeyEvent
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.documentfile.provider.DocumentFile
@@ -13,7 +13,39 @@ import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.adapters.FilepickerFavoritesAdapter
 import com.goodwy.commons.adapters.FilepickerItemsAdapter
 import com.goodwy.commons.databinding.DialogFilepickerBinding
-import com.goodwy.commons.extensions.*
+import com.goodwy.commons.extensions.areSystemAnimationsEnabled
+import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.beGone
+import com.goodwy.commons.extensions.beVisible
+import com.goodwy.commons.extensions.beVisibleIf
+import com.goodwy.commons.extensions.getAlertDialogBuilder
+import com.goodwy.commons.extensions.getAndroidSAFFileItems
+import com.goodwy.commons.extensions.getColoredDrawableWithColor
+import com.goodwy.commons.extensions.getContrastColor
+import com.goodwy.commons.extensions.getDirectChildrenCount
+import com.goodwy.commons.extensions.getDoesFilePathExist
+import com.goodwy.commons.extensions.getFilenameFromPath
+import com.goodwy.commons.extensions.getFolderLastModifieds
+import com.goodwy.commons.extensions.getIsPathDirectory
+import com.goodwy.commons.extensions.getOTGItems
+import com.goodwy.commons.extensions.getParentPath
+import com.goodwy.commons.extensions.getProperPrimaryColor
+import com.goodwy.commons.extensions.getProperTextColor
+import com.goodwy.commons.extensions.getSomeAndroidSAFDocument
+import com.goodwy.commons.extensions.getSomeDocumentFile
+import com.goodwy.commons.extensions.getSomeDocumentSdk30
+import com.goodwy.commons.extensions.getTextSize
+import com.goodwy.commons.extensions.handleHiddenFolderPasswordProtection
+import com.goodwy.commons.extensions.handleLockedFolderOpening
+import com.goodwy.commons.extensions.internalStoragePath
+import com.goodwy.commons.extensions.isAccessibleWithSAFSdk30
+import com.goodwy.commons.extensions.isInDownloadDir
+import com.goodwy.commons.extensions.isPathOnOTG
+import com.goodwy.commons.extensions.isRestrictedSAFOnlyRoot
+import com.goodwy.commons.extensions.isRestrictedWithSAFSdk30
+import com.goodwy.commons.extensions.isVisible
+import com.goodwy.commons.extensions.setupDialogStuff
+import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.helpers.ensureBackgroundThread
 import com.goodwy.commons.models.FileDirItem
 import com.goodwy.commons.views.Breadcrumbs
@@ -77,19 +109,6 @@ class FilePickerDialog(
 
         val builder = activity.getAlertDialogBuilder()
             .setNegativeButton(R.string.cancel, null)
-            .setOnKeyListener { dialogInterface, i, keyEvent ->
-                if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
-                    val breadcrumbs = mDialogView.filepickerBreadcrumbs
-                    if (breadcrumbs.getItemCount() > 1) {
-                        breadcrumbs.removeBreadcrumb()
-                        currPath = breadcrumbs.getLastItem().path.trimEnd('/')
-                        tryUpdateItems()
-                    } else {
-                        mDialog?.dismiss()
-                    }
-                }
-                true
-            }
 
         if (!pickFile) {
             builder.setPositiveButton(R.string.ok, null)
@@ -135,6 +154,17 @@ class FilePickerDialog(
         builder.apply {
             activity.setupDialogStuff(mDialogView.root, this, getTitle()) { alertDialog ->
                 mDialog = alertDialog
+                alertDialog.onBackPressedDispatcher.addCallback(alertDialog) {
+                    val breadcrumbs = mDialogView.filepickerBreadcrumbs
+                    if (breadcrumbs.getItemCount() > 1) {
+                        breadcrumbs.removeBreadcrumb()
+                        currPath = breadcrumbs.getLastItem().path.trimEnd('/')
+                        tryUpdateItems()
+                    } else {
+                        isEnabled = false
+                        alertDialog.onBackPressedDispatcher.onBackPressed()
+                    }
+                }
             }
         }
 

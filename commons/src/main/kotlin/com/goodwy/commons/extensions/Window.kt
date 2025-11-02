@@ -2,44 +2,33 @@ package com.goodwy.commons.extensions
 
 import android.view.View
 import android.view.Window
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.goodwy.commons.helpers.DARK_GREY
 
-fun Window.updateStatusBarColors(backgroundColor: Int) {
-    if (statusBarColor == backgroundColor) {
-        return
-    }
-    statusBarColor = backgroundColor
-    updateStatusBarForegroundColor(backgroundColor)
+fun Window.insetsController(view: View? = null): WindowInsetsControllerCompat {
+    return WindowInsetsControllerCompat(this, view ?: decorView)
 }
 
-fun Window.updateStatusBarForegroundColor(backgroundColor: Int) {
-    val shouldBeLight = backgroundColor.getContrastColor() == DARK_GREY
-
-    decorView.post {
-        if (shouldBeLight) {
-            decorView.systemUiVisibility = decorView.systemUiVisibility or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        } else {
-            decorView.systemUiVisibility = decorView.systemUiVisibility and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR.inv()
-        }
+fun Window.setSystemBarsAppearance(backgroundColor: Int) {
+    val isLightBackground = backgroundColor.getContrastColor() == DARK_GREY
+    insetsController().apply {
+        isAppearanceLightStatusBars = isLightBackground
+        isAppearanceLightNavigationBars = isLightBackground
     }
 }
 
-fun Window.updateNavigationBarColors(backgroundColor: Int) {
-    if (navigationBarColor == backgroundColor) {
-        return
-    }
-    navigationBarColor = backgroundColor
-    updateNavigationBarForegroundColor(backgroundColor)
+fun Window.showBars() = insetsController().apply {
+    systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_DEFAULT
+    show(WindowInsetsCompat.Type.systemBars())
 }
 
-fun Window.updateNavigationBarForegroundColor(backgroundColor: Int) {
-    val shouldBeLight = backgroundColor.getContrastColor() == DARK_GREY
-
-    decorView.post {
-        if (shouldBeLight) {
-            decorView.systemUiVisibility = decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-        } else {
-            decorView.systemUiVisibility = decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-        }
+fun Window.hideBars(transient: Boolean = true) = insetsController().apply {
+    systemBarsBehavior = if (transient) {
+        WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+    } else {
+        WindowInsetsControllerCompat.BEHAVIOR_DEFAULT
     }
+
+    hide(WindowInsetsCompat.Type.systemBars())
 }

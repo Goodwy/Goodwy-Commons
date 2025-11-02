@@ -1,22 +1,22 @@
 [versions]
 #jetbrains
-kotlin = "2.2.20"
+kotlin = "2.2.21"
 kotlin-immutable-collections = "0.4.0"
 #KSP
 kotlinxSerializationJson = "1.9.0"
-ksp = "2.2.20-2.0.4"
+ksp = "2.3.0"
 #Detekt
 detekt = "1.23.8"
 detektCompose = "0.4.27"
 #Androidx
 androidx-customView = "1.2.0"
 androidx-customViewPooling = "1.1.0"
-androidx-lifecycle = "2.8.7"
+androidx-lifecycle = "2.9.4"
 androidx-constraintlayout = "2.2.1"
 androidx-documentfile = "1.1.0"
-androidx-biometricKtx = "1.2.0-alpha05"
+androidx-biometricKtx = "1.4.0-alpha02"
 androidx-exifinterface = "1.4.1"
-androidx-coreKtx = "1.13.1"
+androidx-coreKtx = "1.17.0"
 androidx-appcompat = "1.7.1"
 androidx-swiperefreshlayout = "1.1.0"
 #Material
@@ -30,14 +30,14 @@ recyclerviewFastscroller = "1b9ae542b9"
 #rtlViewpager
 rtlViewpager = "2.0.2"
 #Compose
-composeActivity = "1.9.3"
+composeActivity = "1.11.0"
 compose = "1.7.6"
-composeMaterial3 = "1.3.2"
+composeMaterial3 = "1.4.0"
 #Glide
 glide = "5.0.5"
 glideCompose = "1.0.0-beta08"
 #Room
-room = "2.8.2"
+room = "2.8.3"
 #ezVcard
 ezVcard = "0.12.1"
 #gson
@@ -54,8 +54,8 @@ persianDate = "1.7.1"
 #Gradle
 gradlePlugins-agp = "8.11.1"
 #build
-app-build-compileSDKVersion = "34"
-app-build-targetSDK = "34"
+app-build-compileSDKVersion = "36"
+app-build-targetSDK = "36"
 app-build-minimumSDK = "26"
 app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"

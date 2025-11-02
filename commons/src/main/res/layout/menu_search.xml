@@ -1,93 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/top_app_bar_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:id="@+id/top_toolbar_holder"
+    <FrameLayout
+        android:id="@+id/searchBarContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/smaller_margin">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/top_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/small_margin"
-            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle"
-            tools:layout_height="56dp" />
+        android:layout_height="wrap_content">
 
         <RelativeLayout
-            android:id="@+id/top_toolbar_search_holder"
+            android:id="@+id/toolbarContainer"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/search_menu_height"
-            android:layout_below="@+id/top_toolbar"
-            android:layout_marginStart="@dimen/activity_margin"
-            android:layout_marginEnd="@dimen/activity_margin"
-            android:background="@drawable/search_bg">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smaller_margin">
 
-            <ImageView
-                android:id="@+id/top_toolbar_search_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:paddingStart="@dimen/medium_margin"
-                android:alpha="0.4"
-                android:src="@drawable/ic_search_top_padding"
-                android:contentDescription="@null"
-                tools:ignore="RtlSymmetry" />
-
-            <com.goodwy.commons.views.MyEditText
-                android:id="@+id/top_toolbar_search"
+            <com.goodwy.commons.views.MyAppBarLayout
+                android:id="@+id/appBar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/top_toolbar_search_icon"
-                android:layout_toStartOf="@+id/topToolbarSearchClear"
-                android:background="@null"
-                android:ellipsize="end"
-                android:gravity="start|center_vertical"
-                android:hint="@string/search"
-                android:lines="1"
-                android:maxLines="1"
-                android:paddingStart="@dimen/smaller_margin"
-                android:paddingEnd="@dimen/smaller_margin"
-                android:singleLine="true"
-                android:textSize="@dimen/big_text_size" />
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/topToolbarSearchClear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/medium_margin"
-                android:background="?selectableItemBackgroundBorderless"
-                android:alpha="0.4"
-                android:src="@drawable/ic_clear_round"
-                android:visibility="gone"
-                android:contentDescription="@string/delete"
-                tools:visibility="visible" />
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/small_margin"
+                    app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
+            </com.goodwy.commons.views.MyAppBarLayout>
 
-            <ImageView
-                android:id="@+id/topToolbarSearchSpeechToText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/medium_margin"
-                android:background="?selectableItemBackgroundBorderless"
-                android:alpha="0.4"
-                android:src="@drawable/ic_microphone_vector"
-                android:visibility="gone"
-                android:contentDescription="@string/voice_input"
-                tools:visibility="visible" />
+            <RelativeLayout
+                android:id="@+id/topToolbarSearchHolder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_menu_height"
+                android:layout_below="@+id/appBar"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:background="@drawable/search_bg">
+
+                <ImageView
+                    android:id="@+id/topToolbarSearchIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/medium_margin"
+                    android:alpha="0.4"
+                    android:src="@drawable/ic_search_top_padding"
+                    android:contentDescription="@null"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.goodwy.commons.views.MyEditText
+                    android:id="@+id/topToolbarSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/topToolbarSearchIcon"
+                    android:layout_toStartOf="@+id/topToolbarSearchClear"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/search"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/smaller_margin"
+                    android:paddingEnd="@dimen/smaller_margin"
+                    android:singleLine="true"
+                    android:textSize="@dimen/big_text_size" />
+
+                <ImageView
+                    android:id="@+id/topToolbarSearchClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:alpha="0.4"
+                    android:src="@drawable/ic_clear_round"
+                    android:visibility="gone"
+                    android:contentDescription="@string/delete"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/topToolbarSearchSpeechToText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:alpha="0.4"
+                    android:src="@drawable/ic_microphone_vector"
+                    android:visibility="gone"
+                    android:contentDescription="@string/voice_input"
+                    tools:visibility="visible" />
+            </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
-</com.google.android.material.appbar.AppBarLayout>
+    </FrameLayout>
+</merge>

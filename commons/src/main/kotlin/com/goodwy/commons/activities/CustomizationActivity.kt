@@ -85,21 +85,19 @@ class CustomizationActivity : BaseSimpleActivity() {
     private val binding by viewBinding(ActivityCustomizationBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         setupOptionsMenu()
         refreshMenuItems()
-        updateMaterialActivityViews(
-            mainCoordinatorLayout = binding.customizationCoordinator,
-            nestedView = binding.customizationHolder,
-            useTransparentNavigation = true,
-            useTopSearchMenu = false
+
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.appBar),
+            padBottomSystem = listOf(binding.customizationHolder)
         )
         setupMaterialScrollListener(
             scrollingView = binding.customizationNestedScrollview,
-            toolbar = binding.customizationToolbar
+            topAppBar = binding.appBar
         )
 
         //TODO HIDE
@@ -131,16 +129,16 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         if (!isDynamicTheme()) {
             updateBackgroundColor(getCurrentBackgroundColor())
-            updateActionbarColor(getCurrentBackgroundColor()) //TODO actionbar color
         }
 
         curPrimaryGridColorPicker?.getSpecificColor()?.apply {
             setTheme(getThemeId(this))
         }
 
-        setupToolbar(
-            toolbar = binding.customizationToolbar,
-            toolbarNavigationIcon = NavigationIcon.Arrow
+        setupTopAppBar(
+            topAppBar = binding.appBar,
+            navigationIcon = NavigationIcon.Arrow,
+//            topBarColor = getColoredMaterialStatusBarColor()
         )
         updateApplyToAllColors()
         updateHoldersColor()
@@ -180,11 +178,12 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        if (hasUnsavedChanges && System.currentTimeMillis() - lastSavePromptTS > SAVE_DISCARD_PROMPT_INTERVAL) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (hasUnsavedChanges && System.currentTimeMillis() - lastSavePromptTS > SAVE_DISCARD_PROMPT_INTERVAL) {
             promptSaveDiscard()
+            true
         } else {
-            super.onBackPressed()
+            false
         }
     }
 
@@ -250,9 +249,14 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateAutoThemeFields()
         handleAccentColorLayout()
 
-        binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
+        binding.customizationThemeDescription.setColors(
+            getCurrentTextColor(),
+            getCurrentPrimaryColor(),
+            getCurrentBackgroundColor()
+        )
         binding.customizationThemeHolder.setOnClickListener {
-            if (isProVersion()) themePickerClicked() else {
+            if (isProVersion()) themePickerClicked()
+            else {
                 shakePurchase()
                 RxAnimation.from(binding.themeHolder)
                     .shake(shakeTranslation = 2f)
@@ -298,7 +302,6 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curTextCursorColor = baseConfig.textCursorColor
 
                 setTheme(getThemeId(curPrimaryColor))
-                updateActionbarColor(curBackgroundColor)
             } else {
                 baseConfig.customPrimaryColor = curPrimaryColor
                 baseConfig.customAccentColor = curAccentColor
@@ -329,7 +332,6 @@ class CustomizationActivity : BaseSimpleActivity() {
 
             setTheme(getThemeId(getCurrentPrimaryColor()))
             colorChanged()
-            updateActionbarColor(curBackgroundColor)
         }
         binding.settingsTopAppBarColorIcon.setColors(getCurrentTextColor(), getCurrentAccentOrPrimaryColor(), getCurrentBackgroundColor())
         binding.settingsTopAppBarColorTitle.setColors(getCurrentTextColor(), getCurrentAccentOrPrimaryColor(), getCurrentBackgroundColor())
@@ -339,10 +341,10 @@ class CustomizationActivity : BaseSimpleActivity() {
         binding.customizationThemeDescription.setColors(getCurrentTextColor(), getCurrentPrimaryColor(), getCurrentBackgroundColor())
 
         updateMenuItemColors(binding.customizationToolbar.menu, getCurrentBackgroundColor())
-        setupToolbar(
-            toolbar = binding.customizationToolbar,
-            toolbarNavigationIcon = NavigationIcon.Arrow,
-            statusBarColor = getCurrentBackgroundColor()
+        setupTopAppBar(
+            topAppBar = binding.appBar,
+            navigationIcon = NavigationIcon.Arrow,
+            topBarColor = getCurrentBackgroundColor()
         )
 
         updateHoldersColor()
@@ -352,7 +354,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateLabelColors(getCurrentTextColor())
         updateBackgroundColor(getCurrentBackgroundColor())
         val actionbarColor = if (curSelectedThemeId == THEME_SYSTEM) getCurrentStatusBarColor() else getCurrentBackgroundColor()
-        updateActionbarColor(actionbarColor) //curBackgroundColor //TODO actionbar color
         updateAutoThemeFields()
         updateApplyToAllColors()
         handleAccentColorLayout()
@@ -560,7 +561,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         initColorVariables()
         setupColorsPickers()
         updateBackgroundColor()
-        updateActionbarColor()
         refreshMenuItems()
         updateLabelColors(getCurrentTextColor())
         updateApplyToAllColors()
@@ -689,14 +689,11 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun setCurrentBackgroundColor(color: Int) {
         curBackgroundColor = color
         updateBackgroundColor(color)
-        updateActionbarColor(color)
         updateApplyToAllColors()
     }
 
     private fun setCurrentPrimaryColor(color: Int) {
         curPrimaryColor = color
-        //TODO actionbar color
-        //updateActionbarColor(color)
         //updateApplyToAllColors()
     }
 
@@ -765,7 +762,6 @@ class CustomizationActivity : BaseSimpleActivity() {
                     setCurrentBackgroundColor(color)
                     colorChanged()
                     updateColorTheme(getCurrentThemeId())
-                    updateActionbarColor(color)
                     binding.customizationToolbar.setBackgroundColor(color)
                     binding.customizationToolbar.setTitleTextColor(color.getContrastColor())
                 }
@@ -784,9 +780,6 @@ class CustomizationActivity : BaseSimpleActivity() {
             color = curPrimaryColor,
             colorBackground = curBackgroundColor,
             isPrimaryColorPicker = true,
-            showUseDefaultButton = true,
-            toolbar = binding.customizationToolbar,
-            title = resources.getString(R.string.primary_color)
         ) { wasPositivePressed, color ->
             curPrimaryGridColorPicker = null
             if (wasPositivePressed) {
@@ -797,17 +790,19 @@ class CustomizationActivity : BaseSimpleActivity() {
                     setTheme(getThemeId(color))
                 }
                 val navigationIcon = if (hasUnsavedChanges) NavigationIcon.Cross else NavigationIcon.Arrow
-                setupToolbar(
-                    toolbar = binding.customizationToolbar,
-                    toolbarNavigationIcon = navigationIcon,
-                    statusBarColor = getCurrentBackgroundColor()
+                setupTopAppBar(
+                    topAppBar = binding.appBar,
+                    navigationIcon = navigationIcon,
+                    topBarColor = getCurrentBackgroundColor()
                 )
                 updateTopBarColors()
             } else {
-                //TODO actionbar color
-                updateActionbarColor(curBackgroundColor)//curPrimaryColor
                 setTheme(getThemeId(curPrimaryColor))
-                setupToolbar(binding.customizationToolbar, NavigationIcon.Arrow, curBackgroundColor) //curPrimaryColor
+                setupTopAppBar(
+                    topAppBar = binding.appBar,
+                    navigationIcon = NavigationIcon.Arrow,
+                    topBarColor = curBackgroundColor
+                )
                 updateTopBarColors()
             }
         }
@@ -827,7 +822,6 @@ class CustomizationActivity : BaseSimpleActivity() {
                     colorChanged()
 
                     updateApplyToAllColors()
-                    updateActionbarColor(curBackgroundColor)
                     binding.settingsTopAppBarColorIcon.setColors(getCurrentTextColor(), getCurrentAccentOrPrimaryColor(), getCurrentBackgroundColor())
                     binding.settingsTopAppBarColorTitle.setColors(getCurrentTextColor(), getCurrentAccentOrPrimaryColor(), getCurrentBackgroundColor())
                     binding.customizationUseAccentColor.setColors(getCurrentTextColor(), getCurrentAccentOrPrimaryColor(), getCurrentBackgroundColor())
@@ -1022,7 +1016,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun updateTopBarColors() {
         updateTopBarColors(
-            toolbar = binding.customizationToolbar,
+            topAppBar = binding.appBar,
             colorBackground = getCurrentBackgroundColor(),
             colorPrimary = getCurrentPrimaryColor(),
             topAppBarColorIcon = curTopAppBarColorIcon,

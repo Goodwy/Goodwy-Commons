@@ -7,4 +7,6 @@
     <item name="properties_md5" type="id"/>
     <item name="properties_sha1" type="id"/>
     <item name="properties_sha256" type="id"/>
+    <item name="tag_base_padding" type="id"/>
+    <item name="tag_base_margin" type="id"/>
 </resources>
