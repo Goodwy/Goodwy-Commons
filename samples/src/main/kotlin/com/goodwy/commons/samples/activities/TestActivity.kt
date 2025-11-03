@@ -1,9 +1,6 @@
 package com.goodwy.commons.samples.activities
 
-import android.app.Activity
 import android.os.Bundle
-import androidx.core.view.ScrollingView
-import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.activities.BaseSimpleActivity
@@ -13,7 +10,6 @@ import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
 import com.goodwy.commons.samples.adapters.TestAdapter
 import com.goodwy.commons.samples.databinding.ActivityTestBinding
-import com.goodwy.commons.views.MySearchMenu
 
 class TestActivity : BaseSimpleActivity() {
     override var isSearchBarEnabled = true
@@ -25,14 +21,11 @@ class TestActivity : BaseSimpleActivity() {
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
 
-//        setupEdgeToEdge(
-//            padBottomImeAndSystem = listOf(binding.mainTabsHolder)
-//        )
-
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = TestAdapter()
 
+        binding.mainMenu.updateTitle(getAppLauncherName())
         scrollChange()
     }
 

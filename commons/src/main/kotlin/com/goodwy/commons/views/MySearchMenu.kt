@@ -122,7 +122,6 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : MyAppBarLayout(
         val primaryColor = context.getProperPrimaryColor()
         val surfaceColor = when {
             context.isDynamicTheme() && !context.isSystemInDarkMode() -> context.getProperBackgroundColor()
-//            background == context.getProperBackgroundColor() -> context.getSurfaceColor()
             else -> context.getSurfaceColor()
         }
         val searchHolderColor = if (scrollOffset == 0) surfaceColor else context.getColoredMaterialSearchBarColor()
@@ -136,7 +135,7 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : MyAppBarLayout(
             primaryColor,
             context.getProperTextCursorColor()
         )
-        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.appBar, background)
+        (context as? BaseSimpleActivity)?.updateTopBarColors(this, background)
 
         binding.topToolbarSearchHolder.setBackgroundResource(R.drawable.search_bg)
         binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(searchHolderColor)
