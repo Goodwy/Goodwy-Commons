@@ -41,10 +41,10 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         get() = true
 
     private var topAppBar: MyAppBarLayout? = null
-    private var mySearchMenu: MySearchMenu? = null
+    var mySearchMenu: MySearchMenu? = null
     var scrollingView: ScrollingView? = null
     private var materialScrollColorAnimation: ValueAnimator? = null
-    private var currentScrollY = 0
+    var currentScrollY = 0
 
     private val contentRoot by lazy { findViewById<View>(android.R.id.content) }
 
