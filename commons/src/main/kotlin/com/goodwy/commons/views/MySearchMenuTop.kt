@@ -124,13 +124,14 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : MyAppBarLayo
     fun updateColors(background: Int = context.getProperBackgroundColor()) {
         val contrastColor = background.getContrastColor()
         val primaryColor = context.getProperPrimaryColor()
-        val surfaceColor =
-            if (context.isDynamicTheme() && !context.isSystemInDarkMode()) context.getSurfaceColor()
-            else if (background == context.getProperBackgroundColor()) context.getSurfaceColor()
-            else context.getProperBackgroundColor()
+        val surfaceColor = when {
+            context.isDynamicTheme() && !context.isSystemInDarkMode() -> context.getProperBackgroundColor()
+            background == context.getProperBackgroundColor() -> context.getSurfaceColor()
+            else -> context.getProperBackgroundColor()
+        }
 
         setBackgroundColor(background)
-//        binding.searchBarContainer.setBackgroundColor(background)
+        binding.searchBarContainer.setBackgroundColor(background)
         val searchIconColor = if (context.baseConfig.topAppBarColorIcon) primaryColor else contrastColor
         binding.topToolbarSearchIcon.applyColorFilter(searchIconColor)
         binding.topToolbarSearchSpeechToText.applyColorFilter(contrastColor)

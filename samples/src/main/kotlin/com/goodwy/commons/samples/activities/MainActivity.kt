@@ -49,7 +49,9 @@ class MainActivity : BaseSimpleActivity() {
                     showComposeDialogs = {
                         startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
                     },
-                    openTestButton = ::securityDialog,//::setupStartDate,
+                    openTestButton = {
+                        startActivity(Intent(this@MainActivity, TestActivity::class.java))
+                    },//::securityDialog,//::setupStartDate,
                     showMoreApps = showMoreApps,
                     openAbout = ::launchAbout,
                     moreAppsFromUs = ::launchMoreAppsFromUsIntent,

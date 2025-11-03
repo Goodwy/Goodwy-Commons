@@ -27,8 +27,11 @@ import com.goodwy.commons.extensions.getOverflowIcon
 import com.goodwy.commons.extensions.getProperBackgroundColor
 import com.goodwy.commons.extensions.getProperPrimaryColor
 import com.goodwy.commons.extensions.getSurfaceColor
+import com.goodwy.commons.extensions.isDynamicTheme
+import com.goodwy.commons.extensions.isSystemInDarkMode
 import com.goodwy.commons.extensions.onApplyWindowInsets
 import com.goodwy.commons.extensions.setSystemBarsAppearance
+import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.extensions.updateMarginWithBase
 import com.goodwy.commons.extensions.updatePaddingWithBase
 import com.goodwy.commons.helpers.OVERFLOW_ICON_VERTICAL
@@ -188,15 +191,15 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         }
     }
 
-//    fun getStartRequiredStatusBarColor(): Int {
-//        val useSurfaceColor = isDynamicTheme() && !isSystemInDarkMode()
-//        val scrollingViewOffset = scrollingView?.computeVerticalScrollOffset() ?: 0
-//        return if (scrollingViewOffset == 0) {
-//            if (useSurfaceColor) getSurfaceColor() else getProperBackgroundColor()
-//        } else {
-//            getColoredMaterialStatusBarColor()
-//        }
-//    }
+    fun getStartRequiredStatusBarColor(): Int {
+        val useSurfaceColor = isDynamicTheme() && !isSystemInDarkMode()
+        val scrollingViewOffset = scrollingView?.computeVerticalScrollOffset() ?: 0
+        return if (scrollingViewOffset == 0) {
+            if (useSurfaceColor) getSurfaceColor() else getProperBackgroundColor()
+        } else {
+            getColoredMaterialStatusBarColor()
+        }
+    }
 
     fun getRequiredTopBarColor(): Int {
         return if (

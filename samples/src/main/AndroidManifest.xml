@@ -60,6 +60,11 @@
             android:enableOnBackInvokedCallback="true"
             android:exported="false" />
 
+        <activity
+            android:name="com.goodwy.commons.samples.activities.TestActivity"
+            android:enableOnBackInvokedCallback="true"
+            android:exported="false" />
+
         <activity-alias
             android:name="com.goodwy.commons.samples.activities.SplashActivity.Original"
             android:enabled="true"
