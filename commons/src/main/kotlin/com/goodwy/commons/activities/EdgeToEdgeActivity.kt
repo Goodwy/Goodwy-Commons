@@ -42,7 +42,7 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
 
     private var topAppBar: MyAppBarLayout? = null
     private var mySearchMenu: MySearchMenu? = null
-    private var scrollingView: ScrollingView? = null
+    var scrollingView: ScrollingView? = null
     private var materialScrollColorAnimation: ValueAnimator? = null
     private var currentScrollY = 0
 
