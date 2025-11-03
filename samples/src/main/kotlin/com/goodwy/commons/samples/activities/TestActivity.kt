@@ -19,7 +19,6 @@ class TestActivity : BaseSimpleActivity() {
     override var isSearchBarEnabled = true
 
     private val binding by viewBinding(ActivityTestBinding::inflate)
-    private var currentOldScrollY = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,9 +47,7 @@ class TestActivity : BaseSimpleActivity() {
     private fun scrollChange() {
         val myRecyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         scrollingView = myRecyclerView
-
         val scrollingViewOffset = scrollingView?.computeVerticalScrollOffset() ?: 0
-        currentOldScrollY = scrollingViewOffset
 
         val useSurfaceColor = isDynamicTheme() && !isSystemInDarkMode()
         val backgroundColor = if (useSurfaceColor) getSurfaceColor() else getProperBackgroundColor()
