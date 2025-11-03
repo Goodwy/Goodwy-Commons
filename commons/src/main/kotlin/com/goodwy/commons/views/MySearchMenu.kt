@@ -136,8 +136,8 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : MyAppBarLayout(
         )
         (context as? BaseSimpleActivity)?.updateTopBarColors(binding.appBar, background)
 
-        binding.toolbarContainer.setBackgroundResource(R.drawable.search_bg)
-        binding.toolbarContainer.backgroundTintList = ColorStateList.valueOf(searchHolderColor)
+        binding.topToolbarSearchHolder.setBackgroundResource(R.drawable.search_bg)
+        binding.topToolbarSearchHolder.backgroundTintList = ColorStateList.valueOf(searchHolderColor)
         binding.topToolbarSearchClear.applyColorFilter(contrastColor)
 
         if (context.baseConfig.topAppBarColorTitle) binding.topToolbar.setTitleTextColor(ColorStateList.valueOf(primaryColor))
@@ -148,7 +148,7 @@ open class MySearchMenu(context: Context, attrs: AttributeSet) : MyAppBarLayout(
     }
 
     fun searchBeVisibleIf(visible: Boolean = true) {
-        binding.toolbarContainer.beVisibleIf(visible)
+        binding.topToolbarSearchHolder.beVisibleIf(visible)
     }
 
     fun requestFocusAndShowKeyboard() {

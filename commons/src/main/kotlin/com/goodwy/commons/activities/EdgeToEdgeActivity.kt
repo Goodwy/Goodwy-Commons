@@ -218,6 +218,7 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         topAppBarColorIcon: Boolean = baseConfig.topAppBarColorIcon,
         topAppBarColorTitle: Boolean = baseConfig.topAppBarColorTitle
     ) {
+
         val getProperBackgroundColor = getProperBackgroundColor()
         val contrastColor =
             if (colorBackground == Color.TRANSPARENT) getProperBackgroundColor.getContrastColor()

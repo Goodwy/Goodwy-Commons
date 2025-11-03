@@ -14,7 +14,7 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/customizationToolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="?attr/actionBarSize"
             app:menu="@menu/menu_customization"
             app:title="@string/customize_colors"
             app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
