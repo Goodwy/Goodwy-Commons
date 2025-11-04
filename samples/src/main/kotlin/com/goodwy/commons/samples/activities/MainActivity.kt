@@ -96,8 +96,6 @@ class MainActivity : BaseSimpleActivity() {
             subscriptionIdListRu = arrayListOf("", "", ""),
             subscriptionYearIdList = arrayListOf("", "", ""),
             subscriptionYearIdListRu = arrayListOf("", "", ""),
-            playStoreInstalled = isPlayStoreInstalled(),
-            ruStoreInstalled = isRuStoreInstalled(),
             showAppIconColor = true
         )
     }
@@ -112,8 +110,6 @@ class MainActivity : BaseSimpleActivity() {
             subscriptionYearIdList = arrayListOf("", "", ""),
             subscriptionYearIdListRu = arrayListOf("", "", ""),
             showLifebuoy = false,
-            playStoreInstalled = isPlayStoreInstalled(),
-            ruStoreInstalled = isRuStoreInstalled(),
             showCollection = true
         )
     }
@@ -131,17 +127,25 @@ class MainActivity : BaseSimpleActivity() {
             faqItems.add(FAQItem(com.goodwy.commons.R.string.faq_6_title_commons, com.goodwy.commons.R.string.faq_6_text_commons))
         }
 
+        val flavorName = BuildConfig.FLAVOR
+        val storeDisplayName = when (flavorName) {
+            "gplay" -> "Google Play"
+            "foss" -> "FOSS"
+            "rustore" -> "RuStore"
+            else -> ""
+        }
+        val versionName = BuildConfig.VERSION_NAME
+        val fullVersionText = "$versionName ($storeDisplayName)"
         startAboutActivity(
             R.string.app_name_g,
             licenses,
-            BuildConfig.VERSION_NAME,
+            fullVersionText,
             faqItems,
             true,
             arrayListOf("", "", ""), arrayListOf("", "", ""),
             arrayListOf("", "", ""), arrayListOf("", "", ""),
             arrayListOf("", "", ""), arrayListOf("", "", ""),
-            playStoreInstalled = isPlayStoreInstalled(),
-            ruStoreInstalled = isRuStoreInstalled())
+            )
     }
 
     private fun securityDialog() {

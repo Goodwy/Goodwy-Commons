@@ -631,9 +631,7 @@
                         android:alpha="0.6"
                         android:src="@drawable/ic_chevron_right_vector"
                         android:contentDescription="@null" />
-
                 </RelativeLayout>
-
             </RelativeLayout>
 
             <ImageView
@@ -648,90 +646,4 @@
                 android:contentDescription="@null" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/pro_holder"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="@dimen/about_margin"
-        android:paddingEnd="@dimen/about_margin"
-        android:visibility="gone"
-        tools:visibility="visible">
-
-        <com.goodwy.commons.views.MyTextView
-            android:id="@+id/pro_donate_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="?actionBarSize"
-            android:gravity="center"
-            android:text="@string/action_support_project"
-            android:textSize="@dimen/actionbar_text_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.goodwy.commons.views.MyTextView
-            android:id="@+id/pro_donate_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/big_margin"
-            android:gravity="center"
-            android:text="@string/donate_text_g"
-            android:textColor="@color/theme_light_text_color"
-            android:textSize="@dimen/normal_text_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pro_donate_title" />
-
-        <Button
-            android:id="@+id/pro_donate_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/big_margin"
-            android:text="@string/donate"
-            android:paddingVertical="6dp"
-            android:paddingHorizontal="16dp"
-            android:lines="1"
-            android:ellipsize="end"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pro_donate_text" />
-
-        <com.goodwy.commons.views.MyTextView
-            android:id="@+id/pro_unlock_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/bigger_margin"
-            android:gravity="center"
-            android:text="@string/unlock"
-            android:textAllCaps="true"
-            android:textColor="@color/theme_light_text_color"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/pro_switch_holder" />
-
-        <RelativeLayout
-            android:id="@+id/pro_switch_holder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/section_margin"
-            android:scaleX="2"
-            android:scaleY="2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pro_donate_button">
-
-            <com.goodwy.commons.views.MyMaterialSwitch
-                android:id="@+id/pro_switch"
-                style="@style/SettingsSwitchStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </RelativeLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -174,8 +174,6 @@ class AboutActivity : BaseComposeActivity() {
             putExtra(SUBSCRIPTION_YEAR_ID_LIST, intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST) ?: arrayListOf("", "", ""))
             putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST_RU) ?: arrayListOf("", "", ""))
             putExtra(SHOW_LIFEBUOY, resources.getBoolean(R.bool.show_lifebuoy))
-            putExtra(PLAY_STORE_INSTALLED, intent.getBooleanExtra(PLAY_STORE_INSTALLED, true))
-            putExtra(RU_STORE, intent.getBooleanExtra(RU_STORE, false))
             putExtra(SHOW_COLLECTION, resources.getBoolean(R.bool.show_collection))
             startActivity(this)
         }

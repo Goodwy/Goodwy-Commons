@@ -73,9 +73,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getSubscriptionYearIdList() = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST) ?: arrayListOf("", "", "")
     private fun getSubscriptionYearIdListRu() = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST_RU) ?: arrayListOf("", "", "")
 
-    private fun playStoreInstalled() = intent.getBooleanExtra(PLAY_STORE_INSTALLED, true)
-    private fun ruStoreInstalled() = intent.getBooleanExtra(RU_STORE, false)
-
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
@@ -975,11 +972,13 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun launchPurchase() {
         startPurchaseActivity(
             stringsR.string.app_name_g,
-            getProductIdList(), getProductIdListRu(),
-            getSubscriptionIdList(), getSubscriptionIdListRu(),
-            getSubscriptionYearIdList(), getSubscriptionYearIdListRu(),
-            playStoreInstalled = playStoreInstalled(),
-            ruStoreInstalled = ruStoreInstalled())
+            getProductIdList(),
+            getProductIdListRu(),
+            getSubscriptionIdList(),
+            getSubscriptionIdListRu(),
+            getSubscriptionYearIdList(),
+            getSubscriptionYearIdListRu(),
+        )
     }
 
     private fun shakePurchase() {

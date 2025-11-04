@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:translationZ="4dp">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="@dimen/plus_logo"
+        android:layout_height="@dimen/plus_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/big_margin"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:background="@drawable/squircle_bg"
+        android:contentDescription="@null"
+        android:elevation="8dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_plus_support"
+        tools:tint="@color/color_primary"/>
+
+    <com.goodwy.commons.views.MyTextView
+        android:id="@+id/purchase_apps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_logo"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/action_support_project"
+        android:textSize="16sp" />
+
+</RelativeLayout>

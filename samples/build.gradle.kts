@@ -35,8 +35,8 @@ android {
         applicationId = "com.goodwy.commons.samples"
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         targetSdk = libs.versions.app.build.targetSDK.get().toInt()
-        versionCode = 710
-        versionName = "7.1.0"
+        versionCode = 720
+        versionName = "7.2.0"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -53,10 +53,18 @@ android {
         }
     }
 
-    flavorDimensions.add("variants")
+    flavorDimensions += "distribution"
+
     productFlavors {
-        register("foss")
-        register("prepaid")
+        create("gplay") {
+            dimension = "distribution"
+        }
+        create("foss") {
+            dimension = "distribution"
+        }
+        create("rustore") {
+            dimension = "distribution"
+        }
     }
 
     compileOptions {

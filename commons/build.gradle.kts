@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.goodwy"
-version = "7.1.0"
+version = "7.2.0"
 
 android {
     namespace = "com.goodwy.commons"
@@ -39,8 +39,18 @@ android {
         }
     }
 
-    publishing {
-        singleVariant("release") {}
+    flavorDimensions += "distribution"
+
+    productFlavors {
+        create("gplay") {
+            dimension = "distribution"
+        }
+        create("foss") {
+            dimension = "distribution"
+        }
+        create("rustore") {
+            dimension = "distribution"
+        }
     }
 
     buildFeatures {
@@ -81,14 +91,6 @@ android {
 
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
-    }
-}
-
-publishing.publications {
-    create<MavenPublication>("release") {
-        afterEvaluate {
-            from(components["release"])
-        }
     }
 }
 
@@ -135,8 +137,8 @@ dependencies {
 
     //Goodwy
     api(projects.strings)
-    api(libs.billing.client)
-    api(libs.rustore.client)
+    "gplayImplementation"(libs.billing.client)
+    "rustoreImplementation"(libs.rustore.client)
     api(libs.persian.date)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)

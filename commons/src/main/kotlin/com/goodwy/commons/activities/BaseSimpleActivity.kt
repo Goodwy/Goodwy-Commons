@@ -650,8 +650,6 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
         subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
         subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
-        playStoreInstalled: Boolean = true,
-        ruStoreInstalled: Boolean = false
     ) {
         hideKeyboard()
         Intent(applicationContext, AboutActivity::class.java).apply {
@@ -671,8 +669,6 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
             putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST, subscriptionYearIdList)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, subscriptionYearIdListRu)
-            putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
-            putExtra(RU_STORE, ruStoreInstalled)
             startActivity(this)
         }
     }
@@ -682,9 +678,8 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
                               subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
                               subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
                               showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
-                              playStoreInstalled: Boolean = true,
-                              ruStoreInstalled: Boolean = false,
-                              showCollection: Boolean = resources.getBoolean(R.bool.show_collection)) {
+                              showCollection: Boolean = resources.getBoolean(R.bool.show_collection)
+    ) {
         Intent(applicationContext, PurchaseActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
@@ -696,18 +691,18 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
             putExtra(SUBSCRIPTION_YEAR_ID_LIST, subscriptionYearIdList)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, subscriptionYearIdListRu)
             putExtra(SHOW_LIFEBUOY, showLifebuoy)
-            putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
             putExtra(SHOW_COLLECTION, showCollection)
-            putExtra(RU_STORE, ruStoreInstalled)
             startActivity(this)
         }
     }
 
     fun startCustomizationActivity(showAccentColor : Boolean = false, isCollection : Boolean = false,
-                                   productIdList: ArrayList<String> = arrayListOf("", "", ""), productIdListRu: ArrayList<String> = arrayListOf("", "", ""),
-                                   subscriptionIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionIdListRu: ArrayList<String> = arrayListOf("", "", ""),
-                                   subscriptionYearIdList: ArrayList<String> = arrayListOf("", "", ""), subscriptionYearIdListRu: ArrayList<String> = arrayListOf("", "", ""),
-                                   playStoreInstalled: Boolean = true, ruStoreInstalled: Boolean = false,
+                                   productIdList: ArrayList<String> = arrayListOf("", "", ""),
+                                   productIdListRu: ArrayList<String> = arrayListOf("", "", ""),
+                                   subscriptionIdList: ArrayList<String> = arrayListOf("", "", ""),
+                                   subscriptionIdListRu: ArrayList<String> = arrayListOf("", "", ""),
+                                   subscriptionYearIdList: ArrayList<String> = arrayListOf("", "", ""),
+                                   subscriptionYearIdListRu: ArrayList<String> = arrayListOf("", "", ""),
                                    showAppIconColor : Boolean = false
     ) {
         if (!packageName.contains("ywdoog".reversed(), true)) {
@@ -729,8 +724,6 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
             putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST, subscriptionYearIdList)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, subscriptionYearIdListRu)
-            putExtra(PLAY_STORE_INSTALLED, playStoreInstalled)
-            putExtra(RU_STORE, ruStoreInstalled)
             putExtra(SHOW_APP_ICON_COLOR, showAppIconColor)
             startActivity(this)
         }
