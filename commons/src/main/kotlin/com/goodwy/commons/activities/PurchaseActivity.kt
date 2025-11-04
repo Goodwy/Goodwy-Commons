@@ -318,7 +318,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         binding.lifebuoyButton.setOnClickListener {
             ConfirmationDialog(this, getString(R.string.send_email)) {
                 val body = "$appName : Lifebuoy"
-                val address = getString(R.string.my_email)
+                val address = getMyMailString()
                 val selectorIntent = Intent(ACTION_SENDTO)
                     .setData("mailto:$address".toUri())
                 val emailIntent = Intent(ACTION_SEND).apply {

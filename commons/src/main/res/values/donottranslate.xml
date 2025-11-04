@@ -4,8 +4,9 @@
     <string name="simple_commons">Goodwy Commons</string>
     <string name="progress">%1$s / %2$s</string>
     <string name="donate_url">https://sites.google.com/view/goodwy/support-project</string>
-    <string name="google_play_dev_url">https://play.google.com/store/apps/dev?id=5558472546114098886</string>
+    <string name="google_play_dev_url">https://play.google.com/store/apps/dev?id=6544655677105796673</string>
     <string name="google_play_dev_url_old">https://play.google.com/store/apps/dev?id=8268163890866913014</string>
+    <string name="google_play_dev_url_fake">https://fake.app</string>
     <string name="a_m">am</string>
     <string name="p_m">pm</string>
     <string name="material_you">Material You</string>
@@ -28,7 +29,8 @@
     <!-- About -->
     <string name="two_string_placeholder">%1$s%2$s</string>
     <string name="my_website">\nhttps://www.goodwy.dev/</string>
-    <string name="my_email">goodwy.dev@gmail.com</string>
+    <string name="my_email">help@goodwy.dev</string>
+    <string name="my_email_old">goodwy.dev@gmail.com</string>
     <string name="my_fake_email">noreply@gmail.com</string>
     <string name="reddit">Reddit</string>
     <string name="github">GitHub</string>

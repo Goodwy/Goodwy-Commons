@@ -24,13 +24,7 @@ class MyContextWrapper(context: Context) : ContextWrapper(context) {
         return MyContextWrapper(newContext)
     }
 
-    private fun getSystemLocaleLegacy(config: Configuration) = config.locale
-
     private fun getSystemLocale(config: Configuration) = config.locales.get(0)
-
-    private fun setSystemLocaleLegacy(config: Configuration, locale: Locale) {
-        config.locale = locale
-    }
 
     private fun setSystemLocale(config: Configuration, locale: Locale) {
         config.setLocale(locale)

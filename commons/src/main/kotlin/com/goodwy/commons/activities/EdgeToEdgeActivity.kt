@@ -55,6 +55,11 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         WindowCompat.enableEdgeToEdge(window)
     }
 
+    override fun onResume() {
+        super.onResume()
+        window.setSystemBarsAppearance(getProperBackgroundColor())
+    }
+
     /**
      * Helper for views that need to be edge to edge compatible.
      */

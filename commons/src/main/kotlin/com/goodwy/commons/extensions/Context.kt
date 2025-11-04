@@ -53,12 +53,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.annotation.StringRes
 import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.net.toUri
 import androidx.core.os.bundleOf
+import androidx.core.text.BidiFormatter
 import androidx.exifinterface.media.ExifInterface
 import androidx.loader.content.CursorLoader
 import com.github.ajalt.reprint.core.Reprint
@@ -438,7 +440,7 @@ fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
             if (uri.scheme == "content") {
                 uri
             } else {
-                val newPath = if (uri.toString().startsWith("/")) uri.toString() else uri.path
+                val newPath = if (uri.toString().startsWith("/")) uri.toString() else uri.path ?: ""
                 val file = File(newPath)
                 getFilePublicUri(file, applicationId)
             }
@@ -1295,6 +1297,20 @@ fun Context.findActivity(): Activity? = when (this) {
     else -> null
 }
 
+fun Context.formatWithDeprecatedBadge(
+    @StringRes labelRes: Int,
+    vararg labelArgs: Any
+): String {
+    val label = if (labelArgs.isEmpty()) {
+        getString(labelRes)
+    } else {
+        getString(labelRes, *labelArgs)
+    }
+
+    val badge = BidiFormatter.getInstance().unicodeWrap(getString(R.string.badge_deprecated))
+    return getString(R.string.label_with_badge, label, badge)
+}
+
 //Goodwy
 fun Context.getEmailTypeText(type: Int, label: String): String {
     return if (type == BaseTypes.TYPE_CUSTOM) {
@@ -1517,14 +1533,28 @@ fun Context.sysLocale(): Locale? {
     return getSystemLocale(config)
 }
 
-private fun getSystemLocaleLegacy(config: Configuration) = config.locale
-
 private fun getSystemLocale(config: Configuration) = config.locales.get(0)
 
 fun Context.googlePlayDevUrlRes(): Int {
-    return if (resources.getBoolean(R.bool.new_dev)) R.string.google_play_dev_url else R.string.google_play_dev_url_old
+    return when {
+        packageName.startsWith("dev.goodwy") -> R.string.google_play_dev_url
+        packageName.startsWith("com.goodwy") -> R.string.google_play_dev_url_old
+        else -> R.string.google_play_dev_url_fake
+    }
 }
 
 fun Context.googlePlayDevUrlString(): String {
     return getString(googlePlayDevUrlRes())
+}
+
+fun Context.myMailRes(): Int {
+    return when {
+        packageName.startsWith("dev.goodwy") -> R.string.my_email
+        packageName.startsWith("com.goodwy") -> R.string.my_email_old
+        else -> R.string.my_fake_email
+    }
+}
+
+fun Context.getMyMailString(): String {
+    return getString(myMailRes())
 }
