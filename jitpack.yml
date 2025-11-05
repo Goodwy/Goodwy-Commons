@@ -1,7 +1,8 @@
 jdk:
     - openjdk17
 before_install:
-    - apt-get update
-    - apt-get install -y cmake
+    - sudo apt-get update
+    - sudo apt-get install -y cmake
 install:
     - ./gradlew :commons:publishToMavenLocal
+    - ./gradlew :commons:clean :commons:publishToMavenLocal
