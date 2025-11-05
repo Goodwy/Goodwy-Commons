@@ -46,12 +46,6 @@ android {
         create("rustore") { dimension = "distribution" }
     }
 
-    publishing {
-        multipleVariants {
-            allVariants()
-        }
-    }
-
     buildFeatures {
         viewBinding = true
         compose = true
@@ -90,6 +84,33 @@ android {
 
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("gplayRelease") {
+            groupId = "com.github.goodwy.goodwy-commons"
+            artifactId = "commons-gplay" // <-- The name you will import
+            version = project.version.toString()
+
+            // 💡 MANUALLY SPECIFY THE .AAR FILE
+            artifact("$buildDir/outputs/aar/${project.name}-gplay-release.aar")
+        }
+
+        create<MavenPublication>("fossRelease") {
+            groupId = "com.github.goodwy.goodwy-commons"
+            artifactId = "commons-foss"
+            version = project.version.toString()
+            artifact("$buildDir/outputs/aar/${project.name}-foss-release.aar")
+        }
+
+        create<MavenPublication>("rustoreRelease") {
+            groupId = "com.github.goodwy.goodwy-commons"
+            artifactId = "commons-rustore"
+            version = project.version.toString()
+            artifact("$buildDir/outputs/aar/${project.name}-rustore-release.aar")
+        }
     }
 }
 
