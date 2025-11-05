@@ -4,9 +4,11 @@ jdk:
 install:
     # 1. Setting a memory limit
     - export GRADLE_OPTS="-Dorg.gradle.jvmargs='-Xmx3g' -Dorg.gradle.parallel=false"
-    
-    # 2. 💡 FIRST, WE COLLECT THE AAR
-    - ./gradlew :commons:clean :commons:assembleGplayRelease :commons:assembleFossRelease :commons:assembleRustoreRelease --no-build-cache --rerun-tasks --no-daemon
-    
-    # 3. 💡 THEN WE PUBLISH THEM 
-    - ./gradlew :commons:publishGplayReleasePublicationToMavenLocal :commons:publishFossReleasePublicationToMavenLocal :commons:publishRustoreReleasePublicationToMavenLocal --no-build-cache --rerun-tasks --no-daemon
+
+    # 2. 💡 WE TACKLE ALL TASKS AS ONE TEAM
+    - >
+        ./gradlew :commons:clean
+        :commons:publishGplayReleasePublicationToMavenLocal
+        :commons:publishFossReleasePublicationToMavenLocal
+        :commons:publishRustoreReleasePublicationToMavenLocal
+        --no-build-cache --rerun-tasks --no-daemon
