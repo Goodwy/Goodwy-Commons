@@ -91,11 +91,13 @@ publishing {
     publications {
         create<MavenPublication>("gplayRelease") {
             groupId = "com.github.goodwy.goodwy-commons"
-            artifactId = "commons-gplay" // <-- The name you will import
+            artifactId = "commons-gplay"
             version = project.version.toString()
-
-            // 💡 MANUALLY SPECIFY THE .AAR FILE
             artifact("$buildDir/outputs/aar/${project.name}-gplay-release.aar")
+
+            tasks.named("publishGplayReleasePublicationToMavenLocal") {
+                dependsOn(tasks.named("assembleGplayRelease"))
+            }
         }
 
         create<MavenPublication>("fossRelease") {
@@ -103,6 +105,10 @@ publishing {
             artifactId = "commons-foss"
             version = project.version.toString()
             artifact("$buildDir/outputs/aar/${project.name}-foss-release.aar")
+
+            tasks.named("publishFossReleasePublicationToMavenLocal") {
+                dependsOn(tasks.named("assembleFossRelease"))
+            }
         }
 
         create<MavenPublication>("rustoreRelease") {
@@ -110,6 +116,10 @@ publishing {
             artifactId = "commons-rustore"
             version = project.version.toString()
             artifact("$buildDir/outputs/aar/${project.name}-rustore-release.aar")
+
+            tasks.named("publishRustoreReleasePublicationToMavenLocal") {
+                dependsOn(tasks.named("assembleRustoreRelease"))
+            }
         }
     }
 }

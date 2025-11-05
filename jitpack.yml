@@ -5,13 +5,5 @@ install:
     # 1. Setting a memory limit
     - export GRADLE_OPTS="-Dorg.gradle.jvmargs='-Xmx3g' -Dorg.gradle.parallel=false"
 
-    # 2. 💡 FIRST WE COLLECT THE AAR, THEN WE PUBLISH IT (ALL IN ONE TEAM)
-    - >
-        ./gradlew :commons:clean
-        :commons:assembleGplayRelease
-        :commons:assembleFossRelease
-        :commons:assembleRustoreRelease
-        :commons:publishGplayReleasePublicationToMavenLocal
-        :commons:publishFossReleasePublicationToMavenLocal
-        :commons:publishRustoreReleasePublicationToMavenLocal
-        --no-build-cache --rerun-tasks --no-daemon
+    # 2. RETURNING to the general task publishToMavenLocal
+    - ./gradlew :commons:clean :commons:publishToMavenLocal --no-build-cache --rerun-tasks --no-daemon
