@@ -12,7 +12,7 @@ plugins {
     `maven-publish`
 }
 
-group = "com.goodwy"
+group = "com.github.goodwy.goodwy-commons"
 version = "7.2.0"
 
 android {
@@ -40,16 +40,15 @@ android {
     }
 
     flavorDimensions += "distribution"
-
     productFlavors {
-        create("gplay") {
-            dimension = "distribution"
-        }
-        create("foss") {
-            dimension = "distribution"
-        }
-        create("rustore") {
-            dimension = "distribution"
+        create("gplay") { dimension = "distribution" }
+        create("foss") { dimension = "distribution" }
+        create("rustore") { dimension = "distribution" }
+    }
+
+    publishing {
+        multipleVariants {
+            allVariants()
         }
     }
 
@@ -91,40 +90,6 @@ android {
 
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
-    }
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("gplayRelease") {
-            // These lines specify the name of the artefact.
-            groupId = "com.github.goodwy.goodwy-commons"
-            artifactId = "commons-gplay"
-            version = project.version.toString()
-
-            // 💡 afterEvaluate corrects the error 'SoftwareComponent not found'
-            afterEvaluate {
-                from(components["gplayRelease"])
-            }
-        }
-        create<MavenPublication>("fossRelease") {
-            groupId = "com.github.goodwy.goodwy-commons"
-            artifactId = "commons-foss"
-            version = project.version.toString()
-
-            afterEvaluate {
-                from(components["fossRelease"])
-            }
-        }
-        create<MavenPublication>("rustoreRelease") {
-            groupId = "com.github.goodwy.goodwy-commons"
-            artifactId = "commons-rustore"
-            version = project.version.toString()
-
-            afterEvaluate {
-                from(components["rustoreRelease"])
-            }
-        }
     }
 }
 
