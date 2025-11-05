@@ -97,25 +97,33 @@ android {
 publishing {
     publications {
         create<MavenPublication>("gplayRelease") {
-            from(components["gplayRelease"])
-
+            // These lines specify the name of the artefact.
             groupId = "com.github.goodwy.goodwy-commons"
             artifactId = "commons-gplay"
             version = project.version.toString()
+
+            // 💡 afterEvaluate corrects the error 'SoftwareComponent not found'
+            afterEvaluate {
+                from(components["gplayRelease"])
+            }
         }
         create<MavenPublication>("fossRelease") {
-            from(components["fossRelease"])
-
             groupId = "com.github.goodwy.goodwy-commons"
             artifactId = "commons-foss"
             version = project.version.toString()
+
+            afterEvaluate {
+                from(components["fossRelease"])
+            }
         }
         create<MavenPublication>("rustoreRelease") {
-            from(components["rustoreRelease"])
-
             groupId = "com.github.goodwy.goodwy-commons"
             artifactId = "commons-rustore"
             version = project.version.toString()
+
+            afterEvaluate {
+                from(components["rustoreRelease"])
+            }
         }
     }
 }
