@@ -3,3 +3,5 @@ jdk:
 before_install:
     - apt-get update
     - apt-get install -y cmake
+install:
+    - ./gradlew :commons:publishToMavenLocal
