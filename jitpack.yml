@@ -5,5 +5,5 @@ install:
     # 1. Setting a memory limit
     - export GRADLE_OPTS="-Dorg.gradle.jvmargs='-Xmx3g' -Dorg.gradle.parallel=false"
 
-    # 2. RETURNING to the general task publishToMavenLocal
-    - ./gradlew :commons:clean :commons:publishToMavenLocal --no-build-cache --rerun-tasks --no-daemon
+    # 2. RETURNING to the general task publishToMavenLocal. Module added: strings.
+    - ./gradlew :commons:clean :strings:publishToMavenLocal :commons:publishToMavenLocal --no-build-cache --rerun-tasks --no-daemon
