@@ -3,10 +3,5 @@ jdk:
 
 install:
     - export GRADLE_OPTS="-Dorg.gradle.jvmargs='-Xmx3g' -Dorg.gradle.parallel=false"
-    
-    - >
-        ./gradlew :commons:clean
-        :commons:publishGplayReleasePublicationToMavenLocal
-        :commons:publishFossReleasePublicationToMavenLocal
-        :commons:publishRustoreReleasePublicationToMavenLocal
-        --no-build-cache --rerun-tasks --no-daemon
+
+    - ./gradlew :commons:clean :commons:publishGplayReleasePublicationToMavenLocal :commons:publishFossReleasePublicationToMavenLocal :commons:publishRustoreReleasePublicationToMavenLocal --no-build-cache --rerun-tasks --no-daemon

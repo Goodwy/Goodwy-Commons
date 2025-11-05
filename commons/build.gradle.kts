@@ -92,11 +92,30 @@ android {
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
     }
+}
 
-    publishing {
-        // We publish all options (gplayRelease, fossRelease, rustoreRelease)
-        multipleVariants {
-            allVariants()
+publishing {
+    publications {
+        create<MavenPublication>("gplayRelease") {
+            from(components["gplayRelease"])
+
+            groupId = "com.github.goodwy.goodwy-commons"
+            artifactId = "commons-gplay"
+            version = project.version.toString()
+        }
+        create<MavenPublication>("fossRelease") {
+            from(components["fossRelease"])
+
+            groupId = "com.github.goodwy.goodwy-commons"
+            artifactId = "commons-foss"
+            version = project.version.toString()
+        }
+        create<MavenPublication>("rustoreRelease") {
+            from(components["rustoreRelease"])
+
+            groupId = "com.github.goodwy.goodwy-commons"
+            artifactId = "commons-rustore"
+            version = project.version.toString()
         }
     }
 }
