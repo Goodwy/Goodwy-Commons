@@ -2,4 +2,5 @@ jdk:
     - openjdk17
 
 install:
-    - ./gradlew :commons:clean :commons:assembleGplayRelease :commons:assembleFossRelease :commons:assembleRustoreRelease --no-build-cache --rerun-tasks --no-daemon
+    - export GRADLE_OPTS="-Dorg.gradle.jvmargs='-Xmx3g' -Dorg.gradle.parallel=false"
+    - ./gradlew :commons:clean :commons:publishToMavenLocal --no-build-cache --rerun-tasks --no-daemon

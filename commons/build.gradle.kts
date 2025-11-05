@@ -92,6 +92,13 @@ android {
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
     }
+
+    publishing {
+        // We publish all options (gplayRelease, fossRelease, rustoreRelease)
+        multipleVariants {
+            allVariants()
+        }
+    }
 }
 
 detekt {
