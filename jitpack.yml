@@ -1,11 +1,5 @@
-image: full
-
 jdk:
     - openjdk17
 
-before_install:
-    - sudo apt-get update
-    - sudo apt-get install -y cmake
-
 install:
-    - ./gradlew :commons:clean :commons:publishToMavenLocal --no-build-cache --rerun-tasks
+    - ./gradlew :commons:clean :commons:publishToMavenLocal --no-build-cache --rerun-tasks --no-daemon
