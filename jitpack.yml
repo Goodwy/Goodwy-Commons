@@ -2,6 +2,7 @@ image: full
 
 jdk:
     - openjdk17
+
 before_install:
     - sudo apt-get update
     - sudo apt-get install -y cmake
