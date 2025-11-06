@@ -87,38 +87,40 @@ android {
     }
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("gplayRelease") {
-            groupId = "com.github.goodwy.goodwy-commons"
-            artifactId = "commons-gplay"
-            version = project.version.toString()
-            artifact("$buildDir/outputs/aar/${project.name}-gplay-release.aar")
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("gplayRelease") {
+                groupId = "com.github.goodwy.goodwy-commons"
+                artifactId = "commons-gplay"
+                version = project.version.toString()
+                from(components.getByName("gplayRelease"))
 
-            tasks.named("publishGplayReleasePublicationToMavenLocal") {
-                dependsOn(tasks.named("assembleGplayRelease"))
+                tasks.named("publishGplayReleasePublicationToMavenLocal") {
+                    dependsOn(tasks.named("assembleGplayRelease"))
+                }
             }
-        }
 
-        create<MavenPublication>("fossRelease") {
-            groupId = "com.github.goodwy.goodwy-commons"
-            artifactId = "commons-foss"
-            version = project.version.toString()
-            artifact("$buildDir/outputs/aar/${project.name}-foss-release.aar")
+            create<MavenPublication>("fossRelease") {
+                groupId = "com.github.goodwy.goodwy-commons"
+                artifactId = "commons-foss"
+                version = project.version.toString()
+                from(components.getByName("fossRelease"))
 
-            tasks.named("publishFossReleasePublicationToMavenLocal") {
-                dependsOn(tasks.named("assembleFossRelease"))
+                tasks.named("publishFossReleasePublicationToMavenLocal") {
+                    dependsOn(tasks.named("assembleFossRelease"))
+                }
             }
-        }
 
-        create<MavenPublication>("rustoreRelease") {
-            groupId = "com.github.goodwy.goodwy-commons"
-            artifactId = "commons-rustore"
-            version = project.version.toString()
-            artifact("$buildDir/outputs/aar/${project.name}-rustore-release.aar")
+            create<MavenPublication>("rustoreRelease") {
+                groupId = "com.github.goodwy.goodwy-commons"
+                artifactId = "commons-rustore"
+                version = project.version.toString()
+                from(components.getByName("rustoreRelease"))
 
-            tasks.named("publishRustoreReleasePublicationToMavenLocal") {
-                dependsOn(tasks.named("assembleRustoreRelease"))
+                tasks.named("publishRustoreReleasePublicationToMavenLocal") {
+                    dependsOn(tasks.named("assembleRustoreRelease"))
+                }
             }
         }
     }
