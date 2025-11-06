@@ -35,27 +35,34 @@ class PurchaseHelper {
             ),
         callback: (updatePro: Boolean) -> Unit,
     ) {
-        ruStoreHelper = RuStoreHelper()
-        ruStoreHelper!!.checkPurchasesAvailability(activity)
-
-        activity.lifecycleScope.launch {
-            ruStoreHelper!!.eventStart
-                .flowWithLifecycle(activity.lifecycle)
-                .collect { event ->
-                    handleEventStart(event, ruStoreList)
-                }
+        ruStoreHelper = try {
+            RuStoreHelper()
+        } catch (_: Exception) {
+            null
         }
 
-        activity.lifecycleScope.launch {
-            ruStoreHelper!!.statePurchased
-                .flowWithLifecycle(activity.lifecycle)
-                .collect { state ->
-                    //update of purchased
-                    if (!state.isLoading && ruStoreIsConnected) {
-                        activity.baseConfig.isProRuStore = state.purchases.firstOrNull() != null
-                        callback(true)
+        if (ruStoreHelper != null) {
+            ruStoreHelper!!.checkPurchasesAvailability(activity)
+
+            activity.lifecycleScope.launch {
+                ruStoreHelper!!.eventStart
+                    .flowWithLifecycle(activity.lifecycle)
+                    .collect { event ->
+                        handleEventStart(event, ruStoreList)
                     }
-                }
+            }
+
+            activity.lifecycleScope.launch {
+                ruStoreHelper!!.statePurchased
+                    .flowWithLifecycle(activity.lifecycle)
+                    .collect { state ->
+                        //update of purchased
+                        if (!state.isLoading && ruStoreIsConnected) {
+                            activity.baseConfig.isProRuStore = state.purchases.firstOrNull() != null
+                            callback(true)
+                        }
+                    }
+            }
         }
     }
 
