@@ -46,6 +46,12 @@ android {
         create("rustore") { dimension = "distribution" }
     }
 
+    publishing {
+        singleVariant("gplayRelease") {}
+        singleVariant("fossRelease") {}
+        singleVariant("rustoreRelease") {}
+    }
+
     buildFeatures {
         viewBinding = true
         compose = true
