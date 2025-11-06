@@ -46,7 +46,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private var showCollection = false
     private val predefinedThemes = LinkedHashMap<Int, MyTheme>()
 
-    private val purchaseHelper = PurchaseHelper(this)
+    private val purchaseHelper = PlayStoreHelper(this)
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
