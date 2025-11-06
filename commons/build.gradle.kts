@@ -101,7 +101,6 @@ afterEvaluate {
                 artifactId = "commons-gplay"
                 version = project.version.toString()
                 from(components.getByName("gplayRelease"))
-
                 tasks.named("publishGplayReleasePublicationToMavenLocal") {
                     dependsOn(tasks.named("assembleGplayRelease"))
                 }
@@ -112,7 +111,6 @@ afterEvaluate {
                 artifactId = "commons-foss"
                 version = project.version.toString()
                 from(components.getByName("fossRelease"))
-
                 tasks.named("publishFossReleasePublicationToMavenLocal") {
                     dependsOn(tasks.named("assembleFossRelease"))
                 }
@@ -123,7 +121,6 @@ afterEvaluate {
                 artifactId = "commons-rustore"
                 version = project.version.toString()
                 from(components.getByName("rustoreRelease"))
-
                 tasks.named("publishRustoreReleasePublicationToMavenLocal") {
                     dependsOn(tasks.named("assembleRustoreRelease"))
                 }
