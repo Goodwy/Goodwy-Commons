@@ -5,7 +5,7 @@ import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.baseConfig
 
 class PurchaseHelper {
-    fun initPurchaseIfNeed(app: Application) {
+    fun initPurchaseIfNeed(app: Application, id: String) {
         //Not used for Google Play
     }
 

@@ -39,5 +39,4 @@ object RuStoreModule {
     }
 
     fun provideRuStoreBillingClient(): RuStoreBillingClient = ruStoreBillingClient
-
 }

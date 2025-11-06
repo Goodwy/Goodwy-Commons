@@ -87,64 +87,74 @@ class PurchaseActivity : BaseSimpleActivity() {
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
         showCollection = intent.getBooleanExtra(SHOW_COLLECTION, false)
 
-        ruStoreHelper = RuStoreHelper()
-        ruStoreBillingClient = RuStoreModule.provideRuStoreBillingClient()
+        ruStoreHelper = try {
+            RuStoreHelper()
+        } catch (_: Exception) {
+            null
+        }
+        ruStoreBillingClient = try {
+            RuStoreModule.provideRuStoreBillingClient()
+        } catch (_: Exception) {
+            null
+        }
         if (savedInstanceState == null) {
-            ruStoreBillingClient!!.onNewIntent(intent)
+            ruStoreBillingClient?.onNewIntent(intent)
         }
 
-        ruStoreHelper!!.checkPurchasesAvailability(this)
+        ruStoreHelper?.checkPurchasesAvailability(this)
 
 //            lifecycleScope.launch {
-//                ruStoreHelper!!.stateStart
+//                ruStoreHelper?.stateStart
 //                    .flowWithLifecycle(lifecycle)
 //                    .collect { state ->
 //                        // update button
 //                    }
 //            }
-        lifecycleScope.launch {
-            ruStoreHelper!!.eventStart
-                .flowWithLifecycle(lifecycle)
-                .collect { event ->
-                    handleEventStart(event)
-                }
-        }
-
-        lifecycleScope.launch {
-            ruStoreHelper!!.stateBilling
-                .flowWithLifecycle(lifecycle)
-                .collect { state ->
-                    if (!state.isLoading) {
-                        //price update
-                        setupButtonRuStore(state)
+        if (ruStoreHelper != null) {
+            lifecycleScope.launch {
+                ruStoreHelper!!.eventStart
+                    .flowWithLifecycle(lifecycle)
+                    .collect { event ->
+                        handleEventStart(event)
                     }
-                }
-        }
-        lifecycleScope.launch {
-            ruStoreHelper!!.eventBilling
-                .flowWithLifecycle(lifecycle)
-                .collect { event ->
-                    handleEventBilling(event)
-                }
-        }
+            }
 
-        lifecycleScope.launch {
-            ruStoreHelper!!.statePurchased
-                .flowWithLifecycle(lifecycle)
-                .collect { state ->
-                    if (!state.isLoading && ruStoreIsConnected) {
-                        //update of purchased
-                        setupButtonCheckedRuStore(state.purchases)
-                        //update pro version
-                        baseConfig.isProRuStore = state.purchases.isNotEmpty()
+            lifecycleScope.launch {
+                ruStoreHelper!!.stateBilling
+                    .flowWithLifecycle(lifecycle)
+                    .collect { state ->
+                        if (!state.isLoading) {
+                            //price update
+                            setupButtonRuStore(state)
+                        }
                     }
-                }
+            }
+            lifecycleScope.launch {
+                ruStoreHelper!!.eventBilling
+                    .flowWithLifecycle(lifecycle)
+                    .collect { event ->
+                        handleEventBilling(event)
+                    }
+            }
+
+            lifecycleScope.launch {
+                ruStoreHelper!!.statePurchased
+                    .flowWithLifecycle(lifecycle)
+                    .collect { state ->
+                        if (!state.isLoading && ruStoreIsConnected) {
+                            //update of purchased
+                            setupButtonCheckedRuStore(state.purchases)
+                            //update pro version
+                            baseConfig.isProRuStore = state.purchases.isNotEmpty()
+                        }
+                    }
+            }
         }
     }
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        ruStoreBillingClient!!.onNewIntent(intent)
+        ruStoreBillingClient?.onNewIntent(intent)
     }
 
     override fun onResume() {
@@ -371,7 +381,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             text = resultPrice
             setOnClickListener {
                 if (product != null) {
-                    ruStoreHelper!!.purchaseProduct(product)
+                    ruStoreHelper?.purchaseProduct(product)
                 }
             }
             background.setTint(primaryColor)
@@ -385,7 +395,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             text = resultPrice
             setOnClickListener {
                 if (product != null) {
-                    ruStoreHelper!!.purchaseProduct(product)
+                    ruStoreHelper?.purchaseProduct(product)
                 }
             }
             background.setTint(primaryColor)
@@ -399,7 +409,7 @@ class PurchaseActivity : BaseSimpleActivity() {
             text = resultPrice
             setOnClickListener {
                 if (product != null) {
-                    ruStoreHelper!!.purchaseProduct(product)
+                    ruStoreHelper?.purchaseProduct(product)
                 }
             }
             background.setTint(primaryColor)
@@ -415,7 +425,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper!!.purchaseProduct(product)
+                        ruStoreHelper?.purchaseProduct(product)
                     }
                 }
             } else {
@@ -434,7 +444,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper!!.purchaseProduct(product)
+                        ruStoreHelper?.purchaseProduct(product)
                     }
                 }
             } else {
@@ -453,7 +463,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper!!.purchaseProduct(product)
+                        ruStoreHelper?.purchaseProduct(product)
                     }
                 }
             } else {
@@ -473,7 +483,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper!!.purchaseProduct(product)
+                        ruStoreHelper?.purchaseProduct(product)
                     }
                 }
             } else {
@@ -492,7 +502,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper!!.purchaseProduct(product)
+                        ruStoreHelper?.purchaseProduct(product)
                     }
                 }
             } else {
@@ -511,7 +521,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 text = textPrice
                 setOnClickListener {
                     if (product != null) {
-                        ruStoreHelper!!.purchaseProduct(product)
+                        ruStoreHelper?.purchaseProduct(product)
                     }
                 }
             } else {
@@ -565,7 +575,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         val productList: ArrayList<String> = productIdListRu
         productList.addAll(subscriptionIdListRu)
         productList.addAll(subscriptionYearIdListRu)
-        ruStoreHelper!!.getProducts(productList)
+        ruStoreHelper?.getProducts(productList)
     }
 
     private fun handleEventStart(event: StartPurchasesEvent) {
