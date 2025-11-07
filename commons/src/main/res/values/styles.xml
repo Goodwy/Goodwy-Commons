@@ -144,6 +144,7 @@
     <style name="AppTheme.ActionModeYou" parent="@style/Widget.Material3.ActionMode">
         <item name="android:outlineProvider">none</item>
         <item name="background">@drawable/actionmenu_background_you</item>
+        <item name="height">56dp</item>
         <item name="actionOverflowButtonStyle">@style/TopPopupMenuYou</item>
     </style>
 
