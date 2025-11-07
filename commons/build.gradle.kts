@@ -15,6 +15,12 @@ plugins {
 group = "com.github.goodwy.goodwy-commons"
 version = "7.2.0"
 
+val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    // Include source code files from the main set
+    from(android.sourceSets.getByName("main").java.srcDirs)
+}
+
 android {
     namespace = "com.goodwy.commons"
 
@@ -101,6 +107,7 @@ afterEvaluate {
                 artifactId = "commons-gplay"
                 version = project.version.toString()
                 from(components.getByName("gplayRelease"))
+                artifact(sourcesJar.get())
                 tasks.named("publishGplayReleasePublicationToMavenLocal") {
                     dependsOn(tasks.named("assembleGplayRelease"))
                 }
@@ -111,6 +118,7 @@ afterEvaluate {
                 artifactId = "commons-foss"
                 version = project.version.toString()
                 from(components.getByName("fossRelease"))
+                artifact(sourcesJar.get())
                 tasks.named("publishFossReleasePublicationToMavenLocal") {
                     dependsOn(tasks.named("assembleFossRelease"))
                 }
@@ -121,6 +129,7 @@ afterEvaluate {
                 artifactId = "commons-rustore"
                 version = project.version.toString()
                 from(components.getByName("rustoreRelease"))
+                artifact(sourcesJar.get())
                 tasks.named("publishRustoreReleasePublicationToMavenLocal") {
                     dependsOn(tasks.named("assembleRustoreRelease"))
                 }

@@ -22,7 +22,6 @@
             android:layout_height="match_parent"
             android:paddingHorizontal="@dimen/activity_padding_left_right"
             android:clipToPadding="false"
-            android:paddingTop="54dp"
             android:layoutAnimation="@anim/layout_animation"
             android:scrollbars="none"
             app:layoutManager="com.goodwy.commons.views.MyGridLayoutManager" />

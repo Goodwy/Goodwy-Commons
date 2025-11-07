@@ -10,6 +10,7 @@ import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
 import com.goodwy.commons.samples.adapters.TestAdapter
 import com.goodwy.commons.samples.databinding.ActivityTestBinding
+import com.goodwy.commons.views.MyRecyclerView
 
 class TestActivity : BaseSimpleActivity() {
     override var isSearchBarEnabled = true
@@ -23,7 +24,11 @@ class TestActivity : BaseSimpleActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = TestAdapter()
+        recyclerView.adapter = TestAdapter(
+            activity = this,
+            recyclerView = recyclerView as MyRecyclerView,
+            itemClick = {}
+        )
 
         binding.mainMenu.updateTitle(getAppLauncherName())
         scrollChange()

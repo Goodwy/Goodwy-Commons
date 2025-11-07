@@ -3,6 +3,7 @@ package com.goodwy.commons.adapters
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.view.*
+import android.widget.ActionMenuView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
@@ -87,21 +88,28 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 }
 
                 activity.menuInflater.inflate(getActionMenuId(), menu)
-                val bgColor = if (activity.isDynamicTheme()) {
+
+                val cabBackgroundColor = if (activity.isDynamicTheme()) {
                     resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
                 } else {
-                    Color.BLACK
+                    activity.getColoredMaterialStatusBarColor()
                 }
+                val cabContrastColor = cabBackgroundColor.getContrastColor()
 
-                actBarTextView!!.setTextColor(bgColor.getContrastColor())
-                activity.updateMenuItemColors(menu, baseColor = bgColor, forceWhiteIcons = true)
+                val actModeBar = actMode!!.customView?.parent as? View
+                actModeBar?.setBackgroundColor(cabBackgroundColor)
+                actBarTextView!!.setTextColor(cabContrastColor)
+                activity.updateMenuItemColors(menu, baseColor = cabBackgroundColor, forceWhiteIcons = false)
                 onActionModeCreated()
 
                 //if (activity.isDynamicTheme()) {
                     actBarTextView?.onGlobalLayout {
                         val backArrow = activity.findViewById<ImageView>(androidx.appcompat.R.id.action_mode_close_button)
                         backArrow?.setImageDrawable(resources.getDrawable(R.drawable.ic_chevron_left_vector, activity.theme))
-                        backArrow?.applyColorFilter(bgColor.getContrastColor())
+                        backArrow?.applyColorFilter(cabContrastColor)
+
+                        val actionMenuView = backArrow?.parent?.parent?.parent as? ActionMenuView
+                        actionMenuView?.overflowIcon?.applyColorFilter(cabContrastColor)
                     }
                 //}
                 return true

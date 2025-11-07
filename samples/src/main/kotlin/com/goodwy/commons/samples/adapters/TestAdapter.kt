@@ -1,29 +1,66 @@
 package com.goodwy.commons.samples.adapters
 
-import android.view.LayoutInflater
-import android.view.View
+import android.view.Menu
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.goodwy.commons.samples.R
+import com.goodwy.commons.samples.R as simpleR
+import com.goodwy.commons.R
+import com.goodwy.commons.activities.BaseSimpleActivity
+import com.goodwy.commons.adapters.MyRecyclerViewAdapter
+import com.goodwy.commons.views.MyRecyclerView
 
-class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
+class TestAdapter(activity: BaseSimpleActivity, recyclerView: MyRecyclerView, itemClick: (Any) -> Unit) :
+    MyRecyclerViewAdapter(activity, recyclerView, itemClick) {
 
     private val items = List(20) { "Element ${it + 1}" }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView: TextView = itemView.findViewById(R.id.textView)
-    }
+    override fun getItemCount() = items.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_simple, parent, false)
-        return ViewHolder(view)
+        return createViewHolder(simpleR.layout.item_simple, parent)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textView.text = items[position]
+        val currentPosition = position - positionOffset
+        val element = items[currentPosition]
+
+        val textView = holder.itemView.findViewById<TextView>(simpleR.id.textView)
+        textView.text = element
+
+        // Set the background to visually highlight selected items
+        val isSelected = selectedKeys.contains(getItemSelectionKey(currentPosition))
+        holder.itemView.setBackgroundColor(if (isSelected) 0x33AAAAAA else 0)
+
+        holder.bindView(element, true, true) { itemView, adapterPosition ->
+            // The body is not required, as we have already configured the appearance above.
+        }
     }
 
-    override fun getItemCount() = items.size
+    override fun getActionMenuId() = R.menu.cab_delete_only
+
+    override fun prepareActionMode(menu: Menu) {
+        val deleteItem = menu.findItem(R.id.cab_delete)
+        deleteItem?.isVisible = selectedKeys.isNotEmpty()
+    }
+
+    override fun actionItemPressed(id: Int) {
+        when (id) {
+            R.id.cab_delete -> {
+                // For the test, we simply remove the selection
+                removeSelectedItems(getSelectedItemPositions())
+            }
+        }
+    }
+
+    override fun getSelectableItemCount() = items.size
+
+    override fun getIsItemSelectable(position: Int) = true
+
+    override fun getItemSelectionKey(position: Int) = position + 1
+
+    override fun getItemKeyPosition(key: Int) = key - 1
+
+    override fun onActionModeCreated() {}
+
+    override fun onActionModeDestroyed() {}
 }

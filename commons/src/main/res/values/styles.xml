@@ -32,6 +32,7 @@
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
         <item name="android:forceDarkAllowed">false</item>
+        <item name="windowActionModeOverlay">true</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item>
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
         <item name="android:windowLightStatusBar">false</item>
@@ -1619,26 +1620,10 @@
 
 
     <!--Goodwy-->
-    <style name="AppTheme.BW_20" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_20</item>
-        <item name="colorPrimaryDark">@color/bw_30</item>
-        <item name="colorAccent">@color/bw_20</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.BW_20_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_20</item>
         <item name="colorPrimaryDark">@color/bw_30</item>
         <item name="colorAccent">@color/bw_20</item>
-    </style>
-
-    <style name="AppTheme.BW_30" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_30</item>
-        <item name="colorPrimaryDark">@color/bw_40</item>
-        <item name="colorAccent">@color/bw_30</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.BW_30_core" parent="AppTheme.Base.Core">
@@ -1647,26 +1632,10 @@
         <item name="colorAccent">@color/bw_30</item>
     </style>
 
-    <style name="AppTheme.BW_40" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_40</item>
-        <item name="colorPrimaryDark">@color/bw_50</item>
-        <item name="colorAccent">@color/bw_40</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.BW_40_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_40</item>
         <item name="colorPrimaryDark">@color/bw_50</item>
         <item name="colorAccent">@color/bw_40</item>
-    </style>
-
-    <style name="AppTheme.BW_50" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_50</item>
-        <item name="colorPrimaryDark">@color/bw_60</item>
-        <item name="colorAccent">@color/bw_50</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.BW_50_core" parent="AppTheme.Base.Core">
@@ -1675,26 +1644,10 @@
         <item name="colorAccent">@color/bw_50</item>
     </style>
 
-    <style name="AppTheme.BW_60" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_60</item>
-        <item name="colorPrimaryDark">@color/bw_70</item>
-        <item name="colorAccent">@color/bw_60</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.BW_60_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_60</item>
         <item name="colorPrimaryDark">@color/bw_70</item>
         <item name="colorAccent">@color/bw_60</item>
-    </style>
-
-    <style name="AppTheme.BW_70" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_70</item>
-        <item name="colorPrimaryDark">@color/bw_80</item>
-        <item name="colorAccent">@color/bw_70</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.BW_70_core" parent="AppTheme.Base.Core">
@@ -1703,27 +1656,10 @@
         <item name="colorAccent">@color/bw_70</item>
     </style>
 
-    <style name="AppTheme.BW_80" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_80</item>
-        <item name="colorPrimaryDark">@color/bw_90</item>
-        <item name="colorAccent">@color/bw_80</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.BW_80_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_80</item>
         <item name="colorPrimaryDark">@color/bw_90</item>
         <item name="colorAccent">@color/bw_80</item>
-    </style>
-
-    <style name="AppTheme.BW_90" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_90</item>
-        <item name="colorPrimaryDark">@color/bw_100</item>
-        <item name="colorAccent">@color/bw_90</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.BW_90_core" parent="AppTheme.Base.Core">
@@ -1732,28 +1668,10 @@
         <item name="colorAccent">@color/bw_90</item>
     </style>
 
-    <style name="AppTheme.BW_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_100</item>
-        <item name="colorPrimaryDark">@color/bw_200</item>
-        <item name="colorAccent">@color/bw_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.BW_100_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_100</item>
         <item name="colorPrimaryDark">@color/bw_200</item>
         <item name="colorAccent">@color/bw_100</item>
-    </style>
-
-    <style name="AppTheme.BW_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_200</item>
-        <item name="colorPrimaryDark">@color/bw_300</item>
-        <item name="colorAccent">@color/bw_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.BW_200_core" parent="AppTheme.Base.Core">
@@ -1762,28 +1680,10 @@
         <item name="colorAccent">@color/bw_200</item>
     </style>
 
-    <style name="AppTheme.BW_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_300</item>
-        <item name="colorPrimaryDark">@color/bw_400</item>
-        <item name="colorAccent">@color/bw_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.BW_300_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_300</item>
         <item name="colorPrimaryDark">@color/bw_400</item>
         <item name="colorAccent">@color/bw_300</item>
-    </style>
-
-    <style name="AppTheme.BW_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_400</item>
-        <item name="colorPrimaryDark">@color/bw_500</item>
-        <item name="colorAccent">@color/bw_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.BW_400_core" parent="AppTheme.Base.Core">
@@ -1792,28 +1692,10 @@
         <item name="colorAccent">@color/bw_400</item>
     </style>
 
-    <style name="AppTheme.BW_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_500</item>
-        <item name="colorPrimaryDark">@color/bw_600</item>
-        <item name="colorAccent">@color/bw_500</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.BW_500_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_500</item>
         <item name="colorPrimaryDark">@color/bw_600</item>
         <item name="colorAccent">@color/bw_500</item>
-    </style>
-
-    <style name="AppTheme.BW_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_600</item>
-        <item name="colorPrimaryDark">@color/bw_700</item>
-        <item name="colorAccent">@color/bw_600</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.BW_600_core" parent="AppTheme.Base.Core">
@@ -1822,28 +1704,10 @@
         <item name="colorAccent">@color/bw_600</item>
     </style>
 
-    <style name="AppTheme.BW_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_700</item>
-        <item name="colorPrimaryDark">@color/bw_800</item>
-        <item name="colorAccent">@color/bw_700</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.BW_700_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_700</item>
         <item name="colorPrimaryDark">@color/bw_800</item>
         <item name="colorAccent">@color/bw_700</item>
-    </style>
-
-    <style name="AppTheme.BW_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_800</item>
-        <item name="colorPrimaryDark">@color/bw_900</item>
-        <item name="colorAccent">@color/bw_800</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.BW_800_core" parent="AppTheme.Base.Core">
@@ -1852,28 +1716,10 @@
         <item name="colorAccent">@color/bw_800</item>
     </style>
 
-    <style name="AppTheme.BW_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/bw_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/bw_900</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.BW_900_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/bw_900</item>
         <item name="colorPrimaryDark">@color/bw_000</item>
         <item name="colorAccent">@color/bw_900</item>
-    </style>
-
-    <style name="AppTheme.I_Blue_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_100</item>
-        <item name="colorPrimaryDark">@color/blue_200</item>
-        <item name="colorAccent">@color/blue_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Blue_100_core" parent="AppTheme.Base.Core">
@@ -1882,28 +1728,10 @@
         <item name="colorAccent">@color/blue_100</item>
     </style>
 
-    <style name="AppTheme.I_Blue_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_200</item>
-        <item name="colorPrimaryDark">@color/blue_300</item>
-        <item name="colorAccent">@color/blue_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Blue_200_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/blue_200</item>
         <item name="colorPrimaryDark">@color/blue_300</item>
         <item name="colorAccent">@color/blue_200</item>
-    </style>
-
-    <style name="AppTheme.I_Blue_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_300</item>
-        <item name="colorPrimaryDark">@color/blue_400</item>
-        <item name="colorAccent">@color/blue_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Blue_300_core" parent="AppTheme.Base.Core">
@@ -1912,26 +1740,10 @@
         <item name="colorAccent">@color/blue_300</item>
     </style>
 
-    <style name="AppTheme.I_Blue_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_400</item>
-        <item name="colorPrimaryDark">@color/blue_500</item>
-        <item name="colorAccent">@color/blue_400</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Blue_400_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/blue_400</item>
         <item name="colorPrimaryDark">@color/blue_500</item>
         <item name="colorAccent">@color/blue_400</item>
-    </style>
-
-    <style name="AppTheme.I_Blue_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_500</item>
-        <item name="colorPrimaryDark">@color/blue_600</item>
-        <item name="colorAccent">@color/blue_500</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Blue_500_core" parent="AppTheme.Base.Core">
@@ -1940,26 +1752,10 @@
         <item name="colorAccent">@color/blue_500</item>
     </style>
 
-    <style name="AppTheme.I_Blue_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_600</item>
-        <item name="colorPrimaryDark">@color/blue_700</item>
-        <item name="colorAccent">@color/blue_600</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Blue_600_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/blue_600</item>
         <item name="colorPrimaryDark">@color/blue_700</item>
         <item name="colorAccent">@color/blue_600</item>
-    </style>
-
-    <style name="AppTheme.I_Blue_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_700</item>
-        <item name="colorPrimaryDark">@color/blue_800</item>
-        <item name="colorAccent">@color/blue_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Blue_700_core" parent="AppTheme.Base.Core">
@@ -1968,26 +1764,11 @@
         <item name="colorAccent">@color/blue_700</item>
     </style>
 
-    <style name="AppTheme.I_Blue_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_800</item>
-        <item name="colorPrimaryDark">@color/blue_900</item>
-        <item name="colorAccent">@color/blue_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
 
     <style name="AppTheme.I_Blue_800_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/blue_800</item>
         <item name="colorPrimaryDark">@color/blue_900</item>
         <item name="colorAccent">@color/blue_800</item>
-    </style>
-
-    <style name="AppTheme.I_Blue_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/blue_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/blue_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Blue_900_core" parent="AppTheme.Base.Core">
@@ -1996,28 +1777,10 @@
         <item name="colorAccent">@color/blue_900</item>
     </style>
 
-    <style name="AppTheme.I_Indigo_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_100</item>
-        <item name="colorPrimaryDark">@color/indigo_200</item>
-        <item name="colorAccent">@color/indigo_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Indigo_100_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/indigo_100</item>
         <item name="colorPrimaryDark">@color/indigo_200</item>
         <item name="colorAccent">@color/indigo_100</item>
-    </style>
-
-    <style name="AppTheme.I_Indigo_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_200</item>
-        <item name="colorPrimaryDark">@color/indigo_300</item>
-        <item name="colorAccent">@color/indigo_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Indigo_200_core" parent="AppTheme.Base.Core">
@@ -2026,28 +1789,10 @@
         <item name="colorAccent">@color/indigo_200</item>
     </style>
 
-    <style name="AppTheme.I_Indigo_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_300</item>
-        <item name="colorPrimaryDark">@color/indigo_400</item>
-        <item name="colorAccent">@color/indigo_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Indigo_300_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/indigo_300</item>
         <item name="colorPrimaryDark">@color/indigo_400</item>
         <item name="colorAccent">@color/indigo_300</item>
-    </style>
-
-    <style name="AppTheme.I_Indigo_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_400</item>
-        <item name="colorPrimaryDark">@color/indigo_500</item>
-        <item name="colorAccent">@color/indigo_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Indigo_400_core" parent="AppTheme.Base.Core">
@@ -2056,28 +1801,10 @@
         <item name="colorAccent">@color/indigo_400</item>
     </style>
 
-    <style name="AppTheme.I_Indigo_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_500</item>
-        <item name="colorPrimaryDark">@color/indigo_600</item>
-        <item name="colorAccent">@color/indigo_500</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Indigo_500_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/indigo_500</item>
         <item name="colorPrimaryDark">@color/indigo_600</item>
         <item name="colorAccent">@color/indigo_500</item>
-    </style>
-
-    <style name="AppTheme.I_Indigo_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_600</item>
-        <item name="colorPrimaryDark">@color/indigo_700</item>
-        <item name="colorAccent">@color/indigo_600</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Indigo_600_core" parent="AppTheme.Base.Core">
@@ -2086,27 +1813,10 @@
         <item name="colorAccent">@color/indigo_600</item>
     </style>
 
-    <style name="AppTheme.I_Indigo_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_700</item>
-        <item name="colorPrimaryDark">@color/indigo_800</item>
-        <item name="colorAccent">@color/indigo_700</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Indigo_700_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/indigo_700</item>
         <item name="colorPrimaryDark">@color/indigo_800</item>
         <item name="colorAccent">@color/indigo_700</item>
-    </style>
-
-    <style name="AppTheme.I_Indigo_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_800</item>
-        <item name="colorPrimaryDark">@color/indigo_900</item>
-        <item name="colorAccent">@color/indigo_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Indigo_800_core" parent="AppTheme.Base.Core">
@@ -2115,27 +1825,10 @@
         <item name="colorAccent">@color/indigo_800</item>
     </style>
 
-    <style name="AppTheme.I_Indigo_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/indigo_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/indigo_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Indigo_900_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/indigo_900</item>
         <item name="colorPrimaryDark">@color/bw_000</item>
         <item name="colorAccent">@color/indigo_900</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Purple_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_100</item>
-        <item name="colorPrimaryDark">@color/deep_purple_200</item>
-        <item name="colorAccent">@color/deep_purple_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Deep_Purple_100_core" parent="AppTheme.Base.Core">
@@ -2144,28 +1837,10 @@
         <item name="colorAccent">@color/deep_purple_100</item>
     </style>
 
-    <style name="AppTheme.I_Deep_Purple_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_200</item>
-        <item name="colorPrimaryDark">@color/deep_purple_300</item>
-        <item name="colorAccent">@color/deep_purple_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Deep_Purple_200_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/deep_purple_200</item>
         <item name="colorPrimaryDark">@color/deep_purple_300</item>
         <item name="colorAccent">@color/deep_purple_200</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Purple_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_300</item>
-        <item name="colorPrimaryDark">@color/deep_purple_400</item>
-        <item name="colorAccent">@color/deep_purple_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Deep_Purple_300_core" parent="AppTheme.Base.Core">
@@ -2174,28 +1849,10 @@
         <item name="colorAccent">@color/deep_purple_300</item>
     </style>
 
-    <style name="AppTheme.I_Deep_Purple_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_400</item>
-        <item name="colorPrimaryDark">@color/deep_purple_500</item>
-        <item name="colorAccent">@color/deep_purple_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Deep_Purple_400_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/deep_purple_400</item>
         <item name="colorPrimaryDark">@color/deep_purple_500</item>
         <item name="colorAccent">@color/deep_purple_400</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Purple_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_500</item>
-        <item name="colorPrimaryDark">@color/deep_purple_600</item>
-        <item name="colorAccent">@color/deep_purple_500</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Deep_Purple_500_core" parent="AppTheme.Base.Core">
@@ -2204,27 +1861,10 @@
         <item name="colorAccent">@color/deep_purple_500</item>
     </style>
 
-    <style name="AppTheme.I_Deep_Purple_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_600</item>
-        <item name="colorPrimaryDark">@color/deep_purple_700</item>
-        <item name="colorAccent">@color/deep_purple_600</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Deep_Purple_600_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/deep_purple_600</item>
         <item name="colorPrimaryDark">@color/deep_purple_700</item>
         <item name="colorAccent">@color/deep_purple_600</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Purple_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_700</item>
-        <item name="colorPrimaryDark">@color/deep_purple_800</item>
-        <item name="colorAccent">@color/deep_purple_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Deep_Purple_700_core" parent="AppTheme.Base.Core">
@@ -2233,26 +1873,10 @@
         <item name="colorAccent">@color/deep_purple_700</item>
     </style>
 
-    <style name="AppTheme.I_Deep_Purple_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_800</item>
-        <item name="colorPrimaryDark">@color/deep_purple_900</item>
-        <item name="colorAccent">@color/deep_purple_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Deep_Purple_800_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/deep_purple_800</item>
         <item name="colorPrimaryDark">@color/deep_purple_900</item>
         <item name="colorAccent">@color/deep_purple_800</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Purple_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_purple_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/deep_purple_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Deep_Purple_900_core" parent="AppTheme.Base.Core">
@@ -2261,28 +1885,10 @@
         <item name="colorAccent">@color/deep_purple_900</item>
     </style>
 
-    <style name="AppTheme.I_Purple_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_100</item>
-        <item name="colorPrimaryDark">@color/purple_200</item>
-        <item name="colorAccent">@color/purple_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Purple_100_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/purple_100</item>
         <item name="colorPrimaryDark">@color/purple_200</item>
         <item name="colorAccent">@color/purple_100</item>
-    </style>
-
-    <style name="AppTheme.I_Purple_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryDark">@color/purple_300</item>
-        <item name="colorAccent">@color/purple_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Purple_200_core" parent="AppTheme.Base.Core">
@@ -2291,28 +1897,10 @@
         <item name="colorAccent">@color/purple_200</item>
     </style>
 
-    <style name="AppTheme.I_Purple_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_300</item>
-        <item name="colorPrimaryDark">@color/purple_400</item>
-        <item name="colorAccent">@color/purple_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Purple_300_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/purple_300</item>
         <item name="colorPrimaryDark">@color/purple_400</item>
         <item name="colorAccent">@color/purple_300</item>
-    </style>
-
-    <style name="AppTheme.I_Purple_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_400</item>
-        <item name="colorPrimaryDark">@color/purple_500</item>
-        <item name="colorAccent">@color/purple_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Purple_400_core" parent="AppTheme.Base.Core">
@@ -2321,28 +1909,10 @@
         <item name="colorAccent">@color/purple_400</item>
     </style>
 
-    <style name="AppTheme.I_Purple_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_600</item>
-        <item name="colorAccent">@color/purple_500</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Purple_500_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_600</item>
         <item name="colorAccent">@color/purple_500</item>
-    </style>
-
-    <style name="AppTheme.I_Purple_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_600</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/purple_600</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Purple_600_core" parent="AppTheme.Base.Core">
@@ -2351,26 +1921,10 @@
         <item name="colorAccent">@color/purple_600</item>
     </style>
 
-    <style name="AppTheme.I_Purple_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_700</item>
-        <item name="colorPrimaryDark">@color/purple_800</item>
-        <item name="colorAccent">@color/purple_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Purple_700_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/purple_700</item>
         <item name="colorPrimaryDark">@color/purple_800</item>
         <item name="colorAccent">@color/purple_700</item>
-    </style>
-
-    <style name="AppTheme.I_Purple_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_800</item>
-        <item name="colorPrimaryDark">@color/purple_900</item>
-        <item name="colorAccent">@color/purple_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Purple_800_core" parent="AppTheme.Base.Core">
@@ -2379,27 +1933,10 @@
         <item name="colorAccent">@color/purple_800</item>
     </style>
 
-    <style name="AppTheme.I_Purple_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/purple_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/purple_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Purple_900_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/purple_900</item>
         <item name="colorPrimaryDark">@color/bw_000</item>
         <item name="colorAccent">@color/purple_900</item>
-    </style>
-
-    <style name="AppTheme.I_Pink_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_100</item>
-        <item name="colorPrimaryDark">@color/pink_200</item>
-        <item name="colorAccent">@color/pink_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Pink_100_core" parent="AppTheme.Base.Core">
@@ -2408,28 +1945,10 @@
         <item name="colorAccent">@color/pink_100</item>
     </style>
 
-    <style name="AppTheme.I_Pink_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_200</item>
-        <item name="colorPrimaryDark">@color/pink_300</item>
-        <item name="colorAccent">@color/pink_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Pink_200_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/pink_200</item>
         <item name="colorPrimaryDark">@color/pink_300</item>
         <item name="colorAccent">@color/pink_200</item>
-    </style>
-
-    <style name="AppTheme.I_Pink_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_300</item>
-        <item name="colorPrimaryDark">@color/pink_400</item>
-        <item name="colorAccent">@color/pink_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Pink_300_core" parent="AppTheme.Base.Core">
@@ -2438,28 +1957,10 @@
         <item name="colorAccent">@color/pink_300</item>
     </style>
 
-    <style name="AppTheme.I_Pink_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_400</item>
-        <item name="colorPrimaryDark">@color/pink_500</item>
-        <item name="colorAccent">@color/pink_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Pink_400_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/pink_400</item>
         <item name="colorPrimaryDark">@color/pink_500</item>
         <item name="colorAccent">@color/pink_400</item>
-    </style>
-
-    <style name="AppTheme.I_Pink_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_500</item>
-        <item name="colorPrimaryDark">@color/pink_600</item>
-        <item name="colorAccent">@color/pink_500</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Pink_500_core" parent="AppTheme.Base.Core">
@@ -2468,27 +1969,10 @@
         <item name="colorAccent">@color/pink_500</item>
     </style>
 
-    <style name="AppTheme.I_Pink_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_600</item>
-        <item name="colorPrimaryDark">@color/pink_700</item>
-        <item name="colorAccent">@color/pink_600</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Pink_600_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/pink_600</item>
         <item name="colorPrimaryDark">@color/pink_700</item>
         <item name="colorAccent">@color/pink_600</item>
-    </style>
-
-    <style name="AppTheme.I_Pink_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_700</item>
-        <item name="colorPrimaryDark">@color/pink_800</item>
-        <item name="colorAccent">@color/pink_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Pink_700_core" parent="AppTheme.Base.Core">
@@ -2497,26 +1981,10 @@
         <item name="colorAccent">@color/pink_700</item>
     </style>
 
-    <style name="AppTheme.I_Pink_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_800</item>
-        <item name="colorPrimaryDark">@color/pink_900</item>
-        <item name="colorAccent">@color/pink_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Pink_800_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/pink_800</item>
         <item name="colorPrimaryDark">@color/pink_900</item>
         <item name="colorAccent">@color/pink_800</item>
-    </style>
-
-    <style name="AppTheme.I_Pink_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/pink_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/pink_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Pink_900_core" parent="AppTheme.Base.Core">
@@ -2525,28 +1993,10 @@
         <item name="colorAccent">@color/pink_900</item>
     </style>
 
-    <style name="AppTheme.I_Red_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_100</item>
-        <item name="colorPrimaryDark">@color/red_200</item>
-        <item name="colorAccent">@color/red_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Red_100_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/red_100</item>
         <item name="colorPrimaryDark">@color/red_200</item>
         <item name="colorAccent">@color/red_100</item>
-    </style>
-
-    <style name="AppTheme.I_Red_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_200</item>
-        <item name="colorPrimaryDark">@color/red_300</item>
-        <item name="colorAccent">@color/red_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Red_200_core" parent="AppTheme.Base.Core">
@@ -2555,28 +2005,10 @@
         <item name="colorAccent">@color/red_200</item>
     </style>
 
-    <style name="AppTheme.I_Red_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_300</item>
-        <item name="colorPrimaryDark">@color/red_400</item>
-        <item name="colorAccent">@color/red_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Red_300_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/red_300</item>
         <item name="colorPrimaryDark">@color/red_400</item>
         <item name="colorAccent">@color/red_300</item>
-    </style>
-
-    <style name="AppTheme.I_Red_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_400</item>
-        <item name="colorPrimaryDark">@color/red_500</item>
-        <item name="colorAccent">@color/red_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Red_400_core" parent="AppTheme.Base.Core">
@@ -2585,28 +2017,10 @@
         <item name="colorAccent">@color/red_400</item>
     </style>
 
-    <style name="AppTheme.I_Red_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_500</item>
-        <item name="colorPrimaryDark">@color/red_600</item>
-        <item name="colorAccent">@color/red_500</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Red_500_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/red_500</item>
         <item name="colorPrimaryDark">@color/red_600</item>
         <item name="colorAccent">@color/red_500</item>
-    </style>
-
-    <style name="AppTheme.I_Red_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_600</item>
-        <item name="colorPrimaryDark">@color/red_700</item>
-        <item name="colorAccent">@color/red_600</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Red_600_core" parent="AppTheme.Base.Core">
@@ -2615,27 +2029,10 @@
         <item name="colorAccent">@color/red_600</item>
     </style>
 
-    <style name="AppTheme.I_Red_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_700</item>
-        <item name="colorPrimaryDark">@color/red_800</item>
-        <item name="colorAccent">@color/red_700</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Red_700_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/red_700</item>
         <item name="colorPrimaryDark">@color/red_800</item>
         <item name="colorAccent">@color/red_700</item>
-    </style>
-
-    <style name="AppTheme.I_Red_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_800</item>
-        <item name="colorPrimaryDark">@color/red_900</item>
-        <item name="colorAccent">@color/red_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Red_800_core" parent="AppTheme.Base.Core">
@@ -2644,27 +2041,10 @@
         <item name="colorAccent">@color/red_800</item>
     </style>
 
-    <style name="AppTheme.I_Red_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/red_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/red_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Red_900_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/red_900</item>
         <item name="colorPrimaryDark">@color/bw_000</item>
         <item name="colorAccent">@color/red_900</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Orange_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_100</item>
-        <item name="colorPrimaryDark">@color/deep_orange_200</item>
-        <item name="colorAccent">@color/deep_orange_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Deep_Orange_100_core" parent="AppTheme.Base.Core">
@@ -2673,28 +2053,10 @@
         <item name="colorAccent">@color/deep_orange_100</item>
     </style>
 
-    <style name="AppTheme.I_Deep_Orange_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_200</item>
-        <item name="colorPrimaryDark">@color/deep_orange_300</item>
-        <item name="colorAccent">@color/deep_orange_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Deep_Orange_200_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/deep_orange_200</item>
         <item name="colorPrimaryDark">@color/deep_orange_300</item>
         <item name="colorAccent">@color/deep_orange_200</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Orange_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_300</item>
-        <item name="colorPrimaryDark">@color/deep_orange_400</item>
-        <item name="colorAccent">@color/deep_orange_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Deep_Orange_300_core" parent="AppTheme.Base.Core">
@@ -2703,28 +2065,10 @@
         <item name="colorAccent">@color/deep_orange_300</item>
     </style>
 
-    <style name="AppTheme.I_Deep_Orange_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_400</item>
-        <item name="colorPrimaryDark">@color/deep_orange_500</item>
-        <item name="colorAccent">@color/deep_orange_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Deep_Orange_400_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/deep_orange_400</item>
         <item name="colorPrimaryDark">@color/deep_orange_500</item>
         <item name="colorAccent">@color/deep_orange_400</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Orange_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_500</item>
-        <item name="colorPrimaryDark">@color/deep_orange_600</item>
-        <item name="colorAccent">@color/deep_orange_500</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Deep_Orange_500_core" parent="AppTheme.Base.Core">
@@ -2733,26 +2077,10 @@
         <item name="colorAccent">@color/deep_orange_500</item>
     </style>
 
-    <style name="AppTheme.I_Deep_Orange_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_600</item>
-        <item name="colorPrimaryDark">@color/deep_orange_700</item>
-        <item name="colorAccent">@color/deep_orange_600</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Deep_Orange_600_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/deep_orange_600</item>
         <item name="colorPrimaryDark">@color/deep_orange_700</item>
         <item name="colorAccent">@color/deep_orange_600</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Orange_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_700</item>
-        <item name="colorPrimaryDark">@color/deep_orange_800</item>
-        <item name="colorAccent">@color/deep_orange_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Deep_Orange_700_core" parent="AppTheme.Base.Core">
@@ -2761,26 +2089,10 @@
         <item name="colorAccent">@color/deep_orange_700</item>
     </style>
 
-    <style name="AppTheme.I_Deep_Orange_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_800</item>
-        <item name="colorPrimaryDark">@color/deep_orange_900</item>
-        <item name="colorAccent">@color/deep_orange_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Deep_Orange_800_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/deep_orange_800</item>
         <item name="colorPrimaryDark">@color/deep_orange_900</item>
         <item name="colorAccent">@color/deep_orange_800</item>
-    </style>
-
-    <style name="AppTheme.I_Deep_Orange_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/deep_orange_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/deep_orange_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Deep_Orange_900_core" parent="AppTheme.Base.Core">
@@ -2789,28 +2101,10 @@
         <item name="colorAccent">@color/deep_orange_900</item>
     </style>
 
-    <style name="AppTheme.I_Orange_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_100</item>
-        <item name="colorPrimaryDark">@color/orange_200</item>
-        <item name="colorAccent">@color/orange_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Orange_100_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/orange_100</item>
         <item name="colorPrimaryDark">@color/orange_200</item>
         <item name="colorAccent">@color/orange_100</item>
-    </style>
-
-    <style name="AppTheme.I_Orange_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_200</item>
-        <item name="colorPrimaryDark">@color/orange_300</item>
-        <item name="colorAccent">@color/orange_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Orange_200_core" parent="AppTheme.Base.Core">
@@ -2819,28 +2113,10 @@
         <item name="colorAccent">@color/orange_200</item>
     </style>
 
-    <style name="AppTheme.I_Orange_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_300</item>
-        <item name="colorPrimaryDark">@color/orange_400</item>
-        <item name="colorAccent">@color/orange_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Orange_300_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/orange_300</item>
         <item name="colorPrimaryDark">@color/orange_400</item>
         <item name="colorAccent">@color/orange_300</item>
-    </style>
-
-    <style name="AppTheme.I_Orange_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_400</item>
-        <item name="colorPrimaryDark">@color/orange_500</item>
-        <item name="colorAccent">@color/orange_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Orange_400_core" parent="AppTheme.Base.Core">
@@ -2849,26 +2125,10 @@
         <item name="colorAccent">@color/orange_400</item>
     </style>
 
-    <style name="AppTheme.I_Orange_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_500</item>
-        <item name="colorPrimaryDark">@color/orange_600</item>
-        <item name="colorAccent">@color/orange_500</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Orange_500_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/orange_500</item>
         <item name="colorPrimaryDark">@color/orange_600</item>
         <item name="colorAccent">@color/orange_500</item>
-    </style>
-
-    <style name="AppTheme.I_Orange_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_600</item>
-        <item name="colorPrimaryDark">@color/orange_700</item>
-        <item name="colorAccent">@color/orange_600</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Orange_600_core" parent="AppTheme.Base.Core">
@@ -2877,26 +2137,10 @@
         <item name="colorAccent">@color/orange_600</item>
     </style>
 
-    <style name="AppTheme.I_Orange_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_700</item>
-        <item name="colorPrimaryDark">@color/orange_800</item>
-        <item name="colorAccent">@color/orange_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Orange_700_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/orange_700</item>
         <item name="colorPrimaryDark">@color/orange_800</item>
         <item name="colorAccent">@color/orange_700</item>
-    </style>
-
-    <style name="AppTheme.I_Orange_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_800</item>
-        <item name="colorPrimaryDark">@color/orange_900</item>
-        <item name="colorAccent">@color/orange_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Orange_800_core" parent="AppTheme.Base.Core">
@@ -2905,27 +2149,10 @@
         <item name="colorAccent">@color/orange_800</item>
     </style>
 
-    <style name="AppTheme.I_Orange_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/orange_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/orange_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Orange_900_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/orange_900</item>
         <item name="colorPrimaryDark">@color/bw_000</item>
         <item name="colorAccent">@color/orange_900</item>
-    </style>
-
-    <style name="AppTheme.I_Amber_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_100</item>
-        <item name="colorPrimaryDark">@color/amber_200</item>
-        <item name="colorAccent">@color/amber_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Amber_100_core" parent="AppTheme.Base.Core">
@@ -2934,28 +2161,10 @@
         <item name="colorAccent">@color/amber_100</item>
     </style>
 
-    <style name="AppTheme.I_Amber_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_200</item>
-        <item name="colorPrimaryDark">@color/amber_300</item>
-        <item name="colorAccent">@color/amber_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Amber_200_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/amber_200</item>
         <item name="colorPrimaryDark">@color/amber_300</item>
         <item name="colorAccent">@color/amber_200</item>
-    </style>
-
-    <style name="AppTheme.I_Amber_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_300</item>
-        <item name="colorPrimaryDark">@color/amber_400</item>
-        <item name="colorAccent">@color/amber_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Amber_300_core" parent="AppTheme.Base.Core">
@@ -2964,27 +2173,10 @@
         <item name="colorAccent">@color/amber_300</item>
     </style>
 
-    <style name="AppTheme.I_Amber_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_400</item>
-        <item name="colorPrimaryDark">@color/amber_500</item>
-        <item name="colorAccent">@color/amber_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Amber_400_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/amber_400</item>
         <item name="colorPrimaryDark">@color/amber_500</item>
         <item name="colorAccent">@color/amber_400</item>
-    </style>
-
-    <style name="AppTheme.I_Amber_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_500</item>
-        <item name="colorPrimaryDark">@color/amber_600</item>
-        <item name="colorAccent">@color/amber_500</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Amber_500_core" parent="AppTheme.Base.Core">
@@ -2993,26 +2185,10 @@
         <item name="colorAccent">@color/amber_500</item>
     </style>
 
-    <style name="AppTheme.I_Amber_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_600</item>
-        <item name="colorPrimaryDark">@color/amber_700</item>
-        <item name="colorAccent">@color/amber_600</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Amber_600_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/amber_600</item>
         <item name="colorPrimaryDark">@color/amber_700</item>
         <item name="colorAccent">@color/amber_600</item>
-    </style>
-
-    <style name="AppTheme.I_Amber_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_700</item>
-        <item name="colorPrimaryDark">@color/amber_800</item>
-        <item name="colorAccent">@color/amber_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Amber_700_core" parent="AppTheme.Base.Core">
@@ -3021,26 +2197,10 @@
         <item name="colorAccent">@color/amber_700</item>
     </style>
 
-    <style name="AppTheme.I_Amber_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_800</item>
-        <item name="colorPrimaryDark">@color/amber_900</item>
-        <item name="colorAccent">@color/amber_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Amber_800_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/amber_800</item>
         <item name="colorPrimaryDark">@color/amber_900</item>
         <item name="colorAccent">@color/amber_800</item>
-    </style>
-
-    <style name="AppTheme.I_Amber_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/amber_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/amber_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Amber_900_core" parent="AppTheme.Base.Core">
@@ -3049,28 +2209,10 @@
         <item name="colorAccent">@color/amber_900</item>
     </style>
 
-    <style name="AppTheme.I_Yellow_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_100</item>
-        <item name="colorPrimaryDark">@color/yellow_200</item>
-        <item name="colorAccent">@color/yellow_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Yellow_100_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/yellow_100</item>
         <item name="colorPrimaryDark">@color/yellow_200</item>
         <item name="colorAccent">@color/yellow_100</item>
-    </style>
-
-    <style name="AppTheme.I_Yellow_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_200</item>
-        <item name="colorPrimaryDark">@color/yellow_300</item>
-        <item name="colorAccent">@color/yellow_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Yellow_200_core" parent="AppTheme.Base.Core">
@@ -3079,28 +2221,10 @@
         <item name="colorAccent">@color/yellow_200</item>
     </style>
 
-    <style name="AppTheme.I_Yellow_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_300</item>
-        <item name="colorPrimaryDark">@color/yellow_400</item>
-        <item name="colorAccent">@color/yellow_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Yellow_300_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/yellow_300</item>
         <item name="colorPrimaryDark">@color/yellow_400</item>
         <item name="colorAccent">@color/yellow_300</item>
-    </style>
-
-    <style name="AppTheme.I_Yellow_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_400</item>
-        <item name="colorPrimaryDark">@color/yellow_500</item>
-        <item name="colorAccent">@color/yellow_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Yellow_400_core" parent="AppTheme.Base.Core">
@@ -3109,26 +2233,10 @@
         <item name="colorAccent">@color/yellow_400</item>
     </style>
 
-    <style name="AppTheme.I_Yellow_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_500</item>
-        <item name="colorPrimaryDark">@color/yellow_600</item>
-        <item name="colorAccent">@color/yellow_500</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Yellow_500_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/yellow_500</item>
         <item name="colorPrimaryDark">@color/yellow_600</item>
         <item name="colorAccent">@color/yellow_500</item>
-    </style>
-
-    <style name="AppTheme.I_Yellow_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_600</item>
-        <item name="colorPrimaryDark">@color/yellow_700</item>
-        <item name="colorAccent">@color/yellow_600</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Yellow_600_core" parent="AppTheme.Base.Core">
@@ -3137,26 +2245,10 @@
         <item name="colorAccent">@color/yellow_600</item>
     </style>
 
-    <style name="AppTheme.I_Yellow_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_700</item>
-        <item name="colorPrimaryDark">@color/yellow_800</item>
-        <item name="colorAccent">@color/yellow_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Yellow_700_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/yellow_700</item>
         <item name="colorPrimaryDark">@color/yellow_800</item>
         <item name="colorAccent">@color/yellow_700</item>
-    </style>
-
-    <style name="AppTheme.I_Yellow_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_800</item>
-        <item name="colorPrimaryDark">@color/yellow_900</item>
-        <item name="colorAccent">@color/yellow_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Yellow_800_core" parent="AppTheme.Base.Core">
@@ -3165,27 +2257,10 @@
         <item name="colorAccent">@color/yellow_800</item>
     </style>
 
-    <style name="AppTheme.I_Yellow_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/yellow_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/yellow_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Yellow_900_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/yellow_900</item>
         <item name="colorPrimaryDark">@color/bw_000</item>
         <item name="colorAccent">@color/yellow_900</item>
-    </style>
-
-    <style name="AppTheme.I_Lime_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_100</item>
-        <item name="colorPrimaryDark">@color/lime_200</item>
-        <item name="colorAccent">@color/lime_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Lime_100_core" parent="AppTheme.Base.Core">
@@ -3194,28 +2269,10 @@
         <item name="colorAccent">@color/lime_100</item>
     </style>
 
-    <style name="AppTheme.I_Lime_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_200</item>
-        <item name="colorPrimaryDark">@color/lime_300</item>
-        <item name="colorAccent">@color/lime_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Lime_200_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/lime_200</item>
         <item name="colorPrimaryDark">@color/lime_300</item>
         <item name="colorAccent">@color/lime_200</item>
-    </style>
-
-    <style name="AppTheme.I_Lime_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_300</item>
-        <item name="colorPrimaryDark">@color/lime_400</item>
-        <item name="colorAccent">@color/lime_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Lime_300_core" parent="AppTheme.Base.Core">
@@ -3224,27 +2281,10 @@
         <item name="colorAccent">@color/lime_300</item>
     </style>
 
-    <style name="AppTheme.I_Lime_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_400</item>
-        <item name="colorPrimaryDark">@color/lime_500</item>
-        <item name="colorAccent">@color/lime_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Lime_400_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/lime_400</item>
         <item name="colorPrimaryDark">@color/lime_500</item>
         <item name="colorAccent">@color/lime_400</item>
-    </style>
-
-    <style name="AppTheme.I_Lime_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_500</item>
-        <item name="colorPrimaryDark">@color/lime_600</item>
-        <item name="colorAccent">@color/lime_500</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Lime_500_core" parent="AppTheme.Base.Core">
@@ -3253,26 +2293,10 @@
         <item name="colorAccent">@color/lime_500</item>
     </style>
 
-    <style name="AppTheme.I_Lime_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_600</item>
-        <item name="colorPrimaryDark">@color/lime_700</item>
-        <item name="colorAccent">@color/lime_600</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Lime_600_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/lime_600</item>
         <item name="colorPrimaryDark">@color/lime_700</item>
         <item name="colorAccent">@color/lime_600</item>
-    </style>
-
-    <style name="AppTheme.I_Lime_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_700</item>
-        <item name="colorPrimaryDark">@color/lime_800</item>
-        <item name="colorAccent">@color/lime_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Lime_700_core" parent="AppTheme.Base.Core">
@@ -3281,26 +2305,10 @@
         <item name="colorAccent">@color/lime_700</item>
     </style>
 
-    <style name="AppTheme.I_Lime_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_800</item>
-        <item name="colorPrimaryDark">@color/lime_900</item>
-        <item name="colorAccent">@color/lime_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Lime_800_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/lime_800</item>
         <item name="colorPrimaryDark">@color/lime_900</item>
         <item name="colorAccent">@color/lime_800</item>
-    </style>
-
-    <style name="AppTheme.I_Lime_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/lime_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/lime_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Lime_900_core" parent="AppTheme.Base.Core">
@@ -3309,28 +2317,10 @@
         <item name="colorAccent">@color/lime_900</item>
     </style>
 
-    <style name="AppTheme.I_Green_100" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_100</item>
-        <item name="colorPrimaryDark">@color/green_200</item>
-        <item name="colorAccent">@color/green_100</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Green_100_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/green_100</item>
         <item name="colorPrimaryDark">@color/green_200</item>
         <item name="colorAccent">@color/green_100</item>
-    </style>
-
-    <style name="AppTheme.I_Green_200" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_200</item>
-        <item name="colorPrimaryDark">@color/green_300</item>
-        <item name="colorAccent">@color/green_200</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Green_200_core" parent="AppTheme.Base.Core">
@@ -3339,28 +2329,10 @@
         <item name="colorAccent">@color/green_200</item>
     </style>
 
-    <style name="AppTheme.I_Green_300" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_300</item>
-        <item name="colorPrimaryDark">@color/green_400</item>
-        <item name="colorAccent">@color/green_300</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-    </style>
-
     <style name="AppTheme.I_Green_300_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/green_300</item>
         <item name="colorPrimaryDark">@color/green_400</item>
         <item name="colorAccent">@color/green_300</item>
-    </style>
-
-    <style name="AppTheme.I_Green_400" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_400</item>
-        <item name="colorPrimaryDark">@color/green_500</item>
-        <item name="colorAccent">@color/green_400</item>
-        <item name="actionBarTheme">@style/LightActionBarItems</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
     <style name="AppTheme.I_Green_400_core" parent="AppTheme.Base.Core">
@@ -3369,26 +2341,10 @@
         <item name="colorAccent">@color/green_400</item>
     </style>
 
-    <style name="AppTheme.I_Green_500" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_500</item>
-        <item name="colorPrimaryDark">@color/green_600</item>
-        <item name="colorAccent">@color/green_500</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Green_500_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/green_500</item>
         <item name="colorPrimaryDark">@color/green_600</item>
         <item name="colorAccent">@color/green_500</item>
-    </style>
-
-    <style name="AppTheme.I_Green_600" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_600</item>
-        <item name="colorPrimaryDark">@color/green_700</item>
-        <item name="colorAccent">@color/green_600</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Green_600_core" parent="AppTheme.Base.Core">
@@ -3397,26 +2353,10 @@
         <item name="colorAccent">@color/green_600</item>
     </style>
 
-    <style name="AppTheme.I_Green_700" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_700</item>
-        <item name="colorPrimaryDark">@color/green_800</item>
-        <item name="colorAccent">@color/green_700</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Green_700_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/green_700</item>
         <item name="colorPrimaryDark">@color/green_800</item>
         <item name="colorAccent">@color/green_700</item>
-    </style>
-
-    <style name="AppTheme.I_Green_800" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_800</item>
-        <item name="colorPrimaryDark">@color/green_900</item>
-        <item name="colorAccent">@color/green_800</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="AppTheme.I_Green_800_core" parent="AppTheme.Base.Core">
@@ -3425,18 +2365,9 @@
         <item name="colorAccent">@color/green_800</item>
     </style>
 
-    <style name="AppTheme.I_Green_900" parent="AppTheme.Base">
-        <item name="colorPrimary">@color/green_900</item>
-        <item name="colorPrimaryDark">@color/bw_000</item>
-        <item name="colorAccent">@color/green_900</item>
-        <item name="actionBarTheme">@style/DarkActionBarItems</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
     <style name="AppTheme.I_Green_900_core" parent="AppTheme.Base.Core">
         <item name="colorPrimary">@color/green_900</item>
         <item name="colorPrimaryDark">@color/bw_000</item>
         <item name="colorAccent">@color/green_900</item>
     </style>
-
 </resources>
