@@ -1,13 +1,11 @@
 package com.goodwy.commons.adapters
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.view.*
-import android.widget.ActionMenuView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
-import androidx.core.content.res.ResourcesCompat
+import androidx.appcompat.widget.ActionMenuView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ListAdapter
@@ -116,8 +114,15 @@ abstract class MyRecyclerViewListAdapter<T>(
                         backArrow?.setImageDrawable(resources.getDrawable(R.drawable.ic_chevron_left_vector, activity.theme))
                         backArrow?.applyColorFilter(cabContrastColor)
 
-                        val actionMenuView = backArrow?.parent?.parent?.parent as? ActionMenuView
-                        actionMenuView?.overflowIcon?.applyColorFilter(cabContrastColor)
+                        val cabView = backArrow?.parent as? ViewGroup
+                        for (i in 0 until (cabView?.childCount ?: 0)) {
+                            val child = cabView?.getChildAt(i)
+                            if (child is ActionMenuView) {
+                                // Colouring the overflow icon (three dots)
+                                child.overflowIcon?.applyColorFilter(cabContrastColor)
+                                break
+                            }
+                        }
                     }
                 //}
                 return true
