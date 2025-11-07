@@ -14,7 +14,6 @@
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
         <item name="android:actionModeCloseDrawable">@drawable/ic_chevron_left_vector</item>
-        <item name="actionModeStyle">@style/AppCompat.ActionMode</item>
         <item name="android:forceDarkAllowed">false</item>
         <item name="windowActionModeOverlay">true</item>    <!-- replace casual top menu with contextual menu after long pressing an item -->
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
@@ -33,6 +32,7 @@
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
         <item name="android:forceDarkAllowed">false</item>
         <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeStyle">@style/AppCompat.ActionMode</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item>
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
         <item name="android:windowLightStatusBar">false</item>
@@ -350,6 +350,7 @@
     <style name="AppCompat.ActionMode" parent="@style/Widget.Material3.ActionMode">
         <item name="background">@drawable/actionmenu_background</item>
         <item name="backgroundSplit">?attr/actionModeSplitBackground</item>
+        <item name="height">56dp</item>
         <item name="titleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Title</item>
         <item name="subtitleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle</item>
         <item name="closeItemLayout">@layout/actionbar_close_item</item>
