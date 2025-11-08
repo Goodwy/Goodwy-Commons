@@ -1,6 +1,7 @@
 package com.goodwy.commons.adapters
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
@@ -104,6 +105,8 @@ abstract class MyRecyclerViewListAdapter<T>(
 
                 val actModeBar = actMode!!.customView?.parent as? View
                 actModeBar?.setBackgroundColor(cabBackgroundColor)
+                activity.window.statusBarColor = cabBackgroundColor
+
                 actBarTextView!!.setTextColor(cabContrastColor)
                 activity.updateMenuItemColors(menu, baseColor = cabBackgroundColor, forceWhiteIcons = false)
                 onActionModeCreated()
@@ -134,6 +137,7 @@ abstract class MyRecyclerViewListAdapter<T>(
             }
 
             override fun onDestroyActionMode(actionMode: ActionMode) {
+                activity.window.statusBarColor = Color.TRANSPARENT
                 isSelectable = false
                 (selectedKeys.clone() as HashSet<Int>).forEach {
                     val position = getItemKeyPosition(it)
