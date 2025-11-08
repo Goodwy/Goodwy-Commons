@@ -218,6 +218,7 @@ const val MINIMUM_PIN_LENGTH = 4
 const val DEFAULT_UNLOCK_TIMEOUT_DURATION = 30000L
 
 //Goodwy
+const val APP_FLAVOR_NAME = "app_flavor_name"
 const val SETTINGS_ICON = "settings_icon"
 const val OVERFLOW_ICON = "overflow_icon"
 const val SCREEN_SLIDE_ANIMATION = "Screen_slide_animation"

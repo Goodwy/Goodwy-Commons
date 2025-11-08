@@ -7,6 +7,7 @@
     <string name="google_play_dev_url">https://play.google.com/store/apps/dev?id=6544655677105796673</string>
     <string name="google_play_dev_url_old">https://play.google.com/store/apps/dev?id=8268163890866913014</string>
     <string name="google_play_dev_url_fake">https://fake.app</string>
+    <string name="github_dev_url">https://github.com/Goodwy</string>
     <string name="a_m">am</string>
     <string name="p_m">pm</string>
     <string name="material_you">Material You</string>

@@ -54,7 +54,7 @@ class MainActivity : BaseSimpleActivity() {
                     },//::securityDialog,//::setupStartDate,
                     showMoreApps = showMoreApps,
                     openAbout = ::launchAbout,
-                    moreAppsFromUs = ::launchMoreAppsFromUsIntent,
+                    moreAppsFromUs = ::launchMoreAppsFromUs,
                     startPurchaseActivity = ::launchPurchase,
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
                     openDateButton = ::setupDateButton,
@@ -145,7 +145,12 @@ class MainActivity : BaseSimpleActivity() {
             arrayListOf("", "", ""), arrayListOf("", "", ""),
             arrayListOf("", "", ""), arrayListOf("", "", ""),
             arrayListOf("", "", ""), arrayListOf("", "", ""),
+            flavorName,
             )
+    }
+
+    fun launchMoreAppsFromUs() {
+        launchMoreAppsFromUsIntent(BuildConfig.FLAVOR)
     }
 
     private fun securityDialog() {

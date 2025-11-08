@@ -753,10 +753,6 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(FLASH_FOR_ALERTS, false)
         set(flashForAlerts) = prefs.edit { putBoolean(FLASH_FOR_ALERTS, flashForAlerts) }
 
-    var useGooglePlay: Boolean
-        get() = prefs.getBoolean(USE_GOOGLE_PLAY, false)
-        set(useGooglePlay) = prefs.edit { putBoolean(USE_GOOGLE_PLAY, useGooglePlay) }
-
     var currentSIMCardIndex: Int
         get() = prefs.getInt(CURRENT_SIM_CARD_INDEX, 0) //0 - sim1, 1 - sim2
         set(currentSIMCardIndex) = prefs.edit { putInt(CURRENT_SIM_CARD_INDEX, currentSIMCardIndex) }

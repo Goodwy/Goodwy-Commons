@@ -788,6 +788,8 @@ fun Context.getCanAppBeUpgraded() = proPackages.contains(baseConfig.appId.remove
 
 fun Context.getStoreUrl() = "https://play.google.com/store/apps/details?id=${packageName.removeSuffix(".debug")}"
 
+fun Context.getRuStoreUrl() = "https://www.rustore.ru/catalog/app/${packageName.removeSuffix(".debug")}"
+
 fun Context.getTimeFormat() = if (baseConfig.use24HourFormat) TIME_FORMAT_24 else TIME_FORMAT_12
 
 fun Context.getTimeFormatWithSeconds() = if (baseConfig.use24HourFormat) {

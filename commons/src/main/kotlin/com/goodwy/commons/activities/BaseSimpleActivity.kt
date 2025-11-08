@@ -650,6 +650,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
         subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
         subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
+        flavorName: String,
     ) {
         hideKeyboard()
         Intent(applicationContext, AboutActivity::class.java).apply {
@@ -669,6 +670,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
             putExtra(SUBSCRIPTION_ID_LIST_RU, subscriptionIdListRu)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST, subscriptionYearIdList)
             putExtra(SUBSCRIPTION_YEAR_ID_LIST_RU, subscriptionYearIdListRu)
+            putExtra(APP_FLAVOR_NAME, flavorName)
             startActivity(this)
         }
     }

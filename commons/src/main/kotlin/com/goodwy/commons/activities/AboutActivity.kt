@@ -1,5 +1,6 @@
 package com.goodwy.commons.activities
 
+import android.app.Activity
 import android.content.Intent
 import android.content.Intent.ACTION_SEND
 import android.content.Intent.EXTRA_SUBJECT
@@ -38,6 +39,8 @@ class AboutActivity : BaseComposeActivity() {
         private const val EASTER_EGG_REQUIRED_CLICKS_NEXT = 10
     }
 
+    fun getFlavorName() = intent.getStringExtra(APP_FLAVOR_NAME) ?: "gplay"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdgeSimple()
@@ -53,13 +56,14 @@ class AboutActivity : BaseComposeActivity() {
                         AboutNewSection(
                             appName = appName,
                             appVersion = intent.getStringExtra(APP_VERSION_NAME) ?: "",
+                            appFlavor = getFlavorName(),
                             onRateUsClick = {
                                 onRateUsClick(
                                     showConfirmationAdvancedDialog = onRateUsClickAlertDialogState::show,
                                     showRateStarsDialog = rateStarsAlertDialogState::show
                                 )
                             },
-                            onMoreAppsClick = ::launchMoreAppsFromUsIntent,
+                            onMoreAppsClick = ::launchMoreAppsFromUs,
                             onPrivacyPolicyClick = ::onPrivacyPolicyClick,
                             onFAQClick = ::launchFAQActivity,
                             onTipJarClick = ::onTipJarClick,
@@ -123,6 +127,10 @@ class AboutActivity : BaseComposeActivity() {
             putExtra(APP_FAQ, faqItems)
             startActivity(this)
         }
+    }
+
+    fun launchMoreAppsFromUs() {
+        launchMoreAppsFromUsIntent(getFlavorName())
     }
 
     private fun onRateUsClick(
@@ -207,8 +215,9 @@ class AboutActivity : BaseComposeActivity() {
     }
 
     private fun onInviteClick() {
-        val storeUrl = when {
-            resources.getBoolean(R.bool.hide_google_relations) -> getGithubUrl()
+        val storeUrl = when(getFlavorName()) {
+            "foss" -> getGithubUrl()
+            "rustore" -> getRuStoreUrl()
             else -> getStoreUrl()
         }
 

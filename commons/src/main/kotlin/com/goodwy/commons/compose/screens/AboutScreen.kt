@@ -38,6 +38,8 @@ import com.goodwy.commons.compose.menus.ActionIconButton
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.getRuStoreUrl
+import com.goodwy.commons.extensions.getStoreUrl
 import com.goodwy.commons.extensions.isPlayStoreInstalled
 import com.goodwy.commons.extensions.isRuStoreInstalled
 import java.util.Calendar
@@ -97,6 +99,7 @@ private fun AboutScreenPreview() {
                     setupFAQ = true,
                     appName = "Common",
                     appVersion = "1.0",
+                    appFlavor = "foss",
                     onRateUsClick = {},
                     onMoreAppsClick = {},
                     onPrivacyPolicyClick = {},
@@ -124,6 +127,7 @@ internal fun AboutNewSection(
     setupFAQ: Boolean = true,
     appName: String,
     appVersion: String,
+    appFlavor: String,
     onRateUsClick: () -> Unit,
     onMoreAppsClick: () -> Unit,
     onPrivacyPolicyClick: () -> Unit,
@@ -193,7 +197,7 @@ internal fun AboutNewSection(
             Spacer(modifier = Modifier.size(8.dp))
             HtmlText(stringResource(stringsR.string.about_summary), textColor = textColor)
             Spacer(modifier = Modifier.size(24.dp))
-            if (playStoreInstalled || ruStoreInstalled) {
+            if (appFlavor == "gplay" || appFlavor == "rustore") {
                 AboutItem(
                     text = stringResource(stringsR.string.rate_g),
                     imageVector = Icons.Rounded.Star,
@@ -202,17 +206,21 @@ internal fun AboutNewSection(
                 Spacer(modifier = Modifier.size(18.dp))
             }
             AboutItem(
-                modifierIcon =
-                    if (ruStoreInstalled && !context.baseConfig.useGooglePlay) Modifier
-                        .size(42.dp)
-                        .padding(9.dp)
-                    else Modifier
-                        .size(42.dp)
-                        .padding(start = 10.dp, end = 6.dp, top = 8.dp, bottom = 8.dp),
+                modifierIcon = when (appFlavor) {
+                    "gplay" -> {
+                        Modifier
+                            .size(42.dp)
+                            .padding(start = 10.dp, end = 6.dp, top = 8.dp, bottom = 8.dp)
+                    }
+                    else -> Modifier.size(42.dp).padding(9.dp)
+                },
                 text = stringResource(stringsR.string.more_apps_from_us_g),
                 painter = painterResource(
-                    id = if (ruStoreInstalled && !context.baseConfig.useGooglePlay) R.drawable.ic_rustore
-                    else R.drawable.ic_google_play_vector
+                    id = when (appFlavor) {
+                        "foss" -> R.drawable.ic_github_vector
+                        "rustore" -> R.drawable.ic_rustore
+                        else -> R.drawable.ic_google_play_vector
+                    }
                 ),
                 onClick = onMoreAppsClick,
             )
