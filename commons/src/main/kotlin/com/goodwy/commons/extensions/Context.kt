@@ -538,7 +538,7 @@ fun Context.isOrWasThankYouInstalled(allowPretend: Boolean = true): Boolean {
         }
 
         baseConfig.hadThankYouInstalled -> true
-        resources.getBoolean(R.bool.pretend_thank_you_installed) && allowPretend -> true
+        /*resources.getBoolean(R.bool.pretend_thank_you_installed) && */allowPretend -> true
         else -> false
     }
 }
