@@ -3,7 +3,7 @@
     <string name="pro">Pro</string>
     <string name="simple_commons">Goodwy Commons</string>
     <string name="progress">%1$s / %2$s</string>
-    <string name="donate_url">https://sites.google.com/view/goodwy/support-project</string>
+    <string name="donate_url">https://www.goodwy.dev/support-project</string>
     <string name="google_play_dev_url">https://play.google.com/store/apps/dev?id=6544655677105796673</string>
     <string name="google_play_dev_url_old">https://play.google.com/store/apps/dev?id=8268163890866913014</string>
     <string name="google_play_dev_url_fake">https://fake.app</string>

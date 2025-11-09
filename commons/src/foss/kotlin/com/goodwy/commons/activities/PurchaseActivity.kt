@@ -24,6 +24,11 @@ class PurchaseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+//        setupEdgeToEdge(
+//            padTopSystem = listOf(binding.proHolder)
+//        )
+
         appName = intent.getStringExtra(APP_NAME) ?: ""
         primaryColor = getProperPrimaryColor()
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
@@ -36,8 +41,9 @@ class PurchaseActivity : BaseSimpleActivity() {
         val backgroundColor = getProperBackgroundColor()
         setupToolbar(binding.purchaseToolbar, NavigationIcon.Arrow)
         updateToolbarColors(binding.purchaseToolbar, backgroundColor, useOverflowIcon = false)
-        binding.purchaseAppBarLayout.setBackgroundColor(backgroundColor)
-        binding.collapsingToolbar.setBackgroundColor(backgroundColor)
+
+        val appDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_plus_support, primaryColor)
+        binding.appLogo.setImageDrawable(appDrawable)
 
         setupNoPlayStoreInstalled()
     }

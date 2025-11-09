@@ -78,6 +78,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         purchaseHelper.iapSkuDetailsInitialized.observe(this) {
             if (it) setupButtonIapPurchased()
         }
+
         purchaseHelper.subSkuDetailsInitialized.observe(this) {
             if (it) setupButtonSupPurchased()
         }
@@ -171,7 +172,8 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private fun setupEmail() {
         binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
-        val lifebuoyButtonDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
+        val lifebuoyButtonDrawable =
+            resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
         binding.lifebuoyButton.setImageDrawable(lifebuoyButtonDrawable)
         binding.lifebuoyButton.setOnClickListener {
             ConfirmationDialog(this, getString(R.string.send_email)) {
@@ -423,6 +425,16 @@ class PurchaseActivity : BaseSimpleActivity() {
         binding.plusLogo.setImageDrawable(plusDrawable)
         val lifebuoyDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_lifebuoy, primaryColor)
         binding.lifebuoyLogo.setImageDrawable(lifebuoyDrawable)
+
+        binding.goodwyLogo.apply {
+            applyColorFilter(getProperTextColor())
+            setOnClickListener {
+                launchViewIntent(getString(R.string.my_website))
+            }
+        }
+        binding.goodwyTitle.setOnClickListener {
+            launchViewIntent(getString(R.string.my_website))
+        }
     }
 
     @SuppressLint("SetTextI18n")

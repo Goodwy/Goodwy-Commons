@@ -7,46 +7,47 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/purchaseAppBarLayout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/purchase_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            android:fitsSystemWindows="true">
-
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/purchase_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/purchase_toolbar_height"
-                app:layout_collapseMode="pin"
-                app:navigationIcon="@drawable/ic_chevron_left_vector"/>
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="@dimen/purchase_toolbar_height"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@drawable/ic_chevron_left_vector"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pro_holder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/purchaseAppBarLayout"
         android:paddingStart="@dimen/about_margin"
         android:paddingEnd="@dimen/about_margin">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="@dimen/plus_logo"
+            android:layout_height="@dimen/plus_logo"
+            android:background="@drawable/squircle_bg"
+            android:contentDescription="@null"
+            android:elevation="8dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_plus_support"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:tint="@color/color_primary"/>
 
         <com.goodwy.commons.views.MyTextView
             android:id="@+id/pro_donate_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="?actionBarSize"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/activity_margin"
             android:gravity="center"
             android:text="@string/action_support_project"
             android:textSize="@dimen/actionbar_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/app_logo" />
 
         <com.goodwy.commons.views.MyTextView
             android:id="@+id/pro_donate_text"

@@ -92,11 +92,13 @@ class PurchaseActivity : BaseSimpleActivity() {
         } catch (_: Exception) {
             null
         }
+
         ruStoreBillingClient = try {
             RuStoreModule.provideRuStoreBillingClient()
         } catch (_: Exception) {
             null
         }
+
         if (savedInstanceState == null) {
             ruStoreBillingClient?.onNewIntent(intent)
         }
@@ -289,6 +291,16 @@ class PurchaseActivity : BaseSimpleActivity() {
         binding.plusLogo.setImageDrawable(plusDrawable)
         val lifebuoyDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_lifebuoy, primaryColor)
         binding.lifebuoyLogo.setImageDrawable(lifebuoyDrawable)
+
+        binding.goodwyLogo.apply {
+            applyColorFilter(getProperTextColor())
+            setOnClickListener {
+                launchViewIntent(getString(R.string.my_website))
+            }
+        }
+        binding.goodwyTitle.setOnClickListener {
+            launchViewIntent(getString(R.string.my_website))
+        }
     }
 
     @SuppressLint("SetTextI18n")
