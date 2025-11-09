@@ -1,7 +1,5 @@
 package com.goodwy.commons.activities
 
-import android.animation.ArgbEvaluator
-import android.animation.ValueAnimator
 import android.animation.ObjectAnimator
 import android.animation.StateListAnimator
 import android.annotation.SuppressLint
@@ -26,17 +24,13 @@ import android.telecom.TelecomManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.view.WindowManager
 import android.widget.EditText
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.net.toUri
 import androidx.core.util.Pair
@@ -44,9 +38,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.get
 import androidx.core.view.size
-import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.R
 import com.goodwy.commons.asynctasks.CopyMoveTask
 import com.goodwy.commons.dialogs.*
@@ -56,7 +48,6 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.interfaces.CopyMoveListener
 import com.goodwy.commons.models.FAQItem
 import com.goodwy.commons.models.FileDirItem
-import com.goodwy.commons.views.MySearchMenu
 import com.goodwy.commons.views.MyAppBarLayout
 import com.google.android.material.appbar.AppBarLayout
 import kotlinx.coroutines.launch
@@ -123,7 +114,9 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
 
         if (isAutoTheme()) changeAutoTheme()
 
-        if (!packageName.startsWith("com.goodwy.", true)) {
+        if (!packageName.startsWith("com.goodwy.", true) &&
+            !packageName.startsWith("dev.goodwy.", true)
+        ) {
             if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
                 showModdedAppWarning()
             }
@@ -753,7 +746,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
     // synchronous return value determines only if we are showing the SAF dialog, callback result tells if the SD or OTG permission has been granted
     fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         hideKeyboard()
-        return if (!packageName.startsWith("com.goodwy")) {
+        return if (!packageName.startsWith("com.goodwy") && !packageName.startsWith("dev.goodwy")) {
             callback(true)
             false
         } else if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
@@ -771,7 +764,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         callback: (success: Boolean) -> Unit
     ): Boolean {
         hideKeyboard()
-        return if (!packageName.startsWith("com.goodwy")) {
+        return if (!packageName.startsWith("com.goodwy") && !packageName.startsWith("dev.goodwy")) {
             callback(true)
             false
         } else if (isShowingSAFDialogSdk30(path, showRationale)) {
@@ -801,7 +794,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         callback: (success: Boolean) -> Unit
     ): Boolean {
         hideKeyboard()
-        return if (!packageName.startsWith("com.goodwy")) {
+        return if (!packageName.startsWith("com.goodwy") && !packageName.startsWith("dev.goodwy")) {
             callback(true)
             false
         } else if (isShowingSAFCreateDocumentDialogSdk30(path)) {
@@ -819,7 +812,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         callback: (success: Boolean) -> Unit
     ): Boolean {
         hideKeyboard()
-        return if (!packageName.startsWith("com.goodwy")) {
+        return if (!packageName.startsWith("com.goodwy") && !packageName.startsWith("dev.goodwy")) {
             callback(true)
             false
         } else if (isShowingAndroidSAFDialog(path, openInSystemAppAllowed)) {
@@ -1391,7 +1384,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
 
     private fun getExportSettingsFilename(): String {
         val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro")
-            .removePrefix("com.goodwy.")
+            .removePrefix("com.goodwy.").removePrefix("dev.goodwy.")
         return "$appName-settings_${getCurrentFormattedDateTime()}"
     }
 

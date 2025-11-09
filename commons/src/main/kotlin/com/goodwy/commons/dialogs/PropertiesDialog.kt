@@ -173,7 +173,8 @@ class PropertiesDialog : BasePropertiesDialog {
                 return
             }
 
-            if (mActivity.baseConfig.appId.removeSuffix(".debug") == "com.goodwy.filemanager") {
+            val prefix = mActivity.appPrefix()
+            if (mActivity.baseConfig.appId.removeSuffix(".debug") == prefix + "goodwy.filemanager") {
                 calculateAndDisplayHash(
                     path = path,
                     labelRes = R.string.md5,

@@ -573,7 +573,8 @@ fun Activity.openPathIntent(
             setDataAndType(newUri, mimeType)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-            if (applicationId == "com.goodwy.gallery" || applicationId == "com.goodwy.gallery.debug") {
+            if (applicationId == "com.goodwy.gallery" || applicationId == "com.goodwy.gallery.debug" ||
+                applicationId == "dev.goodwy.gallery" || applicationId == "dev.goodwy.gallery.debug") {
                 putExtra(IS_FROM_GALLERY, true)
             }
 
@@ -618,8 +619,9 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
             putExtra(IS_RIGHT_APP, key)
 
             if (isDefaultDialer()) {
-                val packageName = if (baseConfig.appId.contains(".debug", true)) "com.goodwy.dialer.debug" else "com.goodwy.dialer"
-                val className = "com.goodwy.dialer.activities.DialerActivity"
+                val prefix = appPrefix()
+                val packageName = if (baseConfig.appId.contains(".debug", true)) prefix + "goodwy.dialer.debug" else prefix + "goodwy.dialer"
+                val className = prefix + "goodwy.dialer.activities.DialerActivity"
                 setClassName(packageName, className)
             }
 

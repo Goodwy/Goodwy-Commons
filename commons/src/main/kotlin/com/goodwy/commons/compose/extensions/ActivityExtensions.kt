@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.view.WindowManager
 import androidx.activity.ComponentActivity
-import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import com.goodwy.commons.R
@@ -87,7 +86,9 @@ const val FAKE_VERSION_APP_LABEL =
 fun Context.fakeVersionCheck(
     showConfirmationDialog: () -> Unit
 ) {
-    if (!packageName.startsWith("com.goodwy.", true)) {
+    if (!packageName.startsWith("com.goodwy.", true) &&
+        !packageName.startsWith("dev.goodwy.", true)
+    ) {
         if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
             showConfirmationDialog()
         }

@@ -101,8 +101,9 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             val isTopAppBarColorTitle by config.isTopAppBarColorTitle.collectAsStateWithLifecycle(initialValue = config.topAppBarColorTitle)
             val isBlockingType by config.isBlockingType.collectAsStateWithLifecycle(initialValue = config.blockingType)
             val isBlockingEnabled by config.isBlockingEnabled.collectAsStateWithLifecycle(initialValue = config.blockingEnabled)
+            val prefix = appPrefix()
             val isDialer = remember {
-                config.appId.startsWith("com.goodwy.dialer")
+                config.appId.startsWith(prefix + "goodwy.dialer")
             }
             val isDefaultDialer: Boolean = onEventValue {
                 context.isDefaultDialer()
@@ -271,7 +272,8 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
     }
 
     private fun maybeSetDefaultCallerIdApp() {
-        if (isQPlus() && baseConfig.appId.startsWith("com.goodwy.dialer")) {
+        val prefix = appPrefix()
+        if (isQPlus() && baseConfig.appId.startsWith(prefix + "goodwy.dialer")) {
             setDefaultCallerIdApp()
         }
     }

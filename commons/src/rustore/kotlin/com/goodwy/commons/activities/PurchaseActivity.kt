@@ -294,15 +294,16 @@ class PurchaseActivity : BaseSimpleActivity() {
     @SuppressLint("SetTextI18n")
     private fun setupCollection() {
         binding.collectionHolder.beVisible()
-        val appDialerPackage = "com.goodwy.dialer"
-        val appContactsPackage = "com.goodwy.contacts"
-        val appSmsMessengerPackage = "com.goodwy.smsmessenger"
-        val appGalleryPackage = "com.goodwy.gallery"
-        val appAudiobookLitePackage = "com.goodwy.audiobooklite"
-        val appFilesPackage = "com.goodwy.filemanager"
-        val appKeyboardPackage = "com.goodwy.keyboard"
-        val appCalendarPackage = "com.goodwy.calendar"
-//        val appVoiceRecorderPackage = "com.goodwy.voicerecorderfree"
+        val prefix = appPrefix()
+        val appDialerPackage = prefix + "goodwy.dialer"
+        val appContactsPackage = prefix + "goodwy.contacts"
+        val appSmsMessengerPackage = prefix + "goodwy.smsmessenger"
+        val appGalleryPackage = prefix + "goodwy.gallery"
+        val appAudiobookLitePackage = prefix + "goodwy.audiobooklite"
+        val appFilesPackage = prefix + "goodwy.filemanager"
+        val appKeyboardPackage = prefix + "goodwy.keyboard"
+        val appCalendarPackage = prefix + "goodwy.calendar"
+//        val appVoiceRecorderPackage = prefix + "goodwy.voicerecorderfree"
 
         val appDialerInstalled = isPackageInstalled(appDialerPackage)
         val appContactsInstalled = isPackageInstalled(appContactsPackage)

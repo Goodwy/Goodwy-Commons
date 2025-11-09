@@ -1,7 +1,9 @@
 package com.goodwy.commons.compose.screens
 
+import android.content.Context
 import android.widget.TextView
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -37,11 +39,9 @@ import com.goodwy.commons.compose.lists.SimpleColumnScaffold
 import com.goodwy.commons.compose.menus.ActionIconButton
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
-import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.getRuStoreUrl
-import com.goodwy.commons.extensions.getStoreUrl
 import com.goodwy.commons.extensions.isPlayStoreInstalled
 import com.goodwy.commons.extensions.isRuStoreInstalled
+import com.goodwy.commons.extensions.toast
 import java.util.Calendar
 import com.goodwy.strings.R as stringsR
 
@@ -108,6 +108,7 @@ private fun AboutScreenPreview() {
                     onGithubClick = {},
                     onPatreonClick = {},
                     onBuyMeaCoffeeClick = {},
+                    onWebsiteClick = {},
                     showGithub = true,
                     onLicenseClick = {},
                     onContributorsClick = {},
@@ -136,6 +137,7 @@ internal fun AboutNewSection(
     onGithubClick: () -> Unit,
     onPatreonClick: () -> Unit,
     onBuyMeaCoffeeClick: () -> Unit,
+    onWebsiteClick: () -> Unit,
     showGithub: Boolean = true,
     onLicenseClick: () -> Unit,
     onContributorsClick: () -> Unit,
@@ -264,21 +266,31 @@ internal fun AboutNewSection(
                     horizontalArrangement = Arrangement.Center,
                 ) {
                     MyButton(
+                        context= context,
                         text = stringResource(R.string.github),
                         painter = painterResource(id = R.drawable.ic_github_vector),
                         onClick = onGithubClick,
                     )
                     Spacer(modifier = Modifier.size(18.dp))
                     MyButton(
-                        text = "patreon.com",
+                        context= context,
+                        text = stringResource(R.string.patreon),
                         painter = painterResource(id = R.drawable.ic_patreon),
                         onClick = onPatreonClick,
                     )
                     Spacer(modifier = Modifier.size(18.dp))
                     MyButton(
-                        text = "buymeacoffee.com",
+                        context= context,
+                        text = stringResource(R.string.buymeacoffee),
                         painter = painterResource(id = R.drawable.ic_bmc),
                         onClick = onBuyMeaCoffeeClick,
+                    )
+                    Spacer(modifier = Modifier.size(18.dp))
+                    MyButton(
+                        context= context,
+                        text = "goodwy.dev",
+                        painter = painterResource(id = R.drawable.ic_goodwy),
+                        onClick = onWebsiteClick,
                     )
                 }
             }
@@ -297,6 +309,7 @@ internal fun AboutNewSection(
 
 @Composable
 private fun MyButton(
+    context: Context,
     text: String,
     painter: Painter,
     onClick: () -> Unit,
@@ -307,13 +320,16 @@ private fun MyButton(
             .size(62.dp)
             .padding(SimpleTheme.dimens.padding.small)
             .clip(RoundedCornerShape(50))
-            .clickable(
+            .combinedClickable(
                 interactionSource = navigationIconInteractionSource,
                 indication = ripple(
                     color = SimpleTheme.colorScheme.onSurface,
                     bounded = true
                 ),
-                onClick = onClick
+                onClick = onClick,
+                onLongClick = {
+                    context.toast(text)
+                }
             ),
         contentAlignment = Alignment.Center
     ) {

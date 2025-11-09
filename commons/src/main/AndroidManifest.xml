@@ -17,6 +17,28 @@
         <package android:name="com.goodwy.voicerecorder" />
         <package android:name="com.goodwy.voicerecorderfree.debug" />
         <package android:name="com.goodwy.voicerecorderfree" />
+        <package android:name="com.goodwy.calendar" />
+        <package android:name="com.goodwy.calendar.debug" />
+        <package android:name="com.goodwy.keyboard" />
+        <package android:name="com.goodwy.keyboard.debug" />
+        <package android:name="dev.goodwy.audiobook.debug" />
+        <package android:name="dev.goodwy.audiobook" />
+        <package android:name="dev.goodwy.files.debug" />
+        <package android:name="dev.goodwy.files" />
+        <package android:name="dev.goodwy.dialer.debug" />
+        <package android:name="dev.goodwy.dialer" />
+        <package android:name="dev.goodwy.contacts.debug" />
+        <package android:name="dev.goodwy.contacts" />
+        <package android:name="dev.goodwy.smsmessenger.debug" />
+        <package android:name="dev.goodwy.smsmessenger" />
+        <package android:name="dev.goodwy.voicerecorder.debug" />
+        <package android:name="dev.goodwy.voicerecorder" />
+        <package android:name="dev.goodwy.voicerecorderfree.debug" />
+        <package android:name="dev.goodwy.voicerecorderfree" />
+        <package android:name="dev.goodwy.calendar" />
+        <package android:name="dev.goodwy.calendar.debug" />
+        <package android:name="dev.goodwy.keyboard" />
+        <package android:name="dev.goodwy.keyboard.debug" />
     </queries>
 
     <uses-feature

@@ -1,6 +1,5 @@
 package com.goodwy.commons.activities
 
-import android.app.Activity
 import android.content.Intent
 import android.content.Intent.ACTION_SEND
 import android.content.Intent.EXTRA_SUBJECT
@@ -70,6 +69,7 @@ class AboutActivity : BaseComposeActivity() {
                             onGithubClick = ::onGithubClick,
                             onPatreonClick = ::onPatreonClick,
                             onBuyMeaCoffeeClick = ::onBuyMeaCoffeeClick,
+                            onWebsiteClick = ::onWebsiteClick,
                             showGithub = showGithub(),
                             onLicenseClick = ::onLicenseClick,
                             onContributorsClick = ::onContributorsClick,
@@ -156,15 +156,15 @@ class AboutActivity : BaseComposeActivity() {
     }
 
     private fun onPrivacyPolicyClick() {
-        val appId = baseConfig.appId.removeSuffix(".debug")
+        val appId = baseConfig.appId.removePrefix("com.").removePrefix("dev.").removeSuffix(".debug")
         val url = when (appId) {
-            "com.goodwy.dialer" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-dialer"
-            "com.goodwy.smsmessenger" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-messages"
-            "com.goodwy.contacts" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-contacts"
-            "com.goodwy.gallery" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-gallery"
-            "com.goodwy.filemanager" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-files"
-            "com.goodwy.voicerecorder", "com.goodwy.voicerecorderfree" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-voice-recorder"
-            "com.goodwy.calendar" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-calendar"
+            "goodwy.dialer" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-dialer"
+            "goodwy.smsmessenger" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-messages"
+            "goodwy.contacts" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-contacts"
+            "goodwy.gallery" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-gallery"
+            "goodwy.filemanager" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-files"
+            "goodwy.voicerecorder", "goodwy.voicerecorderfree" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-voice-recorder"
+            "goodwy.calendar" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-calendar"
             else -> "https://sites.google.com/view/goodwy/about/privacy-policy"
         }
         launchViewIntent(url)
@@ -193,6 +193,10 @@ class AboutActivity : BaseComposeActivity() {
 
     private fun onBuyMeaCoffeeClick() {
         launchViewIntent("https://buymeacoffee.com/goodwy")
+    }
+
+    private fun onWebsiteClick() {
+        launchViewIntent(getString(R.string.my_website))
     }
 
     private fun onGithubClick() {

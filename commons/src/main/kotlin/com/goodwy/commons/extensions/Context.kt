@@ -1038,9 +1038,11 @@ val Context.realScreenSize: Point
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
 fun Context.isDefaultDialer(): Boolean {
-    return if (!packageName.startsWith("com.goodwy.contacts") && !packageName.startsWith("com.goodwy.dialer")) {
+    return if (!packageName.startsWith("com.goodwy.contacts") && !packageName.startsWith("com.goodwy.dialer") &&
+        !packageName.startsWith("dev.goodwy.contacts") && !packageName.startsWith("dev.goodwy.dialer")) {
         true
-    } else if ((packageName.startsWith("com.goodwy.contacts") || packageName.startsWith("com.goodwy.dialer")) && isQPlus()) {
+    } else if ((packageName.startsWith("com.goodwy.contacts") || packageName.startsWith("com.goodwy.dialer") ||
+            packageName.startsWith("dev.goodwy.contacts") || packageName.startsWith("dev.goodwy.dialer")) && isQPlus()) {
         val roleManager = getSystemService(RoleManager::class.java)
         roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
@@ -1508,16 +1510,19 @@ fun Context.isPro() = baseConfig.isPro || baseConfig.isProSubs || baseConfig.isP
     (resources.getBoolean(R.bool.using_no_gp) && baseConfig.isProNoGP)
 
 fun Context.isCollection(): Boolean {
-    return isPackageInstalled("com.goodwy.dialer")
-        && isPackageInstalled("com.goodwy.contacts")
-        && isPackageInstalled("com.goodwy.smsmessenger")
-        && isPackageInstalled("com.goodwy.gallery")
-        && isPackageInstalled("com.goodwy.audiobooklite")
-        && isPackageInstalled("com.goodwy.filemanager")
-        && isPackageInstalled("com.goodwy.keyboard")
-        && isPackageInstalled("com.goodwy.calendar")
-        && isPackageInstalled("com.goodwy.voicerecorderfree")
+    val prefix = appPrefix()
+    return isPackageInstalled(prefix + "goodwy.dialer")
+        && isPackageInstalled(prefix + "goodwy.contacts")
+        && isPackageInstalled(prefix + "goodwy.smsmessenger")
+        && isPackageInstalled(prefix + "goodwy.gallery")
+        && isPackageInstalled(prefix + "goodwy.audiobooklite")
+        && isPackageInstalled(prefix + "goodwy.filemanager")
+        && isPackageInstalled(prefix + "goodwy.keyboard")
+        && isPackageInstalled(prefix + "goodwy.calendar")
+        && isPackageInstalled(prefix + "goodwy.voicerecorderfree")
 }
+
+fun Context.appPrefix(): String = if (packageName.startsWith("dev.goodwy")) "dev." else "com."
 
 fun Context.isTalkBackOn(): Boolean {
     val am = getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
