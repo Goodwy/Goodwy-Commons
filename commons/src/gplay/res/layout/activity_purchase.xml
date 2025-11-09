@@ -340,7 +340,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pay_app"
-                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginTop="@dimen/normal_margin"
                 android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
