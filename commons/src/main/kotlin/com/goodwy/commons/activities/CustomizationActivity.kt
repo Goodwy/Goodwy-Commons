@@ -320,12 +320,13 @@ class CustomizationActivity : BaseSimpleActivity() {
             curIsUsingAccentColor = binding.customizationUseAccentColor.isChecked
             curTextCursorColor = baseConfig.textCursorColor
 
-            if (curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_AUTO) {
-                curPrimaryColor = getColor(theme.primaryColorId)
-                curAccentColor = getColor(R.color.color_accent)
-            } else {
-                curPrimaryColor = getCurrentPrimaryColor()
-            }
+//            if (curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_AUTO) {
+//                curPrimaryColor = getColor(theme.primaryColorId)
+//                curAccentColor = getColor(R.color.color_accent)
+//            } else {
+//                curPrimaryColor = getCurrentPrimaryColor()
+//            }
+            curPrimaryColor = getCurrentPrimaryColor()
 
             setTheme(getThemeId(getCurrentPrimaryColor()))
             colorChanged()
@@ -350,7 +351,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         refreshMenuItems()
         updateLabelColors(getCurrentTextColor())
         updateBackgroundColor(getCurrentBackgroundColor())
-        val actionbarColor = if (curSelectedThemeId == THEME_SYSTEM) getCurrentStatusBarColor() else getCurrentBackgroundColor()
         updateAutoThemeFields()
         updateApplyToAllColors()
         handleAccentColorLayout()
@@ -402,7 +402,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 .filter { it.key != THEME_CUSTOM && it.key != THEME_SYSTEM && it.key != THEME_AUTO }) {
                 if (curTextColor == getColor(value.textColorId) &&
                     curBackgroundColor == getColor(value.backgroundColorId) &&
-                    curPrimaryColor == getColor(value.primaryColorId) &&
+//                    curPrimaryColor == getColor(value.primaryColorId) &&
                     curAppIconColor == value.appIconColorId
                 ) {
                     themeId = key
@@ -774,35 +774,69 @@ class CustomizationActivity : BaseSimpleActivity() {
             return
         }
 
-        curPrimaryGridColorPicker = GridColorPickerDialog(
-            activity = this,
-            color = curPrimaryColor,
-            colorBackground = curBackgroundColor,
-            isPrimaryColorPicker = true,
-        ) { wasPositivePressed, color ->
-            curPrimaryGridColorPicker = null
-            if (wasPositivePressed) {
-                if (hasColorChanged(curPrimaryColor, color)) {
-                    setCurrentPrimaryColor(color)
-                    colorChanged()
-                    updateColorTheme(getCurrentThemeId())
-                    setTheme(getThemeId(color))
+        if (!packageName.startsWith("dev.goodwy")) {
+            curPrimaryGridColorPicker = GridColorPickerDialog(
+                activity = this,
+                color = curPrimaryColor,
+                colorBackground = curBackgroundColor,
+                isPrimaryColorPicker = true,
+            ) { wasPositivePressed, color ->
+                curPrimaryGridColorPicker = null
+                if (wasPositivePressed) {
+                    if (hasColorChanged(curPrimaryColor, color)) {
+                        setCurrentPrimaryColor(color)
+                        colorChanged()
+                        updateColorTheme(getCurrentThemeId())
+                        setTheme(getThemeId(color))
+                    }
+                    val navigationIcon = if (hasUnsavedChanges) NavigationIcon.Cross else NavigationIcon.Arrow
+                    setupTopAppBar(
+                        topAppBar = binding.appBar,
+                        navigationIcon = navigationIcon,
+                        topBarColor = getCurrentBackgroundColor()
+                    )
+                    updateTopBarColors()
+                } else {
+                    setTheme(getThemeId(curPrimaryColor))
+                    setupTopAppBar(
+                        topAppBar = binding.appBar,
+                        navigationIcon = NavigationIcon.Arrow,
+                        topBarColor = curBackgroundColor
+                    )
+                    updateTopBarColors()
                 }
-                val navigationIcon = if (hasUnsavedChanges) NavigationIcon.Cross else NavigationIcon.Arrow
-                setupTopAppBar(
-                    topAppBar = binding.appBar,
-                    navigationIcon = navigationIcon,
-                    topBarColor = getCurrentBackgroundColor()
-                )
-                updateTopBarColors()
-            } else {
-                setTheme(getThemeId(curPrimaryColor))
-                setupTopAppBar(
-                    topAppBar = binding.appBar,
-                    navigationIcon = NavigationIcon.Arrow,
-                    topBarColor = curBackgroundColor
-                )
-                updateTopBarColors()
+            }
+        } else {
+            ColorPickerDialog(
+                activity = this,
+                color = curPrimaryColor,
+                addDefaultColorButton = true,
+                colorDefault = resources.getColor(R.color.default_primary_color),
+                title = resources.getString(R.string.primary_color)
+            ) { wasPositivePressed, color, wasDefaultPressed ->
+                if (wasPositivePressed) {
+                    if (hasColorChanged(curPrimaryColor, color)) {
+                        setCurrentPrimaryColor(color)
+                        colorChanged()
+                        updateColorTheme(getCurrentThemeId())
+                        setTheme(getThemeId(color))
+                    }
+                    val navigationIcon = if (hasUnsavedChanges) NavigationIcon.Cross else NavigationIcon.Arrow
+                    setupTopAppBar(
+                        topAppBar = binding.appBar,
+                        navigationIcon = navigationIcon,
+                        topBarColor = getCurrentBackgroundColor()
+                    )
+                    updateTopBarColors()
+                } else {
+                    setTheme(getThemeId(curPrimaryColor))
+                    setupTopAppBar(
+                        topAppBar = binding.appBar,
+                        navigationIcon = NavigationIcon.Arrow,
+                        topBarColor = curBackgroundColor
+                    )
+                    updateTopBarColors()
+                }
             }
         }
     }
