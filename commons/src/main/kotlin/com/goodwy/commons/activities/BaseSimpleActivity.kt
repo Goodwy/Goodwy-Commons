@@ -702,7 +702,6 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
     ) {
         if (!packageName.contains("ywdoog".reversed(), true)) {
             if (baseConfig.appRunCount > 100) {
-                val label = "You are using a fake version of the app. For your own safety download the original one from play.google.com. Thanks"
                 showModdedAppWarning()
                 return
             }

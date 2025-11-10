@@ -1687,8 +1687,8 @@ fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound
 
 fun BaseSimpleActivity.showModdedAppWarning() {
     val label =
-        "You are using a fake version of the app. For your own safety " +
-            "download the original one from play.google.com. Thanks"
+        "You are using a fake version of the app. For your own " +
+            "safety download the original version. Thanks"
     ConfirmationDialog(
         activity = this,
         message = label,

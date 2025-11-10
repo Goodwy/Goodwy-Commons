@@ -530,13 +530,22 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         clicksSinceFirstClick++
         if (clicksSinceFirstClick == EASTER_EGG_REQUIRED_CLICKS) {
-            toast(R.string.hello)
+//            toast(R.string.hello)
         } else if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS_NEXT && !isPro()) {
             firstVersionClickTS = 0L
             clicksSinceFirstClick = 0
-            toast("You hacked the system ;(")
 
-            if (!isAutoTheme() && !isDynamicTheme()) {
+            if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
+                toast("You did not hack the system ;(")
+            } else if (!isAutoTheme() && !isDynamicTheme()) {
+                val text = when {
+                    isLightTheme() -> "You hacked the system ;("
+                    isGrayTheme() -> "It got dark"
+                    isDarkTheme() -> "Blackness"
+                    else -> "Light"
+                }
+                toast(text)
+
                 val themeId = when {
                     isLightTheme() -> THEME_GRAY
                     isGrayTheme() -> THEME_DARK
@@ -544,6 +553,8 @@ class PurchaseActivity : BaseSimpleActivity() {
                     else -> THEME_LIGHT
                 }
                 updateTheme(themeId)
+            } else {
+                toast(R.string.hello)
             }
         }
     }

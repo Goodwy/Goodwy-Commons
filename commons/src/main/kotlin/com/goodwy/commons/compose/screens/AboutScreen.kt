@@ -271,21 +271,21 @@ internal fun AboutNewSection(
                         painter = painterResource(id = R.drawable.ic_github_vector),
                         onClick = onGithubClick,
                     )
-                    Spacer(modifier = Modifier.size(18.dp))
+                    Spacer(modifier = Modifier.size(14.dp))
                     MyButton(
                         context= context,
                         text = stringResource(R.string.patreon),
                         painter = painterResource(id = R.drawable.ic_patreon),
                         onClick = onPatreonClick,
                     )
-                    Spacer(modifier = Modifier.size(18.dp))
+                    Spacer(modifier = Modifier.size(14.dp))
                     MyButton(
                         context= context,
                         text = stringResource(R.string.buymeacoffee),
                         painter = painterResource(id = R.drawable.ic_bmc),
                         onClick = onBuyMeaCoffeeClick,
                     )
-                    Spacer(modifier = Modifier.size(18.dp))
+                    Spacer(modifier = Modifier.size(14.dp))
                     MyButton(
                         context= context,
                         text = "goodwy.dev",
