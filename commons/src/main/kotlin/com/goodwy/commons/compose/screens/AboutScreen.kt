@@ -39,8 +39,6 @@ import com.goodwy.commons.compose.lists.SimpleColumnScaffold
 import com.goodwy.commons.compose.menus.ActionIconButton
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
-import com.goodwy.commons.extensions.isPlayStoreInstalled
-import com.goodwy.commons.extensions.isRuStoreInstalled
 import com.goodwy.commons.extensions.toast
 import java.util.Calendar
 import com.goodwy.strings.R as stringsR
@@ -148,8 +146,6 @@ internal fun AboutNewSection(
     ) {
         val context = LocalContext.current
         val textColor = MaterialTheme.colorScheme.onSurface
-        val playStoreInstalled = context.isPlayStoreInstalled()
-        val ruStoreInstalled = context.isRuStoreInstalled()
         Column(Modifier.padding(start = 16.dp, end = 16.dp, bottom = 26.dp)) {
             Card(shape = RoundedCornerShape(16.dp)) {
                 ListItem(
