@@ -84,10 +84,14 @@ private fun Long.formatWithShamsiAdvanced(dateFormat: String, timeFormat: String
 //    return DateFormat.format(context.getTimeFormat(), cal).toString()
 //}
 
-fun Long.formatTime(context: Context): String {
+fun Long.formatTime(
+    context: Context,
+    timeFormat: String? = null
+): String {
+    val mTimeFormat = timeFormat ?: context.getTimeFormat()
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this
-    return DateFormat.format(context.getTimeFormat(), cal).toString()
+    return DateFormat.format(mTimeFormat, cal).toString()
 }
 
 //fun Long.formatDateOrTime(
@@ -120,22 +124,31 @@ fun Long.formatDateOrTime(
     hideTimeOnOtherDays: Boolean,
     showCurrentYear: Boolean,
     hideTodaysDate: Boolean = true,
+    dateFormat: String? = null,
+    timeFormat: String? = null,
     useShamsi: Boolean? = null
 ): String {
+    val useDateFormat = dateFormat ?: context.baseConfig.dateFormat
+    val useTimeFormat = timeFormat ?: context.getTimeFormat()
     val isUseShamsi = useShamsi ?: context.baseConfig.useShamsi
+
     return if (isUseShamsi) {
         formatDateOrTimeShamsi(
             context,
             hideTimeOnOtherDays,
             showCurrentYear,
-            hideTodaysDate
+            hideTodaysDate,
+            useDateFormat,
+            useTimeFormat
         )
     } else {
         formatDateOrTimeGregorian(
             context,
             hideTimeOnOtherDays,
             showCurrentYear,
-            hideTodaysDate
+            hideTodaysDate,
+            useDateFormat,
+            useTimeFormat
         )
     }
 }
@@ -144,21 +157,23 @@ private fun Long.formatDateOrTimeGregorian(
     context: Context,
     hideTimeOnOtherDays: Boolean,
     showCurrentYear: Boolean,
-    hideTodaysDate: Boolean
+    hideTodaysDate: Boolean,
+    dateFormat: String,
+    timeFormat: String
 ): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this
 
     return if (hideTodaysDate && DateUtils.isToday(this)) {
-        DateFormat.format(context.getTimeFormat(), cal).toString()
+        DateFormat.format(timeFormat, cal).toString()
     } else {
-        var format = context.baseConfig.dateFormat
+        var format = dateFormat
         if (!showCurrentYear && isThisYear()) {
             format = format.replace("y", "").trim().trim('-').trim('.').trim('/')
         }
 
         if (!hideTimeOnOtherDays) {
-            format += ", ${context.getTimeFormat()}"
+            format += ", ${timeFormat}"
         }
 
         DateFormat.format(format, cal).toString()
@@ -169,28 +184,30 @@ private fun Long.formatDateOrTimeShamsi(
     context: Context,
     hideTimeOnOtherDays: Boolean,
     showCurrentYear: Boolean,
-    hideTodaysDate: Boolean
+    hideTodaysDate: Boolean,
+    dateFormat: String,
+    timeFormat: String
 ): String {
     val persianDate = PersianDate(this)
 
     return if (hideTodaysDate && DateUtils.isToday(this)) {
         // Only time for today
-        formatTime(context)
+        formatTime(context, timeFormat)
     } else {
         // Date or date + time for other days
-        var dateFormat = context.baseConfig.dateFormat
+        var mDateFormat = dateFormat
 
         // Remove the year if it is not necessary to display it
         if (!showCurrentYear && isThisYearShamsi(persianDate)) {
-            dateFormat = dateFormat.replace("y", "").trim().trim('-').trim('.').trim('/')
+            mDateFormat = mDateFormat.replace("y", "").trim().trim('-').trim('.').trim('/')
         }
 
         // Formatting the date of Shamsi
-        val datePart = formatShamsiDatePart(persianDate, dateFormat)
+        val datePart = formatShamsiDatePart(persianDate, mDateFormat)
 
         if (!hideTimeOnOtherDays) {
             // Add time
-            val timePart = formatTime(context)
+            val timePart = formatTime(context, timeFormat)
             return "$datePart, $timePart"
         } else {
             return datePart
