@@ -20,7 +20,12 @@ import com.goodwy.commons.views.MyRecyclerView
 import kotlin.math.max
 import kotlin.math.min
 
-abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val itemClick: (Any) -> Unit) :
+abstract class MyRecyclerViewAdapter(
+    val activity: BaseSimpleActivity,
+    val recyclerView: MyRecyclerView,
+    val itemClick: (Any) -> Unit,
+    val useStatusBarColor: Boolean = true,
+) :
     RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
     protected val baseConfig = activity.baseConfig
     protected val resources = activity.resources!!
@@ -98,7 +103,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
                 val actModeBar = actMode!!.customView?.parent as? View
                 actModeBar?.setBackgroundColor(cabBackgroundColor)
-                activity.window.statusBarColor = cabBackgroundColor
+                if (useStatusBarColor) activity.window.statusBarColor = cabBackgroundColor
 
                 actBarTextView!!.setTextColor(cabContrastColor)
                 activity.updateMenuItemColors(menu, baseColor = cabBackgroundColor, forceWhiteIcons = false)
@@ -130,7 +135,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             }
 
             override fun onDestroyActionMode(actionMode: ActionMode) {
-                activity.window.statusBarColor = Color.TRANSPARENT
+                if (useStatusBarColor) activity.window.statusBarColor = Color.TRANSPARENT
                 isSelectable = false
                 (selectedKeys.clone() as HashSet<Int>).forEach {
                     val position = getItemKeyPosition(it)

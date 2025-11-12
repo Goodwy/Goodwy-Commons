@@ -29,6 +29,7 @@ abstract class MyRecyclerViewListAdapter<T>(
     diffUtil: DiffUtil.ItemCallback<T>,
     val itemClick: (T) -> Unit,
     val onRefresh: () -> Unit = {},
+    val useStatusBarColor: Boolean = true,
 ) : ListAdapter<T, MyRecyclerViewListAdapter<T>.ViewHolder>(diffUtil) {
     protected val baseConfig = activity.baseConfig
     protected val resources = activity.resources!!
@@ -105,7 +106,7 @@ abstract class MyRecyclerViewListAdapter<T>(
 
                 val actModeBar = actMode!!.customView?.parent as? View
                 actModeBar?.setBackgroundColor(cabBackgroundColor)
-                activity.window.statusBarColor = cabBackgroundColor
+                if (useStatusBarColor) activity.window.statusBarColor = cabBackgroundColor
 
                 actBarTextView!!.setTextColor(cabContrastColor)
                 activity.updateMenuItemColors(menu, baseColor = cabBackgroundColor, forceWhiteIcons = false)
@@ -137,7 +138,7 @@ abstract class MyRecyclerViewListAdapter<T>(
             }
 
             override fun onDestroyActionMode(actionMode: ActionMode) {
-                activity.window.statusBarColor = Color.TRANSPARENT
+                if (useStatusBarColor) activity.window.statusBarColor = Color.TRANSPARENT
                 isSelectable = false
                 (selectedKeys.clone() as HashSet<Int>).forEach {
                     val position = getItemKeyPosition(it)

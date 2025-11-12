@@ -965,11 +965,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         else -> curPrimaryColor
     }
 
-    private fun getCurrentStatusBarColor() = when (binding.customizationTheme.value) {
-        getMaterialYouString() -> resources.getColor(R.color.you_status_bar_color)
-        else -> curBackgroundColor
-    }
-
     private fun getCurrentSurfaceColor(): Int {
         val bottomColor = when {
             binding.customizationTheme.value == getMaterialYouString() -> resources.getColor(R.color.you_surface_color, theme)
