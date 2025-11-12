@@ -97,11 +97,12 @@ abstract class MyRecyclerViewListAdapter<T>(
 
                 activity.menuInflater.inflate(getActionMenuId(), menu)
 
-                val cabBackgroundColor = if (activity.isDynamicTheme()) {
-                    resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
-                } else {
-                    activity.getColoredMaterialStatusBarColor()
-                }
+//                val cabBackgroundColor = if (activity.isDynamicTheme()) {
+//                    resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
+//                } else {
+//                    activity.getColoredMaterialStatusBarColor()
+//                }
+                val cabBackgroundColor = activity.getColoredMaterialStatusBarColor()
                 val cabContrastColor = cabBackgroundColor.getContrastColor()
 
                 val actModeBar = actMode!!.customView?.parent as? View
@@ -193,7 +194,7 @@ abstract class MyRecyclerViewListAdapter<T>(
         }
     }
 
-    private fun updateTitle() {
+    fun updateTitle() {
         val selectableItemCount = getSelectableItemCount()
         val selectedCount = min(selectedKeys.size, selectableItemCount)
         val oldTitle = actBarTextView?.text

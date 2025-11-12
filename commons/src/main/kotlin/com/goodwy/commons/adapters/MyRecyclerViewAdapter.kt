@@ -94,11 +94,12 @@ abstract class MyRecyclerViewAdapter(
 
                 activity.menuInflater.inflate(getActionMenuId(), menu)
 
-                val cabBackgroundColor = if (activity.isDynamicTheme()) {
-                    resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
-                } else {
-                    activity.getColoredMaterialStatusBarColor()
-                }
+//                val cabBackgroundColor = if (activity.isDynamicTheme()) {
+//                    resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
+//                } else {
+//                    activity.getColoredMaterialStatusBarColor()
+//                }
+                val cabBackgroundColor = activity.getColoredMaterialStatusBarColor()
                 val cabContrastColor = cabBackgroundColor.getContrastColor()
 
                 val actModeBar = actMode!!.customView?.parent as? View
@@ -181,9 +182,9 @@ abstract class MyRecyclerViewAdapter(
         }
     }
 
-    private fun updateTitle() {
+    fun updateTitle() {
         val selectableItemCount = getSelectableItemCount()
-        val selectedCount = Math.min(selectedKeys.size, selectableItemCount)
+        val selectedCount = min(selectedKeys.size, selectableItemCount)
         val oldTitle = actBarTextView?.text
         val newTitle = "$selectedCount / $selectableItemCount"
         if (oldTitle != newTitle) {
@@ -242,8 +243,8 @@ abstract class MyRecyclerViewAdapter(
                 override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
                     selectItemRange(
                         initialSelection,
-                        Math.max(0, lastDraggedIndex - positionOffset),
-                        Math.max(0, minReached - positionOffset),
+                        max(0, lastDraggedIndex - positionOffset),
+                        max(0, minReached - positionOffset),
                         maxReached - positionOffset
                     )
                     if (minReached != maxReached) {
