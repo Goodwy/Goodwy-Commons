@@ -145,7 +145,7 @@
     <style name="AppTheme.ActionModeYou" parent="@style/Widget.Material3.ActionMode">
         <item name="android:outlineProvider">none</item>
         <item name="background">@drawable/actionmenu_background_you</item>
-        <item name="height">56dp</item>
+        <item name="height">58dp</item>
         <item name="actionOverflowButtonStyle">@style/TopPopupMenuYou</item>
     </style>
 
@@ -351,7 +351,7 @@
     <style name="AppCompat.ActionMode" parent="@style/Widget.Material3.ActionMode">
         <item name="background">@drawable/actionmenu_background</item>
         <item name="backgroundSplit">?attr/actionModeSplitBackground</item>
-        <item name="height">56dp</item>
+        <item name="height">58dp</item>
         <item name="titleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Title</item>
         <item name="subtitleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle</item>
         <item name="closeItemLayout">@layout/actionbar_close_item</item>
