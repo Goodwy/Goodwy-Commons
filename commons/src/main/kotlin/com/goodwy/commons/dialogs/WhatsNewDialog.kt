@@ -1,7 +1,13 @@
 package com.goodwy.commons.dialogs
 
 import android.app.Activity
+import android.graphics.Typeface
+import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
+import android.view.View
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.rememberScrollState
@@ -24,13 +30,24 @@ import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.databinding.DialogWhatsNewBinding
 import com.goodwy.commons.extensions.getAlertDialogBuilder
+import com.goodwy.commons.extensions.getProperPrimaryColor
+import com.goodwy.commons.extensions.getProperTextColor
+import com.goodwy.commons.extensions.getSurfaceColor
 import com.goodwy.commons.extensions.setupDialogStuff
 import com.goodwy.commons.models.Release
 
 class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
     init {
         val view = DialogWhatsNewBinding.inflate(LayoutInflater.from(activity), null, false)
-        view.whatsNewContent.text = getNewReleases()
+//        view.whatsNewContent.text = getNewReleases()
+        // Find the container and hide the original TextView
+        val container = view.whatsNewHolder
+
+        val sortedReleases = releases.sortedByDescending { it.id }
+
+        // Add cards to the container before the disclaimer
+        val disclaimerIndex = container.indexOfChild(view.whatsNewDisclaimer)
+        setupReleaseCards(container, disclaimerIndex, sortedReleases)
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
@@ -39,17 +56,138 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
             }
     }
 
-    private fun getNewReleases(): String {
-        val sb = StringBuilder()
+//    private fun getNewReleases(): String {
+//        val sb = StringBuilder()
+//
+//        releases.forEach {
+//            val parts = activity.getString(it.textId).split("\n").map(String::trim)
+//            parts.forEach {
+//                sb.append("- $it\n")
+//            }
+//        }
+//
+//        return sb.toString()
+//    }
 
-        releases.forEach {
-            val parts = activity.getString(it.textId).split("\n").map(String::trim)
-            parts.forEach {
-                sb.append("- $it\n")
+    private fun setupReleaseCards(container: LinearLayout, insertIndex: Int, releases: List<Release>) {
+        releases.forEachIndexed { index, release ->
+            val cardView = createReleaseCard(release)
+            container.addView(cardView, insertIndex + index * 2) // *2 because we add more indents
+
+            // Add spacing between cards (except the last one)
+            if (release != releases.last()) {
+                val space = createSpace()
+                container.addView(space, insertIndex + index * 2 + 1)
+            }
+        }
+    }
+
+    private fun createSpace(): View {
+        return View(activity).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                activity.resources.getDimensionPixelSize(R.dimen.medium_margin)
+            )
+        }
+    }
+
+    private fun createReleaseCard(release: Release): CardView {
+        return CardView(activity).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            ).apply {
+                // Add spacing around the card
+                setMargins(
+                    activity.resources.getDimensionPixelSize(R.dimen.normal_margin),
+                    activity.resources.getDimensionPixelSize(R.dimen.small_margin),
+                    activity.resources.getDimensionPixelSize(R.dimen.normal_margin),
+                    activity.resources.getDimensionPixelSize(R.dimen.small_margin)
+                )
+            }
+
+            cardElevation = activity.resources.getDimension(R.dimen.zero)
+            radius = activity.resources.getDimension(R.dimen.normal_margin)
+            setCardBackgroundColor(activity.getSurfaceColor())
+
+            // Create and configure the internal layout of the card
+            val cardLayout = createCardLayout(release)
+            addView(cardLayout)
+        }
+    }
+
+    private fun createCardLayout(release: Release): LinearLayout {
+        return LinearLayout(activity).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+            orientation = LinearLayout.VERTICAL
+            setPadding(
+                activity.resources.getDimensionPixelSize(R.dimen.activity_margin),
+                activity.resources.getDimensionPixelSize(R.dimen.ten_dpi),
+                activity.resources.getDimensionPixelSize(R.dimen.activity_margin),
+                activity.resources.getDimensionPixelSize(R.dimen.normal_margin)
+            )
+
+            // Add version header
+            release.id.let { version ->
+                val title = TextView(activity).apply {
+                    text = version.toString()
+                    setTypeface(null, Typeface.BOLD)
+                    setTextColor(activity.getProperPrimaryColor())
+                    layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        bottomMargin = activity.resources.getDimensionPixelSize(R.dimen.small_margin)
+                    }
+                }
+                addView(title)
+            }
+
+            // Add content
+            val content = createCardContent(release)
+            addView(content)
+        }
+    }
+
+    private fun createCardContent(release: Release): TextView {
+        return TextView(activity).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+
+            text = formatReleaseText(release)
+            setTextIsSelectable(true)
+            setTextColor(activity.getProperTextColor())
+
+            // Creating indented text for list items
+            setLineSpacing(
+                activity.resources.getDimension(R.dimen.small_margin),
+                1f
+            )
+        }
+    }
+
+    private fun formatReleaseText(release: Release): SpannableStringBuilder {
+        val sb = SpannableStringBuilder()
+        val parts = activity.getString(release.textId).split("\n").map(String::trim)
+
+        parts.forEachIndexed { index, part ->
+            if (part.isNotEmpty()) {
+                // Add a bullet point with indentation
+                sb.append("• $part")
+
+                // Add newline except for the last item
+                if (index < parts.size - 1) {
+                    sb.append("\n")
+                }
             }
         }
 
-        return sb.toString()
+        return sb
     }
 }
 
