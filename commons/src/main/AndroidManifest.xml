@@ -29,8 +29,8 @@
         <package android:name="dev.goodwy.dialer" />
         <package android:name="dev.goodwy.contacts.debug" />
         <package android:name="dev.goodwy.contacts" />
-        <package android:name="dev.goodwy.smsmessenger.debug" />
-        <package android:name="dev.goodwy.smsmessenger" />
+        <package android:name="dev.goodwy.messages.debug" />
+        <package android:name="dev.goodwy.messages" />
         <package android:name="dev.goodwy.voicerecorder.debug" />
         <package android:name="dev.goodwy.voicerecorder" />
         <package android:name="dev.goodwy.voicerecorderfree.debug" />
