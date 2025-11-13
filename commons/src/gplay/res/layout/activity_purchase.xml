@@ -57,6 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/activity_margin"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:text="@string/pref_pay_summary"
