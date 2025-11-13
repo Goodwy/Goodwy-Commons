@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.compose.extensions.config
+import com.goodwy.commons.dialogs.WhatsNewDialog
 import com.goodwy.commons.extensions.*
+import com.goodwy.commons.models.Release
 import com.goodwy.commons.samples.BuildConfig
 import com.goodwy.commons.samples.R
 import com.goodwy.commons.samples.adapters.TestAdapter
@@ -21,6 +23,7 @@ class TestActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
+        setupOptionsMenu()
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -53,6 +56,24 @@ class TestActivity : BaseSimpleActivity() {
 
         binding.mainMenu.updateColors(statusBarColor, scrollingViewOffset)
         setupSearchMenuScrollListener(myRecyclerView, binding.mainMenu, useSurfaceColor)
+    }
+
+    private fun setupOptionsMenu() {
+        binding.mainMenu.requireToolbar().inflateMenu(com.goodwy.commons.R.menu.cab_delete_only)
+        binding.mainMenu.requireToolbar().setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                com.goodwy.commons.R.id.cab_delete -> showWhatsNewDialog()
+                else -> return@setOnMenuItemClickListener false
+            }
+            return@setOnMenuItemClickListener true
+        }
+    }
+
+    private fun showWhatsNewDialog() {
+        arrayListOf<Release>().apply {
+            add(Release(800, R.string.release_800))
+            WhatsNewDialog(this@TestActivity, this)
+        }
     }
 
     override fun getAppLauncherName() = getString(R.string.commons_app_name)

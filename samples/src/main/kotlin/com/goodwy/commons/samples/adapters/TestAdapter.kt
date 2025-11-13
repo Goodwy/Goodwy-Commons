@@ -31,7 +31,7 @@ class TestAdapter(activity: BaseSimpleActivity, recyclerView: MyRecyclerView, it
         val isSelected = selectedKeys.contains(getItemSelectionKey(currentPosition))
         holder.itemView.setBackgroundColor(if (isSelected) 0x33AAAAAA else 0)
 
-        holder.bindView(element, true, true) { itemView, adapterPosition ->
+        holder.bindView(element, allowSingleClick = true, allowLongClick = true) { itemView, adapterPosition ->
             // The body is not required, as we have already configured the appearance above.
         }
     }

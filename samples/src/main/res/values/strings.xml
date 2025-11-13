@@ -1,4 +1,16 @@
 <resources>
     <string name="commons_app_name">Goodwy Commons</string>
     <string name="app_name_g">Goodwy Commons</string>
+
+    <string name="release_800">
+        Compatibility updates for Android 15 &amp; 16\n
+        Optimized loading messages in conversations\n
+        Changed the logic of styles\n
+        The selection of primary colors has been expanded, and you can now specify your own color\n
+        Changed colors of context action modes\n
+        Message time in the properties dialog now includes seconds\n
+        The ‘Move items into the Recycle Bin instead of deleting’ option is now enabled by default\n
+        The ‘Hide the top app bar when scrolling’ option is hidden because it does not work correctly on newer versions of Android\n
+        Fixed display of unread notifications in conversations
+    </string>
 </resources>

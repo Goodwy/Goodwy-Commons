@@ -160,7 +160,6 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
             )
 
             text = formatReleaseText(release)
-            setTextIsSelectable(true)
             setTextColor(activity.getProperTextColor())
 
             // Creating indented text for list items
