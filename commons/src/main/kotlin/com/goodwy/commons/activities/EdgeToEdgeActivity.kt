@@ -69,6 +69,7 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         padBottomImeAndSystem: List<View> = emptyList(),
         moveBottomSystem: List<View> = emptyList(),
         animateIme: Boolean = false,
+        rootView: View? = null,
     ) {
         onApplyWindowInsets { insets ->
             val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
@@ -79,16 +80,17 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
             padBottomImeAndSystem.forEach { it.updatePaddingWithBase(bottom = imeAndSystem.bottom) }
             moveBottomSystem.forEach { it.updateMarginWithBase(bottom = system.bottom) }
 
+            val contentRootView = rootView ?: contentRoot
             if (padCutout) {
                 val cutout = insets.getInsets(Type.displayCutout())
                 val sideLeft = maxOf(system.left, cutout.left)
                 val sideRight = maxOf(system.right, cutout.right)
-                contentRoot.updatePaddingWithBase(left = sideLeft, right = sideRight)
+                contentRootView.updatePaddingWithBase(left = sideLeft, right = sideRight)
             }
 
             if (animateIme) {
                 ViewCompat.setWindowInsetsAnimationCallback(
-                    contentRoot,
+                    contentRootView,
                     object : WindowInsetsAnimationCompat.Callback(DISPATCH_MODE_CONTINUE_ON_SUBTREE) {
                         override fun onProgress(
                             insets: WindowInsetsCompat,
