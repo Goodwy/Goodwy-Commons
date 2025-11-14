@@ -814,7 +814,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 colorDefault = resources.getColor(R.color.default_primary_color),
                 title = resources.getString(R.string.primary_color)
             ) { wasPositivePressed, color, wasDefaultPressed ->
-                if (wasPositivePressed) {
+                if (wasPositivePressed || wasDefaultPressed) {
                     if (hasColorChanged(curPrimaryColor, color)) {
                         setCurrentPrimaryColor(color)
                         colorChanged()
