@@ -61,7 +61,6 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
     var isAskingPermissions = false
     var useDynamicTheme = true
     var useChangeAutoTheme = true
-    var updateNavigationBarColor = true
     var checkedDocumentPath = ""
     var configItemsToExport = LinkedHashMap<String, Any>()
 
