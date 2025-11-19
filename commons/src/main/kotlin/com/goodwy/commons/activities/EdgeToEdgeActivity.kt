@@ -67,6 +67,7 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         padTopSystem: List<View> = emptyList(),
         padBottomSystem: List<View> = emptyList(),
         padBottomImeAndSystem: List<View> = emptyList(),
+        moveTopSystem: List<View> = emptyList(),
         moveBottomSystem: List<View> = emptyList(),
         animateIme: Boolean = false,
     ) {
@@ -77,6 +78,7 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
             padTopSystem.forEach { it.updatePaddingWithBase(top = system.top) }
             padBottomSystem.forEach { it.updatePaddingWithBase(bottom = system.bottom) }
             padBottomImeAndSystem.forEach { it.updatePaddingWithBase(bottom = imeAndSystem.bottom) }
+            moveTopSystem.forEach { it.updateMarginWithBase(top = system.bottom) }
             moveBottomSystem.forEach { it.updateMarginWithBase(bottom = system.bottom) }
 
             if (padCutout) {
