@@ -39,6 +39,7 @@ import com.goodwy.commons.views.MySearchMenu
 
 abstract class EdgeToEdgeActivity : AppCompatActivity() {
     open var isSearchBarEnabled = false
+    open var updateSystemBarsAppearance = true
     open val padCutout: Boolean
         get() = true
 
@@ -57,7 +58,7 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        window.setSystemBarsAppearance(getProperBackgroundColor())
+        if (updateSystemBarsAppearance) window.setSystemBarsAppearance(getProperBackgroundColor())
     }
 
     /**
