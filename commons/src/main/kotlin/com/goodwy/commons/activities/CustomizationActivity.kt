@@ -122,14 +122,14 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setTheme(getThemeId(getCurrentPrimaryColor()))
+        setTheme(getThemeId())
 
         if (!isDynamicTheme()) {
             updateBackgroundColor(getCurrentBackgroundColor())
         }
 
         curPrimaryGridColorPicker?.getSpecificColor()?.apply {
-            setTheme(getThemeId(this))
+            setTheme(getThemeId())
         }
 
         setupTopAppBar(
@@ -298,7 +298,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curIsUsingAccentColor = binding.customizationUseAccentColor.isChecked
                 curTextCursorColor = baseConfig.textCursorColor
 
-                setTheme(getThemeId(curPrimaryColor))
+                setTheme(getThemeId())
             } else {
                 baseConfig.customPrimaryColor = curPrimaryColor
                 baseConfig.customAccentColor = curAccentColor
@@ -328,7 +328,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 //            }
             curPrimaryColor = getCurrentPrimaryColor()
 
-            setTheme(getThemeId(getCurrentPrimaryColor()))
+            setTheme(getThemeId())
             colorChanged()
         }
         binding.settingsTopAppBarColorIcon.setColors(getCurrentTextColor(), getCurrentAccentOrPrimaryColor(), getCurrentBackgroundColor())
@@ -787,7 +787,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                         setCurrentPrimaryColor(color)
                         colorChanged()
                         updateColorTheme(getCurrentThemeId())
-                        setTheme(getThemeId(color))
+                        setTheme(getThemeId())
                     }
                     val navigationIcon = if (hasUnsavedChanges) NavigationIcon.Cross else NavigationIcon.Arrow
                     setupTopAppBar(
@@ -797,7 +797,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     )
                     updateTopBarColors()
                 } else {
-                    setTheme(getThemeId(curPrimaryColor))
+                    setTheme(getThemeId())
                     setupTopAppBar(
                         topAppBar = binding.appBar,
                         navigationIcon = NavigationIcon.Arrow,
@@ -819,7 +819,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                         setCurrentPrimaryColor(color)
                         colorChanged()
                         updateColorTheme(getCurrentThemeId())
-                        setTheme(getThemeId(color))
+                        setTheme(getThemeId())
                     }
                     val navigationIcon = if (hasUnsavedChanges) NavigationIcon.Cross else NavigationIcon.Arrow
                     setupTopAppBar(
@@ -829,7 +829,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     )
                     updateTopBarColors()
                 } else {
-                    setTheme(getThemeId(curPrimaryColor))
+                    setTheme(getThemeId())
                     setupTopAppBar(
                         topAppBar = binding.appBar,
                         navigationIcon = NavigationIcon.Arrow,
