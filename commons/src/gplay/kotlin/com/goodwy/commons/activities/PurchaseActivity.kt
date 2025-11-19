@@ -566,7 +566,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         baseConfig.backgroundColor = getColor(theme.backgroundColorId)
         baseConfig.primaryColor = getColor(theme.primaryColorId)
 
-        setTheme(getThemeId(baseConfig.customPrimaryColor))
+        setTheme(getThemeId())
         recreate()
     }
 
