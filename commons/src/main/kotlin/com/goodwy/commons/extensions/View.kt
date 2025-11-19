@@ -148,19 +148,19 @@ fun View.updateMarginWithBase(
 }
 
 // Animation for SwipeActionView
-fun View.slideRight(view: View, parent: View) {
+fun View.slideRight(parent: View) {
     animate()
         .setInterpolator(DecelerateInterpolator(1.25f))
-        .x(parent.right - resources.getDimension(R.dimen.big_margin) - view.width)
+        .x(parent.right - resources.getDimension(R.dimen.big_margin) - width)
 }
 
-fun View.slideLeft(view: View) {
+fun View.slideLeft() {
     animate()
         .setInterpolator(DecelerateInterpolator(1.25f))
         .x(resources.getDimension(R.dimen.big_margin))
 }
 
-fun View.slideRightReturn(view: View, parent: View) {
+fun View.slideRightReturn(parent: View) {
     animate()
 //        .setDuration(120)
 //        .setInterpolator(DecelerateInterpolator(1.25f))
@@ -168,10 +168,10 @@ fun View.slideRightReturn(view: View, parent: View) {
         .x(parent.left + resources.getDimension(R.dimen.big_margin))
 }
 
-fun View.slideLeftReturn(view: View, parent: View) {
+fun View.slideLeftReturn(parent: View) {
     animate()
 //        .setDuration(120)
 //        .setInterpolator(DecelerateInterpolator(1.25f))
         .setInterpolator(OvershootInterpolator(2.0f))
-        .x(parent.width - resources.getDimension(R.dimen.big_margin) - view.width)
+        .x(parent.width - resources.getDimension(R.dimen.big_margin) - width)
 }
