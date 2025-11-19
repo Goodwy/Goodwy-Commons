@@ -78,7 +78,7 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
             padTopSystem.forEach { it.updatePaddingWithBase(top = system.top) }
             padBottomSystem.forEach { it.updatePaddingWithBase(bottom = system.bottom) }
             padBottomImeAndSystem.forEach { it.updatePaddingWithBase(bottom = imeAndSystem.bottom) }
-            moveTopSystem.forEach { it.updateMarginWithBase(top = system.bottom) }
+            moveTopSystem.forEach { it.updateMarginWithBase(top = system.top) }
             moveBottomSystem.forEach { it.updateMarginWithBase(bottom = system.bottom) }
 
             if (padCutout) {
