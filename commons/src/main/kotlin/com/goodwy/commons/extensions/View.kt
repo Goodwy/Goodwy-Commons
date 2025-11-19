@@ -6,6 +6,8 @@ import android.view.HapticFeedbackConstants
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
+import android.view.animation.DecelerateInterpolator
+import android.view.animation.OvershootInterpolator
 import androidx.annotation.Px
 import androidx.core.view.marginBottom
 import androidx.core.view.marginLeft
@@ -143,4 +145,33 @@ fun View.updateMarginWithBase(
         }
     } catch (ignored: ClassCastException) {
     }
+}
+
+// Animation for SwipeActionView
+fun View.slideRight(view: View, parent: View) {
+    animate()
+        .setInterpolator(DecelerateInterpolator(1.25f))
+        .x(parent.right - resources.getDimension(R.dimen.big_margin) - view.width)
+}
+
+fun View.slideLeft(view: View) {
+    animate()
+        .setInterpolator(DecelerateInterpolator(1.25f))
+        .x(resources.getDimension(R.dimen.big_margin))
+}
+
+fun View.slideRightReturn(view: View, parent: View) {
+    animate()
+//        .setDuration(120)
+//        .setInterpolator(DecelerateInterpolator(1.25f))
+        .setInterpolator(OvershootInterpolator(2.0f))
+        .x(parent.left + resources.getDimension(R.dimen.big_margin))
+}
+
+fun View.slideLeftReturn(view: View, parent: View) {
+    animate()
+//        .setDuration(120)
+//        .setInterpolator(DecelerateInterpolator(1.25f))
+        .setInterpolator(OvershootInterpolator(2.0f))
+        .x(parent.width - resources.getDimension(R.dimen.big_margin) - view.width)
 }
