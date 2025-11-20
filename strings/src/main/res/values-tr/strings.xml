@@ -271,9 +271,10 @@ Tüm katkıda bulunanlara ve diğer destekçilere teşekkürler!
     <string name="message_on_my_way">Yoldayım geliyorum.</string>
     <string name="message_cant_talk_right_now">Üzgünüm, şu anda konuşamıyorum.</string>
     <string name="remind_me">Bana Hatırlat</string>
-    <string name="mute">Sustur</string>
+    <string name="mute">Sesi Kapat</string>
 
     <!-- Relation types -->
+    <string name="unmute">Sesi Aç</string>
     <string name="search_the_web">İnternet\'te arama yapın</string>
     <string name="show_number_blocking_button">Numara engelleme düğmesini göster</string>
     <string name="blocking_type_silence">Sessiz bir çağrı</string>

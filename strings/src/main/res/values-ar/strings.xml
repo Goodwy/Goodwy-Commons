@@ -267,6 +267,7 @@
     <string name="mute">كتم</string>
 
     <!-- Relation types -->
+    <string name="unmute">إلغاء الكتم</string>
     <string name="search_the_web">ابحث في الإنترنت</string>
     <string name="show_number_blocking_button">إظهار زر قفل الأرقام</string>
     <string name="blocking_type_silence">مكالمة هادئة</string>

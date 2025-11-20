@@ -274,6 +274,7 @@ Vielen Dank an alle Mitwirkenden und Unterstützer!
     <string name="mute">Stumm</string>
 
     <!-- Relation types -->
+    <string name="unmute">Ton ein</string>
     <string name="search_the_web">Suche im Internet</string>
     <string name="show_number_blocking_button">Schaltfläche für die Nummernsperre anzeigen</string>
     <string name="blocking_type_silence">Ein leiser Anruf</string>

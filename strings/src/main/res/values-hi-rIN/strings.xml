@@ -272,6 +272,7 @@
     <string name="mute">मूक</string>
 
     <!-- Relation types -->
+    <string name="unmute">पर ध्वनि</string>
     <string name="search_the_web">इंटरनेट पर खोजें</string>
     <string name="show_number_blocking_button">नंबर लॉक बटन दिखाएं</string>
     <string name="blocking_type_silence">एक शांत कॉल</string>

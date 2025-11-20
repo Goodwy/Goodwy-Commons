@@ -272,6 +272,7 @@
     <string name="mute">靜音</string>
 
     <!-- Relation types -->
+    <string name="unmute">打開聲音</string>
     <string name="search_the_web">搜索 Internet</string>
     <string name="show_number_blocking_button">顯示數字區塊按鈕</string>
     <string name="blocking_type_silence">安靜的通話</string>

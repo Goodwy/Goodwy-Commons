@@ -274,6 +274,7 @@ Děkujeme všem přispěvatelům a dalším podporovatelům!
     <string name="mute">Ztlumit</string>
 
     <!-- Relation types -->
+    <string name="unmute">Zvuk zapnutý</string>
     <string name="search_the_web">Vyhledávání na internetu</string>
     <string name="show_number_blocking_button">Zobrazit tlačítko zámku čísla</string>
     <string name="blocking_type_silence">Tichý hovor</string>

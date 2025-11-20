@@ -274,6 +274,7 @@ Dankon al ĉiuj kontribuantoj kaj aliaj subtenantoj!
     <string name="mute">Mute</string>
 
     <!-- Relation types -->
+    <string name="unmute">Sono ŝaltita</string>
     <string name="search_the_web">Interreta serĉo</string>
     <string name="show_number_blocking_button">Montru butonon de numero-bloko</string>
     <string name="blocking_type_silence">Trankvila voko</string>

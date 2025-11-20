@@ -275,6 +275,7 @@ Agradecemos a todos os colaboradores e outros apoiadores!
     <string name="mute">Mudo</string>
 
     <!-- Relation types -->
+    <string name="unmute">Som ligado</string>
     <string name="search_the_web">Pesquisa na Internet</string>
     <string name="show_number_blocking_button">Mostrar o botão de bloqueio de números</string>
     <string name="blocking_type_silence">Uma chamada silenciosa</string>

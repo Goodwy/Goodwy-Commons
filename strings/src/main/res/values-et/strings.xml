@@ -275,6 +275,7 @@ Täname kõiki kaastöölisi ja teisi toetajaid!
     <string name="mute">Vaigistamiseks</string>
 
     <!-- Relation types -->
+    <string name="unmute">Heli sees</string>
     <string name="search_the_web">Internetist otsimine</string>
     <string name="show_number_blocking_button">Näita numbriluku nuppu</string>
     <string name="blocking_type_silence">Vaikne kõne</string>

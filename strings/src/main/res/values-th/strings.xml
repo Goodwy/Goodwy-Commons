@@ -274,6 +274,7 @@
     <string name="mute">ใบ้</string>
 
     <!-- Relation types -->
+    <string name="unmute">เปิดเสียง</string>
     <string name="search_the_web">ค้นหาอินเทอร์เน็ต</string>
     <string name="show_number_blocking_button">แสดงปุ่มล็อคตัวเลข</string>
     <string name="blocking_type_silence">เสียงเรียกอันเงียบงัน</string>

@@ -273,6 +273,7 @@ Bütün ianəçilərimizə təşəkkür edirik, köməyinizi çox qiymətləndir
     <string name="mute">Səssiz</string>
 
     <!-- Relation types -->
+    <string name="unmute">Səs aktivdir</string>
     <string name="search_the_web">İnternet axtarışı</string>
     <string name="show_number_blocking_button">Nömrə bloku düyməsini göstərin</string>
     <string name="blocking_type_silence">Sakit zəng</string>

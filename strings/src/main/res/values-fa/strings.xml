@@ -274,6 +274,7 @@
     <string name="mute">قطع</string>
 
     <!-- Relation types -->
+    <string name="unmute">صدا روشن است</string>
     <string name="search_the_web">جستجو در اینترنت</string>
     <string name="show_number_blocking_button">نمایش دکمه قفل شماره</string>
     <string name="blocking_type_silence">یک تماس آرام</string>

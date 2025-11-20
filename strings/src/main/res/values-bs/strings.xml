@@ -270,7 +270,7 @@ Hvala svim saradnicima i drugim podržavaocima!
     <string name="message_on_my_way">I\'m on my way.</string>
     <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
     <string name="remind_me">Remind Me</string>
-    <string name="mute">Mute</string>
+    <string name="mute">Isključi zvuk</string>
 
     <!-- Relation types -->
     <string name="blocking_type_silence">Tihi poziv</string>
@@ -351,6 +351,7 @@ Hvala svim saradnicima i drugim podržavaocima!
     <string name="minus">Minus</string>
     <string name="more_apps_from_us_g">Daljnje aplikacje od nas</string>
     <string name="text_alignment">Poravnanje teksta</string>
+    <string name="unmute">Uključi zvuk</string>
     <string name="search_the_web">Pretražite web</string>
     <string name="show_number_blocking_button">Prikaži dugme za blokiranje broja</string>
     <string name="typeface">Vrsta slova</string>

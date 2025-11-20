@@ -271,6 +271,7 @@ Si quieres ayudar, avísanos. La guía de traducción está disponible en <a hre
     <string name="mute">Mudo</string>
 
     <!-- Relation types -->
+    <string name="unmute">Sonido activado</string>
     <string name="search_the_web">Buscar en Internet</string>
     <string name="show_number_blocking_button">Mostrar botón de bloqueo de números</string>
     <string name="blocking_type_silence">Una llamada silenciosa</string>

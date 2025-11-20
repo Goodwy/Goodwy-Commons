@@ -272,9 +272,10 @@ Hvala vsem sodelavcem in drugim podpornikom!
     <string name="message_on_my_way">Na poti sem.</string>
     <string name="message_cant_talk_right_now">Oprosti, zdaj ne morem govoriti.</string>
     <string name="remind_me">Opomni me</string>
-    <string name="mute">Mute</string>
+    <string name="mute">Izklopi zvok</string>
 
     <!-- Relation types -->
+    <string name="unmute">Vklopi zvok</string>
     <string name="search_the_web">Iskanje po internetu</string>
     <string name="show_number_blocking_button">Pokaži gumb za zaklepanje številk</string>
     <string name="blocking_type_silence">Tihi klic</string>

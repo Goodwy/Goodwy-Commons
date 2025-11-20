@@ -274,6 +274,7 @@
     <string name="mute">ਚੁੱਪ</string>
 
     <!-- Relation types -->
+    <string name="unmute">ਧੁਨੀ ਚਾਲੂ</string>
     <string name="search_the_web">ਇੰਟਰਨੈੱਟ ਖੋਜ</string>
     <string name="show_number_blocking_button">ਨੰਬਰ ਬਲਾਕ ਬਟਨ ਦਿਖਾਓ</string>
     <string name="blocking_type_silence">ਇੱਕ ਸ਼ਾਂਤ ਕਾਲ</string>

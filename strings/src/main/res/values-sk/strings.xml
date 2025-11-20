@@ -274,6 +274,7 @@ Tento zoznam obsahuje všetkých, ktorí citeľne pomohli s niektorou z našich 
     <string name="mute">Stlmiť</string>
 
     <!-- Relation types -->
+    <string name="unmute">Zvuk zapnutý</string>
     <string name="search_the_web">Vyhľadávanie na internete</string>
     <string name="show_number_blocking_button">Zobraziť tlačidlo uzamknutia čísla</string>
     <string name="blocking_type_silence">Tichý hovor</string>

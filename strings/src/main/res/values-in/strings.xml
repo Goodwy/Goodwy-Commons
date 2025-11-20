@@ -272,6 +272,7 @@ Terima kasih kepada semua kontributor dan pendukung lainnya!
     <string name="mute">Bisu</string>
 
     <!-- Relation types -->
+    <string name="unmute">Suara menyala</string>
     <string name="search_the_web">Pencarian internet</string>
     <string name="show_number_blocking_button">Tampilkan tombol blok nomor</string>
     <string name="blocking_type_silence">Panggilan yang tenang</string>

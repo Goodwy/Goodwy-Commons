@@ -274,6 +274,7 @@
     <string name="mute">خاموش</string>
 
     <!-- Relation types -->
+    <string name="unmute">آواز آن</string>
     <string name="search_the_web">انٹرنیٹ سرچ</string>
     <string name="show_number_blocking_button">نمبر بلاک دا بٹن وکھاؤ</string>
     <string name="blocking_type_silence">ایک خاموش کال</string>

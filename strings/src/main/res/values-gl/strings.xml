@@ -272,6 +272,7 @@ Grazas a todos os colaboradores e demais apoiadores!
     <string name="mute">Silenciar</string>
 
     <!-- Relation types -->
+    <string name="unmute">Son activado</string>
     <string name="search_the_web">Busca en Internet</string>
     <string name="show_number_blocking_button">Mostrar o botón de bloqueo de números</string>
     <string name="blocking_type_silence">Unha chamada tranquila</string>

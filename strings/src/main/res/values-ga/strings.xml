@@ -284,6 +284,7 @@ Buíochas le gach rannpháirtí agus lucht tacaíochta eile!
     <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
     <string name="remind_me">Remind Me</string>
     <string name="mute">Mute</string>
+    <string name="unmute">Fuaim ar siúl</string>
     <string name="search_the_web">Search the web</string>
     <string name="show_number_blocking_button">Show the number blocking button</string>
 

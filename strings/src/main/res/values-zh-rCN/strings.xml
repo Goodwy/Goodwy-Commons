@@ -267,6 +267,7 @@
     <string name="mute">静音</string>
 
     <!-- Relation types -->
+    <string name="unmute">打开声音</string>
     <string name="search_the_web">搜索 Internet</string>
     <string name="show_number_blocking_button">显示数字块按钮</string>
     <string name="blocking_type_silence">安静的通话</string>

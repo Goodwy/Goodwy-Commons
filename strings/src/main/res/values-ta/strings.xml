@@ -271,6 +271,7 @@
     <string name="mute">முடக்கு</string>
 
     <!-- Relation types -->
+    <string name="unmute">ஒலி இயக்கப்பட்டது</string>
     <string name="search_the_web">இணைய தேடல்</string>
     <string name="show_number_blocking_button">எண் தடுப்பு பொத்தானைக் காட்டு</string>
     <string name="blocking_type_silence">ஒரு அமைதியான அழைப்பு</string>

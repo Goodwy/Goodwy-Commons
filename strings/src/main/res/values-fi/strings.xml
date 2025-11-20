@@ -273,6 +273,7 @@ Kiitos kaikille avustajille ja muille tukijoille!
     <string name="mute">Mykistää</string>
 
     <!-- Relation types -->
+    <string name="unmute">Ääni päällä</string>
     <string name="search_the_web">Hae Internetistä</string>
     <string name="show_number_blocking_button">Näytä numerolukituspainike</string>
     <string name="blocking_type_silence">Hiljainen puhelu</string>

@@ -271,6 +271,7 @@ Bedankt aan alle bijdragers en andere supporters!
     <string name="mute">Stom</string>
 
     <!-- Relation types -->
+    <string name="unmute">Geluid aan</string>
     <string name="search_the_web">Zoeken op internet</string>
     <string name="show_number_blocking_button">Knop voor nummerblokkering weergeven</string>
     <string name="blocking_type_silence">Een stille roep</string>

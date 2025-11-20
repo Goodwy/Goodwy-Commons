@@ -272,6 +272,7 @@ Xin cảm ơn tất cả những người đóng góp và những người ủng
     <string name="mute">Câm</string>
 
     <!-- Relation types -->
+    <string name="unmute">Bật âm thanh</string>
     <string name="search_the_web">Tìm kiếm trên Internet</string>
     <string name="show_number_blocking_button">Hiển thị nút khóa số</string>
     <string name="blocking_type_silence">Một cuộc gọi yên tĩnh</string>

@@ -281,6 +281,7 @@
     <string name="message_cant_talk_right_now">Сейчас не могу говорить.</string>
     <string name="remind_me">Напомнить</string>
     <string name="mute">Откл. звук</string>
+    <string name="unmute">Вкл. звук</string>
     <string name="search_the_web">Поиск в интернете</string>
     <string name="show_number_blocking_button">Показывать кнопку блокировки номера</string>
     <string name="blocking_type">Тип блокировки</string>

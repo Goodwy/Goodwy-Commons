@@ -272,6 +272,7 @@
     <string name="mute">Σίγαση</string>
 
     <!-- Relation types -->
+    <string name="unmute">Ήχος</string>
     <string name="search_the_web">Αναζήτηση στο Internet</string>
     <string name="show_number_blocking_button">Εμφάνιση κουμπιού κλειδώματος αριθμού</string>
     <string name="blocking_type_silence">Μια ήσυχη κλήση</string>

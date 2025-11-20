@@ -272,6 +272,7 @@ Hvala svim suradnicima i ostalim podupirateljima!
     <string name="mute">Ćutljiv</string>
 
     <!-- Relation types -->
+    <string name="unmute">Zvuk uključen</string>
     <string name="search_the_web">Pretraživanje interneta</string>
     <string name="show_number_blocking_button">Prikaži gumb za zaključavanje broja</string>
     <string name="blocking_type_silence">Tihi poziv</string>

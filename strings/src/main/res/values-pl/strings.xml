@@ -271,9 +271,10 @@ Dziękujemy wszystkim współautorom i innym osobom wspierającym!
     <string name="message_on_my_way">Jestem w drodze.</string>
     <string name="message_cant_talk_right_now">Przepraszam, nie mogę teraz mówić.</string>
     <string name="remind_me">Przypomnij mi</string>
-    <string name="mute">Niemy</string>
+    <string name="mute">Wycisz</string>
 
     <!-- Relation types -->
+    <string name="unmute">Włącz</string>
     <string name="search_the_web">Szukaj w Internecie</string>
     <string name="show_number_blocking_button">Pokaż przycisk blokady numeru</string>
     <string name="blocking_type_silence">Cichy telefon</string>

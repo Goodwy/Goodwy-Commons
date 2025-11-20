@@ -272,6 +272,7 @@
     <string name="mute">음소거</string>
 
     <!-- Relation types -->
+    <string name="unmute">소리 켜기</string>
     <string name="search_the_web">인터넷 검색</string>
     <string name="show_number_blocking_button">숫자 잠금 버튼 표시</string>
     <string name="blocking_type_silence">조용한 전화</string>

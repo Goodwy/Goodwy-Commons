@@ -270,7 +270,7 @@
     <string name="message_on_my_way">I\'m on my way.</string>
     <string name="message_cant_talk_right_now">Sorry, I can\'t talk right now.</string>
     <string name="remind_me">Remind Me</string>
-    <string name="mute">Mute</string>
+    <string name="mute">Исклучи звук</string>
 
     <!-- Relation types -->
     <string name="blocking_type_silence">Тивок повик</string>
@@ -349,6 +349,7 @@
     <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="billing_error_application_signature_not_correct">За да платите преку RuStore, треба да ја инсталирате верзијата на апликацијата од RuStore</string>
     <string name="text_alignment">Порамнување на текстот</string>
+    <string name="unmute">Вклучи звук</string>
     <string name="search_the_web">Пребарајте на интернет</string>
     <string name="show_number_blocking_button">Прикажи го копчето за блокирање броеви</string>
     <string name="minus">Минус</string>

@@ -274,6 +274,7 @@ Mulțumim tuturor contribuitorilor și celorlalți susținători!
     <string name="mute">Mut</string>
 
     <!-- Relation types -->
+    <string name="unmute">Sunet activat</string>
     <string name="search_the_web">Căutați pe internet</string>
     <string name="show_number_blocking_button">Afișați butonul de blocare a numărului</string>
     <string name="blocking_type_silence">Un apel liniștit</string>

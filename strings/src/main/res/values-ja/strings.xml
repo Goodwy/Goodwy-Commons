@@ -272,6 +272,7 @@
     <string name="mute">唖</string>
 
     <!-- Relation types -->
+    <string name="unmute">サウンドオン</string>
     <string name="search_the_web">インターネットを検索する</string>
     <string name="show_number_blocking_button">番号ロックボタンを表示</string>
     <string name="blocking_type_silence">静かな呼びかけ</string>

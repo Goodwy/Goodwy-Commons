@@ -272,6 +272,7 @@ Grazie a tutti i collaboratori e agli altri sostenitori!
     <string name="mute">Muto</string>
 
     <!-- Relation types -->
+    <string name="unmute">Suono acceso</string>
     <string name="search_the_web">Cerca in Internet</string>
     <string name="show_number_blocking_button">Mostra il pulsante di blocco del numero</string>
     <string name="blocking_type_silence">Una chiamata silenziosa</string>

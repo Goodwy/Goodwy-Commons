@@ -271,6 +271,7 @@ Diolch i\'r holl gyfranwyr a chefnogwyr eraill!
     <string name="mute">Mwnt</string>
 
     <!-- Relation types -->
+    <string name="unmute">Sain ymlaen</string>
     <string name="search_the_web">Chwilio\'r Rhyngrwyd</string>
     <string name="show_number_blocking_button">Dangos rhif clo botwm</string>
     <string name="blocking_type_silence">Galwad dawel</string>

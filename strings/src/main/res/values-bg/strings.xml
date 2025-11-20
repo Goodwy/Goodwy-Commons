@@ -272,9 +272,10 @@
     <string name="message_on_my_way">На път съм.</string>
     <string name="message_cant_talk_right_now">Съжалявам, не мога да говоря в момента.</string>
     <string name="remind_me">Напомни ми</string>
-    <string name="mute">Ням</string>
+    <string name="mute">Без звук</string>
 
     <!-- Relation types -->
+    <string name="unmute">Включи звука</string>
     <string name="search_the_web">Търсене в интернет</string>
     <string name="show_number_blocking_button">Покажи бутона за заключване на номера</string>
     <string name="blocking_type_silence">Тихо обаждане</string>

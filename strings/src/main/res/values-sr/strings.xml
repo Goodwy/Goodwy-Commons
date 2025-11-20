@@ -273,6 +273,7 @@
     <string name="message_cant_talk_right_now">Извини, не могу сада да причам.</string>
     <string name="remind_me">Подсети ме</string>
     <string name="mute">Искључи звук</string>
+    <string name="unmute">Укључи звук</string>
     <string name="search_the_web">Претражите веб</string>
 
     <!-- Relation types -->

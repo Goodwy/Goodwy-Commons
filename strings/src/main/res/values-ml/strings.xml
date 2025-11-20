@@ -273,6 +273,7 @@
     <string name="mute">നിശബ്ദമാക്കുക</string>
 
     <!-- Relation types -->
+    <string name="unmute">ശബ്‌ദം ഓണാണ്</string>
     <string name="search_the_web">ഇൻ്റർനെറ്റ് തിരയൽ</string>
     <string name="show_number_blocking_button">നമ്പർ ബ്ലോക്ക് ബട്ടൺ കാണിക്കുക</string>
     <string name="blocking_type_silence">ശാന്തമായ ഒരു വിളി</string>

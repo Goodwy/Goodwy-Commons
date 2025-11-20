@@ -270,6 +270,7 @@ Köszönjük minden közreműködőnek és támogatónak!
     <string name="mute">Néma</string>
 
     <!-- Relation types -->
+    <string name="unmute">Hang bekapcsolva</string>
     <string name="search_the_web">Keresés az interneten</string>
     <string name="show_number_blocking_button">Számzár gomb megjelenítése</string>
     <string name="blocking_type_silence">Csendes hívás</string>

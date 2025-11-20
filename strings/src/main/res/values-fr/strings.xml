@@ -275,6 +275,7 @@ Merci à tous les contributeurs et autres soutiens !
     <string name="mute">Muet</string>
 
     <!-- Relation types -->
+    <string name="unmute">Activer le son</string>
     <string name="search_the_web">Rechercher sur Internet</string>
     <string name="show_number_blocking_button">Afficher le bouton de verrouillage du numéro</string>
     <string name="blocking_type_silence">Un appel silencieux</string>

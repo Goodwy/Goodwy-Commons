@@ -271,6 +271,7 @@ Eskerrik asko laguntzaile eta gainerako babesle guztiei!
     <string name="mute">Ikusi</string>
 
     <!-- Relation types -->
+    <string name="unmute">Soinua piztuta</string>
     <string name="search_the_web">Interneteko bilaketa</string>
     <string name="show_number_blocking_button">Erakutsi zenbakia blokeatzeko botoia</string>
     <string name="blocking_type_silence">Dei lasai bat</string>

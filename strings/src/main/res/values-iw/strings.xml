@@ -271,6 +271,7 @@
     <string name="mute">השתק</string>
 
     <!-- Relation types -->
+    <string name="unmute">צליל מופעל</string>
     <string name="search_the_web">חיפוש באינטרנט</string>
     <string name="show_number_blocking_button">לחצן \'הצג נעילת מספר\'</string>
     <string name="blocking_type_silence">שיחה שקטה</string>
