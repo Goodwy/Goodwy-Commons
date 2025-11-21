@@ -30,9 +30,11 @@ import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.databinding.DialogWhatsNewBinding
 import com.goodwy.commons.extensions.getAlertDialogBuilder
+import com.goodwy.commons.extensions.getProperBackgroundColor
 import com.goodwy.commons.extensions.getProperPrimaryColor
 import com.goodwy.commons.extensions.getProperTextColor
 import com.goodwy.commons.extensions.getSurfaceColor
+import com.goodwy.commons.extensions.isBlackTheme
 import com.goodwy.commons.extensions.setupDialogStuff
 import com.goodwy.commons.models.Release
 
@@ -108,7 +110,11 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
 
             cardElevation = activity.resources.getDimension(R.dimen.zero)
             radius = activity.resources.getDimension(R.dimen.normal_margin)
-            setCardBackgroundColor(activity.getSurfaceColor())
+
+            val backgroundColor =
+                if (activity.isBlackTheme()) activity.getProperBackgroundColor()
+                else activity.getSurfaceColor()
+            setCardBackgroundColor(backgroundColor)
 
             // Create and configure the internal layout of the card
             val cardLayout = createCardLayout(release)
