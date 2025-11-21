@@ -35,6 +35,8 @@ import com.goodwy.commons.extensions.getProperPrimaryColor
 import com.goodwy.commons.extensions.getProperTextColor
 import com.goodwy.commons.extensions.getSurfaceColor
 import com.goodwy.commons.extensions.isBlackTheme
+import com.goodwy.commons.extensions.isDynamicTheme
+import com.goodwy.commons.extensions.isSystemInDarkMode
 import com.goodwy.commons.extensions.setupDialogStuff
 import com.goodwy.commons.models.Release
 
@@ -112,8 +114,13 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
             radius = activity.resources.getDimension(R.dimen.normal_margin)
 
             val backgroundColor =
-                if (activity.isBlackTheme()) activity.getProperBackgroundColor()
-                else activity.getSurfaceColor()
+                if (activity.isBlackTheme() ||
+                    (activity.isDynamicTheme() && !activity.isSystemInDarkMode())
+                ) {
+                    activity.getProperBackgroundColor()
+                } else {
+                    activity.getSurfaceColor()
+                }
             setCardBackgroundColor(backgroundColor)
 
             // Create and configure the internal layout of the card
