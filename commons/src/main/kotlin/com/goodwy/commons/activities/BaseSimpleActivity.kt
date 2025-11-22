@@ -127,6 +127,10 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
                     baseConfig.isMiui = isMiUi()
                 }
                 miuiCheckJob.join()
+                val emuiCheckJob = launch {
+                    baseConfig.isEmui = isEmui()
+                }
+                emuiCheckJob.join()
                 baseConfig.needInit = false
             }
         }

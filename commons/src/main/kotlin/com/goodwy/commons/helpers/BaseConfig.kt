@@ -823,6 +823,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(IS_MIUI, false)
         set(isMiui) = prefs.edit { putBoolean(IS_MIUI, isMiui) }
 
+    var isEmui: Boolean
+        get() = prefs.getBoolean(IS_EMUI, false)
+        set(isEmui) = prefs.edit { putBoolean(IS_EMUI, isEmui) }
+
     var blockingType: Int
         get() = prefs.getInt(BLOCKING_TYPE, BLOCKING_TYPE_REJECT)
         set(blockingType) = prefs.edit { putInt(BLOCKING_TYPE, blockingType) }

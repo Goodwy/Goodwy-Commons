@@ -1470,6 +1470,10 @@ suspend fun isMiUi(): Boolean {
     return !TextUtils.isEmpty(getSystemProperty("ro.miui.ui.version.name"))
 }
 
+suspend fun isEmui(): Boolean {
+    return !TextUtils.isEmpty(getSystemProperty("ro.build.version.emui"))
+}
+
 suspend fun getSystemProperty(propName: String): String? = withContext(Dispatchers.IO) {
     val line: String
     var input: BufferedReader? = null
