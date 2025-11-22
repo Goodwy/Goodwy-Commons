@@ -1,6 +1,7 @@
 package com.goodwy.commons.dialogs
 
 import android.app.Activity
+import android.graphics.Color
 import android.graphics.Typeface
 import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
@@ -113,14 +114,11 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
             cardElevation = activity.resources.getDimension(R.dimen.zero)
             radius = activity.resources.getDimension(R.dimen.normal_margin)
 
-            val backgroundColor =
-                if (activity.isBlackTheme() ||
-                    (activity.isDynamicTheme() && !activity.isSystemInDarkMode())
-                ) {
-                    activity.getProperBackgroundColor()
-                } else {
-                    activity.getSurfaceColor()
-                }
+            val backgroundColor = when {
+                activity.isBlackTheme() -> activity.getProperBackgroundColor()
+                activity.isDynamicTheme() && !activity.isSystemInDarkMode() -> Color.WHITE
+                else -> activity.getSurfaceColor()
+            }
             setCardBackgroundColor(backgroundColor)
 
             // Create and configure the internal layout of the card
