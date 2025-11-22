@@ -115,8 +115,8 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
             radius = activity.resources.getDimension(R.dimen.normal_margin)
 
             val backgroundColor = when {
+                activity.isDynamicTheme() && !activity.isSystemInDarkMode() -> activity.getSurfaceColor()
                 activity.isBlackTheme() -> activity.getProperBackgroundColor()
-                activity.isDynamicTheme() && !activity.isSystemInDarkMode() -> Color.WHITE
                 else -> activity.getSurfaceColor()
             }
             setCardBackgroundColor(backgroundColor)

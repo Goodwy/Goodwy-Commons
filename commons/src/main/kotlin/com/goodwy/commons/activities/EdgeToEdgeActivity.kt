@@ -223,7 +223,6 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         topAppBar: MyAppBarLayout,
         colorBackground: Int,
         colorPrimary: Int = getProperPrimaryColor(),
-        useColorForStatusBar: Boolean = true,
         useOverflowIcon: Boolean = true,
         topAppBarColorIcon: Boolean = baseConfig.topAppBarColorIcon,
         topAppBarColorTitle: Boolean = baseConfig.topAppBarColorTitle
@@ -236,7 +235,6 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         val itemColor = if (topAppBarColorIcon) colorPrimary else contrastColor
         val titleColor = if (topAppBarColorTitle) colorPrimary else contrastColor
 
-//        val statusBarColor = if (useColorForStatusBar) colorBackground else getProperBackgroundColor
         window.setSystemBarsAppearance(colorBackground)
         topAppBar.setBackgroundColor(colorBackground)
         topAppBar.toolbar?.setTitleTextColor(titleColor)
@@ -258,7 +256,6 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         toolbar: Toolbar,
         colorBackground: Int,
         colorPrimary: Int = getProperPrimaryColor(),
-        useColorForStatusBar: Boolean = true,
         useOverflowIcon: Boolean = true,
         topAppBarColorIcon: Boolean = baseConfig.topAppBarColorIcon,
         topAppBarColorTitle: Boolean = baseConfig.topAppBarColorTitle
@@ -268,7 +265,6 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         val itemColor = if (topAppBarColorIcon) colorPrimary else contrastColor
         val titleColor = if (topAppBarColorTitle) colorPrimary else contrastColor
 
-//        val statusBarColor = if (useColorForStatusBar) colorBackground else getProperBackgroundColor
         window.setSystemBarsAppearance(colorBackground)
         toolbar.setTitleTextColor(titleColor)
         toolbar.navigationIcon?.applyColorFilter(itemColor)
