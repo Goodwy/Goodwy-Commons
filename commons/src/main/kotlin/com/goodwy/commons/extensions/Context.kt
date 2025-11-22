@@ -1467,10 +1467,26 @@ fun Context.getLetterBackgroundColors(): ArrayList<Long> {
 }
 
 suspend fun isMiUi(): Boolean {
+    val manufacturer = Build.MANUFACTURER.lowercase(Locale.getDefault())
+    val isXiaomi = manufacturer.contains(Regex(pattern = "xiaomi|redmi|poco"))
+
+    if (!isXiaomi) {
+        return false
+    }
+
     return !TextUtils.isEmpty(getSystemProperty("ro.miui.ui.version.name"))
 }
 
 suspend fun isEmui(): Boolean {
+    // Quick check by manufacturer
+    val manufacturer = Build.MANUFACTURER.lowercase(Locale.getDefault())
+    val isHuawei = manufacturer.contains(Regex(pattern = "huawei|honor"))
+
+    if (!isHuawei) {
+        return false
+    }
+
+    // Accurate verification via system property
     return !TextUtils.isEmpty(getSystemProperty("ro.build.version.emui"))
 }
 
