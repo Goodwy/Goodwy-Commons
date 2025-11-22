@@ -1,7 +1,6 @@
 package com.goodwy.commons.dialogs
 
 import android.app.Activity
-import android.graphics.Color
 import android.graphics.Typeface
 import android.text.SpannableStringBuilder
 import android.view.LayoutInflater

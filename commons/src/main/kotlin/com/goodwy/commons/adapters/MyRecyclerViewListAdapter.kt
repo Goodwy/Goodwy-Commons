@@ -1,7 +1,6 @@
 package com.goodwy.commons.adapters
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
