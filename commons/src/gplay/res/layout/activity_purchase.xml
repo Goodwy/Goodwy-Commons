@@ -637,8 +637,8 @@
 
             <ImageView
                 android:id="@+id/goodwy_logo"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
                 android:layout_below="@+id/collection_holder"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/big_margin"
@@ -654,7 +654,7 @@
                 android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginBottom="48dp"
                 android:text="goodwy.dev"
-                android:textSize="16sp" />
+                android:textSize="13sp" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

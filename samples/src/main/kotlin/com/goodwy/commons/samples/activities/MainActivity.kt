@@ -49,13 +49,14 @@ class MainActivity : BaseSimpleActivity() {
                     showComposeDialogs = {
                         startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
                     },
-                    openTestButton = {
-                        startActivity(Intent(this@MainActivity, TestActivity::class.java))
-                    },//::securityDialog,//::setupStartDate,
+                    openTestButton = ::securityDialog,//::setupStartDate,
                     showMoreApps = showMoreApps,
                     openAbout = ::launchAbout,
                     moreAppsFromUs = ::launchMoreAppsFromUs,
                     startPurchaseActivity = ::launchPurchase,
+                    startTestActivity = {
+                        startActivity(Intent(this@MainActivity, TestActivity::class.java))
+                    },
                     isTopAppBarColorIcon = isTopAppBarColorIcon,
                     openDateButton = ::setupDateButton,
                     isDateFormat = isDateFormat,

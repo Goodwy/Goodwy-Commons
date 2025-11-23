@@ -52,6 +52,7 @@ fun MainScreen(
     openAbout: () -> Unit,
     moreAppsFromUs: () -> Unit,
     startPurchaseActivity: () -> Unit,
+    startTestActivity: () -> Unit,
     isTopAppBarColorIcon: Boolean = false,
     openDateButton: () -> Unit,
     isDateFormat: String = "d.M.y",
@@ -102,19 +103,19 @@ fun MainScreen(
                     showChevron = true,
                     doOnPreferenceClick = openColorCustomization
                 )
-                SettingsHorizontalDivider()
+                SettingsHorizontalDivider(thickness = 2.dp)
                 SettingsPreferenceComponent(
                     label = "Manage blocked numbers",
                     showChevron = true,
                     doOnPreferenceClick = manageBlockedNumbers
                 )
-                SettingsHorizontalDivider()
+                SettingsHorizontalDivider(thickness = 2.dp)
                 SettingsPreferenceComponent(
                     label = "Compose dialogs",
                     showChevron = true,
                     doOnPreferenceClick = showComposeDialogs
                 )
-                SettingsHorizontalDivider()
+                SettingsHorizontalDivider(thickness = 2.dp)
                 val cal = Calendar.getInstance(Locale.ENGLISH).timeInMillis
                 val formatDate = cal.formatDate(
                     context = LocalContext.current,
@@ -127,13 +128,19 @@ fun MainScreen(
                     value = formatDate,
                     doOnPreferenceClick = openDateButton
                 )
-                SettingsHorizontalDivider()
+                SettingsHorizontalDivider(thickness = 2.dp)
                 SettingsPreferenceComponent(
                     label = "Purchase",
                     showChevron = true,
                     doOnPreferenceClick = startPurchaseActivity
                 )
-                SettingsHorizontalDivider()
+                SettingsHorizontalDivider(thickness = 2.dp)
+                SettingsPreferenceComponent(
+                    label = "Activity",
+                    showChevron = true,
+                    doOnPreferenceClick = startTestActivity
+                )
+                SettingsHorizontalDivider(thickness = 2.dp)
 
                 var showDialog by remember { mutableStateOf(false) }
                 SettingsPreferenceComponent(
@@ -201,6 +208,7 @@ private fun MainScreenPreview() {
             openAbout = {},
             moreAppsFromUs = {},
             startPurchaseActivity = {},
+            startTestActivity = {},
             openDateButton = {},
         )
     }
