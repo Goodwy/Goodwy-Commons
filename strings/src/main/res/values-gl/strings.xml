@@ -141,6 +141,7 @@ Grazas a todos os nosos colaboradores, agradecemos moito a vosa axuda &#10084;&#
     <string name="button_secondary">Botón secundario</string>
     <string name="skip_archive_confirmation">Omita sempre o diálogo de confirmación de arquivo</string>
     <string name="swipe_gestures">Xestos de pasar o dedo</string>
+    <string name="swipe_gestures_and_actions">Xestos e accións de deslizamento</string>
     <string name="swipe_left_action">Acción de pasar o dedo cara á esquerda</string>
     <string name="swipe_right_action">Acción de pasar o dedo cara á dereita</string>
     <string name="use_swipe_gestures">Usa o dedo para a acción</string>

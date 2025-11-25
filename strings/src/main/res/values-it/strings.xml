@@ -140,6 +140,7 @@ Grazie!
     <string name="button_secondary">Pulsante secondario</string>
     <string name="skip_archive_confirmation">Non chiedere mai la conferma dell\'archiviazione</string>
     <string name="swipe_gestures">Gesti di scorrimento rapido</string>
+    <string name="swipe_gestures_and_actions">Gesti e azioni di scorrimento</string>
     <string name="swipe_left_action">Azione Scorri verso sinistra</string>
     <string name="swipe_right_action">Azione di scorrimento verso destra</string>
     <string name="use_swipe_gestures">Utilizzare lo swipe to action</string>

@@ -157,6 +157,7 @@ Zahvaljujemo se svim našim saradnicima, izuzetno cijenimo vašu pomoć &#10084;
     <string name="button_secondary">Secondary button</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
     <string name="swipe_gestures">Swipe gestures</string>
+    <string name="swipe_gestures_and_actions">Geste i radnje prevlačenja</string>
     <string name="swipe_left_action">Swipe left action</string>
     <string name="swipe_right_action">Swipe right action</string>
     <string name="use_swipe_gestures">Use swipe to action</string>

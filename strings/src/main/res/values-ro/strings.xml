@@ -157,6 +157,7 @@ Mulțumim tuturor contribuitorilor noștri, apreciem foarte mult ajutorul vostru
     <string name="button_secondary">Buton secundar</string>
     <string name="skip_archive_confirmation">Sariți întotdeauna dialogul de confirmare a arhivării</string>
     <string name="swipe_gestures">Gesturi de glisare</string>
+    <string name="swipe_gestures_and_actions">Gesturi și acțiuni de glisare</string>
     <string name="swipe_left_action">Acțiunea Glisare spre stânga</string>
     <string name="swipe_right_action">Glisați acțiunea spre dreapta</string>
     <string name="use_swipe_gestures">Utilizează glisarea pentru acțiune</string>

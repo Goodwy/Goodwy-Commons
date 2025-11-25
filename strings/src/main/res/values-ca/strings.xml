@@ -140,6 +140,7 @@ Gràcies a tots els nostres col·laboradors, agraïm molt la vostra ajuda &#1008
     <string name="button_secondary">Botó secundari</string>
     <string name="skip_archive_confirmation">Omet sempre el diàleg de confirmació de l\'arxivament</string>
     <string name="swipe_gestures">Fer lliscar els gestos</string>
+    <string name="swipe_gestures_and_actions">Gestos i accions de lliscar</string>
     <string name="swipe_left_action">Feu lliscar el dit cap a l\'esquerra</string>
     <string name="swipe_right_action">Feu lliscar el dit cap a la dreta</string>
     <string name="use_swipe_gestures">Utilitza el lliscament per a l\'acció</string>

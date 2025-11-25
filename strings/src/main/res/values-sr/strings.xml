@@ -143,6 +143,7 @@
     <string name="button_secondary">Секундарни тастер</string>
     <string name="skip_archive_confirmation">Увек прескочи дијалог за потврду архивирања</string>
     <string name="swipe_gestures">Покрети превлачења</string>
+    <string name="swipe_gestures_and_actions">Гестови и радње превлачења</string>
     <string name="swipe_left_action">Радња превлачења налево</string>
     <string name="swipe_right_action">Радња превлачења надесно</string>
     <string name="use_swipe_gestures">Користите превлачење до радње</string>

@@ -140,6 +140,7 @@ Diolch i\'n holl gyfranwyr, rydym yn gwerthfawrogi eich cymorth yn fawr &#10084;
     <string name="button_secondary">Botwm eilaidd</string>
     <string name="skip_archive_confirmation">Nid yw deialog cadarnhad yn ymddangos cyn archifo</string>
     <string name="swipe_gestures">Ystumiau swipe</string>
+    <string name="swipe_gestures_and_actions">Ystumiau a gweithredoedd swipe</string>
     <string name="swipe_left_action">Swipe gweithredu chwith</string>
     <string name="swipe_right_action">Swipe gweithredu cywir</string>
     <string name="use_swipe_gestures">Defnyddio sweip i weithredu</string>

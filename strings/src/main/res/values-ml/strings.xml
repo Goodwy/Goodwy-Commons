@@ -156,6 +156,7 @@
     <string name="button_secondary">സെക്കൻഡറി ബട്ടൺ</string>
     <string name="skip_archive_confirmation">ആർക്കൈവ് സ്ഥിരീകരണ ഡയലോഗ് എപ്പോഴും ഒഴിവാക്കുക</string>
     <string name="swipe_gestures">സ്വൈപ്പ് ആംഗ്യങ്ങൾ</string>
+    <string name="swipe_gestures_and_actions">ആംഗ്യങ്ങളും പ്രവർത്തനങ്ങളും സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="swipe_left_action">ഇടത്തേക്ക് സ്വൈപ്പുചെയ്യുക</string>
     <string name="swipe_right_action">വലത് പ്രവർത്തനം സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="use_swipe_gestures">പ്രവർത്തനത്തിലേക്ക് സ്വൈപ്പ് ഉപയോഗിക്കുക</string>

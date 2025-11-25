@@ -159,6 +159,7 @@
     <string name="button_secondary">Додаткова кнопка</string>
     <string name="skip_archive_confirmation">Завжди пропускати діалог підтвердження архівації</string>
     <string name="swipe_gestures">Жести свайпами</string>
+    <string name="swipe_gestures_and_actions">Жести прогортання та дії</string>
     <string name="swipe_left_action">Проведіть пальцем вліво</string>
     <string name="swipe_right_action">Проведіть пальцем вправо</string>
     <string name="use_swipe_gestures">Використовуйте свайп до дії</string>.

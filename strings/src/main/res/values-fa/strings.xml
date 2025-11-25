@@ -139,6 +139,7 @@
     <string name="button_secondary">دکمه ثانویه</string>
     <string name="skip_archive_confirmation">همیشه از پنجره تأیید بایگانی صرف نظر کنید</string>
     <string name="swipe_gestures">حرکات تند وشدید زدن</string>
+    <string name="swipe_gestures_and_actions">حرکات و اقدامات کشیدن انگشت</string>
     <string name="swipe_left_action">ضربه تند وشدید زدن به چپ</string>
     <string name="swipe_right_action">ضربه تند وشدید زدن به راست</string>
     <string name="use_swipe_gestures">از Swipe to action استفاده کنید</string>

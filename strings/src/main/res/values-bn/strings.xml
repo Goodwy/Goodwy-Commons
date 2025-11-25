@@ -157,6 +157,7 @@
     <string name="button_secondary">সেকেন্ডারি বোতাম</string>
     <string name="skip_archive_confirmation">সর্বদা সংরক্ষণাগার নিশ্চিতকরণ ডায়ালগ এড়িয়ে যান</string>
     <string name="swipe_gestures"> সোয়াইপ অঙ্গভঙ্গি</string>
+    <string name="swipe_gestures_and_actions">সোয়াইপ অঙ্গভঙ্গি এবং ক্রিয়া</string>
     <string name="swipe_left_action">বাম দিকে সোয়াইপ অ্যাকশন</string>
     <string name="swipe_right_action">ডান দিকে সোয়াইপ করুন</string>
     <string name="use_swipe_gestures">সোয়াইপ টু অ্যাকশন ব্যবহার করুন</string>

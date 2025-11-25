@@ -140,6 +140,7 @@ Kiitos kaikille avustajillemme, arvostamme suuresti apuanne &10084;&#65039;
     <string name="button_secondary">Toissijainen painike</string>
     <string name="skip_archive_confirmation">Älä koskaan kysy vahvistusta arkistoinnin yhteydessä</string>
     <string name="swipe_gestures">Pyyhkäisyeleet</string>
+    <string name="swipe_gestures_and_actions">Pyyhkäisyeleet ja -toiminnot</string>
     <string name="swipe_left_action">Pyyhkäise vasemmalle -toiminto</string>
     <string name="swipe_right_action">Pyyhkäise oikealle -toiminto</string>
     <string name="use_swipe_gestures">Käytä pyyhkäisyliikkeitä toimintaan</string>

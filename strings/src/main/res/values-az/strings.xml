@@ -141,6 +141,7 @@ Bütün ianəçilərimizə təşəkkür edirik, köməyinizi çox qiymətləndir
     <string name="button_secondary">İkinci dərəcəli düymə</string>
     <string name="skip_archive_confirmation">Arxiv təsdiq dialoqunu göstərmə</string>
     <string name="swipe_gestures">Çaldırmaq jestləri</string>
+    <string name="swipe_gestures_and_actions">Jestləri və hərəkətləri sürüşdürün</string>
     <string name="swipe_left_action">Sola sürüşdürün</string>
     <string name="swipe_right_action">Sağa sürüşdürün</string>
     <string name="use_swipe_gestures">Hərəkət etmək üçün sürüşdürün</string>

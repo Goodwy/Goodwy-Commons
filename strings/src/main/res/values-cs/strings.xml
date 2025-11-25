@@ -143,6 +143,7 @@ Děkujeme všem našim přispěvatelům, velmi si vážíme vaší pomoci &#1008
     <string name="button_secondary">Sekundární tlačítko</string>
     <string name="skip_archive_confirmation">Potvrzení archivace vždy přeskočte</string>
     <string name="swipe_gestures">Gesta přejetí prstem</string>
+    <string name="swipe_gestures_and_actions">Gesta a akce přejetím prstem</string>
     <string name="swipe_left_action">Akce přejetí prstem doleva</string>
     <string name="swipe_right_action">Akce přejetí prstem doprava</string>
     <string name="use_swipe_gestures">Použít přejetí prstem k akci</string>

@@ -142,6 +142,7 @@ Vielen Dank an alle unsere Mitwirkenden. Wir wissen Ihre Hilfe sehr zu schätzen
     <string name="button_secondary">Sekundäre Taste</string>
     <string name="skip_archive_confirmation">Archivbestätigungsdialog nicht anzeigen</string>
     <string name="swipe_gestures">Wischgesten</string>
+    <string name="swipe_gestures_and_actions">Wischgesten und Aktionen</string>
     <string name="swipe_left_action">Aktion \"Nach links wischen\"</string>
     <string name="swipe_right_action">Aktion \"Nach rechts wischen\"</string>
     <string name="use_swipe_gestures">Wischen zur Aktion verwenden</string>

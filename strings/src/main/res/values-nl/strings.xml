@@ -139,6 +139,7 @@ Bedankt!
     <string name="button_secondary">Secundaire knop</string>
     <string name="skip_archive_confirmation">Vraag bij het archiveren niet om bevestiging</string>
     <string name="swipe_gestures">Veeg gebaren</string>
+    <string name="swipe_gestures_and_actions">Veegbewegingen en acties</string>
     <string name="swipe_left_action">Veeg naar links actie</string>
     <string name="swipe_right_action">Veeg naar rechts actie</string>
     <string name="use_swipe_gestures">Gebruik vegen om actie te ondernemen</string>

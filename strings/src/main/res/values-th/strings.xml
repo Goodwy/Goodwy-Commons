@@ -157,6 +157,7 @@
     <string name="button_secondary">ปุ่มรอง</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
     <string name="swipe_gestures">ท่าทางการปัด</string>
+    <string name="swipe_gestures_and_actions">ท่าทางและการกระทำการปัด</string>
     <string name="swipe_left_action">ปัดการกระทําไปทางซ้าย</string>
     <string name="swipe_right_action">ปัดไปทางขวา</string>
     <string name="use_swipe_gestures">ใช้การปัดเพื่อดำเนินการ</string>

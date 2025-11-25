@@ -140,6 +140,7 @@ Dėkojame visiems mūsų prisidėjusiems, labai vertiname jūsų pagalbą &10084
     <string name="button_secondary">Antrinis mygtukas</string>
     <string name="skip_archive_confirmation">Visada praleiskite archyvavimo patvirtinimo dialogo langą</string>
     <string name="swipe_gestures">Perbraukimo gestai</string>
+    <string name="swipe_gestures_and_actions">Braukimo gestai ir veiksmai</string>
     <string name="swipe_left_action">Perbraukite kairėn veiksmą</string>
     <string name="swipe_right_action">Perbraukite veiksmą dešinėn</string>
     <string name="use_swipe_gestures">Panaudokite perbraukimą veiksmui atlikti</string>

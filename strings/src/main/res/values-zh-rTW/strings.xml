@@ -140,6 +140,7 @@
     <string name="button_secondary">輔助按鈕</string>
     <string name="skip_archive_confirmation">無需確認即可存檔</string>
     <string name="swipe_gestures">滑動手勢</string>
+    <string name="swipe_gestures_and_actions">滑動手勢和操作</string>
     <string name="swipe_left_action">向左滑動操作</string>
     <string name="swipe_right_action">向右滑動操作</string>
     <string name="use_swipe_gestures">使用滑動操作</string>

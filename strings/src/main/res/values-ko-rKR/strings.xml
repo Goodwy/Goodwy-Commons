@@ -140,6 +140,7 @@
     <string name="button_secondary">보조 버튼</string>
     <string name="skip_archive_confirmation">보관 확인 창 비활성화</string>
     <string name="swipe_gestures">살짝 밀기 제스처</string>
+    <string name="swipe_gestures_and_actions">스와이프 제스처 및 동작</string>
     <string name="swipe_left_action">왼쪽으로 스와이프 동작</string>
     <string name="swipe_right_action">오른쪽으로 스와이프 동작</string>
     <string name="use_swipe_gestures">스와이프를 동작으로 사용</string>

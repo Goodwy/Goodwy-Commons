@@ -140,6 +140,7 @@
     <string name="button_secondary">Δευτερεύον κουμπί</string>
     <string name="skip_archive_confirmation">Να παραλείπετε πάντα το παράθυρο διαλόγου επιβεβαίωσης αρχειοθέτησης</string>
     <string name="swipe_gestures">Κινήσεις ολίσθησης</string>
+    <string name="swipe_gestures_and_actions">Κινήσεις και ενέργειες σάρωσης</string>
     <string name="swipe_left_action">Ενέργεια σάρωσης προς τα αριστερά</string>
     <string name="swipe_right_action">Ενέργεια σάρωσης προς τα δεξιά</string>
     <string name="use_swipe_gestures">Χρησιμοποιήστε το σύρσιμο για δράση</string>

@@ -143,6 +143,7 @@ Agradecemos a todos os nossos colaboradores. Agradecemos imensamente a ajuda de 
     <string name="button_secondary">Botão secundário</string>
     <string name="skip_archive_confirmation">Sempre ignore a confirmação para arquivamento</string>
     <string name="swipe_gestures">Gestos de deslize</string>
+    <string name="swipe_gestures_and_actions">Gestos e ações de deslizar</string>
     <string name="swipe_left_action">Ação de deslizar para a esquerda</string>
     <string name="swipe_right_action">Ação de deslizar para a direita</string>
     <string name="use_swipe_gestures">Utilizar deslizar para ação</string>

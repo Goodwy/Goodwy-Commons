@@ -140,6 +140,7 @@ Cảm ơn bạn!
     <string name="button_secondary">Nút phụ</string>
     <string name="skip_archive_confirmation">Luôn bỏ qua hộp thoại xác nhận lưu trữ</string>
     <string name="swipe_gestures">Cử chỉ vuốt</string>
+    <string name="swipe_gestures_and_actions">Cử chỉ và hành động vuốt</string>
     <string name="swipe_left_action">Hành động vuốt sang trái</string>
     <string name="swipe_right_action">Hành động vuốt sang phải</string>
     <string name="use_swipe_gestures">Sử dụng thao tác vuốt để thực hiện</string>

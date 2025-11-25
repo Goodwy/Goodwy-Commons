@@ -143,6 +143,7 @@ Tack till alla våra bidragsgivare, vi uppskattar verkligen er hjälp &#10084;&#
     <string name="button_secondary">Sekundär knapp</string>
     <string name="skip_archive_confirmation">Hoppa alltid över dialogrutan för bekräftelse av arkivering</string>
     <string name="swipe_gestures">Svep gester</string>
+    <string name="swipe_gestures_and_actions">Svepgester och åtgärder</string>
     <string name="swipe_left_action">Svep åt vänster åtgärd</string>
     <string name="swipe_right_action">Svep åt höger åtgärd</string>
     <string name="use_swipe_gestures">Använd svep till åtgärd</string>

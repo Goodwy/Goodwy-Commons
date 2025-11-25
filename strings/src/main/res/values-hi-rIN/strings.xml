@@ -140,6 +140,7 @@
     <string name="button_secondary">द्वितीयक बटन</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
     <string name="swipe_gestures">स्वाइप जेस्चर</string>
+    <string name="swipe_gestures_and_actions">स्वाइप जेस्चर और क्रियाएँ</string>
     <string name="swipe_left_action">बाईं क्रिया स्वाइप करें</string>
     <string name="swipe_right_action">दाईं ओर स्वाइप करें कार्रवाई</string>
     <string name = "use_swipe_gestures"> कार्रवाई के लिए स्वाइप का उपयोग करें</string>

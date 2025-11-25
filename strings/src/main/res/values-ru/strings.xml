@@ -161,6 +161,7 @@
     <string name="button_secondary">Дополнительная кнопка</string>
     <string name="skip_archive_confirmation">Пропускать диалог подтверждения архивации</string>
     <string name="swipe_gestures">Жесты смахивания</string>
+    <string name="swipe_gestures_and_actions">Жесты пролистывания и действия</string>
     <string name="swipe_left_action">Действие смахивания влево</string>
     <string name="swipe_right_action">Действие смахивания вправо</string>
     <string name="use_swipe_gestures">Использовать смахивания для выполнения действий</string>.

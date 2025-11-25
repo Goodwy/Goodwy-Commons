@@ -159,6 +159,7 @@
     <string name="button_secondary">Вторичен бутон</string>
     <string name="skip_archive_confirmation">Винаги пропускай диалога за потвърждение на архивирането</string>
     <string name="swipe_gestures">Жестове с плъзгане</string>
+    <string name="swipe_gestures_and_actions">Жестове и действия с плъзгане</string>
     <string name="swipe_left_action">Действие с плъзгане наляво</string>
     <string name="swipe_right_action">Действие с плъзгане надясно</string>
     <string name="use_swipe_gestures">Използвайте плъзгания, за да извършвате действия</string>

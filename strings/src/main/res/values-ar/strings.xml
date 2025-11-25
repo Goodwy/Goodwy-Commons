@@ -138,6 +138,7 @@
     <string name="button_secondary">الزر الثانوي</string>
     <string name="skip_archive_confirmation">قم دائمًا بتخطي مربع حوار تأكيد الأرشفة</string>
     <string name="swipe_gestures">إيماءات التمرير</string>
+    <string name="swipe_gestures_and_actions">إيماءات وأفعال التمرير</string>
     <string name="swipe_left_action">اسحب الإجراء لليسار</string>
     <string name="swipe_right_action">اسحب الإجراء لليمين</string>
     <string name="use_swipe_gestures">استخدام التمرير السريع للعمل</string>

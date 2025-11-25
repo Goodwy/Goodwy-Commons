@@ -140,6 +140,7 @@ Eskerrik asko gure laguntzaile guztiei, oso eskertzen dugu zuen laguntza &#10084
     <string name="button_secondary">Bigarren mailako botoia</string>
     <string name="skip_archive_confirmation">Saltatu beti artxibatzeko berrespen elkarrizketa-koadroa</string>
     <string name="swipe_gestures">Irrastatu keinuak</string>
+    <string name="swipe_gestures_and_actions">Irristatu keinuak eta ekintzak</string>
     <string name="swipe_left_action">Irrastatu ezkerreko ekintza</string>
     <string name="swipe_right_action">Irrastatu eskuinera ekintza</string>
     <string name="use_swipe_gestures">Erabili hatza ekintza</string>

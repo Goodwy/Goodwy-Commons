@@ -157,6 +157,7 @@ Dankon al ĉiuj niaj kontribuantoj, ni tre dankas pro via helpo &#10084;&#65039;
     <string name="button_secondary">Malĉefa butono</string>
     <string name="skip_archive_confirmation">Always skip archive confirmation dialog</string>
     <string name="swipe_gestures">Svingaj gestoj</string>
+    <string name="swipe_gestures_and_actions">Svingaj gestoj kaj agoj</string>
     <string name="swipe_left_action">Swipe maldekstren ago</string>
     <string name="swipe_right_action">Glvu dekstren</string>
     <string name="use_swipe_gestures">Uzu gliti por agi</string>

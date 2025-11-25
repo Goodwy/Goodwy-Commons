@@ -140,6 +140,7 @@ Terima kasih!
     <string name="button_secondary">Tombol sekunder</string>
     <string name="skip_archive_confirmation">Selalu lewati dialog konfirmasi pengarsipan</string>
     <string name="swipe_gestures">Gerakan menggeser</string>
+    <string name="swipe_gestures_and_actions">Gerakan dan tindakan menggeser</string>
     <string name="swipe_left_action">Tindakan geser ke kiri</string>
     <string name="swipe_right_action">Geser ke kanan</string>
     <string name="use_swipe_gestures">Menggunakan gerakan mengusap untuk bertindak</string>

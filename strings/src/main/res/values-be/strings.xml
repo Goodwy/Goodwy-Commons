@@ -159,6 +159,7 @@
     <string name="button_secondary">Дадатковая кнопка</string>
     <string name="skip_archive_confirmation">Заўсёды прапускаць дыялогавае акно пацверджання архівацыі</string>
     <string name="swipe_gestures">Жэсты правядзення пальцам</string>
+    <string name="swipe_gestures_and_actions">Жэсты прагортвання і дзеянні</string>
     <string name="swipe_left_action">Правядзіце пальцам улева</string>
     <string name="swipe_right_action">Правядзенне пальцам управа</string>
     <string name="use_swipe_gestures">Выкарыстоўвайце правядзенне пальцам да дзеяння</string>

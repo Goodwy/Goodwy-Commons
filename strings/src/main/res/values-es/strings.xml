@@ -138,6 +138,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="button_secondary">Botón secundario</string>
     <string name="skip_archive_confirmation">Omitir siempre el diálogo de confirmación de archivado</string>
     <string name="swipe_gestures">Gestos de deslizamiento</string>
+    <string name="swipe_gestures_and_actions">Gestos y acciones de deslizamiento</string>
     <string name="swipe_left_action">Acción de deslizar el dedo hacia la izquierda</string>
     <string name="swipe_right_action">Acción de deslizar el dedo hacia la derecha</string>
     <string name="use_swipe_gestures">Usar deslizamiento para acción</string>

@@ -139,6 +139,7 @@
     <string name="button_secondary">இரண்டாம் நிலை பொத்தான்</string>
     <string name="skip_archive_confirmation">காப்பக உறுதிப்படுத்தல் உரையாடலை எப்போதும் தவிர்க்கவும்</string>
     <string name="swipe_gestures">ஸ்வைப் சைகைகள்</string>
+    <string name="swipe_gestures_and_actions">சைகைகள் மற்றும் செயல்களை ஸ்வைப் செய்யவும்</string>
     <string name="swipe_left_action">இடதுபுற செயலை ஸ்வைப் செய்யவும்</string>
     <string name="swipe_right_action">வலதுபுற செயலை ஸ்வைப் செய்யவும்</string>
     <string name="use_swipe_gestures">செயலுக்கு ஸ்வைப் பயன்படுத்தவும்</string>

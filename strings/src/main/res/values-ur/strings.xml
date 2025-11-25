@@ -157,6 +157,7 @@
     <string name="button_secondary">ثانوی بٹن</string>
     <string name="skip_archive_confirmation">ہمیشہ محفوظ شدہ دستاویزات کی تصدیق کے ڈائیلاگ کو چھوڑ دیں۔</string>
     <string name="swipe_gestures">سوائپ اشاروں</string>
+    <string name="swipe_gestures_and_actions">اشاروں اور اعمال کو سوائپ کریں۔</string>
     <string name="swipe_left_action">بائیں سوائپ ایکشن</string>
     <string name="swipe_right_action">دائیں سوائپ ایکشن</string>
     <string name="use_swipe_gestures">کارروائی کے لیے سوائپ کا استعمال کریں</string>

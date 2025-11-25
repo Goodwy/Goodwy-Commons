@@ -142,6 +142,7 @@ Tüm katkıda bulunanlara teşekkür ederiz, yardımlarınız için minnettarız
     <string name="button_secondary">İkincil düğme</string>
     <string name="skip_archive_confirmation">Arşivleme onay penceresini her zaman atlayın</string>
     <string name="swipe_gestures">Kaydırma hareketleri</string>
+    <string name="swipe_gestures_and_actions">Kaydırma hareketleri ve eylemleri</string>
     <string name="swipe_left_action">Sola kaydırma eylemi</string>
     <string name="swipe_right_action">Sağa kaydırma eylemi</string>
     <string name="use_swipe_gestures">Eylem için kaydırmayı kullan</string>

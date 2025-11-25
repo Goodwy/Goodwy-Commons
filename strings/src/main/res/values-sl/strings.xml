@@ -144,6 +144,7 @@ Hvala vsem našim sodelavcem, zelo cenimo vašo pomoč &#10084;&#65039;
     <string name="button_secondary">Sekundarni gumb</string>
     <string name="skip_archive_confirmation">Vedno preskoči potrditev arhiviranja</string>
     <string name="swipe_gestures">Vlečenje potez</string>
+    <string name="swipe_gestures_and_actions">Poteze in dejanja s podrsavanjem</string>
     <string name="swipe_left_action">Podrsnite levo dejanje</string>
     <string name="swipe_right_action">Povlecite dejanje v desno</string>
     <string name="use_swipe_gestures">Uporaba podrsavanja za akcijo</string>

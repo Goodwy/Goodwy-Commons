@@ -145,6 +145,7 @@ Będziemy bardzo wdzięczni.
     <string name="button_secondary">Przycisk pomocniczy</string>
     <string name="skip_archive_confirmation">Nie pokazuj okna potwierdzenia archiwizacji</string>
     <string name="swipe_gestures">Gesty przesuwania</string>
+    <string name="swipe_gestures_and_actions">Gesty i akcje przesuwania</string>
     <string name="swipe_left_action">Akcja Przesuń w lewo</string>
     <string name="swipe_right_action">Akcja przesunięcia w prawo</string>
     <string name="use_swipe_gestures">Użyj przesunięcia do akcji</string>
