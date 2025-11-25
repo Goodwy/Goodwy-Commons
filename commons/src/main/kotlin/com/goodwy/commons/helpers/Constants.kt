@@ -852,10 +852,6 @@ const val CONTACT_THUMBNAILS_SIZE_MEDIUM = 1
 const val CONTACT_THUMBNAILS_SIZE_LARGE = 2
 const val CONTACT_THUMBNAILS_SIZE_EXTRA_LARGE = 3
 
-const val ON_CLICK_CALL_CONTACT = 1
-const val ON_CLICK_VIEW_CONTACT = 2
-const val ON_CLICK_EDIT_CONTACT = 3
-
 // apps with special handling
 const val TELEGRAM_PACKAGE = "org.telegram.messenger"
 const val SIGNAL_PACKAGE = "org.thoughtcrime.securesms"
