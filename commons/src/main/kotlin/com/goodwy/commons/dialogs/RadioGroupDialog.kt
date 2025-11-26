@@ -83,7 +83,10 @@ class RadioGroupDialog(
 
         builder.apply {
             if (defaultItemId != null) {
-                setNeutralButton(R.string.default_color) { _, _ -> itemSelected(defaultItemId) }
+                setNeutralButton(R.string.default_color) { _, _ ->
+                    val checkedId = items.indexOfFirst {it.id == defaultItemId}
+                    itemSelected(checkedId)
+                }
             }
             activity.setupDialogStuff(view.root, this, titleId) { alertDialog ->
                 dialog = alertDialog
