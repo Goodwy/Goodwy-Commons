@@ -48,6 +48,7 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
     var scrollingView: ScrollingView? = null
     private var materialScrollColorAnimation: ValueAnimator? = null
     var currentScrollY = 0
+    var useOverflowIcon: Boolean = true
 
     private val contentRoot by lazy { findViewById<View>(android.R.id.content) }
 
@@ -223,7 +224,6 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         topAppBar: MyAppBarLayout,
         colorBackground: Int,
         colorPrimary: Int = getProperPrimaryColor(),
-        useOverflowIcon: Boolean = true,
         topAppBarColorIcon: Boolean = baseConfig.topAppBarColorIcon,
         topAppBarColorTitle: Boolean = baseConfig.topAppBarColorTitle
     ) {
@@ -239,9 +239,12 @@ abstract class EdgeToEdgeActivity : AppCompatActivity() {
         topAppBar.setBackgroundColor(colorBackground)
         topAppBar.toolbar?.setTitleTextColor(titleColor)
         topAppBar.toolbar?.navigationIcon?.applyColorFilter(itemColor)
-        topAppBar.toolbar?.collapseIcon = resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, itemColor)
-        val overflowIconRes = if (useOverflowIcon) getOverflowIcon(baseConfig.overflowIcon) else getOverflowIcon(OVERFLOW_ICON_VERTICAL)
-        topAppBar.toolbar?.overflowIcon = resources.getColoredDrawableWithColor(this, overflowIconRes, itemColor)
+        topAppBar.toolbar?.collapseIcon =
+            resources.getColoredDrawableWithColor(this, R.drawable.ic_chevron_left_vector, itemColor)
+        val overflowIconRes =
+            if (useOverflowIcon) getOverflowIcon(baseConfig.overflowIcon) else getOverflowIcon(OVERFLOW_ICON_VERTICAL)
+        topAppBar.toolbar?.overflowIcon =
+            resources.getColoredDrawableWithColor(this, overflowIconRes, itemColor)
 
         val menu = topAppBar.toolbar?.menu ?: return
         for (i in 0 until menu.size) {
