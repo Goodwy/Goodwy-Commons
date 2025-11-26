@@ -9,8 +9,14 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.models.RadioItem
 
 class RadioGroupIconDialog(
-    val activity: Activity, val items: ArrayList<RadioItem>, val checkedItemId: Int = -1, val titleId: Int = 0,
-    showOKButton: Boolean = false, val cancelCallback: (() -> Unit)? = null, val callback: (newValue: Any) -> Unit
+    val activity: Activity,
+    val items: ArrayList<RadioItem>,
+    val checkedItemId: Int = -1,
+    val titleId: Int = 0,
+    showOKButton: Boolean = false,
+    val defaultItemId: Int? = null,
+    val cancelCallback: (() -> Unit)? = null,
+    val callback: (newValue: Any) -> Unit
 ) {
     private var dialog: AlertDialog? = null
     private var wasInit = false
@@ -54,6 +60,9 @@ class RadioGroupIconDialog(
         }
 
         builder.apply {
+            if (defaultItemId != null) {
+                setNeutralButton(R.string.default_color) { _, _ -> itemSelected(defaultItemId) }
+            }
             activity.setupDialogStuff(view.root, this, titleId) { alertDialog ->
                 dialog = alertDialog
             }
