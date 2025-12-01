@@ -59,15 +59,15 @@ fun SettingsPurchaseComponent(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Card(
-            modifier = Modifier.padding(start = 16.dp),
+            modifier = Modifier.padding(start = 32.dp),
             shape = RoundedCornerShape(24.dp),
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
             elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
         ) {
             Icon(
                 modifier = Modifier
-                    .size(86.dp)
-                    .padding(8.dp),
+                    .size(80.dp)
+                    .padding(10.dp),
                 painter = painterResource(id = R.drawable.ic_plus_support),
                 contentDescription = stringResource(id = R.string.donate),
                 tint = MaterialTheme.colorScheme.primary,
@@ -75,25 +75,26 @@ fun SettingsPurchaseComponent(
         }
         Column(
             modifier = Modifier
-                .heightIn(86.dp)
+                .heightIn(96.dp)
                 .padding(bottom = 4.dp),
             verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.Start,
         ) {
             Text(
-                modifier = Modifier.padding(start = 16.dp, end = 8.dp),
+                modifier = Modifier.padding(start = 28.dp, end = 12.dp),
                 text = stringResource(StringsR.string.action_support_project),
-                fontSize = 18.sp,
+                fontSize = 14.sp,
             )
             Text(
-                modifier = Modifier.padding(start = 16.dp, end = 8.dp),
+                modifier = Modifier.padding(start = 28.dp, end = 12.dp),
                 text = stringResource(StringsR.string.pref_pay_summary),
-                fontSize = 13.sp,
-                lineHeight = 16.sp,
+                fontSize = 12.sp,
+                lineHeight = 14.sp,
                 color = LocalContentColor.current.copy(alpha = 0.5F),
             )
             Button(
-                modifier = Modifier.padding(start = 16.dp, top = 3.dp).wrapContentWidth().height(20.dp).alpha(0.6f),
+                modifier = Modifier.padding(start = 28.dp, top = 6.dp).wrapContentWidth()
+                    .height(20.dp).alpha(0.6f),
                 onClick = { onPurchaseClick() },
                 contentPadding = PaddingValues(horizontal = 12.dp, vertical = 0.dp)
             ) {
