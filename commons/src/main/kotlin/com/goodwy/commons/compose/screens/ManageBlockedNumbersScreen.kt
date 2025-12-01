@@ -210,7 +210,8 @@ internal fun ManageBlockedNumbersScreen(
                     modifier = Modifier.topAppBarPaddings(),
                     scaleSwitch = 0.8F,
                     showCheckmark = showCheckmarksOnSwitches,
-                    checkmark = ImageVector.vectorResource(R.drawable.ic_check)
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_check),
+                    backgroundColor = MaterialTheme.colorScheme.background
                 )
                 SettingsSwitchComponent(
                     label =
@@ -225,7 +226,8 @@ internal fun ManageBlockedNumbersScreen(
                     isPreferenceEnabled = isBlockingEnabled || !isDialer,
                     scaleSwitch = 0.8F,
                     showCheckmark = showCheckmarksOnSwitches,
-                    checkmark = ImageVector.vectorResource(R.drawable.ic_no_accounts)
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_no_accounts),
+                    backgroundColor = MaterialTheme.colorScheme.background
                 )
                 // Not used for messages
                 if (isDialer) SettingsSwitchComponent(
@@ -236,7 +238,8 @@ internal fun ManageBlockedNumbersScreen(
                     isPreferenceEnabled = isBlockingEnabled,
                     scaleSwitch = 0.8F,
                     showCheckmark = showCheckmarksOnSwitches,
-                    checkmark = ImageVector.vectorResource(R.drawable.ic_question)
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_question),
+                    backgroundColor = MaterialTheme.colorScheme.background
                 )
                 if (isDialer) SettingsPreferenceComponent(
                     label = stringResource(id = com.goodwy.strings.R.string.blocking_type),

@@ -2,6 +2,7 @@ package com.goodwy.commons.compose.settings
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.LocalIndication
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -35,6 +36,7 @@ fun SettingsSwitchComponent(
     showCheckmark: Boolean,
     checkmark: ImageVector = Icons.Rounded.Check,
     onChange: ((Boolean) -> Unit)? = null,
+    backgroundColor: Color = MaterialTheme.colorScheme.surface,
     switchColors: SwitchColors = SwitchDefaults.colors(
         checkedThumbColor = MaterialTheme.colorScheme.onSecondary,//Color.White,
         checkedTrackColor = MaterialTheme.colorScheme.secondary,
@@ -49,6 +51,7 @@ fun SettingsSwitchComponent(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .fillMaxWidth()
+            .background(color = backgroundColor)
             .clickable(
                 enabled = isPreferenceEnabled,
                 onClick = { onChange?.invoke(!initialValue) },
