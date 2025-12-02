@@ -39,7 +39,7 @@ internal fun Theme(
                 } else {
                     dynamicLightColorScheme(context).copy(
                         background = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_50),
-                        surface = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_10),
+                        surface = ColorResourceHelper.getColor(context, android.R.color.system_neutral1_0), //system_neutral1_10
                         secondary = theme.accentColor,
                     )
                 }

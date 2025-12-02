@@ -105,7 +105,7 @@ fun MainScreen(
                 }
             )
             SettingsGroup(
-                title = { Text(text = "Test settings".uppercase(), modifier = Modifier.padding(start = 36.dp)) }
+                title = { Text(text = "Test settings".uppercase()) }
             ) {
                 SettingsPreferenceComponent(
                     label = stringResource(id = R.string.color_customization),
