@@ -46,6 +46,7 @@ import com.goodwy.commons.extensions.*
 import com.goodwy.commons.helpers.isQPlus
 import com.goodwy.strings.R as stringsR
 import java.util.LinkedList
+import androidx.core.graphics.toColorInt
 
 private const val RECENT_COLORS_NUMBER = 5
 
@@ -139,7 +140,7 @@ class ColorPickerDialog(
     private fun confirmNewColor() {
         val hexValue = binding.colorPickerNewHex.value
         val newColor = if (hexValue.length == 6) {
-            Color.parseColor("#$hexValue")
+            "#$hexValue".toColorInt()
         } else {
             currentColorHsv.getColor()
         }
@@ -239,7 +240,7 @@ fun ColorPickerAlertDialog(
                         alertDialogState.hide()
                         val hexValue = dialogColorPickerBinding?.colorPickerNewHex?.value
                         val newColor = if (hexValue?.length == 6) {
-                            Color.parseColor("#$hexValue")
+                            "#$hexValue".toColorInt()
                         } else {
                             currentColorHsv.getColor()
                         }
@@ -343,11 +344,11 @@ private fun DialogColorPickerBinding.init(
     colorPickerNewHex.onTextChangeListener {
         if (it.length == 6 && !isHueBeingDragged) {
             try {
-                val newColor = Color.parseColor("#$it")
+                val newColor = "#$it".toColorInt()
                 Color.colorToHSV(newColor, hsv.value)
                 updateHue(hsv, backgroundColor, currentColorCallback)
                 moveColorPicker(hsv)
-            } catch (ignored: Exception) {
+            } catch (_: Exception) {
             }
         }
     }

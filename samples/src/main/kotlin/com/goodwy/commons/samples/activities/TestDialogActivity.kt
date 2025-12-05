@@ -41,7 +41,7 @@ class TestDialogActivity : ComponentActivity() {
                         .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
-                    Spacer(modifier = Modifier.padding(top = 16.dp))
+                    Spacer(modifier = Modifier.padding(top = 42.dp))
                     ShowButton(getAppSideLoadedDialogState(), text = "App side loaded")
                     ShowButton(getAddBlockedNumberDialogState(), text = "Add blocked number")
                     ShowButton(getConfirmationAlertDialogState(), text = "Confirmation normal")
@@ -64,7 +64,7 @@ class TestDialogActivity : ComponentActivity() {
                     ShowButton(getChooserBottomSheetDialogState(), text = "Bottom sheet chooser")
                     ShowButton(getFileConflictAlertDialogState(), text = "File conflict")
                     ShowButton(getCustomIntervalPickerAlertDialogState(), text = "Custom interval picker")
-                    Spacer(modifier = Modifier.padding(bottom = 16.dp))
+                    Spacer(modifier = Modifier.padding(bottom = 32.dp))
                 }
             }
         }
