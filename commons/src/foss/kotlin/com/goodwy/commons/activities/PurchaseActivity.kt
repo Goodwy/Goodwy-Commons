@@ -51,7 +51,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     @Suppress("DEPRECATION")
     private fun setupNoPlayStoreInstalled() {
         val isProApp = resources.getBoolean(R.bool.is_pro_app)
-        binding.proDonateText.text = Html.fromHtml(getString(stringsR.string.donate_text_g))
+        binding.proDonateText.text = Html.fromHtml(getString(stringsR.string.donate_text_no_gp_g))
         binding.proDonateButton.apply {
             setOnClickListener {
                 launchViewIntent(getString(R.string.donate_url))
