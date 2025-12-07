@@ -339,6 +339,7 @@ abstract class MyRecyclerViewListAdapter<T>(
         paddingStartDp: Int = 0,
         paddingEndDp: Int = 0,
         dividerHeightDp: Int = 1,
+        color: Int = 0x33AAAAAA, // activity.getDividerColor(),
     ) {
         // Remove the old separator
         dividerDecoration?.let {
@@ -353,7 +354,7 @@ abstract class MyRecyclerViewListAdapter<T>(
                     paddingStartDp = paddingStartDp,
                     paddingEndDp = paddingEndDp,
                     dividerHeightDp = dividerHeightDp,
-                    color = 0x33AAAAAA, // activity.getDividerColor(),
+                    color = color,
                     context = activity
                 )
                 setVisible(true)
