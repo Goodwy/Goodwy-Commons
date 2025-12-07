@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.media.ExifInterface
 import android.os.Handler
 import android.os.Looper
+import android.util.TypedValue
 import androidx.core.graphics.ColorUtils
 import androidx.core.os.postDelayed
 import com.goodwy.commons.helpers.DARK_GREY
@@ -213,4 +214,12 @@ fun Int.adjustForContrast(
     }
 
     return color
+}
+
+fun Int.dpToPx(context: Context): Int {
+    return TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_DIP,
+        this.toFloat(),
+        context.resources.displayMetrics
+    ).toInt()
 }

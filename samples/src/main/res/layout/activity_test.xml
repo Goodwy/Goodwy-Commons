@@ -23,7 +23,8 @@
             android:paddingHorizontal="@dimen/activity_padding_left_right"
             android:clipToPadding="false"
             android:layoutAnimation="@anim/layout_animation"
-            android:scrollbars="none"
+            android:scrollbarThumbVertical="@drawable/fastscroller_handle_vertical_gray"
+            android:scrollbars="vertical"
             app:layoutManager="com.goodwy.commons.views.MyGridLayoutManager" />
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

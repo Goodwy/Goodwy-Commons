@@ -23,6 +23,7 @@ import android.content.pm.ShortcutManager
 import android.content.res.Configuration
 import android.database.Cursor
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.graphics.Point
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
@@ -46,6 +47,7 @@ import android.provider.Settings
 import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
 import android.text.TextUtils
+import android.util.TypedValue
 import android.view.View
 import android.view.WindowManager
 import android.view.accessibility.AccessibilityManager
@@ -85,6 +87,7 @@ import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.joda.time.DateTimeConstants
+import androidx.core.graphics.toColorInt
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -1590,4 +1593,12 @@ fun Context.myMailRes(): Int {
 
 fun Context.getMyMailString(): String {
     return getString(myMailRes())
+}
+
+fun Context.getDividerColor(): Int {
+    return if (isDarkTheme() && (isSystemInDarkMode() || isAutoTheme())) {
+        "#444444".toColorInt()
+    } else {
+        "#E0E0E0".toColorInt()
+    }
 }

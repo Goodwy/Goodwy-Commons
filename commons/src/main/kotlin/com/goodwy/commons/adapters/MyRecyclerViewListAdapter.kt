@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.ActionMenuView
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.goodwy.commons.R
@@ -18,6 +17,8 @@ import com.goodwy.commons.helpers.CONTACT_THUMBNAILS_SIZE_LARGE
 import com.goodwy.commons.helpers.CONTACT_THUMBNAILS_SIZE_SMALL
 import com.goodwy.commons.interfaces.MyActionModeCallback
 import com.goodwy.commons.models.RecyclerSelectionPayload
+import com.goodwy.commons.views.BottomPaddingDecoration
+import com.goodwy.commons.views.MyDividerDecoration
 import com.goodwy.commons.views.MyRecyclerView
 import kotlin.math.max
 import kotlin.math.min
@@ -46,6 +47,10 @@ abstract class MyRecyclerViewListAdapter<T>(
 
     private var actBarTextView: TextView? = null
     private var lastLongPressedItem = -1
+
+    private var isDividersVisible = false
+    private var dividerDecoration: MyDividerDecoration? = null
+    private var bottomPaddingDecoration: BottomPaddingDecoration? = null
 
     abstract fun getActionMenuId(): Int
 
@@ -306,16 +311,92 @@ abstract class MyRecyclerViewListAdapter<T>(
         recyclerView.setupZoomListener(zoomListener)
     }
 
-    fun addVerticalDividers(add: Boolean) {
-        if (recyclerView.itemDecorationCount > 0) {
-            recyclerView.removeItemDecorationAt(0)
+//    fun addVerticalDividers(add: Boolean) {
+//        if (recyclerView.itemDecorationCount > 0) {
+//            recyclerView.removeItemDecorationAt(0)
+//        }
+//
+//        if (add) {
+//            DividerItemDecoration(activity, DividerItemDecoration.VERTICAL).apply {
+//                ContextCompat.getDrawable(activity, R.drawable.divider)?.let {
+//                    setDrawable(it)
+//                }
+//                recyclerView.addItemDecoration(this)
+//            }
+//        }
+//    }
+
+    /**
+     * Vertical separator between elements.
+     *
+     * @param visible Enabled.
+     * @param paddingStartDp Left padding in Dp.
+     * @param paddingEndDp Right padding in Dp.
+     * @param dividerHeightDp Height of the divider in Dp.
+     */
+    fun setVerticalDividers(
+        visible: Boolean,
+        paddingStartDp: Int = 0,
+        paddingEndDp: Int = 0,
+        dividerHeightDp: Int = 1,
+    ) {
+        // Remove the old separator
+        dividerDecoration?.let {
+            recyclerView.removeItemDecoration(it)
+            dividerDecoration = null
         }
 
-        if (add) {
-            DividerItemDecoration(activity, DividerItemDecoration.VERTICAL).apply {
-                setDrawable(resources.getDrawable(R.drawable.divider, activity.theme))
-                recyclerView.addItemDecoration(this)
+        if (visible) {
+            // Create or reuse a separator
+            val decoration = MyDividerDecoration().apply {
+                setConfiguration(
+                    paddingStartDp = paddingStartDp,
+                    paddingEndDp = paddingEndDp,
+                    dividerHeightDp = dividerHeightDp,
+                    color = 0x33AAAAAA, // activity.getDividerColor(),
+                    context = activity
+                )
+                setVisible(true)
             }
+
+            recyclerView.addItemDecoration(decoration)
+            dividerDecoration = decoration
+            isDividersVisible = true
+        } else {
+            isDividersVisible = false
+        }
+    }
+
+    /**
+     * Creates the bottom margin of the adapter.
+     * If there is no scrollbar in the Adapter, it is better to use:
+     * ```
+     *         android:scrollbars=“vertical”
+     *         android:clipToPadding=“false”
+     *         android:paddingBottom=“128dp”
+     * ```
+     *
+     * @param bottomPaddingDp Height of the setback in Dp.
+     */
+    fun addBottomPadding(bottomPaddingDp: Int) {
+        // Remove the old indent if there is one
+        bottomPaddingDecoration?.let {
+            recyclerView.removeItemDecoration(it)
+            bottomPaddingDecoration = null
+        }
+
+        if (bottomPaddingDp > 0) {
+            // Convert dp to pixels
+            val paddingPx = bottomPaddingDp.dpToPx(activity)
+
+            // Create and add decoration
+            BottomPaddingDecoration(paddingPx).apply {
+                recyclerView.addItemDecoration(this)
+                bottomPaddingDecoration = this
+            }
+
+            // Updating display
+            recyclerView.invalidateItemDecorations()
         }
     }
 
@@ -404,6 +485,20 @@ abstract class MyRecyclerViewListAdapter<T>(
 
             toggleItemSelection(true, currentPosition, true)
             itemLongClicked(currentPosition)
+        }
+    }
+
+    // Cleaning resources
+    fun cleanup() {
+        dividerDecoration?.let {
+            recyclerView.removeItemDecoration(it)
+            dividerDecoration = null
+        }
+        MyDividerDecoration.clearCache()
+
+        bottomPaddingDecoration?.let {
+            recyclerView.removeItemDecoration(it)
+            bottomPaddingDecoration = null
         }
     }
 }
