@@ -110,7 +110,7 @@ internal fun ManageBlockedNumbersScreen(
     }
 
     SimpleScaffold(
-        darkStatusBarIcons = !isInActionMode,
+//        darkStatusBarIcons = !isInActionMode,
         customTopBar = {
                 scrolledColor: Color,
                 navigationInteractionSource: MutableInteractionSource,
