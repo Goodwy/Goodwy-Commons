@@ -18,13 +18,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.Delete
-import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material.icons.rounded.MoreVert
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
@@ -54,7 +52,6 @@ import com.goodwy.commons.compose.menus.OverflowMode
 import com.goodwy.commons.compose.settings.SettingsSwitchComponent
 import com.goodwy.commons.compose.lists.*
 import com.goodwy.commons.compose.settings.SettingsGroup
-import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.settings.SettingsPreferenceComponent
 import com.goodwy.commons.compose.system_ui_controller.rememberSystemUiController
 import com.goodwy.commons.compose.theme.*
@@ -296,7 +293,7 @@ internal fun ManageBlockedNumbersScreen(
                         checkmark = ImageVector.vectorResource(R.drawable.ic_check),
                     )
                 }
-                Spacer(modifier = Modifier.size(12.dp))
+                Spacer(modifier = Modifier.size(10.dp))
             }
             when {
                 !hasGivenPermissionToBlock -> {
@@ -310,6 +307,36 @@ internal fun ManageBlockedNumbersScreen(
                 }
 
                 hasGivenPermissionToBlock && blockedNumbers.isNotEmpty() -> {
+                    item {
+                        Surface(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 16.dp, vertical = 12.dp)
+                                .clickable { onAdd() },
+                            color = SimpleTheme.colorScheme.background,
+                            tonalElevation = 0.dp
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Rounded.Add,
+                                    contentDescription = null,
+                                    tint = SimpleTheme.colorScheme.primary,
+                                    modifier = Modifier.size(24.dp)
+                                )
+                                Spacer(modifier = Modifier.width(12.dp))
+                                Text(
+                                    modifier = Modifier.weight(1f),
+                                    text = stringResource(id = R.string.add_a_blocked_number),
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    color = SimpleTheme.colorScheme.primary
+                                )
+                            }
+                        }
+                    }
                     itemsIndexed(blockedNumbers, key = { _, blockedNumber -> blockedNumber.id }) { index, blockedNumber ->
                         val isSelected = selectedIds.value.contains(blockedNumber.id)
                         BlockedNumber(
@@ -425,7 +452,6 @@ private fun BlockedNumber(
 ) {
     val hasContactName = blockedNumber.contactName != null
 
-    // Создаем цвета напрямую, как в вашей функции blockedNumberListItemColors
     val containerColor = if (isSelected) {
         if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
             Color(SimpleTheme.colorScheme.primaryContainer.toArgb().darkenColor()).copy(alpha = 0.8f)
@@ -444,7 +470,6 @@ private fun BlockedNumber(
     Surface(
         modifier = modifier,
         color = containerColor,
-        shape = MaterialTheme.shapes.extraSmall,
         tonalElevation = 0.dp,
         shadowElevation = 0.dp,
     ) {
@@ -724,11 +749,12 @@ private fun BlockedNumberActionMenu(
     onCopy: () -> Unit,
     iconColor: Color? = null,
 ) {
+    val deleteIcon = ImageVector.vectorResource(id = R.drawable.ic_delete_outline)
     val actionMenus = remember(selectedIdsCount) {
         val delete =
             ActionItem(
                 nameRes = R.string.unblock,
-                icon = Icons.Rounded.Delete,
+                icon = deleteIcon,
                 doAction = onDelete,
                 overflowMode = OverflowMode.NEVER_OVERFLOW,
                 iconColor = iconColor
@@ -801,7 +827,7 @@ private fun NonActionModeToolbar(
         actions = {
             val actionMenus = remember {
                 listOf(
-                    ActionItem(R.string.add_a_blocked_number, icon = Icons.Rounded.Add, doAction = onAdd, overflowMode = OverflowMode.IF_NECESSARY),
+                    ActionItem(R.string.add_a_blocked_number, icon = Icons.Rounded.Add, doAction = onAdd, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                     ActionItem(R.string.import_blocked_numbers, doAction = onImportBlockedNumbers, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                     ActionItem(R.string.export_blocked_numbers, doAction = onExportBlockedNumbers, overflowMode = OverflowMode.ALWAYS_OVERFLOW),
                 ).toImmutableList()
