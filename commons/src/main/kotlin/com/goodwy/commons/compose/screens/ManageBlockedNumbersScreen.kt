@@ -311,7 +311,7 @@ internal fun ManageBlockedNumbersScreen(
                         Surface(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(horizontal = 16.dp, vertical = 12.dp)
+                                .padding(horizontal = 20.dp, vertical = 12.dp)
                                 .clickable { onAdd() },
                             color = SimpleTheme.colorScheme.background,
                             tonalElevation = 0.dp
@@ -477,7 +477,7 @@ private fun BlockedNumber(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(IntrinsicSize.Min) // Automatic height based on content
-                .padding(start = 16.dp, end = 0.dp), // Indents as in ListItem
+                .padding(start = 20.dp, end = 2.dp), // Indents as in ListItem
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(
@@ -738,7 +738,7 @@ private fun actionModeBgColor(): Color =
     if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
         SimpleTheme.colorScheme.primaryContainer
     } else {
-        actionModeColor
+        SimpleTheme.colorScheme.surface //actionModeColor
     }
 
 
