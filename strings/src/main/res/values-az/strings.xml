@@ -282,6 +282,7 @@ Bütün ianəçilərimizə təşəkkür edirik, köməyinizi çox qiymətləndir
     <string name="enable_blocking_summary">Deaktiv edildikdə, zənglər üçün bütün bloklama parametrləri silinəcək. Mesajlar bloklanmış siyahıdakı nömrələr üçün hələ də bloklanacaq.\nAsan keçid üçün sürətli parametrlər plitəsi əlavə edə bilərsiniz.</string>
     <string name="block_unknown_calls_summary">Naməlum nömrələrdən gələn zənglər bloklanacaq və \"Son zənglər\" siyahısında göstəriləcək.\nKontaktlarınızdakı insanlardan və bu yaxınlarda zəng etdiyiniz insanlardan gələn zənglər çalmağa davam edəcək.</string>
     <string name="bottom_indent">Aşağı abzas</string>
+    <string name="is_do_not_block_contacts_and_recent">Kontaktları və son gedən zəngləri bloklamayın</string>
     <string name="relation_g">Əlaqə</string>
     <string name="relations_g">Əlaqədar şəxslər</string>
     <string name="relation_hint_g">Əlaqədar şəxs</string>

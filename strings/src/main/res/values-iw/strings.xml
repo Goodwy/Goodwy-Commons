@@ -280,6 +280,7 @@
     <string name="enable_blocking_summary">כאשר מושבת, כל הגדרות החסימה יוסרו עבור שיחות. הודעות עדיין ייחסמו למספרים ברשימת החסומים.\nאתה יכול להוסיף אריח הגדרות מהירות למעבר קל.</string>
     <string name="block_unknown_calls_summary">שיחות ממספרים לא ידועים ייחסמו ויוצגו ברשימת \"אחרונים\".\nשיחות נכנסות מאנשים באנשי הקשר שלך ומאנשים שהתקשרת אליהם לאחרונה ימשיכו לצלצל.</string>
     <string name="bottom_indent">כניסה תחתונה</string>
+    <string name="is_do_not_block_contacts_and_recent">אל תחסום אנשי קשר ושיחות יוצאות אחרונות</string>
     <string name="relation_g">קשר</string>
     <string name="relations_g">אנשים קשורים</string>
     <string name="relation_hint_g">אדם קשור</string>

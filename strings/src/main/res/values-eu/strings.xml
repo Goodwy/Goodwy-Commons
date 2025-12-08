@@ -280,6 +280,7 @@ Eskerrik asko laguntzaile eta gainerako babesle guztiei!
     <string name="enable_blocking_summary">Desgaituta dagoenean, blokeo-ezarpen guztiak kenduko dira deietarako. Mezuak blokeatuta egongo dira blokeatutako zerrendako zenbakientzat.\nEzarpen bizkorren fitxa gehi dezakezu erraz aldatzeko.</string>
     <string name="block_unknown_calls_summary">Zenbaki ezezagunetatik datozen deiak blokeatu eta \"Azkenak\" zerrendan agertuko dira.\nZure kontaktuetan dauden pertsonen eta duela gutxi deitu dituzun pertsonen sarrerako deiek jotzen jarraituko dute.</string>
     <string name="bottom_indent">Beheko koska</string>
+    <string name="is_do_not_block_contacts_and_recent">Ez blokeatu kontaktuak eta azken irteerako deiak</string>
     <string name="relation_g">Harremana</string>
     <string name="relations_g">Lotutako pertsonak</string>
     <string name="relation_hint_g">Lotutako pertsona</string>

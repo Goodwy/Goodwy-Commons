@@ -280,6 +280,7 @@ Bedankt aan alle bijdragers en andere supporters!
     <string name="enable_blocking_summary">Wanneer uitgeschakeld, worden alle blokkeringsinstellingen voor oproepen verwijderd. Berichten voor nummers op de blokkeerlijst worden nog steeds geblokkeerd.\nJe kunt een tegel met snelle instellingen toevoegen om eenvoudig te kunnen schakelen.</string>
     <string name="block_unknown_calls_summary">Oproepen van onbekende nummers worden geblokkeerd en weergegeven in de lijst \'Recente oproepen\'.\nInkomende oproepen van mensen in je contacten en van mensen die je recent hebt gebeld, blijven overgaan.</string>
     <string name="bottom_indent">Onderste inspringing</string>
+    <string name="is_do_not_block_contacts_and_recent">Blokkeer geen contacten en recente uitgaande oproepen</string>
     <string name="relation_g">Relatie</string>
     <string name="relations_g">Verwante personen</string>
     <string name="relation_hint_g">Verwante persoon</string>

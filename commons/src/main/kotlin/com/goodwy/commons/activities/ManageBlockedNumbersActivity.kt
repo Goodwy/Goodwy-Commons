@@ -101,6 +101,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             val isTopAppBarColorTitle by config.isTopAppBarColorTitle.collectAsStateWithLifecycle(initialValue = config.topAppBarColorTitle)
             val isBlockingType by config.isBlockingType.collectAsStateWithLifecycle(initialValue = config.blockingType)
             val isBlockingEnabled by config.isBlockingEnabled.collectAsStateWithLifecycle(initialValue = config.blockingEnabled)
+            val isDoNotBlockContactsAndRecent by config.isDoNotBlockContactsAndRecent.collectAsStateWithLifecycle(initialValue = config.doNotBlockContactsAndRecent)
             val prefix = appPrefix()
             val isDialer = remember {
                 config.appId.startsWith(prefix + "goodwy.dialer")
@@ -195,6 +196,11 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
                     isBlockingEnabled = isBlockingEnabled,
                     onBlockingEnabledChange = { isChecked ->
                         config.blockingEnabled = isChecked
+                        onCheckedSetCallerIdAsDefault(isChecked)
+                    },
+                    isDoNotBlockContactsAndRecent = isDoNotBlockContactsAndRecent,
+                    onDoNotBlockContactsAndRecentChange = { isChecked ->
+                        config.doNotBlockContactsAndRecent = isChecked
                         onCheckedSetCallerIdAsDefault(isChecked)
                     },
                 )

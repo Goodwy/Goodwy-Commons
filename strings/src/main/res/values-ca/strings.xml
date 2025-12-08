@@ -281,6 +281,7 @@ Gràcies a tots els col·laboradors i altres donants!
     <string name="enable_blocking_summary">Quan estigui desactivat, tots els paràmetres de bloqueig s\'eliminaran per a les trucades. Els missatges es continuaran bloquejant per als números de la llista bloquejada.\nPodeu afegir una fitxa de configuració ràpida per canviar fàcilment.</string>
     <string name="block_unknown_calls_summary">Les trucades de números desconeguts es bloquejaran i es mostraran a la llista \"Recents\".\nLes trucades entrants de persones dels teus contactes i de persones a qui has trucat recentment continuaran sonant.</string>
     <string name="bottom_indent">Sagnat inferior</string>
+    <string name="is_do_not_block_contacts_and_recent">No bloquegis els contactes ni les trucades sortints recents</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Persones relacionades</string>
     <string name="relation_hint_g">Persona relacionada</string>

@@ -52,6 +52,7 @@ import com.goodwy.commons.compose.menus.ActionMenu
 import com.goodwy.commons.compose.menus.OverflowMode
 import com.goodwy.commons.compose.settings.SettingsSwitchComponent
 import com.goodwy.commons.compose.lists.*
+import com.goodwy.commons.compose.settings.SettingsHorizontalDivider
 import com.goodwy.commons.compose.settings.SettingsPreferenceComponent
 import com.goodwy.commons.compose.system_ui_controller.rememberSystemUiController
 import com.goodwy.commons.compose.theme.*
@@ -96,6 +97,8 @@ internal fun ManageBlockedNumbersScreen(
     onBlockingType: () -> Unit,
     isBlockingEnabled: Boolean,
     onBlockingEnabledChange: (Boolean) -> Unit,
+    isDoNotBlockContactsAndRecent: Boolean,
+    onDoNotBlockContactsAndRecentChange: (Boolean) -> Unit,
 ) {
     val selectedIds: MutableState<Set<Long>> = rememberSaveable { mutableStateOf(emptySet()) }
     val hapticFeedback = LocalHapticFeedback.current
@@ -259,22 +262,37 @@ internal fun ManageBlockedNumbersScreen(
                     doOnPreferenceClick = onBlockingType,
                     backgroundColor = MaterialTheme.colorScheme.background
                 )
-                Spacer(modifier = Modifier.size(16.dp))
-                Card(modifier = Modifier.padding(horizontal = 20.dp)) {
-                    Box (modifier = Modifier.padding(horizontal = 12.dp)) {
-                        Text(
-                            modifier = Modifier.padding(top = 8.dp, bottom = 16.dp),
-                            text =
-                                if (isBlockingEnabled || !isDialer) stringResource(id = com.goodwy.strings.R.string.сalls_and_messages_blocked_warning)
-                                else stringResource(id = com.goodwy.strings.R.string.messages_blocked_warning)
-                        )
-                        Icon(
-                            modifier = Modifier.align(BottomCenter),
-                            imageVector = Icons.Rounded.KeyboardArrowDown,
-                            contentDescription = null
-                        )
-                    }
+                Spacer(modifier = Modifier.size(8.dp))
+                SettingsHorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 20.dp),
+                    color = divider_grey
+                )
+                Column(modifier = Modifier.padding(horizontal = 20.dp)) {
+                    Text(
+                        modifier = Modifier.padding(top = 16.dp),
+                        text = stringResource(id = R.string.blocked_numbers)
+                    )
+                    Text(
+                        modifier = Modifier.padding(bottom = 8.dp),
+                        fontSize = 12.sp,
+                        lineHeight = 14.sp,
+                        color = preferenceValueColor(isEnabled = true),
+                        text =
+                            if (isBlockingEnabled || !isDialer) stringResource(id = com.goodwy.strings.R.string.сalls_and_messages_blocked_warning)
+                            else stringResource(id = com.goodwy.strings.R.string.messages_blocked_warning)
+                    )
                 }
+                if (isDialer) SettingsSwitchComponent(
+                    label = stringResource(id = com.goodwy.strings.R.string.is_do_not_block_contacts_and_recent),
+                    initialValue = isDoNotBlockContactsAndRecent,
+                    onChange = onDoNotBlockContactsAndRecentChange,
+                    modifier = Modifier.topAppBarPaddings(),
+                    isPreferenceEnabled = isBlockingEnabled,
+                    scaleSwitch = 0.8F,
+                    showCheckmark = showCheckmarksOnSwitches,
+                    checkmark = ImageVector.vectorResource(R.drawable.ic_check),
+                    backgroundColor = MaterialTheme.colorScheme.background
+                )
             }
             when {
                 !hasGivenPermissionToBlock -> {
@@ -780,7 +798,9 @@ private fun ManageBlockedNumbersScreenPreview(@PreviewParameter(BooleanPreviewPa
             isBlockingType = 1,
             onBlockingType = {},
             isBlockingEnabled = true,
-            onBlockingEnabledChange = {}
+            onBlockingEnabledChange = {},
+            isDoNotBlockContactsAndRecent = true,
+            onDoNotBlockContactsAndRecentChange = {},
         ) //{}
     }
 }

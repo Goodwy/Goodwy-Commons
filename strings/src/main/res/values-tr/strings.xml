@@ -283,6 +283,7 @@ Tüm katkıda bulunanlara ve diğer destekçilere teşekkürler!
     <string name="enable_blocking_summary">Devre dışı bırakıldığında, aramalar için tüm engelleme ayarları kaldırılır. Engellenen numaralar listesindeki mesajlar yine de engellenir.\nKolayca geçiş yapmak için hızlı ayarlar kutucuğu ekleyebilirsiniz.</string>
     <string name="block_unknown_calls_summary">Bilinmeyen numaralardan gelen aramalar engellenecek ve \"Son Aramalar\" listesinde görüntülenecektir.\nKişilerinizde kayıtlı kişilerden ve yakın zamanda aradığınız kişilerden gelen aramalar çalmaya devam edecektir.</string>
     <string name="bottom_indent">Alt girinti</string>
+    <string name="is_do_not_block_contacts_and_recent">Kişileri ve son giden aramaları engellemeyin</string>
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
     <string name="relation_hint_g">İlgili Kişi</string>

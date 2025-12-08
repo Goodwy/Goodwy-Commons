@@ -284,6 +284,7 @@ Tack till alla bidragsgivare och andra supportrar!
     <string name="enable_blocking_summary">När den är inaktiverad kommer alla blockeringsinställningar att tas bort för samtal. Meddelanden kommer fortfarande att blockeras för nummer på blockeringslistan.\nDu kan lägga till en ruta för snabbinställningar för att enkelt byta.</string>
     <string name="block_unknown_calls_summary">Samtal från okända nummer blockeras och visas i listan \"Senaste\".\nInkommande samtal från personer i dina kontakter och från personer du nyligen har ringt fortsätter att ringa.</string>
     <string name="bottom_indent">Nedre indrag</string>
+    <string name="is_do_not_block_contacts_and_recent">Blockera inte kontakter och senaste utgående samtal</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Relaterade personer</string>
     <string name="relation_hint_g">Relaterad person</string>

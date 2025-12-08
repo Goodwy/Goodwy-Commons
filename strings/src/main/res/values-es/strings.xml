@@ -280,6 +280,7 @@ Si quieres ayudar, avísanos. La guía de traducción está disponible en <a hre
     <string name="enable_blocking_summary">Al desactivar esta opción, se eliminarán todos los bloqueos de llamadas. Los mensajes seguirán bloqueados para los números de la lista de bloqueados.\nPuedes añadir un panel de ajustes rápidos para cambiar fácilmente.</string>
     <string name="block_unknown_calls_summary">Las llamadas de números desconocidos se bloquearán y se mostrarán en la lista \"Recientes\".\nLas llamadas entrantes de tus contactos y de personas a las que hayas llamado recientemente seguirán sonando.</string>
     <string name="bottom_indent">Sangría inferior</string>
+    <string name="is_do_not_block_contacts_and_recent">No bloquear contactos ni llamadas salientes recientes</string>
     <string name="relation_g">Relación</string>
     <string name="relations_g">Personas relacionadas</string>
     <string name="relation_hint_g">Persona relacionada</string>

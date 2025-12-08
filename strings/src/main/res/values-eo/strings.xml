@@ -283,6 +283,7 @@ Dankon al ĉiuj kontribuantoj kaj aliaj subtenantoj!
     <string name="enable_blocking_summary">Kiam estas malŝaltita, ĉiuj blokaj agordoj estos forigitaj por vokoj. Mesaĝoj ankoraŭ estos blokitaj por numeroj en la blokita listo.\nVi povas aldoni rapidan kahelon de agordoj por facila ŝanĝado.</string>
     <string name="block_unknown_calls_summary">Vokoj de nekonataj numeroj estos blokitaj kaj montrataj en la listo \"Lastatempaj\".\nAlvenantaj vokoj de homoj en viaj kontaktoj kaj de homoj, kiujn vi ĵus telefonis, daŭre sonoros.</string>
     <string name="bottom_indent">Malsupra streko</string>
+    <string name="is_do_not_block_contacts_and_recent">Ne bloku kontaktojn kaj lastatempajn elirantajn alvokojn</string>
     <string name="relation_g">Rilato</string>
     <string name="relations_g">Rilataj Personoj</string>
     <string name="relation_hint_g">Rilata Persono</string>

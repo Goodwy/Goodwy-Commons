@@ -283,6 +283,7 @@ Paldies visiem līdzstrādniekiem un citiem atbalstītājiem!
     <string name="enable_blocking_summary">Ja tas ir atspējots, visi zvanu bloķēšanas iestatījumi tiks noņemti. Ziņojumi joprojām tiks bloķēti numuriem bloķēto sarakstā.\nLai atvieglotu pārslēgšanu, varat pievienot ātro iestatījumu elementu.</string>
     <string name="block_unknown_calls_summary">Zvani no nezināmiem numuriem tiks bloķēti un parādīti sarakstā “Nesenie”.\nIenākošie zvani no personām jūsu kontaktpersonās un personām, kurām nesen zvanījāt, turpinās zvanīt.</string>
     <string name="bottom_indent">Apakšējā atkāpe</string>
+    <string name="is_do_not_block_contacts_and_recent">Nebloķējiet kontaktpersonas un nesenos izejošos zvanus</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

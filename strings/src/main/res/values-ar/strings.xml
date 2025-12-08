@@ -276,6 +276,7 @@
     <string name="enable_blocking_summary">عند تعطيلها، ستُزال جميع إعدادات حظر المكالمات. ستظل الرسائل محظورة للأرقام المدرجة في قائمة الحظر. يمكنك إضافة مربع إعدادات سريع للتبديل بسهولة.</string>
     <string name="block_unknown_calls_summary">سيتم حظر المكالمات الواردة من أرقام غير معروفة وعرضها في قائمة \"المكالمات الأخيرة\".\n\nسيستمر رنين المكالمات الواردة من جهات اتصالك ومن الأشخاص الذين اتصلت بهم مؤخرًا.</string>
     <string name="bottom_indent">المسافة البادئة السفلية</string>
+    <string name="is_do_not_block_contacts_and_recent">لا تحظر جهات الاتصال والمكالمات الصادرة الأخيرة</string>
     <string name="relation_g">العلاقة</string>
     <string name="relations_g">الأشخاص ذوو الصلة</string>
     <string name="relation_hint_g">الشخص ذو الصلة</string>

@@ -284,6 +284,7 @@
     <string name="enable_blocking_summary">Када је онемогућено, сва подешавања блокирања ће бити уклоњена за позиве. Поруке ће и даље бити блокиране за бројеве са листе блокираних.\nМожете додати плочицу за брза подешавања за лако пребацивање.</string>
     <string name="block_unknown_calls_summary">Позиви са непознатих бројева биће блокирани и приказани на листи „Недавни“.\nДолазни позиви од људи у вашим контактима и од људи које сте недавно звали ће наставити да звоне.</string>
     <string name="bottom_indent">Доња увлака</string>
+    <string name="is_do_not_block_contacts_and_recent">Не блокирај контакте и недавне одлазне позиве</string>
     <string name="relation_g">Однос</string>
     <string name="relations_g">Повезане особе</string>
     <string name="relation_hint_g">Повезана особа</string>

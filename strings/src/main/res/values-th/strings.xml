@@ -283,6 +283,7 @@
     <string name="enable_blocking_summary">เมื่อปิดใช้งาน การตั้งค่าการบล็อกการโทรทั้งหมดจะถูกลบออก ข้อความจะยังคงถูกบล็อกสำหรับหมายเลขที่อยู่ในรายการที่ถูกบล็อก\nคุณสามารถเพิ่มไทล์การตั้งค่าด่วนเพื่อสลับเปลี่ยนได้ง่าย</string>
     <string name="block_unknown_calls_summary">สายเรียกเข้าจากหมายเลขที่ไม่รู้จักจะถูกบล็อกและแสดงในรายการ \"ล่าสุด\"\nสายเรียกเข้าจากบุคคลในรายชื่อติดต่อของคุณและจากคนที่คุณโทรหาล่าสุดจะยังคงดังต่อไป</string>
     <string name="bottom_indent">เยื้องล่าง</string>
+    <string name="is_do_not_block_contacts_and_recent">อย่าบล็อครายชื่อติดต่อและการโทรออกล่าสุด</string>
     <string name="relation_g">ความสัมพันธ์</string>
     <string name="relations_g">บุคคลที่เกี่ยวข้อง</string>
     <string name="relation_hint_g">บุคคลที่เกี่ยวข้อง</string>

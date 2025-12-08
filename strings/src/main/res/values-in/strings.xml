@@ -281,6 +281,7 @@ Terima kasih kepada semua kontributor dan pendukung lainnya!
     <string name="enable_blocking_summary">Jika dinonaktifkan, semua pengaturan pemblokiran akan dihapus untuk panggilan. Pesan akan tetap diblokir untuk nomor yang ada di daftar blokir.\nAnda dapat menambahkan ubin pengaturan cepat untuk memudahkan peralihan.</string>
     <string name="block_unknown_calls_summary">Panggilan dari nomor tak dikenal akan diblokir dan ditampilkan di daftar \"Terbaru\".\nPanggilan masuk dari orang-orang di kontak Anda dan dari orang-orang yang baru saja Anda hubungi akan tetap berdering.</string>
     <string name="bottom_indent">Lekukan bawah</string>
+    <string name="is_do_not_block_contacts_and_recent">Jangan blokir kontak dan panggilan keluar terbaru</string>
     <string name="relation_g">Hubungan</string>
     <string name="relations_g">Orang Terkait</string>
     <string name="relation_hint_g">Orang Terkait</string>

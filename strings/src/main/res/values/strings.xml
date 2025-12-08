@@ -312,6 +312,7 @@ You can add a quick settings tile for easy switching.</string>
     <string name="block_unknown_calls_summary">Calls from unsaved numbers will be blocked and displayed on the Recents list.
 Incoming calls will continue to ring from people in your contacts and recent outgoing calls.</string>
     <string name="bottom_indent">Bottom indent</string>
+    <string name="is_do_not_block_contacts_and_recent">Do not block contacts and recent outgoing calls</string>
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>

@@ -284,6 +284,7 @@ Täname kõiki kaastöölisi ja teisi toetajaid!
     <string name="enable_blocking_summary">Kui see on keelatud, eemaldatakse kõik kõnede blokeerimisseaded. Sõnumid blokeeritakse endiselt blokeeritud loendis olevate numbrite puhul.\nLihtsaks vahetamiseks saate lisada kiirseadete paani.</string>
     <string name="block_unknown_calls_summary">Tundmatutelt numbritelt tulevad kõned blokeeritakse ja kuvatakse loendis „Hiljutised”.\nSissetulevad kõned teie kontaktidelt ja inimestelt, kellele olete hiljuti helistanud, helisevad edasi.</string>
     <string name="bottom_indent">Alumine taane</string>
+    <string name="is_do_not_block_contacts_and_recent">Ära blokeeri kontakte ja hiljutisi väljaminevaid kõnesid</string>
     <string name="relation_g">Seos</string>
     <string name="relations_g">Seotud isikud</string>
     <string name="relation_hint_g">Seotud isik</string>

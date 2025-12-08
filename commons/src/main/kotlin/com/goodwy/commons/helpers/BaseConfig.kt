@@ -835,6 +835,12 @@ open class BaseConfig(val context: Context) {
 
     val isBlockingEnabled: Flow<Boolean> = ::blockingEnabled.asFlowNonNull()
 
+    var doNotBlockContactsAndRecent: Boolean
+        get() = prefs.getBoolean(DO_NOT_BLOCK_CONTACTS_AND_RECENT, false)
+        set(doNotBlockContactsAndRecent) = prefs.edit { putBoolean(DO_NOT_BLOCK_CONTACTS_AND_RECENT, doNotBlockContactsAndRecent) }
+
+    val isDoNotBlockContactsAndRecent: Flow<Boolean> = ::doNotBlockContactsAndRecent.asFlowNonNull()
+
     var textAlignment: Int
         get() = prefs.getInt(TEXT_ALIGNMENT, TEXT_ALIGNMENT_START)
         set(textAlignment) = prefs.edit { putInt(TEXT_ALIGNMENT, textAlignment) }

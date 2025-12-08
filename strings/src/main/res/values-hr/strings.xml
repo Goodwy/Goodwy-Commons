@@ -281,6 +281,7 @@ Hvala svim suradnicima i ostalim podupirateljima!
     <string name="enable_blocking_summary">Kada je onemogućeno, sve postavke blokiranja bit će uklonjene za pozive. Poruke će i dalje biti blokirane za brojeve na popisu blokiranih.\nMožete dodati pločicu brzih postavki za jednostavno prebacivanje.</string>
     <string name="block_unknown_calls_summary">Pozivi s nepoznatih brojeva bit će blokirani i prikazani na popisu \"Nedavni\".\nDolazni pozivi od osoba u vašim kontaktima i od osoba koje ste nedavno zvali nastavit će zvoniti.</string>
     <string name="bottom_indent">Donja uvlaka</string>
+    <string name="is_do_not_block_contacts_and_recent">Ne blokiraj kontakte i nedavne odlazne pozive</string>
     <string name="relation_g">Odnos</string>
     <string name="relations_g">Povezane osobe</string>
     <string name="relation_hint_g">Povezana osoba</string>

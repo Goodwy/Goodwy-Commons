@@ -281,6 +281,7 @@
     <string name="enable_blocking_summary">無効にすると、通話のブロック設定がすべて解除されます。ブロックリストに登録されている番号からのメッセージは引き続きブロックされます。\nクイック設定タイルを追加して簡単に切り替えることができます。</string>
     <string name="block_unknown_calls_summary">不明な番号からの着信はブロックされ、「最近」リストに表示されます。\n連絡先に登録されている相手や最近通話した相手からの着信は引き続き鳴ります。</string>
     <string name="bottom_indent">下部インデント</string>
+    <string name="is_do_not_block_contacts_and_recent">連絡先と最近の発信通話をブロックしない</string>
     <string name="relation_g">関係</string>
     <string name="relations_g">関係者</string>
     <string name="relation_hint_g">関係者</string>

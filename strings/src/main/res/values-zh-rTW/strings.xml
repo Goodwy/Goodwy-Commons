@@ -281,6 +281,7 @@
     <string name="enable_blocking_summary">停用後，所有來電屏蔽設定都將移除。但封鎖清單中的號碼仍會被封鎖資訊。\n您可以新增快捷設定圖塊，方便切換。</string>
     <string name="block_unknown_calls_summary">來自未知號碼的來電將被封鎖並顯示在「最近通話」清單中。\n來自您通訊錄中聯絡人和您最近撥打過的聯絡人的來電將繼續響鈴。</string>
     <string name="bottom_indent">底部縮排</string>
+    <string name="is_do_not_block_contacts_and_recent">請勿封鎖聯絡人和最近的撥出電話</string>
     <string name="relation_g">關係</string>
     <string name="relations_g">相關人員</string>
     <string name="relation_hint_g">相關人員</string>
