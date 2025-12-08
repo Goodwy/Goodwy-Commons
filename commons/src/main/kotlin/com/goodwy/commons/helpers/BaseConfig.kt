@@ -836,7 +836,7 @@ open class BaseConfig(val context: Context) {
     val isBlockingEnabled: Flow<Boolean> = ::blockingEnabled.asFlowNonNull()
 
     var doNotBlockContactsAndRecent: Boolean
-        get() = prefs.getBoolean(DO_NOT_BLOCK_CONTACTS_AND_RECENT, true)
+        get() = prefs.getBoolean(DO_NOT_BLOCK_CONTACTS_AND_RECENT, false)
         set(doNotBlockContactsAndRecent) = prefs.edit { putBoolean(DO_NOT_BLOCK_CONTACTS_AND_RECENT, doNotBlockContactsAndRecent) }
 
     val isDoNotBlockContactsAndRecent: Flow<Boolean> = ::doNotBlockContactsAndRecent.asFlowNonNull()
