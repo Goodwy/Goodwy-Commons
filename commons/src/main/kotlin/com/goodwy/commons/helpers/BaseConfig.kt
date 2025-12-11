@@ -2,6 +2,7 @@ package com.goodwy.commons.helpers
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Environment
 import android.text.format.DateFormat
@@ -21,7 +22,17 @@ import kotlin.reflect.KProperty0
 import androidx.core.content.edit
 
 open class BaseConfig(val context: Context) {
-    protected val prefs = context.getSharedPrefs()
+//    protected val prefs = context.getSharedPrefs()
+    protected val prefs: SharedPreferences by lazy {
+        try {
+            context.getSharedPrefs()
+        } catch (_: IllegalStateException) {
+            // Return SharedPreferences in read-only mode or use the default values
+            // In some cases, services fail to start and an error occurs:
+            // IllegalStateException: SharedPreferences in credential encrypted storage are not available until after user (id 0) is unlocked
+            context.getSharedPreferences("temp_prefs", Context.MODE_PRIVATE)
+        }
+    }
 
     companion object {
         fun newInstance(context: Context) = BaseConfig(context)
