@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.provider.ContactsContract
 import android.telephony.PhoneNumberUtils
 import com.goodwy.commons.extensions.*
+import com.goodwy.commons.extensions.value
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.PhoneNumber
 import ezvcard.property.FormattedName
@@ -54,6 +55,88 @@ data class Contact(
         var showNicknameInsteadNames = false
         var sortingSymbolsFirst = false
         var collator: Collator? = null
+
+        // Optimised comparator for fast sorting
+        val optimizedComparator = Comparator<Contact> { c1, c2 ->
+            // Quick comparison without creating unnecessary objects
+            compareContacts(c1, c2, sorting, startWithSurname, showNicknameInsteadNames, sortingSymbolsFirst, collator)
+        }
+
+        // Quick comparator in name only (for Recents)
+        val nameOnlyComparator = Comparator<Contact> { c1, c2 ->
+            c1.getNameToDisplay().compareTo(c2.getNameToDisplay(), ignoreCase = true)
+        }
+
+        private fun compareContacts(
+            c1: Contact,
+            c2: Contact,
+            sorting: Int,
+            startWithSurname: Boolean,
+            showNicknameInsteadNames: Boolean,
+            sortingSymbolsFirst: Boolean,
+            collator: Collator?
+        ): Int {
+            var result = when {
+                sorting and SORT_BY_FIRST_NAME != 0 -> {
+                    compareStringsFast(c1.getCompareStringForFirstNameFast(), c2.getCompareStringForFirstNameFast())
+                }
+                sorting and SORT_BY_MIDDLE_NAME != 0 -> {
+                    compareStringsFast(c1.getCompareStringForMiddleNameFast(), c2.getCompareStringForMiddleNameFast())
+                }
+                sorting and SORT_BY_SURNAME != 0 -> {
+                    compareStringsFast(c1.getCompareStringForSurnameFast(), c2.getCompareStringForSurnameFast())
+                }
+                sorting and SORT_BY_FULL_NAME != 0 -> {
+                    compareStringsFast(c1.getCompareStringForFullNameFast(), c2.getCompareStringForFullNameFast())
+                }
+                else -> c1.id.compareTo(c2.id)
+            }
+
+            if (sorting and SORT_DESCENDING != 0) {
+                result *= -1
+            }
+
+            return result
+        }
+
+        private fun compareStringsFast(first: String, second: String): Int {
+            if (first.isEmpty() && second.isEmpty()) return 0
+            if (first.isEmpty()) return 1
+            if (second.isEmpty()) return -1
+
+            // A simple quick comparison
+            return collator?.compare(first, second) ?: first.compareTo(second, true)
+        }
+    }
+
+    // Fast versions of methods without normaliseString()
+    private fun getCompareStringForFirstNameFast(): String {
+        val firstNameOrNickname = if (showNicknameInsteadNames && nickname.isNotBlank()) nickname else firstName
+        return if (firstNameOrNickname.isEmpty() && isNameEmpty()) getFallbackCompareStringFast()
+        else firstNameOrNickname.lowercase()
+    }
+
+    private fun getCompareStringForMiddleNameFast(): String {
+        return if (middleName.isEmpty() && isNameEmpty()) getFallbackCompareStringFast()
+        else middleName.lowercase()
+    }
+
+    private fun getCompareStringForSurnameFast(): String {
+        return if (surname.isEmpty() && isNameEmpty()) getFallbackCompareStringFast()
+        else surname.lowercase()
+    }
+
+    private fun getCompareStringForFullNameFast(): String {
+        return if (getNameToDisplay().isEmpty()) getFallbackCompareStringFast()
+        else getNameToDisplay().lowercase()
+    }
+
+    private fun getFallbackCompareStringFast(): String {
+        return when {
+            getFullCompany().isNotEmpty() -> getFullCompany().lowercase()
+            emails.isNotEmpty() -> emails.first().value.lowercase()
+            else -> ""
+        }
     }
 
     override fun compareTo(other: Contact): Int {
