@@ -468,16 +468,52 @@ class SimpleContactsHelper(val context: Context) {
         return ""
     }
 
+//    fun deleteContactRawIDs(ids: ArrayList<Int>, callback: () -> Unit) {
+//        ensureBackgroundThread {
+//            val uri = Data.CONTENT_URI
+//            if (uri != null && ids.isNotEmpty()) {
+//                ids.chunked(30).forEach { chunk ->
+//                    val selection = "${Data.RAW_CONTACT_ID} IN (${getQuestionMarks(chunk.size)})"
+//                    val selectionArgs = chunk.map { it.toString() }.toTypedArray()
+//                    context.contentResolver.delete(uri, selection, selectionArgs)
+//                }
+//            }
+//            callback()
+//        }
+//    }
+
     fun deleteContactRawIDs(ids: ArrayList<Int>, callback: () -> Unit) {
         ensureBackgroundThread {
             val uri = Data.CONTENT_URI
-            if (uri != null && ids.isNotEmpty()) {
-                ids.chunked(30).forEach { chunk ->
-                    val selection = "${Data.RAW_CONTACT_ID} IN (${getQuestionMarks(chunk.size)})"
-                    val selectionArgs = chunk.map { it.toString() }.toTypedArray()
-                    context.contentResolver.delete(uri, selection, selectionArgs)
+            val resolver = context.contentResolver ?: run {
+                callback()
+                return@ensureBackgroundThread
+            }
+
+            if (uri == null) {
+                callback()
+                return@ensureBackgroundThread
+            }
+
+            val validIds = ids.filter { it > 0 }
+            if (validIds.isEmpty()) {
+                callback()
+                return@ensureBackgroundThread
+            }
+
+            validIds.chunked(30).forEach { chunk ->
+                val selection = "${Data.RAW_CONTACT_ID} IN (${getQuestionMarks(chunk.size)})"
+                val selectionArgs = chunk.map { it.toString() }.toTypedArray()
+
+                try {
+                    resolver.delete(uri, selection, selectionArgs)
+                } catch (_: Exception) {
+                    if (!context.hasPermission(PERMISSION_WRITE_CONTACTS)) {
+                        return@ensureBackgroundThread
+                    }
                 }
             }
+
             callback()
         }
     }

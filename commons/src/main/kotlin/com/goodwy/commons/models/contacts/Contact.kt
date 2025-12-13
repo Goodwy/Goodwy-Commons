@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.provider.ContactsContract
 import android.telephony.PhoneNumberUtils
 import com.goodwy.commons.extensions.*
-import com.goodwy.commons.extensions.value
 import com.goodwy.commons.helpers.*
 import com.goodwy.commons.models.PhoneNumber
 import ezvcard.property.FormattedName

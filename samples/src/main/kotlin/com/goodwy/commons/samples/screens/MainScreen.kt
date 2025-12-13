@@ -196,15 +196,6 @@ private fun buildActionMenuItems(
 }
 
 @Composable
-@ReadOnlyComposable
-private fun actionModeBgColor(): Color =
-    if (LocalTheme.current is Theme.SystemDefaultMaterialYou) {
-        SimpleTheme.colorScheme.primaryContainer
-    } else {
-        actionModeColor
-    }
-
-@Composable
 @MyDevices
 private fun MainScreenPreview() {
     AppThemeSurface {
