@@ -43,22 +43,122 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
     private var iapSkuDetails: Map<String, ProductInfo> = emptyMap()
     private var subSkuDetails: Map<String, ProductInfo> = emptyMap()
 
+    // Fields for storing lists
+    private var lastIapList: List<String> = emptyList()
+    private var lastSubList: List<String> = emptyList()
+
+    // Storage space for all purchases
+    private val _allIapPurchases = MutableStateFlow<List<String>>(emptyList())
+    private val _allSubPurchases = MutableStateFlow<List<String>>(emptyList())
+    val allIapPurchases: StateFlow<List<String>> = _allIapPurchases
+    val allSubPurchases: StateFlow<List<String>> = _allSubPurchases
+
     fun initBillingClient() {
         iapClient = Iap.getIapClient(activity)
-        loadProductInfos()
     }
 
-    private fun loadProductInfos() {
-        loadIapProductInfos()
-        loadSubProductInfos()
+    fun retrieveDonation(iapList: List<String>, subList: List<String>) {
+        // We save lists for future use.
+        this.lastIapList = iapList
+        this.lastSubList = subList
+
+        // 1. Checking purchases (without filtering)
+        checkIapPurchases()
+        checkSubPurchases()
+
+        // 2. We are loading information about specific products (to display prices).
+        if (iapList.isNotEmpty()) {
+            loadIapProductInfos(iapList)
+        } else {
+            _iapSkuDetailsInitialized.value = true
+        }
+
+        if (subList.isNotEmpty()) {
+            loadSubProductInfos(subList)
+        } else {
+            _subSkuDetailsInitialized.value = true
+        }
     }
 
-    private fun loadIapProductInfos() {
-        val products = listOf(
-            "com.goodwy.dialer.pro",
-            "com.goodwy.dialer.pro2",
-            "com.goodwy.dialer.pro3"
-        )
+    private fun checkIapPurchases() {
+        val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
+            priceType = IapClient.PriceType.IN_APP_CONSUMABLE
+        })
+
+        task.addOnSuccessListener { result ->
+            val ownedProductIds = mutableListOf<String>()
+
+            result.inAppPurchaseDataList?.forEach { jsonString ->
+                try {
+                    val purchaseData = InAppPurchaseData(jsonString)
+                    purchaseData.productId?.let { productId ->
+                        ownedProductIds.add(productId)
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+
+            // We save ALL purchases found
+            _allIapPurchases.value = ownedProductIds
+
+            // We filter only those that we need (from lastIapList)
+            val filteredPurchases = ownedProductIds.filter { it in lastIapList }
+            _isIapPurchasedList.value = filteredPurchases
+
+            when {
+                filteredPurchases.isNotEmpty() -> _isIapPurchased.value = Tipping.Succeeded
+                else -> _isIapPurchased.value = Tipping.NoTips
+            }
+        }.addOnFailureListener { e ->
+            _isIapPurchased.value = Tipping.FailedToLoad
+            handleError(e)
+        }
+    }
+
+    private fun checkSubPurchases() {
+        val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
+            priceType = IapClient.PriceType.IN_APP_SUBSCRIPTION
+        })
+
+        task.addOnSuccessListener { result ->
+            val ownedProductIds = mutableListOf<String>()
+
+            result.inAppPurchaseDataList?.forEach { jsonString ->
+                try {
+                    val purchaseData = InAppPurchaseData(jsonString)
+                    purchaseData.productId?.let { productId ->
+                        if (isSubscriptionActive(purchaseData)) {
+                            ownedProductIds.add(productId)
+                        }
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+
+            // Save ALL subscriptions found
+            _allSubPurchases.value = ownedProductIds
+
+            // We filter only those we need (from lastSubList)
+            val filteredPurchases = ownedProductIds.filter { it in lastSubList }
+            _isSupPurchasedList.value = filteredPurchases
+
+            when {
+                filteredPurchases.isNotEmpty() -> _isSupPurchased.value = Tipping.Succeeded
+                else -> _isSupPurchased.value = Tipping.NoTips
+            }
+        }.addOnFailureListener { e ->
+            _isSupPurchased.value = Tipping.FailedToLoad
+            handleError(e)
+        }
+    }
+
+    private fun loadIapProductInfos(products: List<String>) {
+        if (products.isEmpty()) {
+            _iapSkuDetailsInitialized.value = true
+            return
+        }
 
         val task = iapClient.obtainProductInfo(ProductInfoReq().apply {
             priceType = IapClient.PriceType.IN_APP_CONSUMABLE
@@ -74,19 +174,15 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         }
     }
 
-    private fun loadSubProductInfos() {
-        val subscriptions = listOf(
-            "com.goodwy.dialer.sub.monthly",
-            "com.goodwy.dialer.sub.monthly2",
-            "com.goodwy.dialer.sub.monthly3",
-            "com.goodwy.dialer.sub.yearly",
-            "com.goodwy.dialer.sub.yearly2",
-            "com.goodwy.dialer.sub.yearly3"
-        )
+    private fun loadSubProductInfos(products: List<String>) {
+        if (products.isEmpty()) {
+            _subSkuDetailsInitialized.value = true
+            return
+        }
 
         val task = iapClient.obtainProductInfo(ProductInfoReq().apply {
             priceType = IapClient.PriceType.IN_APP_SUBSCRIPTION
-            productIds = subscriptions
+            productIds = products
         })
 
         task.addOnSuccessListener { result ->
@@ -94,87 +190,6 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
             _subSkuDetailsInitialized.value = true
         }.addOnFailureListener { e ->
             _subSkuDetailsInitialized.value = false
-            handleError(e)
-        }
-    }
-
-    fun retrieveDonation(iapList: List<String>, subList: List<String>) {
-        checkIapPurchases(iapList)
-        checkSubPurchases(subList)
-    }
-
-    private fun checkIapPurchases(productIds: List<String>) {
-        val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
-            priceType = IapClient.PriceType.IN_APP_CONSUMABLE
-        })
-
-        task.addOnSuccessListener { result ->
-            val ownedProductIds = mutableListOf<String>()
-
-            result.inAppPurchaseDataList?.forEach { jsonString ->
-                try {
-                    val purchaseData = InAppPurchaseData(jsonString)
-                    purchaseData.productId?.let { productId ->
-                        ownedProductIds.add(productId)
-                    }
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
-
-            _isIapPurchasedList.value = ownedProductIds
-
-            when {
-                ownedProductIds.isNotEmpty() -> {
-                    _isIapPurchased.value = Tipping.Succeeded
-                }
-                else -> {
-                    _isIapPurchased.value = Tipping.NoTips
-                }
-            }
-        }.addOnFailureListener { e ->
-            _isIapPurchased.value = Tipping.FailedToLoad
-            handleError(e)
-        }
-    }
-
-    private fun checkSubPurchases(productIds: List<String>) {
-        val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
-            priceType = IapClient.PriceType.IN_APP_SUBSCRIPTION
-        })
-
-        task.addOnSuccessListener { result ->
-            val ownedProductIds = mutableListOf<String>()
-            val validSubscriptions = mutableListOf<String>()
-
-            result.inAppPurchaseDataList?.forEach { jsonString ->
-                try {
-                    val purchaseData = InAppPurchaseData(jsonString)
-                    purchaseData.productId?.let { productId ->
-                        ownedProductIds.add(productId)
-
-                        // Checking whether the subscription is active
-                        if (isSubscriptionActive(purchaseData)) {
-                            validSubscriptions.add(productId)
-                        }
-                    }
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
-
-            _isSupPurchasedList.value = validSubscriptions
-
-            when {
-                validSubscriptions.isNotEmpty() -> {
-                    _isSupPurchased.value = Tipping.Succeeded
-                }
-                else -> {
-                    _isSupPurchased.value = Tipping.NoTips
-                }
-            }
-        }.addOnFailureListener { e ->
-            _isSupPurchased.value = Tipping.FailedToLoad
             handleError(e)
         }
     }
@@ -280,7 +295,7 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
                     activity.toast(com.goodwy.strings.R.string.purchase_successful)
 
                     // After a successful purchase, we update the lists.
-                    retrieveDonation(emptyList(), emptyList())
+                    retrieveDonation(lastIapList, lastSubList)
                 }
                 OrderStatusCode.ORDER_STATE_CANCEL -> {
                     activity.toast(com.goodwy.strings.R.string.billing_product_deleted)
@@ -338,7 +353,7 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         _isIapPurchased.value = Tipping.FailedToLoad
         _isSupPurchased.value = Tipping.FailedToLoad
 
-        retrieveDonation(emptyList(), emptyList())
+        retrieveDonation(lastIapList, lastSubList)
     }
 
     companion object {
