@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/purchase_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/purchaseAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/purchaseToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/purchase_toolbar_height"
+                app:menu="@menu/menu_purchase"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_chevron_left_vector"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/top_details"
+        layout="@layout/top_view_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.goodwy.commons.helpers.PurchaseTopBehavior"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/purchase_nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/purchaseAppBarLayout"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/purchase_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/normal_margin">
+
+            <com.goodwy.commons.views.MyTextView
+                android:id="@+id/purchase_apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/activity_margin"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/pref_pay_summary"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/pay_app"
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/purchase_apps">
+
+                <RelativeLayout
+                    android:id="@+id/app_one"
+                    android:layout_width="104dp"
+                    android:layout_height="148dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/bigger_margin"
+                    android:layout_toStartOf="@+id/app_two"
+                    android:background="@drawable/button_white_bg"
+                    android:elevation="4dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/app_one_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/app_one_button"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/one_time_purchase"
+                        android:textColor="@color/theme_light_text_color"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_one_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_above="@+id/app_two_button"
+                        android:layout_marginTop="@dimen/medium_margin"
+                        android:alpha="0.6"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_two_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_above="@+id/app_three_button"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="0.7"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_three_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="0.8"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/app_two"
+                    android:layout_width="104dp"
+                    android:layout_height="148dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_white_bg"
+                    android:elevation="4dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/app_two_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/app_one_sub_button"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/monthly"
+                        android:textColor="@color/theme_light_text_color"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_one_sub_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_above="@+id/app_two_sub_button"
+                        android:layout_marginTop="@dimen/medium_margin"
+                        android:alpha="0.7"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_two_sub_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_above="@+id/app_three_sub_button"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="0.8"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_three_sub_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="0.9"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/app_three"
+                    android:layout_width="104dp"
+                    android:layout_height="148dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="4dp"
+                    android:layout_marginStart="@dimen/bigger_margin"
+                    android:layout_toEndOf="@+id/app_two"
+                    android:background="@drawable/button_white_bg"
+                    android:padding="9dp">
+
+                    <TextView
+                        android:id="@+id/app_three_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/app_one_sub_year_button"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/yearly"
+                        android:textColor="@color/theme_light_text_color"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_one_sub_year_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_above="@+id/app_two_sub_year_button"
+                        android:layout_marginTop="@dimen/medium_margin"
+                        android:alpha="0.8"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_two_sub_year_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_above="@+id/app_three_sub_year_button"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="0.9"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/app_three_sub_year_button"
+                        style="@style/AppTheme.Button.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:alpha="1.0"
+                        android:background="@drawable/button_gray_bg_8dp"
+                        android:enabled="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/themeHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pay_app"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/about_margin">
+
+                <ImageView
+                    android:id="@+id/theme_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:src="@drawable/ic_invert_colors"
+                    android:tint="@color/color_primary"
+                    android:contentDescription="@string/themes"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/theme_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/theme_logo"
+                    android:paddingStart="@dimen/about_margin"
+                    tools:ignore="RtlSymmetry">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/theme_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/themes"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/theme_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/theme_title"
+                        android:alpha="0.6"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:text="@string/themes_summary"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/color_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/themeHolder"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/about_margin">
+
+                <ImageView
+                    android:id="@+id/color_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:src="@drawable/ic_palette"
+                    android:tint="@color/color_primary"
+                    android:contentDescription="@string/color_title"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/color_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/color_logo"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/about_margin"
+                    tools:ignore="RtlSymmetry">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/color_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/color_title"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/color_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below ="@+id/color_title"
+                        android:background="@null"
+                        android:alpha="0.6"
+                        android:clickable="false"
+                        android:text="@string/color_summary"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/plus_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/color_holder"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/about_margin">
+
+                <ImageView
+                    android:id="@+id/plus_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_plus_round"
+                    android:tint="@color/color_primary"
+                    android:contentDescription="@string/plus_title"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/plus_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/plus_logo"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/about_margin"
+                    tools:ignore="RtlSymmetry">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/plus_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plus_title"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/plus_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/plus_title"
+                        android:alpha="0.6"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:text="@string/plus_summary"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lifebuoy_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plus_holder"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginHorizontal="@dimen/about_margin">
+
+                <ImageView
+                    android:id="@+id/lifebuoy_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_lifebuoy"
+                    android:tint="@color/color_primary"
+                    android:contentDescription="@string/lifebuoy_title"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/lifebuoy_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/lifebuoy_logo"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/about_margin"
+                    tools:ignore="RtlSymmetry">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/lifebuoy_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lifebuoy_title"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/lifebuoy_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lifebuoy_title"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="@dimen/normal_margin"
+                        android:layout_toStartOf="@+id/lifebuoy_button"
+                        android:alpha="0.6"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:text="@string/lifebuoy_summary"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/lifebuoy_button"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="@dimen/normal_margin"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/lifebuoy_title"
+                        android:layout_alignBottom="@+id/lifebuoy_summary"
+                        android:alpha="0.6"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_mail_vector"
+                        android:contentDescription="@string/lifebuoy_title" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/collection_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lifebuoy_holder"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:background="@drawable/ripple_all_corners_16dp"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/about_margin">
+
+                <ImageView
+                    android:id="@+id/collection_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_award"
+                    android:contentDescription="@string/collection"
+                    tools:ignore="UseAppTint" />
+
+                <RelativeLayout
+                    android:id="@+id/collection_text_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/collection_logo"
+                    android:paddingStart="@dimen/about_margin"
+                    tools:ignore="RtlSymmetry">
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/collection_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/collection_chevron"
+                        android:text="@string/collection"
+                        android:textSize="16sp" />
+
+                    <com.goodwy.commons.views.MyTextView
+                        android:id="@+id/collection_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/collection_title"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="@dimen/normal_margin"
+                        android:layout_toStartOf="@+id/collection_chevron"
+                        android:alpha="0.6"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:text="@string/collection_summary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/collection_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/collection_summary"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_marginEnd="@dimen/normal_margin"
+                        android:background="@drawable/button_white_bg"
+                        android:paddingHorizontal="@dimen/normal_margin"
+                        android:paddingVertical="@dimen/tiny_margin"
+                        android:text="@string/limited_supply"
+                        android:textColor="@color/red_missed"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/collection_chevron"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignTop="@+id/collection_title"
+                        android:layout_alignBottom="@+id/collection_summary"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/normal_margin"
+                        android:alpha="0.6"
+                        android:src="@drawable/ic_chevron_right_vector"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/goodwy_logo"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_below="@+id/collection_holder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/big_margin"
+                android:src="@drawable/ic_goodwy"
+                android:contentDescription="@string/my_website" />
+
+            <com.goodwy.commons.views.MyTextView
+                android:id="@+id/goodwy_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goodwy_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginBottom="48dp"
+                android:text="goodwy.dev"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

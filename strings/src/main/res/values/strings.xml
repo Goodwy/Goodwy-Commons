@@ -386,6 +386,14 @@ Incoming calls will continue to ring from people in your contacts and recent out
     <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="billing_error_application_signature_not_correct">To pay via RuStore you need to install the app version from RuStore</string>
 
+    <!-- HMS -->
+    <string name="huawei_id_not_logged_in">Please login to Huawei ID</string>
+    <string name="region_not_supported">Region not supported by AppGallery</string>
+    <string name="product_already_owned">Product already purchased</string>
+    <string name="network_error">Network error, please try again</string>
+    <string name="purchase_successful">Purchase successful!</string>
+    <string name="purchase_failed">Purchase failed, please try again</string>
+
     <!-- Calendar -->
     <string name="date">Date</string>
     <string name="starts">Starts</string>

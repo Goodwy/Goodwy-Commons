@@ -65,6 +65,9 @@ android {
         create("rustore") {
             dimension = "distribution"
         }
+        create("hms") {
+            dimension = "distribution"
+        }
     }
 
     compileOptions {

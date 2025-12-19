@@ -50,12 +50,14 @@ android {
         create("gplay") { dimension = "distribution" }
         create("foss") { dimension = "distribution" }
         create("rustore") { dimension = "distribution" }
+        create("hms") { dimension = "distribution" }
     }
 
     publishing {
         singleVariant("gplayRelease") {}
         singleVariant("fossRelease") {}
         singleVariant("rustoreRelease") {}
+        singleVariant("hmsRelease") {}
     }
 
     buildFeatures {
@@ -134,6 +136,17 @@ afterEvaluate {
                     dependsOn(tasks.named("assembleRustoreRelease"))
                 }
             }
+
+            create<MavenPublication>("hmsRelease") {
+                groupId = "com.github.goodwy.goodwy-commons"
+                artifactId = "commons-hms"
+                version = project.version.toString()
+                from(components.getByName("hmsRelease"))
+                artifact(sourcesJar.get())
+                tasks.named("publishHmsReleasePublicationToMavenLocal") {
+                    dependsOn(tasks.named("assembleHmsRelease"))
+                }
+            }
         }
     }
 }
@@ -183,6 +196,7 @@ dependencies {
     api(projects.strings)
     "gplayImplementation"(libs.billing.client)
     "rustoreImplementation"(libs.rustore.client)
+    "hmsImplementation"(libs.hms.client)
     api(libs.persian.date)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)
