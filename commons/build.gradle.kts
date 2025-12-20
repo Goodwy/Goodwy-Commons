@@ -197,6 +197,7 @@ dependencies {
     "gplayImplementation"(libs.billing.client)
     "rustoreImplementation"(libs.rustore.client)
     "hmsImplementation"(libs.hms.client)
+    "hmsImplementation"(libs.hms.appservice)
     api(libs.persian.date)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)
