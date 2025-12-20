@@ -51,6 +51,7 @@ rxJava3 = "3.1.5"
 billing = "7.1.1"
 rustore = "6.0.0"
 hms = "6.13.0.300"
+hms-appservice = "5.0.4.303"
 persianDate = "1.7.1"
 #Gradle
 gradlePlugins-agp = "8.11.1"
@@ -114,6 +115,7 @@ rx-java = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxJava3" }
 billing-client = { module = "com.android.billingclient:billing", version.ref = "billing" }
 rustore-client = { module = "ru.rustore.sdk:billingclient", version.ref = "rustore" }
 hms-client = { module = "com.huawei.hms:iap", version.ref = "hms" }
+hms-appservice = { module = "com.huawei.hms:appservice", version.ref = "hms-appservice" }
 persian-date = { module = "com.github.samanzamani:PersianDate", version.ref = "persianDate" }
 #Kotlin
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
