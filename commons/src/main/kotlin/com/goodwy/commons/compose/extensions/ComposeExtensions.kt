@@ -27,8 +27,11 @@ import androidx.lifecycle.compose.LifecycleStartEffect
 import com.goodwy.commons.compose.system_ui_controller.rememberSystemUiController
 import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.compose.theme.isLitWell
+import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.darkenColor
+import com.goodwy.commons.extensions.getContrastColor
 import com.goodwy.commons.extensions.googlePlayDevUrlRes
+import com.goodwy.commons.extensions.isDynamicTheme
 import com.goodwy.commons.extensions.launchViewIntent
 
 fun Context.getActivity(): Activity {
@@ -151,24 +154,28 @@ fun ComponentActivity.enableEdgeToEdgeSimple() {
 }
 
 @Composable
-internal fun TransparentSystemBars(darkIcons: Boolean = !isSystemInDarkTheme()) {
+internal fun TransparentSystemBars() {
     val systemUiController = rememberSystemUiController()
 
-    DisposableEffect(systemUiController, darkIcons) {
-        systemUiController.setSystemBarsColor(
-            color = Color.Transparent,
-            darkIcons = darkIcons,
-            isNavigationBarContrastEnforced = true
-        )
-        onDispose { }
-    }
-//    SideEffect {
+//    DisposableEffect(systemUiController, darkIcons) {
 //        systemUiController.setSystemBarsColor(
 //            color = Color.Transparent,
 //            darkIcons = darkIcons,
 //            isNavigationBarContrastEnforced = true
 //        )
+//        onDispose { }
 //    }
+
+    val localContext = LocalContext.current
+    val darkIcons = (localContext.isDynamicTheme() && !isSystemInDarkTheme()) ||
+        (localContext.baseConfig.backgroundColor.getContrastColor() != android.graphics.Color.WHITE)
+    SideEffect {
+        systemUiController.setSystemBarsColor(
+            color = Color.Transparent,
+            darkIcons = darkIcons,
+            isNavigationBarContrastEnforced = true
+        )
+    }
 }
 
 @Composable
