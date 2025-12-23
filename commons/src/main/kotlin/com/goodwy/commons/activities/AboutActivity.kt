@@ -56,6 +56,7 @@ class AboutActivity : BaseComposeActivity() {
                             appName = appName,
                             appVersion = intent.getStringExtra(APP_VERSION_NAME) ?: "",
                             appFlavor = getFlavorName(),
+                            packageName = packageName,
                             onRateUsClick = {
                                 onRateUsClick(
                                     showConfirmationAdvancedDialog = onRateUsClickAlertDialogState::show,

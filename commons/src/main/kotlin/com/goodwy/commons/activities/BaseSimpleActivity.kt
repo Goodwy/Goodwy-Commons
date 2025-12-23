@@ -671,12 +671,13 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         }
     }
 
-    fun startPurchaseActivity(appNameId: Int,
-                              productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
-                              subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
-                              subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
-                              showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
-                              showCollection: Boolean = resources.getBoolean(R.bool.show_collection)
+    fun startPurchaseActivity(
+        appNameId: Int,
+        productIdList: ArrayList<String>, productIdListRu: ArrayList<String>,
+        subscriptionIdList: ArrayList<String>, subscriptionIdListRu: ArrayList<String>,
+        subscriptionYearIdList: ArrayList<String>, subscriptionYearIdListRu: ArrayList<String>,
+        showLifebuoy: Boolean = resources.getBoolean(R.bool.show_lifebuoy),
+        showCollection: Boolean = resources.getBoolean(R.bool.show_collection)
     ) {
         Intent(applicationContext, PurchaseActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
@@ -694,14 +695,15 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         }
     }
 
-    fun startCustomizationActivity(showAccentColor : Boolean = false, isCollection : Boolean = false,
-                                   productIdList: ArrayList<String> = arrayListOf("", "", ""),
-                                   productIdListRu: ArrayList<String> = arrayListOf("", "", ""),
-                                   subscriptionIdList: ArrayList<String> = arrayListOf("", "", ""),
-                                   subscriptionIdListRu: ArrayList<String> = arrayListOf("", "", ""),
-                                   subscriptionYearIdList: ArrayList<String> = arrayListOf("", "", ""),
-                                   subscriptionYearIdListRu: ArrayList<String> = arrayListOf("", "", ""),
-                                   showAppIconColor : Boolean = false
+    fun startCustomizationActivity(
+        showAccentColor: Boolean = false, isCollection: Boolean = false,
+        productIdList: ArrayList<String> = arrayListOf("", "", ""),
+        productIdListRu: ArrayList<String> = arrayListOf("", "", ""),
+        subscriptionIdList: ArrayList<String> = arrayListOf("", "", ""),
+        subscriptionIdListRu: ArrayList<String> = arrayListOf("", "", ""),
+        subscriptionYearIdList: ArrayList<String> = arrayListOf("", "", ""),
+        subscriptionYearIdListRu: ArrayList<String> = arrayListOf("", "", ""),
+        showAppIconColor: Boolean = false
     ) {
         if (!packageName.contains("ywdoog".reversed(), true)) {
             if (baseConfig.appRunCount > 100) {

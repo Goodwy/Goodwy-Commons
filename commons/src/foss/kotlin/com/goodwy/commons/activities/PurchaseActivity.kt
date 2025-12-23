@@ -9,7 +9,7 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.strings.R as stringsR
 
 class PurchaseActivity : BaseSimpleActivity() {
-    private var appName = ""
+//    private var appName = ""
     private var primaryColor = 0
     private var showLifebuoy = true
 
@@ -29,7 +29,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 //            padTopSystem = listOf(binding.proHolder)
 //        )
 
-        appName = intent.getStringExtra(APP_NAME) ?: ""
+//        appName = intent.getStringExtra(APP_NAME) ?: ""
         primaryColor = getProperPrimaryColor()
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
     }

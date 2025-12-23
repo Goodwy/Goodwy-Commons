@@ -98,6 +98,7 @@ private fun AboutScreenPreview() {
                     appName = "Common",
                     appVersion = "1.0",
                     appFlavor = "foss",
+                    packageName = "com.goodwy.common",
                     onRateUsClick = {},
                     onMoreAppsClick = {},
                     onPrivacyPolicyClick = {},
@@ -127,6 +128,7 @@ internal fun AboutNewSection(
     appName: String,
     appVersion: String,
     appFlavor: String,
+    packageName: String,
     onRateUsClick: () -> Unit,
     onMoreAppsClick: () -> Unit,
     onPrivacyPolicyClick: () -> Unit,
@@ -184,11 +186,18 @@ internal fun AboutNewSection(
                         )
                     },
                     supportingContent = {
-                        Text(
-                            modifier = Modifier.padding(start = 12.dp),
-                            text = "Version: $appVersion",
-                            color = textColor.copy(alpha = 0.5F),
-                        )
+                        Column {
+                            Text(
+                                modifier = Modifier.padding(start = 12.dp),
+                                text = "Version: $appVersion",
+                                color = textColor.copy(alpha = 0.5F),
+                            )
+                            Text(
+                                modifier = Modifier.padding(start = 12.dp),
+                                text = packageName,
+                                color = textColor.copy(alpha = 0.5F),
+                            )
+                        }
                     },
                 )
             }
