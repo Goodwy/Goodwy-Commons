@@ -863,6 +863,10 @@ open class BaseConfig(val context: Context) {
     var showNicknameInsteadNames: Boolean
         get() = prefs.getBoolean(SHOW_NICKNAME_INSTEAD_NAME, false)
         set(showNicknameInsteadNames) = prefs.edit { putBoolean(SHOW_NICKNAME_INSTEAD_NAME, showNicknameInsteadNames) }
+
+    var lastError: String
+        get() = prefs.getString(LAST_ERROR, "")!!
+        set(lastError) = prefs.edit { putString(LAST_ERROR, lastError) }
 }
 
 
