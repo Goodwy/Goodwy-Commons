@@ -148,7 +148,7 @@ internal fun AboutNewSection(
     ) {
         val context = LocalContext.current
         val textColor = MaterialTheme.colorScheme.onSurface
-        Column(Modifier.padding(start = 16.dp, end = 16.dp, bottom = 26.dp)) {
+        Column(Modifier.padding(start = 6.dp, end = 6.dp, bottom = 26.dp)) {
             Card(shape = RoundedCornerShape(16.dp)) {
                 ListItem(
                     modifier = Modifier
