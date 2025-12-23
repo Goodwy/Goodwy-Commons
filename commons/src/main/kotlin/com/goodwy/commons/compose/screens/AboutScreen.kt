@@ -179,22 +179,21 @@ internal fun AboutNewSection(
                         }
                     },
                     headlineContent = {
-                        Text(
-                            modifier = Modifier.padding(start = 12.dp),
-                            text = appName,
-                            fontSize = 18.sp,
-                        )
-                    },
-                    supportingContent = {
-                        Column {
+                        Column(modifier = Modifier.padding(start = 12.dp)) {
                             Text(
-                                modifier = Modifier.padding(start = 12.dp),
+                                text = appName,
+                                fontSize = 18.sp,
+                            )
+                            Text(
                                 text = "Version: $appVersion",
+                                fontSize = 14.sp,
+                                lineHeight = 18.sp,
                                 color = textColor.copy(alpha = 0.5F),
                             )
                             Text(
-                                modifier = Modifier.padding(start = 12.dp),
                                 text = packageName,
+                                fontSize = 14.sp,
+                                lineHeight = 18.sp,
                                 color = textColor.copy(alpha = 0.5F),
                             )
                         }
