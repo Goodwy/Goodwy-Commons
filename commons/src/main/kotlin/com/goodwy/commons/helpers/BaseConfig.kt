@@ -281,7 +281,7 @@ open class BaseConfig(val context: Context) {
         set(isSystemThemeEnabled) = prefs.edit { putBoolean(IS_SYSTEM_THEME_ENABLED, isSystemThemeEnabled) }
 
     var isAutoThemeEnabled: Boolean
-        get() = prefs.getBoolean(IS_AUTO_THEME_ENABLED, false)
+        get() = prefs.getBoolean(IS_AUTO_THEME_ENABLED, context.packageName.startsWith("dev.goodwy.", true))
         set(isAutoThemeEnabled) = prefs.edit { putBoolean(IS_AUTO_THEME_ENABLED, isAutoThemeEnabled) }
 
     var wasCustomThemeSwitchDescriptionShown: Boolean
