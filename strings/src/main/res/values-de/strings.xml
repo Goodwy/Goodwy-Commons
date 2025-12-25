@@ -26,6 +26,8 @@
     <string name="color_summary">Manuelle Anpassung von Grundfarbe, Akzent, Hintergrund, Text und Navigationsleiste</string>
     <string name="plus_title">Unterstütze uns</string>
     <string name="plus_summary">Mit Ihrer Hilfe können wir weitere Funktionen implementieren und die Anwendung noch besser machen</string>
+    <string name="attention">Aufmerksamkeit</string>
+    <string name="attention_summary">Falls Sie in unserer alten Version Käufe getätigt oder das Projekt auf anderen Plattformen unterstützt haben, senden Sie uns bitte eine Bestätigung per E-Mail, und wir werden versuchen, Ihnen einen Aktionscode zuzusenden.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

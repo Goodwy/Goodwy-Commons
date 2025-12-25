@@ -50,6 +50,8 @@
     <string name="color_summary">Manuell justering av primærfarge, utheving, bakgrunn, tekst og navigasjonsfelt</string>
     <string name="plus_title">Støtt oss</string>
     <string name="plus_summary">Med din hjelp kan vi implementere flere funksjoner og gjøre applikasjonen enda bedre</string>
+    <string name="attention">Oppmerksomhet</string>
+    <string name="attention_summary">Hvis du har kjøpt noe i den gamle versjonen vår eller støttet prosjektet på andre plattformer, kan du sende oss en bekreftelse på e-post, så vil vi prøve å sende deg en kampanjekode.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

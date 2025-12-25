@@ -11,9 +11,10 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.findViewTreeLifecycleOwner
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.getColoredDrawableWithColor
-import com.goodwy.commons.extensions.getProperBackgroundColor
+import com.goodwy.commons.extensions.getContrastColor
 import com.goodwy.commons.extensions.getProperPrimaryColor
 import com.goodwy.commons.extensions.getProperTextColor
+import com.goodwy.commons.extensions.getSurfaceColor
 
 class PurchaseThankYouItem @JvmOverloads constructor(
     context: Context,
@@ -60,16 +61,27 @@ class PurchaseThankYouItem @JvmOverloads constructor(
     }
 
     fun updateVisibility() {
-        val appDrawable = context.resources.getColoredDrawableWithColor(context, R.drawable.ic_plus_support, context.getProperPrimaryColor())
-        findViewById<ImageView>(R.id.purchase_logo).setImageDrawable(appDrawable)
-        val drawable = context.resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg, context.getProperPrimaryColor())
+        val primaryColor = context.getProperPrimaryColor()
+        val textColor = context.getProperTextColor()
+
+        val appDrawable =
+            context.resources.getColoredDrawableWithColor(context, R.drawable.ic_plus_support, primaryColor)
+        val appBg =
+            context.resources.getColoredDrawableWithColor(context, R.drawable.button_white_bg_24dp, context.getSurfaceColor())
+        findViewById<ImageView>(R.id.purchase_logo).apply {
+            setImageDrawable(appDrawable)
+            val isDev = context.packageName.startsWith("dev.")
+            if (isDev) background = appBg
+        }
+
+        val drawable =
+            context.resources.getColoredDrawableWithColor(context, R.drawable.button_gray_bg, primaryColor)
         findViewById<AppCompatButton>(R.id.purchase_thank_you_more).apply {
             background = drawable
-            setTextColor(context.getProperBackgroundColor())
+            setTextColor(primaryColor.getContrastColor())
             setPadding(2, 2, 2, 2)
         }
 
-        val textColor = context.getProperTextColor()
         findViewById<MyTextView>(R.id.purchase_thank_you_title).setTextColor(textColor)
         findViewById<MyTextView>(R.id.purchase_thank_you_label).setTextColor(textColor)
     }

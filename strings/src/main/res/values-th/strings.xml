@@ -44,6 +44,8 @@
     <string name="color_summary">การปรับสีหลัก การเน้นเสียง พื้นหลัง ข้อความ และแถบนําทางด้วยตนเอง</string>
     <string name="plus_title">สนับสนุนเรา</string>
     <string name="plus_summary">ด้วยความช่วยเหลือของคุณเราสามารถใช้คุณสมบัติเพิ่มเติมและทําให้แอปพลิเคชันดียิ่งขึ้น</string>
+    <string name="attention">ความสนใจ</string>
+    <string name="attention_summary">หากคุณเคยซื้อสินค้าในเวอร์ชันเก่าของเรา หรือสนับสนุนโครงการผ่านแพลตฟอร์มอื่น โปรดส่งอีเมลยืนยันมาให้เรา และเราจะพยายามส่งรหัสโปรโมชั่นให้คุณ</string>
     <string name="about_summary">
         <![CDATA[
             <i>

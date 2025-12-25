@@ -44,6 +44,8 @@
     <string name="color_summary">Mana alĝustigo de la primara koloro, akcento, fono, teksto kaj navigadbreto</string>
     <string name="plus_title">Subtenu nin</string>
     <string name="plus_summary">Kun via helpo ni povas efektivigi pli da funkcioj kaj fari la aplikaĵon eĉ pli bona</string>
+    <string name="attention">Atento</string>
+    <string name="attention_summary">Se vi aĉetis per nia malnova versio aŭ subtenis la projekton per aliaj platformoj, bonvolu sendi al ni konfirmon per retpoŝto kaj ni provos sendi al vi varbokodon.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

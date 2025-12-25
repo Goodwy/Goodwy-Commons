@@ -26,6 +26,8 @@
     <string name="color_summary">Ročno prilagajanje primarne barve, naglasa, ozadja, besedila in vrstice za krmarjenje</string>
     <string name="plus_title">Podprite nas</string>
     <string name="plus_summary">Z vašo pomočjo lahko implementiramo več funkcij in naredimo aplikacijo še boljšo</string>
+    <string name="attention">Pozornost</string>
+    <string name="attention_summary">Če ste nakupe opravili v naši stari različici ali podprli projekt na drugih platformah, nam prosim pošljite potrditveno sporočilo po e-pošti in poskušali vam bomo poslati promocijsko kodo.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

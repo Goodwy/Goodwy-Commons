@@ -26,6 +26,8 @@
     <string name="color_summary">Ajuste manual del color primario, el acento, el fondo, el texto y la barra de navegación</string>
     <string name="plus_title">Apóyanos</string>
     <string name="plus_summary">Con su ayuda, podemos implementar más funciones y hacer que la aplicación sea aún mejor</string>
+    <string name="attention">Atención</string>
+    <string name="attention_summary">Si realizó compras en nuestra versión anterior o apoyó el proyecto en otras plataformas, envíenos alguna confirmación por correo electrónico e intentaremos enviarle un código promocional.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

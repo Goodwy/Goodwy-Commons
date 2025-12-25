@@ -44,6 +44,8 @@
     <string name="color_summary">Põhivärvi, rõhu, tausta, teksti ja navigeerimisriba käsitsi reguleerimine</string>
     <string name="plus_title">Toetage meid</string>
     <string name="plus_summary">Teie abiga saame rakendada rohkem funktsioone ja muuta rakenduse veelgi paremaks</string>
+    <string name="attention">Tähelepanu</string>
+    <string name="attention_summary">Kui sooritasite oste meie vanas versioonis või toetasite projekti teistel platvormidel, saatke meile palun kinnitus e-posti teel ja me proovime teile sooduskoodi saata.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

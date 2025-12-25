@@ -26,6 +26,8 @@
     <string name="color_summary">Manuel justering af primærfarve, accent, baggrund, tekst og navigationslinje</string>
     <string name="plus_title">Støt os</string>
     <string name="plus_summary">Med din hjælp kan vi implementere flere funktioner og gøre applikationen endnu bedre</string>
+    <string name="attention">Opmærksomhed</string>
+    <string name="attention_summary">Hvis du har foretaget køb i vores gamle version eller støttet projektet på andre platforme, bedes du sende os en bekræftelse via e-mail, så vil vi forsøge at sende dig en rabatkode.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

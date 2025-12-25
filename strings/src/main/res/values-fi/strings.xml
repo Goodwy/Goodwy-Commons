@@ -26,6 +26,8 @@
     <string name="color_summary">Päävärin, korostuksen, taustan, tekstin ja siirtymispalkin manuaalinen säätö</string>
     <string name="plus_title">Tue meitä</string>
     <string name="plus_summary">Avullasi voimme toteuttaa lisää ominaisuuksia ja tehdä sovelluksesta entistä paremman</string>
+    <string name="attention">Huomio</string>
+    <string name="attention_summary">Jos teit ostoksia vanhassa versiossamme tai tuit projektia muilla alustoilla, lähetä meille vahvistus sähköpostitse, niin yritämme lähettää sinulle tarjouskoodin.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

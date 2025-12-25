@@ -26,6 +26,8 @@
     <string name="color_summary">Ruční nastavení primární barvy, zvýraznění, pozadí, textu a navigačního panelu</string>
     <string name="plus_title">Podpořte nás</string>
     <string name="plus_summary">S vaší pomocí můžeme implementovat více funkcí a aplikaci ještě vylepšit</string>
+    <string name="attention">Pozor</string>
+    <string name="attention_summary">Pokud jste provedli nákupy v naší staré verzi nebo podpořili projekt na jiných platformách, zašlete nám prosím potvrzení e-mailem a my se vám pokusíme poslat promo kód.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

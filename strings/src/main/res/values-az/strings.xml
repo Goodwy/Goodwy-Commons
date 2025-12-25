@@ -26,6 +26,8 @@
     <string name="color_summary">Əsas rəng, vurğu, fon, mətn və naviqasiya panelinin əl ilə tənzimlənməsi</string>
     <string name="plus_title">Bizi dəstəkləyin</string>
     <string name="plus_summary">Sizin köməyinizlə biz daha çox funksiya tətbiq edə və tətbiqi daha da yaxşılaşdıra bilərik</string>
+    <string name="attention">Diqqət</string>
+    <string name="attention_summary">Köhnə versiyamızda alış-veriş etmisinizsə və ya layihəni digər platformalarda dəstəkləmisinizsə, zəhmət olmasa, bizə e-poçtla təsdiq göndərin və biz sizə promo kod göndərməyə çalışacağıq.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

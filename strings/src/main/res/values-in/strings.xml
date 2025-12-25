@@ -26,6 +26,8 @@
     <string name="color_summary">Penyesuaian warna primer, aksen, latar belakang, teks, dan bilah navigasi secara manual</string>
     <string name="plus_title">Dukung kami</string>
     <string name="plus_summary">Dengan bantuan Anda, kami dapat mengimplementasikan lebih banyak fitur dan membuat aplikasi menjadi lebih baik</string>
+    <string name="attention">Perhatian</string>
+    <string name="attention_summary">Jika Anda melakukan pembelian di versi lama kami atau mendukung proyek ini di platform lain, mohon kirimkan konfirmasi melalui email dan kami akan mencoba mengirimkan kode promo kepada Anda.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

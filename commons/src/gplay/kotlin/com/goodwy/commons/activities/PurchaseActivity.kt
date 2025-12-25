@@ -36,6 +36,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private var appName = ""
     private var primaryColor = 0
+    private var surfaceColor = 0
     private var productIdList: ArrayList<String> = ArrayList()
     private var productIdListRu: ArrayList<String> = ArrayList()
     private var subscriptionIdList: ArrayList<String> = ArrayList()
@@ -67,6 +68,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         subscriptionYearIdList = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST) ?: arrayListOf("", "", "")
         subscriptionYearIdListRu = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST_RU) ?: arrayListOf("", "", "")
         primaryColor = getProperPrimaryColor()
+        surfaceColor = getSurfaceColor()
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
         showCollection = intent.getBooleanExtra(SHOW_COLLECTION, false)
 
@@ -171,13 +173,13 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupEmail() {
-        binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
+//        binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
         val lifebuoyButtonDrawable =
             resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
         binding.lifebuoyButton.setImageDrawable(lifebuoyButtonDrawable)
         binding.lifebuoyButton.setOnClickListener {
             ConfirmationDialog(this, getString(R.string.send_email)) {
-                val body = "$appName : Lifebuoy"
+                val body = "$appName : Support for the old version"
                 val address = getMyMailString()
                 val selectorIntent = Intent(ACTION_SENDTO)
                     .setData("mailto:$address".toUri())
@@ -416,14 +418,25 @@ class PurchaseActivity : BaseSimpleActivity() {
 
     private fun setupIcon() {
         val appDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_plus_support, primaryColor)
+        val appBg = resources.getColoredDrawableWithColor(this, R.drawable.squircle_bg, surfaceColor)
         binding.topDetails.appLogo.setImageDrawable(appDrawable)
-        val themeDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_invert_colors, primaryColor)
+        binding.topDetails.appLogo.background = appBg
+
+        val textColor = getProperTextColor()
+        binding.appOne.background.setTint(surfaceColor)
+        binding.appOneName.setTextColor(textColor)
+        binding.appTwo.background.setTint(surfaceColor)
+        binding.appTwoName.setTextColor(textColor)
+        binding.appThree.background.setTint(surfaceColor)
+        binding.appThreeName.setTextColor(textColor)
+
+        val themeDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_theme_colors, primaryColor)
         binding.themeLogo.setImageDrawable(themeDrawable)
         val colorDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_palette, primaryColor)
         binding.colorLogo.setImageDrawable(colorDrawable)
         val plusDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_plus_round, primaryColor)
         binding.plusLogo.setImageDrawable(plusDrawable)
-        val lifebuoyDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_lifebuoy, primaryColor)
+        val lifebuoyDrawable = resources.getColoredDrawableWithColor(this, R.drawable.ic_warning_round, primaryColor)
         binding.lifebuoyLogo.setImageDrawable(lifebuoyDrawable)
 
         binding.goodwyLogo.apply {
@@ -530,7 +543,11 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         clicksSinceFirstClick++
         if (clicksSinceFirstClick == EASTER_EGG_REQUIRED_CLICKS) {
-//            toast(R.string.hello)
+            toast(R.string.hello)
+        } else if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS_NEXT && isPro()) {
+            firstVersionClickTS = 0L
+            clicksSinceFirstClick = 0
+            toast("Thank you for your support!")
         } else if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS_NEXT && !isPro()) {
             firstVersionClickTS = 0L
             clicksSinceFirstClick = 0

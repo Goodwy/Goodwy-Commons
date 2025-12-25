@@ -44,6 +44,8 @@
     <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
     <string name="plus_title">Support us</string>
     <string name="plus_summary">আপনার সাহায্যে আমরা আরও বৈশিষ্ট্য বাস্তবায়ন করতে পারি এবং অ্যাপ্লিকেশনটিকে আরও উন্নত করতে পারি</string>
+    <string name="attention">মনোযোগ</string>
+    <string name="attention_summary">আপনি যদি আমাদের পুরানো সংস্করণে কেনাকাটা করে থাকেন অথবা অন্যান্য প্ল্যাটফর্মে প্রকল্পটিকে সমর্থন করে থাকেন, তাহলে অনুগ্রহ করে আমাদের ইমেলের মাধ্যমে কিছু নিশ্চিতকরণ পাঠান এবং আমরা আপনাকে একটি প্রোমো কোড পাঠানোর চেষ্টা করব।</string>
     <string name="about_summary">
         <![CDATA[
             <i>

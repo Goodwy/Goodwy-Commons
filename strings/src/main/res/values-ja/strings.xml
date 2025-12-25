@@ -26,6 +26,8 @@
     <string name="color_summary">原色、アクセント、背景、テキスト、ナビゲーションバーの手動調整</string>
     <string name="plus_title">私たちをサポートしてください</string>
     <string name="plus_summary">あなたの助けを借りて、私たちはより多くの機能を実装し、アプリケーションをさらに良くすることができます</string>
+    <string name="attention">注意</string>
+    <string name="attention_summary">以前のバージョンでご購入いただいた場合、または他のプラットフォームでプロジェクトをサポートしていた場合は、メールで確認をお送りください。プロモーション コードをお送りします。</string>
     <string name="about_summary">
         <![CDATA[
             <i>

@@ -26,6 +26,8 @@
     <string name="color_summary">手動調整原色、強調色、背景、文本和導航欄</string>
     <string name="plus_title">支持我們</string>
     <string name="plus_summary">在您的説明下，我們可以實現更多功能並使應用程式變得更好</string>
+    <string name="attention">注意力</string>
+    <string name="attention_summary">如果您曾在我們的舊版本中進行過購買或在其他平台上支援過該項目，請透過電子郵件向我們發送一些確認訊息，我們將嘗試向您發送促銷代碼。</string>
     <string name="about_summary">
         <![CDATA[
             <i>

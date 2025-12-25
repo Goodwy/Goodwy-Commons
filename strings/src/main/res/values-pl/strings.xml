@@ -26,6 +26,8 @@
     <string name="color_summary">Ręczna regulacja koloru podstawowego, akcentu, tła, tekstu i paska nawigacyjnego</string>
     <string name="plus_title">Wesprzyj nas</string>
     <string name="plus_summary">Z Twoją pomocą możemy wdrożyć więcej funkcji i uczynić aplikację jeszcze lepszą</string>
+    <string name="attention">Uwaga</string>
+    <string name="attention_summary">Jeśli dokonałeś zakupów w starej wersji lub wspierałeś projekt na innych platformach, prosimy o przesłanie nam potwierdzenia e-mailem, a my postaramy się wysłać Ci kod promocyjny.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

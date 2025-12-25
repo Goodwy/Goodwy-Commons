@@ -1532,7 +1532,7 @@ fun Context.isRuStoreInstalled(): Boolean {
 fun Context.isPro() =
     if (packageName.startsWith("dev.")) {
         if (resources.getBoolean(R.bool.is_foss)) baseConfig.isProNoGP
-        else baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore
+        else baseConfig.isPro || baseConfig.isProSubs //|| baseConfig.isProRuStore
     } else {
         baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore ||
             (resources.getBoolean(R.bool.using_no_gp) && baseConfig.isProNoGP)

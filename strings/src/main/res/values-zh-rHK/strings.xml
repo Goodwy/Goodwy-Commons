@@ -44,6 +44,8 @@
     <string name="color_summary">手动调整原色、强调色、背景、文本和导航栏</string>
     <string name="plus_title">支持我们</string>
     <string name="plus_summary">在您的帮助下，我们可以实现更多功能并使应用程序变得更好</string>
+    <string name="attention">注意力</string>
+    <string name="attention_summary">如果您曾在我們的舊版本中進行過購買或在其他平台上支援過該項目，請透過電子郵件向我們發送一些確認訊息，我們將嘗試向您發送促銷代碼。</string>
     <string name="about_summary">
         <![CDATA[
             <i>

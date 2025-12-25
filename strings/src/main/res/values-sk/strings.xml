@@ -26,6 +26,8 @@
     <string name="color_summary">Manuálna úprava primárnej farby, zvýraznenia, pozadia, textu a navigačného panela</string>
     <string name="plus_title">Podporte nás</string>
     <string name="plus_summary">S vašou pomocou môžeme implementovať viac funkcií a aplikáciu ešte vylepšiť</string>
+    <string name="attention">Pozornosť</string>
+    <string name="attention_summary">Ak ste nakupovali v našej starej verzii alebo ste podporili projekt na iných platformách, pošlite nám prosím potvrdenie e-mailom a my sa vám pokúsime poslať promo kód.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

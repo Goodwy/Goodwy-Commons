@@ -26,6 +26,8 @@
     <string name="color_summary">Điều chỉnh thủ công màu chính, dấu, nền, văn bản và thanh điều hướng</string>
     <string name="plus_title">Hỗ trợ chúng tôi</string>
     <string name="plus_summary">Với sự giúp đỡ của bạn, chúng tôi có thể triển khai nhiều tính năng hơn và làm cho ứng dụng tốt hơn nữa</string>
+    <string name="attention">Chú ý</string>
+    <string name="attention_summary">Nếu bạn đã mua hàng trong phiên bản cũ của chúng tôi hoặc ủng hộ dự án trên các nền tảng khác, vui lòng gửi cho chúng tôi xác nhận qua email và chúng tôi sẽ cố gắng gửi cho bạn mã khuyến mãi.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

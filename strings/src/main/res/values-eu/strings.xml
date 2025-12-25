@@ -26,6 +26,8 @@
     <string name="color_summary">Kolore nagusia, azentua, atzeko planoa, testua eta nabigazio-barra eskuz doitzea</string>
     <string name="plus_title">Lagundu gaitzazu</string>
     <string name="plus_summary">Zure laguntzarekin eginbide gehiago inplementa ditzakegu eta aplikazioa are hobea egin</string>
+    <string name="attention">Arreta</string>
+    <string name="attention_summary">Gure bertsio zaharrean erosketak egin badituzu edo proiektua beste plataforma batzuetan babestu baduzu, bidali iezaguzu baieztapen bat posta elektronikoz eta promozio-kode bat bidaltzen saiatuko gara.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

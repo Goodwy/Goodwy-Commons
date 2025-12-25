@@ -26,6 +26,8 @@
     <string name="color_summary">الضبط اليدوي للون الأساسي واللكنة والخلفية والنص وشريط التنقل</string>
     <string name="plus_title">ادعمنا</string>
     <string name="plus_summary">بمساعدتكم يمكننا تنفيذ المزيد من الميزات وجعل التطبيق أفضل</string>
+    <string name="attention">انتباه</string>
+    <string name="attention_summary">إذا قمت بعمليات شراء في إصدارنا القديم أو دعمت المشروع على منصات أخرى، فيرجى إرسال تأكيد إلينا عبر البريد الإلكتروني وسنحاول إرسال رمز ترويجي إليك.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

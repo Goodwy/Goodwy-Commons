@@ -44,6 +44,8 @@
     <string name="color_summary">Manual adjustment of the primary color, accent, background, text and navigation bar</string>
     <string name="plus_title">Support us</string>
     <string name="plus_summary">With your help we can implement more features and make the application even better</string>
+    <string name="attention">Pažnja</string>
+    <string name="attention_summary">Ako ste kupovali u našoj staroj verziji ili podržali projekat na drugim platformama, molimo vas da nam pošaljete potvrdu putem e-maila i pokušat ćemo vam poslati promotivni kod.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

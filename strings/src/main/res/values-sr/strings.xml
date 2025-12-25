@@ -27,6 +27,8 @@
     <string name="color_summary">Ручно подешавање примарне боје, наглашене боје, позадине, текста и навигационе траке</string>
     <string name="plus_title">Подржите нас</string>
     <string name="plus_summary">Уз вашу помоћ можемо имплементирати више функција и учинити апликацију још бољом</string>
+    <string name="attention">Пажња</string>
+    <string name="attention_summary">Ако сте обавили куповину у нашој старој верзији или подржали пројекат на другим платформама, пошаљите нам потврду путем е-поште и покушаћемо да вам пошаљемо промотивни код.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

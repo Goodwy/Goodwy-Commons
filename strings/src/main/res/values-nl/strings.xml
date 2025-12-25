@@ -26,6 +26,8 @@
     <string name="color_summary">Handmatige aanpassing van de primaire kleur, accent, achtergrond, tekst en navigatiebalk</string>
     <string name="plus_title">Steun ons</string>
     <string name="plus_summary">Met uw hulp kunnen we meer functies implementeren en de applicatie nog beter maken</string>
+    <string name="attention">Aandacht</string>
+    <string name="attention_summary">Als je aankopen hebt gedaan in onze oude versie of het project op andere platforms hebt gesteund, stuur ons dan een bevestiging per e-mail en we zullen proberen je een promotiecode te sturen.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

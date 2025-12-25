@@ -44,6 +44,8 @@
     <string name="color_summary">Ручная настройка асноўнага колеру, акцэнту, фону, тэксту і панэль навігацыі</string>
     <string name="plus_title">Падтрымайце нас</string>
     <string name="plus_summary">З вашай дапамогай мы можам рэалізаваць больш функцый і зрабіць дадатак яшчэ лепш</string>
+    <string name="attention">Увага</string>
+    <string name="attention_summary">Калі Вы рабілі пакупкі ў нашай старой версіі або падтрымлівалі праект на іншых пляцоўках, дашліце нам нейкае пацвярджэнне на пошту і мы пастараемся выслаць вам промакод</string>
     <string name="about_summary">
         <![CDATA[
             <i>

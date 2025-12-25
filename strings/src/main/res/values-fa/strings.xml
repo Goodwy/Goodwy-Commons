@@ -26,6 +26,8 @@
     <string name="color_summary">تنظیم دستی رنگ اولیه، لهجه، پس زمینه، متن و نوار ناوبری</string>
     <string name="plus_title">از ما حمایت کنید</string>
     <string name="plus_summary">با کمک شما می توانیم ویژگی های بیشتری را پیاده سازی کنیم و برنامه را حتی بهتر کنیم</string>
+    <string name="attention">توجه</string>
+    <string name="attention_summary">اگر در نسخه قدیمی ما خریدهایی انجام داده‌اید یا از پروژه در پلتفرم‌های دیگر پشتیبانی کرده‌اید، لطفاً از طریق ایمیل تأییدیه برای ما ارسال کنید تا سعی کنیم یک کد تخفیف برای شما ارسال کنیم.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

@@ -44,6 +44,8 @@
     <string name="color_summary">Ръчно регулиране на основния цвят, акцент, фон, текст и навигационна лента</string>
     <string name="plus_title">Подкрепете ни</string>
     <string name="plus_summary">С ваша помощ можем да внедрим повече функции и да направим приложението още по-добро</string>
+    <string name="attention">Внимание</string>
+    <string name="attention_summary">Ако сте правили покупки в старата ни версия или сте подкрепили проекта на други платформи, моля, изпратете ни потвърждение по имейл и ние ще се опитаме да ви изпратим промоционален код.</string>
     <string name="about_summary">
         <![CDATA[
             <i>
