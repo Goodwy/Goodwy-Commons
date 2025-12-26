@@ -9,7 +9,9 @@
     <string name="symbols_first">சின்னங்கள் முதலில் (எ.கா. !@#$)</string>
     <string name="use_custom_notifications">தனிப்பயன் அறிவிப்புகளைப் பயன்படுத்தவும்</string>
     <string name="turn_on_screen">திரையை இயக்கு</string>
+    <string name="top_app_bar">மேல் பயன்பாட்டுப் பட்டி</string>
     <string name="hide_top_bar_when_scrolling">ஸ்க்ரோலிங் செய்யும் போது மேல் ஆப்ஸ் பட்டியை மறை</string>
+    <string name="show_search_bar">தேடல் பட்டியைக் காட்டு</string>
     <string name="unread_indicator_position">படிக்காத காட்டி நிலை</string>
     <string name="start">தொடங்கு</string>
     <string name="end">முடிவு</string>

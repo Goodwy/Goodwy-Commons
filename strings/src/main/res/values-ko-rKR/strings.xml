@@ -9,7 +9,9 @@
     <string name="symbols_first">기호 우선(예: !@#$)</string>
     <string name="use_custom_notifications">사용자 지정 알림 사용</string>
     <string name="turn_on_screen">화면 켜기</string>
+    <string name="top_app_bar">상단 앱 바</string>
     <string name="hide_top_bar_when_scrolling">스크롤할 때 앱 상단 표시줄 숨기기</string>
+    <string name="show_search_bar">검색창 표시</string>
     <string name="unread_indicator_position">읽지 않은 표시기 위치</string>
     <string name="start">시작</string>
     <string name="end">끝</string>

@@ -9,7 +9,9 @@
     <string name="symbols_first">Pirmieji simboliai (pvz., !@#$)</string>
     <string name="use_custom_notifications">Naudoti pasirinktinius pranešimus</string>
     <string name="turn_on_screen">Įjunkite ekraną</string>
+    <string name="top_app_bar">Viršutinė programų juosta</string>
     <string name="hide_top_bar_when_scrolling">Slėpti viršutinę programėlės juostą, kai slinkstama</string>
+    <string name="show_search_bar">Rodyti paieškos juostą</string>
     <string name="unread_indicator_position">Neperskaityto_indikatoriaus padėtis</string>
     <string name="start">Pradėti</string>
     <string name="end">Pabaiga</string>

@@ -9,7 +9,9 @@
     <string name="symbols_first">Əvvəlcə simvollar (məsələn, !@#$)</string>
     <string name="use_custom_notifications">Fərdi bildirişlərdən istifadə edin</string>
     <string name="turn_on_screen">Ekranı yandırın</string>
+    <string name="top_app_bar">Ən yaxşı tətbiq paneli</string>
     <string name="hide_top_bar_when_scrolling">Sürüşdürərkən yuxarı proqram panelini gizlədin</string>
+    <string name="show_search_bar">Axtarış panelini göstər</string>
     <string name="unread_indicator_position">Oxunmamış göstərici mövqeyi</string>
     <string name="start">Başla</string>
     <string name="end">Son</string>

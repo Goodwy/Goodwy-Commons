@@ -9,7 +9,9 @@
     <string name='symbols_first'>पहले प्रतीक (उदा. !@#$)</string>
     <string name='use_custom_notifications'>कस्टम नोटिफिकेशन का उपयोग करें</string>
     <string name="turn_on_screen">स्क्रीन चालू करें</string>
+    <string name="top_app_bar">शीर्ष ऐप बार</string>
     <string name='hide_top_bar_when_scrolling'>स्क्रॉल करते समय शीर्ष ऐप बार छुपाएं</string>
+    <string name="show_search_bar">खोज बार दिखाएँ</string>
     <string name='unread_indicator_position'>अपठित सूचक स्थिति</string>
     <string name='start'>प्रारंभ करें</string>
     <string name='end'>समाप्त</string>

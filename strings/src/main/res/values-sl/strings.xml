@@ -9,7 +9,9 @@
     <string name="symbols_first">Najprej simboli (npr. !@#$)</string>
     <string name="use_custom_notifications">Uporaba obvestil po meri</string>
     <string name="turn_on_screen">Vklop zaslona</string>
+    <string name="top_app_bar">Zgornja vrstica aplikacij</string>
     <string name="hide_top_bar_when_scrolling">Skrij zgornjo vrstico aplikacij med drsenjem</string>
+    <string name="show_search_bar">Prikaži iskalno vrstico</string>
     <string name="unread_indicator_position">Neprebran položaj indikatorja</string>
     <string name="start">Začni</string>
     <string name="end">Konec</string>

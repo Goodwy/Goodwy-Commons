@@ -9,7 +9,9 @@
     <string name="symbols_first">Prvo simboli (npr. !@#$)</string>
     <string name="use_custom_notifications">Koristite prilagođena obavještenja</string>
     <string name="turn_on_screen">Uključivanje zaslona</string>
+    <string name="top_app_bar">Gornja traka aplikacija</string>
     <string name="hide_top_bar_when_scrolling">Sakrij gornju traku aplikacije prilikom pomicanja</string>
+    <string name="show_search_bar">Prikaži traku za pretraživanje</string>
     <string name="unread_indicator_position">Nepročitana pozicija indikatora</string>
     <string name="start">Pokreni</string>
     <string name="end">Kraj</string>

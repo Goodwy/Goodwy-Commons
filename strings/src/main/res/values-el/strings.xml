@@ -9,7 +9,9 @@
     <string name="symbols_first">Σύμβολα πρώτα (π.χ. !@#$)</string>
     <string name="use_custom_notifications">Χρησιμοποιήστε προσαρμοσμένες ειδοποιήσεις</string>
     <string name="turn_on_screen">Ενεργοποιήστε την οθόνη</string>
+    <string name="top_app_bar">Επάνω γραμμή εφαρμογών</string>
     <string name="hide_top_bar_when_scrolling">Αποκρύψτε την επάνω μπάρα της εφαρμογής κατά την κύλιση</string>
+    <string name="show_search_bar">Εμφάνιση γραμμής αναζήτησης</string>
     <string name="unread_indicator_position">Θέση ένδειξης μη αναγνωσμένων μηνυμάτων</string>
     <string name="start">Έναρξη</string>
     <string name="end">Τέλος</string>

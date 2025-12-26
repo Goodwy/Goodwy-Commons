@@ -9,7 +9,9 @@
     <string name="symbols_first">Symbolau yn gyntaf (e.e. !@#$)</string>
     <string name="use_custom_notifications">Defnyddio hysbysiadau personol</string>
     <string name="turn_on_screen">Trowch y sgrin ymlaen</string>
+    <string name="top_app_bar">Bar apiau uchaf</string>
     <string name="hide_top_bar_when_scrolling">Cuddio\'r bar ap uchaf wrth sgrolio</string>
+    <string name="show_search_bar">Dangos y bar chwilio</string>
     <string name="unread_indicator_position"> Lleoliad y dangosydd heb ei ddarllen</string>
     <string name="start">Dechrau</string>
     <string name="end">Diwedd</string>

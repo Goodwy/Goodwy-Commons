@@ -9,7 +9,9 @@
     <string name="symbols_first">Ikurrak lehenik (adibidez, !@#$)</string>
     <string name="use_custom_notifications">Erabili jakinarazpen pertsonalizatuak</string>
     <string name="turn_on_screen">Piztu pantaila</string>
+    <string name="top_app_bar">Aplikazioen goiko barra</string>
     <string name="hide_top_bar_when_scrolling">Ezkutatu aplikazioaren goiko barra mugitzean</string>
+    <string name="show_search_bar">Erakutsi bilaketa-barra</string>
     <string name="unread_indicator_position">Irakurri gabeko adierazlearen posizioa</string>
     <string name="start">Hasi</string>
     <string name="end">Amaiera</string>

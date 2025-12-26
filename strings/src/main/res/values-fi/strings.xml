@@ -9,7 +9,9 @@
     <string name="symbols_first">Symbolit ensin (esim. !@#$)</string>
     <string name="use_custom_notifications">Käyttää mukautettuja ilmoituksia</string>
     <string name="turn_on_screen">Käynnistä näyttö</string>
+    <string name="top_app_bar">Yläsovelluspalkki</string>
     <string name="hide_top_bar_when_scrolling">Piilota sovelluksen yläpalkki selattaessa</string>
+    <string name="show_search_bar">Näytä hakupalkki</string>
     <string name="unread_indicator_position">Lukemattoman indikaattorin sijainti</string>
     <string name="start">Aloita</string>
     <string name="end">End</string>

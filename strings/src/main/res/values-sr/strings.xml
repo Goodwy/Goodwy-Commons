@@ -10,7 +10,9 @@
     <string name="symbols_first">Прво знакови (нпр. !@#$)</string>
     <string name="use_custom_notifications">Користите прилагођена обавештења</string>
     <string name="turn_on_screen">Укључите екран</string>
+    <string name="top_app_bar">Горња трака апликација</string>
     <string name="hide_top_bar_when_scrolling">Сакриј горњу траку приликом померања</string>
+    <string name="show_search_bar">Прикажи траку за претрагу</string>
     <string name="unread_indicator_position">Непрочитана позиција индикатора</string>
     <string name="start">Почетак</string>
     <string name="end">Крај</string>

@@ -27,7 +27,9 @@
     <string name="symbols_first">Sümbolid kõigepealt (nt !@#$)</string>
     <string name="use_custom_notifications">Kasutage kohandatud teateid</string>
     <string name="turn_on_screen">Lülitage ekraan sisse</string>
+    <string name="top_app_bar">Ülemine rakenduste riba</string>
     <string name="hide_top_bar_when_scrolling">Kata rakenduse ülemine riba kerimisel</string>
+    <string name="show_search_bar">Näita otsinguriba</string>
     <string name="unread_indicator_position">Unread indicator position</string>
     <string name="start">Start</string>
     <string name="end">End</string>

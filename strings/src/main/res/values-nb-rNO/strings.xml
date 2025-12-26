@@ -27,7 +27,9 @@
     <string name="symbols_first">Symboler først (f.eks. !@#$)</string>
     <string name="use_custom_notifications">Bruk tilpassede varsler</string>
     <string name="turn_on_screen">Slå på skjermen</string>
+    <string name="top_app_bar">Øverste applinje</string>
     <string name="hide_top_bar_when_scrolling">Dekke den øverste app-linjen når du blar</string>
+    <string name="show_search_bar">Vis søkefelt</string>
     <string name="unread_indicator_position">Posisjon for ulest indikator</string>
     <string name="start">Start</string>
     <string name="end">Slutt</string>

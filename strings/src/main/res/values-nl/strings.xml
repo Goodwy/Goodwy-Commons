@@ -9,7 +9,9 @@
     <string name="symbols_first">Symbolen eerst (bijv. !@#$)</string>
     <string name="use_custom_notifications">Gebruik aangepaste meldingen</string>
     <string name="turn_on_screen">Zet het scherm aan</string>
+    <string name="top_app_bar">Bovenste app-balk</string>
     <string name="hide_top_bar_when_scrolling">Verberg de bovenste app-balk tijdens het scrollen</string>
+    <string name="show_search_bar">Toon zoekbalk</string>
     <string name="unread_indicator_position">Positie ongelezen indicator</string>
     <string name="start">Start</string>
     <string name="end">Einde</string>

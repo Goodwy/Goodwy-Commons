@@ -27,7 +27,9 @@
     <string name="symbols_first">Simboloj unue (ekz. !@#$)</string>
     <string name="use_custom_notifications">Uzu kutimajn sciigojn</string>
     <string name="turn_on_screen">Enŝaltu la ekranon</string>
+    <string name="top_app_bar">Supra aplikaĵa breto</string>
     <string name="hide_top_bar_when_scrolling">Kaŝu la supran aplikan breton dum rulumado</string>
+    <string name="show_search_bar">Montri serĉobreton</string>
     <string name="unread_indicator_position">Nelegita indikilo pozicio</string>
     <string name="start">Komenco</string>
     <string name="end">Fino</string>

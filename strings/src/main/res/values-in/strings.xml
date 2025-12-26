@@ -9,7 +9,9 @@
     <string name="symbols_first">Simbol terlebih dahulu (misalnya !@#$)</string>
     <string name="use_custom_notifications">Gunakan notifikasi khusus</string>
     <string name="turn_on_screen">Nyalakan layarnya</string>
+    <string name="top_app_bar">Bilah aplikasi atas</string>
     <string name="hide_top_bar_when_scrolling">Menyembunyikan bilah aplikasi bagian atas saat menggulir</string>
+    <string name="show_search_bar">Tampilkan bilah pencarian</string>
     <string name="unread_indicator_position">Posisi indikator belum dibaca</string>
     <string name="start">Mulai</string>
     <string name="end">Akhir</string>

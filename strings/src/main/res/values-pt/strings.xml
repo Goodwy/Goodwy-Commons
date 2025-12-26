@@ -9,7 +9,9 @@
     <string name="symbols_first">Símbolos primeiro (por exemplo, !@#$)</string>
     <string name="use_custom_notifications">Usar notificações personalizadas</string>
     <string name="turn_on_screen">Ligar o ecrã</string>
+    <string name="top_app_bar">Barra de aplicativos superior</string>
     <string name="hide_top_bar_when_scrolling">Ocultar a barra superior do aplicativo ao rolar</string>
+    <string name="show_search_bar">Mostrar barra de pesquisa</string>
     <string name="unread_indicator_position">Posição do indicador de não lidas</string>
     <string name="start">Início</string>
     <string name="end">Fim</string>

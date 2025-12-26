@@ -9,7 +9,9 @@
     <string name="symbols_first">Najskôr symboly (napr. !@#$)</string>
     <string name="use_custom_notifications">Použiť vlastné upozornenia</string>
     <string name="turn_on_screen">Zapnutie obrazovky</string>
+    <string name="top_app_bar">Horný panel aplikácií</string>
     <string name="hide_top_bar_when_scrolling">Skryť horný panel aplikácie pri posúvaní</string>
+    <string name="show_search_bar">Zobraziť vyhľadávací panel</string>
     <string name="unread_indicator_position">Pozícia neprečítaného indikátora</string>
     <string name="start">Štart</string>
     <string name="end">Koniec</string>

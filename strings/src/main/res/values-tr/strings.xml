@@ -9,7 +9,9 @@
     <string name="symbols_first">Önce Semboller (örneğin !@#$)</string>
     <string name="use_custom_notifications">Özel bildirimleri kullan</string>
     <string name="turn_on_screen">Ekranı aç</string>
+    <string name="top_app_bar">Üst uygulama çubuğu</string>
     <string name="hide_top_bar_when_scrolling">Kaydırma sırasında üst uygulama çubuğunu gizle</string>
+    <string name="show_search_bar">Arama çubuğunu göster</string>
     <string name="unread_indicator_position">Okunmamış gösterge konumu</string>
     <string name="start">Başlat</string>
     <string name="end">Bitir</string>

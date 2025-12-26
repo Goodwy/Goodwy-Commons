@@ -27,7 +27,9 @@
     <string name="symbols_first">প্রথমে প্রতীক (যেমন !@#$)</string>
     <string name="use_custom_notifications">কাস্টম বিজ্ঞপ্তি ব্যবহার করুন</string>
     <string name="turn_on_screen">পর্দা চালু করুন</string>
+    <string name="top_app_bar">শীর্ষ অ্যাপ বার</string>
     <string name="hide_top_bar_when_scrolling">স্ক্রোল করার সময় শীর্ষ অ্যাপ বার লুকান</string>
+    <string name="show_search_bar">অনুসন্ধান বার দেখান</string>
     <string name="unread_indicator_position">অপঠিত সূচক অবস্থান</string>
     <string name="start">শুরু</string>
     <string name="end">শেষ</string>

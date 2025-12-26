@@ -9,7 +9,9 @@
     <string name="symbols_first">الرموز أولاً (على سبيل المثال !@#$)</string>
     <string name="use_custom_notifications">استخدم الإشعارات المخصصة</string>
     <string name="turn_on_screen">تشغيل الشاشة</string>
+    <string name="top_app_bar">شريط التطبيقات العلوي</string>
     <string name="hide_top_bar_when_scrolling">إخفاء شريط التطبيقات العلوي عند التمرير</string>
+    <string name="show_search_bar">إظهار شريط البحث</string>
     <string name="unread_indicator_position">موضع المؤشر غير المقروء</string>
     <string name="start">ابدأ</string>
     <string name="end">النهاية</string>

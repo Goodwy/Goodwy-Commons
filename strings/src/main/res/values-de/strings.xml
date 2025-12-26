@@ -9,7 +9,9 @@
     <string name="symbols_first">Symbole zuerst (z.B. !@#$)</string>
     <string name="use_custom_notifications">Benutzerdefinierte Benachrichtigungen verwenden</string>
     <string name="turn_on_screen">Schalten Sie den Bildschirm ein</string>
+    <string name="top_app_bar">App-Leiste oben</string>
     <string name="hide_top_bar_when_scrolling">Ausblenden der oberen Anwendungsleiste beim Scrollen</string>
+    <string name="show_search_bar">Suchleiste anzeigen</string>
     <string name="unread_indicator_position">Position der Ungelesen-Anzeige</string>
     <string name="start">Start</string>
     <string name="end">Ende</string>

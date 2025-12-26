@@ -9,7 +9,9 @@
     <string name="symbols_first">Először a szimbólumok (pl. !@#$)</string>
     <string name="use_custom_notifications">Egyéni értesítések használata</string>
     <string name="turn_on_screen">A képernyő bekapcsolása</string>
+    <string name="top_app_bar">Felső alkalmazássáv</string>
     <string name="hide_top_bar_when_scrolling">A felső alkalmazássáv elrejtése görgetés közben</string>
+    <string name="show_search_bar">Keresősáv megjelenítése</string>
     <string name="unread_indicator_position">Olvasatlan jelző pozíció</string>
     <string name="start">Indítás</string>
     <string name="end">Vége</string>

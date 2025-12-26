@@ -27,7 +27,9 @@
     <string name="symbols_first">Първо символите (напр. !@#$)</string>
     <string name="use_custom_notifications">Използване на персонализирани известия</string>
     <string name="turn_on_screen">Включете екрана</string>
+    <string name="top_app_bar">Горна лента с приложения</string>
     <string name="hide_top_bar_when_scrolling">Скриване на горната лента при превъртане</string>
+    <string name="show_search_bar">Показване на лентата за търсене</string>
     <string name="unread_indicator_position">Позиция на индикатора за непрочетено съдържание</string>
     <string name="start">Начало</string>
     <string name="end">Краят</string>

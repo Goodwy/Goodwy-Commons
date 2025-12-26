@@ -9,7 +9,9 @@
     <string name="symbols_first">Primer els símbols (p. ex. !@#$)</string>
     <string name="use_custom_notifications">Utilitzeu notificacions personalitzades</string>
     <string name="turn_on_screen">Encendre la pantalla</string>
+    <string name="top_app_bar">Barra d\'aplicacions superior</string>
     <string name="hide_top_bar_when_scrolling">Amaga la barra d\'aplicacions superior en desplaçar-se</string>
+    <string name="show_search_bar">Mostra la barra de cerca</string>
     <string name="unread_indicator_position">Posició de l\'indicador no llegit</string>
     <string name="start">Inici</string>
     <string name="end">Fi</string>

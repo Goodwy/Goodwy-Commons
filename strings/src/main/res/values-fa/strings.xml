@@ -9,7 +9,9 @@
     <string name="symbols_first">ابتدا نمادها (به عنوان مثال !@#$)</string>
     <string name="use_custom_notifications">از اعلان‌های سفارشی استفاده کنید</string>
     <string name="turn_on_screen">روشن کردن صفحه نمایش</string>
+    <string name="top_app_bar">نوار برنامه بالا</string>
     <string name="hide_top_bar_when_scrolling">پنهان کردن نوار بالای برنامه هنگام پیمایش</string>
+    <string name="show_search_bar">نمایش نوار جستجو</string>
     <string name="unread_indicator_position">موقعیت نشانگر خوانده نشده</string>
     <string name="start">شروع</string>
     <string name="end">پایان</string>
