@@ -384,29 +384,6 @@ class GridColorPickerDialog(
         else -> throw RuntimeException("Invalid color id $index")
     }
 
-    private fun getColors50ForIndex(index: Int) = when (index) {
-        0 -> getColors(R.array.md_line_50)
-        1 -> getColors(R.array.md_pinks)
-        2 -> getColors(R.array.md_purples)
-        3 -> getColors(R.array.md_deep_purples)
-        4 -> getColors(R.array.md_indigos)
-        5 -> getColors(R.array.md_blues)
-        6 -> getColors(R.array.md_light_blues)
-        7 -> getColors(R.array.md_cyans)
-        8 -> getColors(R.array.md_teals)
-        9 -> getColors(R.array.md_greens)
-        10 -> getColors(R.array.md_light_greens)
-        11 -> getColors(R.array.md_limes)
-        12 -> getColors(R.array.md_yellows)
-        13 -> getColors(R.array.md_ambers)
-        14 -> getColors(R.array.md_oranges)
-        15 -> getColors(R.array.md_deep_oranges)
-        16 -> getColors(R.array.md_browns)
-        17 -> getColors(R.array.md_greys)
-        18 -> getColors(R.array.md_blue_greys)
-        else -> throw RuntimeException("Invalid color id $index")
-    }
-
     private fun getColors(id: Int) = activity.resources.getIntArray(id).toCollection(ArrayList())
 
     private fun useDefault() {
