@@ -32,47 +32,53 @@ class PurchaseHelper {
         ),
         callback: (updatePro: Boolean) -> Unit,
     ) {
-        // Check Update
-        val client = JosApps.getAppUpdateClient(activity)
-
-        if(isHmsAvailable(activity) == 0){ // Check if Huawei Mobile Services available (0 for available) --> Update HMS Core if not available
-            client.checkAppUpdate(activity, UpdateCallBack(activity))
-        }
-        else {
-            activity.toast("HMS not available")
-        }
-
         val hmsHelper = HmsHelper(activity)
         hmsHelper.initBillingClient()
-        hmsHelper.retrieveDonation(iapList, subList)
 
-        hmsHelper.isIapPurchasedLiveData.observe(activity) {
-            when (it) {
-                is Tipping.Succeeded -> {
-                    activity.baseConfig.isPro = true
-                    callback(true)
+        // Allow time for initialisation
+        activity.window.decorView.postDelayed({
+            // Checking for updates
+            try {
+                val client = JosApps.getAppUpdateClient(activity)
+                if (isHmsAvailable(activity) == 0) {
+                    client.checkAppUpdate(activity, UpdateCallBack(activity))
                 }
-                is Tipping.NoTips -> {
-                    activity.baseConfig.isPro = false
-                    callback(true)
-                }
-                is Tipping.FailedToLoad -> {}
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
-        }
 
-        hmsHelper.isSupPurchasedLiveData.observe(activity) {
-            when (it) {
-                is Tipping.Succeeded -> {
-                    activity.baseConfig.isProSubs = true
-                    callback(true)
+            // Loading goods
+            hmsHelper.retrieveDonation(iapList, subList)
+
+            // We observe changes
+            hmsHelper.isIapPurchasedLiveData.observe(activity) {
+                when (it) {
+                    is Tipping.Succeeded -> {
+                        activity.baseConfig.isPro = true
+                        callback(true)
+                    }
+                    is Tipping.NoTips -> {
+                        activity.baseConfig.isPro = false
+                        callback(true)
+                    }
+                    is Tipping.FailedToLoad -> {}
                 }
-                is Tipping.NoTips -> {
-                    activity.baseConfig.isProSubs = false
-                    callback(true)
-                }
-                is Tipping.FailedToLoad -> {}
             }
-        }
+
+            hmsHelper.isSupPurchasedLiveData.observe(activity) {
+                when (it) {
+                    is Tipping.Succeeded -> {
+                        activity.baseConfig.isProSubs = true
+                        callback(true)
+                    }
+                    is Tipping.NoTips -> {
+                        activity.baseConfig.isProSubs = false
+                        callback(true)
+                    }
+                    is Tipping.FailedToLoad -> {}
+                }
+            }
+        }, 1000)
     }
 
     /**

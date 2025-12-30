@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.StateFlow
 
 class HmsHelper(private val activity: BaseSimpleActivity) {
     private lateinit var iapClient: IapClient
+    private var initializationAttempted = false
 
     // StateFlow for compatibility with existing code
     private val _iapSkuDetailsInitialized = MutableStateFlow(false)
@@ -54,19 +55,57 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
     val allSubPurchases: StateFlow<List<String>> = _allSubPurchases
 
     fun initBillingClient() {
-        iapClient = Iap.getIapClient(activity)
+        if (initializationAttempted) {
+            return
+        }
+
+        initializationAttempted = true
+
+        try {
+            iapClient = Iap.getIapClient(activity)
+
+//            activity.runOnUiThread {
+//                activity.toast("IAP client created")
+//            }
+
+        } catch (e: Exception) {
+            activity.runOnUiThread {
+                activity.showErrorToast("Error creating IAP client: ${e.message}")
+            }
+            e.printStackTrace()
+        }
     }
 
+    fun isReady(): Boolean {
+        return ::iapClient.isInitialized
+    }
+
+    // The main method for loading goods and checking purchases
     fun retrieveDonation(iapList: List<String>, subList: List<String>) {
-        // We save lists for future use.
         this.lastIapList = iapList
         this.lastSubList = subList
 
-        // 1. Checking purchases (without filtering)
+        if (!isReady()) {
+            activity.runOnUiThread {
+                activity.toast("IAP is not initialised, let's try...")
+            }
+            initBillingClient()
+
+            // Try again in 1.5 seconds
+            activity.window.decorView.postDelayed({
+                retrieveDonationInternal(iapList, subList)
+            }, 1500)
+            return
+        }
+
+        retrieveDonationInternal(iapList, subList)
+    }
+
+    private fun retrieveDonationInternal(iapList: List<String>, subList: List<String>) {
         checkIapPurchases()
         checkSubPurchases()
 
-        // 2. We are loading information about specific products (to display prices).
+        // Uploading product information
         if (iapList.isNotEmpty()) {
             loadIapProductInfos(iapList)
         } else {
@@ -81,6 +120,10 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
     }
 
     private fun checkIapPurchases() {
+        if (!isReady()) {
+            return
+        }
+
         val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
             priceType = IapClient.PriceType.IN_APP_CONSUMABLE
         })
@@ -106,17 +149,27 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
             val filteredPurchases = ownedProductIds.filter { it in lastIapList }
             _isIapPurchasedList.value = filteredPurchases
 
-            when {
-                filteredPurchases.isNotEmpty() -> _isIapPurchased.value = Tipping.Succeeded
-                else -> _isIapPurchased.value = Tipping.NoTips
+            activity.runOnUiThread {
+                when {
+                    filteredPurchases.isNotEmpty() -> {
+                        _isIapPurchased.value = Tipping.Succeeded
+                    }
+                    else -> _isIapPurchased.value = Tipping.NoTips
+                }
             }
         }.addOnFailureListener { e ->
-            _isIapPurchased.value = Tipping.FailedToLoad
-            handleError(e)
+            activity.runOnUiThread {
+                _isIapPurchased.value = Tipping.FailedToLoad
+                handleError(e)
+            }
         }
     }
 
     private fun checkSubPurchases() {
+        if (!isReady()) {
+            return
+        }
+
         val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
             priceType = IapClient.PriceType.IN_APP_SUBSCRIPTION
         })
@@ -140,21 +193,31 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
             // Save ALL subscriptions found
             _allSubPurchases.value = ownedProductIds
 
-            // We filter only those we need (from lastSubList)
+            // We filter only those that we need
             val filteredPurchases = ownedProductIds.filter { it in lastSubList }
             _isSupPurchasedList.value = filteredPurchases
 
-            when {
-                filteredPurchases.isNotEmpty() -> _isSupPurchased.value = Tipping.Succeeded
-                else -> _isSupPurchased.value = Tipping.NoTips
+            activity.runOnUiThread {
+                when {
+                    filteredPurchases.isNotEmpty() -> {
+                        _isSupPurchased.value = Tipping.Succeeded
+                    }
+                    else -> _isSupPurchased.value = Tipping.NoTips
+                }
             }
         }.addOnFailureListener { e ->
-            _isSupPurchased.value = Tipping.FailedToLoad
-            handleError(e)
+            activity.runOnUiThread {
+                _isSupPurchased.value = Tipping.FailedToLoad
+                handleError(e)
+            }
         }
     }
 
     private fun loadIapProductInfos(products: List<String>) {
+        if (!isReady()) {
+            return
+        }
+
         if (products.isEmpty()) {
             _iapSkuDetailsInitialized.value = true
             return
@@ -168,6 +231,12 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         task.addOnSuccessListener { result ->
             iapSkuDetails = result.productInfoList?.associateBy { it.productId } ?: emptyMap()
             _iapSkuDetailsInitialized.value = true
+
+//            activity.runOnUiThread {
+//                if (iapSkuDetails.isNotEmpty()) {
+//                    activity.toast("Goods loaded")
+//                }
+//            }
         }.addOnFailureListener { e ->
             _iapSkuDetailsInitialized.value = false
             handleError(e)
@@ -175,6 +244,10 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
     }
 
     private fun loadSubProductInfos(products: List<String>) {
+        if (!isReady()) {
+            return
+        }
+
         if (products.isEmpty()) {
             _subSkuDetailsInitialized.value = true
             return
@@ -188,6 +261,12 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         task.addOnSuccessListener { result ->
             subSkuDetails = result.productInfoList?.associateBy { it.productId } ?: emptyMap()
             _subSkuDetailsInitialized.value = true
+
+//            activity.runOnUiThread {
+//                if (subSkuDetails.isNotEmpty()) {
+//                    activity.toast("Subscriptions loaded")
+//                }
+//            }
         }.addOnFailureListener { e ->
             _subSkuDetailsInitialized.value = false
             handleError(e)
@@ -196,15 +275,9 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
 
     private fun isSubscriptionActive(purchaseData: InAppPurchaseData): Boolean {
         return try {
-            // Check if the subscription is active
-            // 1. Subscription is paid (purchaseState == 0)
-            // 2. Subscription is not cancelled
-            // 3. Check autoRenewing and expiryDate
-
             val purchaseState = purchaseData.purchaseState
             val autoRenewing = purchaseData.isAutoRenewing
             val expiryDate = purchaseData.expirationDate
-
             val currentTime = System.currentTimeMillis()
 
             purchaseState == 0 && (autoRenewing || (expiryDate?.let { it > currentTime } ?: false))
@@ -224,19 +297,23 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
     }
 
     fun getDonation(productId: String) {
+        if (!isReady()) {
+            activity.toast("IAP is not ready")
+            return
+        }
+
         val productInfo = iapSkuDetails[productId] ?: return
 
         val task = iapClient.createPurchaseIntent(createPurchaseReq(productInfo))
         task.addOnSuccessListener { result ->
             if (result.status != null && result.status.hasResolution()) {
-                // Launching the Activity for payment
                 try {
                     result.status.startResolutionForResult(activity, PURCHASE_REQUEST_CODE)
                 } catch (e: Exception) {
                     handleError(e)
                 }
             } else {
-                activity.toast("Cannot start purchase flow")
+                activity.toast("I am unable to initiate the purchase process")
             }
         }.addOnFailureListener { e ->
             handleError(e)
@@ -244,19 +321,23 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
     }
 
     fun getSubscription(productId: String) {
+        if (!isReady()) {
+            activity.toast("IAP is not ready")
+            return
+        }
+
         val productInfo = subSkuDetails[productId] ?: return
 
         val task = iapClient.createPurchaseIntent(createPurchaseReq(productInfo))
         task.addOnSuccessListener { result ->
             if (result.status != null && result.status.hasResolution()) {
-                // Launching the Activity for payment
                 try {
                     result.status.startResolutionForResult(activity, PURCHASE_REQUEST_CODE)
                 } catch (e: Exception) {
                     handleError(e)
                 }
             } else {
-                activity.toast("Cannot start subscription flow")
+                activity.toast("I am unable to initiate the subscription process.")
             }
         }.addOnFailureListener { e ->
             handleError(e)
@@ -268,9 +349,6 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
             this.productId = productInfo.productId
             priceType = productInfo.priceType
             developerPayload = activity.packageName.toString()
-            // Additional options can be added for subscriptions.
-//            if (priceType == IapClient.PriceType.IN_APP_SUBSCRIPTION) {
-//            }
         }
     }
 
@@ -293,8 +371,6 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
             when (purchaseResultInfo.returnCode) {
                 OrderStatusCode.ORDER_STATE_SUCCESS -> {
                     activity.toast(com.goodwy.strings.R.string.purchase_successful)
-
-                    // After a successful purchase, we update the lists.
                     retrieveDonation(lastIapList, lastSubList)
                 }
                 OrderStatusCode.ORDER_STATE_CANCEL -> {
@@ -304,7 +380,7 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
                     activity.toast(com.goodwy.strings.R.string.purchase_failed)
                 }
                 else -> {
-                    activity.toast("Purchase result: ${purchaseResultInfo.returnCode}")
+                    activity.toast("Result of purchase: ${purchaseResultInfo.returnCode}")
                 }
             }
         } catch (e: Exception) {
@@ -325,10 +401,10 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
                     OrderStatusCode.ORDER_STATE_NET_ERROR ->
                         activity.getString(com.goodwy.strings.R.string.network_error)
                     OrderStatusCode.ORDER_VR_UNINSTALL_ERROR ->
-                        "Please install or update HMS Core"
+                        "Install or update HMS Core"
                     OrderStatusCode.ORDER_STATE_PRODUCT_INVALID ->
-                        "Invalid product"
-                    else -> "HMS Error ${e.statusCode}: ${e.message}"
+                        "Incorrect product"
+                    else -> "HMS error ${e.statusCode}: ${e.message}"
                 }
                 activity.toast(errorMessage)
             }
@@ -338,7 +414,6 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         }
     }
 
-    // Supporting methods for obtaining product information
     fun getProductInfo(productId: String): ProductInfo? {
         return iapSkuDetails[productId] ?: subSkuDetails[productId]
     }

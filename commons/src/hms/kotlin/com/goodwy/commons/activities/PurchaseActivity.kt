@@ -73,10 +73,11 @@ class PurchaseActivity : BaseSimpleActivity() {
         showLifebuoy = intent.getBooleanExtra(SHOW_LIFEBUOY, true)
         showCollection = intent.getBooleanExtra(SHOW_COLLECTION, false)
 
-        hmsHelper.initBillingClient()
-        val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
-        subscriptionIdListAll.addAll(subscriptionYearIdList)
-        hmsHelper.retrieveDonation(productIdList, subscriptionIdListAll)
+//        hmsHelper.initBillingClient()
+//        val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
+//        subscriptionIdListAll.addAll(subscriptionYearIdList)
+//        hmsHelper.retrieveDonation(productIdList, subscriptionIdListAll)
+        initHmsWithDelay()
 
         hmsHelper.iapSkuDetailsInitializedLiveData.observe(this) {
             if (it) setupButtonIapPurchased()
@@ -121,6 +122,17 @@ class PurchaseActivity : BaseSimpleActivity() {
         hmsHelper.isSupPurchasedListLiveData.observe(this) {
             setupButtonSupChecked()
         }
+    }
+
+    private fun initHmsWithDelay() {
+        hmsHelper.initBillingClient()
+
+        // Allow time for HMS Core initialisation
+        binding.root.postDelayed({
+            val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
+            subscriptionIdListAll.addAll(subscriptionYearIdList)
+            hmsHelper.retrieveDonation(productIdList, subscriptionIdListAll)
+        }, 2000)
     }
 
     override fun onResume() {
