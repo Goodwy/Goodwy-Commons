@@ -63,285 +63,271 @@
                 android:text="@string/pref_pay_summary"
                 android:textSize="14sp" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/pay_app"
                 android:layout_width="match_parent"
-                android:layout_height="162dp"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/purchase_apps">
+                android:layout_below="@+id/purchase_apps"
+                android:orientation="vertical">
 
-                <RelativeLayout
+                <LinearLayout
                     android:id="@+id/app_one"
-                    android:layout_width="104dp"
-                    android:layout_height="148dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/bigger_margin"
-                    android:layout_toStartOf="@+id/app_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:layout_marginHorizontal="@dimen/bigger_margin"
                     android:background="@drawable/button_white_bg"
                     android:elevation="4dp"
-                    android:padding="10dp">
+                    android:padding="@dimen/medium_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="4.4">
 
                     <TextView
                         android:id="@+id/app_one_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/app_one_button"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:ellipsize="end"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
                         android:gravity="center"
-                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxLines="3"
                         android:text="@string/one_time_purchase"
                         android:textColor="@color/theme_light_text_color"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:layout_weight="1.4" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_one_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_above="@+id/app_two_button"
-                        android:layout_marginTop="@dimen/medium_margin"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
                         android:alpha="0.6"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_two_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_above="@+id/app_three_button"
-                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
                         android:alpha="0.7"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_three_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginTop="@dimen/smaller_margin"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
                         android:alpha="0.8"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
-                </RelativeLayout>
+                </LinearLayout>
 
-                <RelativeLayout
+                <LinearLayout
                     android:id="@+id/app_two"
-                    android:layout_width="104dp"
-                    android:layout_height="148dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/bigger_margin"
+                    android:layout_marginHorizontal="@dimen/bigger_margin"
                     android:background="@drawable/button_white_bg"
                     android:elevation="4dp"
-                    android:padding="10dp">
+                    android:padding="@dimen/medium_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="4.4"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/app_two_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/app_one_sub_button"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:ellipsize="end"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
                         android:gravity="center"
-                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxLines="3"
                         android:text="@string/monthly"
                         android:textColor="@color/theme_light_text_color"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:layout_weight="1.4" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_one_sub_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_above="@+id/app_two_sub_button"
-                        android:layout_marginTop="@dimen/medium_margin"
-                        android:alpha="0.7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:alpha="0.6"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_two_sub_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_above="@+id/app_three_sub_button"
-                        android:layout_marginTop="@dimen/smaller_margin"
-                        android:alpha="0.8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:alpha="0.7"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_three_sub_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginTop="@dimen/smaller_margin"
-                        android:alpha="0.9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:alpha="0.8"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
-                </RelativeLayout>
+                </LinearLayout>
 
-                <RelativeLayout
+                <LinearLayout
                     android:id="@+id/app_three"
-                    android:layout_width="104dp"
-                    android:layout_height="148dp"
-                    android:layout_centerVertical="true"
-                    android:elevation="4dp"
-                    android:layout_marginStart="@dimen/bigger_margin"
-                    android:layout_toEndOf="@+id/app_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/bigger_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:layout_marginHorizontal="@dimen/bigger_margin"
                     android:background="@drawable/button_white_bg"
-                    android:padding="9dp">
+                    android:elevation="4dp"
+                    android:padding="@dimen/medium_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="4.4"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/app_three_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/app_one_sub_year_button"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
                         android:gravity="center"
                         android:ellipsize="end"
-                        android:maxLines="2"
+                        android:maxLines="3"
                         android:text="@string/yearly"
                         android:textColor="@color/theme_light_text_color"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:layout_weight="1.4" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_one_sub_year_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_above="@+id/app_two_sub_year_button"
-                        android:layout_marginTop="@dimen/medium_margin"
-                        android:alpha="0.8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:alpha="0.6"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_two_sub_year_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_above="@+id/app_three_sub_year_button"
-                        android:layout_marginTop="@dimen/smaller_margin"
-                        android:alpha="0.9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:alpha="0.7"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/app_three_sub_year_button"
                         style="@style/AppTheme.Button.Chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginTop="@dimen/smaller_margin"
-                        android:alpha="1.0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:alpha="0.8"
                         android:background="@drawable/button_gray_bg_8dp"
                         android:enabled="false"
-                        android:lines="1"
-                        android:maxLines="1"
-                        android:singleLine="true"
+                        android:maxLines="2"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="..."
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="9sp"
+                        android:layout_weight="1"
                         tools:ignore="HardcodedText,SmallSp" />
-                </RelativeLayout>
-            </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/themeHolder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pay_app"
-                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/medium_margin"
                 android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
@@ -351,7 +337,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="@dimen/normal_margin"
                     android:layout_marginBottom="@dimen/activity_margin"
-                    android:src="@drawable/ic_invert_colors"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_theme_colors"
                     android:tint="@color/color_primary"
                     android:contentDescription="@string/themes"
                     tools:ignore="UseAppTint" />
@@ -390,7 +377,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/themeHolder"
-                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/smaller_margin"
                 android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
@@ -441,7 +428,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/color_holder"
-                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/smaller_margin"
                 android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
@@ -491,7 +478,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/plus_holder"
-                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/smaller_margin"
                 android:layout_marginHorizontal="@dimen/about_margin">
 
                 <ImageView
@@ -502,9 +489,9 @@
                     android:layout_marginTop="@dimen/normal_margin"
                     android:layout_marginBottom="@dimen/activity_margin"
                     android:padding="5dp"
-                    android:src="@drawable/ic_lifebuoy"
+                    android:src="@drawable/ic_warning_round"
                     android:tint="@color/color_primary"
-                    android:contentDescription="@string/lifebuoy_title"
+                    android:contentDescription="@string/attention"
                     tools:ignore="UseAppTint" />
 
                 <RelativeLayout
@@ -520,7 +507,7 @@
                         android:id="@+id/lifebuoy_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/lifebuoy_title"
+                        android:text="@string/attention"
                         android:textSize="16sp" />
 
                     <com.goodwy.commons.views.MyTextView
@@ -534,7 +521,7 @@
                         android:alpha="0.6"
                         android:background="@null"
                         android:clickable="false"
-                        android:text="@string/lifebuoy_summary"
+                        android:text="@string/attention_summary"
                         android:textSize="12sp" />
 
                     <ImageView
@@ -548,7 +535,7 @@
                         android:alpha="0.6"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:src="@drawable/ic_mail_vector"
-                        android:contentDescription="@string/lifebuoy_title" />
+                        android:contentDescription="@string/send_email" />
                 </RelativeLayout>
             </RelativeLayout>
 
@@ -557,7 +544,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lifebuoy_holder"
-                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/smaller_margin"
                 android:background="@drawable/ripple_all_corners_16dp"
                 android:visibility="gone"
                 android:layout_marginHorizontal="@dimen/about_margin">
