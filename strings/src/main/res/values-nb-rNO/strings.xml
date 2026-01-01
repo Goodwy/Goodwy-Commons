@@ -210,6 +210,23 @@ Takk til alle bidragsytere og andre støttespillere!
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Viktige nyheter og en ny start 🚀</big></b><br><br>
+
+På grunn av pågående betalingsrestriksjoner måtte vi bytte til en ny utviklerkonto og gi ut en ny versjon for å sikre appens fremtid.<br><br>
+
+Hvorfor oppgradere til den nye versjonen?<br>
+✨ Fullt tilpassbart fargevalg – velg hvilken som helst farge du liker!<br>
+🎨 Friske, moderne ikoner<br>
+❤️ Mulighet til å støtte prosjektet – nå viktig for utviklingen.<br><br>
+
+Din nåværende app vil fortsette å fungere og motta oppdateringer.<br><br>
+
+<b>Takk for tilliten og støtten.</b><br><br>
+
+<small><i>Til våre tidlige støttespillere:<br>
+Hvis du tidligere kjøpte denne appen eller ga en donasjon, takk! Send bekreftelsen din til help@goodwy.dev, så vil vi gjøre vårt beste for å gi deg en kampanjekode for den nye versjonen (så lenge lageret rekker).</i></small>
+]]></string>
     <string name="add_number">Legg til nummer</string>
     <string name="add_email">Legg til e-post</string>
     <string name="add_address">Legg til adresse</string>

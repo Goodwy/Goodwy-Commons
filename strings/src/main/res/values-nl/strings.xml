@@ -202,6 +202,28 @@ Bedankt aan alle bijdragers en andere supporters!
     <string name="pro_app_refund_g">Bij het deïnstalleren van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via goodwy.dev@gmail.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+
+<b><big>Belangrijk nieuws en een nieuwe start 🚀</big></b><br><br>
+
+Vanwege aanhoudende betalingsbeperkingen moesten we overstappen naar een nieuw ontwikkelaarsaccount en een nieuwe versie uitbrengen om de toekomst van de app te garanderen.<br><br>
+
+Waarom upgraden naar de nieuwe versie?<br>
+
+✨ Volledig aanpasbare kleurselectie — kies elke kleur die je wilt!<br>
+
+🎨 Frisse, moderne pictogrammen<br>
+
+❤️ Mogelijkheid om het project te ondersteunen — nu essentieel voor de ontwikkeling ervan.<br><br>
+
+Je huidige app blijft functioneren en updates ontvangen.<br><br>
+
+<b>Bedankt voor je vertrouwen en steun.</b><br><br>
+
+<small><i>Voor onze vroege supporters:<br>
+
+Als je deze app eerder hebt gekocht of een donatie hebt gedaan, bedankt! Stuur je bevestiging naar help@goodwy.dev, en we zullen ons best doen om je een promotiecode voor de nieuwe versie te geven (zolang de voorraad strekt).</i></small>
+]]></string>
     <string name="add_number">Nummer toevoegen</string>
     <string name="add_email">E-mail toevoegen</string>
     <string name="add_address">Adres toevoegen</string>

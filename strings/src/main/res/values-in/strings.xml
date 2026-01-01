@@ -203,6 +203,28 @@ Terima kasih kepada semua kontributor dan pendukung lainnya!
     <string name="pro_app_refund_g">Jangan lupa, jika anda untuk mencopot aplikasi berbayar manapun dalam waktu 2 jam, uang anda akan otomatis dikembalikan. Jika anda ingin pengembalian dilakukan lain waktu, cukup hubungi goodwy.dev@gmail.com dan anda akan mendapatkannya. Mempermudah anda untuk mencobanya terlebih dahulu. :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+
+<b><big>Berita penting dan awal yang baru 🚀</big></b><br><br>
+
+Karena pembatasan pembayaran yang sedang berlangsung, kami harus beralih ke akun pengembang baru dan merilis versi baru untuk memastikan masa depan aplikasi ini.<br><br>
+
+Mengapa meningkatkan ke versi baru?<br>
+
+✨ Pilihan warna yang sepenuhnya dapat disesuaikan — pilih warna apa pun yang Anda suka!<br>
+
+🎨 Ikon yang segar dan modern<br>
+
+❤️ Kesempatan untuk mendukung proyek ini — sekarang sangat penting untuk pengembangannya.<br><br>
+
+Aplikasi Anda saat ini akan terus berfungsi dan menerima pembaruan.<br><br>
+
+<b>Terima kasih atas kepercayaan dan dukungan Anda.</b><br><br>
+
+<small><i>Untuk para pendukung awal kami:<br>
+
+Jika Anda sebelumnya telah membeli aplikasi ini atau memberikan donasi, terima kasih! Kirim konfirmasi Anda ke help@goodwy.dev, dan kami akan melakukan yang terbaik untuk memberikan kode promo untuk versi baru (selama persediaan masih ada).</i></small>
+]]></string>
     <string name="add_number">Tambahkan nomor</string>
     <string name="add_email">Tambahkan email</string>
     <string name="add_address">Tambahkan alamat</string>

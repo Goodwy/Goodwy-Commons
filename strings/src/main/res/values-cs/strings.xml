@@ -205,6 +205,23 @@ Děkujeme všem přispěvatelům a dalším podporovatelům!
     <string name="pro_app_refund_g">Nezapomeňte, že pokud odinstalujete kteroukoliv placenou aplikaci do 2 hodin, budou vám automaticky vráceny peníze. Pokud budete chtít vrátit platbu kdykoliv později, kontaktujte nás prosím na goodwy.dev@gmail.com. Tímto vám nic nebrání aplikace plně ozkoušet :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Důležité zprávy a nový začátek 🚀</big></b><br><br>
+
+Kvůli probíhajícím platebním omezením jsme museli přejít na nový vývojářský účet a vydat novou verzi, abychom zajistili budoucnost aplikace.<br><br>
+
+Proč upgradovat na novou verzi?<br>
+✨ Plně přizpůsobitelný výběr barev – vyberte si libovolnou barvu!<br>
+🎨 Svěží, moderní ikony<br>
+❤️ Možnost podpořit projekt – nyní nezbytná pro jeho vývoj.<br><br>
+
+Vaše aktuální aplikace bude i nadále fungovat a dostávat aktualizace.<br><br>
+
+<b>Děkujeme za vaši důvěru a podporu.</b><br><br>
+
+<small><i>Pro naše první podporovatele:<br>
+Pokud jste si tuto aplikaci již dříve zakoupili nebo přispěli, děkujeme! Pošlete potvrzení na adresu help@goodwy.dev a my se budeme snažit poskytnout vám promo kód na novou verzi (do vyprodání zásob).</i></small>
+]]></string>
     <string name="add_number">Přidat číslo</string>
     <string name="add_email">Přidat e-mail</string>
     <string name="add_address">Přidat adresu</string>

@@ -201,6 +201,23 @@ Köszönjük minden közreműködőnek és támogatónak!
     <string name="pro_app_refund_g">Ne felejtse el, hogy ha 2 órán belül eltávolítja a fizetős alkalmazásunkat, akkor automatikusan visszatérítjük az árát. Ha később bármikor mégis visszatérítést szeretne, lépjen kapcsolatba velünk a goodwy.dev@gmail.com címen, és visszakapja. Ez is megkönnyíti a kipróbálást :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Fontos hírek és új kezdet 🚀</big></b><br><br>
+
+A folyamatos fizetési korlátozások miatt új fejlesztői fiókra kellett váltanunk és új verziót kellett kiadnunk az alkalmazás jövőjének biztosítása érdekében.<br><br>
+
+Miért frissítsünk az új verzióra?<br>
+✨ Teljesen testreszabható színválaszték — válasszon bármilyen színt!<br>
+🎨 Friss, modern ikonok<br>
+❤️ Lehetőség a projekt támogatására — most elengedhetetlen a fejlesztéséhez.<br><br>
+
+A jelenlegi alkalmazás továbbra is működni fog és frissítéseket kap.<br><br>
+
+<b>Köszönjük a bizalmat és a támogatást.</b><br><br>
+
+<small><i>Korai támogatóinknak:<br>
+Ha korábban megvásárolta ezt az alkalmazást vagy adományozott, köszönjük! Küldd el a visszaigazolásodat a help@goodwy.dev címre, és mi mindent megteszünk, hogy promóciós kódot biztosítsunk az új verzióhoz (a készlet erejéig).</i></small>
+]]></string>
     <string name="add_number">Szám hozzáadása</string>
     <string name="add_email">E-mail hozzáadása</string>
     <string name="add_address">Cím hozzáadása</string>

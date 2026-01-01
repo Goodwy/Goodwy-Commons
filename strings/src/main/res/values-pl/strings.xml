@@ -205,6 +205,23 @@ Dziękujemy wszystkim współautorom i innym osobom wspierającym!
     <string name="pro_app_refund_g">Nie zapomnij, że jeśli odinstalujesz jakąkolwiek płatną aplikację w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na goodwy.dev@gmail.com i dostaniesz go. To sprawia, że są łatwe do wypróbowania :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Ważne wiadomości i nowy początek 🚀</big></b><br><br>
+
+Z powodu ciągłych ograniczeń płatności musieliśmy przejść na nowe konto deweloperskie i wydać nową wersję, aby zapewnić przyszłość aplikacji.<br><br>
+
+Po co aktualizacja do nowej wersji?<br>
+✨ W pełni konfigurowalny wybór kolorów — wybierz dowolny kolor!<br>
+🎨 Świeże, nowoczesne ikony<br>
+❤️ Możliwość wsparcia projektu — teraz niezbędna do jego rozwoju.<br><br>
+
+Twoja obecna aplikacja będzie nadal działać i otrzymywać aktualizacje.<br><br>
+
+<b>Dziękujemy za zaufanie i wsparcie.</b><br><br>
+
+<small><i>Dla naszych pierwszych darczyńców:<br>
+Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyślij potwierdzenie na adres help@goodwy.dev, a dołożymy wszelkich starań, aby udostępnić kod promocyjny na nową wersję (do wyczerpania zapasów).</i></small>
+]]></string>
     <string name="add_number">Dodaj numer</string>
     <string name="add_email">Dodaj email</string>
     <string name="add_address">Dodaj adres</string>

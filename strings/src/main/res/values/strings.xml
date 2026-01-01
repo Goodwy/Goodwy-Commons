@@ -224,6 +224,25 @@
     </string>
     <string name="deprecated_app_g">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.goodwy.xxx.pro</string>
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="notification_of_new_application">
+        <![CDATA[
+            <b><big>Important news and a new start 🚀</big></b><br><br>
+
+            Due to ongoing payment restrictions, we had to switch to a new developer account and release a new version to ensure the future of the app.<br><br>
+
+            Why upgrade to the new version?<br>
+            ✨ Fully customizable color selection — choose any color you like!<br>
+            🎨 Fresh, modern icons<br>
+            ❤️ Opportunity to support the project — now essential for its development.<br><br>
+
+            Your current app will continue to function and receive updates.<br><br>
+
+            <b>Thank you for your trust and support.</b><br><br>
+
+            <small><i>For our early supporters:<br>
+            If you previously purchased this app or made a donation, thank you! Send your confirmation to help@goodwy.dev, and we will do our best to provide a promo code for the new version (while supplies last).</i></small>
+        ]]>
+    </string>
 
     <!-- Contacts -->
     <string name="add_number">Add number</string>

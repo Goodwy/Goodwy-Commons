@@ -206,6 +206,23 @@ Hvala vsem sodelavcem in drugim podpornikom!
     <string name="pro_app_refund_g">Ne pozabite - če odstranite katerokoli plačljivo aplikacijo v dveh urah, dobite povrnjen avtomatično denar. Če želite povrnitev denarja po preteku tega časa, nas kontaktirajte na goodwy.dev@gmail.com in poskrbeli bomo za to. Zaradi tega je preizkušanje aplikacije še bolj preprosto. :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Pomembne novice in nov začetek 🚀</big></b><br><br>
+
+Zaradi trenutnih omejitev plačil smo morali preklopiti na nov račun razvijalca in izdati novo različico, da bi zagotovili prihodnost aplikacije.<br><br>
+
+Zakaj nadgraditi na novo različico?<br>
+✨ Popolnoma prilagodljiva izbira barv – izberite katero koli barvo, ki vam je všeč!<br>
+🎨 Sveže, moderne ikone<br>
+❤️ Priložnost za podporo projektu – zdaj bistvena za njegov razvoj.<br><br>
+
+Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><br>
+
+<b>Hvala za vaše zaupanje in podporo.</b><br><br>
+
+<small><i>Za naše prve podpornike:<br>
+Če ste to aplikacijo že kupili ali donirali, se vam zahvaljujemo! Pošljite svojo potrditev na help@goodwy.dev in potrudili se bomo, da vam zagotovimo promocijsko kodo za novo različico (dokler so zaloge na voljo).</i></small>
+]]></string>
     <string name="add_number">Dodaj številko</string>
     <string name="add_email">Dodaj e-pošto</string>
     <string name="add_address">Dodaj naslov</string>

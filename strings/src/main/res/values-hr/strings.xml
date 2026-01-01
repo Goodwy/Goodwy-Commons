@@ -203,6 +203,23 @@ Hvala svim suradnicima i ostalim podupirateljima!
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Važne vijesti i novi početak 🚀</big></b><br><br>
+
+Zbog tekućih ograničenja plaćanja, morali smo prijeći na novi račun razvojnog programera i objaviti novu verziju kako bismo osigurali budućnost aplikacije.<br><br>
+
+Zašto nadograditi na novu verziju?<br>
+✨ Potpuno prilagodljiv odabir boja — odaberite bilo koju boju koja vam se sviđa!<br>
+🎨 Svježe, moderne ikone<br>
+❤️ Prilika za podršku projektu — sada ključna za njegov razvoj.<br><br>
+
+Vaša trenutna aplikacija nastavit će funkcionirati i primati ažuriranja.<br><br>
+
+<b>Hvala vam na povjerenju i podršci.</b><br><br>
+
+<small><i>Za naše rane podupiratelje:<br>
+Ako ste prethodno kupili ovu aplikaciju ili donirali, hvala vam! Pošaljite svoju potvrdu na help@goodwy.dev i učinit ćemo sve što možemo da vam osiguramo promotivni kod za novu verziju (dok traju zalihe).</i></small>
+]]></string>
     <string name="add_number">Dodaj broj</string>
     <string name="add_email">Dodaj e-poštu</string>
     <string name="add_address">Dodaj adresu</string>

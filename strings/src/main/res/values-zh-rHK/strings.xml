@@ -205,6 +205,29 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+
+<b><big>重要消息與全新開始🚀</big></b><br><br>
+
+由於持續的支付限制，我們不得不切換到新的開發者帳號並發布新版本，以確保應用程式的未來發展。 <br><br>
+
+為什麼要升級到新版本？ <br>
+
+✨ 完全自訂顏色選擇——選擇您喜歡的任何顏色！ <br>
+
+🎨 全新現代圖示<br>
+
+❤️ 支持專案的機會—這對專案的發展至關重要。 <br><br>
+
+您目前的應用程式將繼續運行並接收更新。 <br><br>
+
+<b>感謝您的信任與支持。 </b><br><br>
+
+<small><i>致我們的早期支持者：<br>
+
+如果您之前購買過此應用程式或進行過捐贈，非常感謝！請將您的確認訊息發送至 help@goodwy.dev，我們將盡力為您提供新版本的優惠碼（數量有限，先到先得）。 </i></small>
+
+]]></string>
     <string name="add_number">添加號碼</string>
     <string name="add_email">添加郵箱</string>
     <string name="add_address">添加地址</string>

@@ -202,6 +202,23 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>חדשות חשובות והתחלה חדשה 🚀</big></b><br><br>
+
+בשל מגבלות תשלום מתמשכות, נאלצנו לעבור לחשבון מפתח חדש ולהוציא גרסה חדשה כדי להבטיח את עתיד האפליקציה.<br><br>
+
+למה לשדרג לגרסה החדשה?<br>
+✨ בחירת צבעים ניתנת להתאמה אישית מלאה - בחרו כל צבע שתרצו!<br>
+🎨 אייקונים רעננים ומודרניים<br>
+❤️ הזדמנות לתמוך בפרויקט - כעת חיונית לפיתוחו.<br><br>
+
+האפליקציה הנוכחית שלכם תמשיך לתפקד ולקבל עדכונים.<br><br>
+
+<b>תודה על האמון והתמיכה.</b><br><br>
+
+<small><i>לתומכים המוקדמים שלנו:<br>
+אם רכשתם בעבר אפליקציה זו או תרמתם, תודה! שלחו את האישור שלכם לכתובת help@goodwy.dev, ונעשה כמיטב יכולתנו לספק קוד קידום מכירות לגרסה החדשה (כל עוד המלאי גמר).</i></small>
+]]></string>
     <string name="add_number">הוסף מספר</string>
     <string name="add_email">הוסף דוא"ל</string>
     <string name="add_address">הוסף כתובת</string>

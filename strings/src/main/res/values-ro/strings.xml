@@ -205,6 +205,23 @@ Mulțumim tuturor contribuitorilor și celorlalți susținători!
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Vești importante și un nou început 🚀</big></b><br><br>
+
+Din cauza restricțiilor de plată continue, a trebuit să trecem la un nou cont de dezvoltator și să lansăm o nouă versiune pentru a asigura viitorul aplicației.<br><br>
+
+De ce să faceți upgrade la noua versiune?<br>
+✨ Selecție de culori complet personalizabilă — alegeți orice culoare doriți!<br>
+🎨 Pictograme proaspete și moderne<br>
+❤️ Oportunitatea de a susține proiectul — acum esențială pentru dezvoltarea acestuia.<br><br>
+
+Aplicația dvs. actuală va continua să funcționeze și să primească actualizări.<br><br>
+
+<b>Vă mulțumim pentru încrederea și sprijinul acordat.</b><br><br>
+
+<small><i>Pentru primii noștri susținători:<br>
+Dacă ați achiziționat anterior această aplicație sau ați făcut o donație, vă mulțumim! Trimiteți confirmarea la help@goodwy.dev și vom face tot posibilul să vă oferim un cod promoțional pentru noua versiune (în limita stocului disponibil).</i></small>
+]]></string>
     <string name="add_number">Adaugați un număr</string>
     <string name="add_email">Adaugă un email</string>
     <string name="add_address">Adaugă adresa</string>

@@ -205,6 +205,23 @@ Dankon al ĉiuj kontribuantoj kaj aliaj subtenantoj!
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Gravaj novaĵoj kaj nova komenco 🚀</big></b><br><br>
+
+Pro daŭraj paglimigoj, ni devis ŝanĝi al nova programista konto kaj publikigi novan version por certigi la estontecon de la aplikaĵo.<br><br>
+
+Kial ĝisdatigi al la nova versio?<br>
+✨ Plene agordebla koloroelekto — elektu ajnan koloron, kiun vi ŝatas!<br>
+🎨 Freŝaj, modernaj ikonoj<br>
+❤️ Ŝanco subteni la projekton — nun esenca por ĝia disvolviĝo.<br><br>
+
+Via nuna aplikaĵo daŭre funkcios kaj ricevos ĝisdatigojn.<br><br>
+
+<b>Dankon pro via fido kaj subteno.</b><br><br>
+
+<small><i>Por niaj fruaj subtenantoj:<br>
+Se vi antaŭe aĉetis ĉi tiun aplikaĵon aŭ faris donacon, dankon! Sendu vian konfirmon al help@goodwy.dev, kaj ni faros nian eblon por provizi varbokodon por la nova versio (dum provizoj daŭras).</i></small>
+]]></string>
     <string name="add_number">Aldoni numeron</string>
     <string name="add_email">Aldoni retpoŝton</string>
     <string name="add_address">Aldoni adreson</string>

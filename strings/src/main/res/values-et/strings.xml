@@ -206,6 +206,23 @@ Täname kõiki kaastöölisi ja teisi toetajaid!
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Olulised uudised ja uus algus 🚀</big></b><br><br>
+
+Jätkuvate maksepiirangute tõttu pidime rakenduse tuleviku tagamiseks üle minema uuele arendajakontole ja avaldama uue versiooni.<br><br>
+
+Miks uuendada uuele versioonile?<br>
+✨ Täielikult kohandatav värvivalik – vali endale meelepärane värv!<br>
+🎨 Värsked ja moodsad ikoonid<br>
+❤️ Võimalus projekti toetada – nüüd on see selle arendamiseks hädavajalik.<br><br>
+
+Teie praegune rakendus jätkab toimimist ja saab värskendusi.<br><br>
+
+<b>Täname teid usalduse ja toetuse eest.</b><br><br>
+
+<small><i>Meie varajastele toetajatele:<br>
+Kui olete selle rakenduse varem ostnud või annetuse teinud, siis täname teid! Saatke oma kinnitus aadressile help@goodwy.dev ja me teeme kõik endast oleneva, et pakkuda teile uue versiooni sooduskoodi (kuni kaupa jätkub).</i></small>
+]]></string>
     <string name="add_number">Lisada number</string>
     <string name="add_email">Add email</string>
     <string name="add_address">Aadressi lisamine</string>

@@ -205,6 +205,23 @@
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+            <b><big>اہم خبریں اور ایک نئی شروعات 🚀</big></b><br><br>
+
+            ادائیگی کی جاری پابندیوں کی وجہ سے، ہمیں ایک نئے ڈویلپر اکاؤنٹ پر جانا پڑا اور ایپ کے مستقبل کو یقینی بنانے کے لیے ایک نیا ورژن جاری کرنا پڑا۔<br><br>
+
+            نئے ورژن میں کیوں اپ گریڈ کریں؟<br>
+            ✨ مکمل طور پر حسب ضرورت رنگ کا انتخاب — اپنی پسند کا کوئی بھی رنگ منتخب کریں!<br>
+            🎨 تازہ، جدید شبیہیں<br>
+            ❤️ پروجیکٹ کو سپورٹ کرنے کا موقع — اب اس کی ترقی کے لیے ضروری ہے۔<br><br>
+
+            آپ کی موجودہ ایپ کام کرتی رہے گی اور اپ ڈیٹس وصول کرتی رہے گی۔<br><br>
+
+            <b>آپ کے اعتماد اور تعاون کا شکریہ۔</b><br><br>
+
+            <small><i>ہمارے ابتدائی حامیوں کے لیے:<br>
+            اگر آپ نے پہلے یہ ایپ خریدی ہے یا عطیہ کیا ہے تو آپ کا شکریہ! اپنی تصدیق help@goodwy.dev پر بھیجیں، اور ہم نئے ورژن کے لیے پرومو کوڈ فراہم کرنے کی پوری کوشش کریں گے (سپلائی ختم ہونے تک)۔</i></small>
+        ]]></string>
     <string name="add_number">نمبر شامل کریں</string>
     <string name="add_email">ای میل شامل کریں</string>
     <string name="add_address">پتہ شامل کریں</string>

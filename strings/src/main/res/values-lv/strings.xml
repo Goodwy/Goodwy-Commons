@@ -205,6 +205,23 @@ Paldies visiem līdzstrādniekiem un citiem atbalstītājiem!
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Svarīgas ziņas un jauns sākums 🚀</big></b><br><br>
+
+Pastāvīgo maksājumu ierobežojumu dēļ mums bija jāpārslēdzas uz jaunu izstrādātāja kontu un jāizlaiž jauna versija, lai nodrošinātu lietotnes nākotni.<br><br>
+
+Kāpēc jaunināt uz jauno versiju?<br>
+✨ Pilnībā pielāgojama krāsu izvēle — izvēlieties jebkuru krāsu, kas jums patīk!<br>
+🎨 Svaigas, modernas ikonas<br>
+❤️ Iespēja atbalstīt projektu — tagad tas ir būtiski tā izstrādei.<br><br>
+
+Jūsu pašreizējā lietotne turpinās darboties un saņems atjauninājumus.<br><br>
+
+<b>Paldies par jūsu uzticību un atbalstu.</b><br><br>
+
+<small><i>Mūsu agrīnajiem atbalstītājiem:<br>
+Ja iepriekš esat iegādājies šo lietotni vai veicis ziedojumu, paldies! Nosūtiet savu apstiprinājumu uz help@goodwy.dev, un mēs darīsim visu iespējamo, lai nodrošinātu jums reklāmas kodu jaunajai versijai (kamēr preces ir noliktavā).</i></small>
+]]></string>
     <string name="add_number">Add number</string>
     <string name="add_email">Add email</string>
     <string name="add_address">Add address</string>

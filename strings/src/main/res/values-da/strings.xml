@@ -202,6 +202,23 @@ Tak til alle bidragydere og andre støtter!
     <string name="pro_app_refund_g">Husk at hvis du afinstallerer en betalt app indenfor 2 timer, får du automatisk pengene tilbage. Vil du have refunderet beløbet på et senere tidspunkt, så send en mail til goodwy.dev@gmail.com . På den måde kan du prøvekøre appen uden omkostninger :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Vigtige nyheder og en ny start 🚀</big></b><br><br>
+
+På grund af løbende betalingsrestriktioner måtte vi skifte til en ny udviklerkonto og udgive en ny version for at sikre appens fremtid.<br><br>
+
+Hvorfor opgradere til den nye version?<br>
+✨ Fuldt tilpasseligt farvevalg — vælg en hvilken som helst farve, du ønsker!<br>
+🎨 Friske, moderne ikoner<br>
+❤️ Mulighed for at støtte projektet — nu afgørende for dets udvikling.<br><br>
+
+Din nuværende app vil fortsat fungere og modtage opdateringer.<br><br>
+
+<b>Tak for din tillid og støtte.</b><br><br>
+
+<small><i>Til vores tidlige støtter:<br>
+Hvis du tidligere har købt denne app eller doneret, tak! Send din bekræftelse til help@goodwy.dev, så vil vi gøre vores bedste for at give dig en rabatkode til den nye version (så længe lager haves).</i></small>
+]]></string>
     <string name="add_number">Tilføj nummer</string>
     <string name="add_email">Oplys e-mail</string>
     <string name="add_address">Oplys adresse</string>

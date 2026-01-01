@@ -217,6 +217,23 @@ Buíochas le gach rannpháirtí agus lucht tacaíochta eile!
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Nuacht thábhachtach agus tús nua 🚀</big></b><br><br>
+
+Mar gheall ar shrianta íocaíochta leanúnacha, b\'éigean dúinn aistriú chuig cuntas forbróra nua agus leagan nua a scaoileadh chun todhchaí na haipe a chinntiú.<br><br>
+
+Cén fáth uasghrádú a dhéanamh chuig an leagan nua?<br>
+✨ Rogha dathanna atá inoiriúnaithe go hiomlán — roghnaigh aon dath is mian leat!<br>
+🎨 Deilbhíní úra, nua-aimseartha<br>
+❤️ Deis chun tacú leis an tionscadal — riachtanach anois dá fhorbairt.<br><br>
+
+Leanfaidh d\'aip reatha ag feidhmiú agus gheobhaidh sí nuashonruithe.<br><br>
+
+<b>Go raibh maith agat as do mhuinín agus do thacaíocht.</b><br><br>
+
+<small><i>Donár luath-thacadóirí:<br>
+Má cheannaigh tú an aip seo roimhe seo nó má rinne tú síntiús, go raibh maith agat! Seol do dheimhniú chuig help@goodwy.dev, agus déanfaimid ár ndícheall cód promo a sholáthar don leagan nua (fad a mhaireann na soláthairtí).</i></small>
+]]></string>
     <string name="add_number">Add number</string>
     <string name="add_email">Add email</string>
     <string name="add_address">Add address</string>

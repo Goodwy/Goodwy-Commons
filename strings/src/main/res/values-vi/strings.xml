@@ -203,6 +203,29 @@ Xin cảm ơn tất cả những người đóng góp và những người ủng
     <string name="pro_app_refund_g">Đừng quên rằng nếu bạn gỡ cài đặt bất kỳ ứng dụng phải trả tiền nào trong vòng 2 giờ, bạn sẽ tự động được hoàn lại tiền. Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại goodwy.dev@gmail.com và bạn sẽ nhận được nó.Thật dễ dàng đúng không :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+
+<b><big>Tin tức quan trọng và một khởi đầu mới 🚀</big></b><br><br>
+
+Do những hạn chế về thanh toán hiện tại, chúng tôi buộc phải chuyển sang tài khoản nhà phát triển mới và phát hành phiên bản mới để đảm bảo tương lai của ứng dụng.<br><br>
+
+Tại sao nên nâng cấp lên phiên bản mới?<br>
+
+✨ Lựa chọn màu sắc hoàn toàn tùy chỉnh — chọn bất kỳ màu nào bạn thích!<br>
+
+🎨 Biểu tượng hiện đại, mới mẻ<br>
+
+❤️ Cơ hội hỗ trợ dự án — điều này hiện rất cần thiết cho sự phát triển của dự án.<br><br>
+
+Ứng dụng hiện tại của bạn sẽ tiếp tục hoạt động và nhận được các bản cập nhật.<br><br>
+
+<b>Cảm ơn sự tin tưởng và hỗ trợ của bạn.</b><br><br>
+
+<small><i>Dành cho những người ủng hộ sớm của chúng tôi:<br>
+
+Nếu trước đây bạn đã mua ứng dụng này hoặc quyên góp, xin cảm ơn! Vui lòng gửi xác nhận của bạn đến help@goodwy.dev, và chúng tôi sẽ cố gắng hết sức để cung cấp mã khuyến mãi cho phiên bản mới (cho đến khi hết hàng).
+
+]]></string>
     <string name="add_number">Thêm số</string>
     <string name="add_email">Thêm email</string>
     <string name="add_address">Thêm địa chỉ</string>

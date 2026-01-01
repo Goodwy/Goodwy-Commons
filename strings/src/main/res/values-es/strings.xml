@@ -202,6 +202,23 @@ Si quieres ayudar, avísanos. La guía de traducción está disponible en <a hre
     <string name="pro_app_refund_g">No olvides que si desinstalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, solo contáctanos en goodwy.dev@gmail.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Noticias importantes y un nuevo comienzo 🚀</big></b><br><br>
+
+Debido a las restricciones de pago, tuvimos que cambiar a una nueva cuenta de desarrollador y lanzar una nueva versión para garantizar el futuro de la aplicación.<br><br>
+
+¿Por qué actualizar a la nueva versión?<br>
+✨ Selección de colores totalmente personalizable: ¡elige el color que quieras!<br>
+🎨 Iconos modernos y modernos<br>
+❤️ Oportunidad de apoyar el proyecto: ahora es esencial para su desarrollo.<br><br>
+
+Tu aplicación actual seguirá funcionando y recibirá actualizaciones.<br><br>
+
+<b>Gracias por tu confianza y apoyo.</b><br><br>
+
+<small><i>Para nuestros primeros seguidores:<br>
+Si ya compraste esta aplicación o hiciste una donación, ¡gracias! Envía tu confirmación a help@goodwy.dev y haremos todo lo posible por proporcionarte un código promocional para la nueva versión (hasta agotar existencias).</i></small>
+]]></string>
     <string name="add_number">Añadir número</string>
     <string name="add_email">Añadir correo electrónico</string>
     <string name="add_address">Añadir dirección</string>

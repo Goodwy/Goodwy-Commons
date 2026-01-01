@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -15,6 +16,8 @@ import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.ChangeDateTimeFormatDialog
+import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
+import com.goodwy.commons.dialogs.NewAppDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
@@ -49,7 +52,7 @@ class MainActivity : BaseSimpleActivity() {
                     showComposeDialogs = {
                         startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
                     },
-                    openTestButton = ::securityDialog,//::setupStartDate,
+                    openTestButton = ::newAppDialog, //::securityDialog,//::setupStartDate,
                     showMoreApps = showMoreApps,
                     openAbout = ::launchAbout,
                     moreAppsFromUs = ::launchMoreAppsFromUs,
@@ -166,10 +169,22 @@ class MainActivity : BaseSimpleActivity() {
         }
     }
 
+    private fun newAppDialog() {
+        NewAppDialog(
+            this,
+            "dev.goodwy.messages",
+            resources.getString(com.goodwy.strings.R.string.notification_of_new_application),
+            "AlRight Message",
+            AppCompatResources.getDrawable(this@MainActivity, com.goodwy.commons.R.drawable.ic_calendar_app),
+            showSubtitle = true
+        ) {
+        }
+    }
+
     private fun setupStartDate() {
         hideKeyboard()
         val datePicker = DatePickerDialog(
-            this, getDatePickerDialogTheme(), startDateSetListener, 2024, 12, 30
+            this, getDatePickerDialogTheme(), startDateSetListener, 2026, 12, 30
         )
 
         datePicker.show()

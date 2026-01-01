@@ -205,6 +205,27 @@ Vielen Dank an alle Mitwirkenden und Unterstützer!
     <string name="pro_app_refund_g">Vergiss nicht, wenn du eine bezahlte App innerhalb von 2 Stunden deinstalliert, wird dir der Betrag erstattet. Wenn du später eine Rückerstattung möchtest, kontaktiere uns einfach unter goodwy.dev@gmail.com und du wirst sie bekommen. Das macht es einfach, die App einfach auszuprobieren :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Wichtige Neuigkeiten und ein Neustart 🚀</big></b><br><br>
+
+Aufgrund anhaltender Zahlungsbeschränkungen mussten wir auf ein neues Entwicklerkonto umsteigen und eine neue Version veröffentlichen, um die Zukunft der App zu sichern.<br><br>
+
+Warum auf die neue Version aktualisieren?<br>
+
+✨ Vollständig anpassbare Farbauswahl – wählen Sie Ihre Lieblingsfarbe!<br>
+
+🎨 Frische, moderne Icons<br>
+
+❤️ Möglichkeit, das Projekt zu unterstützen – jetzt unerlässlich für seine Weiterentwicklung.<br><br>
+
+Ihre aktuelle App funktioniert weiterhin und erhält Updates.<br><br>
+
+<b>Vielen Dank für Ihr Vertrauen und Ihre Unterstützung.</b><br><br>
+
+<small><i>An unsere Unterstützer der ersten Stunde:<br>
+Wenn Sie diese App bereits gekauft oder eine Spende geleistet haben, vielen Dank! Senden Sie Ihre Bestätigung an help@goodwy.dev, und wir werden unser Bestes tun, Ihnen einen Promo-Code für die neue Version zukommen zu lassen (solange der Vorrat reicht).</i></small>
+
+]]></string>
     <string name="add_number">Nummer hinzufügen</string>
     <string name="add_email">E-Mail hinzufügen</string>
     <string name="add_address">Adresse hinzufügen</string>

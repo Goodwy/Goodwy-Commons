@@ -203,6 +203,23 @@ Grazas a todos os colaboradores e demais apoiadores!
     <string name="pro_app_refund_g">Non esquezas que se desinstalas calquera app de pago antes de 2 horas, devolveránseche os cartos automáticamente. Se queres unha devolución máis tarde, contáctanos en goodwy.dev@gmail.com e terala. Isto fai que sexa fácil probala :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Noticias importantes e un novo comezo 🚀</big></b><br><br>
+
+Debido ás restricións de pagamento en curso, tivemos que cambiar a unha nova conta de desenvolvedor e lanzar unha nova versión para garantir o futuro da aplicación.<br><br>
+
+Por que actualizar á nova versión?<br>
+✨ Selección de cores totalmente personalizable: escolle a cor que queiras!<br>
+🎨 Iconas frescas e modernas<br>
+❤️ Oportunidade de apoiar o proxecto, agora esencial para o seu desenvolvemento.<br><br>
+
+A túa aplicación actual seguirá funcionando e recibindo actualizacións.<br><br>
+
+<b>Grazas pola túa confianza e apoio.</b><br><br>
+
+<small><i>Para os nosos primeiros seguidores:<br>
+Se xa compraches esta aplicación ou fixeches unha doazón, grazas! Envía a túa confirmación a help@goodwy.dev e faremos todo o posible para proporcionar un código promocional para a nova versión (ata fin de existencias).</i></small>
+]]></string>
     <string name="add_number">Engadir número</string>
     <string name="add_email">Engadir correo electrónico</string>
     <string name="add_address">Engadir enderezo</string>

@@ -205,6 +205,28 @@ Tüm katkıda bulunanlara ve diğer destekçilere teşekkürler!
     <string name="pro_app_refund_g">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, goodwy.dev@gmail.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+
+<b><big>Önemli haberler ve yeni bir başlangıç ​​🚀</big></b><br><br>
+
+Devam eden ödeme kısıtlamaları nedeniyle, uygulamanın geleceğini güvence altına almak için yeni bir geliştirici hesabına geçmek ve yeni bir sürüm yayınlamak zorunda kaldık.<br><br>
+
+Neden yeni sürüme yükseltmelisiniz?<br>
+
+✨ Tamamen özelleştirilebilir renk seçimi — istediğiniz rengi seçin!<br>
+
+🎨 Yeni, modern simgeler<br>
+
+❤️ Projeyi destekleme fırsatı — artık geliştirilmesi için çok önemli.<br><br>
+
+Mevcut uygulamanız çalışmaya ve güncellemeler almaya devam edecektir.<br><br>
+
+<b>Güveniniz ve desteğiniz için teşekkür ederiz.</b><br><br>
+
+<small><i>Erken dönem destekçilerimiz için:<br>
+Bu uygulamayı daha önce satın aldıysanız veya bağış yaptıysanız, teşekkür ederiz! Onayınızı help@goodwy.dev adresine gönderin, biz de yeni sürüm için bir promosyon kodu sağlamak için elimizden gelenin en iyisini yapacağız (stoklar sınırlı).
+
+]]></string>
     <string name="add_number">Numara ekle</string>
     <string name="add_email">E-posta ekle</string>
     <string name="add_address">Adres ekle</string>

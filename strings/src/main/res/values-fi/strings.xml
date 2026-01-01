@@ -204,6 +204,23 @@ Kiitos kaikille avustajille ja muille tukijoille!
     <string name="pro_app_refund_g">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse goodwy.dev@gmail.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Tärkeitä uutisia ja uusi alku 🚀</big></b><br><br>
+
+Jatkuvien maksurajoitusten vuoksi meidän piti vaihtaa uudelle kehittäjätilille ja julkaista uusi versio varmistaaksemme sovelluksen tulevaisuuden.<br><br>
+
+Miksi päivittää uuteen versioon?<br>
+✨ Täysin muokattavissa oleva värivalinta – valitse mikä tahansa väri!<br>
+🎨 Raikkaat, modernit kuvakkeet<br>
+❤️ Mahdollisuus tukea projektia – nyt välttämätöntä sen kehitykselle.<br><br>
+
+Nykyinen sovelluksesi toimii edelleen ja saa päivityksiä.<br><br>
+
+<b>Kiitos luottamuksestasi ja tuestasi.</b><br><br>
+
+<small><i>Varhaisille tukijoillemme:<br>
+Jos olet aiemmin ostanut tämän sovelluksen tai tehnyt lahjoituksen, kiitos! Lähetä vahvistuksesi osoitteeseen help@goodwy.dev, niin teemme parhaamme tarjotaksemme sinulle uuden version alennuskoodin (niin kauan kuin tavaraa riittää).</i></small>
+]]></string>
     <string name="add_number">Lisää numero</string>
     <string name="add_email">Lisää sähköpostiosoite</string>
     <string name="add_address">Lisää osoite</string>

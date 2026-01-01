@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dialog_holder"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="@dimen/activity_margin">
+    android:layout_height="match_parent">
 
     <com.goodwy.commons.views.MyTextView
         android:id="@+id/new_apps_title"
@@ -14,13 +13,26 @@
         android:textColorHighlight="@color/disabled_text_color_highlight"
         android:textSize="@dimen/bigger_text_size" />
 
+    <TextView
+        android:id="@+id/new_apps_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_apps_title"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="@dimen/big_margin"
+        android:paddingBottom="@dimen/smaller_margin"
+        android:text="@string/more_info"
+        android:textColorHighlight="@color/disabled_text_color_highlight"
+        android:textSize="@dimen/normal_text_size"
+        android:visibility="gone" />
+
     <RelativeLayout
         android:id="@+id/new_apps_holder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:padding="@dimen/medium_margin"
-        android:layout_below="@+id/new_apps_title"
+        android:layout_below="@+id/new_apps_subtitle"
         android:background="@drawable/ripple_all_corners">
 
         <ImageView

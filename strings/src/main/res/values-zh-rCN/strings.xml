@@ -198,6 +198,29 @@
     <string name="pro_app_refund_g">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 goodwy.dev@gmail.com 联系我们即可。这样您就可以放心试用了 :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+
+<b><big>重要消息和全新开始🚀</big></b><br><br>
+
+由于持续的支付限制，我们不得不切换到新的开发者账号并发布新版本，以确保应用的未来发展。<br><br>
+
+为什么要升级到新版本？<br>
+
+✨ 完全自定义颜色选择——选择您喜欢的任何颜色！<br>
+
+🎨 全新现代图标<br>
+
+❤️ 支持项目的机会——这对项目的发展至关重要。<br><br>
+
+您当前的应用程序将继续运行并接收更新。<br><br>
+
+<b>感谢您的信任和支持。</b><br><br>
+
+<small><i>致我们的早期支持者：<br>
+
+如果您之前购买过此应用或进行过捐赠，非常感谢！请将您的确认信息发送至 help@goodwy.dev，我们将尽力为您提供新版本的优惠码（数量有限，先到先得）。</i></small>
+
+]]></string>
     <string name="add_number">添加号码</string>
     <string name="add_email">添加电子邮件</string>
     <string name="add_address">添加地址</string>

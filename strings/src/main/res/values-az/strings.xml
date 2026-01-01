@@ -204,6 +204,23 @@ Bütün ianəçilərimizə təşəkkür edirik, köməyinizi çox qiymətləndir
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Vacib xəbərlər və yeni bir başlanğıc 🚀</big></b><br><br>
+
+Davam edən ödəniş məhdudiyyətləri səbəbindən, tətbiqin gələcəyini təmin etmək üçün yeni bir geliştirici hesabına keçməli və yeni bir versiya buraxmalı olduq.<br><br>
+
+Niyə yeni versiyaya yüksəltməlisiniz?<br>
+✨ Tamamilə fərdiləşdirilə bilən rəng seçimi — istədiyiniz hər hansı bir rəngi seçin!<br>
+🎨 Təzə, müasir ikonlar<br>
+❤️ Layihəni dəstəkləmək imkanı — indi onun inkişafı üçün vacibdir.<br><br>
+
+Hazırkı tətbiqiniz işləməyə davam edəcək və yeniləmələr alacaq.<br><br>
+
+<b>Etibarınız və dəstəyiniz üçün təşəkkür edirik.</b><br><br>
+
+<small><i>İlk dəstəkçilərimiz üçün:<br>
+Əgər əvvəllər bu tətbiqi satın almış və ya ianə etmisinizsə, təşəkkür edirik! Təsdiqinizi help@goodwy.dev ünvanına göndərin və biz yeni versiya üçün promo kod təqdim etmək üçün əlimizdən gələni edəcəyik (təchizat bitənə qədər).</i></small>
+]]></string>
     <string name="add_number">Nömrə əlavə edin</string>
     <string name="add_email">E-poçt əlavə edin</string>
     <string name="add_address">Ünvan əlavə edin</string>

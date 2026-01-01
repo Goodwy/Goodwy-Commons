@@ -203,6 +203,23 @@ Gràcies a tots els col·laboradors i altres donants!
     <string name="pro_app_refund_g">No us oblideu que si desinstal·leu qualsevol aplicació de pagament en un termini de 2 hores, se us retornarà automàticament. Si voleu un reemborsament en qualsevol moment més tard, poseu-vos en contacte amb nosaltres a goodwy.dev@gmail.com i ho rebreu. Això fa que sigui fàcil provar-ho :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Notícies importants i un nou començament 🚀</big></b><br><br>
+
+A causa de les restriccions de pagament contínues, hem hagut de canviar a un nou compte de desenvolupador i llançar una nova versió per garantir el futur de l\'aplicació.<br><br>
+
+Per què actualitzar a la nova versió?<br>
+✨ Selecció de colors totalment personalitzable: tria el color que vulguis!<br>
+🎨 Icones fresques i modernes<br>
+❤️ Oportunitat de donar suport al projecte, ara essencial per al seu desenvolupament.<br><br>
+
+La teva aplicació actual continuarà funcionant i rebent actualitzacions.<br><br>
+
+<b>Gràcies per la teva confiança i suport.</b><br><br>
+
+<small><i>Per als nostres primers seguidors:<br>
+Si ja has comprat aquesta aplicació o has fet una donació, gràcies! Envia la teva confirmació a help@goodwy.dev i farem tot el possible per proporcionar-te un codi promocional per a la nova versió (fins a fi d\'existències).</i></small>
+]]></string>
     <string name="add_number">Afegeix un número</string>
     <string name="add_email">Afegeix un correu electrònic</string>
     <string name="add_address">Afegeix una adreça</string>

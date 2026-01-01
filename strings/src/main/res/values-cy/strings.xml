@@ -202,6 +202,23 @@ Diolch i\'r holl gyfranwyr a chefnogwyr eraill!
     <string name="pro_app_refund_g">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it. That makes it easy to try it out :)</string>
 
     <!-- Contacts -->
+    <string name="notification_of_new_application"><![CDATA[
+<b><big>Newyddion pwysig a dechrau newydd 🚀</big></b><br><br>
+
+Oherwydd cyfyngiadau talu parhaus, bu’n rhaid i ni newid i gyfrif datblygwr newydd a rhyddhau fersiwn newydd i sicrhau dyfodol yr ap.<br><br>
+
+Pam uwchraddio i’r fersiwn newydd?<br>
+✨ Dewis lliw cwbl addasadwy — dewiswch unrhyw liw rydych chi’n ei hoffi!<br>
+🎨 Eiconau ffres, modern<br>
+❤️ Cyfle i gefnogi’r prosiect — bellach yn hanfodol ar gyfer ei ddatblygiad.<br><br>
+
+Bydd eich ap presennol yn parhau i weithredu a derbyn diweddariadau.<br><br>
+
+<b>Diolch am eich ymddiriedaeth a’ch cefnogaeth.</b><br><br>
+
+<small><i>I’n cefnogwyr cynnar:<br>
+Os gwnaethoch chi brynu’r ap hwn o’r blaen neu wneud rhodd, diolch! Anfonwch eich cadarnhad i help@goodwy.dev, a byddwn yn gwneud ein gorau i ddarparu cod hyrwyddo ar gyfer y fersiwn newydd (tra bo cyflenwadau ar gael).</i></small>
+]]></string>
     <string name="add_number">Ychwanegu rhif</string>
     <string name="add_email">Ychwanegu e-bost</string>
     <string name="add_address">Ychwanegu cyfeiriad</string>

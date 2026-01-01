@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.github.goodwy.goodwy-commons"
-version = "7.2.0"
+version = "8.1.0"
 
 val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")

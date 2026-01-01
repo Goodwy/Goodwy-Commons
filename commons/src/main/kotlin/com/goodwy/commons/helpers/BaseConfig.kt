@@ -703,6 +703,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(APP_RECOMMENDATION_DIALOG_COUNT, 3)
         set(appRecommendationDialogCount) = prefs.edit { putInt(APP_RECOMMENDATION_DIALOG_COUNT, appRecommendationDialogCount) }
 
+    var newAppRecommendationDialogCount: Int
+        get() = prefs.getInt(NEW_APP_RECOMMENDATION_DIALOG_COUNT, 3)
+        set(newAppRecommendationDialogCount) = prefs.edit { putInt(NEW_APP_RECOMMENDATION_DIALOG_COUNT, newAppRecommendationDialogCount) }
+
     var openSearch: Boolean
         get() = prefs.getBoolean(CLOSE_SEARCH, false)
         set(openSearch) = prefs.edit { putBoolean(CLOSE_SEARCH, openSearch) }

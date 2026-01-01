@@ -6,7 +6,9 @@ import android.text.Html
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.DialogNewAppsBinding
 import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.beVisibleIf
 import com.goodwy.commons.extensions.getAlertDialogBuilder
+import com.goodwy.commons.extensions.getProperPrimaryColor
 import com.goodwy.commons.extensions.launchViewIntent
 import com.goodwy.commons.extensions.setupDialogStuff
 
@@ -17,6 +19,7 @@ class NewAppDialog(
     val title: String,
     val text: String,
     val drawable: Drawable?,
+    val showSubtitle: Boolean = false,
     val callback: () -> Unit)
 {
     init {
@@ -25,6 +28,9 @@ class NewAppDialog(
             newAppsText.text = text
             newAppsIcon.setImageDrawable(drawable!!)
             newAppsHolder.setOnClickListener { dialogConfirmed() }
+            newAppsSubtitle.beVisibleIf(showSubtitle)
+            newAppsSubtitle.setTextColor(activity.getProperPrimaryColor())
+            newAppsSubtitle.setOnClickListener { moreInfo() }
         }
 
         activity.getAlertDialogBuilder()
@@ -37,7 +43,17 @@ class NewAppDialog(
     }
 
     private fun dialogDismissed(count: Int) {
-        activity.baseConfig.appRecommendationDialogCount = count
+        if (showSubtitle) {
+            activity.baseConfig.newAppRecommendationDialogCount = count
+        } else {
+            activity.baseConfig.appRecommendationDialogCount = count
+        }
+        callback()
+    }
+
+    private fun moreInfo() {
+        val url = "https://www.goodwy.dev/new-developer-account"
+        activity.launchViewIntent(url)
         callback()
     }
 
