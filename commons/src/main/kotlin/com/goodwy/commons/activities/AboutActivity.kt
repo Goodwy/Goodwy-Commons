@@ -158,15 +158,28 @@ class AboutActivity : BaseComposeActivity() {
 
     private fun onPrivacyPolicyClick() {
         val appId = baseConfig.appId.removePrefix("com.").removePrefix("dev.").removeSuffix(".debug")
-        val url = when (appId) {
-            "goodwy.dialer" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-dialer"
-            "goodwy.smsmessenger" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-messages"
-            "goodwy.contacts" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-contacts"
-            "goodwy.gallery" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-gallery"
-            "goodwy.filemanager" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-files"
-            "goodwy.voicerecorder", "goodwy.voicerecorderfree" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-voice-recorder"
-            "goodwy.calendar" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-calendar"
-            else -> "https://sites.google.com/view/goodwy/about/privacy-policy"
+        val url = if (packageName.startsWith("com.goodwy.", true)) {
+            when (appId) {
+                "goodwy.dialer" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-dialer"
+                "goodwy.smsmessenger" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-messages"
+                "goodwy.contacts" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-contacts"
+                "goodwy.gallery" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-gallery"
+                "goodwy.filemanager" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-files"
+                "goodwy.voicerecorder" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-voice-recorder"
+                "goodwy.calendar" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-calendar"
+                else -> "https://sites.google.com/view/goodwy/about/privacy-policy"
+            }
+        } else {
+            when (appId) {
+                "goodwy.dialer" -> "https://www.goodwy.dev/privacy-policy"
+                "goodwy.messages" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-messages"
+                "goodwy.contacts" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-contacts"
+                "goodwy.gallery" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-gallery"
+                "goodwy.filemanager" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-files"
+                "goodwy.voicerecorder" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-voice-recorder"
+                "goodwy.calendar" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-calendar"
+                else -> "https://www.goodwy.dev/privacy-policy"
+            }
         }
         launchViewIntent(url)
     }
