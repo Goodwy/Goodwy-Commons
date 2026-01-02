@@ -158,7 +158,7 @@ class AboutActivity : BaseComposeActivity() {
 
     private fun onPrivacyPolicyClick() {
         val appId = baseConfig.appId.removePrefix("com.").removePrefix("dev.").removeSuffix(".debug")
-        val url = if (packageName.startsWith("com.goodwy.", true)) {
+        val url = if (!isNewApp()) {
             when (appId) {
                 "goodwy.dialer" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-dialer"
                 "goodwy.smsmessenger" -> "https://sites.google.com/view/goodwy/about/privacy-policy-right-messages"

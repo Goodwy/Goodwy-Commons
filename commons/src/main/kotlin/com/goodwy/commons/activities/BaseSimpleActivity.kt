@@ -113,9 +113,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
 
         if (isAutoTheme()) changeAutoTheme()
 
-        if (!packageName.startsWith("com.goodwy.", true) &&
-            !packageName.startsWith("dev.goodwy.", true)
-        ) {
+        if (!packageName.startsWith("com.goodwy.", true) && !isNewApp()) {
             if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
                 showModdedAppWarning()
             }
@@ -750,7 +748,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
     // synchronous return value determines only if we are showing the SAF dialog, callback result tells if the SD or OTG permission has been granted
     fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         hideKeyboard()
-        return if (!packageName.startsWith("com.goodwy") && !packageName.startsWith("dev.goodwy")) {
+        return if (!packageName.startsWith("com.goodwy") && !isNewApp()) {
             callback(true)
             false
         } else if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
@@ -768,7 +766,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         callback: (success: Boolean) -> Unit
     ): Boolean {
         hideKeyboard()
-        return if (!packageName.startsWith("com.goodwy") && !packageName.startsWith("dev.goodwy")) {
+        return if (!packageName.startsWith("com.goodwy") && !isNewApp()) {
             callback(true)
             false
         } else if (isShowingSAFDialogSdk30(path, showRationale)) {
@@ -798,7 +796,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         callback: (success: Boolean) -> Unit
     ): Boolean {
         hideKeyboard()
-        return if (!packageName.startsWith("com.goodwy") && !packageName.startsWith("dev.goodwy")) {
+        return if (!packageName.startsWith("com.goodwy") && !isNewApp()) {
             callback(true)
             false
         } else if (isShowingSAFCreateDocumentDialogSdk30(path)) {
@@ -816,7 +814,7 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         callback: (success: Boolean) -> Unit
     ): Boolean {
         hideKeyboard()
-        return if (!packageName.startsWith("com.goodwy") && !packageName.startsWith("dev.goodwy")) {
+        return if (!packageName.startsWith("com.goodwy") && !isNewApp()) {
             callback(true)
             false
         } else if (isShowingAndroidSAFDialog(path, openInSystemAppAllowed)) {

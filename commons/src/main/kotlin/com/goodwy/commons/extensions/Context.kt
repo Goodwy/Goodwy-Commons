@@ -1551,7 +1551,7 @@ fun Context.isCollection(): Boolean {
         && isPackageInstalled(prefix + "goodwy.voicerecorderfree")
 }
 
-fun Context.appPrefix(): String = if (packageName.startsWith("dev.goodwy")) "dev." else "com."
+fun Context.appPrefix(): String = if (isNewApp()) "dev." else "com."
 
 fun Context.isTalkBackOn(): Boolean {
     val am = getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
@@ -1602,3 +1602,5 @@ fun Context.getDividerColor(): Int {
         "#E0E0E0".toColorInt()
     }
 }
+
+fun Context.isNewApp(): Boolean = packageName.startsWith("dev.goodwy.", true)

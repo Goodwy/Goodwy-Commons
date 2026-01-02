@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlin.reflect.KProperty0
 import androidx.core.content.edit
+import com.goodwy.commons.extensions.isNewApp
 
 open class BaseConfig(val context: Context) {
 //    protected val prefs = context.getSharedPrefs()
@@ -281,7 +282,7 @@ open class BaseConfig(val context: Context) {
         set(isSystemThemeEnabled) = prefs.edit { putBoolean(IS_SYSTEM_THEME_ENABLED, isSystemThemeEnabled) }
 
     var isAutoThemeEnabled: Boolean
-        get() = prefs.getBoolean(IS_AUTO_THEME_ENABLED, context.packageName.startsWith("dev.goodwy.", true))
+        get() = prefs.getBoolean(IS_AUTO_THEME_ENABLED, context.isNewApp())
         set(isAutoThemeEnabled) = prefs.edit { putBoolean(IS_AUTO_THEME_ENABLED, isAutoThemeEnabled) }
 
     var wasCustomThemeSwitchDescriptionShown: Boolean
