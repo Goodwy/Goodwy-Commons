@@ -2,7 +2,12 @@ package com.goodwy.commons.dialogs
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.graphics.Color
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.graphics.drawable.toDrawable
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.DialogIconListBinding
 import com.goodwy.commons.extensions.*
@@ -130,6 +135,9 @@ class IconListDialog(
             if (defaultItemId != null) setNeutralButton(R.string.set_as_default) { _, _ -> itemSelected(defaultItemId) }
             activity.setupDialogStuff(view.root, this, titleId, cancelOnTouchOutside = true) { alertDialog ->
                 dialog = alertDialog
+
+                val window = alertDialog.window
+                window?.setBackgroundDrawable(activity.getRoundedDrawable())
             }
         }
 

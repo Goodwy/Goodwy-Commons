@@ -9,6 +9,7 @@ import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.beVisibleIf
 import com.goodwy.commons.extensions.getAlertDialogBuilder
 import com.goodwy.commons.extensions.getProperPrimaryColor
+import com.goodwy.commons.extensions.getRoundedDrawable
 import com.goodwy.commons.extensions.launchViewIntent
 import com.goodwy.commons.extensions.setupDialogStuff
 
@@ -33,13 +34,17 @@ class NewAppDialog(
             newAppsSubtitle.setOnClickListener { moreInfo() }
         }
 
-        activity.getAlertDialogBuilder()
+        val builder = activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.later) { _, _ -> dialogDismissed(8) }
             .setNeutralButton(R.string.do_not_show_again) { _, _ -> dialogDismissed(1) }
             .setOnCancelListener { dialogDismissed(8) }
-            .apply {
-                activity.setupDialogStuff(view.root, this)
+
+        builder.apply {
+            activity.setupDialogStuff(view.root, this) { alertDialog ->
+                val window = alertDialog.window
+                window?.setBackgroundDrawable(activity.getRoundedDrawable())
             }
+        }
     }
 
     private fun dialogDismissed(count: Int) {

@@ -9,6 +9,9 @@ import android.content.*
 import android.content.Intent.EXTRA_STREAM
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
 import android.media.RingtoneManager
 import android.net.Uri
 import android.os.*
@@ -1808,4 +1811,17 @@ fun Activity.isSpeechToTextAvailable(): Boolean {
         Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0
     )
     return activities.isNotEmpty()
+}
+
+fun Activity.getRoundedDrawable(): Drawable {
+    val radius = resources.getDimension(R.dimen.dialog_corner_radius) // 20dp
+    val properBackgroundColor = getProperBackgroundColor()
+    val backgroundColor =
+        if (properBackgroundColor == Color.BLACK) getSurfaceColor().lightenColor(6)
+        else getSurfaceColor().darkenColor(6)
+
+    return GradientDrawable().apply {
+        setColor(backgroundColor)
+        cornerRadius = radius
+    }
 }
