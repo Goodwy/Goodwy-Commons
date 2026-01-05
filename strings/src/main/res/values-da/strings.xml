@@ -381,6 +381,7 @@ Hvis du tidligere har købt denne app eller doneret, tak! Send din bekræftelse 
     <string name="attendees">Deltagere</string>
     <string name="typeface">Skrifttype</string>
     <string name="minus">Minus</string>
+    <string name="disagree">Jeg er uenig</string>
     <string name="more_apps_from_us_g">Flere apps fra os</string>
     <string name="text_alignment">Tekstjustering</string>
     <string name="use_persian_calendar">Brug persisk kalender</string>
@@ -395,4 +396,5 @@ Hvis du tidligere har købt denne app eller doneret, tak! Send din bekræftelse 
     <string name="messages_blocked_warning">Beskeder fra blokerede numre modtages ikke.</string>
     <string name="enable_blocking">Aktiver blokering</string>
     <string name="plus">Plus</string>
+    <string name="agree">Jeg er enig</string>
 </resources>

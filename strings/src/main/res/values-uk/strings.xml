@@ -387,6 +387,7 @@
     <string name="availability">Доступність</string>
     <string name="attendees">Учасники</string>
     <string name="minus">Мінус</string>
+    <string name="disagree">Я не погоджуюся</string>
     <string name="more_apps_from_us_g">Більше застосунків від нас</string>
     <string name="text_alignment">Вирівнювання тексту</string>
     <string name="use_persian_calendar">Використовуйте перський календар</string>
@@ -401,4 +402,5 @@
     <string name="messages_blocked_warning">Повідомлення із заблокованих номерів надходити не будуть</string>
     <string name="enable_blocking">Увімкнути блокування</string>
     <string name="plus">плюс</string>
+    <string name="agree">Я погоджуюся</string>
 </resources>

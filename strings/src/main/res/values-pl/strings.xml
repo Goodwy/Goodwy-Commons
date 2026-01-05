@@ -384,6 +384,7 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="attendees">Uczestników</string>
     <string name="typeface">Krój pisma</string>
     <string name="minus">Minus</string>
+    <string name="disagree">Nie zgadzam się</string>
     <string name="more_apps_from_us_g">Więcej naszych aplikacji</string>
     <string name="text_alignment">Wyrównanie tekstu</string>
     <string name="use_persian_calendar">Użyj kalendarza perskiego</string>
@@ -398,4 +399,5 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="messages_blocked_warning">Wiadomości z zablokowanych numerów nie będą odbierane.</string>
     <string name="enable_blocking">Włącz blokowanie</string>
     <string name="plus">Plus</string>
+    <string name="agree">Zgadzam się</string>
 </resources>

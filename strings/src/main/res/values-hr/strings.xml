@@ -382,6 +382,7 @@ Ako ste prethodno kupili ovu aplikaciju ili donirali, hvala vam! Pošaljite svoj
     <string name="attendees">Sudionika</string>
     <string name="typeface">Oblici pisma</string>
     <string name="minus">Minus</string>
+    <string name="disagree">Ne slažem se</string>
     <string name="more_apps_from_us_g">Daljnje aplikacje od nas</string>
     <string name="text_alignment">Poravnanje teksta</string>
     <string name="use_persian_calendar">Koristite perzijski kalendar</string>
@@ -396,4 +397,5 @@ Ako ste prethodno kupili ovu aplikaciju ili donirali, hvala vam! Pošaljite svoj
     <string name="messages_blocked_warning">Poruke s blokiranih brojeva neće biti primljene.</string>
     <string name="enable_blocking">Omogući blokiranje</string>
     <string name="plus">Plus</string>
+    <string name="agree">Slažem se</string>
 </resources>

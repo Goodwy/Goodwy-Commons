@@ -384,6 +384,7 @@ Hazırkı tətbiqiniz işləməyə davam edəcək və yeniləmələr alacaq.<br>
     <string name="typeface">Yazı tipi</string>
     <string name="text_alignment">Mətnin uyğunlaşdırılması</string>
     <string name="minus">Minus</string>
+    <string name="disagree">Mən razı deyiləm</string>
     <string name="more_apps_from_us_g">Bizdən daha çox proqram</string>
     <string name="use_persian_calendar">Fars təqvimindən istifadə edin</string>
     <string name="blocking_type">Bloklama növü</string>
@@ -397,4 +398,5 @@ Hazırkı tətbiqiniz işləməyə davam edəcək və yeniləmələr alacaq.<br>
     <string name="messages_blocked_warning">Bloklanmış nömrələrdən mesajlar qəbul edilməyəcək.</string>
     <string name="enable_blocking">Bloklamanı aktivləşdirin</string>
     <string name="plus">Üstəlik</string>
+    <string name="agree">Razıyam</string>
 </resources>

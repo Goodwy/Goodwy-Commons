@@ -385,6 +385,7 @@
     <string name="typeface">ਟਾਈਪਫੇਸ</string>
     <string name="text_alignment">ਟੈਕਸਟ ਅਲਾਈਨਮੈਂਟ</string>
     <string name="minus">ਘਟਾਓ</string>
+    <string name="disagree">ਮੈਂ ਅਸਹਿਮਤ ਹਾਂ</string>
     <string name="more_apps_from_us_g">ਸਾਡੇ ਵੱਲੋਂ ਹੋਰ ਐਪਸ</string>
     <string name="use_persian_calendar">ਫ਼ਾਰਸੀ ਕੈਲੰਡਰ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="blocking_type">ਬਲਾਕਿੰਗ ਕਿਸਮ</string>
@@ -398,4 +399,5 @@
     <string name="messages_blocked_warning">ਬਲੌਕ ਕੀਤੇ ਨੰਬਰਾਂ ਤੋਂ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਣਗੇ।</string>
     <string name="enable_blocking">ਬਲਾਕਿੰਗ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</string>
     <string name="plus">ਪਲੱਸ</string>
+    <string name="agree">ਮੈਂ ਸਹਿਮਤ ਹਾਂ l</string>
 </resources>

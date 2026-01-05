@@ -382,6 +382,7 @@
     <string name="attendees">参加者</string>
     <string name="typeface">書体</string>
     <string name="minus">マイナス</string>
+    <string name="disagree">私は同意しません</string>
     <string name="more_apps_from_us_g">当社の他のアプリ</string>
     <string name="text_alignment">テキストの配置</string>
     <string name="use_persian_calendar">ペルシャ暦を使用する</string>
@@ -396,4 +397,5 @@
     <string name="messages_blocked_warning">ブロックされた番号からのメッセージは受信されません。</string>
     <string name="enable_blocking">ブロックを有効にする</string>
     <string name="plus">プラス</string>
+    <string name="agree">同意します</string>
 </resources>

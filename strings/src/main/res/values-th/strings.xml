@@ -390,6 +390,7 @@
     <string name="typeface">แบบอักษร</string>
     <string name="text_alignment">การจัดตำแหน่งข้อความ</string>
     <string name="minus">ลบ</string>
+    <string name="disagree">ฉันไม่เห็นด้วย</string>
     <string name="more_apps_from_us_g">แอปเพิ่มเติมจากเรา</string>
     <string name="use_persian_calendar">ใช้ปฏิทินเปอร์เซีย</string>
     <string name="blocking_type">ประเภทการบล็อค</string>
@@ -403,4 +404,5 @@
     <string name="messages_blocked_warning">ข้อความจากหมายเลขที่ถูกบล็อคจะไม่ได้รับ</string>
     <string name="enable_blocking">เปิดใช้งานการบล็อค</string>
     <string name="plus">พลัส</string>
+    <string name="agree">ฉันเห็นด้วย</string>
 </resources>

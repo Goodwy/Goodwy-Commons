@@ -383,6 +383,7 @@
     <string name="availability">دسترس بودن</string>
     <string name="attendees">شرکت کنندگان</string>
     <string name="minus">منهای</string>
+    <string name="disagree">من مخالفم</string>
     <string name="more_apps_from_us_g">برنامه‌های دیگر ما</string>
     <string name="text_alignment">تراز کردن متن</string>
     <string name="blocking_type">نوع مسدود کردن</string>
@@ -396,4 +397,5 @@
     <string name="messages_blocked_warning">پیام های شماره های مسدود شده دریافت نمی شود.</string>
     <string name="enable_blocking">مسدود کردن را فعال کنید</string>
     <string name="plus">به علاوه</string>
+    <string name="agree">موافقم</string>
 </resources>

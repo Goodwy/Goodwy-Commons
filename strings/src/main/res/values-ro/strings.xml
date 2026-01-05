@@ -384,6 +384,7 @@ Dacă ați achiziționat anterior această aplicație sau ați făcut o donație
     <string name="attendees">Participanţi</string>
     <string name="typeface">Caractere</string>
     <string name="minus">Minus</string>
+    <string name="disagree">Nu sunt de acord</string>
     <string name="more_apps_from_us_g">Alte aplicații de la noi</string>
     <string name="text_alignment">Alinierea textului</string>
     <string name="use_persian_calendar">Folosește calendarul persan</string>
@@ -398,4 +399,5 @@ Dacă ați achiziționat anterior această aplicație sau ați făcut o donație
     <string name="messages_blocked_warning">Mesajele de la numerele blocate nu vor fi primite.</string>
     <string name="enable_blocking">Activați blocarea</string>
     <string name="plus">Plus</string>
+    <string name="agree">Sunt de acord</string>
 </resources>

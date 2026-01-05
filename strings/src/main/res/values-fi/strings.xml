@@ -383,6 +383,7 @@ Jos olet aiemmin ostanut tämän sovelluksen tai tehnyt lahjoituksen, kiitos! L�
     <string name="attendees">Osallistujat</string>
     <string name="typeface">Kirjasin</string>
     <string name="minus">Miinus</string>
+    <string name="disagree">Olen eri mieltä</string>
     <string name="more_apps_from_us_g">Lisää sovelluksia meiltä</string>
     <string name="text_alignment">Tekstin tasaus</string>
     <string name="use_persian_calendar">Käytä persialaista kalenteria</string>
@@ -397,4 +398,5 @@ Jos olet aiemmin ostanut tämän sovelluksen tai tehnyt lahjoituksen, kiitos! L�
     <string name="messages_blocked_warning">Estetyistä numeroista tulevia viestejä ei vastaanoteta.</string>
     <string name="enable_blocking">Ota esto käyttöön</string>
     <string name="plus">Plus</string>
+    <string name="agree">Olen samaa mieltä</string>
 </resources>

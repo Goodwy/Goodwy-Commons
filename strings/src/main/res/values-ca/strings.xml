@@ -382,6 +382,7 @@ Si ja has comprat aquesta aplicació o has fet una donació, gràcies! Envia la 
     <string name="attendees">Assistents</string>
     <string name="typeface">Tipografia</string>
     <string name="minus">Menys</string>
+    <string name="disagree">No estic d\'acord</string>
     <string name="more_apps_from_us_g">Més aplicacions nostres</string>
     <string name="text_alignment">Alineació del text</string>
     <string name="use_persian_calendar">Utilitzeu el calendari persa</string>
@@ -396,4 +397,5 @@ Si ja has comprat aquesta aplicació o has fet una donació, gràcies! Envia la 
     <string name="messages_blocked_warning">Els missatges dels números bloquejats no es rebran.</string>
     <string name="enable_blocking">Activa el bloqueig</string>
     <string name="plus">A més</string>
+    <string name="agree">Estic d\'acord</string>
 </resources>

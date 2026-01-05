@@ -381,6 +381,7 @@
     <string name="attendees">பங்கேற்பாளர்கள்</string>
     <string name="typeface">எழுத்து வடிவம்</string>
     <string name="minus">கழித்தல்</string>
+    <string name="disagree">நான் உடன்படவில்லை.</string>
     <string name="more_apps_from_us_g">எங்களிடமிருந்து மேலும் செயலிகள்</string>
     <string name="text_alignment">உரை சீரமைப்பு</string>
     <string name="use_persian_calendar">பாரசீக நாட்காட்டியைப் பயன்படுத்தவும்</string>
@@ -395,4 +396,5 @@
     <string name="messages_blocked_warning">தடுக்கப்பட்ட எண்களில் இருந்து செய்திகள் பெறப்படாது.</string>
     <string name="enable_blocking">தடுப்பதை இயக்கு</string>
     <string name="plus">மேலும்</string>
+    <string name="agree">நான் ஒப்புக்கொள்கிறேன்.</string>
 </resources>

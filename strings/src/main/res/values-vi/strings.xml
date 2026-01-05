@@ -388,6 +388,7 @@ Nếu trước đây bạn đã mua ứng dụng này hoặc quyên góp, xin c�
     <string name="attendees">Tham dự</string>
     <string name="typeface">Kiểu chữ</string>
     <string name="minus">Trừ</string>
+    <string name="disagree">Tôi không đồng ý</string>
     <string name="more_apps_from_us_g">Các app khác</string>
     <string name="text_alignment">Căn chỉnh văn bản</string>
     <string name="use_persian_calendar">Sử dụng lịch Ba Tư</string>
@@ -402,4 +403,5 @@ Nếu trước đây bạn đã mua ứng dụng này hoặc quyên góp, xin c�
     <string name="messages_blocked_warning">Tin nhắn từ số bị chặn sẽ không được nhận.</string>
     <string name="enable_blocking">Cho phép chặn</string>
     <string name="plus">Thêm</string>
+    <string name="agree">Tôi đồng ý</string>
 </resources>

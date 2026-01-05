@@ -387,6 +387,7 @@
     <string name="attendees">सहभागियों</string>
     <string name="typeface">मुद्री-रूप</string>
     <string name="minus">ऋण</string>
+    <string name="disagree">मैं असहमत हूं</string>
     <string name="more_apps_from_us_g">हमारी ओर से और भी ऐप्स</string>
     <string name="text_alignment">पाठ संरेखण</string>
     <string name="use_persian_calendar">फ़ारसी कैलेंडर का उपयोग करें</string>
@@ -401,4 +402,5 @@
     <string name="messages_blocked_warning">ब्लॉक किए गए नंबरों से संदेश प्राप्त नहीं होंगे।</string>
     <string name="enable_blocking">ब्लॉकिंग सक्षम करें</string>
     <string name="plus">प्लस</string>
+    <string name="agree">मैं सहमत हूं</string>
 </resources>

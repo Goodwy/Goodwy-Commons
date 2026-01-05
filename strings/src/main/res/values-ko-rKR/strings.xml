@@ -386,6 +386,7 @@
     <string name="attendees">참석자</string>
     <string name="typeface">서체</string>
     <string name="minus">마이너스</string>
+    <string name="disagree">저는 동의하지 않습니다.</string>
     <string name="more_apps_from_us_g">더 많은 앱</string>
     <string name="text_alignment">텍스트 정렬</string>
     <string name="use_persian_calendar">페르시아력을 사용하세요</string>
@@ -400,4 +401,5 @@
     <string name="messages_blocked_warning">차단된 번호에서 온 메시지는 수신되지 않습니다.</string>
     <string name="enable_blocking">차단 활성화</string>
     <string name="plus">을 더한</string>
+    <string name="agree">동의합니다</string>
 </resources>

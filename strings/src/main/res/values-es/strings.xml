@@ -381,6 +381,7 @@ Si ya compraste esta aplicación o hiciste una donación, ¡gracias! Envía tu c
     <string name="attendees">Asistentes</string>
     <string name="typeface">Tipo de letra</string>
     <string name="minus">Menos</string>
+    <string name="disagree">no estoy de acuerdo</string>
     <string name="more_apps_from_us_g">Más aplicaciones nuestras</string>
     <string name="text_alignment">Alineación de texto</string>
     <string name="use_persian_calendar">Utilice el calendario persa</string>
@@ -395,4 +396,5 @@ Si ya compraste esta aplicación o hiciste una donación, ¡gracias! Envía tu c
     <string name="messages_blocked_warning">No se recibirán mensajes de números bloqueados.</string>
     <string name="enable_blocking">Habilitar bloqueo</string>
     <string name="plus">Más</string>
+    <string name="agree">Estoy de acuerdo</string>
 </resources>

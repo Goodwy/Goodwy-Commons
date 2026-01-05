@@ -36,6 +36,8 @@
     <string name="end">End</string>
     <string name="plus">Plus</string>
     <string name="minus">Minus</string>
+    <string name="agree">I AGREE</string>
+    <string name="disagree">I DISAGREE</string>
 
     <!-- About -->
 <!--    <string name="more_apps">More apps</string>-->

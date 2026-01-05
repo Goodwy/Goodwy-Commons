@@ -384,6 +384,7 @@ Ak ste si túto aplikáciu už predtým zakúpili alebo ste prispeli darom, ďak
     <string name="attendees">Účastníkov</string>
     <string name="typeface">Písmo</string>
     <string name="minus">Mínus</string>
+    <string name="disagree">Nesúhlasím</string>
     <string name="more_apps_from_us_g">Viac aplikácií od nás</string>
     <string name="text_alignment">Zarovnanie textu</string>
     <string name="use_persian_calendar">Použite perzský kalendár</string>
@@ -398,4 +399,5 @@ Ak ste si túto aplikáciu už predtým zakúpili alebo ste prispeli darom, ďak
     <string name="messages_blocked_warning">Správy z blokovaných čísel nebudú prijímané.</string>
     <string name="enable_blocking">Povoliť blokovanie</string>
     <string name="plus">Navyše</string>
+    <string name="agree">Súhlasím</string>
 </resources>

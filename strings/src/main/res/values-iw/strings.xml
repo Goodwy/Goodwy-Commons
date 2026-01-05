@@ -381,6 +381,7 @@
     <string name="attendees">משתתפים</string>
     <string name="typeface">צורת גופן</string>
     <string name="minus">מִינוּס</string>
+    <string name="disagree">אני לא מסכים</string>
     <string name="more_apps_from_us_g">אפליקציות נוספות מאיתנו</string>
     <string name="text_alignment">יישור טקסט</string>
     <string name="use_persian_calendar">השתמש בלוח השנה הפרסי</string>
@@ -395,4 +396,5 @@
     <string name="messages_blocked_warning">הודעות ממספרים חסומים לא יתקבלו.</string>
     <string name="enable_blocking">אפשר חסימה</string>
     <string name="plus">פְּלוּס</string>
+    <string name="agree">אני מסכים</string>
 </resources>

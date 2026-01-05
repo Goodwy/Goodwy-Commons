@@ -385,6 +385,7 @@ Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><b
     <string name="attendees">Udeležencev</string>
     <string name="typeface">Tipografija</string>
     <string name="minus">minus</string>
+    <string name="disagree">Ne strinjam se</string>
     <string name="more_apps_from_us_g">Več aplikacij od nas</string>
     <string name="text_alignment">Poravnava besedila</string>
     <string name="use_persian_calendar">Uporabite perzijski koledar</string>
@@ -399,4 +400,5 @@ Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><b
     <string name="messages_blocked_warning">Sporočila z blokiranih številk ne bodo sprejeta.</string>
     <string name="enable_blocking">Omogoči blokiranje</string>
     <string name="plus">Plus</string>
+    <string name="agree">Strinjam se</string>
 </resources>

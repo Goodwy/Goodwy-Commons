@@ -388,6 +388,7 @@ Wenn Sie diese App bereits gekauft oder eine Spende geleistet haben, vielen Dank
     <string name="attendees">Teilnehmer</string>
     <string name="typeface">Schrift</string>
     <string name="minus">Minus</string>
+    <string name="disagree">ich bin nicht einverstanden</string>
     <string name="more_apps_from_us_g">Weitere Apps von uns</string>
     <string name="text_alignment">Textausrichtung</string>
     <string name="use_persian_calendar">Persischen Kalender verwenden</string>
@@ -402,4 +403,5 @@ Wenn Sie diese App bereits gekauft oder eine Spende geleistet haben, vielen Dank
     <string name="messages_blocked_warning">Nachrichten von blockierten Nummern werden nicht empfangen.</string>
     <string name="enable_blocking">Blockierung aktivieren</string>
     <string name="plus">Plus</string>
+    <string name="agree">Ich stimme zu</string>
 </resources>
