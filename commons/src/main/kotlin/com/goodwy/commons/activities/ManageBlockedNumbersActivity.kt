@@ -103,8 +103,9 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity() {
             val isBlockingEnabled by config.isBlockingEnabled.collectAsStateWithLifecycle(initialValue = config.blockingEnabled)
             val isDoNotBlockContactsAndRecent by config.isDoNotBlockContactsAndRecent.collectAsStateWithLifecycle(initialValue = config.doNotBlockContactsAndRecent)
             val prefix = appPrefix()
+            val dialer = if (isNewApp()) "goodwy.phone" else "goodwy.dialer"
             val isDialer = remember {
-                config.appId.startsWith(prefix + "goodwy.dialer")
+                config.appId.startsWith(prefix + dialer)
             }
             val isDefaultDialer: Boolean = onEventValue {
                 context.isDefaultDialer()

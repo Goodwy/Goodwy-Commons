@@ -25,8 +25,8 @@
         <package android:name="dev.goodwy.audiobook" />
         <package android:name="dev.goodwy.files.debug" />
         <package android:name="dev.goodwy.files" />
-        <package android:name="dev.goodwy.dialer.debug" />
-        <package android:name="dev.goodwy.dialer" />
+        <package android:name="dev.goodwy.phone.debug" />
+        <package android:name="dev.goodwy.phone" />
         <package android:name="dev.goodwy.contacts.debug" />
         <package android:name="dev.goodwy.contacts" />
         <package android:name="dev.goodwy.messages.debug" />

@@ -171,7 +171,7 @@ class AboutActivity : BaseComposeActivity() {
             }
         } else {
             when (appId) {
-                "goodwy.dialer" -> "https://www.goodwy.dev/privacy-policy"
+                "goodwy.phone" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-right-dialer"
                 "goodwy.messages" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-messages"
                 "goodwy.contacts" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-contacts"
                 "goodwy.gallery" -> "https://www.goodwy.dev/privacy-policy/privacy-policy-alright-gallery"

@@ -454,7 +454,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     private fun setupCollection() {
         binding.collectionHolder.beVisible()
         val prefix = appPrefix()
-        val appDialerPackage = prefix + "goodwy.dialer"
+        val appDialerPackage = prefix + "goodwy.phone"
         val appContactsPackage = prefix + "goodwy.contacts"
         val appSmsMessengerPackage = prefix + "goodwy.smsmessenger"
         val appGalleryPackage = prefix + "goodwy.gallery"

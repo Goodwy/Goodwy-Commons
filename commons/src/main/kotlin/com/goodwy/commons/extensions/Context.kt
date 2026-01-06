@@ -1042,10 +1042,10 @@ val Context.realScreenSize: Point
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
 fun Context.isDefaultDialer(): Boolean {
     return if (!packageName.startsWith("com.goodwy.contacts") && !packageName.startsWith("com.goodwy.dialer") &&
-        !packageName.startsWith("dev.goodwy.contacts") && !packageName.startsWith("dev.goodwy.dialer")) {
+        !packageName.startsWith("dev.goodwy.contacts") && !packageName.startsWith("dev.goodwy.phone")) {
         true
     } else if ((packageName.startsWith("com.goodwy.contacts") || packageName.startsWith("com.goodwy.dialer") ||
-            packageName.startsWith("dev.goodwy.contacts") || packageName.startsWith("dev.goodwy.dialer")) && isQPlus()) {
+            packageName.startsWith("dev.goodwy.contacts") || packageName.startsWith("dev.goodwy.phone")) && isQPlus()) {
         val roleManager = getSystemService(RoleManager::class.java)
         roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
@@ -1540,7 +1540,8 @@ fun Context.isPro() =
 
 fun Context.isCollection(): Boolean {
     val prefix = appPrefix()
-    return isPackageInstalled(prefix + "goodwy.dialer")
+    val dialer = if (isNewApp()) "goodwy.phone" else "goodwy.dialer"
+    return isPackageInstalled(prefix + dialer)
         && isPackageInstalled(prefix + "goodwy.contacts")
         && isPackageInstalled(prefix + "goodwy.smsmessenger")
         && isPackageInstalled(prefix + "goodwy.gallery")
