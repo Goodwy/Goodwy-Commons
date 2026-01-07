@@ -386,6 +386,7 @@
     <string name="minus">മൈനസ്</string>
     <string name="disagree">ഞാൻ വിയോജിക്കുന്നു</string>
     <string name="height">ഉയരം</string>
+    <string name="select_color">നിറം തിരഞ്ഞെടുക്കുക</string>
     <string name="more_apps_from_us_g">ഞങ്ങളിൽ നിന്നുള്ള കൂടുതൽ ആപ്പുകൾ</string>
     <string name="use_persian_calendar">പേർഷ്യൻ കലണ്ടർ ഉപയോഗിക്കുക</string>
     <string name="blocking_type">തടയൽ തരം</string>

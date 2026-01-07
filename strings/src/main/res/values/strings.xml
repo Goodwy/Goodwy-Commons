@@ -40,6 +40,7 @@
     <string name="disagree">I DISAGREE</string>
     <string name="scale">Scale</string>
     <string name="height">Height</string>
+    <string name="select_color">Select color</string>
 
     <!-- About -->
 <!--    <string name="more_apps">More apps</string>-->

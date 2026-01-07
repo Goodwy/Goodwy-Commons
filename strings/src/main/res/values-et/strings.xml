@@ -387,6 +387,7 @@ Kui olete selle rakenduse varem ostnud või annetuse teinud, siis täname teid! 
     <string name="minus">Miinus</string>
     <string name="disagree">Ma ei nõustu</string>
     <string name="height">Kõrgus</string>
+    <string name="select_color">Valige värv</string>
     <string name="more_apps_from_us_g">Vaata kõiki meie rakendusi</string>
     <string name="text_alignment">Teksti joondamine</string>
     <string name="use_persian_calendar">Kasutage Pärsia kalendrit</string>

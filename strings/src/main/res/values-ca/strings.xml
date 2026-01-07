@@ -384,6 +384,7 @@ Si ja has comprat aquesta aplicació o has fet una donació, gràcies! Envia la 
     <string name="minus">Menys</string>
     <string name="disagree">No estic d\'acord</string>
     <string name="height">Alçada</string>
+    <string name="select_color">Selecciona el color</string>
     <string name="more_apps_from_us_g">Més aplicacions nostres</string>
     <string name="text_alignment">Alineació del text</string>
     <string name="use_persian_calendar">Utilitzeu el calendari persa</string>

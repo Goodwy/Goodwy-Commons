@@ -387,6 +387,7 @@ Ja iepriekš esat iegādājies šo lietotni vai veicis ziedojumu, paldies! Nosū
     <string name="minus">Mīnuss</string>
     <string name="disagree">Es nepiekrītu</string>
     <string name="height">Augstums</string>
+    <string name="select_color">Izvēlieties krāsu</string>
     <string name="more_apps_from_us_g">Vairāk mūsu lietotņu</string>
     <string name="use_persian_calendar">Izmantojiet persiešu kalendāru</string>
     <string name="blocking_type">Bloķēšanas veids</string>
