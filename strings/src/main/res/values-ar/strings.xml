@@ -384,6 +384,7 @@
     <string name="typeface">محرف</string>
     <string name="minus">ناقص</string>
     <string name="disagree">أنا أعترض</string>
+    <string name="height">ارتفاع</string>
     <string name="more_apps_from_us_g">المزيد من تطبيقاتنا</string>
     <string name="text_alignment">محاذاة النص</string>
     <string name="use_persian_calendar">استخدم التقويم الفارسي</string>
@@ -399,4 +400,5 @@
     <string name="enable_blocking">تمكين الحظر</string>
     <string name="plus">زائد</string>
     <string name="agree">أنا موافق</string>
+    <string name="scale">حجم</string>
 </resources>

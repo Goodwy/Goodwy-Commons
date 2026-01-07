@@ -383,6 +383,7 @@ Os gwnaethoch chi brynu’r ap hwn o’r blaen neu wneud rhodd, diolch! Anfonwch
     <string name="text_alignment">Aliniad testun</string>
     <string name="minus">Llai</string>
     <string name="disagree">Rwy\'n anghytuno</string>
+    <string name="height">Uchder</string>
     <string name="more_apps_from_us_g">Mwy o apiau gennym ni</string>
     <string name="use_persian_calendar">Defnyddiwch galendr Perseg</string>
     <string name="blocking_type">Math blocio</string>
@@ -397,4 +398,5 @@ Os gwnaethoch chi brynu’r ap hwn o’r blaen neu wneud rhodd, diolch! Anfonwch
     <string name="enable_blocking">Galluogi blocio</string>
     <string name="plus">Byd Gwaith</string>
     <string name="agree">Rwy\'n cytuno</string>
+    <string name="scale">Graddfa</string>
 </resources>

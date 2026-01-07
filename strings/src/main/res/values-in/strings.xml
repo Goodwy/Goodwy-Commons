@@ -388,6 +388,7 @@ Jika Anda sebelumnya telah membeli aplikasi ini atau memberikan donasi, terima k
     <string name="typeface">Jenis huruf</string>
     <string name="minus">Kurang</string>
     <string name="disagree">Saya tidak setuju</string>
+    <string name="height">Tinggi</string>
     <string name="more_apps_from_us_g">Lebih banyak aplikasi dari kami</string>
     <string name="text_alignment">Perataan teks</string>
     <string name="use_persian_calendar">Gunakan kalender Persia</string>
@@ -403,4 +404,5 @@ Jika Anda sebelumnya telah membeli aplikasi ini atau memberikan donasi, terima k
     <string name="enable_blocking">Aktifkan pemblokiran</string>
     <string name="plus">Plus</string>
     <string name="agree">Saya setuju</string>
+    <string name="scale">Skala</string>
 </resources>

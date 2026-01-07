@@ -385,6 +385,7 @@
     <string name="text_alignment">ടെക്സ്റ്റ് വിന്യാസം</string>
     <string name="minus">മൈനസ്</string>
     <string name="disagree">ഞാൻ വിയോജിക്കുന്നു</string>
+    <string name="height">ഉയരം</string>
     <string name="more_apps_from_us_g">ഞങ്ങളിൽ നിന്നുള്ള കൂടുതൽ ആപ്പുകൾ</string>
     <string name="use_persian_calendar">പേർഷ്യൻ കലണ്ടർ ഉപയോഗിക്കുക</string>
     <string name="blocking_type">തടയൽ തരം</string>
@@ -399,4 +400,5 @@
     <string name="enable_blocking">തടയൽ പ്രവർത്തനക്ഷമമാക്കുക</string>
     <string name="plus">പ്ലസ്</string>
     <string name="agree">ഞാൻ അംഗീകരിക്കുന്നു</string>
+    <string name="scale">സ്കെയിൽ</string>
 </resources>

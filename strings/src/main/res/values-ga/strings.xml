@@ -38,6 +38,7 @@
 <!--    <string name="more_apps">More apps</string>-->
     <string name="minus">Lúide</string>
     <string name="disagree">Ní aontaím</string>
+    <string name="height">Airde</string>
     <string name="more_apps_from_us_g">Tuilleadh aipeanna uainn</string>
 <!--    <string name="rate_us">Rate us</string>-->
     <string name="rate_g">Ráta</string>
@@ -411,4 +412,5 @@ Má cheannaigh tú an aip seo roimhe seo nó má rinne tú síntiús, go raibh m
     <string name="enable_blocking">Cumasaigh blocáil</string>
     <string name="plus">Móide</string>
     <string name="agree">Aontaím</string>
+    <string name="scale">Scála</string>
 </resources>

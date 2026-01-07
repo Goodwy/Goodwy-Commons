@@ -402,6 +402,7 @@
     <string name="attendees">Участники</string>
     <string name="minus">Минус</string>
     <string name="disagree">Не согласен</string>
+    <string name="height">Высота</string>
     <string name="more_apps_from_us_g">Другие наши приложения</string>
     <string name="circle">Круг</string>
     <string name="off">Откл.</string>
@@ -410,4 +411,5 @@
     <string name="enable_blocking">Включить блокировку</string>
     <string name="plus">Плюс</string>
     <string name="agree">Согласен</string>
+    <string name="scale">Масштаб</string>
 </resources>

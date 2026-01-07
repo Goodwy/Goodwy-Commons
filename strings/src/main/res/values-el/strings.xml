@@ -383,6 +383,7 @@
     <string name="typeface">Γραμματοσειρά</string>
     <string name="minus">Πλην</string>
     <string name="disagree">Διαφωνώ</string>
+    <string name="height">Υψος</string>
     <string name="more_apps_from_us_g">Περισσότερες εφαρμογές από εμάς</string>
     <string name="text_alignment">Στοίχιση κειμένου</string>
     <string name="use_persian_calendar">Χρησιμοποιήστε το περσικό ημερολόγιο</string>
@@ -398,4 +399,5 @@
     <string name="enable_blocking">Ενεργοποίηση αποκλεισμού</string>
     <string name="plus">Συν</string>
     <string name="agree">Συμφωνώ</string>
+    <string name="scale">Κλίμακα</string>
 </resources>

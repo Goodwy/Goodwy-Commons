@@ -383,6 +383,7 @@ Jei anksčiau įsigijote šią programėlę arba paaukojote, ačiū! Patvirtinim
     <string name="typeface">Šriftas</string>
     <string name="minus">Minusas</string>
     <string name="disagree">Nesutinku</string>
+    <string name="height">Ūgis</string>
     <string name="more_apps_from_us_g">Kitos mūsų programėlės</string>
     <string name="text_alignment">Teksto lygiavimas</string>
     <string name="use_persian_calendar">Naudokite persų kalendorių</string>
@@ -398,4 +399,5 @@ Jei anksčiau įsigijote šią programėlę arba paaukojote, ačiū! Patvirtinim
     <string name="enable_blocking">Įgalinti blokavimą</string>
     <string name="plus">Pliusas</string>
     <string name="agree">Aš sutinku</string>
+    <string name="scale">Mastelis</string>
 </resources>

@@ -389,6 +389,7 @@
     <string name="typeface">字體</string>
     <string name="minus">減</string>
     <string name="disagree">我不同意</string>
+    <string name="height">高度</string>
     <string name="more_apps_from_us_g">更多我們的應用程式</string>
     <string name="text_alignment">文字對齊</string>
     <string name="use_persian_calendar">使用波斯曆</string>
@@ -404,4 +405,5 @@
     <string name="enable_blocking">啟用封鎖</string>
     <string name="plus">加</string>
     <string name="agree">我同意</string>
+    <string name="scale">規模</string>
 </resources>

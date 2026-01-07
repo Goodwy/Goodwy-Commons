@@ -387,6 +387,7 @@
     <string name="attendees">Учесници</string>
     <string name="minus">Минус</string>
     <string name="disagree">Не слажем се</string>
+    <string name="height">Висина</string>
     <string name="more_apps_from_us_g">Више апликација од нас</string>
     <string name="text_alignment">Поравнање текста</string>
     <string name="use_persian_calendar">Користите персијски календар</string>
@@ -402,4 +403,5 @@
     <string name="enable_blocking">Омогући блокирање</string>
     <string name="plus">Плус</string>
     <string name="agree">Слажем се</string>
+    <string name="scale">Скала</string>
 </resources>

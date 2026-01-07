@@ -381,6 +381,7 @@ Ha korábban megvásárolta ezt az alkalmazást vagy adományozott, köszönjük
     <string name="typeface">Betűkép</string>
     <string name="minus">Mínusz</string>
     <string name="disagree">Nem értek egyet</string>
+    <string name="height">Magasság</string>
     <string name="more_apps_from_us_g">További alkalmazásaink</string>
     <string name="text_alignment">Szöveg igazítás</string>
     <string name="use_persian_calendar">Használj perzsa naptárat</string>
@@ -396,4 +397,5 @@ Ha korábban megvásárolta ezt az alkalmazást vagy adományozott, köszönjük
     <string name="enable_blocking">Blokkolás engedélyezése</string>
     <string name="plus">Plusz</string>
     <string name="agree">Egyetértek</string>
+    <string name="scale">Skála</string>
 </resources>

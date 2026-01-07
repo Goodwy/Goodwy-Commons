@@ -392,6 +392,7 @@ Si vous avez déjà acheté cette application ou fait un don, merci ! Envoyez v
     <string name="typeface">Fonte de caractères</string>
     <string name="minus">Moins</string>
     <string name="disagree">je ne suis pas d\'accord</string>
+    <string name="height">Hauteur</string>
     <string name="more_apps_from_us_g">Plus d\'applications simples</string>
     <string name="text_alignment">Alignement du texte</string>
     <string name="use_persian_calendar">Utiliser le calendrier persan</string>
@@ -407,4 +408,5 @@ Si vous avez déjà acheté cette application ou fait un don, merci ! Envoyez v
     <string name="enable_blocking">Activer le blocage</string>
     <string name="plus">Plus</string>
     <string name="agree">Je suis d\'accord</string>
+    <string name="scale">Échelle</string>
 </resources>

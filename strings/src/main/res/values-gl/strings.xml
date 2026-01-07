@@ -383,6 +383,7 @@ Se xa compraches esta aplicación ou fixeches unha doazón, grazas! Envía a tú
     <string name="typeface">Tipo de letra</string>
     <string name="minus">Menos</string>
     <string name="disagree">Non estou de acordo</string>
+    <string name="height">Altura</string>
     <string name="more_apps_from_us_g">Máis aplicativos nosos</string>
     <string name="text_alignment">Aliñación do texto</string>
     <string name="use_persian_calendar">Usa o calendario persa</string>
@@ -398,4 +399,5 @@ Se xa compraches esta aplicación ou fixeches unha doazón, grazas! Envía a tú
     <string name="enable_blocking">Activa o bloqueo</string>
     <string name="plus">Ademais</string>
     <string name="agree">Estou de acordo</string>
+    <string name="scale">Escala</string>
 </resources>

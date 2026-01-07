@@ -386,6 +386,7 @@
     <string name="typeface">Шрифт</string>
     <string name="minus">Минус</string>
     <string name="disagree">Не съм съгласен/а</string>
+    <string name="height">Височина</string>
     <string name="more_apps_from_us_g">Други наши приложения</string>
     <string name="text_alignment">Подравняване на текст</string>
     <string name="use_persian_calendar">Използвайте персийския календар</string>
@@ -401,4 +402,5 @@
     <string name="enable_blocking">Разрешете блокирането</string>
     <string name="plus">плюс</string>
     <string name="agree">Съгласен съм</string>
+    <string name="scale">Мащаб</string>
 </resources>

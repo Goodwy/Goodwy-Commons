@@ -389,6 +389,7 @@ Nếu trước đây bạn đã mua ứng dụng này hoặc quyên góp, xin c�
     <string name="typeface">Kiểu chữ</string>
     <string name="minus">Trừ</string>
     <string name="disagree">Tôi không đồng ý</string>
+    <string name="height">Chiều cao</string>
     <string name="more_apps_from_us_g">Các app khác</string>
     <string name="text_alignment">Căn chỉnh văn bản</string>
     <string name="use_persian_calendar">Sử dụng lịch Ba Tư</string>
@@ -404,4 +405,5 @@ Nếu trước đây bạn đã mua ứng dụng này hoặc quyên góp, xin c�
     <string name="enable_blocking">Cho phép chặn</string>
     <string name="plus">Thêm</string>
     <string name="agree">Tôi đồng ý</string>
+    <string name="scale">Tỉ lệ</string>
 </resources>

@@ -373,6 +373,7 @@ Ako ste prethodno kupili ovu aplikaciju ili dali donaciju, hvala vam! Pošaljite
     <string name="billing_error_application_signature_not_correct">Za plaćanje putem RuStore-a potrebno je da instalirate verziju aplikacije sa RuStore-a</string>
     <string name="minus">Minus</string>
     <string name="disagree">Ne slažem se</string>
+    <string name="height">Visina</string>
     <string name="more_apps_from_us_g">Daljnje aplikacje od nas</string>
     <string name="text_alignment">Poravnanje teksta</string>
     <string name="unmute">Uključi zvuk</string>
@@ -400,4 +401,5 @@ Ako ste prethodno kupili ovu aplikaciju ili dali donaciju, hvala vam! Pošaljite
     <string name="enable_blocking">Omogući blokiranje</string>
     <string name="plus">Plus</string>
     <string name="agree">Slažem se</string>
+    <string name="scale">Razmjera</string>
 </resources>

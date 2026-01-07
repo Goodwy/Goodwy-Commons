@@ -386,6 +386,7 @@ Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><b
     <string name="typeface">Tipografija</string>
     <string name="minus">minus</string>
     <string name="disagree">Ne strinjam se</string>
+    <string name="height">Višina</string>
     <string name="more_apps_from_us_g">Več aplikacij od nas</string>
     <string name="text_alignment">Poravnava besedila</string>
     <string name="use_persian_calendar">Uporabite perzijski koledar</string>
@@ -401,4 +402,5 @@ Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><b
     <string name="enable_blocking">Omogoči blokiranje</string>
     <string name="plus">Plus</string>
     <string name="agree">Strinjam se</string>
+    <string name="scale">Lestvica</string>
 </resources>

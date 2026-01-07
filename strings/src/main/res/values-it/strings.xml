@@ -383,6 +383,7 @@ Se hai già acquistato questa app o fatto una donazione, grazie! Invia la tua co
     <string name="typeface">Carattere tipografico</string>
     <string name="minus">Meno</string>
     <string name="disagree">non sono d\'accordo</string>
+    <string name="height">Altezza</string>
     <string name="more_apps_from_us_g">Altre nostre app</string>
     <string name="text_alignment">Allineamento del testo</string>
     <string name="use_persian_calendar">Usa il calendario persiano</string>
@@ -398,4 +399,5 @@ Se hai già acquistato questa app o fatto una donazione, grazie! Invia la tua co
     <string name="enable_blocking">Abilita il blocco</string>
     <string name="plus">Più</string>
     <string name="agree">Sono d\'accordo</string>
+    <string name="scale">Scala</string>
 </resources>

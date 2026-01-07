@@ -385,6 +385,7 @@
     <string name="typeface">ٹائپ فیس</string>
     <string name="minus">مائنس</string>
     <string name="disagree">میں متفق نہیں ہوں۔</string>
+    <string name="height">اونچائی</string>
     <string name="more_apps_from_us_g">ساڈے ولوں ہور ایپلیکیشناں</string>
     <string name="text_alignment">متن کی سیدھ</string>
     <string name="use_persian_calendar">فارسی کیلنڈر استعمال کریں۔</string>
@@ -400,4 +401,5 @@
     <string name="enable_blocking">بلاکنگ کو فعال کریں۔</string>
     <string name="plus">پلس</string>
     <string name="agree">میں مانتا ہوں۔</string>
+    <string name="scale">پیمانہ</string>
 </resources>

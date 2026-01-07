@@ -387,6 +387,7 @@ Als je deze app eerder hebt gekocht of een donatie hebt gedaan, bedankt! Stuur j
     <string name="typeface">Lettertype</string>
     <string name="minus">Minus</string>
     <string name="disagree">Ik ben het daar niet mee eens.</string>
+    <string name="height">Hoogte</string>
     <string name="more_apps_from_us_g">Meer apps van ons</string>
     <string name="text_alignment">Tekstuitlijning</string>
     <string name="use_persian_calendar">Gebruik de Perzische kalender</string>
@@ -402,4 +403,5 @@ Als je deze app eerder hebt gekocht of een donatie hebt gedaan, bedankt! Stuur j
     <string name="enable_blocking">Blokkering inschakelen</string>
     <string name="plus">Plus</string>
     <string name="agree">Ik ben het ermee eens.</string>
+    <string name="scale">Schaal</string>
 </resources>

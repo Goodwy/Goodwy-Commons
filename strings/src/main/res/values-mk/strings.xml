@@ -377,6 +377,7 @@
     <string name="show_number_blocking_button">Прикажи го копчето за блокирање броеви</string>
     <string name="minus">Минус</string>
     <string name="disagree">Не се согласувам</string>
+    <string name="height">Висина</string>
     <string name="more_apps_from_us_g">Повеќе апликации од нас</string>
     <string name="typeface">Шифра на печатење</string>
     <string name="long_click_g">Долго кликнување на %s</string>
@@ -400,4 +401,5 @@
     <string name="enable_blocking">Овозможи блокирање</string>
     <string name="plus">Плус</string>
     <string name="agree">Се согласувам</string>
+    <string name="scale">Скала</string>
 </resources>

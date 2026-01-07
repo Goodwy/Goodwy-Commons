@@ -38,6 +38,8 @@
     <string name="minus">Minus</string>
     <string name="agree">I AGREE</string>
     <string name="disagree">I DISAGREE</string>
+    <string name="scale">Scale</string>
+    <string name="height">Height</string>
 
     <!-- About -->
 <!--    <string name="more_apps">More apps</string>-->
