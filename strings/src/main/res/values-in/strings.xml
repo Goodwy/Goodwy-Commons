@@ -176,6 +176,7 @@ Terima kasih!
     <string name="floating_button_style">Gaya tombol mengambang</string>
     <string name="square">Persegi</string>
     <string name="on">Hidup</string>
+    <string name="swipe_width">Lebar geser</string>
     <string name="purchase_simple_thank_you_g">Beli Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nHak cipta © Goodwy %2$d</string>
     <string name="update_thank_you_g">Silakan perbarui Goodwy Thank You ke versi terbaru</string>

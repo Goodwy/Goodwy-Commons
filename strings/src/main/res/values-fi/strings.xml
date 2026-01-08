@@ -176,6 +176,7 @@ Kiitos kaikille avustajillemme, arvostamme suuresti apuanne &10084;&#65039;
     <string name="floating_button_style">Kelluva painiketyyli</string>
     <string name="square">Neliö</string>
     <string name="on">Päällä</string>
+    <string name="swipe_width">Pyyhkäisyn leveys</string>
     <string name="purchase_simple_thank_you_g">Osta Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Päivitä Goodwy Thank You viimeisimpään versioon</string>

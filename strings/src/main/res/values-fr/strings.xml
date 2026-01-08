@@ -179,6 +179,7 @@ Merci à tous nos contributeurs ; nous apprécions grandement votre aide.
     <string name="floating_button_style">Style de bouton flottant</string>
     <string name="square">Carré</string>
     <string name="on">Activ</string>
+    <string name="swipe_width">Largeur de balayage</string>
     <string name="purchase_simple_thank_you_g">Acheter Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Veuillez mettre à jour Goodwy Thank You</string>

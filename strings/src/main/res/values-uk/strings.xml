@@ -181,6 +181,7 @@
     <string name="floating_button_style">Стиль плаваючої кнопки</string>
     <string name="square">Квадратний</string>
     <string name="on">Увімк</string>
+    <string name="swipe_width">Ширина свайпа</string>
     <string name="purchase_simple_thank_you_g">Купити Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАвторські права © Goodwy %2$d</string>
     <string name="update_thank_you_g">Оновіть \"Goodwy Thank You\" до останньої версії.</string>

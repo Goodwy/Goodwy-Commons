@@ -176,6 +176,7 @@
     <string name="floating_button_style">浮动按钮样式</string>
     <string name="square">正方形</string>
     <string name="on">开启</string>
+    <string name="swipe_width">滑动宽度</string>
     <string name="purchase_simple_thank_you_g">購買Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">请更新 Goodwy Thank You 到最新版本</string>

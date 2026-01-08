@@ -176,6 +176,7 @@ Cảm ơn bạn!
     <string name="floating_button_style">Kiểu nút nổi</string>
     <string name="square">Quảng trường</string>
     <string name="on">Bật</string>
+    <string name="swipe_width">Vuốt chiều rộng</string>
     <string name="purchase_simple_thank_you_g">Cảm ơn vì đã mua hàng Goodwy</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Vui lòng cập nhật Goodwy Thank You lên phiên bản mới nhất</string>

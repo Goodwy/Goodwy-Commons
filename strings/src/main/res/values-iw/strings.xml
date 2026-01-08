@@ -176,6 +176,7 @@
     <string name="floating_button_style">סגנון כפתור צף</string>
     <string name="square">מְרוּבָּע</string>
     <string name="on">פעיל</string>
+    <string name="swipe_width">רוחב החלקה</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

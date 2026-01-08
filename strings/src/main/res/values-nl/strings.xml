@@ -175,6 +175,7 @@ Bedankt!
     <string name="floating_button_style">Zwevende knopstijl</string>
     <string name="square">Vierkant</string>
     <string name="on">Aan</string>
+    <string name="swipe_width">Veegbreedte</string>
     <string name="purchase_simple_thank_you_g">Goodwy Bedankje kopen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Er is een nieuwe versie van Goodwy Bedankje</string>

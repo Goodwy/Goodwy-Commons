@@ -176,6 +176,7 @@ Diolch i\'n holl gyfranwyr, rydym yn gwerthfawrogi eich cymorth yn fawr &#10084;
     <string name="floating_button_style">Arddull botwm arnawf</string>
     <string name="square">Sgwâr</string>
     <string name="on">Ymlaen</string>
+    <string name="swipe_width">Lled swipe</string>
     <string name="purchase_simple_thank_you_g">Prynu Goodwy Thank You</string>
     <string name="copyright_g">f %1$s\nHawlfraint © Goodwy %2$d</string>
     <string name="update_thank_you_g">Diweddara Goodwy Thank You i\'r fersiwn diweddaraf</string>

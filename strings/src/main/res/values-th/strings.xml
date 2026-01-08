@@ -178,6 +178,7 @@
     <string name="floating_button_style">สไตล์ปุ่มลอย</string>
     <string name="square">สี่เหลี่ยม</string>
     <string name="on">เปิด</string>
+    <string name="swipe_width">ความกว้างของการปัด</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

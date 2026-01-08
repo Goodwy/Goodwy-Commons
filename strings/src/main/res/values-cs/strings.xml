@@ -179,6 +179,7 @@ Děkujeme všem našim přispěvatelům, velmi si vážíme vaší pomoci &#1008
     <string name="floating_button_style">Styl plovoucího tlačítka</string>
     <string name="square">Náměstí</string>
     <string name="on">Zap</string>
+    <string name="swipe_width">Šířka přejetí prstem</string>
     <string name="purchase_simple_thank_you_g">Zakoupit Jednoduché děkuji</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aktualizujte prosím Jednoduché děkuji na nejnovější verzi</string>

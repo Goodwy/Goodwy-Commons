@@ -180,6 +180,7 @@
     <string name="floating_button_style">Стил плутајућег дугмета</string>
     <string name="square">Скуаре</string>
     <string name="on">Укљ</string>
+    <string name="swipe_width">Ширина превлачења</string>
     <string name="purchase_simple_thank_you_g">Купите Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАуторско право © Goodwy %2$d</string>
     <string name="update_thank_you_g">Молимо ажурирајте Goodwy Thank You на најновију верзију</string>

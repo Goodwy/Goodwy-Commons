@@ -178,6 +178,7 @@ Mulțumim tuturor contribuitorilor noștri, apreciem foarte mult ajutorul vostru
     <string name="floating_button_style">Stil de buton plutitor</string>
     <string name="square">Pătrat</string>
     <string name="on">Activ</string>
+    <string name="swipe_width">Lățimea glisării</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

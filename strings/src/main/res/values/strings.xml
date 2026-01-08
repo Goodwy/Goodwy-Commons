@@ -199,6 +199,7 @@
     <string name="square">Square</string>
     <string name="off">Off</string>
     <string name="on">On</string>
+    <string name="swipe_width">Swipe width</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

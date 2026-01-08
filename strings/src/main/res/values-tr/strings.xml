@@ -178,6 +178,7 @@ Tüm katkıda bulunanlara teşekkür ederiz, yardımlarınız için minnettarız
     <string name="floating_button_style">Yüzen düğme stili</string>
     <string name="square">Kare</string>
     <string name="on">Açık</string>
+    <string name="swipe_width">Kaydırma genişliği</string>
     <string name="purchase_simple_thank_you_g">Goodwy Teşekkürler\'i Satın Al</string>
     <string name="copyright_g">v %1$s\nTelif hakkı © Goodwy %2$d</string>
     <string name="update_thank_you_g">Lütfen Goodwy Teşekkürler\'i son sürüme güncelleyin</string>

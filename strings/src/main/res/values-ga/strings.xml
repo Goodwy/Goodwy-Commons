@@ -192,6 +192,7 @@ Go raibh maith agaibh go léir a chuireann lenár rannchuiditheoirí, táimid an
     <string name="floating_button_style">Stíl cnaipe ar snámh</string>
     <string name="square">Cearnóg</string>
     <string name="on">Ar siúl</string>
+    <string name="swipe_width">Leithead svaidhpeála</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

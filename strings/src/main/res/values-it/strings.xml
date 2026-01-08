@@ -176,6 +176,7 @@ Grazie!
     <string name="floating_button_style">Stile del pulsante mobile</string>
     <string name="square">Piazza</string>
     <string name="on">Accesso</string>
+    <string name="swipe_width">Larghezza di scorrimento</string>
     <string name="purchase_simple_thank_you_g">Acquista Goodwy Grazie</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Aggiornare Semplice Ringraziamento all\'ultima versione</string>

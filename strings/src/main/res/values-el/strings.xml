@@ -176,6 +176,7 @@
     <string name="floating_button_style">Στυλ αιωρούμενου κουμπιού</string>
     <string name="square">Πλατεία</string>
     <string name="on">Ενεργοποίηση</string>
+    <string name="swipe_width">Πλάτος σάρωσης</string>
     <string name="purchase_simple_thank_you_g">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστούμε στην τελευταία έκδοση</string>
