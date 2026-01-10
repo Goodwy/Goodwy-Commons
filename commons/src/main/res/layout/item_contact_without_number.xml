@@ -22,7 +22,6 @@
             android:id="@+id/item_contact_image"
             android:layout_width="@dimen/normal_icon_size"
             android:layout_height="@dimen/normal_icon_size"
-            android:padding="@dimen/tiny_margin"
             android:layout_marginBottom="@dimen/medium_margin"
             android:src="@drawable/ic_person_vector"
             app:layout_constraintBottom_toBottomOf="parent"
