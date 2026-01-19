@@ -340,6 +340,7 @@ class SimpleContactsHelper(val context: Context) {
             .placeholder(placeholder)
             .apply(options)
             .apply(RequestOptions.circleCropTransform())
+            .error(placeholder)
             .into(imageView)
     }
 
@@ -544,6 +545,7 @@ class SimpleContactsHelper(val context: Context) {
                         .placeholder(placeholder)
                         .apply(options)
                         .apply(RequestOptions.circleCropTransform())
+                        .error(placeholder)
                         .into(size, size)
                         .get()
 
