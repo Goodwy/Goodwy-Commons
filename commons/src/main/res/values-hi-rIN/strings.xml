@@ -782,7 +782,6 @@
     <string name="during_day_at">दिन के दौरान %1$02d:%2$02d पर</string>
     <string name="purchase_simple_thank_you">Fossify Thank You ख़रीदें</string>
     <string name="general_settings">सामान्य</string>
-    <string name="improved_color_customization">बेहतर रंग अनुकूलन</string>
     <string name="color_customization">रंग अनुकूलन</string>
     <string name="customize_colors">रंग अनुकूलित करें</string>
     <string name="feature_locked">बंद</string>
@@ -1085,4 +1084,15 @@
     <string name="theme_and_colors">उपस्थिति और रंग</string>
     <string name="confirm_storage_access_restricted_text">सिस्टम प्रतिबंधों के कारण, यह फ़ोल्डर अनुपलब्ध है।</string>
     <string name="number_of_items">आइटम की संख्या</string>
+    <string name="badge_deprecated">(अप्रचलित)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">फ़ॉन्ट</string>
+    <string name="app_font">ऐप फ़ॉन्ट</string>
+    <string name="font_monospace">मोनोस्पेस</string>
+    <string name="select_font_file">फ़ॉन्ट फ़ाइल चुनें…</string>
+    <string name="invalid_font_file">अमान्य फ़ॉन्ट फ़ाइल</string>
+    <string name="call_contact">संपर्क कॉल करें</string>
+    <string name="on_contact_click">संपर्क क्लिक पर</string>
+    <string name="view_contact">संपर्क विवरण देखें</string>
+    <string name="edit_contact">संपादित संपर्क</string>
 </resources>

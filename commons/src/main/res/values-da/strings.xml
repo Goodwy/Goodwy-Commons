@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cancel">Annuller</string>
+    <string name="cancel">Annullér</string>
     <string name="close">Luk</string>
     <string name="back">Tilbage </string>
     <string name="nothing">Intet</string>
@@ -12,8 +12,8 @@
     <string name="an_error_occurred">Der opstod en fejl: %s</string>
     <string name="error">Fejl: %s</string>
     <string name="open_with">Åbn med</string>
-    <string name="edit_with">Rediger med</string>
-    <string name="edit">Rediger</string>
+    <string name="edit_with">Redigér med</string>
+    <string name="edit">Redigér</string>
     <string name="no_app_found">Ingen gyldig app fundet</string>
     <string name="no_browser_found">Ingen browser fundet</string>
     <string name="no_email_client_found">Ingen e-mailklient fundet</string>
@@ -105,7 +105,7 @@
         <item quantity="one">%d række</item>
         <item quantity="other">%d rækker</item>
     </plurals>
-    <string name="manage_blocked_numbers">Administrer blokerede numre</string>
+    <string name="manage_blocked_numbers">Administrér blokerede numre</string>
     <string name="not_blocking_anyone">Du blokerer ikke nogen.</string>
     <string name="add_a_blocked_number">Tilføj et blokeret nummer</string>
     <string name="block_number">Bloker nummer</string>
@@ -314,7 +314,7 @@
     <string name="use_default">Anvend standard</string>
     <string name="default_color">Standard</string>
     <string name="change_color">Skift farve</string>
-    <string name="theme">Udseende</string>
+    <string name="theme">Appens udseende</string>
     <string name="changing_color_description">Ændring af farve vil også medføre skift til tilpasset udseende</string>
     <string name="save">Gem</string>
     <string name="discard">Kassér</string>
@@ -353,7 +353,7 @@
     <string name="temporarily_show_hidden">Vis midlertidigt skjulte</string>
     <string name="stop_showing_hidden">Stop visning af skjulte medier</string>
     <string name="maximum_share_reached">Du kan ikke dele så meget indhold ad gangen</string>
-    <string name="empty_and_disable_recycle_bin">Tøm og deaktiver papirkurven</string>
+    <string name="empty_and_disable_recycle_bin">Tøm og deaktivér papirkurven</string>
     <string name="undo">Fortryd</string>
     <string name="redo">Gentag</string>
     <string name="print">Udskriv</string>
@@ -579,11 +579,10 @@
     <string name="during_day_at">I løbet af dagen kl. %1$02d:%2$02d</string>
     <string name="settings">Indstillinger</string>
     <string name="general_settings">Generelt</string>
-    <string name="color_customization">Farvetilpasning</string>
-    <string name="improved_color_customization">Forbedret farvetilpasning</string>
-    <string name="customize_colors">Rediger farver</string>
+    <string name="color_customization">Se &amp; mærk</string>
+    <string name="customize_colors">Redigér udseende</string>
     <string name="feature_locked">Låst</string>
-    <string name="customize_widget_colors">Rediger widget-farver</string>
+    <string name="customize_widget_colors">Redigér widget-farver</string>
     <string name="customize_notifications">Tilpas notifikationer</string>
     <string name="notification_sound">Notifikationslyd</string>
     <string name="use_english_language">Brug engelsk</string>
@@ -600,7 +599,7 @@
     <string name="show_info_bubble">Vis en info-boble når jeg scroller med rullepanelet</string>
     <string name="prevent_phone_from_sleeping">Forhindr telefonen i at falde i søvn når appen er i forgrunden</string>
     <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
-    <string name="enable_pull_to_refresh">Aktiver træk nedad for at genindlæse</string>
+    <string name="enable_pull_to_refresh">Aktivér træk nedad for at genindlæse</string>
     <string name="use_24_hour_time_format">Brug 24-timersformat</string>
     <string name="change_date_and_time_format">Skift format på dato og tid</string>
     <string name="sunday_first">Søndag første ugedag</string>
@@ -676,7 +675,7 @@
     <string name="no_entries_for_importing">Der blev ikke fundet indhold til import</string>
     <string name="no_new_entries_for_importing">Der er ikke fundet nye poster til import</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
-    <string name="enable_automatic_backups">Aktiver automatisk backup</string>
+    <string name="enable_automatic_backups">Aktivér automatisk backup</string>
     <string name="manage_automatic_backups">Administrer automatisk backup</string>
     <string name="date_time_pattern_info">Du kan bruge disse pladsholdere til automatisk at navngive din fil:\n\n%Y - år\n%M - måned\n%D - dag\n%h - time\n%m - minut\n%s - sekund</string>
     <string name="usb_detected">Du ser ud til at have en USB-enhed tilsluttet. For at sikre at dens filer ses ordentligt, skal du tildele flere rettigheder.</string>
@@ -739,9 +738,9 @@
     <string name="website_label">For at se kildekoden besøg</string>
     <string name="email_label">Send feedback og forslag til</string>
     <string name="upgrade_to_pro">Opgrader til Pro</string>
-    <string name="invite_friends">Inviter venner</string>
+    <string name="invite_friends">Invitér venner</string>
     <string name="share_text">Hej, se %1$s på %2$s</string>
-    <string name="invite_via">Inviter via</string>
+    <string name="invite_via">Invitér via</string>
     <string name="donate">Donér</string>
     <string name="follow_us">Følg os</string>
     <string name="help_us">Hjælp os</string>
@@ -785,7 +784,6 @@
     <string name="clock_short">Ur</string>
     <string name="contacts_short">Kontakter</string>
     <string name="dialer_short">Opkald</string>
-    <string name="draw_short">Tegning</string>
     <string name="file_manager_short">Filhåndtering</string>
     <string name="flashlight_short">Blitz</string>
     <string name="gallery_short">Galleri</string>
@@ -918,7 +916,7 @@
     <string name="why_upgrade_background_color_customization">Selvvalgt baggrundsfarve</string>
     <string name="why_upgrade_file_importing">Understøtter filimport</string>
     <string name="why_upgrade_zooming">Zoomer</string>
-    <string name="third_party_licences">3.-parts licencer</string>
+    <string name="third_party_licences">3.-parts licenser</string>
     <string name="kotlin_title">Kotlin (programmeringssprog)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoombar billedvisning)</string>
     <string name="glide_title">Glide (billedindlæsning og -caching)</string>
@@ -979,7 +977,7 @@
     <string name="album">Album</string>
     <string name="genre">Genre</string>
     <string name="exif">EXIF</string>
-    <string name="apply_to_all_apps">Anvend farver på alle Fossify-apps</string>
+    <string name="apply_to_all_apps">Anvend tema på alle Fossify-apps</string>
     <string name="app_icon_color_warning">Advarsel: Visse launchere håndterer muligvis ikke tilpasning af appikoner korrekt. Hvis ikonet forsvinder, kan du prøve at starte appen via Google Play eller en widget, hvis tilgængelig. Efter start skal du gendanne den grønne standardikonfarve #106D1F. I ekstreme tilfælde kan det være nødvendigt at geninstallere appen.</string>
     <string name="shared_theme_note">Bemærk, at selvom du bruger Pro-versionen af appen, skal du stadig bruge Fossify \"Thank You\" af tekniske årsager. Det tager sig af farvesynkroniseringen.</string>
     <string name="auto_theme">Auto</string>
@@ -1005,7 +1003,7 @@
     <string name="alarm">Alarm</string>
     <string name="purchase_simple_thank_you">Køb Fossify \"Thank You\"</string>
     <string name="requires_fossify_thank_you">Kræver Fossify Thank You</string>
-    <string name="theme_and_colors">Tema og farver</string>
+    <string name="theme_and_colors">Tema &amp; farver</string>
     <string name="medium">Medium</string>
     <string name="start_week_on">Start ugen på</string>
     <string name="widgets">Widgets</string>
@@ -1068,4 +1066,17 @@
         <item quantity="one">Fil gemt</item>
         <item quantity="other">Filer gemt</item>
     </plurals>
+    <string name="enables_more_customization">Muliggør mere tilpasning</string>
+    <string name="translation_latvian">Lettisk</string>
+    <string name="draw_short">Tegn</string>
+    <string name="badge_deprecated">(forældet)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">Skrifttype</string>
+    <string name="app_font">App-skrifttype</string>
+    <string name="select_font_file">Vælg skrifttypefil…</string>
+    <string name="invalid_font_file">Ugyldig skrifttypefil</string>
+    <string name="edit_contact">Rediger kontakt</string>
+    <string name="on_contact_click">Ved klik på kontakt</string>
+    <string name="call_contact">Ring til kontakt</string>
+    <string name="view_contact">Vis kontaktdetaljer</string>
 </resources>

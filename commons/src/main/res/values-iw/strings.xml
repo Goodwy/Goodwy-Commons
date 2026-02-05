@@ -151,7 +151,7 @@
     <string name="use_default">שימוש בברירת מחדל</string>
     <string name="default_color">ברירת מחדל</string>
     <string name="change_color">שנה צבע</string>
-    <string name="theme">ערכת נושא</string>
+    <string name="theme">עיצוב האפלקציה</string>
     <string name="changing_color_description">שינוי צבע יגרום לשימוש בערכת נושא מותאמת</string>
     <string name="save">שמור</string>
     <string name="discard">השלך</string>
@@ -242,7 +242,7 @@
     <string name="your_sounds">הצלילים שלך</string>
     <string name="add_new_sound">הוספת צליל</string>
     <string name="settings">הגדרות</string>
-    <string name="customize_colors">התאם צבעים</string>
+    <string name="customize_colors">התאמה אישית של המראה</string>
     <string name="customize_colors_locked">התאם צבעים (Locked)</string>
     <string name="customize_widget_colors">התאם את צבעי הווידג\'ט</string>
     <string name="use_english_language">השתמש בשפה האנגלית</string>
@@ -423,12 +423,12 @@
     <string name="seconds_letter">%dשנ\'</string>
     <string name="minutes_letter">%dדק\'</string>
     <string name="general_settings">כללי</string>
-    <string name="color_customization">התאמה אישית של הצבעים</string>
+    <string name="color_customization">מראה ותחושה</string>
     <string name="notification_sound">צליל התראה</string>
     <string name="customize_notifications">התאם אישית התראות</string>
     <string name="feature_locked">נעול</string>
     <string name="language">שפה</string>
-    <string name="theme_and_colors">ערכות נושא וצבעים</string>
+    <string name="theme_and_colors">עיצוב וצבעים</string>
     <plurals name="minutes">
         <item quantity="one">דקה</item>
         <item quantity="two">%d דקות</item>
@@ -628,7 +628,7 @@
     <string name="purchase_thank_you"><![CDATA[
 אנא רכשו <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">תודה Fossify</a> כדי לפתוח תכונה זו ולתמוך בפיתוח. תודה!
 ]]></string>
-    <string name="apply_to_all_apps">החלת צבעים על כל אפליקציות Fossify</string>
+    <string name="apply_to_all_apps">החלת עיצוב על כל אפליקציות Fossify</string>
     <string name="solarized">‌</string>
     <string name="whats_new_disclaimer">* רק העדכונים הגדולים יותר מופיעים כאן, תמיד יש גם כמה שיפורים קטנים יותר</string>
     <string name="allow_access_more_media">אפשר גישה למדיה נוספת</string>
@@ -679,7 +679,7 @@
     <string name="confirm_usb_storage_access_text">אנא בחר את התיקייה הראשית של התקן ה-USB במסך הבא, כדי להעניק הרשאה</string>
     <string name="september_short">ספטמבר</string>
     <string name="invite_via">הזמן באמצעות</string>
-    <string name="share_text">היי, בוא לבדוק את %1$s ב-%2$s</string>
+    <string name="share_text">היי ממליץ לך להתקין את %1$s. תוכל למצוא אותו ב-%2$s</string>
     <string name="invite_friends">הזמינו חברים</string>
     <string name="follow_us">עקוב אחרינו</string>
     <string name="support">תמיכה</string>
@@ -850,7 +850,6 @@
     <string name="time_remaining">זמן שנותר:\n%s</string>
     <string name="alarm_warning">אנא וודא שהשעון מעורר עובד כשורה לפני שתסתמך עליו. הוא עלול לתפקד באופן לקוי עקב הגבלות מערכת הקשורות לחיסכון בסוללה.</string>
     <string name="alarm">התראה</string>
-    <string name="improved_color_customization">התאמה אישית משופרת של צבעים</string>
     <string name="show_info_bubble">הצגת בועת מידע בעת גלילה של פריטים על ידי גרירת פס הגלילה</string>
     <string name="keep_last_modified">שמור את הערך הישן של שינוי אחרון בפעולות קובץ</string>
     <string name="show_call_confirmation_dialog">הצגת תיבת דו-שיח לאישור שיחה לפני תחילת שיחה</string>
@@ -1092,4 +1091,15 @@
     </plurals>
     <string name="enables_more_customization">מאפשר התאמה אישית רחבה יותר</string>
     <string name="translation_latvian">לטבית</string>
+    <string name="badge_deprecated">(הוצא משימוש)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">גופן</string>
+    <string name="app_font">גופן האפלקציה</string>
+    <string name="font_monospace">Monospace</string>
+    <string name="select_font_file">בחר קובץ גופן…</string>
+    <string name="invalid_font_file">קובץ גופן לא תקין</string>
+    <string name="edit_contact">ערוך איש קשר</string>
+    <string name="on_contact_click">כפתור יצירת קשר</string>
+    <string name="call_contact">חייג לאיש קשר</string>
+    <string name="view_contact">צפה בפרטי התקשרות</string>
 </resources>

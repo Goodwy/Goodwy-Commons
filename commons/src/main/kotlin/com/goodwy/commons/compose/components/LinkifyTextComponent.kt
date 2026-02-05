@@ -16,6 +16,7 @@ import com.goodwy.commons.R
 import com.goodwy.commons.compose.extensions.MyDevices
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
+import com.goodwy.commons.extensions.applyFontToTextView
 import com.goodwy.commons.extensions.fromHtml
 import com.goodwy.commons.extensions.removeUnderlines
 
@@ -40,6 +41,8 @@ fun LinkifyTextComponent(
         textView.textAlignment = textAlignment
         textView.textSize = fontSize.value
         textView.movementMethod = LinkMovementMethod.getInstance()
+        context.applyFontToTextView(textView)
+
         if (removeUnderlines) {
             customLinkifyTextView.removeUnderlines()
         }

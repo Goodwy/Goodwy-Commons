@@ -1,10 +1,14 @@
 package com.goodwy.commons.activities
 
+import android.content.ActivityNotFoundException
 import android.content.ContentValues
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.Typeface
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.res.ResourcesCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.ActivityCustomizationBinding
@@ -14,9 +18,12 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.helpers.MyContentProvider.COL_ACCENT_COLOR
 import com.goodwy.commons.helpers.MyContentProvider.COL_APP_ICON_COLOR
 import com.goodwy.commons.helpers.MyContentProvider.COL_BACKGROUND_COLOR
+import com.goodwy.commons.helpers.MyContentProvider.COL_FONT_NAME
+import com.goodwy.commons.helpers.MyContentProvider.COL_FONT_TYPE
 import com.goodwy.commons.helpers.MyContentProvider.COL_PRIMARY_COLOR
 import com.goodwy.commons.helpers.MyContentProvider.COL_TEXT_COLOR
 import com.goodwy.commons.helpers.MyContentProvider.COL_THEME_TYPE
+import com.goodwy.commons.helpers.MyContentProvider.FONTS_URI
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_AUTO
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_CUSTOM
 import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_DISABLED
@@ -32,6 +39,7 @@ import com.goodwy.strings.R as stringsR
 import com.google.android.material.snackbar.Snackbar
 import com.mikhaellopez.rxanimation.RxAnimation
 import com.mikhaellopez.rxanimation.shake
+import java.io.File
 import kotlin.math.abs
 
 class CustomizationActivity : BaseSimpleActivity() {
@@ -56,6 +64,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curIsUsingAccentColor = false
     private var curTextCursorColor = 0
     private var originalAppIconColor = 0
+    private var curFontType = 0
+    private var curFontFileName = ""
     private var lastSavePromptTS = 0L
     private var hasUnsavedChanges = false
     private val predefinedThemes = LinkedHashMap<Int, MyTheme>()
@@ -72,6 +82,11 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getSubscriptionIdListRu() = intent.getStringArrayListExtra(SUBSCRIPTION_ID_LIST_RU) ?: arrayListOf("", "", "")
     private fun getSubscriptionYearIdList() = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST) ?: arrayListOf("", "", "")
     private fun getSubscriptionYearIdListRu() = intent.getStringArrayListExtra(SUBSCRIPTION_YEAR_ID_LIST_RU) ?: arrayListOf("", "", "")
+
+    private val fontFilePicker =
+        registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            uri?.let { handleFontFileSelected(it) }
+        }
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
@@ -510,6 +525,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             primaryColor = curPrimaryColor
             accentColor = curAccentColor
             appIconColor = curAppIconColor
+            fontType = curFontType
+            fontName = curFontFileName
 
             topAppBarColorIcon = curTopAppBarColorIcon
             topAppBarColorTitle = curTopAppBarColorTitle
@@ -521,35 +538,51 @@ class CustomizationActivity : BaseSimpleActivity() {
             checkAppIconColor()
         }
 
+        FontHelper.clearCache()
         baseConfig.isGlobalThemeEnabled = binding.applyToAll.isChecked
         baseConfig.isSystemThemeEnabled = curSelectedThemeId == THEME_SYSTEM
         baseConfig.isAutoThemeEnabled = curSelectedThemeId == THEME_AUTO
 
-        if (isPro()) {
-            val globalThemeType = when {
-                baseConfig.isGlobalThemeEnabled.not() -> GLOBAL_THEME_DISABLED
-                baseConfig.isSystemThemeEnabled -> GLOBAL_THEME_SYSTEM
-                baseConfig.isAutoThemeEnabled -> GLOBAL_THEME_AUTO
-                else -> GLOBAL_THEME_CUSTOM
-            }
-
-            updateGlobalConfig(
-                ContentValues().apply {
-                    put(COL_THEME_TYPE, globalThemeType)
-                    put(COL_TEXT_COLOR, curTextColor)
-                    put(COL_BACKGROUND_COLOR, curBackgroundColor)
-                    put(COL_PRIMARY_COLOR, curPrimaryColor)
-                    put(COL_ACCENT_COLOR, curAccentColor)
-                    put(COL_APP_ICON_COLOR, curAppIconColor)
-                }
-            )
-        }
+        if (isProVersion()) saveThankYouChanges()
 
         hasUnsavedChanges = false
-        if (finishAfterSave) {
-            finish()
-        } else {
-            refreshMenuItems()
+        if (finishAfterSave) finish() else refreshMenuItems()
+    }
+
+    private fun saveThankYouChanges() {
+        val globalThemeType = when {
+            baseConfig.isGlobalThemeEnabled.not() -> GLOBAL_THEME_DISABLED
+            baseConfig.isSystemThemeEnabled -> GLOBAL_THEME_SYSTEM
+            baseConfig.isAutoThemeEnabled -> GLOBAL_THEME_AUTO
+            else -> GLOBAL_THEME_CUSTOM
+        }
+
+        val canFontsBeSynced = isThankYouFontsSupported()
+        updateGlobalConfig(
+            ContentValues().apply {
+                put(COL_THEME_TYPE, globalThemeType)
+                put(COL_TEXT_COLOR, curTextColor)
+                put(COL_BACKGROUND_COLOR, curBackgroundColor)
+                put(COL_PRIMARY_COLOR, curPrimaryColor)
+                put(COL_ACCENT_COLOR, curAccentColor)
+                put(COL_APP_ICON_COLOR, curAppIconColor)
+                if (canFontsBeSynced) {
+                    put(COL_FONT_TYPE, curFontType)
+                    put(COL_FONT_NAME, curFontFileName)
+                }
+            }
+        )
+
+        if (curFontType == FONT_TYPE_CUSTOM && curFontFileName.isNotEmpty() && canFontsBeSynced) {
+            val fontData = FontHelper.getFontData(this, curFontFileName) ?: return
+            val fontUri = FONTS_URI.buildUpon()
+                .appendPath(curFontFileName)
+                .build()
+            try {
+                contentResolver.openOutputStream(fontUri, "w")
+                    ?.use { it.write(fontData) }
+            } catch (_: Exception) {
+            }
         }
     }
 
@@ -569,6 +602,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         curPrimaryColor = baseConfig.primaryColor
         curAccentColor = baseConfig.accentColor
         curAppIconColor = baseConfig.appIconColor
+        curFontType = baseConfig.fontType
+        curFontFileName = baseConfig.fontName
 
         curTopAppBarColorIcon = baseConfig.topAppBarColorIcon
         curTopAppBarColorTitle = baseConfig.topAppBarColorTitle
@@ -667,6 +702,8 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         handleAccentColorLayout()
         binding.applyToAllHolder.setOnClickListener { applyToAll() }
+
+        setupFontPicker()
     }
 
     private fun hasColorChanged(old: Int, new: Int) = abs(old - new) > 1
@@ -674,6 +711,113 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun colorChanged() {
         hasUnsavedChanges = true
         setupColorsPickers()
+        refreshMenuItems()
+    }
+
+    private fun setupFontPicker() {
+        updateFontDisplay()
+        binding.customizationFontHolder.setOnClickListener {
+            fontPickerClicked()
+        }
+    }
+
+    private fun updateFontDisplay() {
+        binding.customizationFont.text = when (curFontType) {
+            FONT_TYPE_MONOSPACE -> getString(R.string.font_monospace)
+            FONT_TYPE_CUSTOM -> curFontFileName.ifEmpty { getString(R.string.select_font_file) }
+            else -> getString(R.string.system_default)
+        }
+    }
+
+    private fun fontPickerClicked() {
+        val items = arrayListOf(
+            RadioItem(FONT_TYPE_SYSTEM_DEFAULT, getString(R.string.system_default)),
+            RadioItem(FONT_TYPE_MONOSPACE, getString(R.string.font_monospace)),
+            RadioItem(FONT_TYPE_CUSTOM, getString(R.string.select_font_file))
+        )
+
+        RadioGroupDialog(this, items, curFontType, R.string.app_font) { selected ->
+            val selectedType = selected as Int
+            if (selectedType == FONT_TYPE_CUSTOM) {
+                if (!isProVersion()) {
+                    shakePurchase()
+                    RxAnimation.from(binding.customizationFontHolder)
+                        .shake(shakeTranslation = 2f)
+                        .subscribe()
+
+                    showSnackbar(binding.root)
+                    return@RadioGroupDialog
+                }
+                openFontFilePicker()
+            } else {
+                curFontType = selectedType
+                curFontFileName = ""
+                fontChanged()
+            }
+        }
+    }
+
+    private fun openFontFilePicker() {
+        try {
+            fontFilePicker.launch(
+                arrayOf(
+                    "font/ttf",
+                    "font/otf",
+                    "application/x-font-ttf",
+                    "application/x-font-otf",
+                    "*/*"
+                )
+            )
+        } catch (_: ActivityNotFoundException) {
+            toast(R.string.system_service_disabled)
+        }
+    }
+
+    private fun handleFontFileSelected(uri: Uri) {
+        try {
+            val fileName = getFilenameFromUri(uri)
+            if (fileName.isEmpty() || !fileName.isFontFile()) {
+                toast(R.string.invalid_font_file)
+                return
+            }
+
+            val fontData = contentResolver.openInputStream(uri)?.use { it.readBytes() }
+            if (fontData == null) {
+                toast(R.string.invalid_font_file)
+                return
+            }
+
+            val tempFile = File(cacheDir, fileName)
+            tempFile.writeBytes(fontData)
+            try {
+                Typeface.createFromFile(tempFile)
+            } catch (_: Exception) {
+                tempFile.delete()
+                toast(R.string.invalid_font_file)
+                return
+            }
+            tempFile.delete()
+
+            if (FontHelper.saveFontData(this, fontData, fileName)) {
+                curFontType = FONT_TYPE_CUSTOM
+                curFontFileName = fileName
+                fontChanged()
+            } else {
+                toast(R.string.invalid_font_file)
+            }
+        } catch (_: Exception) {
+            toast(R.string.invalid_font_file)
+        }
+    }
+
+    private fun fontChanged() {
+        hasUnsavedChanges = true
+        updateFontDisplay()
+        applyFontToViewRecursively(
+            view = window.decorView,
+            typeface = FontHelper.getTypeface(this, curFontType, curFontFileName),
+            force = true
+        )
         refreshMenuItems()
     }
 
@@ -930,6 +1074,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             binding.customizationThemeLabel,
             binding.customizationTheme,
             binding.settingsCustomizeColorsSummary,
+            binding.customizationFontLabel,
+            binding.customizationFont,
             binding.customizationTextColorLabel,
             binding.customizationTextCursorColorLabel,
             binding.customizationTextCursorColorDefault,

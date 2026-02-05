@@ -9,11 +9,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.Typeface
 import com.goodwy.commons.compose.extensions.config
 import com.goodwy.commons.compose.theme.model.Theme
 import com.goodwy.commons.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
 import com.goodwy.commons.extensions.getContrastColor
 import com.goodwy.commons.extensions.lightenColor
+import com.goodwy.commons.helpers.FONT_TYPE_CUSTOM
+import com.goodwy.commons.helpers.FONT_TYPE_MONOSPACE
+import com.goodwy.commons.helpers.FontHelper
 import com.goodwy.commons.helpers.isSPlus
 
 @Composable
@@ -135,8 +140,15 @@ internal fun Theme(
 
     val dimensions = CommonDimensions
 
+    val customTypography = if (!view.isInEditMode) {
+        getCustomTypography(context)
+    } else {
+        Typography()
+    }
+
     MaterialTheme(
         colorScheme = colorScheme,
+        typography = customTypography,
         shapes = Shapes,
         content = {
             CompositionLocalProvider(
@@ -147,6 +159,40 @@ internal fun Theme(
                 content()
             }
         },
+    )
+}
+
+@Composable
+private fun getCustomTypography(context: Context): Typography {
+    val baseConfig = context.config
+    val fontType = baseConfig.fontType
+
+    val fontFamily = when (fontType) {
+        FONT_TYPE_MONOSPACE -> FontFamily.Monospace
+        FONT_TYPE_CUSTOM -> {
+            val typeface = FontHelper.getTypeface(context)
+            FontFamily(Typeface(typeface))
+        }
+        else -> FontFamily.Default
+    }
+
+    val defaultTypography = Typography()
+    return Typography(
+        displayLarge = defaultTypography.displayLarge.copy(fontFamily = fontFamily),
+        displayMedium = defaultTypography.displayMedium.copy(fontFamily = fontFamily),
+        displaySmall = defaultTypography.displaySmall.copy(fontFamily = fontFamily),
+        headlineLarge = defaultTypography.headlineLarge.copy(fontFamily = fontFamily),
+        headlineMedium = defaultTypography.headlineMedium.copy(fontFamily = fontFamily),
+        headlineSmall = defaultTypography.headlineSmall.copy(fontFamily = fontFamily),
+        titleLarge = defaultTypography.titleLarge.copy(fontFamily = fontFamily),
+        titleMedium = defaultTypography.titleMedium.copy(fontFamily = fontFamily),
+        titleSmall = defaultTypography.titleSmall.copy(fontFamily = fontFamily),
+        bodyLarge = defaultTypography.bodyLarge.copy(fontFamily = fontFamily),
+        bodyMedium = defaultTypography.bodyMedium.copy(fontFamily = fontFamily),
+        bodySmall = defaultTypography.bodySmall.copy(fontFamily = fontFamily),
+        labelLarge = defaultTypography.labelLarge.copy(fontFamily = fontFamily),
+        labelMedium = defaultTypography.labelMedium.copy(fontFamily = fontFamily),
+        labelSmall = defaultTypography.labelSmall.copy(fontFamily = fontFamily),
     )
 }
 

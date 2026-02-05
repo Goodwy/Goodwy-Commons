@@ -3,11 +3,14 @@ package com.goodwy.commons.views
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
+import androidx.core.content.withStyledAttributes
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat.Type
-import androidx.core.view.updatePadding
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.MaterialToolbar
+import com.goodwy.commons.R
+import com.goodwy.commons.extensions.applyFontToViewRecursively
+import com.goodwy.commons.extensions.updatePaddingWithBase
 
 open class MyAppBarLayout @JvmOverloads constructor(
     context: Context,
@@ -15,6 +18,7 @@ open class MyAppBarLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : AppBarLayout(context, attrs, defStyleAttr) {
     private var cachedToolbar: MaterialToolbar? = null
+    private var applyWindowInsets = true
 
     init {
         elevation = 0f
@@ -23,9 +27,19 @@ open class MyAppBarLayout @JvmOverloads constructor(
         isLiftOnScroll = false
         isLifted = false
 
+        context.withStyledAttributes(attrs, R.styleable.MyAppBarLayout) {
+            applyWindowInsets = getBoolean(R.styleable.MyAppBarLayout_applyWindowInsets, true)
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(this) { view, insets ->
-            val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
-            view.updatePadding(top = system.top, left = system.left, right = system.right)
+            if (applyWindowInsets) {
+                val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
+                view.updatePaddingWithBase(
+                    top = system.top,
+                    left = system.left,
+                    right = system.right
+                )
+            }
             insets
         }
     }
@@ -45,6 +59,7 @@ open class MyAppBarLayout @JvmOverloads constructor(
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
         ViewCompat.requestApplyInsets(this)
+        applyFontToToolbar()
     }
 
     override fun onViewAdded(child: View) {
@@ -57,6 +72,24 @@ open class MyAppBarLayout @JvmOverloads constructor(
         cachedToolbar = null
     }
 
+    fun setApplyWindowInsets(apply: Boolean) {
+        applyWindowInsets = apply
+        if (apply) {
+            ViewCompat.requestApplyInsets(this)
+        } else {
+            updatePaddingWithBase(top = 0, left = 0, right = 0)
+        }
+    }
+
+    fun isApplyWindowInsetsEnabled(): Boolean = applyWindowInsets
+
     fun requireToolbar(): MaterialToolbar =
         toolbar ?: error("MyAppBarLayout requires a Toolbar/MaterialToolbar child")
+
+    fun applyFontToToolbar() {
+        if (isInEditMode) return
+        if (toolbar != null) {
+            context.applyFontToViewRecursively(toolbar)
+        }
+    }
 }

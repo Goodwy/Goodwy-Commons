@@ -34,12 +34,17 @@ style:
     active: true
     ignoreAnnotated: ["Composable"]
     ignoreEnums: true
-    ignoreNumbers: ["-1", "0", "1", "2", "42", "1000"]
+    ignoreNumbers: ["-1", "0", "1", "2", "3", "42", "1000"]
   MaxLineLength:
     active: true
     maxLineLength: 120
     excludePackageStatements: true
     excludeImportStatements: true
+  ReturnCount:
+      active: true
+      max: 4
+      excludeGuardClauses: true
+      excludes: ["**/test/**", "**/androidTest/**"]
 
 naming:
   FunctionNaming:

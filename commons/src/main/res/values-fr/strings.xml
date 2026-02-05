@@ -421,9 +421,9 @@
     <string name="proceed_with_deletion">Voulez-vous vraiment procéder à la suppression \?</string>
     <string name="deletion_confirmation">Voulez-vous vraiment supprimer %s \?</string>
     <string name="deletion_confirmation_short">Supprimer %s \?</string>
-    <string name="move_to_recycle_bin_confirmation">Voulez-vous vraiment déplacer %s dans la corbeille \?</string>
+    <string name="move_to_recycle_bin_confirmation">Voulez-vous vraiment déplacer %s dans la corbeille ?</string>
     <string name="are_you_sure_delete">Voulez-vous vraiment supprimer cet élément \?</string>
-    <string name="are_you_sure_recycle_bin">Voulez-vous vraiment déplacer cet élément dans la corbeille \?</string>
+    <string name="are_you_sure_recycle_bin">Voulez-vous vraiment déplacer cet élément dans la corbeille ?</string>
     <string name="do_not_ask_again">Ne plus demander pour cette session</string>
     <string name="do_not_show_again">Ne plus montrer</string>
     <string name="yes">Oui</string>
@@ -641,7 +641,6 @@
     <string name="settings">Paramètres</string>
     <string name="general_settings">Général</string>
     <string name="color_customization">Personnalisation des couleurs</string>
-    <string name="improved_color_customization">Personnalisation améliorée des couleurs</string>
     <string name="customize_colors">Personnaliser les couleurs</string>
     <string name="feature_locked">Verrouillé</string>
     <string name="customize_widget_colors">Personnaliser les couleurs du widget</string>
@@ -716,7 +715,7 @@
     <string name="restore_all_files">Restaurer tous les fichiers</string>
     <string name="recycle_bin_emptied">Vidage de la corbeille réussi</string>
     <string name="files_restored_successfully">Restauration des fichiers réussie</string>
-    <string name="empty_recycle_bin_confirmation">Voulez-vous vraiment vider la corbeille \? Les fichiers seront irrécupérables.</string>
+    <string name="empty_recycle_bin_confirmation">Voulez-vous vraiment vider la corbeille ? Les fichiers seront irrécupérables.</string>
     <string name="recycle_bin_empty">La corbeille est vide</string>
     <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments de la corbeille est désactivé. Veuillez utiliser la fonction de restauration</string>
     <string name="show_the_recycle_bin">Afficher la corbeille</string>
@@ -1135,4 +1134,8 @@ j\'espère que vous appréciez l\'application. Elle ne contient pas de publicit�
         <item quantity="many">Fichiers enregistrés avec succès</item>
         <item quantity="other">Fichiers enregistrés avec succès</item>
     </plurals>
+    <string name="edit_contact">Modifier le contact</string>
+    <string name="on_contact_click">En appuyant sur un contact</string>
+    <string name="call_contact">Appeler le contact</string>
+    <string name="view_contact">Afficher les détails du contact</string>
 </resources>

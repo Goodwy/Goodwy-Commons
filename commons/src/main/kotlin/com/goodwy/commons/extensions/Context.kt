@@ -23,8 +23,8 @@ import android.content.pm.ShortcutManager
 import android.content.res.Configuration
 import android.database.Cursor
 import android.graphics.BitmapFactory
-import android.graphics.Color
 import android.graphics.Point
+import android.graphics.Typeface
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
 import android.net.Uri
@@ -33,6 +33,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
 import android.os.Looper
+import android.os.UserManager
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.ContactsContract.CommonDataKinds.*
@@ -47,8 +48,8 @@ import android.provider.Settings
 import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
 import android.text.TextUtils
-import android.util.TypedValue
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
 import android.view.accessibility.AccessibilityManager
 import android.widget.ImageView
@@ -97,6 +98,9 @@ val Context.areSystemAnimationsEnabled: Boolean get() = Settings.Global.getFloat
 
 val Context.appLockManager
     get() = AppLockManager.getInstance(applicationContext as Application)
+
+val Context.isCredentialStorageAvailable: Boolean
+    get() = getSystemService(UserManager::class.java)?.isUserUnlocked ?: true
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     toast(getString(id), length)
@@ -523,6 +527,20 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
         mimeType = getMimeTypeFromUri(newUri)
     }
     return mimeType
+}
+
+fun Context.isThankYouFontsSupported(): Boolean {
+    return try {
+        val thankYouAppInfo = packageManager.getPackageInfo(RightThankYou.PACKAGE_NAME, 0)
+        if (isPiePlus()) {
+            thankYouAppInfo.longVersionCode >= RightThankYou.MIN_VERSION_CODE_FOR_FONTS
+        } else {
+            @Suppress("DEPRECATION")
+            thankYouAppInfo.versionCode >= RightThankYou.MIN_VERSION_CODE_FOR_FONTS
+        }
+    } catch (_: Exception) {
+        false
+    }
 }
 
 fun Context.canAccessGlobalConfig(): Boolean {
@@ -1304,19 +1322,51 @@ fun Context.findActivity(): Activity? = when (this) {
     else -> null
 }
 
+fun Context.formatWithBadge(
+    @StringRes labelRes: Int,
+    @StringRes badgeRes: Int,
+    vararg labelArgs: Any
+): CharSequence {
+    val label = if (labelArgs.isEmpty()) getString(labelRes)
+    else getString(labelRes, *labelArgs)
+
+    val badge = BidiFormatter.getInstance().unicodeWrap(getString(badgeRes))
+    return getString(R.string.label_with_badge, label, badge)
+}
+
 fun Context.formatWithDeprecatedBadge(
     @StringRes labelRes: Int,
     vararg labelArgs: Any
-): String {
-    val label = if (labelArgs.isEmpty()) {
-        getString(labelRes)
-    } else {
-        getString(labelRes, *labelArgs)
-    }
+): CharSequence = formatWithBadge(labelRes, R.string.badge_deprecated, *labelArgs)
 
-    val badge = BidiFormatter.getInstance().unicodeWrap(getString(R.string.badge_deprecated))
-    return getString(R.string.label_with_badge, label, badge)
+fun Context.applyFontToTextView(
+    textView: TextView,
+    typeface: Typeface? = null,
+    force: Boolean = false
+) {
+    if (typeface == null && !isCredentialStorageAvailable) return
+    val actualTypeface = typeface ?: FontHelper.getTypeface(this)
+    if (actualTypeface == Typeface.DEFAULT && !force) return // avoid unnecessary calls and overwrites
+    val existingStyle = textView.typeface?.style ?: Typeface.NORMAL
+    textView.setTypeface(actualTypeface, existingStyle)
 }
+
+fun Context.applyFontToViewRecursively(
+    view: View?,
+    typeface: Typeface? = null,
+    force: Boolean = false
+) {
+    if (view == null) return
+    if (typeface == null && !isCredentialStorageAvailable) return
+    val actualTypeface = typeface ?: FontHelper.getTypeface(this)
+    if (view is TextView) applyFontToTextView(view, actualTypeface, force)
+    if (view is ViewGroup) {
+        for (i in 0 until view.childCount) {
+            applyFontToViewRecursively(view.getChildAt(i), actualTypeface, force)
+        }
+    }
+}
+
 
 //Goodwy
 fun Context.getEmailTypeText(type: Int, label: String): String {

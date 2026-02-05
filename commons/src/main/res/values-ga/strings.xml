@@ -12,8 +12,7 @@
     <string name="during_day_at_hh_mm">I rith an lae ag hh:mm</string>
     <string name="settings">Socruithe</string>
     <string name="purchase_simple_thank_you">Ceannaigh Fossify Go raibh maith agat</string>
-    <string name="improved_color_customization">Saincheapadh datha feabhsaithe</string>
-    <string name="customize_colors">Saincheap dathanna</string>
+    <string name="customize_colors">Saincheap an chuma</string>
     <string name="feature_locked">Faoi Ghlas</string>
     <string name="customize_widget_colors">Saincheap dathanna giuirléidí</string>
     <string name="customize_notifications">Saincheap fógraí</string>
@@ -41,9 +40,9 @@
     <string name="use_same_snooze">Bain úsáid as an am snooze céanna i gcónaí</string>
     <string name="snooze_time">Am snooze</string>
     <string name="vibrate_on_button_press">Creath ar phreas an chnaipe</string>
-    <string name="move_items_into_recycle_bin">Bog míreanna isteach sa Bhosca Athchúrsála in ionad iad a scriosadh</string>
-    <string name="recycle_bin_cleaning_interval">Eatramh glantacháin na n-araidí athchúrsála</string>
-    <string name="empty_recycle_bin">Folmhaigh an Bosca Athchúrsála</string>
+    <string name="move_items_into_recycle_bin">Bog míreanna scriosta chuig an mbosca athchúrsála</string>
+    <string name="recycle_bin_cleaning_interval">Eatramh glantacháin an bhosca athchúrsála</string>
+    <string name="empty_recycle_bin">Folmhaigh an bosca athchúrsála</string>
     <string name="force_portrait_mode">Neart Portráid Faisean</string>
     <string name="export_settings">Easpórtáil socruithe</string>
     <string name="settings_exported_successfully">D\' éirigh le socruithe easpórtála</string>
@@ -56,7 +55,7 @@
     <string name="visibility">Infheictheacht</string>
     <string name="scrolling">Scrollaigh</string>
     <string name="file_operations">Oibríochtaí comhaid</string>
-    <string name="recycle_bin">Bosca Athchúrsála</string>
+    <string name="recycle_bin">Bosca athchúrsála</string>
     <string name="startup">Tosaithe</string>
     <string name="text">Téacs</string>
     <string name="migrating">Imirce</string>
@@ -80,15 +79,15 @@
     <string name="last_used_tab">An ceann is déanaí a úsáideadh</string>
     <string name="restore_selected_files">Aischuir na comhaid roghnaithe</string>
     <string name="restore_all_files">Aischuir gach comhad</string>
-    <string name="recycle_bin_emptied">Folmhaíodh an Bosca Athchúrsála go rathúil</string>
+    <string name="recycle_bin_emptied">Tá an bosca athchúrsála folamhaithe go rathúil</string>
     <string name="files_restored_successfully">D\' éirigh le hathchóiriú comhad</string>
-    <string name="empty_recycle_bin_confirmation">An bhfuil tú cinnte go bhfuil fonn ort an Bosca Athchúrsála a fholmhú? Caillfear na comhaid go buan.</string>
-    <string name="recycle_bin_empty">Tá an Bosca Athchúrsála folamh</string>
-    <string name="moving_recycle_bin_items_disabled">Díchumasaíodh míreanna athchúrsála a bhogadh, bain úsáid as Athchóirigh</string>
+    <string name="empty_recycle_bin_confirmation">An bhfuil tú cinnte gur mian leat an bosca athchúrsála a fholmhú? Caillfear na comhaid go buan.</string>
+    <string name="recycle_bin_empty">Tá an bosca athchúrsála folamh</string>
+    <string name="moving_recycle_bin_items_disabled">Tá bogadh míreanna ón mbosca athchúrsála díchumasaithe. Bain úsáid as Athchóirigh le do thoil.</string>
     <string name="show_the_recycle_bin">Taispeáin an bosca athchúrsála</string>
-    <string name="hide_the_recycle_bin">Folaigh an Bosca Athchúrsála</string>
-    <string name="open_the_recycle_bin">Oscail an Bosca Athchúrsála</string>
-    <string name="skip_the_recycle_bin">Ná bac leis an mBosca Athchúrsála, scrios comhaid go díreach</string>
+    <string name="hide_the_recycle_bin">Folaigh an bosca athchúrsála</string>
+    <string name="open_the_recycle_bin">Oscail an bosca athchúrsála</string>
+    <string name="skip_the_recycle_bin">Seachain an bosca athchúrsála, scrios comhaid go díreach</string>
     <string name="importing">Á iompórtáil…</string>
     <string name="exporting">Á easpórtáil…</string>
     <string name="importing_successful">D\'éirigh le hiompórtáil</string>
@@ -227,7 +226,7 @@
     <string name="faq_4_title_commons">Ní maith liom na dathanna giuirléidí, an féidir liom iad a athrú?</string>
     <string name="faq_4_text_commons">Yep, agus tú ag tarraingt giuirléid ar do scáileán baile feictear scáileán cumraíochta giuirléidí. Feicfidh tú cearnóga daite ag bun an chúinne ar chlé, ach brúigh iad chun dath nua a roghnú. Is féidir leat an sleamhnán a úsáid chun an t-alfa a choigeartú freisin.</string>
     <string name="faq_5_title_commons">An féidir liom comhaid scriosta a aischur ar bhealach éigin?</string>
-    <string name="faq_5_text_commons">Má scriosadh iad i ndáiríre, ní féidir leat. Mar sin féin, tá Bosca Athchúrsála cumasaithe de réir réamhshocraithe, cuirfidh sé faoi deara na comhaid a bhogadh sa Bhosca Bruscair in ionad iad a scriosadh.</string>
+    <string name="faq_5_text_commons">Mura scriosadh iad i ndáiríre, ní féidir leat iad a aisghabháil. Mar sin féin, bíonn an bosca athchúrsála cumasaithe de réir réamhshocraithe agus bogann sé comhaid isteach sa bhosca seachas iad a scriosadh láithreach.</string>
     <string name="faq_6_title_commons">D\'imigh deilbhín tosaitheoir an fheidhmchláir. Céard is féidir liom a dhéanamh?</string>
     <string name="faq_6_text_commons">Tagann an cheist seo chun cinn nuair nach dtacaíonn do thosaitheoir go hiomlán le saincheaptha deilbhíní. Déan iarracht an aip a sheoladh trí Google Play nó giuirléid, más inrochtana. Tar éis seoladh, athchóirigh an #106D1F réamhshocraithe dath deilbhín glas. I gcásanna tromchúiseacha, d\'fhéadfadh sé go mbeadh gá leis an aip a athshuiteáil.</string>
     <string name="faq_7_title_commons">Baineadh an t-airgead as mo chuntas bainc, ach ní féidir liom an aip a íoslódáil. Céard is féidir liom a dhéanamh?</string>
@@ -306,7 +305,7 @@
     <string name="ascending">Ag dul suas</string>
     <string name="descending">Íslitheach</string>
     <string name="are_you_sure_delete">An bhfuil tú cinnte go bhfuil fonn ort an mhír seo a scriosadh?</string>
-    <string name="are_you_sure_recycle_bin">An bhfuil tú cinnte go bhfuil fonn ort an mhír seo a bhogadh isteach sa Bhosca Athchúrsála?</string>
+    <string name="are_you_sure_recycle_bin">An bhfuil tú cinnte gur mhaith leat an mhír seo a bhogadh isteach sa bhosca athchúrsála?</string>
     <string name="do_not_ask_again">Ná fiafraigh arís sa seisiún seo</string>
     <string name="do_not_show_again">Ná taispeáin arís</string>
     <plurals name="delete_warning">
@@ -502,8 +501,8 @@
     <string name="alarm">Aláram</string>
     <string name="snooze">SnoozeName</string>
     <string name="general_settings">Ginearálta</string>
-    <string name="color_customization">Saincheapadh datha</string>
-    <string name="theme_and_colors">Téama agus dathanna</string>
+    <string name="color_customization">Breathnú &amp; mothú</string>
+    <string name="theme_and_colors">Téama &amp; dathanna</string>
     <string name="sunday_first">Seachtain tosaithe ar an Domhnach</string>
     <string name="security">Slándáil</string>
     <string name="main_screen">Príomhscáileán</string>
@@ -836,14 +835,14 @@
     <string name="use_default">Úsáid réamhshocrú</string>
     <string name="default_color">Réamhshocrú</string>
     <string name="change_color">Athraigh dath</string>
-    <string name="theme">Téama</string>
+    <string name="theme">Téama an aip</string>
     <string name="changing_color_description">Má athraítear dath, aistreoidh sé go téama saincheaptha</string>
     <string name="save">Sábháil</string>
     <string name="discard">Ná Sábháil</string>
     <string name="undo_changes">Cealaigh athruithe</string>
     <string name="cannot_be_undone">Ní féidir an gníomh seo a chealú.</string>
     <string name="save_before_closing">Tá athruithe gan sábháil agat. Sábháil roimh scor?</string>
-    <string name="apply_to_all_apps">Cuir dathanna i bhfeidhm ar gach Feidhmchlár Fossify</string>
+    <string name="apply_to_all_apps">Cuir an téama i bhfeidhm ar gach Aip Fossify</string>
     <string name="app_icon_color_warning">Rabhadh: Ní fhéadfaidh lainseálaithe áirithe saincheaptha deilbhín feidhmchláir a láimhseáil i gceart. Má imíonn an deilbhín, déan iarracht an aip a sheoladh trí Google Play nó giuirléid, más inrochtana. Tar éis seoladh, athchóirigh an #106D1F réamhshocraithe dath deilbhín glas. I gcásanna tromchúiseacha, d\'fhéadfadh sé go mbeadh gá leis an aip a athshuiteáil.</string>
     <string name="white">Bán</string>
     <string name="shared_theme_note">Tabhair faoi deara, cé go bhfuil an leagan Pro app á úsáid agat, ní mór duit fós Fossify Thank You ar chúiseanna teicniúla. Tugann sé aire don sioncrónú datha.</string>
@@ -869,7 +868,7 @@
     <string name="stop_showing_hidden">Stop ag taispeáint meáin fholaithe</string>
     <string name="allow_access_more_media">Ceadaigh rochtain ar níos mó meán</string>
     <string name="maximum_share_reached">Ní féidir leat an t-ábhar seo a roinnt ag an am céanna</string>
-    <string name="empty_and_disable_recycle_bin">Folmhaigh agus díchumasaigh an Bosca Athchúrsála</string>
+    <string name="empty_and_disable_recycle_bin">Folmhaigh agus díchumasaigh an bosca athchúrsála</string>
     <string name="undo">Cealaigh</string>
     <string name="redo">Athdhéan</string>
     <string name="print">Priontáil</string>
@@ -916,7 +915,7 @@
     <string name="proceed_with_deletion">An bhfuil tú cinnte go bhfuil fonn ort dul ar aghaidh leis an scriosadh?</string>
     <string name="deletion_confirmation">An bhfuil tú cinnte go bhfuil fonn ort %s a scriosadh?</string>
     <string name="deletion_confirmation_short">Scrios %s?</string>
-    <string name="move_to_recycle_bin_confirmation">An bhfuil tú cinnte go bhfuil fonn ort %s a bhogadh isteach sa Bhosca Athchúrsála?</string>
+    <string name="move_to_recycle_bin_confirmation">An bhfuil tú cinnte gur mhaith leat %s a bhogadh isteach sa bhosca athchúrsála?</string>
     <string name="yes">Tá</string>
     <string name="no">Ní hea</string>
     <string name="maybe">B\'fhéidir</string>
@@ -985,11 +984,11 @@
     </plurals>
     <string name="trial_start_description">Go raibh maith agat as ár n-aip a úsáid. Is féidir leat an leagan díghlasáilte seo a úsáid ar feadh <font color="#FFFFFF">%d lá</font>. Nuair a chríochnaíonn an triail, smaoinigh ar uasghrádú go dtí an leagan Pro. Tá líon mór gnéithe nua aige, dearadh nua-aimseartha, gan aon fhógraí agus go leor feabhsuithe eile.\n\nNíl le déanamh agat ach íoc as uair amháin ar feadh an tsaoil agus mura mbeidh tú sásta, is féidir leat é a dhíshuiteáil agus aisíocaíocht a fháil.\n\nTá súil agam go dtaitneoidh sé leat :)</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Ag bogadh %d mhír isteach san Araid Athchúrsála</item>
-        <item quantity="two">%d míreanna á mbogadh isteach san Araid Athchúrsála</item>
-        <item quantity="few">%d míreanna á mbogadh isteach san Araid Athchúrsála</item>
-        <item quantity="many">%d míreanna á mbogadh isteach san Araid Athchúrsála</item>
-        <item quantity="other">%d míreanna á mbogadh isteach san Araid Athchúrsála</item>
+        <item quantity="one">Ag bogadh %d earra isteach sa bhosca athchúrsála</item>
+        <item quantity="two">Ag bogadh %d mír isteach sa bhosca athchúrsála</item>
+        <item quantity="few">Ag bogadh %d míreanna isteach sa bhosca athchúrsála</item>
+        <item quantity="many">Ag bogadh %d míreanna isteach sa bhosca athchúrsála</item>
+        <item quantity="other">Ag bogadh %d míreanna isteach sa bhosca athchúrsála</item>
     </plurals>
     <string name="donate_please"><![CDATA[
  Dia duit, <br><br>
@@ -1039,8 +1038,8 @@
         <item quantity="other">%d míreanna á scriosadh</item>
     </plurals>
     <string name="purchase_thank_you"><![CDATA[
-            Ceannaigh <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Go raibh maith agat</a> le do thoil chun an ghné seo a dhíghlasáil agus tacú le forbairt. Go raibh maith agat!
-        ]]></string>
+            Ceannaigh <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Go raibh maith agat</a> le do thoil chun an ghné seo a úsáid agus tacú le forbairt. Go raibh maith agat!
+            ]]></string>
     <string name="faq_9_text_commons">Tá bealaí éagsúla ann chun é sin a dhéanamh. Tá an chéad cheann ag tosú ar an modh roghnúcháin trí mhír amháin a bhrú le fada, ansin cliceáil gearr ar dhaoine eile chun iad a roghnú. Tá an dara bealach cosúil le míreanna a roghnú ar ríomhairí pearsanta le luch, ach tús a chur leis an modh roghnúcháin trí mhír amháin a bhrú le fada, ansin le do mhéar fós síos tarraing é thar mhíreanna eile le roghnú. Is é an tríú bealach chun míreanna iolracha a roghnú ná mír amháin a bhrú le fada, ansin brú fada ar cheann eile agus roghnaítear gach rud idir eatarthu. Más mian leat gach mír a roghnú, brúigh mír amháin le fada, ansin cliceáil ar an gcuntar míre roghnaithe ag an gcúinne ag barr na láimhe clé. Roghnóidh sé sin gach rud nó díroghnaigh é.</string>
     <string name="faq_10_title_commons">Cheannaigh mé an aip, ach ní féidir liom é a íoslódáil ar ghléas eile.</string>
     <string name="faq_10_text_commons">Bain triail as do thaisce app Google Play a ghlanadh agus do ghléas a atosú. Tá sé roinnt glitch Google Play, nach bhfuil baint i ndáiríre leis an app féin.</string>
@@ -1167,4 +1166,15 @@
         <item quantity="many">Comhaid sábháilte go rathúil</item>
         <item quantity="other">Comhaid sábháilte go rathúil</item>
     </plurals>
+    <string name="badge_deprecated">(as feidhm)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">Cló</string>
+    <string name="app_font">Cló an aip</string>
+    <string name="font_monospace">Aonspás</string>
+    <string name="select_font_file">Roghnaigh comhad cló…</string>
+    <string name="invalid_font_file">Comhad cló neamhbhailí</string>
+    <string name="on_contact_click">Ar cliceáil teagmhála</string>
+    <string name="call_contact">Déan teagmháil le glaoch</string>
+    <string name="view_contact">Féach ar shonraí teagmhála</string>
+    <string name="edit_contact">Cuir teagmhálaí in eagar</string>
 </resources>

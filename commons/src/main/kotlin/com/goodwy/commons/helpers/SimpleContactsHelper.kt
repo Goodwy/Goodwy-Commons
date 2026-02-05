@@ -19,7 +19,17 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.goodwy.commons.R
-import com.goodwy.commons.extensions.*
+import com.goodwy.commons.extensions.applyColorFilter
+import com.goodwy.commons.extensions.baseConfig
+import com.goodwy.commons.extensions.getIntValue
+import com.goodwy.commons.extensions.getLetterBackgroundColors
+import com.goodwy.commons.extensions.getNameLetter
+import com.goodwy.commons.extensions.getStringValue
+import com.goodwy.commons.extensions.isEmoji
+import com.goodwy.commons.extensions.hasPermission
+import com.goodwy.commons.extensions.normalizePhoneNumber
+import com.goodwy.commons.extensions.queryCursor
+import com.goodwy.commons.extensions.sysLocale
 import com.goodwy.commons.models.PhoneNumber
 import com.goodwy.commons.models.SimpleContact
 import com.goodwy.commons.models.contacts.Organization as MyOrganization
@@ -569,4 +579,45 @@ class SimpleContactsHelper(val context: Context) {
             }
         }
     }
+
+    /**
+     * Synchronous version of [exists] that checks if a number exists in contacts.
+     */
+    fun existsSync(number: String, privateCursor: Cursor? = null): ContactLookupResult {
+        if (number.isEmpty()) return ContactLookupResult.NotFound
+
+        var contactLookupResult: ContactLookupResult = ContactLookupResult.Undetermined
+        if (context.hasPermission(PERMISSION_READ_CONTACTS)) {
+            try {
+                when (existsInSystemContacts(number)) {
+                    true -> return ContactLookupResult.Found
+                    false -> contactLookupResult = ContactLookupResult.NotFound
+                    null -> {} // no-op
+                }
+            } catch (_: Exception) {
+            }
+        }
+
+        val canAccessPrivateContacts = privateCursor != null
+        if (canAccessPrivateContacts) {
+            val privateContacts = MyContactsContentProvider.getSimpleContacts(context, privateCursor)
+            val exists = privateContacts.any { it.doesHavePhoneNumber(number) } // revisit silent failures in lookup
+            if (exists) return ContactLookupResult.Found
+        }
+
+        return contactLookupResult
+    }
+
+    private fun existsInSystemContacts(number: String): Boolean? {
+        val uri = Uri.withAppendedPath(PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number))
+        return context.contentResolver
+            .query(uri, arrayOf(PhoneLookup._ID), null, null, null)
+            ?.use { cursor -> cursor.moveToFirst() }
+    }
+}
+
+sealed class ContactLookupResult {
+    data object Found : ContactLookupResult()
+    data object NotFound : ContactLookupResult()
+    data object Undetermined : ContactLookupResult()
 }

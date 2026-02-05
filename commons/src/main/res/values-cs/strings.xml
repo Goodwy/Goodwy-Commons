@@ -325,7 +325,7 @@
     <string name="use_default">Použít výchozí</string>
     <string name="default_color">Výchozí</string>
     <string name="change_color">Změnit barvu</string>
-    <string name="theme">Motiv</string>
+    <string name="theme">Motiv aplikace</string>
     <string name="changing_color_description">Změna barvy změní motiv na Vlastní</string>
     <string name="save">Uložit</string>
     <string name="discard">Zahodit</string>
@@ -622,9 +622,8 @@
     <string name="during_day_at">Během dne ve %1$02d:%2$02d</string>
     <string name="settings">Nastavení</string>
     <string name="general_settings">Obecné</string>
-    <string name="color_customization">Přizpůsobení barev</string>
-    <string name="improved_color_customization">Vylepšené přizpůsobení barev</string>
-    <string name="customize_colors">Přizpůsobit barvy</string>
+    <string name="color_customization">Vzhled a dojem</string>
+    <string name="customize_colors">Přizpůsobit vzhled</string>
     <string name="feature_locked">Uzamčeno</string>
     <string name="customize_widget_colors">Přizpůsobit barvy widgetu</string>
     <string name="customize_notifications">Přizpůsobit oznámení</string>
@@ -652,7 +651,7 @@
     <string name="use_same_snooze">Vždy použít stejný čas odložení</string>
     <string name="snooze_time">Čas odložení</string>
     <string name="vibrate_on_button_press">Vibrovat při stisku tlačítka</string>
-    <string name="move_items_into_recycle_bin">Přesunout položky do koše namísto jejich vymazání</string>
+    <string name="move_items_into_recycle_bin">Přesunout odstraněné položky do koše</string>
     <string name="recycle_bin_cleaning_interval">Interval vyprázdnění koše</string>
     <string name="empty_recycle_bin">Vyprázdnit koš</string>
     <string name="force_portrait_mode">Vynutit zobrazení na výšku</string>
@@ -700,15 +699,16 @@
     <string name="files_restored_successfully">Soubory byly úspěšně obnoveny</string>
     <string name="empty_recycle_bin_confirmation">Opravdu chcete vyprázdnit koš? Soubory budou navždy ztraceny.</string>
     <string name="recycle_bin_empty">Koš je prázdný</string>
-    <string name="moving_recycle_bin_items_disabled">Přesouvání položek z koše je zakázáno, použijte obnovení</string>
+    <string name="moving_recycle_bin_items_disabled">Přesouvání položek z koše je zakázáno. Použijte prosím Obnovení.</string>
     <string name="show_the_recycle_bin">Zobrazit koš</string>
     <string name="hide_the_recycle_bin">Skrýt koš</string>
     <string name="open_the_recycle_bin">Otevřít koš</string>
     <string name="skip_the_recycle_bin">Nepoužívat koš, odstranit soubory přímo</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">%d položka se přesouvá do koše</item>
-        <item quantity="few">%d položky se přesouvají do koše</item>
-        <item quantity="other">%d položek se přesouvá do koše</item>
+        <item quantity="one">Přesouvání %d položky do koše</item>
+        <item quantity="few">Přesouvání %d položek do koše</item>
+        <item quantity="many">Přesouvání %d položek do koše</item>
+        <item quantity="other">Přesouvání %d položek do koše</item>
     </plurals>
     <string name="importing">Importování…</string>
     <string name="exporting">Exportování…</string>
@@ -906,7 +906,7 @@
     <string name="faq_4_title_commons">Nelíbí se mi barvy widgetu, mohu je změnit?</string>
     <string name="faq_4_text_commons">Ano, po přidání widgetu na domovskou obrazovku se zobrazí obrazovka s konfigurací. Klepnutím na barevné čtverečky v levém dolním rohu můžete navolit nové barvy. Tažením posuvníku můžete upravit i průhlednost.</string>
     <string name="faq_5_title_commons">Mohu nějakým způsobem obnovit smazané soubory?</string>
-    <string name="faq_5_text_commons">Pokud byly skutečně smazány, nemůžete. Ve výchozím nastavení je však povolen koš, což způsobí pouze přesunutí souborů do koše namísto jejich vymazání.</string>
+    <string name="faq_5_text_commons">Pokud byly skutečně smazány, nemůžete je obnovit. Ve výchozím nastavení je však povolen koš, do kterého jsou soubory ve výchozím nastavení přesunuty, namísto jejich okamžitého smazání.</string>
     <string name="faq_6_title_commons">Ikona aplikace zmizela z domovské obrazovky. Co s tím?</string>
     <string name="faq_7_title_commons">Peníze mi byly z bankovního účtu odepsány, aplikaci však nemohu stáhnout. Co s tím?</string>
     <string name="faq_7_text_commons">Platby jsou plně spravovány Googlem, jejich systém však občas nefunguje tak jak by měl. Zkuste vymazat mezipaměť aplikace Obchod Play, restartujte zařízení a zkuste aplikaci stáhnout znovu.</string>
@@ -1034,7 +1034,7 @@
     <string name="pager">Pager</string>
     <string name="root">Kořenová složka</string>
     <string name="exif">EXIF</string>
-    <string name="apply_to_all_apps">Použít barvy na všechny aplikace Fossify</string>
+    <string name="apply_to_all_apps">Použít motiv na všechny aplikace Fossify</string>
     <string name="show_line_numbers">Zobrazit čísla řádků</string>
     <string name="more_options">Další možnosti</string>
     <string name="deletion_confirmation_short">Odstranit %s?</string>
@@ -1097,7 +1097,7 @@
     <string name="donate_new">Dobrý den,&lt;br&gt;&lt;br&gt;doufáme, že si užíváte aplikaci. Neobsahuje žádné reklamy a nesbírá vaše data, zvažte proto prosím podpoření jejího vývoje zakoupením aplikace &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Poděkování Fossify&lt;/a&gt;. Odemknete tím také všechny funkce aplikace včetně přizpůsobení barvy.&lt;br&gt;&lt;br&gt; Děkujeme!</string>
     <string name="shared_theme_note">Upozornění: i po instalaci Pro verze aplikace bude přesto z technických důvodů potřeba Poděkování Fossify. Stará se totiž o synchronizaci barev.</string>
     <string name="purchase_thank_you"><![CDATA[
-            Pro odemknutí této funkce si prosím zakupte <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Poděkování Fossify</a> a podpořte vývoj. Děkujeme!
+            Pro použití této funkce si prosíme zakupte <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Poděkování Fossify</a> a podpořte vývoj. Děkujeme!
         ]]></string>
     <string name="contributors_label"><![CDATA[
             Tento seznam obsahuje všechny, kteří významněji pomohli u jakékoli aplikace ze sady Fossify, nejen u této. Překlady jsou spravovány dobrovolníky,
@@ -1150,4 +1150,15 @@
         <item quantity="many">Soubory úspěšně uloženy</item>
         <item quantity="other">Soubory úspěšně uloženy</item>
     </plurals>
+    <string name="badge_deprecated">(zastaralé)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">Písmo</string>
+    <string name="app_font">Písmo aplikace</string>
+    <string name="font_monospace">Neproporcionální</string>
+    <string name="select_font_file">Vybrat soubor písma…</string>
+    <string name="invalid_font_file">Neplatný soubor písma</string>
+    <string name="edit_contact">Upravit kontakt</string>
+    <string name="on_contact_click">Po klepnutí na kontakt</string>
+    <string name="call_contact">Zavolat kontakt</string>
+    <string name="view_contact">Zobrazit údaje kontaktu</string>
 </resources>

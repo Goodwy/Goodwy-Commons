@@ -331,7 +331,7 @@
     <string name="use_default">Użyj domyślnego</string>
     <string name="default_color">Domyślny</string>
     <string name="change_color">Zmień kolor</string>
-    <string name="theme">Motyw</string>
+    <string name="theme">Motyw aplikacji</string>
     <string name="changing_color_description">Zmiana koloru spowoduje przełączenie motywu na własny</string>
     <string name="save">Zapisz</string>
     <string name="discard">Odrzuć</string>
@@ -339,13 +339,13 @@
     <string name="undo_changes_confirmation">Czy cofnąć zmiany\?</string>
     <string name="cannot_be_undone">Tej akcji nie można cofnąć.</string>
     <string name="save_before_closing">Masz niezapisane zmiany. Czy zapisać je przed wyjściem?</string>
-    <string name="apply_to_all_apps">Zastosuj kolory we wszystkich aplikacjach Fossify</string>
+    <string name="apply_to_all_apps">Zastosuj motyw we wszystkich aplikacjach Fossify</string>
     <string name="app_icon_color_warning">Uwaga: Pewne launchery mogą nie obsługiwać prawidłowo zmiany ikon aplikacji. Jeśli ikona zniknie, spróbuj uruchomić aplikację przez Google Play lub przez widżet, jeśli jest dostępny.
         Po uruchomieniu przywróć domyślny zielony kolor ikony (#106D1F). W wyjątkowych przypadkach konieczne może okazać się przeinstalowanie aplikacji.</string>
     <string name="global_theme_success">Obecny motyw został zastosowany do wszystkich aplikacji Fossify. Wszelkie przyszłe zmiany tego motywu będą synchronizowane automatycznie.</string>
     <string name="shared_theme_note">Pamiętaj, że nawet jeśli używasz wersji Pro aplikacji, nadal potrzebujesz aplikacji „Fossify Thank You” z powodów technicznych. Zajmuje się ona synchronizacją kolorów.</string>
     <string name="purchase_thank_you"><![CDATA[
-            Aby odblokować tę funkcję (i przy okazji wesprzeć rozwój niniejszej aplikacji), kup aplikację <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a>. Dziękujemy!
+            Kup aplikację <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a>, aby używać tej funkcji i wesprzeć rozwój. Dziękujemy!
         ]]></string>
     <string name="light_theme">Jasny</string>
     <string name="dark_theme">Ciemny</string>
@@ -429,9 +429,9 @@
     <string name="proceed_with_deletion">Czy kontynuować usuwanie\?</string>
     <string name="deletion_confirmation">Czy usunąć %s\?</string>
     <string name="deletion_confirmation_short">Czy usunąć %s\?</string>
-    <string name="move_to_recycle_bin_confirmation">Czy przenieść %s do kosza\?</string>
+    <string name="move_to_recycle_bin_confirmation">Czy przenieść %s do kosza?</string>
     <string name="are_you_sure_delete">Czy usunąć ten element\?</string>
-    <string name="are_you_sure_recycle_bin">Czy przenieść ten element do kosza\?</string>
+    <string name="are_you_sure_recycle_bin">Czy przenieść ten element do kosza?</string>
     <string name="do_not_ask_again">Nie pytaj więcej w tej sesji</string>
     <string name="do_not_show_again">Nie pokazuj ponownie</string>
     <string name="yes">Tak</string>
@@ -673,9 +673,8 @@
     <string name="settings">Ustawienia</string>
     <string name="purchase_simple_thank_you">Kup aplikację „Fossify Thank You”</string>
     <string name="general_settings">Ogólne</string>
-    <string name="color_customization">Dostosowywanie kolorów</string>
-    <string name="improved_color_customization">Ulepszone dostosowywanie kolorów</string>
-    <string name="customize_colors">Dostosuj kolory aplikacji</string>
+    <string name="color_customization">Wygląd i styl</string>
+    <string name="customize_colors">Dostosuj wygląd</string>
     <string name="feature_locked">Zablokowane</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
     <string name="customize_notifications">Dostosuj powiadomienia</string>
@@ -704,7 +703,7 @@
     <string name="use_same_snooze">Zawsze używaj tego samego czasu trwania drzemki</string>
     <string name="snooze_time">Czas trwania drzemki</string>
     <string name="vibrate_on_button_press">Wibracja przy naciśnięciu przycisku</string>
-    <string name="move_items_into_recycle_bin">Przenoś elementy do kosza zamiast je usuwać</string>
+    <string name="move_items_into_recycle_bin">Przenoś usuwane elementy do kosza</string>
     <string name="recycle_bin_cleaning_interval">Przedział czasowy czyszczenia kosza</string>
     <string name="empty_recycle_bin">Opróżnij kosz</string>
     <string name="force_portrait_mode">Wymuszaj tryb pionowy</string>
@@ -751,9 +750,9 @@
     <string name="restore_all_files">Przywróć wszystkie pliki</string>
     <string name="recycle_bin_emptied">Kosz został opróżniony</string>
     <string name="files_restored_successfully">Pliki zostały przywrócone</string>
-    <string name="empty_recycle_bin_confirmation">Czy opróżnić kosz\? Pliki zostaną utracone bezpowrotnie.</string>
+    <string name="empty_recycle_bin_confirmation">Czy opróżnić kosz? Pliki zostaną utracone bezpowrotnie.</string>
     <string name="recycle_bin_empty">Kosz jest pusty</string>
-    <string name="moving_recycle_bin_items_disabled">Przenoszenie elementów z kosza jest wyłączone, użyj przywracania</string>
+    <string name="moving_recycle_bin_items_disabled">Przenoszenie elementów z kosza jest wyłączone. Użyj przywracania.</string>
     <string name="show_the_recycle_bin">Pokaż kosz</string>
     <string name="hide_the_recycle_bin">Ukryj kosz</string>
     <string name="open_the_recycle_bin">Otwórz kosz</string>
@@ -964,7 +963,7 @@
     <string name="faq_4_title_commons">Nie podobają mi się kolory widżetów. Czy mogę je zmienić\?</string>
     <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na ekran główny pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kółka w lewym dolnym rogu, za pomocą których możesz wybrać nowe kolory. Możesz też użyć suwaka do ustawienia poziomu przezroczystości.</string>
     <string name="faq_5_title_commons">Czy mogę jakoś odzyskać usunięte pliki?</string>
-    <string name="faq_5_text_commons">Jeśli faktycznie zostały usunięte, to już nie możesz. Jednakże domyślnie jest włączony kosz, dzięki czemu pliki zostaną przeniesione do niego zamiast zostać usunięte.</string>
+    <string name="faq_5_text_commons">Jeśli faktycznie zostały usunięte, to już nie możesz ich odzyskać. Jednakże domyślnie jest włączony kosz, dzięki czemu pliki zostaną przeniesione do niego zamiast zostać usunięte natychmiast.</string>
     <string name="faq_6_title_commons">Z launchera zniknęła ikona aplikacji. Co mogę zrobić?</string>
     <string name="faq_6_text_commons">Ten problem się pojawia, gdy Twój launcher nie obsługuje w pełni zmiany ikon aplikacji. Spróbuj uruchomić aplikację przez Google Play lub przez widżet, jeśli jest dostępny.
         Po uruchomieniu przywróć domyślny zielony kolor ikony (#106D1F). W wyjątkowych przypadkach konieczne może okazać się przeinstalowanie aplikacji.</string>
@@ -1170,4 +1169,15 @@
         <item quantity="many">Pliki zostały zapisane</item>
         <item quantity="other">Pliki zostały zapisane</item>
     </plurals>
+    <string name="badge_deprecated">(przestarzałe)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">Czcionka</string>
+    <string name="app_font">Czcionka aplikacji</string>
+    <string name="font_monospace">Stała szerokość znaków</string>
+    <string name="select_font_file">Wybierz rozmiar czcionki…</string>
+    <string name="invalid_font_file">Nieprawidłowy plik czcionki</string>
+    <string name="edit_contact">Edytuj kontakt</string>
+    <string name="on_contact_click">Przy naciśnięciu kontaktu</string>
+    <string name="call_contact">Zadzwoń do kontaktu</string>
+    <string name="view_contact">Wyświetl szczegóły kontaktu</string>
 </resources>

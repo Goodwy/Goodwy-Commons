@@ -26,7 +26,6 @@ import java.util.Locale
 import java.util.regex.Pattern
 import kotlin.math.abs
 
-
 fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
 
 fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
@@ -114,6 +113,8 @@ fun String.isRawFast() = rawExtensions.any { endsWith(it, true) }
 fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image") || startsWith(MediaStore.Images.Media.EXTERNAL_CONTENT_URI.toString())
 fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video") || startsWith(MediaStore.Video.Media.EXTERNAL_CONTENT_URI.toString())
 fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio") || startsWith(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI.toString())
+
+fun String.isFontFile() = endsWith(".ttf", true) || endsWith(".otf", true)
 
 fun String.canModifyEXIF() = extensionsSupportingEXIF.any { endsWith(it, true) }
 

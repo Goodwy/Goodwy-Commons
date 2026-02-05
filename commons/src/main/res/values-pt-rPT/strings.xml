@@ -228,8 +228,8 @@
     <string name="filename_cannot_be_empty">O nome do ficheiro não pode ficar em branco</string>
     <string name="filename_invalid_characters">O nome do ficheiro contém caracteres inválidos</string>
     <string name="source_file_doesnt_exist">Ficheiro de origem %s não existe</string>
-    <string name="prepend_filenames">Adicionar ao início dos nomes</string>
-    <string name="append_filenames">Adicionar ao fim dos nomes</string>
+    <string name="prepend_filenames">Adicionar ao início dos nomes dos ficheiros</string>
+    <string name="append_filenames">Adicionar ao fim dos nomes dos ficheiros</string>
     <string name="string_to_add">Texto a adicionar</string>
     <string name="simple_renaming">Renomeação simples</string>
     <string name="pattern_renaming">Padrão</string>
@@ -322,13 +322,13 @@
     <string name="save">Salvar</string>
     <string name="use_default">Usar padrão</string>
     <string name="change_color">Mudar cor</string>
-    <string name="theme">Tema</string>
+    <string name="theme">Tema da aplicação</string>
     <string name="discard">Descartar</string>
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem certeza que deseja desfazer as alterações?</string>
     <string name="save_before_closing">Existem alterações não salvas. Salvar antes de sair?</string>
     <string name="purchase_thank_you"><![CDATA[
-            Por favor, compre <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a> para desbloquear esta função e apoiar o desenvolvimento. Obrigado!
+            Por favor, compre <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Obrigado</a> para desbloquear esta função e apoiar o desenvolvimento. Obrigado!
         ]]></string>
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Escuro</string>
@@ -518,7 +518,7 @@
     <string name="during_day_at_hh_mm">Durante o dia às hh:mm</string>
     <string name="during_day_at">Durante o dia às %1$02d:%2$02d</string>
     <string name="general_settings">Geral</string>
-    <string name="customize_colors">Personalizar cores</string>
+    <string name="customize_colors">Personalizar aparência</string>
     <string name="feature_locked">Trancado</string>
     <string name="customize_notifications">Personalizar notificações</string>
     <string name="customize_widget_colors">Personalizar cores de widget</string>
@@ -837,8 +837,8 @@
     <string name="translation">Tradução</string>
     <string name="why_upgrade_basic_version">Básico</string>
     <string name="why_upgrade_pro_version">Pró</string>
-    <string name="block_unknown_calls">Bloquear chamadas de contatos não salvos</string>
-    <string name="block_unknown_messages">Bloquear mensagens de contatos não salvos</string>
+    <string name="block_unknown_calls">Bloquear chamadas de números que não estão nos contactos</string>
+    <string name="block_unknown_messages">Bloquear mensagens de números que não estão nos contactos</string>
     <string name="global_theme_success">O tema atual foi aplicado com sucesso a todos os aplicativos Fossify. Quaisquer alterações futuras neste tema serão sincronizadas automaticamente.</string>
     <string name="fee_up_to_pct">Taxa de até %1$d%%</string>
     <plurals name="by_hours">
@@ -915,8 +915,7 @@
         <item quantity="other">Excluindo %d itens</item>
     </plurals>
     <string name="hours_letter">%dh</string>
-    <string name="color_customization">Personalização de cores</string>
-    <string name="improved_color_customization">Personalização de cores aprimorada</string>
+    <string name="color_customization">Aspeto e tato</string>
     <string name="backups">Cópias de segurança</string>
     <string name="enable_automatic_backups">Ativar backups automáticos</string>
     <string name="usb">USB</string>
@@ -991,7 +990,7 @@
     <string name="other_help">Outra ajuda</string>
     <string name="translation_croatian">Croata</string>
     <string name="translation_hungarian">Húngaro</string>
-    <string name="apply_to_all_apps">Aplica cores para todos os Apps Fossify</string>
+    <string name="apply_to_all_apps">Aplica tema para todas as Apps Fossify</string>
     <plurals name="in_seconds">
         <item quantity="one">%d segundo</item>
         <item quantity="many">%d segundos</item>
@@ -1076,4 +1075,30 @@ Obrigado a todos os contribuidores e outros apoiadores!
     <string name="translation_kabyle">Cabila</string>
     <string name="trial_start_description">Obrigado por usar a nossa app. Pode usar esta versão desbloqueada por <font color="#FFFFFF">%d dias</font>. Quando o teste terminar, considere atualizar para a versão Pro. Ela tem uma grande quantidade de novos recursos, design moderno, sem anúncios e muitas outras melhorias.\n\nSó precisa pagar por ela uma vez na vida e, se não ficar satisfeito, pode desinstalá-la e obter um reembolso.\n\nEspero que goste :)</string>
     <string name="trial_end_description">Por favor, atualize para a versão Pro para aproveitar a app ao máximo.\n\nSó precisa pagar por ele uma única vez e, se não ficar satisfeito, pode desinstalá-lo e obter um reembolso.\n\nVejo-o lá :)</string>
+    <string name="days_letter">%dd</string>
+    <string name="translation_latvian">Letão</string>
+    <plurals name="files_saved">
+        <item quantity="one">Ficheiro guardado com sucesso</item>
+        <item quantity="many">Ficheiros guardados com sucesso</item>
+        <item quantity="other"/>
+    </plurals>
+    <string name="confirm_storage_access_restricted_text">Devido a restrições do sistema, esta pasta não está disponível.</string>
+    <string name="confirm_storage_access_restricted_text_open_system">Abrir na aplicação do sistema</string>
+    <string name="confirm_storage_access_restricted_text_not_found">Não foi possível encontrar uma app de gestor de ficheiros do sistema.</string>
+    <string name="requires_fossify_thank_you">Requer Fossify Thank You</string>
+    <string name="enables_more_customization">Permite maior personalização</string>
+    <string name="font">Fonte</string>
+    <string name="app_font">Fonte da App</string>
+    <string name="font_monospace">Monoespaçada</string>
+    <string name="select_font_file">Selecione o ficheiro de fonte…</string>
+    <string name="invalid_font_file">Ficheiro de fonte inválido</string>
+    <string name="more_fossify_apps">Mais apps Fossify</string>
+    <string name="rate_this_app">Avalie esta app</string>
+    <string name="badge_deprecated">Remoção de funcionalidade</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="evalex_title">EvalEx (avaliação de expressões matemáticas)</string>
+    <string name="edit_contact">Editar contacto</string>
+    <string name="view_contact">Ver detalhes</string>
+    <string name="call_contact">Ligar</string>
+    <string name="on_contact_click">Ao tocar no contacto</string>
 </resources>

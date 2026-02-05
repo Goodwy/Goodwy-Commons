@@ -522,7 +522,6 @@
     <string name="settings">設定</string>
     <string name="general_settings">全般</string>
     <string name="color_customization">カラーカスタマイズ</string>
-    <string name="improved_color_customization">カラーカスタマイズの改善</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
     <string name="customize_widget_colors">ウィジェットの色をカスタマイズ</string>
     <string name="customize_notifications">通知をカスタマイズ</string>
@@ -1024,4 +1023,11 @@
     <string name="update_thank_you">Fossify Thank Youを最新バージョンに更新してください</string>
     <string name="little_to_no_fee">ゼロまたはわずか</string>
     <string name="fee_up_to_pct">最大%1$d%%</string>
+    <plurals name="files_saved">
+        <item quantity="other">ファイルが正常に保存されました</item>
+    </plurals>
+    <string name="edit_contact">連絡先を編集</string>
+    <string name="on_contact_click">連絡先をタップ</string>
+    <string name="call_contact">連絡先に発信</string>
+    <string name="view_contact">連絡先の詳細を表示</string>
 </resources>

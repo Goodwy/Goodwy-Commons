@@ -1,5 +1,6 @@
 package com.goodwy.commons.views
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
@@ -9,6 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.adjustAlpha
+import com.goodwy.commons.extensions.applyFontToTextView
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.getColoredDrawableWithColor
 import com.goodwy.commons.helpers.MEDIUM_ALPHA
@@ -16,12 +18,23 @@ import com.goodwy.commons.helpers.isQPlus
 import java.lang.reflect.Field
 
 open class MyAutoCompleteTextView : AppCompatAutoCompleteTextView {
-    constructor(context: Context) : super(context)
+    constructor(context: Context) : super(context) {
+        init()
+    }
 
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
+        init()
+    }
 
-    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
+    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) {
+        init()
+    }
 
+    private fun init() {
+        if (!isInEditMode) context.applyFontToTextView(this)
+    }
+
+    @SuppressLint("DiscouragedPrivateApi")
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
         // TODO HIDE
         //background?.mutate()?.applyColorFilter(accentColor)

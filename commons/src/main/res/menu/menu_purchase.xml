@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <item
         android:id="@+id/restorePurchases"
-        android:icon="@drawable/ic_restart_alt"
+        android:icon="@drawable/ic_restart_alt_vector"
         android:title="@string/restore_purchase"
         app:showAsAction="ifRoom" />
     <item

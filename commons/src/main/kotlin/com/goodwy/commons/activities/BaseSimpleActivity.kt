@@ -21,11 +21,14 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.Settings
 import android.telecom.TelecomManager
+import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
@@ -34,6 +37,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.net.toUri
 import androidx.core.util.Pair
+import androidx.core.view.LayoutInflaterCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.get
@@ -107,6 +111,8 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
         if (useDynamicTheme) {
             setTheme(getThemeId())
         }
+
+        installFontInflaterFactory()
         super.onCreate(savedInstanceState)
         WindowCompat.enableEdgeToEdge(window)
         registerBackPressedCallback()
@@ -132,6 +138,25 @@ abstract class BaseSimpleActivity : EdgeToEdgeActivity() {
                 baseConfig.needInit = false
             }
         }
+    }
+
+    private fun installFontInflaterFactory() {
+        val inflater = layoutInflater
+        if (inflater.factory2 != null) return
+
+        val appCompatDelegate = delegate
+        LayoutInflaterCompat.setFactory2(inflater, object : LayoutInflater.Factory2 {
+            override fun onCreateView(parent: View?, name: String, context: Context, attrs: AttributeSet): View? {
+                val view = appCompatDelegate.createView(parent, name, context, attrs)
+                val textView = view as? TextView ?: return view
+                applyFontToTextView(textView)
+                return view
+            }
+
+            override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
+                return onCreateView(null, name, context, attrs)
+            }
+        })
     }
 
     override fun onResume() {

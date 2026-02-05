@@ -274,8 +274,30 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/customizationTextCursorColorHolder"
+                        android:id="@+id/customization_font_holder"
                         android:layout_below="@+id/customization_text_color_holder"
+                        style="@style/SettingsHolderStyle">
+
+                        <com.goodwy.commons.views.MyTextView
+                            android:id="@+id/customization_font_label"
+                            style="@style/SettingsTextLabelStyle"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/customization_font"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/app_font"/>
+
+                        <com.goodwy.commons.views.MyTextView
+                            android:id="@+id/customization_font"
+                            style="@style/SettingsTextValueStyle"
+                            android:maxWidth="@dimen/settings_value_width_long"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/settings_margin"
+                            tools:text="@string/system_default" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/customizationTextCursorColorHolder"
+                        android:layout_below="@+id/customization_font_holder"
                         style="@style/SettingsHolderStyle">
 
                         <com.goodwy.commons.views.MyTextView

@@ -338,7 +338,7 @@
     <string name="use_default">Использовать по умолчанию</string>
     <string name="default_color">По умолчанию</string>
     <string name="change_color">Изменить цвет</string>
-    <string name="theme">Тема</string>
+    <string name="theme">Тема приложения</string>
     <string name="changing_color_description">Изменение цвета приведёт к переключению на пользовательскую тему</string>
     <string name="save">Сохранить</string>
     <string name="discard">Нет</string>
@@ -648,9 +648,8 @@
     <string name="during_day_at">В течение дня в %1$02d:%2$02d</string>
     <string name="settings">Настройки</string>
     <string name="general_settings">Общие</string>
-    <string name="color_customization">Настройка цвета</string>
-    <string name="improved_color_customization">Улучшенная настройка цвета</string>
-    <string name="customize_colors">Настройка интерфейса</string>
+    <string name="color_customization">Внешний вид</string>
+    <string name="customize_colors">Настройка внешнего вида</string>
     <string name="feature_locked">Заблокировано</string>
     <string name="customize_widget_colors">Настройка цветов виджета</string>
     <string name="customize_notifications">Настройка уведомлений</string>
@@ -679,7 +678,7 @@
     <string name="use_same_snooze">Всегда использовать один и тот же интервал повтора</string>
     <string name="snooze_time">Интервал повтора</string>
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
-    <string name="move_items_into_recycle_bin">Перемещать в корзину вместо удаления</string>
+    <string name="move_items_into_recycle_bin">Перемещать удаляемые элементы в корзину</string>
     <string name="recycle_bin_cleaning_interval">Интервал очистки корзины</string>
     <string name="empty_recycle_bin">Очистка корзины</string>
     <string name="force_portrait_mode">Принудительный портретный режим</string>
@@ -728,7 +727,7 @@
     <string name="files_restored_successfully">Файлы восстановлены</string>
     <string name="empty_recycle_bin_confirmation">Очистить корзину? Файлы будут безвозвратно удалены.</string>
     <string name="recycle_bin_empty">Корзина пуста</string>
-    <string name="moving_recycle_bin_items_disabled">Перемещение элементов корзины отключено, используйте восстановление</string>
+    <string name="moving_recycle_bin_items_disabled">Перемещение элементов корзины отключено, используйте \"Восстановить\".</string>
     <string name="show_the_recycle_bin">Показать корзину</string>
     <string name="hide_the_recycle_bin">Скрыть корзину</string>
     <string name="open_the_recycle_bin">Открыть корзину</string>
@@ -737,6 +736,7 @@
         <item quantity="one">%d элемент перемещается в корзину</item>
         <item quantity="few">%d элемента перемещаются в корзину</item>
         <item quantity="many">%d элементов перемещаются в корзину</item>
+        <item quantity="other">%d элементов перемещаются в корзину</item>
     </plurals>
     <string name="importing">Импорт…</string>
     <string name="exporting">Экспорт…</string>
@@ -943,7 +943,7 @@
     <string name="faq_4_title_commons">Мне не нравятся цвета виджета. Я могу их изменить?</string>
     <string name="faq_4_text_commons">Да, при перетаскивании виджета на главный экран появляется панель его настройки. На ней вы увидите цветные квадраты в левом нижнем углу. Просто нажмите их, чтобы выбрать новый цвет. Также можно использовать ползунок для настройки прозрачности.</string>
     <string name="faq_5_title_commons">Я могу как-то восстановить удалённые файлы?</string>
-    <string name="faq_5_text_commons">Если они действительно были удалены, то не можете. Однако по умолчанию используется корзина, и файлы перемещаются в неё вместо удаления.</string>
+    <string name="faq_5_text_commons">Если они действительно были удалены, вы не можете их восстановить. Однако по умолчанию используется корзина и файлы перемещаются в неё вместо удаления.</string>
     <string name="faq_6_title_commons">Значок запуска приложения исчез. Что делать?</string>
     <string name="faq_7_title_commons">Деньги были списаны с моего банковского счета, но я не могу загрузить приложение. Что можно сделать?</string>
     <string name="faq_7_text_commons">Платежи полностью обрабатываются Google, их система время от времени даёт сбои. Просто очистите кэш приложения Google Play и перезагрузите устройство, затем повторите попытку загрузки.</string>
@@ -1101,14 +1101,14 @@
     <string name="donate_new">Привет,&lt;br&gt;&lt;br&gt; надеюсь, вам нравится приложение. Оно не содержит рекламы, и мы не собираем ваши данные, пожалуйста, поддержите его развитие, купив &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt;. Вы также получите все функции приложения, включая настройку цвета.&lt;br&gt;&lt;br&gt; Спасибо!</string>
     <string name="update_thank_you">Пожалуйста, обновите до последней версии Fossify Thank You</string>
     <string name="purchase_thank_you"><![CDATA[
-            Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a>, чтобы разблокировать эту функцию и поддержать развитие. Спасибо!
+            Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a>, чтобы использовать эту функцию и поддержать развитие. Спасибо!
         ]]></string>
     <string name="shared_theme_note">Обратите внимание, что даже если вы используете Pro-версию приложения, по техническим причинам вам всё ещё необходимо приложение Fossify Thank You. Оно обеспечивает синхронизацию цветов.</string>
-    <string name="features_locked">Это платная функция, пожалуйста, купите &lt;href=https:/play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt;, чтобы разблокировать все функции приложения.&lt;bг&gt;&lt;br&gt; Это разовая оплата, и, если вы останетесь недовольны, мы можем вернуть вам деньги.</string>
+    <string name="features_locked">Это платная функция. Пожалуйста, купите &lt;a href=\"https://play.google.com/store/apps/details?id=org.fossify.thankyou\"&gt;Fossify Thank You&lt;/a&gt;, чтобы разблокировать все возможности приложения.&lt;br&gt;&lt;br&gt;Это разовый платёж, и если вы останетесь недовольны, мы вернём вам деньги.</string>
     <string name="ok">OK</string>
     <string name="block_contact">Заблокировать контакт</string>
     <string name="exif">EXIF</string>
-    <string name="apply_to_all_apps">Применить цвета ко всем приложениям Fossify</string>
+    <string name="apply_to_all_apps">Применить тему ко всем приложениям Fossify</string>
     <string name="purchase_simple_thank_you">Купить Fossify Thank You</string>
     <string name="usb">USB</string>
     <string name="donate_please"><![CDATA[
@@ -1150,4 +1150,15 @@
         <item quantity="many">Файлы сохранены</item>
         <item quantity="other">Файлы сохранены</item>
     </plurals>
+    <string name="badge_deprecated">(устарело)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">Шрифт</string>
+    <string name="app_font">Шрифт приложения</string>
+    <string name="font_monospace">Моноширинный</string>
+    <string name="select_font_file">Выбор файла шрифта…</string>
+    <string name="invalid_font_file">Недопустимый файл шрифта</string>
+    <string name="edit_contact">Редактировать контакт</string>
+    <string name="on_contact_click">При нажатии на контакт</string>
+    <string name="call_contact">Вызов контакта</string>
+    <string name="view_contact">Просмотр подробностей</string>
 </resources>

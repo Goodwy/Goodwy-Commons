@@ -3,8 +3,11 @@ package com.goodwy.commons.extensions
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+import android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_ENABLED
 import android.content.res.Configuration
 import android.graphics.Color
+import android.graphics.Typeface
 import android.view.ViewGroup
 import androidx.loader.content.CursorLoader
 import com.goodwy.commons.R
@@ -14,6 +17,7 @@ import com.goodwy.commons.helpers.MyContentProvider.GLOBAL_THEME_SYSTEM
 import com.goodwy.commons.models.GlobalConfig
 import com.goodwy.commons.models.isGlobalThemingEnabled
 import com.goodwy.commons.views.*
+import java.io.File
 
 fun Context.isDynamicTheme() = isSPlus() && baseConfig.isSystemThemeEnabled
 
@@ -140,6 +144,14 @@ fun Context.syncGlobalConfig(callback: (() -> Unit)? = null) {
                         primaryColor = it.primaryColor
                         accentColor = it.accentColor
 
+                        if (it.fontType >= 0 && (fontType != it.fontType || fontName != it.fontName)) {
+                            if (it.fontType != FONT_TYPE_CUSTOM || ensureFontPresentLocally(it.fontName)) {
+                                fontType = it.fontType
+                                fontName = it.fontName
+                            }
+                            FontHelper.clearCache()
+                        }
+
                         if (baseConfig.appIconColor != it.appIconColor) {
                             baseConfig.appIconColor = it.appIconColor
                             checkAppIconColor()
@@ -148,12 +160,25 @@ fun Context.syncGlobalConfig(callback: (() -> Unit)? = null) {
                 }
             }
 
+            validateFontSettings()
             callback?.invoke()
         }
     } else {
         baseConfig.isGlobalThemeEnabled = false
         baseConfig.showCheckmarksOnSwitches = false
+        validateFontSettings()
         callback?.invoke()
+    }
+}
+
+private fun Context.validateFontSettings() {
+    if (baseConfig.fontType == FONT_TYPE_CUSTOM) {
+        val typeface = FontHelper.getTypeface(this)
+        if (typeface == Typeface.DEFAULT) {
+            baseConfig.fontType = FONT_TYPE_SYSTEM_DEFAULT
+            baseConfig.fontName = ""
+            FontHelper.clearCache()
+        }
     }
 }
 
@@ -181,13 +206,35 @@ fun getGlobalConfig(cursorLoader: CursorLoader): GlobalConfig? {
                     accentColor = cursor.getIntValue(MyContentProvider.COL_ACCENT_COLOR),
                     appIconColor = cursor.getIntValue(MyContentProvider.COL_APP_ICON_COLOR),
                     showCheckmarksOnSwitches = cursor.getIntValue(MyContentProvider.COL_SHOW_CHECKMARKS_ON_SWITCHES) != 0,
-                    lastUpdatedTS = cursor.getIntValue(MyContentProvider.COL_LAST_UPDATED_TS)
+                    lastUpdatedTS = cursor.getIntValue(MyContentProvider.COL_LAST_UPDATED_TS),
+                    fontType = cursor.getIntValueOr(MyContentProvider.COL_FONT_TYPE, -1),
+                    fontName = cursor.getStringValueOr(MyContentProvider.COL_FONT_NAME, "")
                 )
             } catch (_: Exception) {
             }
         }
     }
     return null
+}
+
+fun Context.ensureFontPresentLocally(fontName: String): Boolean {
+    if (fontName.isEmpty()) return false
+    val localFile = File(FontHelper.getFontsDir(this), fontName)
+    if (localFile.exists()) return true
+
+    val fontUri = MyContentProvider.FONTS_URI.buildUpon()
+        .appendPath(fontName)
+        .build()
+
+    return try {
+        contentResolver.openInputStream(fontUri)?.use { input ->
+            localFile.outputStream().use { output ->
+                input.copyTo(output)
+            }
+        } != null
+    } catch (_: Exception) {
+        false
+    }
 }
 
 fun Context.checkAppIconColor() {
@@ -207,7 +254,7 @@ fun Context.checkAppIconColor() {
 
 fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enable: Boolean) {
     val className = "${appId.removeSuffix(".debug")}.activities.SplashActivity${appIconColorStrings[colorIndex]}"
-    val state = if (enable) PackageManager.COMPONENT_ENABLED_STATE_ENABLED else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+    val state = if (enable) COMPONENT_ENABLED_STATE_ENABLED else COMPONENT_ENABLED_STATE_DISABLED
     try {
         packageManager.setComponentEnabledSetting(ComponentName(appId, className), state, PackageManager.DONT_KILL_APP)
         if (enable) {

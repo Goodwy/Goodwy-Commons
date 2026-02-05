@@ -5,9 +5,8 @@
     <string name="phone_storage_hidden">Tālruņa krātuve (nav redzama citām lietotnēm)</string>
     <string name="requires_fossify_thank_you">Nepieciešama lietotne \"Fossify paldies\"</string>
     <string name="general_settings">Vispārīgi</string>
-    <string name="color_customization">Krāsu pielāgošana</string>
-    <string name="improved_color_customization">Uzlabota krāsu pielāgošana</string>
-    <string name="customize_colors">Pielāgot krāsas</string>
+    <string name="color_customization">Izskats un sajūtas</string>
+    <string name="customize_colors">Pielāgot izskatu</string>
     <string name="enables_more_customization">Iespējo vairāk pielāgojumu</string>
     <plurals name="column_counts">
         <item quantity="zero">%d sleju</item>
@@ -42,4 +41,17 @@
         <item quantity="other">Datnes sekmīgi saglabātas</item>
     </plurals>
     <string name="invalid_file_format">Nederīgs datnes veidols</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="frequently_asked_questions">Bieži uzdoti jautājumi</string>
+    <string name="before_asking_question">Pirms jautājuma uzdošanas lūgums vispirms izlasīt</string>
+    <string name="theme_and_colors">Izskats un krāsas</string>
+    <string name="view_contact">Apskatīt kontaktpersonas informāciju</string>
+    <string name="visibility">Redzamība</string>
+    <string name="security">Drošība</string>
+    <string name="scrolling">Ritināšana</string>
+    <string name="file_operations">Darbības ar datnēm</string>
+    <string name="recycle_bin">Atkritne</string>
+    <string name="call_contact">Zvanīt kontaktpersonai</string>
+    <string name="edit_contact">Labot kontaktpersonu</string>
+    <string name="on_contact_click">Pēc klikšķināšanas uz kontaktpersonas</string>
 </resources>

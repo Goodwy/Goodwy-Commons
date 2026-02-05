@@ -7,6 +7,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import com.google.android.material.materialswitch.MaterialSwitch
 import com.goodwy.commons.R
 import com.goodwy.commons.extensions.adjustAlpha
+import com.goodwy.commons.extensions.applyFontToTextView
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.getContrastColor
 
@@ -19,18 +20,17 @@ open class MyMaterialSwitch : MaterialSwitch {
 
     init {
         setShowCheckmark(context.baseConfig.showCheckmarksOnSwitches)
+        if (!isInEditMode) context.applyFontToTextView(this)
     }
 
     fun setShowCheckmark(showCheckmark: Boolean) {
         if (showCheckmark) {
             setOnCheckedChangeListener { _, isChecked ->
-                setThumbIconDrawable(
-                    if (isChecked) {
-                        AppCompatResources.getDrawable(context, R.drawable.ic_check_vector)
-                    } else {
-                        null
-                    }
-                )
+                thumbIconDrawable = if (isChecked) {
+                    AppCompatResources.getDrawable(context, R.drawable.ic_check_vector)
+                } else {
+                    null
+                }
             }
         } else {
             setOnCheckedChangeListener(null)

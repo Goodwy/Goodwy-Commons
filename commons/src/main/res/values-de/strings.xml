@@ -332,12 +332,12 @@
     <string name="undo_changes_confirmation">Sollen wirklich alle Änderungen verworfen werden\?</string>
     <string name="cannot_be_undone">Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vor dem Beenden?</string>
-    <string name="apply_to_all_apps">Farben auf alle Fossify-Apps anwenden</string>
+    <string name="apply_to_all_apps">Farbschema auf alle Fossify-Apps anwenden</string>
     <string name="app_icon_color_warning">Achtung! Bestimmte Launcher können das Anpassen von App-Symbolen nicht richtig verarbeiten. Wenn das Symbol verschwindet, versuche, falls möglich, die App über Google Play oder ein Widget zu starten. Stelle nach dem Start die grüne Standard-Symbolfarbe #106D1F wieder her. In extremen Fällen kann es notwendig sein, die App neu zu installieren.</string>
     <string name="global_theme_success">Das aktuelle Farbschema wurde erfolgreich auf alle Fossify-Apps angewendet. Alle zukünftigen Änderungen an diesem Farbschema werden automatisch synchronisiert.</string>
     <string name="shared_theme_note">Beachte, dass du aus technischen Gründen immer noch Fossify Thank You benötigst, auch wenn du die Pro-App-Version verwendest. Es kümmert sich um die Farbsynchronisation.</string>
     <string name="purchase_thank_you"><![CDATA[
-            Bitte kaufe <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a> um diese Funktion freizuschalten und die Entwicklung zu unterstützen. Vielen Dank!
+            Bitte kaufe <a href="https://play.google.com/store/apps/details?id=org.fossify.thankyou">Fossify Thank You</a> um diese Funktion nutzen zu können und die Entwicklung zu unterstützen. Vielen Dank!
         ]]></string>
     <string name="light_theme">Hell</string>
     <string name="dark_theme">Dunkel</string>
@@ -419,7 +419,7 @@
     <string name="proceed_with_deletion">Soll wirklich mit dem Löschen fortgefahren werden\?</string>
     <string name="deletion_confirmation">%s wirklich löschen\?</string>
     <string name="deletion_confirmation_short">%s löschen\?</string>
-    <string name="move_to_recycle_bin_confirmation">%s wirklich in den Papierkorb verschieben\?</string>
+    <string name="move_to_recycle_bin_confirmation">Soll %s wirklich in den Papierkorb verschoben werden?</string>
     <string name="are_you_sure_delete">Soll dieses Element wirklich gelöscht werden?</string>
     <string name="are_you_sure_recycle_bin">Soll dieses Element wirklich in den Papierkorb verschoben werden?</string>
     <string name="do_not_ask_again">Nicht erneut fragen (in dieser Sitzung)</string>
@@ -610,9 +610,8 @@
     <string name="settings">Einstellungen</string>
     <string name="purchase_simple_thank_you">Fossify Thank You kaufen</string>
     <string name="general_settings">Allgemein</string>
-    <string name="color_customization">Farbanpassung</string>
-    <string name="improved_color_customization">Verbesserte Farbanpassung</string>
-    <string name="customize_colors">Farben anpassen</string>
+    <string name="color_customization">Look and Feel</string>
+    <string name="customize_colors">Aussehen anpassen</string>
     <string name="feature_locked">Gesperrt</string>
     <string name="customize_widget_colors">Widget-Farben anpassen</string>
     <string name="customize_notifications">Benachrichtigungen anpassen</string>
@@ -640,7 +639,7 @@
     <string name="use_same_snooze">Immer dasselbe Schlummerintervall verwenden</string>
     <string name="snooze_time">Schlummerintervall</string>
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
-    <string name="move_items_into_recycle_bin">Elemente in den Papierkorb verschieben statt löschen</string>
+    <string name="move_items_into_recycle_bin">Gelöschte Elemente in den Papierkorb verschieben</string>
     <string name="recycle_bin_cleaning_interval">Intervall zum Leeren des Papierkorbs</string>
     <string name="empty_recycle_bin">Papierkorb leeren</string>
     <string name="force_portrait_mode">Porträtmodus erzwingen</string>
@@ -684,15 +683,15 @@
     <string name="restore_this_file">Diese Datei wiederherstellen</string>
     <string name="restore_selected_files">Markierte Dateien wiederherstellen</string>
     <string name="restore_all_files">Alle Dateien wiederherstellen</string>
-    <string name="recycle_bin_emptied">Papierkorb erfolgreich geleert</string>
-    <string name="files_restored_successfully">Dateien erfolgreich wiederhergestellt</string>
-    <string name="empty_recycle_bin_confirmation">Den Papierkorb wirklich leeren\? Die Dateien sind dann unwiederbringlich gelöscht.</string>
+    <string name="recycle_bin_emptied">Der Papierkorb wurde erfolgreich geleert</string>
+    <string name="files_restored_successfully">Dateien wurden erfolgreich wiederhergestellt</string>
+    <string name="empty_recycle_bin_confirmation">Den Papierkorb wirklich leeren? Die Dateien sind dann unwiederbringlich verloren.</string>
     <string name="recycle_bin_empty">Der Papierkorb ist leer</string>
-    <string name="moving_recycle_bin_items_disabled">Das Verschieben von Papierkorbobjekten ist deaktiviert, bitte Wiederherstellen verwenden</string>
+    <string name="moving_recycle_bin_items_disabled">Das Verschieben von Elementen im Papierkorb ist deaktiviert. Bitte Wiederherstellen verwenden.</string>
     <string name="show_the_recycle_bin">Papierkorb anzeigen</string>
-    <string name="hide_the_recycle_bin">Papierkorb verstecken</string>
+    <string name="hide_the_recycle_bin">Papierkorb ausblenden</string>
     <string name="open_the_recycle_bin">Papierkorb öffnen</string>
-    <string name="skip_the_recycle_bin">Den Papierkorb auslassen, Dateien sofort löschen</string>
+    <string name="skip_the_recycle_bin">Papierkorb überspringen, Dateien direkt löschen</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d Element wird in den Papierkorb verschoben</item>
         <item quantity="other">%d Elemente werden in den Papierkorb verschoben</item>
@@ -875,8 +874,7 @@
     <string name="faq_4_title_commons">Ich mag die Farben des Widgets nicht. Kann ich sie ändern\?</string>
     <string name="faq_4_text_commons">Ja, wenn du ein Widget auf der Startseite ziehst, erscheint ein Konfigurationsmenü. In der linken unteren Ecke sind farbige Kästchen. Drücke auf sie und wähle eine neue Farbe. Außerdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
     <string name="faq_5_title_commons">Kann ich gelöschte Dateien wiederherstellen?</string>
-    <string name="faq_5_text_commons">Wurden die Dateien endgültig gelöscht, sind sie verloren. Standardmäßig ist jedoch der Papierkorb aktiviert. Dateien werden dann in den Papierkorb verschoben anstatt gelöscht.
-        Von dort können die Dateien wiederhergestellt werden.</string>
+    <string name="faq_5_text_commons">Wurden die Dateien endgültig gelöscht, können sie nicht wiederhergestellt werden. Der Papierkorb ist jedoch standardmäßig aktiviert und Dateien werden in den Papierkorb verschoben, anstatt direkt gelöscht.</string>
     <string name="faq_6_title_commons">Das App-Symbol im Launcher ist verschwunden. Was kann ich tun?</string>
     <string name="faq_7_title_commons">Der Betrag wurde von meinem Konto abgebucht, aber ich kann die App nicht herunterladen. Was kann ich machen?</string>
     <string name="faq_7_text_commons">Die Zahlungen werden durch Google gehandhabt. Dabei kommt es gelegentlich zu Verzögerungen. Leere den Cache der Google Play App, starte dein Gerät neu und versuche erneut, die App herunterzuladen.</string>
@@ -1104,4 +1102,15 @@
         <item quantity="one">Datei erfolgreich gespeichert</item>
         <item quantity="other">Dateien erfolgreich gespeichert</item>
     </plurals>
+    <string name="badge_deprecated">(veraltet)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">Schriftart</string>
+    <string name="app_font">App-Schriftart</string>
+    <string name="font_monospace">Monospace</string>
+    <string name="select_font_file">Schriftartdatei auswählen …</string>
+    <string name="invalid_font_file">Ungültige Schriftartdatei</string>
+    <string name="edit_contact">Kontakt bearbeiten</string>
+    <string name="on_contact_click">Beim Klicken auf den Kontakt</string>
+    <string name="call_contact">Kontakt anrufen</string>
+    <string name="view_contact">Kontaktdetails anzeigen</string>
 </resources>

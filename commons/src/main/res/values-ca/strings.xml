@@ -37,14 +37,14 @@
     <string name="notifications">Notificacions</string>
     <string name="email">Correu electrònic</string>
     <string name="previous">Anterior</string>
-    <string name="playpause">Reprodueix / Posa en pausa</string>
+    <string name="playpause">Reproducció / Pausa</string>
     <string name="next">Següent</string>
-    <string name="number">Número</string>
+    <string name="number">Nombre</string>
     <string name="no_contacts_found">No s\'ha trobat cap contacte</string>
     <string name="request_the_required_permissions">Sol·licita els permisos necessaris</string>
     <string name="no_access_to_contacts">L\'aplicació no ha pogut accedir als vostres contactes</string>
-    <string name="no_phone_call_permission">L\'aplicació no té permís per a iniciar trucades telefòniques, concediu-lo a la configuració del dispositiu</string>
-    <string name="insert_text_here">Introdueix el text aquí</string>
+    <string name="no_phone_call_permission">L\'aplicació no té permís per a iniciar telefonades, concediu-lo a la configuració del dispositiu</string>
+    <string name="insert_text_here">Introduïu el text aquí</string>
     <string name="call_person">Truca a %s</string>
     <string name="confirm_calling_person">Confirmeu la trucada a %s</string>
     <string name="one">U</string>
@@ -90,12 +90,12 @@
     <string name="list">Llista</string>
     <string name="increase_column_count">Augmenta el nombre de columnes</string>
     <string name="reduce_column_count">Redueix el nombre de columnes</string>
-    <string name="column_count">Comptador de columnes</string>
+    <string name="column_count">Nombre de columnes</string>
     <string name="row_count">Nombre de files</string>
     <string name="portrait_column_count">Nombre de columnes verticals</string>
     <string name="landscape_column_count">Nombre de columnes horitzontals</string>
-    <string name="change_cover_image">Canvia la imatge de la portada</string>
-    <string name="select_photo">Selecciona una foto</string>
+    <string name="change_cover_image">Canvia la imatge de portada</string>
+    <string name="select_photo">Seleccioneu una foto</string>
     <plurals name="column_counts">
         <item quantity="one">%d columna</item>
         <item quantity="many">%d columnes</item>
@@ -107,7 +107,7 @@
         <item quantity="other">%d files</item>
     </plurals>
     <string name="manage_blocked_numbers">Gestió dels números bloquejats</string>
-    <string name="not_blocking_anyone">No esteu bloquejant a ningú.</string>
+    <string name="not_blocking_anyone">No heu bloquejat a ningú.</string>
     <string name="add_a_blocked_number">Afegeix un número bloquejat</string>
     <string name="block_number">Bloqueja el número</string>
     <string name="block_numbers">Bloqueja números</string>
@@ -116,7 +116,7 @@
     <string name="import_blocked_numbers">Importa els números bloquejats</string>
     <string name="must_make_default_dialer">Cal fer que aquesta aplicació sigui l\'aplicació predeterminada de marcatge per a utilitzar els números bloquejats.</string>
     <string name="set_as_default">Estableix com a predeterminada</string>
-    <string name="block_confirmation">Segur que voleu bloquejar «%s»?</string>
+    <string name="block_confirmation">Confirmeu que voleu bloquejar «%s»?</string>
     <string name="block_unknown_calls">Bloqueja les trucades dels números que no estiguin als contactes</string>
     <string name="block_hidden_calls">Bloqueja les trucades des de números ocults</string>
     <string name="block_unknown_messages">Bloqueja els missatges dels números que no estiguin als contactes</string>
@@ -137,7 +137,7 @@
     <string name="type_2_characters">Escriviu com a mínim 2 caràcters per a iniciar la cerca.</string>
     <string name="show_search">Mostra una barra de cerca</string>
     <string name="search_contacts">Cerca contactes</string>
-    <string name="search_favorites">Cerca als preferits</string>
+    <string name="search_favorites">Cerca preferits</string>
     <string name="search_apps">Cerca aplicacions</string>
     <string name="search_events">Cerca esdeveniments</string>
     <string name="search_groups">Cerca grups</string>
@@ -162,16 +162,16 @@
     <string name="no_camera_permissions">Es requereix permís d\'accés a la càmera</string>
     <string name="no_audio_permissions">Es requereix permís d\'accés a l\'àudio</string>
     <string name="no_permission">Cap permís</string>
-    <string name="allow_notifications_reminders">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els recordatoris.</string>
-    <string name="allow_full_screen_notifications_reminders">Heu de permetre que l\'aplicació mostri notificacions a pantalla completa, en cas contrari podeu perdre recordatoris.</string>
-    <string name="allow_notifications_files">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar la barra de progrés.</string>
-    <string name="allow_notifications_music_player">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà reproduir cançons.</string>
-    <string name="allow_notifications_voice_recorder">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà enregistrar àudio.</string>
-    <string name="allow_notifications_incoming_calls">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar les trucades entrants.</string>
-    <string name="allow_full_screen_notifications_incoming_calls">Heu de permetre que l\'aplicació mostri notificacions a pantalla completa, en cas contrari podeu perdre trucades entrants.</string>
-    <string name="allow_notifications_incoming_messages">Heu de permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els missatges entrants.</string>
-    <string name="allow_alarm_scheduled_messages">Heu de permetre que l\'aplicació accedeixi a alarmes internes, en cas contrari no pot enviar missatges programats.</string>
-    <string name="allow_alarm_sleep_timer">Heu de permetre que l\'aplicació accedeixi a les alarmes internes, en cas contrari no podrà desactivar l\'aplicació després del temporitzador de son.</string>
+    <string name="allow_notifications_reminders">Cal permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els recordatoris.</string>
+    <string name="allow_full_screen_notifications_reminders">Cal permetre que l\'aplicació mostri notificacions a pantalla completa, en cas contrari podeu perdre recordatoris.</string>
+    <string name="allow_notifications_files">Cal permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar la barra de progrés.</string>
+    <string name="allow_notifications_music_player">Cal permetre que l\'aplicació mostri notificacions, en cas contrari no podrà reproduir cançons.</string>
+    <string name="allow_notifications_voice_recorder">Cal permetre que l\'aplicació mostri notificacions, en cas contrari no podrà enregistrar àudio.</string>
+    <string name="allow_notifications_incoming_calls">Cal permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar les trucades entrants.</string>
+    <string name="allow_full_screen_notifications_incoming_calls">Cal permetre que l\'aplicació mostri notificacions a pantalla completa, en cas contrari podeu perdre trucades entrants.</string>
+    <string name="allow_notifications_incoming_messages">Cal permetre que l\'aplicació mostri notificacions, en cas contrari no podrà mostrar els missatges entrants.</string>
+    <string name="allow_alarm_scheduled_messages">Cal permetre que l\'aplicació accedeixi a alarmes internes, en cas contrari no pot enviar missatges programats.</string>
+    <string name="allow_alarm_sleep_timer">Cal permetre que l\'aplicació accedeixi a les alarmes internes, en cas contrari no podrà desactivar l\'aplicació després del temporitzador de son.</string>
     <string name="allow_location_permission">Cal permetre que l\'aplicació accedeixi a la vostra ubicació, en cas contrari no la sabrà.</string>
     <string name="grant_permission">Atorga el permís</string>
     <string name="permission_required">Es requereix permís</string>
@@ -256,7 +256,7 @@
     <string name="rename_in_sd_card_system_restriction">El sistema no permet canviar el nom en aquesta carpeta</string>
     <string name="rename_internal_system_restriction">No es poden canviar els noms de les carpetes directament a l\'emmagatzematge intern, només les subcarpetes</string>
     <string name="cannot_rename_folder">No s\'ha pogut canviar el nom d\'aquesta carpeta</string>
-    <string name="select_folder">Selecciona una carpeta</string>
+    <string name="select_folder">Seleccioneu una carpeta</string>
     <string name="select_file">Seleccioneu un fitxer</string>
     <string name="confirm_storage_access_title">Confirmació d\'accés a l\'emmagatzematge extern</string>
     <string name="confirm_folder_access_title">Confirmació d\'accés a les carpetes</string>
@@ -267,7 +267,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Premeu «<b>Desa</b>» a la part inferior de la pantalla següent per a crear la carpeta nova.</string>
     <string name="confirm_selection">Confirmeu la selecció</string>
     <string name="loading">S\'està carregant…</string>
-    <string name="access_storage_prompt">Si us plau, concediu accés de la nostra aplicació a tots els vostres fitxers, és possible que no funcioni bé sense això.</string>
+    <string name="access_storage_prompt">Si no concediu accés de l\'aplicació a tots els fitxers és possible que no funcioni bé.</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="many">%d elements</item>
@@ -316,13 +316,13 @@
     <string name="gps_coordinates">Coordenades GPS</string>
     <string name="altitude">Altitud</string>
     <string name="remove_exif">Elimina l\'EXIF</string>
-    <string name="remove_exif_confirmation">Segur que voleu eliminar els valors de l\'EXIF com les coordenades GPS, el model de càmera, etc.\?</string>
+    <string name="remove_exif_confirmation">Confirmeu que voleu eliminar els valors de l\'EXIF com les coordenades GPS, el model de càmera, etc.?</string>
     <string name="exif_removed">Els valors de l\'EXIF s\'han eliminat correctament</string>
     <string name="background_color">Color de fons</string>
     <string name="text_color">Color del text</string>
     <string name="primary_color">Color primari</string>
-    <string name="accent_color_white">Color d\'accent del tema blanc</string>
-    <string name="accent_color_black_and_white">Color d\'accent del tema blanc i negre</string>
+    <string name="accent_color_white">Color de ressaltament del tema blanc</string>
+    <string name="accent_color_black_and_white">Color de ressaltament del tema blanc i negre</string>
     <string name="foreground_color">Color de primer pla</string>
     <string name="app_icon_color">Color de la icona d\'aplicació</string>
     <string name="bottom_navigation_bar_color">Color de la barra inferior de navegació</string>
@@ -330,12 +330,12 @@
     <string name="use_default">Utilitza el valor predeterminat</string>
     <string name="default_color">Predeterminat</string>
     <string name="change_color">Canvia el color</string>
-    <string name="theme">Tema</string>
+    <string name="theme">Tema de l\'aplicació</string>
     <string name="changing_color_description">Si canvieu un color, canviarà al tema personalitzat</string>
     <string name="save">Desa</string>
     <string name="discard">Descarta</string>
     <string name="undo_changes">Desfés els canvis</string>
-    <string name="undo_changes_confirmation">Segur que voleu desfer els canvis\?</string>
+    <string name="undo_changes_confirmation">Confirmeu que voleu desfer els canvis?</string>
     <string name="cannot_be_undone">Aquesta acció no es pot desfer.</string>
     <string name="save_before_closing">Hi ha canvis no desats. Els voleu desar abans de sortir\?</string>
     <string name="global_theme_success">Colors actualitzats correctament. S\'ha afegit un tema nou anomenat «Compartit». Feu-lo servir per a actualitzar tots els colors de l\'aplicació en el futur.</string>
@@ -362,7 +362,7 @@
     <string name="select_text">Selecciona el text</string>
     <string name="hide">Oculta</string>
     <string name="unhide">Mostra</string>
-    <string name="hide_folder">Oculta la carpeta</string>
+    <string name="hide_folder">Ocultar carpeta</string>
     <string name="unhide_folder">Mostra la carpeta</string>
     <string name="temporarily_show_hidden">Mostra temporalment els ocults</string>
     <string name="stop_showing_hidden">Deixa de mostrar els ocults</string>
@@ -418,11 +418,11 @@
     <string name="use_custom_sorting">Utilitza l\'ordenació personalitzada</string>
     <string name="change_order">Canvia l\'ordre</string>
     <string name="more_options">Més opcions</string>
-    <string name="proceed_with_deletion">Segur que voleu continuar amb la supressió\?</string>
-    <string name="deletion_confirmation">Segur que voleu suprimir %s\?</string>
-    <string name="move_to_recycle_bin_confirmation">Segur que voleu moure %s a la paperera\?</string>
-    <string name="are_you_sure_delete">Segur que voleu suprimir aquest element\?</string>
-    <string name="are_you_sure_recycle_bin">Segur que voleu moure aquest element a la paperera\?</string>
+    <string name="proceed_with_deletion">Confirmeu que voleu suprimir?</string>
+    <string name="deletion_confirmation">Confirmeu que voleu suprimir %s?</string>
+    <string name="move_to_recycle_bin_confirmation">Confirmeu que voleu moure %s a la paperera de reciclatge?</string>
+    <string name="are_you_sure_delete">Confirmeu que voleu suprimir aquest element?</string>
+    <string name="are_you_sure_recycle_bin">Confirmeu que voleu moure aquest element a la paperera de reciclatge?</string>
     <string name="do_not_ask_again">No tornis a preguntar-ho en aquesta sessió</string>
     <string name="do_not_show_again">No ho tornis a mostrar</string>
     <string name="yes">Sí</string>
@@ -452,7 +452,7 @@
     <string name="authentication_failed">L\'autenticació ha fallat</string>
     <string name="authentication_blocked">S\'ha bloquejat l\'autenticació, torneu a provar-ho d\'aquí a un moment</string>
     <string name="no_fingerprints_registered">No hi ha cap empremta digital registrada. Afegiu-ne alguna a la configuració del dispositiu</string>
-    <string name="go_to_settings">Aneu a la configuració</string>
+    <string name="go_to_settings">Ves a la configuració</string>
     <string name="protection_setup_successfully">Configuració correcta de la contrasenya. Torneu a instal·lar l\'aplicació en cas que l\'oblideu.</string>
     <string name="fingerprint_setup_successfully">Configuració correcta de la protecció. Torneu a instal·lar l\'aplicació en cas de problemes per a restablir-la.</string>
     <string name="lock_folder">Bloqueja la carpeta</string>
@@ -629,9 +629,8 @@
     <string name="during_day_at_hh_mm">Durant el dia a les hh:mm</string>
     <string name="during_day_at">Durant el dia a les %1$02d:%2$02d</string>
     <string name="settings">Configuració</string>
-    <string name="color_customization">Personalització del color</string>
-    <string name="improved_color_customization">Personalització del color millorada</string>
-    <string name="customize_colors">Personalitza els colors</string>
+    <string name="color_customization">Aspecte i comportament</string>
+    <string name="customize_colors">Personalitza l\'aparença</string>
     <string name="feature_locked">Bloquejat</string>
     <string name="customize_widget_colors">Personalitza els colors dels ginys</string>
     <string name="customize_notifications">Personalitza les notificacions</string>
@@ -659,7 +658,7 @@
     <string name="use_same_snooze">Utilitza sempre el mateix temps d\'ajornament</string>
     <string name="snooze_time">Temps d\'ajornament</string>
     <string name="vibrate_on_button_press">Vibra en prémer els botons</string>
-    <string name="move_items_into_recycle_bin">Mou elements a la paperera de reciclatge en lloc de suprimir-los</string>
+    <string name="move_items_into_recycle_bin">Mou els elements suprimits a la paperera de reciclatge</string>
     <string name="recycle_bin_cleaning_interval">Interval de neteja de la paperera de reciclatge</string>
     <string name="empty_recycle_bin">Buida la paperera de reciclatge</string>
     <string name="force_portrait_mode">Força el mode de retrat</string>
@@ -705,9 +704,9 @@
     <string name="restore_all_files">Restaura tots els fitxers</string>
     <string name="recycle_bin_emptied">La paperera de reciclatge s\'ha buidat correctament</string>
     <string name="files_restored_successfully">Els fitxers s\'han restaurat correctament</string>
-    <string name="empty_recycle_bin_confirmation">Segur que voleu buidar la paperera de reciclatge\? Els fitxers es perdran per sempre.</string>
+    <string name="empty_recycle_bin_confirmation">Segur que voleu buidar la paperera de reciclatge? Els fitxers es perdran per sempre.</string>
     <string name="recycle_bin_empty">La paperera de reciclatge és buida</string>
-    <string name="moving_recycle_bin_items_disabled">Moure els elements de la paperera està de reciclatge desactivat, utilitzeu la restauració</string>
+    <string name="moving_recycle_bin_items_disabled">Moure els elements de la paperera de reciclatge està desactivat, utilitzeu la restauració.</string>
     <string name="show_the_recycle_bin">Mostra la paperera de reciclatge</string>
     <string name="hide_the_recycle_bin">Oculta la paperera de reciclatge</string>
     <string name="open_the_recycle_bin">Obre la paperera de reciclatge</string>
@@ -912,7 +911,7 @@
     <string name="faq_4_title_commons">No m\'agraden els colors del giny, puc canviar-los\?</string>
     <string name="faq_4_text_commons">Sí, mentre arrossegueu un giny a la pantalla d\'inici apareixerà una pantalla de configuració de ginys. Veureu quadrats de color a l\'extrem inferior esquerre, només cal prémer-los per a seleccionar un color nou. També podeu utilitzar el control lliscant per a ajustar l\'alfa.</string>
     <string name="faq_5_title_commons">Puc restaurar d\'alguna manera els fitxers suprimits\?</string>
-    <string name="faq_5_text_commons">Si es van suprimir totalment, no ho podeu fer. Tanmateix, hi ha una paperera de reciclatge activada de manera predeterminada que farà que els fitxers es moguin allà en lloc de suprimir-los.</string>
+    <string name="faq_5_text_commons">Si es van suprimir totalment, no els podeu recuperar. Tanmateix, la paperera de reciclatge està activada de manera predeterminada i mou els fitxers a la paperera en lloc de suprimir-los immediatament.</string>
     <string name="faq_6_title_commons">Ha desaparegut la icona del menú d\'aplicacions. Què puc fer?</string>
     <string name="faq_7_title_commons">Els diners s\'han descomptat del meu compte bancari, però no puc baixar l\'aplicació. Què puc fer\?</string>
     <string name="faq_7_text_commons">Google gestiona completament els pagaments, i alguns cops això genera problemes en el seu sistema. Només cal que netegeu la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu, després torneu a intentar baixar-la.</string>
@@ -1059,7 +1058,7 @@
     <string name="developer_description">Un grup d\'aplicacions Android simples i de codi obert amb ginys personalitzables, sense anuncis ni permisos innecessaris.</string>
     <string name="deletion_confirmation_short">Suprimeixo %s?</string>
     <string name="no">No</string>
-    <string name="pin">PASSADOR</string>
+    <string name="pin">PIN</string>
     <string name="usb">USB</string>
     <string name="donate_new">Hola,&lt;br&gt;&lt;br&gt;esperem que gaudiu de l\'aplicació. No conté anuncis i tampoc es recopilen les vostres dades. Si us plau, doneu suport al seu desenvolupament comprant &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank Tou&lt;/a&gt;. També disposareu de totes les funcions desbloquejades de l\'aplicació, incloent-hi la personalització del color.&lt;br&gt;&lt;br&gt;Gràcies!</string>
     <string name="features_locked">Aquesta característica està bloquejada, compreu &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt; per a desbloquejar l\'aplicació completa.&lt;br&gt;&lt;br&gt;És un pagament únic i si no us satisfà, podem reembossar-ho.</string>
@@ -1073,9 +1072,9 @@
     <string name="zero">Zero</string>
     <string name="audio">Àudio</string>
     <string name="genre">Gènere</string>
-    <string name="apply_to_all_apps">Aplicar els colors a totes les aplicacions de Fossify</string>
+    <string name="apply_to_all_apps">Aplicar el tema a totes les aplicacions de Fossify</string>
     <string name="purchase_thank_you"><![CDATA[
-            Compreu la <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a> per a desbloquejar aquesta característica i col·laborar amb el desenvolupament. Gràcies!
+            Compreu la <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a> per a fer serrvir aquesta característica i col·laborar amb el desenvolupament. Gràcies!
         ]]></string>
     <string name="enter_password">Introduïu la contrasenya</string>
     <string name="password">Contrasenya</string>
@@ -1092,7 +1091,7 @@
 \nCopyright © Fossify %2$d</string>
     <string name="social">Social</string>
     <string name="donate_short">Ajudeu-nos comprant la &lt;a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou&gt;Fossify Thank You&lt;/a&gt;, també desbloquejarà totes les funcions de l\'aplicació incloent-hi la personalització del color.</string>
-    <string name="app_icon_color_warning">Atenció: És possible que alguns llançadors no manegin correctament la personalització de la icona de l\'aplicació. Si la icona desapareix, intenteu llançar l\'aplicació a través de Google Play o d\'un giny, si és accessible. Després del llançament, restaureu el color predeterminat de la icona verda #106D1F. En casos extrems, pot ser necessària la reinstal·lació de l\'aplicació.</string>
+    <string name="app_icon_color_warning">Atenció: És possible que alguns llançadors no gestionin correctament la personalització de la icona de l\'aplicació. Si la icona desapareix, intenteu llançar l\'aplicació a través de Google Play o d\'un giny, si és accessible. Després del llançament, restaureu el color predeterminat de la icona verda #106D1F. En casos extrems, pot ser necessària la reinstal·lació de l\'aplicació.</string>
     <string name="faq_6_text_commons">Aquest problema sorgeix quan el llançador no admet completament la personalització d\'icones. Intenteu llançar l\'aplicació a través de Google Play o d\'un giny, si és accessible. Després del llançament, restaureu el color predeterminat de la icona verda #106D1F. En casos extrems, pot ser necessària la reinstal·lació de l\'aplicació.</string>
     <string name="block_contact">Bloqueja el contacte</string>
     <string name="exif">EXIF</string>
@@ -1116,7 +1115,7 @@
     <string name="translation_chuvash">Txuvaix</string>
     <string name="translation_esperanto">Esperanto</string>
     <string name="translation_gujarati">Gujarati</string>
-    <string name="format_phone_numbers">Format de números de telèfon</string>
+    <string name="format_phone_numbers">Format dels números de telèfon</string>
     <string name="platforms">Plataformes</string>
     <string name="donate_to_fossify">Donació a Fossify</string>
     <string name="little_to_no_fee">Molt poc o de franc</string>
@@ -1145,4 +1144,15 @@
         <item quantity="many">Els fitxers s\'han desat correctament</item>
         <item quantity="other">Els fitxers s\'han desat correctament</item>
     </plurals>
+    <string name="badge_deprecated">(obsoleta)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">Lletra</string>
+    <string name="app_font">Lletra de l\'aplicació</string>
+    <string name="font_monospace">Monoespai</string>
+    <string name="select_font_file">Selecciona un fitxer de lletra…</string>
+    <string name="invalid_font_file">Fitxer de lletra no vàlid</string>
+    <string name="edit_contact">Edita el contacte</string>
+    <string name="on_contact_click">En fer clic al contacte</string>
+    <string name="call_contact">Truca al contacte</string>
+    <string name="view_contact">Mostra les dades del contacte</string>
 </resources>

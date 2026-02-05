@@ -34,6 +34,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.auth.AuthPromptCallback
 import androidx.biometric.auth.AuthPromptHost
 import androidx.biometric.auth.Class2BiometricAuthPrompt
+import androidx.core.net.toUri
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.FragmentActivity
@@ -51,7 +52,6 @@ import com.goodwy.commons.views.MyTextView
 import java.io.*
 import java.util.Locale
 import java.util.TreeSet
-import androidx.core.net.toUri
 
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
@@ -1239,13 +1239,19 @@ private fun BaseSimpleActivity.renameCasually(
 @Suppress("DEPRECATION")
 fun createTempFile(file: File): File? {
     return if (file.isDirectory) {
-        createTempDir("temp", "${System.currentTimeMillis()}", file.parentFile)
+        val dir = File.createTempFile("temp", "${System.currentTimeMillis()}", file.parentFile)
+        dir.delete()
+        if (dir.mkdir()) {
+            return dir
+        } else {
+            throw IOException("Unable to create temporary directory $dir.")
+        }
     } else {
         if (isRPlus()) {
             // this can throw FileSystemException, lets catch and handle it at the place calling this function
                 kotlin.io.path.createTempFile(file.parentFile!!.toPath(), "temp", "${System.currentTimeMillis()}").toFile()
         } else {
-            createTempFile("temp", "${System.currentTimeMillis()}", file.parentFile)
+            File.createTempFile("temp", "${System.currentTimeMillis()}", file.parentFile)
         }
     }
 }
@@ -1522,9 +1528,20 @@ fun Activity.setupDialogStuff(
             if (!isFinishing) {
                 show()
             }
-            getButton(Dialog.BUTTON_POSITIVE)?.setTextColor(primaryColor)
-            getButton(Dialog.BUTTON_NEGATIVE)?.setTextColor(primaryColor)
-            getButton(Dialog.BUTTON_NEUTRAL)?.setTextColor(primaryColor)
+            getButton(Dialog.BUTTON_POSITIVE)?.apply {
+                setTextColor(primaryColor)
+                applyFontToTextView(this)
+            }
+            getButton(Dialog.BUTTON_NEGATIVE)?.apply {
+                setTextColor(primaryColor)
+                applyFontToTextView(this)
+            }
+            getButton(Dialog.BUTTON_NEUTRAL)?.apply {
+                setTextColor(primaryColor)
+                applyFontToTextView(this)
+            }
+
+            applyFontToViewRecursively(view)
             callback?.invoke(this)
         }
     } else {
@@ -1538,6 +1555,7 @@ fun Activity.setupDialogStuff(
                     setText(titleId)
                 }
                 setTextColor(textColor)
+                applyFontToTextView(this)
             }
         }
 
@@ -1556,9 +1574,20 @@ fun Activity.setupDialogStuff(
             if (!isFinishing) {
                 show()
             }
-            getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(dialogButtonColor)
-            getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(dialogButtonColor)
-            getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
+            getButton(AlertDialog.BUTTON_POSITIVE)?.apply {
+                setTextColor(dialogButtonColor)
+                applyFontToTextView(this)
+            }
+            getButton(AlertDialog.BUTTON_NEGATIVE)?.apply {
+                setTextColor(dialogButtonColor)
+                applyFontToTextView(this)
+            }
+            getButton(AlertDialog.BUTTON_NEUTRAL)?.apply {
+                setTextColor(dialogButtonColor)
+                applyFontToTextView(this)
+            }
+
+            applyFontToViewRecursively(view)
 
             //TODO Dialog background
             val bgDrawable = when {

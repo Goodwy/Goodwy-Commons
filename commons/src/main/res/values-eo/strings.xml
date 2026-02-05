@@ -421,7 +421,7 @@
     <string name="custom">Laŭmenda</string>
     <string name="system_default">Sistema defaŭlto</string>
     <string name="use_default">Uzi defaŭlton</string>
-    <string name="theme">Etoso</string>
+    <string name="theme">Aplikaĵa etoso</string>
     <string name="foreground_color">Malfona koloro</string>
     <string name="app_icon_color">Koloro de la aplikaĵa bildsimbolo</string>
     <string name="bottom_navigation_bar_color">Koloro de la malsupra naviga breto</string>
@@ -449,7 +449,7 @@
     <string name="whats_new_disclaimer">* nur la plej grandaj ĝisdatigoj aperas ĉi tie, sed ĉiam ankaŭ estas malpli grandaj plibonigoj</string>
     <string name="global_theme_success">La aktuala etoso estis sukcese aplikata al ĉiuj aplikaĵoj de Fossify. De nun, ŝanĝoj al tiu ĉi etoso estos aŭtomate sinkronigitaj.</string>
     <string name="app_icon_color_warning">Atentu: Kelkaj lanĉiloj eble ne traktos ĝuste la tajloradon de aplikaĵaj bildsimboloj. Se la bildsimbolo malaperas, provu lanĉi la aplikaĵon per Google Play aŭ fenestraĵo, se tio eblas. Post lanĉi ĝin, restaŭru la defaŭltan verdan koloron #106D1F de la bildsimbolo. En ekstremaj kazoj, eble endos reinstali la aplikaĵon.</string>
-    <string name="apply_to_all_apps">Apliki kolorojn al ĉiuj aplikaĵoj de Fossify</string>
+    <string name="apply_to_all_apps">Apliki etoson al ĉiuj aplikaĵoj de Fossify</string>
     <string name="faq_6_text_commons">Tiu ĉi problemo aperas kiam via lanĉilo ne tute subtenas la tajloradon de bildsimboloj. Provu lanĉi la aplikaĵon per Google Play aŭ fenestraĵo, se tio eblas. Post lanĉi ĝin, restaŭru la defaŭltan verdan koloron #106D1F de la bildsimbolo. En ekstremaj kazoj, eble endos reinstali la aplikaĵon.</string>
     <string name="maximum_share_reached">Ne eblas kunhavigi tiom ĉi da enhavo samtempe</string>
     <string name="send_email">Sendi retmesaĝon</string>
@@ -693,13 +693,12 @@
     </plurals>
     <string name="feature_locked">Ŝlosita</string>
     <string name="reminder_warning">Bonvolu certigi, ke la memorigiloj ĝuste funkcias antaŭ dependi de ili. Kontrolu viajn agordojn de baterio kaj de sciigoj, kaj ĉu io ajn blokas la memorigilojn aŭ ĉesigas la aplikaĵon en la fono.</string>
-    <string name="improved_color_customization">Plibonigita tajlorado de koloroj</string>
     <string name="notifications_disabled">Sciigoj de tiu ĉi aplikaĵo estas malŝaltataj. Bonvolu ŝalti ilin en la aparataj agordoj.</string>
     <string name="add_new_sound">Aldoni novan sonon</string>
     <string name="small">Malgranda</string>
     <string name="show_hidden_items">Montri kaŝitajn elementojn</string>
     <string name="notification_sound">Sciigosono</string>
-    <string name="customize_colors">Tajlori kolorojn</string>
+    <string name="customize_colors">Tajlori aspekton</string>
     <string name="during_day_at">Dum la tago je %1$02d:%2$02d</string>
     <string name="purchase_simple_thank_you">Aĉeti Fossify Dankon</string>
     <string name="no_reminder">Neniu memorigilo</string>
@@ -714,7 +713,7 @@
     <string name="during_day_at_hh_mm">Dum la tago je hh:mm</string>
     <string name="settings">Agordoj</string>
     <string name="general_settings">Ĝenerala</string>
-    <string name="color_customization">Tajlorado de koloroj</string>
+    <string name="color_customization">Aspekto</string>
     <string name="customize_widget_colors">Tajlori fenestraĵajn kolorojn</string>
     <string name="customize_notifications">Tajlori sciigojn</string>
     <string name="use_english_language">Uzi la anglan lingvon</string>
@@ -723,7 +722,7 @@
     <string name="medium">Meza</string>
     <string name="large">Granda</string>
     <string name="extra_large">Grandega</string>
-    <string name="theme_and_colors">Etoso kaj koloroj</string>
+    <string name="theme_and_colors">Etoso &amp; koloroj</string>
     <string name="use_24_hour_time_format">Uzi horaranĝon de 24 horoj</string>
     <string name="change_date_and_time_format">Ŝanĝi la horan kaj datan aranĝojn</string>
     <string name="hide_the_recycle_bin">Kaŝi rubujon</string>
@@ -732,7 +731,7 @@
     <string name="thumbnails">Bildetoj</string>
     <string name="export_settings">Eksporti agordojn</string>
     <string name="last_used_tab">Laste uzata</string>
-    <string name="move_items_into_recycle_bin">Movi elementojn al la rubujo anstataŭ forigi</string>
+    <string name="move_items_into_recycle_bin">Movi forigitajn elementojn al la rubujo</string>
     <string name="groups_tab">Grupoj</string>
     <string name="open_the_recycle_bin">Malfermi rubujon</string>
     <string name="password_protect_file_deletion">Protekti forigadon kaj movadon de dosieroj per pasvorto</string>
@@ -766,7 +765,7 @@
     <string name="restore_selected_files">Restaŭri elektitajn dosierojn</string>
     <string name="restore_all_files">Restaŭri ĉiujn dosierojn</string>
     <string name="recycle_bin_emptied">Rubujo sukcese malplenigita</string>
-    <string name="moving_recycle_bin_items_disabled">La movado de elementoj en la rubujo estas malŝaltita. Bonvolu uzi la funkcion de restaŭri</string>
+    <string name="moving_recycle_bin_items_disabled">La movado de elementoj en la rubujo estas malŝaltita. Bonvolu uzi la funkcion de restaŭri.</string>
     <string name="password_protect_hidden_items">Protekti videblecon de kaŝitaj elementoj per pasvorto</string>
     <string name="keep_last_modified">Gardi malnovan valoron de lasta modifo dum operacioj je dosieroj</string>
     <string name="settings_exported_successfully">Agordoj sukcese eksportitaj</string>
@@ -932,7 +931,7 @@
     <string name="faq_6_title_commons">La lanĉa bildsimbolo de la aplikaĵo malaperis. Kion povas mi fari?</string>
     <string name="faq_7_title_commons">La mono estis prenita el mi bankokonto, sed mi ne povas elŝuti la aplikaĵon. Kion povas mi fari?</string>
     <string name="faq_7_text_commons">Pagoj estas tute traktitaj pro Google, kies sistemo fojfoje misfunkcias. Simple viŝu la aplikaĵan kaŝon de Google Play, restartigu vian aparaton, kaj provu elŝuti ĝin denove.</string>
-    <string name="faq_5_text_commons">Se vi vere forigis ilin, tio ne eblas. Tamen, estas rubujo kiu defaŭlte esta ŝaltita kaj igas, ke dosieroj moviĝu al la rubujo anstataŭ esti forigitaj.</string>
+    <string name="faq_5_text_commons">Se vi vere forigis ilin, ne eblas restaŭri ilin. Tamen, la rubujo defaŭlte estas ŝaltita kaj movas la dosierojn al la rubujo anstataŭ tuje forigi ilin.</string>
     <string name="faq_8_text_commons">Ĉar la versio de via aplikaĵo ne plu estos ĝisdatigita, la cimoj kiujn vi eble rimarkis neniam estos korektitaj, nek estos aldonita iu ajn nova funkcio. Vi povas aĉeti la version Pro je Google Play pro malgranda kvanto da mono. Estas unufoja pago, kiu volas diri, ke post aĉeti ĝin, vi neniam devos pagi denove, ne eĉ post aĉeti novan aparaton. Se vi ne ŝatas la version Pro, vi povas simple malinstali ĝin en kelkaj horoj, kaj via mono estos aŭtomate repagita. Se vi volas repagon post tio, nur kontaktu nin je hello@fossify.org kaj vi ricevos ĝin.</string>
     <string name="translation_bulgarian">Bulgara</string>
     <string name="why_upgrade_batch_renaming">Altnivela renomado de multaj dosieroj</string>
@@ -1053,4 +1052,15 @@
         <item quantity="one">Dosiero sukcese konservita</item>
         <item quantity="other">Dosieroj sukcese konservitaj</item>
     </plurals>
+    <string name="badge_deprecated">(evitinda)</string>
+    <string name="label_with_badge">%1$s %2$s</string>
+    <string name="font">Tiparo</string>
+    <string name="app_font">Aplikaĵa tiparo</string>
+    <string name="font_monospace">Egallarĝa</string>
+    <string name="select_font_file">Elekti tiparodosieron…</string>
+    <string name="invalid_font_file">Nevalida tiparodosiero</string>
+    <string name="edit_contact">Modifi kontakton</string>
+    <string name="view_contact">Vidi kontaktajn detalojn</string>
+    <string name="on_contact_click">Kiam kontakto estas frapetita</string>
+    <string name="call_contact">Alvoki kontakton</string>
 </resources>

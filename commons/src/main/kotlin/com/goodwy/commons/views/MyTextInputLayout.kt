@@ -6,15 +6,28 @@ import android.util.AttributeSet
 import com.google.android.material.textfield.TextInputLayout
 import com.goodwy.commons.extensions.adjustAlpha
 import com.goodwy.commons.extensions.value
+import com.goodwy.commons.helpers.FontHelper
 import com.goodwy.commons.helpers.HIGHER_ALPHA
 import com.goodwy.commons.helpers.MEDIUM_ALPHA
 
 open class MyTextInputLayout : TextInputLayout {
-    constructor(context: Context) : super(context)
+    constructor(context: Context) : super(context) {
+        applyCustomFont()
+    }
 
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
+        applyCustomFont()
+    }
 
-    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
+    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) {
+        applyCustomFont()
+    }
+
+    private fun applyCustomFont() {
+        if (isInEditMode) return
+        val customTypeface = FontHelper.getTypeface(context)
+        typeface = customTypeface
+    }
 
     // we need to use reflection to make some colors work well
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
