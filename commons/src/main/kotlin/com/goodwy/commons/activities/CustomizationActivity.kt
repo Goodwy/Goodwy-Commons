@@ -819,6 +819,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             force = true
         )
         refreshMenuItems()
+        baseConfig.needRestart = true
     }
 
     private fun setCurrentTextColor(color: Int) {
