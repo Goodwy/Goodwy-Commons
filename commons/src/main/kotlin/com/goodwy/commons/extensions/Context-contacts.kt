@@ -1,5 +1,6 @@
 package com.goodwy.commons.extensions
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor
@@ -341,7 +342,7 @@ fun Context.getSocialActions(id: Int): ArrayList<SocialAction> {
     return socialActions
 }
 
-fun BaseSimpleActivity.initiateCall(contact: Contact, onStartCallIntent: (phoneNumber: String) -> Unit) {
+fun Activity.initiateCall(contact: Contact, onStartCallIntent: (phoneNumber: String) -> Unit) {
     val numbers = contact.phoneNumbers
     if (numbers.size == 1) {
         onStartCallIntent(numbers.first().value)
