@@ -730,16 +730,18 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun fontPickerClicked() {
+        val pro = isProVersion()
+        val selectFontFileText = addLockedLabelIfNeeded(R.string.select_font_file, pro)
         val items = arrayListOf(
             RadioItem(FONT_TYPE_SYSTEM_DEFAULT, getString(R.string.system_default)),
             RadioItem(FONT_TYPE_MONOSPACE, getString(R.string.font_monospace)),
-            RadioItem(FONT_TYPE_CUSTOM, getString(R.string.select_font_file))
+            RadioItem(FONT_TYPE_CUSTOM, selectFontFileText)
         )
 
         RadioGroupDialog(this, items, curFontType, R.string.app_font) { selected ->
             val selectedType = selected as Int
             if (selectedType == FONT_TYPE_CUSTOM) {
-                if (!isProVersion()) {
+                if (!pro) {
                     shakePurchase()
                     RxAnimation.from(binding.customizationFontHolder)
                         .shake(shakeTranslation = 2f)
