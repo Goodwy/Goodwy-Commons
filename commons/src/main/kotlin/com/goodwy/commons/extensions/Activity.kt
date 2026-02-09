@@ -49,6 +49,7 @@ import com.goodwy.commons.helpers.MyContentProvider.COL_LAST_UPDATED_TS
 import com.goodwy.commons.helpers.MyContentProvider.MY_CONTENT_URI
 import com.goodwy.commons.models.*
 import com.goodwy.commons.views.MyTextView
+import com.google.android.material.snackbar.Snackbar
 import java.io.*
 import java.util.Locale
 import java.util.TreeSet
@@ -1855,4 +1856,29 @@ fun Activity.getRoundedDrawable(): Drawable {
         setColor(backgroundColor)
         cornerRadius = radius
     }
+}
+
+fun Activity.showSupportSnackbar(
+    view: View,
+    onClick: () -> Unit
+) {
+    view.performHapticFeedback()
+
+    val snackbar = Snackbar.make(view, com.goodwy.strings.R.string.support_project_to_unlock, Snackbar.LENGTH_SHORT)
+        .setAction(R.string.support) {
+            onClick
+        }
+
+    val bgDrawable = ResourcesCompat.getDrawable(view.resources, R.drawable.button_background_16dp, null)
+    snackbar.view.background = bgDrawable
+    val margin = resources.getDimension(R.dimen.normal_margin).toInt()
+    snackbar.view.updateMarginWithBase(left = margin, right = margin, bottom = margin)
+    val properBackgroundColor = getProperBackgroundColor()
+    val backgroundColor =
+        if (properBackgroundColor == Color.BLACK) getSurfaceColor().lightenColor(6)
+        else getSurfaceColor().darkenColor(6)
+    snackbar.setBackgroundTint(backgroundColor)
+    snackbar.setTextColor(getProperTextColor())
+    snackbar.setActionTextColor(getProperPrimaryColor())
+    snackbar.show()
 }

@@ -1230,25 +1230,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun showSnackbar(view: View) {
-        view.performHapticFeedback()
-
-        val snackbar = Snackbar.make(view, stringsR.string.support_project_to_unlock, Snackbar.LENGTH_SHORT)
-            .setAction(R.string.support) {
-                launchPurchase()
-            }
-
-        val bgDrawable = ResourcesCompat.getDrawable(view.resources, R.drawable.button_background_16dp, null)
-        snackbar.view.background = bgDrawable
-        val margin = resources.getDimension(R.dimen.normal_margin).toInt()
-        snackbar.view.updateMarginWithBase(left = margin, right = margin, bottom = margin)
-        val properBackgroundColor = getProperBackgroundColor()
-        val backgroundColor =
-            if (properBackgroundColor == Color.BLACK) getSurfaceColor().lightenColor(6)
-            else getSurfaceColor().darkenColor(6)
-        snackbar.setBackgroundTint(backgroundColor)
-        snackbar.setTextColor(getProperTextColor())
-        snackbar.setActionTextColor(getProperPrimaryColor())
-        snackbar.show()
+        showSupportSnackbar(view, { launchPurchase() })
     }
 }
 
