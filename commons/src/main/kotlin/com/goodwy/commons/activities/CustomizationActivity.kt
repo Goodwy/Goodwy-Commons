@@ -1230,7 +1230,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun showSnackbar(view: View) {
-        showSupportSnackbar(view, { launchPurchase() })
+        showSupportSnackbar(view) { launchPurchase() }
     }
 }
 

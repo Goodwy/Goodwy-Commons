@@ -1866,7 +1866,7 @@ fun Activity.showSupportSnackbar(
 
     val snackbar = Snackbar.make(view, com.goodwy.strings.R.string.support_project_to_unlock, Snackbar.LENGTH_SHORT)
         .setAction(R.string.support) {
-            onClick
+            onClick()
         }
 
     val bgDrawable = ResourcesCompat.getDrawable(view.resources, R.drawable.button_background_16dp, null)
