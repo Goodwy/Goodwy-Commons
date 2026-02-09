@@ -30,6 +30,7 @@
     <string name="plus_summary">あなたの助けを借りて、私たちはより多くの機能を実装し、アプリケーションをさらに良くすることができます</string>
     <string name="attention">注意</string>
     <string name="attention_summary">以前のバージョンでご購入いただいた場合、または他のプラットフォームでプロジェクトをサポートしていた場合は、メールで確認をお送りください。プロモーション コードをお送りします。</string>
+    <string name="attention_dialog_summary">プロモーションコードを受け取るには、プロジェクトへの支援を証明する書類（Google Playまたは他のプラットフォームのスクリーンショットで結構です）をお送りいただく必要があります。プロモーションコードの数には限りがございますので、証明書を送信しますか？</string>
     <string name="about_summary">
         <![CDATA[
             <i>

@@ -30,6 +30,7 @@
     <string name="plus_summary">Yardımınızla daha fazla özellik uygulayabilir ve uygulamayı daha da iyi hale getirebiliriz</string>
     <string name="attention">Dikkat</string>
     <string name="attention_summary">Eski sürümümüzden alışveriş yaptıysanız veya projeyi diğer platformlarda desteklediyseniz, lütfen bize e-posta yoluyla bir onay gönderin, biz de size bir promosyon kodu göndermeye çalışalım.</string>
+    <string name="attention_dialog_summary">Promosyon kodu almak için projeye desteğinizi kanıtlamanız gerekmektedir (Google Play veya başka bir platformdan alınmış bir ekran görüntüsü yeterlidir). Promosyon kodu sayısı sınırlıdır. Kanıt göndermek ister misiniz?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

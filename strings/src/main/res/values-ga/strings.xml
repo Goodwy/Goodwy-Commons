@@ -57,6 +57,7 @@
     <string name="plus_summary">With your help we can implement more features and make the application even better</string>
     <string name="attention">Aird</string>
     <string name="attention_summary">Má rinne tú ceannacháin inár seanleagan nó má thacaigh tú leis an tionscadal ar ardáin eile, seol chugainn dearbhú trí ríomhphost agus déanfaimid iarracht cód promo a sheoladh chugat.</string>
+    <string name="attention_dialog_summary">Chun cód promóisin a fháil, ní mór duit cruthúnas tacaíochta don tionscadal a sheoladh (is leor pictiúr scáileáin ó Google Play nó ardán eile). Tá líon na gcód promóisin teoranta. An bhfuil tú ag iarraidh cruthúnas a sheoladh?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

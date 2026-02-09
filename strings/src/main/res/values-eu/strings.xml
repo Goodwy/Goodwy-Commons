@@ -30,6 +30,7 @@
     <string name="plus_summary">Zure laguntzarekin eginbide gehiago inplementa ditzakegu eta aplikazioa are hobea egin</string>
     <string name="attention">Arreta</string>
     <string name="attention_summary">Gure bertsio zaharrean erosketak egin badituzu edo proiektua beste plataforma batzuetan babestu baduzu, bidali iezaguzu baieztapen bat posta elektronikoz eta promozio-kode bat bidaltzen saiatuko gara.</string>
+    <string name="attention_dialog_summary">Promozio-kode bat jasotzeko, proiektua babesten duzula frogatu behar duzu (Google Play-tik edo beste plataforma batetik ateratako pantaila-argazki bat nahikoa da). Promozio-kodeen kopurua mugatua da. Froga bidali?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

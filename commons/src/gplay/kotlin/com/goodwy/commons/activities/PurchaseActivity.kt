@@ -178,23 +178,25 @@ class PurchaseActivity : BaseSimpleActivity() {
             resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
         binding.lifebuoyButton.setImageDrawable(lifebuoyButtonDrawable)
         binding.lifebuoyButton.setOnClickListener {
-            ConfirmationDialog(this, getString(R.string.send_email)) {
-                val body = "$appName : Support for the old version"
-                val address = getMyMailString()
-                val selectorIntent = Intent(ACTION_SENDTO)
-                    .setData("mailto:$address".toUri())
-                val emailIntent = Intent(ACTION_SEND).apply {
-                    putExtra(EXTRA_EMAIL, arrayOf(address))
-                    putExtra(EXTRA_SUBJECT, body)
-                    selector = selectorIntent
-                }
+            if (isNewApp()) {
+                ConfirmationDialog(this, getString(stringsR.string.attention_dialog_summary)) {
+                    val body = "$appName : Support for the old version"
+                    val address = getMyMailString()
+                    val selectorIntent = Intent(ACTION_SENDTO)
+                        .setData("mailto:$address".toUri())
+                    val emailIntent = Intent(ACTION_SEND).apply {
+                        putExtra(EXTRA_EMAIL, arrayOf(address))
+                        putExtra(EXTRA_SUBJECT, body)
+                        selector = selectorIntent
+                    }
 
-                try {
-                    startActivity(emailIntent)
-                } catch (_: ActivityNotFoundException) {
-                    toast(R.string.no_app_found)
-                } catch (e: Exception) {
-                    showErrorToast(e)
+                    try {
+                        startActivity(emailIntent)
+                    } catch (_: ActivityNotFoundException) {
+                        toast(R.string.no_app_found)
+                    } catch (e: Exception) {
+                        showErrorToast(e)
+                    }
                 }
             }
         }

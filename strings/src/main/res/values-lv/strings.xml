@@ -48,6 +48,7 @@
     <string name="plus_summary">With your help we can implement more features and make the application even better</string>
     <string name="attention">Uzmanību</string>
     <string name="attention_summary">Ja veicāt pirkumus mūsu vecajā versijā vai atbalstījāt projektu citās platformās, lūdzu, nosūtiet mums apstiprinājumu pa e-pastu, un mēs centīsimies nosūtīt jums reklāmas kodu.</string>
+    <string name="attention_dialog_summary">Lai saņemtu reklāmas kodu, jums jānosūta apliecinājums par atbalstu projektam (pietiek ar ekrānuzņēmumu no Google Play vai citas platformas). Reklāmas kodu skaits ir ierobežots. Vai nosūtīt apliecinājumu?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

@@ -30,6 +30,7 @@
     <string name="plus_summary">Met uw hulp kunnen we meer functies implementeren en de applicatie nog beter maken</string>
     <string name="attention">Aandacht</string>
     <string name="attention_summary">Als je aankopen hebt gedaan in onze oude versie of het project op andere platforms hebt gesteund, stuur ons dan een bevestiging per e-mail en we zullen proberen je een promotiecode te sturen.</string>
+    <string name="attention_dialog_summary">Om een ​​promotiecode te ontvangen, moet u bewijs van uw steun voor het project opsturen (een screenshot van Google Play of een ander platform is voldoende). Het aantal promotiecodes is beperkt. Bewijs opsturen?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

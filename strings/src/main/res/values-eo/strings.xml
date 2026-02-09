@@ -48,6 +48,7 @@
     <string name="plus_summary">Kun via helpo ni povas efektivigi pli da funkcioj kaj fari la aplikaĵon eĉ pli bona</string>
     <string name="attention">Atento</string>
     <string name="attention_summary">Se vi aĉetis per nia malnova versio aŭ subtenis la projekton per aliaj platformoj, bonvolu sendi al ni konfirmon per retpoŝto kaj ni provos sendi al vi varbokodon.</string>
+    <string name="attention_dialog_summary">Por ricevi varbokodon, vi devas sendi pruvon pri subteno por la projekto (ekrankopio de Google Play aŭ alia platformo sufiĉas). La nombro de varbokodoj estas limigita. Ĉu sendi pruvon?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

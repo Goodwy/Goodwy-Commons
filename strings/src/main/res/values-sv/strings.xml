@@ -30,6 +30,7 @@
     <string name="plus_summary">Med din hjälp kan vi implementera fler funktioner och göra applikationen ännu bättre</string>
     <string name="attention">Uppmärksamhet</string>
     <string name="attention_summary">Om du har gjort köp i vår gamla version eller stöttat projektet på andra plattformar, vänligen skicka oss en bekräftelse via e-post så försöker vi skicka en kampanjkod till dig.</string>
+    <string name="attention_dialog_summary">För att få en kampanjkod måste du skicka in bevis på att du stöder projektet (en skärmdump från Google Play eller annan plattform räcker). Antalet kampanjkoder är begränsat. Vill du skicka bevis?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

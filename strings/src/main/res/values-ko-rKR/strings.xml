@@ -30,6 +30,7 @@
     <string name="plus_summary">귀하의 도움으로 더 많은 기능을 구현하고 응용 프로그램을 더욱 향상시킬 수 있습니다</string>
     <string name="attention">주목</string>
     <string name="attention_summary">이전 버전에서 구매하셨거나 다른 플랫폼에서 프로젝트를 후원해 주신 경우, 이메일로 확인 정보를 보내주시면 프로모션 코드를 보내드리도록 하겠습니다.</string>
+    <string name="attention_dialog_summary">프로모션 코드를 받으려면 프로젝트 후원 증빙 자료(Google Play 또는 다른 플랫폼의 스크린샷)를 제출해야 합니다. 프로모션 코드 수량은 한정되어 있습니다. 증빙 자료를 제출하시려면 여기를 클릭하세요.</string>
     <string name="about_summary">
         <![CDATA[
             <i>

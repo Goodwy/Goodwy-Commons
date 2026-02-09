@@ -30,6 +30,7 @@
     <string name="plus_summary">Uz vašu pomoć možemo implementirati više značajki i učiniti aplikaciju još boljom</string>
     <string name="attention">Pažnja</string>
     <string name="attention_summary">Ako ste kupnje obavili u našoj staroj verziji ili podržali projekt na drugim platformama, molimo vas da nam pošaljete potvrdu putem e-pošte i pokušat ćemo vam poslati promotivni kod.</string>
+    <string name="attention_dialog_summary">Za primanje promotivnog koda morate poslati dokaz o podršci projektu (dovoljna je snimka zaslona s Google Playa ili neke druge platforme). Broj promotivnih kodova je ograničen. Poslati dokaz?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

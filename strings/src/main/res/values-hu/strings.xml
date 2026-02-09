@@ -30,6 +30,7 @@
     <string name="plus_summary">Az Ön segítségével több funkciót valósíthatunk meg, és még jobbá tehetjük az alkalmazást</string>
     <string name="attention">Figyelem</string>
     <string name="attention_summary">Ha a régi verziónkban vásároltál, vagy más platformon támogattad a projektet, kérjük, küldj nekünk egy visszaigazolást e-mailben, és megpróbálunk elküldeni neked egy promóciós kódot.</string>
+    <string name="attention_dialog_summary">Promóciós kód igényléséhez igazolást kell küldenie a projekt iránti támogatásáról (elegendő egy képernyőkép a Google Playről vagy más platformról). A promóciós kódok száma korlátozott. Elküldi az igazolást?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

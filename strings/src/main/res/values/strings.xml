@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name_g" translatable="false">Goodwy Commons</string>
     <string name="recorder_g">Recorder</string>
     <string name="player_g">Player</string>
@@ -61,6 +61,7 @@
     <string name="plus_summary">With your help we can implement more features and make the application even better</string>
     <string name="attention">Attention</string>
     <string name="attention_summary">If you made purchases in our old version or supported the project on other platforms, please send us some confirmation by email and we will try to send you a promo code</string>
+    <string name="attention_dialog_summary">To receive a promo code, you must send confirmation of your support for the project (a screenshot from Google Play or another platform is sufficient). The number of promo codes is limited. Send confirmation?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

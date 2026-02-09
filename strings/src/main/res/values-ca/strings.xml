@@ -30,6 +30,7 @@
     <string name="plus_summary">Amb la teva ajuda podem implementar més funcionalitats i fer que l\'aplicació sigui encara millor</string>
     <string name="attention">Atenció</string>
     <string name="attention_summary">Si heu fet compres a la nostra versió antiga o heu donat suport al projecte en altres plataformes, envieu-nos una confirmació per correu electrònic i intentarem enviar-vos un codi promocional.</string>
+    <string name="attention_dialog_summary">Per rebre un codi promocional, heu d\'enviar una prova de suport al projecte (n\'hi ha prou amb una captura de pantalla de Google Play o d\'una altra plataforma). El nombre de codis promocionals és limitat. Voleu enviar una prova?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

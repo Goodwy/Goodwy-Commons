@@ -30,6 +30,7 @@
     <string name="plus_summary">Gyda\'ch help chi, gallwn weithredu mwy o nodweddion a gwneud y cais hyd yn oed yn well</string>
     <string name="attention">Sylw</string>
     <string name="attention_summary">Os gwnaethoch chi brynu yn ein hen fersiwn neu gefnogi\'r prosiect ar lwyfannau eraill, anfonwch gadarnhad atom drwy e-bost a byddwn yn ceisio anfon cod hyrwyddo atoch.</string>
+    <string name="attention_dialog_summary">I dderbyn cod hyrwyddo, rhaid i chi anfon prawf o gefnogaeth i\'r prosiect (mae sgrinlun o Google Play neu blatfform arall yn ddigonol). Mae nifer y codau hyrwyddo yn gyfyngedig. Anfon prawf?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

@@ -30,6 +30,7 @@
     <string name="plus_summary">בעזרתך נוכל ליישם תכונות נוספות ולהפוך את היישום לטוב עוד יותר</string>
     <string name="attention">תְשׁוּמַת לֵב</string>
     <string name="attention_summary">אם ביצעתם רכישות בגרסה הישנה שלנו או תמכתם בפרויקט בפלטפורמות אחרות, אנא שלחו לנו אישור בדוא\"ל וננסה לשלוח לכם קוד קידום מכירות.</string>
+    <string name="attention_dialog_summary">כדי לקבל קוד קופון, עליך לשלוח הוכחת תמיכה בפרויקט (צילום מסך מ-Google Play או פלטפורמה אחרת מספיק). מספר קודי הקופון מוגבל. לשלוח הוכחה?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

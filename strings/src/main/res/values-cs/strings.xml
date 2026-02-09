@@ -30,6 +30,7 @@
     <string name="plus_summary">S vaší pomocí můžeme implementovat více funkcí a aplikaci ještě vylepšit</string>
     <string name="attention">Pozor</string>
     <string name="attention_summary">Pokud jste provedli nákupy v naší staré verzi nebo podpořili projekt na jiných platformách, zašlete nám prosím potvrzení e-mailem a my se vám pokusíme poslat promo kód.</string>
+    <string name="attention_dialog_summary">Pro získání promo kódu musíte zaslat doklad o podpoře projektu (stačí snímek obrazovky z Google Play nebo jiné platformy). Počet promo kódů je omezený. Poslat doklad?</string>
     <string name="about_summary">
         <![CDATA[
             <i>

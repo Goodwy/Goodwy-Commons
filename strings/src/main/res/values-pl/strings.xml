@@ -30,6 +30,7 @@
     <string name="plus_summary">Z Twoją pomocą możemy wdrożyć więcej funkcji i uczynić aplikację jeszcze lepszą</string>
     <string name="attention">Uwaga</string>
     <string name="attention_summary">Jeśli dokonałeś zakupów w starej wersji lub wspierałeś projekt na innych platformach, prosimy o przesłanie nam potwierdzenia e-mailem, a my postaramy się wysłać Ci kod promocyjny.</string>
+    <string name="attention_dialog_summary">Aby otrzymać kod promocyjny, musisz przesłać dowód wsparcia dla projektu (wystarczy zrzut ekranu z Google Play lub innej platformy). Liczba kodów promocyjnych jest ograniczona. Przesłać dowód?</string>
     <string name="about_summary">
         <![CDATA[
             <i>
