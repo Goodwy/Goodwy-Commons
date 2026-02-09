@@ -1239,6 +1239,8 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         val bgDrawable = ResourcesCompat.getDrawable(view.resources, R.drawable.button_background_16dp, null)
         snackbar.view.background = bgDrawable
+        val margin = resources.getDimension(R.dimen.normal_margin).toInt()
+        snackbar.view.updateMarginWithBase(left = margin, right = margin, bottom = margin)
         val properBackgroundColor = getProperBackgroundColor()
         val backgroundColor =
             if (properBackgroundColor == Color.BLACK) getSurfaceColor().lightenColor(6)
