@@ -190,9 +190,8 @@ Bedankt!
     <string name="faq_8_text_commons_g">Omdat deze versie van de app niet meer zal worden bijgewerkt, zullen eventuele fouten nooit meer worden opgelost. Ook zullen er geen nieuwe functies meer worden toegevoegd. De Pro-versie is voor een bescheiden bedrag te vinden in de Google Play Store.
         Dit bedrag hoeft maar een keer te worden betaald, daarna nooit meer. Ook niet voor nieuwe apparaten. Als de Pro-versie toch niet bevalt, deïnstalleer de app dan binnen enkele uren en het bedrag zal worden teruggestort.
         Ook een latere restitutie is nog mogelijk. Neem hiervoor contact op via goodwy.dev@gmail.com en het geld zal alsnog worden teruggestort.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">Wat is een privécontact?</string>
+    <string name="faq_100_text_commons_g">Binnen de app wordt een persoonlijk contact aangemaakt. Dit contact is niet zichtbaar voor andere apps (behalve voor onze apps met een speciale instelling ingeschakeld).\n\nAls u de app verwijdert, worden al uw persoonlijke contacten samen met de app verwijderd. Maak daarom een ​​back-up van uw contacten voordat u de app verwijdert.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

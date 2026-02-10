@@ -192,9 +192,8 @@
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">একটি ব্যক্তিগত যোগাযোগ কী?</string>
+    <string name="faq_100_text_commons_g">অ্যাপের মধ্যে একটি ব্যক্তিগত পরিচিতি তৈরি করা হয়। এই পরিচিতিটি অন্যান্য অ্যাপে দৃশ্যমান হবে না (বিশেষ সেটিং সক্ষম থাকা আমাদের অ্যাপগুলি ছাড়া)।\nআপনি যদি অ্যাপটি মুছে ফেলেন, তাহলে অ্যাপটির সাথে সমস্ত ব্যক্তিগত পরিচিতি মুছে ফেলা হবে, তাই অ্যাপটি মুছে ফেলার আগে আপনার পরিচিতিগুলির ব্যাকআপ নিন।</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

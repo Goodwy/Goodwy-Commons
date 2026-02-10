@@ -191,9 +191,8 @@ Cảm ơn bạn!
     <string name="faq_8_text_commons_g">Vì phiên bản ứng dụng của bạn không còn được cập nhật, các lỗi bạn có thể phát hiện sẽ không bao giờ được sửa. Cũng sẽ không có chức năng mới được thêm vào. Bạn có thể mua phiên bản Pro trên Google Play với một khoản tiền nhỏ.
          Đó là thanh toán một lần, có nghĩa là một khi bạn mua nó, bạn sẽ không bao giờ phải mua lại. Ngay cả sau khi nhận được một thiết bị mới. Nếu bạn không thích phiên bản Pro, bạn có thể gỡ cài đặt trong vòng vài giờ và bạn sẽ tự động lấy lại tiền.
          Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại goodwy.dev@gmail.com và bạn sẽ nhận được nó.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">Liên hệ riêng tư là gì?</string>
+    <string name="faq_100_text_commons_g">Một liên hệ cá nhân được tạo trong ứng dụng. Liên hệ này sẽ không hiển thị cho các ứng dụng khác (ngoại trừ các ứng dụng của chúng tôi có thiết lập đặc biệt được bật).\n\nNếu bạn xóa ứng dụng, tất cả các liên hệ cá nhân sẽ bị xóa cùng với ứng dụng, vì vậy hãy sao lưu danh bạ của bạn trước khi xóa ứng dụng.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

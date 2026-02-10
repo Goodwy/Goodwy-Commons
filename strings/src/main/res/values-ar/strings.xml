@@ -186,9 +186,8 @@
     </string>
     <string name="faq_6_text_commons_g">تنشأ هذه المشكلة عندما لا يدعم المشغل تخصيص الرمز بشكل كامل. حاول تشغيل التطبيق من خلال Google Play أو عنصر واجهة مستخدم ، إذا كان يمكن الوصول إليه.         بعد التشغيل ، قم باستعادة لون رمز التطبيق الافتراضي. في الحالات القصوى ، قد تكون إعادة تثبيت التطبيق ضرورية.</string>
     <string name="faq_8_text_commons_g">نظراً لأن إصدار التطبيق الخاص بك لم يعد محدثاً ، فلن يتم إصلاح الأخطاء التي إكتشافها. كما لن تتم إضافة وظائف جديدة . يمكنك شراء الإصدار الـ Pro على Google Play مقابل مبلغ صغير من المال. إنها دفعة لمرة واحدة،مما يعني أنه بمجرد شرائه ، لن تضطر إلى الدفع مرة أخرى. ليس حتى بعد الحصول على جهاز جديد. إذا كنت لا تحب إصدار Pro ، يمكنك إلغاء تثبيته في غضون ساعات قليلة وستحصل على أموالك تلقائياً.إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على goodwy.dev@gmail.com وستحصل عليه.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">ما هو الاتصال الخاص؟</string>
+    <string name="faq_100_text_commons_g">يتم إنشاء جهة اتصال شخصية داخل التطبيق. لن تكون هذه الجهة مرئية للتطبيقات الأخرى (باستثناء تطبيقاتنا التي تم تفعيل إعدادات خاصة لها).\n\nإذا حذفت التطبيق، فسيتم حذف جميع جهات الاتصال الشخصية معه، لذا يُرجى عمل نسخة احتياطية من جهات اتصالك قبل حذف التطبيق.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

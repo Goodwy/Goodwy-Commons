@@ -191,9 +191,8 @@
     <string name="faq_8_text_commons_g">由於你的程式版本不再更新，將永遠不會修復可能遇到的錯誤，也不會再添加新功能。你可以在Google Play上用一小筆錢購買專業版。
         這是一次性付款。也就是說，一旦你購買了將不必再次付費，即使之後有新裝置也不用。如果你不喜歡專業版，則可以在幾個小時內解除安裝，將自動拿回你的錢。
         之後如果何時想退款，只要你以 goodwy.dev@gmail.com 聯絡我們然後就能獲得退款了。</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">什麼是私人聯繫？</string>
+    <string name="faq_100_text_commons_g">應用程式內會建立一個個人聯絡人。其他應用程式將無法看到此聯絡人（除非是已啟用特殊設定的應用程式）。\n\n如果您刪除此應用程式，所有個人聯絡人也會隨之刪除，因此請在刪除應用程式前備份您的聯絡人。</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

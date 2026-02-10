@@ -194,9 +194,8 @@ Děkujeme všem našim přispěvatelům, velmi si vážíme vaší pomoci &#1008
     <string name="faq_8_text_commons_g">Tato verze aplikace již nebude aktualizována. Chyby, které jste možná objevili, proto nebudou nikdy opraveny. Také již nepřibudou žádné nové funkce. Pro verzi získáte za malý poplatek v Obchodě Google Play.
         Jde o jednorázovou platbu, což znamená, že po zakoupení již nebudete muset nic platit znovu. Ani při koupi nového zařízení. Pokud se vám Pro verze nebude líbit, můžete ji do pár hodin odinstalovat a peníze vám budou automaticky vráceny.
         Pokud budete chtít aplikaci vrátit kdykoliv později, stačí nám napsat na goodwy.dev@gmail.com a peníze vám vrátíme.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">Co je to soukromý kontakt?</string>
+    <string name="faq_100_text_commons_g">V aplikaci se vytvoří osobní kontakt. Tento kontakt nebude viditelný pro ostatní aplikace (s výjimkou našich aplikací se speciálním nastavením).\nPokud aplikaci smažete, budou s ní smazány i všechny osobní kontakty, proto si před smazáním aplikace kontakty zálohujte.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

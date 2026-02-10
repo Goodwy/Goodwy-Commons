@@ -190,9 +190,8 @@
     <string name="faq_8_text_commons_g">アプリのバージョンが更新されないので、アプリのバグが発見されても修復されません。新しい機能も追加されません。Pro版はGoogle Playで少額で販売されています。
         1回のみのお支払いとなりますので、一度購入されるとその後はお支払いいただく必要がなくなります。機種の変更を行った場合も同じです。Pro版がお好みでなかったら、購入して数時間以内にアンインストールすれば自動的に返金されます。
         それよりもあとに払い戻しが必要な場合はこちらにご連絡ください。goodwy.dev@gmail.com</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">プライベートコンタクトとは何ですか？</string>
+    <string name="faq_100_text_commons_g">アプリ内に個人連絡先が作成されます。この連絡先は他のアプリには表示されません（特別な設定が有効になっている弊社アプリを除く）。\nアプリを削除すると、アプリと共にすべての個人連絡先も削除されますので、アプリを削除する前に連絡先をバックアップしてください。</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

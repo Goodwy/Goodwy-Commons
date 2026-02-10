@@ -191,9 +191,8 @@ Grazas a todos os nosos colaboradores, agradecemos moito a vosa axuda &#10084;&#
     <string name="faq_6_text_commons_g">Este problema xorde cando o teu iniciador non admite totalmente a personalización de iconas. Tenta lanzar a aplicación a través de Google Play ou un widget, se é accesible.</string>
     <string name="faq_8_text_commons_g">Como non se vai actualizar máis o teu aplicativo, os bugs que teñas non serán corrixidos. Tampouco se engadirán novas funcións. Podes comprar a versión Pro en Google Play por unha cantidade pequena de cartos. É un pagamento que se fai só unha vez, é dicir, non volves pagar por isto.
         Nin tan sequera ao cambiar de móbil. Se non che gusta a versión Pro, podes simplemente desinstalala e devolveráseche os cartos  automaticamente.Se queres que che devolvamos os cartos máis tarde, envíanos un correo electrónico a goodwy.dev@gmail.com e darémoscho.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">Que é un contacto privado?</string>
+    <string name="faq_100_text_commons_g">Créase un contacto persoal dentro da aplicación. Este contacto non será visible para outras aplicacións (agás as nosas aplicacións cunha configuración especial activada).\nSe eliminas a aplicación, todos os contactos persoais eliminaranse xunto coa aplicación, polo que debes facer unha copia de seguridade dos teus contactos antes de eliminar a aplicación.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

@@ -191,9 +191,8 @@ Gràcies a tots els nostres col·laboradors, agraïm molt la vostra ajuda &#1008
     <string name="faq_8_text_commons_g">Com que la versió de l\'aplicació ja no s\'actualitza, els errors que heu vist, no seran corregits. Tampoc s\’hi afegiran noves funcions. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners.
          Es tracta d\’un pagament únic, cosa que significa que un cop l\’adquireixis, no hauràs de tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament obtindreu els diners.
          Si voleu un reemborsament en qualsevol moment més tard, només cal que contacteu amb nosaltres a l\'adreça goodwy.dev@gmail.com i ho aconseguireu.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">Què és un contacte privat?</string>
+    <string name="faq_100_text_commons_g">Es crea un contacte personal dins de l\'aplicació. Aquest contacte no serà visible per a altres aplicacions (excepte per a les nostres aplicacions que tenen una configuració especial habilitada).\nSi suprimiu l\'aplicació, tots els contactes personals s\'eliminaran juntament amb l\'aplicació, així que feu una còpia de seguretat dels vostres contactes abans de suprimir l\'aplicació.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

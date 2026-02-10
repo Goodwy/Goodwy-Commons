@@ -191,9 +191,8 @@ Diolch i\'n holl gyfranwyr, rydym yn gwerthfawrogi eich cymorth yn fawr &#10084;
     <string name="faq_8_text_commons_g">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at goodwy.dev@gmail.com and you will get it.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">Beth yw cyswllt preifat?</string>
+    <string name="faq_100_text_commons_g">Crëir cyswllt personol o fewn yr ap. Ni fydd y cyswllt hwn yn weladwy i apiau eraill (ac eithrio ein apiau ni sydd â gosodiad arbennig wedi\'i alluogi).\nOs byddwch chi\'n dileu\'r ap, bydd yr holl gysylltiadau personol yn cael eu dileu ynghyd â\'r ap, felly gwnewch gopi wrth gefn o\'ch cysylltiadau cyn dileu\'r ap.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

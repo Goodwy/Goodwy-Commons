@@ -189,9 +189,8 @@ Köszönjük minden közreműködőnknek, nagyra értékeljük a segítségüket
     </string>
     <string name="faq_6_text_commons_g">Ez a probléma akkor merül fel, ha az indító nem támogatja teljes mértékben az ikonok testreszabását. Próbálja meg elindítani az alkalmazást a Google Playen vagy egy widgeten keresztül, ha elérhető.         Az indítás után állítsa vissza az alapértelmezett alkalmazásikon színét. Szélsőséges esetekben szükség lehet az alkalmazás újratelepítésére.</string>
     <string name="faq_8_text_commons_g">Mivel ezt az alkalmazásverziót már nem frissítjük, az esetleges hibák soha nem lesznek kijavítva, ahogy új funkciókat sem fog kapni az alkalmazás. A Pro verziót egy egyszeri kis összegért megvásárolhatja a Google Play áruházban. Az egyszeri fizetés azt jelenti, hogy ha egyszer megvette, soha többet nem kell fizetnie, még egy új eszközön sem. Ha nem tetszik a Pro verzió, a vásárlás után pár órán belül eltávolítva automatikusan visszakapja az árát. Ha később szeretne visszatérítést, csak írjon nekünk a goodwy.dev@gmail.com címre, és meg fogja kapni.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">Mi az a privát kapcsolatfelvétel?</string>
+    <string name="faq_100_text_commons_g">Személyes névjegy jön létre az alkalmazáson belül. Ez a névjegy nem lesz látható más alkalmazások számára (kivéve azokat az alkalmazásokat, amelyekhez engedélyezve van egy speciális beállítás).\n\nHa törli az alkalmazást, az összes személyes névjegy törlődik az alkalmazással együtt, ezért az alkalmazás törlése előtt készítsen biztonsági másolatot a névjegyeiről.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

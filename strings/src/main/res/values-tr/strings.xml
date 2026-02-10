@@ -193,9 +193,8 @@ Tüm katkıda bulunanlara teşekkür ederiz, yardımlarınız için minnettarız
     <string name="faq_8_text_commons_g">Uygulama sürümünüz artık güncellenmediğinden, tespit ettiğiniz hatalar asla düzeltilmeyecektir. Ayrıca yeni işlevler eklenmeyecektir. Pro sürümünü Google Play\'den az miktarda para karşılığında satın alabilirsiniz.
         Bir kerelik ödeme, yani bir kez satın aldığınızda, bir daha asla ödeme yapmanız gerekmeyeceği anlamına gelir. Yeni bir cihaz aldıktan sonra bile. Pro sürümünü beğenmediyseniz, birkaç saat içinde kaldırabilirsiniz ve paranızı otomatik olarak geri alırsınız.
         Daha sonra istediğiniz zaman geri ödeme almak isterseniz, goodwy.dev@gmail.com adresinden bizimle iletişime geçmeniz yeterlidir.</string>
-    <string name="faq_100_title_commons_g">Özel Kişi-Kişiler nedir?</string>
-    <string name="faq_100_text_commons_g">Özel Kişi-Kişiler uygulama içinde oluşturulur. Bu Kişi-Kişiler diğer uygulamalara gözükmeyecektir.
-        Eğer uygulamayı silerseniz özel Kişi-Kişiler de uygulamayla birlikte silinecektir, bu yüzden uygulamayı silmeden önce lütfen kişilerinizi yedekleyiniz.</string>
+    <string name="faq_100_title_commons_g">Özel iletişim nedir?</string>
+    <string name="faq_100_text_commons_g">Uygulama içinde kişisel bir kişi kaydı oluşturulur. Bu kişi kaydı, diğer uygulamalar tarafından görülemez (özel bir ayar etkinleştirilmiş uygulamalarımız hariç).\nUygulamayı silerseniz, tüm kişisel kişi kayıtlarınız da uygulama ile birlikte silinecektir; bu nedenle uygulamayı silmeden önce kişi kayıtlarınızı yedekleyin.</string>
     <string name="faq_101_title_commons_g">Nasıl özel Kişi-Kişiler oluşturulur?</string>
     <string name="faq_101_text_commons_g">Bir kişi oluşturduğunuzda o kişinin kaynağını belirlemeniz gerekir: %s</string>
     <string name="contributors_label_g"><![CDATA[

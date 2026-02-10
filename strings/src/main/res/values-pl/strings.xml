@@ -193,9 +193,8 @@ Będziemy bardzo wdzięczni.
     </string>
     <string name="faq_6_text_commons_g">Ten problem pojawia się, gdy program uruchamiający nie obsługuje w pełni dostosowywania ikon. Spróbuj uruchomić aplikację za pośrednictwem sklepu Google Play lub widżetu, jeśli jest dostępny.         Po uruchomieniu przywróć domyślny kolor ikony aplikacji. W skrajnych przypadkach może być konieczna ponowna instalacja aplikacji.</string>
     <string name="faq_8_text_commons_g">Ponieważ Twoja wersja aplikacji nie jest już aktualizowana, błędy, które być może zauważyłeś, nigdy nie zostaną naprawione. Nie zostaną również dodane żadne nowe funkcje. Możesz kupić wersję Pro w Google Play za niewielką sumę pieniędzy. Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin, a automatycznie otrzymasz swoje pieniądze z powrotem. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie, po prostu skontaktuj się z nami na hello@simplemobiletools.com, a otrzymasz go.</string>
-    <string name="faq_100_title_commons_g">What is a private contact?</string>
-    <string name="faq_100_text_commons_g">A private contact is created within an application. This contact will not be visible to other applications.
-        If you uninstall the app, all private contacts will be deleted along with the app, so back up your contacts before uninstalling the app.</string>
+    <string name="faq_100_title_commons_g">Czym jest kontakt prywatny?</string>
+    <string name="faq_100_text_commons_g">W aplikacji tworzony jest kontakt osobisty. Kontakt ten nie będzie widoczny dla innych aplikacji (z wyjątkiem naszych aplikacji z włączonym specjalnym ustawieniem). Jeśli usuniesz aplikację, wszystkie kontakty osobiste zostaną usunięte wraz z nią, dlatego przed usunięciem aplikacji utwórz kopię zapasową kontaktów.</string>
     <string name="faq_101_title_commons_g">How to create a private contact?</string>
     <string name="faq_101_text_commons_g">When you create a contact, you must select the source of the contact: %s</string>
     <string name="contributors_label_g"><![CDATA[

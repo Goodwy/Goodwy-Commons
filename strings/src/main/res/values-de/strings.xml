@@ -195,7 +195,7 @@ Vielen Dank an alle unsere Mitwirkenden. Wir wissen Ihre Hilfe sehr zu schätzen
         Sollte Dir die Pro Version nicht gefallen, kannst Du sie einfach innerhalb einiger Stunden deinstallieren und wirst Dein Geld automatisch zurück erhalten.
         Möchtest du zu einem späteren Zeitpunkt dein Geld erstattet bekommen, dann kontaktiere uns einfach unter goodwy.dev@gmail.com und du wirst sie bekommen.</string>
     <string name="faq_100_title_commons_g">Was ist ein privater Kontakt?</string>
-    <string name="faq_100_text_commons_g">Ein privater Kontakt wird innerhalb einer Anwendung erstellt. Dieser Kontakt wird für andere Anwendungen nicht sichtbar sein. Wenn Sie die App deinstallieren, werden alle privaten Kontakte zusammen mit der App gelöscht. Sichern Sie daher Ihre Kontakte, bevor Sie die App deinstallieren.</string>
+    <string name="faq_100_text_commons_g">Innerhalb der App wird ein persönlicher Kontakt erstellt. Dieser Kontakt ist für andere Apps nicht sichtbar (außer für unsere eigenen Apps, sofern eine spezielle Einstellung aktiviert ist).\nWenn Sie die App löschen, werden alle Ihre persönlichen Kontakte zusammen mit der App gelöscht. Sichern Sie Ihre Kontakte daher, bevor Sie die App löschen.</string>
     <string name="faq_101_title_commons_g">Wie erstellt man einen privaten Kontakt?</string>
     <string name="faq_101_text_commons_g">Wenn Sie einen Kontakt erstellen, müssen Sie die Quelle des Kontakts auswählen: %s</string>
     <string name="contributors_label_g"><![CDATA[
