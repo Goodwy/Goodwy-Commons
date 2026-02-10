@@ -14,13 +14,11 @@ import kotlin.time.Duration.Companion.days
 import kotlin.time.Duration.Companion.minutes
 
 fun Long.formatSize(): String {
-    if (this <= 0) {
-        return "0 B"
-    }
+    if (this <= 0) return "0 B"
 
     val units = arrayOf("B", "kB", "MB", "GB", "TB", "PB", "EB")
-    val digitGroups = (log10(toDouble()) / log10(1024.0)).toInt()
-    return "${DecimalFormat("#,##0.#").format(this / 1024.0.pow(digitGroups.toDouble()))} ${units[digitGroups]}"
+    val digitGroups = (log10(toDouble()) / log10(1000.0)).toInt()
+    return "${DecimalFormat("#,##0.#").format(this / 1000.0.pow(digitGroups.toDouble()))} ${units[digitGroups]}"
 }
 
 //fun Long.formatDate(context: Context, dateFormat: String? = null, timeFormat: String? = null): String {

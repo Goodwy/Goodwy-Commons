@@ -14,6 +14,8 @@ import com.goodwy.commons.helpers.WCAG_AA_NORMAL
 import java.text.DecimalFormat
 import java.util.Locale
 import java.util.Random
+import kotlin.math.log10
+import kotlin.math.pow
 import kotlin.math.roundToInt
 
 fun Int.getContrastColor(): Int {
@@ -49,13 +51,11 @@ fun Int.getFormattedDuration(forceShowHours: Boolean = false): String {
 }
 
 fun Int.formatSize(): String {
-    if (this <= 0) {
-        return "0 B"
-    }
+    if (this <= 0) return "0 B"
 
     val units = arrayOf("B", "kB", "MB", "GB", "TB")
-    val digitGroups = (Math.log10(toDouble()) / Math.log10(1024.0)).toInt()
-    return "${DecimalFormat("#,##0.#").format(this / Math.pow(1024.0, digitGroups.toDouble()))} ${units[digitGroups]}"
+    val digitGroups = (log10(toDouble()) / log10(1000.0)).toInt()
+    return "${DecimalFormat("#,##0.#").format(this / 1000.0.pow(digitGroups.toDouble()))} ${units[digitGroups]}"
 }
 
 @Deprecated(
