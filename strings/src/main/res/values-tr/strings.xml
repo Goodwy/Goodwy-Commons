@@ -300,8 +300,6 @@ Bu uygulamayı daha önce satın aldıysanız veya bağış yaptıysanız, teşe
     <string name="message_cant_talk_right_now">Üzgünüm, şu anda konuşamıyorum.</string>
     <string name="remind_me">Bana Hatırlat</string>
     <string name="mute">Sesi Kapat</string>
-
-    <!-- Relation types -->
     <string name="unmute">Sesi Aç</string>
     <string name="search_the_web">İnternet\'te arama yapın</string>
     <string name="show_number_blocking_button">Numara engelleme düğmesini göster</string>
@@ -311,35 +309,25 @@ Bu uygulamayı daha önce satın aldıysanız veya bağış yaptıysanız, teşe
     <string name="block_unknown_calls_summary">Bilinmeyen numaralardan gelen aramalar engellenecek ve \"Son Aramalar\" listesinde görüntülenecektir.\nKişilerinizde kayıtlı kişilerden ve yakın zamanda aradığınız kişilerden gelen aramalar çalmaya devam edecektir.</string>
     <string name="bottom_indent">Alt girinti</string>
     <string name="is_do_not_block_contacts_and_recent">Kişileri ve son giden aramaları engellemeyin</string>
+
+    <!-- Relation types -->
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
     <string name="relation_hint_g">İlgili Kişi</string>
-    <!-- Android ContactContract.Relation types -->
-    <string name="relation_assistant_g">Asistan</string>
-    <string name="relation_brother_g">Erkek Kardeş</string>
-    <string name="relation_child_g">Çocuk</string>
-    <string name="relation_domestic_partner_g">Ev arkadaşı</string>
-    <string name="relation_father_g">Baba</string>
-    <string name="relation_friend_g">Arkadaş</string>
-    <string name="relation_manager_g">Menajer</string>
-    <string name="relation_mother_g">Anne</string>
-    <string name="relation_parent_g">Ebeveyn</string>
-    <string name="relation_partner_g">Partner</string>
-    <string name="relation_referred_by_g">Tarafından Yönlendirildi</string>
-    <string name="relation_relative_g">Akraba</string>
-    <string name="relation_sister_g">Kız Kardeş</string>
-    <string name="relation_spouse_g">Eş</string>
     <!-- vCard 4.0 relation types -->
-    <string name="relation_contact_g">Contact</string>
+    <string name="relation_contact_g">Temas etmek</string>
     <string name="relation_acquaintance_g">Tanıdık</string>
+    <string name="relation_friend_g">Arkadaş</string>
     <string name="relation_met_g">Görüştüğüm biri</string>
     <string name="relation_co_worker_g">İş arkadaşı</string>
     <string name="relation_colleague_g">Meslektaş</string>
     <string name="relation_co_resident_g">Ev Arkadaşı</string>
     <string name="relation_neighbor_g">Komşu</string>
+    <string name="relation_child_g">Çocuk</string>
+    <string name="relation_parent_g">Ebeveyn</string>
     <string name="relation_sibling_g">Kardeş</string>
+    <string name="relation_spouse_g">Eş</string>
     <string name="relation_kin_g">Akraba</string>
-    <string name="relation_kin_alt_g">Alt Akraba</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Aşk</string>
     <string name="relation_date_g">Buluşma</string>
@@ -347,6 +335,17 @@ Bu uygulamayı daha önce satın aldıysanız veya bağış yaptıysanız, teşe
     <string name="relation_me_g">Ben</string>
     <string name="relation_agent_g">Ajan</string>
     <string name="relation_emergency_g">Acil Durum Kişileri</string>
+    <!-- Android ContactContract.Relation types -->
+    <string name="relation_assistant_g">Asistan</string>
+    <string name="relation_brother_g">Erkek Kardeş</string>
+    <string name="relation_domestic_partner_g">Ev arkadaşı</string>
+    <string name="relation_father_g">Baba</string>
+    <string name="relation_manager_g">Menajer</string>
+    <string name="relation_mother_g">Anne</string>
+    <string name="relation_partner_g">Partner</string>
+    <string name="relation_referred_by_g">Tarafından Yönlendirildi</string>
+    <string name="relation_relative_g">Akraba</string>
+    <string name="relation_sister_g">Kız Kardeş</string>
     <!-- Additional relation types -->
     <string name="relation_superior_g">Patron</string>
     <string name="relation_subordinate_g">Ast</string>

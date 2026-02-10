@@ -324,7 +324,7 @@
     <string name="relation_referred_by_g">Препоручени од</string>
     <string name="relation_relative_g">Рођак</string>
     <string name="relation_sister_g">Сестра</string>
-    <string name="relation_spouse_g">Супруга</string>
+    <string name="relation_spouse_g">Супружник/супруга</string>
     <!-- vCard 4.0 relation types -->
     <string name="relation_contact_g">Контакт</string>
     <string name="relation_acquaintance_g">Познанство</string>
@@ -335,7 +335,6 @@
     <string name="relation_neighbor_g">Сусед</string>
     <string name="relation_sibling_g">Полубрат</string>
     <string name="relation_kin_g">Родбина</string>
-    <string name="relation_kin_alt_g">Рођак</string>
     <string name="relation_muse_g">Muse</string>
     <string name="relation_crush_g">Crush</string>
     <string name="relation_date_g">Састанак</string>
