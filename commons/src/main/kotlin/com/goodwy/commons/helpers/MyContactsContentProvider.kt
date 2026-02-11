@@ -16,7 +16,9 @@ import com.goodwy.commons.extensions.getStringValueOrNull
 class MyContactsContentProvider {
     companion object {
         private const val AUTHORITY = "com.goodwy.commons.contactsprovider"
+        private const val AUTHORITY_NEW = "dev.goodwy.commons.contactsprovider"
         val CONTACTS_CONTENT_URI = "content://$AUTHORITY/contacts".toUri()
+        val CONTACTS_CONTENT_URI_NEW = "content://$AUTHORITY_NEW/contacts".toUri()
 
         const val FAVORITES_ONLY = "favorites_only"
         const val COL_RAW_ID = "raw_id"
@@ -64,7 +66,7 @@ class MyContactsContentProvider {
                         } while (cursor.moveToNext())
                     }
                 }
-            } catch (ignored: Exception) {
+            } catch (_: Exception) {
             }
             return contacts
         }
@@ -137,7 +139,7 @@ class MyContactsContentProvider {
                         } while (cursor.moveToNext())
                     }
                 }
-            } catch (ignored: Exception) {
+            } catch (_: Exception) {
             }
             return contacts
         }

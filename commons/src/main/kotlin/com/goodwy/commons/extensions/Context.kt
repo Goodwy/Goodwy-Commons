@@ -501,7 +501,8 @@ fun Context.getMyContactsCursor(favoritesOnly: Boolean, withPhoneNumbersOnly: Bo
     val getFavoritesOnly = if (favoritesOnly) "1" else "0"
     val getWithPhoneNumbersOnly = if (withPhoneNumbersOnly) "1" else "0"
     val args = arrayOf(getFavoritesOnly, getWithPhoneNumbersOnly)
-    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, args, null).loadInBackground()
+    val uri = if (isNewApp()) MyContactsContentProvider.CONTACTS_CONTENT_URI_NEW else MyContactsContentProvider.CONTACTS_CONTENT_URI
+    CursorLoader(this, uri, null, null, args, null).loadInBackground()
 } catch (_: Exception) {
     null
 }
