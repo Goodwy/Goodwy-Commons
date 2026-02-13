@@ -198,6 +198,7 @@ dependencies {
     "rustoreImplementation"(libs.rustore.client)
     "hmsImplementation"(libs.hms.client)
     "hmsImplementation"(libs.hms.appservice)
+    "hmsImplementation"(libs.hms.agconnect)
     api(libs.persian.date)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)

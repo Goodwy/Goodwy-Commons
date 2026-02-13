@@ -61,7 +61,9 @@ class PurchaseHelper {
                         activity.baseConfig.isPro = false
                         callback(true)
                     }
-                    is Tipping.FailedToLoad -> {}
+                    is Tipping.FailedToLoad -> {
+                        activity.toast("Failed to load Iap")
+                    }
                 }
             }
 
@@ -75,10 +77,25 @@ class PurchaseHelper {
                         activity.baseConfig.isProSubs = false
                         callback(true)
                     }
-                    is Tipping.FailedToLoad -> {}
+                    is Tipping.FailedToLoad -> {
+                        activity.toast("Failed to load Sup")
+                    }
                 }
             }
-        }, 1000)
+
+            // SKU initialisation observers
+            hmsHelper.iapSkuDetailsInitializedLiveData.observe(activity) {
+                if (it) {
+                    // SKUs are loaded, you can update the UI if necessary.
+                }
+            }
+
+            hmsHelper.subSkuDetailsInitializedLiveData.observe(activity) {
+                if (it) {
+                    // Subscriptions loaded
+                }
+            }
+        }, 500)
     }
 
     /**
@@ -114,7 +131,7 @@ class PurchaseHelper {
                     client.showUpdateDialog(context, info, false)
                 }
                 else {
-                    context.toast("No updates available")
+//                    context.toast("No updates available")
                 }
             }
         }
