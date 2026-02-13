@@ -121,14 +121,18 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
 
     private fun checkIapPurchases() {
         if (!isReady()) {
+            println("❌ checkIapPurchases: IAP client not ready")
             return
         }
+        println("📦 checkIapPurchases: Запрос покупок IAP...")
 
         val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
             priceType = IapClient.PriceType.IN_APP_CONSUMABLE
         })
 
         task.addOnSuccessListener { result ->
+            println("✅ checkIapPurchases: Успешно получен ответ")
+
             val ownedProductIds = mutableListOf<String>()
 
             result.inAppPurchaseDataList?.forEach { jsonString ->
@@ -136,28 +140,57 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
                     val purchaseData = InAppPurchaseData(jsonString)
                     purchaseData.productId?.let { productId ->
                         ownedProductIds.add(productId)
+                        println("   Найден продукт: $productId")
                     }
                 } catch (e: Exception) {
+                    println("   Ошибка парсинга: ${e.message}")
                     e.printStackTrace()
                 }
             }
 
             // We save ALL purchases found
             _allIapPurchases.value = ownedProductIds
+            println("📊 Всего IAP покупок: ${ownedProductIds.size}")
+            println("📊 Наши IAP продукты: $lastIapList")
 
             // We filter only those that we need (from lastIapList)
             val filteredPurchases = ownedProductIds.filter { it in lastIapList }
             _isIapPurchasedList.value = filteredPurchases
+            println("📊 Отфильтрованные IAP: $filteredPurchases")
 
             activity.runOnUiThread {
                 when {
                     filteredPurchases.isNotEmpty() -> {
                         _isIapPurchased.value = Tipping.Succeeded
+                        println("✅ Установка Tipping.Succeeded для IAP")
                     }
-                    else -> _isIapPurchased.value = Tipping.NoTips
+                    else -> {
+                        _isIapPurchased.value = Tipping.NoTips
+                        println("ℹ️ Установка Tipping.NoTips для IAP")
+                    }
                 }
             }
         }.addOnFailureListener { e ->
+            println("❌ checkIapPurchases ОШИБКА:")
+            println("   Сообщение: ${e.message}")
+            if (e is IapApiException) {
+                println("   Код статуса: ${e.statusCode}")
+                println("   Сообщение статуса: ${e.statusMessage}")
+
+                // Дополнительная информация
+                when (e.statusCode) {
+                    OrderStatusCode.ORDER_HWID_NOT_LOGIN ->
+                        println("   ❗ Huawei ID не залогинен")
+                    OrderStatusCode.ORDER_ACCOUNT_AREA_NOT_SUPPORTED ->
+                        println("   ❗ Регион не поддерживается")
+                    OrderStatusCode.ORDER_STATE_NET_ERROR ->
+                        println("   ❗ Ошибка сети")
+                    OrderStatusCode.ORDER_VR_UNINSTALL_ERROR ->
+                        println("   ❗ HMS Core не установлен")
+                    else ->
+                        println("   ❗ Продукт не существует в AppGallery?")
+                }
+            }
             activity.runOnUiThread {
                 _isIapPurchased.value = Tipping.FailedToLoad
                 handleError(e)
@@ -167,14 +200,19 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
 
     private fun checkSubPurchases() {
         if (!isReady()) {
+            println("❌ checkSubPurchases: IAP client not ready")
             return
         }
+
+        println("📦 checkSubPurchases: Запрос подписок...")
 
         val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
             priceType = IapClient.PriceType.IN_APP_SUBSCRIPTION
         })
 
         task.addOnSuccessListener { result ->
+            println("✅ checkSubPurchases: Успешно получен ответ")
+
             val ownedProductIds = mutableListOf<String>()
 
             result.inAppPurchaseDataList?.forEach { jsonString ->
@@ -183,29 +221,45 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
                     purchaseData.productId?.let { productId ->
                         if (isSubscriptionActive(purchaseData)) {
                             ownedProductIds.add(productId)
+                            println("   Активная подписка: $productId")
+                        } else {
+                            println("   Неактивная подписка: $productId")
                         }
                     }
                 } catch (e: Exception) {
+                    println("   Ошибка парсинга: ${e.message}")
                     e.printStackTrace()
                 }
             }
 
-            // Save ALL subscriptions found
             _allSubPurchases.value = ownedProductIds
+            println("📊 Всего подписок: ${ownedProductIds.size}")
+            println("📊 Наши подписки: $lastSubList")
 
-            // We filter only those that we need
             val filteredPurchases = ownedProductIds.filter { it in lastSubList }
             _isSupPurchasedList.value = filteredPurchases
+            println("📊 Отфильтрованные подписки: $filteredPurchases")
 
             activity.runOnUiThread {
                 when {
                     filteredPurchases.isNotEmpty() -> {
+                        println("✅ Установка Tipping.Succeeded для подписок")
                         _isSupPurchased.value = Tipping.Succeeded
                     }
-                    else -> _isSupPurchased.value = Tipping.NoTips
+                    else -> {
+                        println("ℹ️ Установка Tipping.NoTips для подписок")
+                        _isSupPurchased.value = Tipping.NoTips
+                    }
                 }
             }
         }.addOnFailureListener { e ->
+            println("❌ checkSubPurchases ОШИБКА:")
+            println("   Сообщение: ${e.message}")
+            if (e is IapApiException) {
+                println("   Код статуса: ${e.statusCode}")
+                println("   Сообщение статуса: ${e.statusMessage}")
+            }
+
             activity.runOnUiThread {
                 _isSupPurchased.value = Tipping.FailedToLoad
                 handleError(e)
@@ -215,13 +269,17 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
 
     private fun loadIapProductInfos(products: List<String>) {
         if (!isReady()) {
+            println("❌ loadIapProductInfos: IAP client not ready")
             return
         }
 
         if (products.isEmpty()) {
+            println("⚠️ loadIapProductInfos: Список продуктов пуст")
             _iapSkuDetailsInitialized.value = true
             return
         }
+
+        println("📦 loadIapProductInfos: Загрузка информации о продуктах: $products")
 
         val task = iapClient.obtainProductInfo(ProductInfoReq().apply {
             priceType = IapClient.PriceType.IN_APP_CONSUMABLE
@@ -230,14 +288,20 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
 
         task.addOnSuccessListener { result ->
             iapSkuDetails = result.productInfoList?.associateBy { it.productId } ?: emptyMap()
-            _iapSkuDetailsInitialized.value = true
+            println("✅ loadIapProductInfos: Загружено ${iapSkuDetails.size} продуктов")
 
-//            activity.runOnUiThread {
-//                if (iapSkuDetails.isNotEmpty()) {
-//                    activity.toast("Goods loaded")
-//                }
-//            }
+            iapSkuDetails.forEach { (id, info) ->
+                println("   - $id: ${info.price} (${info.currency})")
+            }
+
+            _iapSkuDetailsInitialized.value = true
         }.addOnFailureListener { e ->
+            println("❌ loadIapProductInfos ОШИБКА:")
+            println("   Сообщение: ${e.message}")
+            if (e is IapApiException) {
+                println("   Код статуса: ${e.statusCode}")
+                println("   Сообщение статуса: ${e.statusMessage}")
+            }
             _iapSkuDetailsInitialized.value = false
             handleError(e)
         }
@@ -245,13 +309,17 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
 
     private fun loadSubProductInfos(products: List<String>) {
         if (!isReady()) {
+            println("❌ loadSubProductInfos: IAP client not ready")
             return
         }
 
         if (products.isEmpty()) {
+            println("⚠️ loadSubProductInfos: Список подписок пуст")
             _subSkuDetailsInitialized.value = true
             return
         }
+
+        println("📦 loadSubProductInfos: Загрузка информации о подписках: $products")
 
         val task = iapClient.obtainProductInfo(ProductInfoReq().apply {
             priceType = IapClient.PriceType.IN_APP_SUBSCRIPTION
@@ -260,14 +328,20 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
 
         task.addOnSuccessListener { result ->
             subSkuDetails = result.productInfoList?.associateBy { it.productId } ?: emptyMap()
-            _subSkuDetailsInitialized.value = true
+            println("✅ loadSubProductInfos: Загружено ${subSkuDetails.size} подписок")
 
-//            activity.runOnUiThread {
-//                if (subSkuDetails.isNotEmpty()) {
-//                    activity.toast("Subscriptions loaded")
-//                }
-//            }
+            subSkuDetails.forEach { (id, info) ->
+                println("   - $id: ${info.price} (${info.currency})")
+            }
+
+            _subSkuDetailsInitialized.value = true
         }.addOnFailureListener { e ->
+            println("❌ loadSubProductInfos ОШИБКА:")
+            println("   Сообщение: ${e.message}")
+            if (e is IapApiException) {
+                println("   Код статуса: ${e.statusCode}")
+                println("   Сообщение статуса: ${e.statusMessage}")
+            }
             _subSkuDetailsInitialized.value = false
             handleError(e)
         }

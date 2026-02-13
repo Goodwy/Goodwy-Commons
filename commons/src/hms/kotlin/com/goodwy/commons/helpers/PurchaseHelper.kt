@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.extensions.baseConfig
-import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.helpers.AppUpdateHelper.isHmsAvailable
 import com.huawei.hms.jos.AppUpdateClient
 import com.huawei.hms.jos.JosApps
@@ -61,9 +60,7 @@ class PurchaseHelper {
                         activity.baseConfig.isPro = false
                         callback(true)
                     }
-                    is Tipping.FailedToLoad -> {
-                        activity.toast("Failed to load Iap")
-                    }
+                    is Tipping.FailedToLoad -> {}
                 }
             }
 
@@ -77,9 +74,7 @@ class PurchaseHelper {
                         activity.baseConfig.isProSubs = false
                         callback(true)
                     }
-                    is Tipping.FailedToLoad -> {
-                        activity.toast("Failed to load Sup")
-                    }
+                    is Tipping.FailedToLoad -> {}
                 }
             }
 
