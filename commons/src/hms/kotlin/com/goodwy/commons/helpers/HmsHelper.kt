@@ -268,18 +268,13 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
     }
 
     private fun loadIapProductInfos(products: List<String>) {
-        if (!isReady()) {
-            println("❌ loadIapProductInfos: IAP client not ready")
-            return
-        }
-
+        if (!isReady()) return
         if (products.isEmpty()) {
-            println("⚠️ loadIapProductInfos: Список продуктов пуст")
             _iapSkuDetailsInitialized.value = true
             return
         }
 
-        println("📦 loadIapProductInfos: Загрузка информации о продуктах: $products")
+        println("🔍 REQUESTING PRODUCTS: $products")
 
         val task = iapClient.obtainProductInfo(ProductInfoReq().apply {
             priceType = IapClient.PriceType.IN_APP_CONSUMABLE
@@ -287,20 +282,27 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         })
 
         task.addOnSuccessListener { result ->
-            iapSkuDetails = result.productInfoList?.associateBy { it.productId } ?: emptyMap()
-            println("✅ loadIapProductInfos: Загружено ${iapSkuDetails.size} продуктов")
+            println("🔍 RESPONSE RECEIVED")
+            println("🔍 ProductInfoList size: ${result.productInfoList?.size ?: 0}")
 
-            iapSkuDetails.forEach { (id, info) ->
-                println("   - $id: ${info.price} (${info.currency})")
+            if (result.productInfoList.isNullOrEmpty()) {
+                println("🔍 NO PRODUCTS FOUND")
+                if (result.errMsg != null) {
+                    println("🔍 Error message: ${result.errMsg}")
+                }
+            } else {
+                result.productInfoList.forEach { info ->
+                    println("🔍 FOUND: ${info.productId} - ${info.price}")
+                }
             }
 
+            iapSkuDetails = result.productInfoList?.associateBy { it.productId } ?: emptyMap()
             _iapSkuDetailsInitialized.value = true
         }.addOnFailureListener { e ->
-            println("❌ loadIapProductInfos ОШИБКА:")
-            println("   Сообщение: ${e.message}")
+            println("❌ API CALL FAILED")
             if (e is IapApiException) {
-                println("   Код статуса: ${e.statusCode}")
-                println("   Сообщение статуса: ${e.statusMessage}")
+                println("   Status code: ${e.statusCode}")
+                println("   Message: ${e.message}")
             }
             _iapSkuDetailsInitialized.value = false
             handleError(e)
