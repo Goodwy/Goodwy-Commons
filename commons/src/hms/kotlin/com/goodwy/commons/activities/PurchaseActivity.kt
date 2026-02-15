@@ -90,10 +90,10 @@ class PurchaseActivity : BaseSimpleActivity() {
         hmsHelper.isIapPurchasedLiveData.observe(this) {
             when (it) {
                 is Tipping.Succeeded -> {
-                    baseConfig.isPro = true
+                    baseConfig.isProHms = true
                 }
                 is Tipping.NoTips -> {
-                    baseConfig.isPro = false
+                    baseConfig.isProHms = false
                 }
                 is Tipping.FailedToLoad -> {
                 }
@@ -104,10 +104,10 @@ class PurchaseActivity : BaseSimpleActivity() {
         hmsHelper.isSupPurchasedLiveData.observe(this) {
             when (it) {
                 is Tipping.Succeeded -> {
-                    baseConfig.isProSubs = true
+                    baseConfig.isProSubsHms = true
                 }
                 is Tipping.NoTips -> {
-                    baseConfig.isProSubs = false
+                    baseConfig.isProSubsHms = false
                 }
                 is Tipping.FailedToLoad -> {
                 }

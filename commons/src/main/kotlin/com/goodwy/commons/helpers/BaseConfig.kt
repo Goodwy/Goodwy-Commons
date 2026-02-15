@@ -735,7 +735,15 @@ open class BaseConfig(val context: Context) {
 
     var isProRuStore: Boolean
         get() = prefs.getBoolean(IS_PRO_RUSTORE_VERSION, false)
-        set(isProSubs) = prefs.edit { putBoolean(IS_PRO_RUSTORE_VERSION, isProSubs) }
+        set(isProRuStore) = prefs.edit { putBoolean(IS_PRO_RUSTORE_VERSION, isProRuStore) }
+
+    var isProHms: Boolean
+        get() = prefs.getBoolean(IS_PRO_HMS_VERSION, false)
+        set(isProHms) = prefs.edit { putBoolean(IS_PRO_HMS_VERSION, isProHms) }
+
+    var isProSubsHms: Boolean
+        get() = prefs.getBoolean(IS_PRO_SUBS_HMS_VERSION, false)
+        set(isProSubsHms) = prefs.edit { putBoolean(IS_PRO_SUBS_HMS_VERSION, isProSubsHms) }
 
     var isProNoGP: Boolean
         get() = prefs.getBoolean(IS_PRO_NO_GP_VERSION, false)

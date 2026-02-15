@@ -53,11 +53,11 @@ class PurchaseHelper {
             hmsHelper.isIapPurchasedLiveData.observe(activity) {
                 when (it) {
                     is Tipping.Succeeded -> {
-                        activity.baseConfig.isPro = true
+                        activity.baseConfig.isProHms = true
                         callback(true)
                     }
                     is Tipping.NoTips -> {
-                        activity.baseConfig.isPro = false
+                        activity.baseConfig.isProHms = false
                         callback(true)
                     }
                     is Tipping.FailedToLoad -> {}
@@ -67,11 +67,11 @@ class PurchaseHelper {
             hmsHelper.isSupPurchasedLiveData.observe(activity) {
                 when (it) {
                     is Tipping.Succeeded -> {
-                        activity.baseConfig.isProSubs = true
+                        activity.baseConfig.isProSubsHms = true
                         callback(true)
                     }
                     is Tipping.NoTips -> {
-                        activity.baseConfig.isProSubs = false
+                        activity.baseConfig.isProSubsHms = false
                         callback(true)
                     }
                     is Tipping.FailedToLoad -> {}

@@ -1582,26 +1582,32 @@ fun Context.isRuStoreInstalled(): Boolean {
 }
 
 fun Context.isPro() =
-    if (packageName.startsWith("dev.")) {
+    if (isNewApp()) {
         if (resources.getBoolean(R.bool.is_foss)) baseConfig.isProNoGP
         else baseConfig.isPro || baseConfig.isProSubs //|| baseConfig.isProRuStore
     } else {
-        baseConfig.isPro || baseConfig.isProSubs || baseConfig.isProRuStore ||
+        baseConfig.isPro || baseConfig.isProSubs ||
+            baseConfig.isProRuStore ||
+            baseConfig.isProHms || baseConfig.isProSubsHms ||
             (resources.getBoolean(R.bool.using_no_gp) && baseConfig.isProNoGP)
     }
 
 fun Context.isCollection(): Boolean {
     val prefix = appPrefix()
-    val dialer = if (isNewApp()) "goodwy.phone" else "goodwy.dialer"
-    return isPackageInstalled(prefix + dialer)
-        && isPackageInstalled(prefix + "goodwy.contacts")
-        && isPackageInstalled(prefix + "goodwy.smsmessenger")
-        && isPackageInstalled(prefix + "goodwy.gallery")
-        && isPackageInstalled(prefix + "goodwy.audiobooklite")
-        && isPackageInstalled(prefix + "goodwy.filemanager")
-        && isPackageInstalled(prefix + "goodwy.keyboard")
-        && isPackageInstalled(prefix + "goodwy.calendar")
-        && isPackageInstalled(prefix + "goodwy.voicerecorderfree")
+    return if (isNewApp()) {
+        isPackageInstalled(prefix + "goodwy.phone")
+            && isPackageInstalled(prefix + "goodwy.contacts")
+            && isPackageInstalled(prefix + "goodwy.messages")
+    } else {
+        isPackageInstalled(prefix + "goodwy.dialer")
+            && isPackageInstalled(prefix + "goodwy.contacts")
+            && isPackageInstalled(prefix + "goodwy.smsmessenger")
+            && isPackageInstalled(prefix + "goodwy.gallery")
+            && isPackageInstalled(prefix + "goodwy.audiobooklite")
+            && isPackageInstalled(prefix + "goodwy.filemanager")
+//            && isPackageInstalled(prefix + "goodwy.keyboard")
+            && isPackageInstalled(prefix + "goodwy.calendar")
+    }
 }
 
 fun Context.appPrefix(): String = if (isNewApp()) "dev." else "com."
