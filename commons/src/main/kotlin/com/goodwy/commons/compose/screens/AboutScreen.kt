@@ -417,7 +417,7 @@ fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Col
         modifier = modifier.padding(horizontal = 4.dp),
         factory = { context -> TextView(context).apply {
             setTextColor(textColor.toArgb())
-//            typeface = FontHelper.getTypeface(context)
+            typeface = FontHelper.getTypeface(context)
         } },
         update = { it.text = HtmlCompat.fromHtml(html, HtmlCompat.FROM_HTML_MODE_COMPACT) }
     )
