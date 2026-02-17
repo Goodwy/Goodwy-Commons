@@ -40,6 +40,7 @@ import com.goodwy.commons.compose.menus.ActionIconButton
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.compose.theme.SimpleTheme
 import com.goodwy.commons.extensions.toast
+import com.goodwy.commons.helpers.FontHelper
 import java.util.Calendar
 import com.goodwy.strings.R as stringsR
 
@@ -416,6 +417,7 @@ fun HtmlText(html: String, modifier: Modifier = Modifier, textColor: Color = Col
         modifier = modifier.padding(horizontal = 4.dp),
         factory = { context -> TextView(context).apply {
             setTextColor(textColor.toArgb())
+//            typeface = FontHelper.getTypeface(context)
         } },
         update = { it.text = HtmlCompat.fromHtml(html, HtmlCompat.FROM_HTML_MODE_COMPACT) }
     )
