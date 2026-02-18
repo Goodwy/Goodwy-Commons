@@ -22,7 +22,9 @@ import kotlin.math.roundToInt
 import kotlin.math.sqrt
 
 fun Int.getContrastColor(): Int {
-    return getContrastColor(DARK_GREY, Color.WHITE)
+    val luminance = ColorUtils.calculateLuminance(this)
+    return if (luminance > 0.5) DARK_GREY else Color.WHITE
+//    return getContrastColor(DARK_GREY, Color.WHITE)
 }
 
 fun Int.getContrastColor(firstColor: Int, secondColor: Int): Int {
