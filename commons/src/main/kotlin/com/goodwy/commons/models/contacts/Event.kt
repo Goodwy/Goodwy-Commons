@@ -1,16 +1,21 @@
 package com.goodwy.commons.models.contacts
 
 import kotlinx.serialization.Serializable
-import java.util.Objects
 
 @Serializable
 data class Event(
-    var value: String? = null,
+    var value: String = "",
     var type: Int = 0,
-    var label: String? = null
+    var label: String = ""
 ) {
-    override fun hashCode(): Int {
-        return Objects.hash(value, type, label)
+    companion object {
+        fun fromCursor(value: String?, type: Int?, label: String?): Event {
+            return Event(
+                value = value ?: "",
+                type = type ?: 0,
+                label = label ?: ""
+            )
+        }
     }
 
     override fun equals(other: Any?): Boolean {
@@ -19,14 +24,17 @@ data class Event(
 
         other as Event
 
-        if (type != other.type) return false
         if (value != other.value) return false
+        if (type != other.type) return false
         if (label != other.label) return false
 
         return true
     }
 
-    override fun toString(): String {
-        return "Event(value=$value, type=$type, label=$label)"
+    override fun hashCode(): Int {
+        var result = value.hashCode()
+        result = 31 * result + type
+        result = 31 * result + label.hashCode()
+        return result
     }
 }
