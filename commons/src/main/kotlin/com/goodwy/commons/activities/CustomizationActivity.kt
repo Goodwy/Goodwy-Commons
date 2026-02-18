@@ -72,6 +72,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curPrimaryGridColorPicker: GridColorPickerDialog? = null
     private var globalConfig: GlobalConfig? = null
 
+    private var saveCurSelectedThemeId = 0 // Save the ID from the previous theme
+    private var saveCurPrimaryColor = 0 // Save the color to return to it after selecting a system theme
+
     private fun getShowAccentColor() = intent.getBooleanExtra(SHOW_ACCENT_COLOR, false)
     private fun getShowAppIconColor() = intent.getBooleanExtra(SHOW_APP_ICON_COLOR, false)
 
@@ -257,6 +260,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupThemePicker() {
         curSelectedThemeId = getCurrentThemeId()
+        saveCurSelectedThemeId = curSelectedThemeId
         binding.customizationTheme.text = getThemeText()
         updateAutoThemeFields()
         handleAccentColorLayout()
@@ -284,6 +288,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         for ((key, value) in predefinedThemes) {
             items.add(RadioItem(key, getString(value.labelId)))
         }
+        saveCurSelectedThemeId = curSelectedThemeId
+        if (curSelectedThemeId != THEME_SYSTEM) saveCurPrimaryColor = curPrimaryColor
 
         RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId, R.string.theme) {
             updateColorTheme(it as Int, true)
@@ -298,13 +304,14 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun updateColorTheme(themeId: Int, useStored: Boolean = false) {
         curSelectedThemeId = themeId
+
         binding.customizationTheme.text = getThemeText()
 
         if (curSelectedThemeId == THEME_CUSTOM) {
             if (useStored) {
                 curTextColor = baseConfig.customTextColor
                 curBackgroundColor = baseConfig.customBackgroundColor
-                curPrimaryColor = baseConfig.customPrimaryColor
+                curPrimaryColor = if (saveCurSelectedThemeId == THEME_SYSTEM) saveCurPrimaryColor else baseConfig.customPrimaryColor
                 curAccentColor = baseConfig.customAccentColor
                 curAppIconColor = baseConfig.customAppIconColor
 
@@ -341,7 +348,8 @@ class CustomizationActivity : BaseSimpleActivity() {
 //            } else {
 //                curPrimaryColor = getCurrentPrimaryColor()
 //            }
-            curPrimaryColor = getCurrentPrimaryColor()
+            curPrimaryColor =
+                if (saveCurSelectedThemeId == THEME_SYSTEM && useStored) saveCurPrimaryColor else getCurrentPrimaryColor()
 
             setTheme(getThemeId())
             colorChanged()
@@ -600,6 +608,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         curTextColor = baseConfig.textColor
         curBackgroundColor = baseConfig.backgroundColor
         curPrimaryColor = baseConfig.primaryColor
+        saveCurPrimaryColor = baseConfig.primaryColor
         curAccentColor = baseConfig.accentColor
         curAppIconColor = baseConfig.appIconColor
         curFontType = baseConfig.fontType

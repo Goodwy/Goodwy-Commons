@@ -387,7 +387,7 @@ class GridColorPickerDialog(
     private fun getColors(id: Int) = activity.resources.getIntArray(id).toCollection(ArrayList())
 
     private fun useDefault() {
-        callback(true, activity.resources.getColor(R.color.color_primary))
+        callback(true, activity.resources.getColor(R.color.default_primary_color))
     }
 }
 
@@ -407,7 +407,7 @@ fun GridColorPickerAlertDialog(
     var wasDimmedBackgroundRemoved by remember { mutableStateOf(false) }
 
     val defaultColor = remember {
-        ContextCompat.getColor(context, R.color.color_primary)
+        ContextCompat.getColor(context, R.color.default_primary_color)
     }
     AlertDialog(
         modifier = modifier,
