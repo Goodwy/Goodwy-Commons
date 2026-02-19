@@ -178,6 +178,7 @@ Köszönjük minden közreműködőnknek, nagyra értékeljük a segítségüket
     <string name="square">Négyzet</string>
     <string name="on">Be</string>
     <string name="swipe_width">Húzás szélessége</string>
+    <string name="auto_scroll">Automatikus görgetés</string>
     <string name="purchase_simple_thank_you_g">Goodwy Thank You megvásárlása</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Kérjük frissítse a Goodwy Thank You alkalmazást a legújabb verzióra</string>
@@ -399,4 +400,6 @@ Ha korábban megvásárolta ezt az alkalmazást vagy adományozott, köszönjük
     <string name="plus">Plusz</string>
     <string name="agree">Egyetértek</string>
     <string name="scale">Skála</string>
+    <string name="long_text_behavior">Hosszú szöveg viselkedése</string>
+    <string name="cut_off">Vágás</string>
 </resources>

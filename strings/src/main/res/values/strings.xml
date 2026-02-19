@@ -201,6 +201,9 @@
     <string name="off">Off</string>
     <string name="on">On</string>
     <string name="swipe_width">Swipe width</string>
+    <string name="long_text_behavior">Long Text Behavior</string>
+    <string name="cut_off">Cut Off</string>
+    <string name="auto_scroll">Auto Scroll</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

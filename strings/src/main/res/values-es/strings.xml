@@ -176,6 +176,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="square">Cuadrado</string>
     <string name="on">Enc</string>
     <string name="swipe_width">Ancho de deslizamiento</string>
+    <string name="auto_scroll">Desplazamiento automático</string>
     <string name="purchase_simple_thank_you_g">Comprar Simple Gracias</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Por favor, actualice Simple Gracias a la última versión</string>
@@ -400,4 +401,6 @@ Si ya compraste esta aplicación o hiciste una donación, ¡gracias! Envía tu c
     <string name="plus">Más</string>
     <string name="agree">Estoy de acuerdo</string>
     <string name="scale">Escala</string>
+    <string name="long_text_behavior">Comportamiento de texto largo</string>
+    <string name="cut_off">Recortar</string>
 </resources>

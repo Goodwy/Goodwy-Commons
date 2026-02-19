@@ -182,6 +182,7 @@
     <string name="square">Квадрат</string>
     <string name="on">Вкл</string>
     <string name="swipe_width">Ширина на плъзгане</string>
+    <string name="auto_scroll">Автоматично превъртане</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -404,4 +405,6 @@
     <string name="plus">плюс</string>
     <string name="agree">Съгласен съм</string>
     <string name="scale">Мащаб</string>
+    <string name="long_text_behavior">Поведение при дълъг текст</string>
+    <string name="cut_off">Подрязване</string>
 </resources>

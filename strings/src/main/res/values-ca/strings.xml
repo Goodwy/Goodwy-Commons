@@ -178,6 +178,7 @@ Gràcies a tots els nostres col·laboradors, agraïm molt la vostra ajuda &#1008
     <string name="square">Quadrat</string>
     <string name="on">Encès</string>
     <string name="swipe_width">Amplada de lliscament</string>
+    <string name="auto_scroll">Desplaçament automàtic</string>
     <string name="purchase_simple_thank_you_g">Compra Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Si us plau, actualitzeu Goodwy Thank You a la darrera versió</string>
@@ -401,4 +402,6 @@ Si ja has comprat aquesta aplicació o has fet una donació, gràcies! Envia la 
     <string name="plus">A més</string>
     <string name="agree">Estic d\'acord</string>
     <string name="scale">Escala</string>
+    <string name="long_text_behavior">Comportament de text llarg</string>
+    <string name="cut_off">Retallar</string>
 </resources>

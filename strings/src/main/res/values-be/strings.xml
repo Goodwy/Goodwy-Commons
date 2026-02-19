@@ -183,6 +183,7 @@
     <string name="square">квадратны</string>
     <string name="on">Укл</string>
     <string name="swipe_width">Шырыня свайпа</string>
+    <string name="auto_scroll">Аўтаматычная пракрутка</string>
     <string name="purchase_simple_thank_you_g">Купіць Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАўтарскія правы © Goodwy %2$d</string>
     <string name="update_thank_you_g">Абнавіце \"Goodwy Thank You\" да апошняй версіі.</string>
@@ -406,4 +407,6 @@
     <string name="plus">Плюс</string>
     <string name="agree">Я згодны</string>
     <string name="scale">Маштаб</string>
+    <string name="long_text_behavior">Паводзіны доўгага тэксту</string>
+    <string name="cut_off">Абрэзаць</string>
 </resources>

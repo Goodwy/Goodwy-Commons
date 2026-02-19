@@ -181,6 +181,7 @@ ako aj k Fossify a Simple Mobile Tools, na ktorých sme založení.<br><br>
     <string name="square">Štvorcový</string>
     <string name="on">Zap</string>
     <string name="swipe_width">Šírka potiahnutia</string>
+    <string name="auto_scroll">Automatické posúvanie</string>
     <string name="purchase_simple_thank_you_g">Kúpiť Goodwy Ďakujem</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Prosím aktualizujte Goodwy Ďakujem na najnovšiu verziu</string>
@@ -403,4 +404,6 @@ Ak ste si túto aplikáciu už predtým zakúpili alebo ste prispeli darom, ďak
     <string name="plus">Navyše</string>
     <string name="agree">Súhlasím</string>
     <string name="scale">Mierka</string>
+    <string name="long_text_behavior">Správanie pri dlhých textoch</string>
+    <string name="cut_off">Orezať</string>
 </resources>

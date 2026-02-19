@@ -182,6 +182,7 @@ Hvala vsem našim sodelavcem, zelo cenimo vašo pomoč &#10084;&#65039;
     <string name="square">kvadrat</string>
     <string name="on">Vklop</string>
     <string name="swipe_width">Širina potega</string>
+    <string name="auto_scroll">Samodejno pomikanje</string>
     <string name="purchase_simple_thank_you_g">Kupite aplikacijo Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Prosimo nadgradite Goodwy Thank You na zadnjo verzijo</string>
@@ -404,4 +405,6 @@ Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><b
     <string name="plus">Plus</string>
     <string name="agree">Strinjam se</string>
     <string name="scale">Lestvica</string>
+    <string name="long_text_behavior">Obnašanje dolgega besedila</string>
+    <string name="cut_off">Obrezovanje</string>
 </resources>

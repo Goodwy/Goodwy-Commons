@@ -179,6 +179,7 @@
     <string name="square">مربع</string>
     <string name="on">روشن</string>
     <string name="swipe_width">عرض کشیدن انگشت</string>
+    <string name="auto_scroll">اسکرول خودکار</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -401,4 +402,6 @@
     <string name="plus">به علاوه</string>
     <string name="agree">موافقم</string>
     <string name="scale">مقیاس</string>
+    <string name="long_text_behavior">رفتار متن طولانی</string>
+    <string name="cut_off">تریم</string>
 </resources>

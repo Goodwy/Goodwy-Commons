@@ -178,6 +178,7 @@ Cảm ơn bạn!
     <string name="square">Quảng trường</string>
     <string name="on">Bật</string>
     <string name="swipe_width">Vuốt chiều rộng</string>
+    <string name="auto_scroll">Tự động cuộn</string>
     <string name="purchase_simple_thank_you_g">Cảm ơn vì đã mua hàng Goodwy</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Vui lòng cập nhật Goodwy Thank You lên phiên bản mới nhất</string>
@@ -407,4 +408,6 @@ Nếu trước đây bạn đã mua ứng dụng này hoặc quyên góp, xin c�
     <string name="plus">Thêm</string>
     <string name="agree">Tôi đồng ý</string>
     <string name="scale">Tỉ lệ</string>
+    <string name="long_text_behavior">Hành vi văn bản dài</string>
+    <string name="cut_off">Cắt tỉa</string>
 </resources>

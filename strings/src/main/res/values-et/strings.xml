@@ -180,6 +180,7 @@ Täname kõiki meie kaastöölisi, hindame teie abi väga &10084;&#65039;
     <string name="square">Ruut</string>
     <string name="on">Sees</string>
     <string name="swipe_width">Pühkimise laius</string>
+    <string name="auto_scroll">Automaatne kerimine</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -404,4 +405,6 @@ Kui olete selle rakenduse varem ostnud või annetuse teinud, siis täname teid! 
     <string name="plus">Pluss</string>
     <string name="agree">Ma olen nõus</string>
     <string name="scale">Skaala</string>
+    <string name="long_text_behavior">Pika teksti käitumine</string>
+    <string name="cut_off">Kärpimine</string>
 </resources>

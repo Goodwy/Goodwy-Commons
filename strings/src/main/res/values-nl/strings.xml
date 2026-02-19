@@ -177,6 +177,7 @@ Bedankt!
     <string name="square">Vierkant</string>
     <string name="on">Aan</string>
     <string name="swipe_width">Veegbreedte</string>
+    <string name="auto_scroll">Automatisch scrollen</string>
     <string name="purchase_simple_thank_you_g">Goodwy Bedankje kopen</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Er is een nieuwe versie van Goodwy Bedankje</string>
@@ -405,4 +406,6 @@ Als je deze app eerder hebt gekocht of een donatie hebt gedaan, bedankt! Stuur j
     <string name="plus">Plus</string>
     <string name="agree">Ik ben het ermee eens.</string>
     <string name="scale">Schaal</string>
+    <string name="long_text_behavior">Gedrag bij lange teksten</string>
+    <string name="cut_off">Trim</string>
 </resources>

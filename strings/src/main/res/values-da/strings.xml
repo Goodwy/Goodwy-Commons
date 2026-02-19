@@ -178,6 +178,7 @@ Tak til alle vores bidragydere, vi sætter stor pris på jeres hjælp &#10084;&#
     <string name="square">Firkant</string>
     <string name="on">Til</string>
     <string name="swipe_width">Stryg bredde</string>
+    <string name="auto_scroll">Automatisk rulning</string>
     <string name="purchase_simple_thank_you_g">Køb Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Opdater venligst Goodwy Thank You til den seneste version</string>
@@ -400,4 +401,6 @@ Hvis du tidligere har købt denne app eller doneret, tak! Send din bekræftelse 
     <string name="plus">Plus</string>
     <string name="agree">Jeg er enig</string>
     <string name="scale">Skala</string>
+    <string name="long_text_behavior">Lang tekstadfærd</string>
+    <string name="cut_off">Trim</string>
 </resources>

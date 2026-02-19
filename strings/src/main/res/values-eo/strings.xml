@@ -180,6 +180,7 @@ Dankon al ĉiuj niaj kontribuantoj, ni tre dankas pro via helpo &#10084;&#65039;
     <string name="square">Kvadrato</string>
     <string name="on">Ŝaltita</string>
     <string name="swipe_width">Larĝo de svingo</string>
+    <string name="auto_scroll">Aŭtomata Rulumo</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -403,4 +404,6 @@ Se vi antaŭe aĉetis ĉi tiun aplikaĵon aŭ faris donacon, dankon! Sendu vian 
     <string name="plus">Plie</string>
     <string name="agree">Mi konsentas</string>
     <string name="scale">Skalo</string>
+    <string name="long_text_behavior">Konduto de longa teksto</string>
+    <string name="cut_off">Tajlado</string>
 </resources>

@@ -183,6 +183,7 @@ Agradecemos a todos os nossos colaboradores. Agradecemos imensamente a ajuda de 
     <string name="square">Quadrado</string>
     <string name="on">Ligado</string>
     <string name="swipe_width">Largura do deslize</string>
+    <string name="auto_scroll">Rolagem automática</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -411,4 +412,6 @@ Se você já comprou este aplicativo ou fez uma doação, muito obrigado! Envie 
     <string name="plus">Mais</string>
     <string name="agree">Concordo</string>
     <string name="scale">Escala</string>
+    <string name="long_text_behavior">Comportamento de texto longo</string>
+    <string name="cut_off">Aparar</string>
 </resources>

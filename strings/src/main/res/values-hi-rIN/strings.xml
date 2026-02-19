@@ -178,6 +178,7 @@
     <string name="square">वर्ग</string>
     <string name="on">चालू</string>
     <string name="swipe_width">स्वाइप की चौड़ाई</string>
+    <string name="auto_scroll">स्वतः स्क्रॉल</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">सं %1$s\nकॉपीराइट © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -406,4 +407,6 @@
     <string name="plus">प्लस</string>
     <string name="agree">मैं सहमत हूं</string>
     <string name="scale">पैमाना</string>
+    <string name="long_text_behavior">लंबे पाठ का व्यवहार</string>
+    <string name="cut_off">काट-छांट करना</string>
 </resources>

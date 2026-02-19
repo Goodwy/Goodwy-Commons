@@ -181,6 +181,7 @@ Merci à tous nos contributeurs ; nous apprécions grandement votre aide.
     <string name="square">Carré</string>
     <string name="on">Activ</string>
     <string name="swipe_width">Largeur de balayage</string>
+    <string name="auto_scroll">Défilement automatique</string>
     <string name="purchase_simple_thank_you_g">Acheter Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Veuillez mettre à jour Goodwy Thank You</string>
@@ -410,4 +411,6 @@ Si vous avez déjà acheté cette application ou fait un don, merci ! Envoyez v
     <string name="plus">Plus</string>
     <string name="agree">Je suis d\'accord</string>
     <string name="scale">Échelle</string>
+    <string name="long_text_behavior">Comportement des textes longs</string>
+    <string name="cut_off">Garniture</string>
 </resources>

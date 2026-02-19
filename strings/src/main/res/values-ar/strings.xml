@@ -176,6 +176,7 @@
     <string name="square">مربع</string>
     <string name="on">تشغيل</string>
     <string name="swipe_width">عرض التمرير</string>
+    <string name="auto_scroll">التمرير التلقائي</string>
     <string name="purchase_simple_thank_you_g">شراء تطبيق (Goodwy Thank You)</string>
     <string name="copyright_g">v %1$s\nحقوق النشر © Goodwy %2$d</string>
     <string name="update_thank_you_g">يرجى تحديث تطبيق (Goodwy Thank You) إلى أحدث إصدار</string>
@@ -402,4 +403,6 @@
     <string name="plus">زائد</string>
     <string name="agree">أنا موافق</string>
     <string name="scale">حجم</string>
+    <string name="long_text_behavior">سلوك النصوص الطويلة</string>
+    <string name="cut_off">تقليم</string>
 </resources>

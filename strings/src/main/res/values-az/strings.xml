@@ -179,6 +179,7 @@ Bütün ianəçilərimizə təşəkkür edirik, köməyinizi çox qiymətləndir
     <string name="square">Kvadrat</string>
     <string name="on">Aktiv</string>
     <string name="swipe_width">Sürüşdürmə eni</string>
+    <string name="auto_scroll">Avtomatik Sürüşdürmə</string>
     <string name="purchase_simple_thank_you_g">Sadə Təşəkkür\'ü Alın</string>
     <string name="copyright_g">v %1$s\nMüəllif Hüquqları © Goodwy %2$d</string>
     <string name="update_thank_you_g">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>
@@ -402,4 +403,6 @@ Hazırkı tətbiqiniz işləməyə davam edəcək və yeniləmələr alacaq.<br>
     <string name="plus">Üstəlik</string>
     <string name="agree">Razıyam</string>
     <string name="scale">Miqyas</string>
+    <string name="long_text_behavior">Uzun mətn davranışı</string>
+    <string name="cut_off">Kəsmə</string>
 </resources>

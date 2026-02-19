@@ -178,6 +178,7 @@ Hvala svim našim suradnicima, jako cijenimo vašu pomoć &#10084;&#65039;
     <string name="square">Kvadrat</string>
     <string name="on">Uključeno</string>
     <string name="swipe_width">Širina prevlačenja</string>
+    <string name="auto_scroll">Automatsko pomicanje</string>
     <string name="purchase_simple_thank_you_g">Kupite Jednostavno Hvala</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Molim ažurirajte Jednostavno hvala na najnoviju verziju</string>
@@ -401,4 +402,6 @@ Ako ste prethodno kupili ovu aplikaciju ili donirali, hvala vam! Pošaljite svoj
     <string name="plus">Plus</string>
     <string name="agree">Slažem se</string>
     <string name="scale">Skala</string>
+    <string name="long_text_behavior">Ponašanje dugog teksta</string>
+    <string name="cut_off">Obrezivanje</string>
 </resources>

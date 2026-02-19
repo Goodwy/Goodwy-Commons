@@ -178,6 +178,7 @@
     <string name="square">מְרוּבָּע</string>
     <string name="on">פעיל</string>
     <string name="swipe_width">רוחב החלקה</string>
+    <string name="auto_scroll">גלילה אוטומטית</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -400,4 +401,6 @@
     <string name="plus">פְּלוּס</string>
     <string name="agree">אני מסכים</string>
     <string name="scale">סוּלָם</string>
+    <string name="long_text_behavior">התנהגות טקסט ארוך</string>
+    <string name="cut_off">מְטוּפָּח</string>
 </resources>

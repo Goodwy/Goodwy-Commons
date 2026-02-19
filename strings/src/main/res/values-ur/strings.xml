@@ -180,6 +180,7 @@
     <string name="square">مربع</string>
     <string name="on">چالو</string>
     <string name="swipe_width">سوائپ چوڑائی</string>
+    <string name="auto_scroll">آٹو سکرول</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -403,4 +404,6 @@
     <string name="plus">پلس</string>
     <string name="agree">میں مانتا ہوں۔</string>
     <string name="scale">پیمانہ</string>
+    <string name="long_text_behavior">لمبا متن سلوک</string>
+    <string name="cut_off">تراشنا</string>
 </resources>

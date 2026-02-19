@@ -177,6 +177,7 @@ Eskerrik asko gure laguntzaile guztiei, oso eskertzen dugu zuen laguntza &#10084
     <string name="square">Plaza</string>
     <string name="on">Piztuta</string>
     <string name="swipe_width">Irristailuaren zabalera</string>
+    <string name="auto_scroll">Korritze automatikoa</string>
     <string name="purchase_simple_thank_you_g">Erosi Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Eguneratu Goodwy Thank You azken bertsiora</string>
@@ -401,4 +402,6 @@ Aplikazio hau lehenago erosi baduzu edo dohaintza bat egin baduzu, eskerrik asko
     <string name="plus">Gainera</string>
     <string name="agree">ados nago</string>
     <string name="scale">Eskala</string>
+    <string name="long_text_behavior">Testu luzeen portaera</string>
+    <string name="cut_off">Moztu</string>
 </resources>

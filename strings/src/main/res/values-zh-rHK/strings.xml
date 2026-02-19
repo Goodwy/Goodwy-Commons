@@ -180,6 +180,7 @@
     <string name="square">方塊</string>
     <string name="on">開啟</string>
     <string name="swipe_width">滑動寬度</string>
+    <string name="auto_scroll">自動捲動</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -409,4 +410,6 @@
     <string name="plus">加</string>
     <string name="agree">我同意</string>
     <string name="scale">規模</string>
+    <string name="long_text_behavior">長文本行為</string>
+    <string name="cut_off">修剪</string>
 </resources>

@@ -179,6 +179,7 @@
     <string name="square">സമചതുരം</string>
     <string name="on">ഓൺ</string>
     <string name="swipe_width">സ്വൈപ്പ് വീതി</string>
+    <string name="auto_scroll">ഓട്ടോ സ്ക്രോൾ</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -402,4 +403,6 @@
     <string name="plus">പ്ലസ്</string>
     <string name="agree">ഞാൻ അംഗീകരിക്കുന്നു</string>
     <string name="scale">സ്കെയിൽ</string>
+    <string name="long_text_behavior">ദൈർഘ്യമേറിയ ടെക്സ്റ്റ് രീതി</string>
+    <string name="cut_off">ട്രിം ചെയ്യുക</string>
 </resources>

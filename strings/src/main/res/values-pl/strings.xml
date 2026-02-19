@@ -183,6 +183,7 @@ Będziemy bardzo wdzięczni.
     <string name="square">Kwadrat</string>
     <string name="on">Wł</string>
     <string name="swipe_width">Szerokość przesunięcia</string>
+    <string name="auto_scroll">Automatyczne przewijanie</string>
     <string name="purchase_simple_thank_you_g">Kup aplikację „Goodwy podziękowanie”</string>
     <string name="copyright_g">Wersja %1$s\n© Goodwy %2$d</string>
     <string name="update_thank_you_g">Zaktualizuj aplikację Goodwy podziękowanie do najnowszej wersji</string>
@@ -403,4 +404,6 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="plus">Plus</string>
     <string name="agree">Zgadzam się</string>
     <string name="scale">Skala</string>
+    <string name="long_text_behavior">Zachowanie długiego tekstu</string>
+    <string name="cut_off">Przycinać</string>
 </resources>

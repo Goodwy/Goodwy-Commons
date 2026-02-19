@@ -177,6 +177,7 @@
     <string name="square">சதுரம்</string>
     <string name="on">ஆன்</string>
     <string name="swipe_width">ஸ்வைப் அகலம்</string>
+    <string name="auto_scroll">தானியங்கி உருள்</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -400,4 +401,6 @@
     <string name="plus">மேலும்</string>
     <string name="agree">நான் ஒப்புக்கொள்கிறேன்.</string>
     <string name="scale">அளவுகோல்</string>
+    <string name="long_text_behavior">நீண்ட உரை நடத்தை</string>
+    <string name="cut_off">டிரிம்</string>
 </resources>

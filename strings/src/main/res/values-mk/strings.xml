@@ -179,6 +179,7 @@
     <string name="square">Плоштад</string>
     <string name="on">Вклучен</string>
     <string name="swipe_width">Ширина на лизгање</string>
+    <string name="auto_scroll">Автоматско скролување</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
@@ -403,4 +404,6 @@
     <string name="plus">Плус</string>
     <string name="agree">Се согласувам</string>
     <string name="scale">Скала</string>
+    <string name="long_text_behavior">Однесување кон долг текст</string>
+    <string name="cut_off">Скрати</string>
 </resources>
