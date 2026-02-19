@@ -271,6 +271,7 @@ const val IS_MIUI = "is_miui"
 const val IS_EMUI = "is_emui"
 const val BLOCKING_TYPE = "blocking_type"
 const val TEXT_ALIGNMENT = "text_alignment"
+const val ELLIPSIZE_MODE = "ellipsize_mode"
 const val USE_SPEECH_TO_TEXT = "use_speech_to_text"
 const val BLOCKING_ENABLED = "blocking_enabled"
 const val DO_NOT_BLOCK_CONTACTS_AND_RECENT = "do_not_block_contacts_and_recent"
@@ -888,6 +889,10 @@ const val BLOCKING_TYPE_SILENCE = 3
 // Text alignment
 const val TEXT_ALIGNMENT_START = 1
 const val TEXT_ALIGNMENT_ALONG_EDGES = 2
+
+// Text alignment
+const val ELLIPSIZE_MODE_END = 3
+const val ELLIPSIZE_MODE_MARQUEE = 4
 
 fun getEmptyLocalContact() = LocalContact(
     0,

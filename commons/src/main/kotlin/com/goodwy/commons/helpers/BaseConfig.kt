@@ -886,6 +886,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(TEXT_ALIGNMENT, TEXT_ALIGNMENT_START)
         set(textAlignment) = prefs.edit { putInt(TEXT_ALIGNMENT, textAlignment) }
 
+    var ellipsizeMode: Int
+        get() = prefs.getInt(ELLIPSIZE_MODE, ELLIPSIZE_MODE_END)
+        set(ellipsizeMode) = prefs.edit { putInt(ELLIPSIZE_MODE, ellipsizeMode) }
+
     var useSpeechToText: Boolean
         get() = prefs.getBoolean(USE_SPEECH_TO_TEXT, true)
         set(useSpeechToText) = prefs.edit { putBoolean(USE_SPEECH_TO_TEXT, useSpeechToText) }
