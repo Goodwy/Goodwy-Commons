@@ -52,7 +52,7 @@ billing = "7.1.1"
 rustore = "6.0.0"
 hms = "6.13.0.300"
 hms-appservice = "5.0.4.303"
-hms-agconnect = "1.6.0.300"
+hms-agconnect = "1.8.1.300"
 persianDate = "1.7.1"
 #Gradle
 gradlePlugins-agp = "8.11.1"
