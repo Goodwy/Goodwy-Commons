@@ -127,7 +127,7 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         println("📦 checkIapPurchases: IAP purchase request...")
 
         val task = iapClient.obtainOwnedPurchases(OwnedPurchasesReq().apply {
-            priceType = IapClient.PriceType.IN_APP_CONSUMABLE
+            priceType = IapClient.PriceType.IN_APP_NONCONSUMABLE
         })
 
         task.addOnSuccessListener { result ->
@@ -260,7 +260,7 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         println("🔍 REQUESTING PRODUCTS: $products")
 
         val task = iapClient.obtainProductInfo(ProductInfoReq().apply {
-            priceType = IapClient.PriceType.IN_APP_CONSUMABLE
+            priceType = IapClient.PriceType.IN_APP_NONCONSUMABLE
             productIds = products
         })
 
