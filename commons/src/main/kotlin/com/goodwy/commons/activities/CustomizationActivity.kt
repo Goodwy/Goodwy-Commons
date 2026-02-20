@@ -531,6 +531,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             textColor = curTextColor
             backgroundColor = curBackgroundColor
             primaryColor = curPrimaryColor
+            savePrimaryColor = saveCurPrimaryColor
             accentColor = curAccentColor
             appIconColor = curAppIconColor
             fontType = curFontType
@@ -608,7 +609,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         curTextColor = baseConfig.textColor
         curBackgroundColor = baseConfig.backgroundColor
         curPrimaryColor = baseConfig.primaryColor
-        saveCurPrimaryColor = baseConfig.primaryColor
+        saveCurPrimaryColor = baseConfig.savePrimaryColor
         curAccentColor = baseConfig.accentColor
         curAppIconColor = baseConfig.appIconColor
         curFontType = baseConfig.fontType

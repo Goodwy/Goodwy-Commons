@@ -18,6 +18,8 @@
     <color name="bottom_tabs_dark_background">#FF323236</color>
     <color name="bottom_tabs_black_background">#FF1B1B1B</color> <!--#44666666 transparency sometimes gets in the way-->
     <color name="disabled_text_color_highlight">#00FFFFFF</color>
+    <color name="popup_dialog_background_light">#F4F4F4</color>
+    <color name="popup_dialog_background_black">#3B3B3B</color>
 
     <color name="hint_white">#99FFFFFF</color>
     <color name="hint_black">#66000000</color>

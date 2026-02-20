@@ -111,6 +111,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(PRIMARY_COLOR, ContextCompat.getColor(context, R.color.default_primary_color))
         set(primaryColor) = prefs.edit { putInt(PRIMARY_COLOR, primaryColor) }
 
+    var savePrimaryColor: Int // Used to preserve the primary color that is different from the system color
+        get() = prefs.getInt(SAVE_PRIMARY_COLOR, primaryColor)
+        set(savePrimaryColor) = prefs.edit { putInt(SAVE_PRIMARY_COLOR, savePrimaryColor) }
+
     var accentColor: Int
         get() = prefs.getInt(ACCENT_COLOR, ContextCompat.getColor(context, R.color.default_accent_color))
         set(accentColor) = prefs.edit { putInt(ACCENT_COLOR, accentColor) }
