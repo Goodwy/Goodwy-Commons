@@ -905,6 +905,10 @@ open class BaseConfig(val context: Context) {
     var lastError: String
         get() = prefs.getString(LAST_ERROR, "")!!
         set(lastError) = prefs.edit { putString(LAST_ERROR, lastError) }
+
+    var showErrorDialog: Boolean
+        get() = prefs.getBoolean(SHOW_ERROR_DIALOG, false)
+        set(showErrorDialog) = prefs.edit { putBoolean(SHOW_ERROR_DIALOG, showErrorDialog) }
 }
 
 

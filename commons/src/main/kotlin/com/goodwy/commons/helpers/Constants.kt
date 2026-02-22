@@ -277,6 +277,7 @@ const val USE_SPEECH_TO_TEXT = "use_speech_to_text"
 const val BLOCKING_ENABLED = "blocking_enabled"
 const val DO_NOT_BLOCK_CONTACTS_AND_RECENT = "do_not_block_contacts_and_recent"
 const val SHOW_NICKNAME_INSTEAD_NAME = "show_nickname_instead_name"
+const val SHOW_ERROR_DIALOG = "show_error_dialog"
 
 const val IS_RIGHT_APP = "is_right_app"
 const val IS_PRO_VERSION = "is_pro_version"
