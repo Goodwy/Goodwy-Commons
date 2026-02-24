@@ -1,5 +1,5 @@
 <resources>
-    <string name="message">Mesasj</string>
+    <string name="message">Mesaj</string>
     <string name="settings_icon">Ayarlar simgesi</string>
     <string name="total_g">Toplam: %s</string>
     <string name="last_g">Son: %s</string>
