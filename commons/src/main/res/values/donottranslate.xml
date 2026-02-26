@@ -18,14 +18,18 @@
 
     <!-- App names -->
     <string name="playbook">PlayBook</string>
-    <string name="right_contacts">Right Contacts</string>
     <string name="right_dialer">Right Dialer</string>
+    <string name="right_contacts">Right Contacts</string>
     <string name="right_sms_messenger">Right Messages</string>
     <string name="right_voice_recorder">Right Voice Memos</string>
     <string name="right_gallery">Right Gallery</string>
     <string name="right_files">Right Files</string>
     <string name="right_calendar">Right Calendar</string>
     <string name="right_keyboard">Inkwell Keyboard</string>
+    <string name="alright_phone">AlRight Phone</string>
+    <string name="alright_contacts">AlRight Contacts</string>
+    <string name="alright_messages">AlRight Messages</string>
+    <string name="alright_gallery">AlRight Gallery</string>
 
     <!-- About -->
     <string name="two_string_placeholder">%1$s%2$s</string>

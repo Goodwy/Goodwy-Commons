@@ -455,6 +455,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     @SuppressLint("SetTextI18n")
     private fun setupCollection() {
         binding.collectionHolder.beVisible()
+        val isNewApp = isNewApp()
         val prefix = appPrefix()
         val appDialerPackage = prefix + "goodwy.phone"
         val appContactsPackage = prefix + "goodwy.contacts"
@@ -462,7 +463,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appGalleryPackage = prefix + "goodwy.gallery"
         val appAudiobookLitePackage = prefix + "goodwy.audiobooklite"
         val appFilesPackage = prefix + "goodwy.filemanager"
-        val appKeyboardPackage = prefix + "goodwy.keyboard"
+//        val appKeyboardPackage = prefix + "goodwy.keyboard"
         val appCalendarPackage = prefix + "goodwy.calendar"
 //        val appVoiceRecorderPackage = prefix + "goodwy.voicerecorderfree"
 
@@ -472,28 +473,37 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appGalleryInstalled = isPackageInstalled(appGalleryPackage)
         val appAudiobookLiteInstalled = isPackageInstalled(appAudiobookLitePackage)
         val appFilesInstalled = isPackageInstalled(appFilesPackage)
-        val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
+//        val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
         val appCalendarInstalled = isPackageInstalled(appCalendarPackage)
 //        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)
 
         val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
-            appAudiobookLiteInstalled && appFilesInstalled && appKeyboardInstalled && appCalendarInstalled //&& appVoiceRecorderInstalled
+            appAudiobookLiteInstalled && appFilesInstalled /*&& appKeyboardInstalled*/ && appCalendarInstalled //&& appVoiceRecorderInstalled
 
         if (!appAllInstalled) binding.collectionLogo.applyColorFilter(primaryColor)
         binding.collectionChevron.applyColorFilter(getProperTextColor())
         binding.collectionSubtitle.background.applyColorFilter(getSurfaceColor())
 
-        val items = arrayOf(
-            SimpleListItem(1, R.string.right_dialer, imageRes = R.drawable.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
-            SimpleListItem(2, R.string.right_contacts, imageRes = R.drawable.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
-            SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.drawable.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
-            SimpleListItem(4, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
-            SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage),
-            SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
-            SimpleListItem(7, R.string.right_keyboard, imageRes = R.drawable.ic_inkwell, selected = appKeyboardInstalled, packageName = appKeyboardPackage),
-            SimpleListItem(8, R.string.right_calendar, imageRes = R.drawable.ic_calendar_app, selected = appCalendarInstalled, packageName = appCalendarPackage),
-            //SimpleListItem(9, R.string.right_voice_recorder, imageRes = R.drawable.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage)
-        )
+        val items = if (isNewApp) {
+            arrayOf(
+                SimpleListItem(1, R.string.alright_phone, imageRes = R.drawable.ic_dialer_new, selected = appDialerInstalled, packageName = appDialerPackage),
+                SimpleListItem(2, R.string.alright_contacts, imageRes = R.drawable.ic_contacts_new, selected = appContactsInstalled, packageName = appContactsPackage),
+                SimpleListItem(3, R.string.alright_messages, imageRes = R.drawable.ic_sms_messenger_new, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
+                SimpleListItem(4, R.string.alright_gallery, imageRes = R.drawable.ic_gallery_new, selected = appGalleryInstalled, packageName = appGalleryPackage),
+            )
+        } else {
+            arrayOf(
+                SimpleListItem(1, R.string.right_dialer, imageRes = R.drawable.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
+                SimpleListItem(2, R.string.right_contacts, imageRes = R.drawable.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
+                SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.drawable.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
+                SimpleListItem(4, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
+                SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage),
+                SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
+//            SimpleListItem(7, R.string.right_keyboard, imageRes = R.drawable.ic_inkwell, selected = appKeyboardInstalled, packageName = appKeyboardPackage),
+                SimpleListItem(8, R.string.right_calendar, imageRes = R.drawable.ic_calendar_app, selected = appCalendarInstalled, packageName = appCalendarPackage),
+                //SimpleListItem(9, R.string.right_voice_recorder, imageRes = R.drawable.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage)
+            )
+        }
 
         val percentage = items.filter { it.selected }.size.toString() + "/" + items.size.toString()
         binding.collectionTitle.text = getString(stringsR.string.collection) + "  $percentage"
