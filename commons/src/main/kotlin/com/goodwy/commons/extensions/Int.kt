@@ -24,48 +24,6 @@ import kotlin.math.sqrt
 fun Int.getContrastColor(): Int {
     val luminance = ColorUtils.calculateLuminance(this)
     return if (luminance > 0.5) DARK_GREY else Color.WHITE
-//    return getContrastColor(DARK_GREY, Color.WHITE)
-}
-
-fun Int.getContrastColor(firstColor: Int, secondColor: Int): Int {
-    // Opaque background
-    if (Color.alpha(this) == MAX_ALPHA_INT) {
-        val contrastFirstColor = ColorUtils.calculateContrast(firstColor, this)
-        val contrastSecondColor = ColorUtils.calculateContrast(secondColor, this)
-
-        return if (contrastFirstColor >= contrastSecondColor) firstColor else secondColor
-    }
-
-    // Translucent background: fallback heuristic
-    val luminanceBackground = ColorUtils.calculateLuminance(this)
-    val luminanceFirstColor = ColorUtils.calculateLuminance(firstColor)
-    val luminanceSecondColor = ColorUtils.calculateLuminance(secondColor)
-
-    val lightColor: Int
-    val darkColor: Int
-    val luminanceLight: Double
-    val luminanceDark: Double
-
-    if (luminanceFirstColor >= luminanceSecondColor) {
-        lightColor = firstColor
-        darkColor = secondColor
-        luminanceLight = luminanceFirstColor
-        luminanceDark = luminanceSecondColor
-    } else {
-        lightColor = secondColor
-        darkColor = firstColor
-        luminanceLight = luminanceSecondColor
-        luminanceDark = luminanceFirstColor
-    }
-
-    // Compute crossover luminance where both candidates have equal WCAG contrast
-    // against a (hypothetical) opaque background of luminance L:
-    // (L + 0.05)^2 = (lLight + 0.05) * (lDark + 0.05)
-    val threshold = sqrt((luminanceLight + LUMINANCE_OFFSET) * (luminanceDark + LUMINANCE_OFFSET)) - LUMINANCE_OFFSET
-
-    // If background is lighter than the threshold -> choose darker foreground,
-    // else choose lighter foreground.
-    return if (luminanceBackground >= threshold) darkColor else lightColor
 }
 
 fun Int.toHex() = String.format("#%06X", 0xFFFFFF and this).uppercase(Locale.getDefault())
