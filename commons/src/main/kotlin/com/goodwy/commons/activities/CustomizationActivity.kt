@@ -9,7 +9,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.res.ResourcesCompat
 import com.goodwy.commons.R
 import com.goodwy.commons.databinding.ActivityCustomizationBinding
 import com.goodwy.commons.dialogs.*
@@ -36,7 +35,6 @@ import com.goodwy.commons.models.MyTheme
 import com.goodwy.commons.models.RadioItem
 import com.goodwy.commons.models.isGlobalThemingEnabled
 import com.goodwy.strings.R as stringsR
-import com.google.android.material.snackbar.Snackbar
 import com.mikhaellopez.rxanimation.RxAnimation
 import com.mikhaellopez.rxanimation.shake
 import java.io.File

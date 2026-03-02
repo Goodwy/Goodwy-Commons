@@ -181,6 +181,7 @@
     <string name="on">چالو</string>
     <string name="swipe_width">سوائپ چوڑائی</string>
     <string name="auto_scroll">آٹو سکرول</string>
+    <string name="hide_icons_in_menu">مینو میں شبیہیں چھپائیں۔</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

@@ -830,6 +830,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(SHOW_SEARCH_BAR, true)
         set(showSearchBar) = prefs.edit { putBoolean(SHOW_SEARCH_BAR, showSearchBar) }
 
+    var hideIconsInMenu: Boolean
+        get() = prefs.getBoolean(HIDE_ICONS_IN_MENU, true)
+        set(hideIconsInMenu) = prefs.edit { putBoolean(HIDE_ICONS_IN_MENU, hideIconsInMenu) }
+
     var skipArchiveConfirmation: Boolean
         get() = prefs.getBoolean(SKIP_ARCHIVE_CONFIRMATION, false)
         set(skipArchiveConfirmation) = prefs.edit { putBoolean(SKIP_ARCHIVE_CONFIRMATION, skipArchiveConfirmation) }

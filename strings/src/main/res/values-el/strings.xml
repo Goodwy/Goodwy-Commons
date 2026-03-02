@@ -178,6 +178,7 @@
     <string name="on">Ενεργοποίηση</string>
     <string name="swipe_width">Πλάτος σάρωσης</string>
     <string name="auto_scroll">Αυτόματη κύλιση</string>
+    <string name="hide_icons_in_menu">Απόκρυψη εικονιδίων στο μενού</string>
     <string name="purchase_simple_thank_you_g">Αγοράστε το \"Απλά Σας Ευχαριστώ\"</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστώ στην τελευταία έκδοση</string>

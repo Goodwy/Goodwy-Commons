@@ -204,6 +204,7 @@
     <string name="long_text_behavior">Long Text Behavior</string>
     <string name="cut_off">Cut Off</string>
     <string name="auto_scroll">Auto Scroll</string>
+    <string name="hide_icons_in_menu">Hide icons in menu</string>
 
     <!-- Other -->
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>

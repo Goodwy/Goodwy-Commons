@@ -177,6 +177,7 @@ por favor, considera apoyarnos de alguna manera. Te lo agradeceríamos mucho.<br
     <string name="on">Enc</string>
     <string name="swipe_width">Ancho de deslizamiento</string>
     <string name="auto_scroll">Desplazamiento automático</string>
+    <string name="hide_icons_in_menu">Ocultar iconos en el menú</string>
     <string name="purchase_simple_thank_you_g">Comprar Simple Gracias</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Por favor, actualice Simple Gracias a la última versión</string>

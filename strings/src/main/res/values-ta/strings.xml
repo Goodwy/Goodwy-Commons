@@ -178,6 +178,7 @@
     <string name="on">ஆன்</string>
     <string name="swipe_width">ஸ்வைப் அகலம்</string>
     <string name="auto_scroll">தானியங்கி உருள்</string>
+    <string name="hide_icons_in_menu">மெனுவில் ஐகான்களை மறை</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>

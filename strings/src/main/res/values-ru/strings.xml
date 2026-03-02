@@ -187,6 +187,7 @@
     <string name="on">Вкл.</string>
     <string name="swipe_width">Ширина свайпа</string>
     <string name="auto_scroll">Автоматическая прокрутка</string>
+    <string name="hide_icons_in_menu">Скрывать иконки в меню</string>
     <string name="purchase_simple_thank_you_g">Купить Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nАвторские права © Goodwy %2$d</string>
     <string name="update_thank_you_g">Обновите \"Goodwy Thank You\" до последней версии.</string>

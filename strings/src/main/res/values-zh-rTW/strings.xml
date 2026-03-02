@@ -179,6 +179,7 @@
     <string name="on">開啟</string>
     <string name="swipe_width">滑動寬度</string>
     <string name="auto_scroll">自動捲動</string>
+    <string name="hide_icons_in_menu">隱藏選單中的圖標</string>
     <string name="purchase_simple_thank_you_g">購買Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nCopyright © Goodwy %2$d</string>
     <string name="update_thank_you_g">請更新[Goodwy Thank You]至最新版本</string>

@@ -180,6 +180,7 @@ Bütün ianəçilərimizə təşəkkür edirik, köməyinizi çox qiymətləndir
     <string name="on">Aktiv</string>
     <string name="swipe_width">Sürüşdürmə eni</string>
     <string name="auto_scroll">Avtomatik Sürüşdürmə</string>
+    <string name="hide_icons_in_menu">Menyuda nişanları gizlədin</string>
     <string name="purchase_simple_thank_you_g">Sadə Təşəkkür\'ü Alın</string>
     <string name="copyright_g">v %1$s\nMüəllif Hüquqları © Goodwy %2$d</string>
     <string name="update_thank_you_g">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>

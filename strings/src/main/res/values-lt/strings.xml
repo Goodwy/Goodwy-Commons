@@ -179,6 +179,7 @@ Dėkojame visiems mūsų prisidėjusiems, labai vertiname jūsų pagalbą &10084
     <string name="on">Įjungta</string>
     <string name="swipe_width">Braukite plotį</string>
     <string name="auto_scroll">Automatinis slinkimas</string>
+    <string name="hide_icons_in_menu">Slėpti piktogramas meniu</string>
     <string name="purchase_simple_thank_you_g">Purchase Goodwy Thank You</string>
     <string name="copyright_g">v %1$s\nVisos teisės saugomos © Goodwy %2$d</string>
     <string name="update_thank_you_g">Please update Goodwy Thank You to the latest version</string>
