@@ -89,6 +89,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.joda.time.DateTimeConstants
 import androidx.core.graphics.toColorInt
+import java.util.regex.PatternSyntaxException
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -1187,13 +1188,39 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     } || isNumberBlockedByPattern(number, blockedNumbers)
 }
 
+//fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
+//    for (blockedNumber in blockedNumbers) {
+//        val num = blockedNumber.number
+//        if (num.isBlockedNumberPattern()) {
+//            val pattern = num.replace("+", "\\+").replace("*", ".*")
+//            if (number.matches(pattern.toRegex())) {
+//                return true
+//            }
+//        }
+//    }
+//    return false
+//}
+
+//Fix: java.util.regex.PatternSyntaxException: Incorrectly nested parentheses in regexp pattern near index 18
+//OR CONSEQUENTIAL DAMAGES
+//#   .* (INCLUDING
 fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
     for (blockedNumber in blockedNumbers) {
         val num = blockedNumber.number
         if (num.isBlockedNumberPattern()) {
-            val pattern = num.replace("+", "\\+").replace("*", ".*")
-            if (number.matches(pattern.toRegex())) {
-                return true
+            try {
+                // First, we shield all special characters in regular expressions.
+                val escapedNum = Regex.escape(num)
+                // Then replace the escaped * with .* to support patterns.
+                val pattern = escapedNum.replace("\\*", ".*")
+
+                if (number.matches(Regex(pattern))) {
+                    return true
+                }
+            } catch (e: PatternSyntaxException) {
+                // We log the error and skip this template.
+                android.util.Log.e("BlockedPattern", "Invalid pattern: $num", e)
+                baseConfig.lastError = "Context.isNumberBlockedByPattern() PatternSyntaxException: $e"
             }
         }
     }
