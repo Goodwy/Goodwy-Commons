@@ -1611,7 +1611,9 @@ fun Context.isRuStoreInstalled(): Boolean {
 fun Context.isPro() =
     if (isNewApp()) {
         if (resources.getBoolean(R.bool.is_foss)) baseConfig.isProNoGP
-        else baseConfig.isPro || baseConfig.isProSubs //|| baseConfig.isProRuStore
+        else baseConfig.isPro || baseConfig.isProSubs ||
+            baseConfig.isProRuStore ||
+            baseConfig.isProHms || baseConfig.isProSubsHms
     } else {
         baseConfig.isPro || baseConfig.isProSubs ||
             baseConfig.isProRuStore ||
