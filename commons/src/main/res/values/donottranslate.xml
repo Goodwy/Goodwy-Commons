@@ -30,6 +30,8 @@
     <string name="alright_contacts">Alright Contacts</string>
     <string name="alright_messages">Alright Messages</string>
     <string name="alright_gallery">Alright Gallery</string>
+    <string name="alright_files">Alright Files</string>
+    <string name="alright_calculator">Alright Calculator</string>
 
     <!-- About -->
     <string name="two_string_placeholder">%1$s%2$s</string>
