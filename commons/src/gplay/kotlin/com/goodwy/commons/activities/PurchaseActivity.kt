@@ -173,7 +173,7 @@ class PurchaseActivity : BaseSimpleActivity() {
     }
 
     private fun setupEmail() {
-//        binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
+        binding.lifebuoyHolder.beVisibleIf(showLifebuoy)
         val lifebuoyButtonDrawable =
             resources.getColoredDrawableWithColor(this, R.drawable.ic_mail_vector, getProperTextColor())
         binding.lifebuoyButton.setImageDrawable(lifebuoyButtonDrawable)
