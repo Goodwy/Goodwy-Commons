@@ -480,7 +480,8 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appCalculatorInstalled = isPackageInstalled(appCalculatorPackage)
 
         val appAllInstalled = if (isNewApp) {
-            appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled && appCalculatorInstalled
+            appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
+                appFilesInstalled && appCalculatorInstalled
         } else {
             appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
                 appFilesInstalled && appAudiobookLiteInstalled /*&& appKeyboardInstalled*/ && appCalendarInstalled //&& appVoiceRecorderInstalled
@@ -495,16 +496,17 @@ class PurchaseActivity : BaseSimpleActivity() {
                 SimpleListItem(1, R.string.alright_phone, imageRes = R.drawable.ic_dialer_new, selected = appDialerInstalled, packageName = appDialerPackage),
                 SimpleListItem(2, R.string.alright_contacts, imageRes = R.drawable.ic_contacts_new, selected = appContactsInstalled, packageName = appContactsPackage),
                 SimpleListItem(3, R.string.alright_messages, imageRes = R.drawable.ic_sms_messenger_new, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
-                SimpleListItem(4, R.string.alright_gallery, imageRes = R.drawable.ic_gallery_new, selected = appGalleryInstalled, packageName = appGalleryPackage),
-                SimpleListItem(4, R.string.alright_calculator, imageRes = R.drawable.ic_calculator, selected = appCalculatorInstalled, packageName = appCalculatorPackage),
+                SimpleListItem(4, R.string.alright_files, imageRes = R.drawable.ic_files_new, selected = appFilesInstalled, packageName = appFilesPackage),
+                SimpleListItem(5, R.string.alright_gallery, imageRes = R.drawable.ic_gallery_new, selected = appGalleryInstalled, packageName = appGalleryPackage),
+                SimpleListItem(6, R.string.alright_calculator, imageRes = R.drawable.ic_calculator, selected = appCalculatorInstalled, packageName = appCalculatorPackage),
             )
         } else {
             arrayOf(
                 SimpleListItem(1, R.string.right_dialer, imageRes = R.drawable.ic_dialer, selected = appDialerInstalled, packageName = appDialerPackage),
                 SimpleListItem(2, R.string.right_contacts, imageRes = R.drawable.ic_contacts, selected = appContactsInstalled, packageName = appContactsPackage),
                 SimpleListItem(3, R.string.right_sms_messenger, imageRes = R.drawable.ic_sms_messenger, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
-                SimpleListItem(4, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
-                SimpleListItem(5, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage),
+                SimpleListItem(4, R.string.right_files, imageRes = R.drawable.ic_files, selected = appFilesInstalled, packageName = appFilesPackage),
+                SimpleListItem(5, R.string.right_gallery, imageRes = R.drawable.ic_gallery, selected = appGalleryInstalled, packageName = appGalleryPackage),
                 SimpleListItem(6, R.string.playbook, imageRes = R.drawable.ic_playbook, selected = appAudiobookLiteInstalled, packageName = appAudiobookLitePackage),
 //            SimpleListItem(7, R.string.right_keyboard, imageRes = R.drawable.ic_inkwell, selected = appKeyboardInstalled, packageName = appKeyboardPackage),
                 SimpleListItem(8, R.string.right_calendar, imageRes = R.drawable.ic_calendar_app, selected = appCalendarInstalled, packageName = appCalendarPackage),

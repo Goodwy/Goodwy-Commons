@@ -11,6 +11,12 @@
         <package android:name="dev.goodwy.messages" />
         <package android:name="dev.goodwy.contacts.debug" />
         <package android:name="dev.goodwy.contacts" />
+        <package android:name="dev.goodwy.gallery.debug" />
+        <package android:name="dev.goodwy.gallery" />
+        <package android:name="dev.goodwy.math.debug" />
+        <package android:name="dev.goodwy.math" />
+        <package android:name="dev.goodwy.filemanager.debug" />
+        <package android:name="dev.goodwy.filemanager" />
 
         <package android:name="com.goodwy.dialer.debug" />
         <package android:name="com.goodwy.dialer" />

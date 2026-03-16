@@ -35,8 +35,8 @@ android {
         applicationId = "com.goodwy.commons.samples"
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         targetSdk = libs.versions.app.build.targetSDK.get().toInt()
-        versionCode = 811
-        versionName = "8.1.1"
+        versionCode = 820
+        versionName = "8.2.0"
         vectorDrawables.useSupportLibrary = true
     }
 

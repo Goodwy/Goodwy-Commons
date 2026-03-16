@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.github.goodwy.goodwy-commons"
-version = findProperty("VERSION")?.toString() ?: System.getenv("VERSION") ?: "8.1.1"
+version = findProperty("VERSION")?.toString() ?: System.getenv("VERSION") ?: "8.2.0"
 
 val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
