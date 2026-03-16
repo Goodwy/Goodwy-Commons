@@ -466,6 +466,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 //        val appKeyboardPackage = prefix + "goodwy.keyboard"
         val appCalendarPackage = prefix + "goodwy.calendar"
 //        val appVoiceRecorderPackage = prefix + "goodwy.voicerecorderfree"
+        val appCalculatorPackage = "dev.goodwy.math"
 
         val appDialerInstalled = isPackageInstalled(appDialerPackage)
         val appContactsInstalled = isPackageInstalled(appContactsPackage)
@@ -476,9 +477,14 @@ class PurchaseActivity : BaseSimpleActivity() {
 //        val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
         val appCalendarInstalled = isPackageInstalled(appCalendarPackage)
 //        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)
+        val appCalculatorInstalled = isPackageInstalled(appCalculatorPackage)
 
-        val appAllInstalled = appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
-            appAudiobookLiteInstalled && appFilesInstalled /*&& appKeyboardInstalled*/ && appCalendarInstalled //&& appVoiceRecorderInstalled
+        val appAllInstalled = if (isNewApp) {
+            appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled && appCalculatorInstalled
+        } else {
+            appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
+                appFilesInstalled && appAudiobookLiteInstalled /*&& appKeyboardInstalled*/ && appCalendarInstalled //&& appVoiceRecorderInstalled
+        }
 
         if (!appAllInstalled) binding.collectionLogo.applyColorFilter(primaryColor)
         binding.collectionChevron.applyColorFilter(getProperTextColor())
@@ -490,6 +496,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 SimpleListItem(2, R.string.alright_contacts, imageRes = R.drawable.ic_contacts_new, selected = appContactsInstalled, packageName = appContactsPackage),
                 SimpleListItem(3, R.string.alright_messages, imageRes = R.drawable.ic_sms_messenger_new, selected = appSmsMessengerInstalled, packageName = appSmsMessengerPackage),
                 SimpleListItem(4, R.string.alright_gallery, imageRes = R.drawable.ic_gallery_new, selected = appGalleryInstalled, packageName = appGalleryPackage),
+                SimpleListItem(4, R.string.alright_calculator, imageRes = R.drawable.ic_calculator, selected = appCalculatorInstalled, packageName = appCalculatorPackage),
             )
         } else {
             arrayOf(
