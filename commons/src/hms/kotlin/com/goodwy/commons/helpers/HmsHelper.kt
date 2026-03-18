@@ -481,6 +481,11 @@ class HmsHelper(private val activity: BaseSimpleActivity) {
         retrieveDonation(lastIapList, lastSubList)
     }
 
+    fun refreshPurchasesStatus() {
+        checkIapPurchases()
+        checkSubPurchases()
+    }
+
     companion object {
         const val PURCHASE_REQUEST_CODE = 1001
     }

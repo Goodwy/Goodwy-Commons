@@ -162,11 +162,14 @@ class PurchaseActivity : BaseSimpleActivity() {
             when (menuItem.itemId) {
                 R.id.restorePurchases -> {
                     setupButtonReset()
-
-//                    val subscriptionIdListAll: ArrayList<String> = subscriptionIdList
-//                    subscriptionIdListAll.addAll(subscriptionYearIdList)
-//                    hmsHelper.retrieveDonation(productIdList, subscriptionIdListAll)
                     hmsHelper.restorePurchases()
+
+                    binding.root.postDelayed({
+                        setupButtonIapChecked()
+                        setupButtonSupChecked()
+                        setupButtonIapPurchased()
+                        setupButtonSupPurchased()
+                    }, 1000)
 
                     true
                 }
