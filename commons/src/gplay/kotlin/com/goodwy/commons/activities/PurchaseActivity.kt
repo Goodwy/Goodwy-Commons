@@ -459,7 +459,8 @@ class PurchaseActivity : BaseSimpleActivity() {
         val prefix = appPrefix()
         val appDialerPackage = prefix + "goodwy.phone"
         val appContactsPackage = prefix + "goodwy.contacts"
-        val appSmsMessengerPackage = prefix + "goodwy.smsmessenger"
+        val smsMessenger = if (isNewApp) "goodwy.messages" else "goodwy.smsmessenger"
+        val appSmsMessengerPackage = prefix + smsMessenger
         val appGalleryPackage = prefix + "goodwy.gallery"
         val appAudiobookLitePackage = prefix + "goodwy.audiobooklite"
         val appFilesPackage = prefix + "goodwy.filemanager"
