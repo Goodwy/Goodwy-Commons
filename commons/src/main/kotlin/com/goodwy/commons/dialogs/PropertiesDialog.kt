@@ -227,10 +227,10 @@ class PropertiesDialog : BasePropertiesDialog {
 
             mActivity.runOnUiThread {
                 if (digest != null) {
-                    (mDialogView.propertiesHolder.findViewById<LinearLayout>(propertyId).findViewById<MyTextView>(R.id.property_value)).text =
+                    (mDialogView.propertiesHolder.findViewById<RelativeLayout>(propertyId).findViewById<MyTextView>(R.id.property_value)).text =
                         digest
                 } else {
-                    mDialogView.propertiesHolder.findViewById<LinearLayout>(propertyId).beGone()
+                    mDialogView.propertiesHolder.findViewById<RelativeLayout>(propertyId).beGone()
                 }
             }
         }
