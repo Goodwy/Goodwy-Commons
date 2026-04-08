@@ -184,7 +184,38 @@ class VcfExporter {
                         Im.PROTOCOL_GOOGLE_TALK -> Impp(HANGOUTS, it.value)
                         Im.PROTOCOL_QQ -> Impp(QQ, it.value)
                         Im.PROTOCOL_JABBER -> Impp(JABBER, it.value)
-                        else -> Impp(it.label, it.value)
+                        PROTOCOL_WHATSAPP -> Impp(WHATSAPP, it.value)
+                        PROTOCOL_SIGNAL -> Impp(SIGNAL, it.value)
+                        PROTOCOL_VIBER -> Impp(VIBER, it.value)
+                        PROTOCOL_TELEGRAM -> Impp(TELEGRAM, it.value)
+                        PROTOCOL_THREEMA -> Impp(THREEMA, it.value)
+                        PROTOCOL_TEAMS -> Impp(TEAMS, it.value)
+                        PROTOCOL_WECOM -> Impp(WECOM, it.value)
+                        PROTOCOL_GOOGLE_CHAT -> Impp(GOOGLE_CHAT, it.value)
+                        PROTOCOL_MATRIX -> Impp(MATRIX, it.value)
+                        PROTOCOL_DISCORD -> Impp(DISCORD, it.value)
+                        PROTOCOL_WECHAT -> Impp(WECHAT, it.value)
+                        PROTOCOL_LINE -> Impp(LINE, it.value)
+                        PROTOCOL_INSTAGRAM -> Impp(INSTAGRAM, it.value)
+                        PROTOCOL_FACEBOOK -> Impp(FACEBOOK, it.value)
+                        PROTOCOL_TWITTER -> Impp(TWITTER, it.value)
+                        PROTOCOL_LINKEDIN -> Impp(LINKEDIN, it.value)
+                        PROTOCOL_MAX -> Impp(MAX, it.value)
+//                        else -> Impp(it.label, it.value)
+                        else -> {
+                            // We check whether the value is a valid URI
+                            if (it.value.matches(Regex("^[a-zA-Z][a-zA-Z0-9+.-]*:.*$"))) {
+                                Impp(it.label, it.value)
+                            } else {
+                                // We use the XMPP scheme for the JID format
+                                if (it.value.contains("@") && !it.value.contains(":")) {
+                                    Impp("xmpp", it.value)
+                                } else {
+                                    // Skip invalid IM
+                                    return@forEach
+                                }
+                            }
+                        }
                     }
 
                     card.addImpp(impp)
