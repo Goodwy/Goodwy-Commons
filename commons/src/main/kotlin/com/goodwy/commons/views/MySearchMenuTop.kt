@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import com.google.android.material.appbar.MaterialToolbar
 import com.goodwy.commons.R
+import com.goodwy.commons.activities.BaseSimpleActivity
 import com.goodwy.commons.databinding.MenuSearchTopBinding
 import com.goodwy.commons.extensions.applyColorFilter
 import com.goodwy.commons.extensions.baseConfig
@@ -32,6 +33,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : MyAppBarLayo
     var showSpeechToText = false
     var onSpeechToTextClickListener: (() -> Unit)? = null
     var inFocus = false
+    var isDialog = true
 
     val binding = MenuSearchTopBinding.inflate(LayoutInflater.from(context), this)
 
@@ -142,7 +144,7 @@ open class MySearchMenuTop(context: Context, attrs: AttributeSet) : MyAppBarLayo
         )
 
         //No need to update the status bar when using it in a dialog
-//        (context as? BaseSimpleActivity)?.updateTopBarColors(binding.topToolbar, Color.TRANSPARENT, useColorForStatusBar = false)
+        if (!isDialog) (context as? BaseSimpleActivity)?.updateTopBarColors(this, background)
 
         binding.toolbarContainer.setBackgroundResource(R.drawable.search_bg)
         binding.toolbarContainer.backgroundTintList = ColorStateList.valueOf(surfaceColor)
