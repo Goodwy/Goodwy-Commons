@@ -405,4 +405,7 @@ Se hai già acquistato questa app o fatto una donazione, grazie! Invia la tua co
     <string name="scale">Scala</string>
     <string name="long_text_behavior">Comportamento del testo lungo</string>
     <string name="cut_off">Ordinare</string>
+    <string name="header_color">Colore dell\'intestazione</string>
+    <string name="label_color">Colore dell\'etichetta</string>
+    <string name="label_g">Etichetta</string>
 </resources>

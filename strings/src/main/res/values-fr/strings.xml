@@ -414,4 +414,7 @@ Si vous avez déjà acheté cette application ou fait un don, merci ! Envoyez v
     <string name="scale">Échelle</string>
     <string name="long_text_behavior">Comportement des textes longs</string>
     <string name="cut_off">Garniture</string>
+    <string name="header_color">Couleur de l\'en-tête</string>
+    <string name="label_color">couleur de l\'étiquette</string>
+    <string name="label_g">Étiquette</string>
 </resources>

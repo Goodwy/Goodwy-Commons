@@ -412,4 +412,7 @@ Wenn Sie diese App bereits gekauft oder eine Spende geleistet haben, vielen Dank
     <string name="scale">Skala</string>
     <string name="long_text_behavior">Verhalten langer Texte</string>
     <string name="cut_off">Trimmen</string>
+    <string name="header_color">Headerfarbe</string>
+    <string name="label_color">Etikettenfarbe</string>
+    <string name="label_g">Etikett</string>
 </resources>

@@ -407,4 +407,7 @@
     <string name="scale">Скала</string>
     <string name="long_text_behavior">Однесување кон долг текст</string>
     <string name="cut_off">Скрати</string>
+    <string name="header_color">Боја на заглавието</string>
+    <string name="label_color">Боја на етикетата</string>
+    <string name="label_g">Етикета</string>
 </resources>

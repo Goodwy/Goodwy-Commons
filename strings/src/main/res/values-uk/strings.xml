@@ -410,4 +410,7 @@
     <string name="scale">Масштаб</string>
     <string name="long_text_behavior">Поведінка довгого тексту</string>
     <string name="cut_off">Обрізати</string>
+    <string name="header_color">Колір заголовка</string>
+    <string name="label_color">Колір мітки</string>
+    <string name="label_g">Мітка</string>
 </resources>

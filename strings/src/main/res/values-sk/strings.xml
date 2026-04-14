@@ -407,4 +407,7 @@ Ak ste si túto aplikáciu už predtým zakúpili alebo ste prispeli darom, ďak
     <string name="scale">Mierka</string>
     <string name="long_text_behavior">Správanie pri dlhých textoch</string>
     <string name="cut_off">Orezať</string>
+    <string name="header_color">Farba hlavičky</string>
+    <string name="label_color">Farba štítku</string>
+    <string name="label_g">Štítok</string>
 </resources>

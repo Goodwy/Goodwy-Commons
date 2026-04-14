@@ -404,4 +404,7 @@
     <string name="scale">அளவுகோல்</string>
     <string name="long_text_behavior">நீண்ட உரை நடத்தை</string>
     <string name="cut_off">டிரிம்</string>
+    <string name="header_color">தலைப்பு நிறம்</string>
+    <string name="label_color">லேபிள் நிறம்</string>
+    <string name="label_g">லேபிள்</string>
 </resources>

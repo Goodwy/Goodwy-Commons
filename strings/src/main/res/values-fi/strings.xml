@@ -406,4 +406,7 @@ Jos olet aiemmin ostanut t채m채n sovelluksen tai tehnyt lahjoituksen, kiitos! L�
     <string name="scale">Skaala</string>
     <string name="long_text_behavior">Pitk채n tekstin toiminta</string>
     <string name="cut_off">Leikata</string>
+    <string name="header_color">Yl채tunnisteen v채ri</string>
+    <string name="label_color">Tarran v채ri</string>
+    <string name="label_g">Tarra</string>
 </resources>

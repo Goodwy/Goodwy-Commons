@@ -407,4 +407,7 @@ Pokud jste si tuto aplikaci již dříve zakoupili nebo přispěli, děkujeme! P
     <string name="scale">Měřítko</string>
     <string name="long_text_behavior">Chování dlouhého textu</string>
     <string name="cut_off">Oříznout</string>
+    <string name="header_color">Barva záhlaví</string>
+    <string name="label_color">Barva štítku</string>
+    <string name="label_g">Označení</string>
 </resources>

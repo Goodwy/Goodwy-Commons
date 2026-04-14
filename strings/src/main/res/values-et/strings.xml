@@ -408,4 +408,7 @@ Kui olete selle rakenduse varem ostnud või annetuse teinud, siis täname teid! 
     <string name="scale">Skaala</string>
     <string name="long_text_behavior">Pika teksti käitumine</string>
     <string name="cut_off">Kärpimine</string>
+    <string name="header_color">Päise värv</string>
+    <string name="label_color">Sildi värv</string>
+    <string name="label_g">Silt</string>
 </resources>

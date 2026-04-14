@@ -405,4 +405,7 @@ Aplikazio hau lehenago erosi baduzu edo dohaintza bat egin baduzu, eskerrik asko
     <string name="scale">Eskala</string>
     <string name="long_text_behavior">Testu luzeen portaera</string>
     <string name="cut_off">Moztu</string>
+    <string name="header_color">Goiburuko kolorea</string>
+    <string name="label_color">Etiketaren kolorea</string>
+    <string name="label_g">Etiketa</string>
 </resources>

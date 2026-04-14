@@ -407,4 +407,7 @@ Ako ste prethodno kupili ovu aplikaciju ili dali donaciju, hvala vam! Pošaljite
     <string name="scale">Razmjera</string>
     <string name="long_text_behavior">Ponašanje pri dugom tekstu</string>
     <string name="cut_off">Skrati</string>
+    <string name="header_color">Boja zaglavlja</string>
+    <string name="label_color">Boja oznake</string>
+    <string name="label_g">Oznaka</string>
 </resources>

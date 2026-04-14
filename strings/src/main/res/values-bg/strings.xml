@@ -408,4 +408,7 @@
     <string name="scale">Мащаб</string>
     <string name="long_text_behavior">Поведение при дълъг текст</string>
     <string name="cut_off">Подрязване</string>
+    <string name="header_color">Цвят на заглавката</string>
+    <string name="label_color">Цвят на етикета</string>
+    <string name="label_g">Етикет</string>
 </resources>

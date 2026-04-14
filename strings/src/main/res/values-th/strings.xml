@@ -412,4 +412,7 @@
     <string name="scale">มาตราส่วน</string>
     <string name="long_text_behavior">พฤติกรรมข้อความยาว</string>
     <string name="cut_off">ตัดแต่ง</string>
+    <string name="header_color">สีส่วนหัว</string>
+    <string name="label_color">สีของฉลาก</string>
+    <string name="label_g">ฉลาก</string>
 </resources>

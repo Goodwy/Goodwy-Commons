@@ -413,4 +413,7 @@
     <string name="scale">規模</string>
     <string name="long_text_behavior">長文本行為</string>
     <string name="cut_off">修剪</string>
+    <string name="header_color">標題顏色</string>
+    <string name="label_color">標籤顏色</string>
+    <string name="label_g">標籤</string>
 </resources>

@@ -409,4 +409,7 @@ Als je deze app eerder hebt gekocht of een donatie hebt gedaan, bedankt! Stuur j
     <string name="scale">Schaal</string>
     <string name="long_text_behavior">Gedrag bij lange teksten</string>
     <string name="cut_off">Trim</string>
+    <string name="header_color">Koptekstkleur</string>
+    <string name="label_color">Labelkleur</string>
+    <string name="label_g">Label</string>
 </resources>

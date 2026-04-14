@@ -403,4 +403,7 @@ Ha korábban megvásárolta ezt az alkalmazást vagy adományozott, köszönjük
     <string name="scale">Skála</string>
     <string name="long_text_behavior">Hosszú szöveg viselkedése</string>
     <string name="cut_off">Vágás</string>
+    <string name="header_color">Fejléc színe</string>
+    <string name="label_color">Címke színe</string>
+    <string name="label_g">Címke</string>
 </resources>

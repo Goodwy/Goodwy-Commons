@@ -410,4 +410,7 @@
     <string name="scale">पैमाना</string>
     <string name="long_text_behavior">लंबे पाठ का व्यवहार</string>
     <string name="cut_off">काट-छांट करना</string>
+    <string name="header_color">हेडर का रंग</string>
+    <string name="label_color">लेबल का रंग</string>
+    <string name="label_g">लेबल</string>
 </resources>

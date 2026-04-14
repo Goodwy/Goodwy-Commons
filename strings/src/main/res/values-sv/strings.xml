@@ -408,4 +408,7 @@ Om du tidigare köpt den här appen eller gjort en donation, tack! Skicka din be
     <string name="scale">Skala</string>
     <string name="long_text_behavior">Beteende för lång text</string>
     <string name="cut_off">Trim</string>
+    <string name="header_color">Rubrikfärg</string>
+    <string name="label_color">Etikettfärg</string>
+    <string name="label_g">Märka</string>
 </resources>

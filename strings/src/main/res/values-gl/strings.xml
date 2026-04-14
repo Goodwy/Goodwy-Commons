@@ -405,4 +405,7 @@ Se xa compraches esta aplicación ou fixeches unha doazón, grazas! Envía a tú
     <string name="scale">Escala</string>
     <string name="long_text_behavior">Comportamento de texto longo</string>
     <string name="cut_off">Recortar</string>
+    <string name="header_color">Cor da cabeceira</string>
+    <string name="label_color">Cor da etiqueta</string>
+    <string name="label_g">Etiqueta</string>
 </resources>

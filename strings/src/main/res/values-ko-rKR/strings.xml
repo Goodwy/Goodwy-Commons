@@ -409,4 +409,7 @@
     <string name="scale">규모</string>
     <string name="long_text_behavior">긴 텍스트 동작</string>
     <string name="cut_off">손질</string>
+    <string name="header_color">헤더 색상</string>
+    <string name="label_color">라벨 색상</string>
+    <string name="label_g">상표</string>
 </resources>

@@ -410,4 +410,7 @@
     <string name="scale">Маштаб</string>
     <string name="long_text_behavior">Паводзіны доўгага тэксту</string>
     <string name="cut_off">Абрэзаць</string>
+    <string name="header_color">Колер загалоўка</string>
+    <string name="label_color">Колер этыкеткі</string>
+    <string name="label_g">Этыкетка</string>
 </resources>

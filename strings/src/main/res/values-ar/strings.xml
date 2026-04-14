@@ -406,4 +406,7 @@
     <string name="scale">حجم</string>
     <string name="long_text_behavior">سلوك النصوص الطويلة</string>
     <string name="cut_off">تقليم</string>
+    <string name="header_color">لون رأس الصفحة</string>
+    <string name="label_color">لون الملصق</string>
+    <string name="label_g">ملصق</string>
 </resources>

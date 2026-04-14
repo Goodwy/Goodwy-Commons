@@ -404,4 +404,7 @@ Os gwnaethoch chi brynu’r ap hwn o’r blaen neu wneud rhodd, diolch! Anfonwch
     <string name="scale">Graddfa</string>
     <string name="long_text_behavior">Ymddygiad testun hir</string>
     <string name="cut_off">Trimio</string>
+    <string name="header_color">Lliw\'r pennawd</string>
+    <string name="label_color">Lliw label</string>
+    <string name="label_g">Label</string>
 </resources>

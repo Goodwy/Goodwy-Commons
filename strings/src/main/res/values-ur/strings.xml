@@ -407,4 +407,7 @@
     <string name="scale">پیمانہ</string>
     <string name="long_text_behavior">لمبا متن سلوک</string>
     <string name="cut_off">تراشنا</string>
+    <string name="header_color">ہیڈر کا رنگ</string>
+    <string name="label_color">لیبل کا رنگ</string>
+    <string name="label_g">لیبل</string>
 </resources>

@@ -405,4 +405,7 @@
     <string name="scale">مقیاس</string>
     <string name="long_text_behavior">رفتار متن طولانی</string>
     <string name="cut_off">تریم</string>
+    <string name="header_color">رنگ هدر</string>
+    <string name="label_color">رنگ برچسب</string>
+    <string name="label_g">برچسب</string>
 </resources>

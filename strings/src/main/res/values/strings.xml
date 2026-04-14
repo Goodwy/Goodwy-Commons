@@ -434,4 +434,9 @@ Incoming calls will continue to ring from people in your contacts and recent out
     <string name="event_type">Event type</string>
     <string name="availability">Availability</string>
     <string name="attendees">Attendees</string>
+
+    <!-- Widgets -->
+    <string name="header_color">Header color</string>
+    <string name="label_color">Label color</string>
+    <string name="label_g">Label</string>
 </resources>

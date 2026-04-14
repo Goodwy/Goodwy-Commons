@@ -405,4 +405,7 @@ Ako ste prethodno kupili ovu aplikaciju ili donirali, hvala vam! Pošaljite svoj
     <string name="scale">Skala</string>
     <string name="long_text_behavior">Ponašanje dugog teksta</string>
     <string name="cut_off">Obrezivanje</string>
+    <string name="header_color">Boja zaglavlja</string>
+    <string name="label_color">Boja oznake</string>
+    <string name="label_g">Označiti</string>
 </resources>

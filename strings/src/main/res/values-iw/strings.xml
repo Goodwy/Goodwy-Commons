@@ -404,4 +404,7 @@
     <string name="scale">סוּלָם</string>
     <string name="long_text_behavior">התנהגות טקסט ארוך</string>
     <string name="cut_off">מְטוּפָּח</string>
+    <string name="header_color">צבע הכותרת</string>
+    <string name="label_color">צבע התווית</string>
+    <string name="label_g">מַדבֵּקָה</string>
 </resources>

@@ -404,4 +404,7 @@ Hvis du tidligere har købt denne app eller doneret, tak! Send din bekræftelse 
     <string name="scale">Skala</string>
     <string name="long_text_behavior">Lang tekstadfærd</string>
     <string name="cut_off">Trim</string>
+    <string name="header_color">Farve på overskrift</string>
+    <string name="label_color">Etiketfarve</string>
+    <string name="label_g">Mærke</string>
 </resources>

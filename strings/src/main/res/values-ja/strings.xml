@@ -405,4 +405,7 @@
     <string name="scale">規模</string>
     <string name="long_text_behavior">長いテキストの動作</string>
     <string name="cut_off">トリム</string>
+    <string name="header_color">ヘッダーの色</string>
+    <string name="label_color">ラベルの色</string>
+    <string name="label_g">ラベル</string>
 </resources>

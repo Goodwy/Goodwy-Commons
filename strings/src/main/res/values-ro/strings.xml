@@ -407,4 +407,7 @@ Dacă ați achiziționat anterior această aplicație sau ați făcut o donație
     <string name="scale">Scară</string>
     <string name="long_text_behavior">Comportamentul textului lung</string>
     <string name="cut_off">Aranjare</string>
+    <string name="header_color">Culoarea antetului</string>
+    <string name="label_color">Culoarea etichetei</string>
+    <string name="label_g">Eticheta</string>
 </resources>

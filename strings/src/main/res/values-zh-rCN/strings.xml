@@ -406,4 +406,7 @@
     <string name="scale">规模</string>
     <string name="long_text_behavior">长文本行为</string>
     <string name="cut_off">修剪</string>
+    <string name="header_color">标题颜色</string>
+    <string name="label_color">标签颜色</string>
+    <string name="label_g">标签</string>
 </resources>

@@ -410,4 +410,7 @@ Hvis du tidligere kjøpte denne appen eller ga en donasjon, takk! Send bekreftel
     <string name="scale">Skala</string>
     <string name="long_text_behavior">Lang tekstvirkemåte</string>
     <string name="cut_off">Trim</string>
+    <string name="header_color">Topptekstfarge</string>
+    <string name="label_color">Etikettfarge</string>
+    <string name="label_g">Merkelapp</string>
 </resources>

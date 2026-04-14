@@ -406,4 +406,7 @@ Hazırkı tətbiqiniz işləməyə davam edəcək və yeniləmələr alacaq.<br>
     <string name="scale">Miqyas</string>
     <string name="long_text_behavior">Uzun mətn davranışı</string>
     <string name="cut_off">Kəsmə</string>
+    <string name="header_color">Başlıq rəngi</string>
+    <string name="label_color">Etiket rəngi</string>
+    <string name="label_g">Etiket</string>
 </resources>

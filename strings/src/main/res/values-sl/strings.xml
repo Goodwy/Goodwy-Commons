@@ -408,4 +408,7 @@ Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><b
     <string name="scale">Lestvica</string>
     <string name="long_text_behavior">Obnašanje dolgega besedila</string>
     <string name="cut_off">Obrezovanje</string>
+    <string name="header_color">Barva glave</string>
+    <string name="label_color">Barva oznake</string>
+    <string name="label_g">Oznaka</string>
 </resources>

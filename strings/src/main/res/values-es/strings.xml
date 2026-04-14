@@ -404,4 +404,7 @@ Si ya compraste esta aplicación o hiciste una donación, ¡gracias! Envía tu c
     <string name="scale">Escala</string>
     <string name="long_text_behavior">Comportamiento de texto largo</string>
     <string name="cut_off">Recortar</string>
+    <string name="header_color">Color del encabezado</string>
+    <string name="label_color">Color de la etiqueta</string>
+    <string name="label_g">Etiqueta</string>
 </resources>

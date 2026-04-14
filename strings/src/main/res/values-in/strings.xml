@@ -410,4 +410,7 @@ Jika Anda sebelumnya telah membeli aplikasi ini atau memberikan donasi, terima k
     <string name="scale">Skala</string>
     <string name="long_text_behavior">Perilaku teks panjang</string>
     <string name="cut_off">Memangkas</string>
+    <string name="header_color">Warna header</string>
+    <string name="label_color">Warna label</string>
+    <string name="label_g">Label</string>
 </resources>

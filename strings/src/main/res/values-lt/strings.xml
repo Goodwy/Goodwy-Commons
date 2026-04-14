@@ -405,4 +405,7 @@ Jei anksčiau įsigijote šią programėlę arba paaukojote, ačiū! Patvirtinim
     <string name="scale">Mastelis</string>
     <string name="long_text_behavior">Ilgo teksto elgsena</string>
     <string name="cut_off">Apkirpti</string>
+    <string name="header_color">Antraštės spalva</string>
+    <string name="label_color">Etiketės spalva</string>
+    <string name="label_g">Etiketė</string>
 </resources>

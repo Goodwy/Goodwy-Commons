@@ -408,4 +408,7 @@
     <string name="scale">স্কেল</string>
     <string name="long_text_behavior">দীর্ঘ টেক্সট আচরণ</string>
     <string name="cut_off">ছাঁটাই</string>
+    <string name="header_color">হেডারের রঙ</string>
+    <string name="label_color">লেবেলের রঙ</string>
+    <string name="label_g">লেবেল</string>
 </resources>

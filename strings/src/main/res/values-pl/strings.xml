@@ -407,4 +407,7 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="scale">Skala</string>
     <string name="long_text_behavior">Zachowanie długiego tekstu</string>
     <string name="cut_off">Przycinać</string>
+    <string name="header_color">Kolor nagłówka</string>
+    <string name="label_color">Kolor etykiety</string>
+    <string name="label_g">Etykieta</string>
 </resources>

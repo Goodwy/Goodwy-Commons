@@ -415,4 +415,7 @@ Se você já comprou este aplicativo ou fez uma doação, muito obrigado! Envie 
     <string name="scale">Escala</string>
     <string name="long_text_behavior">Comportamento de texto longo</string>
     <string name="cut_off">Aparar</string>
+    <string name="header_color">Cor do cabeçalho</string>
+    <string name="label_color">Cor da etiqueta</string>
+    <string name="label_g">Rótulo</string>
 </resources>

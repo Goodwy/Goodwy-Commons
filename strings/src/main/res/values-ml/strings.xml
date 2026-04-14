@@ -406,4 +406,7 @@
     <string name="scale">സ്കെയിൽ</string>
     <string name="long_text_behavior">ദൈർഘ്യമേറിയ ടെക്സ്റ്റ് രീതി</string>
     <string name="cut_off">ട്രിം ചെയ്യുക</string>
+    <string name="header_color">തലക്കെട്ടിന്റെ നിറം</string>
+    <string name="label_color">ലേബലിന്റെ നിറം</string>
+    <string name="label_g">ലേബൽ</string>
 </resources>

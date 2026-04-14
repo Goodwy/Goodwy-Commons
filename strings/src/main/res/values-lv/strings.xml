@@ -407,4 +407,7 @@ Ja iepriekš esat iegādājies šo lietotni vai veicis ziedojumu, paldies! Nosū
     <string name="scale">Mērogs</string>
     <string name="long_text_behavior">Gara teksta darbība</string>
     <string name="cut_off">Apgriezt</string>
+    <string name="header_color">Galvenes krāsa</string>
+    <string name="label_color">Etiķetes krāsa</string>
+    <string name="label_g">Etiķete</string>
 </resources>
