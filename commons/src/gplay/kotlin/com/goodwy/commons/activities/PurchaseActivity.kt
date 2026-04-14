@@ -482,7 +482,7 @@ class PurchaseActivity : BaseSimpleActivity() {
 
         val appAllInstalled = if (isNewApp) {
             appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
-                appFilesInstalled && appCalculatorInstalled
+                appFilesInstalled && appCalculatorInstalled && appCalendarInstalled
         } else {
             appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
                 appFilesInstalled && appAudiobookLiteInstalled /*&& appKeyboardInstalled*/ && appCalendarInstalled //&& appVoiceRecorderInstalled
@@ -500,6 +500,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 SimpleListItem(4, R.string.alright_files, imageRes = R.drawable.ic_files_new, selected = appFilesInstalled, packageName = appFilesPackage),
                 SimpleListItem(5, R.string.alright_gallery, imageRes = R.drawable.ic_gallery_new, selected = appGalleryInstalled, packageName = appGalleryPackage),
                 SimpleListItem(6, R.string.alright_calculator, imageRes = R.drawable.ic_calculator, selected = appCalculatorInstalled, packageName = appCalculatorPackage),
+                SimpleListItem(8, R.string.alright_calendar, imageRes = R.drawable.ic_calendar_app_new, selected = appCalendarInstalled, packageName = appCalendarPackage),
             )
         } else {
             arrayOf(
