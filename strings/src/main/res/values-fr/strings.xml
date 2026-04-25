@@ -250,7 +250,7 @@ Si vous avez déjà acheté cette application ou fait un don, merci ! Envoyez v
 
     <!-- Apps -->
     <string name="show_nicknames_instead_of_names">Afficher les surnoms des contacts (le cas échéant) au lieu de leur nom</string>
-    <string name="death">La mort</string>
+    <string name="death">Décès</string>
     <string name="add_field">Ajouter un champ</string>
     <string name="failed_open_link">Échec de l\'ouverture du lien</string>
     <string name="get">Obtenir</string>
