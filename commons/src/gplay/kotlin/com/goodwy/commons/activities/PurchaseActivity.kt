@@ -466,7 +466,7 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appFilesPackage = prefix + "goodwy.filemanager"
 //        val appKeyboardPackage = prefix + "goodwy.keyboard"
         val appCalendarPackage = prefix + "goodwy.calendar"
-//        val appVoiceRecorderPackage = prefix + "goodwy.voicerecorderfree"
+        val appVoiceRecorderPackage = prefix + "goodwy.voicerecorder"
         val appCalculatorPackage = "dev.goodwy.math"
 
         val appDialerInstalled = isPackageInstalled(appDialerPackage)
@@ -477,12 +477,12 @@ class PurchaseActivity : BaseSimpleActivity() {
         val appFilesInstalled = isPackageInstalled(appFilesPackage)
 //        val appKeyboardInstalled = isPackageInstalled(appKeyboardPackage)
         val appCalendarInstalled = isPackageInstalled(appCalendarPackage)
-//        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)
+        val appVoiceRecorderInstalled = isPackageInstalled(appVoiceRecorderPackage)
         val appCalculatorInstalled = isPackageInstalled(appCalculatorPackage)
 
         val appAllInstalled = if (isNewApp) {
             appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
-                appFilesInstalled && appCalculatorInstalled && appCalendarInstalled
+                appFilesInstalled && appCalculatorInstalled && appCalendarInstalled && appVoiceRecorderInstalled
         } else {
             appDialerInstalled && appContactsInstalled && appSmsMessengerInstalled && appGalleryInstalled &&
                 appFilesInstalled && appAudiobookLiteInstalled /*&& appKeyboardInstalled*/ && appCalendarInstalled //&& appVoiceRecorderInstalled
@@ -501,6 +501,7 @@ class PurchaseActivity : BaseSimpleActivity() {
                 SimpleListItem(5, R.string.alright_gallery, imageRes = R.drawable.ic_gallery_new, selected = appGalleryInstalled, packageName = appGalleryPackage),
                 SimpleListItem(6, R.string.alright_calculator, imageRes = R.drawable.ic_calculator_app, selected = appCalculatorInstalled, packageName = appCalculatorPackage),
                 SimpleListItem(8, R.string.alright_calendar, imageRes = R.drawable.ic_calendar_app_new, selected = appCalendarInstalled, packageName = appCalendarPackage),
+                SimpleListItem(9, R.string.alright_voice_recorder, imageRes = R.drawable.ic_voice_recorder, selected = appVoiceRecorderInstalled, packageName = appVoiceRecorderPackage)
             )
         } else {
             arrayOf(
