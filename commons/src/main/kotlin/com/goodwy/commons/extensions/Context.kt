@@ -1627,6 +1627,11 @@ fun Context.isCollection(): Boolean {
         isPackageInstalled(prefix + "goodwy.phone")
             && isPackageInstalled(prefix + "goodwy.contacts")
             && isPackageInstalled(prefix + "goodwy.messages")
+            && isPackageInstalled(prefix + "goodwy.gallery")
+            && isPackageInstalled(prefix + "goodwy.filemanager")
+            && isPackageInstalled(prefix + "goodwy.calendar")
+            && isPackageInstalled(prefix + "goodwy.voicerecorder")
+            && isPackageInstalled(prefix + "goodwy.math")
     } else {
         isPackageInstalled(prefix + "goodwy.dialer")
             && isPackageInstalled(prefix + "goodwy.contacts")
