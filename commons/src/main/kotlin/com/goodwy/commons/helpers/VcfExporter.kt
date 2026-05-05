@@ -353,4 +353,58 @@ class VcfExporter {
         card.addProperty(RawProperty("X-EVENT-LABEL", eventLabel))
         card.addProperty(RawProperty("X-EVENT-ORIGINAL-TYPE", event.type.toString()))
     }
+
+    /**
+     * Generates a vCard string based on the selected fields
+     * @param contact contact
+     */
+    fun generateCustomVCardString(
+        contact: Contact,
+        includePhone: Boolean = false,
+        includeEmail: Boolean = false,
+        includeAddress: Boolean = false,
+        includeWebsite: Boolean = false,
+        shrink: Boolean = false,
+    ): String {
+        return buildString {
+            append("BEGIN:VCARD\n")
+            append("VERSION:3.0\n")
+
+            val name = contact.getNameToDisplay()
+            if (name.isNotEmpty()) {
+                append("FN:$name\n")
+            }
+
+            if (includePhone && contact.phoneNumbers.isNotEmpty()) {
+                contact.phoneNumbers.forEach { phone ->
+                    val typeLabel = getPhoneNumberTypeLabel(phone.type, phone.label)
+                    val type = if (!shrink) ";TYPE=$typeLabel" else ""
+                    append("TEL$type:${phone.value}\n")
+                }
+            }
+
+            if (includeEmail && contact.emails.isNotEmpty()) {
+                contact.emails.forEach { email ->
+                    val typeLabel = getEmailTypeLabel(email.type, email.label)
+                    val type = if (!shrink) ";TYPE=$typeLabel" else ""
+                    append("EMAIL$type:${email.value}\n")
+                }
+            }
+
+            if (includeAddress && contact.addresses.isNotEmpty()) {
+                contact.addresses.forEach { address ->
+                    val typeLabel = getAddressTypeLabel(address.type, address.label)
+                    val type = if (!shrink) ";TYPE=$typeLabel" else ""
+                    append("ADR$type:${address.value}\n")
+                }
+            }
+
+            if (includeWebsite && contact.websites.isNotEmpty()) {
+                contact.websites.forEach { website ->
+                    append("URL:$website\n")
+                }
+            }
+            append("END:VCARD")
+        }
+    }
 }

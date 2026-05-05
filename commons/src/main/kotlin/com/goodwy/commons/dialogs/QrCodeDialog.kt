@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -66,7 +67,11 @@ class QrCodeDialog(
         view.message.beVisibleIf(message.isNotBlank())
 
         val qrBitmap = QrCodeHelper.generateQrCode(activity, content, 640)
-        view.qrCode.setImageBitmap(qrBitmap)
+        if (qrBitmap != null) view.qrCode.setImageBitmap(qrBitmap)
+        else {
+            view.qrCode.setImageResource(R.drawable.ic_question_round)
+            view.qrCode.contentDescription = activity.resources.getString(R.string.unknown_error_occurred)
+        }
 
         val builder = activity.getAlertDialogBuilder()
             .setPositiveButton(positive) { _, _ -> dialogConfirmed() }
@@ -140,10 +145,19 @@ fun QrCodeDialog(
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                qrBitmap?.let {
+                if (qrBitmap != null) {
                     Image(
-                        bitmap = it.asImageBitmap(),
+                        bitmap = qrBitmap.asImageBitmap(),
                         contentDescription = stringResource(id = R.string.qr_code),
+                        modifier = Modifier
+                            .size(240.dp)
+                            .background(Color.White, RoundedCornerShape(12.dp))
+                            .padding(12.dp)
+                    )
+                } else {
+                    Image(
+                        painter = painterResource(id = R.drawable.ic_question_round),
+                        contentDescription = stringResource(id = R.string.unknown_error_occurred),
                         modifier = Modifier
                             .size(240.dp)
                             .background(Color.White, RoundedCornerShape(12.dp))
