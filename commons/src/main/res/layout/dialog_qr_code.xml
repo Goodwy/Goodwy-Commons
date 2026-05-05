@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/big_margin">
+
+        <com.goodwy.commons.views.MyTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:textSize="@dimen/extra_big_text_size"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/qr_code" />
+
+        <com.goodwy.commons.views.MyTextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qr_code"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:textSize="@dimen/bigger_text_size" />
+
+    </RelativeLayout>
+</ScrollView>

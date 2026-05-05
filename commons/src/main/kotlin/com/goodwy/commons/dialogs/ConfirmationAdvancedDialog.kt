@@ -22,8 +22,14 @@ import com.goodwy.commons.extensions.setupDialogStuff
 
 // similar fo ConfirmationDialog, but has a callback for negative button too
 class ConfirmationAdvancedDialog(
-    activity: Activity, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
-    negative: Int = R.string.no, val cancelOnTouchOutside: Boolean = true, val fromHtml: Boolean = false, val callback: (result: Boolean) -> Unit
+    activity: Activity,
+    message: String = "",
+    messageId: Int = R.string.proceed_with_deletion,
+    positive: Int = R.string.yes,
+    negative: Int = R.string.no,
+    val cancelOnTouchOutside: Boolean = true,
+    val fromHtml: Boolean = false,
+    val callback: (result: Boolean) -> Unit
 ) {
     private var dialog: AlertDialog? = null
 

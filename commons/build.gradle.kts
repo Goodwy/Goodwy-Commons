@@ -200,6 +200,7 @@ dependencies {
     "hmsImplementation"(libs.hms.appservice)
     "hmsImplementation"(libs.hms.agconnect)
     api(libs.persian.date)
+    api(libs.zxing.core)
     implementation(libs.behavio.rule)
     implementation(libs.rx.animation)
     implementation(libs.rx.java)

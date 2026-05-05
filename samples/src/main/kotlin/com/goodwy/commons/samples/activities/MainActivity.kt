@@ -18,6 +18,7 @@ import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.ChangeDateTimeFormatDialog
 import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
 import com.goodwy.commons.dialogs.NewAppDialog
+import com.goodwy.commons.dialogs.QrCodeDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
 import com.goodwy.commons.dialogs.SecurityDialog
 import com.goodwy.commons.extensions.*
@@ -52,7 +53,7 @@ class MainActivity : BaseSimpleActivity() {
                     showComposeDialogs = {
                         startActivity(Intent(this@MainActivity, TestDialogActivity::class.java))
                     },
-                    openTestButton = ::newAppDialog, //::securityDialog,//::setupStartDate,
+                    openTestButton = ::qrDialog, //::newAppDialog, //::securityDialog,//::setupStartDate,
                     showMoreApps = showMoreApps,
                     openAbout = ::launchAbout,
                     moreAppsFromUs = ::launchMoreAppsFromUs,
@@ -167,6 +168,15 @@ class MainActivity : BaseSimpleActivity() {
                 config.appProtectionType = type
             }
         }
+    }
+
+    private fun qrDialog() {
+        QrCodeDialog(
+            activity = this,
+            message = "Contact",
+            content = "Contact",
+            dialogTitle = "Qr Code",
+        ) {}
     }
 
     private fun newAppDialog() {

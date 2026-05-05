@@ -54,6 +54,7 @@ hms = "6.13.0.300"
 hms-appservice = "5.0.4.303"
 hms-agconnect = "1.8.1.300"
 persianDate = "1.7.1"
+zxing = "3.5.4"
 #Gradle
 gradlePlugins-agp = "8.11.1"
 #build
@@ -119,6 +120,7 @@ hms-client = { module = "com.huawei.hms:iap", version.ref = "hms" }
 hms-appservice = { module = "com.huawei.hms:appservice", version.ref = "hms-appservice" }
 hms-agconnect = { module = "com.huawei.agconnect:agconnect-core", version.ref = "hms-agconnect" }
 persian-date = { module = "com.github.samanzamani:PersianDate", version.ref = "persianDate" }
+zxing-core = { module = "com.google.zxing:core", version.ref = "zxing" }
 #Kotlin
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 kotlin-immutable-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlin-immutable-collections" }
