@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/message_scrollview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -20,19 +21,28 @@
             android:textSize="@dimen/extra_big_text_size"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/qr_code"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/qr_code_holder"
             android:layout_width="240dp"
             android:layout_height="240dp"
             android:layout_below="@+id/title"
             android:layout_centerHorizontal="true"
-            android:contentDescription="@string/qr_code" />
+            android:padding="@dimen/medium_margin"
+            app:cardCornerRadius="@dimen/activity_margin"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/qr_code" />
+        </androidx.cardview.widget.CardView>
 
         <com.goodwy.commons.views.MyTextView
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/qr_code"
+            android:layout_below="@+id/qr_code_holder"
             android:gravity="center_horizontal"
             android:paddingLeft="@dimen/activity_margin"
             android:paddingTop="@dimen/activity_margin"
