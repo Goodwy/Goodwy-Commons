@@ -245,6 +245,7 @@
     <string name="add_field">フィールドを追加</string>
     <string name="failed_open_link">リンクを開けませんでした</string>
     <string name="address_g">住所</string>
+    <string name="qr_code_contact_faq">QRコードに保存できるデータ量は限られています（通常は最大約3,000文字）。電話番号、メールアドレス、住所、その他の詳細情報を含む完全な連絡先情報は、多くの場合この制限を超えるため、連絡先全体を一度にエンコードすることは不可能です。そのため、送信時には、必要な情報のみを抽出した簡略化されたvCard（バージョン3.0）が生成されます。</string>
     <string name="get">ゲット</string>
     <string name="open">開く</string>
     <string name="collection">コレクション</string>

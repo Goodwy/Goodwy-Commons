@@ -274,6 +274,7 @@
     <string name="add_field">Add field</string>
     <string name="failed_open_link">Failed to open link</string>
     <string name="address_g">Address</string>
+    <string name="qr_code_contact_faq">QR codes can only store a limited amount of data (typically up to ~3,000 characters). Since a complete contact with all phone numbers, emails, addresses, and other details often exceeds this limit, it\'s impossible to encode the entire contact at once. Instead, a simplified vCard (version 3.0) containing only selected essential information is generated for transmission.</string>
 
     <!-- Apps -->
     <string name="get">Get</string>

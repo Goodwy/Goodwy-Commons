@@ -246,6 +246,7 @@ Jos olet aiemmin ostanut tämän sovelluksen tai tehnyt lahjoituksen, kiitos! L�
     <string name="add_field">Lisää kenttä</string>
     <string name="failed_open_link">Linkin avaaminen epäonnistui</string>
     <string name="address_g">Osoite</string>
+    <string name="qr_code_contact_faq">QR-koodit voivat tallentaa vain rajoitetun määrän tietoa (yleensä jopa noin 3 000 merkkiä). Koska täydellinen yhteystieto kaikkine puhelinnumeroineen, sähköpostiosoitteineen, osoitteineen ja muine tietoineen usein ylittää tämän rajan, koko yhteystiedon koodaaminen kerralla on mahdotonta. Sen sijaan lähetystä varten luodaan yksinkertaistettu vCard (versio 3.0), joka sisältää vain valitut olennaiset tiedot.</string>
     <string name="get">Hanki</string>
     <string name="open">Avaa</string>
     <string name="collection">Kokoelma</string>

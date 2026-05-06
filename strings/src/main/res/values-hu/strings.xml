@@ -243,6 +243,7 @@ Ha korábban megvásárolta ezt az alkalmazást vagy adományozott, köszönjük
     <string name="add_field">Mező hozzáadása</string>
     <string name="failed_open_link">Nem sikerült megnyitni a linket</string>
     <string name="address_g">Cím</string>
+    <string name="qr_code_contact_faq">A QR-kódok csak korlátozott mennyiségű adatot tudnak tárolni (általában legfeljebb ~3000 karaktert). Mivel egy teljes névjegy, beleértve az összes telefonszámot, e-mail címet, címet és egyéb adatot, gyakran meghaladja ezt a korlátot, lehetetlen a teljes névjegyet egyszerre kódolni. Ehelyett egy egyszerűsített vCard (3.0-s verzió) generálódik a továbbításhoz, amely csak a kiválasztott lényeges információkat tartalmazza.</string>
     <string name="get">Letöltés</string>
     <string name="open">Nyitott</string>
     <string name="collection">Gyűjtemény</string>

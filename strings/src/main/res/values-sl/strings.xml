@@ -248,6 +248,7 @@ Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><b
     <string name="add_field">Dodaj polje</string>
     <string name="failed_open_link">Povezave ni bilo mogoče odpreti</string>
     <string name="address_g">Naslov</string>
+    <string name="qr_code_contact_faq">QR kode lahko shranijo le omejeno količino podatkov (običajno do ~3000 znakov). Ker celoten stik z vsemi telefonskimi številkami, e-poštnimi naslovi, naslovi in ​​drugimi podatki pogosto preseže to omejitev, je nemogoče kodirati celotnega stika naenkrat. Namesto tega se za prenos ustvari poenostavljena datoteka vCard (različica 3.0), ki vsebuje le izbrane bistvene podatke.</string>
     <string name="get">Pridobi</string>
     <string name="open">Odpri</string>
     <string name="collection">Zbirka</string>

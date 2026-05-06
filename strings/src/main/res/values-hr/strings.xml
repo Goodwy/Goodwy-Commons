@@ -245,6 +245,7 @@ Ako ste prethodno kupili ovu aplikaciju ili donirali, hvala vam! Pošaljite svoj
     <string name="add_field">Dodaj polje</string>
     <string name="failed_open_link">Nije uspjelo otvaranje poveznice</string>
     <string name="address_g">Adresa</string>
+    <string name="qr_code_contact_faq">QR kodovi mogu pohraniti samo ograničenu količinu podataka (obično do ~3000 znakova). Budući da potpuni kontakt sa svim telefonskim brojevima, e-mail adresama, adresama i drugim detaljima često prelazi to ograničenje, nemoguće je kodirati cijeli kontakt odjednom. Umjesto toga, za prijenos se generira pojednostavljena vCard (verzija 3.0) koja sadrži samo odabrane bitne podatke.</string>
     <string name="get">Dohvati</string>
     <string name="open">Otvori</string>
     <string name="collection">Zbirka</string>

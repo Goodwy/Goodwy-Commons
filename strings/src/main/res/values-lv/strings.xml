@@ -247,6 +247,7 @@ Ja iepriekš esat iegādājies šo lietotni vai veicis ziedojumu, paldies! Nosū
     <string name="add_field">Pievienot lauku</string>
     <string name="failed_open_link">Neizdevās atvērt saiti</string>
     <string name="address_g">Adrese</string>
+    <string name="qr_code_contact_faq">QR kodi var saglabāt tikai ierobežotu datu apjomu (parasti līdz ~3000 rakstzīmēm). Tā kā pilnīgs kontakts ar visiem tālruņu numuriem, e-pasta adresēm, adresēm un citu informāciju bieži vien pārsniedz šo ierobežojumu, visu kontaktu nav iespējams uzreiz kodēt. Tā vietā pārsūtīšanai tiek ģenerēta vienkāršota vCard (3.0 versija), kurā ir tikai atlasīta būtiskā informācija.</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

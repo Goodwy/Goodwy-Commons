@@ -3,15 +3,13 @@ package com.goodwy.commons.extensions
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.media.ExifInterface
+import androidx.exifinterface.media.ExifInterface
 import android.os.Handler
 import android.os.Looper
 import android.util.TypedValue
 import androidx.core.graphics.ColorUtils
 import androidx.core.os.postDelayed
 import com.goodwy.commons.helpers.DARK_GREY
-import com.goodwy.commons.helpers.LUMINANCE_OFFSET
-import com.goodwy.commons.helpers.MAX_ALPHA_INT
 import com.goodwy.commons.helpers.WCAG_AA_NORMAL
 import java.text.DecimalFormat
 import java.util.Locale
@@ -19,7 +17,6 @@ import java.util.Random
 import kotlin.math.log10
 import kotlin.math.pow
 import kotlin.math.roundToInt
-import kotlin.math.sqrt
 
 fun Int.getContrastColor(): Int {
     val luminance = ColorUtils.calculateLuminance(this)

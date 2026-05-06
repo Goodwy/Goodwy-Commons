@@ -246,6 +246,7 @@
     <string name="add_field">Додај поле</string>
     <string name="failed_open_link">Неуспешно отворање на линкот</string>
     <string name="address_g">Адреса</string>
+    <string name="qr_code_contact_faq">QR кодовите можат да складираат само ограничена количина на податоци (обично до ~3.000 знаци). Бидејќи целосен контакт со сите телефонски броеви, е-пошта, адреси и други детали честопати го надминува ова ограничување, невозможно е да се кодира целиот контакт одеднаш. Наместо тоа, за пренос се генерира поедноставена vCard (верзија 3.0) што содржи само избрани основни информации.</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

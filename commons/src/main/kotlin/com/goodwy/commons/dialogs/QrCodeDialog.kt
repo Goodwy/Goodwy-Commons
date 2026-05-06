@@ -75,11 +75,11 @@ class QrCodeDialog(
 
         val builder = activity.getAlertDialogBuilder()
             .setPositiveButton(positive) { _, _ -> dialogConfirmed() }
+            .setNeutralButton(R.string.faq) { _, _ -> showFaqDialog(activity) }
 
         builder.apply {
             activity.setupDialogStuff(
                 view.root, this,
-//                titleText = dialogTitle,
                 cancelOnTouchOutside = true
             ) { alertDialog ->
                 dialog = alertDialog
@@ -90,6 +90,16 @@ class QrCodeDialog(
     private fun dialogConfirmed() {
         callback()
         dialog?.dismiss()
+    }
+
+    private fun showFaqDialog(activity: Activity) {
+        ConfirmationDialog(
+            activity,
+            "",
+            com.goodwy.strings.R.string.qr_code_contact_faq,
+            positive = android.R.string.ok,
+            negative = 0
+        ) {}
     }
 }
 

@@ -246,6 +246,7 @@
     <string name="add_field">添加字段</string>
     <string name="failed_open_link">无法打开链接</string>
     <string name="address_g">地址</string>
+    <string name="qr_code_contact_faq">二维码只能存储有限的数据量（通常最多约 3000 个字符）。由于包含所有电话号码、电子邮件、地址和其他详细信息的完整联系人信息通常超过此限制，因此无法一次性编码整个联系人信息。取而代之的是，生成一个仅包含部分必要信息的简化版 vCard（版本 3.0）进行传输。</string>
     <string name="get">获取</string>
     <string name="open">开放式</string>
     <string name="collection">集合</string>

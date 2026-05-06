@@ -262,6 +262,7 @@ Má cheannaigh tú an aip seo roimhe seo nó má rinne tú síntiús, go raibh m
     <string name="add_field">Cuir réimse leis</string>
     <string name="failed_open_link">Theip ar an nasc a oscailt</string>
     <string name="address_g">Seoladh</string>
+    <string name="qr_code_contact_faq">Ní féidir le cóid QR ach méid teoranta sonraí a stóráil (suas le ~3,000 carachtar de ghnáth). Ós rud é go mbíonn teagmháil iomlán ina bhfuil na huimhreacha gutháin, na ríomhphoist, na seoltaí agus sonraí eile go léir níos mó ná an teorainn seo go minic, ní féidir an teagmháil iomlán a ionchódú ag an am céanna. Ina áit sin, gintear vCard simplithe (leagan 3.0) ina bhfuil faisnéis riachtanach roghnaithe amháin le haghaidh tarchuir.</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

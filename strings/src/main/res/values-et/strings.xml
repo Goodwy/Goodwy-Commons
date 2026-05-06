@@ -248,6 +248,7 @@ Kui olete selle rakenduse varem ostnud või annetuse teinud, siis täname teid! 
     <string name="add_field">Lisa väli</string>
     <string name="failed_open_link">Lingi avamine ebaõnnestus</string>
     <string name="address_g">Aadress</string>
+    <string name="qr_code_contact_faq">QR-koodid suudavad salvestada vaid piiratud hulgal andmeid (tavaliselt kuni ~3000 tähemärki). Kuna täielik kontakt koos kõigi telefoninumbrite, e-posti aadresside, aadresside ja muude andmetega ületab sageli selle piiri, on kogu kontakti korraga kodeerimine võimatu. Selle asemel genereeritakse edastamiseks lihtsustatud vCard (versioon 3.0), mis sisaldab ainult valitud olulist teavet.</string>
     <string name="get">Hangi</string>
     <string name="open">Ava</string>
     <string name="collection">Kogu</string>

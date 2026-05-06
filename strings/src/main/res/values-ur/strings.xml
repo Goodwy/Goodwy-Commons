@@ -247,6 +247,7 @@
     <string name="add_field">فیلڈ شامل کریں۔</string>
     <string name="failed_open_link">لنک کھولنے میں ناکام</string>
     <string name="address_g">پتہ</string>
+    <string name="qr_code_contact_faq">QR کوڈز صرف ایک محدود مقدار میں ڈیٹا (عام طور پر ~3,000 حروف تک) کو محفوظ کر سکتے ہیں۔ چونکہ تمام فون نمبرز، ای میلز، پتے اور دیگر تفصیلات کے ساتھ ایک مکمل رابطہ اکثر اس حد سے تجاوز کر جاتا ہے، اس لیے پورے رابطے کو ایک ساتھ انکوڈ کرنا ناممکن ہے۔ اس کے بجائے، ٹرانسمیشن کے لیے صرف منتخب ضروری معلومات پر مشتمل ایک آسان وی کارڈ (ورژن 3.0) تیار کیا جاتا ہے۔</string>
     <string name="get">حاصل کریں</string>
     <string name="open">کھولیں</string>
     <string name="collection">مجموعہ</string>

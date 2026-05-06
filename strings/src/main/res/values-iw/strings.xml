@@ -244,6 +244,7 @@
     <string name="add_field">הוסף שדה</string>
     <string name="failed_open_link">פתיחת הקישור נכשלה</string>
     <string name="address_g">כְּתוֹבֶת</string>
+    <string name="qr_code_contact_faq">קודי QR יכולים לאחסן רק כמות מוגבלת של נתונים (בדרך כלל עד כ-3,000 תווים). מכיוון שאיש קשר שלם הכולל את כל מספרי הטלפון, האימיילים, הכתובות ופרטים אחרים חורג לעתים קרובות ממגבלה זו, בלתי אפשרי לקודד את איש הקשר כולו בבת אחת. במקום זאת, נוצרת עבור העברה vCard פשוטה (גרסה 3.0) המכילה רק מידע חיוני נבחר.</string>
     <string name="get">קבל</string>
     <string name="open">פתח</string>
     <string name="collection">אוסף</string>

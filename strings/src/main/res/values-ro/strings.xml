@@ -247,6 +247,7 @@ Dacă ați achiziționat anterior această aplicație sau ați făcut o donație
     <string name="add_field">Adăugați un câmp</string>
     <string name="failed_open_link">Nu s-a putut deschide linkul</string>
     <string name="address_g">Adresa</string>
+    <string name="qr_code_contact_faq">Codurile QR pot stoca doar o cantitate limitată de date (de obicei, până la ~3.000 de caractere). Deoarece un contact complet, cu toate numerele de telefon, adresele de e-mail, adresele și alte detalii, depășește adesea această limită, este imposibil să codificați întregul contact dintr-o dată. În schimb, pentru transmitere este generat un vCard simplificat (versiunea 3.0) care conține doar informații esențiale selectate.</string>
     <string name="get">Obțineți</string>
     <string name="open">Deschideți</string>
     <string name="collection">Colecție</string>

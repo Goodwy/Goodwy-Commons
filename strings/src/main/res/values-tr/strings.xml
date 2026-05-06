@@ -252,6 +252,7 @@ Bu uygulamayı daha önce satın aldıysanız veya bağış yaptıysanız, teşe
     <string name="add_field">Alan ekle</string>
     <string name="failed_open_link">Bağlantı açılamadı</string>
     <string name="address_g">Adres</string>
+    <string name="qr_code_contact_faq">QR kodları yalnızca sınırlı miktarda veri depolayabilir (genellikle ~3.000 karaktere kadar). Tüm telefon numaraları, e-postalar, adresler ve diğer ayrıntıları içeren eksiksiz bir iletişim bilgisi genellikle bu sınırı aştığı için, tüm iletişim bilgilerini tek seferde kodlamak mümkün değildir. Bunun yerine, yalnızca seçilen temel bilgileri içeren basitleştirilmiş bir vCard (sürüm 3.0) oluşturularak iletilir.</string>
     <string name="get">Almak</string>
     <string name="open">Açık</string>
     <string name="collection">Koleksiyon</string>

@@ -247,6 +247,7 @@ Se vi antaŭe aĉetis ĉi tiun aplikaĵon aŭ faris donacon, dankon! Sendu vian 
     <string name="add_field">Aldoni kampon</string>
     <string name="failed_open_link">Malsukcesis malfermi ligilon</string>
     <string name="address_g">Adreso</string>
+    <string name="qr_code_contact_faq">QR-kodoj povas konservi nur limigitan kvanton da datumoj (tipe ĝis ~3 000 signoj). Ĉar kompleta kontakto kun ĉiuj telefonnumeroj, retpoŝtadresoj, adresoj kaj aliaj detaloj ofte superas ĉi tiun limon, estas neeble ĉifri la tutan kontakton samtempe. Anstataŭe, simpligita vCard (versio 3.0) enhavanta nur elektitajn esencajn informojn estas generita por transdono.</string>
     <string name="get">Akiri</string>
     <string name="open">Malfermu</string>
     <string name="collection">Kolekto</string>

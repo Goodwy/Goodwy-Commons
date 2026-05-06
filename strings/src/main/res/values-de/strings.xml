@@ -252,6 +252,7 @@ Wenn Sie diese App bereits gekauft oder eine Spende geleistet haben, vielen Dank
     <string name="add_field">Feld hinzufügen</string>
     <string name="failed_open_link">Link konnte nicht geöffnet werden</string>
     <string name="address_g">Adresse</string>
+    <string name="qr_code_contact_faq">QR-Codes können nur eine begrenzte Datenmenge speichern (typischerweise bis zu ca. 3.000 Zeichen). Da ein vollständiger Kontakt mit allen Telefonnummern, E-Mail-Adressen, Anschriften und weiteren Details diese Grenze oft überschreitet, ist es nicht möglich, den gesamten Kontakt auf einmal zu kodieren. Stattdessen wird für die Übertragung eine vereinfachte vCard (Version 3.0) generiert, die nur die wichtigsten Informationen enthält.</string>
     <string name="get">Get</string>
     <string name="open">Öffnen</string>
     <string name="collection">Sammlung</string>

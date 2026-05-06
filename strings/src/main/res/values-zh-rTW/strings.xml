@@ -251,6 +251,7 @@
     <string name="add_field">新增字段</string>
     <string name="failed_open_link">無法開啟連結</string>
     <string name="address_g">地址</string>
+    <string name="qr_code_contact_faq">二維碼只能儲存有限的資料量（通常最多約 3000 個字元）。由於包含所有電話號碼、電子郵件、地址和其他詳細資訊的完整聯絡人資訊通常超過此限制，因此無法一次編碼整個聯絡人資訊。取而代之的是，產生一個僅包含部分必要資訊的簡化版 vCard（版本 3.0）進行傳輸。</string>
     <string name="get">獲取</string>
     <string name="open">打開</string>
     <string name="collection">收藏</string>

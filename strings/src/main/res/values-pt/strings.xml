@@ -253,6 +253,7 @@ Se você já comprou este aplicativo ou fez uma doação, muito obrigado! Envie 
     <string name="add_field">Adicionar campo</string>
     <string name="failed_open_link">Falha ao abrir o link</string>
     <string name="address_g">Endereço</string>
+    <string name="qr_code_contact_faq">Os códigos QR só podem armazenar uma quantidade limitada de dados (normalmente até cerca de 3.000 caracteres). Como um contato completo, com todos os números de telefone, e-mails, endereços e outros detalhes, geralmente excede esse limite, é impossível codificar todo o contato de uma só vez. Em vez disso, um vCard simplificado (versão 3.0) contendo apenas as informações essenciais selecionadas é gerado para transmissão.</string>
     <string name="get">Obter</string>
     <string name="open">Abrir</string>
     <string name="collection">Colecção</string>

@@ -255,6 +255,7 @@ Hvis du tidligere kjøpte denne appen eller ga en donasjon, takk! Send bekreftel
     <string name="add_field">Legg til felt</string>
     <string name="failed_open_link">Kunne ikke åpne lenken</string>
     <string name="address_g">Adresse</string>
+    <string name="qr_code_contact_faq">QR-koder kan bare lagre en begrenset mengde data (vanligvis opptil ~3000 tegn). Siden en komplett kontakt med alle telefonnumre, e-postadresser, adresser og andre detaljer ofte overskrider denne grensen, er det umulig å kode hele kontakten samtidig. I stedet genereres et forenklet vCard (versjon 3.0) som kun inneholder utvalgt viktig informasjon for overføring.</string>
     <string name="get">Få</string>
     <string name="open">Åpent</string>
     <string name="collection">Innsamling</string>

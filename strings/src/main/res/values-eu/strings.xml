@@ -244,6 +244,7 @@ Aplikazio hau lehenago erosi baduzu edo dohaintza bat egin baduzu, eskerrik asko
     <string name="add_field">Gehitu eremua</string>
     <string name="failed_open_link">Ezin izan da esteka ireki</string>
     <string name="address_g">Helbidea</string>
+    <string name="qr_code_contact_faq">QR kodeek datu kopuru mugatu bat baino ezin dute gorde (normalean ~3.000 karaktere arte). Telefono zenbaki, posta elektroniko, helbide eta bestelako xehetasun guztiekin kontaktu oso batek muga hori gainditzen duenez askotan, ezinezkoa da kontaktu osoa aldi berean kodetzea. Horren ordez, informazio ezinbesteko hautatua soilik duen vCard sinplifikatu bat (3.0 bertsioa) sortzen da transmisiorako.</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Bilduma</string>

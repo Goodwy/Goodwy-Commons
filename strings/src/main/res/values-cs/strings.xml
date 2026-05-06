@@ -247,6 +247,7 @@ Pokud jste si tuto aplikaci již dříve zakoupili nebo přispěli, děkujeme! P
     <string name="add_field">Přidat pole</string>
     <string name="failed_open_link">Odkaz se nepodařilo otevřít</string>
     <string name="address_g">Adresa</string>
+    <string name="qr_code_contact_faq">QR kódy mohou ukládat pouze omezené množství dat (obvykle až ~3 000 znaků). Protože kompletní kontakt se všemi telefonními čísly, e-maily, adresami a dalšími údaji tento limit často překračuje, není možné zakódovat celý kontakt najednou. Místo toho se pro přenos generuje zjednodušená vizitka vCard (verze 3.0) obsahující pouze vybrané základní informace.</string>
     <string name="get">Získat</string>
     <string name="open">Otevřít</string>
     <string name="collection">Sbírka</string>

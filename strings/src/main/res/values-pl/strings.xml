@@ -247,6 +247,7 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="add_field">Dodaj pole</string>
     <string name="failed_open_link">Nie udało się otworzyć linku</string>
     <string name="address_g">Adres</string>
+    <string name="qr_code_contact_faq">Kody QR mogą przechowywać ograniczoną ilość danych (zwykle do ~3000 znaków). Ponieważ pełny kontakt ze wszystkimi numerami telefonów, adresami e-mail, adresami i innymi szczegółami często przekracza ten limit, nie jest możliwe zakodowanie całego kontaktu naraz. Zamiast tego, do transmisji generowana jest uproszczona wizytówka vCard (wersja 3.0) zawierająca tylko wybrane, istotne informacje.</string>
     <string name="get">Wejdź na stronę</string>
     <string name="open">Otwórz</string>
     <string name="collection">Kolekcja</string>

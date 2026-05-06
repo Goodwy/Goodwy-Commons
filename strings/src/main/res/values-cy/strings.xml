@@ -244,6 +244,7 @@ Os gwnaethoch chi brynu’r ap hwn o’r blaen neu wneud rhodd, diolch! Anfonwch
     <string name="add_field">Ychwanegu maes</string>
     <string name="failed_open_link">Methwyd agor y ddolen</string>
     <string name="address_g">Cyfeiriad</string>
+    <string name="qr_code_contact_faq">Dim ond swm cyfyngedig o ddata y gall codau QR ei storio (hyd at ~3,000 o nodau fel arfer). Gan fod cyswllt cyflawn gyda\'r holl rifau ffôn, e-byst, cyfeiriadau a manylion eraill yn aml yn fwy na\'r terfyn hwn, mae\'n amhosibl amgodio\'r cyswllt cyfan ar unwaith. Yn lle hynny, cynhyrchir vCard symlach (fersiwn 3.0) sy\'n cynnwys gwybodaeth hanfodol ddethol yn unig i\'w drosglwyddo.</string>
     <string name="get">Cael</string>
     <string name="open">Agor</string>
     <string name="collection">Casgliad</string>

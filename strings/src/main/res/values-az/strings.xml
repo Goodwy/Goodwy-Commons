@@ -246,6 +246,7 @@ Hazırkı tətbiqiniz işləməyə davam edəcək və yeniləmələr alacaq.<br>
     <string name="add_field">Sahə əlavə edin</string>
     <string name="failed_open_link">Linki açmaq alınmadı</string>
     <string name="address_g">Ünvan</string>
+    <string name="qr_code_contact_faq">QR kodları yalnız məhdud miqdarda məlumat saxlaya bilər (adətən ~3000 simvola qədər). Bütün telefon nömrələri, e-poçtlar, ünvanlar və digər məlumatlarla tam əlaqə çox vaxt bu limiti aşdığından, bütün əlaqəni birdən kodlaşdırmaq mümkün deyil. Bunun əvəzinə, ötürülmə üçün yalnız seçilmiş vacib məlumatları ehtiva edən sadələşdirilmiş vCard (versiya 3.0) yaradılır.</string>
     <string name="get">Yüklə</string>
     <string name="open">Açıq</string>
     <string name="collection">Kolleksiya</string>

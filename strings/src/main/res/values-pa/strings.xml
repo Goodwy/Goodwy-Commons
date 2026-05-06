@@ -247,6 +247,7 @@
     <string name="add_field">ਖੇਤਰ ਸ਼ਾਮਲ ਕਰੋ</string>
     <string name="failed_open_link">ਲਿੰਕ ਖੋਲ੍ਹਣ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="address_g">ਪਤਾ</string>
+    <string name="qr_code_contact_faq">QR ਕੋਡ ਸਿਰਫ਼ ਸੀਮਤ ਮਾਤਰਾ ਵਿੱਚ ਡੇਟਾ ਸਟੋਰ ਕਰ ਸਕਦੇ ਹਨ (ਆਮ ਤੌਰ \'ਤੇ ~3,000 ਅੱਖਰਾਂ ਤੱਕ)। ਕਿਉਂਕਿ ਸਾਰੇ ਫ਼ੋਨ ਨੰਬਰਾਂ, ਈਮੇਲਾਂ, ਪਤਿਆਂ ਅਤੇ ਹੋਰ ਵੇਰਵਿਆਂ ਵਾਲਾ ਇੱਕ ਪੂਰਾ ਸੰਪਰਕ ਅਕਸਰ ਇਸ ਸੀਮਾ ਤੋਂ ਵੱਧ ਜਾਂਦਾ ਹੈ, ਇਸ ਲਈ ਪੂਰੇ ਸੰਪਰਕ ਨੂੰ ਇੱਕੋ ਸਮੇਂ ਏਨਕੋਡ ਕਰਨਾ ਅਸੰਭਵ ਹੈ। ਇਸਦੀ ਬਜਾਏ, ਇੱਕ ਸਰਲ vCard (ਵਰਜਨ 3.0) ਜਿਸ ਵਿੱਚ ਸਿਰਫ਼ ਚੁਣੀ ਗਈ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀ ਹੁੰਦੀ ਹੈ, ਪ੍ਰਸਾਰਣ ਲਈ ਤਿਆਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।</string>
     <string name="get">ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="open">ਖੋਲੋ</string>
     <string name="collection">ਸੰਗ੍ਰਹਿ</string>

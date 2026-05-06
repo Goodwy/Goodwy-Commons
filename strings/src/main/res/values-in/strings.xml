@@ -250,6 +250,7 @@ Jika Anda sebelumnya telah membeli aplikasi ini atau memberikan donasi, terima k
     <string name="add_field">Tambahkan bidang</string>
     <string name="failed_open_link">Gagal membuka tautan</string>
     <string name="address_g">Alamat</string>
+    <string name="qr_code_contact_faq">Kode QR hanya dapat menyimpan sejumlah data terbatas (biasanya hingga sekitar 3.000 karakter). Karena kontak lengkap dengan semua nomor telepon, email, alamat, dan detail lainnya seringkali melebihi batas ini, tidak mungkin untuk mengkodekan seluruh kontak sekaligus. Sebagai gantinya, vCard yang disederhanakan (versi 3.0) yang hanya berisi informasi penting terpilih akan dibuat untuk dikirimkan.</string>
     <string name="get">Dapatkan</string>
     <string name="open">Buka</string>
     <string name="collection">Koleksi</string>

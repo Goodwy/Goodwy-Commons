@@ -245,6 +245,7 @@ Jei anksčiau įsigijote šią programėlę arba paaukojote, ačiū! Patvirtinim
     <string name="add_field">Pridėti lauką</string>
     <string name="failed_open_link">Nepavyko atidaryti nuorodos</string>
     <string name="address_g">Adresas</string>
+    <string name="qr_code_contact_faq">QR kodai gali saugoti tik ribotą duomenų kiekį (paprastai iki ~3000 simbolių). Kadangi visas kontaktas su visais telefono numeriais, el. pašto adresais, adresais ir kita informacija dažnai viršija šią ribą, neįmanoma iš karto užkoduoti viso kontakto. Vietoj to, perdavimui generuojama supaprastinta vCard (3.0 versija), kurioje yra tik pasirinkta esminė informacija.</string>
     <string name="get">Gauti</string>
     <string name="open">Atidaryti</string>
     <string name="collection">Surinkimas</string>
