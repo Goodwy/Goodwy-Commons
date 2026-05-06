@@ -1944,7 +1944,13 @@ fun Activity.showContactQrCode(contact: Contact) {
     }
 }
 
-private fun Activity.generateAndShowQr(contact: Contact, includePhone: Boolean, includeEmail: Boolean, includeAddress: Boolean, includeWebsite: Boolean) {
+private fun Activity.generateAndShowQr(
+    contact: Contact,
+    includePhone: Boolean,
+    includeEmail: Boolean,
+    includeAddress: Boolean,
+    includeWebsite: Boolean
+) {
     val exporter = VcfExporter()
 
     // Let's try the regular size

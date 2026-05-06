@@ -407,4 +407,14 @@ class VcfExporter {
             append("END:VCARD")
         }
     }
+
+    fun generateSimpleVCard(name: String, phone: String): String {
+        return buildString {
+            append("BEGIN:VCARD\n")
+            append("VERSION:3.0\n")
+            append("FN:$name\n")
+            append("TEL:$phone\n")
+            append("END:VCARD")
+        }
+    }
 }
