@@ -249,6 +249,7 @@ Jika Anda sebelumnya telah membeli aplikasi ini atau memberikan donasi, terima k
     <string name="death">Kematian</string>
     <string name="add_field">Tambahkan bidang</string>
     <string name="failed_open_link">Gagal membuka tautan</string>
+    <string name="address_g">Alamat</string>
     <string name="get">Dapatkan</string>
     <string name="open">Buka</string>
     <string name="collection">Koleksi</string>

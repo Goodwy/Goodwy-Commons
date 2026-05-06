@@ -256,6 +256,7 @@
     <string name="death">Смерть</string>
     <string name="add_field">Добавить поле</string>
     <string name="failed_open_link">Не удалось открыть ссылку</string>
+    <string name="address_g">Адрес</string>
     <string name="get">Загрузить</string>
     <string name="open">Открыть</string>
     <string name="collection">Коллекция</string>

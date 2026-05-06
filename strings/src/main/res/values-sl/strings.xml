@@ -247,6 +247,7 @@ Vaša trenutna aplikacija bo še naprej delovala in prejemala posodobitve.<br><b
     <string name="death">Smrt</string>
     <string name="add_field">Dodaj polje</string>
     <string name="failed_open_link">Povezave ni bilo mogoče odpreti</string>
+    <string name="address_g">Naslov</string>
     <string name="get">Pridobi</string>
     <string name="open">Odpri</string>
     <string name="collection">Zbirka</string>

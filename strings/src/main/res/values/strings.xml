@@ -273,6 +273,7 @@
     <string name="death">Death</string>
     <string name="add_field">Add field</string>
     <string name="failed_open_link">Failed to open link</string>
+    <string name="address_g">Address</string>
 
     <!-- Apps -->
     <string name="get">Get</string>

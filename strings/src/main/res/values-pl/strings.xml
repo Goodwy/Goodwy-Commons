@@ -246,6 +246,7 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="death">Śmierć</string>
     <string name="add_field">Dodaj pole</string>
     <string name="failed_open_link">Nie udało się otworzyć linku</string>
+    <string name="address_g">Adres</string>
     <string name="get">Wejdź na stronę</string>
     <string name="open">Otwórz</string>
     <string name="collection">Kolekcja</string>

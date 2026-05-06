@@ -250,6 +250,7 @@
     <string name="death">死亡</string>
     <string name="add_field">新增字段</string>
     <string name="failed_open_link">無法開啟連結</string>
+    <string name="address_g">地址</string>
     <string name="get">獲取</string>
     <string name="open">打開</string>
     <string name="collection">收藏</string>

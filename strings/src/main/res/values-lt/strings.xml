@@ -244,6 +244,7 @@ Jei anksčiau įsigijote šią programėlę arba paaukojote, ačiū! Patvirtinim
     <string name="death">Mirtis</string>
     <string name="add_field">Pridėti lauką</string>
     <string name="failed_open_link">Nepavyko atidaryti nuorodos</string>
+    <string name="address_g">Adresas</string>
     <string name="get">Gauti</string>
     <string name="open">Atidaryti</string>
     <string name="collection">Surinkimas</string>

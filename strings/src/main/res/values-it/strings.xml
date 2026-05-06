@@ -244,6 +244,7 @@ Se hai già acquistato questa app o fatto una donazione, grazie! Invia la tua co
     <string name="death">Morte</string>
     <string name="add_field">Aggiungi campo</string>
     <string name="failed_open_link">Impossibile aprire il collegamento</string>
+    <string name="address_g">Indirizzo</string>
     <string name="get">Prendi</string>
     <string name="open">Aprire</string>
     <string name="collection">Collezione</string>

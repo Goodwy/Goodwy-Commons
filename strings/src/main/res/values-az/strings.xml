@@ -245,6 +245,7 @@ Hazırkı tətbiqiniz işləməyə davam edəcək və yeniləmələr alacaq.<br>
     <string name="death">Ölüm</string>
     <string name="add_field">Sahə əlavə edin</string>
     <string name="failed_open_link">Linki açmaq alınmadı</string>
+    <string name="address_g">Ünvan</string>
     <string name="get">Yüklə</string>
     <string name="open">Açıq</string>
     <string name="collection">Kolleksiya</string>

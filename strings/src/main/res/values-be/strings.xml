@@ -248,6 +248,7 @@
     <string name="death">Смерць</string>
     <string name="add_field">Дадаць поле</string>
     <string name="failed_open_link">Не атрымалася адкрыць спасылку</string>
+    <string name="address_g">Адрас</string>
     <string name="get">Загрузіць</string>
     <string name="open">Адкрыць</string>
     <string name="collection">Калекцыя</string>

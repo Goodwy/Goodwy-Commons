@@ -245,6 +245,7 @@
     <string name="death">موت</string>
     <string name="add_field">إضافة حقل</string>
     <string name="failed_open_link">فشل في فتح الرابط</string>
+    <string name="address_g">عنوان</string>
     <string name="get">تنزيل</string>
     <string name="open">فتح</string>
     <string name="collection">المجموعة</string>

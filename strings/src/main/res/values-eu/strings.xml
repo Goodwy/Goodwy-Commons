@@ -243,6 +243,7 @@ Aplikazio hau lehenago erosi baduzu edo dohaintza bat egin baduzu, eskerrik asko
     <string name="death">Heriotza</string>
     <string name="add_field">Gehitu eremua</string>
     <string name="failed_open_link">Ezin izan da esteka ireki</string>
+    <string name="address_g">Helbidea</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Bilduma</string>

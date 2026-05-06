@@ -251,6 +251,7 @@ Bu uygulamayı daha önce satın aldıysanız veya bağış yaptıysanız, teşe
     <string name="death">Ölüm</string>
     <string name="add_field">Alan ekle</string>
     <string name="failed_open_link">Bağlantı açılamadı</string>
+    <string name="address_g">Adres</string>
     <string name="get">Almak</string>
     <string name="open">Açık</string>
     <string name="collection">Koleksiyon</string>

@@ -246,6 +246,7 @@
     <string name="death">موت</string>
     <string name="add_field">فیلڈ شامل کریں۔</string>
     <string name="failed_open_link">لنک کھولنے میں ناکام</string>
+    <string name="address_g">پتہ</string>
     <string name="get">حاصل کریں</string>
     <string name="open">کھولیں</string>
     <string name="collection">مجموعہ</string>

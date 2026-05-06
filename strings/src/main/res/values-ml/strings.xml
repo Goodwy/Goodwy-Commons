@@ -245,6 +245,7 @@
     <string name="death">മരണം</string>
     <string name="add_field">ഫീൽഡ് ചേർക്കുക</string>
     <string name="failed_open_link">ലിങ്ക് തുറക്കാനായില്ല</string>
+    <string name="address_g">വിലാസം</string>
     <string name="get">നേടുക</string>
     <string name="open">തുറക്കുക</string>
     <string name="collection">ശേഖരം</string>

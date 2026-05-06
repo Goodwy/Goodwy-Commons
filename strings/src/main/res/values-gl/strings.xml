@@ -244,6 +244,7 @@ Se xa compraches esta aplicación ou fixeches unha doazón, grazas! Envía a tú
     <string name="death">Morte</string>
     <string name="add_field">Engadir campo</string>
     <string name="failed_open_link">Non se puido abrir a ligazón</string>
+    <string name="address_g">Enderezo</string>
     <string name="get">Obter</string>
     <string name="open">Abrir</string>
     <string name="collection">Colección</string>

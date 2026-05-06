@@ -247,6 +247,7 @@ Om du tidigare köpt den här appen eller gjort en donation, tack! Skicka din be
     <string name="death">Död</string>
     <string name="add_field">Lägg till fält</string>
     <string name="failed_open_link">Misslyckades med att öppna länken</string>
+    <string name="address_g">Adress</string>
     <string name="get">Hämta</string>
     <string name="open">Öppna</string>
     <string name="collection">Samling</string>

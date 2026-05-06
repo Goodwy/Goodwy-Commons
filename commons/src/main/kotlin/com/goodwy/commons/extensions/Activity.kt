@@ -48,6 +48,7 @@ import com.goodwy.commons.helpers.*
 import com.goodwy.commons.helpers.MyContentProvider.COL_LAST_UPDATED_TS
 import com.goodwy.commons.helpers.MyContentProvider.MY_CONTENT_URI
 import com.goodwy.commons.models.*
+import com.goodwy.commons.models.contacts.Contact
 import com.goodwy.commons.views.MyTextView
 import com.google.android.material.snackbar.Snackbar
 import java.io.*
@@ -1881,4 +1882,96 @@ fun Activity.showSupportSnackbar(
     snackbar.setTextColor(getProperTextColor())
     snackbar.setActionTextColor(getProperPrimaryColor())
     snackbar.show()
+}
+
+fun Activity.showContactQrCode(contact: Contact) {
+    val items = arrayListOf<RadioItem>()
+
+    if (contact.phoneNumbers.isNotEmpty()) {
+        items.add(RadioItem(
+            SHOW_PHONE_NUMBERS_FIELD,
+            getString(R.string.number),
+            icon = R.drawable.ic_phone_vector
+        ))
+    }
+
+    if (contact.emails.isNotEmpty()) {
+        items.add(RadioItem(
+            SHOW_EMAILS_FIELD,
+            getString(R.string.email),
+            icon = R.drawable.ic_mail_vector
+        ))
+    }
+
+    if (contact.addresses.isNotEmpty()) {
+        items.add(RadioItem(
+            SHOW_ADDRESSES_FIELD,
+            getString(com.goodwy.strings.R.string.address_g),
+            icon = R.drawable.ic_place_vector
+        ))
+    }
+
+    if (contact.websites.isNotEmpty()) {
+        items.add(RadioItem(
+            SHOW_WEBSITES_FIELD,
+            getString(R.string.website),
+            icon = R.drawable.ic_link_vector
+        ))
+    }
+
+    if (items.size > 1) {
+        RadioGroupIconDialog(
+            this,
+            items,
+        ) {
+            val include = it as Int
+            generateAndShowQr(
+                contact = contact,
+                includePhone = include == SHOW_PHONE_NUMBERS_FIELD,
+                includeEmail = include == SHOW_EMAILS_FIELD,
+                includeAddress = include == SHOW_ADDRESSES_FIELD,
+                includeWebsite = include == SHOW_WEBSITES_FIELD,
+            )
+        }
+    } else {
+        generateAndShowQr(
+            contact = contact,
+            includePhone = true,
+            includeEmail = true,
+            includeAddress = true,
+            includeWebsite = true,
+        )
+    }
+}
+
+private fun Activity.generateAndShowQr(contact: Contact, includePhone: Boolean, includeEmail: Boolean, includeAddress: Boolean, includeWebsite: Boolean) {
+    val exporter = VcfExporter()
+
+    // Let's try the regular size
+    var vCard = exporter.generateCustomVCardString(
+        contact = contact,
+        includePhone = includePhone,
+        includeEmail = includeEmail,
+        includeAddress = includeAddress,
+        includeWebsite = includeWebsite
+    )
+
+    // If it doesn't fit, try the compressed version
+    if (!QrCodeHelper.canFitInQrCode(vCard)) {
+        vCard = exporter.generateCustomVCardString(
+            contact = contact,
+            includePhone = includePhone,
+            includeEmail = includeEmail,
+            includeAddress = includeAddress,
+            includeWebsite = includeWebsite,
+            shrink = true
+        )
+    }
+
+    QrCodeDialog(
+        activity = this,
+        message = contact.getNameToDisplay(),
+        content = vCard,
+        dialogTitle = getString(R.string.qr_code)
+    ) {}
 }

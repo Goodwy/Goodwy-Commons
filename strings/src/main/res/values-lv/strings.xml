@@ -246,6 +246,7 @@ Ja iepriekš esat iegādājies šo lietotni vai veicis ziedojumu, paldies! Nosū
     <string name="death">Nāve</string>
     <string name="add_field">Pievienot lauku</string>
     <string name="failed_open_link">Neizdevās atvērt saiti</string>
+    <string name="address_g">Adrese</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

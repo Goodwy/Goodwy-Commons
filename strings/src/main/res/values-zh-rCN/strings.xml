@@ -245,6 +245,7 @@
     <string name="death">死亡</string>
     <string name="add_field">添加字段</string>
     <string name="failed_open_link">无法打开链接</string>
+    <string name="address_g">地址</string>
     <string name="get">获取</string>
     <string name="open">开放式</string>
     <string name="collection">集合</string>

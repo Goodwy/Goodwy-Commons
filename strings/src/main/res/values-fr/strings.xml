@@ -253,6 +253,7 @@ Si vous avez déjà acheté cette application ou fait un don, merci ! Envoyez v
     <string name="death">Décès</string>
     <string name="add_field">Ajouter un champ</string>
     <string name="failed_open_link">Échec de l\'ouverture du lien</string>
+    <string name="address_g">Adresse</string>
     <string name="get">Obtenir</string>
     <string name="open">Ouverture</string>
     <string name="collection">Collection</string>

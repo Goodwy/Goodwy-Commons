@@ -246,6 +246,7 @@ Ak ste si túto aplikáciu už predtým zakúpili alebo ste prispeli darom, ďak
     <string name="death">Smrť</string>
     <string name="add_field">Pridať pole</string>
     <string name="failed_open_link">Nepodarilo sa otvoriť odkaz</string>
+    <string name="address_g">Adresa</string>
     <string name="get">Získať</string>
     <string name="open">Otvoriť</string>
     <string name="collection">Zbierka</string>

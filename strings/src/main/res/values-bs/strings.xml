@@ -245,6 +245,7 @@ Ako ste prethodno kupili ovu aplikaciju ili dali donaciju, hvala vam! Pošaljite
     <string name="death">Smrt</string>
     <string name="add_field">Dodaj polje</string>
     <string name="failed_open_link">Nije moguće otvoriti link</string>
+    <string name="address_g">Adresa</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

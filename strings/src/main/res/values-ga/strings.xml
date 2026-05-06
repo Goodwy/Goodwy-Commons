@@ -261,6 +261,7 @@ Má cheannaigh tú an aip seo roimhe seo nó má rinne tú síntiús, go raibh m
     <string name="death">Bás</string>
     <string name="add_field">Cuir réimse leis</string>
     <string name="failed_open_link">Theip ar an nasc a oscailt</string>
+    <string name="address_g">Seoladh</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

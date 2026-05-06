@@ -254,6 +254,7 @@ Se você já comprou este aplicativo ou fez uma doação, muito obrigado! Envie 
     <string name="death">Morte</string>
     <string name="add_field">Adicionar campo</string>
     <string name="failed_open_link">Falha ao abrir o link</string>
+    <string name="address_g">Endereço</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Collection</string>

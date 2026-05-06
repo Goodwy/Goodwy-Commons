@@ -243,6 +243,7 @@
     <string name="death">Θάνατος</string>
     <string name="add_field">Προσθήκη πεδίου</string>
     <string name="failed_open_link">Αποτυχία ανοίγματος συνδέσμου</string>
+    <string name="address_g">Διεύθυνση</string>
     <string name="get">Λήψη</string>
     <string name="open">Άνοιγμα</string>
     <string name="collection">Συλλογή</string>

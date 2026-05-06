@@ -242,6 +242,7 @@ Ha korábban megvásárolta ezt az alkalmazást vagy adományozott, köszönjük
     <string name="death">Halál</string>
     <string name="add_field">Mező hozzáadása</string>
     <string name="failed_open_link">Nem sikerült megnyitni a linket</string>
+    <string name="address_g">Cím</string>
     <string name="get">Letöltés</string>
     <string name="open">Nyitott</string>
     <string name="collection">Gyűjtemény</string>

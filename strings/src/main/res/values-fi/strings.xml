@@ -245,6 +245,7 @@ Jos olet aiemmin ostanut t채m채n sovelluksen tai tehnyt lahjoituksen, kiitos! L�
     <string name="death">Kuolema</string>
     <string name="add_field">Lis채채 kentt채</string>
     <string name="failed_open_link">Linkin avaaminen ep채onnistui</string>
+    <string name="address_g">Osoite</string>
     <string name="get">Hanki</string>
     <string name="open">Avaa</string>
     <string name="collection">Kokoelma</string>

@@ -246,6 +246,7 @@ Dacă ați achiziționat anterior această aplicație sau ați făcut o donație
     <string name="death">Moarte</string>
     <string name="add_field">Adăugați un câmp</string>
     <string name="failed_open_link">Nu s-a putut deschide linkul</string>
+    <string name="address_g">Adresa</string>
     <string name="get">Obțineți</string>
     <string name="open">Deschideți</string>
     <string name="collection">Colecție</string>

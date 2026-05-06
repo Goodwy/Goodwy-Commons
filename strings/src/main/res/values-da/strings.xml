@@ -243,6 +243,7 @@ Hvis du tidligere har købt denne app eller doneret, tak! Send din bekræftelse 
     <string name="death">Død</string>
     <string name="add_field">Tilføj felt</string>
     <string name="failed_open_link">Kunne ikke åbne linket</string>
+    <string name="address_g">Adresse</string>
     <string name="get">Get</string>
     <string name="open">Open</string>
     <string name="collection">Kollektion</string>

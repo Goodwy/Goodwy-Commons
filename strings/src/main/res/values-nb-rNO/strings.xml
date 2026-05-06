@@ -254,6 +254,7 @@ Hvis du tidligere kjøpte denne appen eller ga en donasjon, takk! Send bekreftel
     <string name="death">Død</string>
     <string name="add_field">Legg til felt</string>
     <string name="failed_open_link">Kunne ikke åpne lenken</string>
+    <string name="address_g">Adresse</string>
     <string name="get">Få</string>
     <string name="open">Åpent</string>
     <string name="collection">Innsamling</string>

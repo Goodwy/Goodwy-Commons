@@ -248,6 +248,7 @@ Als je deze app eerder hebt gekocht of een donatie hebt gedaan, bedankt! Stuur j
     <string name="death">Dood</string>
     <string name="add_field">Veld toevoegen</string>
     <string name="failed_open_link">Link openen mislukt</string>
+    <string name="address_g">Adres</string>
     <string name="get">Haal</string>
     <string name="open">Open</string>
     <string name="collection">Collectie</string>

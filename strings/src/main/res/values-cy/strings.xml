@@ -243,6 +243,7 @@ Os gwnaethoch chi brynu’r ap hwn o’r blaen neu wneud rhodd, diolch! Anfonwch
     <string name="death">Marwolaeth</string>
     <string name="add_field">Ychwanegu maes</string>
     <string name="failed_open_link">Methwyd agor y ddolen</string>
+    <string name="address_g">Cyfeiriad</string>
     <string name="get">Cael</string>
     <string name="open">Agor</string>
     <string name="collection">Casgliad</string>

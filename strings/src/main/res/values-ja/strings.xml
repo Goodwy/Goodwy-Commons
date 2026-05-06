@@ -244,6 +244,7 @@
     <string name="death">死</string>
     <string name="add_field">フィールドを追加</string>
     <string name="failed_open_link">リンクを開けませんでした</string>
+    <string name="address_g">住所</string>
     <string name="get">ゲット</string>
     <string name="open">開く</string>
     <string name="collection">コレクション</string>

@@ -246,6 +246,7 @@
     <string name="death">مرگ</string>
     <string name="add_field">اضافه کردن فیلد</string>
     <string name="failed_open_link">لینک باز نشد</string>
+    <string name="address_g">آدرس</string>
     <string name="get">دریافت</string>
     <string name="open">باز کردن</string>
     <string name="collection">مجموعه</string>

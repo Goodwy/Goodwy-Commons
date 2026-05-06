@@ -251,6 +251,7 @@
     <string name="death">ความตาย</string>
     <string name="add_field">เพิ่มฟิลด์</string>
     <string name="failed_open_link">ไม่สามารถเปิดลิงค์ได้</string>
+    <string name="address_g">ที่อยู่</string>
     <string name="get">รับ</string>
     <string name="open">เปิด</string>
     <string name="collection">คอลเลคชัน</string>

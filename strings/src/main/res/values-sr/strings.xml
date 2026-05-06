@@ -247,6 +247,7 @@
     <string name="death">Смрт</string>
     <string name="add_field">Додај поље</string>
     <string name="failed_open_link">Отварање линка није успело</string>
+    <string name="address_g">Адреса</string>
     <string name="get">Преузми</string>
     <string name="open">Отвори</string>
     <string name="collection">Колекција</string>

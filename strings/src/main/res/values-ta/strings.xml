@@ -243,6 +243,7 @@
     <string name="death">இறப்பு</string>
     <string name="add_field">புலத்தைச் சேர்</string>
     <string name="failed_open_link">இணைப்பைத் திறக்க முடியவில்லை.</string>
+    <string name="address_g">முகவரி</string>
     <string name="get">பெறு</string>
     <string name="open">திற</string>
     <string name="collection">சேகரிப்பு</string>

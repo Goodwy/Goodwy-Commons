@@ -247,6 +247,7 @@ Kui olete selle rakenduse varem ostnud või annetuse teinud, siis täname teid! 
     <string name="death">Surm</string>
     <string name="add_field">Lisa väli</string>
     <string name="failed_open_link">Lingi avamine ebaõnnestus</string>
+    <string name="address_g">Aadress</string>
     <string name="get">Hangi</string>
     <string name="open">Ava</string>
     <string name="collection">Kogu</string>

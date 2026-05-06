@@ -246,6 +246,7 @@ Pokud jste si tuto aplikaci již dříve zakoupili nebo přispěli, děkujeme! P
     <string name="death">Smrt</string>
     <string name="add_field">Přidat pole</string>
     <string name="failed_open_link">Odkaz se nepodařilo otevřít</string>
+    <string name="address_g">Adresa</string>
     <string name="get">Získat</string>
     <string name="open">Otevřít</string>
     <string name="collection">Sbírka</string>

@@ -247,6 +247,7 @@
     <string name="death">Смърт</string>
     <string name="add_field">Добавяне на поле</string>
     <string name="failed_open_link">Отварянето на линка не бе успешно</string>
+    <string name="address_g">Адрес</string>
     <string name="get">Зареждане</string>
     <string name="open">Отваряне</string>
     <string name="collection">Колекция</string>

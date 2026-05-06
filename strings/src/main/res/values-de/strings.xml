@@ -251,6 +251,7 @@ Wenn Sie diese App bereits gekauft oder eine Spende geleistet haben, vielen Dank
     <string name="death">Tod</string>
     <string name="add_field">Feld hinzufügen</string>
     <string name="failed_open_link">Link konnte nicht geöffnet werden</string>
+    <string name="address_g">Adresse</string>
     <string name="get">Get</string>
     <string name="open">Öffnen</string>
     <string name="collection">Sammlung</string>

@@ -243,6 +243,7 @@ Si ya compraste esta aplicación o hiciste una donación, ¡gracias! Envía tu c
     <string name="death">Muerte</string>
     <string name="add_field">Agregar campo</string>
     <string name="failed_open_link">No se pudo abrir el enlace</string>
+    <string name="address_g">DIRECCIÓN</string>
     <string name="get">Obtener</string>
     <string name="open">Abrir</string>
     <string name="collection">Colección</string>
