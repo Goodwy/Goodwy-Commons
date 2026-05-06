@@ -27,7 +27,7 @@
             android:layout_height="240dp"
             android:layout_below="@+id/title"
             android:layout_centerHorizontal="true"
-            android:padding="@dimen/medium_margin"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="@dimen/activity_margin"
             app:cardElevation="0dp">
 
@@ -35,6 +35,7 @@
                 android:id="@+id/qr_code"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="@dimen/medium_margin"
                 android:contentDescription="@string/qr_code" />
         </androidx.cardview.widget.CardView>
 
