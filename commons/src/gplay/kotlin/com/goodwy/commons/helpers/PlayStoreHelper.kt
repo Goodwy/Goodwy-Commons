@@ -100,8 +100,8 @@ class PlayStoreHelper (
                 isSupPurchasedList.postValue(subPurchased)
             }
         }
-    private val subHistoryListener = PurchaseHistoryResponseListener {
-            billingResult: BillingResult, purchases: List<PurchaseHistoryRecord>? ->
+    private val subHistoryListener = PurchasesResponseListener {
+            billingResult: BillingResult, purchases: List<Purchase>? ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                 purchases?.forEach {
                     subsPurchased.addAll(it.products)
@@ -117,8 +117,8 @@ class PlayStoreHelper (
                 isSupPurchasedList.postValue(subPurchased)
             }
         }
-    private val iapHistoryListener = PurchaseHistoryResponseListener {
-            billingResult: BillingResult, purchases: List<PurchaseHistoryRecord>? ->
+    private val iapHistoryListener = PurchasesResponseListener {
+            billingResult: BillingResult, purchases: List<Purchase>? ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                 run breaking@{
                     purchases?.forEach {
@@ -142,7 +142,10 @@ class PlayStoreHelper (
 
     fun initBillingClient() {
         billingClient = BillingClient.newBuilder(activity)
-            .setListener(purchasesUpdatedListener).enablePendingPurchases().build()
+            .setListener(purchasesUpdatedListener)
+            .enablePendingPurchases(
+                PendingPurchasesParams.newBuilder().enableOneTimeProducts().build()
+            ).build()
     }
 
     fun retrieveDonation(iaps: ArrayList<String>, subs: ArrayList<String>) {
@@ -166,11 +169,14 @@ class PlayStoreHelper (
                                     .newBuilder().setProductList(listOf(productList))
                                 billingClient.queryProductDetailsAsync(
                                     params.build()
-                                ) { _: BillingResult?, productDetailsList: List<ProductDetails> ->
+                                ) { _: BillingResult?, productDetailsResult: QueryProductDetailsResult ->
+                                    val productDetailsList: List<ProductDetails> =
+                                        productDetailsResult.productDetailsList
+
                                     iapSkuDetails.addAll(productDetailsList)
                                     iapSkuDetailsInitialized.postValue(true)
-                                    billingClient.queryPurchaseHistoryAsync(
-                                        QueryPurchaseHistoryParams.newBuilder().setProductType(
+                                    billingClient.queryPurchasesAsync(
+                                        QueryPurchasesParams.newBuilder().setProductType(
                                             BillingClient.ProductType.INAPP
                                         ).build(), iapHistoryListener
                                     )
@@ -185,11 +191,14 @@ class PlayStoreHelper (
                                     .newBuilder().setProductList(listOf(productList))
                                 billingClient.queryProductDetailsAsync(
                                     params.build()
-                                ) { _: BillingResult?, productDetailsList: List<ProductDetails> ->
+                                ) { _: BillingResult?, productDetailsResult: QueryProductDetailsResult ->
+                                    val productDetailsList: List<ProductDetails> =
+                                        productDetailsResult.productDetailsList
+
                                     subSkuDetails.addAll(productDetailsList)
                                     subSkuDetailsInitialized.postValue(true)
-                                    billingClient.queryPurchaseHistoryAsync(
-                                        QueryPurchaseHistoryParams.newBuilder().setProductType(
+                                    billingClient.queryPurchasesAsync(
+                                        QueryPurchasesParams.newBuilder().setProductType(
                                             BillingClient.ProductType.SUBS
                                         ).build(), subHistoryListener
                                     )

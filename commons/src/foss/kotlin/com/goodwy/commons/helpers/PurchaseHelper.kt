@@ -1,6 +1,7 @@
 package com.goodwy.commons.helpers
 
 import android.app.Application
+import android.os.Bundle
 import com.goodwy.commons.activities.BaseSimpleActivity
 
 class PurchaseHelper {
@@ -8,18 +9,18 @@ class PurchaseHelper {
         //Not used for Foss
     }
 
+    fun initPurchaseToActivityIfNeed(
+        savedInstanceState: Bundle?,
+        callback: (initialized: Boolean) -> Unit
+    ) {
+        //Not used for Google Play
+    }
+
     fun checkPurchase(
         activity: BaseSimpleActivity,
-        iapList: ArrayList<String> = arrayListOf("pro_version", "pro_version_x2", "pro_version_x3"),
-        subList: ArrayList<String> =
-            arrayListOf("subscription_x1", "subscription_x2", "subscription_x3",
-                "subscription_year_x1", "subscription_year_x2", "subscription_year_x3"),
-        ruStoreList: ArrayList<String> =
-            arrayListOf(
-                "pro_version", "pro_version_x2", "pro_version_x3",
-                "subscription_x1", "subscription_x2", "subscription_x3",
-                "subscription_year_x1", "subscription_year_x2", "subscription_year_x3"
-            ),
+        iapList: ArrayList<String> = arrayListOf(),
+        subList: ArrayList<String> = arrayListOf(),
+        ruStoreList: ArrayList<String> = arrayListOf(),
         callback: (updatePro: Boolean) -> Unit,
     ) {
         //Not used for Foss

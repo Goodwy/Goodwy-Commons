@@ -1612,11 +1612,11 @@ fun Context.isPro() =
     if (isNewApp()) {
         if (resources.getBoolean(R.bool.is_foss)) baseConfig.isProNoGP
         else baseConfig.isPro || baseConfig.isProSubs ||
-            baseConfig.isProRuStore ||
+            baseConfig.isProRuStore || baseConfig.isProRuStoreOld ||
             baseConfig.isProHms || baseConfig.isProSubsHms
     } else {
         baseConfig.isPro || baseConfig.isProSubs ||
-            baseConfig.isProRuStore ||
+            baseConfig.isProRuStore || baseConfig.isProRuStoreOld ||
             baseConfig.isProHms || baseConfig.isProSubsHms ||
             (resources.getBoolean(R.bool.using_no_gp) && baseConfig.isProNoGP)
     }

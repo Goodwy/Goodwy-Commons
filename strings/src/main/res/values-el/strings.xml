@@ -367,14 +367,11 @@
     <string name="relation_sister_in_law_g">Sister-in-law</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Σφάλμα</string>
     <string name="billing_purchase_confirm_in_progress">Επιβεβαίωση αγοράς…</string>
     <string name="billing_purchase_delete_in_progress">Διαγραφή της αγοράς…</string>
     <string name="billing_product_confirmed">Επιβεβαιωμένο/τεκμηριωμένο προϊόν</string>
     <string name="billing_product_deleted">Η αγορά ακυρώθηκε.</string>
     <string name="billing_subscriptions">Συνδρομές</string>
-    <string name="billing_change_to_google_play">Αλλαγή στο Google Play</string>
-    <string name="billing_change_to_ru_store">Αλλαγή στο RuStore</string>
     <string name="billing_error_application_signature_not_correct">Για να πληρώσετε μέσω RuStore, πρέπει να εγκαταστήσετε την έκδοση της εφαρμογής από το RuStore</string>
     <string name="date">Ημερομηνία</string>
     <string name="starts">Ξεκινά</string>

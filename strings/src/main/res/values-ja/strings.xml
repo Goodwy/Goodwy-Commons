@@ -368,14 +368,11 @@
     <string name="relation_sister_in_law_g">Sister-in-law</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Error</string>
     <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
     <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
     <string name="billing_product_confirmed">Product confirmed/substantiated</string>
     <string name="billing_product_deleted">Purchase canceled</string>
-    <string name="billing_subscriptions">Subscriptions</string>
-    <string name="billing_change_to_google_play">Change to Google Play</string>
-    <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_subscriptions">購読</string>
     <string name="billing_error_application_signature_not_correct">RuStoreで支払うには、RuStoreのアプリバージョンをインストールする必要があります。</string>
     <string name="date">日付</string>
     <string name="starts">開始</string>

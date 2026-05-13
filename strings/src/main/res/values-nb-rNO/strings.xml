@@ -378,14 +378,11 @@ Hvis du tidligere kjøpte denne appen eller ga en donasjon, takk! Send bekreftel
     <string name="relation_sister_in_law_g">Sister-in-law</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Error</string>
     <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
     <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
     <string name="billing_product_confirmed">Product confirmed/substantiated</string>
     <string name="billing_product_deleted">Purchase canceled</string>
-    <string name="billing_subscriptions">Subscriptions</string>
-    <string name="billing_change_to_google_play">Change to Google Play</string>
-    <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_subscriptions">Abonnementer</string>
     <string name="billing_error_application_signature_not_correct">For å betale via RuStore må du installere appversjonen fra RuStore</string>
     <string name="date">Daddel</string>
     <string name="starts">Starter</string>

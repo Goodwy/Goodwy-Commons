@@ -377,14 +377,11 @@ Si vous avez déjà acheté cette application ou fait un don, merci ! Envoyez v
     <string name="relation_sister_in_law_g">Sister-in-law</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Error</string>
     <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
     <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
     <string name="billing_product_confirmed">Product confirmed/substantiated</string>
     <string name="billing_product_deleted">Purchase canceled</string>
-    <string name="billing_subscriptions">Subscriptions</string>
-    <string name="billing_change_to_google_play">Change to Google Play</string>
-    <string name="billing_change_to_ru_store">Change to RuStore</string>
+    <string name="billing_subscriptions">Abonnements</string>
     <string name="billing_error_application_signature_not_correct">Pour payer via RuStore, vous devez installer la version de l\'application depuis RuStore</string>
     <string name="date">Date</string>
     <string name="starts">Commence</string>

@@ -29,7 +29,7 @@ class RuStoreHelper {
 
     fun checkPurchasesAvailability(context: Context) {
         _stateStart.value = _stateStart.value.copy(isLoading = true)
-        RuStoreBillingClient.checkPurchasesAvailability(context)
+        RuStoreBillingClient.checkPurchasesAvailability()
             .addOnSuccessListener { result ->
                 _stateStart.value = _stateStart.value.copy(isLoading = false)
                 _eventStart.tryEmit(StartPurchasesEvent.PurchasesAvailability(result))

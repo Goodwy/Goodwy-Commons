@@ -8,6 +8,6 @@ class App : RightApp() {
     override fun onCreate() {
         super.onCreate()
         Reprint.initialize(this)
-        PurchaseHelper().initPurchaseIfNeed(this, "309929407")
+        PurchaseHelper().initPurchaseIfNeed(this, "685363647")
     }
 }

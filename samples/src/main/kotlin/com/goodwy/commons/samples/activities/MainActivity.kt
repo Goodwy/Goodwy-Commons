@@ -16,7 +16,6 @@ import com.goodwy.commons.compose.alert_dialog.rememberAlertDialogState
 import com.goodwy.commons.compose.extensions.*
 import com.goodwy.commons.compose.theme.AppThemeSurface
 import com.goodwy.commons.dialogs.ChangeDateTimeFormatDialog
-import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
 import com.goodwy.commons.dialogs.NewAppDialog
 import com.goodwy.commons.dialogs.QrCodeDialog
 import com.goodwy.commons.dialogs.RateStarsAlertDialog
@@ -92,34 +91,64 @@ class MainActivity : BaseSimpleActivity() {
     }
 
     private fun startCustomizationActivity() {
+        val productIdX1 = BuildConfig.PRODUCT_ID_X1
+        val productIdX2 = BuildConfig.PRODUCT_ID_X2
+        val productIdX3 = BuildConfig.PRODUCT_ID_X3
+        val subscriptionIdX1 = BuildConfig.SUBSCRIPTION_ID_X1
+        val subscriptionIdX2 = BuildConfig.SUBSCRIPTION_ID_X2
+        val subscriptionIdX3 = BuildConfig.SUBSCRIPTION_ID_X3
+        val subscriptionYearIdX1 = BuildConfig.SUBSCRIPTION_YEAR_ID_X1
+        val subscriptionYearIdX2 = BuildConfig.SUBSCRIPTION_YEAR_ID_X2
+        val subscriptionYearIdX3 = BuildConfig.SUBSCRIPTION_YEAR_ID_X3
+
         startCustomizationActivity(
             showAccentColor = true,
             isCollection = false,
-            productIdList = arrayListOf("", "", ""),
-            productIdListRu = arrayListOf("", "", ""),
-            subscriptionIdList = arrayListOf("", "", ""),
-            subscriptionIdListRu = arrayListOf("", "", ""),
-            subscriptionYearIdList = arrayListOf("", "", ""),
-            subscriptionYearIdListRu = arrayListOf("", "", ""),
+            productIdList = arrayListOf(productIdX1, productIdX2, productIdX3),
+            productIdListRu = arrayListOf(productIdX1, productIdX2, productIdX3),
+            subscriptionIdList = arrayListOf(subscriptionIdX1, subscriptionIdX2, subscriptionIdX3),
+            subscriptionIdListRu = arrayListOf(subscriptionIdX1, subscriptionIdX2, subscriptionIdX3),
+            subscriptionYearIdList = arrayListOf(subscriptionYearIdX1, subscriptionYearIdX2, subscriptionYearIdX3),
+            subscriptionYearIdListRu = arrayListOf(subscriptionYearIdX1, subscriptionYearIdX2, subscriptionYearIdX3),
             showAppIconColor = true
         )
     }
 
     private fun launchPurchase() {
+        val productIdX1 = BuildConfig.PRODUCT_ID_X1
+        val productIdX2 = BuildConfig.PRODUCT_ID_X2
+        val productIdX3 = BuildConfig.PRODUCT_ID_X3
+        val subscriptionIdX1 = BuildConfig.SUBSCRIPTION_ID_X1
+        val subscriptionIdX2 = BuildConfig.SUBSCRIPTION_ID_X2
+        val subscriptionIdX3 = BuildConfig.SUBSCRIPTION_ID_X3
+        val subscriptionYearIdX1 = BuildConfig.SUBSCRIPTION_YEAR_ID_X1
+        val subscriptionYearIdX2 = BuildConfig.SUBSCRIPTION_YEAR_ID_X2
+        val subscriptionYearIdX3 = BuildConfig.SUBSCRIPTION_YEAR_ID_X3
+
         startPurchaseActivity(
             R.string.app_name_g,
-            productIdList = arrayListOf("", "", ""),
-            productIdListRu = arrayListOf("", "", ""),
-            subscriptionIdList = arrayListOf("", "", ""),
-            subscriptionIdListRu = arrayListOf("", "", ""),
-            subscriptionYearIdList = arrayListOf("", "", ""),
-            subscriptionYearIdListRu = arrayListOf("", "", ""),
+            productIdList = arrayListOf(productIdX1, productIdX2, productIdX3),
+            productIdListRu = arrayListOf(productIdX1, productIdX2, productIdX3),
+            subscriptionIdList = arrayListOf(subscriptionIdX1, subscriptionIdX2, subscriptionIdX3),
+            subscriptionIdListRu = arrayListOf(subscriptionIdX1, subscriptionIdX2, subscriptionIdX3),
+            subscriptionYearIdList = arrayListOf(subscriptionYearIdX1, subscriptionYearIdX2, subscriptionYearIdX3),
+            subscriptionYearIdListRu = arrayListOf(subscriptionYearIdX1, subscriptionYearIdX2, subscriptionYearIdX3),
             showLifebuoy = false,
             showCollection = true
         )
     }
 
     private fun launchAbout() {
+        val productIdX1 = BuildConfig.PRODUCT_ID_X1
+        val productIdX2 = BuildConfig.PRODUCT_ID_X2
+        val productIdX3 = BuildConfig.PRODUCT_ID_X3
+        val subscriptionIdX1 = BuildConfig.SUBSCRIPTION_ID_X1
+        val subscriptionIdX2 = BuildConfig.SUBSCRIPTION_ID_X2
+        val subscriptionIdX3 = BuildConfig.SUBSCRIPTION_ID_X3
+        val subscriptionYearIdX1 = BuildConfig.SUBSCRIPTION_YEAR_ID_X1
+        val subscriptionYearIdX2 = BuildConfig.SUBSCRIPTION_YEAR_ID_X2
+        val subscriptionYearIdX3 = BuildConfig.SUBSCRIPTION_YEAR_ID_X3
+
         val licenses = LICENSE_AUTOFITTEXTVIEW
 
         val faqItems = arrayListOf(
@@ -142,15 +171,18 @@ class MainActivity : BaseSimpleActivity() {
         val versionName = BuildConfig.VERSION_NAME
         val fullVersionText = "$versionName ($storeDisplayName)"
         startAboutActivity(
-            R.string.app_name_g,
-            licenses,
-            fullVersionText,
-            faqItems,
-            true,
-            arrayListOf("", "", ""), arrayListOf("", "", ""),
-            arrayListOf("", "", ""), arrayListOf("", "", ""),
-            arrayListOf("", "", ""), arrayListOf("", "", ""),
-            flavorName,
+            appNameId = R.string.app_name_g,
+            licenseMask = licenses,
+            versionName = fullVersionText,
+            faqItems = faqItems,
+            showFAQBeforeMail = true,
+            productIdList = arrayListOf(productIdX1, productIdX2, productIdX3),
+            productIdListRu = arrayListOf(productIdX1, productIdX2, productIdX3),
+            subscriptionIdList = arrayListOf(subscriptionIdX1, subscriptionIdX2, subscriptionIdX3),
+            subscriptionIdListRu = arrayListOf(subscriptionIdX1, subscriptionIdX2, subscriptionIdX3),
+            subscriptionYearIdList = arrayListOf(subscriptionYearIdX1, subscriptionYearIdX2, subscriptionYearIdX3),
+            subscriptionYearIdListRu = arrayListOf(subscriptionYearIdX1, subscriptionYearIdX2, subscriptionYearIdX3),
+            flavorName = flavorName,
             )
     }
 

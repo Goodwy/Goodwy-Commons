@@ -370,14 +370,11 @@
     <string name="relation_sister_in_law_g">Sister-in-law</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Error</string>
     <string name="billing_purchase_confirm_in_progress">تایید خرید…</string>
     <string name="billing_purchase_delete_in_progress">حذف خرید…</string>
     <string name="billing_product_confirmed">محصول تأیید/اثبات شد</string>
     <string name="billing_product_deleted">خرید لغو شد</string>
     <string name="billing_subscriptions">اشتراک‌ها</string>
-    <string name="billing_change_to_google_play">تغییر به Google Play</string>
-    <string name="billing_change_to_ru_store">تغییر به RuStore</string>
     <string name="billing_error_application_signature_not_correct">برای پرداخت از طریق RuStore باید نسخه برنامه را از RuStore نصب کنید</string>
     <string name="date">تاریخ</string>
     <string name="starts">شروع</string>

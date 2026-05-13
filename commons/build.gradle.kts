@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.github.goodwy.goodwy-commons"
-version = findProperty("VERSION")?.toString() ?: System.getenv("VERSION") ?: "8.2.0"
+version = findProperty("VERSION")?.toString() ?: System.getenv("VERSION") ?: "8.3.0"
 
 val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
@@ -29,6 +29,7 @@ android {
     defaultConfig {
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         vectorDrawables.useSupportLibrary = true
+        //noinspection WrongGradleMethod
         ksp {
             arg("room.schemaLocation", "$projectDir/schemas")
         }
@@ -196,6 +197,11 @@ dependencies {
     api(projects.strings)
     "gplayImplementation"(libs.billing.client)
     "rustoreImplementation"(libs.rustore.client)
+    "rustoreImplementation"(platform(libs.rustore.bom))
+    "rustoreImplementation"(libs.rustore.pay)
+//    "rustoreImplementation"(libs.hilt.android)
+//    "rustoreImplementation"(libs.androidx.hilt.navigation.compose)
+//    "rustoreImplementation"(libs.androidx.compose.material)
     "hmsImplementation"(libs.hms.client)
     "hmsImplementation"(libs.hms.appservice)
     "hmsImplementation"(libs.hms.agconnect)

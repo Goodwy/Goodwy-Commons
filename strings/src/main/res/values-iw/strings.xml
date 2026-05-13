@@ -367,14 +367,11 @@
     <string name="relation_sister_in_law_g">Sister-in-law</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">שגיאה</string>
     <string name="billing_purchase_confirm_in_progress">מאשר את הרכישה…</string>
     <string name="billing_purchase_delete_in_progress">מוחק את הרכישה…</string>
     <string name="billing_product_confirmed">מוצר אושר/מבוסס</string>
     <string name="billing_product_deleted">הרכישה בוטלה</string>
-    <string name="billing_subscriptions">מינויים</string>
-    <string name="billing_change_to_google_play">שנה ל-Google Play</string>
-    <string name="billing_change_to_ru_store">שנה ל-RuStore</string>
+    <string name="billing_subscriptions">מנויים</string>
     <string name="billing_error_application_signature_not_correct">כדי לשלם באמצעות RuStore עליך להתקין את גרסת האפליקציה מ- RuStore</string>
     <string name="date">תמר</string>
     <string name="starts">מתחיל</string>

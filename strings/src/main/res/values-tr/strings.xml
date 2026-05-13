@@ -375,14 +375,11 @@ Bu uygulamayı daha önce satın aldıysanız veya bağış yaptıysanız, teşe
     <string name="relation_sister_in_law_g">Baldız</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Hata</string>
     <string name="billing_purchase_confirm_in_progress">Satın alım onaylanıyor…</string>
     <string name="billing_purchase_delete_in_progress">Satın alım siliniyor…</string>
     <string name="billing_product_confirmed">Ürün onaylandı/tasdik edildi</string>
     <string name="billing_product_deleted">Satın alım iptal edildi</string>
     <string name="billing_subscriptions">Abonelikler</string>
-    <string name="billing_change_to_google_play">Google Play ile değiştir</string>
-    <string name="billing_change_to_ru_store">RuStore ile değiştir</string>
     <string name="billing_error_application_signature_not_correct">RuStore üzerinden ödeme yapmak için RuStore\'dan uygulama sürümünü yüklemeniz gerekir</string>
     <string name="date">Tarih</string>
     <string name="starts">Başlar</string>

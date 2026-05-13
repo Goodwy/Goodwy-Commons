@@ -386,15 +386,23 @@
     <string name="relation_sister_in_law_g">Золовка</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Ошибка</string>
     <string name="billing_purchase_confirm_in_progress">Подтверждаем покупку…</string>
     <string name="billing_purchase_delete_in_progress">Удаляем покупку…</string>
     <string name="billing_product_confirmed">Продукт подтвержден/подтреблен</string>
     <string name="billing_product_deleted">Покупка отменена</string>
     <string name="billing_subscriptions">Подписки</string>
-    <string name="billing_change_to_google_play">Использовать Google Play</string>
-    <string name="billing_change_to_ru_store">Использовать RuStore</string>
     <string name="billing_error_application_signature_not_correct">Для оплаты через RuStore вам необходимо установить версию приложения от RuStore.</string>
+
+    <!-- RuStore Pay -->
+    <string name="rustore_subscription_warning">
+        <![CDATA[
+        <h2>Предупреждение</h2>
+        RuStore меняет платежную систему для приложений и с 1 августа 2026 если у пользователя будет активная подписка, она продолжит действовать до конца уже оплаченного периода, но после его завершения автоматическое продление не произойдёт.<br>
+        Если Вы хотите поддерживать наши проекты и далее, то Вам необходимо отказаться от текущей подписки и оформить подписку заново.<br><br>
+
+        Спасибо за поддержку!
+        ]]>
+    </string>
 
     <!-- Calendar -->
     <string name="date">Дата</string>

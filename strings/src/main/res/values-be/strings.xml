@@ -372,14 +372,11 @@
     <string name="relation_sister_in_law_g">Залоўка</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Памылка</string>
     <string name="billing_purchase_confirm_in_progress">Пацвярджаем пакупку…</string>
     <string name="billing_purchase_delete_in_progress">Выдаляем куплю…</string>
     <string name="billing_product_confirmed">Прадукт пацверджаны/папатрабаваны</string>
     <string name="billing_product_deleted">Купля адменена</string>
     <string name="billing_subscriptions">Падпіскі</string>
-    <string name="billing_change_to_google_play">Выкарыстоўваць Google Play</string>
-    <string name="billing_change_to_ru_store">Выкарыстоўваць RuStore</string>
     <string name="billing_error_application_signature_not_correct">Для аплаты праз RuStore неабходна ўсталяваць версію праграмы з RuStore</string>
 
     <!-- Calendar -->

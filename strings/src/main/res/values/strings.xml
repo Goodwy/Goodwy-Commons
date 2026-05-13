@@ -410,15 +410,23 @@ Incoming calls will continue to ring from people in your contacts and recent out
     <string name="relation_sister_in_law_g">Sister-in-law</string>
 
     <!-- RuStore -->
-    <string name="billing_general_error">Error</string>
     <string name="billing_purchase_confirm_in_progress">Confirming the purchase…</string>
     <string name="billing_purchase_delete_in_progress">Deleting the purchase…</string>
     <string name="billing_product_confirmed">Product confirmed/substantiated</string>
     <string name="billing_product_deleted">Purchase canceled</string>
     <string name="billing_subscriptions">Subscriptions</string>
-    <string name="billing_change_to_google_play">Change to Google Play</string>
-    <string name="billing_change_to_ru_store">Change to RuStore</string>
     <string name="billing_error_application_signature_not_correct">To pay via RuStore you need to install the app version from RuStore</string>
+
+    <!-- RuStore Pay -->
+    <string name="rustore_subscription_warning">
+        <![CDATA[
+        <h2>Notice</h2>
+        RuStore is changing its payment system for apps. Starting August 1, 2026, if a user has an active subscription, it will remain valid until the end of the period already paid for, but it will not be automatically renewed after that date.<br>
+        If you would like to continue supporting our projects, you will need to cancel your current subscription and sign up for a new one.<br><br>
+
+        Thank you for your support!
+        ]]>
+    </string>
 
     <!-- HMS -->
     <string name="huawei_id_not_logged_in">Please login to Huawei ID</string>
