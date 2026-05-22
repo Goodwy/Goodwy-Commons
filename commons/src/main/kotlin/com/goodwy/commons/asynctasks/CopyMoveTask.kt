@@ -360,11 +360,17 @@ class CopyMoveTask(
         val activity = mActivity.get() ?: return
 
         if (mFileDirItemsToDelete.isNotEmpty()) {
-            val fileUris = activity.getFileUrisFromFileDirItems(mFileDirItemsToDelete)
-            activity.deleteSDK30Uris(fileUris) { success ->
-                if (success) {
-                    mFileDirItemsToDelete.forEach {
-                        activity.deleteFromMediaStore(it.path)
+            activity.resolveMediaStoreUris(mFileDirItemsToDelete) { resolution ->
+                val fileUris = resolution.uris
+                if (fileUris.isEmpty()) {
+                    return@resolveMediaStoreUris
+                }
+
+                activity.deleteSDK30Uris(fileUris) { success ->
+                    if (success) {
+                        resolution.resolved.forEach {
+                            activity.deleteFromMediaStore(it.fileDirItem.path)
+                        }
                     }
                 }
             }
