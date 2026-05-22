@@ -107,6 +107,16 @@ class PurchaseHelper {
         }
 
         // new
+        ruStorePayHelper?.checkPurchase(
+            onSuccess = { purchaseInfoList ->
+//                toast("onSuccess")
+                activity.baseConfig.isProRuStore = purchaseInfoList.isNotEmpty()
+                callback(true)
+            },
+            onError = {
+//                toast("onError checkPurchase")
+            }
+        )
     }
 
     private fun handleEventStart(event: StartPurchasesEvent, productList: ArrayList<String>) {
