@@ -1,5 +1,5 @@
 <resources>
-    <string name="message">Komunikat</string>
+    <string name="message">Wiadomość</string>
     <string name="settings_icon">Ikona Ustawienia</string>
     <string name="total_g">Ogółem: %s</string>
     <string name="last_g">Ostatni: %s</string>
@@ -171,7 +171,7 @@ Będziemy bardzo wdzięczni.
     <string name="show_blocked_numbers">Pokaż zablokowane</string>
     <string name="hide_blocked_numbers">Ukryj zablokowane</string>
     <string name="paste_g">Wstawiać</string>
-    <string name="recents">Niedawny</string>
+    <string name="recents">Ostatnie</string>
     <string name="blocked_call">Zablokowane połączenie</string>
     <string name="unblock_confirmation">Czy na pewno chcesz odblokować \"%s\"?</string>
 
@@ -293,7 +293,7 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="open_in_maps">Otwórz w Mapach</string>
 
     <!-- Dialer -->
-    <string name="all_g">Cały</string>
+    <string name="all_g">Wszystkie</string>
     <string name="message_call_later">Czy mogę zadzwonić do ciebie później?</string>
     <string name="message_on_my_way">Jestem w drodze.</string>
     <string name="message_cant_talk_right_now">Przepraszam, nie mogę teraz mówić.</string>

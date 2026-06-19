@@ -1188,44 +1188,47 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     } || isNumberBlockedByPattern(number, blockedNumbers)
 }
 
+fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
+    for (blockedNumber in blockedNumbers) {
+        try {
+            val num = blockedNumber.number
+            if (num.isBlockedNumberPattern()) {
+                val pattern = num.replace("+", "\\+").replace("*", ".*")
+                if (number.matches(pattern.toRegex())) {
+                    return true
+                }
+            }
+        } catch (e: PatternSyntaxException) {}
+    }
+    return false
+}
+
+//Fix: java.util.regex.PatternSyntaxException: Incorrectly nested parentheses in regexp pattern near index 18
+//OR CONSEQUENTIAL DAMAGES
+//#   .* (INCLUDING
+// Not work
 //fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
 //    for (blockedNumber in blockedNumbers) {
 //        val num = blockedNumber.number
 //        if (num.isBlockedNumberPattern()) {
-//            val pattern = num.replace("+", "\\+").replace("*", ".*")
-//            if (number.matches(pattern.toRegex())) {
-//                return true
+//            try {
+//                // First, we shield all special characters in regular expressions.
+//                val escapedNum = Regex.escape(num)
+//                // Then replace the escaped * with .* to support patterns.
+//                val pattern = escapedNum.replace("\\*", ".*")
+//
+//                if (number.matches(Regex(pattern))) {
+//                    return true
+//                }
+//            } catch (e: PatternSyntaxException) {
+//                // We log the error and skip this template.
+//                android.util.Log.e("BlockedPattern", "Invalid pattern: $num", e)
+//                baseConfig.lastError = "Context.isNumberBlockedByPattern() PatternSyntaxException: $e"
 //            }
 //        }
 //    }
 //    return false
 //}
-
-//Fix: java.util.regex.PatternSyntaxException: Incorrectly nested parentheses in regexp pattern near index 18
-//OR CONSEQUENTIAL DAMAGES
-//#   .* (INCLUDING
-fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
-    for (blockedNumber in blockedNumbers) {
-        val num = blockedNumber.number
-        if (num.isBlockedNumberPattern()) {
-            try {
-                // First, we shield all special characters in regular expressions.
-                val escapedNum = Regex.escape(num)
-                // Then replace the escaped * with .* to support patterns.
-                val pattern = escapedNum.replace("\\*", ".*")
-
-                if (number.matches(Regex(pattern))) {
-                    return true
-                }
-            } catch (e: PatternSyntaxException) {
-                // We log the error and skip this template.
-                android.util.Log.e("BlockedPattern", "Invalid pattern: $num", e)
-                baseConfig.lastError = "Context.isNumberBlockedByPattern() PatternSyntaxException: $e"
-            }
-        }
-    }
-    return false
-}
 
 fun Context.copyToClipboard(text: String) {
     val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
