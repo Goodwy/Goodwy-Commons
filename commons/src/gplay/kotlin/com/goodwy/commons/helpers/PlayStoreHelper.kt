@@ -34,9 +34,17 @@ class PlayStoreHelper (
         }
 
     private fun handlePurchaseIAP(purchase: Purchase) {
-        val consumeParams = ConsumeParams.newBuilder()
-            .setPurchaseToken(purchase.purchaseToken)
-        billingClient.consumeAsync(consumeParams.build(), consumeResponseListener)
+        // We're just confirming the purchase; we are NOT using it
+        val acknowledgePurchaseParams = AcknowledgePurchaseParams
+            .newBuilder().setPurchaseToken(purchase.purchaseToken)
+        billingClient.acknowledgePurchase(
+            acknowledgePurchaseParams.build(),
+            acknowledgePurchaseResponseListener
+        )
+        // Let's clean up consumeAsync
+//        val consumeParams = ConsumeParams.newBuilder()
+//            .setPurchaseToken(purchase.purchaseToken)
+//        billingClient.consumeAsync(consumeParams.build(), consumeResponseListener)
     }
 
     private val acknowledgePurchaseResponseListener =
@@ -58,7 +66,8 @@ class PlayStoreHelper (
             if (!purchase.isAcknowledged) {
                 iapList.forEach {
                     isIapPurchasedList.postValue(iapPurchased)
-                    if (purchase.products.contains(it)) handlePurchaseIAP(purchase)
+//                    if (purchase.products.contains(it)) handlePurchaseIAP(purchase)
+                    handlePurchaseIAP(purchase)
                 }
                 subList.forEach {
                     isSupPurchasedList.postValue(subPurchased)
