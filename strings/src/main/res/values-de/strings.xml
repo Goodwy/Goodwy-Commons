@@ -315,6 +315,7 @@ Wenn Sie diese App bereits gekauft oder eine Spende geleistet haben, vielen Dank
     <string name="block_unknown_calls_summary">Anrufe von unbekannten Nummern werden blockiert und in der Liste „Letzte Anrufe“ angezeigt.\nEingehende Anrufe von Personen in Ihren Kontakten und von Personen, die Sie kürzlich angerufen haben, klingeln weiterhin.</string>
     <string name="bottom_indent">Unterer Einzug</string>
     <string name="is_do_not_block_contacts_and_recent">Kontakte und kürzlich getätigte ausgehende Anrufe nicht blockieren</string>
+    <string name="send_whatsapp">An WhatsApp senden</string>
     <string name="relation_g">Beziehung</string>
     <string name="relations_g">Verwandte Personen</string>
     <string name="relation_hint_g">Verwandte Person</string>

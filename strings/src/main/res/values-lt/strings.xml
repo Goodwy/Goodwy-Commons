@@ -308,6 +308,7 @@ Jei anksčiau įsigijote šią programėlę arba paaukojote, ačiū! Patvirtinim
     <string name="block_unknown_calls_summary">Skambučiai iš nežinomų numerių bus blokuojami ir rodomi sąraše „Naujausi“.\nĮeinantys skambučiai iš jūsų kontaktų ir iš asmenų, kuriems neseniai skambinote, ir toliau skambės.</string>
     <string name="bottom_indent">Apatinė įtrauka</string>
     <string name="is_do_not_block_contacts_and_recent">Neblokuokite kontaktų ir neseniai atliktų skambučių</string>
+    <string name="send_whatsapp">Siųsti į „WhatsApp“</string>
     <string name="relation_g">Ryšys</string>
     <string name="relations_g">Susiję asmenys</string>
     <string name="relation_hint_g">Susijęs asmuo</string>

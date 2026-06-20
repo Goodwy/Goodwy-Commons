@@ -310,6 +310,7 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="block_unknown_calls_summary">Połączenia z nieznanych numerów będą blokowane i wyświetlane na liście „Ostatnie”.\nPołączenia przychodzące od osób z Twoich kontaktów i od osób, do których ostatnio dzwoniłeś, nadal będą dzwonić.</string>
     <string name="bottom_indent">Wcięcie dolne</string>
     <string name="is_do_not_block_contacts_and_recent">Nie blokuj kontaktów i ostatnich połączeń wychodzących</string>
+    <string name="send_whatsapp">Wyślij do WhatsApp</string>
     <string name="relation_g">Relacja</string>
     <string name="relations_g">Powiązane osoby</string>
     <string name="relation_hint_g">Osoba powiązana</string>

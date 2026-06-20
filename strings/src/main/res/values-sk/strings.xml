@@ -310,6 +310,7 @@ Ak ste si túto aplikáciu už predtým zakúpili alebo ste prispeli darom, ďak
     <string name="block_unknown_calls_summary">Hovory z neznámych čísel budú blokované a zobrazené v zozname „Nedávne“.\nPrichádzajúce hovory od ľudí vo vašich kontaktoch a od ľudí, ktorým ste nedávno volali, budú naďalej zvoniť.</string>
     <string name="bottom_indent">Spodná zarážka</string>
     <string name="is_do_not_block_contacts_and_recent">Neblokovať kontakty a posledné odchádzajúce hovory</string>
+    <string name="send_whatsapp">Odoslať na WhatsApp</string>
     <string name="relation_g">Vzťah</string>
     <string name="relations_g">Súvisiace osoby</string>
     <string name="relation_hint_g">Spriaznená osoba</string>

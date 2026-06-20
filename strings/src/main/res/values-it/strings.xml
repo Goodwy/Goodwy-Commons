@@ -308,6 +308,7 @@ Se hai già acquistato questa app o fatto una donazione, grazie! Invia la tua co
     <string name="block_unknown_calls_summary">Le chiamate provenienti da numeri sconosciuti verranno bloccate e visualizzate nell\'elenco \"Recenti\".\nLe chiamate in arrivo dalle persone presenti nei tuoi contatti e dalle persone che hai chiamato di recente continueranno a squillare.</string>
     <string name="bottom_indent">Rientro inferiore</string>
     <string name="is_do_not_block_contacts_and_recent">Non bloccare i contatti e le chiamate in uscita recenti</string>
+    <string name="send_whatsapp">Invia alla proposta</string>
     <string name="relation_g">Relazione</string>
     <string name="relations_g">Persone correlate</string>
     <string name="relation_hint_g">Persona correlata</string>

@@ -316,6 +316,7 @@ Se você já comprou este aplicativo ou fez uma doação, muito obrigado! Envie 
     <string name="block_unknown_calls_summary">Chamadas de números desconhecidos serão bloqueadas e exibidas na lista \"Recentes\".\nChamadas recebidas de pessoas em seus contatos e de pessoas para quem você ligou recentemente continuarão tocando.</string>
     <string name="bottom_indent">Recuo inferior</string>
     <string name="is_do_not_block_contacts_and_recent">Não bloqueie contatos nem chamadas efetuadas recentemente.</string>
+    <string name="send_whatsapp">Enviar para o WhatsApp</string>
     <string name="relation_g">Relação</string>
     <string name="relations_g">Pessoas relacionadas</string>
     <string name="relation_hint_g">Pessoa relacionada</string>

@@ -311,6 +311,7 @@ Om du tidigare köpt den här appen eller gjort en donation, tack! Skicka din be
     <string name="block_unknown_calls_summary">Samtal från okända nummer blockeras och visas i listan \"Senaste\".\nInkommande samtal från personer i dina kontakter och från personer du nyligen har ringt fortsätter att ringa.</string>
     <string name="bottom_indent">Nedre indrag</string>
     <string name="is_do_not_block_contacts_and_recent">Blockera inte kontakter och senaste utgående samtal</string>
+    <string name="send_whatsapp">Skicka till WhatsApp</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Relaterade personer</string>
     <string name="relation_hint_g">Relaterad person</string>

@@ -348,6 +348,7 @@ You can add a quick settings tile for easy switching.</string>
 Incoming calls will continue to ring from people in your contacts and recent outgoing calls.</string>
     <string name="bottom_indent">Bottom indent</string>
     <string name="is_do_not_block_contacts_and_recent">Do not block contacts and recent outgoing calls</string>
+    <string name="send_whatsapp">Send WhatsApp</string>
 
     <!-- Relation types -->
     <string name="relation_g">Relation</string>

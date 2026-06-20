@@ -315,6 +315,7 @@ Bu uygulamayı daha önce satın aldıysanız veya bağış yaptıysanız, teşe
     <string name="is_do_not_block_contacts_and_recent">Kişileri ve son giden aramaları engellemeyin</string>
 
     <!-- Relation types -->
+    <string name="send_whatsapp">WhatsApp\'a gönder</string>
     <string name="relation_g">İlişki</string>
     <string name="relations_g">İlgili Kişiler</string>
     <string name="relation_hint_g">İlgili Kişi</string>

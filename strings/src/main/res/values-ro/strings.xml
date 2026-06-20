@@ -310,6 +310,7 @@ Dacă ați achiziționat anterior această aplicație sau ați făcut o donație
     <string name="block_unknown_calls_summary">Apelurile de la numere necunoscute vor fi blocate și afișate în lista „Recente”.\nApelurile primite de la persoanele din contactele dvs. și de la persoanele pe care le-ați apelat recent vor continua să sune.</string>
     <string name="bottom_indent">Indentatură de jos</string>
     <string name="is_do_not_block_contacts_and_recent">Nu blocați contactele și apelurile recente efectuate</string>
+    <string name="send_whatsapp">Trimite pe WhatsApp</string>
     <string name="relation_g">Relație</string>
     <string name="relations_g">Persoane înrudite</string>
     <string name="relation_hint_g">Persoană înrudită</string>

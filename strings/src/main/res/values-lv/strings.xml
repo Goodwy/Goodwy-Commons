@@ -310,6 +310,7 @@ Ja iepriekš esat iegādājies šo lietotni vai veicis ziedojumu, paldies! Nosū
     <string name="block_unknown_calls_summary">Zvani no nezināmiem numuriem tiks bloķēti un parādīti sarakstā “Nesenie”.\nIenākošie zvani no personām jūsu kontaktpersonās un personām, kurām nesen zvanījāt, turpinās zvanīt.</string>
     <string name="bottom_indent">Apakšējā atkāpe</string>
     <string name="is_do_not_block_contacts_and_recent">Nebloķējiet kontaktpersonas un nesenos izejošos zvanus</string>
+    <string name="send_whatsapp">Sūtīt uz WhatsApp</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

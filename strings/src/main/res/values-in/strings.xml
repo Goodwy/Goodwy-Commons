@@ -313,6 +313,7 @@ Jika Anda sebelumnya telah membeli aplikasi ini atau memberikan donasi, terima k
     <string name="block_unknown_calls_summary">Panggilan dari nomor tak dikenal akan diblokir dan ditampilkan di daftar \"Terbaru\".\nPanggilan masuk dari orang-orang di kontak Anda dan dari orang-orang yang baru saja Anda hubungi akan tetap berdering.</string>
     <string name="bottom_indent">Lekukan bawah</string>
     <string name="is_do_not_block_contacts_and_recent">Jangan blokir kontak dan panggilan keluar terbaru</string>
+    <string name="send_whatsapp">Kirim ke WhatsApp</string>
     <string name="relation_g">Hubungan</string>
     <string name="relations_g">Orang Terkait</string>
     <string name="relation_hint_g">Orang Terkait</string>

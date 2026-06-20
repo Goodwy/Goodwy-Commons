@@ -307,6 +307,7 @@
     <string name="block_unknown_calls_summary">অজানা নম্বর থেকে আসা কলগুলি ব্লক করা হবে এবং \"সাম্প্রতিক\" তালিকায় প্রদর্শিত হবে।\nআপনার পরিচিতিতে থাকা ব্যক্তিদের এবং সম্প্রতি যাদের সাথে আপনি কল করেছেন তাদের কাছ থেকে আসা কলগুলি ক্রমাগত বেজে উঠবে।</string>
     <string name="bottom_indent">নীচের ইন্ডেন্ট</string>
     <string name="is_do_not_block_contacts_and_recent">পরিচিতি এবং সাম্প্রতিক আউটগোয়িং কল ব্লক করবেন না</string>
+    <string name="send_whatsapp">হোয়াটসঅ্যাপে পাঠান</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

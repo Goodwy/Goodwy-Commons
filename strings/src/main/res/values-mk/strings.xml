@@ -306,6 +306,7 @@
     <string name="block_unknown_calls_summary">Повиците од непознати броеви ќе бидат блокирани и прикажани во листата „Неодамнешни“.\nДојдовните повици од луѓе во вашите контакти и од луѓе што неодамна сте ги повикале ќе продолжат да ѕвонат.</string>
     <string name="bottom_indent">Долна алинеја</string>
     <string name="is_do_not_block_contacts_and_recent">Не блокирајте контакти и неодамнешни појдовни повици</string>
+    <string name="send_whatsapp">Испрати до WhatsApp</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>
