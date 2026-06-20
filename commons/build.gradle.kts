@@ -196,9 +196,9 @@ dependencies {
     //Goodwy
     api(projects.strings)
     "gplayImplementation"(libs.billing.client)
-    "rustoreImplementation"(libs.rustore.client)
-    "rustoreImplementation"(platform(libs.rustore.bom))
-    "rustoreImplementation"(libs.rustore.pay)
+//    "rustoreImplementation"(libs.rustore.client)
+//    "rustoreImplementation"(platform(libs.rustore.bom))
+//    "rustoreImplementation"(libs.rustore.pay)
     "hmsImplementation"(libs.hms.client)
     "hmsImplementation"(libs.hms.appservice)
     "hmsImplementation"(libs.hms.agconnect)
