@@ -1,26 +1,18 @@
 package com.goodwy.commons.helpers
 
 import android.app.Application
-import android.app.role.RoleManager
-import android.content.Intent
 import android.os.Bundle
-import android.provider.Telephony
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import com.goodwy.commons.activities.BaseSimpleActivity
-import com.goodwy.commons.compose.extensions.config
-import com.goodwy.commons.dialogs.ConfirmationAdvancedDialog
 import com.goodwy.commons.extensions.baseConfig
 import com.goodwy.commons.extensions.isRuStoreInstalled
-import com.goodwy.commons.extensions.toast
 import com.goodwy.commons.helpers.rustore.RuStoreHelper
 import com.goodwy.commons.helpers.rustore.RuStoreModule
 import com.goodwy.commons.helpers.rustore.model.StartPurchasesEvent
 import com.goodwy.commons.helpers.rustorepay.RuStorePayHelper
-import com.goodwy.strings.R
 import kotlinx.coroutines.launch
 import ru.rustore.sdk.billingclient.model.purchase.PurchaseAvailabilityResult
-import ru.rustore.sdk.core.feature.model.FeatureAvailabilityResult
 import kotlin.collections.firstOrNull
 
 class PurchaseHelper {
