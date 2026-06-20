@@ -6,5 +6,4 @@ install:
     - export GRADLE_OPTS="-Dorg.gradle.jvmargs='-Xmx3g' -Dorg.gradle.parallel=false"
 
     # 2. RETURNING to the general task publishToMavenLocal. Module added: strings.
-    - export GRADLE_OPTS="-Dorg.gradle.jvmargs='-Xmx3g' -Dorg.gradle.parallel=false -Dcom.sun.net.ssl.checkRevocation=false -Dhttps.protocols=TLSv1.2,TLSv1.1,TLSv1"
     - ./gradlew :commons:clean :strings:publishToMavenLocal :commons:publishToMavenLocal --no-build-cache --rerun-tasks --no-daemon

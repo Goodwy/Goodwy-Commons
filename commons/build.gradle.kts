@@ -50,7 +50,7 @@ android {
     productFlavors {
         create("gplay") { dimension = "distribution" }
         create("foss") { dimension = "distribution" }
-        create("rustore") { dimension = "distribution" }
+//        create("rustore") { dimension = "distribution" }
         create("hms") { dimension = "distribution" }
     }
 
