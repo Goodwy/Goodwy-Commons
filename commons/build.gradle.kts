@@ -127,16 +127,16 @@ afterEvaluate {
                 }
             }
 
-            create<MavenPublication>("rustoreRelease") {
-                groupId = "com.github.goodwy.goodwy-commons"
-                artifactId = "commons-rustore"
-                version = project.version.toString()
-                from(components.getByName("rustoreRelease"))
-                artifact(sourcesJar.get())
-                tasks.named("publishRustoreReleasePublicationToMavenLocal") {
-                    dependsOn(tasks.named("assembleRustoreRelease"))
-                }
-            }
+//            create<MavenPublication>("rustoreRelease") {
+//                groupId = "com.github.goodwy.goodwy-commons"
+//                artifactId = "commons-rustore"
+//                version = project.version.toString()
+//                from(components.getByName("rustoreRelease"))
+//                artifact(sourcesJar.get())
+//                tasks.named("publishRustoreReleasePublicationToMavenLocal") {
+//                    dependsOn(tasks.named("assembleRustoreRelease"))
+//                }
+//            }
 
             create<MavenPublication>("hmsRelease") {
                 groupId = "com.github.goodwy.goodwy-commons"
