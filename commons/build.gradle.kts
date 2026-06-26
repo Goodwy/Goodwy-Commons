@@ -50,7 +50,7 @@ android {
     productFlavors {
         create("gplay") { dimension = "distribution" }
         create("foss") { dimension = "distribution" }
-//        create("rustore") { dimension = "distribution" }
+        create("rustore") { dimension = "distribution" }
         create("hms") { dimension = "distribution" }
     }
 
@@ -127,16 +127,16 @@ afterEvaluate {
                 }
             }
 
-//            create<MavenPublication>("rustoreRelease") {
-//                groupId = "com.github.goodwy.goodwy-commons"
-//                artifactId = "commons-rustore"
-//                version = project.version.toString()
-//                from(components.getByName("rustoreRelease"))
-//                artifact(sourcesJar.get())
-//                tasks.named("publishRustoreReleasePublicationToMavenLocal") {
-//                    dependsOn(tasks.named("assembleRustoreRelease"))
-//                }
-//            }
+            create<MavenPublication>("rustoreRelease") {
+                groupId = "com.github.goodwy.goodwy-commons"
+                artifactId = "commons-rustore"
+                version = project.version.toString()
+                from(components.getByName("rustoreRelease"))
+                artifact(sourcesJar.get())
+                tasks.named("publishRustoreReleasePublicationToMavenLocal") {
+                    dependsOn(tasks.named("assembleRustoreRelease"))
+                }
+            }
 
             create<MavenPublication>("hmsRelease") {
                 groupId = "com.github.goodwy.goodwy-commons"
@@ -196,9 +196,9 @@ dependencies {
     //Goodwy
     api(projects.strings)
     "gplayImplementation"(libs.billing.client)
-//    "rustoreImplementation"(libs.rustore.client)
-//    "rustoreImplementation"(platform(libs.rustore.bom))
-//    "rustoreImplementation"(libs.rustore.pay)
+    "rustoreImplementation"(libs.rustore.client)
+    "rustoreImplementation"(platform(libs.rustore.bom))
+    "rustoreImplementation"(libs.rustore.pay)
     "hmsImplementation"(libs.hms.client)
     "hmsImplementation"(libs.hms.appservice)
     "hmsImplementation"(libs.hms.agconnect)
