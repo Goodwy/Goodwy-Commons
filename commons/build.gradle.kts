@@ -3,8 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     alias(libs.plugins.library)
-    // kotlin("android") removed: AGP 9+ has Kotlin support built in and refuses to
-    // coexist with the separate org.jetbrains.kotlin.android plugin
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.compose.compiler)
@@ -18,8 +16,12 @@ version = findProperty("VERSION")?.toString() ?: System.getenv("VERSION") ?: "8.
 
 val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
-    // Include source code files from the main set
-    from(android.sourceSets.getByName("main").java.srcDirs)
+    // Include source code files from the main set.
+    // NOTE: this used to read the paths from android.sourceSets.getByName("main").java.srcDirs,
+    // but that old AGP API's internal implementation changed in AGP 9.2 in a way that throws a
+    // ClassCastException just from being accessed during configuration. Hardcoding the known
+    // source dirs avoids touching that API at all.
+    from("src/main/kotlin", "src/main/java")
 }
 
 android {
