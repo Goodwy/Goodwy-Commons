@@ -58,7 +58,7 @@ hms-agconnect = "1.8.1.300"
 persianDate = "1.7.1"
 zxing = "3.5.4"
 #Gradle
-gradlePlugins-agp = "8.11.1"
+gradlePlugins-agp = "9.0.1"
 #build
 app-build-compileSDKVersion = "36"
 app-build-targetSDK = "36"

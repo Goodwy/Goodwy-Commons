@@ -3,7 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     alias(libs.plugins.library)
-    alias(libs.plugins.kotlinAndroid)
+    // kotlin("android") removed: AGP 9+ has Kotlin support built in and refuses to
+    // coexist with the separate org.jetbrains.kotlin.android plugin
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.compose.compiler)

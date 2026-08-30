@@ -100,8 +100,19 @@ val Context.areSystemAnimationsEnabled: Boolean get() = Settings.Global.getFloat
 val Context.appLockManager
     get() = AppLockManager.getInstance(applicationContext as Application)
 
+// Cached per-process: apps that aren't android:directBootAware (this one isn't) are never
+// even started by the OS before the user's first unlock since boot, so this can only ever
+// go false->true once, before this app's process exists - by the time any Activity/View is
+// inflated it's already permanently true. Without this cache, every TextView inflated (via
+// installFontInflaterFactory()/applyFontToTextView(), which reads this twice per view) does
+// its own getSystemService(UserManager) binder call, which adds up across a whole layout.
+private var cachedIsCredentialStorageAvailable: Boolean? = null
+
 val Context.isCredentialStorageAvailable: Boolean
-    get() = getSystemService(UserManager::class.java)?.isUserUnlocked ?: true
+    get() = cachedIsCredentialStorageAvailable
+        ?: (getSystemService(UserManager::class.java)?.isUserUnlocked ?: true).also {
+            cachedIsCredentialStorageAvailable = it
+        }
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     toast(getString(id), length)
