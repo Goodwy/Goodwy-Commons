@@ -308,6 +308,7 @@ Se xa compraches esta aplicación ou fixeches unha doazón, grazas! Envía a tú
     <string name="block_unknown_calls_summary">As chamadas de números descoñecidos bloquearanse e mostraranse na lista \"Recentes\".\nAs chamadas entrantes das persoas dos teus contactos e das persoas ás que chamaches recentemente seguirán soando.</string>
     <string name="bottom_indent">Sangrado inferior</string>
     <string name="is_do_not_block_contacts_and_recent">Non bloquear contactos nin chamadas saíntes recentes</string>
+    <string name="send_whatsapp">Enviar a WhatsApp</string>
     <string name="relation_g">Relación</string>
     <string name="relations_g">Persoas relacionadas</string>
     <string name="relation_hint_g">Persoa relacionada</string>

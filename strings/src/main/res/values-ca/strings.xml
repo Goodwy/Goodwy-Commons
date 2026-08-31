@@ -308,6 +308,7 @@ Si ja has comprat aquesta aplicació o has fet una donació, gràcies! Envia la 
     <string name="block_unknown_calls_summary">Les trucades de números desconeguts es bloquejaran i es mostraran a la llista \"Recents\".\nLes trucades entrants de persones dels teus contactes i de persones a qui has trucat recentment continuaran sonant.</string>
     <string name="bottom_indent">Sagnat inferior</string>
     <string name="is_do_not_block_contacts_and_recent">No bloquegis els contactes ni les trucades sortints recents</string>
+    <string name="send_whatsapp">Enviar a WhatsApp</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Persones relacionades</string>
     <string name="relation_hint_g">Persona relacionada</string>

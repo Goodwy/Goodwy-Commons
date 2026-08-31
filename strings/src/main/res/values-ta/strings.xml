@@ -307,6 +307,7 @@
     <string name="block_unknown_calls_summary">தெரியாத எண்களிலிருந்து வரும் அழைப்புகள் தடுக்கப்பட்டு \"சமீபத்தியவை\" பட்டியலில் காட்டப்படும்.\nஉங்கள் தொடர்புகளில் உள்ளவர்களிடமிருந்தும், நீங்கள் சமீபத்தில் அழைத்தவர்களிடமிருந்தும் வரும் அழைப்புகள் தொடர்ந்து ஒலித்துக் கொண்டே இருக்கும்.</string>
     <string name="bottom_indent">கீழ் உள்தள்ளல்</string>
     <string name="is_do_not_block_contacts_and_recent">தொடர்புகளையும் சமீபத்திய வெளிச்செல்லும் அழைப்புகளையும் தடுக்க வேண்டாம்.</string>
+    <string name="send_whatsapp">வாட்ஸ்அப்பிற்கு அனுப்பு</string>
     <string name="relation_g">உறவு</string>
     <string name="relations_g">தொடர்புடைய நபர்கள்</string>
     <string name="relation_hint_g">தொடர்புடைய நபர்</string>

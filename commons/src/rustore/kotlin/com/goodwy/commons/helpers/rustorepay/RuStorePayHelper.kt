@@ -232,7 +232,7 @@ class RuStorePayHelper(
         purchaseInteractor
             .getPurchases()
             .addOnSuccessListener { purchases ->
-                val purchaseInfoList = purchases.map { purchase ->
+                val purchaseInfoList = purchases.mapNotNull { purchase ->
                     when (purchase) {
                         is ProductPurchase -> PurchaseInfo(
                             purchaseId = purchase.purchaseId.value,
@@ -257,9 +257,10 @@ class RuStorePayHelper(
                             expirationDate = purchase.expirationDate.time,
                             gracePeriodEnabled = purchase.gracePeriodEnabled,
                         )
+                        else -> null
                     }
                 }
-                onSuccess(purchaseInfoList as List<PurchaseInfo>)
+                onSuccess(purchaseInfoList)
             }
             .addOnFailureListener { error ->
 //                activity.toast("Failed to fetch purchases: $error", Toast.LENGTH_LONG)

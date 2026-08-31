@@ -325,6 +325,7 @@ Má cheannaigh tú an aip seo roimhe seo nó má rinne tú síntiús, go raibh m
     <string name="block_unknown_calls_summary">Cuirfear bac ar ghlaonna ó uimhreacha anaithnide agus taispeánfar iad sa liosta \"Le Déanaí\".\nLeanfaidh glaonna isteach ó dhaoine i do theagmhálaithe agus ó dhaoine ar ghlaoigh tú orthu le déanaí ag glaoch.</string>
     <string name="bottom_indent">fleasc bun</string>
     <string name="is_do_not_block_contacts_and_recent">Ná bac teagmhálaithe agus glaonna amach le déanaí</string>
+    <string name="send_whatsapp">Seol chuig WhatsApp</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Related Persons</string>
     <string name="relation_hint_g">Related Person</string>

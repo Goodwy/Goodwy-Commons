@@ -318,6 +318,7 @@ Hvis du tidligere kjøpte denne appen eller ga en donasjon, takk! Send bekreftel
     <string name="block_unknown_calls_summary">Anrop fra ukjente numre vil bli blokkert og vist i «Siste»-listen.\nInnkommende anrop fra personer i kontaktene dine og fra personer du nylig har ringt, vil fortsette å ringe.</string>
     <string name="bottom_indent">Nedre innrykk</string>
     <string name="is_do_not_block_contacts_and_recent">Ikke blokker kontakter og nylige utgående anrop</string>
+    <string name="send_whatsapp">Send til WhatsApp</string>
     <string name="relation_g">Relationship</string>
     <string name="relations_g">Pårørende</string>
     <string name="relation_hint_g">Tilknyttet person</string>

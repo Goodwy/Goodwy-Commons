@@ -307,6 +307,7 @@
     <string name="block_unknown_calls_summary">Οι κλήσεις από άγνωστους αριθμούς θα αποκλείονται και θα εμφανίζονται στη λίστα \"Πρόσφατες κλήσεις\".\nΟι εισερχόμενες κλήσεις από άτομα στις επαφές σας και από άτομα που καλέσατε πρόσφατα θα συνεχίσουν να κουδουνίζουν.</string>
     <string name="bottom_indent">Κάτω εσοχή</string>
     <string name="is_do_not_block_contacts_and_recent">Μην μπλοκάρετε επαφές και πρόσφατες εξερχόμενες κλήσεις</string>
+    <string name="send_whatsapp">Αποστολή στο WhatsApp</string>
     <string name="relation_g">Σχέση</string>
     <string name="relations_g">Σχετικά πρόσωπα</string>
     <string name="relation_hint_g">Σχετικό πρόσωπο</string>

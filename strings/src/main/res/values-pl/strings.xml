@@ -1,5 +1,5 @@
 <resources>
-    <string name="message">Komunikat</string>
+    <string name="message">Wyślij wiadomość</string>
     <string name="settings_icon">Ikona Ustawienia</string>
     <string name="total_g">Ogółem: %s</string>
     <string name="last_g">Ostatni: %s</string>
@@ -171,7 +171,7 @@ Będziemy bardzo wdzięczni.
     <string name="show_blocked_numbers">Pokaż zablokowane</string>
     <string name="hide_blocked_numbers">Ukryj zablokowane</string>
     <string name="paste_g">Wstawiać</string>
-    <string name="recents">Niedawny</string>
+    <string name="recents">Ostatnie</string>
     <string name="blocked_call">Zablokowane połączenie</string>
     <string name="unblock_confirmation">Czy na pewno chcesz odblokować \"%s\"?</string>
 
@@ -293,7 +293,7 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="open_in_maps">Otwórz w Mapach</string>
 
     <!-- Dialer -->
-    <string name="all_g">Cały</string>
+    <string name="all_g">Wszystkie</string>
     <string name="message_call_later">Czy mogę zadzwonić do ciebie później?</string>
     <string name="message_on_my_way">Jestem w drodze.</string>
     <string name="message_cant_talk_right_now">Przepraszam, nie mogę teraz mówić.</string>
@@ -310,6 +310,7 @@ Jeśli kupiłeś tę aplikację lub przekazałeś darowiznę, dziękujemy! Wyśl
     <string name="block_unknown_calls_summary">Połączenia z nieznanych numerów będą blokowane i wyświetlane na liście „Ostatnie”.\nPołączenia przychodzące od osób z Twoich kontaktów i od osób, do których ostatnio dzwoniłeś, nadal będą dzwonić.</string>
     <string name="bottom_indent">Wcięcie dolne</string>
     <string name="is_do_not_block_contacts_and_recent">Nie blokuj kontaktów i ostatnich połączeń wychodzących</string>
+    <string name="send_whatsapp">Wyślij do WhatsApp</string>
     <string name="relation_g">Relacja</string>
     <string name="relations_g">Powiązane osoby</string>
     <string name="relation_hint_g">Osoba powiązana</string>

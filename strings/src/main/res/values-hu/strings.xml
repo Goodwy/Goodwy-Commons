@@ -306,6 +306,7 @@ Ha korábban megvásárolta ezt az alkalmazást vagy adományozott, köszönjük
     <string name="block_unknown_calls_summary">Az ismeretlen számokról érkező hívások blokkolva lesznek, és a „Legutóbbiak” listában jelennek meg.\nA névjegyzékben szereplő személyektől és a nemrég hívott személyektől érkező hívások továbbra is csörögni fognak.</string>
     <string name="bottom_indent">Alsó behúzás</string>
     <string name="is_do_not_block_contacts_and_recent">Ne blokkolja a névjegyeket és a legutóbbi kimenő hívásokat</string>
+    <string name="send_whatsapp">Küldés WhatsApp-ra</string>
     <string name="relation_g">Kapcsolat</string>
     <string name="relations_g">Kapcsolódó személyek</string>
     <string name="relation_hint_g">Kapcsolódó személy</string>

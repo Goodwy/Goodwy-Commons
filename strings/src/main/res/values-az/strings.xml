@@ -309,6 +309,7 @@ Hazırkı tətbiqiniz işləməyə davam edəcək və yeniləmələr alacaq.<br>
     <string name="block_unknown_calls_summary">Naməlum nömrələrdən gələn zənglər bloklanacaq və \"Son zənglər\" siyahısında göstəriləcək.\nKontaktlarınızdakı insanlardan və bu yaxınlarda zəng etdiyiniz insanlardan gələn zənglər çalmağa davam edəcək.</string>
     <string name="bottom_indent">Aşağı abzas</string>
     <string name="is_do_not_block_contacts_and_recent">Kontaktları və son gedən zəngləri bloklamayın</string>
+    <string name="send_whatsapp">WhatsApp-a göndərin</string>
     <string name="relation_g">Əlaqə</string>
     <string name="relations_g">Əlaqədar şəxslər</string>
     <string name="relation_hint_g">Əlaqədar şəxs</string>

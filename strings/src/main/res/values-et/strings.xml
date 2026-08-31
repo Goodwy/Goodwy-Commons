@@ -311,6 +311,7 @@ Kui olete selle rakenduse varem ostnud või annetuse teinud, siis täname teid! 
     <string name="block_unknown_calls_summary">Tundmatutelt numbritelt tulevad kõned blokeeritakse ja kuvatakse loendis „Hiljutised”.\nSissetulevad kõned teie kontaktidelt ja inimestelt, kellele olete hiljuti helistanud, helisevad edasi.</string>
     <string name="bottom_indent">Alumine taane</string>
     <string name="is_do_not_block_contacts_and_recent">Ära blokeeri kontakte ja hiljutisi väljaminevaid kõnesid</string>
+    <string name="send_whatsapp">Saada WhatsAppi</string>
     <string name="relation_g">Seos</string>
     <string name="relations_g">Seotud isikud</string>
     <string name="relation_hint_g">Seotud isik</string>

@@ -307,6 +307,7 @@ Os gwnaethoch chi brynu’r ap hwn o’r blaen neu wneud rhodd, diolch! Anfonwch
     <string name="block_unknown_calls_summary">Bydd galwadau o rifau anhysbys yn cael eu blocio a\'u harddangos yn y rhestr \"Diweddar\".\nBydd galwadau sy\'n dod i mewn gan bobl yn eich cysylltiadau a chan bobl rydych chi wedi\'u ffonio\'n ddiweddar yn parhau i ganu.</string>
     <string name="bottom_indent">mewnoliad gwaelod</string>
     <string name="is_do_not_block_contacts_and_recent">Peidiwch â rhwystro cysylltiadau a galwadau allan diweddar</string>
+    <string name="send_whatsapp">Anfon at WhatsApp</string>
     <string name="relation_g">Perthynas</string>
     <string name ="relations_g">Personau Cysylltiedig</string>
     <string name ="relation_hint_g">Person Cysylltiedig</string>

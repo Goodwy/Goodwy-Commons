@@ -308,6 +308,7 @@ Ako ste prethodno kupili ovu aplikaciju ili donirali, hvala vam! Pošaljite svoj
     <string name="block_unknown_calls_summary">Pozivi s nepoznatih brojeva bit će blokirani i prikazani na popisu \"Nedavni\".\nDolazni pozivi od osoba u vašim kontaktima i od osoba koje ste nedavno zvali nastavit će zvoniti.</string>
     <string name="bottom_indent">Donja uvlaka</string>
     <string name="is_do_not_block_contacts_and_recent">Ne blokiraj kontakte i nedavne odlazne pozive</string>
+    <string name="send_whatsapp">Pošalji na WhatsApp</string>
     <string name="relation_g">Odnos</string>
     <string name="relations_g">Povezane osobe</string>
     <string name="relation_hint_g">Povezana osoba</string>

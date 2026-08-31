@@ -317,6 +317,7 @@ Si vous avez déjà acheté cette application ou fait un don, merci ! Envoyez v
     <string name="block_unknown_calls_summary">Les appels provenant de numéros inconnus seront bloqués et affichés dans la liste « Récents ».\nLes appels entrants de vos contacts et de ceux que vous avez récemment appelés continueront de sonner.</string>
     <string name="bottom_indent">Retrait inférieur</string>
     <string name="is_do_not_block_contacts_and_recent">Ne bloquez pas les contacts et les appels sortants récents.</string>
+    <string name="send_whatsapp">Envoyer sur WhatsApp</string>
     <string name="relation_g">Relation</string>
     <string name="relations_g">Personnes apparentées</string>
     <string name="relation_hint_g">Personne apparentée</string>
