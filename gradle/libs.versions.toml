@@ -1,26 +1,26 @@
 [versions]
 #jetbrains
-kotlin = "2.3.0"
+kotlin = "2.3.20"
 kotlin-immutable-collections = "0.4.0"
 #KSP
 kotlinxSerializationJson = "1.10.0"
-ksp = "2.3.5"
+ksp = "2.3.9"
 #Detekt
 detekt = "1.23.8"
 detektCompose = "0.4.28"
 #Androidx
 androidx-customView = "1.2.0"
 androidx-customViewPooling = "1.1.0"
-androidx-lifecycle = "2.10.0"
+androidx-lifecycle = "2.11.0"
 androidx-constraintlayout = "2.2.1"
 androidx-documentfile = "1.1.0"
 androidx-biometricKtx = "1.4.0-alpha02"
 androidx-exifinterface = "1.4.2"
-androidx-coreKtx = "1.17.0"
-androidx-appcompat = "1.7.1"
+androidx-coreKtx = "1.19.0"
+androidx-appcompat = "1.8.0"
 androidx-swiperefreshlayout = "1.2.0"
 #Material
-material = "1.13.0"
+material = "1.14.0"
 #patternLockView
 patternLockView = "a90b0d4bf0"
 #reprint
@@ -30,25 +30,26 @@ recyclerviewFastscroller = "2e64d5a90c"
 #rtlViewpager
 rtlViewpager = "2.0.2"
 #Compose
-composeActivity = "1.12.3"
-compose = "1.7.6"
+composeActivity = "1.13.0"
+compose = "1.12.0"
+composeMaterialIcons = "1.7.8"
 composeMaterial3 = "1.4.0"
 #Glide
-glide = "5.0.5"
+glide = "5.0.7"
 glideCompose = "1.0.0-beta08"
 #Room
 room = "2.8.4"
 #ezVcard
 ezVcard = "0.12.1"
 #gson
-gson = "2.13.2"
+gson = "2.14.0"
 #jodaTime
 jodaTime = "2.14.0"
 #Goodwy
 behavioRule = "1.0.1"
 rxAnimation = "2.1.1"
 rxJava3 = "3.1.5"
-billing = "8.0.0"
+billing = "9.1.0"
 rustore = "6.0.0"
 rustoreBom = "2026.04.01"
 rustorePay = "10.3.1"
@@ -58,10 +59,10 @@ hms-agconnect = "1.8.1.300"
 persianDate = "1.7.1"
 zxing = "3.5.4"
 #Gradle
-gradlePlugins-agp = "8.11.1"
+gradlePlugins-agp = "9.2.0"
 #build
-app-build-compileSDKVersion = "36"
-app-build-targetSDK = "36"
+app-build-compileSDKVersion = "37"
+app-build-targetSDK = "37"
 app-build-minimumSDK = "26"
 app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
@@ -89,7 +90,7 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 #Compose
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
-compose-material-icons = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
+compose-material-icons = { module = "androidx.compose.material:material-icons-extended", version.ref = "composeMaterialIcons" }
 compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }

@@ -29,6 +29,12 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
 
     private lateinit var binding: DialogRenameItemsPatternBinding
 
+    // getNewPath() runs sequentially over every selected file during a batch rename; only two
+    // patterns are ever possible here, so cache the formatter/calendar instead of allocating a
+    // new one per file.
+    private val dateFormattersByPattern = HashMap<String, SimpleDateFormat>()
+    private val reusableCalendar: Calendar = Calendar.getInstance()
+
     override fun onFinishInflate() {
         super.onFinishInflate()
         binding = DialogRenameItemsPatternBinding.bind(this)
@@ -123,10 +129,10 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             }
 
             val pattern = if (dateTime.substring(4, 5) == "-") "yyyy-MM-dd kk:mm:ss" else "yyyy:MM:dd kk:mm:ss"
-            val simpleDateFormat = SimpleDateFormat(pattern, Locale.ENGLISH)
+            val simpleDateFormat = dateFormattersByPattern.getOrPut(pattern) { SimpleDateFormat(pattern, Locale.ENGLISH) }
 
             val dt = simpleDateFormat.parse(dateTime.replace("T", " "))
-            val cal = Calendar.getInstance()
+            val cal = reusableCalendar
             cal.time = dt
             val year = cal.get(Calendar.YEAR).toString()
             val month = (cal.get(Calendar.MONTH) + 1).ensureTwoDigits()

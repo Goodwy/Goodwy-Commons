@@ -679,7 +679,7 @@ open class BaseConfig(val context: Context) {
         set(customFontFileName) = prefs.edit { putString(CUSTOM_FONT_FILE_NAME, customFontFileName) }
 
     protected fun <T> KProperty0<T>.asFlow(emitOnCollect: Boolean = false): Flow<T?> =
-        prefs.run { sharedPreferencesCallback(sendOnCollect = emitOnCollect) { this@asFlow.get() } }
+        prefs.sharedPreferencesCallback(sendOnCollect = emitOnCollect) { this@asFlow.get() }
 
     protected fun <T> KProperty0<T>.asFlowNonNull(emitOnCollect: Boolean = false): Flow<T> = asFlow(emitOnCollect).filterNotNull()
 

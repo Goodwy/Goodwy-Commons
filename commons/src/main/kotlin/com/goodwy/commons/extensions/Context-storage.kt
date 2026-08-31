@@ -637,27 +637,31 @@ fun Context.getDirectChildrenCount(rootDocId: String, treeUri: Uri, documentId: 
 }
 
 fun Context.getProperChildrenCount(rootDocId: String, treeUri: Uri, documentId: String, shouldShowHidden: Boolean): Int {
-    val projection = arrayOf(Document.COLUMN_DOCUMENT_ID, Document.COLUMN_MIME_TYPE)
-    val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
-    val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
-    val cursor = ExternalStorageProviderHack.transformQueryResult(rootDocId, childrenUri, rawCursor)
-    return if (cursor.count > 0) {
-        var count = 0
-        cursor.use {
-            while (cursor.moveToNext()) {
-                val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
-                val mimeType = cursor.getStringValue(Document.COLUMN_MIME_TYPE)
-                if (mimeType == Document.MIME_TYPE_DIR) {
-                    count++
-                    count += getProperChildrenCount(rootDocId, treeUri, docId, shouldShowHidden)
-                } else if (!docId.getFilenameFromPath().startsWith('.') || shouldShowHidden) {
-                    count++
+    return try {
+        val projection = arrayOf(Document.COLUMN_DOCUMENT_ID, Document.COLUMN_MIME_TYPE)
+        val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
+        val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
+        val cursor = ExternalStorageProviderHack.transformQueryResult(rootDocId, childrenUri, rawCursor)
+        if (cursor.count > 0) {
+            var count = 0
+            cursor.use {
+                while (cursor.moveToNext()) {
+                    val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
+                    val mimeType = cursor.getStringValue(Document.COLUMN_MIME_TYPE)
+                    if (mimeType == Document.MIME_TYPE_DIR) {
+                        count++
+                        count += getProperChildrenCount(rootDocId, treeUri, docId, shouldShowHidden)
+                    } else if (!docId.getFilenameFromPath().startsWith('.') || shouldShowHidden) {
+                        count++
+                    }
                 }
             }
+            count
+        } else {
+            1
         }
-        count
-    } else {
-        1
+    } catch (_: Exception) {
+        0
     }
 }
 

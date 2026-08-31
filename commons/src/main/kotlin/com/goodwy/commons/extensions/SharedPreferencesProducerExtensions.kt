@@ -5,8 +5,7 @@ import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 
-context (SharedPreferences)
-fun <T> sharedPreferencesCallback(
+fun <T> SharedPreferences.sharedPreferencesCallback(
     sendOnCollect: Boolean = false,
     value: () -> T?,
 ): Flow<T?> = callbackFlow {
