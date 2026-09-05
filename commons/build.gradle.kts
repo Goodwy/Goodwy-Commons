@@ -45,7 +45,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            consumerProguardFiles("proguard-rules.pro")
+            consumerProguardFiles("consumer-rules.pro")
         }
     }
 
@@ -100,7 +100,7 @@ android {
     }
 
     sourceSets {
-        getByName("main").java.srcDirs("src/main/kotlin")
+        getByName("main").java.directories.add("src/main/kotlin")
     }
 }
 

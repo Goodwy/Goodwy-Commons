@@ -50,6 +50,7 @@ fun Int.getFormattedDuration(forceShowHours: Boolean = false): String {
     return sb.toString()
 }
 
+@Deprecated("Use Long.formatSize() instead.")
 fun Int.formatSize(): String {
     if (this <= 0) return "0 B"
 

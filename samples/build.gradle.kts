@@ -41,8 +41,8 @@ android {
         applicationId = "com.goodwy.contacts"
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         targetSdk = libs.versions.app.build.targetSDK.get().toInt()
-        versionCode = 830
-        versionName = "8.3.0"
+        versionCode = 840
+        versionName = "8.4.0"
         vectorDrawables.useSupportLibrary = true
         buildConfigField("String", "PRODUCT_ID_X1", "\"${properties.getProperty("PRODUCT_ID_X1", "")}\"")
         buildConfigField("String", "PRODUCT_ID_X2", "\"${properties.getProperty("PRODUCT_ID_X2", "")}\"")
@@ -58,6 +58,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -113,7 +114,7 @@ android {
     }
 
     sourceSets {
-        getByName("main").java.srcDirs("src/main/kotlin")
+        getByName("main").java.directories.add("src/main/kotlin")
     }
 
     lint {

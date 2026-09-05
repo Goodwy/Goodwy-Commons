@@ -7,13 +7,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/purchase_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/purchase_toolbar_height"
-        app:layout_collapseMode="pin"
-        app:navigationIcon="@drawable/ic_chevron_left_vector"/>
-
     <androidx.core.widget.NestedScrollView
         android:id="@+id/purchase_nested_scrollview"
         android:layout_width="match_parent"
@@ -122,4 +115,12 @@
             </RelativeLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/purchase_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/purchase_toolbar_height"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@drawable/ic_chevron_left_vector"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

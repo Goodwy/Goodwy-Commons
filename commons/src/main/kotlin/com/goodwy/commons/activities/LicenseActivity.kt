@@ -65,6 +65,10 @@ class LicenseActivity : BaseComposeActivity() {
         License(LICENSE_ANDROID_LAME, R.string.android_lame_title, R.string.android_lame_text, R.string.android_lame_url),
         License(LICENSE_PDF_VIEWER, R.string.pdf_viewer_title, R.string.pdf_viewer_text, R.string.pdf_viewer_url),
         License(LICENSE_ZIP4J, R.string.zip4j_title, R.string.zip4j_text, R.string.zip4j_url),
-        License(LICENSE_EVALEX, R.string.evalex_title, R.string.evalex_text, R.string.evalex_url)
+        License(LICENSE_EVALEX, R.string.evalex_title, R.string.evalex_text, R.string.evalex_url),
+        License(LICENSE_MAMMOTH, R.string.mammoth_title, R.string.mammoth_text, R.string.mammoth_url),
+        License(LICENSE_COMMONMARK, R.string.commonmark_title, R.string.commonmark_text, R.string.commonmark_url),
+        License(LICENSE_JSOUP, R.string.jsoup_title, R.string.jsoup_text, R.string.jsoup_url),
+        License(LICENSE_COMMONS_CSV, R.string.commons_csv_title, R.string.commons_csv_text, R.string.commons_csv_url)
     )
 }

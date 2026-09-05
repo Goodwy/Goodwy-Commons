@@ -19,6 +19,8 @@
         <package android:name="dev.goodwy.filemanager" />
         <package android:name="dev.goodwy.calendar" />
         <package android:name="dev.goodwy.calendar.debug" />
+        <package android:name="dev.goodwy.voicerecorder.debug" />
+        <package android:name="dev.goodwy.voicerecorder" />
 
         <package android:name="com.goodwy.dialer.debug" />
         <package android:name="com.goodwy.dialer" />
