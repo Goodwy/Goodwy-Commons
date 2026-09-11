@@ -475,7 +475,7 @@
     <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
     <string name="first_name">First name</string>
     <string name="middle_name">Middle name</string>
-    <string name="surname">Surname</string>
+    <string name="surname">Last name</string>
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
